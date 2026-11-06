@@ -43228,8 +43228,8 @@ namespace LunaCalc
                 "## Le chat testuali via Internet",
                 "In EME gli appuntamenti (sked), gli annunci dei CQ e i rapporti passano quasi sempre da chat testuali su Internet. Le più usate sono queste.",
                 "• **Chat EME di N0UK.** La chat storica dei 2 m in EME, di Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); dello stesso autore è Ping Jockey Central, la chat del meteor scatter (https://www.pingjockey.net) [1].",
-                "• **EMEchat di EA8DBM.** Un'interfaccia web che riunisce le chat EME (https://www.emechat.com): le DXpedition la usano per i 2 m con la chat di N0UK e per i 70 cm e oltre con quella di HB9Q [2].",
-                "• **HB9Q logger.** Chat e registro degli sked per l'EME dai 70 cm in su (https://logger.hb9q.ch) [2].",
+                "• **EMEchat di EA8DBM.** Un'interfaccia web che riunisce le chat EME (https://www.emechat.com): le DXpedition la usano per i 2 m con la chat di N0UK e per i 70 cm e oltre con quella di HB9Q [2][5].",
+                "• **HB9Q logger.** Chat e registro degli sked per l'EME dai 70 cm in su (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, sezione microwave.** La chat di ON4KST è divisa in sezioni per banda (https://www.on4kst.com/chat): nella sezione microwave si incontrano gli operatori delle bande più alte, compresi quelli che lavorano in EME [3].",
                 "### Come leggere gli annunci (NJ9R)",
                 "Chi chiama CQ in chat indica di solito potenza e antenne. «H», o nessuna indicazione, fa pensare a una stazione solo orizzontale (non sempre); «HV» o «XPOL» indica due polarizzazioni ed è la stazione migliore da cercare. Tra stazioni dello stesso continente l'orizzontale con l'orizzontale funziona bene; da un continente all'altro la polarizzazione spaziale può far arrivare quasi verticale un segnale partito orizzontale, con perdite troppo grandi per una stazione piccola (§ 1.3) [4].",
@@ -43237,8 +43237,10 @@ namespace LunaCalc
                 "• Le frequenze audio annunciate in chat aiutano a trovare le stazioni che non trasmettono a 1270 Hz; quando si riceve una stazione, è buona abitudine segnalarlo in chat [4].",
                 "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, giugno 2026, DXpedition C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["en"] = new Dictionary<string, string[]>();
             d["en"]["PREF"] = new string[] {
@@ -43763,8 +43765,8 @@ namespace LunaCalc
                 "## Text chats on the Internet",
                 "In EME, schedules (skeds), CQ announcements and reports almost always go through text chats on the Internet. These are the most used.",
                 "• **N0UK EME chat.** The historic 2 m EME chat, by Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); by the same author is Ping Jockey Central, the meteor scatter chat (https://www.pingjockey.net) [1].",
-                "• **EMEchat by EA8DBM.** A web interface that brings the EME chats together (https://www.emechat.com): DXpeditions use it for 2 m with the N0UK chat and for 70 cm and up with the HB9Q chat [2].",
-                "• **HB9Q logger.** Chat and sked log for EME from 70 cm up (https://logger.hb9q.ch) [2].",
+                "• **EMEchat by EA8DBM.** A web interface that brings the EME chats together (https://www.emechat.com): DXpeditions use it for 2 m with the N0UK chat and for 70 cm and up with the HB9Q chat [2][5].",
+                "• **HB9Q logger.** Chat and sked log for EME from 70 cm up (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, microwave section.** The ON4KST chat is divided into sections by band (https://www.on4kst.com/chat): in the microwave section you meet the operators of the higher bands, including those working EME [3].",
                 "### How to read the announcements (NJ9R)",
                 "Whoever calls CQ in the chat usually states power and antennas. “H”, or no indication, suggests a horizontal-only station (not always); “HV” or “XPOL” means two polarizations and is the best station to look for. Between stations on the same continent horizontal to horizontal works well; from one continent to another, spatial polarization can make a signal that left horizontal arrive almost vertical, with losses too large for a small station (§ 1.3) [4].",
@@ -43772,8 +43774,10 @@ namespace LunaCalc
                 "• The audio frequencies announced in the chat help to find the stations that do not transmit at 1270 Hz; when you receive a station, it is good practice to report it in the chat [4].",
                 "[1] Chris Cox N0UK, EME chat – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, June 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["de"] = new Dictionary<string, string[]>();
             d["de"]["PREF"] = new string[] {
@@ -44298,8 +44302,8 @@ namespace LunaCalc
                 "## Textchats im Internet",
                 "Bei EME laufen Verabredungen (Skeds), CQ-Ankündigungen und Rapporte fast immer über Textchats im Internet. Die meistgenutzten sind diese:",
                 "• **EME-Chat von N0UK.** Der traditionsreiche 2-m-EME-Chat von Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); vom selben Autor stammt Ping Jockey Central, der Meteor-Scatter-Chat (https://www.pingjockey.net) [1].",
-                "• **EMEchat von EA8DBM.** Eine Weboberfläche, die die EME-Chats zusammenführt (https://www.emechat.com): DXpeditionen nutzen sie für 2 m mit dem Chat von N0UK und für 70 cm und darüber mit dem von HB9Q [2].",
-                "• **HB9Q logger.** Chat und Sked-Verzeichnis für EME ab 70 cm aufwärts (https://logger.hb9q.ch) [2].",
+                "• **EMEchat von EA8DBM.** Eine Weboberfläche, die die EME-Chats zusammenführt (https://www.emechat.com): DXpeditionen nutzen sie für 2 m mit dem Chat von N0UK und für 70 cm und darüber mit dem von HB9Q [2][5].",
+                "• **HB9Q logger.** Chat und Sked-Verzeichnis für EME ab 70 cm aufwärts (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, Bereich microwave.** Der Chat von ON4KST ist nach Bändern in Bereiche unterteilt (https://www.on4kst.com/chat): Im Bereich microwave treffen sich die Operatoren der höheren Bänder, darunter auch diejenigen, die EME betreiben [3].",
                 "### Wie man die Ankündigungen liest (NJ9R)",
                 "Wer im Chat CQ ruft, gibt meist Leistung und Antennen an. „H“ oder gar keine Angabe lässt auf eine rein horizontale Station schließen (nicht immer); „HV“ oder „XPOL“ steht für zwei Polarisationen und ist die beste Station, nach der man suchen kann. Zwischen Stationen auf demselben Kontinent funktioniert horizontal mit horizontal gut; von Kontinent zu Kontinent kann die räumliche Polarisation ein horizontal ausgesandtes Signal fast vertikal ankommen lassen, mit Verlusten, die für eine kleine Station zu groß sind (§ 1.3) [4].",
@@ -44307,8 +44311,10 @@ namespace LunaCalc
                 "• Die im Chat angekündigten Audiofrequenzen helfen, Stationen zu finden, die nicht auf 1270 Hz senden; empfängt man eine Station, ist es eine gute Gewohnheit, das im Chat mitzuteilen [4].",
                 "[1] Chris Cox N0UK, EME-Chat – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, Juni 2026, DXpedition C37EME: „2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface“ – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["fr"] = new Dictionary<string, string[]>();
             d["fr"]["PREF"] = new string[] {
@@ -44833,8 +44839,8 @@ namespace LunaCalc
                 "## Les chats textuels sur Internet",
                 "En EME, les rendez-vous (skeds), les annonces de CQ et les reports passent presque toujours par des chats textuels sur Internet. Voici les plus utilisés.",
                 "• **Chat EME de N0UK.** Le chat historique de l'EME sur 2 m, de Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA) ; on doit au même auteur Ping Jockey Central, le chat du meteor scatter (https://www.pingjockey.net) [1].",
-                "• **EMEchat d'EA8DBM.** Une interface web qui réunit les chats EME (https://www.emechat.com) : les DXpéditions l'utilisent pour le 2 m avec le chat de N0UK et pour le 70 cm et au-delà avec celui de HB9Q [2].",
-                "• **HB9Q logger.** Chat et registre des skeds pour l'EME à partir de 70 cm (https://logger.hb9q.ch) [2].",
+                "• **EMEchat d'EA8DBM.** Une interface web qui réunit les chats EME (https://www.emechat.com) : les DXpéditions l'utilisent pour le 2 m avec le chat de N0UK et pour le 70 cm et au-delà avec celui de HB9Q [2][5].",
+                "• **HB9Q logger.** Chat et registre des skeds pour l'EME à partir de 70 cm (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, section microwave.** Le chat d'ON4KST est divisé en sections par bande (https://www.on4kst.com/chat) : dans la section microwave se retrouvent les opérateurs des bandes les plus hautes, y compris ceux qui pratiquent l'EME [3].",
                 "### Comment lire les annonces (NJ9R)",
                 "Qui lance un CQ sur le chat indique généralement sa puissance et ses antennes. « H », ou aucune indication, fait penser à une station uniquement horizontale (pas toujours) ; « HV » ou « XPOL » indique deux polarisations et c'est la meilleure station à rechercher. Entre stations du même continent, l'horizontale avec l'horizontale fonctionne bien ; d'un continent à l'autre, la polarisation spatiale peut faire arriver presque vertical un signal parti horizontal, avec des pertes trop grandes pour une petite station (§ 1.3) [4].",
@@ -44842,8 +44848,10 @@ namespace LunaCalc
                 "• Les fréquences audio annoncées sur le chat aident à trouver les stations qui n'émettent pas à 1270 Hz ; quand on reçoit une station, il est de bon usage de le signaler sur le chat [4].",
                 "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, juin 2026, DXpédition C37EME : « 2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface » – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["es"] = new Dictionary<string, string[]>();
             d["es"]["PREF"] = new string[] {
@@ -45368,8 +45376,8 @@ namespace LunaCalc
                 "## Los chats de texto en Internet",
                 "En EME las citas (sked), los anuncios de CQ y los informes pasan casi siempre por chats de texto en Internet. Los más usados son estos.",
                 "• **Chat EME de N0UK.** El chat histórico de los 2 m en EME, de Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); del mismo autor es Ping Jockey Central, el chat del meteor scatter (https://www.pingjockey.net) [1].",
-                "• **EMEchat de EA8DBM.** Una interfaz web que reúne los chats EME (https://www.emechat.com): las DXpediciones la usan para los 2 m con el chat de N0UK y para los 70 cm y superiores con el de HB9Q [2].",
-                "• **HB9Q logger.** Chat y registro de skeds para el EME de 70 cm en adelante (https://logger.hb9q.ch) [2].",
+                "• **EMEchat de EA8DBM.** Una interfaz web que reúne los chats EME (https://www.emechat.com): las DXpediciones la usan para los 2 m con el chat de N0UK y para los 70 cm y superiores con el de HB9Q [2][5].",
+                "• **HB9Q logger.** Chat y registro de skeds para el EME de 70 cm en adelante (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, sección microwave.** El chat de ON4KST está dividido en secciones por banda (https://www.on4kst.com/chat): en la sección microwave se encuentran los operadores de las bandas más altas, incluidos los que trabajan en EME [3].",
                 "### Cómo leer los anuncios (NJ9R)",
                 "Quien llama CQ en el chat suele indicar potencia y antenas. «H», o ninguna indicación, hace pensar en una estación solo horizontal (no siempre); «HV» o «XPOL» indica dos polarizaciones y es la mejor estación que buscar. Entre estaciones del mismo continente, horizontal con horizontal funciona bien; de un continente a otro la polarización espacial puede hacer llegar casi vertical una señal que salió horizontal, con pérdidas demasiado grandes para una estación pequeña (§ 1.3) [4].",
@@ -45377,8 +45385,10 @@ namespace LunaCalc
                 "• Las frecuencias de audio anunciadas en el chat ayudan a encontrar las estaciones que no transmiten en 1270 Hz; cuando se recibe una estación, es buena costumbre indicarlo en el chat [4].",
                 "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, junio de 2026, DXpedición C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["pt"] = new Dictionary<string, string[]>();
             d["pt"]["PREF"] = new string[] {
@@ -45903,8 +45913,8 @@ namespace LunaCalc
                 "## Os chats de texto na Internet",
                 "Em EME, as marcações (sked), os anúncios de CQ e os relatórios passam quase sempre por chats de texto na Internet. Os mais usados são estes.",
                 "• **Chat EME de N0UK.** O chat histórico dos 2 m em EME, de Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); do mesmo autor é o Ping Jockey Central, o chat do meteor scatter (https://www.pingjockey.net) [1].",
-                "• **EMEchat de EA8DBM.** Uma interface web que reúne os chats EME (https://www.emechat.com): as DXpedições usam-na para os 2 m com o chat de N0UK e para os 70 cm e acima com o de HB9Q [2].",
-                "• **HB9Q logger.** Chat e registo dos skeds para o EME dos 70 cm para cima (https://logger.hb9q.ch) [2].",
+                "• **EMEchat de EA8DBM.** Uma interface web que reúne os chats EME (https://www.emechat.com): as DXpedições usam-na para os 2 m com o chat de N0UK e para os 70 cm e acima com o de HB9Q [2][5].",
+                "• **HB9Q logger.** Chat e registo dos skeds para o EME dos 70 cm para cima (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, secção microwave.** O chat de ON4KST está dividido em secções por banda (https://www.on4kst.com/chat): na secção microwave encontram-se os operadores das bandas mais altas, incluindo os que trabalham em EME [3].",
                 "### Como ler os anúncios (NJ9R)",
                 "Quem chama CQ no chat indica normalmente a potência e as antenas. «H», ou nenhuma indicação, faz pensar numa estação só horizontal (nem sempre); «HV» ou «XPOL» indica duas polarizações e é a melhor estação a procurar. Entre estações do mesmo continente, horizontal com horizontal funciona bem; de um continente para outro, a polarização espacial pode fazer chegar quase vertical um sinal que partiu horizontal, com perdas demasiado grandes para uma estação pequena (§ 1.3) [4].",
@@ -45912,8 +45922,10 @@ namespace LunaCalc
                 "• As frequências de áudio anunciadas no chat ajudam a encontrar as estações que não transmitem em 1270 Hz; quando se recebe uma estação, é bom hábito assinalá-lo no chat [4].",
                 "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, junho de 2026, DXpedição C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["zh"] = new Dictionary<string, string[]>();
             d["zh"]["PREF"] = new string[] {
@@ -46438,8 +46450,8 @@ namespace LunaCalc
                 "## 互联网文字聊天室",
                 "在 EME 中，约定通联（sked）、CQ 公告和报告几乎都通过互联网上的文字聊天室进行。最常用的有以下几个。",
                 "• **N0UK 的 EME 聊天室。** 2 m EME 的老牌聊天室，由 Chris Cox N0UK 创建（https://www.chris.org/cgi-bin/jt65emeA）；同一作者还创建了流星散射聊天室 Ping Jockey Central（https://www.pingjockey.net）[1]。",
-                "• **EA8DBM 的 EMEchat。** 一个汇集各 EME 聊天室的网页界面（https://www.emechat.com）：DX 远征在 2 m 上用它配合 N0UK 的聊天室，在 70 cm 及以上配合 HB9Q 的聊天室 [2]。",
-                "• **HB9Q logger。** 面向 70 cm 及以上 EME 的聊天室和 sked 登记（https://logger.hb9q.ch）[2]。",
+                "• **EA8DBM 的 EMEchat。** 一个汇集各 EME 聊天室的网页界面（https://www.emechat.com）：DX 远征在 2 m 上用它配合 N0UK 的聊天室，在 70 cm 及以上配合 HB9Q 的聊天室 [2][5]。",
+                "• **HB9Q logger。** 面向 70 cm 及以上 EME 的聊天室和 sked 登记（https://logger.hb9q.ch）[2][6]。",
                 "• **ON4KST，microwave 分区。** ON4KST 聊天室按波段分区（https://www.on4kst.com/chat）：在 microwave 分区可以遇到更高波段的操作者，包括从事 EME 的人 [3]。",
                 "### 如何解读公告（NJ9R）",
                 "在聊天室里呼叫 CQ 的人通常会注明功率和天线。“H”或没有任何注明，意味着很可能是只有水平极化的电台（并非总是如此）；“HV”或“XPOL”表示双极化，是最值得寻找的电台。同一大洲的电台之间，水平对水平效果很好；跨大洲时，空间极化可能使发出时为水平的信号到达时几乎变成垂直，对小电台来说损耗太大（§ 1.3）[4]。",
@@ -46447,8 +46459,10 @@ namespace LunaCalc
                 "• 聊天室中公布的音频频率有助于找到不在 1270 Hz 发射的电台；收到某个电台时，在聊天室中告知对方是个好习惯 [4]。",
                 "[1] Chris Cox N0UK，EME 聊天室 – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS，2026 年 6 月，DX 远征 C37EME：“2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["ja"] = new Dictionary<string, string[]>();
             d["ja"]["PREF"] = new string[] {
@@ -46973,8 +46987,8 @@ namespace LunaCalc
                 "## インターネットのテキストチャット",
                 "EMEでは、スケジュール（sked）、CQの告知、レポートのやりとりは、ほとんどがインターネットのテキストチャットで行われます。よく使われるのは次のとおりです。",
                 "• **N0UKのEMEチャット。** Chris Cox N0UKによる2 m EMEの老舗チャットです（https://www.chris.org/cgi-bin/jt65emeA）。同じ作者による、メテオスキャッターのチャットがPing Jockey Centralです（https://www.pingjockey.net） [1]。",
-                "• **EA8DBMのEMEchat。** EMEのチャットをまとめたウェブインターフェースです（https://www.emechat.com）。DXペディションは、2 mではN0UKのチャット、70 cm以上ではHB9Qのチャットと組み合わせてこれを使っています [2]。",
-                "• **HB9Q logger。** 70 cm以上のEME向けのチャットとsked登録簿です（https://logger.hb9q.ch） [2]。",
+                "• **EA8DBMのEMEchat。** EMEのチャットをまとめたウェブインターフェースです（https://www.emechat.com）。DXペディションは、2 mではN0UKのチャット、70 cm以上ではHB9Qのチャットと組み合わせてこれを使っています [2][5]。",
+                "• **HB9Q logger。** 70 cm以上のEME向けのチャットとsked登録簿です（https://logger.hb9q.ch） [2][6]。",
                 "• **ON4KST、microwaveセクション。** ON4KSTのチャットはバンドごとのセクションに分かれています（https://www.on4kst.com/chat）。microwaveセクションでは、EMEを運用する人も含め、上のバンドのオペレーターに出会えます [3]。",
                 "### 告知の読み方 (NJ9R)",
                 "チャットでCQを出す局は、ふつう出力とアンテナを書いています。「H」または何も書いていなければ、水平偏波だけの局と考えられます（いつもそうとは限りません）。「HV」や「XPOL」は二重偏波を示し、いちばん探す価値のある局です。同じ大陸の局どうしなら水平対水平でうまくいきますが、大陸間では空間偏波によって、水平で出た信号がほぼ垂直で届くことがあり、小さな局には損失が大きすぎます（§ 1.3） [4]。",
@@ -46982,8 +46996,10 @@ namespace LunaCalc
                 "• チャットで告知される音声周波数は、1270 Hzで送信していない局を見つけるのに役立ちます。ある局を受信したら、チャットでそれを知らせるのがよい習慣です [4]。",
                 "[1] Chris Cox N0UK, EMEチャット – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, 2026年6月, DXペディションC37EME：“2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["hi"] = new Dictionary<string, string[]>();
             d["hi"]["PREF"] = new string[] {
@@ -47508,8 +47524,8 @@ namespace LunaCalc
                 "## इंटरनेट पर टेक्स्ट चैट",
                 "EME में शेड्यूल (sked), CQ की घोषणाएँ और रिपोर्ट लगभग हमेशा इंटरनेट पर टेक्स्ट चैट के ज़रिए होती हैं। सबसे ज़्यादा इस्तेमाल होने वाले चैट ये हैं।",
                 "• **N0UK का EME चैट।** 2 m EME का ऐतिहासिक चैट, Chris Cox N0UK का (https://www.chris.org/cgi-bin/jt65emeA); इन्हीं के द्वारा बनाया गया Ping Jockey Central मीटियर स्कैटर का चैट है (https://www.pingjockey.net) [1]।",
-                "• **EA8DBM का EMEchat।** एक वेब इंटरफ़ेस जो EME चैटों को एक जगह लाता है (https://www.emechat.com): DXpedition इसे 2 m के लिए N0UK के चैट के साथ और 70 cm तथा उससे ऊपर के लिए HB9Q के चैट के साथ इस्तेमाल करते हैं [2]।",
-                "• **HB9Q logger।** 70 cm और उससे ऊपर के EME के लिए चैट और sked रजिस्टर (https://logger.hb9q.ch) [2]।",
+                "• **EA8DBM का EMEchat।** एक वेब इंटरफ़ेस जो EME चैटों को एक जगह लाता है (https://www.emechat.com): DXpedition इसे 2 m के लिए N0UK के चैट के साथ और 70 cm तथा उससे ऊपर के लिए HB9Q के चैट के साथ इस्तेमाल करते हैं [2][5]।",
+                "• **HB9Q logger।** 70 cm और उससे ऊपर के EME के लिए चैट और sked रजिस्टर (https://logger.hb9q.ch) [2][6]।",
                 "• **ON4KST, microwave अनुभाग।** ON4KST का चैट बैंड के अनुसार अनुभागों में बँटा है (https://www.on4kst.com/chat): microwave अनुभाग में ऊँचे बैंडों के ऑपरेटर मिलते हैं, जिनमें EME करने वाले भी शामिल हैं [3]।",
                 "### घोषणाएँ कैसे पढ़ें (NJ9R)",
                 "चैट में CQ करने वाला आमतौर पर पावर और एंटेना बताता है। “H”, या कोई संकेत न होना, केवल क्षैतिज स्टेशन की ओर इशारा करता है (हमेशा नहीं); “HV” या “XPOL” दो ध्रुवीकरण बताता है और ऐसा स्टेशन खोजना सबसे अच्छा है। एक ही महाद्वीप के स्टेशनों के बीच क्षैतिज से क्षैतिज अच्छा काम करता है; एक महाद्वीप से दूसरे तक स्थानिक ध्रुवीकरण क्षैतिज रूप से भेजे गए सिग्नल को लगभग ऊर्ध्वाधर बनाकर पहुँचा सकता है, जिससे छोटे स्टेशन के लिए नुकसान बहुत बड़ा हो जाता है (§ 1.3) [4]।",
@@ -47517,8 +47533,10 @@ namespace LunaCalc
                 "• चैट में घोषित ऑडियो फ़्रीक्वेंसी उन स्टेशनों को खोजने में मदद करती हैं जो 1270 Hz पर ट्रांसमिट नहीं करते; जब कोई स्टेशन रिसीव हो, तो चैट में बताना अच्छी आदत है [4]।",
                 "[1] Chris Cox N0UK, EME चैट – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, जून 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["ko"] = new Dictionary<string, string[]>();
             d["ko"]["PREF"] = new string[] {
@@ -48043,8 +48061,8 @@ namespace LunaCalc
                 "## 인터넷 텍스트 채팅",
                 "EME에서는 약속(sked), CQ 공지, 리포트가 거의 언제나 인터넷 텍스트 채팅을 통해 오갑니다. 가장 많이 쓰이는 것은 다음과 같습니다.",
                 "• **N0UK의 EME 채팅.** Chris Cox N0UK가 만든 2 m EME의 오래된 채팅입니다(https://www.chris.org/cgi-bin/jt65emeA). 같은 사람이 만든 Ping Jockey Central은 유성 산란(meteor scatter) 채팅입니다(https://www.pingjockey.net) [1].",
-                "• **EA8DBM의 EMEchat.** EME 채팅들을 한데 모은 웹 인터페이스입니다(https://www.emechat.com). DX페디션은 2 m에서는 N0UK 채팅과, 70 cm 이상에서는 HB9Q 채팅과 함께 이것을 사용합니다 [2].",
-                "• **HB9Q logger.** 70 cm 이상 EME를 위한 채팅 및 sked 등록부입니다(https://logger.hb9q.ch) [2].",
+                "• **EA8DBM의 EMEchat.** EME 채팅들을 한데 모은 웹 인터페이스입니다(https://www.emechat.com). DX페디션은 2 m에서는 N0UK 채팅과, 70 cm 이상에서는 HB9Q 채팅과 함께 이것을 사용합니다 [2][5].",
+                "• **HB9Q logger.** 70 cm 이상 EME를 위한 채팅 및 sked 등록부입니다(https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, microwave 섹션.** ON4KST 채팅은 밴드별 섹션으로 나뉘어 있습니다(https://www.on4kst.com/chat). microwave 섹션에서는 EME를 운용하는 사람들을 포함해 높은 밴드의 운용자들을 만날 수 있습니다 [3].",
                 "### 공지 읽는 법 (NJ9R)",
                 "채팅에서 CQ를 내는 사람은 보통 출력과 안테나를 적습니다. “H” 또는 아무 표시가 없으면 수평 편파만 있는 국이라고 짐작할 수 있습니다(항상 그렇지는 않습니다). “HV”나 “XPOL”은 두 편파를 뜻하며, 가장 찾아볼 만한 국입니다. 같은 대륙의 국끼리는 수평 대 수평으로 잘 됩니다. 대륙 간에는 공간 편파 때문에 수평으로 떠난 신호가 거의 수직으로 도착할 수 있어, 작은 국에는 손실이 너무 큽니다(§ 1.3) [4].",
@@ -48052,8 +48070,10 @@ namespace LunaCalc
                 "• 채팅에서 알린 오디오 주파수는 1270 Hz에서 송신하지 않는 국을 찾는 데 도움이 됩니다. 어떤 국을 수신하면 채팅에 알리는 것이 좋은 습관입니다 [4].",
                 "[1] Chris Cox N0UK, EME 채팅 – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, 2026년 6월, DX페디션 C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["id"] = new Dictionary<string, string[]>();
             d["id"]["PREF"] = new string[] {
@@ -48578,8 +48598,8 @@ namespace LunaCalc
                 "## Chat teks melalui Internet",
                 "Dalam EME, janji jadwal (sked), pengumuman CQ, dan laporan hampir selalu melewati chat teks di Internet. Yang paling banyak dipakai adalah berikut ini.",
                 "• **Chat EME N0UK.** Chat bersejarah untuk EME 2 m, milik Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); dari pembuat yang sama ada Ping Jockey Central, chat untuk meteor scatter (https://www.pingjockey.net) [1].",
-                "• **EMEchat dari EA8DBM.** Antarmuka web yang menghimpun chat-chat EME (https://www.emechat.com): DXpedition memakainya untuk 2 m bersama chat N0UK dan untuk 70 cm ke atas bersama chat HB9Q [2].",
-                "• **HB9Q logger.** Chat dan daftar sked untuk EME dari 70 cm ke atas (https://logger.hb9q.ch) [2].",
+                "• **EMEchat dari EA8DBM.** Antarmuka web yang menghimpun chat-chat EME (https://www.emechat.com): DXpedition memakainya untuk 2 m bersama chat N0UK dan untuk 70 cm ke atas bersama chat HB9Q [2][5].",
+                "• **HB9Q logger.** Chat dan daftar sked untuk EME dari 70 cm ke atas (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, bagian microwave.** Chat ON4KST dibagi menjadi bagian-bagian per pita (https://www.on4kst.com/chat): di bagian microwave Anda bertemu operator pita-pita yang lebih tinggi, termasuk mereka yang bekerja di EME [3].",
                 "### Cara membaca pengumuman (NJ9R)",
                 "Yang memanggil CQ di chat biasanya menyebutkan daya dan antenanya. “H”, atau tanpa keterangan, menandakan stasiun yang hanya horizontal (tidak selalu); “HV” atau “XPOL” menunjukkan dua polarisasi dan merupakan stasiun terbaik untuk dicari. Antarstasiun di benua yang sama, horizontal dengan horizontal bekerja baik; antarbenua, polarisasi spasial dapat membuat sinyal yang berangkat horizontal tiba hampir vertikal, dengan rugi yang terlalu besar bagi stasiun kecil (§ 1.3) [4].",
@@ -48587,8 +48607,10 @@ namespace LunaCalc
                 "• Frekuensi audio yang diumumkan di chat membantu menemukan stasiun yang tidak memancar pada 1270 Hz; bila Anda menerima suatu stasiun, sebaiknya biasakan memberitahukannya di chat [4].",
                 "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, Juni 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["ru"] = new Dictionary<string, string[]>();
             d["ru"]["PREF"] = new string[] {
@@ -49113,8 +49135,8 @@ namespace LunaCalc
                 "## Текстовые чаты в Интернете",
                 "В EME договорённости о связи (sked), объявления CQ и рапорты почти всегда проходят через текстовые чаты в Интернете. Чаще всего используются следующие.",
                 "• **EME-чат N0UK.** Исторический чат 2 m EME, созданный Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); тому же автору принадлежит Ping Jockey Central — чат метеорного рассеяния (https://www.pingjockey.net) [1].",
-                "• **EMEchat от EA8DBM.** Веб-интерфейс, объединяющий EME-чаты (https://www.emechat.com): DX-экспедиции используют его на 2 m вместе с чатом N0UK, а на 70 cm и выше — с чатом HB9Q [2].",
-                "• **HB9Q logger.** Чат и журнал скедов для EME от 70 cm и выше (https://logger.hb9q.ch) [2].",
+                "• **EMEchat от EA8DBM.** Веб-интерфейс, объединяющий EME-чаты (https://www.emechat.com): DX-экспедиции используют его на 2 m вместе с чатом N0UK, а на 70 cm и выше — с чатом HB9Q [2][5].",
+                "• **HB9Q logger.** Чат и журнал скедов для EME от 70 cm и выше (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, раздел microwave.** Чат ON4KST разделён на разделы по диапазонам (https://www.on4kst.com/chat): в разделе microwave встречаются операторы высших диапазонов, в том числе работающие через EME [3].",
                 "### Как читать объявления (NJ9R)",
                 "Тот, кто даёт CQ в чате, обычно указывает мощность и антенны. «H» или отсутствие указания наводит на мысль о станции только с горизонтальной поляризацией (не всегда); «HV» или «XPOL» означает две поляризации — такую станцию лучше всего искать. Между станциями одного континента горизонтальная поляризация с горизонтальной работает хорошо; между континентами пространственная поляризация может превратить сигнал, ушедший горизонтальным, почти в вертикальный, с потерями, слишком большими для маленькой станции (§ 1.3) [4].",
@@ -49122,8 +49144,10 @@ namespace LunaCalc
                 "• Звуковые частоты, объявленные в чате, помогают найти станции, которые передают не на 1270 Hz; когда вы принимаете станцию, хорошая привычка — сообщить об этом в чате [4].",
                 "[1] Chris Cox N0UK, EME-чат – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, июнь 2026, DX-экспедиция C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
-                "[3] Чат ON4KST – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
+                "[3] Alain ON4KST – Чат ON4KST – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["uk"] = new Dictionary<string, string[]>();
             d["uk"]["PREF"] = new string[] {
@@ -49648,8 +49672,8 @@ namespace LunaCalc
                 "## Текстові чати в Інтернеті",
                 "В EME домовленості про зв'язок (sked), оголошення CQ і рапорти майже завжди проходять через текстові чати в Інтернеті. Найуживаніші з них такі.",
                 "• **EME-чат N0UK.** Історичний чат 2 m EME, створений Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); тому ж автору належить Ping Jockey Central — чат метеорного розсіювання (https://www.pingjockey.net) [1].",
-                "• **EMEchat від EA8DBM.** Вебінтерфейс, що об'єднує EME-чати (https://www.emechat.com): DX-експедиції користуються ним на 2 m разом із чатом N0UK, а на 70 cm і вище — з чатом HB9Q [2].",
-                "• **HB9Q logger.** Чат і журнал скедів для EME від 70 cm і вище (https://logger.hb9q.ch) [2].",
+                "• **EMEchat від EA8DBM.** Вебінтерфейс, що об'єднує EME-чати (https://www.emechat.com): DX-експедиції користуються ним на 2 m разом із чатом N0UK, а на 70 cm і вище — з чатом HB9Q [2][5].",
+                "• **HB9Q logger.** Чат і журнал скедів для EME від 70 cm і вище (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, розділ microwave.** Чат ON4KST поділено на розділи за діапазонами (https://www.on4kst.com/chat): у розділі microwave зустрічаються оператори найвищих діапазонів, зокрема ті, хто працює через EME [3].",
                 "### Як читати оголошення (NJ9R)",
                 "Хто дає CQ у чаті, зазвичай вказує потужність і антени. «H» або відсутність вказівки наводить на думку про станцію лише з горизонтальною поляризацією (не завжди); «HV» або «XPOL» означає дві поляризації — таку станцію найкраще шукати. Між станціями одного континенту горизонтальна поляризація з горизонтальною працює добре; між континентами просторова поляризація може зробити сигнал, що вийшов горизонтальним, майже вертикальним, із втратами, завеликими для малої станції (§ 1.3) [4].",
@@ -49657,8 +49681,10 @@ namespace LunaCalc
                 "• Звукові частоти, оголошені в чаті, допомагають знайти станції, які передають не на 1270 Hz; коли ви приймаєте станцію, добра звичка — повідомити про це в чаті [4].",
                 "[1] Chris Cox N0UK, EME-чат – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, червень 2026, DX-експедиція C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
-                "[3] Чат ON4KST – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
+                "[3] Alain ON4KST – Чат ON4KST – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["af"] = new Dictionary<string, string[]>();
             d["af"]["PREF"] = new string[] {
@@ -50183,8 +50209,8 @@ namespace LunaCalc
                 "## Tekskletse op die internet",
                 "In EME gaan afsprake (sked), CQ-aankondigings en verslae byna altyd deur tekskletse op die internet. Die mees gebruikte is die volgende.",
                 "• **N0UK se EME-klets.** Die historiese 2 m-EME-klets van Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); van dieselfde outeur is Ping Jockey Central, die klets vir meteoorverstrooiing (https://www.pingjockey.net) [1].",
-                "• **EMEchat van EA8DBM.** 'n Webkoppelvlak wat die EME-kletse saambring (https://www.emechat.com): DX-ekspedisies gebruik dit vir 2 m met die klets van N0UK en vir 70 cm en hoër met dié van HB9Q [2].",
-                "• **HB9Q logger.** Klets en sked-logboek vir EME vanaf 70 cm en hoër (https://logger.hb9q.ch) [2].",
+                "• **EMEchat van EA8DBM.** 'n Webkoppelvlak wat die EME-kletse saambring (https://www.emechat.com): DX-ekspedisies gebruik dit vir 2 m met die klets van N0UK en vir 70 cm en hoër met dié van HB9Q [2][5].",
+                "• **HB9Q logger.** Klets en sked-logboek vir EME vanaf 70 cm en hoër (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, microwave-afdeling.** Die ON4KST-klets is per band in afdelings verdeel (https://www.on4kst.com/chat): in die microwave-afdeling ontmoet die operateurs van die hoër bande mekaar, insluitend dié wat EME werk [3].",
                 "### Hoe om die aankondigings te lees (NJ9R)",
                 "Wie op die klets CQ roep, gee gewoonlik krag en antennas aan. “H”, of geen aanduiding nie, dui op 'n stasie met slegs horisontale polarisasie (nie altyd nie); “HV” of “XPOL” dui op twee polarisasies en is die beste stasie om na te soek. Tussen stasies op dieselfde kontinent werk horisontaal met horisontaal goed; van een kontinent na 'n ander kan ruimtelike polarisasie 'n sein wat horisontaal vertrek het amper vertikaal laat aankom, met verliese te groot vir 'n klein stasie (§ 1.3) [4].",
@@ -50192,8 +50218,10 @@ namespace LunaCalc
                 "• Die oudiofrekwensies wat op die klets aangekondig word, help om stasies te vind wat nie op 1270 Hz uitsaai nie; wanneer jy 'n stasie ontvang, is dit 'n goeie gewoonte om dit op die klets te meld [4].",
                 "[1] Chris Cox N0UK, EME-klets – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, Junie 2026, DX-ekspedisie C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST-klets – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
+                "[3] Alain ON4KST – ON4KST-klets – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["bn"] = new Dictionary<string, string[]>();
             d["bn"]["PREF"] = new string[] {
@@ -50718,8 +50746,8 @@ namespace LunaCalc
                 "## ইন্টারনেটে টেক্সট চ্যাট",
                 "EME-তে অ্যাপয়েন্টমেন্ট (sked), CQ-এর ঘোষণা ও রিপোর্ট প্রায় সবসময় ইন্টারনেটের টেক্সট চ্যাটের মাধ্যমে চলে। সবচেয়ে বেশি ব্যবহৃত চ্যাটগুলো নিচে দেওয়া হলো।",
                 "• **N0UK-এর EME চ্যাট।** 2 m EME-র ঐতিহ্যবাহী চ্যাট, Chris Cox N0UK-এর (https://www.chris.org/cgi-bin/jt65emeA); একই লেখকের Ping Jockey Central হলো মিটিয়র স্ক্যাটারের চ্যাট (https://www.pingjockey.net) [1]।",
-                "• **EA8DBM-এর EMEchat।** EME চ্যাটগুলোকে এক জায়গায় আনা একটি ওয়েব ইন্টারফেস (https://www.emechat.com): DXpedition-গুলো 2 m-এর জন্য N0UK-এর চ্যাট এবং 70 cm ও তার ওপরের জন্য HB9Q-এর চ্যাটসহ এটি ব্যবহার করে [2]।",
-                "• **HB9Q logger।** 70 cm ও তার ওপরের EME-র জন্য চ্যাট ও sked-এর খাতা (https://logger.hb9q.ch) [2]।",
+                "• **EA8DBM-এর EMEchat।** EME চ্যাটগুলোকে এক জায়গায় আনা একটি ওয়েব ইন্টারফেস (https://www.emechat.com): DXpedition-গুলো 2 m-এর জন্য N0UK-এর চ্যাট এবং 70 cm ও তার ওপরের জন্য HB9Q-এর চ্যাটসহ এটি ব্যবহার করে [2][5]।",
+                "• **HB9Q logger।** 70 cm ও তার ওপরের EME-র জন্য চ্যাট ও sked-এর খাতা (https://logger.hb9q.ch) [2][6]।",
                 "• **ON4KST, microwave বিভাগ।** ON4KST-এর চ্যাট ব্যান্ড অনুযায়ী বিভাগে ভাগ করা (https://www.on4kst.com/chat): microwave বিভাগে উঁচু ব্যান্ডের অপারেটরদের দেখা মেলে, EME-তে কাজ করা অপারেটররাও সেখানে থাকেন [3]।",
                 "### ঘোষণা কীভাবে পড়বেন (NJ9R)",
                 "চ্যাটে যিনি CQ দেন তিনি সাধারণত পাওয়ার ও অ্যান্টেনা উল্লেখ করেন। “H”, বা কোনো উল্লেখ না থাকা, ইঙ্গিত দেয় স্টেশনটি কেবল অনুভূমিক (সবসময় নয়); “HV” বা “XPOL” মানে দুটি পোলারাইজেশন, এবং এমন স্টেশনই খোঁজার জন্য সেরা। একই মহাদেশের স্টেশনগুলোর মধ্যে অনুভূমিক-থেকে-অনুভূমিক ভালো কাজ করে; এক মহাদেশ থেকে অন্য মহাদেশে স্থানিক পোলারাইজেশন অনুভূমিকভাবে পাঠানো সংকেতকে প্রায় উল্লম্ব অবস্থায় পৌঁছে দিতে পারে, যাতে ছোট স্টেশনের জন্য লস অতিরিক্ত বড় হয়ে যায় (§ 1.3) [4]।",
@@ -50727,8 +50755,10 @@ namespace LunaCalc
                 "• চ্যাটে ঘোষিত অডিও কম্পাঙ্ক সেই স্টেশনগুলো খুঁজে পেতে সাহায্য করে যারা 1270 Hz-এ প্রেরণ করে না; কোনো স্টেশন গ্রহণ করলে চ্যাটে তা জানানো ভালো অভ্যাস [4]।",
                 "[1] Chris Cox N0UK, EME চ্যাট – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, জুন 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["ar"] = new Dictionary<string, string[]>();
             d["ar"]["PREF"] = new string[] {
@@ -51253,8 +51283,8 @@ namespace LunaCalc
                 "## الدردشات النصية عبر الإنترنت",
                 "في EME تمر المواعيد (sked) وإعلانات CQ والتقارير في الغالب عبر دردشات نصية على الإنترنت. وهذه أكثرها استخدامًا.",
                 "• **دردشة EME لدى N0UK.** الدردشة التاريخية لـ EME على 2 m، من إعداد Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA)؛ وللمؤلف نفسه Ping Jockey Central، دردشة الانتثار النيزكي (meteor scatter) (https://www.pingjockey.net) [1].",
-                "• **EMEchat من EA8DBM.** واجهة ويب تجمع دردشات EME (https://www.emechat.com): تستخدمها بعثات DXpedition لنطاق 2 m مع دردشة N0UK، ولنطاق 70 cm وما فوقه مع دردشة HB9Q [2].",
-                "• **HB9Q logger.** دردشة وسجل مواعيد sked لـ EME من 70 cm فما فوق (https://logger.hb9q.ch) [2].",
+                "• **EMEchat من EA8DBM.** واجهة ويب تجمع دردشات EME (https://www.emechat.com): تستخدمها بعثات DXpedition لنطاق 2 m مع دردشة N0UK، ولنطاق 70 cm وما فوقه مع دردشة HB9Q [2][5].",
+                "• **HB9Q logger.** دردشة وسجل مواعيد sked لـ EME من 70 cm فما فوق (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST، قسم microwave.** دردشة ON4KST مقسمة إلى أقسام بحسب النطاق (https://www.on4kst.com/chat): في قسم microwave يلتقي مشغّلو النطاقات الأعلى، ومنهم من يعمل في EME [3].",
                 "### كيف تُقرأ الإعلانات (NJ9R)",
                 "من ينادي CQ في الدردشة يذكر عادةً القدرة والهوائيات. «H»، أو غياب أي إشارة، يوحي بمحطة أفقية فقط (ليس دائمًا)؛ أما «HV» أو «XPOL» فيدل على استقطابين، وهي أفضل محطة يُبحث عنها. بين محطات القارة نفسها يعمل الأفقي مع الأفقي جيدًا؛ أما من قارة إلى أخرى فقد يجعل الاستقطاب المكاني إشارة انطلقت أفقية تصل شبه عمودية، بفقد أكبر من أن تتحمله محطة صغيرة (§ 1.3) [4].",
@@ -51262,8 +51292,10 @@ namespace LunaCalc
                 "• تساعد الترددات الصوتية المعلنة في الدردشة على العثور على المحطات التي لا ترسل على 1270 Hz؛ وعند استقبال محطة ما، من العادات الحسنة الإشارة إلى ذلك في الدردشة [4].",
                 "[1] Chris Cox N0UK، دردشة EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS، يونيو 2026، DXpedition C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
-                "[3] ON4KST chat – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
+                "[3] Alain ON4KST, ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
             d["tr"] = new Dictionary<string, string[]>();
             d["tr"]["PREF"] = new string[] {
@@ -51788,8 +51820,8 @@ namespace LunaCalc
                 "## İnternet üzerindeki metin sohbetleri",
                 "EME'de randevular (sked), CQ duyuruları ve raporlar neredeyse her zaman İnternet üzerindeki metin sohbetlerinden geçer. En çok kullanılanlar şunlardır.",
                 "• **N0UK EME sohbeti.** Chris Cox N0UK'nin 2 m EME için tarihî sohbeti (https://www.chris.org/cgi-bin/jt65emeA); meteor scatter sohbeti Ping Jockey Central de aynı yazarındır (https://www.pingjockey.net) [1].",
-                "• **EA8DBM'nin EMEchat'i.** EME sohbetlerini bir araya getiren bir web arayüzü (https://www.emechat.com): DXpedition'lar bunu 2 m için N0UK sohbetiyle, 70 cm ve üzeri için HB9Q sohbetiyle kullanır [2].",
-                "• **HB9Q logger.** 70 cm ve üzerindeki EME için sohbet ve sked kaydı (https://logger.hb9q.ch) [2].",
+                "• **EA8DBM'nin EMEchat'i.** EME sohbetlerini bir araya getiren bir web arayüzü (https://www.emechat.com): DXpedition'lar bunu 2 m için N0UK sohbetiyle, 70 cm ve üzeri için HB9Q sohbetiyle kullanır [2][5].",
+                "• **HB9Q logger.** 70 cm ve üzerindeki EME için sohbet ve sked kaydı (https://logger.hb9q.ch) [2][6].",
                 "• **ON4KST, microwave bölümü.** ON4KST sohbeti bantlara göre bölümlere ayrılmıştır (https://www.on4kst.com/chat): microwave bölümünde, EME çalışanlar da dahil olmak üzere, en yüksek bantların operatörleri buluşur [3].",
                 "### Duyurular nasıl okunur (NJ9R)",
                 "Sohbette CQ çağıran genellikle gücünü ve antenlerini belirtir. “H” ya da hiçbir belirtme olmaması, yalnızca yatay polarizasyonlu bir istasyonu düşündürür (her zaman değil); “HV” ya da “XPOL” iki polarizasyonu gösterir ve aranacak en iyi istasyondur. Aynı kıtadaki istasyonlar arasında yatayla yatay iyi çalışır; kıtalar arasında ise uzaysal polarizasyon, yatay olarak çıkan bir sinyalin neredeyse dikey gelmesine yol açabilir ve kayıplar küçük bir istasyon için fazla büyük olur (§ 1.3) [4].",
@@ -51797,8 +51829,10 @@ namespace LunaCalc
                 "• Sohbette duyurulan ses frekansları, 1270 Hz'de göndermeyen istasyonları bulmaya yardımcı olur; bir istasyonu aldığınızda bunu sohbette bildirmek iyi bir alışkanlıktır [4].",
                 "[1] Chris Cox N0UK, EME sohbeti – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
                 "[2] 432 AND ABOVE EME NEWS, Haziran 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
-                "[3] ON4KST sohbeti – https://www.on4kst.com/chat",
-                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
+                "[3] Alain ON4KST – ON4KST sohbeti – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır.",
+                "[5] Aleksandr EA8DBM (LY3UM), EMEchat – https://www.emechat.com",
+                "[6] Daniel HB9Q (KT6Q), HB9Q logger – https://logger.hb9q.ch"
             };
         }
 
