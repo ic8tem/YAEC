@@ -29668,7 +29668,8 @@ namespace LunaCalc
                 lt.Add(Lang.T("distanza media del giorno (scala a destra)  -  ★ = 3 giorni migliori")); lc.Add(cKm); lw.Add((float)dgSpKm);
                 if (conDec) { lt.Add(Lang.T("declinazione della Luna (scala blu a sinistra, dentro il grafico)")); lc.Add(ColoreDec()); lw.Add(1.8f); }
                 float lx = a.Left + S(8) + (conDec ? S(34) : 0), ly = a.Bottom - S(9) - S(15) * lt.Count;
-                using (Brush bg = new SolidBrush(Color.FromArgb(220, Tema.ChartBg))) g.FillRectangle(bg, lx - 4, ly - 3, S(390), S(15) * lt.Count + S(5));
+                dgLegenda = new RectangleF(lx - 4, ly - 3, S(390), S(15) * lt.Count + S(5));
+                using (Brush bg = new SolidBrush(Color.FromArgb(220, Tema.ChartBg))) g.FillRectangle(bg, dgLegenda);
                 using (Brush tt = new SolidBrush(Tema.ChartText))
                     for (int i = 0; i < lt.Count; i++)
                     {
@@ -29682,6 +29683,7 @@ namespace LunaCalc
             fb.Dispose();
         }
 
+        RectangleF dgLegenda;   // riquadro della legenda del grafico Dgrd: i valori della declinazione lo evitano
         Color ColoreDec() { return Tema.Scuro ? Color.FromArgb(110, 175, 255) : Color.FromArgb(31, 111, 209); }
 
         // Declinazione della Luna (geocentrica) sovrapposta al grafico Dgrd/distanza: curva blu con la sua scala
@@ -29731,6 +29733,12 @@ namespace LunaCalc
                     SizeF sz = g.MeasureString(et, fb);
                     float xe = Math.Min(d.Right - sz.Width - 2, Math.Max(d.Left + S(34), pts[i].X - sz.Width / 2));
                     float ye = mx ? pts[i].Y + S(5) : pts[i].Y - sz.Height - S(5);
+                    // sopra la legenda: dall'altra parte del punto, oppure niente scritta
+                    if (new RectangleF(xe - 2, ye, sz.Width + 4, sz.Height).IntersectsWith(dgLegenda))
+                    {
+                        ye = mx ? pts[i].Y - sz.Height - S(5) : pts[i].Y + S(5);
+                        if (new RectangleF(xe - 2, ye, sz.Width + 4, sz.Height).IntersectsWith(dgLegenda) || ye < d.Top || ye + sz.Height > d.Bottom) continue;
+                    }
                     using (Brush bg = new SolidBrush(Color.FromArgb(210, Tema.ChartBg))) g.FillRectangle(bg, xe - 2, ye, sz.Width + 4, sz.Height);
                     g.DrawString(et, fb, tdc, xe, ye);
                 }
@@ -37589,9 +37597,9 @@ namespace LunaCalc
             };
             elenchi["it"] = new Dictionary<string, string[]>();
             elenchi["it"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) è un calcolatore per il traffico radioamatoriale EME (Terra-Luna-Terra) per Windows. È un unico programma in C# (Windows Forms, .NET Framework 4) distribuito come codice sorgente: il file compila.bat lo compila con il compilatore csc.exe già presente in Windows, incorporando l'icona con la Luna (YAEC.ico), e produce YAEC.exe; subito dopo crea i manuali PDF in tutte le 14 lingue del programma nella sottocartella manuali.",
+                "YAEC (Yet Another EME Calc) è un calcolatore per il traffico radioamatoriale EME (Terra-Luna-Terra) per Windows, Linux e macOS. È un unico programma in C# (Windows Forms, .NET Framework 4; su Linux e macOS funziona con Mono). Tutte le versioni si scaricano da GitHub (github.com/ic8tem/YAEC): per Windows l'installatore o la versione portatile, per Linux il pacchetto .deb o l'archivio .tar.gz, per macOS l'immagine .dmg; ogni versione ha anche il codice sorgente e il file SHA256SUMS.txt con le impronte per controllare i file scaricati.",
                 "## Cartella data",
-                "Tutti i dati del programma stanno nella sottocartella data, accanto a YAEC.exe: il programma non scrive nulla nelle cartelle di Windows né in C:\\Users. Si può quindi copiare l'intera cartella del programma su una chiavetta o su un altro computer.",
+                "Tutti i dati del programma stanno nella sottocartella data: su Windows accanto a YAEC.exe (l'installatore mette il programma in Documenti\\YAEC), su Linux in ~/.local/share/YAEC/data, su macOS in ~/Library/Application Support/YAEC/data. Il programma non scrive nulla altrove; su Windows si può quindi copiare l'intera cartella del programma su una chiavetta o su un altro computer.",
                 "• impostazioni.txt: tutte le impostazioni (locator, nominativo, limiti dell'antenna, parametri del budget per ogni banda, lingua, tema, caratteri), in testo semplice.",
                 "• solar-radio-flux.json: i flussi solari misurati dalla rete RSTN, scaricati da NOAA SWPC.",
                 "• lotw.adi: il log scaricato da ARRL Logbook of the World (solo se usi lo scaricamento da LoTW).",
@@ -37599,6 +37607,7 @@ namespace LunaCalc
                 "• tiles: le tessere della mappa già scaricate, per non doverle scaricare di nuovo.",
                 "## Avvio e controllo dei file",
                 "All'avvio, mentre si accorcia la barra verde della finestra di apertura (5 secondi), YAEC controlla la cartella data: la crea se manca, verifica di poterci scrivere e controlla i file. Il flusso solare viene scaricato di nuovo da NOAA se manca, se non è valido o se ha più di 12 ore; il log LoTW viene scaricato di nuovo se manca e se nome utente e password sono memorizzati. L'esito compare sopra la barra verde. Se uno scaricamento non riesce, il programma continua con i dati salvati.",
+                "Il CALL3.TXT viene scaricato di nuovo da W7GJ e da WSJT-X Improved se manca o se ha più di 7 giorni; se nessuna delle due fonti risponde si usa il file salvato.",
                 "Alla prima esecuzione della beta 22 i dati delle versioni precedenti vengono spostati nella cartella data: quelli in AppData\\Roaming\\LunaCalc (fino alla beta 18) e quelli accanto all'eseguibile (dalla beta 19 alla beta 21). Le cartelle vecchie, se restano vuote, vengono eliminate.",
                 "La password di LoTW è salvata cifrata con la protezione dei dati di Windows (DPAPI) dell'utente: su un altro computer, o con un altro utente di Windows, va inserita di nuovo.",
                 "## Manuali",
@@ -37661,9 +37670,9 @@ namespace LunaCalc
             };
             elenchi["en"] = new Dictionary<string, string[]>();
             elenchi["en"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) is a calculator for EME (Earth-Moon-Earth) amateur radio operation on Windows. It is a single C# program (Windows Forms, .NET Framework 4) distributed as source code: compila.bat compiles it with the csc.exe compiler already included in Windows, embedding the Moon icon (YAEC.ico), and produces YAEC.exe; right after that it creates the PDF manuals in all 14 program languages in the manuali subfolder.",
+                "YAEC (Yet Another EME Calc) is a calculator for EME (Earth-Moon-Earth) amateur radio traffic for Windows, Linux and macOS. It is a single C# program (Windows Forms, .NET Framework 4; on Linux and macOS it runs with Mono). All versions are downloaded from GitHub (github.com/ic8tem/YAEC): for Windows the installer or the portable version, for Linux the .deb package or the .tar.gz archive, for macOS the .dmg image; every version also has the source code and the SHA256SUMS.txt file with the fingerprints to check the downloaded files.",
                 "## Data folder",
-                "All the program data are in the data subfolder, next to YAEC.exe: the program writes nothing to the Windows folders or to C:\\Users. The whole program folder can therefore be copied to a USB stick or to another computer.",
+                "All the program data are in the data subfolder: on Windows next to YAEC.exe (the installer puts the program in Documents\\YAEC), on Linux in ~/.local/share/YAEC/data, on macOS in ~/Library/Application Support/YAEC/data. The program writes nothing anywhere else; on Windows you can therefore copy the whole program folder to a USB stick or to another computer.",
                 "• impostazioni.txt: all the settings (locators, callsign, antenna limits, budget parameters for each band, language, theme, fonts), as plain text.",
                 "• solar-radio-flux.json: the solar fluxes measured by the RSTN network, downloaded from NOAA SWPC.",
                 "• lotw.adi: the log downloaded from ARRL Logbook of the World (only if you use the LoTW download).",
@@ -37671,6 +37680,7 @@ namespace LunaCalc
                 "• tiles: the map tiles already downloaded, so they do not have to be downloaded again.",
                 "## Start-up and file check",
                 "At start-up, while the green bar of the opening window shrinks (5 seconds), YAEC checks the data folder: it creates it if missing, verifies that it can write there and checks the files. The solar flux is downloaded again from NOAA if missing, invalid or older than 12 hours; the LoTW log is downloaded again if missing and if username and password are stored. The result is shown above the green bar. If a download fails, the program goes on with the saved data.",
+                "CALL3.TXT is downloaded again from W7GJ and WSJT-X Improved if it is missing or older than 7 days; if neither source responds the saved file is used.",
                 "The first time beta 22 runs, the data of the previous versions are moved into the data folder: those in AppData\\Roaming\\LunaCalc (up to beta 18) and those next to the executable (beta 19 to beta 21). The old folders are deleted if they are left empty.",
                 "The LoTW password is stored encrypted with the Windows data protection (DPAPI) of the user: on another computer, or with another Windows user, it must be entered again.",
                 "## Manuals",
@@ -37733,9 +37743,9 @@ namespace LunaCalc
             };
             elenchi["de"] = new Dictionary<string, string[]>();
             elenchi["de"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) ist ein Rechner für den EME-Amateurfunkbetrieb (Erde-Mond-Erde) unter Windows. Es ist ein einzelnes C#-Programm (Windows Forms, .NET Framework 4), das als Quellcode verteilt wird: compila.bat übersetzt es mit dem in Windows bereits enthaltenen Compiler csc.exe, bettet das Mond-Symbol (YAEC.ico) ein und erzeugt YAEC.exe; gleich danach erstellt es die PDF-Handbücher in allen 14 Programmsprachen im Unterordner manuali.",
+                "YAEC (Yet Another EME Calc) ist ein Rechner für den EME-Amateurfunkverkehr (Erde-Mond-Erde) für Windows, Linux und macOS. Es ist ein einziges C#-Programm (Windows Forms, .NET Framework 4; unter Linux und macOS läuft es mit Mono). Alle Versionen werden von GitHub heruntergeladen (github.com/ic8tem/YAEC): für Windows das Installationsprogramm oder die portable Version, für Linux das .deb-Paket oder das .tar.gz-Archiv, für macOS das .dmg-Abbild; jede Version enthält auch den Quellcode und die Datei SHA256SUMS.txt mit den Prüfsummen zur Kontrolle der heruntergeladenen Dateien.",
                 "## Ordner data",
-                "Alle Daten des Programms liegen im Unterordner data neben YAEC.exe: das Programm schreibt nichts in die Windows-Ordner oder nach C:\\Users. Der ganze Programmordner kann daher auf einen USB-Stick oder einen anderen Computer kopiert werden.",
+                "Alle Daten des Programms liegen im Unterordner data: unter Windows neben YAEC.exe (das Installationsprogramm legt das Programm in Dokumente\\YAEC ab), unter Linux in ~/.local/share/YAEC/data, unter macOS in ~/Library/Application Support/YAEC/data. Das Programm schreibt nirgendwo sonst etwas; unter Windows kann man daher den ganzen Programmordner auf einen USB-Stick oder einen anderen Computer kopieren.",
                 "• impostazioni.txt: alle Einstellungen (Locator, Rufzeichen, Antennengrenzen, Budgetparameter für jedes Band, Sprache, Farbschema, Schriftarten) als einfacher Text.",
                 "• solar-radio-flux.json: die vom RSTN-Netz gemessenen Sonnenflüsse, von NOAA SWPC heruntergeladen.",
                 "• lotw.adi: das von ARRL Logbook of the World heruntergeladene Log (nur wenn Sie den LoTW-Download benutzen).",
@@ -37743,6 +37753,7 @@ namespace LunaCalc
                 "• tiles: die bereits heruntergeladenen Kartenkacheln, damit sie nicht erneut geladen werden müssen.",
                 "## Start und Dateiprüfung",
                 "Beim Start, während der grüne Balken des Startfensters kürzer wird (5 Sekunden), prüft YAEC den Ordner data: es legt ihn an, falls er fehlt, prüft, ob dort geschrieben werden kann, und kontrolliert die Dateien. Der Sonnenfluss wird erneut von NOAA geladen, wenn er fehlt, ungültig oder älter als 12 Stunden ist; das LoTW-Log wird erneut geladen, wenn es fehlt und Benutzername und Passwort gespeichert sind. Das Ergebnis erscheint über dem grünen Balken. Schlägt ein Download fehl, arbeitet das Programm mit den gespeicherten Daten weiter.",
+                "Die CALL3.TXT wird erneut von W7GJ und WSJT-X Improved heruntergeladen, wenn sie fehlt oder älter als 7 Tage ist; antwortet keine der beiden Quellen, wird die gespeicherte Datei verwendet.",
                 "Beim ersten Start der beta 22 werden die Daten der früheren Versionen in den Ordner data verschoben: die aus AppData\\Roaming\\LunaCalc (bis beta 18) und die neben der ausführbaren Datei (beta 19 bis beta 21). Die alten Ordner werden gelöscht, wenn sie leer bleiben.",
                 "Das LoTW-Passwort wird mit dem Windows-Datenschutz (DPAPI) des Benutzers verschlüsselt gespeichert: auf einem anderen Computer oder mit einem anderen Windows-Benutzer muss es erneut eingegeben werden.",
                 "## Handbücher",
@@ -37805,9 +37816,9 @@ namespace LunaCalc
             };
             elenchi["fr"] = new Dictionary<string, string[]>();
             elenchi["fr"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) est un calculateur pour le trafic radioamateur EME (Terre-Lune-Terre) sous Windows. C'est un programme C# unique (Windows Forms, .NET Framework 4) distribué sous forme de code source : compila.bat le compile avec le compilateur csc.exe déjà présent dans Windows, en y intégrant l'icône de la Lune (YAEC.ico), et produit YAEC.exe ; aussitôt après, il crée les manuels PDF dans les 14 langues du programme dans le sous-dossier manuali.",
+                "YAEC (Yet Another EME Calc) est un calculateur pour le trafic radioamateur EME (Terre-Lune-Terre) pour Windows, Linux et macOS. C'est un programme unique en C# (Windows Forms, .NET Framework 4 ; sous Linux et macOS il fonctionne avec Mono). Toutes les versions se téléchargent depuis GitHub (github.com/ic8tem/YAEC) : pour Windows l'installateur ou la version portable, pour Linux le paquet .deb ou l'archive .tar.gz, pour macOS l'image .dmg ; chaque version comporte aussi le code source et le fichier SHA256SUMS.txt avec les empreintes pour vérifier les fichiers téléchargés.",
                 "## Dossier data",
-                "Toutes les données du programme se trouvent dans le sous-dossier data, à côté de YAEC.exe : le programme n'écrit rien dans les dossiers de Windows ni dans C:\\Users. On peut donc copier tout le dossier du programme sur une clé USB ou sur un autre ordinateur.",
+                "Toutes les données du programme se trouvent dans le sous-dossier data : sous Windows à côté de YAEC.exe (l'installateur place le programme dans Documents\\YAEC), sous Linux dans ~/.local/share/YAEC/data, sous macOS dans ~/Library/Application Support/YAEC/data. Le programme n'écrit rien ailleurs ; sous Windows on peut donc copier tout le dossier du programme sur une clé USB ou sur un autre ordinateur.",
                 "• impostazioni.txt : tous les réglages (locators, indicatif, limites de l'antenne, paramètres du bilan pour chaque bande, langue, thème, polices), en texte simple.",
                 "• solar-radio-flux.json : les flux solaires mesurés par le réseau RSTN, téléchargés depuis NOAA SWPC.",
                 "• lotw.adi : le journal téléchargé depuis ARRL Logbook of the World (seulement si vous utilisez le téléchargement LoTW).",
@@ -37815,6 +37826,7 @@ namespace LunaCalc
                 "• tiles : les tuiles de la carte déjà téléchargées, pour ne pas devoir les télécharger à nouveau.",
                 "## Démarrage et contrôle des fichiers",
                 "Au démarrage, pendant que la barre verte de la fenêtre d'ouverture raccourcit (5 secondes), YAEC contrôle le dossier data : il le crée s'il manque, vérifie qu'il peut y écrire et contrôle les fichiers. Le flux solaire est téléchargé à nouveau depuis NOAA s'il manque, s'il n'est pas valide ou s'il a plus de 12 heures ; le journal LoTW est téléchargé à nouveau s'il manque et si le nom d'utilisateur et le mot de passe sont mémorisés. Le résultat s'affiche au-dessus de la barre verte. Si un téléchargement échoue, le programme continue avec les données enregistrées.",
+                "CALL3.TXT est téléchargé de nouveau depuis W7GJ et WSJT-X Improved s'il manque ou s'il a plus de 7 jours ; si aucune des deux sources ne répond, le fichier enregistré est utilisé.",
                 "À la première exécution de la beta 22, les données des versions précédentes sont déplacées dans le dossier data : celles de AppData\\Roaming\\LunaCalc (jusqu'à la beta 18) et celles placées à côté de l'exécutable (de la beta 19 à la beta 21). Les anciens dossiers sont supprimés s'ils restent vides.",
                 "Le mot de passe LoTW est enregistré chiffré avec la protection des données de Windows (DPAPI) de l'utilisateur : sur un autre ordinateur, ou avec un autre utilisateur de Windows, il faut le saisir à nouveau.",
                 "## Manuels",
@@ -37877,9 +37889,9 @@ namespace LunaCalc
             };
             elenchi["es"] = new Dictionary<string, string[]>();
             elenchi["es"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) es una calculadora para el tráfico de radioaficionado EME (Tierra-Luna-Tierra) en Windows. Es un único programa en C# (Windows Forms, .NET Framework 4) distribuido como código fuente: compila.bat lo compila con el compilador csc.exe ya incluido en Windows, incorporando el icono de la Luna (YAEC.ico), y genera YAEC.exe; justo después crea los manuales PDF en los 14 idiomas del programa en la subcarpeta manuali.",
+                "YAEC (Yet Another EME Calc) es una calculadora para el tráfico de radioaficionado EME (Tierra-Luna-Tierra) para Windows, Linux y macOS. Es un único programa en C# (Windows Forms, .NET Framework 4; en Linux y macOS funciona con Mono). Todas las versiones se descargan de GitHub (github.com/ic8tem/YAEC): para Windows el instalador o la versión portátil, para Linux el paquete .deb o el archivo .tar.gz, para macOS la imagen .dmg; cada versión incluye también el código fuente y el archivo SHA256SUMS.txt con las huellas para comprobar los archivos descargados.",
                 "## Carpeta data",
-                "Todos los datos del programa están en la subcarpeta data, junto a YAEC.exe: el programa no escribe nada en las carpetas de Windows ni en C:\\Users. Por eso se puede copiar toda la carpeta del programa a una memoria USB o a otro ordenador.",
+                "Todos los datos del programa están en la subcarpeta data: en Windows junto a YAEC.exe (el instalador pone el programa en Documentos\\YAEC), en Linux en ~/.local/share/YAEC/data, en macOS en ~/Library/Application Support/YAEC/data. El programa no escribe nada en otro lugar; en Windows se puede copiar toda la carpeta del programa a una memoria USB o a otro ordenador.",
                 "• impostazioni.txt: todos los ajustes (locators, indicativo, límites de la antena, parámetros del balance para cada banda, idioma, tema, tipos de letra), en texto simple.",
                 "• solar-radio-flux.json: los flujos solares medidos por la red RSTN, descargados de NOAA SWPC.",
                 "• lotw.adi: el log descargado de ARRL Logbook of the World (solo si usa la descarga de LoTW).",
@@ -37887,6 +37899,7 @@ namespace LunaCalc
                 "• tiles: las teselas del mapa ya descargadas, para no tener que descargarlas de nuevo.",
                 "## Arranque y control de los archivos",
                 "Al arrancar, mientras se acorta la barra verde de la ventana de inicio (5 segundos), YAEC controla la carpeta data: la crea si falta, comprueba que puede escribir en ella y controla los archivos. El flujo solar se descarga de nuevo de NOAA si falta, si no es válido o si tiene más de 12 horas; el log de LoTW se descarga de nuevo si falta y si el nombre de usuario y la contraseña están guardados. El resultado aparece encima de la barra verde. Si una descarga falla, el programa sigue con los datos guardados.",
+                "CALL3.TXT se descarga de nuevo de W7GJ y de WSJT-X Improved si falta o si tiene más de 7 días; si ninguna de las dos fuentes responde se usa el archivo guardado.",
                 "En la primera ejecución de la beta 22 los datos de las versiones anteriores se trasladan a la carpeta data: los de AppData\\Roaming\\LunaCalc (hasta la beta 18) y los que están junto al ejecutable (de la beta 19 a la beta 21). Las carpetas antiguas se eliminan si quedan vacías.",
                 "La contraseña de LoTW se guarda cifrada con la protección de datos de Windows (DPAPI) del usuario: en otro ordenador, o con otro usuario de Windows, hay que introducirla de nuevo.",
                 "## Manuales",
@@ -37949,9 +37962,9 @@ namespace LunaCalc
             };
             elenchi["pt"] = new Dictionary<string, string[]>();
             elenchi["pt"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) é uma calculadora para o tráfego de radioamador EME (Terra-Lua-Terra) em Windows. É um único programa em C# (Windows Forms, .NET Framework 4) distribuído como código-fonte: o compila.bat compila-o com o compilador csc.exe já incluído no Windows, incorporando o ícone da Lua (YAEC.ico), e produz o YAEC.exe; logo a seguir cria os manuais PDF nas 14 línguas do programa na subpasta manuali.",
+                "YAEC (Yet Another EME Calc) é uma calculadora para o tráfego de radioamador EME (Terra-Lua-Terra) para Windows, Linux e macOS. É um único programa em C# (Windows Forms, .NET Framework 4; em Linux e macOS funciona com Mono). Todas as versões se descarregam do GitHub (github.com/ic8tem/YAEC): para Windows o instalador ou a versão portátil, para Linux o pacote .deb ou o arquivo .tar.gz, para macOS a imagem .dmg; cada versão tem também o código-fonte e o ficheiro SHA256SUMS.txt com as impressões digitais para verificar os ficheiros descarregados.",
                 "## Pasta data",
-                "Todos os dados do programa estão na subpasta data, junto ao YAEC.exe: o programa não escreve nada nas pastas do Windows nem em C:\\Users. Assim, pode copiar toda a pasta do programa para uma pen USB ou para outro computador.",
+                "Todos os dados do programa estão na subpasta data: no Windows junto ao YAEC.exe (o instalador coloca o programa em Documentos\\YAEC), no Linux em ~/.local/share/YAEC/data, no macOS em ~/Library/Application Support/YAEC/data. O programa não escreve nada noutro lugar; no Windows pode-se copiar toda a pasta do programa para uma pen USB ou para outro computador.",
                 "• impostazioni.txt: todas as definições (locators, indicativo, limites da antena, parâmetros do balanço para cada banda, língua, tema, tipos de letra), em texto simples.",
                 "• solar-radio-flux.json: os fluxos solares medidos pela rede RSTN, descarregados do NOAA SWPC.",
                 "• lotw.adi: o log descarregado do ARRL Logbook of the World (só se usar a descarga do LoTW).",
@@ -37959,6 +37972,7 @@ namespace LunaCalc
                 "• tiles: os mosaicos do mapa já descarregados, para não ter de os descarregar outra vez.",
                 "## Arranque e controlo dos ficheiros",
                 "No arranque, enquanto a barra verde da janela de abertura encolhe (5 segundos), o YAEC controla a pasta data: cria-a se faltar, verifica que consegue escrever nela e controla os ficheiros. O fluxo solar é descarregado de novo do NOAA se faltar, se não for válido ou se tiver mais de 12 horas; o log do LoTW é descarregado de novo se faltar e se o nome de utilizador e a palavra-passe estiverem guardados. O resultado aparece por cima da barra verde. Se uma descarga falhar, o programa continua com os dados guardados.",
+                "O CALL3.TXT é descarregado de novo de W7GJ e do WSJT-X Improved se faltar ou se tiver mais de 7 dias; se nenhuma das duas fontes responder, usa-se o ficheiro guardado.",
                 "Na primeira execução da beta 22 os dados das versões anteriores são movidos para a pasta data: os de AppData\\Roaming\\LunaCalc (até à beta 18) e os que estão junto ao executável (da beta 19 à beta 21). As pastas antigas são eliminadas se ficarem vazias.",
                 "A palavra-passe do LoTW é guardada cifrada com a proteção de dados do Windows (DPAPI) do utilizador: noutro computador, ou com outro utilizador do Windows, tem de ser introduzida de novo.",
                 "## Manuais",
@@ -38021,9 +38035,9 @@ namespace LunaCalc
             };
             elenchi["zh"] = new Dictionary<string, string[]>();
             elenchi["zh"]["C1"] = new string[] {
-                "YAEC（Yet Another EME Calc）是一款用于 Windows 的业余无线电 EME（地-月-地）通信计算器。它是一个单一的 C# 程序（Windows Forms，.NET Framework 4），以源代码形式发布：compila.bat 使用 Windows 自带的 csc.exe 编译器进行编译，嵌入月亮图标（YAEC.ico），生成 YAEC.exe；随后立即在 manuali 子文件夹中生成程序全部 14 种语言的 PDF 手册。",
+                "YAEC（Yet Another EME Calc）是用于业余无线电 EME（地-月-地）通信的计算程序，支持 Windows、Linux 和 macOS。它是一个 C# 程序（Windows Forms，.NET Framework 4；在 Linux 和 macOS 上通过 Mono 运行）。所有版本均从 GitHub（github.com/ic8tem/YAEC）下载：Windows 有安装程序或便携版，Linux 有 .deb 包或 .tar.gz 压缩包，macOS 有 .dmg 镜像；每个版本还附带源代码和 SHA256SUMS.txt 文件，可用其中的校验值检查下载的文件。",
                 "## data 文件夹",
-                "程序的所有数据都位于 YAEC.exe 旁边的 data 子文件夹中：程序不向 Windows 文件夹或 C:\\Users 写入任何内容。因此可以把整个程序文件夹复制到 U 盘或另一台计算机上。",
+                "程序的所有数据都在 data 子文件夹中：Windows 上位于 YAEC.exe 旁边（安装程序将程序放在“文档\\YAEC”），Linux 上位于 ~/.local/share/YAEC/data，macOS 上位于 ~/Library/Application Support/YAEC/data。程序不在其他地方写入任何内容；因此在 Windows 上可以把整个程序文件夹复制到 U 盘或另一台电脑。",
                 "• impostazioni.txt：全部设置（网格定位、呼号、天线限制、每个波段的预算参数、语言、主题、字体），纯文本格式。",
                 "• solar-radio-flux.json：RSTN 网络测得的太阳射电流量，从 NOAA SWPC 下载。",
                 "• lotw.adi：从 ARRL Logbook of the World 下载的日志（仅在使用 LoTW 下载时）。",
@@ -38031,6 +38045,7 @@ namespace LunaCalc
                 "• tiles：已下载的地图瓦片，无需再次下载。",
                 "## 启动与文件检查",
                 "启动时，在启动窗口的绿色进度条缩短的 5 秒内，YAEC 会检查 data 文件夹：如不存在则创建，确认可以写入并检查各文件。若太阳流量文件缺失、无效或超过 12 小时，则从 NOAA 重新下载；若 LoTW 日志缺失且已保存用户名和密码，则重新下载。结果显示在绿色进度条上方。如果下载失败，程序会继续使用已保存的数据。",
+                "若 CALL3.TXT 缺失或超过 7 天，会从 W7GJ 和 WSJT-X Improved 重新下载；若两个来源都无响应，则使用已保存的文件。",
                 "beta 22 首次运行时，旧版本的数据会被移入 data 文件夹：包括 AppData\\Roaming\\LunaCalc 中的数据（至 beta 18）以及可执行文件旁的数据（beta 19 至 beta 21）。旧文件夹如变为空则会被删除。",
                 "LoTW 密码使用当前用户的 Windows 数据保护（DPAPI）加密保存：在另一台计算机或另一个 Windows 用户下需要重新输入。",
                 "## 手册",
@@ -38093,9 +38108,9 @@ namespace LunaCalc
             };
             elenchi["ja"] = new Dictionary<string, string[]>();
             elenchi["ja"]["C1"] = new string[] {
-                "YAEC（Yet Another EME Calc）は、Windows 用のアマチュア無線 EME（地球-月-地球）通信の計算ツールです。単一の C# プログラム（Windows Forms、.NET Framework 4）としてソースコードで配布されます。compila.bat が Windows に含まれる csc.exe コンパイラーでコンパイルし、月のアイコン（YAEC.ico）を埋め込んで YAEC.exe を作成します。続いて、manuali サブフォルダーにプログラムの全 14 言語の PDF マニュアルを作成します。",
+                "YAEC（Yet Another EME Calc）は、Windows・Linux・macOS 用のアマチュア無線 EME（地球-月-地球）通信の計算プログラムです。C# の単一プログラム（Windows Forms、.NET Framework 4。Linux と macOS では Mono で動作）です。すべてのバージョンは GitHub（github.com/ic8tem/YAEC）からダウンロードできます。Windows はインストーラーまたはポータブル版、Linux は .deb パッケージまたは .tar.gz アーカイブ、macOS は .dmg イメージです。各バージョンにはソースコードと、ダウンロードしたファイルを確認するためのハッシュ値を記した SHA256SUMS.txt も含まれます。",
                 "## data フォルダー",
-                "プログラムのデータはすべて YAEC.exe の横にある data サブフォルダーにあります。プログラムは Windows のフォルダーや C:\\Users には何も書き込みません。そのため、プログラムのフォルダー全体を USB メモリーや別のコンピューターにコピーできます。",
+                "プログラムのデータはすべて data サブフォルダーにあります。Windows では YAEC.exe の隣（インストーラーはプログラムを「ドキュメント\\YAEC」に置きます）、Linux では ~/.local/share/YAEC/data、macOS では ~/Library/Application Support/YAEC/data です。ほかの場所には何も書き込みません。そのため Windows ではプログラムのフォルダーごと USB メモリーや別のコンピューターにコピーできます。",
                 "• impostazioni.txt：すべての設定（ロケーター、コールサイン、アンテナの制限、バンドごとの回線計算パラメーター、言語、テーマ、フォント）をテキスト形式で保存します。",
                 "• solar-radio-flux.json：RSTN 観測網で測定された太陽電波フラックス。NOAA SWPC からダウンロードします。",
                 "• lotw.adi：ARRL Logbook of the World からダウンロードしたログ（LoTW ダウンロードを使う場合のみ）。",
@@ -38103,6 +38118,7 @@ namespace LunaCalc
                 "• tiles：ダウンロード済みの地図タイル。再ダウンロードは不要です。",
                 "## 起動とファイルの確認",
                 "起動時、オープニング画面の緑のバーが短くなる 5 秒の間に、YAEC は data フォルダーを確認します。フォルダーがなければ作成し、書き込めることを確かめ、各ファイルを確認します。太陽フラックスは、ない場合、無効な場合、12 時間より古い場合に NOAA から再ダウンロードします。LoTW ログは、ない場合でユーザー名とパスワードが保存されていれば再ダウンロードします。結果は緑のバーの上に表示されます。ダウンロードに失敗しても、プログラムは保存済みのデータで動作を続けます。",
+                "CALL3.TXT がない場合や 7 日より古い場合は、W7GJ と WSJT-X Improved から再ダウンロードします。どちらの取得元も応答しない場合は保存済みのファイルを使います。",
                 "beta 22 を初めて実行すると、旧バージョンのデータが data フォルダーに移動されます。AppData\\Roaming\\LunaCalc のデータ（beta 18 まで）と実行ファイルの横のデータ（beta 19 から beta 21）です。空になった古いフォルダーは削除されます。",
                 "LoTW のパスワードは、ユーザーの Windows データ保護（DPAPI）で暗号化して保存されます。別のコンピューターや別の Windows ユーザーでは再入力が必要です。",
                 "## マニュアル",
@@ -38165,9 +38181,9 @@ namespace LunaCalc
             };
             elenchi["hi"] = new Dictionary<string, string[]>();
             elenchi["hi"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) Windows के लिए शौकिया रेडियो EME (पृथ्वी-चंद्रमा-पृथ्वी) संचार का कैलकुलेटर है। यह एक ही C# प्रोग्राम (Windows Forms, .NET Framework 4) है जो सोर्स कोड के रूप में वितरित होता है: compila.bat इसे Windows में पहले से मौजूद csc.exe कंपाइलर से कंपाइल करता है, चंद्रमा का आइकन (YAEC.ico) जोड़ता है और YAEC.exe बनाता है; उसके तुरंत बाद manuali सबफ़ोल्डर में प्रोग्राम की सभी 14 भाषाओं में PDF मैनुअल बनाता है।",
+                "YAEC (Yet Another EME Calc) Windows, Linux और macOS के लिए शौकिया रेडियो EME (पृथ्वी-चंद्रमा-पृथ्वी) संचार का कैलकुलेटर है। यह C# में एक ही प्रोग्राम है (Windows Forms, .NET Framework 4; Linux और macOS पर Mono के साथ चलता है)। सभी संस्करण GitHub (github.com/ic8tem/YAEC) से डाउनलोड होते हैं: Windows के लिए इंस्टॉलर या पोर्टेबल संस्करण, Linux के लिए .deb पैकेज या .tar.gz संग्रह, macOS के लिए .dmg इमेज; हर संस्करण में स्रोत कोड और डाउनलोड की गई फ़ाइलों की जाँच के लिए SHA256SUMS.txt फ़ाइल भी होती है।",
                 "## data फ़ोल्डर",
-                "प्रोग्राम का सारा डेटा YAEC.exe के बगल में data सबफ़ोल्डर में रहता है: प्रोग्राम Windows फ़ोल्डरों या C:\\Users में कुछ नहीं लिखता। इसलिए पूरे प्रोग्राम फ़ोल्डर को USB स्टिक या किसी दूसरे कंप्यूटर पर कॉपी किया जा सकता है।",
+                "प्रोग्राम का सारा डेटा data उपफ़ोल्डर में रहता है: Windows पर YAEC.exe के पास (इंस्टॉलर प्रोग्राम को Documents\\YAEC में रखता है), Linux पर ~/.local/share/YAEC/data में, macOS पर ~/Library/Application Support/YAEC/data में। प्रोग्राम कहीं और कुछ नहीं लिखता; इसलिए Windows पर पूरे प्रोग्राम फ़ोल्डर को USB ड्राइव या दूसरे कंप्यूटर पर कॉपी किया जा सकता है।",
                 "• impostazioni.txt: सभी सेटिंग्स (लोकेटर, कॉलसाइन, एंटीना सीमाएँ, हर बैंड के बजट पैरामीटर, भाषा, थीम, फ़ॉन्ट), सादे टेक्स्ट में।",
                 "• solar-radio-flux.json: RSTN नेटवर्क द्वारा मापे गए सौर फ़्लक्स, NOAA SWPC से डाउनलोड किए गए।",
                 "• lotw.adi: ARRL Logbook of the World से डाउनलोड किया गया लॉग (केवल यदि आप LoTW डाउनलोड का उपयोग करते हैं)।",
@@ -38175,6 +38191,7 @@ namespace LunaCalc
                 "• tiles: पहले से डाउनलोड की गई मानचित्र टाइलें, ताकि उन्हें दोबारा डाउनलोड न करना पड़े।",
                 "## स्टार्ट-अप और फ़ाइल जाँच",
                 "स्टार्ट-अप पर, जब शुरुआती विंडो की हरी पट्टी (5 सेकंड) छोटी होती है, YAEC data फ़ोल्डर की जाँच करता है: न होने पर उसे बनाता है, जाँचता है कि उसमें लिखा जा सकता है और फ़ाइलों की जाँच करता है। सौर फ़्लक्स NOAA से फिर डाउनलोड होता है यदि वह मौजूद न हो, अमान्य हो या 12 घंटे से पुराना हो; LoTW लॉग फिर डाउनलोड होता है यदि वह मौजूद न हो और उपयोगकर्ता नाम व पासवर्ड सहेजे हों। परिणाम हरी पट्टी के ऊपर दिखता है। डाउनलोड विफल होने पर प्रोग्राम सहेजे गए डेटा से चलता रहता है।",
+                "यदि CALL3.TXT नहीं है या 7 दिन से पुराना है तो वह W7GJ और WSJT-X Improved से फिर डाउनलोड होता है; यदि कोई भी स्रोत उत्तर न दे तो सहेजी गई फ़ाइल उपयोग होती है।",
                 "beta 22 के पहली बार चलने पर पुराने संस्करणों का डेटा data फ़ोल्डर में ले जाया जाता है: AppData\\Roaming\\LunaCalc वाला (beta 18 तक) और एक्ज़ीक्यूटेबल के बगल वाला (beta 19 से beta 21)। खाली रह गए पुराने फ़ोल्डर हटा दिए जाते हैं।",
                 "LoTW पासवर्ड उपयोगकर्ता की Windows डेटा सुरक्षा (DPAPI) से एन्क्रिप्ट करके सहेजा जाता है: दूसरे कंप्यूटर पर या दूसरे Windows उपयोगकर्ता के साथ इसे फिर से दर्ज करना होगा।",
                 "## मैनुअल",
@@ -38237,9 +38254,9 @@ namespace LunaCalc
             };
             elenchi["ko"] = new Dictionary<string, string[]>();
             elenchi["ko"]["C1"] = new string[] {
-                "YAEC(Yet Another EME Calc)는 Windows용 아마추어 무선 EME(지구-달-지구) 통신 계산기입니다. 하나의 C# 프로그램(Windows Forms, .NET Framework 4)으로 소스 코드 형태로 배포됩니다. compila.bat가 Windows에 포함된 csc.exe 컴파일러로 컴파일하고 달 아이콘(YAEC.ico)을 넣어 YAEC.exe를 만듭니다. 이어서 manuali 하위 폴더에 프로그램의 14개 언어 모두로 PDF 설명서를 만듭니다.",
+                "YAEC(Yet Another EME Calc)는 Windows, Linux, macOS용 아마추어 무선 EME(지구-달-지구) 통신 계산 프로그램입니다. C#으로 된 단일 프로그램(Windows Forms, .NET Framework 4; Linux와 macOS에서는 Mono로 실행)입니다. 모든 버전은 GitHub(github.com/ic8tem/YAEC)에서 내려받습니다. Windows는 설치 프로그램 또는 포터블 버전, Linux는 .deb 패키지 또는 .tar.gz 압축 파일, macOS는 .dmg 이미지이며, 각 버전에는 소스 코드와 내려받은 파일을 확인하는 해시값이 담긴 SHA256SUMS.txt 파일도 있습니다.",
                 "## data 폴더",
-                "프로그램의 모든 데이터는 YAEC.exe 옆의 data 하위 폴더에 있습니다. 프로그램은 Windows 폴더나 C:\\Users에 아무것도 쓰지 않습니다. 따라서 프로그램 폴더 전체를 USB 메모리나 다른 컴퓨터로 복사할 수 있습니다.",
+                "프로그램의 모든 데이터는 data 하위 폴더에 있습니다. Windows에서는 YAEC.exe 옆(설치 프로그램은 프로그램을 문서\\YAEC에 설치), Linux에서는 ~/.local/share/YAEC/data, macOS에서는 ~/Library/Application Support/YAEC/data입니다. 다른 곳에는 아무것도 쓰지 않으므로, Windows에서는 프로그램 폴더 전체를 USB 메모리나 다른 컴퓨터로 복사할 수 있습니다.",
                 "• impostazioni.txt: 모든 설정(로케이터, 호출부호, 안테나 제한, 밴드별 링크 버짓 매개변수, 언어, 테마, 글꼴)을 일반 텍스트로 저장합니다.",
                 "• solar-radio-flux.json: RSTN 관측망이 측정한 태양 전파 플럭스로, NOAA SWPC에서 내려받습니다.",
                 "• lotw.adi: ARRL Logbook of the World에서 내려받은 로그(LoTW 내려받기를 사용할 때만).",
@@ -38247,6 +38264,7 @@ namespace LunaCalc
                 "• tiles: 이미 내려받은 지도 타일로, 다시 내려받을 필요가 없습니다.",
                 "## 시작과 파일 확인",
                 "시작할 때 시작 창의 녹색 막대가 줄어드는 5초 동안 YAEC는 data 폴더를 확인합니다. 폴더가 없으면 만들고, 쓸 수 있는지 확인하고, 파일을 점검합니다. 태양 플럭스는 없거나, 유효하지 않거나, 12시간보다 오래되면 NOAA에서 다시 내려받습니다. LoTW 로그는 없고 사용자 이름과 비밀번호가 저장되어 있으면 다시 내려받습니다. 결과는 녹색 막대 위에 표시됩니다. 내려받기에 실패하면 프로그램은 저장된 데이터로 계속 작동합니다.",
+                "CALL3.TXT가 없거나 7일보다 오래되면 W7GJ와 WSJT-X Improved에서 다시 내려받습니다. 두 출처 모두 응답하지 않으면 저장된 파일을 사용합니다.",
                 "v22를 처음 실행하면 이전 버전의 데이터가 data 폴더로 옮겨집니다. AppData\\Roaming\\LunaCalc의 데이터(v18까지)와 실행 파일 옆의 데이터(beta 19~beta 21)입니다. 비게 된 옛 폴더는 삭제됩니다.",
                 "LoTW 비밀번호는 사용자의 Windows 데이터 보호(DPAPI)로 암호화하여 저장됩니다. 다른 컴퓨터나 다른 Windows 사용자에서는 다시 입력해야 합니다.",
                 "## 설명서",
@@ -38309,9 +38327,9 @@ namespace LunaCalc
             };
             elenchi["id"] = new Dictionary<string, string[]>();
             elenchi["id"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) adalah kalkulator untuk komunikasi radio amatir EME (Bumi-Bulan-Bumi) di Windows. Ini adalah satu program C# (Windows Forms, .NET Framework 4) yang didistribusikan sebagai kode sumber: compila.bat mengompilasinya dengan kompiler csc.exe yang sudah ada di Windows, menyertakan ikon Bulan (YAEC.ico), dan menghasilkan YAEC.exe; segera setelah itu membuat manual PDF dalam ke-14 bahasa program di subfolder manuali.",
+                "YAEC (Yet Another EME Calc) adalah kalkulator untuk komunikasi radio amatir EME (Bumi-Bulan-Bumi) untuk Windows, Linux dan macOS. Ini adalah satu program C# (Windows Forms, .NET Framework 4; di Linux dan macOS berjalan dengan Mono). Semua versi diunduh dari GitHub (github.com/ic8tem/YAEC): untuk Windows penginstal atau versi portabel, untuk Linux paket .deb atau arsip .tar.gz, untuk macOS image .dmg; setiap versi juga menyertakan kode sumber dan file SHA256SUMS.txt berisi sidik jari untuk memeriksa file yang diunduh.",
                 "## Folder data",
-                "Semua data program berada di subfolder data, di samping YAEC.exe: program tidak menulis apa pun ke folder Windows atau ke C:\\Users. Karena itu seluruh folder program dapat disalin ke flashdisk atau ke komputer lain.",
+                "Semua data program berada di subfolder data: di Windows di samping YAEC.exe (penginstal menaruh program di Documents\\YAEC), di Linux di ~/.local/share/YAEC/data, di macOS di ~/Library/Application Support/YAEC/data. Program tidak menulis apa pun di tempat lain; di Windows seluruh folder program dapat disalin ke flashdisk atau komputer lain.",
                 "• impostazioni.txt: semua pengaturan (lokator, tanda panggil, batas antena, parameter anggaran untuk setiap pita, bahasa, tema, huruf), sebagai teks biasa.",
                 "• solar-radio-flux.json: fluks matahari yang diukur jaringan RSTN, diunduh dari NOAA SWPC.",
                 "• lotw.adi: log yang diunduh dari ARRL Logbook of the World (hanya jika Anda memakai unduhan LoTW).",
@@ -38319,6 +38337,7 @@ namespace LunaCalc
                 "• tiles: ubin peta yang sudah diunduh, agar tidak perlu diunduh lagi.",
                 "## Saat mulai dan pemeriksaan berkas",
                 "Saat mulai, selama bilah hijau jendela pembuka memendek (5 detik), YAEC memeriksa folder data: membuatnya bila belum ada, memastikan dapat menulis di sana dan memeriksa berkas-berkasnya. Fluks matahari diunduh ulang dari NOAA jika tidak ada, tidak valid atau lebih tua dari 12 jam; log LoTW diunduh ulang jika tidak ada dan nama pengguna serta kata sandi tersimpan. Hasilnya tampil di atas bilah hijau. Jika unduhan gagal, program tetap berjalan dengan data yang tersimpan.",
+                "CALL3.TXT diunduh ulang dari W7GJ dan WSJT-X Improved jika tidak ada atau berumur lebih dari 7 hari; jika kedua sumber tidak merespons, file yang tersimpan dipakai.",
                 "Saat beta 22 pertama kali dijalankan, data versi sebelumnya dipindahkan ke folder data: yang ada di AppData\\Roaming\\LunaCalc (hingga beta 18) dan yang ada di samping berkas eksekusi (beta 19 hingga beta 21). Folder lama dihapus jika menjadi kosong.",
                 "Kata sandi LoTW disimpan terenkripsi dengan perlindungan data Windows (DPAPI) milik pengguna: di komputer lain, atau dengan pengguna Windows lain, kata sandi harus dimasukkan lagi.",
                 "## Manual",
@@ -38381,9 +38400,9 @@ namespace LunaCalc
             };
             elenchi["ru"] = new Dictionary<string, string[]>();
             elenchi["ru"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) — калькулятор для радиолюбительской связи EME (Земля-Луна-Земля) под Windows. Это одна программа на C# (Windows Forms, .NET Framework 4), распространяемая в виде исходного кода: compila.bat компилирует её компилятором csc.exe, уже входящим в Windows, встраивает значок Луны (YAEC.ico) и создаёт YAEC.exe; сразу после этого он создаёт PDF-руководства на всех 14 языках программы в подпапке manuali.",
+                "YAEC (Yet Another EME Calc) — калькулятор для радиолюбительской связи EME (Земля-Луна-Земля) для Windows, Linux и macOS. Это одна программа на C# (Windows Forms, .NET Framework 4; в Linux и macOS работает с Mono). Все версии загружаются с GitHub (github.com/ic8tem/YAEC): для Windows — установщик или портативная версия, для Linux — пакет .deb или архив .tar.gz, для macOS — образ .dmg; к каждой версии прилагаются исходный код и файл SHA256SUMS.txt с контрольными суммами для проверки загруженных файлов.",
                 "## Папка data",
-                "Все данные программы находятся в подпапке data рядом с YAEC.exe: программа ничего не записывает в папки Windows и в C:\\Users. Поэтому всю папку программы можно скопировать на флешку или на другой компьютер.",
+                "Все данные программы находятся в подпапке data: в Windows — рядом с YAEC.exe (установщик помещает программу в «Документы\\YAEC»), в Linux — в ~/.local/share/YAEC/data, в macOS — в ~/Library/Application Support/YAEC/data. Программа больше нигде ничего не записывает; поэтому в Windows всю папку программы можно скопировать на флешку или на другой компьютер.",
                 "• impostazioni.txt: все настройки (локаторы, позывной, ограничения антенны, параметры бюджета для каждого диапазона, язык, тема, шрифты) в виде простого текста.",
                 "• solar-radio-flux.json: солнечные потоки, измеренные сетью RSTN, загруженные с NOAA SWPC.",
                 "• lotw.adi: журнал, загруженный из ARRL Logbook of the World (только если используется загрузка из LoTW).",
@@ -38391,6 +38410,7 @@ namespace LunaCalc
                 "• tiles: уже загруженные фрагменты карты, чтобы не загружать их повторно.",
                 "## Запуск и проверка файлов",
                 "При запуске, пока укорачивается зелёная полоса заставки (5 секунд), YAEC проверяет папку data: создаёт её, если её нет, проверяет возможность записи и проверяет файлы. Солнечный поток загружается с NOAA заново, если файла нет, он повреждён или старше 12 часов; журнал LoTW загружается заново, если его нет и сохранены имя пользователя и пароль. Результат показывается над зелёной полосой. Если загрузка не удалась, программа продолжает работать с сохранёнными данными.",
+                "CALL3.TXT загружается заново с W7GJ и WSJT-X Improved, если его нет или он старше 7 дней; если ни один источник не отвечает, используется сохранённый файл.",
                 "При первом запуске beta 22 данные предыдущих версий переносятся в папку data: из AppData\\Roaming\\LunaCalc (до beta 18) и из папки исполняемого файла (с beta 19 по beta 21). Старые папки, если они остались пустыми, удаляются.",
                 "Пароль LoTW хранится в зашифрованном виде с помощью защиты данных Windows (DPAPI) пользователя: на другом компьютере или под другим пользователем Windows его нужно ввести заново.",
                 "## Руководства",
@@ -38453,9 +38473,9 @@ namespace LunaCalc
             };
             elenchi["uk"] = new Dictionary<string, string[]>();
             elenchi["uk"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) — калькулятор для радіоаматорського зв'язку EME (Земля-Місяць-Земля) під Windows. Це одна програма на C# (Windows Forms, .NET Framework 4), що поширюється у вигляді вихідного коду: compila.bat компілює її компілятором csc.exe, який уже є у Windows, вбудовує значок Місяця (YAEC.ico) і створює YAEC.exe; одразу після цього він створює PDF-посібники всіма 14 мовами програми в підпапці manuali.",
+                "YAEC (Yet Another EME Calc) — калькулятор для радіоаматорського зв'язку EME (Земля-Місяць-Земля) для Windows, Linux і macOS. Це одна програма на C# (Windows Forms, .NET Framework 4; у Linux і macOS працює з Mono). Усі версії завантажуються з GitHub (github.com/ic8tem/YAEC): для Windows — інсталятор або портативна версія, для Linux — пакет .deb або архів .tar.gz, для macOS — образ .dmg; до кожної версії додано вихідний код і файл SHA256SUMS.txt з контрольними сумами для перевірки завантажених файлів.",
                 "## Папка data",
-                "Усі дані програми містяться в підпапці data поруч із YAEC.exe: програма нічого не записує в папки Windows і в C:\\Users. Тому всю папку програми можна скопіювати на флешку або на інший комп'ютер.",
+                "Усі дані програми зберігаються в підтеці data: у Windows — поруч із YAEC.exe (інсталятор розміщує програму в «Документи\\YAEC»), у Linux — у ~/.local/share/YAEC/data, у macOS — у ~/Library/Application Support/YAEC/data. Програма більше ніде нічого не записує; тому у Windows всю теку програми можна скопіювати на флешку або на інший комп'ютер.",
                 "• impostazioni.txt: усі налаштування (локатори, позивний, обмеження антени, параметри бюджету для кожного діапазону, мова, тема, шрифти) у вигляді простого тексту.",
                 "• solar-radio-flux.json: сонячні потоки, виміряні мережею RSTN, завантажені з NOAA SWPC.",
                 "• lotw.adi: журнал, завантажений з ARRL Logbook of the World (лише якщо використовується завантаження з LoTW).",
@@ -38463,6 +38483,7 @@ namespace LunaCalc
                 "• tiles: уже завантажені фрагменти мапи, щоб не завантажувати їх знову.",
                 "## Запуск і перевірка файлів",
                 "Під час запуску, поки скорочується зелена смуга заставки (5 секунд), YAEC перевіряє папку data: створює її, якщо її немає, перевіряє можливість запису і перевіряє файли. Сонячний потік завантажується з NOAA знову, якщо файлу немає, він пошкоджений або старший за 12 годин; журнал LoTW завантажується знову, якщо його немає і збережено ім'я користувача та пароль. Результат показується над зеленою смугою. Якщо завантаження не вдалося, програма продовжує працювати зі збереженими даними.",
+                "CALL3.TXT завантажується знову з W7GJ і WSJT-X Improved, якщо його немає або він старший за 7 днів; якщо жодне джерело не відповідає, використовується збережений файл.",
                 "Під час першого запуску beta 22 дані попередніх версій переносяться в папку data: з AppData\\Roaming\\LunaCalc (до beta 18) і з папки виконуваного файлу (з beta 19 до beta 21). Старі папки, якщо вони лишилися порожніми, видаляються.",
                 "Пароль LoTW зберігається зашифрованим за допомогою захисту даних Windows (DPAPI) користувача: на іншому комп'ютері або під іншим користувачем Windows його треба ввести знову.",
                 "## Посібники",
@@ -38525,9 +38546,9 @@ namespace LunaCalc
             };
             elenchi["af"] = new Dictionary<string, string[]>();
             elenchi["af"]["C1"] = new string[] {
-                "YAEC (Yet Another EME Calc) is 'n rekenaar vir EME-amateurradioverkeer (Aarde-Maan-Aarde) op Windows. Dit is 'n enkele C#-program (Windows Forms, .NET Framework 4) wat as bronkode versprei word: compila.bat kompileer dit met die csc.exe-samesteller wat reeds in Windows ingesluit is, sit die Maan-ikoon (YAEC.ico) in en skep YAEC.exe; direk daarna skep dit die PDF-handleidings in al 14 tale van die program in die subvouer manuali.",
+                "YAEC (Yet Another EME Calc) is 'n sakrekenaar vir EME-amateurradioverkeer (Aarde-Maan-Aarde) vir Windows, Linux en macOS. Dit is 'n enkele C#-program (Windows Forms, .NET Framework 4; op Linux en macOS loop dit met Mono). Alle weergawes word van GitHub afgelaai (github.com/ic8tem/YAEC): vir Windows die installeerder of die draagbare weergawe, vir Linux die .deb-pakket of die .tar.gz-argief, vir macOS die .dmg-beeld; elke weergawe bevat ook die bronkode en die lêer SHA256SUMS.txt met die vingerafdrukke om die afgelaaide lêers na te gaan.",
                 "## Data-vouer",
-                "Al die programdata is in die data-subvouer langs YAEC.exe: die program skryf niks na die Windows-vouers of na C:\\Users nie. Die hele programvouer kan dus na 'n USB-stokkie of 'n ander rekenaar gekopieer word.",
+                "Al die program se data is in die subgids data: op Windows langs YAEC.exe (die installeerder plaas die program in Dokumente\\YAEC), op Linux in ~/.local/share/YAEC/data, op macOS in ~/Library/Application Support/YAEC/data. Die program skryf niks elders nie; op Windows kan jy dus die hele programgids na 'n USB-stokkie of 'n ander rekenaar kopieer.",
                 "• impostazioni.txt: al die instellings (locators, roepsein, antennagrense, begrotingsparameters vir elke band, taal, tema, lettertipes), as gewone teks.",
                 "• solar-radio-flux.json: die sonvloed gemeet deur die RSTN-netwerk, afgelaai van NOAA SWPC.",
                 "• lotw.adi: die logboek afgelaai van ARRL Logbook of the World (net as jy die LoTW-aflaai gebruik).",
@@ -38535,6 +38556,7 @@ namespace LunaCalc
                 "• tiles: die kaartteëls wat reeds afgelaai is, sodat hulle nie weer afgelaai hoef te word nie.",
                 "## Begin en lêerkontrole",
                 "By die begin, terwyl die groen balk van die openingsvenster korter word (5 sekondes), kontroleer YAEC die data-vouer: dit skep die vouer as dit ontbreek, maak seker dat dit daarin kan skryf en kontroleer die lêers. Die sonvloed word weer van NOAA afgelaai as dit ontbreek, ongeldig is of ouer as 12 uur is; die LoTW-logboek word weer afgelaai as dit ontbreek en die gebruikersnaam en wagwoord gestoor is. Die uitslag word bo die groen balk gewys. As 'n aflaai misluk, gaan die program voort met die gestoorde data.",
+                "CALL3.TXT word weer van W7GJ en WSJT-X Improved afgelaai as dit ontbreek of ouer as 7 dae is; as geen van die twee bronne antwoord nie, word die gestoorde lêer gebruik.",
                 "Die eerste keer dat beta 22 loop, word die data van vorige weergawes na die data-vouer geskuif: dié in AppData\\Roaming\\LunaCalc (tot beta 18) en dié langs die uitvoerbare lêer (beta 19 tot beta 21). Die ou vouers word uitgevee as hulle leeg bly.",
                 "Die LoTW-wagwoord word geënkripteer gestoor met die Windows-databeskerming (DPAPI) van die gebruiker: op 'n ander rekenaar, of met 'n ander Windows-gebruiker, moet dit weer ingevoer word.",
                 "## Handleidings",
@@ -40086,6 +40108,13 @@ namespace LunaCalc
 
     static class Formula
     {
+        // "§" apre una formula in linea solo se è seguito subito da un carattere (non da uno spazio) e c'è il "§" che la chiude;
+        // "§ 1.3" è il simbolo di paragrafo dei rimandi
+        public static bool Apre(string t, int i)
+        {
+            return i + 1 < t.Length && t[i + 1] != ' ' && t.IndexOf('§', i + 1) > i + 1;
+        }
+
         public static readonly StringFormat Sf = CreaSf();
         static StringFormat CreaSf()
         {
@@ -40816,7 +40845,7 @@ namespace LunaCalc
                     continue;
                 }
                 if (c == '}' && colore != Color.Empty) { Svuota(); colore = Color.Empty; i++; continue; }
-                if (c == '§')
+                if (c == '§' && Formula.Apre(t, i))
                 {
                     Svuota();
                     int j = t.IndexOf('§', i + 1);
@@ -41362,7 +41391,7 @@ namespace LunaCalc
             int i = 0;
             while (i < t.Length)
             {
-                if (t[i] == '§')
+                if (t[i] == '§' && Formula.Apre(t, i))
                 {
                     int j = t.IndexOf('§', i + 1);
                     if (j < 0) j = t.Length;
@@ -41613,7 +41642,7 @@ namespace LunaCalc
                 char c = t[i];
                 if (c == '*' && i + 1 < t.Length && t[i + 1] == '*') { fuori(); gr = !gr; i += 2; continue; }
                 if (c == '*' && (cor || t.IndexOf('*', i + 1) > i + 1)) { fuori(); cor = !cor; i++; continue; }
-                if (c == '§')
+                if (c == '§' && Formula.Apre(t, i))
                 {
                     fuori();
                     int j = t.IndexOf('§', i + 1);
