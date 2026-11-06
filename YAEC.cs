@@ -2871,6 +2871,32 @@ namespace LunaCalc
             "in diretta",
             "Torna al tracciamento in diretta, con l'ora attuale.",
             "Giorno del tracciamento (UTC): apri il calendario per scegliere un giorno passato o futuro; l'ora si sceglie trascinando la linea rossa delle 24 ore in basso.",
+            "CALL3.TXT: nominativi e locator delle stazioni EME",
+            "Scrivi un nominativo nella casella del locator del DX: se è nel CALL3.TXT il programma propone il suo locator e lo inserisce premendo Invio. Clic qui per aggiornare il file o copiarlo nella cartella di WSJT-X.",
+            "{0} nel CALL3.TXT: {1} (premi Invio per usarlo)",
+            "Il CALL3.TXT è l'elenco dei nominativi delle stazioni EME con il loro locator, usato anche da WSJT-X. YAEC scarica sia la lista di W7GJ sia quella distribuita con WSJT-X Improved: se una delle due non risponde usa l'altra, se rispondono entrambe le fonde per nominativo (a parità di nominativo vale il locator di W7GJ). Il file si aggiorna da solo all'avvio quando ha più di 7 giorni.",
+            "Nessun CALL3.TXT nella cartella data.",
+            "{0:N0} nominativi, file del {1}",
+            "Cartella di WSJT-X: ",
+            "  (non trovata)",
+            "Aggiorna ora",
+            "Copia in WSJT-X",
+            "Scaricamento da W7GJ e WSJT-X Improved…",
+            "Prima scarica il CALL3.TXT con Aggiorna ora.",
+            "Cartella di WSJT-X non trovata: scegli dove copiare il CALL3.TXT (in WSJT-X: File > Open log directory).",
+            "Copiato in ",
+            "  (il file precedente è in CALL3.TXT.bak). Riavvia WSJT-X per usarlo.",
+            "Copia non riuscita: ",
+            "CALL3.TXT mancante: scaricamento da W7GJ e WSJT-X Improved…",
+            "CALL3.TXT più vecchio di 7 giorni: scaricamento da W7GJ e WSJT-X Improved…",
+            "{0:N0} nominativi",
+            "non raggiungibile",
+            "CALL3.TXT aggiornato",
+            "CALL3.TXT: aggiornamento già in corso…",
+            "CALL3.TXT non raggiungibile: si usa il file salvato",
+            "CALL3.TXT aggiornato: {0:N0} nominativi da W7GJ e WSJT-X Improved ({1:N0} solo nella seconda, {2:N0} con locator diverso: vale W7GJ)",
+            "CALL3.TXT aggiornato: {0:N0} nominativi (solo {1}, l'altra fonte non risponde)",
+            "CALL3.TXT non aggiornato: ",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4087,6 +4113,32 @@ namespace LunaCalc
             "live",
             "Back to live tracking, with the current time.",
             "Tracking day (UTC): open the calendar to choose a past or future day; choose the time by dragging the red line of the 24 hours at the bottom.",
+            "CALL3.TXT: callsigns and locators of EME stations",
+            "Type a callsign in the DX locator box: if it is in CALL3.TXT the program suggests its locator and enters it when you press Enter. Click here to update the file or copy it into the WSJT-X folder.",
+            "{0} in CALL3.TXT: {1} (press Enter to use it)",
+            "CALL3.TXT is the list of EME station callsigns with their locators, also used by WSJT-X. YAEC downloads both the W7GJ list and the one distributed with WSJT-X Improved: if one of them does not respond it uses the other; if both respond it merges them by callsign (for the same callsign the W7GJ locator wins). The file updates itself at startup when it is more than 7 days old.",
+            "No CALL3.TXT in the data folder.",
+            "{0:N0} callsigns, file dated {1}",
+            "WSJT-X folder: ",
+            "  (not found)",
+            "Update now",
+            "Copy to WSJT-X",
+            "Downloading from W7GJ and WSJT-X Improved…",
+            "First download CALL3.TXT with Update now.",
+            "WSJT-X folder not found: choose where to copy CALL3.TXT (in WSJT-X: File > Open log directory).",
+            "Copied to ",
+            "  (the previous file is in CALL3.TXT.bak). Restart WSJT-X to use it.",
+            "Copy failed: ",
+            "CALL3.TXT missing: downloading from W7GJ and WSJT-X Improved…",
+            "CALL3.TXT older than 7 days: downloading from W7GJ and WSJT-X Improved…",
+            "{0:N0} callsigns",
+            "not reachable",
+            "CALL3.TXT up to date",
+            "CALL3.TXT: update already in progress…",
+            "CALL3.TXT not reachable: using the saved file",
+            "CALL3.TXT updated: {0:N0} callsigns from W7GJ and WSJT-X Improved ({1:N0} only in the second, {2:N0} with a different locator: W7GJ wins)",
+            "CALL3.TXT updated: {0:N0} callsigns (only {1}, the other source does not respond)",
+            "CALL3.TXT not updated: ",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5303,6 +5355,32 @@ namespace LunaCalc
             "live",
             "Zurück zur Live-Verfolgung mit der aktuellen Uhrzeit.",
             "Tag der Verfolgung (UTC): Öffnen Sie den Kalender, um einen vergangenen oder zukünftigen Tag zu wählen; die Uhrzeit wählen Sie, indem Sie die rote Linie der 24 Stunden unten ziehen.",
+            "CALL3.TXT: Rufzeichen und Locator der EME-Stationen",
+            "Gib ein Rufzeichen in das Locator-Feld des DX ein: steht es in der CALL3.TXT, schlägt das Programm seinen Locator vor und übernimmt ihn mit Enter. Hier klicken, um die Datei zu aktualisieren oder in den WSJT-X-Ordner zu kopieren.",
+            "{0} in CALL3.TXT: {1} (Enter zum Übernehmen)",
+            "Die CALL3.TXT ist die Liste der Rufzeichen der EME-Stationen mit ihrem Locator, die auch WSJT-X verwendet. YAEC lädt sowohl die Liste von W7GJ als auch die mit WSJT-X Improved verteilte herunter: antwortet eine nicht, wird die andere verwendet; antworten beide, werden sie nach Rufzeichen zusammengeführt (bei gleichem Rufzeichen gilt der Locator von W7GJ). Die Datei wird beim Start automatisch aktualisiert, wenn sie älter als 7 Tage ist.",
+            "Keine CALL3.TXT im Ordner data.",
+            "{0:N0} Rufzeichen, Datei vom {1}",
+            "WSJT-X-Ordner: ",
+            "  (nicht gefunden)",
+            "Jetzt aktualisieren",
+            "In WSJT-X kopieren",
+            "Download von W7GJ und WSJT-X Improved…",
+            "Lade die CALL3.TXT zuerst mit Jetzt aktualisieren herunter.",
+            "WSJT-X-Ordner nicht gefunden: wähle, wohin die CALL3.TXT kopiert werden soll (in WSJT-X: File > Open log directory).",
+            "Kopiert nach ",
+            "  (die vorherige Datei liegt in CALL3.TXT.bak). Starte WSJT-X neu, um sie zu verwenden.",
+            "Kopieren fehlgeschlagen: ",
+            "CALL3.TXT fehlt: Download von W7GJ und WSJT-X Improved…",
+            "CALL3.TXT älter als 7 Tage: Download von W7GJ und WSJT-X Improved…",
+            "{0:N0} Rufzeichen",
+            "nicht erreichbar",
+            "CALL3.TXT aktuell",
+            "CALL3.TXT: Aktualisierung läuft bereits…",
+            "CALL3.TXT nicht erreichbar: die gespeicherte Datei wird verwendet",
+            "CALL3.TXT aktualisiert: {0:N0} Rufzeichen von W7GJ und WSJT-X Improved ({1:N0} nur in der zweiten, {2:N0} mit anderem Locator: W7GJ gilt)",
+            "CALL3.TXT aktualisiert: {0:N0} Rufzeichen (nur {1}, die andere Quelle antwortet nicht)",
+            "CALL3.TXT nicht aktualisiert: ",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6519,6 +6597,32 @@ namespace LunaCalc
             "en direct",
             "Revenir au suivi en direct, à l'heure actuelle.",
             "Jour du suivi (UTC) : ouvrez le calendrier pour choisir un jour passé ou futur ; l'heure se choisit en faisant glisser la ligne rouge des 24 heures en bas.",
+            "CALL3.TXT : indicatifs et locators des stations EME",
+            "Tapez un indicatif dans la case du locator du DX : s'il figure dans CALL3.TXT, le programme propose son locator et l'insère quand vous appuyez sur Entrée. Cliquez ici pour mettre à jour le fichier ou le copier dans le dossier de WSJT-X.",
+            "{0} dans CALL3.TXT : {1} (Entrée pour l'utiliser)",
+            "CALL3.TXT est la liste des indicatifs des stations EME avec leur locator, utilisée aussi par WSJT-X. YAEC télécharge à la fois la liste de W7GJ et celle distribuée avec WSJT-X Improved : si l'une ne répond pas, il utilise l'autre ; si les deux répondent, il les fusionne par indicatif (pour un même indicatif, le locator de W7GJ prévaut). Le fichier se met à jour tout seul au démarrage lorsqu'il a plus de 7 jours.",
+            "Aucun CALL3.TXT dans le dossier data.",
+            "{0:N0} indicatifs, fichier du {1}",
+            "Dossier de WSJT-X : ",
+            "  (introuvable)",
+            "Mettre à jour",
+            "Copier dans WSJT-X",
+            "Téléchargement depuis W7GJ et WSJT-X Improved…",
+            "Téléchargez d'abord CALL3.TXT avec Mettre à jour.",
+            "Dossier de WSJT-X introuvable : choisissez où copier CALL3.TXT (dans WSJT-X : File > Open log directory).",
+            "Copié dans ",
+            "  (le fichier précédent est dans CALL3.TXT.bak). Redémarrez WSJT-X pour l'utiliser.",
+            "Échec de la copie : ",
+            "CALL3.TXT manquant : téléchargement depuis W7GJ et WSJT-X Improved…",
+            "CALL3.TXT de plus de 7 jours : téléchargement depuis W7GJ et WSJT-X Improved…",
+            "{0:N0} indicatifs",
+            "injoignable",
+            "CALL3.TXT à jour",
+            "CALL3.TXT : mise à jour déjà en cours…",
+            "CALL3.TXT injoignable : le fichier enregistré est utilisé",
+            "CALL3.TXT mis à jour : {0:N0} indicatifs de W7GJ et WSJT-X Improved ({1:N0} seulement dans la seconde, {2:N0} avec un locator différent : W7GJ prévaut)",
+            "CALL3.TXT mis à jour : {0:N0} indicatifs (seulement {1}, l'autre source ne répond pas)",
+            "CALL3.TXT non mis à jour : ",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7735,6 +7839,32 @@ namespace LunaCalc
             "en directo",
             "Volver al seguimiento en directo, con la hora actual.",
             "Día del seguimiento (UTC): abre el calendario para elegir un día pasado o futuro; la hora se elige arrastrando la línea roja de las 24 horas, abajo.",
+            "CALL3.TXT: indicativos y locators de las estaciones EME",
+            "Escribe un indicativo en la casilla del locator del DX: si está en CALL3.TXT el programa propone su locator y lo introduce al pulsar Intro. Haz clic aquí para actualizar el archivo o copiarlo en la carpeta de WSJT-X.",
+            "{0} en CALL3.TXT: {1} (pulsa Intro para usarlo)",
+            "CALL3.TXT es la lista de indicativos de las estaciones EME con su locator, usada también por WSJT-X. YAEC descarga tanto la lista de W7GJ como la distribuida con WSJT-X Improved: si una no responde usa la otra; si responden ambas las fusiona por indicativo (para el mismo indicativo vale el locator de W7GJ). El archivo se actualiza solo al inicio cuando tiene más de 7 días.",
+            "No hay CALL3.TXT en la carpeta data.",
+            "{0:N0} indicativos, archivo del {1}",
+            "Carpeta de WSJT-X: ",
+            "  (no encontrada)",
+            "Actualizar ahora",
+            "Copiar a WSJT-X",
+            "Descargando de W7GJ y WSJT-X Improved…",
+            "Descarga primero CALL3.TXT con Actualizar ahora.",
+            "Carpeta de WSJT-X no encontrada: elige dónde copiar CALL3.TXT (en WSJT-X: File > Open log directory).",
+            "Copiado en ",
+            "  (el archivo anterior está en CALL3.TXT.bak). Reinicia WSJT-X para usarlo.",
+            "Copia fallida: ",
+            "Falta CALL3.TXT: descargando de W7GJ y WSJT-X Improved…",
+            "CALL3.TXT con más de 7 días: descargando de W7GJ y WSJT-X Improved…",
+            "{0:N0} indicativos",
+            "no disponible",
+            "CALL3.TXT actualizado",
+            "CALL3.TXT: actualización ya en curso…",
+            "CALL3.TXT no disponible: se usa el archivo guardado",
+            "CALL3.TXT actualizado: {0:N0} indicativos de W7GJ y WSJT-X Improved ({1:N0} solo en la segunda, {2:N0} con locator distinto: vale W7GJ)",
+            "CALL3.TXT actualizado: {0:N0} indicativos (solo {1}, la otra fuente no responde)",
+            "CALL3.TXT no actualizado: ",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -8951,6 +9081,32 @@ namespace LunaCalc
             "em direto",
             "Voltar ao seguimento em direto, com a hora atual.",
             "Dia do seguimento (UTC): abra o calendário para escolher um dia passado ou futuro; a hora escolhe-se arrastando a linha vermelha das 24 horas, em baixo.",
+            "CALL3.TXT: indicativos e locators das estações EME",
+            "Escreva um indicativo na caixa do locator do DX: se estiver no CALL3.TXT o programa propõe o seu locator e insere-o ao premir Enter. Clique aqui para atualizar o ficheiro ou copiá-lo para a pasta do WSJT-X.",
+            "{0} no CALL3.TXT: {1} (prima Enter para usar)",
+            "O CALL3.TXT é a lista de indicativos das estações EME com o seu locator, usada também pelo WSJT-X. O YAEC descarrega tanto a lista de W7GJ como a distribuída com o WSJT-X Improved: se uma não responder usa a outra; se ambas responderem funde-as por indicativo (para o mesmo indicativo vale o locator de W7GJ). O ficheiro atualiza-se sozinho no arranque quando tem mais de 7 dias.",
+            "Nenhum CALL3.TXT na pasta data.",
+            "{0:N0} indicativos, ficheiro de {1}",
+            "Pasta do WSJT-X: ",
+            "  (não encontrada)",
+            "Atualizar agora",
+            "Copiar para o WSJT-X",
+            "A descarregar de W7GJ e WSJT-X Improved…",
+            "Descarregue primeiro o CALL3.TXT com Atualizar agora.",
+            "Pasta do WSJT-X não encontrada: escolha onde copiar o CALL3.TXT (no WSJT-X: File > Open log directory).",
+            "Copiado para ",
+            "  (o ficheiro anterior está em CALL3.TXT.bak). Reinicie o WSJT-X para o usar.",
+            "Falha na cópia: ",
+            "CALL3.TXT em falta: a descarregar de W7GJ e WSJT-X Improved…",
+            "CALL3.TXT com mais de 7 dias: a descarregar de W7GJ e WSJT-X Improved…",
+            "{0:N0} indicativos",
+            "indisponível",
+            "CALL3.TXT atualizado",
+            "CALL3.TXT: atualização já em curso…",
+            "CALL3.TXT indisponível: usa-se o ficheiro guardado",
+            "CALL3.TXT atualizado: {0:N0} indicativos de W7GJ e WSJT-X Improved ({1:N0} só na segunda, {2:N0} com locator diferente: vale W7GJ)",
+            "CALL3.TXT atualizado: {0:N0} indicativos (só {1}, a outra fonte não responde)",
+            "CALL3.TXT não atualizado: ",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10167,6 +10323,32 @@ namespace LunaCalc
             "实时",
             "返回实时跟踪，使用当前时间。",
             "跟踪日期（UTC）：打开日历选择过去或未来的某一天；拖动下方 24 小时条上的红线选择时间。",
+            "CALL3.TXT:EME 电台的呼号与网格定位",
+            "在 DX 定位框中输入呼号:若它在 CALL3.TXT 中,程序会提示其网格定位,按回车即可填入。点击此处可更新文件或将其复制到 WSJT-X 文件夹。",
+            "{0} 在 CALL3.TXT 中:{1}(按回车使用)",
+            "CALL3.TXT 是 EME 电台呼号及其网格定位的列表,WSJT-X 也使用它。YAEC 同时下载 W7GJ 的列表和随 WSJT-X Improved 发布的列表:若其中一个无响应则使用另一个;若两者都可用则按呼号合并(同一呼号以 W7GJ 的定位为准)。文件超过 7 天时会在启动时自动更新。",
+            "data 文件夹中没有 CALL3.TXT。",
+            "{0:N0} 个呼号,文件日期 {1}",
+            "WSJT-X 文件夹:",
+            "(未找到)",
+            "立即更新",
+            "复制到 WSJT-X",
+            "正在从 W7GJ 和 WSJT-X Improved 下载…",
+            "请先用“立即更新”下载 CALL3.TXT。",
+            "未找到 WSJT-X 文件夹:请选择 CALL3.TXT 的复制位置(在 WSJT-X 中:File > Open log directory)。",
+            "已复制到 ",
+            "(原文件保存在 CALL3.TXT.bak)。重新启动 WSJT-X 即可使用。",
+            "复制失败:",
+            "缺少 CALL3.TXT:正在从 W7GJ 和 WSJT-X Improved 下载…",
+            "CALL3.TXT 已超过 7 天:正在从 W7GJ 和 WSJT-X Improved 下载…",
+            "{0:N0} 个呼号",
+            "无法访问",
+            "CALL3.TXT 已是最新",
+            "CALL3.TXT:更新已在进行中…",
+            "无法获取 CALL3.TXT:使用已保存的文件",
+            "CALL3.TXT 已更新:来自 W7GJ 和 WSJT-X Improved 的 {0:N0} 个呼号({1:N0} 个仅在后者中,{2:N0} 个定位不同:以 W7GJ 为准)",
+            "CALL3.TXT 已更新:{0:N0} 个呼号(仅 {1},另一来源无响应)",
+            "CALL3.TXT 未更新:",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11383,6 +11565,32 @@ namespace LunaCalc
             "ライブ",
             "現在時刻のライブ追尾に戻ります。",
             "追尾する日（UTC）：カレンダーを開いて過去または未来の日を選びます。時刻は下の 24 時間の赤い線をドラッグして選びます。",
+            "CALL3.TXT:EME 局のコールサインとロケーター",
+            "DX のロケーター欄にコールサインを入力すると、CALL3.TXT にあればそのロケーターを提案し、Enter キーで入力します。ここをクリックするとファイルを更新するか WSJT-X のフォルダーにコピーできます。",
+            "{0} は CALL3.TXT に登録:{1}(Enter で使用)",
+            "CALL3.TXT は EME 局のコールサインとロケーターの一覧で、WSJT-X でも使われます。YAEC は W7GJ のリストと WSJT-X Improved に同梱のリストの両方をダウンロードします。片方が応答しなければもう片方を使い、両方応答すればコールサインごとに統合します(同じコールサインでは W7GJ のロケーターを優先)。ファイルは 7 日より古いと起動時に自動更新されます。",
+            "data フォルダーに CALL3.TXT がありません。",
+            "{0:N0} 局、ファイル日付 {1}",
+            "WSJT-X のフォルダー:",
+            "(見つかりません)",
+            "今すぐ更新",
+            "WSJT-X にコピー",
+            "W7GJ と WSJT-X Improved からダウンロード中…",
+            "先に「今すぐ更新」で CALL3.TXT をダウンロードしてください。",
+            "WSJT-X のフォルダーが見つかりません。CALL3.TXT のコピー先を選んでください(WSJT-X では File > Open log directory)。",
+            "コピー先: ",
+            "(以前のファイルは CALL3.TXT.bak にあります)。WSJT-X を再起動すると使われます。",
+            "コピーに失敗しました: ",
+            "CALL3.TXT がありません:W7GJ と WSJT-X Improved からダウンロード中…",
+            "CALL3.TXT が 7 日より古い:W7GJ と WSJT-X Improved からダウンロード中…",
+            "{0:N0} 局",
+            "接続できません",
+            "CALL3.TXT は最新です",
+            "CALL3.TXT:すでに更新中です…",
+            "CALL3.TXT に接続できません:保存済みファイルを使用",
+            "CALL3.TXT を更新:W7GJ と WSJT-X Improved から {0:N0} 局(後者のみ {1:N0}、ロケーター相違 {2:N0}:W7GJ を優先)",
+            "CALL3.TXT を更新:{0:N0} 局({1} のみ、もう一方の取得元は応答なし)",
+            "CALL3.TXT は更新されませんでした: ",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12599,6 +12807,32 @@ namespace LunaCalc
             "लाइव",
             "वर्तमान समय के साथ लाइव ट्रैकिंग पर लौटें।",
             "ट्रैकिंग का दिन (UTC): अतीत या भविष्य का दिन चुनने के लिए कैलेंडर खोलें; समय नीचे 24 घंटे की लाल रेखा खींचकर चुनें।",
+            "CALL3.TXT: EME स्टेशनों के कॉलसाइन और लोकेटर",
+            "DX लोकेटर बॉक्स में कॉलसाइन लिखें: यदि वह CALL3.TXT में है तो प्रोग्राम उसका लोकेटर सुझाता है और Enter दबाने पर भर देता है। फ़ाइल अपडेट करने या उसे WSJT-X फ़ोल्डर में कॉपी करने के लिए यहाँ क्लिक करें।",
+            "{0} CALL3.TXT में: {1} (उपयोग के लिए Enter दबाएँ)",
+            "CALL3.TXT EME स्टेशनों के कॉलसाइन और उनके लोकेटर की सूची है, जिसे WSJT-X भी उपयोग करता है। YAEC W7GJ की सूची और WSJT-X Improved के साथ वितरित सूची, दोनों डाउनलोड करता है: यदि एक उत्तर न दे तो दूसरी का उपयोग करता है; यदि दोनों उत्तर दें तो उन्हें कॉलसाइन के अनुसार मिला देता है (एक ही कॉलसाइन पर W7GJ का लोकेटर मान्य होता है)। फ़ाइल 7 दिन से पुरानी होने पर प्रारंभ में अपने-आप अपडेट होती है।",
+            "data फ़ोल्डर में कोई CALL3.TXT नहीं है।",
+            "{0:N0} कॉलसाइन, फ़ाइल दिनांक {1}",
+            "WSJT-X फ़ोल्डर: ",
+            "  (नहीं मिला)",
+            "अभी अपडेट करें",
+            "WSJT-X में कॉपी करें",
+            "W7GJ और WSJT-X Improved से डाउनलोड हो रहा है…",
+            "पहले 'अभी अपडेट करें' से CALL3.TXT डाउनलोड करें।",
+            "WSJT-X फ़ोल्डर नहीं मिला: CALL3.TXT कहाँ कॉपी करना है चुनें (WSJT-X में: File > Open log directory)।",
+            "कॉपी किया गया: ",
+            "  (पिछली फ़ाइल CALL3.TXT.bak में है)। इसका उपयोग करने के लिए WSJT-X पुनः आरंभ करें।",
+            "कॉपी विफल: ",
+            "CALL3.TXT नहीं है: W7GJ और WSJT-X Improved से डाउनलोड हो रहा है…",
+            "CALL3.TXT 7 दिन से पुराना है: W7GJ और WSJT-X Improved से डाउनलोड हो रहा है…",
+            "{0:N0} कॉलसाइन",
+            "उपलब्ध नहीं",
+            "CALL3.TXT अद्यतन है",
+            "CALL3.TXT: अपडेट पहले से चल रहा है…",
+            "CALL3.TXT उपलब्ध नहीं: सहेजी गई फ़ाइल का उपयोग",
+            "CALL3.TXT अपडेट: W7GJ और WSJT-X Improved से {0:N0} कॉलसाइन ({1:N0} केवल दूसरी में, {2:N0} अलग लोकेटर के साथ: W7GJ मान्य)",
+            "CALL3.TXT अपडेट: {0:N0} कॉलसाइन (केवल {1}, दूसरा स्रोत उत्तर नहीं दे रहा)",
+            "CALL3.TXT अपडेट नहीं हुआ: ",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -13815,6 +14049,32 @@ namespace LunaCalc
             "실시간",
             "현재 시각으로 실시간 추적으로 돌아갑니다.",
             "추적 날짜 (UTC): 달력을 열어 과거나 미래의 날을 고르세요. 시간은 아래 24시간 막대의 빨간 선을 끌어서 고릅니다.",
+            "CALL3.TXT: EME 국의 호출부호와 로케이터",
+            "DX 로케이터 칸에 호출부호를 입력하세요. CALL3.TXT에 있으면 프로그램이 로케이터를 제안하고 Enter를 누르면 입력합니다. 파일을 업데이트하거나 WSJT-X 폴더로 복사하려면 여기를 클릭하세요.",
+            "{0} CALL3.TXT 등록: {1} (Enter로 사용)",
+            "CALL3.TXT는 EME 국의 호출부호와 로케이터 목록으로, WSJT-X도 사용합니다. YAEC는 W7GJ 목록과 WSJT-X Improved와 함께 배포되는 목록을 모두 내려받습니다. 하나가 응답하지 않으면 다른 하나를 쓰고, 둘 다 응답하면 호출부호별로 병합합니다(같은 호출부호는 W7GJ 로케이터 우선). 파일이 7일보다 오래되면 시작할 때 자동으로 업데이트됩니다.",
+            "data 폴더에 CALL3.TXT가 없습니다.",
+            "호출부호 {0:N0}개, 파일 날짜 {1}",
+            "WSJT-X 폴더: ",
+            "  (찾을 수 없음)",
+            "지금 업데이트",
+            "WSJT-X로 복사",
+            "W7GJ와 WSJT-X Improved에서 내려받는 중…",
+            "먼저 '지금 업데이트'로 CALL3.TXT를 내려받으세요.",
+            "WSJT-X 폴더를 찾을 수 없습니다. CALL3.TXT를 복사할 위치를 선택하세요(WSJT-X: File > Open log directory).",
+            "복사됨: ",
+            "  (이전 파일은 CALL3.TXT.bak에 있습니다). 사용하려면 WSJT-X를 다시 시작하세요.",
+            "복사 실패: ",
+            "CALL3.TXT 없음: W7GJ와 WSJT-X Improved에서 내려받는 중…",
+            "CALL3.TXT가 7일 넘음: W7GJ와 WSJT-X Improved에서 내려받는 중…",
+            "호출부호 {0:N0}개",
+            "연결할 수 없음",
+            "CALL3.TXT 최신",
+            "CALL3.TXT: 이미 업데이트 중…",
+            "CALL3.TXT에 연결할 수 없음: 저장된 파일 사용",
+            "CALL3.TXT 업데이트: W7GJ와 WSJT-X Improved에서 호출부호 {0:N0}개 (두 번째에만 {1:N0}개, 로케이터 다름 {2:N0}개: W7GJ 우선)",
+            "CALL3.TXT 업데이트: 호출부호 {0:N0}개 ({1}만, 다른 출처는 응답 없음)",
+            "CALL3.TXT 업데이트 안 됨: ",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15031,6 +15291,32 @@ namespace LunaCalc
             "langsung",
             "Kembali ke pelacakan langsung, dengan waktu sekarang.",
             "Hari pelacakan (UTC): buka kalender untuk memilih hari lampau atau mendatang; jam dipilih dengan menyeret garis merah 24 jam di bawah.",
+            "CALL3.TXT: callsign dan lokator stasiun EME",
+            "Ketik callsign di kotak lokator DX: jika ada di CALL3.TXT, program menyarankan lokatornya dan mengisinya saat Anda menekan Enter. Klik di sini untuk memperbarui file atau menyalinnya ke folder WSJT-X.",
+            "{0} di CALL3.TXT: {1} (tekan Enter untuk memakainya)",
+            "CALL3.TXT adalah daftar callsign stasiun EME beserta lokatornya, yang juga dipakai WSJT-X. YAEC mengunduh daftar W7GJ dan daftar yang didistribusikan bersama WSJT-X Improved: jika salah satu tidak merespons, yang lain dipakai; jika keduanya merespons, keduanya digabung per callsign (untuk callsign yang sama berlaku lokator W7GJ). File diperbarui otomatis saat program dimulai jika berumur lebih dari 7 hari.",
+            "Tidak ada CALL3.TXT di folder data.",
+            "{0:N0} callsign, file tanggal {1}",
+            "Folder WSJT-X: ",
+            "  (tidak ditemukan)",
+            "Perbarui sekarang",
+            "Salin ke WSJT-X",
+            "Mengunduh dari W7GJ dan WSJT-X Improved…",
+            "Unduh dulu CALL3.TXT dengan Perbarui sekarang.",
+            "Folder WSJT-X tidak ditemukan: pilih tempat menyalin CALL3.TXT (di WSJT-X: File > Open log directory).",
+            "Disalin ke ",
+            "  (file sebelumnya ada di CALL3.TXT.bak). Mulai ulang WSJT-X untuk memakainya.",
+            "Gagal menyalin: ",
+            "CALL3.TXT tidak ada: mengunduh dari W7GJ dan WSJT-X Improved…",
+            "CALL3.TXT lebih dari 7 hari: mengunduh dari W7GJ dan WSJT-X Improved…",
+            "{0:N0} callsign",
+            "tidak dapat dijangkau",
+            "CALL3.TXT mutakhir",
+            "CALL3.TXT: pembaruan sedang berjalan…",
+            "CALL3.TXT tidak dapat dijangkau: memakai file tersimpan",
+            "CALL3.TXT diperbarui: {0:N0} callsign dari W7GJ dan WSJT-X Improved ({1:N0} hanya di yang kedua, {2:N0} dengan lokator berbeda: berlaku W7GJ)",
+            "CALL3.TXT diperbarui: {0:N0} callsign (hanya {1}, sumber lain tidak merespons)",
+            "CALL3.TXT tidak diperbarui: ",
         };
 
         public static readonly string[] RU = {
@@ -16248,6 +16534,32 @@ namespace LunaCalc
             "в реальном времени",
             "Вернуться к сопровождению в реальном времени, с текущим временем.",
             "День сопровождения (UTC): откройте календарь, чтобы выбрать прошедший или будущий день; время выбирается перетаскиванием красной линии 24 часов внизу.",
+            "CALL3.TXT: позывные и локаторы станций EME",
+            "Введите позывной в поле локатора DX: если он есть в CALL3.TXT, программа предложит его локатор и вставит его по нажатию Enter. Нажмите здесь, чтобы обновить файл или скопировать его в папку WSJT-X.",
+            "{0} в CALL3.TXT: {1} (Enter — использовать)",
+            "CALL3.TXT — это список позывных станций EME с их локаторами, который использует и WSJT-X. YAEC загружает и список W7GJ, и список, распространяемый с WSJT-X Improved: если один не отвечает, используется другой; если отвечают оба, они объединяются по позывному (при одинаковом позывном действует локатор W7GJ). Файл обновляется сам при запуске, если он старше 7 дней.",
+            "В папке data нет CALL3.TXT.",
+            "{0:N0} позывных, файл от {1}",
+            "Папка WSJT-X: ",
+            "  (не найдена)",
+            "Обновить сейчас",
+            "Копировать в WSJT-X",
+            "Загрузка с W7GJ и WSJT-X Improved…",
+            "Сначала загрузите CALL3.TXT кнопкой «Обновить сейчас».",
+            "Папка WSJT-X не найдена: выберите, куда скопировать CALL3.TXT (в WSJT-X: File > Open log directory).",
+            "Скопировано в ",
+            "  (предыдущий файл — в CALL3.TXT.bak). Перезапустите WSJT-X, чтобы он его использовал.",
+            "Не удалось скопировать: ",
+            "CALL3.TXT отсутствует: загрузка с W7GJ и WSJT-X Improved…",
+            "CALL3.TXT старше 7 дней: загрузка с W7GJ и WSJT-X Improved…",
+            "{0:N0} позывных",
+            "недоступен",
+            "CALL3.TXT актуален",
+            "CALL3.TXT: обновление уже идёт…",
+            "CALL3.TXT недоступен: используется сохранённый файл",
+            "CALL3.TXT обновлён: {0:N0} позывных от W7GJ и WSJT-X Improved ({1:N0} только во втором, {2:N0} с другим локатором: действует W7GJ)",
+            "CALL3.TXT обновлён: {0:N0} позывных (только {1}, другой источник не отвечает)",
+            "CALL3.TXT не обновлён: ",
         };
 
         public static readonly string[] UK = {
@@ -17465,6 +17777,32 @@ namespace LunaCalc
             "наживо",
             "Повернутися до супроводу наживо, з поточним часом.",
             "День супроводу (UTC): відкрийте календар, щоб вибрати минулий або майбутній день; час вибирається перетягуванням червоної лінії 24 годин унизу.",
+            "CALL3.TXT: позивні та локатори станцій EME",
+            "Введіть позивний у поле локатора DX: якщо він є в CALL3.TXT, програма запропонує його локатор і вставить його після натискання Enter. Натисніть тут, щоб оновити файл або скопіювати його до теки WSJT-X.",
+            "{0} у CALL3.TXT: {1} (Enter — використати)",
+            "CALL3.TXT — це список позивних станцій EME з їхніми локаторами, який використовує й WSJT-X. YAEC завантажує і список W7GJ, і список, що поширюється з WSJT-X Improved: якщо один не відповідає, використовується інший; якщо відповідають обидва, вони об'єднуються за позивним (за однакового позивного діє локатор W7GJ). Файл оновлюється сам під час запуску, якщо він старший за 7 днів.",
+            "У теці data немає CALL3.TXT.",
+            "{0:N0} позивних, файл від {1}",
+            "Тека WSJT-X: ",
+            "  (не знайдено)",
+            "Оновити зараз",
+            "Копіювати до WSJT-X",
+            "Завантаження з W7GJ і WSJT-X Improved…",
+            "Спочатку завантажте CALL3.TXT кнопкою «Оновити зараз».",
+            "Теку WSJT-X не знайдено: виберіть, куди скопіювати CALL3.TXT (у WSJT-X: File > Open log directory).",
+            "Скопійовано до ",
+            "  (попередній файл — у CALL3.TXT.bak). Перезапустіть WSJT-X, щоб він його використав.",
+            "Не вдалося скопіювати: ",
+            "CALL3.TXT відсутній: завантаження з W7GJ і WSJT-X Improved…",
+            "CALL3.TXT старший за 7 днів: завантаження з W7GJ і WSJT-X Improved…",
+            "{0:N0} позивних",
+            "недоступний",
+            "CALL3.TXT актуальний",
+            "CALL3.TXT: оновлення вже триває…",
+            "CALL3.TXT недоступний: використовується збережений файл",
+            "CALL3.TXT оновлено: {0:N0} позивних від W7GJ і WSJT-X Improved ({1:N0} лише в другому, {2:N0} з іншим локатором: діє W7GJ)",
+            "CALL3.TXT оновлено: {0:N0} позивних (лише {1}, інше джерело не відповідає)",
+            "CALL3.TXT не оновлено: ",
         };
 
         public static readonly string[] AF = {
@@ -18682,6 +19020,32 @@ namespace LunaCalc
             "regstreeks",
             "Terug na regstreekse volging, met die huidige tyd.",
             "Volgdag (UTC): maak die kalender oop om 'n vorige of toekomstige dag te kies; kies die tyd deur die rooi lyn van die 24 uur onder te sleep.",
+            "CALL3.TXT: roepseine en lokators van EME-stasies",
+            "Tik 'n roepsein in die DX-lokatorblokkie: as dit in CALL3.TXT is, stel die program sy lokator voor en vul dit in wanneer jy Enter druk. Klik hier om die lêer by te werk of na die WSJT-X-gids te kopieer.",
+            "{0} in CALL3.TXT: {1} (druk Enter om dit te gebruik)",
+            "CALL3.TXT is die lys van roepseine van EME-stasies met hul lokators, wat ook deur WSJT-X gebruik word. YAEC laai sowel die lys van W7GJ as dié wat saam met WSJT-X Improved versprei word af: as een nie antwoord nie, word die ander gebruik; as albei antwoord, word hulle volgens roepsein saamgevoeg (by dieselfde roepsein geld die lokator van W7GJ). Die lêer werk homself by wanneer die program begin as dit ouer as 7 dae is.",
+            "Geen CALL3.TXT in die data-gids nie.",
+            "{0:N0} roepseine, lêer van {1}",
+            "WSJT-X-gids: ",
+            "  (nie gevind nie)",
+            "Werk nou by",
+            "Kopieer na WSJT-X",
+            "Laai af van W7GJ en WSJT-X Improved…",
+            "Laai eers CALL3.TXT af met Werk nou by.",
+            "WSJT-X-gids nie gevind nie: kies waarheen CALL3.TXT gekopieer moet word (in WSJT-X: File > Open log directory).",
+            "Gekopieer na ",
+            "  (die vorige lêer is in CALL3.TXT.bak). Herbegin WSJT-X om dit te gebruik.",
+            "Kopiëring het misluk: ",
+            "CALL3.TXT ontbreek: laai af van W7GJ en WSJT-X Improved…",
+            "CALL3.TXT ouer as 7 dae: laai af van W7GJ en WSJT-X Improved…",
+            "{0:N0} roepseine",
+            "nie bereikbaar nie",
+            "CALL3.TXT is op datum",
+            "CALL3.TXT: bywerking reeds aan die gang…",
+            "CALL3.TXT nie bereikbaar nie: die gestoorde lêer word gebruik",
+            "CALL3.TXT bygewerk: {0:N0} roepseine van W7GJ en WSJT-X Improved ({1:N0} slegs in die tweede, {2:N0} met 'n ander lokator: W7GJ geld)",
+            "CALL3.TXT bygewerk: {0:N0} roepseine (slegs {1}, die ander bron antwoord nie)",
+            "CALL3.TXT nie bygewerk nie: ",
         };
 
         public static readonly string[] BN = {
@@ -19898,6 +20262,32 @@ namespace LunaCalc
             "সরাসরি",
             "বর্তমান সময়সহ সরাসরি ট্র্যাকিংয়ে ফিরে যান।",
             "ট্র্যাকিংয়ের দিন (UTC): অতীত বা ভবিষ্যতের দিন বেছে নিতে ক্যালেন্ডার খুলুন; নিচে ২৪ ঘণ্টার লাল রেখা টেনে সময় বেছে নিন।",
+            "CALL3.TXT: EME স্টেশনগুলোর কলসাইন ও লোকেটর",
+            "DX লোকেটর ঘরে একটি কলসাইন লিখুন: সেটি CALL3.TXT-এ থাকলে প্রোগ্রাম তার লোকেটর প্রস্তাব করে এবং Enter চাপলে বসিয়ে দেয়। ফাইল হালনাগাদ করতে বা WSJT-X ফোল্ডারে কপি করতে এখানে ক্লিক করুন।",
+            "{0} CALL3.TXT-এ: {1} (ব্যবহার করতে Enter চাপুন)",
+            "CALL3.TXT হলো EME স্টেশনগুলোর কলসাইন ও তাদের লোকেটরের তালিকা, যা WSJT-X-ও ব্যবহার করে। YAEC W7GJ-এর তালিকা এবং WSJT-X Improved-এর সঙ্গে বিতরণ করা তালিকা — দুটোই ডাউনলোড করে: একটি সাড়া না দিলে অন্যটি ব্যবহার করে; দুটোই সাড়া দিলে কলসাইন ধরে একত্র করে (একই কলসাইনে W7GJ-এর লোকেটর প্রাধান্য পায়)। ফাইলটি ৭ দিনের বেশি পুরোনো হলে চালুর সময় নিজে থেকেই হালনাগাদ হয়।",
+            "data ফোল্ডারে কোনো CALL3.TXT নেই।",
+            "{0:N0}টি কলসাইন, ফাইলের তারিখ {1}",
+            "WSJT-X ফোল্ডার: ",
+            "  (পাওয়া যায়নি)",
+            "এখনই হালনাগাদ",
+            "WSJT-X-এ কপি",
+            "W7GJ ও WSJT-X Improved থেকে ডাউনলোড হচ্ছে…",
+            "আগে 'এখনই হালনাগাদ' দিয়ে CALL3.TXT ডাউনলোড করুন।",
+            "WSJT-X ফোল্ডার পাওয়া যায়নি: CALL3.TXT কোথায় কপি করবেন বেছে নিন (WSJT-X-এ: File > Open log directory)।",
+            "কপি হয়েছে: ",
+            "  (আগের ফাইলটি CALL3.TXT.bak-এ আছে)। ব্যবহার করতে WSJT-X আবার চালু করুন।",
+            "কপি ব্যর্থ: ",
+            "CALL3.TXT নেই: W7GJ ও WSJT-X Improved থেকে ডাউনলোড হচ্ছে…",
+            "CALL3.TXT ৭ দিনের বেশি পুরোনো: W7GJ ও WSJT-X Improved থেকে ডাউনলোড হচ্ছে…",
+            "{0:N0}টি কলসাইন",
+            "পৌঁছানো যাচ্ছে না",
+            "CALL3.TXT হালনাগাদ আছে",
+            "CALL3.TXT: হালনাগাদ ইতিমধ্যে চলছে…",
+            "CALL3.TXT পৌঁছানো যাচ্ছে না: সংরক্ষিত ফাইল ব্যবহার হচ্ছে",
+            "CALL3.TXT হালনাগাদ: W7GJ ও WSJT-X Improved থেকে {0:N0}টি কলসাইন ({1:N0}টি শুধু দ্বিতীয়টিতে, {2:N0}টির লোকেটর ভিন্ন: W7GJ প্রাধান্য পায়)",
+            "CALL3.TXT হালনাগাদ: {0:N0}টি কলসাইন (শুধু {1}, অন্য উৎস সাড়া দিচ্ছে না)",
+            "CALL3.TXT হালনাগাদ হয়নি: ",
         };
 
         public static readonly string[] AR = {
@@ -21114,6 +21504,32 @@ namespace LunaCalc
             "مباشر",
             "العودة إلى التتبع المباشر بالوقت الحالي.",
             "يوم التتبع (UTC): افتح التقويم لاختيار يوم ماضٍ أو مقبل؛ ويُختار الوقت بسحب الخط الأحمر لشريط الـ 24 ساعة في الأسفل.",
+            "CALL3.TXT: نداءات ومحددات مواقع محطات EME",
+            "اكتب نداءً في خانة محدد موقع DX: إذا كان موجودًا في CALL3.TXT يقترح البرنامج محدد موقعه ويُدخله عند الضغط على Enter. انقر هنا لتحديث الملف أو نسخه إلى مجلد WSJT-X.",
+            "{0} في CALL3.TXT: {1} (اضغط Enter لاستخدامه)",
+            "CALL3.TXT هو قائمة نداءات محطات EME مع محددات مواقعها، ويستخدمها WSJT-X أيضًا. يقوم YAEC بتنزيل قائمة W7GJ والقائمة الموزعة مع WSJT-X Improved معًا: إذا لم تستجب إحداهما يستخدم الأخرى؛ وإذا استجابت كلتاهما يدمجهما حسب النداء (للنداء نفسه يُعتمد محدد موقع W7GJ). يُحدَّث الملف تلقائيًا عند بدء التشغيل إذا كان عمره أكثر من 7 أيام.",
+            "لا يوجد CALL3.TXT في مجلد data.",
+            "{0:N0} نداء، الملف بتاريخ {1}",
+            "مجلد WSJT-X: ",
+            "  (غير موجود)",
+            "حدّث الآن",
+            "انسخ إلى WSJT-X",
+            "جارٍ التنزيل من W7GJ وWSJT-X Improved…",
+            "نزّل أولًا CALL3.TXT بالزر «حدّث الآن».",
+            "لم يُعثر على مجلد WSJT-X: اختر مكان نسخ CALL3.TXT (في WSJT-X: File > Open log directory).",
+            "نُسخ إلى ",
+            "  (الملف السابق في CALL3.TXT.bak). أعد تشغيل WSJT-X لاستخدامه.",
+            "فشل النسخ: ",
+            "CALL3.TXT مفقود: جارٍ التنزيل من W7GJ وWSJT-X Improved…",
+            "CALL3.TXT أقدم من 7 أيام: جارٍ التنزيل من W7GJ وWSJT-X Improved…",
+            "{0:N0} نداء",
+            "تعذّر الوصول",
+            "CALL3.TXT محدَّث",
+            "CALL3.TXT: التحديث جارٍ بالفعل…",
+            "تعذّر الوصول إلى CALL3.TXT: يُستخدم الملف المحفوظ",
+            "تم تحديث CALL3.TXT: {0:N0} نداء من W7GJ وWSJT-X Improved ({1:N0} في الثانية فقط، {2:N0} بمحدد موقع مختلف: يُعتمد W7GJ)",
+            "تم تحديث CALL3.TXT: {0:N0} نداء ({1} فقط، المصدر الآخر لا يستجيب)",
+            "لم يُحدَّث CALL3.TXT: ",
         };
 
         public static readonly string[] TR = {
@@ -22330,6 +22746,32 @@ namespace LunaCalc
             "canlı",
             "Geçerli saatle canlı izlemeye dön.",
             "İzleme günü (UTC): geçmiş ya da gelecek bir gün seçmek için takvimi açın; saati alttaki 24 saatlik kırmızı çizgiyi sürükleyerek seçin.",
+            "CALL3.TXT: EME istasyonlarının çağrı işaretleri ve lokatörleri",
+            "DX lokatör kutusuna bir çağrı işareti yazın: CALL3.TXT içinde varsa program lokatörünü önerir ve Enter'a bastığınızda girer. Dosyayı güncellemek veya WSJT-X klasörüne kopyalamak için buraya tıklayın.",
+            "{0} CALL3.TXT içinde: {1} (kullanmak için Enter'a basın)",
+            "CALL3.TXT, EME istasyonlarının çağrı işaretlerini ve lokatörlerini içeren, WSJT-X'in de kullandığı listedir. YAEC hem W7GJ listesini hem de WSJT-X Improved ile dağıtılan listeyi indirir: biri yanıt vermezse diğerini kullanır; ikisi de yanıt verirse çağrı işaretine göre birleştirir (aynı çağrı işaretinde W7GJ lokatörü geçerlidir). Dosya 7 günden eskiyse açılışta kendiliğinden güncellenir.",
+            "data klasöründe CALL3.TXT yok.",
+            "{0:N0} çağrı işareti, dosya tarihi {1}",
+            "WSJT-X klasörü: ",
+            "  (bulunamadı)",
+            "Şimdi güncelle",
+            "WSJT-X'e kopyala",
+            "W7GJ ve WSJT-X Improved'dan indiriliyor…",
+            "Önce Şimdi güncelle ile CALL3.TXT'yi indirin.",
+            "WSJT-X klasörü bulunamadı: CALL3.TXT'nin kopyalanacağı yeri seçin (WSJT-X'te: File > Open log directory).",
+            "Kopyalandı: ",
+            "  (önceki dosya CALL3.TXT.bak içinde). Kullanmak için WSJT-X'i yeniden başlatın.",
+            "Kopyalama başarısız: ",
+            "CALL3.TXT yok: W7GJ ve WSJT-X Improved'dan indiriliyor…",
+            "CALL3.TXT 7 günden eski: W7GJ ve WSJT-X Improved'dan indiriliyor…",
+            "{0:N0} çağrı işareti",
+            "erişilemiyor",
+            "CALL3.TXT güncel",
+            "CALL3.TXT: güncelleme zaten sürüyor…",
+            "CALL3.TXT'ye erişilemiyor: kayıtlı dosya kullanılıyor",
+            "CALL3.TXT güncellendi: W7GJ ve WSJT-X Improved'dan {0:N0} çağrı işareti ({1:N0} yalnızca ikincide, {2:N0} farklı lokatörlü: W7GJ geçerli)",
+            "CALL3.TXT güncellendi: {0:N0} çağrı işareti (yalnızca {1}, diğer kaynak yanıt vermiyor)",
+            "CALL3.TXT güncellenmedi: ",
         };
     }
 
@@ -28783,7 +29225,8 @@ namespace LunaCalc
         // Tracciamento non solo in diretta: un momento scelto (giorno dal calendario, ora trascinando la linea rossa)
         DateTime? trkScelto;                 // null = in diretta
         DateTimePicker dtpTrkGiorno;
-        Pillola btnTrkAdesso;
+        Pillola btnTrkAdesso, btnTrkCall3;
+        string dxCall3 = "", dxCall3Grid = "";   // nominativo preso da CALL3.TXT e il suo locator
         bool trkTrascina, trkSyncGiorno;
         RectangleF trkStrRett;               // zona della striscia delle 24 ore (per trascinare la linea)
         float trkStrBx, trkStrBw;
@@ -28901,6 +29344,21 @@ namespace LunaCalc
             cardDx.Controls.Add(txtTrkDx);
             cardMe.Layout += (s, e) => { txtTrkLoc.Location = new Point(S(18), S(31)); txtTrkLoc.Width = Math.Max(S(60), Math.Min(cardMe.Width - S(40), S(250))); };
             cardDx.Layout += (s, e) => { txtTrkDx.Location = new Point(S(18), S(31)); txtTrkDx.Width = Math.Max(S(60), Math.Min(cardDx.Width - S(40), S(250))); };
+            btnTrkCall3 = new Pillola("CALL3", StilePillola.Bordo, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 7.5F * fontFactor, FontStyle.Bold));
+            tip.SetToolTip(btnTrkCall3, Lang.T("CALL3.TXT: nominativi e locator delle stazioni EME") + "\u0001"
+                + Lang.T("Scrivi un nominativo nella casella del locator del DX: se è nel CALL3.TXT il programma propone il suo locator e lo inserisce premendo Invio. Clic qui per aggiornare il file o copiarlo nella cartella di WSJT-X."));
+            cardDx.Controls.Add(btnTrkCall3);
+            cardDx.Layout += (s, e) =>
+            {
+                Size sb = btnTrkCall3.GetPreferredSize(Size.Empty);
+                int wt;
+                using (Font ft = FontPx(Lang.FontUi, S(12), false))
+                    wt = TextRenderer.MeasureText(Lang.T("QTH - Locator WWL DX").ToUpper(Lang.Cultura), ft).Width;
+                btnTrkCall3.Location = new Point(cardDx.Width - S(11) - sb.Width, S(4));
+                btnTrkCall3.Visible = S(12) + wt + S(6) + sb.Width + S(11) <= cardDx.Width;
+            };
+            btnTrkCall3.Click += (s, e) => FinestraCall3();
+            AgganciaCall3(txtTrkDx);
             cardMe.Paint += (s, e) => DisegnaScheda(e.Graphics, cardMe, Lang.T("QTH - Locator WWL mio"), null, Color.Empty, subMe, subMeCol, badgeMe, txtTrkLoc, ColBlu, S(2));
             cardDx.Paint += (s, e) => DisegnaScheda(e.Graphics, cardDx, Lang.T("QTH - Locator WWL DX"), null, Color.Empty, subDx, subDxCol, "", txtTrkDx, Tema.Linea, 1f);
             txtTrkLoc.TextChanged += (s, e) =>
@@ -30068,10 +30526,15 @@ namespace LunaCalc
             if (txtTrkLoc.BackColor != Tema.Field) { txtTrkLoc.BackColor = Tema.Field; txtTrkDx.BackColor = Tema.Field; }
             // riga sotto il locator del DX
             if (txtTrkDx.Text.Trim().Length == 0) { subDx = Lang.T("inserisci il locator della stazione da ascoltare"); subDxCol = Tema.Muted; }
-            else if (!dx.Ok) { subDx = Lang.T("locator non valido"); subDxCol = Tema.BadFg; }
+            else if (!dx.Ok)
+            {
+                string c3, g3 = ProponiCall3(txtTrkDx.Text, out c3);
+                if (g3 != null) { subDx = string.Format(Lang.T("{0} nel CALL3.TXT: {1} (premi Invio per usarlo)"), c3, g3); subDxCol = Tema.OkFg; }
+                else { subDx = Lang.T("locator non valido"); subDxCol = Tema.BadFg; }
+            }
             else
             {
-                subDx = SottoLocator(txtTrkDx.Text, dx.Lat, dx.Lon) + (chkDx.Checked ? "" : Lang.T("   (seconda stazione disattivata)"));
+                subDx = (NomeDxCall3().Length > 0 ? NomeDxCall3() + " · " : "") + SottoLocator(txtTrkDx.Text, dx.Lat, dx.Lon) + (chkDx.Checked ? "" : Lang.T("   (seconda stazione disattivata)"));
                 subDxCol = Tema.Muted;
             }
             trk.DxValido = dx.Ok;
@@ -34324,6 +34787,7 @@ namespace LunaCalc
             tip.SetToolTip(chkDx, Lang.T("Confronta con la seconda stazione"));
             chkDx.CheckedChanged += (s, e) => { EnableDx(); UpdateLive(); };
             dx = BuildStation(g2, 0, "", 0);
+            AgganciaCall3(dx.Loc);
             gbDx = SchedaCampi(Lang.T("Seconda stazione (DX)"), Color.FromArgb(217, 119, 6), g2, chkDx);
             top.Controls.Add(gbDx, 1, 0);
 
@@ -34621,7 +35085,133 @@ namespace LunaCalc
                     + Lang.T(")   ora locale ") + TimeZoneInfo.ConvertTimeFromUtc(adesso, dx.Tz).ToString("HH:mm", inv);
                 dx.Coord.Text = t;
             }
-            else { dx.Coord.ForeColor = Color.Firebrick; dx.Coord.Text = Lang.T("Locator non valido"); }
+            else
+            {
+                string c3, g3 = ProponiCall3(dx.Loc.Text, out c3);
+                if (g3 != null) { dx.Coord.ForeColor = Tema.OkFg; dx.Coord.Text = string.Format(Lang.T("{0} nel CALL3.TXT: {1} (premi Invio per usarlo)"), c3, g3); }
+                else { dx.Coord.ForeColor = Color.Firebrick; dx.Coord.Text = Lang.T("Locator non valido"); }
+            }
+            if (dx.Ok && NomeDxCall3().Length > 0) dx.Coord.Text = NomeDxCall3() + " · " + dx.Coord.Text;
+        }
+
+        // Se il testo non è un locator ma un nominativo presente nel CALL3.TXT, il locator da proporre
+        static string ProponiCall3(string testo, out string call)
+        {
+            call = null;
+            double la, lo;
+            string t = (testo ?? "").Trim();
+            if (t.Length < 3 || Locator.TryParse(t, out la, out lo)) return null;
+            return Call3.Cerca(t, out call);
+        }
+
+        // Nominativo del DX preso dal CALL3.TXT, finché il locator resta quello
+        string NomeDxCall3()
+        {
+            if (dxCall3.Length == 0 || dx == null || dx.Loc == null) return "";
+            return string.Equals(dx.Loc.Text.Trim(), dxCall3Grid, StringComparison.OrdinalIgnoreCase) ? dxCall3 : "";
+        }
+
+        // Invio in una casella del locator del DX: se contiene un nominativo del CALL3.TXT, lo sostituisce col suo locator
+        void AgganciaCall3(TextBox tb)
+        {
+            tb.PreviewKeyDown += (s, e) =>
+            {
+                string c;
+                if (e.KeyCode == Keys.Enter && ProponiCall3(tb.Text, out c) != null) e.IsInputKey = true;
+            };
+            tb.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode != Keys.Enter) return;
+                string c, g = ProponiCall3(tb.Text, out c);
+                if (g == null) return;
+                e.Handled = true; e.SuppressKeyPress = true;
+                dxCall3 = c; dxCall3Grid = g;
+                tb.Text = g;
+                tb.SelectionStart = tb.Text.Length;
+            };
+        }
+
+        // Finestra del CALL3.TXT: stato del file, aggiornamento dalle due fonti, copia nella cartella di WSJT-X
+        void FinestraCall3()
+        {
+            using (Form f = new Form())
+            {
+                f.Text = "CALL3.TXT";
+                f.FormBorderStyle = FormBorderStyle.FixedDialog;
+                f.MaximizeBox = false; f.MinimizeBox = false; f.ShowInTaskbar = false;
+                f.StartPosition = FormStartPosition.CenterParent;
+                TableLayoutPanel t = new TableLayoutPanel(); t.AutoSize = true; t.ColumnCount = 1; t.Padding = new Padding(S(14));
+                Label info = new Label(); info.AutoSize = true; info.MaximumSize = new Size(S(520), 0); info.Margin = new Padding(0, 0, 0, S(10));
+                info.Text = Lang.T("Il CALL3.TXT è l'elenco dei nominativi delle stazioni EME con il loro locator, usato anche da WSJT-X. YAEC scarica sia la lista di W7GJ sia quella distribuita con WSJT-X Improved: se una delle due non risponde usa l'altra, se rispondono entrambe le fonde per nominativo (a parità di nominativo vale il locator di W7GJ). Il file si aggiorna da solo all'avvio quando ha più di 7 giorni.");
+                Label stato = new Label(); stato.AutoSize = true; stato.MaximumSize = new Size(S(520), 0); stato.Font = new Font(Lang.FontUi, 10F, FontStyle.Bold);
+                Label fonti = new Label(); fonti.AutoSize = true; fonti.MaximumSize = new Size(S(520), 0); fonti.ForeColor = Tema.Muted; fonti.Margin = new Padding(0, S(4), 0, S(4));
+                Label esito = new Label(); esito.AutoSize = true; esito.MaximumSize = new Size(S(520), 0); esito.MinimumSize = new Size(S(520), S(44)); esito.Margin = new Padding(0, S(6), 0, 0);
+                Label wsj = new Label(); wsj.AutoSize = true; wsj.MaximumSize = new Size(S(520), 0); wsj.ForeColor = Tema.Muted; wsj.Margin = new Padding(0, S(10), 0, 0);
+                Action rinfresca = () =>
+                {
+                    DateTime d = Call3.DataFile;
+                    stato.Text = d == DateTime.MinValue ? Lang.T("Nessun CALL3.TXT nella cartella data.")
+                        : string.Format(ci, Lang.T("{0:N0} nominativi, file del {1}"), Call3.Conteggio, d.ToString("dd/MM/yyyy HH:mm", inv));
+                    fonti.Text = Call3.Fonti[0][0] + ": " + (Call3.Esito[0].Length > 0 ? Call3.Esito[0] : "—") + "\n"
+                        + Call3.Fonti[1][0] + ": " + (Call3.Esito[1].Length > 0 ? Call3.Esito[1] : "—");
+                    string cw = Call3.CartellaWsjtx();
+                    wsj.Text = Lang.T("Cartella di WSJT-X: ") + cw + (Directory.Exists(cw) ? "" : Lang.T("  (non trovata)"));
+                };
+                rinfresca();
+                t.Controls.Add(info); t.Controls.Add(stato); t.Controls.Add(fonti); t.Controls.Add(esito); t.Controls.Add(wsj);
+                Button agg = new Button(); agg.Text = Lang.T("Aggiorna ora");
+                Button cop = new Button(); cop.Text = Lang.T("Copia in WSJT-X");
+                Button chiudi = new Button(); chiudi.Text = Lang.T("Chiudi"); chiudi.DialogResult = DialogResult.Cancel;
+                agg.Click += (s, e) =>
+                {
+                    agg.Enabled = false; cop.Enabled = false;
+                    esito.ForeColor = Tema.Fore;
+                    esito.Text = Lang.T("Scaricamento da W7GJ e WSJT-X Improved…");
+                    System.Threading.Thread th = new System.Threading.Thread(() =>
+                    {
+                        string m = Call3.Aggiorna(true);
+                        try
+                        {
+                            f.BeginInvoke((Action)(() =>
+                            {
+                                esito.Text = m; agg.Enabled = true; cop.Enabled = true; rinfresca();
+                                UpdateLocators(); AggiornaTracciamento(true);
+                            }));
+                        }
+                        catch { }
+                    });
+                    th.IsBackground = true;
+                    th.Start();
+                };
+                cop.Click += (s, e) =>
+                {
+                    if (!File.Exists(Call3.Percorso)) { esito.ForeColor = Tema.BadFg; esito.Text = Lang.T("Prima scarica il CALL3.TXT con Aggiorna ora."); return; }
+                    string cw = Call3.CartellaWsjtx();
+                    if (!Directory.Exists(cw))
+                        using (FolderBrowserDialog fb = new FolderBrowserDialog())
+                        {
+                            fb.Description = Lang.T("Cartella di WSJT-X non trovata: scegli dove copiare il CALL3.TXT (in WSJT-X: File > Open log directory).");
+                            if (fb.ShowDialog(f) != DialogResult.OK) return;
+                            cw = fb.SelectedPath;
+                        }
+                    try
+                    {
+                        string dest = Path.Combine(cw, Call3.Nome);
+                        if (File.Exists(dest))
+                        {
+                            string bak = Path.Combine(cw, "CALL3.TXT.bak");
+                            File.Copy(dest, bak, true);
+                        }
+                        File.Copy(Call3.Percorso, dest, true);
+                        esito.ForeColor = Tema.OkFg;
+                        esito.Text = Lang.T("Copiato in ") + dest + Lang.T("  (il file precedente è in CALL3.TXT.bak). Riavvia WSJT-X per usarlo.");
+                    }
+                    catch (Exception ex) { esito.ForeColor = Tema.BadFg; esito.Text = Lang.T("Copia non riuscita: ") + ex.Message; }
+                };
+                StileDialogo(f, t, chiudi, cop, agg);
+                f.CancelButton = chiudi;
+                f.ShowDialog(this);
+            }
         }
 
         // Frequenza di lavoro = MHz + kHz/1000
@@ -36982,7 +37572,7 @@ namespace LunaCalc
             return "";
         }
 
-        static byte[] Scarica(string url, int timeoutMs)
+        internal static byte[] Scarica(string url, int timeoutMs)
         {
             try
             {
@@ -37003,7 +37593,7 @@ namespace LunaCalc
             }
         }
 
-        static void ScriviAtomico(string p, byte[] dati)
+        internal static void ScriviAtomico(string p, byte[] dati)
         {
             string tmp = p + ".tmp";
             File.WriteAllBytes(tmp, dati);
@@ -37058,6 +37648,12 @@ namespace LunaCalc
                 catch { stato(Lang.T("Flusso solare non raggiungibile: si usano i dati salvati")); }
             }
 
+            // CALL3.TXT (nominativi e locator delle stazioni EME): mancante o più vecchio di 7 giorni
+            if (!File.Exists(Call3.Percorso)) stato(Lang.T("CALL3.TXT mancante: scaricamento da W7GJ e WSJT-X Improved…"));
+            else if ((DateTime.UtcNow - File.GetLastWriteTimeUtc(Call3.Percorso)).TotalDays >= Call3.GiorniValidita)
+                stato(Lang.T("CALL3.TXT più vecchio di 7 giorni: scaricamento da W7GJ e WSJT-X Improved…"));
+            stato(Call3.Aggiorna(false));
+
             // log LoTW: solo se mancante e con nome utente e password memorizzati
             string lotw = Percorso("lotw.adi");
             string u = Impostazione("lotw_utente"), pw = MainForm.DecifraPassword(Impostazione("lotw_password"));
@@ -37078,6 +37674,191 @@ namespace LunaCalc
                 catch { stato(Lang.T("Registro LoTW non raggiungibile")); }
             }
             stato(Lang.T("Cartella data pronta"));
+        }
+    }
+
+    // CALL3.TXT: elenco nominativo → locator delle stazioni EME (quello usato da WSJT-X).
+    // Due fonti: la lista curata da W7GJ e quella distribuita con WSJT-X Improved (SourceForge).
+    // Si scaricano entrambe; se una non risponde si usa l'altra; se rispondono tutte e due si fondono
+    // per nominativo (in caso di locator diversi vale W7GJ). Il file finale sta in data/CALL3.TXT.
+    static class Call3
+    {
+        public const string Nome = "CALL3.TXT";
+        public static readonly string[][] Fonti = {
+            new string[] { "W7GJ", "http://www.bigskyspaces.com/w7gj/CALL3.TXT", "http://www.bigskyspaces.com/w7gj/call3.txt" },
+            new string[] { "WSJT-X Improved (SourceForge)", "https://downloads.sourceforge.net/project/wsjt-x-improved/Additional%20Files/CALL3.TXT",
+                "https://sourceforge.net/projects/wsjt-x-improved/files/Additional%20Files/CALL3.TXT/download" } };
+        public const int GiorniValidita = 7;
+
+        static readonly object blocco = new object();
+        static Dictionary<string, string> griglie;      // nominativo → locator
+        static DateTime caricato = DateTime.MinValue;  // data del file letto
+        public static volatile bool InCorso;
+        public static string[] Esito = { "", "" };      // esito dell'ultimo tentativo per ciascuna fonte
+
+        public static string Percorso { get { return Dati.Percorso(Nome); } }
+
+        // Righe valide: "NOMINATIVO,LOCATOR,..." (le righe che iniziano con // sono commenti)
+        static bool RigaValida(string riga, out string call, out string grid)
+        {
+            call = grid = null;
+            if (riga.Length < 6 || riga.StartsWith("//")) return false;
+            string[] p = riga.Split(',');
+            if (p.Length < 2) return false;
+            call = p[0].Trim().ToUpperInvariant();
+            grid = p[1].Trim().ToUpperInvariant();
+            if (call.Length < 3 || call.Length > 13 || call.IndexOf(' ') >= 0) return false;
+            double la, lo;
+            if (grid.Length < 4 || !Locator.TryParse(grid, out la, out lo)) return false;
+            return true;
+        }
+
+        // Testo scaricato → righe valide (null se non sembra un CALL3)
+        static List<string> Analizza(byte[] b)
+        {
+            if (b == null || b.Length < 200) return null;
+            string t = Encoding.GetEncoding(28591).GetString(b);
+            if (t.IndexOf("<html", StringComparison.OrdinalIgnoreCase) >= 0) return null;
+            List<string> ok = new List<string>();
+            string c, g;
+            foreach (string r0 in t.Split('\n'))
+            {
+                string r = r0.Trim('\r', ' ', '\t');
+                if (RigaValida(r, out c, out g)) ok.Add(r);
+            }
+            return ok.Count >= 50 ? ok : null;
+        }
+
+        static List<string> ScaricaFonte(int i)
+        {
+            for (int k = 1; k < Fonti[i].Length; k++)
+            {
+                try
+                {
+                    List<string> r = Analizza(Dati.Scarica(Fonti[i][k], 20000));
+                    if (r != null) { Esito[i] = string.Format(CultureInfo.InvariantCulture, Lang.T("{0:N0} nominativi"), r.Count); return r; }
+                }
+                catch { }
+            }
+            Esito[i] = Lang.T("non raggiungibile");
+            return null;
+        }
+
+        // Scarica e fonde; forza = ignora l'età del file. Restituisce un messaggio per l'utente.
+        public static string Aggiorna(bool forza)
+        {
+            string p = Percorso;
+            try
+            {
+                if (!forza && File.Exists(p) && (DateTime.UtcNow - File.GetLastWriteTimeUtc(p)).TotalDays < GiorniValidita)
+                    return Lang.T("CALL3.TXT aggiornato");
+            }
+            catch { }
+            if (InCorso) return Lang.T("CALL3.TXT: aggiornamento già in corso…");
+            InCorso = true;
+            try
+            {
+                List<string> a = ScaricaFonte(0), b = ScaricaFonte(1);
+                if (a == null && b == null) return Lang.T("CALL3.TXT non raggiungibile: si usa il file salvato");
+                // fusione per nominativo: prima W7GJ, poi le stazioni che mancano prese dall'altra fonte
+                List<string> righe = new List<string>();
+                HashSet<string> visti = new HashSet<string>();
+                int diversi = 0, aggiunti = 0;
+                Dictionary<string, string> ga = new Dictionary<string, string>();
+                string c, g;
+                if (a != null)
+                    foreach (string r in a)
+                        if (RigaValida(r, out c, out g) && visti.Add(c)) { righe.Add(r); ga[c] = g; }
+                if (b != null)
+                    foreach (string r in b)
+                    {
+                        if (!RigaValida(r, out c, out g)) continue;
+                        string g0;
+                        if (ga.TryGetValue(c, out g0)) { if (!LocatorCompatibili(g0, g)) diversi++; continue; }
+                        if (visti.Add(c)) { righe.Add(r); if (a != null) aggiunti++; }
+                    }
+                righe.Sort((x, y) => string.CompareOrdinal(x, y));
+                StringBuilder sb = new StringBuilder();
+                string fonti = a != null && b != null ? Fonti[0][0] + " + " + Fonti[1][0] : (a != null ? Fonti[0][0] : Fonti[1][0]);
+                sb.Append("// CALL3.TXT - " + righe.Count.ToString(CultureInfo.InvariantCulture) + " stations - "
+                    + DateTime.UtcNow.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) + " UTC\r\n");
+                sb.Append("// Sources: " + fonti + (a != null && b != null ? " (merged by callsign, W7GJ preferred)" : "") + "\r\n");
+                sb.Append("// Downloaded and merged by YAEC - Yet Another EME Calc\r\n");
+                foreach (string r in righe) sb.Append(r).Append("\r\n");
+                Dati.ScriviAtomico(p, Encoding.GetEncoding(28591).GetBytes(sb.ToString()));
+                lock (blocco) { griglie = null; }
+                if (a != null && b != null)
+                    return string.Format(CultureInfo.InvariantCulture, Lang.T("CALL3.TXT aggiornato: {0:N0} nominativi da W7GJ e WSJT-X Improved ({1:N0} solo nella seconda, {2:N0} con locator diverso: vale W7GJ)"),
+                        righe.Count, aggiunti, diversi);
+                return string.Format(CultureInfo.InvariantCulture, Lang.T("CALL3.TXT aggiornato: {0:N0} nominativi (solo {1}, l'altra fonte non risponde)"), righe.Count, fonti);
+            }
+            catch (Exception ex) { return Lang.T("CALL3.TXT non aggiornato: ") + ex.Message; }
+            finally { InCorso = false; }
+        }
+
+        // Due locator della stessa stazione sono "uguali" se il più corto è l'inizio del più lungo
+        static bool LocatorCompatibili(string x, string y)
+        {
+            return x.StartsWith(y, StringComparison.Ordinal) || y.StartsWith(x, StringComparison.Ordinal);
+        }
+
+        static Dictionary<string, string> Tabella()
+        {
+            lock (blocco)
+            {
+                string p = Percorso;
+                DateTime d = DateTime.MinValue;
+                try { if (File.Exists(p)) d = File.GetLastWriteTimeUtc(p); } catch { }
+                if (griglie != null && d == caricato) return griglie;
+                Dictionary<string, string> t = new Dictionary<string, string>();
+                try
+                {
+                    if (d != DateTime.MinValue)
+                    {
+                        string c, g;
+                        foreach (string r in File.ReadAllLines(p, Encoding.GetEncoding(28591)))
+                            if (RigaValida(r.Trim(), out c, out g) && !t.ContainsKey(c)) t[c] = g;
+                    }
+                }
+                catch { }
+                griglie = t; caricato = d;
+                return t;
+            }
+        }
+
+        public static int Conteggio { get { return Tabella().Count; } }
+        public static DateTime DataFile
+        {
+            get { try { return File.Exists(Percorso) ? File.GetLastWriteTime(Percorso) : DateTime.MinValue; } catch { return DateTime.MinValue; } }
+        }
+
+        // Locator di un nominativo (anche con prefisso o suffisso: EA8/IK1ABC, IK1ABC/P); null se assente
+        public static string Cerca(string testo, out string call)
+        {
+            call = null;
+            if (string.IsNullOrEmpty(testo)) return null;
+            string t = testo.Trim().ToUpperInvariant();
+            if (t.Length < 3) return null;
+            Dictionary<string, string> tab = Tabella();
+            if (tab.Count == 0) return null;
+            string g;
+            if (tab.TryGetValue(t, out g)) { call = t; return g; }
+            string piu = null;
+            foreach (string pz in t.Split('/'))
+                if (pz.Length >= 3 && (piu == null || pz.Length > piu.Length)) piu = pz;
+            if (piu != null && piu != t && tab.TryGetValue(piu, out g)) { call = piu; return g; }
+            return null;
+        }
+
+        // Cartella dei dati di WSJT-X sul sistema in uso
+        public static string CartellaWsjtx()
+        {
+            if (Piattaforma.Windows)
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "WSJT-X");
+            string home = Environment.GetEnvironmentVariable("HOME") ?? Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            if (Piattaforma.Mac) return Path.Combine(home, "Library", "Application Support", "WSJT-X");
+            string xdg = Environment.GetEnvironmentVariable("XDG_DATA_HOME");
+            return Path.Combine(string.IsNullOrEmpty(xdg) ? Path.Combine(home, ".local", "share") : xdg, "WSJT-X");
         }
     }
 

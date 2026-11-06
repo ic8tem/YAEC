@@ -62,6 +62,18 @@ jobs:
         run: |
           V="$(tr -d ' \r\n' < VERSION)"
           echo "version=$V" >> "$GITHUB_OUTPUT"
+      - name: Verifica delle fonti di CALL3.TXT (solo informativa)
+        continue-on-error: true
+        run: |
+          for u in "http://www.bigskyspaces.com/w7gj/CALL3.TXT" "http://www.bigskyspaces.com/w7gj/call3.txt" \
+                   "https://downloads.sourceforge.net/project/wsjt-x-improved/Additional%20Files/CALL3.TXT" \
+                   "https://sourceforge.net/projects/wsjt-x-improved/files/Additional%20Files/CALL3.TXT/download"; do
+            code=$(curl -sSL -A "YAEC-CI" -m 30 -o c3.tmp -w "%{http_code}" "$u" || echo ERR)
+            echo "CALL3 $code $(wc -c < c3.tmp 2>/dev/null) bytes, righe valide $(grep -cE '^[A-Z0-9/]+,[A-R]{2}[0-9]{2}' c3.tmp 2>/dev/null) :: $u"
+            head -c 300 c3.tmp | tr -d '\r' | head -4; echo
+          done
+          curl -sSL -m 30 http://www.bigskyspaces.com/w7gj/ | grep -io 'href="[^"]*call3[^"]*"' | head || true
+          curl -sSL -m 30 http://www.bigskyspaces.com/w7gj/tracker.htm | grep -io 'href="[^"]*\.txt"' | head || true
       - name: Pacchetti .deb e .tar.gz
         run: |
           cp win/YAEC.exe .
