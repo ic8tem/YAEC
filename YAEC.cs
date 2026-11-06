@@ -28956,7 +28956,7 @@ namespace LunaCalc
                 }
             }
 
-            if (conDec) DisegnaDeclinazione(g, a, X, fs, fb);
+            if (conDec) DisegnaDeclinazione(g, a, X, fs, fb, false);
 
             // adesso
             DateTime now = DateTime.UtcNow;
@@ -28986,6 +28986,8 @@ namespace LunaCalc
                     g.DrawString(Lang.T("distanza media del giorno (scala a destra)  -  ★ = 3 giorni migliori"), fs, tt, lx + S(30), ly + S(30));
                 }
             }
+            // valori dei massimi della declinazione sopra la legenda, perché restino leggibili
+            if (conDec) DisegnaDeclinazione(g, a, X, fs, fb, true);
             fs.Dispose();
             fb.Dispose();
         }
@@ -28994,12 +28996,16 @@ namespace LunaCalc
 
         // Declinazione della Luna (geocentrica) sovrapposta al grafico Dgrd/distanza: curva blu con la sua scala
         // (±30°) scritta dentro il bordo sinistro, linea punteggiata dello zero, massimi a nord e a sud con la data.
-        void DisegnaDeclinazione(Graphics g, RectangleF d, Func<DateTime, float> X, Font fs, Font fb)
+        void DisegnaDeclinazione(Graphics g, RectangleF d, Func<DateTime, float> X, Font fs, Font fb, bool soloValori)
         {
             const double DecScala = 30.0;
             Func<double, float> Yc = vc => d.Top + (float)((DecScala - Math.Max(-DecScala, Math.Min(DecScala, vc))) / (2 * DecScala) * d.Height);
             Color cDec = ColoreDec();
             float y0 = Yc(0);
+            int n = dgT.Count;
+            PointF[] pts = new PointF[n];
+            for (int i = 0; i < n; i++) pts[i] = new PointF(X(dgT[i]), Yc(dgDec[i]));
+            if (!soloValori)
             using (Brush tdc = new SolidBrush(cDec))
             using (Brush bg = new SolidBrush(Color.FromArgb(200, Tema.ChartBg)))
             {
@@ -29014,10 +29020,7 @@ namespace LunaCalc
                 }
                 using (Pen p0 = new Pen(Color.FromArgb(150, cDec), 1f)) { p0.DashStyle = DashStyle.Dot; g.DrawLine(p0, d.Left + S(30), y0, d.Right, y0); }
             }
-            int n = dgT.Count;
-            PointF[] pts = new PointF[n];
-            for (int i = 0; i < n; i++) pts[i] = new PointF(X(dgT[i]), Yc(dgDec[i]));
-            using (Pen pc = new Pen(cDec, 1.8f)) g.DrawLines(pc, pts);
+            if (!soloValori) { using (Pen pc = new Pen(cDec, 1.8f)) g.DrawLines(pc, pts); return; }
             // massimi a nord e a sud: punto e valore con la data (un estremo per ogni finestra di ±1 giorno)
             using (Brush tdc = new SolidBrush(cDec))
             {
@@ -37936,12 +37939,6 @@ namespace LunaCalc
                 catch { stato(Lang.T("Flusso solare non raggiungibile: si usano i dati salvati")); }
             }
 
-            // CALL3.TXT (nominativi e locator delle stazioni EME): mancante o più vecchio di 7 giorni
-            if (!File.Exists(Call3.Percorso)) stato(Lang.T("CALL3.TXT mancante: scaricamento da W7GJ e WSJT-X Improved…"));
-            else if ((DateTime.UtcNow - File.GetLastWriteTimeUtc(Call3.Percorso)).TotalDays >= Call3.GiorniValidita)
-                stato(Lang.T("CALL3.TXT più vecchio di 7 giorni: scaricamento da W7GJ e WSJT-X Improved…"));
-            stato(Call3.Aggiorna(false));
-
             // log LoTW: solo se mancante e con nome utente e password memorizzati
             string lotw = Percorso("lotw.adi");
             string u = Impostazione("lotw_utente"), pw = MainForm.DecifraPassword(Impostazione("lotw_password"));
@@ -37961,6 +37958,12 @@ namespace LunaCalc
                 }
                 catch { stato(Lang.T("Registro LoTW non raggiungibile")); }
             }
+
+            // CALL3.TXT (nominativi e locator delle stazioni EME): mancante o più vecchio di 7 giorni
+            if (!File.Exists(Call3.Percorso)) stato(Lang.T("CALL3.TXT mancante: scaricamento da W7GJ e WSJT-X Improved…"));
+            else if ((DateTime.UtcNow - File.GetLastWriteTimeUtc(Call3.Percorso)).TotalDays >= Call3.GiorniValidita)
+                stato(Lang.T("CALL3.TXT più vecchio di 7 giorni: scaricamento da W7GJ e WSJT-X Improved…"));
+            stato(Call3.Aggiorna(false));
             stato(Lang.T("Cartella data pronta"));
         }
     }
@@ -38023,7 +38026,7 @@ namespace LunaCalc
             {
                 try
                 {
-                    List<string> r = Analizza(Dati.Scarica(Fonti[i][k], 20000));
+                    List<string> r = Analizza(Dati.Scarica(Fonti[i][k], i == 0 ? 30000 : 120000));   // SourceForge: 2 MB, a volte lento
                     if (r != null) { Esito[i] = string.Format(CultureInfo.InvariantCulture, Lang.T("{0:N0} nominativi"), r.Count); return r; }
                 }
                 catch { }
