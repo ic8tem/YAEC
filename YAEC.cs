@@ -38020,18 +38020,61 @@ namespace LunaCalc
             return ok.Count >= 50 ? ok : null;
         }
 
+        // Scaricamento che segue a mano i rinvii (SourceForge rimanda a un mirror, anche da https a http,
+        // e Mono non segue da solo quel passaggio)
+        static byte[] ScaricaConRinvii(string url, int timeoutMs)
+        {
+            try { ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072 | (SecurityProtocolType)768 | SecurityProtocolType.Tls; } catch { }
+            for (int salto = 0; salto < 8; salto++)
+            {
+                HttpWebRequest rq = (HttpWebRequest)WebRequest.Create(url);
+                rq.Timeout = timeoutMs;
+                rq.ReadWriteTimeout = timeoutMs;
+                rq.AllowAutoRedirect = false;
+                rq.UserAgent = "YAEC/" + MainForm.Versione.TrimStart('v') + " (EME calculator for radio amateurs)";
+                HttpWebResponse rs;
+                try { rs = (HttpWebResponse)rq.GetResponse(); }
+                catch (WebException wex)
+                {
+                    rs = wex.Response as HttpWebResponse;
+                    if (rs == null) throw;
+                }
+                using (rs)
+                {
+                    int code = (int)rs.StatusCode;
+                    if (code >= 300 && code < 400)
+                    {
+                        string dove = rs.Headers["Location"];
+                        if (string.IsNullOrEmpty(dove)) throw new WebException("HTTP " + code);
+                        url = new Uri(new Uri(url), dove).AbsoluteUri;
+                        continue;
+                    }
+                    if (code != 200) throw new WebException("HTTP " + code);
+                    using (Stream st = rs.GetResponseStream())
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        st.CopyTo(ms);
+                        return ms.ToArray();
+                    }
+                }
+            }
+            throw new WebException("too many redirects");
+        }
+
         static List<string> ScaricaFonte(int i)
         {
+            string errore = "";
             for (int k = 1; k < Fonti[i].Length; k++)
             {
                 try
                 {
-                    List<string> r = Analizza(Dati.Scarica(Fonti[i][k], i == 0 ? 30000 : 120000));   // SourceForge: 2 MB, a volte lento
+                    List<string> r = Analizza(ScaricaConRinvii(Fonti[i][k], i == 0 ? 30000 : 120000));   // SourceForge: 2 MB, a volte lento
                     if (r != null) { Esito[i] = string.Format(CultureInfo.InvariantCulture, Lang.T("{0:N0} nominativi"), r.Count); return r; }
+                    errore = "?";
                 }
-                catch { }
+                catch (Exception ex) { errore = ex.Message; }
             }
-            Esito[i] = Lang.T("non raggiungibile");
+            Esito[i] = Lang.T("non raggiungibile") + (errore.Length > 0 ? " (" + errore + ")" : "");
             return null;
         }
 
@@ -38075,6 +38118,7 @@ namespace LunaCalc
                     + DateTime.UtcNow.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) + " UTC\r\n");
                 sb.Append("// Sources: " + fonti + (a != null && b != null ? " (merged by callsign, W7GJ preferred)" : "") + "\r\n");
                 sb.Append("// Downloaded and merged by YAEC - Yet Another EME Calc\r\n");
+                sb.Append("// " + Fonti[0][0] + ": " + Esito[0] + " - " + Fonti[1][0] + ": " + Esito[1] + "\r\n");
                 foreach (string r in righe) sb.Append(r).Append("\r\n");
                 Dati.ScriviAtomico(p, Encoding.GetEncoding(28591).GetBytes(sb.ToString()));
                 lock (blocco) { griglie = null; }
