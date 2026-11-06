@@ -132,6 +132,14 @@ jobs:
           convert shot/es.png -resize 1200x shot/es.jpg 2>/dev/null && echo "SCREENSHOT-ES-B64:$(base64 -w 0 shot/es.jpg)" || true
           kill $PID 2>/dev/null || true
           sed -i 's/^lingua=es/lingua=it/' "$HOME/.local/share/YAEC/data/impostazioni.txt"
+          for C in "La risoluzione dell'encoder" "Sæmundsson" "Il preamplificatore e la figura di rumore"; do
+            YAEC_LINGUETTA="TEORIA E CONSIGLI SULL'EME" YAEC_CERCA="$C" mono YAEC.exe &
+            PID=$!
+            sleep 30
+            import -window root shot/c.png || true
+            convert shot/c.png -resize 1200x shot/c.jpg 2>/dev/null && echo "SCREENSHOT-CERCA-B64:$(base64 -w 0 shot/c.jpg)" || true
+            kill $PID 2>/dev/null || true
+          done
           for T in "MANUALE D'USO" "CAVI COASSIALI"; do
             YAEC_LINGUETTA="$T" mono YAEC.exe &
             PID=$!

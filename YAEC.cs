@@ -33030,6 +33030,24 @@ namespace LunaCalc
                 }
             };
             treeMan.AfterSelect += (s, e) => { DocBlocco b = e.Node.Tag as DocBlocco; if (b != null) { docMan.Lampeggia = null; docMan.VaiA(b); } };
+            // Windows: quando la linguetta compare la prima volta l'indice deve partire dalla prima voce (la prefazione)
+            bool indiceInCima = false;
+            treeMan.VisibleChanged += (s, e) =>
+            {
+                if (indiceInCima || !treeMan.Visible || treeMan.Nodes.Count == 0) return;
+                indiceInCima = true;
+                treeMan.BeginInvoke((Action)(() =>
+                {
+                    try { treeMan.TopNode = treeMan.Nodes[0]; } catch { }
+                    // solo per le prove automatiche: YAEC_CERCA=<testo> mostra quel punto del manuale
+                    string cerca = Environment.GetEnvironmentVariable("YAEC_CERCA");
+                    if (!string.IsNullOrEmpty(cerca) && docMan != null)
+                    {
+                        DocBlocco bc = docMan.Cerca(cerca, null);
+                        if (bc != null) docMan.VaiA(bc);
+                    }
+                }));
+            };
             sx.Controls.Add(txtCercaMan, 0, 0);
             sx.Controls.Add(bWord, 0, 1);
             sx.Controls.Add(treeMan, 0, 2);
@@ -33321,7 +33339,12 @@ namespace LunaCalc
             List<List<string>> c4 = Sezioni(TestiManuale.E(lg, "C4"));
             Func<int, List<string>> S4 = i => i < c4.Count ? c4[i] : new List<string>();
             bool itEn = ManualeV27.Ha(lg);   // capitoli riscritti con le formule in stile Equation Editor (tutte le lingue tradotte)
-            Righe(S4(0)); Righe(S4(1));
+            // 1.1: la formula di Sæmundsson della rifrazione in stile Equation Editor (formula in linea)
+            List<string> pos = new List<string>(S4(0));
+            for (int i = 0; i < pos.Count; i++)
+                pos[i] = pos[i].Replace("R = 1,02 / tan(h + 10,3/(h + 5,11))", "§R = \\frac{1,02}{tan \\p{h + \\frac{10,3}{h + 5,11}}}§")
+                               .Replace("R = 1.02 / tan(h + 10.3/(h + 5.11))", "§R = \\frac{1.02}{tan \\p{h + \\frac{10.3}{h + 5.11}}}§");
+            Righe(pos); Righe(S4(1));
             if (itEn) { Righe(ManualeV27.E(lg, "S43")); Righe(ManualeV27.E(lg, "S44")); }
             else
             {
@@ -33395,8 +33418,13 @@ namespace LunaCalc
             Righe(ManualeV27.E(lg, "S55"));
             }
             treeMan.ExpandAll();
-            if (treeMan.Nodes.Count > 0) treeMan.Nodes[0].EnsureVisible();
             treeMan.EndUpdate();
+            // l'indice parte dalla prima voce (la prefazione, nel manuale di teoria)
+            if (treeMan.Nodes.Count > 0)
+            {
+                try { treeMan.TopNode = treeMan.Nodes[0]; } catch { }
+                treeMan.Nodes[0].EnsureVisible();
+            }
             docMan.Aggiorna();
         }
 
@@ -41185,7 +41213,7 @@ namespace LunaCalc
             int nc = 0;
             foreach (string[] r in b.Righe) nc = Math.Max(nc, r.Length);
             float pad = Px(8);
-            float[] nat = new float[nc];
+            float[] nat = new float[nc], min = new float[nc];
             tc.Celle = new List<DocBlocco[]>();
             for (int ri = 0; ri < b.Righe.Count; ri++)
             {
@@ -41199,13 +41227,34 @@ namespace LunaCalc
                     wb = wb >= 0 ? Px(130) : 0;
                     foreach (DocPezzo p in Pezzi(g, tx, f)) wn += p.W;
                     nat[c] = Math.Max(nat[c], Math.Min(wn, Px(420)) + 2 * pad + wb);
+                    // larghezza minima: nessuna parola spezzata; i valori brevi (numeri, unità) restano su una riga
+                    float wm = 0;
+                    if (wn <= Px(110)) wm = wn;
+                    else
+                        foreach (string parola in (tx ?? "").Split(' '))
+                        {
+                            if (parola.Length == 0) continue;
+                            float wp = 0;
+                            foreach (DocPezzo p in Pezzi(g, parola, f)) wp += p.W;
+                            wm = Math.Max(wm, wp);
+                        }
+                    min[c] = Math.Max(min[c], Math.Min(wm, Px(260)) + 2 * pad + wb + Px(2));
                 }
                 tc.Celle.Add(cel);
             }
-            float tot = 0;
-            foreach (float v in nat) tot += v;
+            float tot = 0, totMin = 0;
+            for (int c = 0; c < nc; c++) { nat[c] = Math.Max(nat[c], min[c]); tot += nat[c]; totMin += min[c]; }
             tc.Cw = new float[nc];
-            for (int c = 0; c < nc; c++) tc.Cw[c] = tot <= w ? nat[c] * w / Math.Max(1, tot) : Math.Max(Px(40), nat[c] * w / tot);
+            if (tot <= w)
+                for (int c = 0; c < nc; c++) tc.Cw[c] = nat[c] + (w - tot) * nat[c] / Math.Max(1, tot);
+            else if (totMin <= w)
+            {
+                // ogni colonna ha almeno la sua parola più lunga; lo spazio che resta va a chi ha più testo da mandare a capo
+                float resto = w - totMin, extra = tot - totMin;
+                for (int c = 0; c < nc; c++) tc.Cw[c] = min[c] + (extra > 0 ? resto * (nat[c] - min[c]) / extra : 0);
+            }
+            else
+                for (int c = 0; c < nc; c++) tc.Cw[c] = Math.Max(Px(30), min[c] * w / totMin);
             tc.Rh = new float[b.Righe.Count];
             for (int ri = 0; ri < b.Righe.Count; ri++)
             {
@@ -42369,7 +42418,7 @@ namespace LunaCalc
                 "~ esempio: transverter con NF 1,0 dB e guadagno 17 dB (valori minimi del DEMI L144-28) davanti a una radio HF con NF 10 dB.",
                 "@colonne 56",
                 "#### Abaco: NF della combinazione al variare della radio e del guadagno del transverter",
-                "@abaco Curve calcolate con la (3.7.3) per un transverter con NF 1,0 dB. Più il transverter guadagna, meno pesa la radio: con 25 dB di guadagno una radio con 20 dB di NF porta il totale a 2,0 dB; con 10 dB di guadagno la stessa radio porta il totale a 10,5 dB.",
+                "@abaco Curve calcolate con la (1.7.3) per un transverter con NF 1,0 dB. Più il transverter guadagna, meno pesa la radio: con 25 dB di guadagno una radio con 20 dB di NF porta il totale a 2,0 dB; con 10 dB di guadagno la stessa radio porta il totale a 10,5 dB.",
                 "@destra",
                 "#### Transverter per 144 MHz (IF 28 MHz)",
                 "|h| Costruttore · modello | >NF | >G RX | >TX | Fonte",
@@ -42456,8 +42505,8 @@ namespace LunaCalc
                 "### Compensare: chi corregge cosa",
                 "Compensare il Doppler significa spostare la frequenza di trasmissione, di ricezione o entrambe, in modo che i segnali si incontrino sulla frequenza concordata (lo *sked*). Ogni stazione corregge il proprio Doppler e, quando lavora un DX, anche quello del DX [1]:",
                 "|h| Situazione | Trasmissione | Ricezione",
-                "| Chiamata CQ e ascolto del proprio eco | sulla frequenza dello sked | sked + Doppler dell'eco (3.10.1)",
-                "| QSO con un DX noto (Doppler completo verso il DX) | corretta perché il DX ti riceva sullo sked | sked + Doppler DX → io (3.10.2)",
+                "| Chiamata CQ e ascolto del proprio eco | sulla frequenza dello sked | sked + Doppler dell'eco (1.10.1)",
+                "| QSO con un DX noto (Doppler completo verso il DX) | corretta perché il DX ti riceva sullo sked | sked + Doppler DX → io (1.10.2)",
                 "| CFOM, frequenza costante sulla Luna | sked − metà del proprio Doppler | sked + metà del proprio Doppler",
                 "### CFOM – Constant Frequency On Moon",
                 "Con il CFOM tutte le stazioni si comportano come se un trasmettitore virtuale sulla Luna fosse sintonizzato sullo sked: ognuna corregge solo metà del **proprio** Doppler in trasmissione e metà in ricezione, senza bisogno di conoscere il locator del corrispondente [2]:",
@@ -42489,7 +42538,7 @@ namespace LunaCalc
                 "| 12 bit | 4.096 | 0,088° | < 0,01 dB | 432 MHz con array grandi",
                 "| 14 bit | 16.384 | 0,022° | < 0,01 dB | dischi a 10 e 24 GHz [1]",
                 "| 16 bit | 65.536 | 0,005° | < 0,01 dB | oltre: limite dato dalla meccanica, non dall'encoder",
-                "~ Passo e perdita calcolati con (3.11.2) e (3.11.1). Una regola pratica è tenere l'errore sotto un decimo del fascio: l'array di 4 yagi in 144 MHz si accontenta di 8 bit, un disco di 3 m a 10 GHz (fascio ≈ 0,7°) chiede almeno 13 – 14 bit.",
+                "~ Passo e perdita calcolati con (1.11.2) e (1.11.1). Una regola pratica è tenere l'errore sotto un decimo del fascio: l'array di 4 yagi in 144 MHz si accontenta di 8 bit, un disco di 3 m a 10 GHz (fascio ≈ 0,7°) chiede almeno 13 – 14 bit.",
                 "> Il numero di bit dice solo quanto finemente si *legge* la posizione: la precisione reale dipende anche dai giochi meccanici, dalla flessione del sostegno, dal vento e dalla taratura del nord e dell'orizzonte.",
                 "### Array di yagi: attuatori e pulegge",
                 "Negli array di yagi (accoppiamenti di 2, 4 o più antenne) il carico in elevazione è grande e sbilanciato. Sul mercato si trovano attuatori lineari con motore a vite senza fine: in queste soluzioni la vite serve solo a regolare il moto, mentre il sostegno meccanico del carico è affidato a pulegge. La vite senza fine ha il vantaggio di non girare all'indietro sotto il carico, così l'array resta fermo anche a motore spento.",
@@ -42849,7 +42898,7 @@ namespace LunaCalc
                 "~ example: transverter with NF 1.0 dB and gain 17 dB (minimum values of the DEMI L144-28) in front of an HF radio with NF 10 dB.",
                 "@colonne 56",
                 "#### Chart: NF of the combination as the radio and the transverter gain vary",
-                "@abaco Curves computed with (3.7.3) for a transverter with NF 1.0 dB. The more the transverter gains, the less the radio weighs: with 25 dB of gain a radio with 20 dB of NF brings the total to 2.0 dB; with 10 dB of gain the same radio brings the total to 10.5 dB.",
+                "@abaco Curves computed with (1.7.3) for a transverter with NF 1.0 dB. The more the transverter gains, the less the radio weighs: with 25 dB of gain a radio with 20 dB of NF brings the total to 2.0 dB; with 10 dB of gain the same radio brings the total to 10.5 dB.",
                 "@destra",
                 "#### Transverters for 144 MHz (IF 28 MHz)",
                 "|h| Maker · model | >NF | >RX G | >TX | Source",
@@ -42936,8 +42985,8 @@ namespace LunaCalc
                 "### Compensating: who corrects what",
                 "Compensating the Doppler means shifting the transmit frequency, the receive frequency or both, so that the signals meet on the agreed frequency (the *sked*). Each station corrects its own Doppler and, when working a DX, also that of the DX [1]:",
                 "|h| Situation | Transmit | Receive",
-                "| CQ call and listening to your own echo | on the sked frequency | sked + echo Doppler (3.10.1)",
-                "| QSO with a known DX (full Doppler towards the DX) | corrected so that the DX receives you on the sked | sked + Doppler DX → me (3.10.2)",
+                "| CQ call and listening to your own echo | on the sked frequency | sked + echo Doppler (1.10.1)",
+                "| QSO with a known DX (full Doppler towards the DX) | corrected so that the DX receives you on the sked | sked + Doppler DX → me (1.10.2)",
                 "| CFOM, constant frequency on the Moon | sked − half of your own Doppler | sked + half of your own Doppler",
                 "### CFOM – Constant Frequency On Moon",
                 "With CFOM all stations behave as if a virtual transmitter on the Moon were tuned to the sked: each corrects only half of its **own** Doppler in transmission and half in reception, without needing to know the locator of the other station [2]:",
@@ -42969,7 +43018,7 @@ namespace LunaCalc
                 "| 12 bit | 4,096 | 0.088° | < 0.01 dB | 432 MHz with large arrays",
                 "| 14 bit | 16,384 | 0.022° | < 0.01 dB | dishes at 10 and 24 GHz [1]",
                 "| 16 bit | 65,536 | 0.005° | < 0.01 dB | beyond: limit set by the mechanics, not by the encoder",
-                "~ Step and loss computed with (3.11.2) and (3.11.1). A practical rule is to keep the error below a tenth of the beam: the 4-yagi array on 144 MHz is happy with 8 bits, a 3 m dish at 10 GHz (beam ≈ 0.7°) needs at least 13 – 14 bits.",
+                "~ Step and loss computed with (1.11.2) and (1.11.1). A practical rule is to keep the error below a tenth of the beam: the 4-yagi array on 144 MHz is happy with 8 bits, a 3 m dish at 10 GHz (beam ≈ 0.7°) needs at least 13 – 14 bits.",
                 "> The number of bits only says how finely the position is *read*: the real precision also depends on mechanical play, the flexing of the support, the wind and the calibration of north and of the horizon.",
                 "### Yagi arrays: actuators and pulleys",
                 "In yagi arrays (combinations of 2, 4 or more antennas) the elevation load is large and unbalanced. Linear actuators with a worm-screw motor are available on the market: in these solutions the screw only regulates the motion, while the mechanical support of the load is entrusted to pulleys. The worm screw has the advantage of not turning backwards under the load, so the array stays still even with the motor off.",
@@ -43321,7 +43370,7 @@ namespace LunaCalc
                 "~ Beispiel: Transverter mit NF 1,0 dB und Verstärkung 17 dB (Mindestwerte des DEMI L144-28) vor einem KW-Funkgerät mit NF 10 dB.",
                 "@colonne 56",
                 "#### Diagramm: NF der Kombination in Abhängigkeit von Funkgerät und Transverterverstärkung",
-                "@abaco Kurven berechnet mit (3.7.3) für einen Transverter mit NF 1,0 dB. Je mehr der Transverter verstärkt, desto weniger fällt das Funkgerät ins Gewicht: Mit 25 dB Verstärkung bringt ein Funkgerät mit 20 dB NF die Gesamtrauschzahl auf 2,0 dB; mit 10 dB Verstärkung bringt dasselbe Funkgerät sie auf 10,5 dB.",
+                "@abaco Kurven berechnet mit (1.7.3) für einen Transverter mit NF 1,0 dB. Je mehr der Transverter verstärkt, desto weniger fällt das Funkgerät ins Gewicht: Mit 25 dB Verstärkung bringt ein Funkgerät mit 20 dB NF die Gesamtrauschzahl auf 2,0 dB; mit 10 dB Verstärkung bringt dasselbe Funkgerät sie auf 10,5 dB.",
                 "@destra",
                 "#### Transverter für 144 MHz (ZF 28 MHz)",
                 "|h| Hersteller · Modell | >NF | >RX-Verst. | >TX | Quelle",
@@ -43408,8 +43457,8 @@ namespace LunaCalc
                 "### Kompensieren: wer korrigiert was",
                 "Den Doppler zu kompensieren bedeutet, die Sendefrequenz, die Empfangsfrequenz oder beide so zu verschieben, dass sich die Signale auf der vereinbarten Frequenz (dem *Sked*) treffen. Jede Station korrigiert ihren eigenen Doppler und, beim Verkehr mit einer DX-Station, auch den der DX-Station [1]:",
                 "|h| Situation | Senden | Empfangen",
-                "| CQ-Ruf und Abhören des eigenen Echos | auf der Sked-Frequenz | Sked + Echo-Doppler (3.10.1)",
-                "| QSO mit bekannter DX-Station (voller Doppler zur DX-Station) | so korrigiert, dass die DX-Station Sie auf dem Sked empfängt | Sked + Doppler DX → ich (3.10.2)",
+                "| CQ-Ruf und Abhören des eigenen Echos | auf der Sked-Frequenz | Sked + Echo-Doppler (1.10.1)",
+                "| QSO mit bekannter DX-Station (voller Doppler zur DX-Station) | so korrigiert, dass die DX-Station Sie auf dem Sked empfängt | Sked + Doppler DX → ich (1.10.2)",
                 "| CFOM, konstante Frequenz auf dem Mond | Sked − halber eigener Doppler | Sked + halber eigener Doppler",
                 "### CFOM – Constant Frequency On Moon",
                 "Bei CFOM verhalten sich alle Stationen so, als wäre ein virtueller Sender auf dem Mond auf das Sked abgestimmt: Jede korrigiert nur die Hälfte ihres **eigenen** Dopplers beim Senden und die Hälfte beim Empfang, ohne den Locator der anderen Station kennen zu müssen [2]:",
@@ -43441,7 +43490,7 @@ namespace LunaCalc
                 "| 12 Bit | 4.096 | 0,088° | < 0,01 dB | 432 MHz mit großen Gruppen",
                 "| 14 Bit | 16.384 | 0,022° | < 0,01 dB | Parabolspiegel für 10 und 24 GHz [1]",
                 "| 16 Bit | 65.536 | 0,005° | < 0,01 dB | darüber: Grenze durch die Mechanik, nicht durch den Encoder",
-                "~ Schritt und Verlust berechnet mit (3.11.2) und (3.11.1). Eine praktische Regel ist, den Fehler unter einem Zehntel der Keule zu halten: Die 4-Yagi-Gruppe auf 144 MHz kommt mit 8 Bit aus, ein 3-m-Spiegel bei 10 GHz (Keule ≈ 0,7°) braucht mindestens 13 – 14 Bit.",
+                "~ Schritt und Verlust berechnet mit (1.11.2) und (1.11.1). Eine praktische Regel ist, den Fehler unter einem Zehntel der Keule zu halten: Die 4-Yagi-Gruppe auf 144 MHz kommt mit 8 Bit aus, ein 3-m-Spiegel bei 10 GHz (Keule ≈ 0,7°) braucht mindestens 13 – 14 Bit.",
                 "> Die Anzahl der Bits sagt nur, wie fein die Position *gelesen* wird: Die tatsächliche Genauigkeit hängt auch vom mechanischen Spiel, der Durchbiegung der Halterung, dem Wind und der Kalibrierung von Nord und Horizont ab.",
                 "### Yagi-Gruppen: Stellantriebe und Umlenkrollen",
                 "Bei Yagi-Gruppen (Kombinationen aus 2, 4 oder mehr Antennen) ist die Elevationslast groß und unausgeglichen. Auf dem Markt gibt es Linearantriebe mit Schneckengetriebemotor: Bei diesen Lösungen regelt die Spindel nur die Bewegung, während die mechanische Aufnahme der Last Umlenkrollen übertragen wird. Das Schneckengetriebe hat den Vorteil, dass es sich unter Last nicht zurückdreht, sodass die Gruppe auch bei ausgeschaltetem Motor stehen bleibt.",
@@ -43793,7 +43842,7 @@ namespace LunaCalc
                 "~ exemple : transverter avec NF 1,0 dB et gain 17 dB (valeurs minimales du DEMI L144-28) devant un poste HF avec NF 10 dB.",
                 "@colonne 56",
                 "#### Abaque : NF de l'ensemble en fonction du poste et du gain du transverter",
-                "@abaco Courbes calculées avec (3.7.3) pour un transverter avec NF 1,0 dB. Plus le transverter a de gain, moins le poste pèse : avec 25 dB de gain un poste avec 20 dB de NF porte le total à 2,0 dB ; avec 10 dB de gain le même poste porte le total à 10,5 dB.",
+                "@abaco Courbes calculées avec (1.7.3) pour un transverter avec NF 1,0 dB. Plus le transverter a de gain, moins le poste pèse : avec 25 dB de gain un poste avec 20 dB de NF porte le total à 2,0 dB ; avec 10 dB de gain le même poste porte le total à 10,5 dB.",
                 "@destra",
                 "#### Transverters pour 144 MHz (FI 28 MHz)",
                 "|h| Fabricant · modèle | >NF | >G RX | >TX | Source",
@@ -43880,8 +43929,8 @@ namespace LunaCalc
                 "### Compenser : qui corrige quoi",
                 "Compenser le Doppler signifie décaler la fréquence d'émission, celle de réception ou les deux, afin que les signaux se rencontrent sur la fréquence convenue (le *sked*). Chaque station corrige son propre Doppler et, quand elle contacte un DX, aussi celui du DX [1] :",
                 "|h| Situation | Émission | Réception",
-                "| Appel CQ et écoute de son propre écho | sur la fréquence du sked | sked + Doppler de l'écho (3.10.1)",
-                "| QSO avec un DX connu (Doppler complet vers le DX) | corrigée pour que le DX vous reçoive sur le sked | sked + Doppler DX → moi (3.10.2)",
+                "| Appel CQ et écoute de son propre écho | sur la fréquence du sked | sked + Doppler de l'écho (1.10.1)",
+                "| QSO avec un DX connu (Doppler complet vers le DX) | corrigée pour que le DX vous reçoive sur le sked | sked + Doppler DX → moi (1.10.2)",
                 "| CFOM, fréquence constante sur la Lune | sked − la moitié de son propre Doppler | sked + la moitié de son propre Doppler",
                 "### CFOM – Constant Frequency On Moon",
                 "Avec le CFOM toutes les stations se comportent comme si un émetteur virtuel sur la Lune était accordé sur le sked : chacune ne corrige que la moitié de son **propre** Doppler en émission et la moitié en réception, sans avoir besoin de connaître le locator de l'autre station [2] :",
@@ -43913,7 +43962,7 @@ namespace LunaCalc
                 "| 12 bits | 4 096 | 0,088° | < 0,01 dB | 432 MHz avec grands groupements",
                 "| 14 bits | 16 384 | 0,022° | < 0,01 dB | paraboles à 10 et 24 GHz [1]",
                 "| 16 bits | 65 536 | 0,005° | < 0,01 dB | au-delà : limite fixée par la mécanique, non par le codeur",
-                "~ Pas et perte calculés avec (3.11.2) et (3.11.1). Une règle pratique est de garder l'erreur sous un dixième du lobe : le groupement de 4 yagis sur 144 MHz se contente de 8 bits, une parabole de 3 m à 10 GHz (lobe ≈ 0,7°) demande au moins 13 – 14 bits.",
+                "~ Pas et perte calculés avec (1.11.2) et (1.11.1). Une règle pratique est de garder l'erreur sous un dixième du lobe : le groupement de 4 yagis sur 144 MHz se contente de 8 bits, une parabole de 3 m à 10 GHz (lobe ≈ 0,7°) demande au moins 13 – 14 bits.",
                 "> Le nombre de bits dit seulement avec quelle finesse la position est *lue* : la précision réelle dépend aussi du jeu mécanique, de la flexion du support, du vent et de l'étalonnage du nord et de l'horizon.",
                 "### Groupements de yagis : actionneurs et poulies",
                 "Dans les groupements de yagis (combinaisons de 2, 4 antennes ou plus) la charge en élévation est importante et déséquilibrée. On trouve dans le commerce des vérins linéaires à moteur et vis sans fin : dans ces solutions la vis ne fait que régler le mouvement, tandis que le soutien mécanique de la charge est confié à des poulies. La vis sans fin a l'avantage de ne pas tourner à l'envers sous la charge, si bien que le groupement reste immobile même moteur arrêté.",
@@ -44265,7 +44314,7 @@ namespace LunaCalc
                 "~ ejemplo: transverter con NF 1,0 dB y ganancia 17 dB (valores mínimos del DEMI L144-28) delante de una radio de HF con NF 10 dB.",
                 "@colonne 56",
                 "#### Gráfico: NF del conjunto al variar la radio y la ganancia del transverter",
-                "@abaco Curvas calculadas con (3.7.3) para un transverter con NF 1,0 dB. Cuanto más gana el transverter, menos pesa la radio: con 25 dB de ganancia una radio con 20 dB de NF lleva el total a 2,0 dB; con 10 dB de ganancia la misma radio lleva el total a 10,5 dB.",
+                "@abaco Curvas calculadas con (1.7.3) para un transverter con NF 1,0 dB. Cuanto más gana el transverter, menos pesa la radio: con 25 dB de ganancia una radio con 20 dB de NF lleva el total a 2,0 dB; con 10 dB de ganancia la misma radio lleva el total a 10,5 dB.",
                 "@destra",
                 "#### Transverters para 144 MHz (FI 28 MHz)",
                 "|h| Fabricante · modelo | >NF | >G RX | >TX | Fuente",
@@ -44352,8 +44401,8 @@ namespace LunaCalc
                 "### Compensar: quién corrige qué",
                 "Compensar el Doppler significa desplazar la frecuencia de transmisión, la de recepción o ambas, para que las señales se encuentren en la frecuencia acordada (el *sked*). Cada estación corrige su propio Doppler y, cuando trabaja con un DX, también el del DX [1]:",
                 "|h| Situación | Transmisión | Recepción",
-                "| Llamada CQ y escucha del propio eco | en la frecuencia del sked | sked + Doppler del eco (3.10.1)",
-                "| QSO con un DX conocido (Doppler completo hacia el DX) | corregida para que el DX te reciba en el sked | sked + Doppler DX → yo (3.10.2)",
+                "| Llamada CQ y escucha del propio eco | en la frecuencia del sked | sked + Doppler del eco (1.10.1)",
+                "| QSO con un DX conocido (Doppler completo hacia el DX) | corregida para que el DX te reciba en el sked | sked + Doppler DX → yo (1.10.2)",
                 "| CFOM, frecuencia constante en la Luna | sked − la mitad del propio Doppler | sked + la mitad del propio Doppler",
                 "### CFOM – Constant Frequency On Moon",
                 "Con CFOM todas las estaciones se comportan como si un transmisor virtual en la Luna estuviera sintonizado en el sked: cada una corrige solo la mitad de su **propio** Doppler en transmisión y la mitad en recepción, sin necesidad de conocer el locator de la otra estación [2]:",
@@ -44385,7 +44434,7 @@ namespace LunaCalc
                 "| 12 bits | 4096 | 0,088° | < 0,01 dB | 432 MHz con sistemas grandes",
                 "| 14 bits | 16 384 | 0,022° | < 0,01 dB | parábolas en 10 y 24 GHz [1]",
                 "| 16 bits | 65 536 | 0,005° | < 0,01 dB | más allá: límite impuesto por la mecánica, no por el encoder",
-                "~ Paso y pérdida calculados con (3.11.2) y (3.11.1). Una regla práctica es mantener el error por debajo de una décima del haz: al sistema de 4 yagis en 144 MHz le bastan 8 bits, una parábola de 3 m en 10 GHz (haz ≈ 0,7°) necesita al menos 13 – 14 bits.",
+                "~ Paso y pérdida calculados con (1.11.2) y (1.11.1). Una regla práctica es mantener el error por debajo de una décima del haz: al sistema de 4 yagis en 144 MHz le bastan 8 bits, una parábola de 3 m en 10 GHz (haz ≈ 0,7°) necesita al menos 13 – 14 bits.",
                 "> El número de bits solo indica con qué finura se *lee* la posición: la precisión real depende también de los juegos mecánicos, de la flexión del soporte, del viento y de la calibración del norte y del horizonte.",
                 "### Sistemas de yagis: actuadores y poleas",
                 "En los sistemas de yagis (combinaciones de 2, 4 o más antenas) la carga en elevación es grande y desequilibrada. En el mercado existen actuadores lineales con motor de tornillo sin fin: en estas soluciones el tornillo solo regula el movimiento, mientras que el soporte mecánico de la carga se confía a poleas. El tornillo sin fin tiene la ventaja de no girar hacia atrás bajo la carga, por lo que el sistema permanece quieto incluso con el motor apagado.",
@@ -44737,7 +44786,7 @@ namespace LunaCalc
                 "~ exemplo: transverter com NF 1,0 dB e ganho 17 dB (valores mínimos do DEMI L144-28) à frente de um rádio HF com NF 10 dB.",
                 "@colonne 56",
                 "#### Gráfico: NF da combinação em função do rádio e do ganho do transverter",
-                "@abaco Curvas calculadas com (3.7.3) para um transverter com NF 1,0 dB. Quanto mais o transverter ganha, menos o rádio pesa: com 25 dB de ganho um rádio com 20 dB de NF leva o total a 2,0 dB; com 10 dB de ganho o mesmo rádio leva o total a 10,5 dB.",
+                "@abaco Curvas calculadas com (1.7.3) para um transverter com NF 1,0 dB. Quanto mais o transverter ganha, menos o rádio pesa: com 25 dB de ganho um rádio com 20 dB de NF leva o total a 2,0 dB; com 10 dB de ganho o mesmo rádio leva o total a 10,5 dB.",
                 "@destra",
                 "#### Transverters para 144 MHz (FI 28 MHz)",
                 "|h| Fabricante · modelo | >NF | >G RX | >TX | Fonte",
@@ -44824,8 +44873,8 @@ namespace LunaCalc
                 "### Compensar: quem corrige o quê",
                 "Compensar o Doppler significa deslocar a frequência de transmissão, a de receção ou ambas, para que os sinais se encontrem na frequência combinada (o *sked*). Cada estação corrige o seu próprio Doppler e, quando trabalha um DX, também o do DX [1]:",
                 "|h| Situação | Transmissão | Receção",
-                "| Chamada CQ e escuta do próprio eco | na frequência do sked | sked + Doppler do eco (3.10.1)",
-                "| QSO com um DX conhecido (Doppler total em direção ao DX) | corrigida para que o DX o receba no sked | sked + Doppler DX → eu (3.10.2)",
+                "| Chamada CQ e escuta do próprio eco | na frequência do sked | sked + Doppler do eco (1.10.1)",
+                "| QSO com um DX conhecido (Doppler total em direção ao DX) | corrigida para que o DX o receba no sked | sked + Doppler DX → eu (1.10.2)",
                 "| CFOM, frequência constante na Lua | sked − metade do próprio Doppler | sked + metade do próprio Doppler",
                 "### CFOM – Constant Frequency On Moon",
                 "Com o CFOM todas as estações comportam-se como se um transmissor virtual na Lua estivesse sintonizado no sked: cada uma corrige apenas metade do seu **próprio** Doppler em transmissão e metade em receção, sem precisar de conhecer o locator da outra estação [2]:",
@@ -44857,7 +44906,7 @@ namespace LunaCalc
                 "| 12 bit | 4 096 | 0,088° | < 0,01 dB | 432 MHz com agrupamentos grandes",
                 "| 14 bit | 16 384 | 0,022° | < 0,01 dB | parabólicas a 10 e 24 GHz [1]",
                 "| 16 bit | 65 536 | 0,005° | < 0,01 dB | mais além: limite imposto pela mecânica, não pelo encoder",
-                "~ Passo e perda calculados com (3.11.2) e (3.11.1). Uma regra prática é manter o erro abaixo de um décimo do feixe: o agrupamento de 4 yagis em 144 MHz fica satisfeito com 8 bits, uma parabólica de 3 m a 10 GHz (feixe ≈ 0,7°) precisa de pelo menos 13 – 14 bits.",
+                "~ Passo e perda calculados com (1.11.2) e (1.11.1). Uma regra prática é manter o erro abaixo de um décimo do feixe: o agrupamento de 4 yagis em 144 MHz fica satisfeito com 8 bits, uma parabólica de 3 m a 10 GHz (feixe ≈ 0,7°) precisa de pelo menos 13 – 14 bits.",
                 "> O número de bits indica apenas com que finura a posição é *lida*: a precisão real depende também das folgas mecânicas, da flexão do suporte, do vento e da calibração do norte e do horizonte.",
                 "### Agrupamentos de yagis: atuadores e roldanas",
                 "Nos agrupamentos de yagis (combinações de 2, 4 ou mais antenas) a carga em elevação é grande e desequilibrada. Existem no mercado atuadores lineares com motor de parafuso sem-fim: nestas soluções o parafuso apenas regula o movimento, enquanto a sustentação mecânica da carga é confiada a roldanas. O parafuso sem-fim tem a vantagem de não rodar para trás sob a carga, pelo que o agrupamento fica parado mesmo com o motor desligado.",
@@ -45209,7 +45258,7 @@ namespace LunaCalc
                 "~ 示例：NF 1.0 dB、增益 17 dB 的收发转换器（DEMI L144-28 的最低指标），后接 NF 10 dB 的短波电台。",
                 "@colonne 56",
                 "#### 图表：组合 NF 随电台 NF 和收发转换器增益的变化",
-                "@abaco 按 (3.7.3) 对 NF 1.0 dB 的收发转换器计算的曲线。收发转换器增益越高，电台的影响越小：增益为 25 dB 时，NF 20 dB 的电台使总 NF 为 2.0 dB；增益为 10 dB 时，同一电台使总 NF 达到 10.5 dB。",
+                "@abaco 按 (1.7.3) 对 NF 1.0 dB 的收发转换器计算的曲线。收发转换器增益越高，电台的影响越小：增益为 25 dB 时，NF 20 dB 的电台使总 NF 为 2.0 dB；增益为 10 dB 时，同一电台使总 NF 达到 10.5 dB。",
                 "@destra",
                 "#### 144 MHz 收发转换器（中频 28 MHz）",
                 "|h| 厂家 · 型号 | >NF | >RX 增益 | >TX | 来源",
@@ -45296,8 +45345,8 @@ namespace LunaCalc
                 "### 补偿：谁来校正什么",
                 "补偿多普勒是指移动发射频率、接收频率或两者，使信号在约定频率（*sked*）上相遇。每个电台校正自身的多普勒，与 DX 通联时还要校正 DX 的多普勒 [1]：",
                 "|h| 情形 | 发射 | 接收",
-                "| CQ 呼叫并收听自己的回波 | 在 sked 频率上 | sked + 回波多普勒 (3.10.1)",
-                "| 与已知 DX 进行 QSO（向 DX 完全补偿多普勒） | 经校正，使 DX 在 sked 上收到你 | sked + 多普勒 DX → 本站 (3.10.2)",
+                "| CQ 呼叫并收听自己的回波 | 在 sked 频率上 | sked + 回波多普勒 (1.10.1)",
+                "| 与已知 DX 进行 QSO（向 DX 完全补偿多普勒） | 经校正，使 DX 在 sked 上收到你 | sked + 多普勒 DX → 本站 (1.10.2)",
                 "| CFOM，月面恒定频率 | sked − 本站多普勒的一半 | sked + 本站多普勒的一半",
                 "### CFOM – Constant Frequency On Moon（月面恒定频率）",
                 "使用 CFOM 时，所有电台的工作方式就如同月球上有一台虚拟发射机调谐在 sked 频率上：每个电台在发射时只校正其**自身**多普勒的一半，在接收时校正另一半，而无需知道对方电台的定位符 [2]：",
@@ -45329,7 +45378,7 @@ namespace LunaCalc
                 "| 12 位 | 4,096 | 0.088° | < 0.01 dB | 432 MHz 大型阵列",
                 "| 14 位 | 16,384 | 0.022° | < 0.01 dB | 10 和 24 GHz 抛物面天线 [1]",
                 "| 16 位 | 65,536 | 0.005° | < 0.01 dB | 更高：限制来自机械结构而非编码器",
-                "~ 步距和损耗按 (3.11.2) 和 (3.11.1) 计算。实用规则是使误差小于波束宽度的十分之一：144 MHz 的 4 八木阵列用 8 位即可，10 GHz 的 3 m 抛物面（波束 ≈ 0.7°）至少需要 13 – 14 位。",
+                "~ 步距和损耗按 (1.11.2) 和 (1.11.1) 计算。实用规则是使误差小于波束宽度的十分之一：144 MHz 的 4 八木阵列用 8 位即可，10 GHz 的 3 m 抛物面（波束 ≈ 0.7°）至少需要 13 – 14 位。",
                 "> 位数只说明位置*读取*的精细程度：实际精度还取决于机械间隙、支架的形变、风以及正北和地平线的校准。",
                 "### 八木阵列：执行机构与滑轮",
                 "在八木阵列（2 副、4 副或更多天线的组合）中，俯仰负载大且不平衡。市场上有采用蜗杆电机的直线执行机构：在这类方案中，丝杆只负责调节运动，负载的机械支撑则交给滑轮。蜗杆的优点是在负载作用下不会反转，因此即使电机断电，阵列也能保持不动。",
@@ -45681,7 +45730,7 @@ namespace LunaCalc
                 "~ 例：NF 1.0 dB、利得17 dB（DEMI L144-28の最小値）のトランスバーターを、NF 10 dBのHF無線機の前に置いた場合。",
                 "@colonne 56",
                 "#### グラフ：無線機とトランスバーター利得による組み合わせのNFの変化",
-                "@abaco NF 1.0 dBのトランスバーターについて(3.7.3)で計算した曲線。トランスバーターの利得が大きいほど無線機の影響は小さくなります。利得25 dBでは、NF 20 dBの無線機でも総合値は2.0 dB、利得10 dBでは同じ無線機で総合値は10.5 dBになります。",
+                "@abaco NF 1.0 dBのトランスバーターについて(1.7.3)で計算した曲線。トランスバーターの利得が大きいほど無線機の影響は小さくなります。利得25 dBでは、NF 20 dBの無線機でも総合値は2.0 dB、利得10 dBでは同じ無線機で総合値は10.5 dBになります。",
                 "@destra",
                 "#### 144 MHz用トランスバーター（IF 28 MHz）",
                 "|h| メーカー · 型番 | >NF | >RX G | >TX | 出典",
@@ -45768,8 +45817,8 @@ namespace LunaCalc
                 "### 補正：誰が何を補正するか",
                 "ドップラーを補正するとは、送信周波数、受信周波数、またはその両方をずらして、信号が取り決めた周波数（*sked*）で出会うようにすることです。各局は自局のドップラーを補正し、DX局と交信する場合はDX局の分も補正します [1]：",
                 "|h| 状況 | 送信 | 受信",
-                "| CQ送出と自局エコーの受信 | skedの周波数 | sked + エコードップラー (3.10.1)",
-                "| 既知のDX局とのQSO（DX局へのドップラーを全量補正） | DX局がskedで受信できるよう補正 | sked + ドップラー DX → 自局 (3.10.2)",
+                "| CQ送出と自局エコーの受信 | skedの周波数 | sked + エコードップラー (1.10.1)",
+                "| 既知のDX局とのQSO（DX局へのドップラーを全量補正） | DX局がskedで受信できるよう補正 | sked + ドップラー DX → 自局 (1.10.2)",
                 "| CFOM、月面上で一定の周波数 | sked − 自局ドップラーの半分 | sked + 自局ドップラーの半分",
                 "### CFOM – Constant Frequency On Moon",
                 "CFOMでは、すべての局が月面上の仮想送信機がskedに同調しているかのように振る舞います。各局は**自局の**ドップラーの半分を送信で、半分を受信で補正するだけで、相手局のロケーターを知る必要はありません [2]：",
@@ -45801,7 +45850,7 @@ namespace LunaCalc
                 "| 12 bit | 4,096 | 0.088° | < 0.01 dB | 大規模アレイの432 MHz",
                 "| 14 bit | 16,384 | 0.022° | < 0.01 dB | 10および24 GHzのディッシュ [1]",
                 "| 16 bit | 65,536 | 0.005° | < 0.01 dB | それ以上：限界はエンコーダーではなく機構で決まる",
-                "~ ステップと損失は(3.11.2)と(3.11.1)で計算。実用的な目安は誤差をビーム幅の10分の1以下に抑えることです。144 MHzの4本八木アレイなら8ビットで十分ですが、10 GHzの3 mディッシュ（ビーム幅 ≈ 0.7°）には少なくとも13～14ビットが必要です。",
+                "~ ステップと損失は(1.11.2)と(1.11.1)で計算。実用的な目安は誤差をビーム幅の10分の1以下に抑えることです。144 MHzの4本八木アレイなら8ビットで十分ですが、10 GHzの3 mディッシュ（ビーム幅 ≈ 0.7°）には少なくとも13～14ビットが必要です。",
                 "> ビット数は位置をどれだけ細かく*読み取る*かを示すだけです。実際の精度は機械的なガタ、支持部のたわみ、風、北と水平の校正にも左右されます。",
                 "### 八木アレイ：アクチュエーターとプーリー",
                 "八木アレイ（2本、4本またはそれ以上のアンテナの組み合わせ）では、仰角方向の負荷が大きく、バランスも取れていません。市販のウォームギア・モーター付きリニアアクチュエーターがあり、これらの方式ではねじは動きを制御するだけで、負荷の機械的な支持はプーリーに任せます。ウォームギアには負荷で逆回転しないという利点があり、モーターを止めてもアレイは静止したままです。",
@@ -46153,7 +46202,7 @@ namespace LunaCalc
                 "~ उदाहरण: NF 1.0 dB और गेन 17 dB (DEMI L144-28 के न्यूनतम मान) वाला ट्रांसवर्टर, NF 10 dB वाले HF रेडियो के आगे।",
                 "@colonne 56",
                 "#### चार्ट: रेडियो और ट्रांसवर्टर गेन बदलने पर संयोजन का NF",
-                "@abaco NF 1.0 dB वाले ट्रांसवर्टर के लिए (3.7.3) से गणना किए गए वक्र। ट्रांसवर्टर का गेन जितना अधिक, रेडियो का असर उतना कम: 25 dB गेन के साथ 20 dB NF वाला रेडियो कुल को 2.0 dB तक ले जाता है; 10 dB गेन के साथ वही रेडियो कुल को 10.5 dB तक ले जाता है।",
+                "@abaco NF 1.0 dB वाले ट्रांसवर्टर के लिए (1.7.3) से गणना किए गए वक्र। ट्रांसवर्टर का गेन जितना अधिक, रेडियो का असर उतना कम: 25 dB गेन के साथ 20 dB NF वाला रेडियो कुल को 2.0 dB तक ले जाता है; 10 dB गेन के साथ वही रेडियो कुल को 10.5 dB तक ले जाता है।",
                 "@destra",
                 "#### 144 MHz के ट्रांसवर्टर (IF 28 MHz)",
                 "|h| निर्माता · मॉडल | >NF | >RX G | >TX | स्रोत",
@@ -46240,8 +46289,8 @@ namespace LunaCalc
                 "### क्षतिपूर्ति: कौन क्या सुधारता है",
                 "Doppler की क्षतिपूर्ति का अर्थ है ट्रांसमिट फ़्रीक्वेंसी, रिसीव फ़्रीक्वेंसी या दोनों को खिसकाना, ताकि सिग्नल तय फ़्रीक्वेंसी (*sked*) पर मिलें। हर स्टेशन अपना Doppler सुधारता है और, DX के साथ काम करते समय, DX का भी [1]:",
                 "|h| स्थिति | ट्रांसमिट | रिसीव",
-                "| CQ कॉल और अपनी इको सुनना | sked फ़्रीक्वेंसी पर | sked + इको Doppler (3.10.1)",
-                "| ज्ञात DX के साथ QSO (DX की ओर पूरा Doppler) | ऐसे सुधारा कि DX आपको sked पर प्राप्त करे | sked + Doppler DX → मैं (3.10.2)",
+                "| CQ कॉल और अपनी इको सुनना | sked फ़्रीक्वेंसी पर | sked + इको Doppler (1.10.1)",
+                "| ज्ञात DX के साथ QSO (DX की ओर पूरा Doppler) | ऐसे सुधारा कि DX आपको sked पर प्राप्त करे | sked + Doppler DX → मैं (1.10.2)",
                 "| CFOM, चंद्रमा पर स्थिर फ़्रीक्वेंसी | sked − अपने Doppler का आधा | sked + अपने Doppler का आधा",
                 "### CFOM – Constant Frequency On Moon",
                 "CFOM के साथ सभी स्टेशन ऐसे व्यवहार करते हैं मानो चंद्रमा पर एक काल्पनिक ट्रांसमीटर sked पर ट्यून हो: हर स्टेशन अपने **स्वयं के** Doppler का केवल आधा ट्रांसमिशन में और आधा रिसेप्शन में सुधारता है, दूसरे स्टेशन का लोकेटर जानने की ज़रूरत के बिना [2]:",
@@ -46273,7 +46322,7 @@ namespace LunaCalc
                 "| 12 bit | 4,096 | 0.088° | < 0.01 dB | 432 MHz बड़े ऐरे के साथ",
                 "| 14 bit | 16,384 | 0.022° | < 0.01 dB | 10 और 24 GHz पर डिश [1]",
                 "| 16 bit | 65,536 | 0.005° | < 0.01 dB | इससे आगे: सीमा यांत्रिकी तय करती है, एन्कोडर नहीं",
-                "~ चरण और नुकसान (3.11.2) और (3.11.1) से गणना किए गए। व्यावहारिक नियम है त्रुटि को बीम के दसवें हिस्से से कम रखना: 144 MHz पर 4-यागी ऐरे 8 बिट से संतुष्ट है, 10 GHz पर 3 m डिश (बीम ≈ 0.7°) को कम से कम 13 – 14 बिट चाहिए।",
+                "~ चरण और नुकसान (1.11.2) और (1.11.1) से गणना किए गए। व्यावहारिक नियम है त्रुटि को बीम के दसवें हिस्से से कम रखना: 144 MHz पर 4-यागी ऐरे 8 बिट से संतुष्ट है, 10 GHz पर 3 m डिश (बीम ≈ 0.7°) को कम से कम 13 – 14 बिट चाहिए।",
                 "> बिटों की संख्या केवल यह बताती है कि स्थिति कितनी बारीकी से *पढ़ी* जाती है: वास्तविक सटीकता यांत्रिक प्ले, सपोर्ट के झुकाव, हवा और उत्तर तथा क्षितिज के कैलिब्रेशन पर भी निर्भर करती है।",
                 "### यागी ऐरे: एक्चुएटर और पुली",
                 "यागी ऐरे (2, 4 या अधिक एंटेना के संयोजन) में एलिवेशन लोड बड़ा और असंतुलित होता है। बाज़ार में वर्म-स्क्रू मोटर वाले लीनियर एक्चुएटर उपलब्ध हैं: इन समाधानों में स्क्रू केवल गति को नियंत्रित करता है, जबकि लोड का यांत्रिक सहारा पुलियों को सौंपा जाता है। वर्म स्क्रू का लाभ यह है कि वह लोड के नीचे उल्टा नहीं घूमता, इसलिए मोटर बंद होने पर भी ऐरे स्थिर रहता है।",
@@ -46625,7 +46674,7 @@ namespace LunaCalc
                 "~ 예: NF 10 dB의 HF 무선기 앞에 NF 1.0 dB, 이득 17 dB(DEMI L144-28의 최소값)의 트랜스버터.",
                 "@colonne 56",
                 "#### 그래프: 무선기와 트랜스버터 이득에 따른 조합의 NF",
-                "@abaco NF 1.0 dB 트랜스버터에 대해 (3.7.3)으로 계산한 곡선입니다. 트랜스버터 이득이 클수록 무선기의 영향은 작아집니다. 이득 25 dB이면 NF 20 dB의 무선기에서도 전체가 2.0 dB이고, 이득 10 dB이면 같은 무선기로 전체가 10.5 dB가 됩니다.",
+                "@abaco NF 1.0 dB 트랜스버터에 대해 (1.7.3)으로 계산한 곡선입니다. 트랜스버터 이득이 클수록 무선기의 영향은 작아집니다. 이득 25 dB이면 NF 20 dB의 무선기에서도 전체가 2.0 dB이고, 이득 10 dB이면 같은 무선기로 전체가 10.5 dB가 됩니다.",
                 "@destra",
                 "#### 144 MHz용 트랜스버터 (IF 28 MHz)",
                 "|h| 제조사 · 모델 | >NF | >RX G | >TX | 출처",
@@ -46712,8 +46761,8 @@ namespace LunaCalc
                 "### 보정: 누가 무엇을 보정하나",
                 "도플러를 보정한다는 것은 송신 주파수, 수신 주파수 또는 둘 다를 옮겨 신호가 약속한 주파수(*sked*)에서 만나도록 하는 것입니다. 각 국은 자기 도플러를 보정하고, DX와 교신할 때는 DX의 도플러도 보정합니다 [1]:",
                 "|h| 상황 | 송신 | 수신",
-                "| CQ 호출 및 자기 에코 청취 | sked 주파수 | sked + 에코 도플러 (3.10.1)",
-                "| 알려진 DX와의 QSO (DX 쪽으로 전체 도플러) | DX가 sked에서 수신하도록 보정 | sked + 도플러 DX → 자국 (3.10.2)",
+                "| CQ 호출 및 자기 에코 청취 | sked 주파수 | sked + 에코 도플러 (1.10.1)",
+                "| 알려진 DX와의 QSO (DX 쪽으로 전체 도플러) | DX가 sked에서 수신하도록 보정 | sked + 도플러 DX → 자국 (1.10.2)",
                 "| CFOM, 달에서 주파수 일정 | sked − 자기 도플러의 절반 | sked + 자기 도플러의 절반",
                 "### CFOM – Constant Frequency On Moon",
                 "CFOM에서는 모든 국이 마치 달 위의 가상 송신기가 sked에 맞춰져 있는 것처럼 행동합니다. 각 국은 **자기** 도플러의 절반을 송신에서, 절반을 수신에서 보정할 뿐이며, 상대 국의 로케이터를 알 필요가 없습니다 [2]:",
@@ -46745,7 +46794,7 @@ namespace LunaCalc
                 "| 12 bit | 4,096 | 0.088° | < 0.01 dB | 대형 어레이의 432 MHz",
                 "| 14 bit | 16,384 | 0.022° | < 0.01 dB | 10 및 24 GHz 접시 안테나 [1]",
                 "| 16 bit | 65,536 | 0.005° | < 0.01 dB | 그 이상: 인코더가 아니라 기계 부분이 한계를 정함",
-                "~ 스텝과 손실은 (3.11.2)와 (3.11.1)로 계산했습니다. 실용적인 규칙은 오차를 빔의 10분의 1 이하로 유지하는 것입니다. 144 MHz의 4야기 어레이는 8비트로 충분하고, 10 GHz의 3 m 접시(빔 ≈ 0.7°)는 최소 13~14비트가 필요합니다.",
+                "~ 스텝과 손실은 (1.11.2)와 (1.11.1)로 계산했습니다. 실용적인 규칙은 오차를 빔의 10분의 1 이하로 유지하는 것입니다. 144 MHz의 4야기 어레이는 8비트로 충분하고, 10 GHz의 3 m 접시(빔 ≈ 0.7°)는 최소 13~14비트가 필요합니다.",
                 "> 비트 수는 위치를 얼마나 세밀하게 *읽는지*를 나타낼 뿐입니다. 실제 정밀도는 기계적 유격, 지지대의 휨, 바람, 북쪽과 지평선의 교정에도 좌우됩니다.",
                 "### 야기 어레이: 액추에이터와 풀리",
                 "야기 어레이(안테나 2개, 4개 또는 그 이상의 조합)에서는 앙각 부하가 크고 불균형합니다. 시중에는 웜 스크류 모터를 사용하는 리니어 액추에이터가 있습니다. 이러한 방식에서는 스크류가 움직임만 조절하고, 부하의 기계적 지지는 풀리가 담당합니다. 웜 스크류는 부하에 의해 역회전하지 않는다는 장점이 있어, 모터가 꺼져 있어도 어레이가 그대로 유지됩니다.",
@@ -47097,7 +47146,7 @@ namespace LunaCalc
                 "~ contoh: transverter dengan NF 1,0 dB dan penguatan 17 dB (nilai minimum DEMI L144-28) di depan radio HF dengan NF 10 dB.",
                 "@colonne 56",
                 "#### Grafik: NF kombinasi saat radio dan penguatan transverter berubah",
-                "@abaco Kurva dihitung dengan (3.7.3) untuk transverter dengan NF 1,0 dB. Semakin besar penguatan transverter, semakin kecil pengaruh radio: dengan penguatan 25 dB, radio dengan NF 20 dB membawa total menjadi 2,0 dB; dengan penguatan 10 dB, radio yang sama membawa total menjadi 10,5 dB.",
+                "@abaco Kurva dihitung dengan (1.7.3) untuk transverter dengan NF 1,0 dB. Semakin besar penguatan transverter, semakin kecil pengaruh radio: dengan penguatan 25 dB, radio dengan NF 20 dB membawa total menjadi 2,0 dB; dengan penguatan 10 dB, radio yang sama membawa total menjadi 10,5 dB.",
                 "@destra",
                 "#### Transverter untuk 144 MHz (IF 28 MHz)",
                 "|h| Pembuat · model | >NF | >G RX | >TX | Sumber",
@@ -47184,8 +47233,8 @@ namespace LunaCalc
                 "### Kompensasi: siapa mengoreksi apa",
                 "Mengompensasi Doppler berarti menggeser frekuensi pancar, frekuensi terima, atau keduanya, sehingga sinyal bertemu pada frekuensi yang disepakati (*sked*). Setiap stasiun mengoreksi Doppler-nya sendiri dan, saat bekerja dengan DX, juga Doppler milik DX [1]:",
                 "|h| Situasi | Pancar | Terima",
-                "| Panggilan CQ dan mendengarkan echo sendiri | pada frekuensi sked | sked + Doppler echo (3.10.1)",
-                "| QSO dengan DX yang diketahui (Doppler penuh ke arah DX) | dikoreksi agar DX menerima Anda pada sked | sked + Doppler DX → saya (3.10.2)",
+                "| Panggilan CQ dan mendengarkan echo sendiri | pada frekuensi sked | sked + Doppler echo (1.10.1)",
+                "| QSO dengan DX yang diketahui (Doppler penuh ke arah DX) | dikoreksi agar DX menerima Anda pada sked | sked + Doppler DX → saya (1.10.2)",
                 "| CFOM, frekuensi konstan di Bulan | sked − setengah Doppler sendiri | sked + setengah Doppler sendiri",
                 "### CFOM – Constant Frequency On Moon",
                 "Dengan CFOM semua stasiun berperilaku seolah-olah sebuah pemancar virtual di Bulan disetel ke sked: masing-masing hanya mengoreksi setengah Doppler **miliknya sendiri** saat memancar dan setengah saat menerima, tanpa perlu mengetahui lokator stasiun lawan [2]:",
@@ -47217,7 +47266,7 @@ namespace LunaCalc
                 "| 12 bit | 4.096 | 0,088° | < 0,01 dB | 432 MHz dengan susunan besar",
                 "| 14 bit | 16.384 | 0,022° | < 0,01 dB | antena parabola pada 10 dan 24 GHz [1]",
                 "| 16 bit | 65.536 | 0,005° | < 0,01 dB | lebih dari itu: batasnya ditentukan mekanik, bukan encoder",
-                "~ Langkah dan kerugian dihitung dengan (3.11.2) dan (3.11.1). Aturan praktisnya adalah menjaga galat di bawah sepersepuluh berkas: susunan 4 yagi di 144 MHz sudah cukup dengan 8 bit, antena parabola 3 m pada 10 GHz (berkas ≈ 0,7°) memerlukan setidaknya 13 – 14 bit.",
+                "~ Langkah dan kerugian dihitung dengan (1.11.2) dan (1.11.1). Aturan praktisnya adalah menjaga galat di bawah sepersepuluh berkas: susunan 4 yagi di 144 MHz sudah cukup dengan 8 bit, antena parabola 3 m pada 10 GHz (berkas ≈ 0,7°) memerlukan setidaknya 13 – 14 bit.",
                 "> Jumlah bit hanya menyatakan seberapa halus posisi *dibaca*: presisi sebenarnya juga bergantung pada kelonggaran mekanis, lenturan penyangga, angin, serta kalibrasi arah utara dan horizon.",
                 "### Susunan yagi: aktuator dan katrol",
                 "Pada susunan yagi (kombinasi 2, 4, atau lebih antena) beban elevasinya besar dan tidak seimbang. Di pasaran tersedia aktuator linear dengan motor ulir cacing (worm screw): dalam solusi ini ulir hanya mengatur gerakan, sedangkan penopangan mekanis beban diserahkan kepada katrol. Ulir cacing memiliki keuntungan tidak berputar balik akibat beban, sehingga susunan antena tetap diam meskipun motor mati.",
@@ -47569,7 +47618,7 @@ namespace LunaCalc
                 "~ пример: трансвертер с NF 1,0 dB и усилением 17 dB (минимальные значения DEMI L144-28) перед КВ-радиостанцией с NF 10 dB.",
                 "@colonne 56",
                 "#### График: NF комбинации в зависимости от радиостанции и усиления трансвертера",
-                "@abaco Кривые рассчитаны по (3.7.3) для трансвертера с NF 1,0 dB. Чем больше усиление трансвертера, тем меньше влияет радиостанция: при усилении 25 dB радиостанция с NF 20 dB даёт в сумме 2,0 dB; при усилении 10 dB та же радиостанция даёт в сумме 10,5 dB.",
+                "@abaco Кривые рассчитаны по (1.7.3) для трансвертера с NF 1,0 dB. Чем больше усиление трансвертера, тем меньше влияет радиостанция: при усилении 25 dB радиостанция с NF 20 dB даёт в сумме 2,0 dB; при усилении 10 dB та же радиостанция даёт в сумме 10,5 dB.",
                 "@destra",
                 "#### Трансвертеры на 144 MHz (ПЧ 28 MHz)",
                 "|h| Производитель · модель | >NF | >Усиление RX | >TX | Источник",
@@ -47656,8 +47705,8 @@ namespace LunaCalc
                 "### Компенсация: кто что корректирует",
                 "Компенсировать доплер — значит сдвигать частоту передачи, частоту приёма или обе так, чтобы сигналы встретились на согласованной частоте (*sked*). Каждая станция корректирует свой доплер, а при работе с DX — также и доплер DX [1]:",
                 "|h| Ситуация | Передача | Приём",
-                "| Вызов CQ и прослушивание собственного эха | на частоте sked | sked + доплер эха (3.10.1)",
-                "| QSO с известным DX (полный доплер в сторону DX) | с коррекцией, чтобы DX принимал вас на частоте sked | sked + доплер DX → я (3.10.2)",
+                "| Вызов CQ и прослушивание собственного эха | на частоте sked | sked + доплер эха (1.10.1)",
+                "| QSO с известным DX (полный доплер в сторону DX) | с коррекцией, чтобы DX принимал вас на частоте sked | sked + доплер DX → я (1.10.2)",
                 "| CFOM, постоянная частота на Луне | sked − половина собственного доплера | sked + половина собственного доплера",
                 "### CFOM – Constant Frequency On Moon",
                 "При CFOM все станции ведут себя так, как будто на Луне находится виртуальный передатчик, настроенный на частоту sked: каждая корректирует только половину своего **собственного** доплера на передаче и половину на приёме, не зная локатора другой станции [2]:",
@@ -47689,7 +47738,7 @@ namespace LunaCalc
                 "| 12 бит | 4 096 | 0,088° | < 0,01 dB | 432 MHz с большими решётками",
                 "| 14 бит | 16 384 | 0,022° | < 0,01 dB | параболы на 10 и 24 GHz [1]",
                 "| 16 бит | 65 536 | 0,005° | < 0,01 dB | далее: предел задаёт механика, а не энкодер",
-                "~ Шаг и потери рассчитаны по (3.11.2) и (3.11.1). Практическое правило — держать ошибку ниже десятой доли ширины диаграммы: решётке из 4 Яги на 144 MHz хватает 8 бит, 3-метровой параболе на 10 GHz (ширина ≈ 0,7°) нужно не менее 13 – 14 бит.",
+                "~ Шаг и потери рассчитаны по (1.11.2) и (1.11.1). Практическое правило — держать ошибку ниже десятой доли ширины диаграммы: решётке из 4 Яги на 144 MHz хватает 8 бит, 3-метровой параболе на 10 GHz (ширина ≈ 0,7°) нужно не менее 13 – 14 бит.",
                 "> Число бит говорит только о том, насколько тонко положение *считывается*: реальная точность зависит также от механических люфтов, прогиба опоры, ветра и калибровки севера и горизонта.",
                 "### Решётки Яги: приводы и шкивы",
                 "В решётках Яги (комбинациях из 2, 4 и более антенн) нагрузка по углу места велика и несбалансированна. В продаже имеются линейные приводы с червячным мотор-редуктором: в таких решениях винт только регулирует движение, а механическое удержание нагрузки возлагается на шкивы. Преимущество червячной передачи в том, что под нагрузкой она не проворачивается назад, поэтому решётка остаётся неподвижной даже при выключенном двигателе.",
@@ -48041,7 +48090,7 @@ namespace LunaCalc
                 "~ приклад: трансвертер з NF 1,0 dB і підсиленням 17 dB (мінімальні значення DEMI L144-28) перед КХ-радіостанцією з NF 10 dB.",
                 "@colonne 56",
                 "#### Графік: NF комбінації залежно від радіостанції та підсилення трансвертера",
-                "@abaco Криві обчислено за (3.7.3) для трансвертера з NF 1,0 dB. Що більше підсилення трансвертера, то менше впливає радіостанція: з підсиленням 25 dB радіостанція з NF 20 dB дає загалом 2,0 dB; з підсиленням 10 dB та сама радіостанція дає загалом 10,5 dB.",
+                "@abaco Криві обчислено за (1.7.3) для трансвертера з NF 1,0 dB. Що більше підсилення трансвертера, то менше впливає радіостанція: з підсиленням 25 dB радіостанція з NF 20 dB дає загалом 2,0 dB; з підсиленням 10 dB та сама радіостанція дає загалом 10,5 dB.",
                 "@destra",
                 "#### Трансвертери на 144 MHz (ПЧ 28 MHz)",
                 "|h| Виробник · модель | >NF | >Підс. RX | >TX | Джерело",
@@ -48128,8 +48177,8 @@ namespace LunaCalc
                 "### Компенсація: хто що коригує",
                 "Компенсувати Доплер означає зсунути частоту передачі, частоту прийому або обидві, щоб сигнали зустрілися на погодженій частоті (*sked*). Кожна станція коригує власний Доплер, а під час зв'язку з DX — також Доплер DX [1]:",
                 "|h| Ситуація | Передача | Прийом",
-                "| Виклик CQ і прослуховування власної луни | на частоті sked | sked + Доплер луни (3.10.1)",
-                "| QSO з відомим DX (повний Доплер у бік DX) | скоригована так, щоб DX приймав вас на sked | sked + Доплер DX → я (3.10.2)",
+                "| Виклик CQ і прослуховування власної луни | на частоті sked | sked + Доплер луни (1.10.1)",
+                "| QSO з відомим DX (повний Доплер у бік DX) | скоригована так, щоб DX приймав вас на sked | sked + Доплер DX → я (1.10.2)",
                 "| CFOM, стала частота на Місяці | sked − половина власного Доплера | sked + половина власного Доплера",
                 "### CFOM – Constant Frequency On Moon",
                 "У CFOM усі станції поводяться так, ніби віртуальний передавач на Місяці налаштований на sked: кожна коригує лише половину **власного** Доплера на передачі й половину на прийомі, без потреби знати локатор іншої станції [2]:",
@@ -48161,7 +48210,7 @@ namespace LunaCalc
                 "| 12 біт | 4 096 | 0,088° | < 0,01 dB | 432 MHz з великими системами",
                 "| 14 біт | 16 384 | 0,022° | < 0,01 dB | парабол на 10 і 24 GHz [1]",
                 "| 16 біт | 65 536 | 0,005° | < 0,01 dB | далі: межу задає механіка, а не енкодер",
-                "~ Крок і втрати обчислено за (3.11.2) і (3.11.1). Практичне правило — тримати похибку нижче десятої частини ширини діаграми: системі з 4 яг на 144 MHz досить 8 біт, 3-метрова парабола на 10 GHz (діаграма ≈ 0,7°) потребує щонайменше 13 – 14 біт.",
+                "~ Крок і втрати обчислено за (1.11.2) і (1.11.1). Практичне правило — тримати похибку нижче десятої частини ширини діаграми: системі з 4 яг на 144 MHz досить 8 біт, 3-метрова парабола на 10 GHz (діаграма ≈ 0,7°) потребує щонайменше 13 – 14 біт.",
                 "> Кількість бітів говорить лише про те, наскільки дрібно *зчитується* положення: реальна точність залежить також від механічних люфтів, прогину опори, вітру та калібрування півночі й горизонту.",
                 "### Системи яг: приводи та шківи",
                 "У системах яг (комбінаціях з 2, 4 або більше антен) навантаження по куту місця велике й незбалансоване. На ринку є лінійні приводи з черв'ячним двигуном: у таких рішеннях гвинт лише регулює рух, а механічне утримання навантаження покладено на шківи. Черв'ячна передача має ту перевагу, що не прокручується назад під навантаженням, тож система залишається нерухомою навіть з вимкненим двигуном.",
@@ -48513,7 +48562,7 @@ namespace LunaCalc
                 "~ voorbeeld: transverter met NF 1,0 dB en wins 17 dB (minimum waardes van die DEMI L144-28) voor 'n HF-radio met NF 10 dB.",
                 "@colonne 56",
                 "#### Grafiek: NF van die kombinasie soos die radio en die transverterwins wissel",
-                "@abaco Krommes bereken met (3.7.3) vir 'n transverter met NF 1,0 dB. Hoe meer die transverter versterk, hoe minder weeg die radio: met 25 dB wins bring 'n radio met 20 dB NF die totaal op 2,0 dB; met 10 dB wins bring dieselfde radio die totaal op 10,5 dB.",
+                "@abaco Krommes bereken met (1.7.3) vir 'n transverter met NF 1,0 dB. Hoe meer die transverter versterk, hoe minder weeg die radio: met 25 dB wins bring 'n radio met 20 dB NF die totaal op 2,0 dB; met 10 dB wins bring dieselfde radio die totaal op 10,5 dB.",
                 "@destra",
                 "#### Transverters vir 144 MHz (MF 28 MHz)",
                 "|h| Vervaardiger · model | >NF | >RX G | >TX | Bron",
@@ -48600,8 +48649,8 @@ namespace LunaCalc
                 "### Kompenseer: wie korrigeer wat",
                 "Om die Doppler te kompenseer beteken om die uitsaaifrekwensie, die ontvangsfrekwensie of albei te verskuif, sodat die seine op die ooreengekome frekwensie (die *sked*) ontmoet. Elke stasie korrigeer sy eie Doppler en, wanneer 'n DX gewerk word, ook dié van die DX [1]:",
                 "|h| Situasie | Uitsending | Ontvangs",
-                "| CQ-roep en luister na jou eie eggo | op die sked-frekwensie | sked + eggo-Doppler (3.10.1)",
-                "| QSO met 'n bekende DX (volle Doppler na die DX) | gekorrigeer sodat die DX jou op die sked ontvang | sked + Doppler DX → ek (3.10.2)",
+                "| CQ-roep en luister na jou eie eggo | op die sked-frekwensie | sked + eggo-Doppler (1.10.1)",
+                "| QSO met 'n bekende DX (volle Doppler na die DX) | gekorrigeer sodat die DX jou op die sked ontvang | sked + Doppler DX → ek (1.10.2)",
                 "| CFOM, konstante frekwensie op die Maan | sked − helfte van jou eie Doppler | sked + helfte van jou eie Doppler",
                 "### CFOM – Constant Frequency On Moon",
                 "Met CFOM gedra alle stasies hulle asof 'n virtuele sender op die Maan op die sked ingestem is: elkeen korrigeer slegs die helfte van sy **eie** Doppler in uitsending en die helfte in ontvangs, sonder om die lokaliseerder van die ander stasie te hoef te ken [2]:",
@@ -48633,7 +48682,7 @@ namespace LunaCalc
                 "| 12 bis | 4 096 | 0,088° | < 0,01 dB | 432 MHz met groot stelsels",
                 "| 14 bis | 16 384 | 0,022° | < 0,01 dB | skottels op 10 en 24 GHz [1]",
                 "| 16 bis | 65 536 | 0,005° | < 0,01 dB | daarbo: perk deur die meganika bepaal, nie deur die enkodeerder nie",
-                "~ Stap en verlies bereken met (3.11.2) en (3.11.1). 'n Praktiese reël is om die fout onder 'n tiende van die bundel te hou: die 4-yagi-stelsel op 144 MHz is tevrede met 8 bisse, 'n skottel van 3 m op 10 GHz (bundel ≈ 0,7°) het minstens 13 – 14 bisse nodig.",
+                "~ Stap en verlies bereken met (1.11.2) en (1.11.1). 'n Praktiese reël is om die fout onder 'n tiende van die bundel te hou: die 4-yagi-stelsel op 144 MHz is tevrede met 8 bisse, 'n skottel van 3 m op 10 GHz (bundel ≈ 0,7°) het minstens 13 – 14 bisse nodig.",
                 "> Die aantal bisse sê net hoe fyn die posisie *gelees* word: die werklike presisie hang ook af van meganiese speling, die buiging van die steun, die wind en die kalibrasie van noord en van die horison.",
                 "### Yagi-stelsels: aktueerders en katrolle",
                 "In yagi-stelsels (kombinasies van 2, 4 of meer antennas) is die elevasielas groot en ongebalanseerd. Lineêre aktueerders met 'n wurmskroefmotor is op die mark beskikbaar: in hierdie oplossings reguleer die skroef slegs die beweging, terwyl die meganiese ondersteuning van die las aan katrolle toevertrou word. Die wurmskroef het die voordeel dat dit nie onder die las terugdraai nie, sodat die stelsel stil bly selfs met die motor af.",
@@ -48985,7 +49034,7 @@ namespace LunaCalc
                 "~ উদাহরণ: NF 1.0 dB ও গেইন 17 dB (DEMI L144-28-এর ন্যূনতম মান) সহ একটি ট্রান্সভার্টার, NF 10 dB-এর একটি HF রেডিওর সামনে।",
                 "@colonne 56",
                 "#### চার্ট: রেডিও ও ট্রান্সভার্টারের গেইন বদলালে সংমিশ্রণের NF",
-                "@abaco NF 1.0 dB-এর একটি ট্রান্সভার্টারের জন্য (3.7.3) দিয়ে গণনা করা কার্ভ। ট্রান্সভার্টারের গেইন যত বেশি, রেডিওর প্রভাব তত কম: 25 dB গেইনে 20 dB NF-এর একটি রেডিও মোটকে 2.0 dB-তে নিয়ে যায়; 10 dB গেইনে একই রেডিও মোটকে 10.5 dB-তে নিয়ে যায়।",
+                "@abaco NF 1.0 dB-এর একটি ট্রান্সভার্টারের জন্য (1.7.3) দিয়ে গণনা করা কার্ভ। ট্রান্সভার্টারের গেইন যত বেশি, রেডিওর প্রভাব তত কম: 25 dB গেইনে 20 dB NF-এর একটি রেডিও মোটকে 2.0 dB-তে নিয়ে যায়; 10 dB গেইনে একই রেডিও মোটকে 10.5 dB-তে নিয়ে যায়।",
                 "@destra",
                 "#### 144 MHz-এর ট্রান্সভার্টার (IF 28 MHz)",
                 "|h| নির্মাতা · মডেল | >NF | >RX G | >TX | উৎস",
@@ -49072,8 +49121,8 @@ namespace LunaCalc
                 "### কম্পেনসেশন: কে কী সংশোধন করে",
                 "ডপলার কম্পেনসেট করার অর্থ ট্রান্সমিট ফ্রিকোয়েন্সি, রিসিভ ফ্রিকোয়েন্সি বা উভয়ই সরানো, যাতে সিগন্যালগুলো নির্ধারিত ফ্রিকোয়েন্সিতে (*sked*) মিলিত হয়। প্রতিটি স্টেশন নিজের ডপলার সংশোধন করে এবং, কোনো DX-এর সাথে কাজ করার সময়, DX-এরটিও [1]:",
                 "|h| পরিস্থিতি | ট্রান্সমিট | রিসিভ",
-                "| CQ কল এবং নিজের ইকো শোনা | sked ফ্রিকোয়েন্সিতে | sked + ইকো ডপলার (3.10.1)",
-                "| পরিচিত DX-এর সাথে QSO (DX-এর দিকে পূর্ণ ডপলার) | এমনভাবে সংশোধিত যাতে DX আপনাকে sked-এ পায় | sked + ডপলার DX → আমি (3.10.2)",
+                "| CQ কল এবং নিজের ইকো শোনা | sked ফ্রিকোয়েন্সিতে | sked + ইকো ডপলার (1.10.1)",
+                "| পরিচিত DX-এর সাথে QSO (DX-এর দিকে পূর্ণ ডপলার) | এমনভাবে সংশোধিত যাতে DX আপনাকে sked-এ পায় | sked + ডপলার DX → আমি (1.10.2)",
                 "| CFOM, চাঁদে স্থির ফ্রিকোয়েন্সি | sked − নিজের ডপলারের অর্ধেক | sked + নিজের ডপলারের অর্ধেক",
                 "### CFOM – Constant Frequency On Moon",
                 "CFOM-এ সব স্টেশন এমন আচরণ করে যেন চাঁদে একটি কাল্পনিক ট্রান্সমিটার sked-এ টিউন করা আছে: প্রতিটি স্টেশন ট্রান্সমিশনে তার **নিজের** ডপলারের কেবল অর্ধেক এবং রিসেপশনে অর্ধেক সংশোধন করে, অন্য স্টেশনের লোকেটর জানার প্রয়োজন ছাড়াই [2]:",
@@ -49105,7 +49154,7 @@ namespace LunaCalc
                 "| 12 bit | 4,096 | 0.088° | < 0.01 dB | বড় অ্যারেসহ 432 MHz",
                 "| 14 bit | 16,384 | 0.022° | < 0.01 dB | 10 ও 24 GHz-এ ডিশ [1]",
                 "| 16 bit | 65,536 | 0.005° | < 0.01 dB | এর বাইরে: সীমা নির্ধারণ করে মেকানিক্স, এনকোডার নয়",
-                "~ ধাপ ও লস (3.11.2) ও (3.11.1) দিয়ে গণনা করা। একটি ব্যবহারিক নিয়ম হলো ত্রুটি বিমের দশ ভাগের এক ভাগের নিচে রাখা: 144 MHz-এ 4-ইয়াগি অ্যারের জন্য 8 বিটই যথেষ্ট, 10 GHz-এ একটি 3 m ডিশের (বিম ≈ 0.7°) অন্তত 13 – 14 বিট দরকার।",
+                "~ ধাপ ও লস (1.11.2) ও (1.11.1) দিয়ে গণনা করা। একটি ব্যবহারিক নিয়ম হলো ত্রুটি বিমের দশ ভাগের এক ভাগের নিচে রাখা: 144 MHz-এ 4-ইয়াগি অ্যারের জন্য 8 বিটই যথেষ্ট, 10 GHz-এ একটি 3 m ডিশের (বিম ≈ 0.7°) অন্তত 13 – 14 বিট দরকার।",
                 "> বিটের সংখ্যা কেবল বলে অবস্থান কত সূক্ষ্মভাবে *পড়া* হয়: প্রকৃত নির্ভুলতা যান্ত্রিক প্লে, সাপোর্টের বাঁকা হওয়া, বাতাস এবং উত্তর ও দিগন্তের ক্যালিব্রেশনের ওপরও নির্ভর করে।",
                 "### ইয়াগি অ্যারে: অ্যাকচুয়েটর ও পুলি",
                 "ইয়াগি অ্যারেতে (2, 4 বা তার বেশি অ্যান্টেনার সমন্বয়) এলিভেশনের ভার বড় এবং অসম। বাজারে ওয়ার্ম-স্ক্রু মোটরসহ লিনিয়ার অ্যাকচুয়েটর পাওয়া যায়: এই সমাধানগুলোতে স্ক্রু কেবল গতি নিয়ন্ত্রণ করে, আর ভারের যান্ত্রিক সাপোর্টের দায়িত্ব থাকে পুলির ওপর। ওয়ার্ম স্ক্রুর সুবিধা হলো ভারের চাপে এটি উল্টো দিকে ঘোরে না, তাই মোটর বন্ধ থাকলেও অ্যারে স্থির থাকে।",
@@ -49457,7 +49506,7 @@ namespace LunaCalc
                 "~ مثال: محوّل ترددي برقم ضوضاء 1.0 dB وكسب 17 dB (القيم الدنيا لـ DEMI L144-28) أمام جهاز HF برقم ضوضاء 10 dB.",
                 "@colonne 56",
                 "#### مخطط: رقم ضوضاء التركيبة مع تغيّر الجهاز وكسب المحوّل الترددي",
-                "@abaco منحنيات محسوبة بالمعادلة (3.7.3) لمحوّل ترددي برقم ضوضاء 1.0 dB. كلما زاد كسب المحوّل الترددي قلّ تأثير الجهاز: مع كسب 25 dB يرفع جهاز رقم ضوضائه 20 dB المجموع إلى 2.0 dB؛ ومع كسب 10 dB يرفع الجهاز نفسه المجموع إلى 10.5 dB.",
+                "@abaco منحنيات محسوبة بالمعادلة (1.7.3) لمحوّل ترددي برقم ضوضاء 1.0 dB. كلما زاد كسب المحوّل الترددي قلّ تأثير الجهاز: مع كسب 25 dB يرفع جهاز رقم ضوضائه 20 dB المجموع إلى 2.0 dB؛ ومع كسب 10 dB يرفع الجهاز نفسه المجموع إلى 10.5 dB.",
                 "@destra",
                 "#### محوّلات ترددية لنطاق 144 MHz (IF 28 MHz)",
                 "|h| الصانع · الطراز | >NF | >G الاستقبال | >الإرسال | المصدر",
@@ -49544,8 +49593,8 @@ namespace LunaCalc
                 "### التعويض: من يصحّح ماذا",
                 "تعويض دوبلر يعني إزاحة تردد الإرسال أو تردد الاستقبال أو كليهما، بحيث تلتقي الإشارات على التردد المتفق عليه (*sked*). تصحّح كل محطة دوبلر الخاص بها، وعند العمل مع محطة DX تصحّح أيضًا دوبلر محطة DX [1]:",
                 "|h| الحالة | الإرسال | الاستقبال",
-                "| نداء CQ والاستماع إلى صداك | على تردد sked | sked + دوبلر الصدى (3.10.1)",
-                "| اتصال مع DX معروف (دوبلر كامل نحو DX) | مصحَّح بحيث يستقبلك DX على sked | sked + دوبلر DX → أنا (3.10.2)",
+                "| نداء CQ والاستماع إلى صداك | على تردد sked | sked + دوبلر الصدى (1.10.1)",
+                "| اتصال مع DX معروف (دوبلر كامل نحو DX) | مصحَّح بحيث يستقبلك DX على sked | sked + دوبلر DX → أنا (1.10.2)",
                 "| CFOM، تردد ثابت على القمر | sked − نصف دوبلر محطتك | sked + نصف دوبلر محطتك",
                 "### CFOM – Constant Frequency On Moon",
                 "مع CFOM تتصرف جميع المحطات كما لو كان هناك مرسل افتراضي على القمر مضبوط على sked: تصحّح كل محطة نصف دوبلر **محطتها** فقط في الإرسال ونصفه في الاستقبال، دون حاجة إلى معرفة محدد موقع المحطة الأخرى [2]:",
@@ -49577,7 +49626,7 @@ namespace LunaCalc
                 "| 12 bit | 4,096 | 0.088° | < 0.01 dB | 432 MHz بمصفوفات كبيرة",
                 "| 14 bit | 16,384 | 0.022° | < 0.01 dB | الأطباق على 10 و24 GHz [1]",
                 "| 16 bit | 65,536 | 0.005° | < 0.01 dB | ما بعد ذلك: الحد تفرضه الميكانيكا لا المرمّز",
-                "~ الخطوة والفقد محسوبان بالمعادلتين (3.11.2) و(3.11.1). القاعدة العملية هي إبقاء الخطأ دون عُشر الحزمة: مصفوفة 4 ياغي على 144 MHz تكفيها 8 بتات، أما طبق قطره 3 m على 10 GHz (حزمة ≈ 0.7°) فيحتاج إلى 13 – 14 بتًا على الأقل.",
+                "~ الخطوة والفقد محسوبان بالمعادلتين (1.11.2) و(1.11.1). القاعدة العملية هي إبقاء الخطأ دون عُشر الحزمة: مصفوفة 4 ياغي على 144 MHz تكفيها 8 بتات، أما طبق قطره 3 m على 10 GHz (حزمة ≈ 0.7°) فيحتاج إلى 13 – 14 بتًا على الأقل.",
                 "> عدد البتات يدل فقط على مدى دقة *قراءة* الموضع: الدقة الحقيقية تعتمد أيضًا على الخلوص الميكانيكي، وانثناء الحامل، والرياح، ومعايرة الشمال والأفق.",
                 "### مصفوفات ياغي: المشغّلات والبكرات",
                 "في مصفوفات ياغي (تركيبات من 2 أو 4 هوائيات أو أكثر) يكون حمل الارتفاع كبيرًا وغير متوازن. تتوفر في السوق مشغّلات خطية بمحرك ذي لولب دودي: في هذه الحلول ينظّم اللولب الحركة فقط، بينما يُعهد بالحمل الميكانيكي إلى البكرات. ميزة اللولب الدودي أنه لا يدور عكسيًا تحت الحمل، فتبقى المصفوفة ثابتة حتى مع توقف المحرك.",
@@ -49929,7 +49978,7 @@ namespace LunaCalc
                 "~ örnek: NF'si 10 dB olan bir HF telsizin önünde NF 1,0 dB ve kazancı 17 dB olan transverter (DEMI L144-28'in en düşük değerleri).",
                 "@colonne 56",
                 "#### Grafik: telsiz ve transverter kazancı değiştikçe kombinasyonun NF'si",
-                "@abaco NF'si 1,0 dB olan bir transverter için (3.7.3) ile hesaplanmış eğriler. Transverter ne kadar çok kazanırsa telsiz o kadar az etkiler: 25 dB kazançla NF'si 20 dB olan bir telsiz toplamı 2,0 dB'ye getirir; 10 dB kazançla aynı telsiz toplamı 10,5 dB'ye getirir.",
+                "@abaco NF'si 1,0 dB olan bir transverter için (1.7.3) ile hesaplanmış eğriler. Transverter ne kadar çok kazanırsa telsiz o kadar az etkiler: 25 dB kazançla NF'si 20 dB olan bir telsiz toplamı 2,0 dB'ye getirir; 10 dB kazançla aynı telsiz toplamı 10,5 dB'ye getirir.",
                 "@destra",
                 "#### 144 MHz transverter'ları (IF 28 MHz)",
                 "|h| Üretici · model | >NF | >RX G | >TX | Kaynak",
@@ -50016,8 +50065,8 @@ namespace LunaCalc
                 "### Düzeltme: kim neyi düzeltir",
                 "Doppler'i düzeltmek, sinyallerin kararlaştırılan frekansta (*sked*) buluşması için gönderme frekansını, alma frekansını ya da her ikisini kaydırmak demektir. Her istasyon kendi Doppler'ini ve bir DX ile çalışırken DX'inkini de düzeltir [1]:",
                 "|h| Durum | Gönderme | Alma",
-                "| CQ çağrısı ve kendi yankınızı dinleme | sked frekansında | sked + yankı Doppler'i (3.10.1)",
-                "| Bilinen bir DX ile QSO (DX'e doğru tam Doppler) | DX sizi sked'de alacak şekilde düzeltilmiş | sked + Doppler DX → ben (3.10.2)",
+                "| CQ çağrısı ve kendi yankınızı dinleme | sked frekansında | sked + yankı Doppler'i (1.10.1)",
+                "| Bilinen bir DX ile QSO (DX'e doğru tam Doppler) | DX sizi sked'de alacak şekilde düzeltilmiş | sked + Doppler DX → ben (1.10.2)",
                 "| CFOM, Ay'da sabit frekans | sked − kendi Doppler'inizin yarısı | sked + kendi Doppler'inizin yarısı",
                 "### CFOM – Constant Frequency On Moon",
                 "CFOM ile tüm istasyonlar, sanki Ay'daki sanal bir verici sked'e ayarlanmış gibi davranır: her biri **kendi** Doppler'inin yalnızca yarısını göndermede, yarısını almada düzeltir ve diğer istasyonun lokatörünü bilmesi gerekmez [2]:",
@@ -50049,7 +50098,7 @@ namespace LunaCalc
                 "| 12 bit | 4.096 | 0,088° | < 0,01 dB | büyük dizilerle 432 MHz",
                 "| 14 bit | 16.384 | 0,022° | < 0,01 dB | 10 ve 24 GHz'de çanaklar [1]",
                 "| 16 bit | 65.536 | 0,005° | < 0,01 dB | ötesi: sınırı enkoder değil mekanik belirler",
-                "~ Adım ve kayıp (3.11.2) ve (3.11.1) ile hesaplanmıştır. Pratik bir kural, hatayı hüzmenin onda birinin altında tutmaktır: 144 MHz'deki 4 yagili dizi için 8 bit yeterlidir, 10 GHz'de 3 m'lik bir çanak (hüzme ≈ 0,7°) en az 13 – 14 bit gerektirir.",
+                "~ Adım ve kayıp (1.11.2) ve (1.11.1) ile hesaplanmıştır. Pratik bir kural, hatayı hüzmenin onda birinin altında tutmaktır: 144 MHz'deki 4 yagili dizi için 8 bit yeterlidir, 10 GHz'de 3 m'lik bir çanak (hüzme ≈ 0,7°) en az 13 – 14 bit gerektirir.",
                 "> Bit sayısı yalnızca konumun ne kadar ince *okunduğunu* söyler: gerçek hassasiyet ayrıca mekanik boşluklara, desteğin esnemesine, rüzgâra ve kuzey ile ufkun kalibrasyonuna bağlıdır.",
                 "### Yagi dizileri: aktüatörler ve makaralar",
                 "Yagi dizilerinde (2, 4 ya da daha fazla antenin kombinasyonları) yükseliş yükü büyük ve dengesizdir. Piyasada sonsuz vida motorlu doğrusal aktüatörler bulunur: bu çözümlerde vida yalnızca hareketi düzenler, yükün mekanik taşınması ise makaralara bırakılır. Sonsuz vidanın avantajı yük altında geri dönmemesidir; böylece dizi motor kapalıyken bile yerinde kalır.",
