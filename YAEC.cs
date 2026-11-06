@@ -24571,14 +24571,14 @@ namespace LunaCalc
             b.TvNf = NudBU(0m, 20m, 0.1m, 1, "dB", null);
             b.Tant = NudBU(0m, 20000m, 5m, 0, "K", null);
             b.CavoAnt = ComboCavi(); b.CavoPa = ComboCavi(); b.CavoDis = ComboCavi();
-            b.Modo = new ComboBox();
+            b.Modo = new Tendina(); ((Tendina)b.Modo).SuCarta = true;
             b.Modo.DropDownStyle = ComboBoxStyle.DropDownList;
             foreach (int i in BudgetParams.ModiOrdine)
                 b.Modo.Items.Add(BudgetParams.ModiNome[i] + " · " + BudgetParams.ModiSn[i].ToString("0.#", ci) + " dB" + (BudgetParams.ModiDaVerificare[i] ? " (" + Lang.T("da verificare") + ")" : ""));
             b.Modo.Items.Add(Lang.T("personalizzato"));
             b.Modo.DropDownWidth = S(220);
             // transverter: modelli della tabella del manuale, oppure "personalizzato"
-            b.TvMod = new ComboBox();
+            b.TvMod = new Tendina(); ((Tendina)b.TvMod).SuCarta = true;
             b.TvMod.DropDownStyle = ComboBoxStyle.DropDownList;
             for (int i = 0; i < BudgetParams.TvNome.Length; i++)
                 b.TvMod.Items.Add(BudgetParams.TvNome[i] + " · NF " + BudgetParams.TvNfMod[i].ToString("0.0", ci) + " dB · G " + BudgetParams.TvGMod[i].ToString("0", ci) + " dB");
@@ -24757,7 +24757,8 @@ namespace LunaCalc
 
         ComboBox ComboCavi()
         {
-            ComboBox c = new ComboBox();
+            Tendina c = new Tendina();
+            c.SuCarta = true;
             c.DropDownStyle = ComboBoxStyle.DropDownList;
             c.DropDownWidth = S(380);
             c.MaxDropDownItems = 20;
@@ -24851,7 +24852,7 @@ namespace LunaCalc
             bar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             bar.Dock = DockStyle.Fill;
             bar.WrapContents = true;
-            cmbBand = new ComboBox();
+            cmbBand = new Tendina();
             cmbBand.DropDownStyle = ComboBoxStyle.DropDownList;
             foreach (int f in bandeAttive) cmbBand.Items.Add(NomeBanda(f));
             cmbBand.SelectedIndex = Math.Max(0, bandeAttive.IndexOf(144));
@@ -24879,7 +24880,7 @@ namespace LunaCalc
             Label lb = L(Lang.T("Banda")); bar.Controls.Add(lb); bar.Controls.Add(cmbBand);
             bar.Controls.Add(L(Lang.T("Istante (UTC)"))); bar.Controls.Add(dtpB); bar.Controls.Add(bNow); bar.Controls.Add(bRow);
             bar.Controls.Add(chkPol);
-            cmbBw = new ComboBox();
+            cmbBw = new Tendina();
             cmbBw.DropDownStyle = ComboBoxStyle.DropDownList;
             for (int hz = 50; hz <= 3000; hz += 50) cmbBw.Items.Add(hz.ToString(inv));
             cmbBw.SelectedItem = "2500";
@@ -25986,7 +25987,7 @@ namespace LunaCalc
             bar.AutoSize = true;
             bar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             bar.Dock = DockStyle.Fill;
-            cmbBand3 = new ComboBox();
+            cmbBand3 = new Tendina();
             cmbBand3.DropDownStyle = ComboBoxStyle.DropDownList;
             foreach (int f in bandeAttive) cmbBand3.Items.Add(NomeBanda(f));
             cmbBand3.SelectedIndex = bandeAttive.IndexOf(curBand);
@@ -26040,7 +26041,7 @@ namespace LunaCalc
             fu.AutoSize = true;
             fu.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             fu.Dock = DockStyle.Fill;
-            cmbSfuFonte = new ComboBox();
+            cmbSfuFonte = new Tendina();
             cmbSfuFonte.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSfuFonte.Items.AddRange(new object[] {
                 new VoceFonte(Lang.T("NOAA SWPC · rete RSTN, 245 – 15400 MHz (consigliata)"), "NOAA SWPC · " + Lang.T("rete RSTN, 245 – 15400 MHz"), " " + Lang.T("(consigliata: 4 stazioni, 8 frequenze)")),
@@ -26139,8 +26140,8 @@ namespace LunaCalc
             // Scelte per il calcolo
             TableLayoutPanel gc;
             Group(Lang.T("SCELTE PER IL CALCOLO"), 4, out gc);
-            cmbSfuMe = new ComboBox();
-            cmbSfuDx = new ComboBox();
+            cmbSfuMe = new Tendina();
+            cmbSfuDx = new Tendina();
             foreach (ComboBox c in new ComboBox[] { cmbSfuMe, cmbSfuDx })
             {
                 c.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -26938,7 +26939,7 @@ namespace LunaCalc
             bar.Controls.Add(L(Lang.T("Istante (UTC)"))); bar.Controls.Add(dtpSky); bar.Controls.Add(bNow); bar.Controls.Add(bRow);
             bar.Controls.Add(chkSkyLive); bar.Controls.Add(chkSkyTrack); bar.Controls.Add(chkSkyLim);
             // tre scale di colori per il rumore del cielo
-            cmbSkyColori = new ComboBox();
+            cmbSkyColori = new Tendina();
             cmbSkyColori.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSkyColori.Items.AddRange(new object[] { Lang.T("Arcobaleno"), Lang.T("Dal nero (meno rumore) al bianco (più rumore)"),
                 Lang.T("Dal giallo (meno rumore) al rosso (più rumore)") });
@@ -27615,11 +27616,11 @@ namespace LunaCalc
             root.Margin = new Padding(0); root.Padding = new Padding(0);
             FlowLayoutPanel bar = new FlowLayoutPanel();
             bar.AutoSize = true; bar.Dock = DockStyle.Fill; bar.Padding = new Padding(S(6), S(3), S(6), S(3));
-            cmbDbgDir = new ComboBox(); cmbDbgDir.DropDownStyle = ComboBoxStyle.DropDownList; cmbDbgDir.Width = S(170);
+            cmbDbgDir = new Tendina(); cmbDbgDir.DropDownStyle = ComboBoxStyle.DropDownList; cmbDbgDir.Width = S(170);
             cmbDbgDir.Items.AddRange(new object[] { Lang.T("tu → DX e DX → tu"), Lang.T("tu → DX"), Lang.T("DX → tu") });
             cmbDbgDir.SelectedIndex = 0;
             cmbDbgDir.SelectedIndexChanged += (s, e) => RiempiDebug();
-            cmbDbgZoom = new ComboBox(); cmbDbgZoom.DropDownStyle = ComboBoxStyle.DropDownList; cmbDbgZoom.Width = S(80);
+            cmbDbgZoom = new Tendina(); cmbDbgZoom.DropDownStyle = ComboBoxStyle.DropDownList; cmbDbgZoom.Width = S(80);
             cmbDbgZoom.Items.AddRange(new object[] { "75 %", "100 %", "125 %", "150 %" });
             cmbDbgZoom.SelectedIndex = 1;
             cmbDbgZoom.SelectedIndexChanged += (s, e) => { docDebug.Zoom = new float[] { 0.75f, 1f, 1.25f, 1.5f }[cmbDbgZoom.SelectedIndex]; docDebug.Aggiorna(); };
@@ -28045,7 +28046,7 @@ namespace LunaCalc
             bar.AutoSize = true;
             bar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             bar.Dock = DockStyle.Fill;
-            cmbPuntMappa = new ComboBox();
+            cmbPuntMappa = new Tendina();
             cmbPuntMappa.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPuntMappa.Items.AddRange(new object[] { Lang.T("Aerofotografica (Esri World Imagery)"), Mappe[1].Nome, Mappe[0].Nome });
             cmbPuntMappa.SelectedIndex = 0;
@@ -30023,7 +30024,8 @@ namespace LunaCalc
                 c.BackColor = Tema.Field;
                 c.ForeColor = Tema.FieldFore;
                 ComboBox cb = c as ComboBox;
-                if (cb != null) cb.FlatStyle = Tema.Scuro ? FlatStyle.Flat : FlatStyle.Standard;
+                if (cb != null) cb.FlatStyle = (Tema.Scuro || cb is Tendina) ? FlatStyle.Flat : FlatStyle.Standard;
+                if (cb != null) cb.Invalidate();
             }
             else if (c is Button)
             {
@@ -30241,7 +30243,8 @@ namespace LunaCalc
 
         ComboBox ComboFreq(bool khz)
         {
-            ComboBox c = new ComboBox();
+            Tendina c = new Tendina();
+            c.SuCarta = true;
             c.DropDownStyle = ComboBoxStyle.DropDown;
             c.Font = new Font(Lang.FontUi, 16F * fontFactor, FontStyle.Bold);
             if (khz)
@@ -32572,7 +32575,7 @@ namespace LunaCalc
             root.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
             root.Padding = new Padding(S(8));
 
-            cmbTema = new ComboBox();
+            cmbTema = new Tendina();
             cmbTema.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTema.Items.AddRange(new object[] { Lang.T("Chiaro"), Lang.T("Notte"), Lang.T("Nero") });
             cmbTema.SelectedIndex = Tema.Schema;
@@ -32606,7 +32609,7 @@ namespace LunaCalc
                 this.Text = TitoloFinestra();
                 if (map != null) map.Invalidate();
             };
-            cmbLingua = new ComboBox();
+            cmbLingua = new Tendina();
             cmbLingua.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbLingua.Items.AddRange(Lang.Nomi);
             cmbLingua.SelectedIndex = Lang.Idx;
@@ -32618,7 +32621,7 @@ namespace LunaCalc
                 BeginInvoke(new Action(Ricostruisci));   // si applica subito, senza riavviare
             };
             // Tipo di carattere: elenco con intestazione e nota, ogni nome scritto nel suo carattere
-            cmbFontNome = new ComboBox();
+            cmbFontNome = new Tendina();
             cmbFontNome.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbFontNome.Width = S(160);
             cmbFontNome.DrawMode = DrawMode.OwnerDrawVariable;
@@ -32664,7 +32667,7 @@ namespace LunaCalc
                 BeginInvoke(new Action(Ricostruisci));   // si applica subito, senza riavviare
             };
             // Caratteri: una sola dimensione in percentuale per tabelle, finestre, caselle e pulsanti
-            ComboBox cmbCaratteri = new ComboBox();
+            ComboBox cmbCaratteri = new Tendina();
             cmbCaratteri.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCaratteri.Width = S(80);
             int[] perc = { 90, 100, 110, 125, 150 };
@@ -33647,7 +33650,7 @@ namespace LunaCalc
             };
             txtCercaCavi.Tag = "su-carta";
             bar.Controls.Add(cerca);
-            cmbCaviTipo = new ComboBox(); cmbCaviTipo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbCaviTipo = new Tendina(); cmbCaviTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCaviTipo.Items.AddRange(new object[] { Lang.T("Tutti"), Lang.T("Flessibili"), Lang.T("Superflessibili"), Lang.T("Semirigidi (corrugati)"), Lang.T("Personalizzati") });
             cmbCaviTipo.SelectedIndex = 0;   // non mostrata: la scelta si fa con le pastiglie
             string[] filtri = { Lang.T("Tutti") + " · " + CaviDb.Elenco.Count.ToString(ci), Lang.T("Flessibili"), Lang.T("Superflessibili"), Lang.T("Semirigidi (corrugati)"), Lang.T("Personalizzati") };
@@ -33662,7 +33665,7 @@ namespace LunaCalc
                 caviFiltri.Add(pf);
                 bar.Controls.Add(pf);
             }
-            cmbCaviDiam = new ComboBox(); cmbCaviDiam.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviDiam.Width = S(110);
+            cmbCaviDiam = new Tendina(); cmbCaviDiam.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviDiam.Width = S(110);
             cmbCaviDiam.Items.AddRange(new object[] { Lang.T("tutti"), "≤ 7 mm", "7 – 11 mm", "11 – 16 mm", "> 16 mm" });
             cmbCaviDiam.SelectedIndex = 0;
             cmbCaviDiam.SelectedIndexChanged += (s, e) => RiempiCavi();
@@ -33671,7 +33674,7 @@ namespace LunaCalc
             cmbCaviDiam.Margin = new Padding(S(3), S(5), S(3), S(3));
             FlowLayoutPanel barDx = new FlowLayoutPanel();
             barDx.AutoSize = true; barDx.AutoSizeMode = AutoSizeMode.GrowAndShrink; barDx.WrapContents = false; barDx.Anchor = AnchorStyles.Right | AnchorStyles.Top;
-            cmbCaviBanda = new ComboBox(); cmbCaviBanda.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviBanda.Width = S(190);
+            cmbCaviBanda = new Tendina(); cmbCaviBanda.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviBanda.Width = S(190);
             int ib = 2;
             for (int i = 0; i < CaviDb.Fb.Length; i++)
             {
@@ -33683,7 +33686,7 @@ namespace LunaCalc
             cmbCaviBanda.Margin = new Padding(S(3), S(5), S(10), S(3));
             cmbCaviBanda.SelectedIndexChanged += (s, e) => { if (cmbCaviOrd != null && cmbCaviOrd.SelectedIndex > 0) RiempiCavi(); else { pnlCavi.Invalidate(); pnlCaviTesta.Invalidate(); pnlCaviGrafico.Invalidate(); } };
             // ordine della tabella: per diametro, oppure per perdita (crescente o decrescente) nella banda evidenziata
-            cmbCaviOrd = new ComboBox(); cmbCaviOrd.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviOrd.Width = S(170);
+            cmbCaviOrd = new Tendina(); cmbCaviOrd.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviOrd.Width = S(170);
             cmbCaviOrd.Items.AddRange(new object[] { Lang.T("diametro"), Lang.T("perdita crescente"), Lang.T("perdita decrescente"), Lang.T("nome del cavo"), Lang.T("costruttore"), Lang.T("tipo") });
             cmbCaviOrd.SelectedIndex = 0;
             cmbCaviOrd.Margin = new Padding(S(3), S(5), S(14), S(3));
@@ -33808,7 +33811,7 @@ namespace LunaCalc
             pnlCaviCalc.Tag = "carta";
             nudCaviLen = NudU(0, 1000, 35, 1, 80, "m", "0.#");
             nudCaviLen.ValueChanged += (s, e) => pnlCaviCalc.Invalidate();
-            cmbCaviCalcBanda = new ComboBox(); cmbCaviCalcBanda.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviCalcBanda.Width = S(100);
+            cmbCaviCalcBanda = new Tendina(); cmbCaviCalcBanda.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviCalcBanda.Width = S(100);
             foreach (double f in CaviDb.Fb) cmbCaviCalcBanda.Items.Add(f.ToString(inv) + " MHz");
             cmbCaviCalcBanda.SelectedIndex = ib;
             cmbCaviCalcBanda.SelectedIndexChanged += (s, e) => pnlCaviCalc.Invalidate();
@@ -34936,7 +34939,7 @@ namespace LunaCalc
             bOpen.Font = new Font(this.Font, FontStyle.Bold);
             bOpen.Click += (s, e) => ScegliAdif();
             lblAdif = L(Lang.T("Nessun file ADIF caricato."));
-            cmbMappa = new ComboBox();
+            cmbMappa = new Tendina();
             cmbMappa.DropDownStyle = ComboBoxStyle.DropDownList;
             foreach (TileProvider tpv in Mappe) cmbMappa.Items.Add(tpv.Nome);
             cmbMappa.SelectedIndex = 0;
@@ -36029,14 +36032,14 @@ namespace LunaCalc
             tip.SetToolTip(nudDur, Lang.T("Durata del periodo di calcolo in giorni (anche frazioni, es. 0,5 = 12 ore)."));
             nudStep = NudU(1, 1440, 10, 0, 80, "min", null);
             tip.SetToolTip(nudStep, Lang.T("Passo della tabella in minuti."));
-            cmbFreq = new ComboBox();
+            cmbFreq = new Tendina();
             cmbFreq.DropDownStyle = ComboBoxStyle.DropDown;
             foreach (int f in bandeAttive) cmbFreq.Items.Add(f.ToString(inv));
             cmbFreq.Text = "144";
             cmbFreq.Width = S(70);
             cmbFreq.Anchor = AnchorStyles.Left;
             tip.SetToolTip(cmbFreq, Lang.T("Frequenza di lavoro, parte in MHz (es. 144).\nServe per Tsky/Dgrd e, insieme ai kHz, per il Doppler e le frequenze CFOM."));
-            cmbKhz = new ComboBox();
+            cmbKhz = new Tendina();
             cmbKhz.DropDownStyle = ComboBoxStyle.DropDown;
             for (int kh = 0; kh <= 999; kh++) cmbKhz.Items.Add(kh.ToString("000", inv));
             cmbKhz.MaxDropDownItems = 20;
@@ -37811,6 +37814,71 @@ namespace LunaCalc
     }
 
     // Tendina con gli angoli arrotondati: la ComboBox sta dentro una cornice disegnata che ne copre i bordi squadrati
+    // Menu a tendina con lo stesso aspetto in tutti gli schemi di colori: tendina piatta, bordo arrotondato e freccia
+    // a "v" sottile (come quelle della barra delle impostazioni). Disegna sopra la tendina di sistema dopo ogni WM_PAINT.
+    class Tendina : ComboBox
+    {
+        public bool Cornice = true;          // false quando sta già dentro una CorniceTonda
+        public Color Fondo = Color.Empty;    // colore di ciò che sta dietro gli angoli (vuoto = il primo genitore opaco)
+        public bool SuCarta;                 // la tendina sta su una scheda bianca disegnata (Tema.Carta)
+        public Tendina() { this.FlatStyle = FlatStyle.Flat; }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == 0x000F || m.Msg == 0x0085)   // WM_PAINT, WM_NCPAINT
+                try { Ridisegna(); } catch { }
+        }
+        protected override void OnMouseEnter(EventArgs e) { base.OnMouseEnter(e); Invalidate(); }
+        protected override void OnMouseLeave(EventArgs e) { base.OnMouseLeave(e); Invalidate(); }
+
+        Color Dietro()
+        {
+            if (!Fondo.IsEmpty) return Fondo;
+            if (SuCarta) return Tema.Carta;
+            for (Control c = this.Parent; c != null; c = c.Parent)
+                if (c.BackColor.A == 255) return c.BackColor;
+            return Tema.Back;
+        }
+
+        void Ridisegna()
+        {
+            if (!this.IsHandleCreated || this.Width < 10 || this.Height < 8) return;
+            using (Graphics g = Graphics.FromHwnd(this.Handle))
+            {
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                Rectangle cr = this.ClientRectangle;
+                Color campo = this.Enabled ? this.BackColor : (Tema.Scuro ? Tema.Section : Color.FromArgb(243, 244, 246));
+                // zona della freccia: fondo del campo e "v" sottile
+                int wf = Math.Max(14, SystemInformation.VerticalScrollBarWidth);
+                Rectangle rf = new Rectangle(cr.Right - wf - 1, cr.Top + 1, wf, cr.Height - 2);
+                using (Brush b = new SolidBrush(campo)) g.FillRectangle(b, rf);
+                float cx = rf.Left + rf.Width / 2f, cy = rf.Top + rf.Height / 2f, d = Math.Max(3f, cr.Height / 7f);
+                Color cfr = this.Enabled ? (Tema.Scuro ? Color.FromArgb(200, 206, 216) : Color.FromArgb(75, 85, 99)) : Color.FromArgb(160, 166, 176);
+                using (Pen pv = new Pen(cfr, Math.Max(1.3f, cr.Height / 16f)))
+                {
+                    pv.StartCap = LineCap.Round; pv.EndCap = LineCap.Round; pv.LineJoin = LineJoin.Round;
+                    g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy - d / 2f), new PointF(cx, cy + d / 2f), new PointF(cx + d, cy - d / 2f) });
+                }
+                if (!Cornice) return;
+                // angoli arrotondati: fuori dal bordo il colore di ciò che sta dietro
+                float rag = Math.Min(cr.Height / 2f - 1, Math.Max(3f, this.Font.Height * 0.35f));
+                RectangleF rb = new RectangleF(0.5f, 0.5f, cr.Width - 1.5f, cr.Height - 1.5f);
+                using (GraphicsPath p = MainForm.Arrotondato(rb, rag))
+                {
+                    using (Region fuori = new Region(new Rectangle(0, 0, cr.Width, cr.Height)))
+                    {
+                        fuori.Exclude(p);
+                        using (Brush bd = new SolidBrush(Dietro())) g.FillRegion(bd, fuori);
+                    }
+                    bool sopra = this.ClientRectangle.Contains(this.PointToClient(Control.MousePosition));
+                    Color cb = this.Focused || sopra ? Color.FromArgb(31, 111, 209) : (Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(201, 206, 216));
+                    using (Pen pn = new Pen(cb, 1.3f)) g.DrawPath(pn, p);
+                }
+            }
+        }
+    }
+
     class CorniceTonda : Panel
     {
         public readonly ComboBox Dentro;
@@ -37821,6 +37889,8 @@ namespace LunaCalc
             this.BackColor = Color.Transparent;
             Dentro = cb;
             cb.FlatStyle = FlatStyle.Flat;
+            Tendina td = cb as Tendina;
+            if (td != null) td.Cornice = false;
             this.Controls.Add(cb);
             this.AutoSize = false;
             Disponi();
