@@ -38069,7 +38069,7 @@ namespace LunaCalc
                 try
                 {
                     List<string> r = Analizza(ScaricaConRinvii(Fonti[i][k], i == 0 ? 30000 : 120000));   // SourceForge: 2 MB, a volte lento
-                    if (r != null) { Esito[i] = string.Format(CultureInfo.InvariantCulture, Lang.T("{0:N0} nominativi"), r.Count); return r; }
+                    if (r != null) { Esito[i] = string.Format(Lang.Cultura, Lang.T("{0:N0} nominativi"), r.Count); return r; }
                     errore = "?";
                 }
                 catch (Exception ex) { errore = ex.Message; }
@@ -38123,9 +38123,9 @@ namespace LunaCalc
                 Dati.ScriviAtomico(p, Encoding.GetEncoding(28591).GetBytes(sb.ToString()));
                 lock (blocco) { griglie = null; }
                 if (a != null && b != null)
-                    return string.Format(CultureInfo.InvariantCulture, Lang.T("CALL3.TXT aggiornato: {0:N0} nominativi da W7GJ e WSJT-X Improved ({1:N0} solo nella seconda, {2:N0} con locator diverso: vale W7GJ)"),
+                    return string.Format(Lang.Cultura, Lang.T("CALL3.TXT aggiornato: {0:N0} nominativi da W7GJ e WSJT-X Improved ({1:N0} solo nella seconda, {2:N0} con locator diverso: vale W7GJ)"),
                         righe.Count, aggiunti, diversi);
-                return string.Format(CultureInfo.InvariantCulture, Lang.T("CALL3.TXT aggiornato: {0:N0} nominativi (solo {1}, l'altra fonte non risponde)"), righe.Count, fonti);
+                return string.Format(Lang.Cultura, Lang.T("CALL3.TXT aggiornato: {0:N0} nominativi (solo {1}, l'altra fonte non risponde)"), righe.Count, fonti);
             }
             catch (Exception ex) { return Lang.T("CALL3.TXT non aggiornato: ") + ex.Message; }
             finally { InCorso = false; }

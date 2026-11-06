@@ -81,7 +81,7 @@ jobs:
       - name: Prova di avvio con Mono (schermo virtuale Xvfb) e schermata
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil libgdiplus xvfb imagemagick fonts-dejavu-core > /dev/null
+          sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil ca-certificates-mono libgdiplus xvfb imagemagick fonts-dejavu-core > /dev/null
           # impostazioni di prova: stazione IC8TEM a Capri e un DX, lingua italiana
           mkdir -p "$HOME/.local/share/YAEC/data"
           printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=W7GJ\n' > "$HOME/.local/share/YAEC/data/impostazioni.txt"

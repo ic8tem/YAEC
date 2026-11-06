@@ -19,7 +19,7 @@ Version: ${VER}
 Section: hamradio
 Priority: optional
 Architecture: all
-Depends: mono-runtime, libmono-system-windows-forms4.0-cil, libmono-system-drawing4.0-cil, libmono-system-web-extensions4.0-cil, libmono-system-security4.0-cil, libmono-system-io-compression4.0-cil, libmono-system-io-compression-filesystem4.0-cil, libgdiplus
+Depends: mono-runtime, libmono-system-windows-forms4.0-cil, libmono-system-drawing4.0-cil, libmono-system-web-extensions4.0-cil, libmono-system-security4.0-cil, libmono-system-io-compression4.0-cil, libmono-system-io-compression-filesystem4.0-cil, libgdiplus, ca-certificates-mono
 Maintainer: Costantino IC8TEM <ic8tem@gmail.com>
 Homepage: https://github.com/ic8tem/YAEC
 Description: YAEC - Yet Another EME Calc
