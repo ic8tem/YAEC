@@ -23,7 +23,7 @@ All the versions before 1.0 are called **beta**.
 ## Build
 
 - Windows: `compila.bat` (uses the C# compiler included in Windows, .NET Framework 4, C# 5).
-- Every push is compiled by GitHub Actions on Windows and started on Linux with Mono; a tag `vX.Y` publishes the release with the Windows installer (Inno Setup) and the Linux and macOS packages. See `.github/workflows/build.yml`.
+- Every push is compiled by GitHub Actions on Windows and started on Linux with Mono; when the `VERSION` file on `main` holds a new version, the workflow publishes its release with the Windows installer (Inno Setup) and the Linux and macOS packages. See `.github/workflows/build.yml`.
 
 ## License
 
