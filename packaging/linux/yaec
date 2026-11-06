@@ -1,0 +1,12 @@
+#!/bin/sh
+# YAEC - Yet Another EME Calc: avvio su Linux con Mono
+# I dati stanno in ~/.local/share/YAEC/data
+DIR="$(dirname "$(readlink -f "$0")")"
+if [ -f "$DIR/YAEC.exe" ]; then EXE="$DIR/YAEC.exe"; else EXE="/usr/lib/yaec/YAEC.exe"; fi
+if ! command -v mono >/dev/null 2>&1; then
+  MSG="YAEC needs Mono. Install it, e.g.: sudo apt install mono-complete  |  sudo dnf install mono-complete  |  sudo pacman -S mono"
+  if command -v zenity >/dev/null 2>&1; then zenity --error --text="$MSG" 2>/dev/null; elif command -v kdialog >/dev/null 2>&1; then kdialog --error "$MSG"; fi
+  echo "$MSG" >&2
+  exit 1
+fi
+exec mono "$EXE" "$@"

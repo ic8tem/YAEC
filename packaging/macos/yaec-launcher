@@ -1,0 +1,24 @@
+#!/bin/bash
+# YAEC - avvio su macOS con Mono (le finestre Windows Forms di Mono usano X11: serve XQuartz)
+# I dati stanno in ~/Library/Application Support/YAEC/data
+HERE="$(cd "$(dirname "$0")" && pwd)"
+EXE="$HERE/../Resources/YAEC.exe"
+MONO=""
+for m in /Library/Frameworks/Mono.framework/Versions/Current/Commands/mono /opt/homebrew/bin/mono /usr/local/bin/mono; do
+  if [ -x "$m" ]; then MONO="$m"; break; fi
+done
+[ -z "$MONO" ] && MONO="$(command -v mono 2>/dev/null)"
+if [ -z "$MONO" ]; then
+  osascript -e 'display alert "YAEC needs Mono" message "Install Mono for macOS (mono-project.com or the Framework Mono package from WineHQ) and XQuartz (xquartz.org), then open YAEC again." as critical' >/dev/null 2>&1
+  open "https://www.mono-project.com/download/stable/#download-mac"
+  exit 1
+fi
+if [ ! -d "/Applications/Utilities/XQuartz.app" ] && [ ! -d "/Applications/XQuartz.app" ]; then
+  osascript -e 'display alert "YAEC needs XQuartz" message "Mono draws the YAEC window through X11. Install XQuartz (xquartz.org), log out and in again, then open YAEC." as critical' >/dev/null 2>&1
+  open "https://www.xquartz.org"
+  exit 1
+fi
+export MONO_MWF_MAC_FORCE_X11=1
+[ -z "$DISPLAY" ] && export DISPLAY=:0
+mkdir -p "$HOME/Library/Application Support/YAEC/data"
+exec "$MONO" "$EXE" "$@" >>"$HOME/Library/Application Support/YAEC/data/mono-log.txt" 2>&1

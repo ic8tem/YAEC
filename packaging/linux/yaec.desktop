@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=YAEC - Yet Another EME Calc
+GenericName=EME calculator
+Comment=Moon position, EME link budget, sky and solar noise for radio amateurs
+Exec=yaec
+Icon=yaec
+Terminal=false
+Categories=HamRadio;Science;Utility;
+Keywords=EME;moonbounce;ham;radio;

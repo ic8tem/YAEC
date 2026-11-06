@@ -1,0 +1,5 @@
+YAEC.exe
+YAEC-*-Setup.exe
+dist/
+data/
+*.zip
