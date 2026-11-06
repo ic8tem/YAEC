@@ -2691,7 +2691,7 @@ namespace LunaCalc
             "In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.",
             "Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.",
             "È impaginato come un documento di Word, con le formule in stile Equation Editor: si può copiare negli appunti o salvare in Word (.docx).",
-            "Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
+            "Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna, Luna sul mondo), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
             "Grazie per avermi usato: spero di esserti stato utile.",
             "No",
             "Sì",
@@ -2915,6 +2915,36 @@ namespace LunaCalc
             "tipo",
             "ordinati per {0}",
             "Prefazione dell'autore",
+            "SV1BSX, tabella delle attenuazioni dei cavi coassiali (qsl.net/sv1bsx) – valori da verificare sulle schede dei costruttori",
+            "SSB-Electronic, schede tecniche Aircell / Ecoflex (distribuite da Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, schede LMR (distribuite da Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, scheda LMR-400 (iewc.com)",
+            "Siva Cavi, schede tecniche HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, schede tecniche CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, schede tecniche Messi & Paoloni Hyperflex / Ultraflex ed Ecoflex Plus (wimo.com)",
+            "Scheda del cavo SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), schede tecniche HELIAX LDF / FSJ (commscope.com)",
+            "Symair, schede tecniche HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, schede tecniche H1000 (H1000C1), 8237 (RG-8/U) e 9913 (catalog.belden.com); per 8237 e 9913 i valori in dB/100 ft sono convertiti in dB/100 m",
+            "Tasker (MILAN S.r.l.), schede tecniche RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 e C538 (copie presso i distributori: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, schede tecniche Airborne, Hyperflex e Ultraflex e catalogo dei cavi a 50 Ω 2026 (messi.it)",
+            "SSB-Electronic, schede tecniche SeaTex, Aircell 7 e Aircom Premium e catalogo dei cavi (ssb.de)",
+            "Tabelle dei cavi coassiali di DD1US (dd1us.de, 27/04/2024) ed EA5IP (qsl.net/ea5ip): 5,5 dB a 144 MHz e 9,1 dB a 432 MHz; costruttore non indicato",
+            "Prospecta, scheda tecnica RT5020 (radiosystem.it)",
+            "Prospecta, scheda tecnica XT-2400 (hamradioshop.it)",
+            "QAXIAL, scheda tecnica LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, catalogo MIL-C-17F 50 Ω: RG 142 B/U (M17/60) e RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica di Rota Franco (Senago), scheda tecnica RG115 (rf-microwave.com)",
+            "vari",
+            "produttori cinesi",
+            "guaina in vetro",
+            "Le schermate del programma",
+            "Le linguette nell'ordine in cui compaiono nei sei gruppi della barra in alto; per ognuna, che cosa mostra e a che cosa serve.",
+            "Accanto al locator del DX c'è la casella del nominativo: se il nominativo è nel CALL3.TXT il locator si riempie da solo, e il pulsante CALL3 aggiorna l'elenco o lo copia nella cartella di WSJT-X. Trascinando la linea rossa delle 24 ore o scegliendo il giorno nel calendario la schermata mostra un istante passato o futuro; ▶ Adesso torna alla diretta. La frequenza si sceglie nel riquadro Eco e frequenze.",
+            "La tabella a destra elenca i giorni con gli stessi colori delle fasce del grafico (verde i tre giorni migliori, rosso e arancione il Sole vicino alla Luna). La curva blu della declinazione si sovrappone al grafico, con la sua scala dentro il bordo sinistro; la casella \"Ore utili in verde sulla Dgrd\" colora le ore con la Luna dentro i limiti dell'antenna.",
+            "Il database dei cavi coassiali a 50 Ω con l'attenuazione a 50, 70, 144, 222 e 432 MHz e le fonti di ogni valore; si ordina per diametro, perdita, nome, costruttore o tipo (anche cliccando l'intestazione delle colonne), si filtra per tipo e diametro e si cerca per nome. A destra il calcolo della perdita di una tratta e il grafico dei cavi spuntati; il pulsante \"usa nel Budget EME\" porta il cavo nel Budget. Si possono aggiungere cavi personalizzati.",
+            "I recapiti dell'autore (e-mail, profilo QRZ.com) e i ringraziamenti a chi ha contribuito al programma.",
+            "Il testo della licenza con cui il programma è distribuito.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -3951,7 +3981,7 @@ namespace LunaCalc
             "At the top four indicators, on the left the data source (NOAA RSTN recommended, or F10.7 from NOAA or Penticton, or a custom address) with the stations, on the right the solar flux spectrum with the extrapolation to the working frequency.",
             "This manual, inside the program and in all languages: clickable index, search, formulas and sources.",
             "It is laid out like a Word document, with the formulas in Equation Editor style: it can be copied to the clipboard or saved as Word (.docx).",
-            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position), Link (EME budget, Solar noise, Export calculations to Excel, DEBUG FORMULE), Log (WWL map and ADIF), Help and tools (USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
+            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position, Moon over the world), Link (EME budget, Solar noise, Export calculations to Excel, DEBUG FORMULE), Log (WWL map and ADIF), Help and tools (USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
             "Thank you for using me: I hope I have been useful to you.",
             "No",
             "Yes",
@@ -4175,6 +4205,36 @@ namespace LunaCalc
             "type",
             "sorted by {0}",
             "Author's preface",
+            "SV1BSX, coaxial cable attenuation table (qsl.net/sv1bsx) – values to be checked against the manufacturers' datasheets",
+            "SSB-Electronic, datasheets Aircell / Ecoflex (distributed by Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, datasheets LMR (distributed by Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, datasheet LMR-400 (iewc.com)",
+            "Siva Cavi, datasheets HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, datasheets CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, datasheets Messi & Paoloni Hyperflex / Ultraflex and Ecoflex Plus (wimo.com)",
+            "Datasheet of the cable SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), datasheets HELIAX LDF / FSJ (commscope.com)",
+            "Symair, datasheets HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, datasheets H1000 (H1000C1), 8237 (RG-8/U) and 9913 (catalog.belden.com); for 8237 and 9913 the values in dB/100 ft are converted to dB/100 m",
+            "Tasker (MILAN S.r.l.), datasheets RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 and C538 (copies at the distributors: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, datasheets Airborne, Hyperflex and Ultraflex; 50 Ω cable catalogue 2026 (messi.it)",
+            "SSB-Electronic, datasheets SeaTex, Aircell 7 and Aircom Premium; cable catalogue (ssb.de)",
+            "Coaxial cable tables by DD1US (dd1us.de, 27/04/2024) and EA5IP (qsl.net/ea5ip): 5.5 dB at 144 MHz, 9.1 dB at 432 MHz; manufacturer not stated",
+            "Prospecta, datasheet RT5020 (radiosystem.it)",
+            "Prospecta, datasheet XT-2400 (hamradioshop.it)",
+            "QAXIAL, datasheet LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, catalogue MIL-C-17F 50 Ω: RG 142 B/U (M17/60) and RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), datasheet RG115 (rf-microwave.com)",
+            "various",
+            "Chinese manufacturers",
+            "glass jacket",
+            "The program's screens",
+            "The tabs in the order in which they appear in the six groups of the top bar; for each one, what it shows and what it is for.",
+            "Next to the DX locator there is the callsign box: if the callsign is in CALL3.TXT the locator fills in by itself, and the CALL3 button updates the list or copies it into the WSJT-X folder. Dragging the red line of the 24 hours or choosing the day in the calendar shows a past or future moment; ▶ Now returns to live. The frequency is chosen in the Echo and frequencies box.",
+            "The table on the right lists the days with the same colors as the chart bands (green the three best days, red and orange the Sun close to the Moon). The blue declination curve is drawn over the chart, with its scale inside the left edge; the \"Usable hours in green on the Dgrd\" box colors the hours with the Moon inside the antenna limits.",
+            "The database of 50 Ω coaxial cables with the attenuation at 50, 70, 144, 222 and 432 MHz and the source of every value; it sorts by diameter, loss, name, manufacturer or type (also by clicking the column headers), filters by type and diameter and searches by name. On the right, the loss of a run and the chart of the ticked cables; the \"use in EME Budget\" button takes the cable to the Budget. Custom cables can be added.",
+            "The author's contacts (e-mail, QRZ.com profile) and thanks to those who contributed to the program.",
+            "The text of the license under which the program is distributed.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5211,7 +5271,7 @@ namespace LunaCalc
             "Oben vier Indikatoren, links die Datenquelle (NOAA RSTN empfohlen, oder F10.7 von NOAA oder Penticton, oder eine eigene Adresse) mit den Stationen, rechts das Spektrum des Sonnenflusses mit der Extrapolation zur Arbeitsfrequenz.",
             "Dieses Handbuch, im Programm und in allen Sprachen: anklickbares Inhaltsverzeichnis, Suche, Formeln und Quellen.",
             "Es ist wie ein Word-Dokument gestaltet, mit Formeln im Stil des Formel-Editors: es kann in die Zwischenablage kopiert oder als Word (.docx) gespeichert werden.",
-            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, DEBUG FORMULE), Log (WWL-Karte und ADIF), Hilfe und Tools (BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (ABOUT & CREDITS, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
+            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition, Mond über der Welt), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, DEBUG FORMULE), Log (WWL-Karte und ADIF), Hilfe und Tools (BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (ABOUT & CREDITS, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
             "Danke, dass du mich benutzt hast: ich hoffe, ich war dir nützlich.",
             "Nein",
             "Ja",
@@ -5435,6 +5495,36 @@ namespace LunaCalc
             "Typ",
             "sortiert nach {0}",
             "Vorwort des Autors",
+            "SV1BSX, Dämpfungstabelle der Koaxialkabel (qsl.net/sv1bsx) – Werte anhand der Herstellerdatenblätter zu prüfen",
+            "SSB-Electronic, Datenblätter Aircell / Ecoflex (vertrieben von Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, Datenblätter LMR (vertrieben von Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, Datenblatt LMR-400 (iewc.com)",
+            "Siva Cavi, Datenblätter HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, Datenblätter CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, Datenblätter Messi & Paoloni Hyperflex / Ultraflex und Ecoflex Plus (wimo.com)",
+            "Datenblatt des Kabels SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), Datenblätter HELIAX LDF / FSJ (commscope.com)",
+            "Symair, Datenblätter HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, Datenblätter H1000 (H1000C1), 8237 (RG-8/U) und 9913 (catalog.belden.com); für 8237 und 9913 sind die Werte in dB/100 ft in dB/100 m umgerechnet",
+            "Tasker (MILAN S.r.l.), Datenblätter RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 und C538 (Kopien bei den Händlern: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, Datenblätter Airborne, Hyperflex und Ultraflex; Katalog der 50-Ω-Kabel 2026 (messi.it)",
+            "SSB-Electronic, Datenblätter SeaTex, Aircell 7 und Aircom Premium; Kabelkatalog (ssb.de)",
+            "Koaxialkabeltabellen von DD1US (dd1us.de, 27/04/2024) und EA5IP (qsl.net/ea5ip): 5,5 dB bei 144 MHz, 9,1 dB bei 432 MHz; Hersteller nicht angegeben",
+            "Prospecta, Datenblatt RT5020 (radiosystem.it)",
+            "Prospecta, Datenblatt XT-2400 (hamradioshop.it)",
+            "QAXIAL, Datenblatt LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, Katalog MIL-C-17F 50 Ω: RG 142 B/U (M17/60) und RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), Datenblatt RG115 (rf-microwave.com)",
+            "verschiedene",
+            "chinesische Hersteller",
+            "Glasfasermantel",
+            "Die Bildschirme des Programms",
+            "Die Reiter in der Reihenfolge, in der sie in den sechs Gruppen der oberen Leiste erscheinen; zu jedem, was er zeigt und wozu er dient.",
+            "Neben dem Locator des DX steht das Rufzeichenfeld: steht das Rufzeichen in der CALL3.TXT, wird der Locator automatisch ausgefüllt, und die Schaltfläche CALL3 aktualisiert die Liste oder kopiert sie in den WSJT-X-Ordner. Durch Ziehen der roten Linie der 24 Stunden oder Wahl des Tages im Kalender zeigt der Bildschirm einen vergangenen oder zukünftigen Zeitpunkt; ▶ Jetzt kehrt zur Live-Anzeige zurück. Die Frequenz wird im Feld Echo und Frequenzen gewählt.",
+            "Die Tabelle rechts listet die Tage mit denselben Farben wie die Bänder des Diagramms (grün die drei besten Tage, rot und orange die Sonne nahe am Mond). Die blaue Deklinationskurve liegt über dem Diagramm, mit ihrer Skala innerhalb des linken Rands; das Kästchen „Nutzbare Stunden grün auf der Dgrd“ färbt die Stunden mit dem Mond innerhalb der Antennengrenzen.",
+            "Die Datenbank der 50-Ω-Koaxialkabel mit der Dämpfung bei 50, 70, 144, 222 und 432 MHz und den Quellen jedes Werts; sie lässt sich nach Durchmesser, Dämpfung, Name, Hersteller oder Typ sortieren (auch per Klick auf die Spaltenköpfe), nach Typ und Durchmesser filtern und nach Namen durchsuchen. Rechts die Dämpfung einer Strecke und das Diagramm der markierten Kabel; die Schaltfläche „im EME-Budget verwenden“ übernimmt das Kabel ins Budget. Eigene Kabel können hinzugefügt werden.",
+            "Die Kontaktdaten des Autors (E-Mail, QRZ.com-Profil) und der Dank an alle, die zum Programm beigetragen haben.",
+            "Der Text der Lizenz, unter der das Programm verbreitet wird.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6471,7 +6561,7 @@ namespace LunaCalc
             "En haut quatre indicateurs, à gauche la source des données (NOAA RSTN recommandée, ou F10.7 de NOAA ou de Penticton, ou une adresse personnalisée) avec les stations, à droite le spectre du flux solaire avec l'extrapolation jusqu'à la fréquence de travail.",
             "Ce manuel, dans le programme et dans toutes les langues : sommaire cliquable, recherche, formules et sources.",
             "Il est mis en page comme un document Word, avec les formules dans le style de l'éditeur d'équations : il peut être copié dans le presse-papiers ou enregistré en Word (.docx).",
-            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DEBUG FORMULE), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (ABOUT & CREDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
+            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune, La Lune sur le monde), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DEBUG FORMULE), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (ABOUT & CREDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
             "Merci de m'avoir utilisé : j'espère t'avoir été utile.",
             "Non",
             "Oui",
@@ -6695,6 +6785,36 @@ namespace LunaCalc
             "type",
             "triés par {0}",
             "Préface de l'auteur",
+            "SV1BSX, tableau des atténuations des câbles coaxiaux (qsl.net/sv1bsx) – valeurs à vérifier sur les fiches des fabricants",
+            "SSB-Electronic, fiches techniques Aircell / Ecoflex (distribuées par Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, fiches techniques LMR (distribuées par Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, fiche technique LMR-400 (iewc.com)",
+            "Siva Cavi, fiches techniques HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, fiches techniques CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, fiches techniques Messi & Paoloni Hyperflex / Ultraflex et Ecoflex Plus (wimo.com)",
+            "Fiche du câble SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), fiches techniques HELIAX LDF / FSJ (commscope.com)",
+            "Symair, fiches techniques HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, fiches techniques H1000 (H1000C1), 8237 (RG-8/U) et 9913 (catalog.belden.com); pour 8237 et 9913 les valeurs en dB/100 ft sont converties en dB/100 m",
+            "Tasker (MILAN S.r.l.), fiches techniques RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 et C538 (copies chez les distributeurs: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, fiches techniques Airborne, Hyperflex et Ultraflex; catalogue des câbles 50 Ω 2026 (messi.it)",
+            "SSB-Electronic, fiches techniques SeaTex, Aircell 7 et Aircom Premium; catalogue des câbles (ssb.de)",
+            "Tableaux des câbles coaxiaux de DD1US (dd1us.de, 27/04/2024) et EA5IP (qsl.net/ea5ip): 5,5 dB à 144 MHz, 9,1 dB à 432 MHz; fabricant non indiqué",
+            "Prospecta, fiche technique RT5020 (radiosystem.it)",
+            "Prospecta, fiche technique XT-2400 (hamradioshop.it)",
+            "QAXIAL, fiche technique LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, catalogue MIL-C-17F 50 Ω: RG 142 B/U (M17/60) et RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), fiche technique RG115 (rf-microwave.com)",
+            "divers",
+            "fabricants chinois",
+            "gaine en verre",
+            "Les écrans du programme",
+            "Les onglets dans l'ordre où ils apparaissent dans les six groupes de la barre du haut ; pour chacun, ce qu'il montre et à quoi il sert.",
+            "À côté du locator du DX se trouve la case de l'indicatif : si l'indicatif figure dans CALL3.TXT, le locator se remplit tout seul, et le bouton CALL3 met à jour la liste ou la copie dans le dossier de WSJT-X. En faisant glisser la ligne rouge des 24 heures ou en choisissant le jour dans le calendrier, l'écran montre un instant passé ou futur ; ▶ Maintenant revient au direct. La fréquence se choisit dans le cadre Écho et fréquences.",
+            "Le tableau de droite liste les jours avec les mêmes couleurs que les bandes du graphique (vert les trois meilleurs jours, rouge et orange le Soleil proche de la Lune). La courbe bleue de déclinaison est superposée au graphique, avec son échelle à l'intérieur du bord gauche ; la case « Heures utiles en vert sur la Dgrd » colore les heures où la Lune est dans les limites de l'antenne.",
+            "La base de données des câbles coaxiaux 50 Ω avec l'atténuation à 50, 70, 144, 222 et 432 MHz et les sources de chaque valeur ; on la trie par diamètre, perte, nom, fabricant ou type (aussi en cliquant sur les en-têtes de colonnes), on la filtre par type et diamètre et on y cherche par nom. À droite, la perte d'un tronçon et le graphique des câbles cochés ; le bouton « utiliser dans le Budget EME » envoie le câble au Budget. On peut ajouter des câbles personnalisés.",
+            "Les coordonnées de l'auteur (e-mail, profil QRZ.com) et les remerciements à ceux qui ont contribué au programme.",
+            "Le texte de la licence sous laquelle le programme est distribué.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7731,7 +7851,7 @@ namespace LunaCalc
             "Arriba cuatro indicadores, a la izquierda la fuente de los datos (NOAA RSTN recomendada, o F10.7 de NOAA o de Penticton, o una dirección personalizada) con las estaciones, a la derecha el espectro del flujo solar con la extrapolación hasta la frecuencia de trabajo.",
             "Este manual, dentro del programa y en todos los idiomas: índice con clic, búsqueda, fórmulas y fuentes.",
             "Está maquetado como un documento Word, con las fórmulas al estilo del editor de ecuaciones: se puede copiar al portapapeles o guardar en Word (.docx).",
-            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEBUG FORMULE), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ABOUT & CREDITS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
+            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna, Luna sobre el mundo), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEBUG FORMULE), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ABOUT & CREDITS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
             "Gracias por usarme: espero haberte sido útil.",
             "No",
             "Sí",
@@ -7955,6 +8075,36 @@ namespace LunaCalc
             "tipo",
             "ordenados por {0}",
             "Prefacio del autor",
+            "SV1BSX, tabla de atenuaciones de cables coaxiales (qsl.net/sv1bsx) – valores a comprobar en las hojas de los fabricantes",
+            "SSB-Electronic, hojas técnicas Aircell / Ecoflex (distribuidas por Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, hojas técnicas LMR (distribuidas por Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, hoja técnica LMR-400 (iewc.com)",
+            "Siva Cavi, hojas técnicas HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, hojas técnicas CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, hojas técnicas Messi & Paoloni Hyperflex / Ultraflex y Ecoflex Plus (wimo.com)",
+            "Hoja del cable SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), hojas técnicas HELIAX LDF / FSJ (commscope.com)",
+            "Symair, hojas técnicas HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, hojas técnicas H1000 (H1000C1), 8237 (RG-8/U) y 9913 (catalog.belden.com); para 8237 y 9913 los valores en dB/100 ft se han convertido a dB/100 m",
+            "Tasker (MILAN S.r.l.), hojas técnicas RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 y C538 (copias en los distribuidores: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, hojas técnicas Airborne, Hyperflex y Ultraflex; catálogo de cables de 50 Ω 2026 (messi.it)",
+            "SSB-Electronic, hojas técnicas SeaTex, Aircell 7 y Aircom Premium; catálogo de cables (ssb.de)",
+            "Tablas de cables coaxiales de DD1US (dd1us.de, 27/04/2024) y EA5IP (qsl.net/ea5ip): 5,5 dB a 144 MHz, 9,1 dB a 432 MHz; fabricante no indicado",
+            "Prospecta, hoja técnica RT5020 (radiosystem.it)",
+            "Prospecta, hoja técnica XT-2400 (hamradioshop.it)",
+            "QAXIAL, hoja técnica LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, catálogo MIL-C-17F 50 Ω: RG 142 B/U (M17/60) y RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), hoja técnica RG115 (rf-microwave.com)",
+            "varios",
+            "fabricantes chinos",
+            "cubierta de vidrio",
+            "Las pantallas del programa",
+            "Las pestañas en el orden en que aparecen en los seis grupos de la barra superior; para cada una, qué muestra y para qué sirve.",
+            "Junto al locator del DX está la casilla del indicativo: si el indicativo está en CALL3.TXT el locator se rellena solo, y el botón CALL3 actualiza la lista o la copia en la carpeta de WSJT-X. Arrastrando la línea roja de las 24 horas o eligiendo el día en el calendario la pantalla muestra un instante pasado o futuro; ▶ Ahora vuelve al directo. La frecuencia se elige en el recuadro Eco y frecuencias.",
+            "La tabla de la derecha enumera los días con los mismos colores que las franjas del gráfico (verde los tres mejores días, rojo y naranja el Sol cerca de la Luna). La curva azul de declinación se superpone al gráfico, con su escala dentro del borde izquierdo; la casilla «Horas útiles en verde sobre la Dgrd» colorea las horas con la Luna dentro de los límites de la antena.",
+            "La base de datos de cables coaxiales de 50 Ω con la atenuación a 50, 70, 144, 222 y 432 MHz y las fuentes de cada valor; se ordena por diámetro, pérdida, nombre, fabricante o tipo (también pulsando los encabezados de las columnas), se filtra por tipo y diámetro y se busca por nombre. A la derecha, la pérdida de un tramo y el gráfico de los cables marcados; el botón «usar en el Balance EME» lleva el cable al Balance. Se pueden añadir cables personalizados.",
+            "Los datos de contacto del autor (correo, perfil de QRZ.com) y los agradecimientos a quienes han contribuido al programa.",
+            "El texto de la licencia con la que se distribuye el programa.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -8991,7 +9141,7 @@ namespace LunaCalc
             "Em cima quatro indicadores, à esquerda a fonte dos dados (NOAA RSTN recomendada, ou F10.7 da NOAA ou de Penticton, ou um endereço personalizado) com as estações, à direita o espectro do fluxo solar com a extrapolação até à frequência de trabalho.",
             "Este manual, dentro do programa e em todas as línguas: índice clicável, pesquisa, fórmulas e fontes.",
             "Está paginado como um documento Word, com as fórmulas no estilo do editor de equações: pode ser copiado para a área de transferência ou guardado em Word (.docx).",
-            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEBUG FORMULE), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (ABOUT & CREDITS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
+            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua, Lua sobre o mundo), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEBUG FORMULE), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (ABOUT & CREDITS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
             "Obrigado por me teres usado: espero ter-te sido útil.",
             "Não",
             "Sim",
@@ -9215,6 +9365,36 @@ namespace LunaCalc
             "tipo",
             "ordenados por {0}",
             "Prefácio do autor",
+            "SV1BSX, tabela de atenuações de cabos coaxiais (qsl.net/sv1bsx) – valores a verificar nas fichas dos fabricantes",
+            "SSB-Electronic, fichas técnicas Aircell / Ecoflex (distribuídas por Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, fichas técnicas LMR (distribuídas por Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, ficha técnica LMR-400 (iewc.com)",
+            "Siva Cavi, fichas técnicas HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, fichas técnicas CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, fichas técnicas Messi & Paoloni Hyperflex / Ultraflex e Ecoflex Plus (wimo.com)",
+            "Ficha do cabo SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), fichas técnicas HELIAX LDF / FSJ (commscope.com)",
+            "Symair, fichas técnicas HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, fichas técnicas H1000 (H1000C1), 8237 (RG-8/U) e 9913 (catalog.belden.com); para 8237 e 9913 os valores em dB/100 ft foram convertidos para dB/100 m",
+            "Tasker (MILAN S.r.l.), fichas técnicas RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 e C538 (cópias nos distribuidores: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, fichas técnicas Airborne, Hyperflex e Ultraflex; catálogo de cabos de 50 Ω 2026 (messi.it)",
+            "SSB-Electronic, fichas técnicas SeaTex, Aircell 7 e Aircom Premium; catálogo de cabos (ssb.de)",
+            "Tabelas de cabos coaxiais de DD1US (dd1us.de, 27/04/2024) e EA5IP (qsl.net/ea5ip): 5,5 dB a 144 MHz, 9,1 dB a 432 MHz; fabricante não indicado",
+            "Prospecta, ficha técnica RT5020 (radiosystem.it)",
+            "Prospecta, ficha técnica XT-2400 (hamradioshop.it)",
+            "QAXIAL, ficha técnica LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, catálogo MIL-C-17F 50 Ω: RG 142 B/U (M17/60) e RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), ficha técnica RG115 (rf-microwave.com)",
+            "vários",
+            "fabricantes chineses",
+            "bainha de vidro",
+            "Os ecrãs do programa",
+            "Os separadores pela ordem em que aparecem nos seis grupos da barra superior; para cada um, o que mostra e para que serve.",
+            "Junto ao locator do DX está a caixa do indicativo: se o indicativo estiver no CALL3.TXT o locator preenche-se sozinho, e o botão CALL3 atualiza a lista ou copia-a para a pasta do WSJT-X. Arrastando a linha vermelha das 24 horas ou escolhendo o dia no calendário, o ecrã mostra um instante passado ou futuro; ▶ Agora volta ao direto. A frequência escolhe-se no quadro Eco e frequências.",
+            "A tabela à direita lista os dias com as mesmas cores das faixas do gráfico (verde os três melhores dias, vermelho e laranja o Sol perto da Lua). A curva azul da declinação sobrepõe-se ao gráfico, com a sua escala dentro da margem esquerda; a caixa «Horas úteis a verde na Dgrd» pinta as horas com a Lua dentro dos limites da antena.",
+            "A base de dados dos cabos coaxiais de 50 Ω com a atenuação a 50, 70, 144, 222 e 432 MHz e as fontes de cada valor; ordena-se por diâmetro, perda, nome, fabricante ou tipo (também clicando nos cabeçalhos das colunas), filtra-se por tipo e diâmetro e pesquisa-se por nome. À direita, a perda de um troço e o gráfico dos cabos assinalados; o botão «usar no Balanço EME» leva o cabo para o Balanço. Podem acrescentar-se cabos personalizados.",
+            "Os contactos do autor (e-mail, perfil QRZ.com) e os agradecimentos a quem contribuiu para o programa.",
+            "O texto da licença com que o programa é distribuído.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10251,7 +10431,7 @@ namespace LunaCalc
             "上方四个指示，左侧为数据来源 (推荐 NOAA RSTN，或 NOAA、彭蒂克顿的 F10.7，或自定义地址) 及台站，右侧为太阳流量频谱及外推到工作频率的曲线。",
             "本手册，内置于程序并提供所有语言：可点击目录、搜索、公式和来源。",
             "它像 Word 文档一样排版，公式采用公式编辑器风格：可复制到剪贴板或保存为 Word (.docx)。",
-            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、DEBUG FORMULE)、日志 (WWL 与 ADIF 地图)、帮助与工具 (使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (ABOUT & CREDITS、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
+            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置、月照全球)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、DEBUG FORMULE)、日志 (WWL 与 ADIF 地图)、帮助与工具 (使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (ABOUT & CREDITS、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
             "感谢使用我：希望我对你有所帮助。",
             "否",
             "是",
@@ -10475,6 +10655,36 @@ namespace LunaCalc
             "类型",
             "按{0}排序",
             "作者序言",
+            "SV1BSX, 同轴电缆衰减表 (qsl.net/sv1bsx) – 数值需对照制造商资料核实",
+            "SSB-Electronic, 技术资料 Aircell / Ecoflex (经销商 Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, 技术资料 LMR (经销商 Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, 技术资料 LMR-400 (iewc.com)",
+            "Siva Cavi, 技术资料 HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, 技术资料 CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, 技术资料 Messi & Paoloni Hyperflex / Ultraflex 和 Ecoflex Plus (wimo.com)",
+            "电缆资料 SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), 技术资料 HELIAX LDF / FSJ (commscope.com)",
+            "Symair, 技术资料 HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, 技术资料 H1000 (H1000C1), 8237 (RG-8/U) 和 9913 (catalog.belden.com); 8237 和 9913 的 dB/100 ft 数值已换算为 dB/100 m",
+            "Tasker (MILAN S.r.l.), 技术资料 RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 和 C538 (经销商处的副本: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, 技术资料 Airborne, Hyperflex 和 Ultraflex; 50 Ω 电缆目录 2026 (messi.it)",
+            "SSB-Electronic, 技术资料 SeaTex, Aircell 7 和 Aircom Premium; 电缆目录 (ssb.de)",
+            "同轴电缆表，作者 DD1US (dd1us.de, 27/04/2024) 和 EA5IP (qsl.net/ea5ip): 144 MHz 时 5.5 dB, 432 MHz 时 9.1 dB; 未注明制造商",
+            "Prospecta, 技术资料 RT5020 (radiosystem.it)",
+            "Prospecta, 技术资料 XT-2400 (hamradioshop.it)",
+            "QAXIAL, 技术资料 LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, 目录 MIL-C-17F 50 Ω: RG 142 B/U (M17/60) 和 RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), 技术资料 RG115 (rf-microwave.com)",
+            "多家",
+            "中国制造商",
+            "玻璃护套",
+            "程序的各个界面",
+            "按顶部栏六个分组中的顺序列出各选项卡；每个选项卡显示什么、有什么用途。",
+            "DX 定位旁边是呼号框：若呼号在 CALL3.TXT 中，定位会自动填入；CALL3 按钮可更新列表或将其复制到 WSJT-X 文件夹。拖动 24 小时条上的红线或在日历中选择日期，可显示过去或未来的时刻；▶ 现在 返回实时。频率在“回波与频率”框中选择。",
+            "右侧表格用与图表色带相同的颜色列出各日（绿色为三个最佳日，红色和橙色为太阳靠近月球）。蓝色赤纬曲线叠加在图表上，其刻度在左边框内侧；“Dgrd 上可用时段显示为绿色”复选框会把月球处于天线限制内的时段标为绿色。",
+            "50 Ω 同轴电缆数据库，含 50、70、144、222 和 432 MHz 的衰减及每个数值的来源；可按直径、损耗、名称、制造商或类型排序（也可点击列标题），按类型和直径筛选并按名称搜索。右侧是某段线路的损耗计算和所勾选电缆的图表；“用于 EME 预算”按钮可把电缆带入预算。可以添加自定义电缆。",
+            "作者的联系方式（电子邮件、QRZ.com 资料页）以及对为程序作出贡献者的致谢。",
+            "程序发布所依据的许可证全文。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11511,7 +11721,7 @@ namespace LunaCalc
             "上部に 4 つの指標、左にデータソース (推奨は NOAA RSTN、または NOAA かペンティクトンの F10.7、またはカスタムアドレス) と観測所、右に運用周波数までの外挿付き太陽電波束スペクトル。",
             "このマニュアル。プログラム内にあり全言語対応：クリックできる目次、検索、数式、出典。",
             "Word 文書のようにレイアウトされ、数式は数式エディター風です：クリップボードにコピーしたり Word (.docx) で保存したりできます。",
-            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、DEBUG FORMULE)、ログ (WWL・ADIF 地図)、ヘルプとツール (取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (ABOUT & CREDITS、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
+            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置、世界から見た月)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、DEBUG FORMULE)、ログ (WWL・ADIF 地図)、ヘルプとツール (取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (ABOUT & CREDITS、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
             "使ってくれてありがとう：お役に立てたなら幸いです。",
             "いいえ",
             "はい",
@@ -11735,6 +11945,36 @@ namespace LunaCalc
             "種類",
             "{0}順",
             "著者まえがき",
+            "SV1BSX, 同軸ケーブル減衰量表 (qsl.net/sv1bsx) – 値はメーカーのデータシートで要確認",
+            "SSB-Electronic, データシート Aircell / Ecoflex (販売元 Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, データシート LMR (販売元 Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, データシート LMR-400 (iewc.com)",
+            "Siva Cavi, データシート HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, データシート CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, データシート Messi & Paoloni Hyperflex / Ultraflex と Ecoflex Plus (wimo.com)",
+            "ケーブルのデータシート SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), データシート HELIAX LDF / FSJ (commscope.com)",
+            "Symair, データシート HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, データシート H1000 (H1000C1), 8237 (RG-8/U) と 9913 (catalog.belden.com); 8237 と 9913 は dB/100 ft の値を dB/100 m に換算",
+            "Tasker (MILAN S.r.l.), データシート RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 と C538 (販売店にある写し: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, データシート Airborne, Hyperflex と Ultraflex; 50 Ω ケーブルカタログ 2026 (messi.it)",
+            "SSB-Electronic, データシート SeaTex, Aircell 7 と Aircom Premium; ケーブルカタログ (ssb.de)",
+            "同軸ケーブル表： DD1US (dd1us.de, 27/04/2024) と EA5IP (qsl.net/ea5ip): 144 MHz で 5.5 dB, 432 MHz で 9.1 dB; メーカー記載なし",
+            "Prospecta, データシート RT5020 (radiosystem.it)",
+            "Prospecta, データシート XT-2400 (hamradioshop.it)",
+            "QAXIAL, データシート LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, カタログ MIL-C-17F 50 Ω: RG 142 B/U (M17/60) と RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), データシート RG115 (rf-microwave.com)",
+            "各社",
+            "中国メーカー",
+            "ガラス被覆",
+            "プログラムの画面",
+            "上部バーの 6 つのグループに並ぶ順にタブを紹介し、それぞれ何を表示し何に使うかを説明します。",
+            "DX のロケーターの横にはコールサイン欄があります。コールサインが CALL3.TXT にあればロケーターが自動で入り、CALL3 ボタンでリストの更新や WSJT-X フォルダーへのコピーができます。24 時間の赤い線をドラッグするか、カレンダーで日を選ぶと過去や未来の時刻を表示します。▶ 現在 でライブに戻ります。周波数は「エコーと周波数」の枠で選びます。",
+            "右の表は、グラフの帯と同じ色で各日を一覧表示します（緑は上位 3 日、赤と橙は太陽が月に近い日）。青い赤緯曲線はグラフに重ねて描かれ、目盛りは左端の内側にあります。「Dgrd の利用可能時間を緑で表示」チェックボックスで、月がアンテナの制限内にある時間を緑にします。",
+            "50 Ω 同軸ケーブルのデータベースで、50・70・144・222・432 MHz の減衰量と各値の出典を収録しています。直径、損失、名前、メーカー、種類で並べ替え（列見出しのクリックでも可）、種類と直径で絞り込み、名前で検索できます。右側は区間の損失計算とチェックしたケーブルのグラフで、「EME 回線計算で使用」ボタンでケーブルを回線計算に送ります。独自のケーブルも追加できます。",
+            "著者の連絡先（電子メール、QRZ.com のプロフィール）と、プログラムに協力した方々への謝辞。",
+            "プログラムの配布条件となるライセンスの全文。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12771,7 +13011,7 @@ namespace LunaCalc
             "ऊपर चार संकेतक, बाईं ओर डेटा स्रोत (NOAA RSTN अनुशंसित, या NOAA अथवा पेंटिक्टन का F10.7, या कस्टम पता) स्टेशनों के साथ, दाईं ओर कार्य आवृत्ति तक एक्सट्रापोलेशन सहित सौर फ्लक्स स्पेक्ट्रम।",
             "यह मैनुअल, प्रोग्राम के भीतर और सभी भाषाओं में: क्लिक योग्य विषय-सूची, खोज, सूत्र और स्रोत।",
             "यह Word दस्तावेज़ की तरह सजा है, सूत्र समीकरण संपादक की शैली में: इसे क्लिपबोर्ड में कॉपी या Word (.docx) में सहेजा जा सकता है।",
-            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, DEBUG FORMULE), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (ABOUT & CREDITS, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
+            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति, विश्व पर चंद्रमा), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, DEBUG FORMULE), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (ABOUT & CREDITS, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
             "मुझे उपयोग करने के लिए धन्यवाद: आशा है मैं आपके काम आया।",
             "नहीं",
             "हाँ",
@@ -12995,6 +13235,36 @@ namespace LunaCalc
             "प्रकार",
             "{0} के अनुसार क्रमबद्ध",
             "लेखक की प्रस्तावना",
+            "SV1BSX, समाक्षीय केबल क्षीणन तालिका (qsl.net/sv1bsx) – मान निर्माताओं की डेटाशीट से जाँचें",
+            "SSB-Electronic, डेटाशीट Aircell / Ecoflex (वितरक Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, डेटाशीट LMR (वितरक Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, डेटाशीट LMR-400 (iewc.com)",
+            "Siva Cavi, डेटाशीट HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, डेटाशीट CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, डेटाशीट Messi & Paoloni Hyperflex / Ultraflex और Ecoflex Plus (wimo.com)",
+            "केबल की डेटाशीट SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), डेटाशीट HELIAX LDF / FSJ (commscope.com)",
+            "Symair, डेटाशीट HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, डेटाशीट H1000 (H1000C1), 8237 (RG-8/U) और 9913 (catalog.belden.com); 8237 और 9913 के dB/100 ft मान dB/100 m में बदले गए हैं",
+            "Tasker (MILAN S.r.l.), डेटाशीट RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 और C538 (वितरकों के पास प्रतियाँ: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, डेटाशीट Airborne, Hyperflex और Ultraflex; 50 Ω केबल कैटलॉग 2026 (messi.it)",
+            "SSB-Electronic, डेटाशीट SeaTex, Aircell 7 और Aircom Premium; केबल कैटलॉग (ssb.de)",
+            "समाक्षीय केबल तालिकाएँ: DD1US (dd1us.de, 27/04/2024) और EA5IP (qsl.net/ea5ip): 144 MHz पर 5.5 dB, 432 MHz पर 9.1 dB; निर्माता नहीं बताया गया",
+            "Prospecta, डेटाशीट RT5020 (radiosystem.it)",
+            "Prospecta, डेटाशीट XT-2400 (hamradioshop.it)",
+            "QAXIAL, डेटाशीट LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, कैटलॉग MIL-C-17F 50 Ω: RG 142 B/U (M17/60) और RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), डेटाशीट RG115 (rf-microwave.com)",
+            "विभिन्न",
+            "चीनी निर्माता",
+            "काँच की परत",
+            "प्रोग्राम की स्क्रीनें",
+            "ऊपर की पट्टी के छह समूहों में जिस क्रम से टैब दिखते हैं उसी क्रम में; हर टैब क्या दिखाता है और किस काम का है।",
+            "DX लोकेटर के पास कॉलसाइन का बॉक्स है: यदि कॉलसाइन CALL3.TXT में है तो लोकेटर अपने-आप भर जाता है, और CALL3 बटन सूची अपडेट करता है या उसे WSJT-X फ़ोल्डर में कॉपी करता है। 24 घंटे की लाल रेखा खींचकर या कैलेंडर में दिन चुनकर स्क्रीन बीता या आने वाला क्षण दिखाती है; ▶ अभी लाइव पर लौटाता है। आवृत्ति इको और आवृत्तियाँ बॉक्स में चुनी जाती है।",
+            "दाईं ओर की तालिका दिनों को चार्ट की पट्टियों के समान रंगों में दिखाती है (हरा तीन सर्वश्रेष्ठ दिन, लाल और नारंगी सूर्य चंद्रमा के पास)। नीला दिक्पात वक्र चार्ट के ऊपर बनता है, उसका पैमाना बाएँ किनारे के भीतर है; “Dgrd पर उपयोगी घंटे हरे रंग में” बॉक्स उन घंटों को रंगता है जब चंद्रमा एंटीना की सीमाओं में है।",
+            "50 Ω समाक्षीय केबलों का डेटाबेस, 50, 70, 144, 222 और 432 MHz पर क्षीणन और हर मान के स्रोत के साथ; इसे व्यास, हानि, नाम, निर्माता या प्रकार से क्रमबद्ध किया जा सकता है (स्तंभ शीर्षक पर क्लिक करके भी), प्रकार और व्यास से छाना और नाम से खोजा जा सकता है। दाईं ओर एक खंड की हानि की गणना और चुने गए केबलों का ग्राफ़; \"EME बजट में उपयोग करें\" बटन केबल को बजट में ले जाता है। अपने केबल भी जोड़े जा सकते हैं।",
+            "लेखक के संपर्क (ई-मेल, QRZ.com प्रोफ़ाइल) और प्रोग्राम में योगदान देने वालों का आभार।",
+            "वह लाइसेंस पाठ जिसके अंतर्गत प्रोग्राम वितरित किया जाता है।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14031,7 +14301,7 @@ namespace LunaCalc
             "위쪽에 네 지표, 왼쪽에 데이터 출처 (NOAA RSTN 권장, 또는 NOAA나 펜틱턴의 F10.7, 또는 사용자 주소)와 관측소, 오른쪽에 운용 주파수까지 외삽한 태양 플럭스 스펙트럼.",
             "이 설명서로, 프로그램 안에 있으며 모든 언어를 지원합니다: 클릭 가능한 목차, 검색, 수식, 출처.",
             "Word 문서처럼 배치되고 수식은 수식 편집기 양식입니다: 클립보드로 복사하거나 Word (.docx)로 저장할 수 있습니다.",
-            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, DEBUG FORMULE), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (ABOUT & CREDITS, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
+            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치, 세계 위의 달), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, DEBUG FORMULE), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (ABOUT & CREDITS, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
             "사용해 주셔서 감사합니다: 도움이 되었기를 바랍니다.",
             "아니요",
             "예",
@@ -14255,6 +14525,36 @@ namespace LunaCalc
             "종류",
             "{0} 순 정렬",
             "저자 서문",
+            "SV1BSX, 동축 케이블 감쇠 표 (qsl.net/sv1bsx) – 값은 제조사 데이터시트로 확인 필요",
+            "SSB-Electronic, 데이터시트 Aircell / Ecoflex (배급 Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, 데이터시트 LMR (배급 Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, 데이터시트 LMR-400 (iewc.com)",
+            "Siva Cavi, 데이터시트 HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, 데이터시트 CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, 데이터시트 Messi & Paoloni Hyperflex / Ultraflex 및 Ecoflex Plus (wimo.com)",
+            "케이블 데이터시트 SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), 데이터시트 HELIAX LDF / FSJ (commscope.com)",
+            "Symair, 데이터시트 HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, 데이터시트 H1000 (H1000C1), 8237 (RG-8/U) 및 9913 (catalog.belden.com); 8237과 9913은 dB/100 ft 값을 dB/100 m로 환산",
+            "Tasker (MILAN S.r.l.), 데이터시트 RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 및 C538 (판매점의 사본: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, 데이터시트 Airborne, Hyperflex 및 Ultraflex; 50 Ω 케이블 카탈로그 2026 (messi.it)",
+            "SSB-Electronic, 데이터시트 SeaTex, Aircell 7 및 Aircom Premium; 케이블 카탈로그 (ssb.de)",
+            "동축 케이블 표: DD1US (dd1us.de, 27/04/2024) 및 EA5IP (qsl.net/ea5ip): 144 MHz에서 5.5 dB, 432 MHz에서 9.1 dB; 제조사 표시 없음",
+            "Prospecta, 데이터시트 RT5020 (radiosystem.it)",
+            "Prospecta, 데이터시트 XT-2400 (hamradioshop.it)",
+            "QAXIAL, 데이터시트 LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, 카탈로그 MIL-C-17F 50 Ω: RG 142 B/U (M17/60) 및 RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), 데이터시트 RG115 (rf-microwave.com)",
+            "여러 제조사",
+            "중국 제조사",
+            "유리 피복",
+            "프로그램 화면",
+            "상단 막대의 여섯 그룹에 나오는 순서대로 탭을 소개하고, 각 탭이 무엇을 보여 주고 어디에 쓰이는지 설명합니다.",
+            "DX 로케이터 옆에는 호출부호 칸이 있습니다. 호출부호가 CALL3.TXT에 있으면 로케이터가 자동으로 채워지고, CALL3 버튼으로 목록을 업데이트하거나 WSJT-X 폴더로 복사할 수 있습니다. 24시간 막대의 빨간 선을 끌거나 달력에서 날짜를 고르면 과거나 미래의 시점을 보여 주며, ▶ 지금 을 누르면 실시간으로 돌아갑니다. 주파수는 에코와 주파수 상자에서 고릅니다.",
+            "오른쪽 표는 그래프 띠와 같은 색으로 날짜를 보여 줍니다(녹색은 최고의 3일, 빨강과 주황은 태양이 달 가까이 있는 날). 파란 적위 곡선은 그래프 위에 겹쳐 그려지며 눈금은 왼쪽 테두리 안쪽에 있습니다. “Dgrd에 사용 가능 시간을 녹색으로” 확인란은 달이 안테나 한계 안에 있는 시간을 녹색으로 표시합니다.",
+            "50 Ω 동축 케이블 데이터베이스로, 50·70·144·222·432 MHz의 감쇠와 각 값의 출처를 담고 있습니다. 직경, 손실, 이름, 제조사, 종류로 정렬하고(열 머리글을 눌러도 됨) 종류와 직경으로 거르며 이름으로 검색할 수 있습니다. 오른쪽에는 구간 손실 계산과 체크한 케이블의 그래프가 있으며 \"EME 버짓에 사용\" 버튼으로 케이블을 버짓에 넣습니다. 사용자 케이블을 추가할 수 있습니다.",
+            "저자의 연락처(이메일, QRZ.com 프로필)와 프로그램에 기여한 분들에 대한 감사의 말.",
+            "프로그램이 배포되는 라이선스의 전문.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15291,7 +15591,7 @@ namespace LunaCalc
             "Di atas empat indikator, di kiri sumber data (NOAA RSTN disarankan, atau F10.7 dari NOAA atau Penticton, atau alamat kustom) dengan stasiun-stasiunnya, di kanan spektrum fluks matahari dengan ekstrapolasi hingga frekuensi kerja.",
             "Manual ini, di dalam program dan dalam semua bahasa: daftar isi yang dapat diklik, pencarian, rumus dan sumber.",
             "Ditata seperti dokumen Word, dengan rumus bergaya editor persamaan: dapat disalin ke papan klip atau disimpan sebagai Word (.docx).",
-            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG FORMULE), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (ABOUT & CREDITS, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
+            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan, Bulan di atas dunia), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG FORMULE), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (ABOUT & CREDITS, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
             "Terima kasih telah memakai saya: semoga saya bermanfaat bagimu.",
             "Tidak",
             "Ya",
@@ -15515,6 +15815,36 @@ namespace LunaCalc
             "jenis",
             "diurutkan menurut {0}",
             "Kata pengantar penulis",
+            "SV1BSX, tabel redaman kabel koaksial (qsl.net/sv1bsx) – nilai perlu diperiksa pada lembar data pabrikan",
+            "SSB-Electronic, lembar data Aircell / Ecoflex (didistribusikan oleh Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, lembar data LMR (didistribusikan oleh Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, lembar data LMR-400 (iewc.com)",
+            "Siva Cavi, lembar data HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, lembar data CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, lembar data Messi & Paoloni Hyperflex / Ultraflex dan Ecoflex Plus (wimo.com)",
+            "Lembar data kabel SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), lembar data HELIAX LDF / FSJ (commscope.com)",
+            "Symair, lembar data HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, lembar data H1000 (H1000C1), 8237 (RG-8/U) dan 9913 (catalog.belden.com); untuk 8237 dan 9913 nilai dB/100 ft dikonversi ke dB/100 m",
+            "Tasker (MILAN S.r.l.), lembar data RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 dan C538 (salinan di distributor: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, lembar data Airborne, Hyperflex dan Ultraflex; katalog kabel 50 Ω 2026 (messi.it)",
+            "SSB-Electronic, lembar data SeaTex, Aircell 7 dan Aircom Premium; katalog kabel (ssb.de)",
+            "Tabel kabel koaksial dari DD1US (dd1us.de, 27/04/2024) dan EA5IP (qsl.net/ea5ip): 5,5 dB pada 144 MHz, 9,1 dB pada 432 MHz; pabrikan tidak disebutkan",
+            "Prospecta, lembar data RT5020 (radiosystem.it)",
+            "Prospecta, lembar data XT-2400 (hamradioshop.it)",
+            "QAXIAL, lembar data LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, katalog MIL-C-17F 50 Ω: RG 142 B/U (M17/60) dan RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), lembar data RG115 (rf-microwave.com)",
+            "berbagai",
+            "pabrikan Tiongkok",
+            "selubung kaca",
+            "Layar-layar program",
+            "Tab-tab sesuai urutan kemunculannya dalam enam kelompok di bilah atas; untuk masing-masing, apa yang ditampilkan dan apa gunanya.",
+            "Di samping lokator DX ada kotak callsign: jika callsign ada di CALL3.TXT, lokator terisi sendiri, dan tombol CALL3 memperbarui daftar atau menyalinnya ke folder WSJT-X. Dengan menyeret garis merah 24 jam atau memilih hari di kalender, layar menampilkan saat yang lalu atau yang akan datang; ▶ Sekarang kembali ke siaran langsung. Frekuensi dipilih di kotak Gema dan frekuensi.",
+            "Tabel di kanan mencantumkan hari-hari dengan warna yang sama seperti pita grafik (hijau tiga hari terbaik, merah dan jingga Matahari dekat Bulan). Kurva deklinasi biru ditumpangkan pada grafik, dengan skalanya di dalam tepi kiri; kotak \"Jam berguna berwarna hijau pada Dgrd\" mewarnai jam ketika Bulan berada dalam batas antena.",
+            "Basis data kabel koaksial 50 Ω dengan redaman pada 50, 70, 144, 222 dan 432 MHz serta sumber setiap nilai; dapat diurutkan menurut diameter, rugi, nama, pabrikan atau tipe (juga dengan mengklik judul kolom), disaring menurut tipe dan diameter, dan dicari menurut nama. Di kanan, perhitungan rugi suatu ruas dan grafik kabel yang dicentang; tombol \"pakai di Anggaran EME\" membawa kabel ke Anggaran. Kabel kustom dapat ditambahkan.",
+            "Kontak penulis (e-mail, profil QRZ.com) dan ucapan terima kasih kepada yang telah berkontribusi pada program.",
+            "Teks lisensi yang menjadi dasar distribusi program.",
         };
 
         public static readonly string[] RU = {
@@ -16552,7 +16882,7 @@ namespace LunaCalc
             "Вверху четыре индикатора, слева источник данных (рекомендуется NOAA RSTN, либо F10.7 от NOAA или Пентиктона, либо свой адрес) со станциями, справа спектр солнечного потока с экстраполяцией до рабочей частоты.",
             "Это руководство, внутри программы и на всех языках: кликабельное оглавление, поиск, формулы и источники.",
             "Оно свёрстано как документ Word, с формулами в стиле редактора уравнений: его можно скопировать в буфер обмена или сохранить в Word (.docx).",
-            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, DEBUG FORMULE), Журнал (Карта WWL и ADIF), Справка и инструменты (РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (ABOUT & CREDITS, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
+            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны, Луна над миром), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, DEBUG FORMULE), Журнал (Карта WWL и ADIF), Справка и инструменты (РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (ABOUT & CREDITS, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
             "Спасибо, что пользовались мной: надеюсь, я был вам полезен.",
             "Нет",
             "Да",
@@ -16776,6 +17106,36 @@ namespace LunaCalc
             "тип",
             "упорядочены: {0}",
             "Предисловие автора",
+            "SV1BSX, таблица затухания коаксиальных кабелей (qsl.net/sv1bsx) – значения следует сверить с описаниями производителей",
+            "SSB-Electronic, технические описания Aircell / Ecoflex (распространяются Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, технические описания LMR (распространяются Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, техническое описание LMR-400 (iewc.com)",
+            "Siva Cavi, технические описания HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, технические описания CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, технические описания Messi & Paoloni Hyperflex / Ultraflex и Ecoflex Plus (wimo.com)",
+            "Описание кабеля SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), технические описания HELIAX LDF / FSJ (commscope.com)",
+            "Symair, технические описания HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, технические описания H1000 (H1000C1), 8237 (RG-8/U) и 9913 (catalog.belden.com); для 8237 и 9913 значения в дБ/100 футов пересчитаны в дБ/100 м",
+            "Tasker (MILAN S.r.l.), технические описания RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 и C538 (копии у дистрибьюторов: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, технические описания Airborne, Hyperflex и Ultraflex; каталог кабелей 50 Ом 2026 (messi.it)",
+            "SSB-Electronic, технические описания SeaTex, Aircell 7 и Aircom Premium; каталог кабелей (ssb.de)",
+            "Таблицы коаксиальных кабелей DD1US (dd1us.de, 27/04/2024) и EA5IP (qsl.net/ea5ip): 5,5 дБ на 144 МГц, 9,1 дБ на 432 МГц; производитель не указан",
+            "Prospecta, техническое описание RT5020 (radiosystem.it)",
+            "Prospecta, техническое описание XT-2400 (hamradioshop.it)",
+            "QAXIAL, техническое описание LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, каталог MIL-C-17F 50 Ω: RG 142 B/U (M17/60) и RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), техническое описание RG115 (rf-microwave.com)",
+            "разные",
+            "китайские производители",
+            "стеклянная оболочка",
+            "Экраны программы",
+            "Вкладки в том порядке, в каком они идут в шести группах верхней панели; для каждой — что она показывает и для чего служит.",
+            "Рядом с локатором DX находится поле позывного: если позывной есть в CALL3.TXT, локатор заполняется сам, а кнопка CALL3 обновляет список или копирует его в папку WSJT-X. Перетаскивая красную линию 24 часов или выбирая день в календаре, можно увидеть прошлый или будущий момент; ▶ Сейчас возвращает в реальное время. Частота выбирается в блоке «Эхо и частоты».",
+            "Таблица справа перечисляет дни теми же цветами, что и полосы графика (зелёный — три лучших дня, красный и оранжевый — Солнце близко к Луне). Синяя кривая склонения наложена на график, её шкала — у левого края внутри; флажок «Полезные часы зелёным на Dgrd» окрашивает часы, когда Луна в пределах антенны.",
+            "База данных коаксиальных кабелей 50 Ом с затуханием на 50, 70, 144, 222 и 432 МГц и источниками каждого значения; её можно упорядочить по диаметру, потерям, названию, производителю или типу (также щелчком по заголовкам столбцов), отфильтровать по типу и диаметру и искать по названию. Справа — расчёт потерь отрезка и график отмеченных кабелей; кнопка «использовать в бюджете EME» переносит кабель в бюджет. Можно добавить свои кабели.",
+            "Контакты автора (e-mail, профиль QRZ.com) и благодарности тем, кто помог программе.",
+            "Текст лицензии, на условиях которой распространяется программа.",
         };
 
         public static readonly string[] UK = {
@@ -17813,7 +18173,7 @@ namespace LunaCalc
             "Угорі чотири індикатори, ліворуч джерело даних (рекомендовано NOAA RSTN, або F10.7 від NOAA чи Пентіктона, або власна адреса) зі станціями, праворуч спектр сонячного потоку з екстраполяцією до робочої частоти.",
             "Цей посібник, усередині програми і всіма мовами: зміст із посиланнями, пошук, формули і джерела.",
             "Його зверстано як документ Word, із формулами в стилі редактора рівнянь: його можна скопіювати в буфер обміну або зберегти у Word (.docx).",
-            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, DEBUG FORMULE), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ABOUT & CREDITS, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
+            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця, Місяць над світом), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, DEBUG FORMULE), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ABOUT & CREDITS, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
             "Дякую, що користувалися мною: сподіваюся, я був вам корисний.",
             "Ні",
             "Так",
@@ -18037,6 +18397,36 @@ namespace LunaCalc
             "тип",
             "упорядковано: {0}",
             "Передмова автора",
+            "SV1BSX, таблиця згасання коаксіальних кабелів (qsl.net/sv1bsx) – значення слід звірити з описами виробників",
+            "SSB-Electronic, технічні описи Aircell / Ecoflex (поширюються Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, технічні описи LMR (поширюються Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, технічний опис LMR-400 (iewc.com)",
+            "Siva Cavi, технічні описи HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, технічні описи CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, технічні описи Messi & Paoloni Hyperflex / Ultraflex і Ecoflex Plus (wimo.com)",
+            "Опис кабелю SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), технічні описи HELIAX LDF / FSJ (commscope.com)",
+            "Symair, технічні описи HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, технічні описи H1000 (H1000C1), 8237 (RG-8/U) і 9913 (catalog.belden.com); для 8237 і 9913 значення в дБ/100 футів перераховано в дБ/100 м",
+            "Tasker (MILAN S.r.l.), технічні описи RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 і C538 (копії в дистриб'юторів: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, технічні описи Airborne, Hyperflex і Ultraflex; каталог кабелів 50 Ом 2026 (messi.it)",
+            "SSB-Electronic, технічні описи SeaTex, Aircell 7 і Aircom Premium; каталог кабелів (ssb.de)",
+            "Таблиці коаксіальних кабелів DD1US (dd1us.de, 27/04/2024) і EA5IP (qsl.net/ea5ip): 5,5 дБ на 144 МГц, 9,1 дБ на 432 МГц; виробника не вказано",
+            "Prospecta, технічний опис RT5020 (radiosystem.it)",
+            "Prospecta, технічний опис XT-2400 (hamradioshop.it)",
+            "QAXIAL, технічний опис LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, каталог MIL-C-17F 50 Ω: RG 142 B/U (M17/60) і RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), технічний опис RG115 (rf-microwave.com)",
+            "різні",
+            "китайські виробники",
+            "скляна оболонка",
+            "Екрани програми",
+            "Вкладки в тому порядку, в якому вони йдуть у шести групах верхньої панелі; для кожної — що вона показує і для чого слугує.",
+            "Поруч із локатором DX є поле позивного: якщо позивний є в CALL3.TXT, локатор заповнюється сам, а кнопка CALL3 оновлює список або копіює його до теки WSJT-X. Перетягуючи червону лінію 24 годин або вибираючи день у календарі, можна побачити минулий чи майбутній момент; ▶ Зараз повертає до реального часу. Частота вибирається в блоці «Луна і частоти».",
+            "Таблиця праворуч перелічує дні тими самими кольорами, що й смуги графіка (зелений — три найкращі дні, червоний і помаранчевий — Сонце близько до Місяця). Синя крива схилення накладена на графік, її шкала — біля лівого краю всередині; прапорець «Корисні години зеленим на Dgrd» фарбує години, коли Місяць у межах антени.",
+            "База даних коаксіальних кабелів 50 Ом зі згасанням на 50, 70, 144, 222 і 432 МГц та джерелами кожного значення; її можна впорядкувати за діаметром, втратами, назвою, виробником або типом (також клацанням по заголовках стовпців), відфільтрувати за типом і діаметром і шукати за назвою. Праворуч — розрахунок втрат відрізка і графік позначених кабелів; кнопка «використати в бюджеті EME» переносить кабель до бюджету. Можна додати власні кабелі.",
+            "Контакти автора (e-mail, профіль QRZ.com) і подяки тим, хто допоміг програмі.",
+            "Текст ліцензії, на умовах якої поширюється програма.",
         };
 
         public static readonly string[] AF = {
@@ -19074,7 +19464,7 @@ namespace LunaCalc
             "Bo vier aanwysers, links die databron (NOAA RSTN aanbeveel, of F10.7 van NOAA of Penticton, of 'n eie adres) met die stasies, regs die spektrum van die sonvloed met die ekstrapolasie tot die werkfrekwensie.",
             "Hierdie handleiding, binne die program en in alle tale: klikbare inhoudsopgawe, soek, formules en bronne.",
             "Dit is soos 'n Word-dokument uitgelê, met die formules in die styl van die vergelykingsredigeerder: dit kan na die knipbord gekopieer of as Word (.docx) gestoor word.",
-            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, DEBUG FORMULE), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (ABOUT & CREDITS, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
+            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie, Maan oor die wêreld), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, DEBUG FORMULE), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (ABOUT & CREDITS, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
             "Dankie dat jy my gebruik het: ek hoop ek was vir jou nuttig.",
             "Nee",
             "Ja",
@@ -19298,6 +19688,36 @@ namespace LunaCalc
             "tipe",
             "gesorteer volgens {0}",
             "Voorwoord van die outeur",
+            "SV1BSX, verswakkingstabel van koaksiale kabels (qsl.net/sv1bsx) – waardes moet teen die vervaardigers se datablaaie nagegaan word",
+            "SSB-Electronic, datablaaie Aircell / Ecoflex (versprei deur Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, datablaaie LMR (versprei deur Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, datablad LMR-400 (iewc.com)",
+            "Siva Cavi, datablaaie HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, datablaaie CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, datablaaie Messi & Paoloni Hyperflex / Ultraflex en Ecoflex Plus (wimo.com)",
+            "Datablad van die kabel SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), datablaaie HELIAX LDF / FSJ (commscope.com)",
+            "Symair, datablaaie HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, datablaaie H1000 (H1000C1), 8237 (RG-8/U) en 9913 (catalog.belden.com); vir 8237 en 9913 is die waardes in dB/100 ft na dB/100 m omgeskakel",
+            "Tasker (MILAN S.r.l.), datablaaie RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 en C538 (afskrifte by die verspreiders: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, datablaaie Airborne, Hyperflex en Ultraflex; katalogus van 50 Ω-kabels 2026 (messi.it)",
+            "SSB-Electronic, datablaaie SeaTex, Aircell 7 en Aircom Premium; kabelkatalogus (ssb.de)",
+            "Koaksiale kabeltabelle van DD1US (dd1us.de, 27/04/2024) en EA5IP (qsl.net/ea5ip): 5,5 dB by 144 MHz, 9,1 dB by 432 MHz; vervaardiger nie aangedui nie",
+            "Prospecta, datablad RT5020 (radiosystem.it)",
+            "Prospecta, datablad XT-2400 (hamradioshop.it)",
+            "QAXIAL, datablad LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, katalogus MIL-C-17F 50 Ω: RG 142 B/U (M17/60) en RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), datablad RG115 (rf-microwave.com)",
+            "verskeie",
+            "Chinese vervaardigers",
+            "glasomhulsel",
+            "Die program se skerms",
+            "Die oortjies in die volgorde waarin hulle in die ses groepe van die boonste balk verskyn; vir elkeen, wat dit wys en waarvoor dit dien.",
+            "Langs die DX-lokator is die roepseinblokkie: as die roepsein in CALL3.TXT is, word die lokator vanself ingevul, en die CALL3-knoppie werk die lys by of kopieer dit na die WSJT-X-gids. Deur die rooi lyn van die 24 uur te sleep of die dag in die kalender te kies, wys die skerm 'n vorige of toekomstige oomblik; ▶ Nou keer terug na regstreeks. Die frekwensie word in die blok Eggo en frekwensies gekies.",
+            "Die tabel regs lys die dae met dieselfde kleure as die bande van die grafiek (groen die drie beste dae, rooi en oranje die Son naby die Maan). Die blou deklinasiekurwe word oor die grafiek geteken, met sy skaal binne die linkerrand; die blokkie \"Bruikbare ure in groen op die Dgrd\" kleur die ure wanneer die Maan binne die antennagrense is.",
+            "Die databasis van 50 Ω-koaksiale kabels met die verswakking by 50, 70, 144, 222 en 432 MHz en die bronne van elke waarde; dit word gesorteer volgens deursnee, verlies, naam, vervaardiger of tipe (ook deur op die kolomopskrifte te klik), gefiltreer volgens tipe en deursnee en volgens naam deursoek. Regs die verlies van 'n lopie en die grafiek van die gemerkte kabels; die knoppie \"gebruik in die EME-begroting\" neem die kabel na die Begroting. Eie kabels kan bygevoeg word.",
+            "Die outeur se kontakbesonderhede (e-pos, QRZ.com-profiel) en dank aan almal wat tot die program bygedra het.",
+            "Die teks van die lisensie waaronder die program versprei word.",
         };
 
         public static readonly string[] BN = {
@@ -20334,7 +20754,7 @@ namespace LunaCalc
             "ওপরে চারটি নির্দেশক, বামে স্টেশনসহ তথ্যের উৎস (NOAA RSTN প্রস্তাবিত, অথবা NOAA বা পেন্টিকটনের F10.7, অথবা নিজস্ব ঠিকানা), ডানে কাজের কম্পাঙ্ক পর্যন্ত এক্সট্রাপোলেশনসহ সৌর ফ্লাক্সের বর্ণালি।",
             "এই ম্যানুয়াল, প্রোগ্রামের ভেতরে ও সব ভাষায়: ক্লিকযোগ্য সূচি, অনুসন্ধান, সূত্র ও উৎস।",
             "এটি Word নথির মতো সাজানো, সূত্রগুলি সমীকরণ সম্পাদকের শৈলীতে: ক্লিপবোর্ডে কপি বা Word (.docx) হিসেবে সংরক্ষণ করা যায়।",
-            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, DEBUG FORMULE), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (ABOUT & CREDITS, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
+            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান, বিশ্বের উপরে চাঁদ), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, DEBUG FORMULE), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (ABOUT & CREDITS, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
             "আমাকে ব্যবহার করার জন্য ধন্যবাদ: আশা করি আপনার কাজে লেগেছি।",
             "না",
             "হ্যাঁ",
@@ -20558,6 +20978,36 @@ namespace LunaCalc
             "ধরন",
             "{0} অনুযায়ী সাজানো",
             "লেখকের ভূমিকা",
+            "SV1BSX, সমাক্ষ কেবলের ক্ষয় সারণি (qsl.net/sv1bsx) – মানগুলো নির্মাতাদের ডেটাশিটে যাচাই করতে হবে",
+            "SSB-Electronic, ডেটাশিট Aircell / Ecoflex (পরিবেশক Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, ডেটাশিট LMR (পরিবেশক Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, ডেটাশিট LMR-400 (iewc.com)",
+            "Siva Cavi, ডেটাশিট HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, ডেটাশিট CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, ডেটাশিট Messi & Paoloni Hyperflex / Ultraflex ও Ecoflex Plus (wimo.com)",
+            "কেবলের ডেটাশিট SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), ডেটাশিট HELIAX LDF / FSJ (commscope.com)",
+            "Symair, ডেটাশিট HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, ডেটাশিট H1000 (H1000C1), 8237 (RG-8/U) ও 9913 (catalog.belden.com); 8237 ও 9913-এর dB/100 ft মান dB/100 m-এ রূপান্তরিত",
+            "Tasker (MILAN S.r.l.), ডেটাশিট RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 ও C538 (পরিবেশকদের কাছে থাকা কপি: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, ডেটাশিট Airborne, Hyperflex ও Ultraflex; 50 Ω কেবল ক্যাটালগ 2026 (messi.it)",
+            "SSB-Electronic, ডেটাশিট SeaTex, Aircell 7 ও Aircom Premium; কেবল ক্যাটালগ (ssb.de)",
+            "সমাক্ষ কেবলের সারণি: DD1US (dd1us.de, 27/04/2024) ও EA5IP (qsl.net/ea5ip): 144 MHz-এ 5.5 dB, 432 MHz-এ 9.1 dB; নির্মাতা উল্লেখ নেই",
+            "Prospecta, ডেটাশিট RT5020 (radiosystem.it)",
+            "Prospecta, ডেটাশিট XT-2400 (hamradioshop.it)",
+            "QAXIAL, ডেটাশিট LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, ক্যাটালগ MIL-C-17F 50 Ω: RG 142 B/U (M17/60) ও RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), ডেটাশিট RG115 (rf-microwave.com)",
+            "বিভিন্ন",
+            "চীনা নির্মাতা",
+            "কাচের আবরণ",
+            "প্রোগ্রামের পর্দাগুলো",
+            "ওপরের বারের ছয়টি দলে যে ক্রমে ট্যাবগুলো আসে সেই ক্রমে; প্রতিটি কী দেখায় এবং কী কাজে লাগে।",
+            "DX লোকেটরের পাশে কলসাইনের ঘর: কলসাইনটি CALL3.TXT-এ থাকলে লোকেটর নিজে থেকেই বসে যায়, আর CALL3 বোতাম তালিকা হালনাগাদ করে বা WSJT-X ফোল্ডারে কপি করে। ২৪ ঘণ্টার লাল রেখা টেনে বা ক্যালেন্ডারে দিন বেছে অতীত বা ভবিষ্যতের মুহূর্ত দেখা যায়; ▶ এখন সরাসরিতে ফিরিয়ে আনে। কম্পাঙ্ক বেছে নেওয়া হয় প্রতিধ্বনি ও কম্পাঙ্ক ঘরে।",
+            "ডানের সারণি গ্রাফের পট্টির একই রঙে দিনগুলো দেখায় (সবুজ তিনটি সেরা দিন, লাল ও কমলা সূর্য চাঁদের কাছে)। নীল বিষুবলম্ব বক্ররেখা গ্রাফের ওপর আঁকা থাকে, এর স্কেল বাঁ প্রান্তের ভেতরে; \"Dgrd-তে ব্যবহারযোগ্য ঘণ্টা সবুজে\" বাক্সটি চাঁদ অ্যান্টেনার সীমার ভেতরে থাকার ঘণ্টাগুলো সবুজ করে।",
+            "50 Ω সমাক্ষ কেবলের ডেটাবেস, 50, 70, 144, 222 ও 432 MHz-এ ক্ষয় এবং প্রতিটি মানের উৎসসহ; ব্যাস, ক্ষতি, নাম, নির্মাতা বা ধরন অনুযায়ী সাজানো যায় (কলামের শিরোনামে ক্লিক করেও), ধরন ও ব্যাস দিয়ে ছাঁকা যায় এবং নাম দিয়ে খোঁজা যায়। ডানে একটি অংশের ক্ষতির হিসাব ও টিক দেওয়া কেবলগুলোর গ্রাফ; \"EME বাজেটে ব্যবহার\" বোতাম কেবলটিকে বাজেটে নিয়ে যায়। নিজস্ব কেবল যোগ করা যায়।",
+            "লেখকের যোগাযোগ (ই-মেইল, QRZ.com প্রোফাইল) এবং প্রোগ্রামে যাঁরা অবদান রেখেছেন তাঁদের প্রতি কৃতজ্ঞতা।",
+            "যে লাইসেন্সের অধীনে প্রোগ্রামটি বিতরণ করা হয় তার পাঠ।",
         };
 
         public static readonly string[] AR = {
@@ -21594,7 +22044,7 @@ namespace LunaCalc
             "في الأعلى أربعة مؤشرات، على اليسار مصدر البيانات (NOAA RSTN موصى به، أو F10.7 من NOAA أو بنتكتون، أو عنوان مخصص) مع المحطات، على اليمين طيف تدفق الشمس مع الاستقراء حتى تردد العمل.",
             "هذا الدليل، داخل البرنامج وبكل اللغات: فهرس قابل للنقر، وبحث، وصيغ، ومصادر.",
             "مُنسَّق مثل مستند Word، والصيغ بأسلوب محرر المعادلات: يمكن نسخه إلى الحافظة أو حفظه بصيغة Word (.docx).",
-            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، DEBUG FORMULE)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (ABOUT & CREDITS، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
+            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر، القمر فوق العالم)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، DEBUG FORMULE)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (ABOUT & CREDITS، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
             "شكرًا لاستخدامك إياي: أرجو أن أكون قد أفدتك.",
             "لا",
             "نعم",
@@ -21818,6 +22268,36 @@ namespace LunaCalc
             "النوع",
             "مرتبة حسب {0}",
             "مقدمة المؤلف",
+            "SV1BSX, جدول توهين الكبلات المحورية (qsl.net/sv1bsx) – يجب التحقق من القيم في نشرات المصنّعين",
+            "SSB-Electronic, نشرات فنية Aircell / Ecoflex (يوزعها Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, نشرات فنية LMR (يوزعها Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, نشرة فنية LMR-400 (iewc.com)",
+            "Siva Cavi, نشرات فنية HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, نشرات فنية CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, نشرات فنية Messi & Paoloni Hyperflex / Ultraflex و Ecoflex Plus (wimo.com)",
+            "نشرة الكبل SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), نشرات فنية HELIAX LDF / FSJ (commscope.com)",
+            "Symair, نشرات فنية HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, نشرات فنية H1000 (H1000C1), 8237 (RG-8/U) و 9913 (catalog.belden.com); بالنسبة إلى 8237 و9913 حُوّلت القيم من dB/100 ft إلى dB/100 m",
+            "Tasker (MILAN S.r.l.), نشرات فنية RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 و C538 (نسخ لدى الموزعين: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, نشرات فنية Airborne, Hyperflex و Ultraflex; كتالوج كبلات 50 Ω 2026 (messi.it)",
+            "SSB-Electronic, نشرات فنية SeaTex, Aircell 7 و Aircom Premium; كتالوج الكبلات (ssb.de)",
+            "جداول الكبلات المحورية من DD1US (dd1us.de, 27/04/2024) و EA5IP (qsl.net/ea5ip): 5.5 dB عند 144 MHz, 9.1 dB عند 432 MHz; المصنّع غير مذكور",
+            "Prospecta, نشرة فنية RT5020 (radiosystem.it)",
+            "Prospecta, نشرة فنية XT-2400 (hamradioshop.it)",
+            "QAXIAL, نشرة فنية LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, كتالوج MIL-C-17F 50 Ω: RG 142 B/U (M17/60) و RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), نشرة فنية RG115 (rf-microwave.com)",
+            "متنوعة",
+            "مصنّعون صينيون",
+            "غلاف زجاجي",
+            "شاشات البرنامج",
+            "التبويبات بالترتيب الذي تظهر به في المجموعات الست في الشريط العلوي؛ ولكل منها ما يعرضه وما فائدته.",
+            "بجوار محدد موقع DX توجد خانة النداء: إذا كان النداء في CALL3.TXT يُملأ محدد الموقع تلقائيًا، ويحدّث زر CALL3 القائمة أو ينسخها إلى مجلد WSJT-X. بسحب الخط الأحمر لشريط الـ 24 ساعة أو اختيار اليوم في التقويم تعرض الشاشة لحظة ماضية أو مقبلة؛ ويعيد ▶ الآن إلى البث المباشر. يُختار التردد في إطار الصدى والترددات.",
+            "يعرض الجدول على اليمين الأيام بالألوان نفسها لأشرطة المخطط (الأخضر لأفضل ثلاثة أيام، والأحمر والبرتقالي للشمس القريبة من القمر). ويُرسم منحنى الميل الأزرق فوق المخطط ومقياسه داخل الحافة اليسرى؛ وتلوّن خانة «الساعات المفيدة بالأخضر على Dgrd» الساعات التي يكون فيها القمر داخل حدود الهوائي.",
+            "قاعدة بيانات الكبلات المحورية 50 Ω مع التوهين عند 50 و70 و144 و222 و432 MHz ومصادر كل قيمة؛ تُرتّب حسب القطر أو الفقد أو الاسم أو المصنّع أو النوع (أيضًا بالنقر على عناوين الأعمدة)، وتُرشّح حسب النوع والقطر ويُبحث فيها بالاسم. على اليمين حساب فقد مقطع ومخطط الكبلات المحددة؛ ويأخذ زر «استخدم في ميزانية EME» الكبل إلى الميزانية. يمكن إضافة كبلات مخصّصة.",
+            "بيانات الاتصال بالمؤلف (البريد الإلكتروني وملف QRZ.com) والشكر لمن أسهموا في البرنامج.",
+            "نص الترخيص الذي يُوزَّع البرنامج بموجبه.",
         };
 
         public static readonly string[] TR = {
@@ -22854,7 +23334,7 @@ namespace LunaCalc
             "Üstte dört gösterge, solda istasyonlarıyla veri kaynağı (önerilen NOAA RSTN, ya da NOAA veya Penticton F10.7, ya da özel adres), sağda çalışma frekansına kadar dışdeğerlemeli güneş akısı spektrumu.",
             "Bu kılavuz, program içinde ve tüm dillerde: tıklanabilir içindekiler, arama, formüller ve kaynaklar.",
             "Bir Word belgesi gibi düzenlenmiştir, formüller denklem düzenleyicisi tarzındadır: panoya kopyalanabilir ya da Word (.docx) olarak kaydedilebilir.",
-            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, DEBUG FORMULE), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (ABOUT & CREDITS, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
+            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu, Dünya üzerinde Ay), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, DEBUG FORMULE), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (ABOUT & CREDITS, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
             "Beni kullandığın için teşekkürler: umarım işine yaramışımdır.",
             "Hayır",
             "Evet",
@@ -23078,6 +23558,36 @@ namespace LunaCalc
             "tür",
             "{0} sırasına göre",
             "Yazarın önsözü",
+            "SV1BSX, koaksiyel kablo zayıflama tablosu (qsl.net/sv1bsx) – değerler üretici föylerinden doğrulanmalı",
+            "SSB-Electronic, teknik föyler Aircell / Ecoflex (dağıtıcı Moonraker UK, moonrakeronline.com)",
+            "Times Microwave Systems, teknik föyler LMR (dağıtıcı Fairview Microwave, fairviewmicrowave.com)",
+            "Times Microwave Systems, teknik föy LMR-400 (iewc.com)",
+            "Siva Cavi, teknik föyler HF 240 / HF 287 / HF 400 (sivacavi.it)",
+            "RFS – Radio Frequency Systems, teknik föyler CELLFLEX LCF / SCF (rfsworld.com)",
+            "WiMo, teknik föyler Messi & Paoloni Hyperflex / Ultraflex ve Ecoflex Plus (wimo.com)",
+            "Kablo föyü SYV50-7 low loss (szansy.com)",
+            "CommScope (Andrew), teknik föyler HELIAX LDF / FSJ (commscope.com)",
+            "Symair, teknik föyler HCAAYZ-50-12 / HCAHY-50-9 (symair.com)",
+            "Belden, teknik föyler H1000 (H1000C1), 8237 (RG-8/U) ve 9913 (catalog.belden.com); 8237 ve 9913 için dB/100 ft değerleri dB/100 m'ye çevrildi",
+            "Tasker (MILAN S.r.l.), teknik föyler RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 ve C538 (dağıtıcılardaki kopyalar: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)",
+            "Messi & Paoloni, teknik föyler Airborne, Hyperflex ve Ultraflex; 50 Ω kablo kataloğu 2026 (messi.it)",
+            "SSB-Electronic, teknik föyler SeaTex, Aircell 7 ve Aircom Premium; kablo kataloğu (ssb.de)",
+            "Koaksiyel kablo tabloları: DD1US (dd1us.de, 27/04/2024) ve EA5IP (qsl.net/ea5ip): 144 MHz'de 5,5 dB, 432 MHz'de 9,1 dB; üretici belirtilmemiş",
+            "Prospecta, teknik föy RT5020 (radiosystem.it)",
+            "Prospecta, teknik föy XT-2400 (hamradioshop.it)",
+            "QAXIAL, teknik föy LLF195 (qaxial.com, rf-microwave.com)",
+            "Caledonian Cables, katalog MIL-C-17F 50 Ω: RG 142 B/U (M17/60) ve RG 393/U (M17/127) (caledonian-cables.net)",
+            "R.F. elettronica – Rota Franco (Senago), teknik föy RG115 (rf-microwave.com)",
+            "çeşitli",
+            "Çinli üreticiler",
+            "cam kılıf",
+            "Programın ekranları",
+            "Sekmeler üst çubuğun altı grubunda göründükleri sırayla; her biri için ne gösterdiği ve ne işe yaradığı.",
+            "DX lokatörünün yanında çağrı işareti kutusu vardır: çağrı işareti CALL3.TXT içindeyse lokatör kendiliğinden dolar ve CALL3 düğmesi listeyi günceller ya da WSJT-X klasörüne kopyalar. 24 saatlik şeritteki kırmızı çizgiyi sürükleyerek veya takvimden gün seçerek geçmiş ya da gelecek bir an görüntülenir; ▶ Şimdi canlıya döner. Frekans Yankı ve frekanslar kutusunda seçilir.",
+            "Sağdaki tablo günleri grafikteki şeritlerle aynı renklerle listeler (yeşil en iyi üç gün, kırmızı ve turuncu Güneş'in Ay'a yakın olduğu günler). Mavi dik açıklık eğrisi grafiğin üzerine çizilir, ölçeği sol kenarın içindedir; \"Dgrd üzerinde kullanılabilir saatler yeşil\" kutusu Ay'ın anten sınırları içinde olduğu saatleri yeşile boyar.",
+            "Ölçümleri 50, 70, 144, 222 ve 432 MHz'deki zayıflama ve her değerin kaynağıyla birlikte 50 Ω koaksiyel kablo veritabanı; çapa, kayba, ada, üreticiye ya da türe göre sıralanır (sütun başlıklarına tıklayarak da), tür ve çapa göre süzülür ve adla aranır. Sağda bir hattın kaybı ve işaretlenen kabloların grafiği; \"EME Bütçesinde kullan\" düğmesi kabloyu Bütçeye taşır. Özel kablolar eklenebilir.",
+            "Yazarın iletişim bilgileri (e-posta, QRZ.com profili) ve programa katkıda bulunanlara teşekkürler.",
+            "Programın dağıtıldığı lisansın metni.",
         };
     }
 
@@ -32543,6 +33053,34 @@ namespace LunaCalc
             // 2. Guida all'uso (il Sole vicino alla Luna e l'assorbimento polare sono nel capitolo 4)
             Capitolo(TestiManuale.T(lg, "CAP3"));
             string salta1 = Lang.T("IL SOLE VICINO ALLA LUNA"), salta2 = Lang.T("ASSORBIMENTO POLARE (PCA) E AURORALE"), primi = Lang.T("PRIMI PASSI");
+            string parametri = Lang.T("PARAMETRI MODIFICABILI: COSA SONO E COSA SIGNIFICANO");
+            bool schermateFatte = false;
+            // rassegna di tutte le schermate, gruppo per gruppo, prima dei parametri
+            Action Schermate = () =>
+            {
+                schermateFatte = true;
+                Sezione(Lang.T("Le schermate del programma"));
+                b.Add(DocBlocco.P(DocTipo.Par, Lang.T("Le linguette nell'ordine in cui compaiono nei sei gruppi della barra in alto; per ognuna, che cosa mostra e a che cosa serve.")));
+                Dictionary<string, string> desc = new Dictionary<string, string>();
+                foreach (string[] x in DescrizioniLinguette()) desc[x[0]] = x[1];
+                string[][] gruppi = {
+                    new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Volta celeste") },
+                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
+                    new string[] { Lang.T("Collegamento"), Lang.T("Budget EME"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("DEBUG FORMULE") },
+                    new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
+                    new string[] { Lang.T("Aiuto e tools"), Lang.T("MANUALE D'USO"), Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("CAVI COASSIALI") },
+                    new string[] { "Credits and thanks", "ABOUT & CREDITS", Lang.T("CONTATTI DELL'AUTORE E RINGRAZIAMENTI"), Lang.T("LICENZA D'USO") } };
+                foreach (string[] gr in gruppi)
+                {
+                    Sotto(gr[0]);
+                    for (int gi = 1; gi < gr.Length; gi++)
+                    {
+                        string nome = gr[gi], d;
+                        if (!desc.TryGetValue(nome, out d)) continue;
+                        b.Add(DocBlocco.P(DocTipo.Par, "**" + nome + "** – " + d));
+                    }
+                }
+            };
             bool inSalto = false, primoTitolo = true, dopoPrimi = false;
             TestoIstruzioni((t, pt, grassetto) =>
             {
@@ -32553,6 +33091,7 @@ namespace LunaCalc
                     if (dopoPrimi) { Righe(ManualeV27.E(lg, "S32")); dopoPrimi = false; }
                     inSalto = t == salta1 || t == salta2;
                     if (inSalto) return;
+                    if (t == parametri && !schermateFatte) Schermate();
                     if (primoTitolo && t != primi) { primoTitolo = false; return; }   // "perché questo programma": introduzione senza numero
                     primoTitolo = false;
                     Sezione(t);
@@ -33082,7 +33621,7 @@ namespace LunaCalc
             int ord = cmbCaviOrd == null ? 0 : cmbCaviOrd.SelectedIndex;
             int bo = Math.Max(0, Math.Min(CaviDb.Fb.Length - 1, cmbCaviBanda.SelectedIndex));
             // a parità, l'ordine per diametro (Sort non è stabile)
-            Func<Cavo, string> testoOrd = k => ord == 3 ? k.Etichetta : (ord == 4 ? (k.Costruttori != null && k.Costruttori.Length > 0 ? k.Costruttori[0] : "") : (ord == 5 ? TipoCavo(k.Tipo) : ""));
+            Func<Cavo, string> testoOrd = k => ord == 3 ? k.Etichetta : (ord == 4 ? (k.Costruttori != null && k.Costruttori.Length > 0 ? Cavo.CostruttoreVisto(k.Costruttori[0]) : "") : (ord == 5 ? TipoCavo(k.Tipo) : ""));
             l.Sort((a, b) =>
             {
                 int c0 = ord == 1 ? a.Db[bo].CompareTo(b.Db[bo]) : (ord == 2 ? b.Db[bo].CompareTo(a.Db[bo]) : 0);
@@ -33109,7 +33648,7 @@ namespace LunaCalc
                 if (di == 4 && c.Diam <= 16) continue;
                 if (q.Length > 0)
                 {
-                    string tutto = string.Join(" ", c.Nomi) + " " + string.Join(" ", c.Costruttori) + " " + c.Anche + (c.Marino ? " " + Lang.T("ambienti marini") + " SeaTex" : "");
+                    string tutto = string.Join(" ", c.Nomi) + " " + c.NomeVisto + " " + string.Join(" ", c.Costruttori) + " " + c.CostruttoriVisti(" ") + " " + c.Anche + (c.Marino ? " " + Lang.T("ambienti marini") + " SeaTex" : "");
                     if (tutto.IndexOf(q, StringComparison.CurrentCultureIgnoreCase) < 0) continue;
                 }
                 caviMostrati.Add(c);
@@ -33143,7 +33682,7 @@ namespace LunaCalc
             float hn = fr.Height;
             for (int i = 1; i < c.Nomi.Length; i++) hn += fs.Height;
             if (c.Anche.Length > 0) hn += g.MeasureString(Lang.T("anche:") + " " + c.Anche, fs, (int)Math.Max(10, wNome - S(30))).Height + S(4);
-            float hc = g.MeasureString(string.Join(" · ", c.Costruttori), fs, (int)Math.Max(10, wCostr - S(8))).Height;
+            float hc = g.MeasureString(c.CostruttoriVisti(" · "), fs, (int)Math.Max(10, wCostr - S(8))).Height;
             return Math.Max(h, Math.Max(hn, hc) + S(10));
         }
 
@@ -33296,7 +33835,7 @@ namespace LunaCalc
                     }
                     // costruttore, tipo a pastiglia, diametro
                     using (Brush bm = new SolidBrush(Tema.Muted))
-                        g.DrawString(string.Join(" · ", c.Costruttori), fs, bm, new RectangleF(cx[1] + S(6), rr.Top + S(6), cx[2] - cx[1] - S(8), rr.Height - S(8)));
+                        g.DrawString(c.CostruttoriVisti(" · "), fs, bm, new RectangleF(cx[1] + S(6), rr.Top + S(6), cx[2] - cx[1] - S(8), rr.Height - S(8)));
                     string tt = TipoCavo(c.Tipo);
                     Color tf = c.Tipo == "semirigido" ? Color.FromArgb(91, 63, 168) : (c.Tipo == "superflessibile" ? blu : (c.Tipo == "flessibile" ? Color.FromArgb(23, 128, 61) : Color.FromArgb(150, 95, 0)));
                     Color tb = c.Tipo == "semirigido" ? Color.FromArgb(237, 232, 250) : (c.Tipo == "superflessibile" ? Color.FromArgb(227, 238, 252) : (c.Tipo == "flessibile" ? Color.FromArgb(222, 244, 229) : Color.FromArgb(255, 243, 205)));
@@ -33973,8 +34512,8 @@ namespace LunaCalc
         string[][] DescrizioniLinguette()
         {
             return new string[][] {
-                new string[] { Lang.T("Posizione live e +- 24h"), Lang.T("La schermata principale, aggiornata ogni secondo. In alto le impostazioni generali (nominativo, lingua, colori, caratteri e tipo di carattere), il pulsante SCELTA BANDE e la casella dei dati complessi; sotto, i locator tuo e del DX (da 4 a 14 caratteri, con la precisione della posizione), la frequenza e gli orologi UTC, locale e del DX. La fascia di stato (verde = puntabile, arancione = fuori dai limiti, grigio = sotto l'orizzonte, blu = finestra comune) ha il conto alla rovescia; seguono la bussola e l'arco dell'elevazione con i limiti dell'antenna in giallo e quattro riquadri: Luna (fase, sorgere e tramonto), Eco e frequenze (Doppler, ritardo dell'eco e frequenze CFOM), Cielo e geometria (Tsky, distanza, declinazione, angolo orario, Dgrd e il pulsante VAI A VOLTA CELESTE) e S/N stimato (in 2500 Hz con la soglia tipica del modo come riferimento, dati del DX, la casella CALCOLI APPROFONDITI e il pulsante VAI AI CALCOLI). In basso le prossime 24 ore.") },
-                new string[] { Lang.T("Distanza e Dgrd"), Lang.T("Grafico da 7 a 61 giorni della Dgrd (0 dB in basso, -15 dB in alto) e della distanza media giornaliera della Luna, con perigeo, apogeo, luna nuova e i tre giorni migliori (★). La classifica tiene conto solo delle ore in cui la Luna è davvero puntabile con i tuoi limiti.") + " " + Lang.T("Il simbolo ☀ segna i giorni in cui la Luna è vicina al Sole (rosso: entro 3 larghezze del fascio, arancione: entro 6): il rumore solare può peggiorare la ricezione. Colore e spessore delle due curve si cambiano nella barra sopra il grafico.") },
+                new string[] { Lang.T("Posizione live e +- 24h"), Lang.T("La schermata principale, aggiornata ogni secondo. In alto le impostazioni generali (nominativo, lingua, colori, caratteri e tipo di carattere), il pulsante SCELTA BANDE e la casella dei dati complessi; sotto, i locator tuo e del DX (da 4 a 14 caratteri, con la precisione della posizione), la frequenza e gli orologi UTC, locale e del DX. La fascia di stato (verde = puntabile, arancione = fuori dai limiti, grigio = sotto l'orizzonte, blu = finestra comune) ha il conto alla rovescia; seguono la bussola e l'arco dell'elevazione con i limiti dell'antenna in giallo e quattro riquadri: Luna (fase, sorgere e tramonto), Eco e frequenze (Doppler, ritardo dell'eco e frequenze CFOM), Cielo e geometria (Tsky, distanza, declinazione, angolo orario, Dgrd e il pulsante VAI A VOLTA CELESTE) e S/N stimato (in 2500 Hz con la soglia tipica del modo come riferimento, dati del DX, la casella CALCOLI APPROFONDITI e il pulsante VAI AI CALCOLI). In basso le prossime 24 ore.") + " " + Lang.T("Accanto al locator del DX c'è la casella del nominativo: se il nominativo è nel CALL3.TXT il locator si riempie da solo, e il pulsante CALL3 aggiorna l'elenco o lo copia nella cartella di WSJT-X. Trascinando la linea rossa delle 24 ore o scegliendo il giorno nel calendario la schermata mostra un istante passato o futuro; ▶ Adesso torna alla diretta. La frequenza si sceglie nel riquadro Eco e frequenze.") },
+                new string[] { Lang.T("Distanza e Dgrd"), Lang.T("Grafico da 7 a 61 giorni della Dgrd (0 dB in basso, -15 dB in alto) e della distanza media giornaliera della Luna, con perigeo, apogeo, luna nuova e i tre giorni migliori (★). La classifica tiene conto solo delle ore in cui la Luna è davvero puntabile con i tuoi limiti.") + " " + Lang.T("Il simbolo ☀ segna i giorni in cui la Luna è vicina al Sole (rosso: entro 3 larghezze del fascio, arancione: entro 6): il rumore solare può peggiorare la ricezione. Colore e spessore delle due curve si cambiano nella barra sopra il grafico.") + " " + Lang.T("La tabella a destra elenca i giorni con gli stessi colori delle fasce del grafico (verde i tre giorni migliori, rosso e arancione il Sole vicino alla Luna). La curva blu della declinazione si sovrappone al grafico, con la sua scala dentro il bordo sinistro; la casella \"Ore utili in verde sulla Dgrd\" colora le ore con la Luna dentro i limiti dell'antenna.") },
                 new string[] { Lang.T("Volta celeste"), Lang.T("Il cielo visto dal tuo QTH, con l'orizzonte piatto e i colori del rumore del cielo (dal blu al rosso) alla frequenza scelta, i limiti della tua antenna, l'orizzonte del DX, le radiosorgenti, il Sole e il percorso della Luna nelle prossime 24 ore.") + " " + Lang.T("Le zone fuori dai limiti della tua antenna sono coperte da righe diagonali grigio chiaro.") },
                 new string[] { Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Mappa aerofotografica o topografica centrata sulla tua stazione, con sopra la volta celeste in pianta (orizzonte = cerchio esterno, zenit = centro): posizione attuale della Luna, percorso nelle prossime 24 ore con sorgere e tramonto, limiti dell'antenna in giallo e zone fuori dai limiti sfocate in grigio chiaro. Le maniglie gialle si trascinano con il mouse per regolare i limiti direttamente sulla mappa; la rotella cambia lo zoom.") + " " + Lang.T("La casella \"Sfuma le zone fuori dai limiti\" accende o spegne la sfocatura.") + " " + Lang.T("In alto a destra due cursori regolano l'opacità e il tono del grigio delle zone fuori dai limiti (il tono vale anche per la Volta celeste).") },
                 new string[] { Lang.T("Luna sul mondo"), Lang.T("Mappa del mondo con le terre colorate secondo l'elevazione della Luna vista da ogni località, nello stesso momento della Posizione della Luna; passando il mouse si leggono elevazione, azimut e distanza, con un clic il punto diventa la stazione DX.") },
@@ -33983,6 +34522,9 @@ namespace LunaCalc
                 new string[] { Lang.T("Rumore solare"), Lang.T("Scarica dal web i flussi solari misurati dalla rete RSTN e stima quanto il Sole aumenta il rumore del ricevitore, in base alla distanza angolare tra Sole e Luna e al diagramma dell'antenna. Utile vicino alla luna nuova.") + " " + Lang.T("In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.") },
                 new string[] { Lang.T("Mappa WWL e ADIF"), Lang.T("Mappa del mondo con il reticolo Maidenhead; caricando il file ADIF del log si colorano i quadrati lavorati (arancione), confermati via LoTW (verde) o solo con QSL (blu), anche per banda e solo EME.") + " " + Lang.T("Con \"Scarica da LoTW…\" il log viene scaricato direttamente da LoTW (nome utente e password vengono chiesti e memorizzati nelle impostazioni).") },
                 new string[] { "ABOUT & CREDITS", Lang.T("Crediti con i link e storia delle versioni.") },
+                new string[] { Lang.T("CAVI COASSIALI"), Lang.T("Il database dei cavi coassiali a 50 Ω con l'attenuazione a 50, 70, 144, 222 e 432 MHz e le fonti di ogni valore; si ordina per diametro, perdita, nome, costruttore o tipo (anche cliccando l'intestazione delle colonne), si filtra per tipo e diametro e si cerca per nome. A destra il calcolo della perdita di una tratta e il grafico dei cavi spuntati; il pulsante \"usa nel Budget EME\" porta il cavo nel Budget. Si possono aggiungere cavi personalizzati.") },
+                new string[] { Lang.T("CONTATTI DELL'AUTORE E RINGRAZIAMENTI"), Lang.T("I recapiti dell'autore (e-mail, profilo QRZ.com) e i ringraziamenti a chi ha contribuito al programma.") },
+                new string[] { Lang.T("LICENZA D'USO"), Lang.T("Il testo della licenza con cui il programma è distribuito.") },
                 new string[] { Lang.T("MANUALE D'USO"), Lang.T("Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.") },
                 new string[] { Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("Come funziona l'EME e come lavorarlo al meglio: rumore del cielo e Dgrd, Sole, polarizzazione, budget del collegamento, Doppler, procedure operative e fonti; indice cliccabile, ricerca e formule, come il manuale.") },
                 new string[] { Lang.T("Export in Excel dei calcoli"), Lang.T("Lo stesso Budget EME in forma di foglio Excel: le caselle verdi si modificano e i risultati si aggiornano subito.") },
@@ -34006,7 +34548,7 @@ namespace LunaCalc
             w(Lang.T("5. Premi \"Calcola tabella\": le righe verdi sono quelle utili, il riquadro in basso elenca le finestre."), 10F, false);
             w("", 5F, false);
             w(Lang.T("COME SI SCELGONO LE LINGUETTE"), 11F, true);
-            w(Lang.T("Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\"."), 10F, false);
+            w(Lang.T("Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna, Luna sul mondo), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\"."), 10F, false);
             w(Lang.T("Schema di colori (impostazioni generali): Chiaro, Notte (toni di blu) o Nero (sfondo nero, adatto all'uso al buio e agli schermi OLED)."), 10F, false);
             w("", 5F, false);
             if (conLinguette) w(Lang.T("LE LINGUETTE"), 11F, true);
@@ -37053,6 +37595,7 @@ namespace LunaCalc
                 "• impostazioni.txt: tutte le impostazioni (locator, nominativo, limiti dell'antenna, parametri del budget per ogni banda, lingua, tema, caratteri), in testo semplice.",
                 "• solar-radio-flux.json: i flussi solari misurati dalla rete RSTN, scaricati da NOAA SWPC.",
                 "• lotw.adi: il log scaricato da ARRL Logbook of the World (solo se usi lo scaricamento da LoTW).",
+                "• CALL3.TXT: l'elenco dei nominativi delle stazioni EME con il loro locator, scaricato da W7GJ e da WSJT-X Improved e fuso in un solo file (si aggiorna da solo quando ha più di 7 giorni).",
                 "• tiles: le tessere della mappa già scaricate, per non doverle scaricare di nuovo.",
                 "## Avvio e controllo dei file",
                 "All'avvio, mentre si accorcia la barra verde della finestra di apertura (5 secondi), YAEC controlla la cartella data: la crea se manca, verifica di poterci scrivere e controlla i file. Il flusso solare viene scaricato di nuovo da NOAA se manca, se non è valido o se ha più di 12 ore; il log LoTW viene scaricato di nuovo se manca e se nome utente e password sono memorizzati. L'esito compare sopra la barra verde. Se uno scaricamento non riesce, il programma continua con i dati salvati.",
@@ -37124,6 +37667,7 @@ namespace LunaCalc
                 "• impostazioni.txt: all the settings (locators, callsign, antenna limits, budget parameters for each band, language, theme, fonts), as plain text.",
                 "• solar-radio-flux.json: the solar fluxes measured by the RSTN network, downloaded from NOAA SWPC.",
                 "• lotw.adi: the log downloaded from ARRL Logbook of the World (only if you use the LoTW download).",
+                "• CALL3.TXT: the list of EME station callsigns with their locators, downloaded from W7GJ and WSJT-X Improved and merged into one file (it updates itself when older than 7 days).",
                 "• tiles: the map tiles already downloaded, so they do not have to be downloaded again.",
                 "## Start-up and file check",
                 "At start-up, while the green bar of the opening window shrinks (5 seconds), YAEC checks the data folder: it creates it if missing, verifies that it can write there and checks the files. The solar flux is downloaded again from NOAA if missing, invalid or older than 12 hours; the LoTW log is downloaded again if missing and if username and password are stored. The result is shown above the green bar. If a download fails, the program goes on with the saved data.",
@@ -37195,6 +37739,7 @@ namespace LunaCalc
                 "• impostazioni.txt: alle Einstellungen (Locator, Rufzeichen, Antennengrenzen, Budgetparameter für jedes Band, Sprache, Farbschema, Schriftarten) als einfacher Text.",
                 "• solar-radio-flux.json: die vom RSTN-Netz gemessenen Sonnenflüsse, von NOAA SWPC heruntergeladen.",
                 "• lotw.adi: das von ARRL Logbook of the World heruntergeladene Log (nur wenn Sie den LoTW-Download benutzen).",
+                "• CALL3.TXT: die Liste der Rufzeichen der EME-Stationen mit ihrem Locator, von W7GJ und WSJT-X Improved heruntergeladen und in einer Datei zusammengeführt (aktualisiert sich selbst, wenn sie älter als 7 Tage ist).",
                 "• tiles: die bereits heruntergeladenen Kartenkacheln, damit sie nicht erneut geladen werden müssen.",
                 "## Start und Dateiprüfung",
                 "Beim Start, während der grüne Balken des Startfensters kürzer wird (5 Sekunden), prüft YAEC den Ordner data: es legt ihn an, falls er fehlt, prüft, ob dort geschrieben werden kann, und kontrolliert die Dateien. Der Sonnenfluss wird erneut von NOAA geladen, wenn er fehlt, ungültig oder älter als 12 Stunden ist; das LoTW-Log wird erneut geladen, wenn es fehlt und Benutzername und Passwort gespeichert sind. Das Ergebnis erscheint über dem grünen Balken. Schlägt ein Download fehl, arbeitet das Programm mit den gespeicherten Daten weiter.",
@@ -37266,6 +37811,7 @@ namespace LunaCalc
                 "• impostazioni.txt : tous les réglages (locators, indicatif, limites de l'antenne, paramètres du bilan pour chaque bande, langue, thème, polices), en texte simple.",
                 "• solar-radio-flux.json : les flux solaires mesurés par le réseau RSTN, téléchargés depuis NOAA SWPC.",
                 "• lotw.adi : le journal téléchargé depuis ARRL Logbook of the World (seulement si vous utilisez le téléchargement LoTW).",
+                "• CALL3.TXT : la liste des indicatifs des stations EME avec leur locator, téléchargée depuis W7GJ et WSJT-X Improved et fusionnée en un seul fichier (elle se met à jour toute seule après 7 jours).",
                 "• tiles : les tuiles de la carte déjà téléchargées, pour ne pas devoir les télécharger à nouveau.",
                 "## Démarrage et contrôle des fichiers",
                 "Au démarrage, pendant que la barre verte de la fenêtre d'ouverture raccourcit (5 secondes), YAEC contrôle le dossier data : il le crée s'il manque, vérifie qu'il peut y écrire et contrôle les fichiers. Le flux solaire est téléchargé à nouveau depuis NOAA s'il manque, s'il n'est pas valide ou s'il a plus de 12 heures ; le journal LoTW est téléchargé à nouveau s'il manque et si le nom d'utilisateur et le mot de passe sont mémorisés. Le résultat s'affiche au-dessus de la barre verte. Si un téléchargement échoue, le programme continue avec les données enregistrées.",
@@ -37337,6 +37883,7 @@ namespace LunaCalc
                 "• impostazioni.txt: todos los ajustes (locators, indicativo, límites de la antena, parámetros del balance para cada banda, idioma, tema, tipos de letra), en texto simple.",
                 "• solar-radio-flux.json: los flujos solares medidos por la red RSTN, descargados de NOAA SWPC.",
                 "• lotw.adi: el log descargado de ARRL Logbook of the World (solo si usa la descarga de LoTW).",
+                "• CALL3.TXT: la lista de indicativos de las estaciones EME con su locator, descargada de W7GJ y de WSJT-X Improved y fusionada en un solo archivo (se actualiza sola cuando tiene más de 7 días).",
                 "• tiles: las teselas del mapa ya descargadas, para no tener que descargarlas de nuevo.",
                 "## Arranque y control de los archivos",
                 "Al arrancar, mientras se acorta la barra verde de la ventana de inicio (5 segundos), YAEC controla la carpeta data: la crea si falta, comprueba que puede escribir en ella y controla los archivos. El flujo solar se descarga de nuevo de NOAA si falta, si no es válido o si tiene más de 12 horas; el log de LoTW se descarga de nuevo si falta y si el nombre de usuario y la contraseña están guardados. El resultado aparece encima de la barra verde. Si una descarga falla, el programa sigue con los datos guardados.",
@@ -37408,6 +37955,7 @@ namespace LunaCalc
                 "• impostazioni.txt: todas as definições (locators, indicativo, limites da antena, parâmetros do balanço para cada banda, língua, tema, tipos de letra), em texto simples.",
                 "• solar-radio-flux.json: os fluxos solares medidos pela rede RSTN, descarregados do NOAA SWPC.",
                 "• lotw.adi: o log descarregado do ARRL Logbook of the World (só se usar a descarga do LoTW).",
+                "• CALL3.TXT: a lista de indicativos das estações EME com o seu locator, descarregada de W7GJ e do WSJT-X Improved e fundida num só ficheiro (atualiza-se sozinha quando tem mais de 7 dias).",
                 "• tiles: os mosaicos do mapa já descarregados, para não ter de os descarregar outra vez.",
                 "## Arranque e controlo dos ficheiros",
                 "No arranque, enquanto a barra verde da janela de abertura encolhe (5 segundos), o YAEC controla a pasta data: cria-a se faltar, verifica que consegue escrever nela e controla os ficheiros. O fluxo solar é descarregado de novo do NOAA se faltar, se não for válido ou se tiver mais de 12 horas; o log do LoTW é descarregado de novo se faltar e se o nome de utilizador e a palavra-passe estiverem guardados. O resultado aparece por cima da barra verde. Se uma descarga falhar, o programa continua com os dados guardados.",
@@ -37479,6 +38027,7 @@ namespace LunaCalc
                 "• impostazioni.txt：全部设置（网格定位、呼号、天线限制、每个波段的预算参数、语言、主题、字体），纯文本格式。",
                 "• solar-radio-flux.json：RSTN 网络测得的太阳射电流量，从 NOAA SWPC 下载。",
                 "• lotw.adi：从 ARRL Logbook of the World 下载的日志（仅在使用 LoTW 下载时）。",
+                "• CALL3.TXT：EME 电台呼号及其网格定位列表，从 W7GJ 和 WSJT-X Improved 下载并合并为一个文件（超过 7 天会自动更新）。",
                 "• tiles：已下载的地图瓦片，无需再次下载。",
                 "## 启动与文件检查",
                 "启动时，在启动窗口的绿色进度条缩短的 5 秒内，YAEC 会检查 data 文件夹：如不存在则创建，确认可以写入并检查各文件。若太阳流量文件缺失、无效或超过 12 小时，则从 NOAA 重新下载；若 LoTW 日志缺失且已保存用户名和密码，则重新下载。结果显示在绿色进度条上方。如果下载失败，程序会继续使用已保存的数据。",
@@ -37550,6 +38099,7 @@ namespace LunaCalc
                 "• impostazioni.txt：すべての設定（ロケーター、コールサイン、アンテナの制限、バンドごとの回線計算パラメーター、言語、テーマ、フォント）をテキスト形式で保存します。",
                 "• solar-radio-flux.json：RSTN 観測網で測定された太陽電波フラックス。NOAA SWPC からダウンロードします。",
                 "• lotw.adi：ARRL Logbook of the World からダウンロードしたログ（LoTW ダウンロードを使う場合のみ）。",
+                "• CALL3.TXT：EME 局のコールサインとロケーターの一覧。W7GJ と WSJT-X Improved からダウンロードして 1 つのファイルに統合します（7 日を過ぎると自動更新）。",
                 "• tiles：ダウンロード済みの地図タイル。再ダウンロードは不要です。",
                 "## 起動とファイルの確認",
                 "起動時、オープニング画面の緑のバーが短くなる 5 秒の間に、YAEC は data フォルダーを確認します。フォルダーがなければ作成し、書き込めることを確かめ、各ファイルを確認します。太陽フラックスは、ない場合、無効な場合、12 時間より古い場合に NOAA から再ダウンロードします。LoTW ログは、ない場合でユーザー名とパスワードが保存されていれば再ダウンロードします。結果は緑のバーの上に表示されます。ダウンロードに失敗しても、プログラムは保存済みのデータで動作を続けます。",
@@ -37621,6 +38171,7 @@ namespace LunaCalc
                 "• impostazioni.txt: सभी सेटिंग्स (लोकेटर, कॉलसाइन, एंटीना सीमाएँ, हर बैंड के बजट पैरामीटर, भाषा, थीम, फ़ॉन्ट), सादे टेक्स्ट में।",
                 "• solar-radio-flux.json: RSTN नेटवर्क द्वारा मापे गए सौर फ़्लक्स, NOAA SWPC से डाउनलोड किए गए।",
                 "• lotw.adi: ARRL Logbook of the World से डाउनलोड किया गया लॉग (केवल यदि आप LoTW डाउनलोड का उपयोग करते हैं)।",
+                "• CALL3.TXT: EME स्टेशनों के कॉलसाइन और उनके लोकेटर की सूची, W7GJ और WSJT-X Improved से डाउनलोड करके एक फ़ाइल में मिलाई गई (7 दिन से पुरानी होने पर अपने-आप अपडेट होती है)।",
                 "• tiles: पहले से डाउनलोड की गई मानचित्र टाइलें, ताकि उन्हें दोबारा डाउनलोड न करना पड़े।",
                 "## स्टार्ट-अप और फ़ाइल जाँच",
                 "स्टार्ट-अप पर, जब शुरुआती विंडो की हरी पट्टी (5 सेकंड) छोटी होती है, YAEC data फ़ोल्डर की जाँच करता है: न होने पर उसे बनाता है, जाँचता है कि उसमें लिखा जा सकता है और फ़ाइलों की जाँच करता है। सौर फ़्लक्स NOAA से फिर डाउनलोड होता है यदि वह मौजूद न हो, अमान्य हो या 12 घंटे से पुराना हो; LoTW लॉग फिर डाउनलोड होता है यदि वह मौजूद न हो और उपयोगकर्ता नाम व पासवर्ड सहेजे हों। परिणाम हरी पट्टी के ऊपर दिखता है। डाउनलोड विफल होने पर प्रोग्राम सहेजे गए डेटा से चलता रहता है।",
@@ -37692,6 +38243,7 @@ namespace LunaCalc
                 "• impostazioni.txt: 모든 설정(로케이터, 호출부호, 안테나 제한, 밴드별 링크 버짓 매개변수, 언어, 테마, 글꼴)을 일반 텍스트로 저장합니다.",
                 "• solar-radio-flux.json: RSTN 관측망이 측정한 태양 전파 플럭스로, NOAA SWPC에서 내려받습니다.",
                 "• lotw.adi: ARRL Logbook of the World에서 내려받은 로그(LoTW 내려받기를 사용할 때만).",
+                "• CALL3.TXT: EME 국의 호출부호와 로케이터 목록으로, W7GJ와 WSJT-X Improved에서 내려받아 하나의 파일로 합칩니다(7일이 지나면 자동 업데이트).",
                 "• tiles: 이미 내려받은 지도 타일로, 다시 내려받을 필요가 없습니다.",
                 "## 시작과 파일 확인",
                 "시작할 때 시작 창의 녹색 막대가 줄어드는 5초 동안 YAEC는 data 폴더를 확인합니다. 폴더가 없으면 만들고, 쓸 수 있는지 확인하고, 파일을 점검합니다. 태양 플럭스는 없거나, 유효하지 않거나, 12시간보다 오래되면 NOAA에서 다시 내려받습니다. LoTW 로그는 없고 사용자 이름과 비밀번호가 저장되어 있으면 다시 내려받습니다. 결과는 녹색 막대 위에 표시됩니다. 내려받기에 실패하면 프로그램은 저장된 데이터로 계속 작동합니다.",
@@ -37763,6 +38315,7 @@ namespace LunaCalc
                 "• impostazioni.txt: semua pengaturan (lokator, tanda panggil, batas antena, parameter anggaran untuk setiap pita, bahasa, tema, huruf), sebagai teks biasa.",
                 "• solar-radio-flux.json: fluks matahari yang diukur jaringan RSTN, diunduh dari NOAA SWPC.",
                 "• lotw.adi: log yang diunduh dari ARRL Logbook of the World (hanya jika Anda memakai unduhan LoTW).",
+                "• CALL3.TXT: daftar callsign stasiun EME beserta lokatornya, diunduh dari W7GJ dan WSJT-X Improved lalu digabung menjadi satu file (diperbarui sendiri bila berumur lebih dari 7 hari).",
                 "• tiles: ubin peta yang sudah diunduh, agar tidak perlu diunduh lagi.",
                 "## Saat mulai dan pemeriksaan berkas",
                 "Saat mulai, selama bilah hijau jendela pembuka memendek (5 detik), YAEC memeriksa folder data: membuatnya bila belum ada, memastikan dapat menulis di sana dan memeriksa berkas-berkasnya. Fluks matahari diunduh ulang dari NOAA jika tidak ada, tidak valid atau lebih tua dari 12 jam; log LoTW diunduh ulang jika tidak ada dan nama pengguna serta kata sandi tersimpan. Hasilnya tampil di atas bilah hijau. Jika unduhan gagal, program tetap berjalan dengan data yang tersimpan.",
@@ -37834,6 +38387,7 @@ namespace LunaCalc
                 "• impostazioni.txt: все настройки (локаторы, позывной, ограничения антенны, параметры бюджета для каждого диапазона, язык, тема, шрифты) в виде простого текста.",
                 "• solar-radio-flux.json: солнечные потоки, измеренные сетью RSTN, загруженные с NOAA SWPC.",
                 "• lotw.adi: журнал, загруженный из ARRL Logbook of the World (только если используется загрузка из LoTW).",
+                "• CALL3.TXT: список позывных станций EME с их локаторами, загруженный с W7GJ и WSJT-X Improved и объединённый в один файл (обновляется сам, если старше 7 дней).",
                 "• tiles: уже загруженные фрагменты карты, чтобы не загружать их повторно.",
                 "## Запуск и проверка файлов",
                 "При запуске, пока укорачивается зелёная полоса заставки (5 секунд), YAEC проверяет папку data: создаёт её, если её нет, проверяет возможность записи и проверяет файлы. Солнечный поток загружается с NOAA заново, если файла нет, он повреждён или старше 12 часов; журнал LoTW загружается заново, если его нет и сохранены имя пользователя и пароль. Результат показывается над зелёной полосой. Если загрузка не удалась, программа продолжает работать с сохранёнными данными.",
@@ -37905,6 +38459,7 @@ namespace LunaCalc
                 "• impostazioni.txt: усі налаштування (локатори, позивний, обмеження антени, параметри бюджету для кожного діапазону, мова, тема, шрифти) у вигляді простого тексту.",
                 "• solar-radio-flux.json: сонячні потоки, виміряні мережею RSTN, завантажені з NOAA SWPC.",
                 "• lotw.adi: журнал, завантажений з ARRL Logbook of the World (лише якщо використовується завантаження з LoTW).",
+                "• CALL3.TXT: список позивних станцій EME з їхніми локаторами, завантажений з W7GJ і WSJT-X Improved та об'єднаний в один файл (оновлюється сам, якщо старший за 7 днів).",
                 "• tiles: уже завантажені фрагменти мапи, щоб не завантажувати їх знову.",
                 "## Запуск і перевірка файлів",
                 "Під час запуску, поки скорочується зелена смуга заставки (5 секунд), YAEC перевіряє папку data: створює її, якщо її немає, перевіряє можливість запису і перевіряє файли. Сонячний потік завантажується з NOAA знову, якщо файлу немає, він пошкоджений або старший за 12 годин; журнал LoTW завантажується знову, якщо його немає і збережено ім'я користувача та пароль. Результат показується над зеленою смугою. Якщо завантаження не вдалося, програма продовжує працювати зі збереженими даними.",
@@ -37976,6 +38531,7 @@ namespace LunaCalc
                 "• impostazioni.txt: al die instellings (locators, roepsein, antennagrense, begrotingsparameters vir elke band, taal, tema, lettertipes), as gewone teks.",
                 "• solar-radio-flux.json: die sonvloed gemeet deur die RSTN-netwerk, afgelaai van NOAA SWPC.",
                 "• lotw.adi: die logboek afgelaai van ARRL Logbook of the World (net as jy die LoTW-aflaai gebruik).",
+                "• CALL3.TXT: die lys van roepseine van EME-stasies met hul lokators, afgelaai van W7GJ en WSJT-X Improved en in een lêer saamgevoeg (werk homself by as dit ouer as 7 dae is).",
                 "• tiles: die kaartteëls wat reeds afgelaai is, sodat hulle nie weer afgelaai hoef te word nie.",
                 "## Begin en lêerkontrole",
                 "By die begin, terwyl die groen balk van die openingsvenster korter word (5 sekondes), kontroleer YAEC die data-vouer: dit skep die vouer as dit ontbreek, maak seker dat dit daarin kan skryf en kontroleer die lêers. Die sonvloed word weer van NOAA afgelaai as dit ontbreek, ongeldig is of ouer as 12 uur is; die LoTW-logboek word weer afgelaai as dit ontbreek en die gebruikersnaam en wagwoord gestoor is. Die uitslag word bo die groen balk gewys. As 'n aflaai misluk, gaan die program voort met die gestoorde data.",
@@ -38385,7 +38941,10 @@ namespace LunaCalc
         public static readonly string[][] Fonti = {
             new string[] { "W7GJ", "http://www.bigskyspaces.com/w7gj/CALL3.TXT", "https://www.bigskyspaces.com/w7gj/call3.txt", "http://www.bigskyspaces.com/w7gj/call3.txt" },
             new string[] { "WSJT-X Improved (SourceForge)", "https://downloads.sourceforge.net/project/wsjt-x-improved/Additional%20Files/CALL3.TXT",
-                "https://sourceforge.net/projects/wsjt-x-improved/files/Additional%20Files/CALL3.TXT/download" } };
+                "https://sourceforge.net/projects/wsjt-x-improved/files/Additional%20Files/CALL3.TXT/download",
+                // ultima possibilità senza HTTPS (alcune installazioni di Mono non accettano i certificati dei mirror):
+                // il contenuto viene comunque controllato riga per riga prima di usarlo
+                "http://downloads.sourceforge.net/project/wsjt-x-improved/Additional%20Files/CALL3.TXT" } };
         public const int GiorniValidita = 7;
 
         static readonly object blocco = new object();
@@ -41205,7 +41764,15 @@ namespace LunaCalc
         public bool Personale;
         public bool Marino;     // cavo per ambienti marini: nel nome mostrato compare "(ambienti marini)"
         public string Nome { get { return Nomi[0]; } }
-        public string NomeVisto { get { return Nomi[0] + (Marino ? " (" + Lang.T("ambienti marini") + ")" : ""); } }
+        public string NomeVisto { get { return Nomi[0].Replace("guaina in vetro", Lang.T("guaina in vetro")) + (Marino ? " (" + Lang.T("ambienti marini") + ")" : ""); } }
+        // costruttori nella lingua scelta ("vari", "produttori cinesi" sono descrizioni, non nomi)
+        public static string CostruttoreVisto(string x)
+        {
+            if (x == "vari") return Lang.T("vari");
+            if (x == "produttori cinesi") return Lang.T("produttori cinesi");
+            return x.Replace("(vari)", "(" + Lang.T("vari") + ")");
+        }
+        public string CostruttoriVisti(string sep) { return string.Join(sep, Array.ConvertAll(Costruttori, CostruttoreVisto)); }
         public string Etichetta { get { return NomeVisto + (Nomi.Length > 1 ? " ≡ " + string.Join(", ", Nomi, 1, Nomi.Length - 1) : "") + " · " + Diam.ToString("0.0", CultureInfo.CurrentCulture) + " mm"; } }
 
         // dB/100 m alla frequenza f (MHz): legge di potenza tra le due bande più vicine
@@ -41307,26 +41874,26 @@ namespace LunaCalc
         {
             switch (breve)
             {
-                case "qsl.net/sv1bsx": return "SV1BSX, tabella delle attenuazioni dei cavi coassiali (qsl.net/sv1bsx) – valori da verificare sulle schede dei costruttori";
-                case "moonrakeronline (SSB)": return "SSB-Electronic, schede tecniche Aircell / Ecoflex (distribuite da Moonraker UK, moonrakeronline.com)";
-                case "Fairview / Times": return "Times Microwave Systems, schede LMR (distribuite da Fairview Microwave, fairviewmicrowave.com)";
-                case "Times / iewc": return "Times Microwave Systems, scheda LMR-400 (iewc.com)";
-                case "sivacavi.it": return "Siva Cavi, schede tecniche HF 240 / HF 287 / HF 400 (sivacavi.it)";
-                case "RFS": return "RFS – Radio Frequency Systems, schede tecniche CELLFLEX LCF / SCF (rfsworld.com)";
-                case "WiMo": return "WiMo, schede tecniche Messi & Paoloni Hyperflex / Ultraflex ed Ecoflex Plus (wimo.com)";
-                case "szansy.com": return "Scheda del cavo SYV50-7 low loss (szansy.com)";
-                case "CommScope": return "CommScope (Andrew), schede tecniche HELIAX LDF / FSJ (commscope.com)";
-                case "Symair": return "Symair, schede tecniche HCAAYZ-50-12 / HCAHY-50-9 (symair.com)";
-                case "Belden": return "Belden, schede tecniche H1000 (H1000C1), 8237 (RG-8/U) e 9913 (catalog.belden.com); per 8237 e 9913 i valori in dB/100 ft sono convertiti in dB/100 m";
-                case "Tasker": return "Tasker (MILAN S.r.l.), schede tecniche RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 e C538 (copie presso i distributori: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)";
-                case "messi.it": return "Messi & Paoloni, schede tecniche Airborne, Hyperflex e Ultraflex e catalogo dei cavi a 50 Ω 2026 (messi.it)";
-                case "ssb.de": return "SSB-Electronic, schede tecniche SeaTex, Aircell 7 e Aircom Premium e catalogo dei cavi (ssb.de)";
-                case "DD1US / EA5IP": return "Tabelle dei cavi coassiali di DD1US (dd1us.de, 27/04/2024) ed EA5IP (qsl.net/ea5ip): 5,5 dB a 144 MHz e 9,1 dB a 432 MHz; costruttore non indicato";
-                case "Prospecta RT5020": return "Prospecta, scheda tecnica RT5020 (radiosystem.it)";
-                case "Prospecta XT2400": return "Prospecta, scheda tecnica XT-2400 (hamradioshop.it)";
-                case "Qaxial": return "QAXIAL, scheda tecnica LLF195 (qaxial.com, rf-microwave.com)";
-                case "Caledonian MIL-C-17": return "Caledonian Cables, catalogo MIL-C-17F 50 Ω: RG 142 B/U (M17/60) e RG 393/U (M17/127) (caledonian-cables.net)";
-                case "R.F. elettronica": return "R.F. elettronica di Rota Franco (Senago), scheda tecnica RG115 (rf-microwave.com)";
+                case "qsl.net/sv1bsx": return Lang.T("SV1BSX, tabella delle attenuazioni dei cavi coassiali (qsl.net/sv1bsx) – valori da verificare sulle schede dei costruttori");
+                case "moonrakeronline (SSB)": return Lang.T("SSB-Electronic, schede tecniche Aircell / Ecoflex (distribuite da Moonraker UK, moonrakeronline.com)");
+                case "Fairview / Times": return Lang.T("Times Microwave Systems, schede LMR (distribuite da Fairview Microwave, fairviewmicrowave.com)");
+                case "Times / iewc": return Lang.T("Times Microwave Systems, scheda LMR-400 (iewc.com)");
+                case "sivacavi.it": return Lang.T("Siva Cavi, schede tecniche HF 240 / HF 287 / HF 400 (sivacavi.it)");
+                case "RFS": return Lang.T("RFS – Radio Frequency Systems, schede tecniche CELLFLEX LCF / SCF (rfsworld.com)");
+                case "WiMo": return Lang.T("WiMo, schede tecniche Messi & Paoloni Hyperflex / Ultraflex ed Ecoflex Plus (wimo.com)");
+                case "szansy.com": return Lang.T("Scheda del cavo SYV50-7 low loss (szansy.com)");
+                case "CommScope": return Lang.T("CommScope (Andrew), schede tecniche HELIAX LDF / FSJ (commscope.com)");
+                case "Symair": return Lang.T("Symair, schede tecniche HCAAYZ-50-12 / HCAHY-50-9 (symair.com)");
+                case "Belden": return Lang.T("Belden, schede tecniche H1000 (H1000C1), 8237 (RG-8/U) e 9913 (catalog.belden.com); per 8237 e 9913 i valori in dB/100 ft sono convertiti in dB/100 m");
+                case "Tasker": return Lang.T("Tasker (MILAN S.r.l.), schede tecniche RG 174, RG 58 CU / PUR, RG 223 U, RG 213 U, C526, C527, C529 e C538 (copie presso i distributori: komplekt-a.ru, chipdip.ru, deep-sound.ru, ormix.lv, triopak.fi)");
+                case "messi.it": return Lang.T("Messi & Paoloni, schede tecniche Airborne, Hyperflex e Ultraflex e catalogo dei cavi a 50 Ω 2026 (messi.it)");
+                case "ssb.de": return Lang.T("SSB-Electronic, schede tecniche SeaTex, Aircell 7 e Aircom Premium e catalogo dei cavi (ssb.de)");
+                case "DD1US / EA5IP": return Lang.T("Tabelle dei cavi coassiali di DD1US (dd1us.de, 27/04/2024) ed EA5IP (qsl.net/ea5ip): 5,5 dB a 144 MHz e 9,1 dB a 432 MHz; costruttore non indicato");
+                case "Prospecta RT5020": return Lang.T("Prospecta, scheda tecnica RT5020 (radiosystem.it)");
+                case "Prospecta XT2400": return Lang.T("Prospecta, scheda tecnica XT-2400 (hamradioshop.it)");
+                case "Qaxial": return Lang.T("QAXIAL, scheda tecnica LLF195 (qaxial.com, rf-microwave.com)");
+                case "Caledonian MIL-C-17": return Lang.T("Caledonian Cables, catalogo MIL-C-17F 50 Ω: RG 142 B/U (M17/60) e RG 393/U (M17/127) (caledonian-cables.net)");
+                case "R.F. elettronica": return Lang.T("R.F. elettronica di Rota Franco (Senago), scheda tecnica RG115 (rf-microwave.com)");
                 default: return breve;
             }
         }

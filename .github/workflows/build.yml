@@ -116,6 +116,14 @@ jobs:
           import -window root shot/YAEC-teoria.png || true
           convert shot/YAEC-teoria.png -resize 1200x shot/small3.jpg 2>/dev/null && echo "SCREENSHOT3-B64:$(base64 -w 0 shot/small3.jpg)" || true
           kill $PID 2>/dev/null || true
+          for T in "MANUALE D'USO" "CAVI COASSIALI"; do
+            YAEC_LINGUETTA="$T" mono YAEC.exe &
+            PID=$!
+            sleep 30
+            import -window root shot/x.png || true
+            convert shot/x.png -resize 1200x shot/x.jpg 2>/dev/null && echo "SCREENSHOT-${T// /_}-B64:$(base64 -w 0 shot/x.jpg)" || true
+            kill $PID 2>/dev/null || true
+          done
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
       - uses: actions/upload-artifact@v4
         with:
