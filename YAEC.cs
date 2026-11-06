@@ -2910,6 +2910,10 @@ namespace LunaCalc
             "Ore utili in verde sulla Dgrd",
             "Colora di verde i tratti della curva Dgrd nelle ore con la Luna dentro i limiti della tua antenna (o nella finestra comune con il DX).",
             "Mostra sul grafico la declinazione della Luna (curva blu): con la Luna dalla parte del tuo emisfero sale più alta e resta più ore sopra l'orizzonte",
+            "nome del cavo",
+            "costruttore",
+            "tipo",
+            "ordinati per {0}",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4165,6 +4169,10 @@ namespace LunaCalc
             "Usable hours in green on the Dgrd",
             "Colors green the parts of the Dgrd curve in the hours when the Moon is inside your antenna limits (or in the common window with the DX).",
             "Shows the Moon declination on the chart (blue curve): with the Moon on your hemisphere's side it rises higher and stays above the horizon longer",
+            "cable name",
+            "manufacturer",
+            "type",
+            "sorted by {0}",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5420,6 +5428,10 @@ namespace LunaCalc
             "Nutzbare Stunden grün auf der Dgrd",
             "Färbt die Abschnitte der Dgrd-Kurve grün, in denen der Mond innerhalb deiner Antennengrenzen steht (oder im gemeinsamen Fenster mit dem DX).",
             "Zeigt die Monddeklination im Diagramm (blaue Kurve): steht der Mond auf der Seite deiner Hemisphäre, steigt er höher und bleibt länger über dem Horizont",
+            "Kabelname",
+            "Hersteller",
+            "Typ",
+            "sortiert nach {0}",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6675,6 +6687,10 @@ namespace LunaCalc
             "Heures utiles en vert sur la Dgrd",
             "Colore en vert les parties de la courbe Dgrd aux heures où la Lune est dans les limites de votre antenne (ou dans la fenêtre commune avec le DX).",
             "Affiche la déclinaison de la Lune sur le graphique (courbe bleue) : du côté de votre hémisphère, la Lune monte plus haut et reste plus longtemps au-dessus de l'horizon",
+            "nom du câble",
+            "fabricant",
+            "type",
+            "triés par {0}",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7930,6 +7946,10 @@ namespace LunaCalc
             "Horas útiles en verde sobre la Dgrd",
             "Colorea de verde los tramos de la curva Dgrd en las horas con la Luna dentro de los límites de tu antena (o en la ventana común con el DX).",
             "Muestra en el gráfico la declinación de la Luna (curva azul): con la Luna del lado de tu hemisferio sube más alta y permanece más horas sobre el horizonte",
+            "nombre del cable",
+            "fabricante",
+            "tipo",
+            "ordenados por {0}",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9185,6 +9205,10 @@ namespace LunaCalc
             "Horas úteis a verde na Dgrd",
             "Pinta de verde os troços da curva Dgrd nas horas com a Lua dentro dos limites da sua antena (ou na janela comum com o DX).",
             "Mostra no gráfico a declinação da Lua (curva azul): com a Lua do lado do seu hemisfério sobe mais alto e fica mais horas acima do horizonte",
+            "nome do cabo",
+            "fabricante",
+            "tipo",
+            "ordenados por {0}",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10440,6 +10464,10 @@ namespace LunaCalc
             "Dgrd 上可用时段显示为绿色",
             "将月球位于天线限制范围内（或与 DX 的共同窗口）时段的 Dgrd 曲线段标为绿色。",
             "在图表上显示月球赤纬（蓝色曲线）：月球位于你所在半球一侧时升得更高，在地平线上停留更久",
+            "电缆名称",
+            "制造商",
+            "类型",
+            "按{0}排序",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11695,6 +11723,10 @@ namespace LunaCalc
             "Dgrd の利用可能時間を緑で表示",
             "月がアンテナの制限内にある時間（または DX との共通ウィンドウ）の Dgrd 曲線を緑で表示します。",
             "グラフに月の赤緯（青い曲線）を表示します。月が自分の半球側にあるときは高く昇り、地平線上に長くとどまります",
+            "ケーブル名",
+            "メーカー",
+            "種類",
+            "{0}順",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12950,6 +12982,10 @@ namespace LunaCalc
             "Dgrd पर उपयोगी घंटे हरे रंग में",
             "जिन घंटों में चंद्रमा आपके एंटीना की सीमाओं के भीतर है (या DX के साथ साझा खिड़की में), Dgrd वक्र के उन हिस्सों को हरा रंगता है।",
             "चार्ट पर चंद्रमा का दिक्पात (नीला वक्र) दिखाता है: आपके गोलार्ध की ओर होने पर चंद्रमा अधिक ऊँचा उठता है और अधिक घंटे क्षितिज के ऊपर रहता है",
+            "केबल का नाम",
+            "निर्माता",
+            "प्रकार",
+            "{0} के अनुसार क्रमबद्ध",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14205,6 +14241,10 @@ namespace LunaCalc
             "Dgrd에 사용 가능 시간을 녹색으로",
             "달이 안테나 한계 안에 있는 시간(또는 DX와의 공통 창)의 Dgrd 곡선 부분을 녹색으로 표시합니다.",
             "그래프에 달의 적위(파란 곡선)를 표시합니다. 달이 자신의 반구 쪽에 있으면 더 높이 뜨고 지평선 위에 더 오래 머뭅니다",
+            "케이블 이름",
+            "제조사",
+            "종류",
+            "{0} 순 정렬",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15460,6 +15500,10 @@ namespace LunaCalc
             "Jam berguna berwarna hijau pada Dgrd",
             "Mewarnai hijau bagian kurva Dgrd pada jam ketika Bulan berada dalam batas antena Anda (atau dalam jendela bersama dengan DX).",
             "Menampilkan deklinasi Bulan pada grafik (kurva biru): saat Bulan berada di sisi belahan bumi Anda, ia naik lebih tinggi dan lebih lama di atas cakrawala",
+            "nama kabel",
+            "produsen",
+            "jenis",
+            "diurutkan menurut {0}",
         };
 
         public static readonly string[] RU = {
@@ -16716,6 +16760,10 @@ namespace LunaCalc
             "Полезные часы зелёным на Dgrd",
             "Окрашивает зелёным участки кривой Dgrd в часы, когда Луна в пределах вашей антенны (или в общем окне с DX).",
             "Показывает на графике склонение Луны (синяя кривая): когда Луна на стороне вашего полушария, она поднимается выше и дольше остаётся над горизонтом",
+            "название кабеля",
+            "производитель",
+            "тип",
+            "упорядочены: {0}",
         };
 
         public static readonly string[] UK = {
@@ -17972,6 +18020,10 @@ namespace LunaCalc
             "Корисні години зеленим на Dgrd",
             "Фарбує зеленим ділянки кривої Dgrd у години, коли Місяць у межах вашої антени (або в спільному вікні з DX).",
             "Показує на графіку схилення Місяця (синя крива): коли Місяць на боці вашої півкулі, він піднімається вище й довше залишається над горизонтом",
+            "назва кабелю",
+            "виробник",
+            "тип",
+            "упорядковано: {0}",
         };
 
         public static readonly string[] AF = {
@@ -19228,6 +19280,10 @@ namespace LunaCalc
             "Bruikbare ure in groen op die Dgrd",
             "Kleur die dele van die Dgrd-kurwe groen in die ure wanneer die Maan binne jou antennagrense is (of in die gemeenskaplike venster met die DX).",
             "Wys die Maan se deklinasie op die grafiek (blou kurwe): aan die kant van jou halfrond styg die Maan hoër en bly langer bo die horison",
+            "kabelnaam",
+            "vervaardiger",
+            "tipe",
+            "gesorteer volgens {0}",
         };
 
         public static readonly string[] BN = {
@@ -20483,6 +20539,10 @@ namespace LunaCalc
             "Dgrd-তে ব্যবহারযোগ্য ঘণ্টা সবুজে",
             "যে ঘণ্টাগুলোতে চাঁদ আপনার অ্যান্টেনার সীমার ভেতরে থাকে (বা DX-এর সঙ্গে যৌথ জানালায়), Dgrd বক্ররেখার সেই অংশগুলো সবুজ করে।",
             "চার্টে চাঁদের বিষুবলম্ব (নীল বক্ররেখা) দেখায়: আপনার গোলার্ধের দিকে থাকলে চাঁদ বেশি উঁচুতে ওঠে এবং বেশি সময় দিগন্তের ওপরে থাকে",
+            "কেবলের নাম",
+            "প্রস্তুতকারক",
+            "ধরন",
+            "{0} অনুযায়ী সাজানো",
         };
 
         public static readonly string[] AR = {
@@ -21738,6 +21798,10 @@ namespace LunaCalc
             "الساعات المفيدة بالأخضر على Dgrd",
             "يلوّن بالأخضر أجزاء منحنى Dgrd في الساعات التي يكون فيها القمر داخل حدود هوائيك (أو في النافذة المشتركة مع DX).",
             "يعرض على المخطط ميل القمر (المنحنى الأزرق): عندما يكون القمر في جهة نصف الكرة الذي تقع فيه يرتفع أكثر ويبقى ساعات أطول فوق الأفق",
+            "اسم الكبل",
+            "الشركة المصنعة",
+            "النوع",
+            "مرتبة حسب {0}",
         };
 
         public static readonly string[] TR = {
@@ -22993,6 +23057,10 @@ namespace LunaCalc
             "Dgrd üzerinde kullanılabilir saatler yeşil",
             "Ay'ın anten sınırlarınız içinde olduğu saatlerde (veya DX ile ortak pencerede) Dgrd eğrisinin bölümlerini yeşile boyar.",
             "Grafikte Ay'ın dik açıklığını gösterir (mavi eğri): Ay sizin yarımkürenizin tarafındayken daha yükseğe çıkar ve ufkun üzerinde daha uzun kalır",
+            "kablo adı",
+            "üretici",
+            "tür",
+            "{0} sırasına göre",
         };
     }
 
@@ -23283,10 +23351,10 @@ namespace LunaCalc
             b.TvCavo = (double)u.TvCavo.Value;
             b.TvNf = (double)u.TvNf.Value;
             b.Tant = (double)u.Tant.Value;
-            b.CavoAnt = u.CavoAnt.SelectedIndex; b.LenAnt = (double)u.LenAnt.Value;
+            b.CavoAnt = MainForm.IndiceCavo(u.CavoAnt); b.LenAnt = (double)u.LenAnt.Value;
             b.Rele = (double)u.Rele.Value;
-            b.CavoPa = u.CavoPa.SelectedIndex; b.LenPa = (double)u.LenPa.Value;
-            b.CavoDis = u.CavoDis.SelectedIndex; b.LenDis = (double)u.LenDis.Value;
+            b.CavoPa = MainForm.IndiceCavo(u.CavoPa); b.LenPa = (double)u.LenPa.Value;
+            b.CavoDis = MainForm.IndiceCavo(u.CavoDis); b.LenDis = (double)u.LenDis.Value;
             b.TvOn = u.TvOn.Checked ? 1 : 0;
             b.TvGainSet = (double)u.TvGain.Value;
             b.TvMod = u.TvMod.SelectedIndex >= 0 && u.TvMod.SelectedIndex < TvNome.Length ? u.TvMod.SelectedIndex : -1;
@@ -23322,9 +23390,9 @@ namespace LunaCalc
             Set(u.TvCavo, TvCavo);
             Set(u.TvNf, TvNf);
             Set(u.Tant, Tant);
-            SetC(u.CavoAnt, CavoAnt); Set(u.LenAnt, LenAnt); Set(u.Rele, Rele);
-            SetC(u.CavoPa, CavoPa); Set(u.LenPa, LenPa);
-            SetC(u.CavoDis, CavoDis); Set(u.LenDis, LenDis);
+            MainForm.ScegliCavo(u.CavoAnt, (int)Math.Round(CavoAnt)); Set(u.LenAnt, LenAnt); Set(u.Rele, Rele);
+            MainForm.ScegliCavo(u.CavoPa, (int)Math.Round(CavoPa)); Set(u.LenPa, LenPa);
+            MainForm.ScegliCavo(u.CavoDis, (int)Math.Round(CavoDis)); Set(u.LenDis, LenDis);
             u.TvOn.Checked = TvOn > 0.5;
             Set(u.TvGain, TvGainSet);
             u.TvGain.Enabled = u.TvOn.Checked; u.TvNf.Enabled = u.TvOn.Checked; u.TvMod.Enabled = u.TvOn.Checked;
@@ -23835,7 +23903,7 @@ namespace LunaCalc
             b.TvMod.SelectedIndex = b.TvMod.Items.Count - 1;
             b.TvMod.DropDownWidth = S(360);
             b.TvMod.Enabled = false;
-            b.TvOn = new CheckBox();
+            b.TvOn = new Spunta();
             b.TvOn.Text = Lang.T("TRANSVERTER");
             b.TvOn.AutoSize = true;
             b.TvOn.Font = new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold);
@@ -23912,7 +23980,7 @@ namespace LunaCalc
 
             b.GTot = new Label();
             b.Info1 = new Label(); b.Info2 = new Label(); b.NfFriis = new Label();   // testi disegnati nella scheda
-            b.Ground = new CheckBox();
+            b.Ground = new Spunta();
             b.Ground.Text = "";
             b.Ground.AutoSize = true;
             b.GroundH = NudBU(0m, 100m, 0.5m, 1, "m", "0.#");
@@ -24010,8 +24078,47 @@ namespace LunaCalc
             c.DropDownStyle = ComboBoxStyle.DropDownList;
             c.DropDownWidth = S(380);
             c.MaxDropDownItems = 20;
-            foreach (Cavo k in CaviDb.Elenco) c.Items.Add(k.Etichetta);
+            RiempiTendinaCavi(c);
             return c;
+        }
+
+        // Voce di una tendina dei cavi: il testo e la posizione del cavo in CaviDb.Elenco
+        class VoceCavo
+        {
+            public int I; public string T;
+            public override string ToString() { return T; }
+        }
+
+        // Le tendine dei cavi sono ordinate per diametro (a parità di diametro, per nome)
+        static void RiempiTendinaCavi(ComboBox c)
+        {
+            c.Items.Clear();
+            List<int> ord = new List<int>();
+            for (int i = 0; i < CaviDb.Elenco.Count; i++) ord.Add(i);
+            ord.Sort((x, y) =>
+            {
+                int d = CaviDb.Elenco[x].Diam.CompareTo(CaviDb.Elenco[y].Diam);
+                if (d != 0) return d;
+                d = string.Compare(CaviDb.Elenco[x].Etichetta, CaviDb.Elenco[y].Etichetta, StringComparison.CurrentCultureIgnoreCase);
+                return d != 0 ? d : x.CompareTo(y);
+            });
+            foreach (int i in ord) { VoceCavo v = new VoceCavo(); v.I = i; v.T = CaviDb.Elenco[i].Etichetta; c.Items.Add(v); }
+        }
+
+        public static int IndiceCavo(ComboBox c)
+        {
+            VoceCavo v = c.SelectedItem as VoceCavo;
+            return v == null ? -1 : v.I;
+        }
+
+        public static void ScegliCavo(ComboBox c, int indice)
+        {
+            for (int k = 0; k < c.Items.Count; k++)
+            {
+                VoceCavo v = c.Items[k] as VoceCavo;
+                if (v != null && v.I == indice) { c.SelectedIndex = k; return; }
+            }
+            if (c.Items.Count > 0 && c.SelectedIndex < 0) c.SelectedIndex = 0;
         }
 
         // Aggiorna l'elenco dei cavi in tutte le tendine (dopo un cavo personalizzato aggiunto o tolto)
@@ -24022,11 +24129,10 @@ namespace LunaCalc
                 if (u == null) continue;
                 foreach (ComboBox c in new ComboBox[] { u.CavoAnt, u.CavoPa, u.CavoDis })
                 {
-                    int i = c.SelectedIndex;
+                    int i = IndiceCavo(c);
                     loadingB = true;
-                    c.Items.Clear();
-                    foreach (Cavo k in CaviDb.Elenco) c.Items.Add(k.Etichetta);
-                    c.SelectedIndex = Math.Min(Math.Max(0, i), c.Items.Count - 1);
+                    RiempiTendinaCavi(c);
+                    ScegliCavo(c, Math.Min(Math.Max(0, i), CaviDb.Elenco.Count - 1));
                     loadingB = false;
                 }
             }
@@ -24081,7 +24187,7 @@ namespace LunaCalc
             bRow.Margin = new Padding(S(3), S(2), S(3), S(2));
             tip.SetToolTip(bRow, Lang.T("Usa l'istante della riga selezionata nella tabella della Posizione della Luna."));
             bRow.Click += (s, e) => UsaRigaSelezionata();
-            chkPol = new CheckBox();
+            chkPol = new Spunta();
             chkPol.Text = Lang.T("perdita di polarizzazione");
             chkPol.AutoSize = true;
             chkPol.Margin = new Padding(S(12), S(6), S(3), S(3));
@@ -25270,7 +25376,7 @@ namespace LunaCalc
             btnSfu = new Pillola("⟳ " + Lang.T("Aggiorna dal web").ToUpper(Lang.Cultura), StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
             btnSfu.Margin = new Padding(S(6), S(1), S(3), S(1));
             btnSfu.Click += (s, e) => ScaricaSfu();
-            chkSfuAuto = new CheckBox();
+            chkSfuAuto = new Spunta();
             chkSfuAuto.Text = Lang.T("all'avvio");
             chkSfuAuto.AutoSize = true;
             chkSfuAuto.Checked = true;
@@ -25335,7 +25441,7 @@ namespace LunaCalc
                 n.ValueChanged += (s, e) => RecalcBudget();
                 tip.SetToolTip(n, Lang.T("Livello medio dei lobi laterali rispetto al lobo principale (dB). Pesa quando il Sole è lontano dalla Luna."));
             }
-            chkSfuMan = new CheckBox();
+            chkSfuMan = new Spunta();
             chkSfuMan.Text = Lang.T("Flusso manuale per questa banda");
             chkSfuMan.AutoSize = true;
             chkSfuMan.CheckedChanged += (s, e) => RecalcBudget();
@@ -26090,18 +26196,18 @@ namespace LunaCalc
             bRow.Text = Lang.T("Usa la riga selezionata nella tabella");
             bRow.AutoSize = true;
             bRow.Click += (s, e) => { DateTime t; if (RigaSelezionata(out t)) { chkSkyLive.Checked = false; dtpSky.Value = t; RecalcSky(); } };
-            chkSkyLive = new CheckBox();
+            chkSkyLive = new Spunta();
             chkSkyLive.Text = Lang.T("Segui l'ora attuale (ogni minuto)");
             chkSkyLive.AutoSize = true;
             chkSkyLive.Margin = new Padding(S(10), S(6), S(3), S(3));
             chkSkyLive.CheckedChanged += (s, e) => { if (chkSkyLive.Checked) { dtpSky.Value = NowUtcMinute(); RecalcSky(); } };
-            chkSkyTrack = new CheckBox();
+            chkSkyTrack = new Spunta();
             chkSkyTrack.Text = Lang.T("Percorso della Luna nelle prossime 24 ore");
             chkSkyTrack.AutoSize = true;
             chkSkyTrack.Checked = true;
             chkSkyTrack.Margin = new Padding(S(10), S(6), S(3), S(3));
             chkSkyTrack.CheckedChanged += (s, e) => sky.Invalidate();
-            chkSkyLim = new CheckBox();
+            chkSkyLim = new Spunta();
             chkSkyLim.Text = Lang.T("Limiti della mia antenna");
             chkSkyLim.AutoSize = true;
             chkSkyLim.Checked = true;
@@ -27243,13 +27349,13 @@ namespace LunaCalc
             bPiu.Width = S(34);
             bPiu.Click += (s, e) => CambiaZoomPunt(1);
             lblPuntZoom = L("");
-            chkPuntPercorso = new CheckBox();
+            chkPuntPercorso = new Spunta();
             chkPuntPercorso.Text = Lang.T("Percorso della Luna nelle prossime 24 ore");
             chkPuntPercorso.AutoSize = true;
             chkPuntPercorso.Checked = true;
             chkPuntPercorso.Margin = new Padding(S(14), S(6), S(3), S(3));
             chkPuntPercorso.CheckedChanged += (s, e) => pnlPunt.Invalidate();
-            chkPuntSfuma = new CheckBox();
+            chkPuntSfuma = new Spunta();
             chkPuntSfuma.Text = Lang.T("Sfuma le zone fuori dai limiti");
             chkPuntSfuma.AutoSize = true;
             chkPuntSfuma.Checked = true;
@@ -28416,7 +28522,7 @@ namespace LunaCalc
             bUpd.Text = Lang.T("Aggiorna adesso");
             bUpd.AutoSize = true;
             bUpd.Click += (s, e) => RecalcDgrd();
-            chkDgAuto = new CheckBox();
+            chkDgAuto = new Spunta();
             chkDgAuto.Text = Lang.T("Aggiornamento automatico (ogni 10 minuti)");
             chkDgAuto.AutoSize = true;
             chkDgAuto.Checked = true;
@@ -28424,7 +28530,7 @@ namespace LunaCalc
             nudDgGiorni = Nud(7, 61, 30, 0, 60);
             nudDgGiorni.ValueChanged += (s, e) => { if (!caricamento) RecalcDgrd(); };
             tip.SetToolTip(nudDgGiorni, Lang.T("Numero di giorni da oggi da mostrare nel grafico (da 7 a 61)."));
-            chkDgSoloUtili = new CheckBox();
+            chkDgSoloUtili = new Spunta();
             chkDgSoloUtili.Text = Lang.T("Solo giorni con finestra utile");
             chkDgSoloUtili.AutoSize = true;
             chkDgSoloUtili.Margin = new Padding(S(10), S(6), S(3), S(3));
@@ -28432,7 +28538,7 @@ namespace LunaCalc
             chkDgSoloUtili.CheckedChanged += (s, e) => RiempiTabellaDg();
             bar.Controls.Add(L(Lang.T("Giorni da oggi (fino a 61)"))); bar.Controls.Add(nudDgGiorni); bar.Controls.Add(bUpd); bar.Controls.Add(chkDgAuto);
             bar.Controls.Add(chkDgSoloUtili);
-            chkDgDec = new CheckBox();
+            chkDgDec = new Spunta();
             chkDgDec.Text = Lang.T("Curva della declinazione");
             chkDgDec.AutoSize = true;
             chkDgDec.Checked = true;
@@ -28440,7 +28546,7 @@ namespace LunaCalc
             tip.SetToolTip(chkDgDec, Lang.T("Mostra sul grafico la declinazione della Luna (curva blu): con la Luna dalla parte del tuo emisfero sale più alta e resta più ore sopra l'orizzonte"));
             chkDgDec.CheckedChanged += (s, e) => { if (dgChart != null) dgChart.Invalidate(); if (!caricamento) SaveSettings(); };
             bar.Controls.Add(chkDgDec);
-            chkDgVerde = new CheckBox();
+            chkDgVerde = new Spunta();
             chkDgVerde.Text = Lang.T("Ore utili in verde sulla Dgrd");
             chkDgVerde.AutoSize = true;
             chkDgVerde.Checked = false;
@@ -29179,7 +29285,7 @@ namespace LunaCalc
         void Colora(Control c)
         {
             if (c is SkyPanel || c is MapPanel) return;
-            if (c is Pillola) { c.Invalidate(); return; }
+            if (c is Pillola || c is Spunta) { c.Invalidate(); return; }
             if (c is CorniceTonda)
             {
                 CorniceTonda ct = (CorniceTonda)c;
@@ -29494,7 +29600,7 @@ namespace LunaCalc
             trkImpHost.Margin = new Padding(0);
             barImp.Controls.Add(trkImpHost, 0, 0);
 
-            chkComplessi = new CheckBox();
+            chkComplessi = new Spunta();
             chkComplessi.Text = Lang.T("CALCOLI APPROFONDITI");
             chkComplessi.AutoSize = true;
             chkComplessi.Font = new Font(Lang.FontUi, 13F * fontFactor, FontStyle.Bold);
@@ -30995,7 +31101,7 @@ namespace LunaCalc
                 TextBox tpw = new TextBox(); tpw.Width = S(220); tpw.UseSystemPasswordChar = true; tpw.Text = password;
                 g.Controls.Add(L(Lang.T("Nome utente LoTW")), 0, 1); g.Controls.Add(tu, 1, 1);
                 g.Controls.Add(L(Lang.T("Password LoTW")), 0, 2); g.Controls.Add(tpw, 1, 2);
-                CheckBox cm = new CheckBox();
+                CheckBox cm = new Spunta();
                 cm.Text = Lang.T("Memorizza nome utente e password nelle impostazioni");
                 cm.AutoSize = true;
                 cm.Checked = true;
@@ -31679,7 +31785,7 @@ namespace LunaCalc
                 List<CheckBox> cbs = new List<CheckBox>();
                 foreach (int b in Bande)
                 {
-                    CheckBox c = new CheckBox();
+                    CheckBox c = new Spunta();
                     c.Text = b >= 47000 ? (b / 1000).ToString(inv) + " GHz" : b.ToString(inv) + " MHz";
                     c.AutoSize = true;
                     c.Checked = bandeAttive.Contains(b);
@@ -32635,6 +32741,8 @@ namespace LunaCalc
         readonly ToolTip caviTip = new ToolTip();
         int caviTipRiga = -1;
         ComboBox cmbCaviTipo, cmbCaviDiam, cmbCaviBanda, cmbCaviCalcBanda, cmbCaviOrd;
+        bool caviClicTesta;
+        bool caviInv;   // ordine per nome, costruttore o tipo: false = A → Z, true = Z → A
         Label lblNotaCavi;
         NumericUpDown nudCaviLen;
         PannelloDisegno pnlCaviGrafico, pnlCaviCalc;
@@ -32762,11 +32870,11 @@ namespace LunaCalc
             cmbCaviBanda.SelectedIndexChanged += (s, e) => { if (cmbCaviOrd != null && cmbCaviOrd.SelectedIndex > 0) RiempiCavi(); else { pnlCavi.Invalidate(); pnlCaviTesta.Invalidate(); pnlCaviGrafico.Invalidate(); } };
             // ordine della tabella: per diametro, oppure per perdita (crescente o decrescente) nella banda evidenziata
             cmbCaviOrd = new ComboBox(); cmbCaviOrd.DropDownStyle = ComboBoxStyle.DropDownList; cmbCaviOrd.Width = S(170);
-            cmbCaviOrd.Items.AddRange(new object[] { Lang.T("diametro"), Lang.T("perdita crescente"), Lang.T("perdita decrescente") });
+            cmbCaviOrd.Items.AddRange(new object[] { Lang.T("diametro"), Lang.T("perdita crescente"), Lang.T("perdita decrescente"), Lang.T("nome del cavo"), Lang.T("costruttore"), Lang.T("tipo") });
             cmbCaviOrd.SelectedIndex = 0;
             cmbCaviOrd.Margin = new Padding(S(3), S(5), S(14), S(3));
             tip.SetToolTip(cmbCaviOrd, Lang.T("Ordina la tabella per diametro o per perdita nella banda evidenziata; si può anche cliccare l'intestazione di una banda (un clic crescente, il secondo decrescente)."));
-            cmbCaviOrd.SelectedIndexChanged += (s, e) => RiempiCavi();
+            cmbCaviOrd.SelectedIndexChanged += (s, e) => { if (!caviClicTesta) caviInv = false; RiempiCavi(); };
             Label lo = L(Lang.T("Ordina per")); lo.Margin = new Padding(S(3), S(9), S(3), S(3));
             Pillola bAgg = new Pillola("+ " + Lang.T("Aggiungi cavo personalizzato"), StilePillola.Bordo, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 9F * fontFactor));
             bAgg.Margin = new Padding(S(3), S(4), S(3), S(3));
@@ -32791,10 +32899,20 @@ namespace LunaCalc
             {
                 if (e.Button != MouseButtons.Left) return;
                 float[] cxh = ColonneCavi(pnlCavi != null ? pnlCavi.Width : pnlCaviTesta.Width);
-                for (int i = 3; i < 9; i++)
+                for (int i = 0; i < 9; i++)
                 {
                     if (e.X < cxh[i] || e.X >= cxh[i + 1]) continue;
                     if (i == 3) { cmbCaviOrd.SelectedIndex = 0; return; }
+                    if (i < 3)
+                    {
+                        // cavo, costruttore, tipo: un clic dalla A alla Z, il secondo dalla Z alla A
+                        int oi = 3 + i;
+                        caviClicTesta = true;
+                        if (cmbCaviOrd.SelectedIndex == oi) { caviInv = !caviInv; RiempiCavi(); }
+                        else { caviInv = false; cmbCaviOrd.SelectedIndex = oi; }
+                        caviClicTesta = false;
+                        return;
+                    }
                     int bi = i - 4;
                     if (cmbCaviBanda.SelectedIndex == bi && cmbCaviOrd.SelectedIndex == 1) cmbCaviOrd.SelectedIndex = 2;
                     else
@@ -32888,7 +33006,7 @@ namespace LunaCalc
                     if (caviSpuntati.Contains(c))
                     {
                         int i = CaviDb.Elenco.IndexOf(c);
-                        if (i >= 0) { bMe.CavoDis.SelectedIndex = i; bMe.LenDis.Value = nudCaviLen.Value; impSel = 0; MostraSchema(); tabs.SelectedTab = tpBudget; }
+                        if (i >= 0) { ScegliCavo(bMe.CavoDis, i); bMe.LenDis.Value = nudCaviLen.Value; impSel = 0; MostraSchema(); tabs.SelectedTab = tpBudget; }
                         break;
                     }
             };
@@ -32934,13 +33052,20 @@ namespace LunaCalc
             int ord = cmbCaviOrd == null ? 0 : cmbCaviOrd.SelectedIndex;
             int bo = Math.Max(0, Math.Min(CaviDb.Fb.Length - 1, cmbCaviBanda.SelectedIndex));
             // a parità, l'ordine per diametro (Sort non è stabile)
+            Func<Cavo, string> testoOrd = k => ord == 3 ? k.Etichetta : (ord == 4 ? (k.Costruttori != null && k.Costruttori.Length > 0 ? k.Costruttori[0] : "") : (ord == 5 ? TipoCavo(k.Tipo) : ""));
             l.Sort((a, b) =>
             {
                 int c0 = ord == 1 ? a.Db[bo].CompareTo(b.Db[bo]) : (ord == 2 ? b.Db[bo].CompareTo(a.Db[bo]) : 0);
+                if (ord >= 3)
+                {
+                    c0 = string.Compare(testoOrd(a), testoOrd(b), StringComparison.CurrentCultureIgnoreCase);
+                    if (caviInv) c0 = -c0;
+                }
                 return c0 != 0 ? c0 : a.Diam.CompareTo(b.Diam);
             });
             if (lblNotaCavi != null)
                 lblNotaCavi.Text = ord == 0 ? Lang.T("attenuazione in dB/100 m a 20 °C · ordinati per diametro")
+                    : ord >= 3 ? Lang.T("attenuazione in dB/100 m a 20 °C") + " · " + string.Format(Lang.T("ordinati per {0}"), cmbCaviOrd.Items[ord]) + (caviInv ? " (Z → A)" : " (A → Z)")
                     : Lang.T("attenuazione in dB/100 m a 20 °C") + " · " + string.Format(ord == 1 ? Lang.T("ordinati per perdita crescente a {0} MHz") : Lang.T("ordinati per perdita decrescente a {0} MHz"), CaviDb.Fb[bo].ToString(inv));
             foreach (Cavo c in l)
             {
@@ -33050,7 +33175,8 @@ namespace LunaCalc
                     if (banda) using (Brush bb = new SolidBrush(Color.FromArgb(31, 111, 209))) g.FillRectangle(bb, r);
                     string t = i < 4 ? tit[i].ToUpper(Lang.Cultura) : CaviDb.Fb[i - 4].ToString(inv);
                     int ordH = cmbCaviOrd == null ? 0 : cmbCaviOrd.SelectedIndex;
-                    if (banda && ordH > 0) t += ordH == 1 ? " ▲" : " ▼";
+                    if (banda && ordH > 0 && ordH < 3) t += ordH == 1 ? " ▲" : " ▼";
+                    if (i < 3 && ordH == 3 + i) t += caviInv ? " ▼" : " ▲";
                     Color ct = banda ? Color.White : (Tema.Scuro ? Tema.Fore : Color.FromArgb(25, 45, 80));
                     float pad = S(6);
                     Testo(g, t, fh, ct, new RectangleF(r.Left + (i == 0 ? S(26) : pad), r.Top, Math.Max(1, r.Width - 2 * pad - (i == 0 ? S(20) : 0)), r.Height),
@@ -34007,7 +34133,7 @@ namespace LunaCalc
             bMe.Click += (s, e) => CentraMappa(me.Ok ? me.Lat : 40, me.Ok ? me.Lon : 14, Math.Max(mapZoom, 5));
             Button bWorld = new Button(); bWorld.Text = Lang.T("Tutto il mondo"); bWorld.AutoSize = true;
             bWorld.Click += (s, e) => CentraMappa(20, 0, 2);
-            chkGrid = new CheckBox(); chkGrid.Text = Lang.T("Reticolo Maidenhead"); chkGrid.Checked = true; chkGrid.AutoSize = true;
+            chkGrid = new Spunta(); chkGrid.Text = Lang.T("Reticolo Maidenhead"); chkGrid.Checked = true; chkGrid.AutoSize = true;
             chkGrid.Margin = new Padding(S(10), S(6), S(3), S(3));
             chkGrid.CheckedChanged += (s, e) => map.Invalidate();
             Button bClear = new Button();
@@ -34035,10 +34161,10 @@ namespace LunaCalc
             tabBande.Height = S(26);
             tabBande.TabPages.Add(Lang.T("Tutte le bande"));
             tabBande.SelectedIndexChanged += (s, e) => FiltraAdif();
-            chkSoloEme = new CheckBox(); chkSoloEme.Text = Lang.T("Solo QSO via EME (PROP_MODE = EME)"); chkSoloEme.AutoSize = true;
+            chkSoloEme = new Spunta(); chkSoloEme.Text = Lang.T("Solo QSO via EME (PROP_MODE = EME)"); chkSoloEme.AutoSize = true;
             chkSoloEme.Margin = new Padding(S(10), S(6), S(3), S(3));
             chkSoloEme.CheckedChanged += (s, e) => FiltraAdif();
-            chkConf = new CheckBox(); chkConf.Text = Lang.T("Distingui i confermati (verde = LoTW, blu = solo QSL)"); chkConf.AutoSize = true; chkConf.Checked = true;
+            chkConf = new Spunta(); chkConf.Text = Lang.T("Distingui i confermati (verde = LoTW, blu = solo QSL)"); chkConf.AutoSize = true; chkConf.Checked = true;
             chkConf.Margin = new Padding(S(10), S(6), S(3), S(3));
             chkConf.CheckedChanged += (s, e) => map.Invalidate();
             bar2.Controls.Add(L(Lang.T("Banda"))); bar2.Controls.Add(tabBande); bar2.Controls.Add(chkSoloEme); bar2.Controls.Add(chkConf);
@@ -34639,6 +34765,15 @@ namespace LunaCalc
             this.StartPosition = FormStartPosition.CenterScreen;
 
             BuildUi();
+            // colore delle caselle di spunta: quello dominante di ogni linguetta
+            {
+                Color verde = Color.FromArgb(23, 128, 61), blu = Color.FromArgb(31, 111, 209), viola = Color.FromArgb(91, 63, 168), aranc = Color.FromArgb(217, 119, 6);
+                Control[] pg = { tpTrack, tpPos, tpBudget, tpSolar, tpSky, tpDgrd, tpMap, tpPunt };
+                Color[] cl = { verde, blu, viola, aranc, blu, verde, blu, blu };
+                for (int i = 0; i < pg.Length; i++) if (pg[i] != null) Spunta.ColoriLinguette[pg[i]] = cl[i];
+                Spunta sdx = chkDx as Spunta;
+                if (sdx != null) sdx.Colore = Color.FromArgb(217, 119, 6);
+            }
             caricamento = true;
             LoadSettings();
             caricamento = false;
@@ -35040,7 +35175,7 @@ namespace LunaCalc
             // Stazione DX: la casella CONFRONTA sta nel titolo
             TableLayoutPanel g2;
             Group(Lang.T("Seconda stazione (DX)"), 4, out g2);
-            chkDx = new CheckBox();
+            chkDx = new Spunta();
             chkDx.Text = Lang.T("CONFRONTA");
             chkDx.AutoSize = true;
             chkDx.Font = new Font(Lang.FontUi, 8.5F * fontFactor, FontStyle.Bold);
@@ -35094,12 +35229,12 @@ namespace LunaCalc
             tip.SetToolTip(cmbKhz, Lang.T("kHz da sommare ai MHz: es. 144 MHz + 180 kHz = 144,180 MHz.\nÈ la frequenza CFOM usata per il Doppler e per le frequenze TX/RX."));
             cmbFreq.TextChanged += (s, e) => { UpdateLive(); FreqCambiata(); };
             cmbKhz.TextChanged += (s, e) => { UpdateLive(); FreqCambiata(); };
-            chkRefr = new CheckBox();
+            chkRefr = new Spunta();
             chkRefr.Text = Lang.T("rifrazione");
             chkRefr.AutoSize = true;
             chkRefr.ForeColor = Tema.Muted;
             tip.SetToolTip(chkRefr, Lang.T("Correggi la rifrazione atmosferica") + "\u0001" + Lang.T("Senza spunta: elevazione geometrica topocentrica, come nei programmi EME più diffusi."));
-            chkOnly = new CheckBox();
+            chkOnly = new Spunta();
             chkOnly.Text = Lang.T("solo righe puntabili da entrambe");
             chkOnly.AutoSize = true;
             chkOnly.ForeColor = Tema.Muted;
@@ -36543,6 +36678,106 @@ namespace LunaCalc
     }
 
     enum StilePillola { Pieno, Bordo, Casella }
+
+    // Casella di spunta con lo stesso aspetto della Pillola "Casella" (bordo arrotondato, quadratino colorato
+    // con la spunta bianca, testo in grassetto). Il colore è quello della linguetta in cui si trova (ColoriLinguette),
+    // oppure quello scelto con Colore.
+    class Spunta : CheckBox
+    {
+        public Color Colore = Color.Empty;
+        public static readonly Dictionary<Control, Color> ColoriLinguette = new Dictionary<Control, Color>();
+        public static Color Predefinito = Color.FromArgb(31, 111, 209);
+        bool sopra;
+
+        public Spunta()
+        {
+            this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer
+                | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
+            this.Cursor = Cursors.Hand;
+            this.Font = new Font(this.Font, FontStyle.Bold);
+        }
+
+        Color ColoreUsato()
+        {
+            if (!Colore.IsEmpty) return Colore;
+            for (Control c = this.Parent; c != null; c = c.Parent)
+            {
+                Color k;
+                if (ColoriLinguette.TryGetValue(c, out k)) return k;
+            }
+            return Predefinito;
+        }
+
+        public override Size GetPreferredSize(Size proposed)
+        {
+            int h = this.Font.Height;
+            Size t = TextRenderer.MeasureText(this.Text ?? "", this.Font, Size.Empty, TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
+            return new Size(t.Width + (int)(h * 2.95f), (int)(h * 1.75f));
+        }
+
+        protected override void OnFontChanged(EventArgs e)
+        {
+            if (!this.Font.Bold) { this.Font = new Font(this.Font, FontStyle.Bold); return; }
+            base.OnFontChanged(e);
+        }
+        protected override void OnMouseEnter(EventArgs e) { sopra = true; Invalidate(); base.OnMouseEnter(e); }
+        protected override void OnMouseLeave(EventArgs e) { sopra = false; Invalidate(); base.OnMouseLeave(e); }
+        protected override void OnCheckedChanged(EventArgs e) { Invalidate(); base.OnCheckedChanged(e); }
+        protected override void OnEnabledChanged(EventArgs e) { Invalidate(); base.OnEnabledChanged(e); }
+
+        static Color Mescola(Color a, Color b, float k)
+        {
+            return Color.FromArgb((int)(a.R + (b.R - a.R) * k), (int)(a.G + (b.G - a.G) * k), (int)(a.B + (b.B - a.B) * k));
+        }
+        static Rectangle Rect(RectangleF r) { return new Rectangle((int)Math.Round(r.X), (int)Math.Round(r.Y), (int)Math.Round(r.Width), (int)Math.Round(r.Height)); }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            int h = this.Font.Height;
+            float bw = Math.Max(1.2f, h / 9f);
+            RectangleF r = new RectangleF(bw / 2 + 0.5f, bw / 2 + 0.5f, this.Width - bw - 1.5f, this.Height - bw - 1.5f);
+            float rag = Math.Min(r.Height / 2f, h * 0.42f);
+            Color col = ColoreUsato();
+            Color carta = Tema.Scuro ? Tema.Field : Color.White;
+            Color grigio = Tema.Scuro ? Color.FromArgb(120, 128, 140) : Color.FromArgb(150, 156, 166);
+            bool acceso = this.Enabled && this.Checked;
+            Color c = acceso ? col : grigio;
+            using (GraphicsPath p = MainForm.Arrotondato(r, rag))
+            {
+                Color fondo = acceso ? Mescola(carta, col, Tema.Scuro ? 0.15f : 0.06f) : (sopra && this.Enabled ? Mescola(carta, col, 0.05f) : carta);
+                using (Brush b = new SolidBrush(fondo)) g.FillPath(b, p);
+                using (Pen pn = new Pen(c, bw * (acceso ? 1.6f : 1.2f))) g.DrawPath(pn, p);
+            }
+            float q = h * 0.9f;
+            RectangleF box = new RectangleF(r.X + h * 0.42f, r.Y + (r.Height - q) / 2, q, q);
+            using (GraphicsPath pb = MainForm.Arrotondato(box, q * 0.2f))
+            {
+                if (acceso)
+                {
+                    using (Brush bb = new SolidBrush(col)) g.FillPath(bb, pb);
+                    using (Pen pv = new Pen(Color.White, Math.Max(1.5f, q / 7f)))
+                    {
+                        pv.StartCap = LineCap.Round; pv.EndCap = LineCap.Round; pv.LineJoin = LineJoin.Round;
+                        g.DrawLines(pv, new PointF[] { new PointF(box.X + q * 0.24f, box.Y + q * 0.52f), new PointF(box.X + q * 0.43f, box.Y + q * 0.70f), new PointF(box.X + q * 0.77f, box.Y + q * 0.32f) });
+                    }
+                }
+                else
+                {
+                    using (Brush bb = new SolidBrush(carta)) g.FillPath(bb, pb);
+                    using (Pen pg = new Pen(grigio, bw)) g.DrawPath(pg, pb);
+                }
+            }
+            float xt = box.Right + h * 0.45f;
+            Color ct = !this.Enabled ? grigio : (acceso ? (Tema.Scuro ? Mescola(col, Color.White, 0.5f) : col) : (Tema.Scuro ? Tema.Fore : Color.FromArgb(55, 65, 81)));
+            TextFormatFlags tfs = TextFormatFlags.VerticalCenter | TextFormatFlags.Left | TextFormatFlags.SingleLine | TextFormatFlags.NoPadding | TextFormatFlags.EndEllipsis;
+            TextRenderer.DrawText(g, this.Text, this.Font, Rect(new RectangleF(xt, r.Y, Math.Max(1, r.Right - xt - h * 0.3f), r.Height)), ct, tfs);
+            if (this.Focused && this.ShowFocusCues)
+                using (Pen pf = new Pen(Color.FromArgb(120, col), 1f)) { pf.DashStyle = DashStyle.Dot; g.DrawRectangle(pf, Rect(new RectangleF(xt - 2, r.Y + 3, Math.Max(1, r.Right - xt - h * 0.2f), r.Height - 6))); }
+        }
+    }
 
     class Pillola : Control, IButtonControl
     {
