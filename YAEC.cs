@@ -2687,7 +2687,7 @@ namespace LunaCalc
             "La schermata principale, aggiornata ogni secondo. In alto le impostazioni generali (nominativo, lingua, colori, caratteri e tipo di carattere), il pulsante SCELTA BANDE e la casella dei dati complessi; sotto, i locator tuo e del DX (da 4 a 14 caratteri, con la precisione della posizione), la frequenza e gli orologi UTC, locale e del DX. La fascia di stato (verde = puntabile, arancione = fuori dai limiti, grigio = sotto l'orizzonte, blu = finestra comune) ha il conto alla rovescia; seguono la bussola e l'arco dell'elevazione con i limiti dell'antenna in giallo e quattro riquadri: Luna (fase, sorgere e tramonto), Eco e frequenze (Doppler, ritardo dell'eco e frequenze CFOM), Cielo e geometria (Tsky, distanza, declinazione, angolo orario, Dgrd e il pulsante VAI A VOLTA CELESTE) e S/N stimato (in 2500 Hz con la soglia tipica del modo come riferimento, dati del DX, la casella CALCOLI APPROFONDITI e il pulsante VAI AI CALCOLI). In basso le prossime 24 ore.",
             "Ricognizione dei miei ostacoli",
             "In alto a destra due cursori regolano l'opacità e il tono del grigio delle zone fuori dai limiti (il tono vale anche per la Volta celeste).",
-            "Bilancio del collegamento per ogni banda scelta (da 50 a 432 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP, perdita di tratta, segnale all'antenna, S/N e S/N in 2500 Hz con la soglia tipica del modo) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.",
+            "Bilancio del collegamento per ogni banda scelta (da 50 a 432 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP mia e del DX, perdita di tratta, S/N io → DX e DX → io nella banda passante scelta e con il Sole, riportato anche a 2500 Hz) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.",
             "In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.",
             "Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.",
             "È impaginato come un documento di Word, con le formule in stile Equation Editor: si può copiare negli appunti o salvare in Word (.docx).",
@@ -2947,6 +2947,12 @@ namespace LunaCalc
             "Il testo della licenza con cui il programma è distribuito.",
             "S = flusso solare in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = costante di Boltzmann (1,380649·10⁻²³ J/K); G = guadagno lineare dell'antenna; λ = lunghezza d'onda; θ = distanza angolare tra Sole e Luna; a = guadagno del diagramma verso il Sole, mai sotto il livello dei lobi laterali impostato (10 dB più basso nei lobi posteriori); ΔN = aumento del rumore dovuto al Sole.",
             "1.1 - Posizione live e +- 24h (ex Tracciamento) anche nel passato e nel futuro: giorno dal calendario e ora trascinando la linea rossa, frequenza nel riquadro Eco e frequenze; casella del nominativo del DX con il CALL3.TXT scaricato da W7GJ e da WSJT-X Improved e fuso, locator proposto e copia nella cartella di WSJT-X; Distanza e Dgrd senza classifica, con la declinazione sovrapposta, righe colorate come il grafico e ore utili in verde a scelta; caselle di spunta nello stile del programma; cavi ordinati per diametro nelle tendine e per nome, costruttore e tipo nella tabella, con fonti tradotte; Budget EME con i soli modi a 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) e schema dell'impianto che si adatta ai testi; MANUALE D'USO con la rassegna di tutte le schermate; TEORIA E CONSIGLI SULL'EME con la prefazione dell'autore, numerazione da 1 e formule del rumore solare; HTTPS su Linux e macOS con i certificati del sistema.",
+            "EIRP mia",
+            "EIRP del DX",
+            "S/N io → DX",
+            "S/N DX → io",
+            "in {0:0} Hz · {1} dB in 2500 Hz",
+            "in {0:0} Hz con il Sole · {1} dB in 2500 Hz",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -3979,7 +3985,7 @@ namespace LunaCalc
             "The main screen, updated every second. At the top the general settings (callsign, language, colours, font sizes and font), the BAND SELECTION button and the complex-data box; below, your and the DX locators (4 to 14 characters, with the accuracy of the position), the frequency and the UTC, local and DX clocks. The status band (green = pointable, orange = outside the limits, grey = below the horizon, blue = common window) has the countdown; then the compass and the elevation arc with the antenna limits in yellow and four cards: Moon (phase, rise and set), Echo and frequencies (Doppler, echo delay and CFOM frequencies), Sky and geometry (Tsky, distance, declination, hour angle, Dgrd and the GO TO SKY VIEW button) and estimated S/N (in 2500 Hz with the typical threshold of the mode as a reference, DX data, the IN-DEPTH CALCULATIONS box and the GO TO CALCULATIONS button). At the bottom the next 24 hours.",
             "Reconnaissance of my obstacles",
             "At the top right two sliders set the opacity and the tone of the grey over the zones outside the limits (the tone also applies to the Sky view).",
-            "Link budget for each chosen band (50 to 432 MHz), with the data of each band stored separately. On the left the two stations (antenna and gain, BETA for antennas without elevation), six indicators (QSO possible, EIRP, path loss, signal at the antenna, S/N and S/N in 2500 Hz with the typical threshold of the mode) and the table with all the steps; on the right the diagram of the transmit and receive system of the chosen station: antenna and Tant, antenna – relay cable, coaxial relay, transmitter with its cable, preamplifier, downlead cable, optional transverter, cables and radio with MDS and mode. The cables are chosen from the database of the COAXIAL CABLES tab and the losses are calculated automatically. At the top right the IN-DEPTH CALCULATIONS box, the same as on the main screen.",
+            "Link budget for each chosen band (50 to 432 MHz), with the data of each band stored separately. On the left the two stations (antenna and gain, BETA for antennas without elevation), six indicators (QSO possible, my EIRP and the DX's, path loss, S/N me → DX and DX → me in the chosen bandwidth and with the Sun, also referred to 2500 Hz) and the table with all the steps; on the right the diagram of the transmit and receive system of the chosen station: antenna and Tant, antenna – relay cable, coaxial relay, transmitter with its cable, preamplifier, downlead cable, optional transverter, cables and radio with MDS and mode. The cables are chosen from the database of the COAXIAL CABLES tab and the losses are calculated automatically. At the top right the IN-DEPTH CALCULATIONS box, the same as on the main screen.",
             "At the top four indicators, on the left the data source (NOAA RSTN recommended, or F10.7 from NOAA or Penticton, or a custom address) with the stations, on the right the solar flux spectrum with the extrapolation to the working frequency.",
             "This manual, inside the program and in all languages: clickable index, search, formulas and sources.",
             "It is laid out like a Word document, with the formulas in Equation Editor style: it can be copied to the clipboard or saved as Word (.docx).",
@@ -4239,6 +4245,12 @@ namespace LunaCalc
             "The text of the license under which the program is distributed.",
             "S = solar flux in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann constant (1.380649·10⁻²³ J/K); G = linear antenna gain; λ = wavelength; θ = angular distance between Sun and Moon; a = pattern gain towards the Sun, never below the set side-lobe level (10 dB lower in the back lobes); ΔN = noise increase due to the Sun.",
             "1.1 - Live position and +- 24h (formerly Tracking) also in the past and in the future: day from the calendar and time by dragging the red line, frequency in the Echo and frequencies box; DX callsign box with CALL3.TXT downloaded from W7GJ and WSJT-X Improved and merged, suggested locator and copy into the WSJT-X folder; Distance and Dgrd without the ranking, with the declination overlaid, rows colored like the chart and optional green usable hours; tickboxes in the program's style; cables sorted by diameter in the drop-down lists and by name, manufacturer and type in the table, with translated sources; EME budget with only the 60 s modes (JT65, Q65-60A, Q65-60B, Q65-60C) and a station diagram that adapts to the texts; USER MANUAL reviewing every screen; THEORY AND TIPS ON EME with the author's preface, numbering from 1 and the solar noise formulas; HTTPS on Linux and macOS with the system certificates.",
+            "My EIRP",
+            "DX EIRP",
+            "S/N me → DX",
+            "S/N DX → me",
+            "in {0:0} Hz · {1} dB in 2500 Hz",
+            "in {0:0} Hz with the Sun · {1} dB in 2500 Hz",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5271,7 +5283,7 @@ namespace LunaCalc
             "Der Hauptbildschirm, jede Sekunde aktualisiert. Oben die allgemeinen Einstellungen (Rufzeichen, Sprache, Farben, Schriftgrößen und Schriftart), die Schaltfläche BANDAUSWAHL und das Kästchen für komplexe Daten; darunter dein Locator und der des DX (4 bis 14 Zeichen, mit der Genauigkeit der Position), die Frequenz und die Uhren UTC, Ortszeit und DX. Der Statusbalken (grün = ausrichtbar, orange = außerhalb der Grenzen, grau = unter dem Horizont, blau = gemeinsames Fenster) hat den Countdown; dann Kompass und Elevationsbogen mit den Antennengrenzen in Gelb und vier Karten: Mond (Phase, Auf- und Untergang), Echo und Frequenzen (Doppler, Echolaufzeit und CFOM-Frequenzen), Himmel und Geometrie (Tsky, Entfernung, Deklination, Stundenwinkel, Dgrd und die Schaltfläche ZUR HIMMELSANSICHT) und geschätztes S/N (in 2500 Hz mit der typischen Schwelle der Betriebsart als Anhaltspunkt, DX-Daten, das Kästchen VERTIEFTE BERECHNUNGEN und die Schaltfläche ZU DEN BERECHNUNGEN). Unten die nächsten 24 Stunden.",
             "Erkundung meiner Hindernisse",
             "Oben rechts stellen zwei Schieberegler die Deckkraft und den Ton des Graus der Zonen außerhalb der Grenzen ein (der Ton gilt auch für die Himmelsansicht).",
-            "Verbindungsbudget für jedes gewählte Band (50 bis 432 MHz), mit getrennt gespeicherten Daten für jedes Band. Links die beiden Stationen (Antenne und Gewinn, BETA für Antennen ohne Elevation), sechs Indikatoren (Verbindung möglich, EIRP, Streckendämpfung, Signal an der Antenne, S/N und S/N in 2500 Hz mit der typischen Schwelle der Betriebsart) und die Tabelle mit allen Schritten; rechts das Schema der Sende- und Empfangsanlage der gewählten Station: Antenne und Tant, Kabel Antenne – Relais, Koaxialrelais, Sender mit seinem Kabel, Vorverstärker, Zuleitungskabel, optionaler Transverter, Kabel und Funkgerät mit MDS und Betriebsart. Die Kabel werden aus der Datenbank des Reiters KOAXIALKABEL gewählt und die Verluste automatisch berechnet. Oben rechts das Kästchen VERTIEFTE BERECHNUNGEN, dasselbe wie auf dem Hauptbildschirm.",
+            "Verbindungsbudget für jedes gewählte Band (50 bis 432 MHz), mit getrennt gespeicherten Daten für jedes Band. Links die beiden Stationen (Antenne und Gewinn, BETA für Antennen ohne Elevation), sechs Indikatoren (Verbindung möglich, meine EIRP und die des DX, Streckendämpfung, S/N ich → DX und DX → ich in der gewählten Bandbreite und mit der Sonne, auch auf 2500 Hz bezogen) und die Tabelle mit allen Schritten; rechts das Schema der Sende- und Empfangsanlage der gewählten Station: Antenne und Tant, Kabel Antenne – Relais, Koaxialrelais, Sender mit seinem Kabel, Vorverstärker, Zuleitungskabel, optionaler Transverter, Kabel und Funkgerät mit MDS und Betriebsart. Die Kabel werden aus der Datenbank des Reiters KOAXIALKABEL gewählt und die Verluste automatisch berechnet. Oben rechts das Kästchen VERTIEFTE BERECHNUNGEN, dasselbe wie auf dem Hauptbildschirm.",
             "Oben vier Indikatoren, links die Datenquelle (NOAA RSTN empfohlen, oder F10.7 von NOAA oder Penticton, oder eine eigene Adresse) mit den Stationen, rechts das Spektrum des Sonnenflusses mit der Extrapolation zur Arbeitsfrequenz.",
             "Dieses Handbuch, im Programm und in allen Sprachen: anklickbares Inhaltsverzeichnis, Suche, Formeln und Quellen.",
             "Es ist wie ein Word-Dokument gestaltet, mit Formeln im Stil des Formel-Editors: es kann in die Zwischenablage kopiert oder als Word (.docx) gespeichert werden.",
@@ -5531,6 +5543,12 @@ namespace LunaCalc
             "Der Text der Lizenz, unter der das Programm verbreitet wird.",
             "S = Sonnenfluss in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann-Konstante (1,380649·10⁻²³ J/K); G = linearer Antennengewinn; λ = Wellenlänge; θ = Winkelabstand zwischen Sonne und Mond; a = Gewinn des Diagramms in Richtung Sonne, nie unter dem eingestellten Nebenkeulenpegel (in den rückwärtigen Keulen 10 dB tiefer); ΔN = Rauschzunahme durch die Sonne.",
             "1.1 - Position live und +- 24h (früher Verfolgung) auch in Vergangenheit und Zukunft: Tag aus dem Kalender und Uhrzeit durch Ziehen der roten Linie, Frequenz im Feld Echo und Frequenzen; Rufzeichenfeld des DX mit der CALL3.TXT von W7GJ und WSJT-X Improved, zusammengeführt, mit vorgeschlagenem Locator und Kopie in den WSJT-X-Ordner; Entfernung und Dgrd ohne Rangliste, mit überlagerter Deklination, Zeilen in den Farben des Diagramms und wahlweise grünen nutzbaren Stunden; Kontrollkästchen im Stil des Programms; Kabel in den Auswahllisten nach Durchmesser und in der Tabelle nach Name, Hersteller und Typ sortiert, mit übersetzten Quellen; EME-Budget nur mit den 60-s-Modi (JT65, Q65-60A, Q65-60B, Q65-60C) und einem Anlagenschema, das sich den Texten anpasst; BENUTZERHANDBUCH mit allen Bildschirmen; THEORIE UND TIPPS ZU EME mit dem Vorwort des Autors, Nummerierung ab 1 und den Formeln des Sonnenrauschens; HTTPS unter Linux und macOS mit den Zertifikaten des Systems.",
+            "Meine EIRP",
+            "EIRP des DX",
+            "S/N ich → DX",
+            "S/N DX → ich",
+            "in {0:0} Hz · {1} dB in 2500 Hz",
+            "in {0:0} Hz mit der Sonne · {1} dB in 2500 Hz",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6563,7 +6581,7 @@ namespace LunaCalc
             "L'écran principal, mis à jour chaque seconde. En haut les réglages généraux (indicatif, langue, couleurs, tailles et police des caractères), le bouton CHOIX DES BANDES et la case des données complexes ; en dessous ton locator et celui du DX (de 4 à 14 caractères, avec la précision de la position), la fréquence et les horloges UTC, locale et DX. La barre d'état (vert = pointable, orange = hors limites, gris = sous l'horizon, bleu = fenêtre commune) donne le compte à rebours ; puis la boussole et l'arc d'élévation avec les limites de l'antenne en jaune, et quatre cartes : Lune (phase, lever et coucher), Écho et fréquences (Doppler, retard de l'écho et fréquences CFOM), Ciel et géométrie (Tsky, distance, déclinaison, angle horaire, Dgrd et le bouton ALLER À LA VOÛTE CÉLESTE) et S/N estimé (en 2500 Hz avec le seuil typique du mode comme référence, données du DX, la case CALCULS APPROFONDIS et le bouton ALLER AUX CALCULS). En bas les prochaines 24 heures.",
             "Reconnaissance de mes obstacles",
             "En haut à droite deux curseurs règlent l'opacité et le ton du gris des zones hors limites (le ton vaut aussi pour la Voûte céleste).",
-            "Bilan de liaison pour chaque bande choisie (de 50 à 432 MHz), avec des données enregistrées séparément pour chaque bande. À gauche les deux stations (antenne et gain, BETA pour les antennes sans élévation), six indicateurs (liaison possible, PIRE, perte du trajet, signal à l'antenne, S/N et S/N en 2500 Hz avec le seuil typique du mode) et le tableau avec toutes les étapes ; à droite le schéma de l'installation d'émission et de réception de la station choisie : antenne et Tant, câble antenne – relais, relais coaxial, émetteur avec son câble, préampli, câble de descente, transverter optionnel, câbles et radio avec MDS et mode. Les câbles se choisissent dans la base de données de l'onglet CÂBLES COAXIAUX et les pertes sont calculées automatiquement. En haut à droite la case CALCULS APPROFONDIS, la même que sur l'écran principal.",
+            "Bilan de liaison pour chaque bande choisie (de 50 à 432 MHz), avec des données enregistrées séparément pour chaque bande. À gauche les deux stations (antenne et gain, BETA pour les antennes sans élévation), six indicateurs (liaison possible, ma PIRE et celle du DX, perte du trajet, S/N moi → DX et DX → moi dans la bande passante choisie et avec le Soleil, ramené aussi à 2500 Hz) et le tableau avec toutes les étapes ; à droite le schéma de l'installation d'émission et de réception de la station choisie : antenne et Tant, câble antenne – relais, relais coaxial, émetteur avec son câble, préampli, câble de descente, transverter optionnel, câbles et radio avec MDS et mode. Les câbles se choisissent dans la base de données de l'onglet CÂBLES COAXIAUX et les pertes sont calculées automatiquement. En haut à droite la case CALCULS APPROFONDIS, la même que sur l'écran principal.",
             "En haut quatre indicateurs, à gauche la source des données (NOAA RSTN recommandée, ou F10.7 de NOAA ou de Penticton, ou une adresse personnalisée) avec les stations, à droite le spectre du flux solaire avec l'extrapolation jusqu'à la fréquence de travail.",
             "Ce manuel, dans le programme et dans toutes les langues : sommaire cliquable, recherche, formules et sources.",
             "Il est mis en page comme un document Word, avec les formules dans le style de l'éditeur d'équations : il peut être copié dans le presse-papiers ou enregistré en Word (.docx).",
@@ -6823,6 +6841,12 @@ namespace LunaCalc
             "Le texte de la licence sous laquelle le programme est distribué.",
             "S = flux solaire en SFU (10⁻²² W·m⁻²·Hz⁻¹) ; k = constante de Boltzmann (1,380649·10⁻²³ J/K) ; G = gain linéaire de l'antenne ; λ = longueur d'onde ; θ = distance angulaire entre le Soleil et la Lune ; a = gain du diagramme vers le Soleil, jamais sous le niveau des lobes secondaires choisi (10 dB plus bas dans les lobes arrière) ; ΔN = augmentation du bruit due au Soleil.",
             "1.1 - Position en direct et +- 24h (ex Suivi) aussi dans le passé et le futur : jour choisi dans le calendrier et heure en faisant glisser la ligne rouge, fréquence dans le cadre Écho et fréquences ; case de l'indicatif du DX avec CALL3.TXT téléchargé depuis W7GJ et WSJT-X Improved et fusionné, locator proposé et copie dans le dossier de WSJT-X ; Distance et Dgrd sans classement, avec la déclinaison superposée, des lignes colorées comme le graphique et des heures utiles en vert au choix ; cases à cocher dans le style du programme ; câbles triés par diamètre dans les listes et par nom, fabricant et type dans le tableau, avec sources traduites ; Bilan EME avec les seuls modes à 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) et schéma de l'installation qui s'adapte aux textes ; MANUEL D'UTILISATION passant en revue tous les écrans ; THÉORIE ET CONSEILS SUR L'EME avec la préface de l'auteur, une numérotation à partir de 1 et les formules du bruit solaire ; HTTPS sous Linux et macOS avec les certificats du système.",
+            "Ma PIRE",
+            "PIRE du DX",
+            "S/N moi → DX",
+            "S/N DX → moi",
+            "en {0:0} Hz · {1} dB en 2500 Hz",
+            "en {0:0} Hz avec le Soleil · {1} dB en 2500 Hz",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7855,7 +7879,7 @@ namespace LunaCalc
             "La pantalla principal, actualizada cada segundo. Arriba los ajustes generales (indicativo, idioma, colores, tamaños y tipo de letra), el botón ELECCIÓN DE BANDAS y la casilla de los datos complejos; debajo tu locator y el del DX (de 4 a 14 caracteres, con la precisión de la posición), la frecuencia y los relojes UTC, local y DX. La barra de estado (verde = apuntable, naranja = fuera de límites, gris = bajo el horizonte, azul = ventana común) tiene la cuenta atrás; luego la brújula y el arco de elevación con los límites de la antena en amarillo, y cuatro tarjetas: Luna (fase, salida y puesta), Eco y frecuencias (Doppler, retardo del eco y frecuencias CFOM), Cielo y geometría (Tsky, distancia, declinación, ángulo horario, Dgrd y el botón IR A LA BÓVEDA CELESTE) y S/N estimado (en 2500 Hz con el umbral típico del modo como referencia, datos del DX, la casilla CÁLCULOS DETALLADOS y el botón IR A LOS CÁLCULOS). Abajo las próximas 24 horas.",
             "Reconocimiento de mis obstáculos",
             "Arriba a la derecha dos deslizadores regulan la opacidad y el tono del gris de las zonas fuera de los límites (el tono vale también para la Bóveda celeste).",
-            "Balance del enlace para cada banda elegida (de 50 a 432 MHz), con datos guardados por separado para cada banda. A la izquierda las dos estaciones (antena y ganancia, BETA para antenas sin elevación), seis indicadores (enlace posible, PIRE, pérdida del trayecto, señal en la antena, S/N y S/N en 2500 Hz con el umbral típico del modo) y la tabla con todos los pasos; a la derecha el esquema de la instalación de transmisión y recepción de la estación elegida: antena y Tant, cable antena – relé, relé coaxial, transmisor con su cable, previo, cable de bajada, transverter opcional, latiguillos y radio con MDS y modo. Los cables se eligen de la base de datos de la pestaña CABLES COAXIALES y las pérdidas se calculan solas. Arriba a la derecha la casilla CÁLCULOS DETALLADOS, la misma de la pantalla principal.",
+            "Balance del enlace para cada banda elegida (de 50 a 432 MHz), con datos guardados por separado para cada banda. A la izquierda las dos estaciones (antena y ganancia, BETA para antenas sin elevación), seis indicadores (enlace posible, mi PIRE y la del DX, pérdida del trayecto, S/N yo → DX y DX → yo en el ancho de banda elegido y con el Sol, referido también a 2500 Hz) y la tabla con todos los pasos; a la derecha el esquema de la instalación de transmisión y recepción de la estación elegida: antena y Tant, cable antena – relé, relé coaxial, transmisor con su cable, previo, cable de bajada, transverter opcional, latiguillos y radio con MDS y modo. Los cables se eligen de la base de datos de la pestaña CABLES COAXIALES y las pérdidas se calculan solas. Arriba a la derecha la casilla CÁLCULOS DETALLADOS, la misma de la pantalla principal.",
             "Arriba cuatro indicadores, a la izquierda la fuente de los datos (NOAA RSTN recomendada, o F10.7 de NOAA o de Penticton, o una dirección personalizada) con las estaciones, a la derecha el espectro del flujo solar con la extrapolación hasta la frecuencia de trabajo.",
             "Este manual, dentro del programa y en todos los idiomas: índice con clic, búsqueda, fórmulas y fuentes.",
             "Está maquetado como un documento Word, con las fórmulas al estilo del editor de ecuaciones: se puede copiar al portapapeles o guardar en Word (.docx).",
@@ -8115,6 +8139,12 @@ namespace LunaCalc
             "El texto de la licencia con la que se distribuye el programa.",
             "S = flujo solar en SFU (10⁻²² W·m⁻²·Hz⁻¹); k = constante de Boltzmann (1,380649·10⁻²³ J/K); G = ganancia lineal de la antena; λ = longitud de onda; θ = distancia angular entre el Sol y la Luna; a = ganancia del diagrama hacia el Sol, nunca por debajo del nivel de lóbulos laterales fijado (10 dB más bajo en los lóbulos traseros); ΔN = aumento del ruido debido al Sol.",
             "1.1 - Posición en vivo y +- 24h (antes Seguimiento) también en el pasado y en el futuro: día desde el calendario y hora arrastrando la línea roja, frecuencia en el recuadro Eco y frecuencias; casilla del indicativo del DX con CALL3.TXT descargado de W7GJ y de WSJT-X Improved y fusionado, locator propuesto y copia en la carpeta de WSJT-X; Distancia y Dgrd sin clasificación, con la declinación superpuesta, filas coloreadas como el gráfico y horas útiles en verde a elección; casillas de verificación con el estilo del programa; cables ordenados por diámetro en las listas y por nombre, fabricante y tipo en la tabla, con fuentes traducidas; Balance EME solo con los modos de 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) y esquema de la instalación que se adapta a los textos; MANUAL DE USO con el repaso de todas las pantallas; TEORÍA Y CONSEJOS SOBRE EME con el prefacio del autor, numeración desde 1 y fórmulas del ruido solar; HTTPS en Linux y macOS con los certificados del sistema.",
+            "Mi PIRE",
+            "PIRE del DX",
+            "S/N yo → DX",
+            "S/N DX → yo",
+            "en {0:0} Hz · {1} dB en 2500 Hz",
+            "en {0:0} Hz con el Sol · {1} dB en 2500 Hz",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9147,7 +9177,7 @@ namespace LunaCalc
             "O ecrã principal, atualizado a cada segundo. Em cima as definições gerais (indicativo, língua, cores, tamanhos e tipo de letra), o botão ESCOLHA DE BANDAS e a caixa dos dados complexos; por baixo o teu locator e o do DX (de 4 a 14 caracteres, com a precisão da posição), a frequência e os relógios UTC, local e DX. A barra de estado (verde = apontável, laranja = fora dos limites, cinzento = abaixo do horizonte, azul = janela comum) tem a contagem decrescente; depois a bússola e o arco de elevação com os limites da antena a amarelo, e quatro cartões: Lua (fase, nascer e ocaso), Eco e frequências (Doppler, atraso do eco e frequências CFOM), Céu e geometria (Tsky, distância, declinação, ângulo horário, Dgrd e o botão IR PARA A ABÓBADA CELESTE) e S/N estimado (em 2500 Hz com o limiar típico do modo como referência, dados do DX, a caixa CÁLCULOS APROFUNDADOS e o botão IR PARA OS CÁLCULOS). Em baixo as próximas 24 horas.",
             "Reconhecimento dos meus obstáculos",
             "No canto superior direito dois cursores regulam a opacidade e o tom do cinzento das zonas fora dos limites (o tom vale também para a Abóbada celeste).",
-            "Balanço da ligação para cada banda escolhida (de 50 a 432 MHz), com dados guardados separadamente para cada banda. À esquerda as duas estações (antena e ganho, BETA para antenas sem elevação), seis indicadores (ligação possível, PIRE, perda do percurso, sinal na antena, S/N e S/N em 2500 Hz com o limiar típico do modo) e a tabela com todos os passos; à direita o esquema da instalação de emissão e receção da estação escolhida: antena e Tant, cabo antena – relé, relé coaxial, emissor com o seu cabo, pré-amplificador, cabo de descida, transverter opcional, cabos e rádio com MDS e modo. Os cabos escolhem-se da base de dados do separador CABOS COAXIAIS e as perdas são calculadas automaticamente. No canto superior direito a caixa CÁLCULOS APROFUNDADOS, a mesma do ecrã principal.",
+            "Balanço da ligação para cada banda escolhida (de 50 a 432 MHz), com dados guardados separadamente para cada banda. À esquerda as duas estações (antena e ganho, BETA para antenas sem elevação), seis indicadores (ligação possível, a minha PIRE e a do DX, perda do percurso, S/N eu → DX e DX → eu na largura de banda escolhida e com o Sol, referido também a 2500 Hz) e a tabela com todos os passos; à direita o esquema da instalação de emissão e receção da estação escolhida: antena e Tant, cabo antena – relé, relé coaxial, emissor com o seu cabo, pré-amplificador, cabo de descida, transverter opcional, cabos e rádio com MDS e modo. Os cabos escolhem-se da base de dados do separador CABOS COAXIAIS e as perdas são calculadas automaticamente. No canto superior direito a caixa CÁLCULOS APROFUNDADOS, a mesma do ecrã principal.",
             "Em cima quatro indicadores, à esquerda a fonte dos dados (NOAA RSTN recomendada, ou F10.7 da NOAA ou de Penticton, ou um endereço personalizado) com as estações, à direita o espectro do fluxo solar com a extrapolação até à frequência de trabalho.",
             "Este manual, dentro do programa e em todas as línguas: índice clicável, pesquisa, fórmulas e fontes.",
             "Está paginado como um documento Word, com as fórmulas no estilo do editor de equações: pode ser copiado para a área de transferência ou guardado em Word (.docx).",
@@ -9407,6 +9437,12 @@ namespace LunaCalc
             "O texto da licença com que o programa é distribuído.",
             "S = fluxo solar em SFU (10⁻²² W·m⁻²·Hz⁻¹); k = constante de Boltzmann (1,380649·10⁻²³ J/K); G = ganho linear da antena; λ = comprimento de onda; θ = distância angular entre o Sol e a Lua; a = ganho do diagrama na direção do Sol, nunca abaixo do nível de lóbulos laterais definido (10 dB mais baixo nos lóbulos traseiros); ΔN = aumento do ruído devido ao Sol.",
             "1.1 - Posição em direto e +- 24h (antes Seguimento) também no passado e no futuro: dia no calendário e hora arrastando a linha vermelha, frequência no quadro Eco e frequências; caixa do indicativo do DX com o CALL3.TXT descarregado de W7GJ e do WSJT-X Improved e fundido, locator proposto e cópia para a pasta do WSJT-X; Distância e Dgrd sem classificação, com a declinação sobreposta, linhas coloridas como o gráfico e horas úteis a verde à escolha; caixas de verificação no estilo do programa; cabos ordenados por diâmetro nas listas e por nome, fabricante e tipo na tabela, com fontes traduzidas; Balanço EME só com os modos de 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) e esquema da instalação que se adapta aos textos; MANUAL DE UTILIZAÇÃO com a revisão de todos os ecrãs; TEORIA E CONSELHOS SOBRE EME com o prefácio do autor, numeração a partir de 1 e fórmulas do ruído solar; HTTPS em Linux e macOS com os certificados do sistema.",
+            "A minha PIRE",
+            "PIRE do DX",
+            "S/N eu → DX",
+            "S/N DX → eu",
+            "em {0:0} Hz · {1} dB em 2500 Hz",
+            "em {0:0} Hz com o Sol · {1} dB em 2500 Hz",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10439,7 +10475,7 @@ namespace LunaCalc
             "主界面，每秒更新。上方为常规设置 (呼号、语言、颜色、字号和字体)、“波段选择”按钮和复杂数据复选框；下方为你和 DX 的定位符 (4 至 14 个字符，显示位置精度)、频率以及 UTC、本地和 DX 时钟。状态栏 (绿 = 可对准，橙 = 超出限制，灰 = 地平线以下，蓝 = 共同窗口) 显示倒计时；然后是罗盘和仰角弧 (天线限制为黄色) 以及四张卡片：月球 (月相、升落)、回波与频率 (多普勒、回波延迟和 CFOM 频率)、天空与几何 (Tsky、距离、赤纬、时角、Dgrd 和“前往天穹”按钮) 以及估计 S/N (2500 Hz 内，以模式的典型门限作参考、DX 数据、“深入计算”复选框和“前往计算”按钮)。底部为未来 24 小时。",
             "我的障碍物勘察",
             "右上角两个滑块调节超出限制区域灰色的不透明度和色调 (色调也适用于天穹)。",
-            "每个所选波段 (50 至 432 MHz) 的链路预算，各波段数据分别保存。左侧为两个电台 (天线与增益，无仰角天线用 BETA)、六个指示 (可以通联、EIRP、路径损耗、天线处信号、S/N 和附带模式典型门限的 2500 Hz 内 S/N) 以及包含所有步骤的表格；右侧为所选电台的收发设备框图：天线与 Tant、天线 – 继电器电缆、同轴继电器、发射机及其电缆、前置放大器、馈线、可选变频器、跳线以及带 MDS 和模式的电台。电缆从同轴电缆页的数据库中选择，损耗自动计算。右上角是“深入计算”复选框，与主界面上的相同。",
+            "每个所选波段 (50 至 432 MHz) 的链路预算，各波段数据分别保存。左侧为两个电台 (天线与增益，无仰角天线用 BETA)、六个指示 (可以通联、我的 EIRP 和 DX 的 EIRP、路径损耗、所选带宽内含太阳影响的 S/N（我 → DX 和 DX → 我），并换算到 2500 Hz) 以及包含所有步骤的表格；右侧为所选电台的收发设备框图：天线与 Tant、天线 – 继电器电缆、同轴继电器、发射机及其电缆、前置放大器、馈线、可选变频器、跳线以及带 MDS 和模式的电台。电缆从同轴电缆页的数据库中选择，损耗自动计算。右上角是“深入计算”复选框，与主界面上的相同。",
             "上方四个指示，左侧为数据来源 (推荐 NOAA RSTN，或 NOAA、彭蒂克顿的 F10.7，或自定义地址) 及台站，右侧为太阳流量频谱及外推到工作频率的曲线。",
             "本手册，内置于程序并提供所有语言：可点击目录、搜索、公式和来源。",
             "它像 Word 文档一样排版，公式采用公式编辑器风格：可复制到剪贴板或保存为 Word (.docx)。",
@@ -10699,6 +10735,12 @@ namespace LunaCalc
             "程序发布所依据的许可证全文。",
             "S = 太阳流量，单位 SFU（10⁻²² W·m⁻²·Hz⁻¹）；k = 玻尔兹曼常数（1.380649·10⁻²³ J/K）；G = 天线线性增益；λ = 波长；θ = 太阳与月球的角距；a = 方向图朝向太阳的增益，不低于所设旁瓣电平（后瓣再低 10 dB）；ΔN = 太阳引起的噪声增加。",
             "1.1 - 实时位置与 +- 24h（原“跟踪”）也可查看过去和未来：用日历选择日期，拖动红线选择时间，频率移到“回波与频率”框；DX 呼号框，CALL3.TXT 从 W7GJ 和 WSJT-X Improved 下载并合并，自动建议定位并可复制到 WSJT-X 文件夹；距离与 Dgrd 去掉排名，叠加赤纬曲线，表格行颜色与图表一致，可选绿色可用时段；复选框采用程序风格；下拉列表中电缆按直径排序，表格可按名称、制造商和类型排序，来源已翻译；EME 链路预算只保留 60 s 模式（JT65、Q65-60A、Q65-60B、Q65-60C），设备示意图随文字自动调整；使用手册逐一介绍所有界面；EME 理论与建议加入作者序言、编号从 1 开始并给出太阳噪声公式；Linux 和 macOS 上使用系统证书进行 HTTPS。",
+            "我的 EIRP",
+            "DX 的 EIRP",
+            "S/N 我 → DX",
+            "S/N DX → 我",
+            "{0:0} Hz 内 · 2500 Hz 内 {1} dB",
+            "{0:0} Hz 内（含太阳）· 2500 Hz 内 {1} dB",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11731,7 +11773,7 @@ namespace LunaCalc
             "メイン画面。毎秒更新されます。上部に一般設定 (コールサイン、言語、色、文字サイズとフォント)、バンド選択ボタン、高度なデータのチェックボックス。その下に自局と DX のロケーター (4 ～ 14 文字、位置の精度付き)、周波数、UTC・現地・DX の時計。状態バー (緑 = 向けられる、橙 = 制限外、灰 = 地平線下、青 = 共通ウィンドウ) にカウントダウン。続いてコンパスと仰角の弧 (アンテナの制限は黄色)、4 枚のカード：月 (月相、出没)、エコーと周波数 (ドップラー、エコー遅延、CFOM 周波数)、空と幾何 (Tsky、距離、赤緯、時角、Dgrd、「天球へ」ボタン)、推定 S/N (2500 Hz 換算、モードの典型的なしきい値を参考表示、DX データ、「詳細な計算」チェックボックス、「計算へ」ボタン)。下部は今後 24 時間。",
             "自局障害物の偵察",
             "右上の 2 つのスライダーで制限外領域のグレーの不透明度と濃さを調整します (濃さは天球にも適用)。",
-            "選択した各バンド (50 ～ 432 MHz) の回線計算。データはバンドごとに保存されます。左に 2 局 (アンテナと利得、仰角のないアンテナは BETA)、6 つの指標 (交信可能、EIRP、伝搬損失、アンテナでの信号、S/N、モードの典型的なしきい値付きの 2500 Hz 換算 S/N) とすべての手順の表。右に選んだ局の送受信設備の系統図：アンテナと Tant、アンテナ – リレー間ケーブル、同軸リレー、送信機とそのケーブル、プリアンプ、引き込みケーブル、オプションのトランスバーター、ジャンパー、MDS とモード付きの無線機。ケーブルは同軸ケーブルタブのデータベースから選び、損失は自動計算されます。右上はメイン画面と同じ「詳細な計算」チェックボックス。",
+            "選択した各バンド (50 ～ 432 MHz) の回線計算。データはバンドごとに保存されます。左に 2 局 (アンテナと利得、仰角のないアンテナは BETA)、6 つの指標 (交信可能、自局と DX の EIRP、伝搬損失、選んだ帯域幅で太陽を含めた S/N（自局 → DX と DX → 自局）、2500 Hz 換算値も表示) とすべての手順の表。右に選んだ局の送受信設備の系統図：アンテナと Tant、アンテナ – リレー間ケーブル、同軸リレー、送信機とそのケーブル、プリアンプ、引き込みケーブル、オプションのトランスバーター、ジャンパー、MDS とモード付きの無線機。ケーブルは同軸ケーブルタブのデータベースから選び、損失は自動計算されます。右上はメイン画面と同じ「詳細な計算」チェックボックス。",
             "上部に 4 つの指標、左にデータソース (推奨は NOAA RSTN、または NOAA かペンティクトンの F10.7、またはカスタムアドレス) と観測所、右に運用周波数までの外挿付き太陽電波束スペクトル。",
             "このマニュアル。プログラム内にあり全言語対応：クリックできる目次、検索、数式、出典。",
             "Word 文書のようにレイアウトされ、数式は数式エディター風です：クリップボードにコピーしたり Word (.docx) で保存したりできます。",
@@ -11991,6 +12033,12 @@ namespace LunaCalc
             "プログラムの配布条件となるライセンスの全文。",
             "S = 太陽フラックス（SFU、10⁻²² W·m⁻²·Hz⁻¹）、k = ボルツマン定数（1.380649·10⁻²³ J/K）、G = アンテナの線形利得、λ = 波長、θ = 太陽と月の離角、a = 太陽方向のパターン利得（設定したサイドローブレベルより下にはならず、バックローブではさらに 10 dB 低い）、ΔN = 太陽による雑音の増加。",
             "1.1 - ライブ位置と +- 24h（旧「追尾」）で過去と未来も表示：カレンダーで日を、赤い線のドラッグで時刻を選択し、周波数は「エコーと周波数」枠へ。DX のコールサイン欄を追加し、W7GJ と WSJT-X Improved からダウンロードして統合した CALL3.TXT でロケーターを提案、WSJT-X フォルダーへのコピーも可能。距離と Dgrd は順位列を廃止し、赤緯を重ねて表示、行をグラフと同じ色に、利用可能時間の緑表示は任意に。チェックボックスをプログラムのスタイルに統一。ケーブルはドロップダウンで直径順、表で名前・メーカー・種類順に並べ替え可能、出典も翻訳。EME 回線計算は 60 秒のモード（JT65、Q65-60A、Q65-60B、Q65-60C）のみとし、設備図は文字の長さに合わせて調整。取扱説明書で全画面を紹介。EME の理論とヒントに著者まえがき、1 からの番号、太陽雑音の数式を追加。Linux と macOS ではシステムの証明書で HTTPS。",
+            "自局の EIRP",
+            "DX の EIRP",
+            "S/N 自局 → DX",
+            "S/N DX → 自局",
+            "{0:0} Hz · 2500 Hz 換算 {1} dB",
+            "{0:0} Hz（太陽を含む）· 2500 Hz 換算 {1} dB",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13023,7 +13071,7 @@ namespace LunaCalc
             "मुख्य स्क्रीन, हर सेकंड अद्यतन होती है। ऊपर सामान्य सेटिंग्स (कॉलसाइन, भाषा, रंग, अक्षरों के आकार और फ़ॉन्ट), बैंड चयन बटन और जटिल डेटा का बॉक्स; नीचे आपका और DX का लोकेटर (4 से 14 अक्षर, स्थिति की सटीकता के साथ), आवृत्ति और UTC, स्थानीय तथा DX घड़ियाँ। स्थिति पट्टी (हरा = लक्ष्य योग्य, नारंगी = सीमाओं से बाहर, धूसर = क्षितिज के नीचे, नीला = साझा खिड़की) में उलटी गिनती है; फिर कम्पास और उन्नयन चाप, एंटेना की सीमाएँ पीले रंग में, और चार कार्ड: चंद्रमा (कला, उदय और अस्त), इको और आवृत्तियाँ (डॉप्लर, इको विलंब और CFOM आवृत्तियाँ), आकाश और ज्यामिति (Tsky, दूरी, दिक्पात, घंटा कोण, Dgrd और आकाश दृश्य पर जाएँ बटन) और अनुमानित S/N (2500 Hz में, संदर्भ के लिए मोड की सामान्य सीमा के साथ, DX डेटा, विस्तृत गणनाएँ बॉक्स और गणनाओं पर जाएँ बटन)। नीचे अगले 24 घंटे।",
             "मेरी बाधाओं की टोह",
             "ऊपर दाईं ओर दो स्लाइडर सीमाओं से बाहर के क्षेत्रों के धूसर की अपारदर्शिता और रंग नियंत्रित करते हैं (रंग आकाश दृश्य पर भी लागू)।",
-            "प्रत्येक चुने गए बैंड (50 से 432 MHz) के लिए लिंक बजट, हर बैंड का डेटा अलग सहेजा जाता है। बाईं ओर दोनों स्टेशन (एंटेना और गेन, बिना उन्नयन वाले एंटेना के लिए BETA), छह संकेतक (संपर्क संभव, EIRP, पथ हानि, एंटेना पर सिग्नल, S/N और मोड की सामान्य सीमा के साथ 2500 Hz में S/N) और सभी चरणों वाली तालिका; दाईं ओर चुने गए स्टेशन की प्रसारण और रिसेप्शन व्यवस्था का आरेख: एंटेना और Tant, केबल एंटेना – रिले, कोएक्सियल रिले, अपने केबल के साथ ट्रांसमीटर, प्रीएम्प, फीडर केबल, वैकल्पिक ट्रांसवर्टर, जम्पर और MDS व मोड के साथ रेडियो। केबल कोएक्सियल केबल टैब के डेटाबेस से चुने जाते हैं और हानि स्वतः गणना होती है। ऊपर दाईं ओर विस्तृत गणनाएँ बॉक्स, मुख्य स्क्रीन वाला ही।",
+            "प्रत्येक चुने गए बैंड (50 से 432 MHz) के लिए लिंक बजट, हर बैंड का डेटा अलग सहेजा जाता है। बाईं ओर दोनों स्टेशन (एंटेना और गेन, बिना उन्नयन वाले एंटेना के लिए BETA), छह संकेतक (संपर्क संभव, मेरा और DX का EIRP, पथ हानि, चुनी गई बैंडविड्थ में सूर्य सहित S/N मैं → DX और DX → मैं, 2500 Hz पर भी) और सभी चरणों वाली तालिका; दाईं ओर चुने गए स्टेशन की प्रसारण और रिसेप्शन व्यवस्था का आरेख: एंटेना और Tant, केबल एंटेना – रिले, कोएक्सियल रिले, अपने केबल के साथ ट्रांसमीटर, प्रीएम्प, फीडर केबल, वैकल्पिक ट्रांसवर्टर, जम्पर और MDS व मोड के साथ रेडियो। केबल कोएक्सियल केबल टैब के डेटाबेस से चुने जाते हैं और हानि स्वतः गणना होती है। ऊपर दाईं ओर विस्तृत गणनाएँ बॉक्स, मुख्य स्क्रीन वाला ही।",
             "ऊपर चार संकेतक, बाईं ओर डेटा स्रोत (NOAA RSTN अनुशंसित, या NOAA अथवा पेंटिक्टन का F10.7, या कस्टम पता) स्टेशनों के साथ, दाईं ओर कार्य आवृत्ति तक एक्सट्रापोलेशन सहित सौर फ्लक्स स्पेक्ट्रम।",
             "यह मैनुअल, प्रोग्राम के भीतर और सभी भाषाओं में: क्लिक योग्य विषय-सूची, खोज, सूत्र और स्रोत।",
             "यह Word दस्तावेज़ की तरह सजा है, सूत्र समीकरण संपादक की शैली में: इसे क्लिपबोर्ड में कॉपी या Word (.docx) में सहेजा जा सकता है।",
@@ -13283,6 +13331,12 @@ namespace LunaCalc
             "वह लाइसेंस पाठ जिसके अंतर्गत प्रोग्राम वितरित किया जाता है।",
             "S = SFU में सौर फ़्लक्स (10⁻²² W·m⁻²·Hz⁻¹); k = बोल्ट्ज़मान स्थिरांक (1.380649·10⁻²³ J/K); G = एंटीना का रैखिक लाभ; λ = तरंगदैर्ध्य; θ = सूर्य और चंद्रमा के बीच कोणीय दूरी; a = सूर्य की ओर पैटर्न का लाभ, निर्धारित साइड-लोब स्तर से कभी कम नहीं (पिछले लोब में 10 dB और कम); ΔN = सूर्य के कारण शोर में वृद्धि।",
             "1.1 - लाइव स्थिति और +- 24h (पहले ट्रैकिंग) अब अतीत और भविष्य में भी: कैलेंडर से दिन और लाल रेखा खींचकर समय, आवृत्ति इको और आवृत्तियाँ बॉक्स में; DX कॉलसाइन बॉक्स, W7GJ और WSJT-X Improved से डाउनलोड करके मिलाए गए CALL3.TXT के साथ, सुझाया गया लोकेटर और WSJT-X फ़ोल्डर में कॉपी; दूरी और Dgrd बिना रैंकिंग के, दिक्पात ऊपर से, पंक्तियाँ चार्ट के रंगों में और वैकल्पिक हरे उपयोगी घंटे; प्रोग्राम की शैली में चेकबॉक्स; ड्रॉपडाउन में केबल व्यास से और तालिका में नाम, निर्माता और प्रकार से क्रमबद्ध, अनूदित स्रोतों के साथ; EME बजट में केवल 60 s मोड (JT65, Q65-60A, Q65-60B, Q65-60C) और पाठ के अनुसार ढलने वाला स्टेशन आरेख; उपयोगकर्ता मैनुअल में सभी स्क्रीनों की समीक्षा; EME पर सिद्धांत और सुझाव में लेखक की प्रस्तावना, 1 से क्रमांकन और सौर शोर के सूत्र; Linux और macOS पर सिस्टम प्रमाणपत्रों के साथ HTTPS।",
+            "मेरा EIRP",
+            "DX का EIRP",
+            "S/N मैं → DX",
+            "S/N DX → मैं",
+            "{0:0} Hz में · 2500 Hz में {1} dB",
+            "{0:0} Hz में सूर्य सहित · 2500 Hz में {1} dB",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14315,7 +14369,7 @@ namespace LunaCalc
             "메인 화면으로, 매초 갱신됩니다. 위쪽에 일반 설정 (호출부호, 언어, 색상, 글자 크기와 글꼴), 밴드 선택 버튼, 고급 데이터 확인란; 그 아래 내 로케이터와 DX 로케이터 (4~14자, 위치 정밀도 표시), 주파수와 UTC·현지·DX 시계. 상태 표시줄 (녹색 = 향할 수 있음, 주황 = 제한 밖, 회색 = 지평선 아래, 파랑 = 공통 창)에 카운트다운; 이어서 나침반과 앙각 호 (안테나 한계는 노란색), 네 개의 카드: 달 (위상, 출몰), 에코와 주파수 (도플러, 에코 지연, CFOM 주파수), 하늘과 기하 (Tsky, 거리, 적위, 시간각, Dgrd, 하늘 보기로 버튼), 추정 S/N (2500 Hz 기준, 모드의 일반 임계값을 참고로 표시, DX 데이터, 심화 계산 확인란, 계산으로 버튼). 아래쪽은 앞으로 24시간.",
             "내 장애물 정찰",
             "오른쪽 위의 슬라이더 두 개로 제한 밖 영역 회색의 불투명도와 톤을 조절합니다 (톤은 하늘 보기에도 적용).",
-            "선택한 각 밴드 (50~432 MHz)의 링크 버짓으로, 데이터는 밴드별로 따로 저장됩니다. 왼쪽에 두 무선국 (안테나와 이득, 앙각이 없는 안테나는 BETA), 여섯 지표 (교신 가능, EIRP, 경로 손실, 안테나의 신호, S/N, 모드의 일반 임계값과 함께 2500 Hz 기준 S/N)와 모든 단계의 표; 오른쪽에 선택한 무선국의 송수신 설비 계통도: 안테나와 Tant, 안테나 – 릴레이 케이블, 동축 릴레이, 송신기와 그 케이블, 프리앰프, 인입 케이블, 선택 트랜스버터, 점퍼, MDS와 모드가 있는 무선기. 케이블은 동축 케이블 탭의 데이터베이스에서 고르며 손실은 자동 계산됩니다. 오른쪽 위에 메인 화면과 같은 심화 계산 확인란.",
+            "선택한 각 밴드 (50~432 MHz)의 링크 버짓으로, 데이터는 밴드별로 따로 저장됩니다. 왼쪽에 두 무선국 (안테나와 이득, 앙각이 없는 안테나는 BETA), 여섯 지표 (교신 가능, 내 EIRP와 DX의 EIRP, 경로 손실, 선택한 대역폭에서 태양을 포함한 S/N 나 → DX 및 DX → 나, 2500 Hz 환산값 포함)와 모든 단계의 표; 오른쪽에 선택한 무선국의 송수신 설비 계통도: 안테나와 Tant, 안테나 – 릴레이 케이블, 동축 릴레이, 송신기와 그 케이블, 프리앰프, 인입 케이블, 선택 트랜스버터, 점퍼, MDS와 모드가 있는 무선기. 케이블은 동축 케이블 탭의 데이터베이스에서 고르며 손실은 자동 계산됩니다. 오른쪽 위에 메인 화면과 같은 심화 계산 확인란.",
             "위쪽에 네 지표, 왼쪽에 데이터 출처 (NOAA RSTN 권장, 또는 NOAA나 펜틱턴의 F10.7, 또는 사용자 주소)와 관측소, 오른쪽에 운용 주파수까지 외삽한 태양 플럭스 스펙트럼.",
             "이 설명서로, 프로그램 안에 있으며 모든 언어를 지원합니다: 클릭 가능한 목차, 검색, 수식, 출처.",
             "Word 문서처럼 배치되고 수식은 수식 편집기 양식입니다: 클립보드로 복사하거나 Word (.docx)로 저장할 수 있습니다.",
@@ -14575,6 +14629,12 @@ namespace LunaCalc
             "프로그램이 배포되는 라이선스의 전문.",
             "S = 태양 플럭스(SFU, 10⁻²² W·m⁻²·Hz⁻¹); k = 볼츠만 상수(1.380649·10⁻²³ J/K); G = 안테나 선형 이득; λ = 파장; θ = 태양과 달 사이의 각거리; a = 태양 방향의 패턴 이득으로, 설정한 사이드로브 레벨보다 낮아지지 않음(백로브에서는 10 dB 더 낮음); ΔN = 태양에 의한 잡음 증가.",
             "1.1 - 실시간 위치 및 +- 24h(이전 추적)에서 과거와 미래도 표시: 달력으로 날짜를, 빨간 선을 끌어 시간을 고르고 주파수는 에코와 주파수 상자로 이동; DX 호출부호 칸 추가, W7GJ와 WSJT-X Improved에서 내려받아 합친 CALL3.TXT로 로케이터를 제안하고 WSJT-X 폴더로 복사 가능; 거리와 Dgrd에서 순위 열을 없애고 적위를 겹쳐 표시, 행을 그래프와 같은 색으로, 사용 가능 시간의 녹색 표시는 선택; 확인란을 프로그램 스타일로 통일; 드롭다운의 케이블은 직경순, 표는 이름·제조사·종류로 정렬 가능하며 출처도 번역; EME 링크 버짓은 60초 모드(JT65, Q65-60A, Q65-60B, Q65-60C)만 남기고 설비도는 글자 길이에 맞춰 조정; 사용 설명서에서 모든 화면을 소개; EME 이론과 조언에 저자 서문, 1부터의 번호, 태양 잡음 공식 추가; Linux와 macOS에서 시스템 인증서로 HTTPS.",
+            "내 EIRP",
+            "DX의 EIRP",
+            "S/N 나 → DX",
+            "S/N DX → 나",
+            "{0:0} Hz · 2500 Hz 기준 {1} dB",
+            "{0:0} Hz, 태양 포함 · 2500 Hz 기준 {1} dB",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15607,7 +15667,7 @@ namespace LunaCalc
             "Layar utama, diperbarui setiap detik. Di atas pengaturan umum (callsign, bahasa, warna, ukuran dan jenis huruf), tombol PILIHAN PITA dan kotak data kompleks; di bawahnya locatormu dan locator DX (4 sampai 14 karakter, dengan ketelitian posisi), frekuensi dan jam UTC, lokal dan DX. Bilah status (hijau = dapat diarahkan, oranye = di luar batas, abu-abu = di bawah cakrawala, biru = jendela bersama) memuat hitung mundur; lalu kompas dan busur elevasi dengan batas antena berwarna kuning, dan empat kartu: Bulan (fase, terbit dan terbenam), Gema dan frekuensi (Doppler, tunda gema dan frekuensi CFOM), Langit dan geometri (Tsky, jarak, deklinasi, sudut jam, Dgrd dan tombol KE KUBAH LANGIT) dan S/N perkiraan (dalam 2500 Hz dengan ambang tipikal mode sebagai acuan, data DX, kotak PERHITUNGAN MENDALAM dan tombol KE PERHITUNGAN). Di bawah 24 jam berikutnya.",
             "Pengintaian rintangan saya",
             "Di kanan atas dua penggeser mengatur opasitas dan nada abu-abu zona di luar batas (nadanya juga berlaku untuk Kubah langit).",
-            "Anggaran tautan untuk setiap pita yang dipilih (50 hingga 432 MHz), dengan data yang disimpan terpisah untuk setiap pita. Di kiri kedua stasiun (antena dan penguatan, BETA untuk antena tanpa elevasi), enam indikator (kontak mungkin, EIRP, rugi lintasan, sinyal di antena, S/N dan S/N dalam 2500 Hz dengan ambang tipikal mode) dan tabel semua langkah; di kanan skema instalasi pemancar dan penerima stasiun yang dipilih: antena dan Tant, kabel antena – relai, relai koaksial, pemancar dengan kabelnya, preamp, kabel turun, transverter opsional, kabel pendek dan radio dengan MDS dan mode. Kabel dipilih dari basis data tab KABEL KOAKSIAL dan rugi-ruginya dihitung otomatis. Di kanan atas kotak PERHITUNGAN MENDALAM, sama dengan di layar utama.",
+            "Anggaran tautan untuk setiap pita yang dipilih (50 hingga 432 MHz), dengan data yang disimpan terpisah untuk setiap pita. Di kiri kedua stasiun (antena dan penguatan, BETA untuk antena tanpa elevasi), enam indikator (kontak mungkin, EIRP saya dan EIRP DX, rugi lintasan, S/N saya → DX dan DX → saya pada lebar pita yang dipilih dan dengan Matahari, juga dirujuk ke 2500 Hz) dan tabel semua langkah; di kanan skema instalasi pemancar dan penerima stasiun yang dipilih: antena dan Tant, kabel antena – relai, relai koaksial, pemancar dengan kabelnya, preamp, kabel turun, transverter opsional, kabel pendek dan radio dengan MDS dan mode. Kabel dipilih dari basis data tab KABEL KOAKSIAL dan rugi-ruginya dihitung otomatis. Di kanan atas kotak PERHITUNGAN MENDALAM, sama dengan di layar utama.",
             "Di atas empat indikator, di kiri sumber data (NOAA RSTN disarankan, atau F10.7 dari NOAA atau Penticton, atau alamat kustom) dengan stasiun-stasiunnya, di kanan spektrum fluks matahari dengan ekstrapolasi hingga frekuensi kerja.",
             "Manual ini, di dalam program dan dalam semua bahasa: daftar isi yang dapat diklik, pencarian, rumus dan sumber.",
             "Ditata seperti dokumen Word, dengan rumus bergaya editor persamaan: dapat disalin ke papan klip atau disimpan sebagai Word (.docx).",
@@ -15867,6 +15927,12 @@ namespace LunaCalc
             "Teks lisensi yang menjadi dasar distribusi program.",
             "S = fluks matahari dalam SFU (10⁻²² W·m⁻²·Hz⁻¹); k = konstanta Boltzmann (1,380649·10⁻²³ J/K); G = penguatan linear antena; λ = panjang gelombang; θ = jarak sudut antara Matahari dan Bulan; a = penguatan pola ke arah Matahari, tidak pernah di bawah tingkat lobus samping yang ditetapkan (10 dB lebih rendah di lobus belakang); ΔN = kenaikan derau akibat Matahari.",
             "1.1 - Posisi langsung dan +- 24h (dulu Pelacakan) juga untuk masa lalu dan masa depan: hari dari kalender dan jam dengan menyeret garis merah, frekuensi di kotak Gema dan frekuensi; kotak callsign DX dengan CALL3.TXT yang diunduh dari W7GJ dan WSJT-X Improved lalu digabung, lokator yang disarankan dan salinan ke folder WSJT-X; Jarak dan Dgrd tanpa peringkat, dengan deklinasi ditumpangkan, baris berwarna seperti grafik dan jam berguna hijau opsional; kotak centang bergaya program; kabel diurutkan menurut diameter di daftar pilihan serta menurut nama, pabrikan dan tipe di tabel, dengan sumber yang diterjemahkan; Anggaran EME hanya dengan mode 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) dan skema instalasi yang menyesuaikan teks; MANUAL PENGGUNAAN yang meninjau semua layar; TEORI DAN TIPS EME dengan kata pengantar penulis, penomoran dari 1 dan rumus derau matahari; HTTPS di Linux dan macOS dengan sertifikat sistem.",
+            "EIRP saya",
+            "EIRP DX",
+            "S/N saya → DX",
+            "S/N DX → saya",
+            "dalam {0:0} Hz · {1} dB dalam 2500 Hz",
+            "dalam {0:0} Hz dengan Matahari · {1} dB dalam 2500 Hz",
         };
 
         public static readonly string[] RU = {
@@ -16900,7 +16966,7 @@ namespace LunaCalc
             "Главный экран, обновляется каждую секунду. Вверху общие настройки (позывной, язык, цвета, размеры и шрифт), кнопка ВЫБОР ДИАПАЗОНОВ и флажок сложных данных; ниже ваш локатор и локатор DX (от 4 до 14 символов, с точностью положения), частота и часы UTC, местное и DX. Строка состояния (зелёный = можно навести, оранжевый = вне ограничений, серый = под горизонтом, синий = общее окно) показывает обратный отсчёт; далее компас и дуга возвышения с пределами антенны жёлтым и четыре карточки: Луна (фаза, восход и заход), Эхо и частоты (Доплер, задержка эха и частоты CFOM), Небо и геометрия (Tsky, расстояние, склонение, часовой угол, Dgrd и кнопка К НЕБЕСНОМУ СВОДУ) и оценка S/N (в 2500 Гц с типичным порогом вида связи для справки, данные DX, флажок УГЛУБЛЁННЫЕ РАСЧЁТЫ и кнопка К РАСЧЁТАМ). Внизу ближайшие 24 часа.",
             "Разведка моих препятствий",
             "Вверху справа два ползунка регулируют непрозрачность и тон серого для зон вне ограничений (тон действует и на Небесный свод).",
-            "Бюджет линии для каждого выбранного диапазона (от 50 до 432 МГц), данные хранятся отдельно для каждого диапазона. Слева две станции (антенна и усиление, BETA для антенн без возвышения), шесть индикаторов (связь возможна, ЭИИМ, потери на трассе, сигнал на антенне, S/N и S/N в 2500 Гц с типичным порогом вида связи) и таблица со всеми шагами; справа схема передающей и приёмной установки выбранной станции: антенна и Tant, кабель антенна – реле, коаксиальное реле, передатчик со своим кабелем, предусилитель, фидер, необязательный трансвертер, перемычки и радиостанция с MDS и видом связи. Кабели выбираются из базы вкладки КОАКСИАЛЬНЫЕ КАБЕЛИ, потери рассчитываются автоматически. Вверху справа флажок УГЛУБЛЁННЫЕ РАСЧЁТЫ — тот же, что на главном экране.",
+            "Бюджет линии для каждого выбранного диапазона (от 50 до 432 МГц), данные хранятся отдельно для каждого диапазона. Слева две станции (антенна и усиление, BETA для антенн без возвышения), шесть индикаторов (связь возможна, моя ЭИИМ и ЭИИМ DX, потери на трассе, S/N я → DX и DX → я в выбранной полосе и с учётом Солнца, также приведённое к 2500 Гц) и таблица со всеми шагами; справа схема передающей и приёмной установки выбранной станции: антенна и Tant, кабель антенна – реле, коаксиальное реле, передатчик со своим кабелем, предусилитель, фидер, необязательный трансвертер, перемычки и радиостанция с MDS и видом связи. Кабели выбираются из базы вкладки КОАКСИАЛЬНЫЕ КАБЕЛИ, потери рассчитываются автоматически. Вверху справа флажок УГЛУБЛЁННЫЕ РАСЧЁТЫ — тот же, что на главном экране.",
             "Вверху четыре индикатора, слева источник данных (рекомендуется NOAA RSTN, либо F10.7 от NOAA или Пентиктона, либо свой адрес) со станциями, справа спектр солнечного потока с экстраполяцией до рабочей частоты.",
             "Это руководство, внутри программы и на всех языках: кликабельное оглавление, поиск, формулы и источники.",
             "Оно свёрстано как документ Word, с формулами в стиле редактора уравнений: его можно скопировать в буфер обмена или сохранить в Word (.docx).",
@@ -17160,6 +17226,12 @@ namespace LunaCalc
             "Текст лицензии, на условиях которой распространяется программа.",
             "S = солнечный поток в SFU (10⁻²² Вт·м⁻²·Гц⁻¹); k = постоянная Больцмана (1,380649·10⁻²³ Дж/К); G = линейное усиление антенны; λ = длина волны; θ = угловое расстояние между Солнцем и Луной; a = усиление диаграммы в направлении Солнца, не ниже заданного уровня боковых лепестков (в задних лепестках на 10 дБ ниже); ΔN = рост шума из-за Солнца.",
             "1.1 - «Положение онлайн и +- 24h» (бывшее «Сопровождение») также в прошлом и будущем: день из календаря и время перетаскиванием красной линии, частота в блоке «Эхо и частоты»; поле позывного DX с CALL3.TXT, загруженным с W7GJ и WSJT-X Improved и объединённым, с предложенным локатором и копированием в папку WSJT-X; «Расстояние и Dgrd» без рейтинга, с наложенным склонением, строками в цветах графика и зелёными полезными часами по выбору; флажки в стиле программы; кабели в списках упорядочены по диаметру, в таблице — по названию, производителю и типу, источники переведены; бюджет EME только с 60-секундными видами (JT65, Q65-60A, Q65-60B, Q65-60C) и схемой станции, подстраивающейся под тексты; РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ с обзором всех экранов; ТЕОРИЯ И СОВЕТЫ ПО EME с предисловием автора, нумерацией с 1 и формулами солнечного шума; HTTPS в Linux и macOS с сертификатами системы.",
+            "Моя ЭИИМ",
+            "ЭИИМ DX",
+            "S/N я → DX",
+            "S/N DX → я",
+            "в {0:0} Гц · {1} дБ в 2500 Гц",
+            "в {0:0} Гц с Солнцем · {1} дБ в 2500 Гц",
         };
 
         public static readonly string[] UK = {
@@ -18193,7 +18265,7 @@ namespace LunaCalc
             "Головний екран, оновлюється щосекунди. Угорі загальні налаштування (позивний, мова, кольори, розміри і шрифт), кнопка ВИБІР ДІАПАЗОНІВ і прапорець складних даних; нижче ваш локатор і локатор DX (від 4 до 14 символів, з точністю положення), частота і годинники UTC, місцевий і DX. Рядок стану (зелений = можна навести, помаранчевий = поза межами, сірий = під горизонтом, синій = спільне вікно) показує зворотний відлік; далі компас і дуга підйому з межами антени жовтим і чотири картки: Місяць (фаза, схід і захід), Луна і частоти (Доплер, затримка луни і частоти CFOM), Небо і геометрія (Tsky, відстань, схилення, годинний кут, Dgrd і кнопка ДО НЕБЕСНОГО СКЛЕПІННЯ) і оцінка S/N (у 2500 Гц з типовим порогом виду зв'язку для довідки, дані DX, прапорець ПОГЛИБЛЕНІ РОЗРАХУНКИ і кнопка ДО РОЗРАХУНКІВ). Унизу найближчі 24 години.",
             "Розвідка моїх перешкод",
             "Угорі праворуч два повзунки регулюють непрозорість і тон сірого для зон поза межами (тон діє і на Небесне склепіння).",
-            "Бюджет лінії для кожного вибраного діапазону (від 50 до 432 МГц), дані зберігаються окремо для кожного діапазону. Ліворуч дві станції (антена і підсилення, BETA для антен без підйому), шість індикаторів (зв'язок можливий, ЕІВП, втрати на трасі, сигнал на антені, S/N і S/N у 2500 Гц з типовим порогом виду зв'язку) і таблиця з усіма кроками; праворуч схема передавальної і приймальної установки вибраної станції: антена і Tant, кабель антена – реле, коаксіальне реле, передавач зі своїм кабелем, попередній підсилювач, фідер, необов'язковий трансвертер, перемички і радіостанція з MDS і видом зв'язку. Кабелі вибираються з бази вкладки КОАКСІАЛЬНІ КАБЕЛІ, втрати розраховуються автоматично. Угорі праворуч прапорець ПОГЛИБЛЕНІ РОЗРАХУНКИ — той самий, що на головному екрані.",
+            "Бюджет лінії для кожного вибраного діапазону (від 50 до 432 МГц), дані зберігаються окремо для кожного діапазону. Ліворуч дві станції (антена і підсилення, BETA для антен без підйому), шість індикаторів (зв'язок можливий, моя ЕІВП і ЕІВП DX, втрати на трасі, S/N я → DX і DX → я у вибраній смузі та з урахуванням Сонця, також зведене до 2500 Гц) і таблиця з усіма кроками; праворуч схема передавальної і приймальної установки вибраної станції: антена і Tant, кабель антена – реле, коаксіальне реле, передавач зі своїм кабелем, попередній підсилювач, фідер, необов'язковий трансвертер, перемички і радіостанція з MDS і видом зв'язку. Кабелі вибираються з бази вкладки КОАКСІАЛЬНІ КАБЕЛІ, втрати розраховуються автоматично. Угорі праворуч прапорець ПОГЛИБЛЕНІ РОЗРАХУНКИ — той самий, що на головному екрані.",
             "Угорі чотири індикатори, ліворуч джерело даних (рекомендовано NOAA RSTN, або F10.7 від NOAA чи Пентіктона, або власна адреса) зі станціями, праворуч спектр сонячного потоку з екстраполяцією до робочої частоти.",
             "Цей посібник, усередині програми і всіма мовами: зміст із посиланнями, пошук, формули і джерела.",
             "Його зверстано як документ Word, із формулами в стилі редактора рівнянь: його можна скопіювати в буфер обміну або зберегти у Word (.docx).",
@@ -18453,6 +18525,12 @@ namespace LunaCalc
             "Текст ліцензії, на умовах якої поширюється програма.",
             "S = сонячний потік у SFU (10⁻²² Вт·м⁻²·Гц⁻¹); k = стала Больцмана (1,380649·10⁻²³ Дж/К); G = лінійне підсилення антени; λ = довжина хвилі; θ = кутова відстань між Сонцем і Місяцем; a = підсилення діаграми в напрямку Сонця, не нижче заданого рівня бічних пелюсток (у задніх пелюстках на 10 дБ нижче); ΔN = зростання шуму через Сонце.",
             "1.1 - «Положення наживо і +- 24h» (колишній «Супровід») також у минулому й майбутньому: день із календаря і час перетягуванням червоної лінії, частота в блоці «Луна і частоти»; поле позивного DX із CALL3.TXT, завантаженим з W7GJ і WSJT-X Improved та об'єднаним, із запропонованим локатором і копіюванням до теки WSJT-X; «Відстань і Dgrd» без рейтингу, з накладеним схиленням, рядками в кольорах графіка й зеленими корисними годинами за вибором; прапорці в стилі програми; кабелі у списках упорядковано за діаметром, у таблиці — за назвою, виробником і типом, джерела перекладено; бюджет EME лише з 60-секундними видами (JT65, Q65-60A, Q65-60B, Q65-60C) і схемою станції, що підлаштовується під тексти; ПОСІБНИК КОРИСТУВАЧА з оглядом усіх екранів; ТЕОРІЯ І ПОРАДИ ЩОДО EME з передмовою автора, нумерацією з 1 і формулами сонячного шуму; HTTPS у Linux і macOS із сертифікатами системи.",
+            "Моя ЕІВП",
+            "ЕІВП DX",
+            "S/N я → DX",
+            "S/N DX → я",
+            "у {0:0} Гц · {1} дБ у 2500 Гц",
+            "у {0:0} Гц із Сонцем · {1} дБ у 2500 Гц",
         };
 
         public static readonly string[] AF = {
@@ -19486,7 +19564,7 @@ namespace LunaCalc
             "Die hoofskerm, elke sekonde opgedateer. Bo die algemene instellings (roepsein, taal, kleure, groottes en lettertipe), die knoppie BANDKEUSE en die blokkie vir komplekse data; daaronder jou locator en dié van die DX (4 tot 14 karakters, met die akkuraatheid van die posisie), die frekwensie en die horlosies UTC, plaaslik en DX. Die statusbalk (groen = rigbaar, oranje = buite die grense, grys = onder die horison, blou = gemeenskaplike venster) het die aftelling; dan die kompas en die hoogteboog met die antennagrense in geel, en vier kaarte: Maan (fase, opkoms en ondergang), Eggo en frekwensies (Doppler, eggovertraging en CFOM-frekwensies), Hemel en geometrie (Tsky, afstand, deklinasie, uurhoek, Dgrd en die knoppie NA LUGAANSIG) en geskatte S/N (in 2500 Hz met die tipiese drempel van die modus as verwysing, DX-data, die blokkie DIEPGAANDE BEREKENINGE en die knoppie NA DIE BEREKENINGE). Onder die volgende 24 uur.",
             "Verkenning van my hindernisse",
             "Regs bo stel twee skuiwers die ondeursigtigheid en die tint van die grys van die sones buite die grense (die tint geld ook vir Lugaansig).",
-            "Skakelbegroting vir elke gekose band (50 tot 432 MHz), met data apart vir elke band gestoor. Links die twee stasies (antenna en wins, BETA vir antennas sonder hoogte), ses aanwysers (kontak moontlik, EIRP, baanverlies, sein by die antenna, S/N en S/N in 2500 Hz met die tipiese drempel van die modus) en die tabel met al die stappe; regs die skema van die uitsaai- en ontvangsinstallasie van die gekose stasie: antenna en Tant, kabel antenna – relê, koaksiale relê, sender met sy kabel, voorversterker, toevoerkabel, opsionele transverter, kabeltjies en radio met MDS en modus. Die kabels word uit die databasis van die KOAKSIALE KABELS-oortjie gekies en die verliese word outomaties bereken. Regs bo die blokkie DIEPGAANDE BEREKENINGE, dieselfde as op die hoofskerm.",
+            "Skakelbegroting vir elke gekose band (50 tot 432 MHz), met data apart vir elke band gestoor. Links die twee stasies (antenna en wins, BETA vir antennas sonder hoogte), ses aanwysers (kontak moontlik, my EIRP en dié van die DX, baanverlies, S/N ek → DX en DX → ek in die gekose bandwydte en met die Son, ook herlei na 2500 Hz) en die tabel met al die stappe; regs die skema van die uitsaai- en ontvangsinstallasie van die gekose stasie: antenna en Tant, kabel antenna – relê, koaksiale relê, sender met sy kabel, voorversterker, toevoerkabel, opsionele transverter, kabeltjies en radio met MDS en modus. Die kabels word uit die databasis van die KOAKSIALE KABELS-oortjie gekies en die verliese word outomaties bereken. Regs bo die blokkie DIEPGAANDE BEREKENINGE, dieselfde as op die hoofskerm.",
             "Bo vier aanwysers, links die databron (NOAA RSTN aanbeveel, of F10.7 van NOAA of Penticton, of 'n eie adres) met die stasies, regs die spektrum van die sonvloed met die ekstrapolasie tot die werkfrekwensie.",
             "Hierdie handleiding, binne die program en in alle tale: klikbare inhoudsopgawe, soek, formules en bronne.",
             "Dit is soos 'n Word-dokument uitgelê, met die formules in die styl van die vergelykingsredigeerder: dit kan na die knipbord gekopieer of as Word (.docx) gestoor word.",
@@ -19746,6 +19824,12 @@ namespace LunaCalc
             "Die teks van die lisensie waaronder die program versprei word.",
             "S = sonvloed in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann-konstante (1,380649·10⁻²³ J/K); G = lineêre antennawins; λ = golflengte; θ = hoekafstand tussen Son en Maan; a = wins van die patroon na die Son, nooit onder die ingestelde sylobvlak nie (10 dB laer in die agterlobbe); ΔN = geraastoename weens die Son.",
             "1.1 - Regstreekse posisie en +- 24h (voorheen Volg) ook in die verlede en die toekoms: dag uit die kalender en tyd deur die rooi lyn te sleep, frekwensie in die blok Eggo en frekwensies; roepseinblokkie van die DX met CALL3.TXT wat van W7GJ en WSJT-X Improved afgelaai en saamgevoeg word, voorgestelde lokator en kopie na die WSJT-X-gids; Afstand en Dgrd sonder rangorde, met die deklinasie daaroor, rye in die kleure van die grafiek en opsionele groen bruikbare ure; merkblokkies in die styl van die program; kabels in die aftreklyste volgens deursnee en in die tabel volgens naam, vervaardiger en tipe gesorteer, met vertaalde bronne; EME-begroting met net die 60 s-modusse (JT65, Q65-60A, Q65-60B, Q65-60C) en 'n stasieskema wat by die tekste aanpas; GEBRUIKERSHANDLEIDING wat elke skerm bespreek; TEORIE EN WENKE OOR EME met die outeur se voorwoord, nommering vanaf 1 en die formules van sonruis; HTTPS op Linux en macOS met die stelsel se sertifikate.",
+            "My EIRP",
+            "EIRP van die DX",
+            "S/N ek → DX",
+            "S/N DX → ek",
+            "in {0:0} Hz · {1} dB in 2500 Hz",
+            "in {0:0} Hz met die Son · {1} dB in 2500 Hz",
         };
 
         public static readonly string[] BN = {
@@ -20778,7 +20862,7 @@ namespace LunaCalc
             "মূল পর্দা, প্রতি সেকেন্ডে হালনাগাদ হয়। ওপরে সাধারণ সেটিং (কলসাইন, ভাষা, রং, অক্ষরের আকার ও ফন্ট), ব্যান্ড নির্বাচন বোতাম ও জটিল তথ্যের বাক্স; নিচে আপনার ও DX-এর লোকেটর (4 থেকে 14 অক্ষর, অবস্থানের নির্ভুলতাসহ), কম্পাঙ্ক এবং UTC, স্থানীয় ও DX ঘড়ি। অবস্থা-দণ্ডে (সবুজ = লক্ষ্যযোগ্য, কমলা = সীমার বাইরে, ধূসর = দিগন্তের নিচে, নীল = যৌথ জানালা) কাউন্টডাউন; তারপর কম্পাস ও উচ্চতা-চাপ, অ্যান্টেনার সীমা হলুদে, এবং চারটি কার্ড: চাঁদ (কলা, উদয় ও অস্ত), প্রতিধ্বনি ও কম্পাঙ্ক (ডপলার, প্রতিধ্বনির বিলম্ব ও CFOM কম্পাঙ্ক), আকাশ ও জ্যামিতি (Tsky, দূরত্ব, বিষুবলম্ব, ঘণ্টাকোণ, Dgrd ও আকাশ-গম্বুজে যান বোতাম) এবং আনুমানিক S/N (2500 Hz-এ, রেফারেন্স হিসেবে মোডের সাধারণ থ্রেশহোল্ডসহ, DX তথ্য, গভীর হিসাব বাক্স ও হিসাবে যান বোতাম)। নিচে আগামী 24 ঘণ্টা।",
             "আমার বাধাগুলির অনুসন্ধান",
             "ওপরে ডানে দুটি স্লাইডার সীমার বাইরের অঞ্চলের ধূসরের অস্বচ্ছতা ও রং নিয়ন্ত্রণ করে (রংটি আকাশ-গম্বুজেও প্রযোজ্য)।",
-            "প্রতিটি নির্বাচিত ব্যান্ডের (50 থেকে 432 MHz) লিংক বাজেট, প্রতিটি ব্যান্ডের তথ্য আলাদাভাবে সংরক্ষিত। বামে দুটি স্টেশন (অ্যান্টেনা ও গেইন, উচ্চতাহীন অ্যান্টেনার জন্য BETA), ছয়টি নির্দেশক (যোগাযোগ সম্ভব, EIRP, পথ ক্ষতি, অ্যান্টেনায় সিগন্যাল, S/N ও মোডের সাধারণ থ্রেশহোল্ডসহ 2500 Hz-এ S/N) এবং সব ধাপসহ টেবিল; ডানে নির্বাচিত স্টেশনের সম্প্রচার ও গ্রহণ ব্যবস্থার চিত্র: অ্যান্টেনা ও Tant, কেবল অ্যান্টেনা – রিলে, কোঅ্যাক্সিয়াল রিলে, নিজের কেবলসহ ট্রান্সমিটার, প্রিঅ্যাম্প, ফিডার কেবল, ঐচ্ছিক ট্রান্সভার্টার, জাম্পার এবং MDS ও মোডসহ রেডিও। কেবল কোঅ্যাক্সিয়াল কেবল ট্যাবের ডেটাবেস থেকে বাছা হয় এবং ক্ষতি স্বয়ংক্রিয়ভাবে হিসাব হয়। ওপরে ডানে গভীর হিসাব বাক্স, মূল পর্দার মতোই।",
+            "প্রতিটি নির্বাচিত ব্যান্ডের (50 থেকে 432 MHz) লিংক বাজেট, প্রতিটি ব্যান্ডের তথ্য আলাদাভাবে সংরক্ষিত। বামে দুটি স্টেশন (অ্যান্টেনা ও গেইন, উচ্চতাহীন অ্যান্টেনার জন্য BETA), ছয়টি নির্দেশক (যোগাযোগ সম্ভব, আমার ও DX-এর EIRP, পথ ক্ষতি, বেছে নেওয়া ব্যান্ডউইথে সূর্যসহ S/N আমি → DX ও DX → আমি, 2500 Hz-এও রূপান্তরিত) এবং সব ধাপসহ টেবিল; ডানে নির্বাচিত স্টেশনের সম্প্রচার ও গ্রহণ ব্যবস্থার চিত্র: অ্যান্টেনা ও Tant, কেবল অ্যান্টেনা – রিলে, কোঅ্যাক্সিয়াল রিলে, নিজের কেবলসহ ট্রান্সমিটার, প্রিঅ্যাম্প, ফিডার কেবল, ঐচ্ছিক ট্রান্সভার্টার, জাম্পার এবং MDS ও মোডসহ রেডিও। কেবল কোঅ্যাক্সিয়াল কেবল ট্যাবের ডেটাবেস থেকে বাছা হয় এবং ক্ষতি স্বয়ংক্রিয়ভাবে হিসাব হয়। ওপরে ডানে গভীর হিসাব বাক্স, মূল পর্দার মতোই।",
             "ওপরে চারটি নির্দেশক, বামে স্টেশনসহ তথ্যের উৎস (NOAA RSTN প্রস্তাবিত, অথবা NOAA বা পেন্টিকটনের F10.7, অথবা নিজস্ব ঠিকানা), ডানে কাজের কম্পাঙ্ক পর্যন্ত এক্সট্রাপোলেশনসহ সৌর ফ্লাক্সের বর্ণালি।",
             "এই ম্যানুয়াল, প্রোগ্রামের ভেতরে ও সব ভাষায়: ক্লিকযোগ্য সূচি, অনুসন্ধান, সূত্র ও উৎস।",
             "এটি Word নথির মতো সাজানো, সূত্রগুলি সমীকরণ সম্পাদকের শৈলীতে: ক্লিপবোর্ডে কপি বা Word (.docx) হিসেবে সংরক্ষণ করা যায়।",
@@ -21038,6 +21122,12 @@ namespace LunaCalc
             "যে লাইসেন্সের অধীনে প্রোগ্রামটি বিতরণ করা হয় তার পাঠ।",
             "S = SFU-তে সৌর ফ্লাক্স (10⁻²² W·m⁻²·Hz⁻¹); k = বোল্টজম্যান ধ্রুবক (1.380649·10⁻²³ J/K); G = অ্যান্টেনার রৈখিক লাভ; λ = তরঙ্গদৈর্ঘ্য; θ = সূর্য ও চাঁদের মধ্যে কৌণিক দূরত্ব; a = সূর্যের দিকে প্যাটার্নের লাভ, নির্ধারিত পার্শ্ব-লোব স্তরের নিচে কখনো নয় (পেছনের লোবে আরও 10 dB কম); ΔN = সূর্যের কারণে নয়েজ বৃদ্ধি।",
             "1.1 - লাইভ অবস্থান ও +- 24h (আগের ট্র্যাকিং) এখন অতীত ও ভবিষ্যতেও: ক্যালেন্ডার থেকে দিন ও লাল রেখা টেনে সময়, কম্পাঙ্ক প্রতিধ্বনি ও কম্পাঙ্ক ঘরে; DX কলসাইনের ঘর, W7GJ ও WSJT-X Improved থেকে ডাউনলোড করে একত্র করা CALL3.TXT-সহ, প্রস্তাবিত লোকেটর ও WSJT-X ফোল্ডারে কপি; দূরত্ব ও Dgrd ক্রমতালিকা ছাড়া, বিষুবলম্ব ওপরে আঁকা, সারি গ্রাফের রঙে এবং ঐচ্ছিক সবুজ ব্যবহারযোগ্য ঘণ্টা; প্রোগ্রামের শৈলীতে টিকবক্স; ড্রপডাউনে কেবল ব্যাস অনুযায়ী এবং সারণিতে নাম, নির্মাতা ও ধরন অনুযায়ী সাজানো, অনূদিত উৎসসহ; EME বাজেটে কেবল 60 s মোড (JT65, Q65-60A, Q65-60B, Q65-60C) এবং লেখার সঙ্গে মানিয়ে নেওয়া স্টেশন চিত্র; ব্যবহার নির্দেশিকায় সব পর্দার পর্যালোচনা; EME তত্ত্ব ও পরামর্শে লেখকের ভূমিকা, 1 থেকে ক্রমিক নম্বর ও সৌর নয়েজের সূত্র; Linux ও macOS-এ সিস্টেমের সনদ দিয়ে HTTPS।",
+            "আমার EIRP",
+            "DX-এর EIRP",
+            "S/N আমি → DX",
+            "S/N DX → আমি",
+            "{0:0} Hz-এ · 2500 Hz-এ {1} dB",
+            "{0:0} Hz-এ সূর্যসহ · 2500 Hz-এ {1} dB",
         };
 
         public static readonly string[] AR = {
@@ -22070,7 +22160,7 @@ namespace LunaCalc
             "الشاشة الرئيسية، تُحدَّث كل ثانية. في الأعلى الإعدادات العامة (النداء، اللغة، الألوان، أحجام الخطوط ونوعها)، وزر اختيار النطاقات وخانة البيانات المعقدة؛ تحتها محدِّد موقعك ومحدِّد موقع DX (من 4 إلى 14 حرفًا، مع دقة الموقع)، والتردد وساعات UTC والمحلية وDX. شريط الحالة (أخضر = قابل للتوجيه، برتقالي = خارج الحدود، رمادي = تحت الأفق، أزرق = نافذة مشتركة) يعرض العد التنازلي؛ ثم البوصلة وقوس الارتفاع مع حدود الهوائي بالأصفر، وأربع بطاقات: القمر (الطور، الشروق والغروب)، الصدى والترددات (دوبلر، تأخر الصدى وترددات CFOM)، السماء والهندسة (Tsky، المسافة، الميل، الزاوية الساعية، Dgrd وزر إلى قبة السماء) وS/N المقدَّر (في 2500 Hz مع العتبة النموذجية للنمط للاسترشاد، بيانات DX، خانة الحسابات المعمّقة وزر إلى الحسابات). في الأسفل الساعات الـ 24 القادمة.",
             "استطلاع عوائقي",
             "في أعلى اليمين منزلقان يضبطان عتامة الرمادي ودرجته للمناطق خارج الحدود (الدرجة تسري أيضًا على قبة السماء).",
-            "ميزانية الوصلة لكل نطاق مختار (من 50 إلى 432 MHz)، مع بيانات محفوظة لكل نطاق على حدة. على اليسار المحطتان (الهوائي والكسب، وBETA للهوائيات دون ارتفاع)، وستة مؤشرات (الاتصال ممكن، EIRP، خسارة المسار، الإشارة عند الهوائي، S/N وS/N في 2500 Hz مع العتبة النموذجية للنمط) والجدول بكل الخطوات؛ على اليمين مخطط منظومة الإرسال والاستقبال للمحطة المختارة: الهوائي وTant، كابل الهوائي – المرحّل، المرحّل المحوري، المرسل مع كابله، المضخم الأولي، كابل التغذية، المحوّل الترددي الاختياري، الوصلات والجهاز مع MDS والنمط. تُختار الكابلات من قاعدة بيانات تبويب الكابلات المحورية وتُحسب الخسائر تلقائيًا. في أعلى اليمين خانة الحسابات المعمّقة، نفسها الموجودة في الشاشة الرئيسية.",
+            "ميزانية الوصلة لكل نطاق مختار (من 50 إلى 432 MHz)، مع بيانات محفوظة لكل نطاق على حدة. على اليسار المحطتان (الهوائي والكسب، وBETA للهوائيات دون ارتفاع)، وستة مؤشرات (الاتصال ممكن، EIRP الخاص بي وEIRP محطة DX، خسارة المسار، S/N أنا → DX وDX → أنا في عرض النطاق المختار ومع الشمس، ومحوّلًا أيضًا إلى 2500 Hz) والجدول بكل الخطوات؛ على اليمين مخطط منظومة الإرسال والاستقبال للمحطة المختارة: الهوائي وTant، كابل الهوائي – المرحّل، المرحّل المحوري، المرسل مع كابله، المضخم الأولي، كابل التغذية، المحوّل الترددي الاختياري، الوصلات والجهاز مع MDS والنمط. تُختار الكابلات من قاعدة بيانات تبويب الكابلات المحورية وتُحسب الخسائر تلقائيًا. في أعلى اليمين خانة الحسابات المعمّقة، نفسها الموجودة في الشاشة الرئيسية.",
             "في الأعلى أربعة مؤشرات، على اليسار مصدر البيانات (NOAA RSTN موصى به، أو F10.7 من NOAA أو بنتكتون، أو عنوان مخصص) مع المحطات، على اليمين طيف تدفق الشمس مع الاستقراء حتى تردد العمل.",
             "هذا الدليل، داخل البرنامج وبكل اللغات: فهرس قابل للنقر، وبحث، وصيغ، ومصادر.",
             "مُنسَّق مثل مستند Word، والصيغ بأسلوب محرر المعادلات: يمكن نسخه إلى الحافظة أو حفظه بصيغة Word (.docx).",
@@ -22330,6 +22420,12 @@ namespace LunaCalc
             "نص الترخيص الذي يُوزَّع البرنامج بموجبه.",
             "S = التدفق الشمسي بوحدة SFU ‏(10⁻²² W·m⁻²·Hz⁻¹)؛ k = ثابت بولتزمان (1.380649·10⁻²³ J/K)؛ G = الكسب الخطي للهوائي؛ λ = طول الموجة؛ θ = المسافة الزاوية بين الشمس والقمر؛ a = كسب المخطط باتجاه الشمس، لا يقل أبدًا عن مستوى الفصوص الجانبية المحدد (أقل بـ 10 dB في الفصوص الخلفية)؛ ΔN = زيادة الضجيج بسبب الشمس.",
             "1.1 - «الموقع المباشر و +- 24h» (التتبع سابقًا) يعرض الماضي والمستقبل أيضًا: اليوم من التقويم والوقت بسحب الخط الأحمر، والتردد في إطار الصدى والترددات؛ خانة نداء محطة DX مع CALL3.TXT المنزّل من W7GJ ومن WSJT-X Improved والمدموج، ومحدد موقع مقترح ونسخ إلى مجلد WSJT-X؛ «المسافة وDgrd» بلا ترتيب، مع الميل فوق المخطط وصفوف بألوان المخطط وساعات مفيدة خضراء اختيارية؛ خانات اختيار بأسلوب البرنامج؛ الكبلات مرتبة حسب القطر في القوائم المنسدلة وحسب الاسم والمصنّع والنوع في الجدول، مع ترجمة المصادر؛ ميزانية EME بالأنماط ذات 60 ثانية فقط (JT65 وQ65-60A وQ65-60B وQ65-60C) ومخطط محطة يتكيّف مع النصوص؛ دليل الاستخدام يستعرض كل الشاشات؛ النظرية والنصائح حول EME مع مقدمة المؤلف وترقيم يبدأ من 1 وصيغ ضجيج الشمس؛ HTTPS على Linux وmacOS بشهادات النظام.",
+            "EIRP الخاص بي",
+            "EIRP محطة DX",
+            "S/N أنا → DX",
+            "S/N DX → أنا",
+            "في {0:0} Hz · {1} dB في 2500 Hz",
+            "في {0:0} Hz مع الشمس · {1} dB في 2500 Hz",
         };
 
         public static readonly string[] TR = {
@@ -23362,7 +23458,7 @@ namespace LunaCalc
             "Ana ekran, her saniye güncellenir. Üstte genel ayarlar (çağrı işareti, dil, renkler, yazı boyutları ve yazı tipi), BANT SEÇİMİ düğmesi ve karmaşık veri kutusu; altında sizin ve DX'in lokatörü (4 ile 14 karakter, konum doğruluğuyla), frekans ve UTC, yerel ve DX saatleri. Durum çubuğu (yeşil = yönlendirilebilir, turuncu = sınır dışı, gri = ufkun altında, mavi = ortak pencere) geri sayımı gösterir; ardından pusula ve yükseklik yayı, anten sınırları sarı renkte, ve dört kart: Ay (evre, doğuş ve batış), Yankı ve frekanslar (Doppler, yankı gecikmesi ve CFOM frekansları), Gökyüzü ve geometri (Tsky, uzaklık, dik açıklık, saat açısı, Dgrd ve GÖK KUBBESİNE GİT düğmesi) ve tahmini S/N (2500 Hz'de, referans olarak modun tipik eşiğiyle, DX verileri, AYRINTILI HESAPLAR kutusu ve HESAPLARA GİT düğmesi). Altta sonraki 24 saat.",
             "Engellerimin keşfi",
             "Sağ üstte iki kaydırıcı sınır dışı bölgelerin gri opaklığını ve tonunu ayarlar (ton Gök kubbesi için de geçerlidir).",
-            "Seçilen her bant (50 ile 432 MHz) için bağlantı bütçesi; veriler her bant için ayrı kaydedilir. Solda iki istasyon (anten ve kazanç, yükseklik ayarı olmayan antenler için BETA), altı gösterge (bağlantı mümkün, EIRP, yol kaybı, antendeki sinyal, S/N ve modun tipik eşiğiyle 2500 Hz'de S/N) ve tüm adımları içeren tablo; sağda seçilen istasyonun yayın ve alış düzeneği şeması: anten ve Tant, anten – röle kablosu, koaksiyel röle, kablosuyla verici, ön yükseltici, iniş kablosu, isteğe bağlı transverter, ara kablolar ve MDS ile modlu telsiz. Kablolar KOAKSİYEL KABLOLAR sekmesinin veritabanından seçilir ve kayıplar otomatik hesaplanır. Sağ üstte ana ekrandakiyle aynı AYRINTILI HESAPLAR kutusu.",
+            "Seçilen her bant (50 ile 432 MHz) için bağlantı bütçesi; veriler her bant için ayrı kaydedilir. Solda iki istasyon (anten ve kazanç, yükseklik ayarı olmayan antenler için BETA), altı gösterge (bağlantı mümkün, benim ve DX'in EIRP'si, yol kaybı, seçilen bant genişliğinde Güneş dahil S/N ben → DX ve DX → ben, 2500 Hz'e de indirgenmiş) ve tüm adımları içeren tablo; sağda seçilen istasyonun yayın ve alış düzeneği şeması: anten ve Tant, anten – röle kablosu, koaksiyel röle, kablosuyla verici, ön yükseltici, iniş kablosu, isteğe bağlı transverter, ara kablolar ve MDS ile modlu telsiz. Kablolar KOAKSİYEL KABLOLAR sekmesinin veritabanından seçilir ve kayıplar otomatik hesaplanır. Sağ üstte ana ekrandakiyle aynı AYRINTILI HESAPLAR kutusu.",
             "Üstte dört gösterge, solda istasyonlarıyla veri kaynağı (önerilen NOAA RSTN, ya da NOAA veya Penticton F10.7, ya da özel adres), sağda çalışma frekansına kadar dışdeğerlemeli güneş akısı spektrumu.",
             "Bu kılavuz, program içinde ve tüm dillerde: tıklanabilir içindekiler, arama, formüller ve kaynaklar.",
             "Bir Word belgesi gibi düzenlenmiştir, formüller denklem düzenleyicisi tarzındadır: panoya kopyalanabilir ya da Word (.docx) olarak kaydedilebilir.",
@@ -23622,6 +23718,12 @@ namespace LunaCalc
             "Programın dağıtıldığı lisansın metni.",
             "S = SFU cinsinden güneş akısı (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann sabiti (1,380649·10⁻²³ J/K); G = antenin doğrusal kazancı; λ = dalga boyu; θ = Güneş ile Ay arasındaki açısal uzaklık; a = diyagramın Güneş yönündeki kazancı, ayarlanan yan lob seviyesinin altına asla inmez (arka loblarda 10 dB daha düşük); ΔN = Güneş nedeniyle gürültü artışı.",
             "1.1 - Canlı konum ve +- 24h (eski Takip) geçmişte ve gelecekte de: gün takvimden, saat kırmızı çizgiyi sürükleyerek, frekans Yankı ve frekanslar kutusunda; W7GJ ve WSJT-X Improved'dan indirilip birleştirilen CALL3.TXT ile DX çağrı işareti kutusu, önerilen lokatör ve WSJT-X klasörüne kopyalama; Mesafe ve Dgrd sıralama sütunu olmadan, üst üste çizilen dik açıklık, grafikle aynı renkte satırlar ve isteğe bağlı yeşil kullanılabilir saatlerle; programın stilinde onay kutuları; açılır listelerde çapa göre, tabloda ada, üreticiye ve türe göre sıralanan kablolar, çevrilmiş kaynaklarla; yalnızca 60 s modlarıyla (JT65, Q65-60A, Q65-60B, Q65-60C) EME bütçesi ve metinlere uyum sağlayan tesis şeması; tüm ekranları gözden geçiren KULLANIM KILAVUZU; yazarın önsözü, 1'den başlayan numaralandırma ve güneş gürültüsü formülleriyle EME ÜZERİNE TEORİ VE ÖNERİLER; Linux ve macOS'ta sistem sertifikalarıyla HTTPS.",
+            "Benim EIRP'm",
+            "DX'in EIRP'si",
+            "S/N ben → DX",
+            "S/N DX → ben",
+            "{0:0} Hz'de · 2500 Hz'de {1} dB",
+            "{0:0} Hz'de Güneş dahil · 2500 Hz'de {1} dB",
         };
     }
 
@@ -25176,8 +25278,9 @@ namespace LunaCalc
             PreparaGrafica(g);
             g.Clear(Tema.Back);
             Rectangle cr = pnlKpi.ClientRectangle;
-            string[] tit = { Lang.T("COLLEGAMENTO POSSIBILE"), Lang.T("EIRP (NEI DUE SENSI)"), Lang.T("PERDITA DI TRATTA EME"),
-                Lang.T("SEGNALE ALL'ANTENNA RX"), string.Format(ci, Lang.T("S/N in {0} Hz"), LeggiBw()).ToUpper(Lang.Cultura), string.Format(ci, Lang.T("S/N in {0} Hz"), 2500).ToUpper(Lang.Cultura) };
+            // prima riga: collegamento, EIRP mia, EIRP del DX; seconda: perdita di tratta e S/N nei due sensi (con il Sole, se calcolato)
+            string[] tit = { Lang.T("COLLEGAMENTO POSSIBILE"), Lang.T("EIRP mia").ToUpper(Lang.Cultura), Lang.T("EIRP del DX").ToUpper(Lang.Cultura),
+                Lang.T("PERDITA DI TRATTA EME"), Lang.T("S/N io → DX").ToUpper(Lang.Cultura), Lang.T("S/N DX → io").ToUpper(Lang.Cultura) };
             float gap = S(10), w = (cr.Width - 4 * gap) / 3f, h = (cr.Height - 3 * gap) / 2f;
             using (Font fh = FontPx(Lang.FontUi, S(11), false))
             using (Font fv = FontPx(FamigliaNumeri, S(26), true))
@@ -25336,24 +25439,18 @@ namespace LunaCalc
                 kpiS[0] = r.Ok ? Lang.T("Luna puntabile da entrambe") : Lang.T("la Luna non è puntabile da entrambe");
                 kpiC[0] = r.Ok ? Tema.OkFg : Tema.BadFg;
                 double e1 = Math.Pow(10.0, a.EirpDbW / 10.0), e2 = Math.Pow(10.0, b.EirpDbW / 10.0);
-                kpiV[1] = FmtW(Math.Max(e1, e2), c) + " · " + Math.Max(a.EirpDbW, b.EirpDbW).ToString("F1", c) + " dBW";
-                kpiS[1] = Math.Abs(a.EirpDbW - b.EirpDbW) < 0.05 ? string.Format(c, Lang.T("{0} all'antenna · {1:F1} dBi"), FmtW(a.PantW, c), a.Gtx)
-                    : string.Format(c, Lang.T("io → DX {0:F1} dBW · DX → io {1:F1} dBW"), a.EirpDbW, b.EirpDbW);
+                kpiV[1] = FmtW(e1, c) + " · " + a.EirpDbW.ToString("F1", c) + " dBW";
+                kpiS[1] = string.Format(c, Lang.T("{0} all'antenna · {1:F1} dBi"), FmtW(a.PantW, c), a.Gtx);
                 kpiC[1] = Color.FromArgb(31, 111, 209);
-                kpiV[2] = path.ToString("F1", c) + " dB";
-                kpiS[2] = chkPol.Checked ? string.Format(c, Lang.T("+ {0:F1} dB polarizzazione (Dpol {1:F0}°)"), pol, r.Dpol) : string.Format(c, Lang.T("polarizzazione non inclusa (Dpol {0:F0}°)"), r.Dpol);
-                kpiC[2] = Color.FromArgb(107, 114, 128);
-                kpiV[3] = Math.Min(a.Sant, b.Sant).ToString("F1", c) + " dBm";
-                kpiS[3] = Math.Abs(a.Sant - b.Sant) < 0.05 ? Lang.T("io → DX e DX → io") : string.Format(c, Lang.T("io → DX {0:F1} · DX → io {1:F1}"), a.Sant, b.Sant);
-                kpiC[3] = Color.FromArgb(91, 63, 168);
-                kpiV[4] = Segno(Math.Min(a.SNb, b.SNb), c) + " dB";
-                kpiS[4] = string.Format(c, Lang.T("in {0:0} Hz · io → DX {1} · DX → io {2}"), bw, Segno(a.SNb, c), Segno(b.SNb, c));
-                kpiC[4] = Color.FromArgb(217, 119, 6);
-                // solo l'S/N riportato a 2500 Hz: la soglia del modo è un riferimento, non un limite netto (Deep Search, media, AP)
-                double sA = Sn2500(a.SNb, bw), sB = Sn2500(b.SNb, bw);
-                kpiV[5] = Segno(Math.Min(sA, sB), c) + " dB";
-                kpiS[5] = string.Format(c, Lang.T("io → DX {0} · DX → io {1} · soglia tipica {2}: {3} dB"), Segno(sA, c), Segno(sB, c), pm.NomeModo, pm.SnReq.ToString("0.#", c));
-                kpiC[5] = Color.FromArgb(15, 139, 141);
+                kpiV[2] = FmtW(e2, c) + " · " + b.EirpDbW.ToString("F1", c) + " dBW";
+                kpiS[2] = string.Format(c, Lang.T("{0} all'antenna · {1:F1} dBi"), FmtW(b.PantW, c), b.Gtx);
+                kpiC[2] = Color.FromArgb(217, 119, 6);
+                kpiV[3] = path.ToString("F1", c) + " dB";
+                kpiS[3] = chkPol.Checked ? string.Format(c, Lang.T("+ {0:F1} dB polarizzazione (Dpol {1:F0}°)"), pol, r.Dpol) : string.Format(c, Lang.T("polarizzazione non inclusa (Dpol {0:F0}°)"), r.Dpol);
+                kpiC[3] = Color.FromArgb(107, 114, 128);
+                KpiSn(a, b, bw, false);
+                kpiC[4] = Color.FromArgb(15, 139, 141);
+                kpiC[5] = Color.FromArgb(91, 63, 168);
             }
             // titolo delle schede delle stazioni: locator e posizione della Luna
             bMe.Sotto = (me != null && me.Ok ? me.Loc.Text.Trim() : "") + (valido && r != null ? string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.P.Az, r.P.El) : "");
@@ -25364,6 +25461,19 @@ namespace LunaCalc
         }
 
         static string Segno(double v, CultureInfo c) { return (v >= 0 ? "+" : "−") + Math.Abs(v).ToString("F1", c); }
+
+        // S/N nei due sensi nella banda passante scelta (con il Sole quando è calcolato), con il valore riportato a 2500 Hz
+        void KpiSn(Tratta a, Tratta b, double bw, bool sole)
+        {
+            CultureInfo c = ci;
+            Tratta[] t = { a, b };
+            for (int i = 0; i < 2; i++)
+            {
+                kpiV[4 + i] = Segno(t[i].SNb, c) + " dB";
+                kpiS[4 + i] = string.Format(c, sole ? Lang.T("in {0:0} Hz con il Sole · {1} dB in 2500 Hz") : Lang.T("in {0:0} Hz · {1} dB in 2500 Hz"), bw, Segno(Sn2500(t[i].SNb, bw), c));
+            }
+            if (pnlKpi != null) pnlKpi.Invalidate();
+        }
 
 
         void SalvaBanda(int f)
@@ -25750,6 +25860,8 @@ namespace LunaCalc
                 }
 
                 if (solar && a2 != null) AddSolarRows(a, b, a2, b2, sa, sb);
+                // gli indicatori S/N del Budget usano l'S/N con il Sole, come l'ultima riga della tabella
+                if (target == lvB && a2 != null && sa != null && sb != null && (sa.Valid || sb.Valid)) KpiSn(a2, b2, bw, true);
             }
             finally
             {
@@ -34606,7 +34718,7 @@ namespace LunaCalc
                 new string[] { Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Mappa aerofotografica o topografica centrata sulla tua stazione, con sopra la volta celeste in pianta (orizzonte = cerchio esterno, zenit = centro): posizione attuale della Luna, percorso nelle prossime 24 ore con sorgere e tramonto, limiti dell'antenna in giallo e zone fuori dai limiti sfocate in grigio chiaro. Le maniglie gialle si trascinano con il mouse per regolare i limiti direttamente sulla mappa; la rotella cambia lo zoom.") + " " + Lang.T("La casella \"Sfuma le zone fuori dai limiti\" accende o spegne la sfocatura.") + " " + Lang.T("In alto a destra due cursori regolano l'opacità e il tono del grigio delle zone fuori dai limiti (il tono vale anche per la Volta celeste).") },
                 new string[] { Lang.T("Luna sul mondo"), Lang.T("Mappa del mondo con le terre colorate secondo l'elevazione della Luna vista da ogni località, nello stesso momento della Posizione della Luna; passando il mouse si leggono elevazione, azimut e distanza, con un clic il punto diventa la stazione DX.") },
                 new string[] { Lang.T("Posizione della Luna"), Lang.T("Tabella per il periodo scelto (in giorni, con l'intervallo in minuti) con il colore della puntabilità; passando il mouse sull'intestazione di una colonna compare la sua spiegazione. Esportazione CSV per Excel.") },
-                new string[] { Lang.T("Budget EME"), Lang.T("Bilancio del collegamento per ogni banda scelta (da 50 a 432 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP, perdita di tratta, segnale all'antenna, S/N e S/N in 2500 Hz con la soglia tipica del modo) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.") },
+                new string[] { Lang.T("Budget EME"), Lang.T("Bilancio del collegamento per ogni banda scelta (da 50 a 432 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP mia e del DX, perdita di tratta, S/N io → DX e DX → io nella banda passante scelta e con il Sole, riportato anche a 2500 Hz) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.") },
                 new string[] { Lang.T("Rumore solare"), Lang.T("Scarica dal web i flussi solari misurati dalla rete RSTN e stima quanto il Sole aumenta il rumore del ricevitore, in base alla distanza angolare tra Sole e Luna e al diagramma dell'antenna. Utile vicino alla luna nuova.") + " " + Lang.T("In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.") },
                 new string[] { Lang.T("Mappa WWL e ADIF"), Lang.T("Mappa del mondo con il reticolo Maidenhead; caricando il file ADIF del log si colorano i quadrati lavorati (arancione), confermati via LoTW (verde) o solo con QSL (blu), anche per banda e solo EME.") + " " + Lang.T("Con \"Scarica da LoTW…\" il log viene scaricato direttamente da LoTW (nome utente e password vengono chiesti e memorizzati nelle impostazioni).") },
                 new string[] { "ABOUT & CREDITS", Lang.T("Crediti con i link e storia delle versioni.") },
@@ -40435,6 +40547,9 @@ namespace LunaCalc
         }
 
         // ---- Esportazione in OMML (Office Math) per il documento di Word
+        // grandezza delle formule nel documento Word, in mezzi punti (0 = quella del testo)
+        public static int DimDocx;
+
         public static string Omml(string s)
         {
             StringBuilder sb = new StringBuilder();
@@ -40449,7 +40564,7 @@ namespace LunaCalc
         {
             sb.Append("<m:r>");
             if (diritto) sb.Append("<m:rPr><m:sty m:val=\"p\"/></m:rPr>");
-            sb.Append("<w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\"/></w:rPr><m:t xml:space=\"preserve\">").Append(Xml(t)).Append("</m:t></m:r>");
+            sb.Append("<w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\"/>" + (DimDocx > 0 ? "<w:sz w:val=\"" + DimDocx.ToString(CultureInfo.InvariantCulture) + "\"/><w:szCs w:val=\"" + DimDocx.ToString(CultureInfo.InvariantCulture) + "\"/>" : "") + "</w:rPr><m:t xml:space=\"preserve\">").Append(Xml(t)).Append("</m:t></m:r>");
         }
 
         static string OmmlGruppo(string g)
@@ -41495,6 +41610,37 @@ namespace LunaCalc
 
         // manuale = true: titoli su quattro livelli, capitoli a pagina nuova, sommario automatico, numero di pagina in fondo,
         // riquadri colorati, colonne affiancate, righe evidenziate, testo colorato e figure (abaco) come nel programma
+        // Un'unica grandezza per tutte le formule del documento Word (in mezzi punti): la più grande con cui
+        // anche la formula più lunga resta dentro il margine del foglio (da 11 pt fino a un minimo di 7 pt)
+        static int DimensioneFormuleDocx(List<DocBlocco> blocchi, int larghezza)
+        {
+            float disponibile = (larghezza - 340) / 20f - 42f;   // punti: rientro della formula e spazio per il numero (x.y)
+            float piu = 0;
+            Action<List<DocBlocco>> Misura = null;
+            Misura = l =>
+            {
+                foreach (DocBlocco b in l)
+                {
+                    if (b.Sx != null) Misura(b.Sx);
+                    if (b.Dx != null) Misura(b.Dx);
+                    if (b.Tipo != DocTipo.Formula) continue;
+                    try
+                    {
+                        string l1 = b.Testo + (b.Valori == null && b.Risultato != null ? " = \\h{" + b.Risultato + "}" : "");
+                        piu = Math.Max(piu, Formula.Analizza(l1, 11f).W);
+                        if (b.Valori != null)
+                            piu = Math.Max(piu, Formula.Analizza("= " + b.Valori + (b.Risultato != null ? " = \\h{" + b.Risultato + "}" : ""), 11f).W);
+                    }
+                    catch { }
+                }
+            };
+            Misura(blocchi);
+            if (piu <= 0) return 22;
+            // Cambria Math in Word è un po' più largo del disegno del programma: margine del 12 %
+            double scala = Math.Min(1.0, disponibile / (piu * 1.12));
+            return (int)Math.Max(14, Math.Min(22, Math.Floor(22 * scala)));
+        }
+
         public void SalvaDocx(string percorso, string titolo, bool manuale)
         {
             StringBuilder d = new StringBuilder();
@@ -41504,7 +41650,9 @@ namespace LunaCalc
              .Append(" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\"")
              .Append(" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\" xmlns:pic=\"http://schemas.openxmlformats.org/drawingml/2006/picture\"><w:body>");
             int nTitoli = 0;
-            ScriviDocx(d, Blocchi, manuale, ref nTitoli, figure, 9638);
+            Formula.DimDocx = DimensioneFormuleDocx(Blocchi, 9638);
+            try { ScriviDocx(d, Blocchi, manuale, ref nTitoli, figure, 9638); }
+            finally { Formula.DimDocx = 0; }
             d.Append("<w:sectPr>");
             if (manuale) d.Append("<w:footerReference w:type=\"default\" r:id=\"rIdPiede\"/>");
             d.Append("<w:pgSz w:w=\"11906\" w:h=\"16838\"/><w:pgMar w:top=\"1134\" w:right=\"1134\" w:bottom=\"1134\" w:left=\"1134\" w:header=\"567\" w:footer=\"567\" w:gutter=\"0\"/></w:sectPr></w:body></w:document>");
