@@ -132,7 +132,7 @@ jobs:
           convert shot/es.png -resize 1200x shot/es.jpg 2>/dev/null && echo "SCREENSHOT-ES-B64:$(base64 -w 0 shot/es.jpg)" || true
           kill $PID 2>/dev/null || true
           sed -i 's/^lingua=es/lingua=it/' "$HOME/.local/share/YAEC/data/impostazioni.txt"
-          for C in "La risoluzione dell'encoder" "Sæmundsson" "Il preamplificatore e la figura di rumore"; do
+          for C in "Verificare il puntamento con il radar GRAVES" "Le impostazioni di NJ9R per JT65B" "Le chat testuali via Internet"; do
             YAEC_LINGUETTA="TEORIA E CONSIGLI SULL'EME" YAEC_CERCA="$C" mono YAEC.exe &
             PID=$!
             sleep 30
