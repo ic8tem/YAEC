@@ -2646,7 +2646,7 @@ namespace LunaCalc
             "Scrivi una mail",
             "Copia indirizzo",
             "Hai un transverter da far conoscere?",
-            "Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 1.7.2 del manuale «TEORIA E CONSIGLI SULL'EME», con la citazione della fonte.",
+            "Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 1.7.1 del manuale «TEORIA E CONSIGLI SULL'EME», con la citazione della fonte.",
             "Il programma ha il patrocinio della",
             "Licenza d'uso",
             "YAEC è un programma libero, scritto da un radioamatore per i radioamatori. Il suo codice è stato sviluppato anche con l'aiuto di un assistente di intelligenza artificiale, e la licenza ne riprende il modo di lavorare: essere davvero utile, dire sempre come stanno le cose, mostrare il proprio ragionamento, non nuocere a nessuno e riconoscere il lavoro degli altri. Sotto ci sono i principi e poi le condizioni vere e proprie.",
@@ -2761,7 +2761,7 @@ namespace LunaCalc
             "beta-tester",
             "RINGRAZIAMENTI",
             "Lunghezza d'onda e sezione radar della Luna",
-            "Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale «TEORIA E CONSIGLI SULL'EME» (§ 1.7.2). Con \"personalizzato\" li scrivi tu.",
+            "Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale «TEORIA E CONSIGLI SULL'EME» (§ 1.7.1). Con \"personalizzato\" li scrivi tu.",
             "Guadagno singola antenna",
             "Banda passante",
             "Lunghezza",
@@ -2971,6 +2971,7 @@ namespace LunaCalc
             "che comunemente si trovano negli impianti degli operatori EME di tutto il mondo",
             "Citato nel manuale TEORIA E CONSIGLI SULL'EME:",
             "1.2 - Budget EME con gli indicatori EIRP mia, EIRP del DX, perdita di tratta e S/N nei due sensi (con il Sole); formule del documento Word di una sola grandezza, dentro i margini; pulsanti pieni e menu a tendina piatti con bordo arrotondato in tutti gli schemi; otto schemi di colori pastello; caselle dei valori con le frecce affiancate; i tre giorni migliori in ordine di data; sfondo del cielo sfocato; DEBUG FORMULE tradotto; manuale TEORIA E CONSIGLI SULL'EME con i consigli di Relu NJ9R (GRAVES, puntamento, connettori, guadagno delle antenne, JT65B e MAP65, relè di polarizzazione), i nuovi paragrafi sulla prima ricezione e sulle chat via Internet e le tabelle di VE7BQH nella prefazione; ringraziamenti a NJ9R, il ricordo di IK1UWL e gli autori di articoli, hardware e software, con il fumetto delle loro opere.",
+            "1.2.1 - La pagina CONTATTI DELL'AUTORE E RINGRAZIAMENTI si apre di nuovo correttamente su Linux e macOS; il rimando per i transverter indica il § 1.7.1.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -3962,7 +3963,7 @@ namespace LunaCalc
             "Write an e-mail",
             "Copy address",
             "Do you have a transverter to make known?",
-            "If you would like to make other transverters or your own transverter known, write an e-mail to the author: the data will be added to chapter 1.7.2 of the manual «THEORY AND TIPS ON EME», citing the source.",
+            "If you would like to make other transverters or your own transverter known, write an e-mail to the author: the data will be added to chapter 1.7.1 of the manual «THEORY AND TIPS ON EME», citing the source.",
             "The program is under the patronage of the",
             "Licence",
             "YAEC is free software, written by a radio amateur for radio amateurs. Its code was also developed with the help of an artificial intelligence assistant, and the licence follows its way of working: be really useful, always say how things are, show your own reasoning, harm no one and acknowledge the work of others. Below are the principles and then the actual conditions.",
@@ -4077,7 +4078,7 @@ namespace LunaCalc
             "beta testers",
             "ACKNOWLEDGEMENTS",
             "Wavelength and radar cross-section of the Moon",
-            "Transverter model: the program takes its noise figure and gain from the table in the manual «THEORY AND TIPS ON EME» (§ 1.7.2). With \"custom\" you enter them yourself.",
+            "Transverter model: the program takes its noise figure and gain from the table in the manual «THEORY AND TIPS ON EME» (§ 1.7.1). With \"custom\" you enter them yourself.",
             "Single antenna gain",
             "Bandwidth",
             "Length",
@@ -4287,6 +4288,7 @@ namespace LunaCalc
             "commonly found in the stations of EME operators all over the world",
             "Cited in the THEORY AND TIPS ON EME manual:",
             "1.2 - EME budget with the indicators My EIRP, DX EIRP, path loss and S/N in both directions (with the Sun); Word document formulas in a single size, within the margins; filled buttons and flat drop-down lists with rounded borders in all schemes; eight pastel colour schemes; value boxes with side-by-side arrows; the three best days in date order; blurred sky background; FORMULA DEBUG translated; THEORY AND TIPS ON EME manual with the advice of Relu NJ9R (GRAVES, pointing, connectors, antenna gain, JT65B and MAP65, polarization relay), the new sections on the first reception and on internet chats, and the VE7BQH tables in the preface; thanks to NJ9R, the memory of IK1UWL and the authors of articles, hardware and software, with a tooltip on their works.",
+            "1.2.1 - The AUTHOR CONTACTS AND ACKNOWLEDGEMENTS page opens correctly again on Linux and macOS; the reference for the transverters points to § 1.7.1.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5278,7 +5280,7 @@ namespace LunaCalc
             "E-Mail schreiben",
             "Adresse kopieren",
             "Hast du einen Transverter bekannt zu machen?",
-            "Wenn du andere Transverter oder deinen eigenen bekannt machen möchtest, schreib dem Autor eine E-Mail: die Daten werden mit Quellenangabe in Kapitel 1.7.2 des Handbuchs «THEORIE UND TIPPS ZU EME» aufgenommen.",
+            "Wenn du andere Transverter oder deinen eigenen bekannt machen möchtest, schreib dem Autor eine E-Mail: die Daten werden mit Quellenangabe in Kapitel 1.7.1 des Handbuchs «THEORIE UND TIPPS ZU EME» aufgenommen.",
             "Das Programm steht unter der Schirmherrschaft der",
             "Lizenz",
             "YAEC ist ein freies Programm, von einem Funkamateur für Funkamateure geschrieben. Sein Code wurde auch mit Hilfe eines KI-Assistenten entwickelt, und die Lizenz übernimmt dessen Arbeitsweise: wirklich nützlich sein, immer sagen, wie die Dinge sind, das eigene Denken zeigen, niemandem schaden und die Arbeit anderer anerkennen. Unten stehen die Grundsätze und dann die eigentlichen Bedingungen.",
@@ -5393,7 +5395,7 @@ namespace LunaCalc
             "Beta-Tester",
             "DANKSAGUNGEN",
             "Wellenlänge und Radarquerschnitt des Mondes",
-            "Transverter-Modell: Das Programm übernimmt Rauschzahl und Verstärkung aus der Tabelle im Handbuch «THEORIE UND TIPPS ZU EME» (§ 1.7.2). Mit „benutzerdefiniert“ gibst du sie selbst ein.",
+            "Transverter-Modell: Das Programm übernimmt Rauschzahl und Verstärkung aus der Tabelle im Handbuch «THEORIE UND TIPPS ZU EME» (§ 1.7.1). Mit „benutzerdefiniert“ gibst du sie selbst ein.",
             "Gewinn einer Einzelantenne",
             "Bandbreite",
             "Länge",
@@ -5603,6 +5605,7 @@ namespace LunaCalc
             "die man üblicherweise in den Stationen der EME-Funker in aller Welt findet",
             "Zitiert im Handbuch THEORIE UND TIPPS ZU EME:",
             "1.2 - EME-Budget mit den Anzeigen Meine EIRP, EIRP des DX, Streckendämpfung und S/N in beide Richtungen (mit der Sonne); Formeln des Word-Dokuments in einer einzigen Größe, innerhalb der Ränder; gefüllte Schaltflächen und flache Auswahllisten mit abgerundetem Rand in allen Schemata; acht Pastell-Farbschemata; Wertfelder mit nebeneinanderliegenden Pfeilen; die drei besten Tage nach Datum geordnet; unscharfer Himmelshintergrund; FORMEL-DEBUG übersetzt; Handbuch THEORIE UND TIPPS ZU EME mit den Ratschlägen von Relu NJ9R (GRAVES, Ausrichtung, Stecker, Antennengewinn, JT65B und MAP65, Polarisationsrelais), den neuen Abschnitten zum ersten Empfang und zu den Internet-Chats und den VE7BQH-Tabellen im Vorwort; Dank an NJ9R, Erinnerung an IK1UWL und an die Autoren von Artikeln, Hardware und Software, mit einem Tooltip zu ihren Werken.",
+            "1.2.1 - Die Seite KONTAKT ZUM AUTOR UND DANK öffnet sich unter Linux und macOS wieder korrekt; der Verweis für die Transverter zeigt auf § 1.7.1.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6594,7 +6597,7 @@ namespace LunaCalc
             "Écrire un e-mail",
             "Copier l'adresse",
             "As-tu un transverter à faire connaître ?",
-            "Si tu veux faire connaître d'autres transverters ou ton transverter, écris un e-mail à l'auteur : les données seront ajoutées, avec leur source, au chapitre 1.7.2 du manuel «THÉORIE ET CONSEILS SUR L'EME».",
+            "Si tu veux faire connaître d'autres transverters ou ton transverter, écris un e-mail à l'auteur : les données seront ajoutées, avec leur source, au chapitre 1.7.1 du manuel «THÉORIE ET CONSEILS SUR L'EME».",
             "Le programme bénéficie du patronage de la",
             "Licence",
             "YAEC est un programme libre, écrit par un radioamateur pour les radioamateurs. Son code a aussi été développé avec l'aide d'un assistant d'intelligence artificielle, et la licence en reprend la manière de travailler : être vraiment utile, toujours dire les choses comme elles sont, montrer son raisonnement, ne nuire à personne et reconnaître le travail des autres. Ci-dessous les principes, puis les conditions proprement dites.",
@@ -6709,7 +6712,7 @@ namespace LunaCalc
             "bêta-testeurs",
             "REMERCIEMENTS",
             "Longueur d'onde et section radar de la Lune",
-            "Modèle du transverter : le programme reprend son facteur de bruit et son gain du tableau du manuel «THÉORIE ET CONSEILS SUR L'EME» (§ 1.7.2). Avec « personnalisé », tu les saisis toi-même.",
+            "Modèle du transverter : le programme reprend son facteur de bruit et son gain du tableau du manuel «THÉORIE ET CONSEILS SUR L'EME» (§ 1.7.1). Avec « personnalisé », tu les saisis toi-même.",
             "Gain d'une antenne",
             "Bande passante",
             "Longueur",
@@ -6919,6 +6922,7 @@ namespace LunaCalc
             "que l'on trouve couramment dans les stations des opérateurs EME du monde entier",
             "Cité dans le manuel THÉORIE ET CONSEILS SUR L'EME :",
             "1.2 - Bilan EME avec les indicateurs Ma PIRE, PIRE du DX, perte de trajet et S/B dans les deux sens (avec le Soleil) ; formules du document Word d'une seule taille, dans les marges ; boutons pleins et listes déroulantes plates à bord arrondi dans tous les thèmes ; huit thèmes de couleurs pastel ; cases de valeurs avec les flèches côte à côte ; les trois meilleurs jours dans l'ordre chronologique ; fond du ciel flou ; DÉBOGAGE DES FORMULES traduit ; manuel THÉORIE ET CONSEILS SUR L'EME avec les conseils de Relu NJ9R (GRAVES, pointage, connecteurs, gain des antennes, JT65B et MAP65, relais de polarisation), les nouvelles sections sur la première réception et sur les chats Internet, et les tableaux de VE7BQH dans la préface ; remerciements à NJ9R, souvenir d'IK1UWL et des auteurs d'articles, de matériel et de logiciels, avec une infobulle sur leurs travaux.",
+            "1.2.1 - La page CONTACTS DE L'AUTEUR ET REMERCIEMENTS s'ouvre de nouveau correctement sous Linux et macOS ; le renvoi pour les transverters indique le § 1.7.1.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7910,7 +7914,7 @@ namespace LunaCalc
             "Escribir un correo",
             "Copiar la dirección",
             "¿Tienes un transverter para dar a conocer?",
-            "Si quieres dar a conocer otros transverters o tu transverter, escribe un correo al autor: los datos se añadirán, con su fuente, al capítulo 1.7.2 del manual «TEORÍA Y CONSEJOS SOBRE EME».",
+            "Si quieres dar a conocer otros transverters o tu transverter, escribe un correo al autor: los datos se añadirán, con su fuente, al capítulo 1.7.1 del manual «TEORÍA Y CONSEJOS SOBRE EME».",
             "El programa cuenta con el patrocinio de la",
             "Licencia",
             "YAEC es un programa libre, escrito por un radioaficionado para los radioaficionados. Su código se ha desarrollado también con la ayuda de un asistente de inteligencia artificial, y la licencia toma de él su manera de trabajar: ser realmente útil, decir siempre las cosas como son, mostrar el propio razonamiento, no dañar a nadie y reconocer el trabajo de los demás. Abajo están los principios y luego las condiciones propiamente dichas.",
@@ -8025,7 +8029,7 @@ namespace LunaCalc
             "beta-testers",
             "AGRADECIMIENTOS",
             "Longitud de onda y sección radar de la Luna",
-            "Modelo del transverter: el programa toma su figura de ruido y su ganancia de la tabla del manual «TEORÍA Y CONSEJOS SOBRE EME» (§ 1.7.2). Con \"personalizado\" los escribes tú.",
+            "Modelo del transverter: el programa toma su figura de ruido y su ganancia de la tabla del manual «TEORÍA Y CONSEJOS SOBRE EME» (§ 1.7.1). Con \"personalizado\" los escribes tú.",
             "Ganancia de una antena",
             "Ancho de banda",
             "Longitud",
@@ -8235,6 +8239,7 @@ namespace LunaCalc
             "que se encuentran habitualmente en las estaciones de los operadores EME de todo el mundo",
             "Citado en el manual TEORÍA Y CONSEJOS SOBRE EME:",
             "1.2 - Balance EME con los indicadores Mi PIRE, PIRE del DX, pérdida de trayecto y S/R en los dos sentidos (con el Sol); fórmulas del documento Word de un solo tamaño, dentro de los márgenes; botones rellenos y listas desplegables planas con borde redondeado en todos los esquemas; ocho esquemas de colores pastel; casillas de valores con las flechas una al lado de la otra; los tres mejores días en orden de fecha; fondo del cielo desenfocado; DEPURACIÓN DE FÓRMULAS traducido; manual TEORÍA Y CONSEJOS SOBRE EME con los consejos de Relu NJ9R (GRAVES, apuntamiento, conectores, ganancia de las antenas, JT65B y MAP65, relé de polarización), los nuevos apartados sobre la primera recepción y sobre los chats de Internet y las tablas de VE7BQH en el prefacio; agradecimientos a NJ9R, el recuerdo de IK1UWL y los autores de artículos, hardware y software, con un globo de ayuda sobre sus obras.",
+            "1.2.1 - La página CONTACTOS DEL AUTOR Y AGRADECIMIENTOS vuelve a abrirse correctamente en Linux y macOS; la referencia para los transverters indica el § 1.7.1.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9226,7 +9231,7 @@ namespace LunaCalc
             "Escrever um e-mail",
             "Copiar o endereço",
             "Tens um transverter para dar a conhecer?",
-            "Se quiseres dar a conhecer outros transverters ou o teu transverter, escreve um e-mail ao autor: os dados serão acrescentados, com a fonte, ao capítulo 1.7.2 do manual «TEORIA E CONSELHOS SOBRE EME».",
+            "Se quiseres dar a conhecer outros transverters ou o teu transverter, escreve um e-mail ao autor: os dados serão acrescentados, com a fonte, ao capítulo 1.7.1 do manual «TEORIA E CONSELHOS SOBRE EME».",
             "O programa tem o patrocínio da",
             "Licença",
             "O YAEC é um programa livre, escrito por um radioamador para os radioamadores. O seu código foi desenvolvido também com a ajuda de um assistente de inteligência artificial, e a licença retoma a sua forma de trabalhar: ser realmente útil, dizer sempre as coisas como são, mostrar o próprio raciocínio, não prejudicar ninguém e reconhecer o trabalho dos outros. Em baixo estão os princípios e depois as condições propriamente ditas.",
@@ -9341,7 +9346,7 @@ namespace LunaCalc
             "beta-testers",
             "AGRADECIMENTOS",
             "Comprimento de onda e secção radar da Lua",
-            "Modelo do transverter: o programa usa a figura de ruído e o ganho da tabela do manual «TEORIA E CONSELHOS SOBRE EME» (§ 1.7.2). Com \"personalizado\" introduzes tu os valores.",
+            "Modelo do transverter: o programa usa a figura de ruído e o ganho da tabela do manual «TEORIA E CONSELHOS SOBRE EME» (§ 1.7.1). Com \"personalizado\" introduzes tu os valores.",
             "Ganho de uma antena",
             "Largura de banda",
             "Comprimento",
@@ -9551,6 +9556,7 @@ namespace LunaCalc
             "que se encontram habitualmente nas estações dos operadores EME de todo o mundo",
             "Citado no manual TEORIA E CONSELHOS SOBRE EME:",
             "1.2 - Balanço EME com os indicadores A minha EIRP, EIRP do DX, perda de percurso e S/R nos dois sentidos (com o Sol); fórmulas do documento Word num só tamanho, dentro das margens; botões preenchidos e listas pendentes planas com rebordo arredondado em todos os esquemas; oito esquemas de cores pastel; caixas de valores com as setas lado a lado; os três melhores dias por ordem de data; fundo do céu desfocado; DEPURAÇÃO DE FÓRMULAS traduzido; manual TEORIA E CONSELHOS SOBRE EME com os conselhos de Relu NJ9R (GRAVES, apontamento, conectores, ganho das antenas, JT65B e MAP65, relé de polarização), as novas secções sobre a primeira receção e sobre os chats na Internet e as tabelas de VE7BQH no prefácio; agradecimentos a NJ9R, a memória de IK1UWL e os autores de artigos, hardware e software, com um balão de ajuda sobre as suas obras.",
+            "1.2.1 - A página CONTACTOS DO AUTOR E AGRADECIMENTOS volta a abrir corretamente em Linux e macOS; a referência para os transverters indica o § 1.7.1.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10542,7 +10548,7 @@ namespace LunaCalc
             "写邮件",
             "复制地址",
             "有变频器想介绍吗？",
-            "如果你想介绍其他变频器或你自己的变频器，请给作者发邮件：数据将连同来源加入手册「EME 理论与建议」第 1.7.2 章。",
+            "如果你想介绍其他变频器或你自己的变频器，请给作者发邮件：数据将连同来源加入手册「EME 理论与建议」第 1.7.1 章。",
             "本程序由以下机构赞助：",
             "许可证",
             "YAEC 是一款自由程序，由业余无线电爱好者为业余无线电爱好者编写。其代码也借助人工智能助手开发，许可证沿用了它的工作方式：真正有用、始终实事求是、展示推理过程、不伤害任何人、承认他人的工作。下面先是原则，然后是具体条件。",
@@ -10657,7 +10663,7 @@ namespace LunaCalc
             "测试员",
             "致谢",
             "波长与月球雷达截面",
-            "变频器型号：程序从手册「EME 理论与建议」表格（§ 1.7.2）中读取其噪声系数和增益。选择“自定义”则由你自行输入。",
+            "变频器型号：程序从手册「EME 理论与建议」表格（§ 1.7.1）中读取其噪声系数和增益。选择“自定义”则由你自行输入。",
             "单副天线增益",
             "带宽",
             "长度",
@@ -10867,6 +10873,7 @@ namespace LunaCalc
             "这些作品常见于世界各地 EME 操作员的电台中",
             "在《EME 理论与建议》手册中的引用：",
             "1.2 - EME 链路预算新增指标：我的 EIRP、DX 的 EIRP、路径损耗以及双向 S/N（含太阳）；Word 文档中的公式统一为一种大小并保持在页边距内；所有配色方案中的按钮改为填充样式，下拉列表改为扁平圆角样式；八种粉彩配色方案；数值框的上下箭头并排显示；三个最佳日期按日期排序；天空背景模糊；公式调试已翻译；《EME 理论与建议》手册加入 Relu NJ9R 的建议（GRAVES、指向、连接器、天线增益、JT65B 与 MAP65、极化继电器）、关于首次接收和网络聊天室的新章节，并在序言中加入 VE7BQH 天线表；致谢 NJ9R，缅怀 IK1UWL，感谢文章、硬件和软件的作者，并以提示框介绍他们的作品。",
+            "1.2.1 - 作者联系方式与致谢页面在 Linux 和 macOS 上恢复正常打开；变频器的参考章节改为 § 1.7.1。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11858,7 +11865,7 @@ namespace LunaCalc
             "メールを書く",
             "アドレスをコピー",
             "紹介したいトランスバーターはありますか？",
-            "他のトランスバーターやあなたのトランスバーターを紹介したい場合は、作者にメールしてください：データは出典とともにマニュアル「EME の理論とアドバイス」第 1.7.2 章に追加されます。",
+            "他のトランスバーターやあなたのトランスバーターを紹介したい場合は、作者にメールしてください：データは出典とともにマニュアル「EME の理論とアドバイス」第 1.7.1 章に追加されます。",
             "本プログラムの後援：",
             "ライセンス",
             "YAEC はアマチュア無線家がアマチュア無線家のために書いたフリーのプログラムです。コードは AI アシスタントの助けも借りて開発され、ライセンスはその働き方を受け継いでいます：本当に役に立つこと、常にありのままを伝えること、考え方の筋道を示すこと、誰も傷つけないこと、他者の仕事を認めること。以下に原則、続いて具体的な条件を示します。",
@@ -11973,7 +11980,7 @@ namespace LunaCalc
             "ベータテスター",
             "謝辞",
             "波長と月のレーダー断面積",
-            "トランスバーターの機種：雑音指数と利得はマニュアル「EME の理論とアドバイス」の表（§ 1.7.2）から取得します。「カスタム」では自分で入力します。",
+            "トランスバーターの機種：雑音指数と利得はマニュアル「EME の理論とアドバイス」の表（§ 1.7.1）から取得します。「カスタム」では自分で入力します。",
             "アンテナ1本の利得",
             "帯域幅",
             "長さ",
@@ -12183,6 +12190,7 @@ namespace LunaCalc
             "世界中の EME 局の設備で広く使われています",
             "「EME の理論とアドバイス」マニュアルでの引用箇所：",
             "1.2 - EME 回線計算に「自局 EIRP」「DX の EIRP」「経路損失」「双方向の S/N（太陽を含む）」の表示を追加。Word 文書の数式を単一サイズにして余白内に収めた。すべての配色でボタンを塗りつぶし型、ドロップダウンを角丸のフラット型に。パステル配色を 8 種類追加。数値ボックスの矢印を横並びに。ベスト 3 日を日付順に。空の背景をぼかした。数式デバッグを翻訳。「EME の理論とアドバイス」マニュアルに Relu NJ9R の助言（GRAVES、指向、コネクター、アンテナ利得、JT65B と MAP65、偏波リレー）、最初の受信とインターネットチャットに関する新しい節、序文に VE7BQH の表を追加。NJ9R への謝辞、IK1UWL の追悼、記事・ハードウェア・ソフトウェアの作者への謝辞と、その作品を示すツールチップを追加。",
+            "1.2.1 - 作者への連絡と謝辞のページが Linux と macOS で再び正しく開くようになりました。トランスバーターの参照先を § 1.7.1 に修正。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13174,7 +13182,7 @@ namespace LunaCalc
             "ई-मेल लिखें",
             "पता कॉपी करें",
             "क्या आपके पास परिचित कराने के लिए कोई ट्रांसवर्टर है?",
-            "यदि आप अन्य ट्रांसवर्टर या अपना ट्रांसवर्टर परिचित कराना चाहते हैं तो लेखक को ई-मेल लिखें: डेटा स्रोत सहित मैनुअल «EME सिद्धांत और सुझाव» के अध्याय 1.7.2 में जोड़ा जाएगा।",
+            "यदि आप अन्य ट्रांसवर्टर या अपना ट्रांसवर्टर परिचित कराना चाहते हैं तो लेखक को ई-मेल लिखें: डेटा स्रोत सहित मैनुअल «EME सिद्धांत और सुझाव» के अध्याय 1.7.1 में जोड़ा जाएगा।",
             "प्रोग्राम को संरक्षण प्राप्त है:",
             "लाइसेंस",
             "YAEC एक मुक्त प्रोग्राम है, जिसे एक रेडियो शौकिया ने रेडियो शौकियों के लिए लिखा है। इसका कोड एक कृत्रिम बुद्धि सहायक की मदद से भी विकसित हुआ है, और लाइसेंस उसकी कार्यशैली अपनाता है: सचमुच उपयोगी होना, हमेशा चीज़ें जैसी हैं वैसी कहना, अपना तर्क दिखाना, किसी को हानि न पहुँचाना और दूसरों के काम को मान्यता देना। नीचे सिद्धांत हैं और फिर वास्तविक शर्तें।",
@@ -13289,7 +13297,7 @@ namespace LunaCalc
             "बीटा-टेस्टर",
             "आभार",
             "तरंगदैर्ध्य और चंद्रमा का रडार क्रॉस-सेक्शन",
-            "ट्रांसवर्टर मॉडल: प्रोग्राम मैनुअल «EME सिद्धांत और सुझाव» की तालिका (§ 1.7.2) से इसका नॉइज़ फ़िगर और गेन लेता है। \"कस्टम\" चुनने पर आप स्वयं लिखते हैं।",
+            "ट्रांसवर्टर मॉडल: प्रोग्राम मैनुअल «EME सिद्धांत और सुझाव» की तालिका (§ 1.7.1) से इसका नॉइज़ फ़िगर और गेन लेता है। \"कस्टम\" चुनने पर आप स्वयं लिखते हैं।",
             "एकल एंटीना गेन",
             "बैंडविड्थ",
             "लंबाई",
@@ -13499,6 +13507,7 @@ namespace LunaCalc
             "जो दुनिया भर के EME ऑपरेटरों के स्टेशनों में आम तौर पर मिलते हैं",
             "EME सिद्धांत और सुझाव मैनुअल में उल्लेख:",
             "1.2 - EME बजट में मेरी EIRP, DX की EIRP, पथ हानि और दोनों दिशाओं में S/N (सूर्य सहित) के संकेतक; Word दस्तावेज़ के सूत्र एक ही आकार में, हाशियों के भीतर; सभी योजनाओं में भरे हुए बटन और गोल किनारे वाली सपाट ड्रॉप-डाउन सूचियाँ; आठ पेस्टल रंग योजनाएँ; मान बॉक्स में अगल-बगल तीर; तीन सबसे अच्छे दिन तिथि के क्रम में; धुंधली आकाश पृष्ठभूमि; सूत्र डिबग का अनुवाद; EME सिद्धांत और सुझाव मैनुअल में Relu NJ9R की सलाह (GRAVES, पॉइंटिंग, कनेक्टर, एंटेना गेन, JT65B और MAP65, ध्रुवीकरण रिले), पहले रिसेप्शन और इंटरनेट चैट पर नए खंड, और प्रस्तावना में VE7BQH की तालिकाएँ; NJ9R को धन्यवाद, IK1UWL की स्मृति और लेखों, हार्डवेयर व सॉफ़्टवेयर के रचनाकारों को आभार, उनकी कृतियों के टूलटिप के साथ।",
+            "1.2.1 - लेखक से संपर्क और आभार पृष्ठ Linux और macOS पर फिर से सही खुलता है; ट्रांसवर्टर का संदर्भ अब § 1.7.1 है।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14490,7 +14499,7 @@ namespace LunaCalc
             "메일 쓰기",
             "주소 복사",
             "소개할 트랜스버터가 있습니까?",
-            "다른 트랜스버터나 당신의 트랜스버터를 소개하고 싶다면 저자에게 메일을 보내십시오: 데이터는 출처와 함께 설명서「EME 이론과 조언」 1.7.2장에 추가됩니다.",
+            "다른 트랜스버터나 당신의 트랜스버터를 소개하고 싶다면 저자에게 메일을 보내십시오: 데이터는 출처와 함께 설명서「EME 이론과 조언」 1.7.1장에 추가됩니다.",
             "이 프로그램의 후원:",
             "라이선스",
             "YAEC는 아마추어 무선사가 아마추어 무선사를 위해 쓴 자유 프로그램입니다. 코드는 인공지능 도우미의 도움으로도 개발되었으며, 라이선스는 그 일하는 방식을 이어받습니다: 정말로 쓸모 있을 것, 언제나 있는 그대로 말할 것, 생각의 과정을 보여 줄 것, 누구에게도 해를 끼치지 않을 것, 다른 이의 노고를 인정할 것. 아래에 원칙과 구체적인 조건이 있습니다.",
@@ -14605,7 +14614,7 @@ namespace LunaCalc
             "베타 테스터",
             "감사의 말",
             "파장과 달의 레이더 단면적",
-            "트랜스버터 모델: 프로그램이 설명서「EME 이론과 조언」 표(§ 1.7.2)에서 잡음 지수와 이득을 가져옵니다. \"사용자 지정\"이면 직접 입력합니다.",
+            "트랜스버터 모델: 프로그램이 설명서「EME 이론과 조언」 표(§ 1.7.1)에서 잡음 지수와 이득을 가져옵니다. \"사용자 지정\"이면 직접 입력합니다.",
             "안테나 1개 이득",
             "대역폭",
             "길이",
@@ -14815,6 +14824,7 @@ namespace LunaCalc
             "전 세계 EME 운용자들의 국에서 흔히 볼 수 있는 것들",
             "EME 이론과 조언 매뉴얼의 인용 위치:",
             "1.2 - EME 링크 버짓에 내 EIRP, DX의 EIRP, 경로 손실, 양방향 S/N(태양 포함) 표시 추가; Word 문서의 수식을 한 가지 크기로 여백 안에 맞춤; 모든 테마에서 채워진 버튼과 둥근 테두리의 평면 드롭다운 목록; 파스텔 색 테마 8종; 값 상자의 화살표를 나란히 배치; 가장 좋은 3일을 날짜순으로; 하늘 배경 흐림 처리; 수식 디버그 번역; EME 이론과 조언 매뉴얼에 Relu NJ9R의 조언(GRAVES, 지향, 커넥터, 안테나 이득, JT65B와 MAP65, 편파 릴레이), 첫 수신과 인터넷 채팅에 관한 새 절, 서문에 VE7BQH 표 추가; NJ9R에 대한 감사, IK1UWL 추모, 기사·하드웨어·소프트웨어 저자들에 대한 감사와 그들의 작업을 보여 주는 도움말.",
+            "1.2.1 - 저자 연락처 및 감사의 말 페이지가 Linux와 macOS에서 다시 올바르게 열립니다. 트랜스버터 참조를 § 1.7.1로 수정.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15806,7 +15816,7 @@ namespace LunaCalc
             "Tulis e-mail",
             "Salin alamat",
             "Punya transverter untuk diperkenalkan?",
-            "Jika ingin memperkenalkan transverter lain atau transvertermu, kirim e-mail ke penulis: datanya akan ditambahkan, beserta sumbernya, ke bab 1.7.2 manual «TEORI DAN TIPS EME».",
+            "Jika ingin memperkenalkan transverter lain atau transvertermu, kirim e-mail ke penulis: datanya akan ditambahkan, beserta sumbernya, ke bab 1.7.1 manual «TEORI DAN TIPS EME».",
             "Program ini didukung oleh",
             "Lisensi",
             "YAEC adalah program bebas, ditulis oleh seorang radio amatir untuk para radio amatir. Kodenya juga dikembangkan dengan bantuan asisten kecerdasan buatan, dan lisensinya mengambil cara kerjanya: benar-benar berguna, selalu mengatakan apa adanya, menunjukkan penalarannya, tidak merugikan siapa pun dan mengakui karya orang lain. Di bawah ini prinsipnya, lalu ketentuannya.",
@@ -15921,7 +15931,7 @@ namespace LunaCalc
             "penguji beta",
             "UCAPAN TERIMA KASIH",
             "Panjang gelombang dan penampang radar Bulan",
-            "Model transverter: program mengambil angka derau dan penguatannya dari tabel di manual «TEORI DAN TIPS EME» (§ 1.7.2). Dengan \"kustom\" kamu mengisinya sendiri.",
+            "Model transverter: program mengambil angka derau dan penguatannya dari tabel di manual «TEORI DAN TIPS EME» (§ 1.7.1). Dengan \"kustom\" kamu mengisinya sendiri.",
             "Penguatan satu antena",
             "Lebar pita",
             "Panjang",
@@ -16131,6 +16141,7 @@ namespace LunaCalc
             "yang umum ditemukan di stasiun operator EME di seluruh dunia",
             "Dikutip dalam manual TEORI DAN TIPS EME:",
             "1.2 - Anggaran EME dengan indikator EIRP saya, EIRP DX, rugi lintasan dan S/N dua arah (dengan Matahari); rumus dokumen Word dalam satu ukuran, di dalam margin; tombol penuh dan daftar tarik-turun datar bertepi bulat di semua skema; delapan skema warna pastel; kotak nilai dengan panah berdampingan; tiga hari terbaik menurut urutan tanggal; latar langit yang diburamkan; DEBUG RUMUS diterjemahkan; manual TEORI DAN TIPS EME dengan saran Relu NJ9R (GRAVES, pengarahan, konektor, penguatan antena, JT65B dan MAP65, relay polarisasi), bagian baru tentang penerimaan pertama dan chat internet, serta tabel VE7BQH di kata pengantar; ucapan terima kasih kepada NJ9R, kenangan untuk IK1UWL dan para penulis artikel, perangkat keras dan perangkat lunak, dengan tooltip tentang karya mereka.",
+            "1.2.1 - Halaman KONTAK PENULIS DAN UCAPAN TERIMA KASIH kembali terbuka dengan benar di Linux dan macOS; rujukan untuk transverter kini menunjuk § 1.7.1.",
         };
 
         public static readonly string[] RU = {
@@ -17123,7 +17134,7 @@ namespace LunaCalc
             "Написать письмо",
             "Копировать адрес",
             "Хотите рассказать о трансвертере?",
-            "Если вы хотите рассказать о других трансвертерах или о своём, напишите автору: данные будут добавлены с указанием источника в главу 1.7.2 руководства «ТЕОРИЯ И СОВЕТЫ ПО EME».",
+            "Если вы хотите рассказать о других трансвертерах или о своём, напишите автору: данные будут добавлены с указанием источника в главу 1.7.1 руководства «ТЕОРИЯ И СОВЕТЫ ПО EME».",
             "Программа выпущена под патронатом",
             "Лицензия",
             "YAEC — свободная программа, написанная радиолюбителем для радиолюбителей. Её код разрабатывался также с помощью ассистента на основе искусственного интеллекта, и лицензия перенимает его способ работы: быть действительно полезной, всегда говорить, как обстоят дела, показывать ход рассуждений, никому не вредить и признавать труд других. Ниже — принципы, затем сами условия.",
@@ -17238,7 +17249,7 @@ namespace LunaCalc
             "бета-тестеров",
             "БЛАГОДАРНОСТИ",
             "Длина волны и ЭПР Луны",
-            "Модель трансвертера: программа берёт коэффициент шума и усиление из таблицы руководства «ТЕОРИЯ И СОВЕТЫ ПО EME» (§ 1.7.2). При выборе «пользовательский» вы вводите их сами.",
+            "Модель трансвертера: программа берёт коэффициент шума и усиление из таблицы руководства «ТЕОРИЯ И СОВЕТЫ ПО EME» (§ 1.7.1). При выборе «пользовательский» вы вводите их сами.",
             "Усиление одной антенны",
             "Полоса пропускания",
             "Длина",
@@ -17448,6 +17459,7 @@ namespace LunaCalc
             "которые обычно встречаются на станциях EME-операторов по всему миру",
             "Упоминается в руководстве ТЕОРИЯ И СОВЕТЫ ПО EME:",
             "1.2 - Бюджет EME с показателями «Моя ЭИИМ», «ЭИИМ DX», потери на трассе и S/N в обоих направлениях (с учётом Солнца); формулы документа Word одного размера, в пределах полей; залитые кнопки и плоские выпадающие списки со скруглённой рамкой во всех схемах; восемь пастельных цветовых схем; поля значений со стрелками рядом; три лучших дня в порядке дат; размытый фон неба; ОТЛАДКА ФОРМУЛ переведена; руководство ТЕОРИЯ И СОВЕТЫ ПО EME с советами Relu NJ9R (GRAVES, наведение, разъёмы, усиление антенн, JT65B и MAP65, реле поляризации), новыми разделами о первом приёме и об интернет-чатах и таблицами VE7BQH в предисловии; благодарность NJ9R, память об IK1UWL и благодарность авторам статей, аппаратуры и программ с подсказкой об их работах.",
+            "1.2.1 - Страница КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ снова правильно открывается в Linux и macOS; ссылка для трансвертеров указывает на § 1.7.1.",
         };
 
         public static readonly string[] UK = {
@@ -18440,7 +18452,7 @@ namespace LunaCalc
             "Написати листа",
             "Копіювати адресу",
             "Хочете розповісти про трансвертер?",
-            "Якщо ви хочете розповісти про інші трансвертери або про свій, напишіть авторові: дані буде додано із зазначенням джерела до розділу 1.7.2 посібника «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME».",
+            "Якщо ви хочете розповісти про інші трансвертери або про свій, напишіть авторові: дані буде додано із зазначенням джерела до розділу 1.7.1 посібника «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME».",
             "Програма випущена під патронатом",
             "Ліцензія",
             "YAEC — вільна програма, написана радіоаматором для радіоаматорів. Її код розроблявся також за допомогою асистента на основі штучного інтелекту, і ліцензія переймає його спосіб роботи: бути справді корисною, завжди казати, як є, показувати хід міркувань, нікому не шкодити й визнавати працю інших. Нижче — принципи, потім самі умови.",
@@ -18555,7 +18567,7 @@ namespace LunaCalc
             "бета-тестерів",
             "ПОДЯКИ",
             "Довжина хвилі та ЕПР Місяця",
-            "Модель трансвертера: програма бере коефіцієнт шуму та підсилення з таблиці посібника «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME» (§ 1.7.2). Для «користувацький» ви вводите їх самі.",
+            "Модель трансвертера: програма бере коефіцієнт шуму та підсилення з таблиці посібника «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME» (§ 1.7.1). Для «користувацький» ви вводите їх самі.",
             "Підсилення однієї антени",
             "Смуга пропускання",
             "Довжина",
@@ -18765,6 +18777,7 @@ namespace LunaCalc
             "які зазвичай є на станціях EME-операторів по всьому світу",
             "Згадується в посібнику ТЕОРІЯ ТА ПОРАДИ ЩОДО EME:",
             "1.2 - Бюджет EME з показниками «Моя ЕІВП», «ЕІВП DX», втрати на трасі та S/N в обох напрямках (з урахуванням Сонця); формули документа Word одного розміру, у межах полів; заповнені кнопки та пласкі випадні списки із заокругленою рамкою в усіх схемах; вісім пастельних колірних схем; поля значень зі стрілками поруч; три найкращі дні в порядку дат; розмитий фон неба; НАЛАГОДЖЕННЯ ФОРМУЛ перекладено; посібник ТЕОРІЯ ТА ПОРАДИ ЩОДО EME з порадами Relu NJ9R (GRAVES, наведення, роз'єми, підсилення антен, JT65B і MAP65, реле поляризації), новими розділами про перший прийом та інтернет-чати й таблицями VE7BQH у передмові; подяка NJ9R, пам'ять про IK1UWL та подяка авторам статей, апаратури й програм із підказкою про їхні роботи.",
+            "1.2.1 - Сторінка КОНТАКТИ АВТОРА І ПОДЯКИ знову правильно відкривається в Linux і macOS; посилання для трансвертерів вказує на § 1.7.1.",
         };
 
         public static readonly string[] AF = {
@@ -19757,7 +19770,7 @@ namespace LunaCalc
             "Skryf 'n e-pos",
             "Kopieer die adres",
             "Het jy 'n transverter om bekend te stel?",
-            "As jy ander transverters of jou eie transverter bekend wil stel, skryf 'n e-pos aan die outeur: die data sal met hul bron by hoofstuk 1.7.2 van die handleiding «TEORIE EN WENKE OOR EME» gevoeg word.",
+            "As jy ander transverters of jou eie transverter bekend wil stel, skryf 'n e-pos aan die outeur: die data sal met hul bron by hoofstuk 1.7.1 van die handleiding «TEORIE EN WENKE OOR EME» gevoeg word.",
             "Die program is onder die beskerming van die",
             "Lisensie",
             "YAEC is 'n vrye program, deur 'n radioamateur vir radioamateurs geskryf. Sy kode is ook met die hulp van 'n KI-assistent ontwikkel, en die lisensie neem sy manier van werk oor: werklik nuttig wees, altyd sê hoe dinge is, die eie redenasie wys, niemand skade aandoen nie en die werk van ander erken. Hieronder die beginsels en dan die eintlike voorwaardes.",
@@ -19872,7 +19885,7 @@ namespace LunaCalc
             "beta-toetsers",
             "ERKENNINGS",
             "Golflengte en radardeursnee van die Maan",
-            "Transverter-model: die program neem sy ruissyfer en versterking uit die tabel in die handleiding «TEORIE EN WENKE OOR EME» (§ 1.7.2). Met \"pasgemaak\" vul jy dit self in.",
+            "Transverter-model: die program neem sy ruissyfer en versterking uit die tabel in die handleiding «TEORIE EN WENKE OOR EME» (§ 1.7.1). Met \"pasgemaak\" vul jy dit self in.",
             "Wins van een antenna",
             "Bandwydte",
             "Lengte",
@@ -20082,6 +20095,7 @@ namespace LunaCalc
             "wat algemeen in die stasies van EME-operateurs regoor die wêreld gevind word",
             "Aangehaal in die handleiding TEORIE EN WENKE OOR EME:",
             "1.2 - EME-begroting met die aanwysers My EIRP, EIRP van die DX, padverlies en S/N in albei rigtings (met die Son); formules van die Word-dokument in een grootte, binne die kantlyne; gevulde knoppies en plat aftreklyste met geronde rand in alle skemas; agt pastelkleurskemas; waardekassies met die pyltjies langs mekaar; die drie beste dae in datumvolgorde; vaag hemelagtergrond; FORMULE-ONTFOUTING vertaal; handleiding TEORIE EN WENKE OOR EME met die raad van Relu NJ9R (GRAVES, rigting, verbindings, antennewins, JT65B en MAP65, polarisasierelê), die nuwe afdelings oor die eerste ontvangs en oor internetklets, en die VE7BQH-tabelle in die voorwoord; dank aan NJ9R, die herinnering aan IK1UWL en die skrywers van artikels, hardeware en sagteware, met 'n wenk oor hul werk.",
+            "1.2.1 - Die bladsy KONTAK MET DIE OUTEUR EN ERKENNINGS maak weer korrek oop op Linux en macOS; die verwysing vir die transverters wys na § 1.7.1.",
         };
 
         public static readonly string[] BN = {
@@ -21073,7 +21087,7 @@ namespace LunaCalc
             "ই-মেইল লিখুন",
             "ঠিকানা কপি করুন",
             "পরিচিত করানোর মতো কোনো ট্রান্সভার্টার আছে?",
-            "অন্য ট্রান্সভার্টার বা আপনার ট্রান্সভার্টার পরিচিত করাতে চাইলে লেখককে ই-মেইল করুন: তথ্য উৎসসহ ম্যানুয়ালের «EME তত্ত্ব ও পরামর্শ» 1.7.2 অধ্যায়ে যোগ করা হবে।",
+            "অন্য ট্রান্সভার্টার বা আপনার ট্রান্সভার্টার পরিচিত করাতে চাইলে লেখককে ই-মেইল করুন: তথ্য উৎসসহ ম্যানুয়ালের «EME তত্ত্ব ও পরামর্শ» 1.7.1 অধ্যায়ে যোগ করা হবে।",
             "প্রোগ্রামটির পৃষ্ঠপোষক:",
             "লাইসেন্স",
             "YAEC একটি মুক্ত প্রোগ্রাম, একজন রেডিও অপেশাদার রেডিও অপেশাদারদের জন্য লিখেছেন। এর কোড একটি কৃত্রিম বুদ্ধিমত্তা সহকারীর সাহায্যেও তৈরি, এবং লাইসেন্সটি তার কাজের ধরন গ্রহণ করে: সত্যিই উপকারী হওয়া, সবসময় যা সত্য তা বলা, নিজের যুক্তি দেখানো, কারও ক্ষতি না করা এবং অন্যের কাজের স্বীকৃতি দেওয়া। নিচে নীতিগুলি, তারপর আসল শর্তাবলি।",
@@ -21188,7 +21202,7 @@ namespace LunaCalc
             "বিটা-টেস্টার",
             "কৃতজ্ঞতা",
             "তরঙ্গদৈর্ঘ্য ও চাঁদের রাডার প্রস্থচ্ছেদ",
-            "ট্রান্সভার্টারের মডেল: প্রোগ্রাম ম্যানুয়ালের «EME তত্ত্ব ও পরামর্শ» সারণি (§ 1.7.2) থেকে এর নয়েজ ফিগার ও গেইন নেয়। \"নিজস্ব\" বাছলে আপনি নিজে লেখেন।",
+            "ট্রান্সভার্টারের মডেল: প্রোগ্রাম ম্যানুয়ালের «EME তত্ত্ব ও পরামর্শ» সারণি (§ 1.7.1) থেকে এর নয়েজ ফিগার ও গেইন নেয়। \"নিজস্ব\" বাছলে আপনি নিজে লেখেন।",
             "একক অ্যান্টেনার গেইন",
             "ব্যান্ডউইথ",
             "দৈর্ঘ্য",
@@ -21398,6 +21412,7 @@ namespace LunaCalc
             "যা সারা বিশ্বের EME অপারেটরদের স্টেশনে সাধারণত পাওয়া যায়",
             "EME তত্ত্ব ও পরামর্শ ম্যানুয়ালে উল্লেখ:",
             "1.2 - EME বাজেটে আমার EIRP, DX-এর EIRP, পথের ক্ষতি এবং দুই দিকের S/N (সূর্যসহ) সূচক; Word নথির সূত্র একই আকারে, মার্জিনের ভেতরে; সব স্কিমে ভরাট বোতাম ও গোলাকার প্রান্তের সমতল ড্রপ-ডাউন তালিকা; আটটি প্যাস্টেল রঙের স্কিম; মানের বাক্সে পাশাপাশি তীর; সেরা তিন দিন তারিখের ক্রমে; ঝাপসা আকাশের পটভূমি; সূত্র ডিবাগ অনূদিত; EME তত্ত্ব ও পরামর্শ ম্যানুয়ালে Relu NJ9R-এর পরামর্শ (GRAVES, তাক করা, কানেক্টর, অ্যান্টেনার গেইন, JT65B ও MAP65, পোলারাইজেশন রিলে), প্রথম রিসেপশন ও ইন্টারনেট চ্যাট নিয়ে নতুন অংশ এবং ভূমিকায় VE7BQH-এর সারণি; NJ9R-কে ধন্যবাদ, IK1UWL-এর স্মরণ এবং নিবন্ধ, হার্ডওয়্যার ও সফটওয়্যারের রচয়িতাদের প্রতি কৃতজ্ঞতা, তাঁদের কাজের টুলটিপসহ।",
+            "1.2.1 - লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা পৃষ্ঠাটি Linux ও macOS-এ আবার ঠিকভাবে খোলে; ট্রান্সভার্টারের রেফারেন্স এখন § 1.7.1।",
         };
 
         public static readonly string[] AR = {
@@ -22389,7 +22404,7 @@ namespace LunaCalc
             "اكتب رسالة",
             "انسخ العنوان",
             "هل لديك محوّل ترددي تريد التعريف به؟",
-            "إذا أردت التعريف بمحوّلات ترددية أخرى أو بمحوّلك، فاكتب إلى المؤلف: ستُضاف البيانات مع مصدرها إلى الفصل 1.7.2 من الدليل «نظرية EME ونصائح».",
+            "إذا أردت التعريف بمحوّلات ترددية أخرى أو بمحوّلك، فاكتب إلى المؤلف: ستُضاف البيانات مع مصدرها إلى الفصل 1.7.1 من الدليل «نظرية EME ونصائح».",
             "البرنامج برعاية",
             "الترخيص",
             "YAEC برنامج حر كتبه هاوٍ لاسلكي للهواة اللاسلكيين. طُوّرت شيفرته أيضًا بمساعدة مساعد ذكاء اصطناعي، ويستلهم الترخيص طريقته في العمل: أن يكون مفيدًا حقًا، وأن يقول الأمور كما هي دائمًا، وأن يُظهر طريقة تفكيره، وألا يؤذي أحدًا، وأن يعترف بعمل الآخرين. فيما يلي المبادئ ثم الشروط نفسها.",
@@ -22504,7 +22519,7 @@ namespace LunaCalc
             "مختبري النسخة التجريبية",
             "شكر وتقدير",
             "الطول الموجي والمقطع الراداري للقمر",
-            "طراز المحوّل: يأخذ البرنامج رقم الضوضاء والكسب من جدول الدليل «نظرية EME ونصائح» (§ 1.7.2). مع \"مخصّص\" تكتبهما بنفسك.",
+            "طراز المحوّل: يأخذ البرنامج رقم الضوضاء والكسب من جدول الدليل «نظرية EME ونصائح» (§ 1.7.1). مع \"مخصّص\" تكتبهما بنفسك.",
             "كسب الهوائي الواحد",
             "عرض النطاق",
             "الطول",
@@ -22714,6 +22729,7 @@ namespace LunaCalc
             "التي توجد عادةً في محطات مشغّلي EME حول العالم",
             "مذكور في دليل نظرية EME ونصائح:",
             "1.2 - ميزانية EME مع مؤشرات قدرتي EIRP وقدرة DX EIRP وخسارة المسار ونسبة S/N في الاتجاهين (مع الشمس)؛ معادلات مستند Word بحجم واحد داخل الهوامش؛ أزرار ممتلئة وقوائم منسدلة مسطحة بحواف مستديرة في جميع المخططات؛ ثمانية مخططات ألوان باستيل؛ مربعات القيم بأسهم متجاورة؛ أفضل ثلاثة أيام بترتيب التاريخ؛ خلفية سماء ضبابية؛ ترجمة تصحيح الصيغ؛ دليل نظرية EME ونصائح مع نصائح Relu NJ9R (GRAVES، التوجيه، الموصلات، كسب الهوائيات، JT65B وMAP65، مرحّل الاستقطاب)، وأقسام جديدة عن الاستقبال الأول وعن الدردشات عبر الإنترنت، وجداول VE7BQH في المقدمة؛ شكر لـ NJ9R، وذكرى IK1UWL، وشكر لمؤلفي المقالات والعتاد والبرمجيات مع تلميح عن أعمالهم.",
+            "1.2.1 - صفحة التواصل مع المؤلف والشكر تُفتح مجددًا بشكل صحيح على Linux وmacOS؛ والإحالة الخاصة بالمحوّلات تشير إلى § 1.7.1.",
         };
 
         public static readonly string[] TR = {
@@ -23705,7 +23721,7 @@ namespace LunaCalc
             "E-posta yaz",
             "Adresi kopyala",
             "Tanıtmak istediğin bir transverter var mı?",
-            "Başka transverterleri ya da kendi transverterini tanıtmak istersen yazara e-posta gönder: veriler kaynağıyla birlikte kılavuzun «EME ÜZERİNE TEORİ VE ÖNERİLER» 1.7.2 bölümüne eklenecek.",
+            "Başka transverterleri ya da kendi transverterini tanıtmak istersen yazara e-posta gönder: veriler kaynağıyla birlikte kılavuzun «EME ÜZERİNE TEORİ VE ÖNERİLER» 1.7.1 bölümüne eklenecek.",
             "Program şu kuruluşun himayesindedir:",
             "Lisans",
             "YAEC, bir radyo amatörü tarafından radyo amatörleri için yazılmış özgür bir programdır. Kodu bir yapay zekâ asistanının yardımıyla da geliştirildi ve lisans onun çalışma biçimini benimser: gerçekten yararlı olmak, her zaman olanı olduğu gibi söylemek, akıl yürütmeyi göstermek, kimseye zarar vermemek ve başkalarının emeğini tanımak. Aşağıda önce ilkeler, sonra asıl koşullar yer alıyor.",
@@ -23820,7 +23836,7 @@ namespace LunaCalc
             "beta test ekibi",
             "TEŞEKKÜRLER",
             "Dalga boyu ve Ay'ın radar kesit alanı",
-            "Transverter modeli: program gürültü faktörünü ve kazancı kılavuzdaki «EME ÜZERİNE TEORİ VE ÖNERİLER» tablodan (§ 1.7.2) alır. \"Özel\" seçilirse değerleri sen girersin.",
+            "Transverter modeli: program gürültü faktörünü ve kazancı kılavuzdaki «EME ÜZERİNE TEORİ VE ÖNERİLER» tablodan (§ 1.7.1) alır. \"Özel\" seçilirse değerleri sen girersin.",
             "Tek anten kazancı",
             "Bant genişliği",
             "Uzunluk",
@@ -24030,6 +24046,7 @@ namespace LunaCalc
             "ki bunlar dünyanın her yerindeki EME operatörlerinin istasyonlarında yaygın olarak bulunur",
             "EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzunda geçtiği yerler:",
             "1.2 - EME bütçesinde Benim EIRP, DX'in EIRP'si, yol kaybı ve iki yönde S/N (Güneş dahil) göstergeleri; Word belgesindeki formüller tek boyutta, kenar boşlukları içinde; tüm şemalarda dolu düğmeler ve yuvarlak kenarlı düz açılır listeler; sekiz pastel renk şeması; yan yana oklu değer kutuları; en iyi üç gün tarih sırasına göre; bulanık gökyüzü arka planı; FORMÜL HATA AYIKLAMA çevrildi; EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzuna Relu NJ9R'nin önerileri (GRAVES, yönlendirme, konektörler, anten kazancı, JT65B ve MAP65, polarizasyon rölesi), ilk alım ve internet sohbetleri üzerine yeni bölümler ve önsözde VE7BQH tabloları; NJ9R'ye teşekkür, IK1UWL'nin anısı ve makale, donanım ve yazılım yazarlarına teşekkür, eserleri hakkında ipucu balonuyla.",
+            "1.2.1 - YAZARLA İLETİŞİM VE TEŞEKKÜRLER sayfası Linux ve macOS'ta yeniden doğru açılıyor; transverterler için yapılan atıf artık § 1.7.1'i gösteriyor.",
         };
     }
 
@@ -24965,7 +24982,7 @@ namespace LunaCalc
             tip.SetToolTip(b.LenPa, Lang.T("Lunghezza del cavo tra l'amplificatore (PA) e il relè coassiale."));
             tip.SetToolTip(b.LenDis, Lang.T("Lunghezza del cavo di discesa tra il preamplificatore in antenna e la stazione."));
             tip.SetToolTip(b.TvOn, Lang.T("Attiva il transverter quando la radio non lavora direttamente sulla banda scelta: entra nella catena di ricezione con il suo guadagno e la sua figura di rumore."));
-            tip.SetToolTip(b.TvMod, Lang.T("Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale «TEORIA E CONSIGLI SULL'EME» (§ 1.7.2). Con \"personalizzato\" li scrivi tu."));
+            tip.SetToolTip(b.TvMod, Lang.T("Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale «TEORIA E CONSIGLI SULL'EME» (§ 1.7.1). Con \"personalizzato\" li scrivi tu."));
             tip.SetToolTip(b.TvCavo, Lang.T("Perdita dei cavetti tra l'uscita RX del transverter e l'ingresso della radio (dB)."));
             tip.SetToolTip(b.TvNf, Lang.T("Cifra di rumore del transverter in ricezione (dB)."));
             tip.SetToolTip(b.TvGain, Lang.T("Guadagno di conversione del transverter in ricezione."));
@@ -30253,7 +30270,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.2";
+        public const string Versione = "1.2.1";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -33272,6 +33289,7 @@ namespace LunaCalc
             Lang.T("1.0.1 - Nella pagina della release su GitHub c'è il file SHA256SUMS.txt con le impronte SHA-256 di tutti i pacchetti: servono a verificare che i file scaricati siano proprio quelli originali (istruzioni nel README)."),
             Lang.T("1.1 - Posizione live e +- 24h (ex Tracciamento) anche nel passato e nel futuro: giorno dal calendario e ora trascinando la linea rossa, frequenza nel riquadro Eco e frequenze; casella del nominativo del DX con il CALL3.TXT scaricato da W7GJ e da WSJT-X Improved e fuso, locator proposto e copia nella cartella di WSJT-X; Distanza e Dgrd senza classifica, con la declinazione sovrapposta, righe colorate come il grafico e ore utili in verde a scelta; caselle di spunta nello stile del programma; cavi ordinati per diametro nelle tendine e per nome, costruttore e tipo nella tabella, con fonti tradotte; Budget EME con i soli modi a 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) e schema dell'impianto che si adatta ai testi; MANUALE D'USO con la rassegna di tutte le schermate; TEORIA E CONSIGLI SULL'EME con la prefazione dell'autore, numerazione da 1 e formule del rumore solare; HTTPS su Linux e macOS con i certificati del sistema."),
             Lang.T("1.2 - Budget EME con gli indicatori EIRP mia, EIRP del DX, perdita di tratta e S/N nei due sensi (con il Sole); formule del documento Word di una sola grandezza, dentro i margini; pulsanti pieni e menu a tendina piatti con bordo arrotondato in tutti gli schemi; otto schemi di colori pastello; caselle dei valori con le frecce affiancate; i tre giorni migliori in ordine di data; sfondo del cielo sfocato; DEBUG FORMULE tradotto; manuale TEORIA E CONSIGLI SULL'EME con i consigli di Relu NJ9R (GRAVES, puntamento, connettori, guadagno delle antenne, JT65B e MAP65, relè di polarizzazione), i nuovi paragrafi sulla prima ricezione e sulle chat via Internet e le tabelle di VE7BQH nella prefazione; ringraziamenti a NJ9R, il ricordo di IK1UWL e gli autori di articoli, hardware e software, con il fumetto delle loro opere."),
+            Lang.T("1.2.1 - La pagina CONTATTI DELL'AUTORE E RINGRAZIAMENTI si apre di nuovo correttamente su Linux e macOS; il rimando per i transverter indica il § 1.7.1."),
         };
 
                     _AboutVersioniLg = Lang.Idx;
@@ -34669,6 +34687,9 @@ namespace LunaCalc
             int h = Math.Max(pnlContScroll.ClientSize.Height, (int)Math.Ceiling(contAltezza));
             if (h > pnlContScroll.ClientSize.Height) w = Math.Max(S(700), pnlContScroll.ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
             if (pnlContatti.Width != w || pnlContatti.Height != h) pnlContatti.Size = new Size(w, h);
+            // solo per le prove automatiche: YAEC_FONDO=1 mostra il fondo della pagina (i ringraziamenti)
+            if (Environment.GetEnvironmentVariable("YAEC_FONDO") == "1" && h > pnlContScroll.ClientSize.Height)
+                pnlContScroll.AutoScrollPosition = new Point(0, h);
             pnlContatti.Invalidate();
         }
 
@@ -34845,7 +34866,7 @@ namespace LunaCalc
                 y += ch + S(22);
 
                 // invito per i transverter (riquadro giallo, capitolo 3.7.2)
-                string nt = Lang.T("Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 1.7.2 del manuale «TEORIA E CONSIGLI SULL'EME», con la citazione della fonte.");
+                string nt = Lang.T("Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 1.7.1 del manuale «TEORIA E CONSIGLI SULL'EME», con la citazione della fonte.");
                 string ntb = Lang.T("Hai un transverter da far conoscere?");
                 string ntr = "**" + ntb + "** " + nt;
                 float hn = Math.Max(S(58), TestoRicco(g, ntr, fd, fdb, Color.Black, 0, 0, wtot - S(36), 1.45f, false) + S(22));
