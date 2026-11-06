@@ -24833,6 +24833,10 @@ namespace LunaCalc
         // ---- schema dell'impianto: riquadri calcolati dai testi (si adattano a caratteri dal 90 al 150 %)
         RectangleF RAnt, RCavoAnt, RRele, RReleBox, RTx, RLna, RPre, RDis, RTv, RCavetti, RRadio;
         float impRh, impXl;
+        // riquadri dello schema (0 cavo antenna, 1 relè, 2 TX, 3 preampli, 4 discesa): true = etichetta sopra la casella,
+        // quando etichetta e casella non stanno sulla stessa riga (lingue con testi lunghi o finestra stretta)
+        readonly bool[] impPila = new bool[5];
+        int Linee(int box, int n) { return impPila[box] ? 2 * n : n; }
         int impRadioRighe = 1;
         bool impRadioUna = true;
 
@@ -24871,11 +24875,23 @@ namespace LunaCalc
                 impXl = xMax >= xMin ? (xMin + xMax) / 2f : xMax;
                 float xR = W - S(8) - wR;
                 Func<string, float, float> Fh = (t, w) => string.IsNullOrEmpty(t) ? 0f : g.MeasureString(t, fr, (int)Math.Max(10, w - 2 * pad)).Height + S(4);
-                float hCa = S(26) + 2 * rh + Fh(impCavoAnt, wR) + S(6);
-                float hRe = S(26) + rh + S(6);
-                float hTx = S(26) + 3 * rh + Fh(impTx, wTx) + S(6);
-                float hPre = S(26) + 2 * rh + Fh(impPre, wR) + S(6);
-                float hDis = S(26) + 2 * rh + Fh(impDis, wR) + S(6);
+                // per ogni riquadro: etichetta e casella sulla stessa riga solo se ci stanno
+                Func<string[], int[], float> Serve = (et, cw) =>
+                {
+                    float m = 0;
+                    for (int k = 0; k < et.Length; k++) m = Math.Max(m, Lw(et[k]) + S(12) + cw[k]);
+                    return m + 2 * pad;
+                };
+                impPila[0] = Serve(new string[] { Lang.T("Tipo"), Lang.T("Lunghezza") }, new int[] { fc, fn }) > wR;
+                impPila[1] = Serve(new string[] { Lang.T("Perdita di inserzione") }, new int[] { fn }) > wR;
+                impPila[2] = Serve(new string[] { Lang.T("Potenza in uscita"), Lang.T("Cavo PA – relè"), Lang.T("Lunghezza") }, new int[] { fn, fc, fn }) > wTx;
+                impPila[3] = Serve(new string[] { Lang.T("Guadagno"), Lang.T("Figura di rumore") }, new int[] { fn, fn }) > wR;
+                impPila[4] = Serve(new string[] { Lang.T("Tipo"), Lang.T("Lunghezza") }, new int[] { fc, fn }) > wR;
+                float hCa = S(26) + Linee(0, 2) * rh + Fh(impCavoAnt, wR) + S(6);
+                float hRe = S(26) + Linee(1, 1) * rh + S(6);
+                float hTx = S(26) + Linee(2, 3) * rh + Fh(impTx, wTx) + S(6);
+                float hPre = S(26) + Linee(3, 2) * rh + Fh(impPre, wR) + S(6);
+                float hDis = S(26) + Linee(4, 2) * rh + Fh(impDis, wR) + S(6);
                 float hTv = S(32) + 2 * rh + S(6);
                 float hCav = rh + S(14);
                 impRadioUna = 2 * pad + Lw(Lang.T("MDS della radio")) + fn + S(24) + Lw(Lang.T("Modo · S/N richiesto")) + fm + S(10) <= W - S(16);
@@ -24907,11 +24923,11 @@ namespace LunaCalc
                 foreach (BudgetUi v in new BudgetUi[] { bMe, bDx })
                 {
                     Campo(v.Tant, RAnt.Right - fn, RAnt.Top + S(18), fn, rh);
-                    Riga2(v.CavoAnt, RCavoAnt, 0, fc); Riga2(v.LenAnt, RCavoAnt, 1, fn);
-                    Riga2(v.Rele, RReleBox, 0, fn);
-                    Riga2(v.P, RTx, 0, fn); Riga2(v.CavoPa, RTx, 1, fc); Riga2(v.LenPa, RTx, 2, fn);
-                    Riga2(v.PreGain, RPre, 0, fn); Riga2(v.Nf, RPre, 1, fn);
-                    Riga2(v.CavoDis, RDis, 0, fc); Riga2(v.LenDis, RDis, 1, fn);
+                    Riga2(v.CavoAnt, RCavoAnt, 0, fc, 0); Riga2(v.LenAnt, RCavoAnt, 1, fn, 0);
+                    Riga2(v.Rele, RReleBox, 0, fn, 1);
+                    Riga2(v.P, RTx, 0, fn, 2); Riga2(v.CavoPa, RTx, 1, fc, 2); Riga2(v.LenPa, RTx, 2, fn, 2);
+                    Riga2(v.PreGain, RPre, 0, fn, 3); Riga2(v.Nf, RPre, 1, fn, 3);
+                    Riga2(v.CavoDis, RDis, 0, fc, 4); Riga2(v.LenDis, RDis, 1, fn, 4);
                     v.TvOn.Location = new Point((int)(RTv.Left + pad), (int)(RTv.Top + S(6)));
                     float xm = RTv.Left + pad + Lw(Lang.T("Modello")) + S(12);
                     Campo(v.TvMod, xm, RTv.Top + S(30), (int)Math.Min(S(330), RTv.Right - pad - xm), rh);
@@ -24928,9 +24944,11 @@ namespace LunaCalc
         }
 
         // controllo nella riga k di un riquadro, allineato a destra
-        void Riga2(Control c, RectangleF r, int k, int w)
+        void Riga2(Control c, RectangleF r, int k, int w, int box)
         {
-            Campo(c, r.Right - S(10) - w, r.Top + S(26) + k * impRh, w, impRh);
+            int wl = (int)Math.Min(w, r.Width - S(20));
+            int riga = impPila[box] ? 2 * k + 1 : k;
+            Campo(c, r.Right - S(10) - wl, r.Top + S(26) + riga * impRh, wl, impRh);
         }
 
         void Campo(Control c, float x, float y, int w, float rh)
@@ -24962,9 +24980,12 @@ namespace LunaCalc
             if (titolo != null) Testo(g, titolo, ft, c, new RectangleF(r.Left + S(10), r.Top + S(4), r.Width - S(16), S(22)), StringAlignment.Near, StringAlignment.Center);
         }
 
-        void Etichetta(Graphics g, string t, RectangleF r, int k, Font f)
+        // etichetta della riga k: a sinistra della casella (larga wc) o, se il riquadro è stretto, sulla riga sopra
+        void Etichetta(Graphics g, string t, RectangleF r, int k, Font f, int box, int wc)
         {
-            Testo(g, t, f, Tema.Fore, new RectangleF(r.Left + S(10), r.Top + S(26) + k * impRh, r.Width * 0.62f, impRh), StringAlignment.Near, StringAlignment.Center);
+            bool pila = impPila[box];
+            float w = pila ? r.Width - S(20) : Math.Max(S(20), r.Width - S(20) - wc - S(6));
+            Testo(g, t, f, Tema.Fore, new RectangleF(r.Left + S(10), r.Top + S(26) + (pila ? 2 * k : k) * impRh, w, impRh), StringAlignment.Near, StringAlignment.Center);
         }
 
         // testo colorato in fondo al riquadro, sotto le righe dei campi
@@ -25064,19 +25085,19 @@ namespace LunaCalc
                 Riquadro(g, RCavoAnt, cLinea, Lang.T("CAVO ANTENNA – RELÈ"), ft);
                 float wca = g.MeasureString(Lang.T("CAVO ANTENNA – RELÈ"), ft).Width;
                 Testo(g, Lang.T("TX e RX"), fp, Tema.Muted, new RectangleF(RCavoAnt.Left + S(10) + wca, RCavoAnt.Top + S(5), Math.Max(1, RCavoAnt.Width - wca - S(20)), S(22)), StringAlignment.Near, StringAlignment.Center);
-                Etichetta(g, Lang.T("Tipo"), RCavoAnt, 0, fl); Etichetta(g, Lang.T("Lunghezza"), RCavoAnt, 1, fl);
-                Piede(g, impCavoAnt, fr, cAnt, RCavoAnt, 2);
+                Etichetta(g, Lang.T("Tipo"), RCavoAnt, 0, fl, 0, S(156)); Etichetta(g, Lang.T("Lunghezza"), RCavoAnt, 1, fl, 0, S(84));
+                Piede(g, impCavoAnt, fr, cAnt, RCavoAnt, Linee(0, 2));
                 Riquadro(g, RReleBox, cLinea, Lang.T("RELÈ COASSIALE TX / RX"), ft);
-                Etichetta(g, Lang.T("Perdita di inserzione"), RReleBox, 0, fl);
+                Etichetta(g, Lang.T("Perdita di inserzione"), RReleBox, 0, fl, 1, S(84));
                 Riquadro(g, RTx, cTx, Lang.T("TRASMETTITORE · PA"), ft);
-                Etichetta(g, Lang.T("Potenza in uscita"), RTx, 0, fl); Etichetta(g, Lang.T("Cavo PA – relè"), RTx, 1, fl); Etichetta(g, Lang.T("Lunghezza"), RTx, 2, fl);
-                Piede(g, impTx, fr, cTx, RTx, 3);
+                Etichetta(g, Lang.T("Potenza in uscita"), RTx, 0, fl, 2, S(84)); Etichetta(g, Lang.T("Cavo PA – relè"), RTx, 1, fl, 2, S(156)); Etichetta(g, Lang.T("Lunghezza"), RTx, 2, fl, 2, S(84));
+                Piede(g, impTx, fr, cTx, RTx, Linee(2, 3));
                 Riquadro(g, RPre, cAnt, Lang.T("PREAMPLIFICATORE"), ft);
-                Etichetta(g, Lang.T("Guadagno"), RPre, 0, fl); Etichetta(g, Lang.T("Figura di rumore"), RPre, 1, fl);
-                Piede(g, impPre, fr, cAnt, RPre, 2);
+                Etichetta(g, Lang.T("Guadagno"), RPre, 0, fl, 3, S(84)); Etichetta(g, Lang.T("Figura di rumore"), RPre, 1, fl, 3, S(84));
+                Piede(g, impPre, fr, cAnt, RPre, Linee(3, 2));
                 Riquadro(g, RDis, cLinea, Lang.T("CAVO DI DISCESA"), ft);
-                Etichetta(g, Lang.T("Tipo"), RDis, 0, fl); Etichetta(g, Lang.T("Lunghezza"), RDis, 1, fl);
-                Piede(g, impDis, fr, cAnt, RDis, 2);
+                Etichetta(g, Lang.T("Tipo"), RDis, 0, fl, 4, S(156)); Etichetta(g, Lang.T("Lunghezza"), RDis, 1, fl, 4, S(84));
+                Piede(g, impDis, fr, cAnt, RDis, Linee(4, 2));
                 BudgetUi u = impSel == 0 ? bMe : bDx;
                 bool tv = u != null && u.TvOn.Checked;
                 Color cTv = tv ? cRx : Color.FromArgb(Tema.Scuro ? 110 : 150, cRx);

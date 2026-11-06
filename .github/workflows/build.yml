@@ -116,6 +116,15 @@ jobs:
           import -window root shot/YAEC-teoria.png || true
           convert shot/YAEC-teoria.png -resize 1200x shot/small3.jpg 2>/dev/null && echo "SCREENSHOT3-B64:$(base64 -w 0 shot/small3.jpg)" || true
           kill $PID 2>/dev/null || true
+          # Bilan EME in francese (testi lunghi nello schema dell'impianto)
+          sed -i 's/^lingua=it/lingua=fr/' "$HOME/.local/share/YAEC/data/impostazioni.txt"
+          YAEC_LINGUETTA="Bilan EME" mono YAEC.exe &
+          PID=$!
+          sleep 30
+          import -window root shot/fr.png || true
+          convert shot/fr.png -resize 1200x shot/fr.jpg 2>/dev/null && echo "SCREENSHOT-FR-B64:$(base64 -w 0 shot/fr.jpg)" || true
+          kill $PID 2>/dev/null || true
+          sed -i 's/^lingua=fr/lingua=it/' "$HOME/.local/share/YAEC/data/impostazioni.txt"
           for T in "MANUALE D'USO" "CAVI COASSIALI"; do
             YAEC_LINGUETTA="$T" mono YAEC.exe &
             PID=$!
