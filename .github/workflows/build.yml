@@ -1,12 +1,12 @@
 name: Build YAEC
 
 # Ogni push compila il programma su Windows e lo prova su Linux con Mono.
-# Un tag "v1.0" (o successivo) crea la release con l'installatore per Windows
-# e i pacchetti per Linux e macOS.
+# La versione sta nel file VERSION: quando su main arriva una versione che non ha
+# ancora la sua release (tag vX.Y), la crea con l'installatore per Windows e i
+# pacchetti per Linux e macOS.
 on:
   push:
     branches: [ main ]
-    tags: [ 'v*' ]
   pull_request:
   workflow_dispatch:
 
@@ -22,7 +22,7 @@ jobs:
         id: ver
         shell: bash
         run: |
-          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then V="${GITHUB_REF#refs/tags/v}"; else V="1.0"; fi
+          V="$(tr -d ' \r\n' < VERSION)"
           echo "version=$V" >> "$GITHUB_OUTPUT"
       - name: Compila YAEC.exe (csc di .NET Framework 4, C# 5)
         shell: cmd
@@ -60,7 +60,7 @@ jobs:
       - name: Versione
         id: ver
         run: |
-          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then V="${GITHUB_REF#refs/tags/v}"; else V="1.0"; fi
+          V="$(tr -d ' \r\n' < VERSION)"
           echo "version=$V" >> "$GITHUB_OUTPUT"
       - name: Pacchetti .deb e .tar.gz
         run: |
@@ -102,7 +102,7 @@ jobs:
       - name: Versione
         id: ver
         run: |
-          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then V="${GITHUB_REF#refs/tags/v}"; else V="1.0"; fi
+          V="$(tr -d ' \r\n' < VERSION)"
           echo "version=$V" >> "$GITHUB_OUTPUT"
       - name: YAEC.app e .dmg
         run: |
@@ -114,7 +114,7 @@ jobs:
           path: dist/
 
   release:
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [ windows, linux, macos ]
     runs-on: ubuntu-latest
     steps:
@@ -122,12 +122,13 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: out
-      - name: Crea la release
+      - name: Crea la release (se questa versione non ce l'ha ancora)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="${GITHUB_REF#refs/tags/}"
-          V="${TAG#v}"
+          V="$(tr -d ' \r\n' < VERSION)"
+          TAG="v${V}"
+          if gh release view "$TAG" >/dev/null 2>&1; then echo "La release $TAG esiste gia'."; exit 0; fi
           rm -f out/windows/YAEC.exe
           cat > notes.md <<NOTES
           YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
@@ -138,4 +139,4 @@ jobs:
 
           Le versioni precedenti alla 1.0 si chiamano beta. Dettagli nel file README.txt.
           NOTES
-          gh release create "$TAG" out/windows/* out/linux/* out/macos/* --title "YAEC ${V}" --notes-file notes.md
+          gh release create "$TAG" out/windows/* out/linux/* out/macos/* --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
