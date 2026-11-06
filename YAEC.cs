@@ -2868,6 +2868,9 @@ namespace LunaCalc
             "{0} dB in 2500 Hz · soglia tipica {1}: {2} dB",
             "1.0 - Prima versione stabile, per Windows, Linux e macOS (Linux e macOS con Mono; i dati in ~/.local/share/YAEC/data o in ~/Library/Application Support/YAEC/data); installatore per Windows e pacchetti per Linux e macOS creati su GitHub; le versioni precedenti si chiamano beta. Nuova linguetta Luna sul mondo (elevazione della Luna sulle terre emerse di tutto il mondo, stazione DX con un clic, stato della tua antenna); manuale diviso in MANUALE D'USO APPROFONDITO e TEORIA E CONSIGLI SULL'EME; gruppi Aiuto e tools e Credits and thanks; linguetta Export in Excel dei calcoli; niente più margine sul modo: S/N in 2500 Hz con la soglia tipica come riferimento e i limiti del JT65 nel manuale; nel manuale anche la tabella del Q65 per TX1 – TX6, la rotazione di Faraday e la sintesi dell'articolo di SM5BSZ; tabella dei cavi ordinabile per perdita, con nuovi cavi Messi & Paoloni, SSB (SeaTex per ambienti marini, Aircom Premium), Belden e Tasker; caselle con l'unità senza scritte residue.",
             "1.0.1 - Nella pagina della release su GitHub c'è il file SHA256SUMS.txt con le impronte SHA-256 di tutti i pacchetti: servono a verificare che i file scaricati siano proprio quelli originali (istruzioni nel README).",
+            "in diretta",
+            "Torna al tracciamento in diretta, con l'ora attuale.",
+            "Giorno del tracciamento (UTC): apri il calendario per scegliere un giorno passato o futuro; l'ora si sceglie trascinando la linea rossa delle 24 ore in basso.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4081,6 +4084,9 @@ namespace LunaCalc
             "{0} dB in 2500 Hz · typical threshold {1}: {2} dB",
             "1.0 - First stable version, for Windows, Linux and macOS (Linux and macOS with Mono; data in ~/.local/share/YAEC/data or in ~/Library/Application Support/YAEC/data); Windows installer and Linux and macOS packages built on GitHub; earlier versions are called beta. New Moon over the world tab (Moon elevation over the land areas of the whole world, DX station with one click, status of your antenna); manual split into IN-DEPTH USER MANUAL and THEORY AND TIPS ON EME; Help and tools and Credits and thanks groups; Export calculations to Excel tab; no more mode margin: S/N in 2500 Hz with the typical threshold as reference and the JT65 limits in the manual; the manual also has the Q65 table for TX1 – TX6, Faraday rotation and the summary of the SM5BSZ article; cable table sortable by loss, with new Messi & Paoloni, SSB (SeaTex for marine environments, Aircom Premium), Belden and Tasker cables; boxes with a unit no longer show leftover text.",
             "1.0.1 - The GitHub release page now has the file SHA256SUMS.txt with the SHA-256 fingerprints of all the packages: use them to check that the downloaded files are the original ones (instructions in the README).",
+            "live",
+            "Back to live tracking, with the current time.",
+            "Tracking day (UTC): open the calendar to choose a past or future day; choose the time by dragging the red line of the 24 hours at the bottom.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5294,6 +5300,9 @@ namespace LunaCalc
             "{0} dB in 2500 Hz · typische Schwelle {1}: {2} dB",
             "1.0 - Erste stabile Version, für Windows, Linux und macOS (Linux und macOS mit Mono; Daten in ~/.local/share/YAEC/data bzw. in ~/Library/Application Support/YAEC/data); Installationsprogramm für Windows und Pakete für Linux und macOS auf GitHub erstellt; die früheren Versionen heißen beta. Neuer Reiter Mond über der Welt (Elevation des Mondes über den Landflächen der ganzen Welt, DX-Station mit einem Klick, Zustand Ihrer Antenne); Handbuch aufgeteilt in AUSFÜHRLICHES BENUTZERHANDBUCH und THEORIE UND TIPPS ZU EME; Gruppen Hilfe und Tools sowie Credits and thanks; Reiter Export der Berechnungen nach Excel; keine Betriebsartreserve mehr: S/N in 2500 Hz mit der typischen Schwelle als Bezug und die Grenzen von JT65 im Handbuch; im Handbuch außerdem die Q65-Tabelle für TX1 – TX6, die Faraday-Drehung und die Zusammenfassung des Artikels von SM5BSZ; Kabeltabelle nach Dämpfung sortierbar, mit neuen Kabeln von Messi & Paoloni, SSB (SeaTex für maritime Umgebungen, Aircom Premium), Belden und Tasker; Felder mit Einheit ohne Textreste.",
             "1.0.1 - Auf der Release-Seite bei GitHub gibt es die Datei SHA256SUMS.txt mit den SHA-256-Prüfsummen aller Pakete: Damit lässt sich prüfen, ob die heruntergeladenen Dateien die Originale sind (Anleitung in der README).",
+            "live",
+            "Zurück zur Live-Verfolgung mit der aktuellen Uhrzeit.",
+            "Tag der Verfolgung (UTC): Öffnen Sie den Kalender, um einen vergangenen oder zukünftigen Tag zu wählen; die Uhrzeit wählen Sie, indem Sie die rote Linie der 24 Stunden unten ziehen.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6507,6 +6516,9 @@ namespace LunaCalc
             "{0} dB en 2500 Hz · seuil typique {1} : {2} dB",
             "1.0 - Première version stable, pour Windows, Linux et macOS (Linux et macOS avec Mono ; données dans ~/.local/share/YAEC/data ou dans ~/Library/Application Support/YAEC/data) ; installateur pour Windows et paquets pour Linux et macOS créés sur GitHub ; les versions précédentes s'appellent beta. Nouvel onglet La Lune sur le monde (élévation de la Lune au-dessus des terres émergées du monde entier, station DX en un clic, état de votre antenne) ; manuel divisé en MANUEL D'UTILISATION DÉTAILLÉ et THÉORIE ET CONSEILS SUR L'EME ; groupes Aide et outils et Credits and thanks ; onglet Export des calculs vers Excel ; plus de marge sur le mode : S/N dans 2500 Hz avec le seuil typique comme référence et les limites du JT65 dans le manuel ; dans le manuel aussi le tableau du Q65 pour TX1 – TX6, la rotation de Faraday et la synthèse de l'article de SM5BSZ ; tableau des câbles triable par perte, avec de nouveaux câbles Messi & Paoloni, SSB (SeaTex pour milieux marins, Aircom Premium), Belden et Tasker ; cases avec unité sans texte résiduel.",
             "1.0.1 - La page de la version sur GitHub contient le fichier SHA256SUMS.txt avec les empreintes SHA-256 de tous les paquets : elles servent à vérifier que les fichiers téléchargés sont bien les originaux (instructions dans le README).",
+            "en direct",
+            "Revenir au suivi en direct, à l'heure actuelle.",
+            "Jour du suivi (UTC) : ouvrez le calendrier pour choisir un jour passé ou futur ; l'heure se choisit en faisant glisser la ligne rouge des 24 heures en bas.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7720,6 +7732,9 @@ namespace LunaCalc
             "{0} dB en 2500 Hz · umbral típico {1}: {2} dB",
             "1.0 - Primera versión estable, para Windows, Linux y macOS (Linux y macOS con Mono; los datos en ~/.local/share/YAEC/data o en ~/Library/Application Support/YAEC/data); instalador para Windows y paquetes para Linux y macOS creados en GitHub; las versiones anteriores se llaman beta. Nueva pestaña Luna sobre el mundo (elevación de la Luna sobre las tierras emergidas de todo el mundo, estación DX con un clic, estado de tu antena); manual dividido en MANUAL DE USO DETALLADO y TEORÍA Y CONSEJOS SOBRE EME; grupos Ayuda y herramientas y Credits and thanks; pestaña Exportar los cálculos a Excel; ya no hay margen sobre el modo: S/N en 2500 Hz con el umbral típico como referencia y los límites del JT65 en el manual; en el manual también la tabla del Q65 para TX1 – TX6, la rotación de Faraday y la síntesis del artículo de SM5BSZ; tabla de cables ordenable por pérdida, con nuevos cables Messi & Paoloni, SSB (SeaTex para entornos marinos, Aircom Premium), Belden y Tasker; casillas con la unidad sin textos residuales.",
             "1.0.1 - En la página de la versión en GitHub está el archivo SHA256SUMS.txt con las huellas SHA-256 de todos los paquetes: sirven para comprobar que los archivos descargados son los originales (instrucciones en el README).",
+            "en directo",
+            "Volver al seguimiento en directo, con la hora actual.",
+            "Día del seguimiento (UTC): abre el calendario para elegir un día pasado o futuro; la hora se elige arrastrando la línea roja de las 24 horas, abajo.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -8933,6 +8948,9 @@ namespace LunaCalc
             "{0} dB em 2500 Hz · limiar típico {1}: {2} dB",
             "1.0 - Primeira versão estável, para Windows, Linux e macOS (Linux e macOS com Mono; os dados em ~/.local/share/YAEC/data ou em ~/Library/Application Support/YAEC/data); instalador para Windows e pacotes para Linux e macOS criados no GitHub; as versões anteriores chamam-se beta. Novo separador Lua sobre o mundo (elevação da Lua sobre as terras emersas de todo o mundo, estação DX com um clique, estado da sua antena); manual dividido em MANUAL DE UTILIZAÇÃO APROFUNDADO e TEORIA E CONSELHOS SOBRE EME; grupos Ajuda e ferramentas e Credits and thanks; separador Exportar os cálculos para Excel; deixa de haver margem sobre o modo: S/N em 2500 Hz com o limiar típico como referência e os limites do JT65 no manual; no manual também a tabela do Q65 para TX1 – TX6, a rotação de Faraday e a síntese do artigo de SM5BSZ; tabela de cabos ordenável por perda, com novos cabos Messi & Paoloni, SSB (SeaTex para ambientes marinhos, Aircom Premium), Belden e Tasker; caixas com a unidade sem textos residuais.",
             "1.0.1 - Na página da versão no GitHub está o ficheiro SHA256SUMS.txt com as impressões SHA-256 de todos os pacotes: servem para verificar que os ficheiros descarregados são os originais (instruções no README).",
+            "em direto",
+            "Voltar ao seguimento em direto, com a hora atual.",
+            "Dia do seguimento (UTC): abra o calendário para escolher um dia passado ou futuro; a hora escolhe-se arrastando a linha vermelha das 24 horas, em baixo.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10146,6 +10164,9 @@ namespace LunaCalc
             "{0} dB (在 2500 Hz 中) · {1} 典型门限: {2} dB",
             "1.0 - 首个稳定版本，适用于 Windows、Linux 和 macOS（Linux 和 macOS 通过 Mono 运行；数据位于 ~/.local/share/YAEC/data 或 ~/Library/Application Support/YAEC/data）；Windows 安装程序以及 Linux 和 macOS 安装包在 GitHub 上生成；之前的版本称为 beta。新增“月照全球”页（全球陆地上空的月球仰角、一键选择 DX 电台、你的天线状态）；手册拆分为“详细使用手册”和“EME 理论与建议”；新增“帮助与工具”和“Credits and thanks”组；新增“计算结果导出到 Excel”页；不再使用模式余量：改为 2500 Hz 内的 S/N，以典型门限为参考，JT65 的限制写入手册；手册还新增 TX1 – TX6 的 Q65 表格、Faraday 旋转以及 SM5BSZ 文章摘要；电缆表可按损耗排序，新增 Messi & Paoloni、SSB（用于海洋环境的 SeaTex、Aircom Premium）、Belden 和 Tasker 电缆；带单位的输入框不再残留文字。",
             "1.0.1 - GitHub 发布页面新增 SHA256SUMS.txt 文件，列出所有安装包的 SHA-256 指纹，可用来确认下载的文件是原始文件（说明见 README）。",
+            "实时",
+            "返回实时跟踪，使用当前时间。",
+            "跟踪日期（UTC）：打开日历选择过去或未来的某一天；拖动下方 24 小时条上的红线选择时间。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11359,6 +11380,9 @@ namespace LunaCalc
             "{0} dB (2500 Hz 帯域) · {1} の典型的なしきい値: {2} dB",
             "1.0 - 初の安定版。Windows、Linux、macOS に対応（Linux と macOS は Mono で動作。データは ~/.local/share/YAEC/data または ~/Library/Application Support/YAEC/data）；Windows 用インストーラーと Linux・macOS 用パッケージを GitHub で作成；以前のバージョンは beta と呼びます。新しいタブ「世界から見た月」（世界中の陸地上での月の仰角、ワンクリックで DX 局、自局アンテナの状態）；マニュアルを「詳細取扱説明書」と「EME の理論とアドバイス」に分割；グループ「ヘルプとツール」と「Credits and thanks」；タブ「計算結果を Excel へエクスポート」；モードのマージンを廃止：2500 Hz での S/N を典型的なしきい値を基準に表示し、JT65 の限界はマニュアルに記載；マニュアルには TX1 – TX6 の Q65 の表、Faraday 回転、SM5BSZ の記事の要約も追加；ケーブル表を損失で並べ替え可能にし、Messi & Paoloni、SSB（海洋環境向けの SeaTex、Aircom Premium）、Belden、Tasker の新しいケーブルを追加；単位付きの入力欄に文字が残らないように修正。",
             "1.0.1 - GitHub のリリースページに、全パッケージの SHA-256 フィンガープリントを記載した SHA256SUMS.txt を追加。ダウンロードしたファイルが元のものか確認できます（手順は README）。",
+            "ライブ",
+            "現在時刻のライブ追尾に戻ります。",
+            "追尾する日（UTC）：カレンダーを開いて過去または未来の日を選びます。時刻は下の 24 時間の赤い線をドラッグして選びます。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12572,6 +12596,9 @@ namespace LunaCalc
             "{0} dB, 2500 Hz में · {1} की सामान्य सीमा: {2} dB",
             "1.0 - पहला स्थिर संस्करण, Windows, Linux और macOS के लिए (Linux और macOS पर Mono के साथ; डेटा ~/.local/share/YAEC/data या ~/Library/Application Support/YAEC/data में); Windows के लिए इंस्टॉलर और Linux तथा macOS के लिए पैकेज GitHub पर बनाए गए; पिछले संस्करण beta कहलाते हैं। नया टैब विश्व पर चंद्रमा (पूरे विश्व के भू-भागों पर चंद्रमा का उन्नयन, एक क्लिक में DX स्टेशन, आपके एंटीना की स्थिति); मैनुअल को विस्तृत उपयोगकर्ता मैनुअल और EME सिद्धांत और सुझाव में बाँटा गया; सहायता और टूल तथा Credits and thanks समूह; गणनाओं का Excel में निर्यात टैब; मोड पर मार्जिन अब नहीं: 2500 Hz में S/N, संदर्भ के रूप में सामान्य सीमा के साथ, और JT65 की सीमाएँ मैनुअल में; मैनुअल में TX1 – TX6 के लिए Q65 की तालिका, Faraday घूर्णन और SM5BSZ के लेख का सार भी; केबल तालिका हानि के अनुसार क्रमबद्ध की जा सकती है, Messi & Paoloni, SSB (समुद्री वातावरण के लिए SeaTex, Aircom Premium), Belden और Tasker के नए केबलों के साथ; इकाई वाले बॉक्स में अब बचा हुआ पाठ नहीं।",
             "1.0.1 - GitHub के रिलीज़ पेज पर अब SHA256SUMS.txt फ़ाइल है जिसमें सभी पैकेजों के SHA-256 फ़िंगरप्रिंट हैं: इनसे जाँचें कि डाउनलोड की गई फ़ाइलें मूल हैं (निर्देश README में)।",
+            "लाइव",
+            "वर्तमान समय के साथ लाइव ट्रैकिंग पर लौटें।",
+            "ट्रैकिंग का दिन (UTC): अतीत या भविष्य का दिन चुनने के लिए कैलेंडर खोलें; समय नीचे 24 घंटे की लाल रेखा खींचकर चुनें।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -13785,6 +13812,9 @@ namespace LunaCalc
             "{0} dB (2500 Hz) · {1} 일반 임계값: {2} dB",
             "1.0 - 첫 안정 버전, Windows, Linux, macOS용(Linux와 macOS는 Mono 사용; 데이터는 ~/.local/share/YAEC/data 또는 ~/Library/Application Support/YAEC/data); Windows용 설치 프로그램과 Linux 및 macOS용 패키지를 GitHub에서 생성; 이전 버전은 beta라고 부름. 새 탭 '세계 위의 달'(전 세계 육지 위의 달 앙각, 클릭 한 번으로 DX 국, 내 안테나 상태); 설명서를 '상세 사용 설명서'와 'EME 이론과 조언'으로 분리; '도움말 및 도구'와 'Credits and thanks' 그룹; '계산 결과 Excel 내보내기' 탭; 모드 마진 폐지: 2500 Hz 기준 S/N을 일반적인 임계값과 비교하여 표시하고 JT65의 한계는 설명서에 수록; 설명서에 TX1 – TX6용 Q65 표, Faraday 회전, SM5BSZ 기사 요약도 추가; 케이블 표를 손실 기준으로 정렬 가능, Messi & Paoloni, SSB(해양 환경용 SeaTex, Aircom Premium), Belden, Tasker 새 케이블 추가; 단위가 있는 입력란에 남는 글자 없음.",
             "1.0.1 - GitHub 릴리스 페이지에 모든 패키지의 SHA-256 지문이 담긴 SHA256SUMS.txt 파일 추가: 내려받은 파일이 원본인지 확인할 수 있습니다 (방법은 README 참고).",
+            "실시간",
+            "현재 시각으로 실시간 추적으로 돌아갑니다.",
+            "추적 날짜 (UTC): 달력을 열어 과거나 미래의 날을 고르세요. 시간은 아래 24시간 막대의 빨간 선을 끌어서 고릅니다.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -14998,6 +15028,9 @@ namespace LunaCalc
             "{0} dB dalam 2500 Hz · ambang tipikal {1}: {2} dB",
             "1.0 - Versi stabil pertama, untuk Windows, Linux, dan macOS (Linux dan macOS dengan Mono; data di ~/.local/share/YAEC/data atau di ~/Library/Application Support/YAEC/data); penginstal untuk Windows serta paket untuk Linux dan macOS dibuat di GitHub; versi-versi sebelumnya disebut beta. Tab baru Bulan di atas dunia (elevasi Bulan di atas daratan seluruh dunia, stasiun DX dengan satu klik, status antena Anda); manual dibagi menjadi MANUAL PENGGUNAAN LENGKAP dan TEORI DAN TIPS EME; grup Bantuan dan alat serta Credits and thanks; tab Ekspor perhitungan ke Excel; tidak ada lagi margin mode: S/N dalam 2500 Hz dengan ambang tipikal sebagai acuan dan batas JT65 di manual; di manual juga tabel Q65 untuk TX1 – TX6, rotasi Faraday, dan ringkasan artikel SM5BSZ; tabel kabel dapat diurutkan menurut rugi, dengan kabel baru Messi & Paoloni, SSB (SeaTex untuk lingkungan laut, Aircom Premium), Belden, dan Tasker; kotak bersatuan tanpa sisa tulisan.",
             "1.0.1 - Halaman rilis di GitHub kini memuat berkas SHA256SUMS.txt berisi sidik SHA-256 semua paket: gunakan untuk memastikan berkas yang diunduh adalah yang asli (petunjuk di README).",
+            "langsung",
+            "Kembali ke pelacakan langsung, dengan waktu sekarang.",
+            "Hari pelacakan (UTC): buka kalender untuk memilih hari lampau atau mendatang; jam dipilih dengan menyeret garis merah 24 jam di bawah.",
         };
 
         public static readonly string[] RU = {
@@ -16212,6 +16245,9 @@ namespace LunaCalc
             "{0} дБ в 2500 Гц · типичный порог {1}: {2} дБ",
             "1.0 - Первая стабильная версия для Windows, Linux и macOS (Linux и macOS с Mono; данные в ~/.local/share/YAEC/data или в ~/Library/Application Support/YAEC/data); установщик для Windows и пакеты для Linux и macOS собираются на GitHub; предыдущие версии называются beta. Новая вкладка «Луна над миром» (высота Луны над сушей всего мира, станция DX одним щелчком, состояние вашей антенны); руководство разделено на «ПОДРОБНОЕ РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ» и «ТЕОРИЯ И СОВЕТЫ ПО EME»; группы «Справка и инструменты» и «Credits and thanks»; вкладка «Экспорт расчётов в Excel»; запаса по виду связи больше нет: S/N в полосе 2500 Hz с типичным порогом в качестве ориентира, а пределы JT65 — в руководстве; в руководстве также таблица Q65 для TX1 – TX6, вращение Faraday и краткое изложение статьи SM5BSZ; таблицу кабелей можно сортировать по потерям, добавлены новые кабели Messi & Paoloni, SSB (SeaTex для морской среды, Aircom Premium), Belden и Tasker; в полях с единицами больше не остаётся лишнего текста.",
             "1.0.1 - На странице релиза на GitHub появился файл SHA256SUMS.txt с отпечатками SHA-256 всех пакетов: по ним можно проверить, что скачанные файлы — оригинальные (инструкция в README).",
+            "в реальном времени",
+            "Вернуться к сопровождению в реальном времени, с текущим временем.",
+            "День сопровождения (UTC): откройте календарь, чтобы выбрать прошедший или будущий день; время выбирается перетаскиванием красной линии 24 часов внизу.",
         };
 
         public static readonly string[] UK = {
@@ -17426,6 +17462,9 @@ namespace LunaCalc
             "{0} дБ у 2500 Гц · типовий поріг {1}: {2} дБ",
             "1.0 - Перша стабільна версія для Windows, Linux і macOS (Linux і macOS з Mono; дані в ~/.local/share/YAEC/data або в ~/Library/Application Support/YAEC/data); інсталятор для Windows і пакети для Linux і macOS збираються на GitHub; попередні версії називаються beta. Нова вкладка «Місяць над світом» (висота Місяця над суходолом усього світу, станція DX одним клацанням, стан вашої антени); посібник поділено на «ДОКЛАДНИЙ ПОСІБНИК КОРИСТУВАЧА» і «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME»; групи «Довідка та інструменти» і «Credits and thanks»; вкладка «Експорт розрахунків в Excel»; запасу за видом зв'язку більше немає: S/N у смузі 2500 Hz з типовим порогом як орієнтиром, а межі JT65 — у посібнику; у посібнику також таблиця Q65 для TX1 – TX6, обертання Faraday і стислий виклад статті SM5BSZ; таблицю кабелів можна сортувати за втратами, додано нові кабелі Messi & Paoloni, SSB (SeaTex для морського середовища, Aircom Premium), Belden і Tasker; у полях з одиницями більше не лишається зайвого тексту.",
             "1.0.1 - На сторінці релізу на GitHub з'явився файл SHA256SUMS.txt з відбитками SHA-256 усіх пакетів: за ними можна перевірити, що завантажені файли — оригінальні (інструкція в README).",
+            "наживо",
+            "Повернутися до супроводу наживо, з поточним часом.",
+            "День супроводу (UTC): відкрийте календар, щоб вибрати минулий або майбутній день; час вибирається перетягуванням червоної лінії 24 годин унизу.",
         };
 
         public static readonly string[] AF = {
@@ -18640,6 +18679,9 @@ namespace LunaCalc
             "{0} dB in 2500 Hz · tipiese drempel {1}: {2} dB",
             "1.0 - Eerste stabiele weergawe, vir Windows, Linux en macOS (Linux en macOS met Mono; die data in ~/.local/share/YAEC/data of in ~/Library/Application Support/YAEC/data); installeerder vir Windows en pakkette vir Linux en macOS op GitHub gebou; die vorige weergawes heet beta. Nuwe oortjie Maan oor die wêreld (elevasie van die Maan oor die landmassas van die hele wêreld, DX-stasie met een klik, stand van jou antenna); handleiding verdeel in UITGEBREIDE GEBRUIKERSHANDLEIDING en TEORIE EN WENKE OOR EME; groepe Hulp en gereedskap en Credits and thanks; oortjie Uitvoer van berekeninge na Excel; geen modusmarge meer nie: S/N in 2500 Hz met die tipiese drempel as verwysing en die grense van JT65 in die handleiding; in die handleiding ook die Q65-tabel vir TX1 – TX6, Faraday-rotasie en die opsomming van SM5BSZ se artikel; kabeltabel sorteerbaar volgens verlies, met nuwe kabels van Messi & Paoloni, SSB (SeaTex vir mariene omgewings, Aircom Premium), Belden en Tasker; blokkies met 'n eenheid sonder oorblywende teks.",
             "1.0.1 - Die vrystellingsblad op GitHub bevat nou die lêer SHA256SUMS.txt met die SHA-256-vingerafdrukke van al die pakkette: daarmee kan jy kontroleer dat die afgelaaide lêers die oorspronklikes is (instruksies in die README).",
+            "regstreeks",
+            "Terug na regstreekse volging, met die huidige tyd.",
+            "Volgdag (UTC): maak die kalender oop om 'n vorige of toekomstige dag te kies; kies die tyd deur die rooi lyn van die 24 uur onder te sleep.",
         };
 
         public static readonly string[] BN = {
@@ -19853,6 +19895,9 @@ namespace LunaCalc
             "{0} dB, 2500 Hz-এ · {1}-এর সাধারণ থ্রেশহোল্ড: {2} dB",
             "1.0 - প্রথম স্থিতিশীল সংস্করণ, Windows, Linux ও macOS-এর জন্য (Linux ও macOS-এ Mono দিয়ে; ডেটা ~/.local/share/YAEC/data বা ~/Library/Application Support/YAEC/data-তে); Windows-এর ইনস্টলার এবং Linux ও macOS-এর প্যাকেজ GitHub-এ তৈরি; আগের সংস্করণগুলিকে beta বলা হয়। নতুন ট্যাব বিশ্বের উপরে চাঁদ (সারা বিশ্বের স্থলভাগের ওপরে চাঁদের উচ্চতা, এক ক্লিকে DX স্টেশন, আপনার অ্যান্টেনার অবস্থা); ম্যানুয়াল ভাগ করা হয়েছে বিস্তারিত ব্যবহার নির্দেশিকা ও EME তত্ত্ব ও পরামর্শ-এ; সহায়তা ও টুল এবং Credits and thanks দল; হিসাব Excel-এ রপ্তানি ট্যাব; মোডের মার্জিন আর নেই: 2500 Hz-এ S/N, সাধারণ সীমাকে রেফারেন্স ধরে, আর JT65-এর সীমা ম্যানুয়ালে; ম্যানুয়ালে TX1 – TX6-এর জন্য Q65-এর টেবিল, Faraday ঘূর্ণন এবং SM5BSZ-এর প্রবন্ধের সারসংক্ষেপও; কেবল টেবিল ক্ষতি অনুসারে সাজানো যায়, Messi & Paoloni, SSB (সামুদ্রিক পরিবেশের জন্য SeaTex, Aircom Premium), Belden ও Tasker-এর নতুন কেবলসহ; একক-যুক্ত বাক্সে আর অবশিষ্ট লেখা থাকে না।",
             "1.0.1 - GitHub-এর রিলিজ পাতায় এখন সব প্যাকেজের SHA-256 ফিঙ্গারপ্রিন্টসহ SHA256SUMS.txt ফাইল আছে: ডাউনলোড করা ফাইলগুলো আসল কিনা তা যাচাই করতে কাজে লাগে (নির্দেশনা README-তে)।",
+            "সরাসরি",
+            "বর্তমান সময়সহ সরাসরি ট্র্যাকিংয়ে ফিরে যান।",
+            "ট্র্যাকিংয়ের দিন (UTC): অতীত বা ভবিষ্যতের দিন বেছে নিতে ক্যালেন্ডার খুলুন; নিচে ২৪ ঘণ্টার লাল রেখা টেনে সময় বেছে নিন।",
         };
 
         public static readonly string[] AR = {
@@ -21066,6 +21111,9 @@ namespace LunaCalc
             "{0} dB في 2500 Hz · العتبة النموذجية لـ {1}: {2} dB",
             "1.0 - أول إصدار مستقر، لـ Windows وLinux وmacOS (Linux وmacOS مع Mono؛ البيانات في ~/.local/share/YAEC/data أو في ~/Library/Application Support/YAEC/data)؛ مُثبِّت لـ Windows وحزم لـ Linux وmacOS تُنشأ على GitHub؛ الإصدارات السابقة تُسمّى beta. تبويب جديد القمر فوق العالم (ارتفاع القمر فوق اليابسة في العالم كله، محطة DX بنقرة واحدة، حالة هوائيك)؛ تقسيم الدليل إلى دليل الاستخدام المفصّل ونظرية EME ونصائح؛ مجموعتا المساعدة والأدوات وCredits and thanks؛ تبويب تصدير الحسابات إلى Excel؛ لا مزيد من هامش النمط: S/N في 2500 Hz مع العتبة النموذجية مرجعًا وحدود JT65 في الدليل؛ وفي الدليل أيضًا جدول Q65 لـ TX1 – TX6 ودوران Faraday وخلاصة مقال SM5BSZ؛ جدول الكوابل قابل للترتيب حسب الفقد، مع كوابل جديدة من Messi & Paoloni وSSB ‏(SeaTex للبيئات البحرية، Aircom Premium) وBelden وTasker؛ خانات الوحدات بلا نصوص متبقية.",
             "1.0.1 - تحتوي صفحة الإصدار على GitHub الآن على الملف SHA256SUMS.txt مع بصمات SHA-256 لجميع الحزم: تُستخدم للتحقق من أن الملفات التي نزّلتها هي الأصلية (التعليمات في README).",
+            "مباشر",
+            "العودة إلى التتبع المباشر بالوقت الحالي.",
+            "يوم التتبع (UTC): افتح التقويم لاختيار يوم ماضٍ أو مقبل؛ ويُختار الوقت بسحب الخط الأحمر لشريط الـ 24 ساعة في الأسفل.",
         };
 
         public static readonly string[] TR = {
@@ -22279,6 +22327,9 @@ namespace LunaCalc
             "{0} dB, 2500 Hz'de · {1} tipik eşiği: {2} dB",
             "1.0 - İlk kararlı sürüm, Windows, Linux ve macOS için (Linux ve macOS'ta Mono ile; veriler ~/.local/share/YAEC/data veya ~/Library/Application Support/YAEC/data içinde); Windows için kurulum programı ile Linux ve macOS paketleri GitHub'da oluşturuldu; önceki sürümlerin adı beta. Yeni Dünya üzerinde Ay sekmesi (tüm dünyadaki karaların üzerinde Ay'ın yükselişi, tek tıklamayla DX istasyonu, antenninizin durumu); kılavuz AYRINTILI KULLANIM KILAVUZU ve EME ÜZERİNE TEORİ VE ÖNERİLER olarak ikiye ayrıldı; Yardım ve araçlar ile Credits and thanks grupları; Hesaplamaları Excel'e aktar sekmesi; artık mod payı yok: 2500 Hz'de S/N, referans olarak tipik eşikle birlikte, JT65'in sınırları ise kılavuzda; kılavuzda ayrıca TX1 – TX6 için Q65 tablosu, Faraday dönmesi ve SM5BSZ'nin makalesinin özeti; kayba göre sıralanabilen kablo tablosu, Messi & Paoloni, SSB (deniz ortamları için SeaTex, Aircom Premium), Belden ve Tasker'ın yeni kablolarıyla; birimli kutularda artık kalıntı yazı yok.",
             "1.0.1 - GitHub sürüm sayfasında artık tüm paketlerin SHA-256 parmak izlerini içeren SHA256SUMS.txt dosyası var: indirilen dosyaların orijinal olduğunu doğrulamak için kullanılır (talimatlar README'de).",
+            "canlı",
+            "Geçerli saatle canlı izlemeye dön.",
+            "İzleme günü (UTC): geçmiş ya da gelecek bir gün seçmek için takvimi açın; saati alttaki 24 saatlik kırmızı çizgiyi sürükleyerek seçin.",
         };
     }
 
@@ -28729,6 +28780,14 @@ namespace LunaCalc
 
         // Schede della riga in alto: locator mio, locator del DX, frequenza, ora UTC, ora locale, ora locale del DX
         PannelloDisegno cardMe, cardDx, cardFreq, cardUtc, cardLoc, cardLocDx;
+        // Tracciamento non solo in diretta: un momento scelto (giorno dal calendario, ora trascinando la linea rossa)
+        DateTime? trkScelto;                 // null = in diretta
+        DateTimePicker dtpTrkGiorno;
+        Pillola btnTrkAdesso;
+        bool trkTrascina, trkSyncGiorno;
+        RectangleF trkStrRett;               // zona della striscia delle 24 ore (per trascinare la linea)
+        float trkStrBx, trkStrBw;
+        Label lblTrkPunto;
         TableLayoutPanel barImp;
         string subMe = "", subDx = "", badgeMe = "", subFreq = "";
         Color subMeCol = Color.Gray, subDxCol = Color.Gray;
@@ -28867,24 +28926,44 @@ namespace LunaCalc
 
             cmbTrkMhz = ComboFreq(false);
             cmbTrkKhz = ComboFreq(true);
-            cmbTrkMhz.Width = S(82);
-            cmbTrkKhz.Width = S(74);
-            cmbTrkMhz.Anchor = AnchorStyles.None;
-            cmbTrkKhz.Anchor = AnchorStyles.None;
-            Label punto = new Label();
-            punto.Text = ".";
-            punto.AutoSize = true;
-            punto.Font = new Font(FamigliaNumeri, 18F * fontFactor, FontStyle.Bold);
-            cardFreq.Controls.Add(cmbTrkMhz);
-            cardFreq.Controls.Add(punto);
-            cardFreq.Controls.Add(cmbTrkKhz);
+            cmbTrkMhz.Font = new Font(Lang.FontUi, 11F * fontFactor, FontStyle.Bold);
+            cmbTrkKhz.Font = new Font(Lang.FontUi, 11F * fontFactor, FontStyle.Bold);
+            cmbTrkMhz.Width = S(70);
+            cmbTrkKhz.Width = S(62);
+            lblTrkPunto = new Label();
+            lblTrkPunto.Text = ".";
+            lblTrkPunto.AutoSize = true;
+            lblTrkPunto.Font = new Font(FamigliaNumeri, 13F * fontFactor, FontStyle.Bold);
+            tip.SetToolTip(cmbTrkMhz, Lang.T("Frequenza (MHz / kHz)"));
+            tip.SetToolTip(cmbTrkKhz, Lang.T("Frequenza (MHz / kHz)"));
+            // giorno (UTC): calendario a comparsa; l'ora si sceglie trascinando la linea rossa delle 24 ore
+            dtpTrkGiorno = new DateTimePicker();
+            dtpTrkGiorno.Format = DateTimePickerFormat.Custom;
+            dtpTrkGiorno.CustomFormat = "ddd dd/MM/yyyy";
+            dtpTrkGiorno.Font = new Font(Lang.FontUi, 12F * fontFactor, FontStyle.Bold);
+            dtpTrkGiorno.Value = DateTime.UtcNow.Date;
+            tip.SetToolTip(dtpTrkGiorno, Lang.T("Giorno del tracciamento (UTC): apri il calendario per scegliere un giorno passato o futuro; l'ora si sceglie trascinando la linea rossa delle 24 ore in basso."));
+            btnTrkAdesso = new Pillola("▶ " + Lang.T("Adesso"), StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 8.5F * fontFactor, FontStyle.Bold));
+            tip.SetToolTip(btnTrkAdesso, Lang.T("Torna al tracciamento in diretta, con l'ora attuale."));
+            cardFreq.Controls.Add(dtpTrkGiorno);
+            cardFreq.Controls.Add(btnTrkAdesso);
             cardFreq.Layout += (s, e) =>
             {
-                cmbTrkMhz.Location = new Point(S(14), S(29));
-                punto.Location = new Point(cmbTrkMhz.Right + S(1), cmbTrkMhz.Top + (cmbTrkMhz.Height - punto.Height) / 2);
-                cmbTrkKhz.Location = new Point(punto.Right + S(1), S(29));
+                dtpTrkGiorno.Location = new Point(S(14), S(29));
+                dtpTrkGiorno.Width = Math.Max(S(90), Math.Min(cardFreq.Width - S(28), S(190)));
+                btnTrkAdesso.Location = new Point(S(14), dtpTrkGiorno.Bottom + S(4));
             };
-            cardFreq.Paint += (s, e) => DisegnaScheda(e.Graphics, cardFreq, Lang.T("Frequenza (MHz / kHz)"), null, Color.Empty, subFreq, Tema.Muted, "", null, Color.Empty, 0);
+            cardFreq.Paint += (s, e) => DisegnaScheda(e.Graphics, cardFreq, Lang.T("Giorno (UTC)"), null, Color.Empty, "", Tema.Muted,
+                trkScelto.HasValue ? "" : Lang.T("in diretta"), null, Color.Empty, 0);
+            dtpTrkGiorno.ValueChanged += (s, e) =>
+            {
+                if (trkSyncGiorno) return;
+                DateTime g0 = dtpTrkGiorno.Value.Date;
+                DateTime ora = trkScelto.HasValue ? trkScelto.Value : DateTime.UtcNow;
+                trkScelto = DateTime.SpecifyKind(g0.Add(new TimeSpan(ora.Hour, ora.Minute, 0)), DateTimeKind.Utc);
+                AggiornaTracciamento(true);
+            };
+            btnTrkAdesso.Click += (s, e) => { trkScelto = null; AggiornaTracciamento(true); };
             cmbTrkMhz.TextChanged += (s, e) => { if (!syncFreq) { syncFreq = true; cmbFreq.Text = cmbTrkMhz.Text; syncFreq = false; } AggiornaSottoFreq(); };
             cmbTrkKhz.TextChanged += (s, e) => { if (!syncFreq) { syncFreq = true; cmbKhz.Text = cmbTrkKhz.Text; syncFreq = false; } };
 
@@ -28897,12 +28976,24 @@ namespace LunaCalc
             pnlTrk.Dock = DockStyle.Fill;
             pnlTrk.Margin = new Padding(S(10), S(4), S(10), S(6));
             pnlTrk.Paint += DisegnaTrk;
+            pnlTrk.Controls.Add(cmbTrkMhz);
+            pnlTrk.Controls.Add(lblTrkPunto);
+            pnlTrk.Controls.Add(cmbTrkKhz);
+            // la linea rossa delle 24 ore si trascina (o si clicca un punto della striscia): tracciamento per quel momento
+            pnlTrk.MouseDown += (s, e) =>
+            {
+                if (e.Button != MouseButtons.Left || !trkStrRett.Contains(e.Location) || trk.StrisciaT0 == DateTime.MinValue) return;
+                trkTrascina = true;
+                TrkOraDaX(e.X);
+            };
+            pnlTrk.MouseUp += (s, e) => { if (trkTrascina) { trkTrascina = false; AggiornaTracciamento(true); } };
             bool tipTrk = false;
             pnlTrk.MouseMove += (s, e) =>
             {
-                bool su = false;
+                if (trkTrascina) { TrkOraDaX(e.X); return; }
+                bool su = trkStrRett.Contains(e.Location);
                 foreach (KeyValuePair<RectangleF, Action> kv in trkZone) if (kv.Key.Contains(e.Location)) su = true;
-                pnlTrk.Cursor = su ? Cursors.Hand : Cursors.Default;
+                pnlTrk.Cursor = trkStrRett.Contains(e.Location) ? Cursors.SizeWE : (su ? Cursors.Hand : Cursors.Default);
                 bool sopra = trkTipZona.Contains(e.Location);
                 if (sopra && !tipTrk)
                 {
@@ -28927,6 +29018,17 @@ namespace LunaCalc
             trkTimer.Interval = 1000;
             trkTimer.Tick += (s, e) => { if (tabs != null && tabs.SelectedTab == tpTrack) AggiornaTracciamento(false); };
             trkTimer.Start();
+        }
+
+        // Posizione x nella striscia delle 24 ore → momento scelto (al minuto)
+        void TrkOraDaX(int x)
+        {
+            if (trkStrBw <= 0) return;
+            double h = Math.Max(0, Math.Min(24.0 - 1.0 / 60.0, (x - trkStrBx) / trkStrBw * 24.0));
+            DateTime t = trk.StrisciaT0.AddMinutes(Math.Round(h * 60.0));
+            if (trkScelto.HasValue && trkScelto.Value == t) return;
+            trkScelto = t;
+            AggiornaTracciamento(false);
         }
 
         // "banda 144 MHz" sotto la frequenza, se i MHz sono una delle bande scelte
@@ -29192,6 +29294,7 @@ namespace LunaCalc
             public double SnA, SnB, SnSoleA = double.NaN, SnSoleB = double.NaN;
             public byte[] Striscia;               // prossime 24 ore a passi di 5 minuti
             public DateTime StrisciaT0;
+            public bool Diretta = true;
             public bool FinTrovata, FinInCorso;
             public DateTime FinA, FinB;
         }
@@ -29603,7 +29706,19 @@ namespace LunaCalc
                 // --- Eco e frequenze (CFOM)
                 x = rc.Left + pad; y = rc.Top + S(8); wi = rc.Width - pad - S(14);
                 Testo(g, Lang.T("ECO E FREQUENZE (CFOM)"), fh, Tema.Muted, new RectangleF(x, y, wi, S(18)), StringAlignment.Near, StringAlignment.Near);
-                y += S(22);
+                // frequenza (MHz . kHz) a destra del titolo
+                if (cmbTrkMhz != null)
+                {
+                    int yc = (int)(y - S(3));
+                    int xk = (int)(rc.Right - S(14) - cmbTrkKhz.Width);
+                    int xp = xk - lblTrkPunto.Width;
+                    int xm = xp - cmbTrkMhz.Width;
+                    if (cmbTrkMhz.Location != new Point(xm, yc)) cmbTrkMhz.Location = new Point(xm, yc);
+                    if (cmbTrkKhz.Location != new Point(xk, yc)) cmbTrkKhz.Location = new Point(xk, yc);
+                    Point pp = new Point(xp, yc + (cmbTrkMhz.Height - lblTrkPunto.Height) / 2);
+                    if (lblTrkPunto.Location != pp) lblTrkPunto.Location = pp;
+                }
+                y += cmbTrkMhz != null ? Math.Max(S(22), cmbTrkMhz.Height + S(2)) : S(22);
                 RigaDato(g, x, y, wi, lh, Lang.T("Eco proprio"), trk.EcoTxt, fl, fv, Tema.Fore); y += lh + S(2);
                 if (trk.UsaDx) { RigaDato(g, x, y, wi, lh, Lang.T("DX → io"), trk.DxIoTxt, fl, fv, Tema.Fore); y += lh + S(2); }
                 RigaDato(g, x, y, wi, lh, Lang.T("CFOM · trasmetti su"), trk.CfomTx, fl, fv, Tema.BadFg); y += lh + S(2);
@@ -29756,7 +29871,7 @@ namespace LunaCalc
             {
                 // titolo e legenda sulla stessa riga
                 float x = r.Left + S(14), y = r.Top + S(7);
-                string tt = Lang.T("Prossime 24 ore (UTC)");
+                string tt = trk.Diretta ? Lang.T("Prossime 24 ore (UTC)") : trk.StrisciaT0.ToString("ddd dd/MM/yyyy", Lang.Cultura) + " (UTC)";
                 float wt = g.MeasureString(tt, fh).Width;
                 Testo(g, tt, fh, Tema.Scuro ? Tema.Fore : Color.FromArgb(55, 65, 81), new RectangleF(x, y, wt + S(4), S(20)), StringAlignment.Near, StringAlignment.Center);
                 x += wt + S(18);
@@ -29781,6 +29896,8 @@ namespace LunaCalc
                 // barre
                 float bx = r.Left + S(20), bw = r.Width - S(40);
                 float yb1 = r.Top + S(38), yb2 = yb1 + S(18), hb = S(14);
+                trkStrBx = bx; trkStrBw = bw;
+                trkStrRett = new RectangleF(bx - S(6), yb1 - S(10), bw + S(12), r.Bottom - (yb1 - S(10)));
                 byte[] st = trk.Striscia;
                 if (st != null && st.Length > 0)
                 {
@@ -29828,7 +29945,12 @@ namespace LunaCalc
                     float xa = bx + (float)((trk.Utc - trk.StrisciaT0).TotalHours / 24.0 * bw);
                     Color rosso = Color.FromArgb(198, 40, 40);
                     using (Pen pa = new Pen(rosso, S(5) / 2f)) g.DrawLine(pa, xa, yb1 - S(8), xa, ya + S(2));
-                    Testo(g, Lang.T("adesso"), fa, rosso, new RectangleF(xa + S(4), ya + S(21), S(120), S(16)), StringAlignment.Near, StringAlignment.Near);
+                    // maniglia: si trascina per scegliere l'ora
+                    using (Brush bm = new SolidBrush(rosso)) g.FillEllipse(bm, xa - S(5), yb1 - S(13), S(10), S(10));
+                    string et = trk.Diretta ? Lang.T("adesso") : trk.Utc.ToString("HH:mm", inv) + " UTC";
+                    float we = g.MeasureString(et, fa).Width + S(8);
+                    float xe = xa + S(4) + we > r.Right - S(6) ? xa - S(4) - we : xa + S(4);
+                    Testo(g, et, fa, rosso, new RectangleF(xe, ya + S(21), we, S(16)), xe < xa ? StringAlignment.Far : StringAlignment.Near, StringAlignment.Near);
                 }
             }
         }
@@ -29930,8 +30052,16 @@ namespace LunaCalc
         void AggiornaTracciamento(bool forzaFinestra)
         {
             if (pnlTrk == null || me == null) return;
-            DateTime now = DateTime.UtcNow;
+            DateTime now = trkScelto.HasValue ? trkScelto.Value : DateTime.UtcNow;
             trk.Utc = now;
+            trk.Diretta = !trkScelto.HasValue;
+            if (dtpTrkGiorno != null && dtpTrkGiorno.Value.Date != now.Date)
+            {
+                trkSyncGiorno = true;
+                try { dtpTrkGiorno.Value = now.Date; } catch { }
+                trkSyncGiorno = false;
+            }
+            if (btnTrkAdesso != null && btnTrkAdesso.Visible == trk.Diretta) { btnTrkAdesso.Visible = !trk.Diretta; cardFreq.Invalidate(); }
             if (txtTrkLoc.ForeColor != CVal) txtTrkLoc.ForeColor = CVal;
             if (txtTrkDx.ForeColor != ColArancio) txtTrkDx.ForeColor = ColArancio;
             if (txtTrkLoc.BackColor != Tema.Field) { txtTrkLoc.BackColor = Tema.Field; txtTrkDx.BackColor = Tema.Field; }
@@ -30001,14 +30131,15 @@ namespace LunaCalc
             trk.Illum = (1 - Math.Cos(elong * Math.PI / 180.0)) / 2.0;
             trk.Crescente = ((r.P.Ra - sra + 720.0) % 360.0) < 180.0;
             trk.Fase = NomeFase(trk.Illum, trk.Crescente);
-            if (forzaFinestra || (now - trkWinCalc).TotalSeconds >= 60)
+            if (forzaFinestra || trkTrascina || Math.Abs((now - trkWinCalc).TotalSeconds) >= 60)
             {
                 DateTime t0 = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0, DateTimeKind.Utc);
                 trkWinTxt = ProssimaFinestra(t0);
                 bool inC; DateTime fa, fb;
                 trk.FinTrovata = CercaFinestra(t0, out inC, out fa, out fb);
                 trk.FinInCorso = inC; trk.FinA = fa; trk.FinB = fb;
-                CalcolaStriscia(now, useDx);
+                // la striscia del giorno si ricalcola solo se cambia il giorno o i dati (non a ogni passo del trascinamento)
+                if (!trkTrascina || trk.StrisciaT0 != now.Date) CalcolaStriscia(now, useDx);
                 trk.SorgeTramonta = SorgeTramonta(t0);
                 trkWinCalc = now;
             }
