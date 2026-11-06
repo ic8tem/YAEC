@@ -81,7 +81,7 @@ jobs:
       - name: Prova di avvio con Mono (schermo virtuale Xvfb) e schermata
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil ca-certificates-mono libgdiplus xvfb imagemagick fonts-dejavu-core > /dev/null
+          sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil libgdiplus xvfb imagemagick fonts-dejavu-core > /dev/null
           # impostazioni di prova: stazione IC8TEM a Capri e un DX, lingua italiana
           mkdir -p "$HOME/.local/share/YAEC/data"
           printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=W7GJ\n' > "$HOME/.local/share/YAEC/data/impostazioni.txt"
@@ -98,6 +98,10 @@ jobs:
           if kill -0 $PID 2>/dev/null; then echo "YAEC in esecuzione dopo 90 s: avvio riuscito"; kill $PID; else echo "YAEC si e' chiuso"; exit 1; fi
           # seconda schermata: linguetta Distanza e Dgrd (e CALL3.TXT ormai scaricato)
           ls -la "$HOME/.local/share/YAEC/data" || true
+          apt-cache search mono | grep -iE "cert|mono-devel|mono-complete" | head || true
+          which cert-sync mozroots || true
+          mono --version | head -1 || true
+          head -c 200 "$HOME/.local/share/YAEC/data/solar-radio-flux.json" 2>/dev/null; echo
           head -5 "$HOME/.local/share/YAEC/data/CALL3.TXT" 2>/dev/null || true
           YAEC_LINGUETTA="Distanza e Dgrd" mono YAEC.exe &
           PID=$!

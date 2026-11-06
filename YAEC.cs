@@ -2907,6 +2907,9 @@ namespace LunaCalc
             "nominativo non presente nel CALL3.TXT: inserisci il locator",
             "Il nominativo e il locator della stazione che vuoi ascoltare o collegare. Se il nominativo è nel CALL3.TXT il locator si riempie da solo; se il locator è valido, la seconda stazione si attiva in tutte le linguette.",
             " · locator dal CALL3.TXT",
+            "Ore utili in verde sulla Dgrd",
+            "Colora di verde i tratti della curva Dgrd nelle ore con la Luna dentro i limiti della tua antenna (o nella finestra comune con il DX).",
+            "Mostra sul grafico la declinazione della Luna (curva blu): con la Luna dalla parte del tuo emisfero sale più alta e resta più ore sopra l'orizzonte",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4159,6 +4162,9 @@ namespace LunaCalc
             "callsign not in CALL3.TXT: enter the locator",
             "The callsign and locator of the station you want to hear or work. If the callsign is in CALL3.TXT the locator fills in by itself; if the locator is valid, the second station is enabled in all tabs.",
             " · locator from CALL3.TXT",
+            "Usable hours in green on the Dgrd",
+            "Colors green the parts of the Dgrd curve in the hours when the Moon is inside your antenna limits (or in the common window with the DX).",
+            "Shows the Moon declination on the chart (blue curve): with the Moon on your hemisphere's side it rises higher and stays above the horizon longer",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5411,6 +5417,9 @@ namespace LunaCalc
             "Rufzeichen nicht in der CALL3.TXT: Locator eingeben",
             "Rufzeichen und Locator der Station, die du hören oder arbeiten willst. Steht das Rufzeichen in der CALL3.TXT, wird der Locator automatisch ausgefüllt; ist der Locator gültig, wird die zweite Station in allen Reitern aktiviert.",
             " · Locator aus der CALL3.TXT",
+            "Nutzbare Stunden grün auf der Dgrd",
+            "Färbt die Abschnitte der Dgrd-Kurve grün, in denen der Mond innerhalb deiner Antennengrenzen steht (oder im gemeinsamen Fenster mit dem DX).",
+            "Zeigt die Monddeklination im Diagramm (blaue Kurve): steht der Mond auf der Seite deiner Hemisphäre, steigt er höher und bleibt länger über dem Horizont",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6663,6 +6672,9 @@ namespace LunaCalc
             "indicatif absent de CALL3.TXT : saisissez le locator",
             "L'indicatif et le locator de la station que vous voulez écouter ou contacter. Si l'indicatif figure dans CALL3.TXT, le locator se remplit tout seul ; si le locator est valide, la seconde station s'active dans tous les onglets.",
             " · locator de CALL3.TXT",
+            "Heures utiles en vert sur la Dgrd",
+            "Colore en vert les parties de la courbe Dgrd aux heures où la Lune est dans les limites de votre antenne (ou dans la fenêtre commune avec le DX).",
+            "Affiche la déclinaison de la Lune sur le graphique (courbe bleue) : du côté de votre hémisphère, la Lune monte plus haut et reste plus longtemps au-dessus de l'horizon",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7915,6 +7927,9 @@ namespace LunaCalc
             "indicativo no presente en CALL3.TXT: introduce el locator",
             "El indicativo y el locator de la estación que quieres escuchar o contactar. Si el indicativo está en CALL3.TXT el locator se rellena solo; si el locator es válido, la segunda estación se activa en todas las pestañas.",
             " · locator de CALL3.TXT",
+            "Horas útiles en verde sobre la Dgrd",
+            "Colorea de verde los tramos de la curva Dgrd en las horas con la Luna dentro de los límites de tu antena (o en la ventana común con el DX).",
+            "Muestra en el gráfico la declinación de la Luna (curva azul): con la Luna del lado de tu hemisferio sube más alta y permanece más horas sobre el horizonte",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9167,6 +9182,9 @@ namespace LunaCalc
             "indicativo não presente no CALL3.TXT: introduza o locator",
             "O indicativo e o locator da estação que quer ouvir ou contactar. Se o indicativo estiver no CALL3.TXT o locator preenche-se sozinho; se o locator for válido, a segunda estação ativa-se em todos os separadores.",
             " · locator do CALL3.TXT",
+            "Horas úteis a verde na Dgrd",
+            "Pinta de verde os troços da curva Dgrd nas horas com a Lua dentro dos limites da sua antena (ou na janela comum com o DX).",
+            "Mostra no gráfico a declinação da Lua (curva azul): com a Lua do lado do seu hemisfério sobe mais alto e fica mais horas acima do horizonte",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10419,6 +10437,9 @@ namespace LunaCalc
             "CALL3.TXT 中没有该呼号：请输入网格定位",
             "你想收听或联络的电台的呼号与网格定位。若呼号在 CALL3.TXT 中，定位会自动填入；若定位有效，第二电台会在所有选项卡中启用。",
             " · 定位来自 CALL3.TXT",
+            "Dgrd 上可用时段显示为绿色",
+            "将月球位于天线限制范围内（或与 DX 的共同窗口）时段的 Dgrd 曲线段标为绿色。",
+            "在图表上显示月球赤纬（蓝色曲线）：月球位于你所在半球一侧时升得更高，在地平线上停留更久",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11671,6 +11692,9 @@ namespace LunaCalc
             "CALL3.TXT にないコールサイン：ロケーターを入力してください",
             "受信または交信したい局のコールサインとロケーター。コールサインが CALL3.TXT にあればロケーターは自動で入ります。ロケーターが有効なら、すべてのタブで第 2 局が有効になります。",
             " · ロケーターは CALL3.TXT から",
+            "Dgrd の利用可能時間を緑で表示",
+            "月がアンテナの制限内にある時間（または DX との共通ウィンドウ）の Dgrd 曲線を緑で表示します。",
+            "グラフに月の赤緯（青い曲線）を表示します。月が自分の半球側にあるときは高く昇り、地平線上に長くとどまります",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12923,6 +12947,9 @@ namespace LunaCalc
             "कॉलसाइन CALL3.TXT में नहीं है: लोकेटर डालें",
             "जिस स्टेशन को आप सुनना या उससे संपर्क करना चाहते हैं उसका कॉलसाइन और लोकेटर। यदि कॉलसाइन CALL3.TXT में है तो लोकेटर अपने-आप भर जाता है; यदि लोकेटर मान्य है तो दूसरा स्टेशन सभी टैब में सक्रिय हो जाता है।",
             " · लोकेटर CALL3.TXT से",
+            "Dgrd पर उपयोगी घंटे हरे रंग में",
+            "जिन घंटों में चंद्रमा आपके एंटीना की सीमाओं के भीतर है (या DX के साथ साझा खिड़की में), Dgrd वक्र के उन हिस्सों को हरा रंगता है।",
+            "चार्ट पर चंद्रमा का दिक्पात (नीला वक्र) दिखाता है: आपके गोलार्ध की ओर होने पर चंद्रमा अधिक ऊँचा उठता है और अधिक घंटे क्षितिज के ऊपर रहता है",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14175,6 +14202,9 @@ namespace LunaCalc
             "CALL3.TXT에 없는 호출부호: 로케이터를 입력하세요",
             "듣거나 교신하려는 국의 호출부호와 로케이터입니다. 호출부호가 CALL3.TXT에 있으면 로케이터가 자동으로 채워지고, 로케이터가 유효하면 모든 탭에서 두 번째 국이 활성화됩니다.",
             " · 로케이터: CALL3.TXT",
+            "Dgrd에 사용 가능 시간을 녹색으로",
+            "달이 안테나 한계 안에 있는 시간(또는 DX와의 공통 창)의 Dgrd 곡선 부분을 녹색으로 표시합니다.",
+            "그래프에 달의 적위(파란 곡선)를 표시합니다. 달이 자신의 반구 쪽에 있으면 더 높이 뜨고 지평선 위에 더 오래 머뭅니다",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15427,6 +15457,9 @@ namespace LunaCalc
             "callsign tidak ada di CALL3.TXT: masukkan lokator",
             "Callsign dan lokator stasiun yang ingin Anda dengar atau hubungi. Jika callsign ada di CALL3.TXT, lokator terisi sendiri; jika lokator valid, stasiun kedua aktif di semua tab.",
             " · lokator dari CALL3.TXT",
+            "Jam berguna berwarna hijau pada Dgrd",
+            "Mewarnai hijau bagian kurva Dgrd pada jam ketika Bulan berada dalam batas antena Anda (atau dalam jendela bersama dengan DX).",
+            "Menampilkan deklinasi Bulan pada grafik (kurva biru): saat Bulan berada di sisi belahan bumi Anda, ia naik lebih tinggi dan lebih lama di atas cakrawala",
         };
 
         public static readonly string[] RU = {
@@ -16680,6 +16713,9 @@ namespace LunaCalc
             "позывного нет в CALL3.TXT: введите локатор",
             "Позывной и локатор станции, которую вы хотите слушать или провести с ней связь. Если позывной есть в CALL3.TXT, локатор заполняется сам; если локатор верен, вторая станция включается на всех вкладках.",
             " · локатор из CALL3.TXT",
+            "Полезные часы зелёным на Dgrd",
+            "Окрашивает зелёным участки кривой Dgrd в часы, когда Луна в пределах вашей антенны (или в общем окне с DX).",
+            "Показывает на графике склонение Луны (синяя кривая): когда Луна на стороне вашего полушария, она поднимается выше и дольше остаётся над горизонтом",
         };
 
         public static readonly string[] UK = {
@@ -17933,6 +17969,9 @@ namespace LunaCalc
             "позивного немає в CALL3.TXT: введіть локатор",
             "Позивний і локатор станції, яку ви хочете слухати або провести з нею зв'язок. Якщо позивний є в CALL3.TXT, локатор заповнюється сам; якщо локатор правильний, друга станція вмикається на всіх вкладках.",
             " · локатор із CALL3.TXT",
+            "Корисні години зеленим на Dgrd",
+            "Фарбує зеленим ділянки кривої Dgrd у години, коли Місяць у межах вашої антени (або в спільному вікні з DX).",
+            "Показує на графіку схилення Місяця (синя крива): коли Місяць на боці вашої півкулі, він піднімається вище й довше залишається над горизонтом",
         };
 
         public static readonly string[] AF = {
@@ -19186,6 +19225,9 @@ namespace LunaCalc
             "roepsein nie in CALL3.TXT nie: tik die lokator in",
             "Die roepsein en lokator van die stasie wat jy wil hoor of werk. As die roepsein in CALL3.TXT is, word die lokator vanself ingevul; as die lokator geldig is, word die tweede stasie in alle oortjies geaktiveer.",
             " · lokator uit CALL3.TXT",
+            "Bruikbare ure in groen op die Dgrd",
+            "Kleur die dele van die Dgrd-kurwe groen in die ure wanneer die Maan binne jou antennagrense is (of in die gemeenskaplike venster met die DX).",
+            "Wys die Maan se deklinasie op die grafiek (blou kurwe): aan die kant van jou halfrond styg die Maan hoër en bly langer bo die horison",
         };
 
         public static readonly string[] BN = {
@@ -20438,6 +20480,9 @@ namespace LunaCalc
             "কলসাইন CALL3.TXT-এ নেই: লোকেটর লিখুন",
             "যে স্টেশন শুনতে বা যার সঙ্গে যোগাযোগ করতে চান তার কলসাইন ও লোকেটর। কলসাইনটি CALL3.TXT-এ থাকলে লোকেটর নিজে থেকেই বসে যায়; লোকেটর বৈধ হলে সব ট্যাবে দ্বিতীয় স্টেশন চালু হয়।",
             " · লোকেটর CALL3.TXT থেকে",
+            "Dgrd-তে ব্যবহারযোগ্য ঘণ্টা সবুজে",
+            "যে ঘণ্টাগুলোতে চাঁদ আপনার অ্যান্টেনার সীমার ভেতরে থাকে (বা DX-এর সঙ্গে যৌথ জানালায়), Dgrd বক্ররেখার সেই অংশগুলো সবুজ করে।",
+            "চার্টে চাঁদের বিষুবলম্ব (নীল বক্ররেখা) দেখায়: আপনার গোলার্ধের দিকে থাকলে চাঁদ বেশি উঁচুতে ওঠে এবং বেশি সময় দিগন্তের ওপরে থাকে",
         };
 
         public static readonly string[] AR = {
@@ -21690,6 +21735,9 @@ namespace LunaCalc
             "النداء غير موجود في CALL3.TXT: أدخل محدد الموقع",
             "نداء ومحدد موقع المحطة التي تريد الاستماع إليها أو الاتصال بها. إذا كان النداء في CALL3.TXT يُملأ محدد الموقع تلقائيًا؛ وإذا كان محدد الموقع صالحًا تُفعَّل المحطة الثانية في كل التبويبات.",
             " · محدد الموقع من CALL3.TXT",
+            "الساعات المفيدة بالأخضر على Dgrd",
+            "يلوّن بالأخضر أجزاء منحنى Dgrd في الساعات التي يكون فيها القمر داخل حدود هوائيك (أو في النافذة المشتركة مع DX).",
+            "يعرض على المخطط ميل القمر (المنحنى الأزرق): عندما يكون القمر في جهة نصف الكرة الذي تقع فيه يرتفع أكثر ويبقى ساعات أطول فوق الأفق",
         };
 
         public static readonly string[] TR = {
@@ -22942,6 +22990,9 @@ namespace LunaCalc
             "çağrı işareti CALL3.TXT'de yok: lokatörü girin",
             "Dinlemek veya bağlantı kurmak istediğiniz istasyonun çağrı işareti ve lokatörü. Çağrı işareti CALL3.TXT içindeyse lokatör kendiliğinden dolar; lokatör geçerliyse ikinci istasyon tüm sekmelerde etkinleşir.",
             " · lokatör CALL3.TXT'den",
+            "Dgrd üzerinde kullanılabilir saatler yeşil",
+            "Ay'ın anten sınırlarınız içinde olduğu saatlerde (veya DX ile ortak pencerede) Dgrd eğrisinin bölümlerini yeşile boyar.",
+            "Grafikte Ay'ın dik açıklığını gösterir (mavi eğri): Ay sizin yarımkürenizin tarafındayken daha yükseğe çıkar ve ufkun üzerinde daha uzun kalır",
         };
     }
 
@@ -27769,7 +27820,7 @@ namespace LunaCalc
         List<DateTime> dgT = new List<DateTime>();
         List<double> dgDgrd = new List<double>();
         List<double> dgDec = new List<double>();          // declinazione geocentrica della Luna (°), stessi istanti di dgT
-        CheckBox chkDgDec;
+        CheckBox chkDgDec, chkDgVerde;
         List<bool> dgOk = new List<bool>();
         List<DateTime> dgTop = new List<DateTime>();
         List<DateTime> dgNuova = new List<DateTime>();     // istanti di luna nuova
@@ -28386,9 +28437,17 @@ namespace LunaCalc
             chkDgDec.AutoSize = true;
             chkDgDec.Checked = true;
             chkDgDec.Margin = new Padding(S(10), S(6), S(3), S(3));
-            tip.SetToolTip(chkDgDec, Lang.T("Mostra sotto il grafico la declinazione della Luna: con la Luna dalla parte del tuo emisfero sale più alta e resta più ore sopra l'orizzonte"));
+            tip.SetToolTip(chkDgDec, Lang.T("Mostra sul grafico la declinazione della Luna (curva blu): con la Luna dalla parte del tuo emisfero sale più alta e resta più ore sopra l'orizzonte"));
             chkDgDec.CheckedChanged += (s, e) => { if (dgChart != null) dgChart.Invalidate(); if (!caricamento) SaveSettings(); };
             bar.Controls.Add(chkDgDec);
+            chkDgVerde = new CheckBox();
+            chkDgVerde.Text = Lang.T("Ore utili in verde sulla Dgrd");
+            chkDgVerde.AutoSize = true;
+            chkDgVerde.Checked = false;
+            chkDgVerde.Margin = new Padding(S(10), S(6), S(3), S(3));
+            tip.SetToolTip(chkDgVerde, Lang.T("Colora di verde i tratti della curva Dgrd nelle ore con la Luna dentro i limiti della tua antenna (o nella finestra comune con il DX)."));
+            chkDgVerde.CheckedChanged += (s, e) => { if (dgChart != null) dgChart.Invalidate(); if (!caricamento) SaveSettings(); };
+            bar.Controls.Add(chkDgVerde);
             // colore e spessore delle due curve del grafico
             btnColDg = new Button(); btnColDg.Width = S(34); btnColDg.Height = S(24);
             btnColKm = new Button(); btnColKm.Width = S(34); btnColKm.Height = S(24);
@@ -28814,6 +28873,7 @@ namespace LunaCalc
             RectangleF a = new RectangleF(ml, mt, Math.Max(10, cr.Width - ml - mr), Math.Max(10, cr.Height - mt - mb));
             // declinazione della Luna sovrapposta al grafico, con la sua scala blu dentro il bordo sinistro
             bool conDec = chkDgDec != null && chkDgDec.Checked && dgDec.Count == dgT.Count;
+            bool verde = chkDgVerde != null && chkDgVerde.Checked;
             float yFine = a.Bottom;
             double t0 = dgStart.Ticks, t1 = dgEnd.Ticks;
             // distanza media diurna
@@ -28934,8 +28994,9 @@ namespace LunaCalc
                 PointF[] pts = new PointF[dgT.Count];
                 for (int i = 0; i < dgT.Count; i++) pts[i] = new PointF(X(dgT[i]), Yd(dgDgrd[i]));
                 g.DrawLines(pd, pts);
-                for (int i = 1; i < dgT.Count; i++)
-                    if (dgOk[i] && dgOk[i - 1]) g.DrawLine(po, pts[i - 1], pts[i]);
+                if (verde)
+                    for (int i = 1; i < dgT.Count; i++)
+                        if (dgOk[i] && dgOk[i - 1]) g.DrawLine(po, pts[i - 1], pts[i]);
             }
 
             // luna nuova: disco bianco e nero in alto, sulla giornata
@@ -28966,25 +29027,21 @@ namespace LunaCalc
                 using (Pen pn = new Pen(Tema.BadFg, 1.5f)) { pn.DashStyle = DashStyle.Dash; g.DrawLine(pn, x, a.Top, x, yFine); }
                 using (Brush bn = new SolidBrush(Tema.BadFg)) g.DrawString(Lang.T("adesso"), fb, bn, x + 3, a.Top + S(2));
             }
-            // legenda (in basso a sinistra, dove la Dgrd è vicina a 0 dB solo raramente)
+            // legenda (in basso a sinistra, dove la Dgrd è vicina a 0 dB solo raramente): una riga per ogni curva mostrata
             {
-                float lx = a.Left + S(8) + (conDec ? S(34) : 0), ly = a.Bottom - S(54) - (conDec ? S(15) : 0);
-                using (Brush bg = new SolidBrush(Color.FromArgb(220, Tema.ChartBg))) g.FillRectangle(bg, lx - 4, ly - 3, S(390), S(conDec ? 65 : 50));
-                if (conDec)
-                {
-                    using (Pen p4 = new Pen(ColoreDec(), 1.8f)) g.DrawLine(p4, lx, ly + S(52), lx + S(24), ly + S(52));
-                    using (Brush tt4 = new SolidBrush(Tema.ChartText))
-                        g.DrawString(Lang.T("declinazione della Luna (scala blu a sinistra, dentro il grafico)"), fs, tt4, lx + S(30), ly + S(45));
-                }
-                using (Pen p1 = new Pen(cDg, (float)dgSpDg)) g.DrawLine(p1, lx, ly + S(7), lx + S(24), ly + S(7));
-                using (Pen p2 = new Pen(cOk, (float)dgSpDg + 2f)) g.DrawLine(p2, lx, ly + S(22), lx + S(24), ly + S(22));
-                using (Pen p3 = new Pen(cKm, (float)dgSpKm)) g.DrawLine(p3, lx, ly + S(37), lx + S(24), ly + S(37));
+                List<string> lt = new List<string>(); List<Color> lc = new List<Color>(); List<float> lw = new List<float>();
+                lt.Add(Lang.T("Dgrd per ") + me.Loc.Text.Trim() + " a " + dgFreq.ToString("0.000", ci) + Lang.T(" MHz (0 dB = ideale, in basso)")); lc.Add(cDg); lw.Add((float)dgSpDg);
+                if (verde) { lt.Add(dgDx ? Lang.T("ore con finestra comune con il DX") : Lang.T("ore con la Luna dentro i limiti della tua antenna")); lc.Add(cOk); lw.Add((float)dgSpDg + 2f); }
+                lt.Add(Lang.T("distanza media del giorno (scala a destra)  -  ★ = 3 giorni migliori")); lc.Add(cKm); lw.Add((float)dgSpKm);
+                if (conDec) { lt.Add(Lang.T("declinazione della Luna (scala blu a sinistra, dentro il grafico)")); lc.Add(ColoreDec()); lw.Add(1.8f); }
+                float lx = a.Left + S(8) + (conDec ? S(34) : 0), ly = a.Bottom - S(9) - S(15) * lt.Count;
+                using (Brush bg = new SolidBrush(Color.FromArgb(220, Tema.ChartBg))) g.FillRectangle(bg, lx - 4, ly - 3, S(390), S(15) * lt.Count + S(5));
                 using (Brush tt = new SolidBrush(Tema.ChartText))
-                {
-                    g.DrawString(Lang.T("Dgrd per ") + me.Loc.Text.Trim() + " a " + dgFreq.ToString("0.000", ci) + Lang.T(" MHz (0 dB = ideale, in basso)"), fs, tt, lx + S(30), ly);
-                    g.DrawString(dgDx ? Lang.T("ore con finestra comune con il DX") : Lang.T("ore con la Luna dentro i limiti della tua antenna"), fs, tt, lx + S(30), ly + S(15));
-                    g.DrawString(Lang.T("distanza media del giorno (scala a destra)  -  ★ = 3 giorni migliori"), fs, tt, lx + S(30), ly + S(30));
-                }
+                    for (int i = 0; i < lt.Count; i++)
+                    {
+                        using (Pen pl = new Pen(lc[i], lw[i])) g.DrawLine(pl, lx, ly + S(7) + S(15) * i, lx + S(24), ly + S(7) + S(15) * i);
+                        g.DrawString(lt[i], fs, tt, lx + S(30), ly + S(15) * i);
+                    }
             }
             // valori dei massimi della declinazione sopra la legenda, perché restino leggibili
             if (conDec) DisegnaDeclinazione(g, a, X, fs, fb, true);
@@ -36134,6 +36191,7 @@ namespace LunaCalc
                 lines.Add("dg_sp_dist=" + dgSpKm.ToString(inv));
                 lines.Add("cavi_base=" + CaviDb.NumBase.ToString(inv));
                 if (chkDgDec != null) lines.Add("dg_decl=" + (chkDgDec.Checked ? "1" : "0"));
+                if (chkDgVerde != null) lines.Add("dg_verde=" + (chkDgVerde.Checked ? "1" : "0"));
                 if (chkPuntSfuma != null) lines.Add("punt_sfuma=" + (chkPuntSfuma.Checked ? "1" : "0"));
                 lines.Add("grigio_opacita=" + grigioOpacita.ToString(inv));
                 List<string> cs_ = new List<string>();
@@ -36290,6 +36348,7 @@ namespace LunaCalc
                             }
                         case "punt_sfuma": chkPuntSfuma.Checked = v != "0"; break;
                         case "dg_decl": if (chkDgDec != null) chkDgDec.Checked = v != "0"; break;
+                        case "dg_verde": if (chkDgVerde != null) chkDgVerde.Checked = v == "1"; break;
                         case "colonne":
                             {
                                 colScelte = new bool[26];
