@@ -2574,13 +2574,13 @@ namespace LunaCalc
             "Colori",
             "Tipo di carattere",
             "Immagini aeree (Ricognizione dei miei ostacoli)",
-            "Figura di rumore delle radio e transverter (manuale, § 3.7)",
+            "Figura di rumore delle radio e transverter (manuale «TEORIA E CONSIGLI SULL'EME», § 1.7)",
             "Misure di Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) e di DF9IC con DARC OV Durlach A35 (radio a 144 MHz); schede di Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; stazione EME di W3SZ.",
-            "Doppler, CFOM e CAT (manuale, § 3.10)",
+            "Doppler, CFOM e CAT (manuale «TEORIA E CONSIGLI SULL'EME», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" e \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Locator Maidenhead (manuale, § 2.2)",
             "Wikipedia, \"Maidenhead Locator System\": origine (G4ANB, IARU 1980), struttura, estensioni oltre gli 8 caratteri.",
-            "Puntamento e strumenti per le bande superiori (manuale, § 3.11)",
+            "Puntamento e strumenti per le bande superiori (manuale «TEORIA E CONSIGLI SULL'EME», § 1.11)",
             "Gerald Ihninger OE2IGL e Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "Letteratura EME di SM5BSZ",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) e \"EME Path Modulation\" (2000).",
@@ -2594,7 +2594,7 @@ namespace LunaCalc
             "Logo della Sezione ARI \"Valle del Liri\" (03-04), usato con il patrocinio della Sezione.",
             "beta 27 - Bande fino a 432 MHz; schermata di avvio con il logo e il patrocinio della Sezione ARI Valle del Liri; ringraziamento nella finestra di chiusura; lingue bengalese, arabo e turco (17 lingue); schermata principale con quattro riquadri colorati, VAI AI CALCOLI e VAI A VOLTA CELESTE, locator fino a 14 caratteri, scelta del tipo di carattere e fumetti scuri; Ricognizione dei miei ostacoli con opacità e tono del grigio; giorno evidenziato in Distanza e Dgrd; pulsante Colonne nella Posizione della Luna; Budget EME con lo schema dell'impianto TX/RX; Rumore solare con fonti, indicatori e spettro; DEBUG FORMULE in stile Word con salvataggio .docx; nuove linguette CAVI COASSIALI, CONTATTI DELL'AUTORE e LICENZA D'USO; manuale dentro il programma (MANUALE D'USO APPROFONDITO).",
             "Cerca nel manuale: scrivi una parola e premi Invio; Invio di nuovo per il risultato successivo.",
-            "MANUALE D'USO APPROFONDITO",
+            "MANUALE D'USO",
             "Le formule sono uguali in tutte le lingue.",
             "Schermata dal vivo della linguetta",
             "Clicca l'immagine per aprirla.",
@@ -2627,7 +2627,7 @@ namespace LunaCalc
             "≡ = cavi accorpati in una riga: stesso tipo, diametro uguale (±0,2 mm) e attenuazione entro 0,2 dB/100 m in tutte le bande; il valore è la media.",
             "anche: = altre sigle commerciali equivalenti (per esempio LMR-400 = HF400, CNT-400).",
             "Le sigle cinesi (50-3, 50-5, 50-7, 50-9, 50-12…) indicano il diametro del dielettrico in mm: 50-7 ≈ classe RG-213/LMR-400, 50-9 ≈ 1/2\" superflessibile, 50-12 ≈ 1/2\" corrugato.",
-            "Le fonti di ogni cavo sono nel fumetto della sua riga e nel manuale, § 3.8.",
+            "Le fonti di ogni cavo sono nel fumetto della sua riga e nel manuale «TEORIA E CONSIGLI SULL'EME», § 1.8.",
             "anche:",
             "Fonti:",
             "CONFRONTO DEI CAVI SPUNTATI",
@@ -2646,7 +2646,7 @@ namespace LunaCalc
             "Scrivi una mail",
             "Copia indirizzo",
             "Hai un transverter da far conoscere?",
-            "Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 3.7.2 del manuale, con la citazione della fonte.",
+            "Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 1.7.2 del manuale «TEORIA E CONSIGLI SULL'EME», con la citazione della fonte.",
             "Il programma ha il patrocinio della",
             "Licenza d'uso",
             "YAEC è un programma libero, scritto da un radioamatore per i radioamatori. Il suo codice è stato sviluppato anche con l'aiuto di un assistente di intelligenza artificiale, e la licenza ne riprende il modo di lavorare: essere davvero utile, dire sempre come stanno le cose, mostrare il proprio ragionamento, non nuocere a nessuno e riconoscere il lavoro degli altri. Sotto ci sono i principi e poi le condizioni vere e proprie.",
@@ -2691,7 +2691,7 @@ namespace LunaCalc
             "In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.",
             "Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.",
             "È impaginato come un documento di Word, con le formule in stile Equation Editor: si può copiare negli appunti o salvare in Word (.docx).",
-            "Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO APPROFONDITO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
+            "Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
             "Grazie per avermi usato: spero di esserti stato utile.",
             "No",
             "Sì",
@@ -2748,7 +2748,7 @@ namespace LunaCalc
             "(numerazione del capitolo {0})",
             "nuovo",
             "Crediti per gli algoritmi, le formule e i dati usati",
-            "I crediti, con gli autori, le opere e i collegamenti, sono nel capitolo «Fonti, dati e crediti» del MANUALE D'USO APPROFONDITO.",
+            "I crediti, con gli autori, le opere e i collegamenti, sono nel capitolo «Fonti, dati e crediti» di TEORIA E CONSIGLI SULL'EME.",
             "figura di rumore della radio a media frequenza (dB)",
             "NF transverter + radio (dB)",
             "NF del solo transverter: 1,0 dB",
@@ -2761,7 +2761,7 @@ namespace LunaCalc
             "beta-tester",
             "RINGRAZIAMENTI",
             "Lunghezza d'onda e sezione radar della Luna",
-            "Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale (§ 3.7.2). Con \"personalizzato\" li scrivi tu.",
+            "Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale «TEORIA E CONSIGLI SULL'EME» (§ 1.7.2). Con \"personalizzato\" li scrivi tu.",
             "Guadagno singola antenna",
             "Banda passante",
             "Lunghezza",
@@ -2914,6 +2914,7 @@ namespace LunaCalc
             "costruttore",
             "tipo",
             "ordinati per {0}",
+            "Prefazione dell'autore",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -3833,13 +3834,13 @@ namespace LunaCalc
             "Colours",
             "Font",
             "Aerial images (Reconnaissance of my obstacles)",
-            "Noise figure of radios and transverters (manual, § 3.7)",
+            "Noise figure of radios and transverters (manual «THEORY AND TIPS ON EME», § 1.7)",
             "Measurements by Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) and by DF9IC with DARC OV Durlach A35 (144 MHz radios); data sheets of Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; EME station of W3SZ.",
-            "Doppler, CFOM and CAT (manual, § 3.10)",
+            "Doppler, CFOM and CAT (manual «THEORY AND TIPS ON EME», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" and \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Maidenhead locator (manual, § 2.2)",
             "Wikipedia, \"Maidenhead Locator System\": origin (G4ANB, IARU 1980), structure, extensions beyond 8 characters.",
-            "Pointing and tools for the higher bands (manual, § 3.11)",
+            "Pointing and tools for the higher bands (manual «THEORY AND TIPS ON EME», § 1.11)",
             "Gerald Ihninger OE2IGL and Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "SM5BSZ EME literature",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) and \"EME Path Modulation\" (2000).",
@@ -3853,7 +3854,7 @@ namespace LunaCalc
             "Logo of the ARI \"Valle del Liri\" Section (03-04), used under the patronage of the Section.",
             "beta 27 - Bands up to 432 MHz; start-up screen with the logo and the patronage of the ARI Valle del Liri Section; thank-you line in the closing window; Bengali, Arabic and Turkish languages (17 languages); main screen with four coloured cards, GO TO CALCULATIONS and GO TO SKY VIEW, locators up to 14 characters, font chooser and dark tooltips; Reconnaissance of my obstacles with grey opacity and tone; highlighted day in Distance and Dgrd; Columns button in Moon position; EME budget with the TX/RX system diagram; Solar noise with sources, indicators and spectrum; DEBUG FORMULE in Word style with .docx saving; new COAXIAL CABLES, AUTHOR CONTACTS and LICENCE tabs; manual inside the program (IN-DEPTH USER MANUAL).",
             "Search the manual: type a word and press Enter; Enter again for the next result.",
-            "IN-DEPTH USER MANUAL",
+            "USER MANUAL",
             "The formulas are the same in all languages.",
             "Live screenshot of the tab",
             "Click the picture to open it.",
@@ -3886,7 +3887,7 @@ namespace LunaCalc
             "≡ = cables merged into one row: same type, same diameter (±0.2 mm) and attenuation within 0.2 dB/100 m in all bands; the value is the mean.",
             "also: = other equivalent commercial names (for example LMR-400 = HF400, CNT-400).",
             "The Chinese codes (50-3, 50-5, 50-7, 50-9, 50-12…) give the dielectric diameter in mm: 50-7 ≈ RG-213/LMR-400 class, 50-9 ≈ 1/2\" superflexible, 50-12 ≈ 1/2\" corrugated.",
-            "The sources of each cable are in the tooltip of its row and in the manual, § 3.8.",
+            "The sources of each cable are in the tooltip of its row and in the manual «THEORY AND TIPS ON EME», § 1.8.",
             "also:",
             "Sources:",
             "COMPARISON OF THE TICKED CABLES",
@@ -3905,7 +3906,7 @@ namespace LunaCalc
             "Write an e-mail",
             "Copy address",
             "Do you have a transverter to make known?",
-            "If you would like to make other transverters or your own transverter known, write an e-mail to the author: the data will be added to chapter 3.7.2 of the manual, citing the source.",
+            "If you would like to make other transverters or your own transverter known, write an e-mail to the author: the data will be added to chapter 1.7.2 of the manual «THEORY AND TIPS ON EME», citing the source.",
             "The program is under the patronage of the",
             "Licence",
             "YAEC is free software, written by a radio amateur for radio amateurs. Its code was also developed with the help of an artificial intelligence assistant, and the licence follows its way of working: be really useful, always say how things are, show your own reasoning, harm no one and acknowledge the work of others. Below are the principles and then the actual conditions.",
@@ -3950,7 +3951,7 @@ namespace LunaCalc
             "At the top four indicators, on the left the data source (NOAA RSTN recommended, or F10.7 from NOAA or Penticton, or a custom address) with the stations, on the right the solar flux spectrum with the extrapolation to the working frequency.",
             "This manual, inside the program and in all languages: clickable index, search, formulas and sources.",
             "It is laid out like a Word document, with the formulas in Equation Editor style: it can be copied to the clipboard or saved as Word (.docx).",
-            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position), Link (EME budget, Solar noise, Export calculations to Excel, DEBUG FORMULE), Log (WWL map and ADIF), Help and tools (IN-DEPTH USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
+            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position), Link (EME budget, Solar noise, Export calculations to Excel, DEBUG FORMULE), Log (WWL map and ADIF), Help and tools (USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
             "Thank you for using me: I hope I have been useful to you.",
             "No",
             "Yes",
@@ -4007,7 +4008,7 @@ namespace LunaCalc
             "(numbering of section {0})",
             "new",
             "Credits for the algorithms, formulas and data used",
-            "The credits, with the authors, works and links, are in the “Sources, data and credits” chapter of the MANUALE D'USO APPROFONDITO.",
+            "The credits, with the authors, works and links, are in the “Sources, data and credits” chapter of the THEORY AND TIPS ON EME.",
             "noise figure of the IF radio (dB)",
             "NF transverter + radio (dB)",
             "NF of the transverter alone: 1.0 dB",
@@ -4020,7 +4021,7 @@ namespace LunaCalc
             "beta testers",
             "ACKNOWLEDGEMENTS",
             "Wavelength and radar cross-section of the Moon",
-            "Transverter model: the program takes its noise figure and gain from the table in the manual (§ 3.7.2). With \"custom\" you enter them yourself.",
+            "Transverter model: the program takes its noise figure and gain from the table in the manual «THEORY AND TIPS ON EME» (§ 1.7.2). With \"custom\" you enter them yourself.",
             "Single antenna gain",
             "Bandwidth",
             "Length",
@@ -4173,6 +4174,7 @@ namespace LunaCalc
             "manufacturer",
             "type",
             "sorted by {0}",
+            "Author's preface",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5092,13 +5094,13 @@ namespace LunaCalc
             "Farben",
             "Schriftart",
             "Luftbilder (Erkundung meiner Hindernisse)",
-            "Rauschzahl von Funkgeräten und Transvertern (Handbuch, § 3.7)",
+            "Rauschzahl von Funkgeräten und Transvertern (Handbuch «THEORIE UND TIPPS ZU EME», § 1.7)",
             "Messungen von Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) und von DF9IC mit dem DARC-OV Durlach A35 (144-MHz-Geräte); Datenblätter von Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; EME-Station von W3SZ.",
-            "Doppler, CFOM und CAT (Handbuch, § 3.10)",
+            "Doppler, CFOM und CAT (Handbuch «THEORIE UND TIPPS ZU EME», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" und \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Maidenhead-Locator (Handbuch, § 2.2)",
             "Wikipedia, \"Maidenhead Locator System\": Ursprung (G4ANB, IARU 1980), Aufbau, Erweiterungen über 8 Zeichen.",
-            "Ausrichtung und Werkzeuge für die höheren Bänder (Handbuch, § 3.11)",
+            "Ausrichtung und Werkzeuge für die höheren Bänder (Handbuch «THEORIE UND TIPPS ZU EME», § 1.11)",
             "Gerald Ihninger OE2IGL und Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "EME-Literatur von SM5BSZ",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) und \"EME Path Modulation\" (2000).",
@@ -5112,7 +5114,7 @@ namespace LunaCalc
             "Logo der ARI-Sektion \"Valle del Liri\" (03-04), verwendet mit der Schirmherrschaft der Sektion.",
             "beta 27 - Bänder nur bis 432 MHz; Startbildschirm mit dem Logo und der Schirmherrschaft der ARI-Sektion Valle del Liri; Dankeszeile im Schließfenster; Sprachen Bengalisch, Arabisch und Türkisch (17 Sprachen); Hauptbildschirm mit vier farbigen Karten, ZU DEN BERECHNUNGEN und ZUR HIMMELSANSICHT, Locator bis 14 Zeichen, Schriftartwahl und dunkle Tooltips; Erkundung meiner Hindernisse mit Deckkraft und Ton des Graus; hervorgehobener Tag in Entfernung und Dgrd; Spalten-Schaltfläche in der Mondposition; EME-Budget mit dem Schema der TX/RX-Anlage; Sonnenrauschen mit Quellen, Indikatoren und Spektrum; DEBUG FORMULE im Word-Stil mit Speichern als .docx; neue Reiter KOAXIALKABEL, KONTAKT ZUM AUTOR und LIZENZ; Handbuch im Programm (AUSFÜHRLICHES BENUTZERHANDBUCH).",
             "Im Handbuch suchen: ein Wort eingeben und Enter drücken; erneut Enter für das nächste Ergebnis.",
-            "AUSFÜHRLICHES BENUTZERHANDBUCH",
+            "BENUTZERHANDBUCH",
             "Die Formeln sind in allen Sprachen gleich.",
             "Live-Bildschirmfoto des Reiters",
             "Zum Öffnen auf das Bild klicken.",
@@ -5145,7 +5147,7 @@ namespace LunaCalc
             "≡ = in einer Zeile zusammengefasste Kabel: gleicher Typ, gleicher Durchmesser (±0,2 mm) und Dämpfung innerhalb 0,2 dB/100 m in allen Bändern; der Wert ist der Mittelwert.",
             "auch: = weitere gleichwertige Handelsbezeichnungen (zum Beispiel LMR-400 = HF400, CNT-400).",
             "Die chinesischen Kürzel (50-3, 50-5, 50-7, 50-9, 50-12…) geben den Durchmesser des Dielektrikums in mm an: 50-7 ≈ Klasse RG-213/LMR-400, 50-9 ≈ 1/2\" superflexibel, 50-12 ≈ 1/2\" gewellt.",
-            "Die Quellen jedes Kabels stehen im Tooltip seiner Zeile und im Handbuch, § 3.8.",
+            "Die Quellen jedes Kabels stehen im Tooltip seiner Zeile und im Handbuch «THEORIE UND TIPPS ZU EME», § 1.8.",
             "auch:",
             "Quellen:",
             "VERGLEICH DER ANGEKREUZTEN KABEL",
@@ -5164,7 +5166,7 @@ namespace LunaCalc
             "E-Mail schreiben",
             "Adresse kopieren",
             "Hast du einen Transverter bekannt zu machen?",
-            "Wenn du andere Transverter oder deinen eigenen bekannt machen möchtest, schreib dem Autor eine E-Mail: die Daten werden mit Quellenangabe in Kapitel 3.7.2 des Handbuchs aufgenommen.",
+            "Wenn du andere Transverter oder deinen eigenen bekannt machen möchtest, schreib dem Autor eine E-Mail: die Daten werden mit Quellenangabe in Kapitel 1.7.2 des Handbuchs «THEORIE UND TIPPS ZU EME» aufgenommen.",
             "Das Programm steht unter der Schirmherrschaft der",
             "Lizenz",
             "YAEC ist ein freies Programm, von einem Funkamateur für Funkamateure geschrieben. Sein Code wurde auch mit Hilfe eines KI-Assistenten entwickelt, und die Lizenz übernimmt dessen Arbeitsweise: wirklich nützlich sein, immer sagen, wie die Dinge sind, das eigene Denken zeigen, niemandem schaden und die Arbeit anderer anerkennen. Unten stehen die Grundsätze und dann die eigentlichen Bedingungen.",
@@ -5209,7 +5211,7 @@ namespace LunaCalc
             "Oben vier Indikatoren, links die Datenquelle (NOAA RSTN empfohlen, oder F10.7 von NOAA oder Penticton, oder eine eigene Adresse) mit den Stationen, rechts das Spektrum des Sonnenflusses mit der Extrapolation zur Arbeitsfrequenz.",
             "Dieses Handbuch, im Programm und in allen Sprachen: anklickbares Inhaltsverzeichnis, Suche, Formeln und Quellen.",
             "Es ist wie ein Word-Dokument gestaltet, mit Formeln im Stil des Formel-Editors: es kann in die Zwischenablage kopiert oder als Word (.docx) gespeichert werden.",
-            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, DEBUG FORMULE), Log (WWL-Karte und ADIF), Hilfe und Tools (AUSFÜHRLICHES BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (ABOUT & CREDITS, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
+            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, DEBUG FORMULE), Log (WWL-Karte und ADIF), Hilfe und Tools (BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (ABOUT & CREDITS, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
             "Danke, dass du mich benutzt hast: ich hoffe, ich war dir nützlich.",
             "Nein",
             "Ja",
@@ -5266,7 +5268,7 @@ namespace LunaCalc
             "(Nummerierung des Abschnitts {0})",
             "neu",
             "Danksagungen für die verwendeten Algorithmen, Formeln und Daten",
-            "Die Danksagungen mit Autoren, Werken und Links stehen im Kapitel „Quellen, Daten und Danksagungen“ des MANUALE D'USO APPROFONDITO.",
+            "Die Danksagungen mit Autoren, Werken und Links stehen im Kapitel „Quellen, Daten und Danksagungen“ des THEORIE UND TIPPS ZU EME.",
             "Rauschzahl des ZF-Funkgeräts (dB)",
             "NF Transverter + Funkgerät (dB)",
             "NF des Transverters allein: 1,0 dB",
@@ -5279,7 +5281,7 @@ namespace LunaCalc
             "Beta-Tester",
             "DANKSAGUNGEN",
             "Wellenlänge und Radarquerschnitt des Mondes",
-            "Transverter-Modell: Das Programm übernimmt Rauschzahl und Verstärkung aus der Tabelle im Handbuch (§ 3.7.2). Mit „benutzerdefiniert“ gibst du sie selbst ein.",
+            "Transverter-Modell: Das Programm übernimmt Rauschzahl und Verstärkung aus der Tabelle im Handbuch «THEORIE UND TIPPS ZU EME» (§ 1.7.2). Mit „benutzerdefiniert“ gibst du sie selbst ein.",
             "Gewinn einer Einzelantenne",
             "Bandbreite",
             "Länge",
@@ -5432,6 +5434,7 @@ namespace LunaCalc
             "Hersteller",
             "Typ",
             "sortiert nach {0}",
+            "Vorwort des Autors",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6351,13 +6354,13 @@ namespace LunaCalc
             "Couleurs",
             "Police",
             "Images aériennes (Reconnaissance de mes obstacles)",
-            "Facteur de bruit des radios et des transverters (manuel, § 3.7)",
+            "Facteur de bruit des radios et des transverters (manuel «THÉORIE ET CONSEILS SUR L'EME», § 1.7)",
             "Mesures d'Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) et de DF9IC avec le DARC-OV Durlach A35 (appareils 144 MHz) ; fiches techniques de Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA ; station EME de W3SZ.",
-            "Doppler, CFOM et CAT (manuel, § 3.10)",
+            "Doppler, CFOM et CAT (manuel «THÉORIE ET CONSEILS SUR L'EME», § 1.10)",
             "Bob Atkins KA1GT, « Doppler 101 for 1296 MHz EME (…and other bands) » et « CFOM – Constant Frequency On Moon Doppler Mode ».",
             "Locator Maidenhead (manuel, § 2.2)",
             "Wikipédia, « Maidenhead Locator System » : origine (G4ANB, IARU 1980), structure, extensions au-delà de 8 caractères.",
-            "Pointage et outils pour les bandes supérieures (manuel, § 3.11)",
+            "Pointage et outils pour les bandes supérieures (manuel «THÉORIE ET CONSEILS SUR L'EME», § 1.11)",
             "Gerald Ihninger OE2IGL et Joachim Köppen DF3GJ, « EME Link Budget & Analysis Tool (1-300 GHz) ».",
             "Littérature EME de SM5BSZ",
             "Leif Åsbrink SM5BSZ, « Selecting Polarisation for EME » (1997) et « EME Path Modulation » (2000).",
@@ -6371,7 +6374,7 @@ namespace LunaCalc
             "Logo de la section ARI « Valle del Liri » (03-04), utilisé avec le patronage de la section.",
             "beta 27 - bandes jusqu'à 432 MHz seulement ; écran de démarrage avec le logo et le patronage de la section ARI Valle del Liri ; ligne de remerciement dans la fenêtre de fermeture ; langues bengali, arabe et turc (17 langues) ; écran principal avec quatre cartes colorées, ALLER AUX CALCULS et ALLER À LA VOÛTE CÉLESTE, locator jusqu'à 14 caractères, choix de la police et infobulles sombres ; Reconnaissance de mes obstacles avec opacité et ton du gris ; jour mis en évidence dans Distance et Dgrd ; bouton Colonnes dans Position de la Lune ; Bilan EME avec le schéma de l'installation TX/RX ; Bruit solaire avec sources, indicateurs et spectre ; DEBUG FORMULE en style Word avec enregistrement .docx ; nouveaux onglets CÂBLES COAXIAUX, CONTACTS DE L'AUTEUR et LICENCE ; manuel dans le programme (MANUEL D'UTILISATION DÉTAILLÉ).",
             "Rechercher dans le manuel : taper un mot et appuyer sur Entrée ; Entrée de nouveau pour le résultat suivant.",
-            "MANUEL D'UTILISATION DÉTAILLÉ",
+            "MANUEL D'UTILISATION",
             "Les formules sont les mêmes dans toutes les langues.",
             "capture en direct de l'onglet",
             "Cliquer sur l'image pour l'ouvrir.",
@@ -6404,7 +6407,7 @@ namespace LunaCalc
             "≡ = câbles regroupés sur une ligne : même type, même diamètre (±0,2 mm) et atténuation à 0,2 dB/100 m près sur toutes les bandes ; la valeur est la moyenne.",
             "aussi : = autres noms commerciaux équivalents (par exemple LMR-400 = HF400, CNT-400).",
             "Les sigles chinois (50-3, 50-5, 50-7, 50-9, 50-12…) indiquent le diamètre du diélectrique en mm : 50-7 ≈ classe RG-213/LMR-400, 50-9 ≈ 1/2\" super-souple, 50-12 ≈ 1/2\" annelé.",
-            "Les sources de chaque câble sont dans l'infobulle de sa ligne et dans le manuel, § 3.8.",
+            "Les sources de chaque câble sont dans l'infobulle de sa ligne et dans le manuel «THÉORIE ET CONSEILS SUR L'EME», § 1.8.",
             "aussi :",
             "Sources :",
             "COMPARAISON DES CÂBLES COCHÉS",
@@ -6423,7 +6426,7 @@ namespace LunaCalc
             "Écrire un e-mail",
             "Copier l'adresse",
             "As-tu un transverter à faire connaître ?",
-            "Si tu veux faire connaître d'autres transverters ou ton transverter, écris un e-mail à l'auteur : les données seront ajoutées, avec leur source, au chapitre 3.7.2 du manuel.",
+            "Si tu veux faire connaître d'autres transverters ou ton transverter, écris un e-mail à l'auteur : les données seront ajoutées, avec leur source, au chapitre 1.7.2 du manuel «THÉORIE ET CONSEILS SUR L'EME».",
             "Le programme bénéficie du patronage de la",
             "Licence",
             "YAEC est un programme libre, écrit par un radioamateur pour les radioamateurs. Son code a aussi été développé avec l'aide d'un assistant d'intelligence artificielle, et la licence en reprend la manière de travailler : être vraiment utile, toujours dire les choses comme elles sont, montrer son raisonnement, ne nuire à personne et reconnaître le travail des autres. Ci-dessous les principes, puis les conditions proprement dites.",
@@ -6468,7 +6471,7 @@ namespace LunaCalc
             "En haut quatre indicateurs, à gauche la source des données (NOAA RSTN recommandée, ou F10.7 de NOAA ou de Penticton, ou une adresse personnalisée) avec les stations, à droite le spectre du flux solaire avec l'extrapolation jusqu'à la fréquence de travail.",
             "Ce manuel, dans le programme et dans toutes les langues : sommaire cliquable, recherche, formules et sources.",
             "Il est mis en page comme un document Word, avec les formules dans le style de l'éditeur d'équations : il peut être copié dans le presse-papiers ou enregistré en Word (.docx).",
-            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DEBUG FORMULE), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION DÉTAILLÉ, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (ABOUT & CREDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
+            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DEBUG FORMULE), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (ABOUT & CREDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
             "Merci de m'avoir utilisé : j'espère t'avoir été utile.",
             "Non",
             "Oui",
@@ -6525,7 +6528,7 @@ namespace LunaCalc
             "(numérotation de la section {0})",
             "nouveau",
             "Crédits pour les algorithmes, formules et données utilisés",
-            "Les crédits, avec les auteurs, les ouvrages et les liens, se trouvent dans le chapitre « Sources, données et crédits » du MANUALE D'USO APPROFONDITO.",
+            "Les crédits, avec les auteurs, les ouvrages et les liens, se trouvent dans le chapitre « Sources, données et crédits » du THÉORIE ET CONSEILS SUR L'EME.",
             "facteur de bruit de la radio en FI (dB)",
             "NF transverter + radio (dB)",
             "NF du transverter seul : 1,0 dB",
@@ -6538,7 +6541,7 @@ namespace LunaCalc
             "bêta-testeurs",
             "REMERCIEMENTS",
             "Longueur d'onde et section radar de la Lune",
-            "Modèle du transverter : le programme reprend son facteur de bruit et son gain du tableau du manuel (§ 3.7.2). Avec « personnalisé », tu les saisis toi-même.",
+            "Modèle du transverter : le programme reprend son facteur de bruit et son gain du tableau du manuel «THÉORIE ET CONSEILS SUR L'EME» (§ 1.7.2). Avec « personnalisé », tu les saisis toi-même.",
             "Gain d'une antenne",
             "Bande passante",
             "Longueur",
@@ -6691,6 +6694,7 @@ namespace LunaCalc
             "fabricant",
             "type",
             "triés par {0}",
+            "Préface de l'auteur",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7610,13 +7614,13 @@ namespace LunaCalc
             "Colores",
             "Tipo de letra",
             "Imágenes aéreas (Reconocimiento de mis obstáculos)",
-            "Figura de ruido de radios y transverters (manual, § 3.7)",
+            "Figura de ruido de radios y transverters (manual «TEORÍA Y CONSEJOS SOBRE EME», § 1.7)",
             "Medidas de Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) y de DF9IC con el DARC-OV Durlach A35 (equipos de 144 MHz); hojas de datos de Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; estación EME de W3SZ.",
-            "Doppler, CFOM y CAT (manual, § 3.10)",
+            "Doppler, CFOM y CAT (manual «TEORÍA Y CONSEJOS SOBRE EME», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" y \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Locator Maidenhead (manual, § 2.2)",
             "Wikipedia, \"Maidenhead Locator System\": origen (G4ANB, IARU 1980), estructura, extensiones más allá de 8 caracteres.",
-            "Apuntamiento y herramientas para las bandas superiores (manual, § 3.11)",
+            "Apuntamiento y herramientas para las bandas superiores (manual «TEORÍA Y CONSEJOS SOBRE EME», § 1.11)",
             "Gerald Ihninger OE2IGL y Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "Literatura EME de SM5BSZ",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) y \"EME Path Modulation\" (2000).",
@@ -7630,7 +7634,7 @@ namespace LunaCalc
             "Logo de la sección ARI \"Valle del Liri\" (03-04), usado con el patrocinio de la sección.",
             "beta 27 - bandas solo hasta 432 MHz; pantalla de inicio con el logo y el patrocinio de la sección ARI Valle del Liri; línea de agradecimiento en la ventana de cierre; idiomas bengalí, árabe y turco (17 idiomas); pantalla principal con cuatro tarjetas de color, IR A LOS CÁLCULOS e IR A LA BÓVEDA CELESTE, locator hasta 14 caracteres, elección del tipo de letra y ayudas emergentes oscuras; Reconocimiento de mis obstáculos con opacidad y tono del gris; día resaltado en Distancia y Dgrd; botón Columnas en Posición de la Luna; Balance EME con el esquema de la instalación TX/RX; Ruido solar con fuentes, indicadores y espectro; DEBUG FORMULE en estilo Word con guardado .docx; nuevas pestañas CABLES COAXIALES, CONTACTOS DEL AUTOR y LICENCIA; manual dentro del programa (MANUAL DE USO DETALLADO).",
             "Buscar en el manual: escribe una palabra y pulsa Intro; Intro otra vez para el resultado siguiente.",
-            "MANUAL DE USO DETALLADO",
+            "MANUAL DE USO",
             "Las fórmulas son las mismas en todos los idiomas.",
             "captura en vivo de la pestaña",
             "Haz clic en la imagen para abrirla.",
@@ -7663,7 +7667,7 @@ namespace LunaCalc
             "≡ = cables agrupados en una fila: mismo tipo, mismo diámetro (±0,2 mm) y atenuación dentro de 0,2 dB/100 m en todas las bandas; el valor es la media.",
             "también: = otros nombres comerciales equivalentes (por ejemplo LMR-400 = HF400, CNT-400).",
             "Las siglas chinas (50-3, 50-5, 50-7, 50-9, 50-12…) indican el diámetro del dieléctrico en mm: 50-7 ≈ clase RG-213/LMR-400, 50-9 ≈ 1/2\" superflexible, 50-12 ≈ 1/2\" corrugado.",
-            "Las fuentes de cada cable están en la ayuda emergente de su fila y en el manual, § 3.8.",
+            "Las fuentes de cada cable están en la ayuda emergente de su fila y en el manual «TEORÍA Y CONSEJOS SOBRE EME», § 1.8.",
             "también:",
             "Fuentes:",
             "COMPARACIÓN DE LOS CABLES MARCADOS",
@@ -7682,7 +7686,7 @@ namespace LunaCalc
             "Escribir un correo",
             "Copiar la dirección",
             "¿Tienes un transverter para dar a conocer?",
-            "Si quieres dar a conocer otros transverters o tu transverter, escribe un correo al autor: los datos se añadirán, con su fuente, al capítulo 3.7.2 del manual.",
+            "Si quieres dar a conocer otros transverters o tu transverter, escribe un correo al autor: los datos se añadirán, con su fuente, al capítulo 1.7.2 del manual «TEORÍA Y CONSEJOS SOBRE EME».",
             "El programa cuenta con el patrocinio de la",
             "Licencia",
             "YAEC es un programa libre, escrito por un radioaficionado para los radioaficionados. Su código se ha desarrollado también con la ayuda de un asistente de inteligencia artificial, y la licencia toma de él su manera de trabajar: ser realmente útil, decir siempre las cosas como son, mostrar el propio razonamiento, no dañar a nadie y reconocer el trabajo de los demás. Abajo están los principios y luego las condiciones propiamente dichas.",
@@ -7727,7 +7731,7 @@ namespace LunaCalc
             "Arriba cuatro indicadores, a la izquierda la fuente de los datos (NOAA RSTN recomendada, o F10.7 de NOAA o de Penticton, o una dirección personalizada) con las estaciones, a la derecha el espectro del flujo solar con la extrapolación hasta la frecuencia de trabajo.",
             "Este manual, dentro del programa y en todos los idiomas: índice con clic, búsqueda, fórmulas y fuentes.",
             "Está maquetado como un documento Word, con las fórmulas al estilo del editor de ecuaciones: se puede copiar al portapapeles o guardar en Word (.docx).",
-            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEBUG FORMULE), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO DETALLADO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ABOUT & CREDITS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
+            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEBUG FORMULE), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ABOUT & CREDITS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
             "Gracias por usarme: espero haberte sido útil.",
             "No",
             "Sí",
@@ -7784,7 +7788,7 @@ namespace LunaCalc
             "(numeración de la sección {0})",
             "nuevo",
             "Créditos de los algoritmos, fórmulas y datos utilizados",
-            "Los créditos, con los autores, las obras y los enlaces, están en el capítulo «Fuentes, datos y créditos» del MANUALE D'USO APPROFONDITO.",
+            "Los créditos, con los autores, las obras y los enlaces, están en el capítulo «Fuentes, datos y créditos» del TEORÍA Y CONSEJOS SOBRE EME.",
             "figura de ruido de la radio en FI (dB)",
             "NF transverter + radio (dB)",
             "NF del transverter solo: 1,0 dB",
@@ -7797,7 +7801,7 @@ namespace LunaCalc
             "beta-testers",
             "AGRADECIMIENTOS",
             "Longitud de onda y sección radar de la Luna",
-            "Modelo del transverter: el programa toma su figura de ruido y su ganancia de la tabla del manual (§ 3.7.2). Con \"personalizado\" los escribes tú.",
+            "Modelo del transverter: el programa toma su figura de ruido y su ganancia de la tabla del manual «TEORÍA Y CONSEJOS SOBRE EME» (§ 1.7.2). Con \"personalizado\" los escribes tú.",
             "Ganancia de una antena",
             "Ancho de banda",
             "Longitud",
@@ -7950,6 +7954,7 @@ namespace LunaCalc
             "fabricante",
             "tipo",
             "ordenados por {0}",
+            "Prefacio del autor",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -8869,13 +8874,13 @@ namespace LunaCalc
             "Cores",
             "Tipo de letra",
             "Imagens aéreas (Reconhecimento dos meus obstáculos)",
-            "Figura de ruído de rádios e transverters (manual, § 3.7)",
+            "Figura de ruído de rádios e transverters (manual «TEORIA E CONSELHOS SOBRE EME», § 1.7)",
             "Medidas de Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) e de DF9IC com o DARC-OV Durlach A35 (equipamentos de 144 MHz); folhas de dados de Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; estação EME de W3SZ.",
-            "Doppler, CFOM e CAT (manual, § 3.10)",
+            "Doppler, CFOM e CAT (manual «TEORIA E CONSELHOS SOBRE EME», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" e \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Locator Maidenhead (manual, § 2.2)",
             "Wikipédia, \"Maidenhead Locator System\": origem (G4ANB, IARU 1980), estrutura, extensões além de 8 caracteres.",
-            "Apontamento e ferramentas para as bandas superiores (manual, § 3.11)",
+            "Apontamento e ferramentas para as bandas superiores (manual «TEORIA E CONSELHOS SOBRE EME», § 1.11)",
             "Gerald Ihninger OE2IGL e Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "Literatura EME de SM5BSZ",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) e \"EME Path Modulation\" (2000).",
@@ -8889,7 +8894,7 @@ namespace LunaCalc
             "Logótipo da secção ARI \"Valle del Liri\" (03-04), usado com o patrocínio da secção.",
             "beta 27 - bandas só até 432 MHz; ecrã de arranque com o logótipo e o patrocínio da secção ARI Valle del Liri; linha de agradecimento na janela de fecho; línguas bengali, árabe e turco (17 línguas); ecrã principal com quatro cartões coloridos, IR PARA OS CÁLCULOS e IR PARA A ABÓBADA CELESTE, locator até 14 caracteres, escolha do tipo de letra e dicas escuras; Reconhecimento dos meus obstáculos com opacidade e tom do cinzento; dia destacado em Distância e Dgrd; botão Colunas na Posição da Lua; Balanço EME com o esquema da instalação TX/RX; Ruído solar com fontes, indicadores e espectro; DEBUG FORMULE em estilo Word com gravação .docx; novos separadores CABOS COAXIAIS, CONTACTOS DO AUTOR e LICENÇA; manual dentro do programa (MANUAL DE UTILIZAÇÃO APROFUNDADO).",
             "Pesquisar no manual: escreve uma palavra e prime Enter; Enter de novo para o resultado seguinte.",
-            "MANUAL DE UTILIZAÇÃO APROFUNDADO",
+            "MANUAL DE UTILIZAÇÃO",
             "As fórmulas são as mesmas em todas as línguas.",
             "captura ao vivo do separador",
             "Clica na imagem para a abrir.",
@@ -8922,7 +8927,7 @@ namespace LunaCalc
             "≡ = cabos agrupados numa linha: mesmo tipo, mesmo diâmetro (±0,2 mm) e atenuação dentro de 0,2 dB/100 m em todas as bandas; o valor é a média.",
             "também: = outros nomes comerciais equivalentes (por exemplo LMR-400 = HF400, CNT-400).",
             "As siglas chinesas (50-3, 50-5, 50-7, 50-9, 50-12…) indicam o diâmetro do dielétrico em mm: 50-7 ≈ classe RG-213/LMR-400, 50-9 ≈ 1/2\" superflexível, 50-12 ≈ 1/2\" corrugado.",
-            "As fontes de cada cabo estão na dica da sua linha e no manual, § 3.8.",
+            "As fontes de cada cabo estão na dica da sua linha e no manual «TEORIA E CONSELHOS SOBRE EME», § 1.8.",
             "também:",
             "Fontes:",
             "COMPARAÇÃO DOS CABOS ASSINALADOS",
@@ -8941,7 +8946,7 @@ namespace LunaCalc
             "Escrever um e-mail",
             "Copiar o endereço",
             "Tens um transverter para dar a conhecer?",
-            "Se quiseres dar a conhecer outros transverters ou o teu transverter, escreve um e-mail ao autor: os dados serão acrescentados, com a fonte, ao capítulo 3.7.2 do manual.",
+            "Se quiseres dar a conhecer outros transverters ou o teu transverter, escreve um e-mail ao autor: os dados serão acrescentados, com a fonte, ao capítulo 1.7.2 do manual «TEORIA E CONSELHOS SOBRE EME».",
             "O programa tem o patrocínio da",
             "Licença",
             "O YAEC é um programa livre, escrito por um radioamador para os radioamadores. O seu código foi desenvolvido também com a ajuda de um assistente de inteligência artificial, e a licença retoma a sua forma de trabalhar: ser realmente útil, dizer sempre as coisas como são, mostrar o próprio raciocínio, não prejudicar ninguém e reconhecer o trabalho dos outros. Em baixo estão os princípios e depois as condições propriamente ditas.",
@@ -8986,7 +8991,7 @@ namespace LunaCalc
             "Em cima quatro indicadores, à esquerda a fonte dos dados (NOAA RSTN recomendada, ou F10.7 da NOAA ou de Penticton, ou um endereço personalizado) com as estações, à direita o espectro do fluxo solar com a extrapolação até à frequência de trabalho.",
             "Este manual, dentro do programa e em todas as línguas: índice clicável, pesquisa, fórmulas e fontes.",
             "Está paginado como um documento Word, com as fórmulas no estilo do editor de equações: pode ser copiado para a área de transferência ou guardado em Word (.docx).",
-            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEBUG FORMULE), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO APROFUNDADO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (ABOUT & CREDITS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
+            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEBUG FORMULE), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (ABOUT & CREDITS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
             "Obrigado por me teres usado: espero ter-te sido útil.",
             "Não",
             "Sim",
@@ -9043,7 +9048,7 @@ namespace LunaCalc
             "(numeração da secção {0})",
             "novo",
             "Créditos dos algoritmos, fórmulas e dados usados",
-            "Os créditos, com os autores, as obras e as ligações, estão no capítulo «Fontes, dados e créditos» do MANUALE D'USO APPROFONDITO.",
+            "Os créditos, com os autores, as obras e as ligações, estão no capítulo «Fontes, dados e créditos» do TEORIA E CONSELHOS SOBRE EME.",
             "figura de ruído do rádio em FI (dB)",
             "NF transverter + rádio (dB)",
             "NF só do transverter: 1,0 dB",
@@ -9056,7 +9061,7 @@ namespace LunaCalc
             "beta-testers",
             "AGRADECIMENTOS",
             "Comprimento de onda e secção radar da Lua",
-            "Modelo do transverter: o programa usa a figura de ruído e o ganho da tabela do manual (§ 3.7.2). Com \"personalizado\" introduzes tu os valores.",
+            "Modelo do transverter: o programa usa a figura de ruído e o ganho da tabela do manual «TEORIA E CONSELHOS SOBRE EME» (§ 1.7.2). Com \"personalizado\" introduzes tu os valores.",
             "Ganho de uma antena",
             "Largura de banda",
             "Comprimento",
@@ -9209,6 +9214,7 @@ namespace LunaCalc
             "fabricante",
             "tipo",
             "ordenados por {0}",
+            "Prefácio do autor",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10128,13 +10134,13 @@ namespace LunaCalc
             "颜色",
             "字体",
             "航拍图像 (我的障碍物勘察)",
-            "电台和变频器的噪声系数 (手册 § 3.7)",
+            "电台和变频器的噪声系数 (手册「EME 理论与建议」 § 1.7)",
             "Adam Farson VA7OJ/AB4OJ 的测量 (IC-9700、FT-991) 以及 DF9IC 使用 DARC-OV Durlach A35 的测量 (144 MHz 设备)；Down East Microwave、Kuhne electronic、Q5 Signal、HA1YA 的数据表；W3SZ 的 EME 电台。",
-            "多普勒、CFOM 与 CAT (手册 § 3.10)",
+            "多普勒、CFOM 与 CAT (手册「EME 理论与建议」 § 1.10)",
             "Bob Atkins KA1GT，“Doppler 101 for 1296 MHz EME (…and other bands)”与“CFOM – Constant Frequency On Moon Doppler Mode”。",
             "梅登黑德定位符 (手册 § 2.2)",
             "维基百科，“Maidenhead Locator System”：起源 (G4ANB，IARU 1980)、结构、超过 8 个字符的扩展。",
-            "较高波段的指向与工具 (手册 § 3.11)",
+            "较高波段的指向与工具 (手册「EME 理论与建议」 § 1.11)",
             "Gerald Ihninger OE2IGL 与 Joachim Köppen DF3GJ，“EME Link Budget & Analysis Tool (1-300 GHz)”。",
             "SM5BSZ 的 EME 文献",
             "Leif Åsbrink SM5BSZ，“Selecting Polarisation for EME” (1997) 与 “EME Path Modulation” (2000)。",
@@ -10148,7 +10154,7 @@ namespace LunaCalc
             "ARI “Valle del Liri” 分会 (03-04) 的徽标，经分会赞助使用。",
             "beta 27 - 波段仅到 432 MHz；启动画面带 ARI Valle del Liri 分会的徽标与赞助；关闭窗口中的致谢语；新增孟加拉语、阿拉伯语和土耳其语 (共 17 种语言)；主界面四张彩色卡片、“前往计算”和“前往天穹”按钮、定位符最多 14 个字符、字体选择和深色提示；我的障碍物勘察增加灰色不透明度与色调；距离与 Dgrd 中可突出显示某天；月球位置中的“列”按钮；EME 链路预算带收发设备框图；太阳噪声带来源、指示和频谱；DEBUG FORMULE 采用 Word 样式并可保存为 .docx；新页面：同轴电缆、作者联系方式和许可证；程序内手册 (详细使用手册)。",
             "在手册中搜索：输入一个词并按 Enter；再按 Enter 查看下一个结果。",
-            "详细使用手册",
+            "使用手册",
             "公式在所有语言中相同。",
             "页面实时截图",
             "单击图片打开。",
@@ -10181,7 +10187,7 @@ namespace LunaCalc
             "≡ = 合并为一行的电缆：类型相同、直径相同 (±0.2 mm)，各波段衰减相差不超过 0.2 dB/100 m；数值为平均值。",
             "也称：= 其他等效商品名 (例如 LMR-400 = HF400、CNT-400)。",
             "中国型号 (50-3、50-5、50-7、50-9、50-12…) 表示介质直径 (mm)：50-7 ≈ RG-213/LMR-400 级，50-9 ≈ 1/2\" 超柔，50-12 ≈ 1/2\" 波纹。",
-            "每种电缆的来源见其所在行的提示及手册 § 3.8。",
+            "每种电缆的来源见其所在行的提示及手册「EME 理论与建议」 § 1.8。",
             "也称：",
             "来源：",
             "勾选电缆的比较",
@@ -10200,7 +10206,7 @@ namespace LunaCalc
             "写邮件",
             "复制地址",
             "有变频器想介绍吗？",
-            "如果你想介绍其他变频器或你自己的变频器，请给作者发邮件：数据将连同来源加入手册第 3.7.2 章。",
+            "如果你想介绍其他变频器或你自己的变频器，请给作者发邮件：数据将连同来源加入手册「EME 理论与建议」第 1.7.2 章。",
             "本程序由以下机构赞助：",
             "许可证",
             "YAEC 是一款自由程序，由业余无线电爱好者为业余无线电爱好者编写。其代码也借助人工智能助手开发，许可证沿用了它的工作方式：真正有用、始终实事求是、展示推理过程、不伤害任何人、承认他人的工作。下面先是原则，然后是具体条件。",
@@ -10245,7 +10251,7 @@ namespace LunaCalc
             "上方四个指示，左侧为数据来源 (推荐 NOAA RSTN，或 NOAA、彭蒂克顿的 F10.7，或自定义地址) 及台站，右侧为太阳流量频谱及外推到工作频率的曲线。",
             "本手册，内置于程序并提供所有语言：可点击目录、搜索、公式和来源。",
             "它像 Word 文档一样排版，公式采用公式编辑器风格：可复制到剪贴板或保存为 Word (.docx)。",
-            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、DEBUG FORMULE)、日志 (WWL 与 ADIF 地图)、帮助与工具 (详细使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (ABOUT & CREDITS、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
+            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、DEBUG FORMULE)、日志 (WWL 与 ADIF 地图)、帮助与工具 (使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (ABOUT & CREDITS、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
             "感谢使用我：希望我对你有所帮助。",
             "否",
             "是",
@@ -10302,7 +10308,7 @@ namespace LunaCalc
             "（第 {0} 节的编号）",
             "新",
             "所用算法、公式和数据的致谢",
-            "致谢（含作者、作品和链接）位于 MANUALE D'USO APPROFONDITO 的「来源、数据与致谢」一章。",
+            "致谢（含作者、作品和链接）位于 EME 理论与建议 的「来源、数据与致谢」一章。",
             "中频电台的噪声系数 (dB)",
             "NF 变频器 + 电台 (dB)",
             "仅变频器的 NF：1.0 dB",
@@ -10315,7 +10321,7 @@ namespace LunaCalc
             "测试员",
             "致谢",
             "波长与月球雷达截面",
-            "变频器型号：程序从手册表格（§ 3.7.2）中读取其噪声系数和增益。选择“自定义”则由你自行输入。",
+            "变频器型号：程序从手册「EME 理论与建议」表格（§ 1.7.2）中读取其噪声系数和增益。选择“自定义”则由你自行输入。",
             "单副天线增益",
             "带宽",
             "长度",
@@ -10468,6 +10474,7 @@ namespace LunaCalc
             "制造商",
             "类型",
             "按{0}排序",
+            "作者序言",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11387,13 +11394,13 @@ namespace LunaCalc
             "色",
             "フォント",
             "航空写真 (自局障害物の偵察)",
-            "無線機とトランスバーターの雑音指数 (マニュアル § 3.7)",
+            "無線機とトランスバーターの雑音指数 (マニュアル「EME の理論とアドバイス」 § 1.7)",
             "Adam Farson VA7OJ/AB4OJ の測定 (IC-9700、FT-991) と DF9IC による DARC-OV Durlach A35 での測定 (144 MHz 機器)；Down East Microwave、Kuhne electronic、Q5 Signal、HA1YA のデータシート；W3SZ の EME 局。",
-            "ドップラー、CFOM、CAT (マニュアル § 3.10)",
+            "ドップラー、CFOM、CAT (マニュアル「EME の理論とアドバイス」 § 1.10)",
             "Bob Atkins KA1GT「Doppler 101 for 1296 MHz EME (…and other bands)」および「CFOM – Constant Frequency On Moon Doppler Mode」。",
             "メイデンヘッドロケーター (マニュアル § 2.2)",
             "Wikipedia「Maidenhead Locator System」：起源 (G4ANB、IARU 1980)、構造、8 文字を超える拡張。",
-            "上位バンドの指向とツール (マニュアル § 3.11)",
+            "上位バンドの指向とツール (マニュアル「EME の理論とアドバイス」 § 1.11)",
             "Gerald Ihninger OE2IGL と Joachim Köppen DF3GJ「EME Link Budget & Analysis Tool (1-300 GHz)」。",
             "SM5BSZ の EME 文献",
             "Leif Åsbrink SM5BSZ「Selecting Polarisation for EME」(1997) および「EME Path Modulation」(2000)。",
@@ -11407,7 +11414,7 @@ namespace LunaCalc
             "ARI「Valle del Liri」支部 (03-04) のロゴ。支部の後援のもとで使用。",
             "beta 27 - バンドは 432 MHz まで；ARI Valle del Liri 支部のロゴと後援入りの起動画面；終了ウィンドウにお礼の一行；ベンガル語、アラビア語、トルコ語を追加 (17 言語)；メイン画面に 4 枚の色付きカード、「計算へ」と「天球へ」、ロケーター最大 14 文字、フォント選択、ダークなツールチップ；自局障害物の偵察にグレーの不透明度と濃さ；距離と Dgrd で日の強調；月の位置に列ボタン；EME 回線計算に TX/RX 設備の系統図；太陽雑音にソース、指標、スペクトル；DEBUG FORMULE を Word スタイルにし .docx 保存に対応；新タブ「同軸ケーブル」「作者への連絡」「ライセンス」；プログラム内マニュアル (詳細取扱説明書)。",
             "マニュアル内を検索：語を入力して Enter、もう一度 Enter で次の結果。",
-            "詳細取扱説明書",
+            "取扱説明書",
             "数式はすべての言語で同じです。",
             "タブのライブ画面",
             "画像をクリックすると開きます。",
@@ -11440,7 +11447,7 @@ namespace LunaCalc
             "≡ = 1 行にまとめたケーブル：同じ種類、同じ外径 (±0.2 mm)、全バンドで減衰量の差が 0.2 dB/100 m 以内；値は平均。",
             "別名：= その他の同等商品名 (例 LMR-400 = HF400、CNT-400)。",
             "中国の型番 (50-3、50-5、50-7、50-9、50-12…) は誘電体の直径 (mm) を示します：50-7 ≈ RG-213/LMR-400 クラス、50-9 ≈ 1/2\" スーパーフレキシブル、50-12 ≈ 1/2\" 波付き。",
-            "各ケーブルの出典はその行のツールチップとマニュアル § 3.8 にあります。",
+            "各ケーブルの出典はその行のツールチップとマニュアル「EME の理論とアドバイス」 § 1.8 にあります。",
             "別名：",
             "出典：",
             "チェックしたケーブルの比較",
@@ -11459,7 +11466,7 @@ namespace LunaCalc
             "メールを書く",
             "アドレスをコピー",
             "紹介したいトランスバーターはありますか？",
-            "他のトランスバーターやあなたのトランスバーターを紹介したい場合は、作者にメールしてください：データは出典とともにマニュアル第 3.7.2 章に追加されます。",
+            "他のトランスバーターやあなたのトランスバーターを紹介したい場合は、作者にメールしてください：データは出典とともにマニュアル「EME の理論とアドバイス」第 1.7.2 章に追加されます。",
             "本プログラムの後援：",
             "ライセンス",
             "YAEC はアマチュア無線家がアマチュア無線家のために書いたフリーのプログラムです。コードは AI アシスタントの助けも借りて開発され、ライセンスはその働き方を受け継いでいます：本当に役に立つこと、常にありのままを伝えること、考え方の筋道を示すこと、誰も傷つけないこと、他者の仕事を認めること。以下に原則、続いて具体的な条件を示します。",
@@ -11504,7 +11511,7 @@ namespace LunaCalc
             "上部に 4 つの指標、左にデータソース (推奨は NOAA RSTN、または NOAA かペンティクトンの F10.7、またはカスタムアドレス) と観測所、右に運用周波数までの外挿付き太陽電波束スペクトル。",
             "このマニュアル。プログラム内にあり全言語対応：クリックできる目次、検索、数式、出典。",
             "Word 文書のようにレイアウトされ、数式は数式エディター風です：クリップボードにコピーしたり Word (.docx) で保存したりできます。",
-            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、DEBUG FORMULE)、ログ (WWL・ADIF 地図)、ヘルプとツール (詳細取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (ABOUT & CREDITS、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
+            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、DEBUG FORMULE)、ログ (WWL・ADIF 地図)、ヘルプとツール (取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (ABOUT & CREDITS、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
             "使ってくれてありがとう：お役に立てたなら幸いです。",
             "いいえ",
             "はい",
@@ -11561,7 +11568,7 @@ namespace LunaCalc
             "（{0} 節の番号）",
             "新規",
             "使用したアルゴリズム、式、データのクレジット",
-            "著者、著作、リンクを含むクレジットは MANUALE D'USO APPROFONDITO の「出典、データ、クレジット」の章にあります。",
+            "著者、著作、リンクを含むクレジットは EME の理論とアドバイス の「出典、データ、クレジット」の章にあります。",
             "IF 側無線機の雑音指数 (dB)",
             "NF トランスバーター + 無線機 (dB)",
             "トランスバーター単体の NF：1.0 dB",
@@ -11574,7 +11581,7 @@ namespace LunaCalc
             "ベータテスター",
             "謝辞",
             "波長と月のレーダー断面積",
-            "トランスバーターの機種：雑音指数と利得はマニュアルの表（§ 3.7.2）から取得します。「カスタム」では自分で入力します。",
+            "トランスバーターの機種：雑音指数と利得はマニュアル「EME の理論とアドバイス」の表（§ 1.7.2）から取得します。「カスタム」では自分で入力します。",
             "アンテナ1本の利得",
             "帯域幅",
             "長さ",
@@ -11727,6 +11734,7 @@ namespace LunaCalc
             "メーカー",
             "種類",
             "{0}順",
+            "著者まえがき",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12646,13 +12654,13 @@ namespace LunaCalc
             "रंग",
             "फ़ॉन्ट",
             "हवाई चित्र (मेरी बाधाओं की टोह)",
-            "रेडियो और ट्रांसवर्टर का नॉइज़ फिगर (मैनुअल § 3.7)",
+            "रेडियो और ट्रांसवर्टर का नॉइज़ फिगर (मैनुअल «EME सिद्धांत और सुझाव» § 1.7)",
             "Adam Farson VA7OJ/AB4OJ के माप (IC-9700, FT-991) और DF9IC के DARC-OV Durlach A35 के साथ माप (144 MHz उपकरण); Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA की डेटाशीट; W3SZ का EME स्टेशन।",
-            "डॉप्लर, CFOM और CAT (मैनुअल § 3.10)",
+            "डॉप्लर, CFOM और CAT (मैनुअल «EME सिद्धांत और सुझाव» § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" और \"CFOM – Constant Frequency On Moon Doppler Mode\"।",
             "मेडनहेड लोकेटर (मैनुअल § 2.2)",
             "विकिपीडिया, \"Maidenhead Locator System\": उत्पत्ति (G4ANB, IARU 1980), संरचना, 8 अक्षरों से आगे के विस्तार।",
-            "ऊँचे बैंडों के लिए लक्ष्यीकरण और उपकरण (मैनुअल § 3.11)",
+            "ऊँचे बैंडों के लिए लक्ष्यीकरण और उपकरण (मैनुअल «EME सिद्धांत और सुझाव» § 1.11)",
             "Gerald Ihninger OE2IGL और Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\"।",
             "SM5BSZ का EME साहित्य",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) और \"EME Path Modulation\" (2000)।",
@@ -12666,7 +12674,7 @@ namespace LunaCalc
             "ARI \"Valle del Liri\" अनुभाग (03-04) का लोगो, अनुभाग के संरक्षण के साथ प्रयुक्त।",
             "beta 27 - बैंड केवल 432 MHz तक; ARI Valle del Liri अनुभाग के लोगो और संरक्षण के साथ आरंभ स्क्रीन; बंद करने की खिड़की में धन्यवाद पंक्ति; बंगाली, अरबी और तुर्की भाषाएँ (17 भाषाएँ); चार रंगीन कार्डों वाली मुख्य स्क्रीन, गणनाओं पर जाएँ और आकाश दृश्य पर जाएँ, 14 अक्षरों तक लोकेटर, फ़ॉन्ट चयन और गहरे टूलटिप; मेरी बाधाओं की टोह में धूसर की अपारदर्शिता और रंग; दूरी और Dgrd में दिन उभारना; चंद्रमा की स्थिति में स्तंभ बटन; TX/RX व्यवस्था आरेख के साथ EME बजट; स्रोत, संकेतक और स्पेक्ट्रम के साथ सौर शोर; Word शैली में DEBUG FORMULE और .docx में सहेजना; नए टैब कोएक्सियल केबल, लेखक से संपर्क और लाइसेंस; प्रोग्राम के भीतर मैनुअल (विस्तृत उपयोगकर्ता मैनुअल)।",
             "मैनुअल में खोजें: एक शब्द लिखें और Enter दबाएँ; अगले परिणाम के लिए फिर Enter।",
-            "विस्तृत उपयोगकर्ता मैनुअल",
+            "उपयोगकर्ता मैनुअल",
             "सूत्र सभी भाषाओं में समान हैं।",
             "टैब का लाइव स्क्रीनशॉट",
             "खोलने के लिए चित्र पर क्लिक करें।",
@@ -12699,7 +12707,7 @@ namespace LunaCalc
             "≡ = एक पंक्ति में समूहित केबल: समान प्रकार, समान व्यास (±0.2 mm) और सभी बैंडों में 0.2 dB/100 m के भीतर क्षीणन; मान औसत है।",
             "यह भी: = अन्य समतुल्य व्यापारिक नाम (उदाहरण LMR-400 = HF400, CNT-400)।",
             "चीनी कोड (50-3, 50-5, 50-7, 50-9, 50-12…) डाइइलेक्ट्रिक का व्यास mm में बताते हैं: 50-7 ≈ RG-213/LMR-400 वर्ग, 50-9 ≈ 1/2\" अति-लचीला, 50-12 ≈ 1/2\" नालीदार।",
-            "प्रत्येक केबल के स्रोत उसकी पंक्ति के टूलटिप और मैनुअल § 3.8 में हैं।",
+            "प्रत्येक केबल के स्रोत उसकी पंक्ति के टूलटिप और मैनुअल «EME सिद्धांत और सुझाव» § 1.8 में हैं।",
             "यह भी:",
             "स्रोत:",
             "चिह्नित केबलों की तुलना",
@@ -12718,7 +12726,7 @@ namespace LunaCalc
             "ई-मेल लिखें",
             "पता कॉपी करें",
             "क्या आपके पास परिचित कराने के लिए कोई ट्रांसवर्टर है?",
-            "यदि आप अन्य ट्रांसवर्टर या अपना ट्रांसवर्टर परिचित कराना चाहते हैं तो लेखक को ई-मेल लिखें: डेटा स्रोत सहित मैनुअल के अध्याय 3.7.2 में जोड़ा जाएगा।",
+            "यदि आप अन्य ट्रांसवर्टर या अपना ट्रांसवर्टर परिचित कराना चाहते हैं तो लेखक को ई-मेल लिखें: डेटा स्रोत सहित मैनुअल «EME सिद्धांत और सुझाव» के अध्याय 1.7.2 में जोड़ा जाएगा।",
             "प्रोग्राम को संरक्षण प्राप्त है:",
             "लाइसेंस",
             "YAEC एक मुक्त प्रोग्राम है, जिसे एक रेडियो शौकिया ने रेडियो शौकियों के लिए लिखा है। इसका कोड एक कृत्रिम बुद्धि सहायक की मदद से भी विकसित हुआ है, और लाइसेंस उसकी कार्यशैली अपनाता है: सचमुच उपयोगी होना, हमेशा चीज़ें जैसी हैं वैसी कहना, अपना तर्क दिखाना, किसी को हानि न पहुँचाना और दूसरों के काम को मान्यता देना। नीचे सिद्धांत हैं और फिर वास्तविक शर्तें।",
@@ -12763,7 +12771,7 @@ namespace LunaCalc
             "ऊपर चार संकेतक, बाईं ओर डेटा स्रोत (NOAA RSTN अनुशंसित, या NOAA अथवा पेंटिक्टन का F10.7, या कस्टम पता) स्टेशनों के साथ, दाईं ओर कार्य आवृत्ति तक एक्सट्रापोलेशन सहित सौर फ्लक्स स्पेक्ट्रम।",
             "यह मैनुअल, प्रोग्राम के भीतर और सभी भाषाओं में: क्लिक योग्य विषय-सूची, खोज, सूत्र और स्रोत।",
             "यह Word दस्तावेज़ की तरह सजा है, सूत्र समीकरण संपादक की शैली में: इसे क्लिपबोर्ड में कॉपी या Word (.docx) में सहेजा जा सकता है।",
-            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, DEBUG FORMULE), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (विस्तृत उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (ABOUT & CREDITS, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
+            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, DEBUG FORMULE), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (ABOUT & CREDITS, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
             "मुझे उपयोग करने के लिए धन्यवाद: आशा है मैं आपके काम आया।",
             "नहीं",
             "हाँ",
@@ -12820,7 +12828,7 @@ namespace LunaCalc
             "(खंड {0} की क्रमांकन)",
             "नया",
             "प्रयुक्त एल्गोरिदम, सूत्रों और डेटा का श्रेय",
-            "लेखकों, कृतियों और लिंक सहित श्रेय MANUALE D'USO APPROFONDITO के «स्रोत, डेटा और आभार» अध्याय में हैं।",
+            "लेखकों, कृतियों और लिंक सहित श्रेय EME सिद्धांत और सुझाव के «स्रोत, डेटा और आभार» अध्याय में हैं।",
             "IF रेडियो का नॉइज़ फ़िगर (dB)",
             "NF ट्रांसवर्टर + रेडियो (dB)",
             "केवल ट्रांसवर्टर का NF: 1.0 dB",
@@ -12833,7 +12841,7 @@ namespace LunaCalc
             "बीटा-टेस्टर",
             "आभार",
             "तरंगदैर्ध्य और चंद्रमा का रडार क्रॉस-सेक्शन",
-            "ट्रांसवर्टर मॉडल: प्रोग्राम मैनुअल की तालिका (§ 3.7.2) से इसका नॉइज़ फ़िगर और गेन लेता है। \"कस्टम\" चुनने पर आप स्वयं लिखते हैं।",
+            "ट्रांसवर्टर मॉडल: प्रोग्राम मैनुअल «EME सिद्धांत और सुझाव» की तालिका (§ 1.7.2) से इसका नॉइज़ फ़िगर और गेन लेता है। \"कस्टम\" चुनने पर आप स्वयं लिखते हैं।",
             "एकल एंटीना गेन",
             "बैंडविड्थ",
             "लंबाई",
@@ -12986,6 +12994,7 @@ namespace LunaCalc
             "निर्माता",
             "प्रकार",
             "{0} के अनुसार क्रमबद्ध",
+            "लेखक की प्रस्तावना",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -13905,13 +13914,13 @@ namespace LunaCalc
             "색상",
             "글꼴",
             "항공 사진 (내 장애물 정찰)",
-            "무선기와 트랜스버터의 잡음 지수 (설명서 § 3.7)",
+            "무선기와 트랜스버터의 잡음 지수 (설명서「EME 이론과 조언」 § 1.7)",
             "Adam Farson VA7OJ/AB4OJ의 측정 (IC-9700, FT-991)과 DF9IC의 DARC-OV Durlach A35 측정 (144 MHz 장비); Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA의 데이터시트; W3SZ의 EME 국.",
-            "도플러, CFOM, CAT (설명서 § 3.10)",
+            "도플러, CFOM, CAT (설명서「EME 이론과 조언」 § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" 및 \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "메이든헤드 로케이터 (설명서 § 2.2)",
             "위키백과, \"Maidenhead Locator System\": 기원 (G4ANB, IARU 1980), 구조, 8자를 넘는 확장.",
-            "상위 밴드의 지향과 도구 (설명서 § 3.11)",
+            "상위 밴드의 지향과 도구 (설명서「EME 이론과 조언」 § 1.11)",
             "Gerald Ihninger OE2IGL과 Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "SM5BSZ의 EME 문헌",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) 및 \"EME Path Modulation\" (2000).",
@@ -13925,7 +13934,7 @@ namespace LunaCalc
             "ARI \"Valle del Liri\" 지부 (03-04)의 로고, 지부의 후원으로 사용.",
             "beta 27 - 밴드는 432 MHz까지만; ARI Valle del Liri 지부의 로고와 후원이 담긴 시작 화면; 종료 창의 감사 문구; 벵골어, 아랍어, 터키어 추가 (17개 언어); 메인 화면에 네 개의 색 카드, 계산으로 및 하늘 보기로 버튼, 로케이터 최대 14자, 글꼴 선택, 어두운 도움말; 내 장애물 정찰에 회색 불투명도와 톤; 거리와 Dgrd에서 날짜 강조; 달의 위치에 열 버튼; EME 링크 버짓에 TX/RX 설비 계통도; 태양 잡음에 출처, 지표, 스펙트럼; DEBUG FORMULE을 Word 스타일로, .docx 저장 지원; 새 탭 동축 케이블, 저자 연락처, 라이선스; 프로그램 안의 설명서 (상세 사용 설명서).",
             "설명서에서 검색: 단어를 입력하고 Enter, 다시 Enter로 다음 결과.",
-            "상세 사용 설명서",
+            "사용 설명서",
             "수식은 모든 언어에서 같습니다.",
             "탭의 실시간 화면",
             "그림을 클릭하면 열립니다.",
@@ -13958,7 +13967,7 @@ namespace LunaCalc
             "≡ = 한 행으로 묶은 케이블: 같은 종류, 같은 외경 (±0.2 mm), 모든 밴드에서 감쇠 차이 0.2 dB/100 m 이내; 값은 평균.",
             "다른 이름: = 기타 동등 상품명 (예: LMR-400 = HF400, CNT-400).",
             "중국 형번 (50-3, 50-5, 50-7, 50-9, 50-12…)은 유전체 지름 (mm)을 나타냅니다: 50-7 ≈ RG-213/LMR-400급, 50-9 ≈ 1/2\" 슈퍼플렉시블, 50-12 ≈ 1/2\" 주름형.",
-            "각 케이블의 출처는 해당 행의 도움말과 설명서 § 3.8에 있습니다.",
+            "각 케이블의 출처는 해당 행의 도움말과 설명서「EME 이론과 조언」 § 1.8에 있습니다.",
             "다른 이름:",
             "출처:",
             "선택한 케이블 비교",
@@ -13977,7 +13986,7 @@ namespace LunaCalc
             "메일 쓰기",
             "주소 복사",
             "소개할 트랜스버터가 있습니까?",
-            "다른 트랜스버터나 당신의 트랜스버터를 소개하고 싶다면 저자에게 메일을 보내십시오: 데이터는 출처와 함께 설명서 3.7.2장에 추가됩니다.",
+            "다른 트랜스버터나 당신의 트랜스버터를 소개하고 싶다면 저자에게 메일을 보내십시오: 데이터는 출처와 함께 설명서「EME 이론과 조언」 1.7.2장에 추가됩니다.",
             "이 프로그램의 후원:",
             "라이선스",
             "YAEC는 아마추어 무선사가 아마추어 무선사를 위해 쓴 자유 프로그램입니다. 코드는 인공지능 도우미의 도움으로도 개발되었으며, 라이선스는 그 일하는 방식을 이어받습니다: 정말로 쓸모 있을 것, 언제나 있는 그대로 말할 것, 생각의 과정을 보여 줄 것, 누구에게도 해를 끼치지 않을 것, 다른 이의 노고를 인정할 것. 아래에 원칙과 구체적인 조건이 있습니다.",
@@ -14022,7 +14031,7 @@ namespace LunaCalc
             "위쪽에 네 지표, 왼쪽에 데이터 출처 (NOAA RSTN 권장, 또는 NOAA나 펜틱턴의 F10.7, 또는 사용자 주소)와 관측소, 오른쪽에 운용 주파수까지 외삽한 태양 플럭스 스펙트럼.",
             "이 설명서로, 프로그램 안에 있으며 모든 언어를 지원합니다: 클릭 가능한 목차, 검색, 수식, 출처.",
             "Word 문서처럼 배치되고 수식은 수식 편집기 양식입니다: 클립보드로 복사하거나 Word (.docx)로 저장할 수 있습니다.",
-            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, DEBUG FORMULE), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (상세 사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (ABOUT & CREDITS, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
+            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, DEBUG FORMULE), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (ABOUT & CREDITS, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
             "사용해 주셔서 감사합니다: 도움이 되었기를 바랍니다.",
             "아니요",
             "예",
@@ -14079,7 +14088,7 @@ namespace LunaCalc
             "({0}절의 번호)",
             "새 항목",
             "사용한 알고리즘, 공식, 데이터의 출처",
-            "저자, 저작물, 링크가 포함된 출처는 MANUALE D'USO APPROFONDITO의 「출처, 데이터와 크레딧」 장에 있습니다.",
+            "저자, 저작물, 링크가 포함된 출처는 EME 이론과 조언의 「출처, 데이터와 크레딧」 장에 있습니다.",
             "IF 무전기의 잡음 지수 (dB)",
             "NF 트랜스버터 + 무전기 (dB)",
             "트랜스버터 단독 NF: 1.0 dB",
@@ -14092,7 +14101,7 @@ namespace LunaCalc
             "베타 테스터",
             "감사의 말",
             "파장과 달의 레이더 단면적",
-            "트랜스버터 모델: 프로그램이 설명서 표(§ 3.7.2)에서 잡음 지수와 이득을 가져옵니다. \"사용자 지정\"이면 직접 입력합니다.",
+            "트랜스버터 모델: 프로그램이 설명서「EME 이론과 조언」 표(§ 1.7.2)에서 잡음 지수와 이득을 가져옵니다. \"사용자 지정\"이면 직접 입력합니다.",
             "안테나 1개 이득",
             "대역폭",
             "길이",
@@ -14245,6 +14254,7 @@ namespace LunaCalc
             "제조사",
             "종류",
             "{0} 순 정렬",
+            "저자 서문",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15164,13 +15174,13 @@ namespace LunaCalc
             "Warna",
             "Jenis huruf",
             "Citra udara (Pengintaian rintangan saya)",
-            "Angka derau radio dan transverter (manual, § 3.7)",
+            "Angka derau radio dan transverter (manual «TEORI DAN TIPS EME», § 1.7)",
             "Pengukuran oleh Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) dan oleh DF9IC dengan DARC-OV Durlach A35 (perangkat 144 MHz); lembar data Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; stasiun EME W3SZ.",
-            "Doppler, CFOM dan CAT (manual, § 3.10)",
+            "Doppler, CFOM dan CAT (manual «TEORI DAN TIPS EME», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" dan \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Locator Maidenhead (manual, § 2.2)",
             "Wikipedia, \"Maidenhead Locator System\": asal-usul (G4ANB, IARU 1980), struktur, perluasan di atas 8 karakter.",
-            "Pengarahan dan alat untuk pita yang lebih tinggi (manual, § 3.11)",
+            "Pengarahan dan alat untuk pita yang lebih tinggi (manual «TEORI DAN TIPS EME», § 1.11)",
             "Gerald Ihninger OE2IGL dan Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "Literatur EME dari SM5BSZ",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) dan \"EME Path Modulation\" (2000).",
@@ -15184,7 +15194,7 @@ namespace LunaCalc
             "Logo seksi ARI \"Valle del Liri\" (03-04), digunakan dengan dukungan seksi tersebut.",
             "beta 27 - pita hanya hingga 432 MHz; layar pembuka dengan logo dan dukungan seksi ARI Valle del Liri; baris terima kasih di jendela penutupan; bahasa Bengali, Arab dan Turki (17 bahasa); layar utama dengan empat kartu berwarna, KE PERHITUNGAN dan KE KUBAH LANGIT, locator hingga 14 karakter, pilihan jenis huruf dan tooltip gelap; Pengintaian rintangan saya dengan opasitas dan nada abu-abu; hari yang disorot di Jarak dan Dgrd; tombol Kolom di Posisi Bulan; Anggaran EME dengan skema instalasi TX/RX; Derau matahari dengan sumber, indikator dan spektrum; DEBUG FORMULE bergaya Word dengan simpan .docx; tab baru KABEL KOAKSIAL, KONTAK PENULIS dan LISENSI; manual di dalam program (MANUAL PENGGUNAAN LENGKAP).",
             "Cari di manual: ketik sebuah kata dan tekan Enter; Enter lagi untuk hasil berikutnya.",
-            "MANUAL PENGGUNAAN LENGKAP",
+            "MANUAL PENGGUNAAN",
             "Rumus sama di semua bahasa.",
             "tangkapan langsung tab",
             "Klik gambar untuk membukanya.",
@@ -15217,7 +15227,7 @@ namespace LunaCalc
             "≡ = kabel digabung dalam satu baris: jenis sama, diameter sama (±0,2 mm) dan redaman dalam 0,2 dB/100 m di semua pita; nilainya rata-rata.",
             "juga: = nama dagang setara lainnya (misalnya LMR-400 = HF400, CNT-400).",
             "Kode Tiongkok (50-3, 50-5, 50-7, 50-9, 50-12…) menunjukkan diameter dielektrik dalam mm: 50-7 ≈ kelas RG-213/LMR-400, 50-9 ≈ 1/2\" superfleksibel, 50-12 ≈ 1/2\" bergelombang.",
-            "Sumber setiap kabel ada di tooltip barisnya dan di manual, § 3.8.",
+            "Sumber setiap kabel ada di tooltip barisnya dan di manual «TEORI DAN TIPS EME», § 1.8.",
             "juga:",
             "Sumber:",
             "PERBANDINGAN KABEL YANG DICENTANG",
@@ -15236,7 +15246,7 @@ namespace LunaCalc
             "Tulis e-mail",
             "Salin alamat",
             "Punya transverter untuk diperkenalkan?",
-            "Jika ingin memperkenalkan transverter lain atau transvertermu, kirim e-mail ke penulis: datanya akan ditambahkan, beserta sumbernya, ke bab 3.7.2 manual.",
+            "Jika ingin memperkenalkan transverter lain atau transvertermu, kirim e-mail ke penulis: datanya akan ditambahkan, beserta sumbernya, ke bab 1.7.2 manual «TEORI DAN TIPS EME».",
             "Program ini didukung oleh",
             "Lisensi",
             "YAEC adalah program bebas, ditulis oleh seorang radio amatir untuk para radio amatir. Kodenya juga dikembangkan dengan bantuan asisten kecerdasan buatan, dan lisensinya mengambil cara kerjanya: benar-benar berguna, selalu mengatakan apa adanya, menunjukkan penalarannya, tidak merugikan siapa pun dan mengakui karya orang lain. Di bawah ini prinsipnya, lalu ketentuannya.",
@@ -15281,7 +15291,7 @@ namespace LunaCalc
             "Di atas empat indikator, di kiri sumber data (NOAA RSTN disarankan, atau F10.7 dari NOAA atau Penticton, atau alamat kustom) dengan stasiun-stasiunnya, di kanan spektrum fluks matahari dengan ekstrapolasi hingga frekuensi kerja.",
             "Manual ini, di dalam program dan dalam semua bahasa: daftar isi yang dapat diklik, pencarian, rumus dan sumber.",
             "Ditata seperti dokumen Word, dengan rumus bergaya editor persamaan: dapat disalin ke papan klip atau disimpan sebagai Word (.docx).",
-            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG FORMULE), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN LENGKAP, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (ABOUT & CREDITS, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
+            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG FORMULE), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (ABOUT & CREDITS, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
             "Terima kasih telah memakai saya: semoga saya bermanfaat bagimu.",
             "Tidak",
             "Ya",
@@ -15338,7 +15348,7 @@ namespace LunaCalc
             "(penomoran bagian {0})",
             "baru",
             "Kredit untuk algoritma, rumus dan data yang digunakan",
-            "Kredit, beserta penulis, karya dan tautannya, ada di bab «Sumber, data dan kredit» dalam MANUALE D'USO APPROFONDITO.",
+            "Kredit, beserta penulis, karya dan tautannya, ada di bab «Sumber, data dan kredit» dalam TEORI DAN TIPS EME.",
             "noise figure radio IF (dB)",
             "NF transverter + radio (dB)",
             "NF transverter saja: 1,0 dB",
@@ -15351,7 +15361,7 @@ namespace LunaCalc
             "penguji beta",
             "UCAPAN TERIMA KASIH",
             "Panjang gelombang dan penampang radar Bulan",
-            "Model transverter: program mengambil angka derau dan penguatannya dari tabel di manual (§ 3.7.2). Dengan \"kustom\" kamu mengisinya sendiri.",
+            "Model transverter: program mengambil angka derau dan penguatannya dari tabel di manual «TEORI DAN TIPS EME» (§ 1.7.2). Dengan \"kustom\" kamu mengisinya sendiri.",
             "Penguatan satu antena",
             "Lebar pita",
             "Panjang",
@@ -15504,6 +15514,7 @@ namespace LunaCalc
             "produsen",
             "jenis",
             "diurutkan menurut {0}",
+            "Kata pengantar penulis",
         };
 
         public static readonly string[] RU = {
@@ -16424,13 +16435,13 @@ namespace LunaCalc
             "Цвета",
             "Шрифт",
             "Аэроснимки (Разведка моих препятствий)",
-            "Коэффициент шума радиостанций и трансвертеров (руководство, § 3.7)",
+            "Коэффициент шума радиостанций и трансвертеров (руководство «ТЕОРИЯ И СОВЕТЫ ПО EME», § 1.7)",
             "Измерения Адама Фарсона VA7OJ/AB4OJ (IC-9700, FT-991) и DF9IC с DARC-OV Durlach A35 (аппаратура 144 МГц); технические описания Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; станция EME W3SZ.",
-            "Доплер, CFOM и CAT (руководство, § 3.10)",
+            "Доплер, CFOM и CAT (руководство «ТЕОРИЯ И СОВЕТЫ ПО EME», § 1.10)",
             "Боб Аткинс KA1GT, «Doppler 101 for 1296 MHz EME (…and other bands)» и «CFOM – Constant Frequency On Moon Doppler Mode».",
             "Локатор Maidenhead (руководство, § 2.2)",
             "Википедия, «Maidenhead Locator System»: происхождение (G4ANB, IARU 1980), структура, расширения сверх 8 символов.",
-            "Наведение и инструменты для верхних диапазонов (руководство, § 3.11)",
+            "Наведение и инструменты для верхних диапазонов (руководство «ТЕОРИЯ И СОВЕТЫ ПО EME», § 1.11)",
             "Геральд Ихнингер OE2IGL и Иоахим Кёппен DF3GJ, «EME Link Budget & Analysis Tool (1-300 GHz)».",
             "Литература SM5BSZ по EME",
             "Лейф Осбринк SM5BSZ, «Selecting Polarisation for EME» (1997) и «EME Path Modulation» (2000).",
@@ -16444,7 +16455,7 @@ namespace LunaCalc
             "Логотип секции ARI «Valle del Liri» (03-04), используется с патронатом секции.",
             "beta 27 - диапазоны только до 432 МГц; заставка с логотипом и патронатом секции ARI Valle del Liri; строка благодарности в окне закрытия; бенгальский, арабский и турецкий языки (17 языков); главный экран с четырьмя цветными карточками, К РАСЧЁТАМ и К НЕБЕСНОМУ СВОДУ, локатор до 14 символов, выбор шрифта и тёмные подсказки; Разведка моих препятствий с непрозрачностью и тоном серого; выделение дня в Расстоянии и Dgrd; кнопка Столбцы в Положении Луны; Бюджет EME со схемой установки TX/RX; Шум Солнца с источниками, индикаторами и спектром; DEBUG FORMULE в стиле Word с сохранением в .docx; новые вкладки КОАКСИАЛЬНЫЕ КАБЕЛИ, КОНТАКТЫ АВТОРА и ЛИЦЕНЗИЯ; руководство внутри программы (ПОДРОБНОЕ РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ).",
             "Поиск в руководстве: введите слово и нажмите Enter; снова Enter — следующий результат.",
-            "ПОДРОБНОЕ РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ",
+            "РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ",
             "Формулы одинаковы на всех языках.",
             "живой снимок вкладки",
             "Щёлкните по изображению, чтобы открыть его.",
@@ -16477,7 +16488,7 @@ namespace LunaCalc
             "≡ = кабели, объединённые в одну строку: тот же тип, тот же диаметр (±0,2 мм) и затухание в пределах 0,2 дБ/100 м на всех диапазонах; значение — среднее.",
             "также: = другие эквивалентные торговые названия (например LMR-400 = HF400, CNT-400).",
             "Китайские обозначения (50-3, 50-5, 50-7, 50-9, 50-12…) указывают диаметр диэлектрика в мм: 50-7 ≈ класс RG-213/LMR-400, 50-9 ≈ 1/2\" сверхгибкий, 50-12 ≈ 1/2\" гофрированный.",
-            "Источники каждого кабеля указаны в подсказке его строки и в руководстве, § 3.8.",
+            "Источники каждого кабеля указаны в подсказке его строки и в руководстве «ТЕОРИЯ И СОВЕТЫ ПО EME», § 1.8.",
             "также:",
             "Источники:",
             "СРАВНЕНИЕ ОТМЕЧЕННЫХ КАБЕЛЕЙ",
@@ -16496,7 +16507,7 @@ namespace LunaCalc
             "Написать письмо",
             "Копировать адрес",
             "Хотите рассказать о трансвертере?",
-            "Если вы хотите рассказать о других трансвертерах или о своём, напишите автору: данные будут добавлены с указанием источника в главу 3.7.2 руководства.",
+            "Если вы хотите рассказать о других трансвертерах или о своём, напишите автору: данные будут добавлены с указанием источника в главу 1.7.2 руководства «ТЕОРИЯ И СОВЕТЫ ПО EME».",
             "Программа выпущена под патронатом",
             "Лицензия",
             "YAEC — свободная программа, написанная радиолюбителем для радиолюбителей. Её код разрабатывался также с помощью ассистента на основе искусственного интеллекта, и лицензия перенимает его способ работы: быть действительно полезной, всегда говорить, как обстоят дела, показывать ход рассуждений, никому не вредить и признавать труд других. Ниже — принципы, затем сами условия.",
@@ -16541,7 +16552,7 @@ namespace LunaCalc
             "Вверху четыре индикатора, слева источник данных (рекомендуется NOAA RSTN, либо F10.7 от NOAA или Пентиктона, либо свой адрес) со станциями, справа спектр солнечного потока с экстраполяцией до рабочей частоты.",
             "Это руководство, внутри программы и на всех языках: кликабельное оглавление, поиск, формулы и источники.",
             "Оно свёрстано как документ Word, с формулами в стиле редактора уравнений: его можно скопировать в буфер обмена или сохранить в Word (.docx).",
-            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, DEBUG FORMULE), Журнал (Карта WWL и ADIF), Справка и инструменты (ПОДРОБНОЕ РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (ABOUT & CREDITS, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
+            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, DEBUG FORMULE), Журнал (Карта WWL и ADIF), Справка и инструменты (РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (ABOUT & CREDITS, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
             "Спасибо, что пользовались мной: надеюсь, я был вам полезен.",
             "Нет",
             "Да",
@@ -16598,7 +16609,7 @@ namespace LunaCalc
             "(нумерация раздела {0})",
             "новое",
             "Благодарности за использованные алгоритмы, формулы и данные",
-            "Благодарности с авторами, работами и ссылками находятся в главе «Источники, данные и благодарности» руководства MANUALE D'USO APPROFONDITO.",
+            "Благодарности с авторами, работами и ссылками находятся в главе «Источники, данные и благодарности» руководства ТЕОРИЯ И СОВЕТЫ ПО EME.",
             "коэффициент шума трансивера ПЧ (дБ)",
             "NF трансвертер + трансивер (дБ)",
             "NF одного трансвертера: 1,0 дБ",
@@ -16611,7 +16622,7 @@ namespace LunaCalc
             "бета-тестеров",
             "БЛАГОДАРНОСТИ",
             "Длина волны и ЭПР Луны",
-            "Модель трансвертера: программа берёт коэффициент шума и усиление из таблицы руководства (§ 3.7.2). При выборе «пользовательский» вы вводите их сами.",
+            "Модель трансвертера: программа берёт коэффициент шума и усиление из таблицы руководства «ТЕОРИЯ И СОВЕТЫ ПО EME» (§ 1.7.2). При выборе «пользовательский» вы вводите их сами.",
             "Усиление одной антенны",
             "Полоса пропускания",
             "Длина",
@@ -16764,6 +16775,7 @@ namespace LunaCalc
             "производитель",
             "тип",
             "упорядочены: {0}",
+            "Предисловие автора",
         };
 
         public static readonly string[] UK = {
@@ -17684,13 +17696,13 @@ namespace LunaCalc
             "Кольори",
             "Шрифт",
             "Аерознімки (Розвідка моїх перешкод)",
-            "Коефіцієнт шуму радіостанцій і трансвертерів (посібник, § 3.7)",
+            "Коефіцієнт шуму радіостанцій і трансвертерів (посібник «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME», § 1.7)",
             "Вимірювання Адама Фарсона VA7OJ/AB4OJ (IC-9700, FT-991) і DF9IC з DARC-OV Durlach A35 (апаратура 144 МГц); технічні описи Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; станція EME W3SZ.",
-            "Доплер, CFOM і CAT (посібник, § 3.10)",
+            "Доплер, CFOM і CAT (посібник «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME», § 1.10)",
             "Боб Аткінс KA1GT, «Doppler 101 for 1296 MHz EME (…and other bands)» і «CFOM – Constant Frequency On Moon Doppler Mode».",
             "Локатор Maidenhead (посібник, § 2.2)",
             "Вікіпедія, «Maidenhead Locator System»: походження (G4ANB, IARU 1980), структура, розширення понад 8 символів.",
-            "Наведення та інструменти для верхніх діапазонів (посібник, § 3.11)",
+            "Наведення та інструменти для верхніх діапазонів (посібник «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME», § 1.11)",
             "Геральд Іхнінгер OE2IGL і Йоахім Кеппен DF3GJ, «EME Link Budget & Analysis Tool (1-300 GHz)».",
             "Література SM5BSZ з EME",
             "Лейф Осбрінк SM5BSZ, «Selecting Polarisation for EME» (1997) і «EME Path Modulation» (2000).",
@@ -17704,7 +17716,7 @@ namespace LunaCalc
             "Логотип секції ARI «Valle del Liri» (03-04), використовується з патронатом секції.",
             "beta 27 - діапазони лише до 432 МГц; заставка з логотипом і патронатом секції ARI Valle del Liri; рядок подяки у вікні закриття; бенгальська, арабська та турецька мови (17 мов); головний екран із чотирма кольоровими картками, ДО РОЗРАХУНКІВ і ДО НЕБЕСНОГО СКЛЕПІННЯ, локатор до 14 символів, вибір шрифту і темні підказки; Розвідка моїх перешкод з непрозорістю і тоном сірого; виділення дня у Відстані і Dgrd; кнопка Стовпці в Положенні Місяця; Бюджет EME зі схемою установки TX/RX; Шум Сонця з джерелами, індикаторами і спектром; DEBUG FORMULE у стилі Word зі збереженням у .docx; нові вкладки КОАКСІАЛЬНІ КАБЕЛІ, КОНТАКТИ АВТОРА і ЛІЦЕНЗІЯ; посібник усередині програми (ДОКЛАДНИЙ ПОСІБНИК КОРИСТУВАЧА).",
             "Пошук у посібнику: введіть слово і натисніть Enter; знову Enter — наступний результат.",
-            "ДОКЛАДНИЙ ПОСІБНИК КОРИСТУВАЧА",
+            "ПОСІБНИК КОРИСТУВАЧА",
             "Формули однакові всіма мовами.",
             "живий знімок вкладки",
             "Клацніть на зображення, щоб відкрити його.",
@@ -17737,7 +17749,7 @@ namespace LunaCalc
             "≡ = кабелі, об'єднані в один рядок: той самий тип, той самий діаметр (±0,2 мм) і загасання в межах 0,2 дБ/100 м на всіх діапазонах; значення — середнє.",
             "також: = інші еквівалентні торгові назви (наприклад LMR-400 = HF400, CNT-400).",
             "Китайські позначення (50-3, 50-5, 50-7, 50-9, 50-12…) вказують діаметр діелектрика в мм: 50-7 ≈ клас RG-213/LMR-400, 50-9 ≈ 1/2\" надгнучкий, 50-12 ≈ 1/2\" гофрований.",
-            "Джерела кожного кабелю вказано в підказці його рядка і в посібнику, § 3.8.",
+            "Джерела кожного кабелю вказано в підказці його рядка і в посібнику «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME», § 1.8.",
             "також:",
             "Джерела:",
             "ПОРІВНЯННЯ ПОЗНАЧЕНИХ КАБЕЛІВ",
@@ -17756,7 +17768,7 @@ namespace LunaCalc
             "Написати листа",
             "Копіювати адресу",
             "Хочете розповісти про трансвертер?",
-            "Якщо ви хочете розповісти про інші трансвертери або про свій, напишіть авторові: дані буде додано із зазначенням джерела до розділу 3.7.2 посібника.",
+            "Якщо ви хочете розповісти про інші трансвертери або про свій, напишіть авторові: дані буде додано із зазначенням джерела до розділу 1.7.2 посібника «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME».",
             "Програма випущена під патронатом",
             "Ліцензія",
             "YAEC — вільна програма, написана радіоаматором для радіоаматорів. Її код розроблявся також за допомогою асистента на основі штучного інтелекту, і ліцензія переймає його спосіб роботи: бути справді корисною, завжди казати, як є, показувати хід міркувань, нікому не шкодити й визнавати працю інших. Нижче — принципи, потім самі умови.",
@@ -17801,7 +17813,7 @@ namespace LunaCalc
             "Угорі чотири індикатори, ліворуч джерело даних (рекомендовано NOAA RSTN, або F10.7 від NOAA чи Пентіктона, або власна адреса) зі станціями, праворуч спектр сонячного потоку з екстраполяцією до робочої частоти.",
             "Цей посібник, усередині програми і всіма мовами: зміст із посиланнями, пошук, формули і джерела.",
             "Його зверстано як документ Word, із формулами в стилі редактора рівнянь: його можна скопіювати в буфер обміну або зберегти у Word (.docx).",
-            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, DEBUG FORMULE), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ДОКЛАДНИЙ ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ABOUT & CREDITS, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
+            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, DEBUG FORMULE), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ABOUT & CREDITS, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
             "Дякую, що користувалися мною: сподіваюся, я був вам корисний.",
             "Ні",
             "Так",
@@ -17858,7 +17870,7 @@ namespace LunaCalc
             "(нумерація розділу {0})",
             "нове",
             "Подяки за використані алгоритми, формули й дані",
-            "Подяки з авторами, працями й посиланнями наведено в розділі «Джерела, дані та подяки» посібника MANUALE D'USO APPROFONDITO.",
+            "Подяки з авторами, працями й посиланнями наведено в розділі «Джерела, дані та подяки» посібника ТЕОРІЯ ТА ПОРАДИ ЩОДО EME.",
             "коефіцієнт шуму трансивера ПЧ (дБ)",
             "NF трансвертер + трансивер (дБ)",
             "NF лише трансвертера: 1,0 дБ",
@@ -17871,7 +17883,7 @@ namespace LunaCalc
             "бета-тестерів",
             "ПОДЯКИ",
             "Довжина хвилі та ЕПР Місяця",
-            "Модель трансвертера: програма бере коефіцієнт шуму та підсилення з таблиці посібника (§ 3.7.2). Для «користувацький» ви вводите їх самі.",
+            "Модель трансвертера: програма бере коефіцієнт шуму та підсилення з таблиці посібника «ТЕОРІЯ ТА ПОРАДИ ЩОДО EME» (§ 1.7.2). Для «користувацький» ви вводите їх самі.",
             "Підсилення однієї антени",
             "Смуга пропускання",
             "Довжина",
@@ -18024,6 +18036,7 @@ namespace LunaCalc
             "виробник",
             "тип",
             "упорядковано: {0}",
+            "Передмова автора",
         };
 
         public static readonly string[] AF = {
@@ -18944,13 +18957,13 @@ namespace LunaCalc
             "Kleure",
             "Lettertipe",
             "Lugfoto's (Verkenning van my hindernisse)",
-            "Geraasfaktor van radio's en transverters (handleiding, § 3.7)",
+            "Geraasfaktor van radio's en transverters (handleiding «TEORIE EN WENKE OOR EME», § 1.7)",
             "Metings deur Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) en deur DF9IC met die DARC-OV Durlach A35 (144 MHz-toerusting); datablaaie van Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; EME-stasie van W3SZ.",
-            "Doppler, CFOM en CAT (handleiding, § 3.10)",
+            "Doppler, CFOM en CAT (handleiding «TEORIE EN WENKE OOR EME», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" en \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Maidenhead-locator (handleiding, § 2.2)",
             "Wikipedia, \"Maidenhead Locator System\": oorsprong (G4ANB, IARU 1980), struktuur, uitbreidings bo 8 karakters.",
-            "Rigting en gereedskap vir die hoër bande (handleiding, § 3.11)",
+            "Rigting en gereedskap vir die hoër bande (handleiding «TEORIE EN WENKE OOR EME», § 1.11)",
             "Gerald Ihninger OE2IGL en Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "EME-literatuur deur SM5BSZ",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) en \"EME Path Modulation\" (2000).",
@@ -18964,7 +18977,7 @@ namespace LunaCalc
             "Logo van die ARI-afdeling \"Valle del Liri\" (03-04), gebruik met die beskerming van die afdeling.",
             "beta 27 - bande net tot 432 MHz; beginskerm met die logo en die beskerming van die ARI-afdeling Valle del Liri; dankiereël in die sluitvenster; tale Bengaals, Arabies en Turks (17 tale); hoofskerm met vier gekleurde kaarte, NA DIE BEREKENINGE en NA LUGAANSIG, locator tot 14 karakters, lettertipekeuse en donker wenke; Verkenning van my hindernisse met ondeursigtigheid en tint van die grys; uitgeligte dag in Afstand en Dgrd; Kolomme-knoppie in Maanposisie; EME-begroting met die skema van die TX/RX-installasie; Songeraas met bronne, aanwysers en spektrum; DEBUG FORMULE in Word-styl met stoor as .docx; nuwe oortjies KOAKSIALE KABELS, KONTAK MET DIE OUTEUR en LISENSIE; handleiding binne die program (UITGEBREIDE GEBRUIKERSHANDLEIDING).",
             "Soek in die handleiding: tik 'n woord en druk Enter; weer Enter vir die volgende resultaat.",
-            "UITGEBREIDE GEBRUIKERSHANDLEIDING",
+            "GEBRUIKERSHANDLEIDING",
             "Die formules is dieselfde in alle tale.",
             "regstreekse skermskoot van die oortjie",
             "Klik op die prent om dit oop te maak.",
@@ -18997,7 +19010,7 @@ namespace LunaCalc
             "≡ = kabels in een ry saamgegroepeer: dieselfde tipe, dieselfde deursnee (±0,2 mm) en verswakking binne 0,2 dB/100 m in alle bande; die waarde is die gemiddelde.",
             "ook: = ander gelykwaardige handelsname (byvoorbeeld LMR-400 = HF400, CNT-400).",
             "Die Chinese kodes (50-3, 50-5, 50-7, 50-9, 50-12…) gee die deursnee van die diëlektrikum in mm: 50-7 ≈ klas RG-213/LMR-400, 50-9 ≈ 1/2\" superbuigsaam, 50-12 ≈ 1/2\" gegolf.",
-            "Die bronne van elke kabel staan in die wenk van sy ry en in die handleiding, § 3.8.",
+            "Die bronne van elke kabel staan in die wenk van sy ry en in die handleiding «TEORIE EN WENKE OOR EME», § 1.8.",
             "ook:",
             "Bronne:",
             "VERGELYKING VAN DIE GEMERKTE KABELS",
@@ -19016,7 +19029,7 @@ namespace LunaCalc
             "Skryf 'n e-pos",
             "Kopieer die adres",
             "Het jy 'n transverter om bekend te stel?",
-            "As jy ander transverters of jou eie transverter bekend wil stel, skryf 'n e-pos aan die outeur: die data sal met hul bron by hoofstuk 3.7.2 van die handleiding gevoeg word.",
+            "As jy ander transverters of jou eie transverter bekend wil stel, skryf 'n e-pos aan die outeur: die data sal met hul bron by hoofstuk 1.7.2 van die handleiding «TEORIE EN WENKE OOR EME» gevoeg word.",
             "Die program is onder die beskerming van die",
             "Lisensie",
             "YAEC is 'n vrye program, deur 'n radioamateur vir radioamateurs geskryf. Sy kode is ook met die hulp van 'n KI-assistent ontwikkel, en die lisensie neem sy manier van werk oor: werklik nuttig wees, altyd sê hoe dinge is, die eie redenasie wys, niemand skade aandoen nie en die werk van ander erken. Hieronder die beginsels en dan die eintlike voorwaardes.",
@@ -19061,7 +19074,7 @@ namespace LunaCalc
             "Bo vier aanwysers, links die databron (NOAA RSTN aanbeveel, of F10.7 van NOAA of Penticton, of 'n eie adres) met die stasies, regs die spektrum van die sonvloed met die ekstrapolasie tot die werkfrekwensie.",
             "Hierdie handleiding, binne die program en in alle tale: klikbare inhoudsopgawe, soek, formules en bronne.",
             "Dit is soos 'n Word-dokument uitgelê, met die formules in die styl van die vergelykingsredigeerder: dit kan na die knipbord gekopieer of as Word (.docx) gestoor word.",
-            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, DEBUG FORMULE), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (UITGEBREIDE GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (ABOUT & CREDITS, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
+            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, DEBUG FORMULE), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (ABOUT & CREDITS, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
             "Dankie dat jy my gebruik het: ek hoop ek was vir jou nuttig.",
             "Nee",
             "Ja",
@@ -19118,7 +19131,7 @@ namespace LunaCalc
             "(nommering van afdeling {0})",
             "nuut",
             "Erkennings vir die algoritmes, formules en data wat gebruik is",
-            "Die erkennings, met die outeurs, werke en skakels, is in die hoofstuk “Bronne, data en erkennings” van die MANUALE D'USO APPROFONDITO.",
+            "Die erkennings, met die outeurs, werke en skakels, is in die hoofstuk “Bronne, data en erkennings” van die TEORIE EN WENKE OOR EME.",
             "geraassyfer van die MF-radio (dB)",
             "NF transverter + radio (dB)",
             "NF van net die transverter: 1,0 dB",
@@ -19131,7 +19144,7 @@ namespace LunaCalc
             "beta-toetsers",
             "ERKENNINGS",
             "Golflengte en radardeursnee van die Maan",
-            "Transverter-model: die program neem sy ruissyfer en versterking uit die tabel in die handleiding (§ 3.7.2). Met \"pasgemaak\" vul jy dit self in.",
+            "Transverter-model: die program neem sy ruissyfer en versterking uit die tabel in die handleiding «TEORIE EN WENKE OOR EME» (§ 1.7.2). Met \"pasgemaak\" vul jy dit self in.",
             "Wins van een antenna",
             "Bandwydte",
             "Lengte",
@@ -19284,6 +19297,7 @@ namespace LunaCalc
             "vervaardiger",
             "tipe",
             "gesorteer volgens {0}",
+            "Voorwoord van die outeur",
         };
 
         public static readonly string[] BN = {
@@ -20203,13 +20217,13 @@ namespace LunaCalc
             "রং",
             "ফন্ট",
             "আকাশচিত্র (আমার বাধাগুলির অনুসন্ধান)",
-            "রেডিও ও ট্রান্সভার্টারের নয়েজ ফিগার (ম্যানুয়াল § 3.7)",
+            "রেডিও ও ট্রান্সভার্টারের নয়েজ ফিগার (ম্যানুয়াল «EME তত্ত্ব ও পরামর্শ» § 1.7)",
             "Adam Farson VA7OJ/AB4OJ-এর পরিমাপ (IC-9700, FT-991) এবং DARC-OV Durlach A35 দিয়ে DF9IC-এর পরিমাপ (144 MHz যন্ত্র); Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA-এর ডেটাশিট; W3SZ-এর EME স্টেশন।",
-            "ডপলার, CFOM ও CAT (ম্যানুয়াল § 3.10)",
+            "ডপলার, CFOM ও CAT (ম্যানুয়াল «EME তত্ত্ব ও পরামর্শ» § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" ও \"CFOM – Constant Frequency On Moon Doppler Mode\"।",
             "মেইডেনহেড লোকেটর (ম্যানুয়াল § 2.2)",
             "উইকিপিডিয়া, \"Maidenhead Locator System\": উৎপত্তি (G4ANB, IARU 1980), গঠন, 8 অক্ষরের বেশি সম্প্রসারণ।",
-            "উচ্চতর ব্যান্ডের জন্য লক্ষ্য নির্ধারণ ও সরঞ্জাম (ম্যানুয়াল § 3.11)",
+            "উচ্চতর ব্যান্ডের জন্য লক্ষ্য নির্ধারণ ও সরঞ্জাম (ম্যানুয়াল «EME তত্ত্ব ও পরামর্শ» § 1.11)",
             "Gerald Ihninger OE2IGL ও Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\"।",
             "SM5BSZ-এর EME রচনা",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) ও \"EME Path Modulation\" (2000)।",
@@ -20223,7 +20237,7 @@ namespace LunaCalc
             "ARI \"Valle del Liri\" শাখার (03-04) লোগো, শাখার পৃষ্ঠপোষকতায় ব্যবহৃত।",
             "beta 27 - ব্যান্ড কেবল 432 MHz পর্যন্ত; ARI Valle del Liri শাখার লোগো ও পৃষ্ঠপোষকতাসহ শুরুর পর্দা; বন্ধের জানালায় ধন্যবাদের লাইন; বাংলা, আরবি ও তুর্কি ভাষা (17টি ভাষা); চারটি রঙিন কার্ডসহ মূল পর্দা, হিসাবে যান ও আকাশ-গম্বুজে যান, 14 অক্ষর পর্যন্ত লোকেটর, ফন্ট নির্বাচন ও গাঢ় টুলটিপ; আমার বাধাগুলির অনুসন্ধানে ধূসরের অস্বচ্ছতা ও রং; দূরত্ব ও Dgrd-এ দিন হাইলাইট; চাঁদের অবস্থানে কলাম বোতাম; TX/RX ব্যবস্থার চিত্রসহ EME বাজেট; উৎস, নির্দেশক ও বর্ণালিসহ সৌর নয়েজ; Word শৈলীতে DEBUG FORMULE ও .docx সংরক্ষণ; নতুন ট্যাব কোঅ্যাক্সিয়াল কেবল, লেখকের সঙ্গে যোগাযোগ ও লাইসেন্স; প্রোগ্রামের ভেতরে ম্যানুয়াল (বিস্তারিত ব্যবহার নির্দেশিকা)।",
             "ম্যানুয়ালে খুঁজুন: একটি শব্দ লিখে Enter চাপুন; পরের ফলের জন্য আবার Enter।",
-            "বিস্তারিত ব্যবহার নির্দেশিকা",
+            "ব্যবহার নির্দেশিকা",
             "সূত্রগুলি সব ভাষায় একই।",
             "ট্যাবের সরাসরি স্ক্রিনশট",
             "খুলতে ছবিতে ক্লিক করুন।",
@@ -20256,7 +20270,7 @@ namespace LunaCalc
             "≡ = এক সারিতে একত্রিত কেবল: একই ধরন, একই ব্যাস (±0.2 mm) ও সব ব্যান্ডে 0.2 dB/100 m-এর মধ্যে ক্ষয়; মানটি গড়।",
             "আরও: = অন্যান্য সমতুল্য বাণিজ্যিক নাম (যেমন LMR-400 = HF400, CNT-400)।",
             "চীনা কোড (50-3, 50-5, 50-7, 50-9, 50-12…) ডাইইলেকট্রিকের ব্যাস mm-এ নির্দেশ করে: 50-7 ≈ RG-213/LMR-400 শ্রেণি, 50-9 ≈ 1/2\" অতি-নমনীয়, 50-12 ≈ 1/2\" ঢেউখেলানো।",
-            "প্রতিটি কেবলের উৎস তার সারির টুলটিপে ও ম্যানুয়ালের § 3.8-এ আছে।",
+            "প্রতিটি কেবলের উৎস তার সারির টুলটিপে ও ম্যানুয়ালের «EME তত্ত্ব ও পরামর্শ» § 1.8-এ আছে।",
             "আরও:",
             "উৎস:",
             "চিহ্নিত কেবলের তুলনা",
@@ -20275,7 +20289,7 @@ namespace LunaCalc
             "ই-মেইল লিখুন",
             "ঠিকানা কপি করুন",
             "পরিচিত করানোর মতো কোনো ট্রান্সভার্টার আছে?",
-            "অন্য ট্রান্সভার্টার বা আপনার ট্রান্সভার্টার পরিচিত করাতে চাইলে লেখককে ই-মেইল করুন: তথ্য উৎসসহ ম্যানুয়ালের 3.7.2 অধ্যায়ে যোগ করা হবে।",
+            "অন্য ট্রান্সভার্টার বা আপনার ট্রান্সভার্টার পরিচিত করাতে চাইলে লেখককে ই-মেইল করুন: তথ্য উৎসসহ ম্যানুয়ালের «EME তত্ত্ব ও পরামর্শ» 1.7.2 অধ্যায়ে যোগ করা হবে।",
             "প্রোগ্রামটির পৃষ্ঠপোষক:",
             "লাইসেন্স",
             "YAEC একটি মুক্ত প্রোগ্রাম, একজন রেডিও অপেশাদার রেডিও অপেশাদারদের জন্য লিখেছেন। এর কোড একটি কৃত্রিম বুদ্ধিমত্তা সহকারীর সাহায্যেও তৈরি, এবং লাইসেন্সটি তার কাজের ধরন গ্রহণ করে: সত্যিই উপকারী হওয়া, সবসময় যা সত্য তা বলা, নিজের যুক্তি দেখানো, কারও ক্ষতি না করা এবং অন্যের কাজের স্বীকৃতি দেওয়া। নিচে নীতিগুলি, তারপর আসল শর্তাবলি।",
@@ -20320,7 +20334,7 @@ namespace LunaCalc
             "ওপরে চারটি নির্দেশক, বামে স্টেশনসহ তথ্যের উৎস (NOAA RSTN প্রস্তাবিত, অথবা NOAA বা পেন্টিকটনের F10.7, অথবা নিজস্ব ঠিকানা), ডানে কাজের কম্পাঙ্ক পর্যন্ত এক্সট্রাপোলেশনসহ সৌর ফ্লাক্সের বর্ণালি।",
             "এই ম্যানুয়াল, প্রোগ্রামের ভেতরে ও সব ভাষায়: ক্লিকযোগ্য সূচি, অনুসন্ধান, সূত্র ও উৎস।",
             "এটি Word নথির মতো সাজানো, সূত্রগুলি সমীকরণ সম্পাদকের শৈলীতে: ক্লিপবোর্ডে কপি বা Word (.docx) হিসেবে সংরক্ষণ করা যায়।",
-            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, DEBUG FORMULE), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (বিস্তারিত ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (ABOUT & CREDITS, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
+            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, DEBUG FORMULE), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (ABOUT & CREDITS, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
             "আমাকে ব্যবহার করার জন্য ধন্যবাদ: আশা করি আপনার কাজে লেগেছি।",
             "না",
             "হ্যাঁ",
@@ -20377,7 +20391,7 @@ namespace LunaCalc
             "(অংশ {0}-এর নম্বর)",
             "নতুন",
             "ব্যবহৃত অ্যালগরিদম, সূত্র ও তথ্যের কৃতজ্ঞতা",
-            "লেখক, রচনা ও লিংকসহ কৃতজ্ঞতা MANUALE D'USO APPROFONDITO-এর «উৎস, তথ্য ও কৃতজ্ঞতা» অধ্যায়ে আছে।",
+            "লেখক, রচনা ও লিংকসহ কৃতজ্ঞতা EME তত্ত্ব ও পরামর্শ-এর «উৎস, তথ্য ও কৃতজ্ঞতা» অধ্যায়ে আছে।",
             "IF রেডিওর নয়েজ ফিগার (dB)",
             "NF ট্রান্সভার্টার + রেডিও (dB)",
             "শুধু ট্রান্সভার্টারের NF: 1.0 dB",
@@ -20390,7 +20404,7 @@ namespace LunaCalc
             "বিটা-টেস্টার",
             "কৃতজ্ঞতা",
             "তরঙ্গদৈর্ঘ্য ও চাঁদের রাডার প্রস্থচ্ছেদ",
-            "ট্রান্সভার্টারের মডেল: প্রোগ্রাম ম্যানুয়ালের সারণি (§ 3.7.2) থেকে এর নয়েজ ফিগার ও গেইন নেয়। \"নিজস্ব\" বাছলে আপনি নিজে লেখেন।",
+            "ট্রান্সভার্টারের মডেল: প্রোগ্রাম ম্যানুয়ালের «EME তত্ত্ব ও পরামর্শ» সারণি (§ 1.7.2) থেকে এর নয়েজ ফিগার ও গেইন নেয়। \"নিজস্ব\" বাছলে আপনি নিজে লেখেন।",
             "একক অ্যান্টেনার গেইন",
             "ব্যান্ডউইথ",
             "দৈর্ঘ্য",
@@ -20543,6 +20557,7 @@ namespace LunaCalc
             "প্রস্তুতকারক",
             "ধরন",
             "{0} অনুযায়ী সাজানো",
+            "লেখকের ভূমিকা",
         };
 
         public static readonly string[] AR = {
@@ -21462,13 +21477,13 @@ namespace LunaCalc
             "الألوان",
             "الخط",
             "صور جوية (استطلاع عوائقي)",
-            "عامل ضجيج الأجهزة والمحوّلات الترددية (الدليل، § 3.7)",
+            "عامل ضجيج الأجهزة والمحوّلات الترددية (الدليل «نظرية EME ونصائح»، § 1.7)",
             "قياسات Adam Farson VA7OJ/AB4OJ (IC-9700، FT-991) وقياسات DF9IC باستخدام DARC-OV Durlach A35 (أجهزة 144 MHz)؛ نشرات بيانات Down East Microwave وKuhne electronic وQ5 Signal وHA1YA؛ محطة EME لدى W3SZ.",
-            "دوبلر وCFOM وCAT (الدليل، § 3.10)",
+            "دوبلر وCFOM وCAT (الدليل «نظرية EME ونصائح»، § 1.10)",
             "Bob Atkins KA1GT، \"Doppler 101 for 1296 MHz EME (…and other bands)\" و\"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "محدِّد موقع Maidenhead (الدليل، § 2.2)",
             "ويكيبيديا، \"Maidenhead Locator System\": الأصل (G4ANB، IARU 1980)، البنية، الامتدادات بعد 8 أحرف.",
-            "التوجيه والأدوات للنطاقات الأعلى (الدليل، § 3.11)",
+            "التوجيه والأدوات للنطاقات الأعلى (الدليل «نظرية EME ونصائح»، § 1.11)",
             "Gerald Ihninger OE2IGL وJoachim Köppen DF3GJ، \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "مؤلفات SM5BSZ عن EME",
             "Leif Åsbrink SM5BSZ، \"Selecting Polarisation for EME\" (1997) و\"EME Path Modulation\" (2000).",
@@ -21482,7 +21497,7 @@ namespace LunaCalc
             "شعار فرع ARI \"Valle del Liri\" (03-04)، مستخدم برعاية الفرع.",
             "beta 27 - النطاقات حتى 432 MHz فقط؛ شاشة بدء بشعار فرع ARI Valle del Liri ورعايته؛ سطر شكر في نافذة الإغلاق؛ اللغات البنغالية والعربية والتركية (17 لغة)؛ شاشة رئيسية بأربع بطاقات ملونة، إلى الحسابات وإلى قبة السماء، محدِّد موقع حتى 14 حرفًا، اختيار الخط وتلميحات داكنة؛ استطلاع عوائقي مع عتامة الرمادي ودرجته؛ إبراز اليوم في المسافة وDgrd؛ زر الأعمدة في موقع القمر؛ ميزانية EME مع مخطط منظومة الإرسال والاستقبال؛ ضجيج الشمس مع المصادر والمؤشرات والطيف؛ DEBUG FORMULE بأسلوب Word مع الحفظ بصيغة .docx؛ تبويبات جديدة: الكابلات المحورية، التواصل مع المؤلف، الترخيص؛ الدليل داخل البرنامج (دليل الاستخدام المفصّل).",
             "البحث في الدليل: اكتب كلمة واضغط Enter؛ اضغط Enter مرة أخرى للنتيجة التالية.",
-            "دليل الاستخدام المفصّل",
+            "دليل الاستخدام",
             "الصيغ هي نفسها في كل اللغات.",
             "لقطة حية للتبويب",
             "انقر على الصورة لفتحها.",
@@ -21515,7 +21530,7 @@ namespace LunaCalc
             "≡ = كابلات مجمّعة في صف واحد: النوع نفسه، والقطر نفسه (±0.2 mm)، وتوهين ضمن 0.2 dB/100 m في كل النطاقات؛ القيمة هي المتوسط.",
             "أيضًا: = أسماء تجارية مكافئة أخرى (مثل LMR-400 = HF400، CNT-400).",
             "الرموز الصينية (50-3، 50-5، 50-7، 50-9، 50-12…) تدل على قطر العازل بالمليمتر: 50-7 ≈ فئة RG-213/LMR-400، 50-9 ≈ 1/2\" فائق المرونة، 50-12 ≈ 1/2\" مموّج.",
-            "مصادر كل كابل في تلميح صفه وفي الدليل، § 3.8.",
+            "مصادر كل كابل في تلميح صفه وفي الدليل «نظرية EME ونصائح»، § 1.8.",
             "أيضًا:",
             "المصادر:",
             "مقارنة الكابلات المعلَّمة",
@@ -21534,7 +21549,7 @@ namespace LunaCalc
             "اكتب رسالة",
             "انسخ العنوان",
             "هل لديك محوّل ترددي تريد التعريف به؟",
-            "إذا أردت التعريف بمحوّلات ترددية أخرى أو بمحوّلك، فاكتب إلى المؤلف: ستُضاف البيانات مع مصدرها إلى الفصل 3.7.2 من الدليل.",
+            "إذا أردت التعريف بمحوّلات ترددية أخرى أو بمحوّلك، فاكتب إلى المؤلف: ستُضاف البيانات مع مصدرها إلى الفصل 1.7.2 من الدليل «نظرية EME ونصائح».",
             "البرنامج برعاية",
             "الترخيص",
             "YAEC برنامج حر كتبه هاوٍ لاسلكي للهواة اللاسلكيين. طُوّرت شيفرته أيضًا بمساعدة مساعد ذكاء اصطناعي، ويستلهم الترخيص طريقته في العمل: أن يكون مفيدًا حقًا، وأن يقول الأمور كما هي دائمًا، وأن يُظهر طريقة تفكيره، وألا يؤذي أحدًا، وأن يعترف بعمل الآخرين. فيما يلي المبادئ ثم الشروط نفسها.",
@@ -21579,7 +21594,7 @@ namespace LunaCalc
             "في الأعلى أربعة مؤشرات، على اليسار مصدر البيانات (NOAA RSTN موصى به، أو F10.7 من NOAA أو بنتكتون، أو عنوان مخصص) مع المحطات، على اليمين طيف تدفق الشمس مع الاستقراء حتى تردد العمل.",
             "هذا الدليل، داخل البرنامج وبكل اللغات: فهرس قابل للنقر، وبحث، وصيغ، ومصادر.",
             "مُنسَّق مثل مستند Word، والصيغ بأسلوب محرر المعادلات: يمكن نسخه إلى الحافظة أو حفظه بصيغة Word (.docx).",
-            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، DEBUG FORMULE)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام المفصّل، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (ABOUT & CREDITS، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
+            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، DEBUG FORMULE)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (ABOUT & CREDITS، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
             "شكرًا لاستخدامك إياي: أرجو أن أكون قد أفدتك.",
             "لا",
             "نعم",
@@ -21636,7 +21651,7 @@ namespace LunaCalc
             "(ترقيم القسم {0})",
             "جديد",
             "الشكر على الخوارزميات والصيغ والبيانات المستخدمة",
-            "الشكر، مع المؤلفين والأعمال والروابط، موجود في فصل «المصادر والبيانات والشكر» من MANUALE D'USO APPROFONDITO.",
+            "الشكر، مع المؤلفين والأعمال والروابط، موجود في فصل «المصادر والبيانات والشكر» من نظرية EME ونصائح.",
             "رقم الضجيج لجهاز التردد الوسيط (dB)",
             "NF المحوِّل + الجهاز (dB)",
             "NF المحوِّل وحده: 1.0 dB",
@@ -21649,7 +21664,7 @@ namespace LunaCalc
             "مختبري النسخة التجريبية",
             "شكر وتقدير",
             "الطول الموجي والمقطع الراداري للقمر",
-            "طراز المحوّل: يأخذ البرنامج رقم الضوضاء والكسب من جدول الدليل (§ 3.7.2). مع \"مخصّص\" تكتبهما بنفسك.",
+            "طراز المحوّل: يأخذ البرنامج رقم الضوضاء والكسب من جدول الدليل «نظرية EME ونصائح» (§ 1.7.2). مع \"مخصّص\" تكتبهما بنفسك.",
             "كسب الهوائي الواحد",
             "عرض النطاق",
             "الطول",
@@ -21802,6 +21817,7 @@ namespace LunaCalc
             "الشركة المصنعة",
             "النوع",
             "مرتبة حسب {0}",
+            "مقدمة المؤلف",
         };
 
         public static readonly string[] TR = {
@@ -22721,13 +22737,13 @@ namespace LunaCalc
             "Renkler",
             "Yazı tipi",
             "Hava görüntüleri (Engellerimin keşfi)",
-            "Telsiz ve transverterlerin gürültü faktörü (kılavuz, § 3.7)",
+            "Telsiz ve transverterlerin gürültü faktörü (kılavuz «EME ÜZERİNE TEORİ VE ÖNERİLER», § 1.7)",
             "Adam Farson VA7OJ/AB4OJ'nin ölçümleri (IC-9700, FT-991) ve DF9IC'nin DARC-OV Durlach A35 ile ölçümleri (144 MHz cihazlar); Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA veri sayfaları; W3SZ'nin EME istasyonu.",
-            "Doppler, CFOM ve CAT (kılavuz, § 3.10)",
+            "Doppler, CFOM ve CAT (kılavuz «EME ÜZERİNE TEORİ VE ÖNERİLER», § 1.10)",
             "Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" ve \"CFOM – Constant Frequency On Moon Doppler Mode\".",
             "Maidenhead lokatörü (kılavuz, § 2.2)",
             "Vikipedi, \"Maidenhead Locator System\": köken (G4ANB, IARU 1980), yapı, 8 karakterin ötesindeki uzantılar.",
-            "Üst bantlar için yönlendirme ve araçlar (kılavuz, § 3.11)",
+            "Üst bantlar için yönlendirme ve araçlar (kılavuz «EME ÜZERİNE TEORİ VE ÖNERİLER», § 1.11)",
             "Gerald Ihninger OE2IGL ve Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\".",
             "SM5BSZ'nin EME yayınları",
             "Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) ve \"EME Path Modulation\" (2000).",
@@ -22741,7 +22757,7 @@ namespace LunaCalc
             "ARI \"Valle del Liri\" şubesinin (03-04) logosu, şubenin himayesiyle kullanılmıştır.",
             "beta 27 - bantlar yalnızca 432 MHz'e kadar; ARI Valle del Liri şubesinin logosu ve himayesiyle açılış ekranı; kapanış penceresinde teşekkür satırı; Bengalce, Arapça ve Türkçe diller (17 dil); dört renkli kartlı ana ekran, HESAPLARA GİT ve GÖK KUBBESİNE GİT, 14 karaktere kadar lokatör, yazı tipi seçimi ve koyu ipuçları; Engellerimin keşfi'nde gri opaklığı ve tonu; Mesafe ve Dgrd'de vurgulanan gün; Ay konumunda Sütunlar düğmesi; TX/RX düzeneği şemalı EME Bütçesi; kaynaklar, göstergeler ve spektrumlu Güneş gürültüsü; Word tarzında DEBUG FORMULE ve .docx olarak kaydetme; yeni sekmeler KOAKSİYEL KABLOLAR, YAZARLA İLETİŞİM ve LİSANS; program içinde kılavuz (AYRINTILI KULLANIM KILAVUZU).",
             "Kılavuzda ara: bir sözcük yazıp Enter'a basın; sonraki sonuç için yeniden Enter.",
-            "AYRINTILI KULLANIM KILAVUZU",
+            "KULLANIM KILAVUZU",
             "Formüller tüm dillerde aynıdır.",
             "sekmenin canlı ekran görüntüsü",
             "Açmak için resme tıklayın.",
@@ -22774,7 +22790,7 @@ namespace LunaCalc
             "≡ = tek satırda birleştirilmiş kablolar: aynı tür, aynı çap (±0,2 mm) ve tüm bantlarda 0,2 dB/100 m içinde zayıflama; değer ortalamadır.",
             "ayrıca: = diğer eşdeğer ticari adlar (örneğin LMR-400 = HF400, CNT-400).",
             "Çin kodları (50-3, 50-5, 50-7, 50-9, 50-12…) dielektriğin çapını mm olarak verir: 50-7 ≈ RG-213/LMR-400 sınıfı, 50-9 ≈ 1/2\" süper esnek, 50-12 ≈ 1/2\" oluklu.",
-            "Her kablonun kaynakları satırının ipucunda ve kılavuzda, § 3.8'dedir.",
+            "Her kablonun kaynakları satırının ipucunda ve kılavuzda «EME ÜZERİNE TEORİ VE ÖNERİLER», § 1.8'dedir.",
             "ayrıca:",
             "Kaynaklar:",
             "İŞARETLİ KABLOLARIN KARŞILAŞTIRMASI",
@@ -22793,7 +22809,7 @@ namespace LunaCalc
             "E-posta yaz",
             "Adresi kopyala",
             "Tanıtmak istediğin bir transverter var mı?",
-            "Başka transverterleri ya da kendi transverterini tanıtmak istersen yazara e-posta gönder: veriler kaynağıyla birlikte kılavuzun 3.7.2 bölümüne eklenecek.",
+            "Başka transverterleri ya da kendi transverterini tanıtmak istersen yazara e-posta gönder: veriler kaynağıyla birlikte kılavuzun «EME ÜZERİNE TEORİ VE ÖNERİLER» 1.7.2 bölümüne eklenecek.",
             "Program şu kuruluşun himayesindedir:",
             "Lisans",
             "YAEC, bir radyo amatörü tarafından radyo amatörleri için yazılmış özgür bir programdır. Kodu bir yapay zekâ asistanının yardımıyla da geliştirildi ve lisans onun çalışma biçimini benimser: gerçekten yararlı olmak, her zaman olanı olduğu gibi söylemek, akıl yürütmeyi göstermek, kimseye zarar vermemek ve başkalarının emeğini tanımak. Aşağıda önce ilkeler, sonra asıl koşullar yer alıyor.",
@@ -22838,7 +22854,7 @@ namespace LunaCalc
             "Üstte dört gösterge, solda istasyonlarıyla veri kaynağı (önerilen NOAA RSTN, ya da NOAA veya Penticton F10.7, ya da özel adres), sağda çalışma frekansına kadar dışdeğerlemeli güneş akısı spektrumu.",
             "Bu kılavuz, program içinde ve tüm dillerde: tıklanabilir içindekiler, arama, formüller ve kaynaklar.",
             "Bir Word belgesi gibi düzenlenmiştir, formüller denklem düzenleyicisi tarzındadır: panoya kopyalanabilir ya da Word (.docx) olarak kaydedilebilir.",
-            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, DEBUG FORMULE), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (AYRINTILI KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (ABOUT & CREDITS, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
+            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, DEBUG FORMULE), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (ABOUT & CREDITS, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
             "Beni kullandığın için teşekkürler: umarım işine yaramışımdır.",
             "Hayır",
             "Evet",
@@ -22895,7 +22911,7 @@ namespace LunaCalc
             "({0} bölümünün numaralandırması)",
             "yeni",
             "Kullanılan algoritmalar, formüller ve veriler için teşekkürler",
-            "Yazarlar, eserler ve bağlantılarla birlikte teşekkürler MANUALE D'USO APPROFONDITO içindeki «Kaynaklar, veriler ve teşekkürler» bölümündedir.",
+            "Yazarlar, eserler ve bağlantılarla birlikte teşekkürler EME ÜZERİNE TEORİ VE ÖNERİLER içindeki «Kaynaklar, veriler ve teşekkürler» bölümündedir.",
             "ara frekans telsizinin gürültü sayısı (dB)",
             "NF transverter + telsiz (dB)",
             "Yalnız transverterin NF değeri: 1,0 dB",
@@ -22908,7 +22924,7 @@ namespace LunaCalc
             "beta test ekibi",
             "TEŞEKKÜRLER",
             "Dalga boyu ve Ay'ın radar kesit alanı",
-            "Transverter modeli: program gürültü faktörünü ve kazancı kılavuzdaki tablodan (§ 3.7.2) alır. \"Özel\" seçilirse değerleri sen girersin.",
+            "Transverter modeli: program gürültü faktörünü ve kazancı kılavuzdaki «EME ÜZERİNE TEORİ VE ÖNERİLER» tablodan (§ 1.7.2) alır. \"Özel\" seçilirse değerleri sen girersin.",
             "Tek anten kazancı",
             "Bant genişliği",
             "Uzunluk",
@@ -23061,6 +23077,7 @@ namespace LunaCalc
             "üretici",
             "tür",
             "{0} sırasına göre",
+            "Yazarın önsözü",
         };
     }
 
@@ -23970,7 +23987,7 @@ namespace LunaCalc
             tip.SetToolTip(b.LenPa, Lang.T("Lunghezza del cavo tra l'amplificatore (PA) e il relè coassiale."));
             tip.SetToolTip(b.LenDis, Lang.T("Lunghezza del cavo di discesa tra il preamplificatore in antenna e la stazione."));
             tip.SetToolTip(b.TvOn, Lang.T("Attiva il transverter quando la radio non lavora direttamente sulla banda scelta: entra nella catena di ricezione con il suo guadagno e la sua figura di rumore."));
-            tip.SetToolTip(b.TvMod, Lang.T("Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale (§ 3.7.2). Con \"personalizzato\" li scrivi tu."));
+            tip.SetToolTip(b.TvMod, Lang.T("Modello del transverter: il programma ne prende figura di rumore e guadagno dalla tabella del manuale «TEORIA E CONSIGLI SULL'EME» (§ 1.7.2). Con \"personalizzato\" li scrivi tu."));
             tip.SetToolTip(b.TvCavo, Lang.T("Perdita dei cavetti tra l'uscita RX del transverter e l'ingresso della radio (dB)."));
             tip.SetToolTip(b.TvNf, Lang.T("Cifra di rumore del transverter in ricezione (dB)."));
             tip.SetToolTip(b.TvGain, Lang.T("Guadagno di conversione del transverter in ricezione."));
@@ -32067,7 +32084,7 @@ namespace LunaCalc
             Scrivi(rt, Lang.T("Calcolatore per il traffico radioamatoriale EME (Terra-Luna-Terra). Gli indirizzi web sono cliccabili."), 9.5F, false);
             Scrivi(rt, "", 6F, false);
             Scrivi(rt, Lang.T("CREDITI PER GLI ALGORITMI, LE FORMULE E I DATI USATI"), 10.5F, true);
-            Scrivi(rt, Lang.T("I crediti, con gli autori, le opere e i collegamenti, sono nel capitolo «Fonti, dati e crediti» del MANUALE D'USO APPROFONDITO."), 9.5F, false);
+            Scrivi(rt, Lang.T("I crediti, con gli autori, le opere e i collegamenti, sono nel capitolo «Fonti, dati e crediti» di TEORIA E CONSIGLI SULL'EME."), 9.5F, false);
             Scrivi(rt, "", 6F, false);
             Scrivi(rt, Lang.T("STORIA DELLE VERSIONI"), 10.5F, true);
             foreach (string v in AboutVersioni) Scrivi(rt, "• " + v, 9.5F, false);
@@ -32150,16 +32167,16 @@ namespace LunaCalc
                 "https://wdc.kugi.kyoto-u.ac.jp/poles/polesexp.html" },
             new string[] { Lang.T("App per telefono (beta 7, beta 8)"),
                 Lang.T("Stessi algoritmi delle effemeridi lunari riscritti in JavaScript; Progressive Web App con service worker per l'uso offline.") },
-            new string[] { Lang.T("Figura di rumore delle radio e transverter (manuale, § 3.7)"),
+            new string[] { Lang.T("Figura di rumore delle radio e transverter (manuale «TEORIA E CONSIGLI SULL'EME», § 1.7)"),
                 Lang.T("Misure di Adam Farson VA7OJ/AB4OJ (IC-9700, FT-991) e di DF9IC con DARC OV Durlach A35 (radio a 144 MHz); schede di Down East Microwave, Kuhne electronic, Q5 Signal, HA1YA; stazione EME di W3SZ."),
                 "https://www.df9ic.de/tech/trxtest/trxtest.html" },
-            new string[] { Lang.T("Doppler, CFOM e CAT (manuale, § 3.10)"),
+            new string[] { Lang.T("Doppler, CFOM e CAT (manuale «TEORIA E CONSIGLI SULL'EME», § 1.10)"),
                 Lang.T("Bob Atkins KA1GT, \"Doppler 101 for 1296 MHz EME (…and other bands)\" e \"CFOM – Constant Frequency On Moon Doppler Mode\"."),
                 "https://bobatkins.com/radio/CFOM.html" },
             new string[] { Lang.T("Locator Maidenhead (manuale, § 2.2)"),
                 Lang.T("Wikipedia, \"Maidenhead Locator System\": origine (G4ANB, IARU 1980), struttura, estensioni oltre gli 8 caratteri."),
                 "https://en.wikipedia.org/wiki/Maidenhead_Locator_System" },
-            new string[] { Lang.T("Puntamento e strumenti per le bande superiori (manuale, § 3.11)"),
+            new string[] { Lang.T("Puntamento e strumenti per le bande superiori (manuale «TEORIA E CONSIGLI SULL'EME», § 1.11)"),
                 Lang.T("Gerald Ihninger OE2IGL e Joachim Köppen DF3GJ, \"EME Link Budget & Analysis Tool (1-300 GHz)\"."),
                 "https://wettersat.bplaced.net/EME/EME.html" },
             new string[] { Lang.T("Letteratura EME di SM5BSZ"),
@@ -32234,7 +32251,7 @@ namespace LunaCalc
             }
         }
 
-        // ---------- Linguetta "MANUALE D'USO APPROFONDITO": indice, ricerca, formule, schermate dal vivo ----------
+        // ---------- Linguetta "MANUALE D'USO": indice, ricerca, formule, schermate dal vivo ----------
 
         // due linguette con lo stesso motore: il manuale del programma (capitoli 1 e 2) e TEORIA E CONSIGLI SULL'EME (3 e 4)
         DocView docMan, docEme;
@@ -32270,7 +32287,7 @@ namespace LunaCalc
                     try
                     {
                         Cursor = Cursors.WaitCursor;
-                        docMan.SalvaDocx(d.FileName, "YAEC " + Versione + " – " + Lang.T(eme ? "TEORIA E CONSIGLI SULL'EME" : "MANUALE D'USO APPROFONDITO"), true);
+                        docMan.SalvaDocx(d.FileName, "YAEC " + Versione + " – " + Lang.T(eme ? "TEORIA E CONSIGLI SULL'EME" : "MANUALE D'USO"), true);
                     }
                     catch (Exception ex) { Messaggio(this, Lang.T("Impossibile salvare il file:\n") + ex.Message, "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     finally { Cursor = Cursors.Default; }
@@ -32513,7 +32530,7 @@ namespace LunaCalc
             };
 
             // copertina
-            b.Add(DocBlocco.P(DocTipo.Titolo, "YAEC " + Versione + " – " + Lang.T(eme ? "TEORIA E CONSIGLI SULL'EME" : "MANUALE D'USO APPROFONDITO")));
+            b.Add(DocBlocco.P(DocTipo.Titolo, "YAEC " + Versione + " – " + Lang.T(eme ? "TEORIA E CONSIGLI SULL'EME" : "MANUALE D'USO")));
             b.Add(DocBlocco.P(DocTipo.Didascalia, NomeProgramma + " · " + Lang.T("a cura di Costantino IC8TEM") + " · " + Lang.T("Le formule sono uguali in tutte le lingue.")));
             if (!eme)
             {
@@ -32560,11 +32577,25 @@ namespace LunaCalc
                 b.Add(DocBlocco.P(DocTipo.Par, tt));
             }, false);
             if (dopoPrimi) Righe(ManualeV27.E(lg, "S32"));
+            // ultime sezioni del capitolo 2: Volta celeste, mappa e quota; linguette, Mappa di puntamento e DEBUG FORMULE
+            // (fino alla 1.0 erano i §§ 3.13 e 3.14 di TEORIA E CONSIGLI SULL'EME)
+            List<List<string>> c4m = Sezioni(TestiManuale.E(lg, "C4"));
+            if (c4m.Count > 7) Righe(c4m[7]);
+            if (c4m.Count > 10) Righe(c4m[10]);
             }
             else
             {
-            // la numerazione continua dal manuale del programma (3 e 4), così restano validi tutti i rimandi tra le due linguette
-            cap = 2;
+            // prefazione dell'autore (senza numero), poi i capitoli numerati da 1
+            string[] pref = ManualeV27.E(lg, "PREF");
+            if (pref.Length > 0)
+            {
+                DocBlocco xp = DocBlocco.P(DocTipo.Titolo, Lang.T("Prefazione dell'autore"));
+                b.Add(xp);
+                nCap = new TreeNode(xp.Testo); nCap.Tag = xp; nCap.NodeFont = new Font(treeMan.Font, FontStyle.Bold);
+                treeMan.Nodes.Add(nCap);
+                Righe(pref);
+            }
+            cap = 0;
             // 3. Come funziona: le sezioni della v26 riordinate, con i capitoli nuovi
             Capitolo(TestiManuale.T(lg, "CAP4"));
             List<List<string>> c4 = Sezioni(TestiManuale.E(lg, "C4"));
@@ -32615,8 +32646,7 @@ namespace LunaCalc
             Righe(dop);
             Righe(ManualeV27.E(lg, "S411"));
             Righe(ManualeV27.E(lg, "S412"));
-            Righe(S4(7)); Righe(S4(10));
-            // 4. Fonti, dati e crediti (con i crediti spostati qui dalla linguetta ABOUT & CREDITS)
+            // 2. Fonti, dati e crediti (con i crediti spostati qui dalla linguetta ABOUT & CREDITS)
             Capitolo(TestiManuale.T(lg, "CAP5"));
             Righe(TestiManuale.E(lg, "C5"));
             Sezione(Lang.T("Crediti per gli algoritmi, le formule e i dati usati"));
@@ -33411,7 +33441,7 @@ namespace LunaCalc
                 Lang.T("≡ = cavi accorpati in una riga: stesso tipo, diametro uguale (±0,2 mm) e attenuazione entro 0,2 dB/100 m in tutte le bande; il valore è la media."),
                 Lang.T("anche: = altre sigle commerciali equivalenti (per esempio LMR-400 = HF400, CNT-400)."),
                 Lang.T("Le sigle cinesi (50-3, 50-5, 50-7, 50-9, 50-12…) indicano il diametro del dielettrico in mm: 50-7 ≈ classe RG-213/LMR-400, 50-9 ≈ 1/2\" superflessibile, 50-12 ≈ 1/2\" corrugato."),
-                Lang.T("Le fonti di ogni cavo sono nel fumetto della sua riga e nel manuale, § 3.8.") };
+                Lang.T("Le fonti di ogni cavo sono nel fumetto della sua riga e nel manuale «TEORIA E CONSIGLI SULL'EME», § 1.8.") };
             using (Font fh = FontPx(Lang.FontUi, S(13), true))
             using (Font fr = FontPx(Lang.FontUi, S(12), false))
             using (Font fb = FontPx(Lang.FontUi, S(12), true))
@@ -33612,7 +33642,7 @@ namespace LunaCalc
                 y += ch + S(22);
 
                 // invito per i transverter (riquadro giallo, capitolo 3.7.2)
-                string nt = Lang.T("Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 3.7.2 del manuale, con la citazione della fonte.");
+                string nt = Lang.T("Se hai interesse a far conoscere altri transverter o il tuo transverter, scrivi una mail all'autore: i dati verranno aggiunti al capitolo 1.7.2 del manuale «TEORIA E CONSIGLI SULL'EME», con la citazione della fonte.");
                 string ntb = Lang.T("Hai un transverter da far conoscere?");
                 string ntr = "**" + ntb + "** " + nt;
                 float hn = Math.Max(S(58), TestoRicco(g, ntr, fd, fdb, Color.Black, 0, 0, wtot - S(36), 1.45f, false) + S(22));
@@ -33953,7 +33983,7 @@ namespace LunaCalc
                 new string[] { Lang.T("Rumore solare"), Lang.T("Scarica dal web i flussi solari misurati dalla rete RSTN e stima quanto il Sole aumenta il rumore del ricevitore, in base alla distanza angolare tra Sole e Luna e al diagramma dell'antenna. Utile vicino alla luna nuova.") + " " + Lang.T("In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.") },
                 new string[] { Lang.T("Mappa WWL e ADIF"), Lang.T("Mappa del mondo con il reticolo Maidenhead; caricando il file ADIF del log si colorano i quadrati lavorati (arancione), confermati via LoTW (verde) o solo con QSL (blu), anche per banda e solo EME.") + " " + Lang.T("Con \"Scarica da LoTW…\" il log viene scaricato direttamente da LoTW (nome utente e password vengono chiesti e memorizzati nelle impostazioni).") },
                 new string[] { "ABOUT & CREDITS", Lang.T("Crediti con i link e storia delle versioni.") },
-                new string[] { Lang.T("MANUALE D'USO APPROFONDITO"), Lang.T("Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.") },
+                new string[] { Lang.T("MANUALE D'USO"), Lang.T("Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.") },
                 new string[] { Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("Come funziona l'EME e come lavorarlo al meglio: rumore del cielo e Dgrd, Sole, polarizzazione, budget del collegamento, Doppler, procedure operative e fonti; indice cliccabile, ricerca e formule, come il manuale.") },
                 new string[] { Lang.T("Export in Excel dei calcoli"), Lang.T("Lo stesso Budget EME in forma di foglio Excel: le caselle verdi si modificano e i risultati si aggiornano subito.") },
                 new string[] { Lang.T("DEBUG FORMULE"), Lang.T("Tutti i parametri e le formule del Budget EME e del Rumore solare, per entrambe le direzioni (tu → DX e DX → tu), con i valori sostituiti e il risultato di ogni passaggio: lunghezza d'onda, sezione radar della Luna, perdita di tratta, EIRP, segnale lungo la catena di ricezione, MDS e margine, figura di rumore con Friis, temperature, rumore e S/N, e per il Sole flusso, fascio, attenuazione del diagramma, area efficace e aumento del rumore. Si attiva con la casella \"CALCOLI APPROFONDITI\"; il pulsante in basso copia tutto negli appunti.") + " " + Lang.T("È impaginato come un documento di Word, con le formule in stile Equation Editor: si può copiare negli appunti o salvare in Word (.docx).") }
@@ -33976,7 +34006,7 @@ namespace LunaCalc
             w(Lang.T("5. Premi \"Calcola tabella\": le righe verdi sono quelle utili, il riquadro in basso elenca le finestre."), 10F, false);
             w("", 5F, false);
             w(Lang.T("COME SI SCELGONO LE LINGUETTE"), 11F, true);
-            w(Lang.T("Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO APPROFONDITO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\"."), 10F, false);
+            w(Lang.T("Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\"."), 10F, false);
             w(Lang.T("Schema di colori (impostazioni generali): Chiaro, Notte (toni di blu) o Nero (sfondo nero, adatto all'uso al buio e agli schermi OLED)."), 10F, false);
             w("", 5F, false);
             if (conLinguette) w(Lang.T("LE LINGUETTE"), 11F, true);
@@ -35363,7 +35393,7 @@ namespace LunaCalc
             BuildContattiTab(tpContatti);
             tpLicenza = new TabPage(Lang.T("LICENZA D'USO"));
             BuildLicenzaTab(tpLicenza);
-            tpIstr = new TabPage(Lang.T("MANUALE D'USO APPROFONDITO"));
+            tpIstr = new TabPage(Lang.T("MANUALE D'USO"));
             tpEme = new TabPage(Lang.T("TEORIA E CONSIGLI SULL'EME"));
             tpExcel = new TabPage(Lang.T("Export in Excel dei calcoli"));
             BuildExcelTab(tpExcel);
@@ -38399,12 +38429,14 @@ namespace LunaCalc
 
         // Scaricamento che segue a mano i rinvii (SourceForge rimanda a un mirror, anche da https a http,
         // e Mono non segue da solo quel passaggio)
+        static string ultimoUrl = "";
         static byte[] ScaricaConRinvii(string url, int timeoutMs)
         {
             Dati.PreparaVerificaCertificati();
             try { ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072 | (SecurityProtocolType)768 | SecurityProtocolType.Tls; } catch { }
             for (int salto = 0; salto < 8; salto++)
             {
+                ultimoUrl = url;
                 HttpWebRequest rq = (HttpWebRequest)WebRequest.Create(url);
                 rq.Timeout = timeoutMs;
                 rq.ReadWriteTimeout = timeoutMs;
@@ -38450,7 +38482,12 @@ namespace LunaCalc
                     if (r != null) { Esito[i] = string.Format(Lang.Cultura, Lang.T("{0:N0} nominativi"), r.Count); return r; }
                     errore = "?";
                 }
-                catch (Exception ex) { errore = ex.Message; }
+                catch (Exception ex)
+                {
+                    errore = ex.Message;
+                    for (Exception x = ex.InnerException; x != null; x = x.InnerException) errore += " / " + x.Message;
+                    if (ultimoUrl.Length > 0) errore += " @ " + ultimoUrl;
+                }
             }
             Esito[i] = Lang.T("non raggiungibile") + (errore.Length > 0 ? " (" + errore + ")" : "");
             return null;
@@ -41366,6 +41403,18 @@ namespace LunaCalc
         static ManualeV27()
         {
             d["it"] = new Dictionary<string, string[]>();
+            d["it"]["PREF"] = new string[] {
+                "Questa parte del manuale non descrive i pulsanti del programma, ma le idee su cui il programma è costruito. Prima dei capitoli, l'autore ritiene di voler esprimere alcuni concetti che sono risultati chiave per studiare il programma, anche alla luce delle ultime esperienze vissute in stazione.",
+                "• **Il calcolo è un riferimento, non una promessa.** Budget, S/N stimato e soglie dei modi digitali descrivono un collegamento ideale. Durante la ricezione contano il rumore locale e antropico, che può cambiare da un minuto all'altro, e la rotazione di Faraday: pochi istanti bastano a cancellare i decibel di margine calcolati (§ 1.3, 1.12).",
+                "• **La giornata si sceglie prima di accendere.** Dgrd, distanza della Luna e declinazione dicono quanto rumore del cielo c'è dietro la Luna, quante ore resta sopra l'orizzonte e quanto sale: gli stessi apparati rendono in modo molto diverso da un giorno all'altro (§ 1.4).",
+                "• **La polarizzazione può far sparire un segnale.** Con antenne lineari la rotazione di Faraday e la polarizzazione spaziale possono spegnere un'eco per minuti o per ore; spesso basta aspettare, ripetere o ruotare la polarizzazione, invece di cercare il guasto (§ 1.3).",
+                "• **Ogni decibel davanti al preamplificatore conta.** Cavi, relè e connettori prima del preamplificatore peggiorano la temperatura di sistema più di quanto suggerisca il loro numero in dB: è lì che conviene spendere (§ 1.7, 1.8).",
+                "• **Prima le frequenze giuste.** Il Doppler e il CFOM spostano l'eco anche di kHz alle bande alte: un'eco fuori dalla finestra di decodifica non si sente, anche con un buon segnale (§ 1.10).",
+                "• **Il Sole è un avversario prevedibile.** Quando è vicino alla Luna il rumore cresce: il programma lo segnala in anticipo, e vale la pena tenerne conto nella scelta dei giorni (§ 1.5, 1.9).",
+                "• **Ascoltare, confrontare, annotare.** Il programma serve a capire che cosa aspettarsi; il confronto tra le stime e quello che si riceve davvero, annotato con data, ora e condizioni, è il modo più rapido per conoscere la propria stazione.",
+                "Le fonti di ogni capitolo sono citate per esteso; dove i dati teorici e l'esperienza non coincidono, il manuale lo dice apertamente.",
+                "~. Costantino IC8TEM"
+            };
             d["it"]["S32"] = new string[] {
                 "## Il locator Maidenhead (WWL)",
                 "Il **locator Maidenhead**, detto anche WWL (World Wide Locator) o QTH locator, è il codice con cui i radioamatori indicano la posizione della stazione. Lo ha ideato John Morris G4ANB ed è stato adottato dal Gruppo di lavoro VHF della IARU nell'aprile 1980, in una riunione a Maidenhead, in Inghilterra; ha sostituito il vecchio QRA locator, che copriva solo l'Europa [1]. Dal 1999 il riferimento geodetico è il WGS-84, lo stesso del GPS [1]. YAEC ricava dal locator latitudine e longitudine della stazione, e da queste tutti i calcoli.",
@@ -41425,7 +41474,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Soglie al 50 % di probabilità di decodifica, misurate su canale a rumore bianco (AWGN). Per il Q65 la decodifica *a priori* (AP), che sfrutta i nominativi già noti durante il QSO, aggiunge da 1,5 a 3,6 dB secondo il sottomodo (per esempio Q65-60A −30,2 dB) [2]; YAEC mostra come riferimento i valori senza AP, più prudenti. Con un Doppler spread di alcuni hertz la soglia peggiora: per il Q65-60A di circa 2 dB a 5 Hz e di circa 3 dB a 10 Hz (letti dal grafico di [2]). Struttura del Q65, sottomodi e confronto con il JT65 sono nel § 3.12. Per l'EME il documento consiglia Q65-60A in 50 e 144 MHz e Q65-60B in 432 MHz [2]: i sottomodi B – E hanno spaziatura dei toni e banda occupata 2 – 16 volte quelle del sottomodo A.",
+                "~ Soglie al 50 % di probabilità di decodifica, misurate su canale a rumore bianco (AWGN). Per il Q65 la decodifica *a priori* (AP), che sfrutta i nominativi già noti durante il QSO, aggiunge da 1,5 a 3,6 dB secondo il sottomodo (per esempio Q65-60A −30,2 dB) [2]; YAEC mostra come riferimento i valori senza AP, più prudenti. Con un Doppler spread di alcuni hertz la soglia peggiora: per il Q65-60A di circa 2 dB a 5 Hz e di circa 3 dB a 10 Hz (letti dal grafico di [2]). Struttura del Q65, sottomodi e confronto con il JT65 sono nel § 1.12. Per l'EME il documento consiglia Q65-60A in 50 e 144 MHz e Q65-60B in 432 MHz [2]: i sottomodi B – E hanno spaziatura dei toni e banda occupata 2 – 16 volte quelle del sottomodo A.",
                 "Per il JT65 K1JT ha pubblicato i limiti per ogni tipo di decodifica, ottenuti con simulazioni del sottomodo JT65B [5]:",
                 "|h| JT65: tipo di decodifica | >S/N (2500 Hz) | Fonte",
                 "| Messaggio qualsiasi, anche testo libero | −24 dB | [5]",
@@ -41447,7 +41496,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, XXI Meeting EME, presentazione fornita da IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, documento del 12 novembre 2010, fornito da IC8TEM.",
                 "[5] J. Taylor K1JT, relazione sul JT65 alla conferenza EME 2006 (K1JT_eme2006.pdf): tabella dei livelli minimi di S/N in 2500 Hz.",
-                "> Lo schema dell'impianto, a destra nella linguetta, ricava le perdite dai cavi scelti: in trasmissione cavo PA–relè + relè + cavo antenna, in ricezione cavo antenna + relè prima del preamplificatore e cavo di discesa dopo. Le attenuazioni dei cavi vengono dal database della linguetta CAVI COASSIALI (§ 3.8)."
+                "> Lo schema dell'impianto, a destra nella linguetta, ricava le perdite dai cavi scelti: in trasmissione cavo PA–relè + relè + cavo antenna, in ricezione cavo antenna + relè prima del preamplificatore e cavo di discesa dopo. Le attenuazioni dei cavi vengono dal database della linguetta CAVI COASSIALI (§ 1.8)."
             };
             d["it"]["S47"] = new string[] {
                 "## Il preamplificatore e la figura di rumore della radio {nuovo}",
@@ -41595,7 +41644,7 @@ namespace LunaCalc
                 "Il vantaggio è che più stazioni, e chiunque stia solo ascoltando, possono seguire un QSO sulla stessa frequenza senza ricalcolare il Doppler per ciascuna. YAEC mostra queste due frequenze nella schermata principale.",
                 "### Il CAT della radio",
                 "Il Doppler cambia di continuo, quindi la compensazione va aggiornata a ogni periodo. Il modo più semplice è lasciarla al programma digitale (per esempio la finestra *Astronomical Data* di WSJT-X) che, tramite il **CAT** della radio, regola i VFO di trasmissione e ricezione e mantiene la radio allineata alla frequenza giusta [1] [2]. Senza CAT si può usare lo split (un VFO per la trasmissione e uno per la ricezione) o il RIT, ritoccando a mano a ogni periodo: in 50 e 144 MHz è fattibile, in 432 MHz diventa scomodo [1].",
-                "> Attenzione: per il CFOM la radio deve accettare il cambio di frequenza via CAT **anche durante la trasmissione**. Alcuni apparati non lo fanno (per esempio l'FT-897 citato in [2]): in quel caso si può comunque ricevere in CFOM, mentre la trasmissione resta a frequenza fissa. Con un transverter (§ 3.7) il CAT regola la radio a media frequenza: imposta nel programma lo scostamento del transverter, in modo che la frequenza mostrata sia quella reale.",
+                "> Attenzione: per il CFOM la radio deve accettare il cambio di frequenza via CAT **anche durante la trasmissione**. Alcuni apparati non lo fanno (per esempio l'FT-897 citato in [2]): in quel caso si può comunque ricevere in CFOM, mentre la trasmissione resta a frequenza fissa. Con un transverter (§ 1.7) il CAT regola la radio a media frequenza: imposta nel programma lo scostamento del transverter, in modo che la frequenza mostrata sia quella reale.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (dall'articolo sono usati solo i dati fino a 432 MHz) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -41626,7 +41675,7 @@ namespace LunaCalc
             };
             d["it"]["S412"] = new string[] {
                 "## I modi digitali per l'EME: Q65 e JT65",
-                "Il Budget EME (§ 3.6) mostra l'S/N stimato accanto alla soglia tipica del modo digitale scelto. Questa sezione spiega da dove vengono le soglie del **Q65**, come è fatto il segnale e perché oggi il Q65 ha in gran parte sostituito il JT65 nell'EME delle bande di YAEC. I dati vengono da tre documenti: la guida rapida degli autori del Q65 [1], il confronto JT65A – Q65-60A di K1JT [2] e lo studio del processo di codifica di G4JNT [3].",
+                "Il Budget EME (§ 1.6) mostra l'S/N stimato accanto alla soglia tipica del modo digitale scelto. Questa sezione spiega da dove vengono le soglie del **Q65**, come è fatto il segnale e perché oggi il Q65 ha in gran parte sostituito il JT65 nell'EME delle bande di YAEC. I dati vengono da tre documenti: la guida rapida degli autori del Q65 [1], il confronto JT65A – Q65-60A di K1JT [2] e lo studio del processo di codifica di G4JNT [3].",
                 "### Che cos'è il Q65",
                 "Il Q65 è stato introdotto con WSJT-X 2.4.0 da K1JT, G4WJS, K9AN e IV3NWV per QSO minimi su percorsi particolarmente difficili; quando il Doppler spread supera qualche hertz è il più sensibile tra i modi di WSJT-X ed è adatto a troposcatter, rain scatter, scatter ionosferico, TEP ed EME dalle VHF in su [1]. Usa una modulazione FSK a **65 toni** e deriva dal QRA64 del 2016; rispetto a questo introduce [1]:",
                 "• un nuovo codice correttore Q-ary Repeat Accumulate a basso rapporto, proposto da Nico Palermo IV3NWV [3] [4];",
@@ -41683,7 +41732,7 @@ namespace LunaCalc
                 "~ Da [1], solo per le bande fino a 432 MHz. Gli autori invitano a sperimentare altre combinazioni.",
                 "Il periodo di 30 s raddoppia la velocità del QSO con segnali relativamente forti, quello di 120 s guadagna circa 3 dB per singola trasmissione [2].",
                 "### Q65 e JT65 a confronto",
-                "Il **JT65A** è stato per quasi vent'anni il modo EME dei 6 metri: con la decodifica *Deep Search* arriva a −28 dB in 2500 Hz (−29 dB con la media dei messaggi, § 3.6), circa 15 dB sotto il livello necessario per il CW a orecchio, ma solo per i corrispondenti presenti nel database CALL3.TXT di nominativi e locator. In quei QSO l'informazione realmente trasmessa è molto poca: circa 14 bit per un nominativo e un locator scelti dal database, più 1 bit di rapporto e 1 bit di conferma [2].",
+                "Il **JT65A** è stato per quasi vent'anni il modo EME dei 6 metri: con la decodifica *Deep Search* arriva a −28 dB in 2500 Hz (−29 dB con la media dei messaggi, § 1.6), circa 15 dB sotto il livello necessario per il CW a orecchio, ma solo per i corrispondenti presenti nel database CALL3.TXT di nominativi e locator. In quei QSO l'informazione realmente trasmessa è molto poca: circa 14 bit per un nominativo e un locator scelti dal database, più 1 bit di rapporto e 1 bit di conferma [2].",
                 "Il **Q65** trasmette sempre 78 bit di messaggio: anche un QSO minimo porta un nominativo qualsiasi (29 bit), un rapporto numerico vero (7 bit) e la conferma (1 bit), senza database [2]. K1JT ha preparato dieci file simulati con segnali a −29 dB e Doppler spread di 1 Hz, cinque JT65A e cinque Q65-60A per file, e ha provato a decodificarli in quattro modi, con 50 decodifiche possibili per prova [2]:",
                 "|h| Prova | Modo | Nominativo e locator del DX | Deep Search | >Corrette | >Errate",
                 "| 1 | JT65A | non noti | non disponibile | 0 | 0",
@@ -41692,8 +41741,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | noti (DX Call e DX Grid) | – | 49 | 0",
                 "~ Da [2], tabella 1. Impostazioni JT65: Deep, Deep Search, AP, 6 schemi di cancellazione casuale, livello aggressivo 9; Q65: Fast, media attiva, azzeramento automatico della media.",
                 "Le conclusioni dell'autore [2]: per le risposte alla propria chiamata il Q65-60A ha, per **qualunque** chiamante sconosciuto, circa la stessa sensibilità che il JT65A ha solo per chi è nel database; per tutti gli altri è più sensibile di **almeno 3 dB**, e lo è ancora di più nei messaggi successivi, quando entrambi i nominativi sono noti. Le decodifiche errate sono così rare da essere difficili da misurare. La media dei messaggi del JT65 serve per un solo chiamante già individuato, quella del Q65 funziona su tutta la banda visualizzata. Infine il JT65 dedica al sincronismo metà dell'energia trasmessa, il Q65 un quarto.",
-                "> Il valore di −25 dB del JT65 nel Budget EME è quello della guida di WSJT-X senza Deep Search (§ 3.6); il −28 dB con Deep Search vale solo per i corrispondenti presenti nel database, il −29 dB con la media per qualunque messaggio.",
-                ">! **Incongruenza tra le fonti.** Il documento di confronto JT65A – Q65-60A [2] indica −29 dB per il JT65A con Deep Search; la relazione di K1JT alla conferenza EME 2006, citata nel § 3.6, dà invece −28 dB per la Deep Search e −29 dB per la media dei messaggi. YAEC usa i valori del 2006. Le due fonti si riferiscono a sottomodi diversi: JT65B nelle simulazioni del 2006, JT65A in [2].",
+                "> Il valore di −25 dB del JT65 nel Budget EME è quello della guida di WSJT-X senza Deep Search (§ 1.6); il −28 dB con Deep Search vale solo per i corrispondenti presenti nel database, il −29 dB con la media per qualunque messaggio.",
+                ">! **Incongruenza tra le fonti.** Il documento di confronto JT65A – Q65-60A [2] indica −29 dB per il JT65A con Deep Search; la relazione di K1JT alla conferenza EME 2006, citata nel § 1.6, dà invece −28 dB per la Deep Search e −29 dB per la media dei messaggi. YAEC usa i valori del 2006. Le due fonti si riferiscono a sottomodi diversi: JT65B nelle simulazioni del 2006, JT65A in [2].",
                 "### Come il Q65 costruisce il segnale",
                 "G4JNT ha ricostruito dal codice sorgente di WSJT-X il percorso che porta dal messaggio ai toni trasmessi, verificandolo con il programma Q65CODE.EXE di WSJT-X [3]. In sintesi:",
                 "• **Codifica della sorgente.** Come FST4, FT8, FT4 e MSK144, il messaggio diventa 71 bit di dati più 6 bit di tipo, 77 in tutto. Un testo libero ha fino a 13 caratteri di un alfabeto di 42 simboli (spazio, cifre, lettere e + - . / ?), e §42^{13}§ è minore di §2^{71}§; la modalità telemetria porta fino a 18 cifre esadecimali [3].",
@@ -41728,7 +41777,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Esempio ridotto da [6], con TX7MB (CI00) come DXpedition: ogni stazione che chiama resta sulla sua frequenza e passa a RRR quando riceve il proprio «R CI00».",
                 "> Le finestre comuni con la Luna sono brevi, soprattutto al sorgere e al tramonto, quando molte stazioni sfruttano il ground gain: il Posizione live e +- 24h e la linguetta Distanza e Dgrd mostrano quando la Luna è visibile da entrambe le stazioni.",
-                ">⚠ La discussione sui limiti teorici perde di significato nel momento in cui ci si trova a ricevere i segnali: un rumore locale improvviso può peggiorare l'ascolto, così come la rotazione di Faraday (§ 3.3).",
+                ">⚠ La discussione sui limiti teorici perde di significato nel momento in cui ci si trova a ricevere i segnali: un rumore locale improvviso può peggiorare l'ascolto, così come la rotazione di Faraday (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 aprile 2021 (WSJT-X 2.4.0), fornito da IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (file di prova JT65A_and_Q65-60A.zip), fornito da IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, ottobre 2023, fornito da IC8TEM.",
@@ -41838,6 +41887,18 @@ namespace LunaCalc
                 "= T_{sky,min} = 13 · \\p{\\frac{408}{f}}^{2,6} \\t{ K}"
             };
             d["en"] = new Dictionary<string, string[]>();
+            d["en"]["PREF"] = new string[] {
+                "This part of the manual does not describe the program's buttons, but the ideas the program is built on. Before the chapters, the author wishes to set out a few concepts that have proved key to studying the program, also in the light of his most recent experience at the station.",
+                "• **The calculation is a reference, not a promise.** Budget, estimated S/N and digital-mode thresholds describe an ideal path. During reception what counts is local and man-made noise, which can change from one minute to the next, and Faraday rotation: a few moments are enough to wipe out the calculated margin (§ 1.3, 1.12).",
+                "• **Choose the day before switching on.** Dgrd, Moon distance and declination tell how much sky noise lies behind the Moon, how many hours it stays above the horizon and how high it rises: the same equipment performs very differently from one day to the next (§ 1.4).",
+                "• **Polarization can make a signal vanish.** With linear antennas, Faraday rotation and spatial polarization can kill an echo for minutes or hours; often it is enough to wait, repeat or rotate the polarization instead of looking for a fault (§ 1.3).",
+                "• **Every decibel in front of the preamplifier counts.** Cables, relays and connectors before the preamplifier worsen the system temperature more than their dB figure suggests: that is where money is best spent (§ 1.7, 1.8).",
+                "• **Right frequencies first.** Doppler and CFOM shift the echo by up to several kHz on the higher bands: an echo outside the decoding window is not heard, even with a good signal (§ 1.10).",
+                "• **The Sun is a predictable opponent.** When it is close to the Moon the noise rises: the program warns in advance, and it is worth taking into account when choosing the days (§ 1.5, 1.9).",
+                "• **Listen, compare, take notes.** The program helps to understand what to expect; comparing the estimates with what is actually received, noted with date, time and conditions, is the fastest way to get to know your own station.",
+                "The sources of every chapter are cited in full; where theory and experience do not agree, the manual says so openly.",
+                "~. Costantino IC8TEM"
+            };
             d["en"]["S32"] = new string[] {
                 "## The Maidenhead locator (WWL)",
                 "The **Maidenhead locator**, also called WWL (World Wide Locator) or QTH locator, is the code radio amateurs use to give the position of their station. It was devised by John Morris G4ANB and adopted by the IARU VHF Working Group in April 1980, at a meeting in Maidenhead, England; it replaced the old QRA locator, which only covered Europe [1]. Since 1999 the geodetic datum is WGS-84, the same as GPS [1]. YAEC derives the latitude and longitude of the station from the locator, and all the calculations from these.",
@@ -41897,7 +41958,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Thresholds for 50 % decode probability, measured on an additive white Gaussian noise (AWGN) channel. For Q65, *a priori* (AP) decoding, which uses the callsigns already known during the QSO, adds 1.5 to 3.6 dB depending on the submode (for example Q65-60A −30.2 dB) [2]; YAEC shows the more cautious values without AP as a reference. With a Doppler spread of a few hertz the threshold gets worse: for Q65-60A by about 2 dB at 5 Hz and about 3 dB at 10 Hz (read from the chart in [2]). The structure of Q65, its submodes and the comparison with JT65 are in § 3.12. For EME the document recommends Q65-60A on 50 and 144 MHz and Q65-60B on 432 MHz [2]: submodes B – E have tone spacing and occupied bandwidth 2 – 16 times those of submode A.",
+                "~ Thresholds for 50 % decode probability, measured on an additive white Gaussian noise (AWGN) channel. For Q65, *a priori* (AP) decoding, which uses the callsigns already known during the QSO, adds 1.5 to 3.6 dB depending on the submode (for example Q65-60A −30.2 dB) [2]; YAEC shows the more cautious values without AP as a reference. With a Doppler spread of a few hertz the threshold gets worse: for Q65-60A by about 2 dB at 5 Hz and about 3 dB at 10 Hz (read from the chart in [2]). The structure of Q65, its submodes and the comparison with JT65 are in § 1.12. For EME the document recommends Q65-60A on 50 and 144 MHz and Q65-60B on 432 MHz [2]: submodes B – E have tone spacing and occupied bandwidth 2 – 16 times those of submode A.",
                 "For JT65, K1JT published the limits for each kind of decoding, obtained from simulations of the JT65B submode [5]:",
                 "|h| JT65: kind of decoding | >S/N (2500 Hz) | Source",
                 "| Any message, including plain text | −24 dB | [5]",
@@ -41919,7 +41980,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21st EME Meeting, presentation supplied by IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, document of 12 November 2010, supplied by IC8TEM.",
                 "[5] J. Taylor K1JT, paper on JT65 at the EME 2006 conference (K1JT_eme2006.pdf): table of minimum S/N levels in 2500 Hz.",
-                "> The station diagram, on the right of the tab, derives the losses from the chosen cables: in transmission PA–relay cable + relay + antenna cable, in reception antenna cable + relay before the preamplifier and feed cable after it. The cable attenuations come from the database of the COAXIAL CABLES tab (§ 3.8)."
+                "> The station diagram, on the right of the tab, derives the losses from the chosen cables: in transmission PA–relay cable + relay + antenna cable, in reception antenna cable + relay before the preamplifier and feed cable after it. The cable attenuations come from the database of the COAXIAL CABLES tab (§ 1.8)."
             };
             d["en"]["S47"] = new string[] {
                 "## The preamplifier and the noise figure of the radio {nuovo}",
@@ -42067,7 +42128,7 @@ namespace LunaCalc
                 "The advantage is that several stations, and anyone who is only listening, can follow a QSO on the same frequency without recalculating the Doppler for each one. YAEC shows these two frequencies on the main screen.",
                 "### The radio CAT",
                 "The Doppler changes continuously, so the compensation must be updated every period. The simplest way is to leave it to the digital program (for example the *Astronomical Data* window of WSJT-X) which, through the radio **CAT**, sets the transmit and receive VFOs and keeps the radio aligned to the right frequency [1] [2]. Without CAT you can use split (one VFO for transmission and one for reception) or RIT, adjusting by hand every period: on 50 and 144 MHz it is feasible, on 432 MHz it becomes awkward [1].",
-                "> Caution: for CFOM the radio must accept the frequency change via CAT **also during transmission**. Some rigs do not (for example the FT-897 mentioned in [2]): in that case you can still receive in CFOM, while transmission stays on a fixed frequency. With a transverter (§ 3.7) the CAT sets the radio at the intermediate frequency: set the transverter offset in the program, so that the frequency shown is the real one.",
+                "> Caution: for CFOM the radio must accept the frequency change via CAT **also during transmission**. Some rigs do not (for example the FT-897 mentioned in [2]): in that case you can still receive in CFOM, while transmission stays on a fixed frequency. With a transverter (§ 1.7) the CAT sets the radio at the intermediate frequency: set the transverter offset in the program, so that the frequency shown is the real one.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (only the data up to 432 MHz are used from the article) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -42098,7 +42159,7 @@ namespace LunaCalc
             };
             d["en"]["S412"] = new string[] {
                 "## Digital modes for EME: Q65 and JT65",
-                "The EME budget (§ 3.6) shows the estimated S/N next to the typical threshold of the chosen digital mode. This section explains where the **Q65** thresholds come from, how the signal is built and why Q65 has today largely replaced JT65 for EME on the YAEC bands. The data come from three documents: the quick-start guide by the authors of Q65 [1], the JT65A – Q65-60A comparison by K1JT [2] and the study of the coding process by G4JNT [3].",
+                "The EME budget (§ 1.6) shows the estimated S/N next to the typical threshold of the chosen digital mode. This section explains where the **Q65** thresholds come from, how the signal is built and why Q65 has today largely replaced JT65 for EME on the YAEC bands. The data come from three documents: the quick-start guide by the authors of Q65 [1], the JT65A – Q65-60A comparison by K1JT [2] and the study of the coding process by G4JNT [3].",
                 "### What Q65 is",
                 "Q65 was introduced with WSJT-X 2.4.0 by K1JT, G4WJS, K9AN and IV3NWV for minimal QSOs over especially difficult paths; when the Doppler spread exceeds a few hertz it is the most sensitive of the WSJT-X modes, and it suits troposcatter, rain scatter, ionospheric scatter, TEP and EME from VHF upwards [1]. It uses **65-tone** FSK and derives from QRA64 of 2016; compared with it, it introduces [1]:",
                 "• a new low-rate Q-ary Repeat Accumulate error-correcting code, proposed by Nico Palermo IV3NWV [3] [4];",
@@ -42155,7 +42216,7 @@ namespace LunaCalc
                 "~ From [1], only for the bands up to 432 MHz. The authors encourage experimenting with other combinations.",
                 "The 30 s period doubles the QSO rate with relatively strong signals, the 120 s period gains about 3 dB per single transmission [2].",
                 "### Q65 and JT65 compared",
-                "**JT65A** was the EME mode of the 6-metre band for nearly twenty years: with *Deep Search* decoding it reaches −28 dB in 2500 Hz (−29 dB with message averaging, § 3.6), about 15 dB below the level needed for copying CW by ear, but only for stations listed in the CALL3.TXT database of callsigns and locators. In those QSOs very little information is actually sent: about 14 bits for a callsign and locator chosen from the database, plus a 1-bit report and a 1-bit acknowledgment [2].",
+                "**JT65A** was the EME mode of the 6-metre band for nearly twenty years: with *Deep Search* decoding it reaches −28 dB in 2500 Hz (−29 dB with message averaging, § 1.6), about 15 dB below the level needed for copying CW by ear, but only for stations listed in the CALL3.TXT database of callsigns and locators. In those QSOs very little information is actually sent: about 14 bits for a callsign and locator chosen from the database, plus a 1-bit report and a 1-bit acknowledgment [2].",
                 "**Q65** always sends 78-bit messages: even a minimal QSO carries an arbitrary callsign (29 bits), a real numerical report (7 bits) and the acknowledgment (1 bit), without a database [2]. K1JT prepared ten simulated files with signals at −29 dB and 1 Hz Doppler spread, five JT65A and five Q65-60A per file, and tried to decode them in four ways, with 50 possible decodes per test [2]:",
                 "|h| Test | Mode | DX callsign and locator | Deep Search | >Good | >Bad",
                 "| 1 | JT65A | not known | not available | 0 | 0",
@@ -42164,8 +42225,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | known (DX Call and DX Grid) | – | 49 | 0",
                 "~ From [2], table 1. JT65 settings: Deep, Deep Search, AP, 6 random erasure patterns, aggressive level 9; Q65: Fast, averaging on, automatic clearing of the average.",
                 "The author's conclusions [2]: for replies to one's CQ, Q65-60A has, for **any** unknown caller, about the same sensitivity that JT65A has only for callers in the database; for all others it is **at least 3 dB** more sensitive, and more still in later messages, when both callsigns are known. False decodes are so rare that they are hard to measure. JT65 message averaging works for a single caller already identified, Q65 averaging over the whole displayed band. Finally, JT65 devotes half of the transmitted energy to sync, Q65 a quarter.",
-                "> The −25 dB value for JT65 in the EME budget is the one from the WSJT-X guide without Deep Search (§ 3.6); the −28 dB with Deep Search only applies to stations listed in the database, the −29 dB with averaging to any message.",
-                ">! **Inconsistency between sources.** The JT65A – Q65-60A comparison document [2] gives −29 dB for JT65A with Deep Search; K1JT's paper at the EME 2006 conference, cited in § 3.6, gives instead −28 dB for Deep Search and −29 dB for message averaging. YAEC uses the 2006 values. The two sources refer to different submodes: JT65B in the 2006 simulations, JT65A in [2].",
+                "> The −25 dB value for JT65 in the EME budget is the one from the WSJT-X guide without Deep Search (§ 1.6); the −28 dB with Deep Search only applies to stations listed in the database, the −29 dB with averaging to any message.",
+                ">! **Inconsistency between sources.** The JT65A – Q65-60A comparison document [2] gives −29 dB for JT65A with Deep Search; K1JT's paper at the EME 2006 conference, cited in § 1.6, gives instead −28 dB for Deep Search and −29 dB for message averaging. YAEC uses the 2006 values. The two sources refer to different submodes: JT65B in the 2006 simulations, JT65A in [2].",
                 "### How Q65 builds the signal",
                 "G4JNT reconstructed from the WSJT-X source code the path from the message to the transmitted tones, checking it with the WSJT-X program Q65CODE.EXE [3]. In short:",
                 "• **Source coding.** As in FST4, FT8, FT4 and MSK144, the message becomes 71 data bits plus 6 type bits, 77 in all. A free text has up to 13 characters from a 42-symbol alphabet (space, digits, letters and + - . / ?), and §42^{13}§ is less than §2^{71}§; telemetry mode carries up to 18 hexadecimal digits [3].",
@@ -42200,7 +42261,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Shortened example from [6], with TX7MB (CI00) as the DXpedition: each caller stays on its own frequency and switches to RRR when it receives its own “R CI00”.",
                 "> Common Moon windows are short, especially at moonrise and moonset, when many stations use ground gain: the Live position and +- 24h tab and the Distance and Dgrd tab show when the Moon is visible from both stations.",
-                ">⚠ The discussion of theoretical limits loses its meaning the moment you are actually receiving signals: a sudden local noise can make reception worse, and so can Faraday rotation (§ 3.3).",
+                ">⚠ The discussion of theoretical limits loses its meaning the moment you are actually receiving signals: a sudden local noise can make reception worse, and so can Faraday rotation (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 April 2021 (WSJT-X 2.4.0), supplied by IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (test files JT65A_and_Q65-60A.zip), supplied by IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, October 2023, supplied by IC8TEM.",
@@ -42302,6 +42363,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["de"] = new Dictionary<string, string[]>();
+            d["de"]["PREF"] = new string[] {
+                "Dieser Teil des Handbuchs beschreibt nicht die Schaltflächen des Programms, sondern die Ideen, auf denen es aufgebaut ist. Vor den Kapiteln möchte der Autor einige Gedanken darlegen, die sich für das Studium des Programms als entscheidend erwiesen haben, auch im Licht seiner jüngsten Erfahrungen an der Station.",
+                "• **Die Rechnung ist ein Anhaltspunkt, kein Versprechen.** Budget, geschätztes S/N und Schwellen der Digitalmodi beschreiben eine ideale Verbindung. Beim Empfang zählen das lokale und menschengemachte Rauschen, das sich von Minute zu Minute ändern kann, und die Faraday-Drehung: wenige Augenblicke genügen, um die berechnete Reserve zu verlieren (§ 1.3, 1.12).",
+                "• **Den Tag wählt man vor dem Einschalten.** Dgrd, Mondentfernung und Deklination zeigen, wie viel Himmelsrauschen hinter dem Mond liegt, wie viele Stunden er über dem Horizont bleibt und wie hoch er steigt: dieselbe Anlage leistet von Tag zu Tag sehr Unterschiedliches (§ 1.4).",
+                "• **Die Polarisation kann ein Signal verschwinden lassen.** Bei linearen Antennen können Faraday-Drehung und räumliche Polarisation ein Echo für Minuten oder Stunden auslöschen; oft genügt es zu warten, zu wiederholen oder die Polarisation zu drehen, statt einen Fehler zu suchen (§ 1.3).",
+                "• **Jedes Dezibel vor dem Vorverstärker zählt.** Kabel, Relais und Stecker vor dem Vorverstärker verschlechtern die Systemtemperatur stärker, als ihr dB-Wert vermuten lässt: dort lohnt sich jede Investition (§ 1.7, 1.8).",
+                "• **Zuerst die richtigen Frequenzen.** Doppler und CFOM verschieben das Echo auf den höheren Bändern um bis zu einige kHz: ein Echo außerhalb des Dekodierfensters wird nicht gehört, auch bei gutem Signal (§ 1.10).",
+                "• **Die Sonne ist ein berechenbarer Gegner.** Steht sie nahe beim Mond, steigt das Rauschen: das Programm warnt rechtzeitig, und das sollte man bei der Wahl der Tage berücksichtigen (§ 1.5, 1.9).",
+                "• **Hören, vergleichen, notieren.** Das Programm hilft zu verstehen, was zu erwarten ist; der Vergleich zwischen Schätzung und tatsächlichem Empfang, notiert mit Datum, Uhrzeit und Bedingungen, ist der schnellste Weg, die eigene Station kennenzulernen.",
+                "Die Quellen jedes Kapitels sind vollständig angegeben; wo Theorie und Erfahrung nicht übereinstimmen, sagt das Handbuch es offen.",
+                "~. Costantino IC8TEM"
+            };
             d["de"]["S32"] = new string[] {
                 "## Der Maidenhead-Locator (WWL)",
                 "Der **Maidenhead-Locator**, auch WWL (World Wide Locator) oder QTH-Locator genannt, ist der Code, mit dem Funkamateure den Standort ihrer Station angeben. Er wurde von John Morris G4ANB entwickelt und im April 1980 von der VHF-Arbeitsgruppe der IARU auf einem Treffen in Maidenhead (England) angenommen; er ersetzte den alten QRA-Locator, der nur Europa abdeckte [1]. Seit 1999 ist das geodätische Datum WGS-84, dasselbe wie beim GPS [1]. YAEC leitet aus dem Locator die geografische Breite und Länge der Station ab und daraus alle Berechnungen.",
@@ -42361,7 +42434,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Schwellen für 50 % Dekodierwahrscheinlichkeit, gemessen auf einem Kanal mit additivem weißem gaußschem Rauschen (AWGN). Bei Q65 bringt die *A-priori*-Dekodierung (AP), die die im QSO bereits bekannten Rufzeichen nutzt, je nach Untermodus 1,5 bis 3,6 dB (zum Beispiel Q65-60A −30,2 dB) [2]; YAEC zeigt die vorsichtigeren Werte ohne AP als Anhaltspunkt. Mit einer Doppler-Verbreiterung von einigen Hertz verschlechtert sich die Schwelle: bei Q65-60A um etwa 2 dB bei 5 Hz und etwa 3 dB bei 10 Hz (abgelesen aus dem Diagramm in [2]). Aufbau von Q65, seine Untermodi und der Vergleich mit JT65 stehen in § 3.12. Für EME empfiehlt das Dokument Q65-60A auf 50 und 144 MHz und Q65-60B auf 432 MHz [2]: Die Untermodi B – E haben den 2- bis 16-fachen Tonabstand und die 2- bis 16-fache belegte Bandbreite des Untermodus A.",
+                "~ Schwellen für 50 % Dekodierwahrscheinlichkeit, gemessen auf einem Kanal mit additivem weißem gaußschem Rauschen (AWGN). Bei Q65 bringt die *A-priori*-Dekodierung (AP), die die im QSO bereits bekannten Rufzeichen nutzt, je nach Untermodus 1,5 bis 3,6 dB (zum Beispiel Q65-60A −30,2 dB) [2]; YAEC zeigt die vorsichtigeren Werte ohne AP als Anhaltspunkt. Mit einer Doppler-Verbreiterung von einigen Hertz verschlechtert sich die Schwelle: bei Q65-60A um etwa 2 dB bei 5 Hz und etwa 3 dB bei 10 Hz (abgelesen aus dem Diagramm in [2]). Aufbau von Q65, seine Untermodi und der Vergleich mit JT65 stehen in § 1.12. Für EME empfiehlt das Dokument Q65-60A auf 50 und 144 MHz und Q65-60B auf 432 MHz [2]: Die Untermodi B – E haben den 2- bis 16-fachen Tonabstand und die 2- bis 16-fache belegte Bandbreite des Untermodus A.",
                 "Für JT65 hat K1JT die Grenzen für jede Art der Dekodierung veröffentlicht, ermittelt durch Simulationen des Untermodus JT65B [5]:",
                 "|h| JT65: Art der Dekodierung | >S/N (2500 Hz) | Quelle",
                 "| Beliebige Nachricht, auch Freitext | −24 dB | [5]",
@@ -42383,7 +42456,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21. EME-Meeting, Präsentation zur Verfügung gestellt von IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, Dokument vom 12. November 2010, zur Verfügung gestellt von IC8TEM.",
                 "[5] J. Taylor K1JT, Vortrag über JT65 auf der EME-Konferenz 2006 (K1JT_eme2006.pdf): Tabelle der minimalen S/N-Werte in 2500 Hz.",
-                "> Das Stationsschema rechts im Reiter leitet die Verluste aus den gewählten Kabeln ab: beim Senden Kabel PA–Relais + Relais + Antennenkabel, beim Empfang Antennenkabel + Relais vor dem Vorverstärker und Speiseleitung danach. Die Kabeldämpfungen stammen aus der Datenbank des Reiters COAXIAL CABLES (§ 3.8)."
+                "> Das Stationsschema rechts im Reiter leitet die Verluste aus den gewählten Kabeln ab: beim Senden Kabel PA–Relais + Relais + Antennenkabel, beim Empfang Antennenkabel + Relais vor dem Vorverstärker und Speiseleitung danach. Die Kabeldämpfungen stammen aus der Datenbank des Reiters COAXIAL CABLES (§ 1.8)."
             };
             d["de"]["S47"] = new string[] {
                 "## Der Vorverstärker und die Rauschzahl des Funkgeräts {nuovo}",
@@ -42531,7 +42604,7 @@ namespace LunaCalc
                 "Der Vorteil ist, dass mehrere Stationen und jeder, der nur zuhört, ein QSO auf derselben Frequenz verfolgen können, ohne den Doppler für jede einzelne neu zu berechnen. YAEC zeigt diese beiden Frequenzen auf dem Hauptbildschirm an.",
                 "### Die CAT-Steuerung des Funkgeräts",
                 "Der Doppler ändert sich ständig, daher muss die Kompensation in jeder Periode aktualisiert werden. Am einfachsten überlässt man sie dem Digitalprogramm (zum Beispiel dem Fenster *Astronomical Data* von WSJT-X), das über die **CAT**-Schnittstelle des Funkgeräts die Sende- und Empfangs-VFOs einstellt und das Funkgerät auf der richtigen Frequenz hält [1] [2]. Ohne CAT kann man Split (ein VFO zum Senden und einer zum Empfangen) oder RIT verwenden und in jeder Periode von Hand nachstellen: Auf 50 und 144 MHz ist das machbar, auf 432 MHz wird es umständlich [1].",
-                "> Achtung: Für CFOM muss das Funkgerät den Frequenzwechsel über CAT **auch während des Sendens** annehmen. Manche Geräte tun das nicht (zum Beispiel das in [2] erwähnte FT-897): In diesem Fall kann man trotzdem in CFOM empfangen, während das Senden auf einer festen Frequenz bleibt. Mit einem Transverter (§ 3.7) stellt die CAT-Steuerung das Funkgerät auf der Zwischenfrequenz ein: Stellen Sie im Programm die Transverter-Ablage ein, damit die angezeigte Frequenz die tatsächliche ist.",
+                "> Achtung: Für CFOM muss das Funkgerät den Frequenzwechsel über CAT **auch während des Sendens** annehmen. Manche Geräte tun das nicht (zum Beispiel das in [2] erwähnte FT-897): In diesem Fall kann man trotzdem in CFOM empfangen, während das Senden auf einer festen Frequenz bleibt. Mit einem Transverter (§ 1.7) stellt die CAT-Steuerung das Funkgerät auf der Zwischenfrequenz ein: Stellen Sie im Programm die Transverter-Ablage ein, damit die angezeigte Frequenz die tatsächliche ist.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (aus dem Artikel werden nur die Daten bis 432 MHz verwendet) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -42562,7 +42635,7 @@ namespace LunaCalc
             };
             d["de"]["S412"] = new string[] {
                 "## Digitale Betriebsarten für EME: Q65 und JT65",
-                "Das EME-Budget (§ 3.6) zeigt das geschätzte S/N neben der typischen Schwelle der gewählten digitalen Betriebsart. Dieser Abschnitt erklärt, woher die Schwellen von **Q65** stammen, wie das Signal aufgebaut ist und warum Q65 heute JT65 für EME auf den YAEC-Bändern weitgehend abgelöst hat. Die Daten stammen aus drei Dokumenten: der Kurzanleitung der Autoren von Q65 [1], dem Vergleich JT65A – Q65-60A von K1JT [2] und der Untersuchung des Kodierverfahrens durch G4JNT [3].",
+                "Das EME-Budget (§ 1.6) zeigt das geschätzte S/N neben der typischen Schwelle der gewählten digitalen Betriebsart. Dieser Abschnitt erklärt, woher die Schwellen von **Q65** stammen, wie das Signal aufgebaut ist und warum Q65 heute JT65 für EME auf den YAEC-Bändern weitgehend abgelöst hat. Die Daten stammen aus drei Dokumenten: der Kurzanleitung der Autoren von Q65 [1], dem Vergleich JT65A – Q65-60A von K1JT [2] und der Untersuchung des Kodierverfahrens durch G4JNT [3].",
                 "### Was Q65 ist",
                 "Q65 wurde mit WSJT-X 2.4.0 von K1JT, G4WJS, K9AN und IV3NWV für minimale QSOs über besonders schwierige Strecken eingeführt; wenn die Doppler-Verbreiterung einige Hertz übersteigt, ist es die empfindlichste der WSJT-X-Betriebsarten, und es eignet sich für Troposcatter, Regenscatter, ionosphärischen Scatter, TEP und EME ab VHF aufwärts [1]. Es verwendet FSK mit **65 Tönen** und geht auf QRA64 von 2016 zurück; gegenüber diesem führt es ein [1]:",
                 "• einen neuen fehlerkorrigierenden Q-ären Repeat-Accumulate-Code mit niedriger Rate, vorgeschlagen von Nico Palermo IV3NWV [3] [4];",
@@ -42619,7 +42692,7 @@ namespace LunaCalc
                 "~ Aus [1], nur für die Bänder bis 432 MHz. Die Autoren ermutigen dazu, mit anderen Kombinationen zu experimentieren.",
                 "Die 30-s-Periode verdoppelt die QSO-Rate bei relativ starken Signalen, die 120-s-Periode gewinnt etwa 3 dB pro einzelner Aussendung [2].",
                 "### Q65 und JT65 im Vergleich",
-                "**JT65A** war fast zwanzig Jahre lang die EME-Betriebsart des 6-m-Bands: Mit der *Deep-Search*-Dekodierung erreicht es −28 dB in 2500 Hz (−29 dB mit Nachrichtenmittelung, § 3.6), etwa 15 dB unter dem Pegel, der für das Hören von CW nach Gehör nötig ist, aber nur für Stationen, die in der Datenbank CALL3.TXT mit Rufzeichen und Locatoren aufgeführt sind. In diesen QSOs wird tatsächlich sehr wenig Information übertragen: etwa 14 Bit für ein aus der Datenbank gewähltes Rufzeichen mit Locator, dazu ein Rapport von 1 Bit und eine Bestätigung von 1 Bit [2].",
+                "**JT65A** war fast zwanzig Jahre lang die EME-Betriebsart des 6-m-Bands: Mit der *Deep-Search*-Dekodierung erreicht es −28 dB in 2500 Hz (−29 dB mit Nachrichtenmittelung, § 1.6), etwa 15 dB unter dem Pegel, der für das Hören von CW nach Gehör nötig ist, aber nur für Stationen, die in der Datenbank CALL3.TXT mit Rufzeichen und Locatoren aufgeführt sind. In diesen QSOs wird tatsächlich sehr wenig Information übertragen: etwa 14 Bit für ein aus der Datenbank gewähltes Rufzeichen mit Locator, dazu ein Rapport von 1 Bit und eine Bestätigung von 1 Bit [2].",
                 "**Q65** sendet immer Nachrichten mit 78 Bit: Auch ein minimales QSO überträgt ein beliebiges Rufzeichen (29 Bit), einen echten numerischen Rapport (7 Bit) und die Bestätigung (1 Bit), ohne Datenbank [2]. K1JT erstellte zehn simulierte Dateien mit Signalen bei −29 dB und 1 Hz Doppler-Verbreiterung, je Datei fünf JT65A- und fünf Q65-60A-Signale, und versuchte sie auf vier Arten zu dekodieren, mit 50 möglichen Dekodierungen je Test [2]:",
                 "|h| Test | Betriebsart | Rufzeichen und Locator der DX-Station | Deep Search | >Richtig | >Falsch",
                 "| 1 | JT65A | nicht bekannt | nicht verfügbar | 0 | 0",
@@ -42628,8 +42701,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | bekannt (DX Call und DX Grid) | – | 49 | 0",
                 "~ Aus [2], Tabelle 1. Einstellungen JT65: Deep, Deep Search, AP, 6 zufällige Löschmuster, Aggressivitätsstufe 9; Q65: Fast, Mittelung ein, automatisches Löschen des Mittelwerts.",
                 "Die Schlussfolgerungen des Autors [2]: Bei Antworten auf den eigenen CQ-Ruf hat Q65-60A für **jede** unbekannte rufende Station etwa dieselbe Empfindlichkeit, die JT65A nur für Stationen in der Datenbank hat; für alle anderen ist es **mindestens 3 dB** empfindlicher, und noch mehr bei späteren Nachrichten, wenn beide Rufzeichen bekannt sind. Falschdekodierungen sind so selten, dass sie schwer zu messen sind. Die Nachrichtenmittelung von JT65 funktioniert für eine einzelne, bereits erkannte rufende Station, die von Q65 über das gesamte angezeigte Band. Schließlich verwendet JT65 die Hälfte der gesendeten Energie für die Synchronisation, Q65 ein Viertel.",
-                "> Der Wert −25 dB für JT65 im EME-Budget ist der aus der WSJT-X-Anleitung ohne Deep Search (§ 3.6); die −28 dB mit Deep Search gelten nur für Stationen, die in der Datenbank aufgeführt sind, die −29 dB mit Mittelung für jede beliebige Nachricht.",
-                ">! **Widerspruch zwischen den Quellen.** Das Vergleichsdokument JT65A – Q65-60A [2] nennt −29 dB für JT65A mit Deep Search; der Vortrag von K1JT auf der Konferenz EME 2006, zitiert in § 3.6, gibt dagegen −28 dB für Deep Search und −29 dB für die Nachrichtenmittelung an. YAEC verwendet die Werte von 2006. Die beiden Quellen beziehen sich auf verschiedene Untermodi: JT65B in den Simulationen von 2006, JT65A in [2].",
+                "> Der Wert −25 dB für JT65 im EME-Budget ist der aus der WSJT-X-Anleitung ohne Deep Search (§ 1.6); die −28 dB mit Deep Search gelten nur für Stationen, die in der Datenbank aufgeführt sind, die −29 dB mit Mittelung für jede beliebige Nachricht.",
+                ">! **Widerspruch zwischen den Quellen.** Das Vergleichsdokument JT65A – Q65-60A [2] nennt −29 dB für JT65A mit Deep Search; der Vortrag von K1JT auf der Konferenz EME 2006, zitiert in § 1.6, gibt dagegen −28 dB für Deep Search und −29 dB für die Nachrichtenmittelung an. YAEC verwendet die Werte von 2006. Die beiden Quellen beziehen sich auf verschiedene Untermodi: JT65B in den Simulationen von 2006, JT65A in [2].",
                 "### Wie Q65 das Signal aufbaut",
                 "G4JNT hat aus dem Quellcode von WSJT-X den Weg von der Nachricht zu den gesendeten Tönen rekonstruiert und ihn mit dem WSJT-X-Programm Q65CODE.EXE überprüft [3]. Kurz zusammengefasst:",
                 "• **Quellenkodierung.** Wie bei FST4, FT8, FT4 und MSK144 wird die Nachricht zu 71 Datenbits plus 6 Typbits, insgesamt 77. Ein freier Text hat bis zu 13 Zeichen aus einem Alphabet von 42 Symbolen (Leerzeichen, Ziffern, Buchstaben und + - . / ?), und §42^{13}§ ist kleiner als §2^{71}§; der Telemetriemodus überträgt bis zu 18 Hexadezimalziffern [3].",
@@ -42664,7 +42737,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Gekürztes Beispiel aus [6], mit TX7MB (CI00) als DXpedition: Jeder Anrufer bleibt auf seiner eigenen Frequenz und geht zu RRR über, wenn er sein eigenes „R CI00“ empfängt.",
                 "> Gemeinsame Mondfenster sind kurz, besonders bei Mondaufgang und Monduntergang, wenn viele Stationen den Bodeneffekt nutzen: Der Reiter Position live und +- 24h und der Reiter Entfernung und Dgrd zeigen, wann der Mond von beiden Stationen aus sichtbar ist.",
-                ">⚠ Die Betrachtung der theoretischen Grenzen verliert ihre Bedeutung in dem Moment, in dem man die Signale tatsächlich empfängt: Ein plötzliches lokales Rauschen kann den Empfang verschlechtern, ebenso wie die Faraday-Drehung (§ 3.3).",
+                ">⚠ Die Betrachtung der theoretischen Grenzen verliert ihre Bedeutung in dem Moment, in dem man die Signale tatsächlich empfängt: Ein plötzliches lokales Rauschen kann den Empfang verschlechtern, ebenso wie die Faraday-Drehung (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3. April 2021 (WSJT-X 2.4.0), zur Verfügung gestellt von IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (Testdateien JT65A_and_Q65-60A.zip), zur Verfügung gestellt von IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Oktober 2023, zur Verfügung gestellt von IC8TEM.",
@@ -42766,6 +42839,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["fr"] = new Dictionary<string, string[]>();
+            d["fr"]["PREF"] = new string[] {
+                "Cette partie du manuel ne décrit pas les boutons du programme, mais les idées sur lesquelles il est construit. Avant les chapitres, l'auteur souhaite exposer quelques notions qui se sont révélées essentielles pour étudier le programme, à la lumière aussi de ses expériences les plus récentes à la station.",
+                "• **Le calcul est une référence, pas une promesse.** Budget, S/N estimé et seuils des modes numériques décrivent une liaison idéale. Pendant la réception comptent le bruit local et artificiel, qui peut changer d'une minute à l'autre, et la rotation de Faraday : quelques instants suffisent à effacer la marge calculée (§ 1.3, 1.12).",
+                "• **La journée se choisit avant d'allumer.** Dgrd, distance de la Lune et déclinaison indiquent combien de bruit du ciel se trouve derrière la Lune, combien d'heures elle reste au-dessus de l'horizon et à quelle hauteur elle monte : le même matériel donne des résultats très différents d'un jour à l'autre (§ 1.4).",
+                "• **La polarisation peut faire disparaître un signal.** Avec des antennes linéaires, la rotation de Faraday et la polarisation spatiale peuvent éteindre un écho pendant des minutes ou des heures ; souvent il suffit d'attendre, de répéter ou de tourner la polarisation au lieu de chercher une panne (§ 1.3).",
+                "• **Chaque décibel avant le préamplificateur compte.** Câbles, relais et connecteurs avant le préamplificateur dégradent la température du système plus que ne le laisse penser leur valeur en dB : c'est là qu'il vaut la peine d'investir (§ 1.7, 1.8).",
+                "• **D'abord les bonnes fréquences.** Le Doppler et le CFOM déplacent l'écho jusqu'à plusieurs kHz sur les bandes hautes : un écho hors de la fenêtre de décodage n'est pas entendu, même avec un bon signal (§ 1.10).",
+                "• **Le Soleil est un adversaire prévisible.** Quand il est proche de la Lune, le bruit augmente : le programme le signale à l'avance, et il faut en tenir compte dans le choix des jours (§ 1.5, 1.9).",
+                "• **Écouter, comparer, noter.** Le programme aide à comprendre à quoi s'attendre ; comparer les estimations avec ce que l'on reçoit vraiment, en notant date, heure et conditions, est le moyen le plus rapide de connaître sa propre station.",
+                "Les sources de chaque chapitre sont citées intégralement ; là où la théorie et l'expérience ne concordent pas, le manuel le dit ouvertement.",
+                "~. Costantino IC8TEM"
+            };
             d["fr"]["S32"] = new string[] {
                 "## Le locator Maidenhead (WWL)",
                 "Le **locator Maidenhead**, appelé aussi WWL (World Wide Locator) ou QTH locator, est le code que les radioamateurs utilisent pour indiquer la position de leur station. Il a été conçu par John Morris G4ANB et adopté par le groupe de travail VHF de l'IARU en avril 1980, lors d'une réunion à Maidenhead, en Angleterre ; il a remplacé l'ancien QRA locator, qui ne couvrait que l'Europe [1]. Depuis 1999 le système géodésique de référence est le WGS-84, le même que celui du GPS [1]. YAEC tire du locator la latitude et la longitude de la station, et de celles-ci tous les calculs.",
@@ -42825,7 +42910,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Seuils pour une probabilité de décodage de 50 %, mesurés sur un canal à bruit blanc gaussien additif (AWGN). Pour Q65, le décodage *a priori* (AP), qui utilise les indicatifs déjà connus pendant le QSO, ajoute de 1,5 à 3,6 dB selon le sous-mode (par exemple Q65-60A −30,2 dB) [2] ; YAEC affiche comme référence les valeurs plus prudentes sans AP. Avec un étalement Doppler de quelques hertz le seuil se dégrade : pour Q65-60A d'environ 2 dB à 5 Hz et d'environ 3 dB à 10 Hz (lu sur le graphique de [2]). La structure de Q65, ses sous-modes et la comparaison avec JT65 se trouvent au § 3.12. Pour l'EME le document conseille Q65-60A sur 50 et 144 MHz et Q65-60B sur 432 MHz [2] : les sous-modes B – E ont un espacement des tons et une bande occupée 2 – 16 fois ceux du sous-mode A.",
+                "~ Seuils pour une probabilité de décodage de 50 %, mesurés sur un canal à bruit blanc gaussien additif (AWGN). Pour Q65, le décodage *a priori* (AP), qui utilise les indicatifs déjà connus pendant le QSO, ajoute de 1,5 à 3,6 dB selon le sous-mode (par exemple Q65-60A −30,2 dB) [2] ; YAEC affiche comme référence les valeurs plus prudentes sans AP. Avec un étalement Doppler de quelques hertz le seuil se dégrade : pour Q65-60A d'environ 2 dB à 5 Hz et d'environ 3 dB à 10 Hz (lu sur le graphique de [2]). La structure de Q65, ses sous-modes et la comparaison avec JT65 se trouvent au § 1.12. Pour l'EME le document conseille Q65-60A sur 50 et 144 MHz et Q65-60B sur 432 MHz [2] : les sous-modes B – E ont un espacement des tons et une bande occupée 2 – 16 fois ceux du sous-mode A.",
                 "Pour le JT65, K1JT a publié les limites de chaque type de décodage, obtenues par des simulations du sous-mode JT65B [5] :",
                 "|h| JT65 : type de décodage | >S/N (2500 Hz) | Source",
                 "| Message quelconque, y compris texte libre | −24 dB | [5]",
@@ -42847,7 +42932,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21e Meeting EME, présentation fournie par IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, document du 12 novembre 2010, fourni par IC8TEM.",
                 "[5] J. Taylor K1JT, exposé sur le JT65 à la conférence EME 2006 (K1JT_eme2006.pdf) : tableau des niveaux minimaux de S/N en 2500 Hz.",
-                "> Le schéma de la station, à droite de l'onglet, déduit les pertes des câbles choisis : en émission câble PA–relais + relais + câble d'antenne, en réception câble d'antenne + relais avant le préampli et câble de descente après celui-ci. Les affaiblissements des câbles proviennent de la base de données de l'onglet COAXIAL CABLES (§ 3.8)."
+                "> Le schéma de la station, à droite de l'onglet, déduit les pertes des câbles choisis : en émission câble PA–relais + relais + câble d'antenne, en réception câble d'antenne + relais avant le préampli et câble de descente après celui-ci. Les affaiblissements des câbles proviennent de la base de données de l'onglet COAXIAL CABLES (§ 1.8)."
             };
             d["fr"]["S47"] = new string[] {
                 "## Le préampli et le facteur de bruit du poste {nuovo}",
@@ -42995,7 +43080,7 @@ namespace LunaCalc
                 "L'avantage est que plusieurs stations, et quiconque se contente d'écouter, peuvent suivre un QSO sur la même fréquence sans recalculer le Doppler pour chacune. YAEC affiche ces deux fréquences sur l'écran principal.",
                 "### Le CAT du poste",
                 "Le Doppler varie en permanence, donc la compensation doit être mise à jour à chaque période. Le plus simple est de la confier au programme numérique (par exemple la fenêtre *Astronomical Data* de WSJT-X) qui, par le **CAT** du poste, règle les VFO d'émission et de réception et maintient le poste sur la bonne fréquence [1] [2]. Sans CAT on peut utiliser le split (un VFO pour l'émission et un pour la réception) ou le RIT, en corrigeant à la main à chaque période : sur 50 et 144 MHz c'est faisable, sur 432 MHz cela devient malcommode [1].",
-                "> Attention : pour le CFOM le poste doit accepter le changement de fréquence par CAT **même pendant l'émission**. Certains appareils ne le font pas (par exemple le FT-897 cité dans [2]) : dans ce cas on peut tout de même recevoir en CFOM, tandis que l'émission reste sur une fréquence fixe. Avec un transverter (§ 3.7) le CAT règle le poste sur la fréquence intermédiaire : indiquez le décalage du transverter dans le programme, afin que la fréquence affichée soit la fréquence réelle.",
+                "> Attention : pour le CFOM le poste doit accepter le changement de fréquence par CAT **même pendant l'émission**. Certains appareils ne le font pas (par exemple le FT-897 cité dans [2]) : dans ce cas on peut tout de même recevoir en CFOM, tandis que l'émission reste sur une fréquence fixe. Avec un transverter (§ 1.7) le CAT règle le poste sur la fréquence intermédiaire : indiquez le décalage du transverter dans le programme, afin que la fréquence affichée soit la fréquence réelle.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (seules les données jusqu'à 432 MHz sont reprises de l'article) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -43026,7 +43111,7 @@ namespace LunaCalc
             };
             d["fr"]["S412"] = new string[] {
                 "## Modes numériques pour l'EME : Q65 et JT65",
-                "Le bilan EME (§ 3.6) affiche le S/N estimé à côté du seuil typique du mode numérique choisi. Cette section explique d'où viennent les seuils de **Q65**, comment le signal est construit et pourquoi Q65 a aujourd'hui largement remplacé JT65 pour l'EME sur les bandes de YAEC. Les données proviennent de trois documents : le guide de démarrage rapide des auteurs de Q65 [1], la comparaison JT65A – Q65-60A de K1JT [2] et l'étude du processus de codage de G4JNT [3].",
+                "Le bilan EME (§ 1.6) affiche le S/N estimé à côté du seuil typique du mode numérique choisi. Cette section explique d'où viennent les seuils de **Q65**, comment le signal est construit et pourquoi Q65 a aujourd'hui largement remplacé JT65 pour l'EME sur les bandes de YAEC. Les données proviennent de trois documents : le guide de démarrage rapide des auteurs de Q65 [1], la comparaison JT65A – Q65-60A de K1JT [2] et l'étude du processus de codage de G4JNT [3].",
                 "### Qu'est-ce que Q65",
                 "Q65 a été introduit avec WSJT-X 2.4.0 par K1JT, G4WJS, K9AN et IV3NWV pour des QSO minimaux sur des trajets particulièrement difficiles ; quand l'étalement Doppler dépasse quelques hertz c'est le plus sensible des modes de WSJT-X, et il convient à la troposcatter, au rain scatter, à la diffusion ionosphérique, à la TEP et à l'EME à partir de la VHF [1]. Il utilise une FSK à **65 tons** et dérive de QRA64 de 2016 ; par rapport à celui-ci, il introduit [1] :",
                 "• un nouveau code correcteur d'erreurs Q-ary Repeat Accumulate à faible débit, proposé par Nico Palermo IV3NWV [3] [4] ;",
@@ -43083,7 +43168,7 @@ namespace LunaCalc
                 "~ D'après [1], seulement pour les bandes jusqu'à 432 MHz. Les auteurs encouragent à expérimenter d'autres combinaisons.",
                 "La période de 30 s double le rythme des QSO avec des signaux relativement forts, la période de 120 s gagne environ 3 dB par émission isolée [2].",
                 "### Q65 et JT65 comparés",
-                "**JT65A** a été le mode EME de la bande des 6 mètres pendant près de vingt ans : avec le décodage *Deep Search* il atteint −28 dB dans 2500 Hz (−29 dB avec le moyennage des messages, § 3.6), environ 15 dB sous le niveau nécessaire pour lire la CW à l'oreille, mais seulement pour les stations figurant dans la base de données CALL3.TXT d'indicatifs et de locators. Dans ces QSO on transmet en réalité très peu d'information : environ 14 bits pour un indicatif et un locator choisis dans la base, plus un report de 1 bit et un accusé de réception de 1 bit [2].",
+                "**JT65A** a été le mode EME de la bande des 6 mètres pendant près de vingt ans : avec le décodage *Deep Search* il atteint −28 dB dans 2500 Hz (−29 dB avec le moyennage des messages, § 1.6), environ 15 dB sous le niveau nécessaire pour lire la CW à l'oreille, mais seulement pour les stations figurant dans la base de données CALL3.TXT d'indicatifs et de locators. Dans ces QSO on transmet en réalité très peu d'information : environ 14 bits pour un indicatif et un locator choisis dans la base, plus un report de 1 bit et un accusé de réception de 1 bit [2].",
                 "**Q65** transmet toujours des messages de 78 bits : même un QSO minimal contient un indicatif quelconque (29 bits), un vrai report numérique (7 bits) et l'accusé de réception (1 bit), sans base de données [2]. K1JT a préparé dix fichiers simulés avec des signaux à −29 dB et un étalement Doppler de 1 Hz, cinq JT65A et cinq Q65-60A par fichier, et a essayé de les décoder de quatre façons, avec 50 décodages possibles par essai [2] :",
                 "|h| Essai | Mode | Indicatif et locator du DX | Deep Search | >Bons | >Faux",
                 "| 1 | JT65A | inconnus | non disponible | 0 | 0",
@@ -43092,8 +43177,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | connus (DX Call et DX Grid) | – | 49 | 0",
                 "~ D'après [2], tableau 1. Réglages JT65 : Deep, Deep Search, AP, 6 motifs d'effacement aléatoires, niveau agressif 9 ; Q65 : Fast, moyennage activé, effacement automatique de la moyenne.",
                 "Les conclusions de l'auteur [2] : pour les réponses à son propre CQ, Q65-60A a, pour **n'importe quel** correspondant inconnu, à peu près la sensibilité que JT65A n'a que pour les correspondants présents dans la base ; pour tous les autres il est **au moins 3 dB** plus sensible, et davantage encore dans les messages suivants, quand les deux indicatifs sont connus. Les faux décodages sont si rares qu'ils sont difficiles à mesurer. Le moyennage des messages de JT65 fonctionne pour un seul correspondant déjà identifié, celui de Q65 sur toute la bande affichée. Enfin, JT65 consacre la moitié de l'énergie émise à la synchronisation, Q65 un quart.",
-                "> La valeur de −25 dB pour JT65 dans le bilan EME est celle du guide de WSJT-X sans Deep Search (§ 3.6) ; les −28 dB avec Deep Search ne valent que pour les stations présentes dans la base de données, les −29 dB avec moyennage pour n'importe quel message.",
-                ">! **Incohérence entre les sources.** Le document de comparaison JT65A – Q65-60A [2] indique −29 dB pour le JT65A avec Deep Search ; l'exposé de K1JT à la conférence EME 2006, cité au § 3.6, donne en revanche −28 dB pour le Deep Search et −29 dB pour le moyennage des messages. YAEC utilise les valeurs de 2006. Les deux sources se réfèrent à des sous-modes différents : JT65B dans les simulations de 2006, JT65A dans [2].",
+                "> La valeur de −25 dB pour JT65 dans le bilan EME est celle du guide de WSJT-X sans Deep Search (§ 1.6) ; les −28 dB avec Deep Search ne valent que pour les stations présentes dans la base de données, les −29 dB avec moyennage pour n'importe quel message.",
+                ">! **Incohérence entre les sources.** Le document de comparaison JT65A – Q65-60A [2] indique −29 dB pour le JT65A avec Deep Search ; l'exposé de K1JT à la conférence EME 2006, cité au § 1.6, donne en revanche −28 dB pour le Deep Search et −29 dB pour le moyennage des messages. YAEC utilise les valeurs de 2006. Les deux sources se réfèrent à des sous-modes différents : JT65B dans les simulations de 2006, JT65A dans [2].",
                 "### Comment Q65 construit le signal",
                 "G4JNT a reconstitué à partir du code source de WSJT-X le chemin du message aux tons émis, en le vérifiant avec le programme Q65CODE.EXE de WSJT-X [3]. En résumé :",
                 "• **Codage de source.** Comme dans FST4, FT8, FT4 et MSK144, le message devient 71 bits de données plus 6 bits de type, 77 en tout. Un texte libre compte jusqu'à 13 caractères d'un alphabet de 42 symboles (espace, chiffres, lettres et + - . / ?), et §42^{13}§ est inférieur à §2^{71}§ ; le mode télémétrie transporte jusqu'à 18 chiffres hexadécimaux [3].",
@@ -43128,7 +43213,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Exemple abrégé d'après [6], avec TX7MB (CI00) comme DXpédition : chaque station qui appelle reste sur sa propre fréquence et passe à RRR quand elle reçoit son propre « R CI00 ».",
                 "> Les fenêtres lunaires communes sont courtes, surtout au lever et au coucher de la Lune, quand beaucoup de stations profitent de l'effet de sol : l'onglet Position en direct et +- 24h et l'onglet Distance et Dgrd montrent quand la Lune est visible des deux stations.",
-                ">⚠ La discussion sur les limites théoriques perd son sens au moment où l'on reçoit effectivement les signaux : un bruit local soudain peut dégrader l'écoute, tout comme la rotation de Faraday (§ 3.3).",
+                ">⚠ La discussion sur les limites théoriques perd son sens au moment où l'on reçoit effectivement les signaux : un bruit local soudain peut dégrader l'écoute, tout comme la rotation de Faraday (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 avril 2021 (WSJT-X 2.4.0), fourni par IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (fichiers d'essai JT65A_and_Q65-60A.zip), fourni par IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, octobre 2023, fourni par IC8TEM.",
@@ -43230,6 +43315,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["es"] = new Dictionary<string, string[]>();
+            d["es"]["PREF"] = new string[] {
+                "Esta parte del manual no describe los botones del programa, sino las ideas sobre las que está construido. Antes de los capítulos, el autor desea expresar algunos conceptos que han resultado clave para estudiar el programa, también a la luz de sus experiencias más recientes en la estación.",
+                "• **El cálculo es una referencia, no una promesa.** Balance, S/N estimada y umbrales de los modos digitales describen un enlace ideal. Durante la recepción cuentan el ruido local y artificial, que puede cambiar de un minuto a otro, y la rotación de Faraday: bastan unos instantes para borrar el margen calculado (§ 1.3, 1.12).",
+                "• **El día se elige antes de encender.** Dgrd, distancia de la Luna y declinación indican cuánto ruido del cielo hay detrás de la Luna, cuántas horas permanece sobre el horizonte y cuánto sube: el mismo equipo rinde de forma muy distinta de un día a otro (§ 1.4).",
+                "• **La polarización puede hacer desaparecer una señal.** Con antenas lineales, la rotación de Faraday y la polarización espacial pueden apagar un eco durante minutos u horas; a menudo basta con esperar, repetir o girar la polarización en lugar de buscar una avería (§ 1.3).",
+                "• **Cada decibelio delante del preamplificador cuenta.** Cables, relés y conectores antes del preamplificador empeoran la temperatura del sistema más de lo que sugiere su valor en dB: ahí es donde conviene invertir (§ 1.7, 1.8).",
+                "• **Primero las frecuencias correctas.** El Doppler y el CFOM desplazan el eco hasta varios kHz en las bandas altas: un eco fuera de la ventana de decodificación no se oye, aunque la señal sea buena (§ 1.10).",
+                "• **El Sol es un adversario previsible.** Cuando está cerca de la Luna el ruido aumenta: el programa lo avisa con antelación, y conviene tenerlo en cuenta al elegir los días (§ 1.5, 1.9).",
+                "• **Escuchar, comparar, anotar.** El programa sirve para entender qué esperar; comparar las estimaciones con lo que se recibe de verdad, anotando fecha, hora y condiciones, es la forma más rápida de conocer la propia estación.",
+                "Las fuentes de cada capítulo se citan íntegramente; donde la teoría y la experiencia no coinciden, el manual lo dice abiertamente.",
+                "~. Costantino IC8TEM"
+            };
             d["es"]["S32"] = new string[] {
                 "## El locator Maidenhead (WWL)",
                 "El **locator Maidenhead**, también llamado WWL (World Wide Locator) o QTH locator, es el código que usan los radioaficionados para indicar la posición de su estación. Fue ideado por John Morris G4ANB y adoptado por el Grupo de Trabajo VHF de la IARU en abril de 1980, en una reunión celebrada en Maidenhead, Inglaterra; sustituyó al antiguo QRA locator, que solo cubría Europa [1]. Desde 1999 el datum geodésico es WGS-84, el mismo del GPS [1]. YAEC obtiene del locator la latitud y la longitud de la estación, y de estas todos los cálculos.",
@@ -43289,7 +43386,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Umbrales para una probabilidad de decodificación del 50 %, medidos en un canal de ruido blanco gaussiano aditivo (AWGN). En Q65 la decodificación *a priori* (AP), que usa los indicativos ya conocidos durante el QSO, añade de 1,5 a 3,6 dB según el submodo (por ejemplo Q65-60A −30,2 dB) [2]; YAEC muestra como referencia los valores más prudentes sin AP. Con una dispersión Doppler de pocos hercios el umbral empeora: en Q65-60A unos 2 dB a 5 Hz y unos 3 dB a 10 Hz (leído en el gráfico de [2]). La estructura de Q65, sus submodos y la comparación con JT65 están en el § 3.12. Para EME el documento recomienda Q65-60A en 50 y 144 MHz y Q65-60B en 432 MHz [2]: los submodos B – E tienen una separación de tonos y un ancho de banda ocupado de 2 – 16 veces los del submodo A.",
+                "~ Umbrales para una probabilidad de decodificación del 50 %, medidos en un canal de ruido blanco gaussiano aditivo (AWGN). En Q65 la decodificación *a priori* (AP), que usa los indicativos ya conocidos durante el QSO, añade de 1,5 a 3,6 dB según el submodo (por ejemplo Q65-60A −30,2 dB) [2]; YAEC muestra como referencia los valores más prudentes sin AP. Con una dispersión Doppler de pocos hercios el umbral empeora: en Q65-60A unos 2 dB a 5 Hz y unos 3 dB a 10 Hz (leído en el gráfico de [2]). La estructura de Q65, sus submodos y la comparación con JT65 están en el § 1.12. Para EME el documento recomienda Q65-60A en 50 y 144 MHz y Q65-60B en 432 MHz [2]: los submodos B – E tienen una separación de tonos y un ancho de banda ocupado de 2 – 16 veces los del submodo A.",
                 "Para el JT65, K1JT publicó los límites de cada tipo de decodificación, obtenidos con simulaciones del submodo JT65B [5]:",
                 "|h| JT65: tipo de decodificación | >S/N (2500 Hz) | Fuente",
                 "| Cualquier mensaje, también texto libre | −24 dB | [5]",
@@ -43311,7 +43408,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21.º Meeting EME, presentación facilitada por IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, documento del 12 de noviembre de 2010, facilitado por IC8TEM.",
                 "[5] J. Taylor K1JT, ponencia sobre JT65 en la conferencia EME 2006 (K1JT_eme2006.pdf): tabla de los niveles mínimos de S/N en 2500 Hz.",
-                "> El esquema de la estación, a la derecha de la pestaña, deduce las pérdidas de los cables elegidos: en transmisión cable PA–relé + relé + cable de antena, en recepción cable de antena + relé antes del preamplificador y cable de bajada después de él. Las atenuaciones de los cables proceden de la base de datos de la pestaña COAXIAL CABLES (§ 3.8)."
+                "> El esquema de la estación, a la derecha de la pestaña, deduce las pérdidas de los cables elegidos: en transmisión cable PA–relé + relé + cable de antena, en recepción cable de antena + relé antes del preamplificador y cable de bajada después de él. Las atenuaciones de los cables proceden de la base de datos de la pestaña COAXIAL CABLES (§ 1.8)."
             };
             d["es"]["S47"] = new string[] {
                 "## El preamplificador y la figura de ruido de la radio {nuovo}",
@@ -43459,7 +43556,7 @@ namespace LunaCalc
                 "La ventaja es que varias estaciones, y quien solo escucha, pueden seguir un QSO en la misma frecuencia sin recalcular el Doppler para cada una. YAEC muestra estas dos frecuencias en la pantalla principal.",
                 "### El CAT de la radio",
                 "El Doppler cambia continuamente, por lo que la compensación debe actualizarse en cada periodo. La forma más sencilla es dejarla al programa digital (por ejemplo la ventana *Astronomical Data* de WSJT-X) que, a través del **CAT** de la radio, ajusta los VFO de transmisión y recepción y mantiene la radio en la frecuencia correcta [1] [2]. Sin CAT se puede usar el split (un VFO para transmitir y otro para recibir) o el RIT, ajustando a mano en cada periodo: en 50 y 144 MHz es factible, en 432 MHz resulta incómodo [1].",
-                "> Atención: para CFOM la radio debe aceptar el cambio de frecuencia por CAT **también durante la transmisión**. Algunos equipos no lo hacen (por ejemplo el FT-897 citado en [2]): en ese caso se puede recibir igualmente en CFOM, mientras que la transmisión queda en una frecuencia fija. Con un transverter (§ 3.7) el CAT ajusta la radio en la frecuencia intermedia: configura el desplazamiento del transverter en el programa, para que la frecuencia mostrada sea la real.",
+                "> Atención: para CFOM la radio debe aceptar el cambio de frecuencia por CAT **también durante la transmisión**. Algunos equipos no lo hacen (por ejemplo el FT-897 citado en [2]): en ese caso se puede recibir igualmente en CFOM, mientras que la transmisión queda en una frecuencia fija. Con un transverter (§ 1.7) el CAT ajusta la radio en la frecuencia intermedia: configura el desplazamiento del transverter en el programa, para que la frecuencia mostrada sea la real.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (del artículo solo se usan los datos hasta 432 MHz) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -43490,7 +43587,7 @@ namespace LunaCalc
             };
             d["es"]["S412"] = new string[] {
                 "## Modos digitales para EME: Q65 y JT65",
-                "El balance EME (§ 3.6) muestra la S/N estimada junto al umbral típico del modo digital elegido. Esta sección explica de dónde proceden los umbrales de **Q65**, cómo se construye la señal y por qué Q65 ha sustituido hoy en gran medida a JT65 para EME en las bandas de YAEC. Los datos proceden de tres documentos: la guía rápida de los autores de Q65 [1], la comparación JT65A – Q65-60A de K1JT [2] y el estudio del proceso de codificación de G4JNT [3].",
+                "El balance EME (§ 1.6) muestra la S/N estimada junto al umbral típico del modo digital elegido. Esta sección explica de dónde proceden los umbrales de **Q65**, cómo se construye la señal y por qué Q65 ha sustituido hoy en gran medida a JT65 para EME en las bandas de YAEC. Los datos proceden de tres documentos: la guía rápida de los autores de Q65 [1], la comparación JT65A – Q65-60A de K1JT [2] y el estudio del proceso de codificación de G4JNT [3].",
                 "### Qué es Q65",
                 "Q65 fue introducido con WSJT-X 2.4.0 por K1JT, G4WJS, K9AN e IV3NWV para QSO mínimos en trayectos especialmente difíciles; cuando la dispersión Doppler supera unos pocos hercios es el más sensible de los modos de WSJT-X, y es adecuado para troposcatter, rain scatter, dispersión ionosférica, TEP y EME desde VHF hacia arriba [1]. Usa FSK de **65 tonos** y deriva de QRA64 de 2016; respecto a este introduce [1]:",
                 "• un nuevo código corrector de errores Q-ary Repeat Accumulate de baja tasa, propuesto por Nico Palermo IV3NWV [3] [4];",
@@ -43547,7 +43644,7 @@ namespace LunaCalc
                 "~ De [1], solo para las bandas hasta 432 MHz. Los autores animan a experimentar con otras combinaciones.",
                 "El periodo de 30 s duplica el ritmo de QSO con señales relativamente fuertes, el periodo de 120 s gana unos 3 dB por cada transmisión individual [2].",
                 "### Q65 y JT65 comparados",
-                "**JT65A** fue el modo EME de la banda de 6 metros durante casi veinte años: con la decodificación *Deep Search* alcanza −28 dB en 2500 Hz (−29 dB con el promediado de mensajes, § 3.6), unos 15 dB por debajo del nivel necesario para copiar CW de oído, pero solo para las estaciones incluidas en la base de datos CALL3.TXT de indicativos y locators. En esos QSO se envía en realidad muy poca información: unos 14 bits para un indicativo y un locator elegidos de la base de datos, más un informe de 1 bit y una confirmación de 1 bit [2].",
+                "**JT65A** fue el modo EME de la banda de 6 metros durante casi veinte años: con la decodificación *Deep Search* alcanza −28 dB en 2500 Hz (−29 dB con el promediado de mensajes, § 1.6), unos 15 dB por debajo del nivel necesario para copiar CW de oído, pero solo para las estaciones incluidas en la base de datos CALL3.TXT de indicativos y locators. En esos QSO se envía en realidad muy poca información: unos 14 bits para un indicativo y un locator elegidos de la base de datos, más un informe de 1 bit y una confirmación de 1 bit [2].",
                 "**Q65** envía siempre mensajes de 78 bits: incluso un QSO mínimo transporta un indicativo arbitrario (29 bits), un informe numérico real (7 bits) y la confirmación (1 bit), sin base de datos [2]. K1JT preparó diez ficheros simulados con señales a −29 dB y 1 Hz de dispersión Doppler, cinco JT65A y cinco Q65-60A por fichero, e intentó decodificarlos de cuatro maneras, con 50 decodificaciones posibles por prueba [2]:",
                 "|h| Prueba | Modo | Indicativo y locator del DX | Deep Search | >Correctas | >Erróneas",
                 "| 1 | JT65A | no conocidos | no disponible | 0 | 0",
@@ -43556,8 +43653,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | conocidos (DX Call y DX Grid) | – | 49 | 0",
                 "~ De [2], tabla 1. Ajustes de JT65: Deep, Deep Search, AP, 6 patrones de borrado aleatorios, nivel agresivo 9; Q65: Fast, promediado activado, borrado automático del promedio.",
                 "Las conclusiones del autor [2]: en las respuestas al propio CQ, Q65-60A tiene, para **cualquier** corresponsal desconocido, más o menos la misma sensibilidad que JT65A tiene solo para los corresponsales de la base de datos; para todos los demás es **al menos 3 dB** más sensible, y aún más en los mensajes siguientes, cuando se conocen ambos indicativos. Las decodificaciones falsas son tan raras que resultan difíciles de medir. El promediado de mensajes de JT65 funciona para un único corresponsal ya identificado, el de Q65 sobre toda la banda mostrada. Por último, JT65 dedica la mitad de la energía transmitida al sincronismo, Q65 una cuarta parte.",
-                "> El valor de −25 dB para JT65 en el balance EME es el de la guía de WSJT-X sin Deep Search (§ 3.6); los −28 dB con Deep Search solo valen para las estaciones incluidas en la base de datos, los −29 dB con promediado para cualquier mensaje.",
-                ">! **Incoherencia entre las fuentes.** El documento de comparación JT65A – Q65-60A [2] indica −29 dB para JT65A con Deep Search; la ponencia de K1JT en la conferencia EME 2006, citada en el § 3.6, da en cambio −28 dB para Deep Search y −29 dB para el promediado de mensajes. YAEC usa los valores de 2006. Las dos fuentes se refieren a submodos distintos: JT65B en las simulaciones de 2006, JT65A en [2].",
+                "> El valor de −25 dB para JT65 en el balance EME es el de la guía de WSJT-X sin Deep Search (§ 1.6); los −28 dB con Deep Search solo valen para las estaciones incluidas en la base de datos, los −29 dB con promediado para cualquier mensaje.",
+                ">! **Incoherencia entre las fuentes.** El documento de comparación JT65A – Q65-60A [2] indica −29 dB para JT65A con Deep Search; la ponencia de K1JT en la conferencia EME 2006, citada en el § 1.6, da en cambio −28 dB para Deep Search y −29 dB para el promediado de mensajes. YAEC usa los valores de 2006. Las dos fuentes se refieren a submodos distintos: JT65B en las simulaciones de 2006, JT65A en [2].",
                 "### Cómo construye Q65 la señal",
                 "G4JNT reconstruyó a partir del código fuente de WSJT-X el camino del mensaje a los tonos transmitidos, verificándolo con el programa Q65CODE.EXE de WSJT-X [3]. En resumen:",
                 "• **Codificación de la fuente.** Como en FST4, FT8, FT4 y MSK144, el mensaje se convierte en 71 bits de datos más 6 bits de tipo, 77 en total. Un texto libre tiene hasta 13 caracteres de un alfabeto de 42 símbolos (espacio, cifras, letras y + - . / ?), y §42^{13}§ es menor que §2^{71}§; el modo de telemetría transporta hasta 18 cifras hexadecimales [3].",
@@ -43592,7 +43689,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Ejemplo abreviado de [6], con TX7MB (CI00) como DXpedición: cada estación que llama se queda en su propia frecuencia y pasa a RRR cuando recibe su propio “R CI00”.",
                 "> Las ventanas lunares comunes son cortas, sobre todo en la salida y la puesta de la Luna, cuando muchas estaciones aprovechan el efecto suelo: la pestaña Posición en vivo y +- 24h y la pestaña Distancia y Dgrd muestran cuándo la Luna es visible desde ambas estaciones.",
-                ">⚠ La discusión sobre los límites teóricos pierde su sentido en el momento en que se están recibiendo las señales: un ruido local repentino puede empeorar la escucha, al igual que la rotación de Faraday (§ 3.3).",
+                ">⚠ La discusión sobre los límites teóricos pierde su sentido en el momento en que se están recibiendo las señales: un ruido local repentino puede empeorar la escucha, al igual que la rotación de Faraday (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 de abril de 2021 (WSJT-X 2.4.0), facilitado por IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (ficheros de prueba JT65A_and_Q65-60A.zip), facilitado por IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, octubre de 2023, facilitado por IC8TEM.",
@@ -43694,6 +43791,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["pt"] = new Dictionary<string, string[]>();
+            d["pt"]["PREF"] = new string[] {
+                "Esta parte do manual não descreve os botões do programa, mas as ideias sobre as quais ele foi construído. Antes dos capítulos, o autor deseja expor alguns conceitos que se revelaram essenciais para estudar o programa, também à luz das suas experiências mais recentes na estação.",
+                "• **O cálculo é uma referência, não uma promessa.** Balanço, S/N estimado e limiares dos modos digitais descrevem uma ligação ideal. Durante a receção contam o ruído local e artificial, que pode mudar de um minuto para o outro, e a rotação de Faraday: bastam poucos instantes para apagar a margem calculada (§ 1.3, 1.12).",
+                "• **O dia escolhe-se antes de ligar.** Dgrd, distância da Lua e declinação indicam quanto ruído do céu há atrás da Lua, quantas horas fica acima do horizonte e quanto sobe: o mesmo equipamento rende de forma muito diferente de um dia para o outro (§ 1.4).",
+                "• **A polarização pode fazer desaparecer um sinal.** Com antenas lineares, a rotação de Faraday e a polarização espacial podem apagar um eco durante minutos ou horas; muitas vezes basta esperar, repetir ou rodar a polarização, em vez de procurar uma avaria (§ 1.3).",
+                "• **Cada decibel antes do pré-amplificador conta.** Cabos, relés e conectores antes do pré-amplificador pioram a temperatura do sistema mais do que sugere o seu valor em dB: é aí que vale a pena investir (§ 1.7, 1.8).",
+                "• **Primeiro as frequências certas.** O Doppler e o CFOM deslocam o eco até vários kHz nas bandas altas: um eco fora da janela de descodificação não se ouve, mesmo com um bom sinal (§ 1.10).",
+                "• **O Sol é um adversário previsível.** Quando está perto da Lua o ruído aumenta: o programa avisa com antecedência, e vale a pena tê-lo em conta na escolha dos dias (§ 1.5, 1.9).",
+                "• **Ouvir, comparar, anotar.** O programa ajuda a perceber o que esperar; comparar as estimativas com o que se recebe de facto, anotando data, hora e condições, é a forma mais rápida de conhecer a própria estação.",
+                "As fontes de cada capítulo são citadas na íntegra; onde a teoria e a experiência não coincidem, o manual di-lo abertamente.",
+                "~. Costantino IC8TEM"
+            };
             d["pt"]["S32"] = new string[] {
                 "## O locator Maidenhead (WWL)",
                 "O **locator Maidenhead**, também chamado WWL (World Wide Locator) ou QTH locator, é o código que os radioamadores usam para indicar a posição da sua estação. Foi concebido por John Morris G4ANB e adotado pelo Grupo de Trabalho VHF da IARU em abril de 1980, numa reunião em Maidenhead, Inglaterra; substituiu o antigo QRA locator, que cobria apenas a Europa [1]. Desde 1999 o datum geodésico é o WGS-84, o mesmo do GPS [1]. O YAEC obtém do locator a latitude e a longitude da estação e, a partir destas, todos os cálculos.",
@@ -43753,7 +43862,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Limiares para 50 % de probabilidade de descodificação, medidos num canal de ruído branco gaussiano aditivo (AWGN). Para o Q65, a descodificação *a priori* (AP), que usa os indicativos já conhecidos durante o QSO, acrescenta 1,5 a 3,6 dB consoante o submodo (por exemplo Q65-60A −30,2 dB) [2]; o YAEC mostra como referência os valores mais prudentes sem AP. Com um Doppler spread de alguns hertz o limiar piora: para o Q65-60A cerca de 2 dB a 5 Hz e cerca de 3 dB a 10 Hz (lido no gráfico de [2]). A estrutura do Q65, os seus submodos e a comparação com o JT65 estão no § 3.12. Para EME o documento recomenda Q65-60A em 50 e 144 MHz e Q65-60B em 432 MHz [2]: os submodos B – E têm espaçamento entre tons e largura de banda ocupada 2 – 16 vezes as do submodo A.",
+                "~ Limiares para 50 % de probabilidade de descodificação, medidos num canal de ruído branco gaussiano aditivo (AWGN). Para o Q65, a descodificação *a priori* (AP), que usa os indicativos já conhecidos durante o QSO, acrescenta 1,5 a 3,6 dB consoante o submodo (por exemplo Q65-60A −30,2 dB) [2]; o YAEC mostra como referência os valores mais prudentes sem AP. Com um Doppler spread de alguns hertz o limiar piora: para o Q65-60A cerca de 2 dB a 5 Hz e cerca de 3 dB a 10 Hz (lido no gráfico de [2]). A estrutura do Q65, os seus submodos e a comparação com o JT65 estão no § 1.12. Para EME o documento recomenda Q65-60A em 50 e 144 MHz e Q65-60B em 432 MHz [2]: os submodos B – E têm espaçamento entre tons e largura de banda ocupada 2 – 16 vezes as do submodo A.",
                 "Para o JT65, K1JT publicou os limites de cada tipo de descodificação, obtidos com simulações do submodo JT65B [5]:",
                 "|h| JT65: tipo de descodificação | >S/N (2500 Hz) | Fonte",
                 "| Qualquer mensagem, incluindo texto livre | −24 dB | [5]",
@@ -43775,7 +43884,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21.º Meeting EME, apresentação fornecida por IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, documento de 12 de novembro de 2010, fornecido por IC8TEM.",
                 "[5] J. Taylor K1JT, comunicação sobre o JT65 na conferência EME 2006 (K1JT_eme2006.pdf): tabela dos níveis mínimos de S/N em 2500 Hz.",
-                "> O esquema da estação, à direita do separador, obtém as perdas a partir dos cabos escolhidos: em transmissão cabo PA–relé + relé + cabo de antena, em receção cabo de antena + relé antes do pré-amplificador e cabo de descida depois dele. As atenuações dos cabos vêm da base de dados do separador COAXIAL CABLES (§ 3.8)."
+                "> O esquema da estação, à direita do separador, obtém as perdas a partir dos cabos escolhidos: em transmissão cabo PA–relé + relé + cabo de antena, em receção cabo de antena + relé antes do pré-amplificador e cabo de descida depois dele. As atenuações dos cabos vêm da base de dados do separador COAXIAL CABLES (§ 1.8)."
             };
             d["pt"]["S47"] = new string[] {
                 "## O pré-amplificador e a figura de ruído do rádio {nuovo}",
@@ -43923,7 +44032,7 @@ namespace LunaCalc
                 "A vantagem é que várias estações, e quem esteja apenas a escutar, podem acompanhar um QSO na mesma frequência sem recalcular o Doppler para cada uma. O YAEC mostra estas duas frequências no ecrã principal.",
                 "### O CAT do rádio",
                 "O Doppler varia continuamente, pelo que a compensação deve ser atualizada a cada período. A forma mais simples é deixá-la ao programa digital (por exemplo a janela *Astronomical Data* do WSJT-X) que, através do **CAT** do rádio, define os VFO de transmissão e de receção e mantém o rádio alinhado na frequência certa [1] [2]. Sem CAT pode usar-se o split (um VFO para transmissão e outro para receção) ou o RIT, ajustando à mão a cada período: em 50 e 144 MHz é viável, em 432 MHz torna-se incómodo [1].",
-                "> Atenção: para o CFOM o rádio tem de aceitar a mudança de frequência via CAT **também durante a transmissão**. Alguns equipamentos não o fazem (por exemplo o FT-897 citado em [2]): nesse caso pode-se continuar a receber em CFOM, enquanto a transmissão fica numa frequência fixa. Com um transverter (§ 3.7) o CAT define o rádio na frequência intermédia: configure o desvio do transverter no programa, para que a frequência mostrada seja a real.",
+                "> Atenção: para o CFOM o rádio tem de aceitar a mudança de frequência via CAT **também durante a transmissão**. Alguns equipamentos não o fazem (por exemplo o FT-897 citado em [2]): nesse caso pode-se continuar a receber em CFOM, enquanto a transmissão fica numa frequência fixa. Com um transverter (§ 1.7) o CAT define o rádio na frequência intermédia: configure o desvio do transverter no programa, para que a frequência mostrada seja a real.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (do artigo usam-se apenas os dados até 432 MHz) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -43954,7 +44063,7 @@ namespace LunaCalc
             };
             d["pt"]["S412"] = new string[] {
                 "## Modos digitais para EME: Q65 e JT65",
-                "O budget EME (§ 3.6) mostra a S/N estimada ao lado do limiar típico do modo digital escolhido. Esta secção explica de onde vêm os limiares do **Q65**, como é construído o sinal e porque é que o Q65 substituiu hoje em grande parte o JT65 para EME nas bandas do YAEC. Os dados vêm de três documentos: o guia de início rápido dos autores do Q65 [1], a comparação JT65A – Q65-60A de K1JT [2] e o estudo do processo de codificação de G4JNT [3].",
+                "O budget EME (§ 1.6) mostra a S/N estimada ao lado do limiar típico do modo digital escolhido. Esta secção explica de onde vêm os limiares do **Q65**, como é construído o sinal e porque é que o Q65 substituiu hoje em grande parte o JT65 para EME nas bandas do YAEC. Os dados vêm de três documentos: o guia de início rápido dos autores do Q65 [1], a comparação JT65A – Q65-60A de K1JT [2] e o estudo do processo de codificação de G4JNT [3].",
                 "### O que é o Q65",
                 "O Q65 foi introduzido com o WSJT-X 2.4.0 por K1JT, G4WJS, K9AN e IV3NWV para QSO mínimos em percursos particularmente difíceis; quando o Doppler spread ultrapassa alguns hertz é o mais sensível dos modos do WSJT-X, e adequa-se a troposcatter, rain scatter, dispersão ionosférica, TEP e EME de VHF para cima [1]. Usa FSK de **65 tons** e deriva do QRA64 de 2016; em relação a este, introduz [1]:",
                 "• um novo código corretor de erros Q-ary Repeat Accumulate de baixa taxa, proposto por Nico Palermo IV3NWV [3] [4];",
@@ -44011,7 +44120,7 @@ namespace LunaCalc
                 "~ De [1], apenas para as bandas até 432 MHz. Os autores incentivam a experimentar outras combinações.",
                 "O período de 30 s duplica o ritmo de QSO com sinais relativamente fortes, o período de 120 s ganha cerca de 3 dB por transmissão individual [2].",
                 "### Q65 e JT65 comparados",
-                "O **JT65A** foi o modo EME da banda dos 6 metros durante quase vinte anos: com a descodificação *Deep Search* chega a −28 dB em 2500 Hz (−29 dB com a média de mensagens, § 3.6), cerca de 15 dB abaixo do nível necessário para copiar CW de ouvido, mas apenas para as estações listadas na base de dados CALL3.TXT de indicativos e locators. Nesses QSO transmite-se na realidade muito pouca informação: cerca de 14 bits para um indicativo e locator escolhidos da base de dados, mais um relatório de 1 bit e uma confirmação de 1 bit [2].",
+                "O **JT65A** foi o modo EME da banda dos 6 metros durante quase vinte anos: com a descodificação *Deep Search* chega a −28 dB em 2500 Hz (−29 dB com a média de mensagens, § 1.6), cerca de 15 dB abaixo do nível necessário para copiar CW de ouvido, mas apenas para as estações listadas na base de dados CALL3.TXT de indicativos e locators. Nesses QSO transmite-se na realidade muito pouca informação: cerca de 14 bits para um indicativo e locator escolhidos da base de dados, mais um relatório de 1 bit e uma confirmação de 1 bit [2].",
                 "O **Q65** envia sempre mensagens de 78 bits: mesmo um QSO mínimo transporta um indicativo arbitrário (29 bits), um relatório numérico real (7 bits) e a confirmação (1 bit), sem base de dados [2]. K1JT preparou dez ficheiros simulados com sinais a −29 dB e 1 Hz de Doppler spread, cinco JT65A e cinco Q65-60A por ficheiro, e tentou descodificá-los de quatro formas, com 50 descodificações possíveis por ensaio [2]:",
                 "|h| Ensaio | Modo | Indicativo e locator do DX | Deep Search | >Corretas | >Erradas",
                 "| 1 | JT65A | não conhecidos | não disponível | 0 | 0",
@@ -44020,8 +44129,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | conhecidos (DX Call e DX Grid) | – | 49 | 0",
                 "~ De [2], tabela 1. Configuração JT65: Deep, Deep Search, AP, 6 padrões de apagamento aleatórios, nível agressivo 9; Q65: Fast, média ativa, limpeza automática da média.",
                 "As conclusões do autor [2]: para as respostas ao próprio CQ, o Q65-60A tem, para **qualquer** chamador desconhecido, aproximadamente a mesma sensibilidade que o JT65A tem apenas para os chamadores da base de dados; para todos os outros é **pelo menos 3 dB** mais sensível, e ainda mais nas mensagens seguintes, quando ambos os indicativos são conhecidos. As descodificações falsas são tão raras que são difíceis de medir. A média de mensagens do JT65 funciona para um único chamador já identificado, a média do Q65 em toda a banda mostrada. Por fim, o JT65 dedica metade da energia transmitida ao sincronismo, o Q65 um quarto.",
-                "> O valor de −25 dB para o JT65 no budget EME é o do guia do WSJT-X sem Deep Search (§ 3.6); os −28 dB com Deep Search aplicam-se apenas às estações listadas na base de dados, os −29 dB com média a qualquer mensagem.",
-                ">! **Incoerência entre as fontes.** O documento de comparação JT65A – Q65-60A [2] indica −29 dB para o JT65A com Deep Search; a comunicação de K1JT na conferência EME 2006, citada no § 3.6, dá em vez disso −28 dB para a Deep Search e −29 dB para a média de mensagens. O YAEC usa os valores de 2006. As duas fontes referem-se a submodos diferentes: JT65B nas simulações de 2006, JT65A em [2].",
+                "> O valor de −25 dB para o JT65 no budget EME é o do guia do WSJT-X sem Deep Search (§ 1.6); os −28 dB com Deep Search aplicam-se apenas às estações listadas na base de dados, os −29 dB com média a qualquer mensagem.",
+                ">! **Incoerência entre as fontes.** O documento de comparação JT65A – Q65-60A [2] indica −29 dB para o JT65A com Deep Search; a comunicação de K1JT na conferência EME 2006, citada no § 1.6, dá em vez disso −28 dB para a Deep Search e −29 dB para a média de mensagens. O YAEC usa os valores de 2006. As duas fontes referem-se a submodos diferentes: JT65B nas simulações de 2006, JT65A em [2].",
                 "### Como o Q65 constrói o sinal",
                 "G4JNT reconstruiu a partir do código-fonte do WSJT-X o percurso da mensagem até aos tons transmitidos, verificando-o com o programa Q65CODE.EXE do WSJT-X [3]. Em resumo:",
                 "• **Codificação da fonte.** Como em FST4, FT8, FT4 e MSK144, a mensagem torna-se 71 bits de dados mais 6 bits de tipo, 77 no total. Um texto livre tem até 13 caracteres de um alfabeto de 42 símbolos (espaço, algarismos, letras e + - . / ?), e §42^{13}§ é menor que §2^{71}§; o modo de telemetria transporta até 18 algarismos hexadecimais [3].",
@@ -44056,7 +44165,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Exemplo abreviado de [6], com TX7MB (CI00) como DXpedição: cada estação que chama fica na sua própria frequência e passa a RRR quando recebe o seu próprio “R CI00”.",
                 "> As janelas lunares comuns são curtas, sobretudo no nascer e no pôr da Lua, quando muitas estações aproveitam o efeito de solo: o separador Posição em direto e +- 24h e o separador Distância e Dgrd mostram quando a Lua é visível de ambas as estações.",
-                ">⚠ A discussão sobre os limites teóricos perde o seu significado no momento em que se estão a receber os sinais: um ruído local repentino pode piorar a escuta, tal como a rotação de Faraday (§ 3.3).",
+                ">⚠ A discussão sobre os limites teóricos perde o seu significado no momento em que se estão a receber os sinais: um ruído local repentino pode piorar a escuta, tal como a rotação de Faraday (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 de abril de 2021 (WSJT-X 2.4.0), fornecido por IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (ficheiros de teste JT65A_and_Q65-60A.zip), fornecido por IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, outubro de 2023, fornecido por IC8TEM.",
@@ -44158,6 +44267,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["zh"] = new Dictionary<string, string[]>();
+            d["zh"]["PREF"] = new string[] {
+                "本部分手册不介绍程序的按钮，而是介绍程序所依据的思想。在各章之前，作者希望阐述几个对学习本程序至关重要的概念，这些概念也来自他最近在电台中的经验。",
+                "• **计算是参考，而不是承诺。** 链路预算、估计的 S/N 和数字模式门限描述的是理想链路。接收时起作用的是本地噪声和人为噪声（可能每分钟都在变化）以及法拉第旋转：片刻之间就能抹去计算出的余量（§ 1.3, 1.12）。",
+                "• **开机之前先选好日子。** Dgrd、月球距离和赤纬说明月球背后有多少天空噪声、月球在地平线上停留多少小时以及升得多高：同一套设备在不同日子的表现差别很大（§ 1.4）。",
+                "• **极化可能让信号消失。** 使用线极化天线时，法拉第旋转和空间极化可能让回波消失几分钟甚至几小时；通常只需等待、重复或旋转极化，而不必去找故障（§ 1.3）。",
+                "• **前置放大器之前的每个分贝都很重要。** 前置放大器之前的电缆、继电器和连接器对系统温度的恶化比其 dB 数值看上去更严重：投资应优先放在这里（§ 1.7, 1.8）。",
+                "• **先把频率弄对。** 在较高波段，多普勒和 CFOM 会使回波偏移达数 kHz：落在解码窗口之外的回波即使信号很好也听不到（§ 1.10）。",
+                "• **太阳是可预测的对手。** 太阳靠近月球时噪声上升：程序会提前提示，选择日期时值得考虑（§ 1.5, 1.9）。",
+                "• **收听、比较、记录。** 程序帮助你了解可以期待什么；把估计值与实际接收结果进行比较，并记录日期、时间和条件，是了解自己电台的最快方法。",
+                "每一章的来源都完整列出；理论与经验不一致之处，手册会坦率说明。",
+                "~. Costantino IC8TEM"
+            };
             d["zh"]["S32"] = new string[] {
                 "## 梅登黑德定位符（WWL）",
                 "**梅登黑德定位符**（Maidenhead locator），又称 WWL（World Wide Locator）或 QTH 定位符，是业余无线电爱好者用来表示其电台位置的代码。它由 John Morris G4ANB 设计，并于 1980 年 4 月在英国梅登黑德召开的会议上被 IARU VHF 工作组采纳；它取代了仅覆盖欧洲的旧 QRA 定位符 [1]。自 1999 年起其大地基准为 WGS-84，与 GPS 相同 [1]。YAEC 由定位符推算电台的纬度和经度，并据此进行所有计算。",
@@ -44217,7 +44338,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ 50 % 解码概率的门限，在加性高斯白噪声（AWGN）信道上测得。对于 Q65，*先验*（AP）解码利用 QSO 过程中已知的呼号，视子模式可增益 1.5 至 3.6 dB（例如 Q65-60A 为 −30.2 dB）[2]；YAEC 显示不含 AP 的较保守数值作为参考。当多普勒扩展为几赫兹时门限会变差：对 Q65-60A，5 Hz 时约差 2 dB，10 Hz 时约差 3 dB（读自 [2] 中的图表）。Q65 的结构、子模式以及与 JT65 的比较见 § 3.12。对于 EME，该文献建议 50 和 144 MHz 使用 Q65-60A，432 MHz 使用 Q65-60B [2]：子模式 B – E 的音调间隔和占用带宽为子模式 A 的 2 – 16 倍。",
+                "~ 50 % 解码概率的门限，在加性高斯白噪声（AWGN）信道上测得。对于 Q65，*先验*（AP）解码利用 QSO 过程中已知的呼号，视子模式可增益 1.5 至 3.6 dB（例如 Q65-60A 为 −30.2 dB）[2]；YAEC 显示不含 AP 的较保守数值作为参考。当多普勒扩展为几赫兹时门限会变差：对 Q65-60A，5 Hz 时约差 2 dB，10 Hz 时约差 3 dB（读自 [2] 中的图表）。Q65 的结构、子模式以及与 JT65 的比较见 § 1.12。对于 EME，该文献建议 50 和 144 MHz 使用 Q65-60A，432 MHz 使用 Q65-60B [2]：子模式 B – E 的音调间隔和占用带宽为子模式 A 的 2 – 16 倍。",
                 "对于 JT65，K1JT 发布了每种解码方式的极限，这些数值来自对 JT65B 子模式的仿真 [5]：",
                 "|h| JT65：解码方式 | >S/N（2500 Hz） | 来源",
                 "| 任意消息，包括自由文本 | −24 dB | [5]",
@@ -44239,7 +44360,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”，第 21 届 EME Meeting，演示文稿由 IC8TEM 提供。",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”，2010 年 11 月 12 日的文档，由 IC8TEM 提供。",
                 "[5] J. Taylor K1JT，2006 年 EME 会议上关于 JT65 的报告（K1JT_eme2006.pdf）：2500 Hz 内最低 S/N 电平表。",
-                "> 选项卡右侧的电台框图根据所选电缆推算损耗：发射时为 PA–继电器电缆 + 继电器 + 天线电缆，接收时为前置放大器之前的天线电缆 + 继电器，以及前置放大器之后的馈线电缆。电缆衰减取自 COAXIAL CABLES 选项卡的数据库（§ 3.8）。"
+                "> 选项卡右侧的电台框图根据所选电缆推算损耗：发射时为 PA–继电器电缆 + 继电器 + 天线电缆，接收时为前置放大器之前的天线电缆 + 继电器，以及前置放大器之后的馈线电缆。电缆衰减取自 COAXIAL CABLES 选项卡的数据库（§ 1.8）。"
             };
             d["zh"]["S47"] = new string[] {
                 "## 前置放大器与电台的噪声系数 {nuovo}",
@@ -44387,7 +44508,7 @@ namespace LunaCalc
                 "其优点是多个电台以及只是收听的人都可以在同一频率上跟踪一次 QSO，而无需为每个电台重新计算多普勒。YAEC 在主界面上显示这两个频率。",
                 "### 电台 CAT",
                 "多普勒频移不断变化，因此每个周期都必须更新补偿。最简单的方法是交给数字模式程序（例如 WSJT-X 的 *Astronomical Data* 窗口），它通过电台的 **CAT** 设置发射和接收 VFO，使电台保持在正确的频率上 [1] [2]。没有 CAT 时，可以使用异频（split，一个 VFO 用于发射，另一个用于接收）或 RIT，每个周期手动调整：在 50 和 144 MHz 上可行，在 432 MHz 上就很麻烦了 [1]。",
-                "> 注意：对于 CFOM，电台必须**在发射期间也**能接受通过 CAT 改变频率。有些电台做不到（例如 [2] 中提到的 FT-897）：这种情况下仍可用 CFOM 接收，而发射则保持在固定频率。使用收发转换器时（§ 3.7），CAT 设置的是电台的中频：请在程序中设置收发转换器的频率偏移，使显示的频率为实际频率。",
+                "> 注意：对于 CFOM，电台必须**在发射期间也**能接受通过 CAT 改变频率。有些电台做不到（例如 [2] 中提到的 FT-897）：这种情况下仍可用 CFOM 接收，而发射则保持在固定频率。使用收发转换器时（§ 1.7），CAT 设置的是电台的中频：请在程序中设置收发转换器的频率偏移，使显示的频率为实际频率。",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)”（本文仅采用其中 432 MHz 及以下的数据）– https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -44418,7 +44539,7 @@ namespace LunaCalc
             };
             d["zh"]["S412"] = new string[] {
                 "## EME 数字模式：Q65 与 JT65",
-                "EME 链路预算（§ 3.6）显示估算的 S/N，并在旁边列出所选数字模式的典型门限。本节说明 **Q65** 门限的来源、信号的构成，以及为什么如今在 YAEC 频段的 EME 中 Q65 已基本取代 JT65。数据来自三份文献：Q65 作者编写的快速入门指南 [1]、K1JT 所做的 JT65A – Q65-60A 比较 [2]，以及 G4JNT 对编码过程的研究 [3]。",
+                "EME 链路预算（§ 1.6）显示估算的 S/N，并在旁边列出所选数字模式的典型门限。本节说明 **Q65** 门限的来源、信号的构成，以及为什么如今在 YAEC 频段的 EME 中 Q65 已基本取代 JT65。数据来自三份文献：Q65 作者编写的快速入门指南 [1]、K1JT 所做的 JT65A – Q65-60A 比较 [2]，以及 G4JNT 对编码过程的研究 [3]。",
                 "### Q65 是什么",
                 "Q65 由 K1JT、G4WJS、K9AN 和 IV3NWV 在 WSJT-X 2.4.0 中推出，用于在特别困难的路径上完成最简 QSO；当多普勒扩展超过几赫兹时，它是 WSJT-X 各模式中灵敏度最高的，适用于对流层散射、雨散射、电离层散射、TEP 以及 VHF 及以上频段的 EME [1]。它使用 **65 音调** FSK，源自 2016 年的 QRA64；与 QRA64 相比，它引入了 [1]：",
                 "• 一种新的低码率 Q 元重复累积（Q-ary Repeat Accumulate）纠错码，由 Nico Palermo IV3NWV 提出 [3] [4]；",
@@ -44475,7 +44596,7 @@ namespace LunaCalc
                 "~ 摘自 [1]，仅列出 432 MHz 及以下频段。作者鼓励尝试其他组合。",
                 "30 s 周期在信号较强时可使 QSO 速率加倍，120 s 周期每次发射约增益 3 dB [2]。",
                 "### Q65 与 JT65 的比较",
-                "**JT65A** 近二十年来一直是 6 米波段的 EME 模式：使用 *Deep Search* 解码时可达 2500 Hz 内 −28 dB（使用消息平均时为 −29 dB，§ 3.6），比人耳抄收 CW 所需电平低约 15 dB，但仅限于列在 CALL3.TXT 呼号和定位符数据库中的电台。在这类 QSO 中实际传送的信息极少：从数据库中选出的呼号和定位符约 14 位，加上 1 位信号报告和 1 位确认 [2]。",
+                "**JT65A** 近二十年来一直是 6 米波段的 EME 模式：使用 *Deep Search* 解码时可达 2500 Hz 内 −28 dB（使用消息平均时为 −29 dB，§ 1.6），比人耳抄收 CW 所需电平低约 15 dB，但仅限于列在 CALL3.TXT 呼号和定位符数据库中的电台。在这类 QSO 中实际传送的信息极少：从数据库中选出的呼号和定位符约 14 位，加上 1 位信号报告和 1 位确认 [2]。",
                 "**Q65** 始终发送 78 位消息：即使是最简 QSO 也携带任意呼号（29 位）、真实的数字信号报告（7 位）和确认（1 位），无需数据库 [2]。K1JT 制作了十个仿真文件，信号为 −29 dB、多普勒扩展 1 Hz，每个文件含五个 JT65A 和五个 Q65-60A 信号，并尝试用四种方式解码，每项测试有 50 个可能的解码 [2]：",
                 "|h| 测试 | 模式 | DX 呼号和定位符 | Deep Search | >正确 | >错误",
                 "| 1 | JT65A | 未知 | 不可用 | 0 | 0",
@@ -44484,8 +44605,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | 已知（DX Call 和 DX Grid） | – | 49 | 0",
                 "~ 摘自 [2] 表 1。JT65 设置：Deep、Deep Search、AP、6 种随机擦除模式、激进等级 9；Q65：Fast、开启平均、自动清除平均值。",
                 "作者的结论 [2]：对于回应自己 CQ 的电台，Q65-60A 对**任何**未知呼叫者的灵敏度，与 JT65A 仅对数据库中呼叫者的灵敏度大致相同；对于其他所有电台，它的灵敏度**至少高 3 dB**，在双方呼号均已知的后续消息中还要更高。误解码极为罕见，难以测量。JT65 的消息平均只对已识别的单个呼叫者有效，Q65 则在整个显示带宽内进行平均。最后，JT65 将一半的发射能量用于同步，Q65 只用四分之一。",
-                "> EME 链路预算中 JT65 的 −25 dB 取自 WSJT-X 指南中不使用 Deep Search 的数值（§ 3.6）；使用 Deep Search 的 −28 dB 仅适用于数据库中列出的电台，使用平均的 −29 dB 则适用于任意消息。",
-                ">! **资料来源之间不一致。** JT65A – Q65-60A 对比文档 [2] 给出 JT65A 使用 Deep Search 时为 −29 dB；而 § 3.6 引用的 K1JT 在 EME 2006 会议上的报告给出 Deep Search 为 −28 dB、消息平均为 −29 dB。YAEC 采用 2006 年的数值。两份资料针对的是不同的子模式：2006 年的仿真为 JT65B，[2] 中为 JT65A。",
+                "> EME 链路预算中 JT65 的 −25 dB 取自 WSJT-X 指南中不使用 Deep Search 的数值（§ 1.6）；使用 Deep Search 的 −28 dB 仅适用于数据库中列出的电台，使用平均的 −29 dB 则适用于任意消息。",
+                ">! **资料来源之间不一致。** JT65A – Q65-60A 对比文档 [2] 给出 JT65A 使用 Deep Search 时为 −29 dB；而 § 1.6 引用的 K1JT 在 EME 2006 会议上的报告给出 Deep Search 为 −28 dB、消息平均为 −29 dB。YAEC 采用 2006 年的数值。两份资料针对的是不同的子模式：2006 年的仿真为 JT65B，[2] 中为 JT65A。",
                 "### Q65 如何构成信号",
                 "G4JNT 根据 WSJT-X 源代码重建了从消息到发射音调的过程，并用 WSJT-X 程序 Q65CODE.EXE 进行了核验 [3]。简述如下：",
                 "• **信源编码。** 与 FST4、FT8、FT4 和 MSK144 一样，消息变为 71 个数据位加 6 个类型位，共 77 位。自由文本最多 13 个字符，取自 42 个符号的字母表（空格、数字、字母和 + - . / ?），而 §42^{13}§ 小于 §2^{71}§；遥测模式最多可传送 18 个十六进制数字 [3]。",
@@ -44520,7 +44641,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ 根据 [6] 简化的示例，以 TX7MB (CI00) 为 DX 远征台：每个呼叫者都停留在自己的频率上，收到发给自己的“R CI00”后改发 RRR。",
                 "> 双方共同可见月球的时间窗口很短，尤其是在月出和月落时，此时许多台站利用地面效应：实时位置与 +- 24h 选项卡和“距离与 Dgrd”选项卡会显示月球何时对双方台站都可见。",
-                ">⚠ 一旦真正开始接收信号，关于理论上限的讨论便失去意义：突然出现的本地噪声会使接收变差，法拉第旋转也是如此（§ 3.3）。",
+                ">⚠ 一旦真正开始接收信号，关于理论上限的讨论便失去意义：突然出现的本地噪声会使接收变差，法拉第旋转也是如此（§ 1.3）。",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 2021 年 4 月 3 日（WSJT-X 2.4.0），由 IC8TEM 提供。",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A”（测试文件 JT65A_and_Q65-60A.zip），由 IC8TEM 提供 – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, 2023 年 10 月，由 IC8TEM 提供。",
@@ -44622,6 +44743,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ja"] = new Dictionary<string, string[]>();
+            d["ja"]["PREF"] = new string[] {
+                "このパートでは、プログラムのボタンではなく、プログラムの土台となる考え方を説明します。各章に先立ち、著者は、最近の局での経験も踏まえて、プログラムを学ぶうえで鍵となったいくつかの考えを述べておきたいと思います。",
+                "• **計算は目安であって約束ではない。** 回線計算、推定 S/N、デジタルモードのしきい値は理想的な回線を表します。受信中に効いてくるのは、分単位で変わりうるローカルノイズや人工雑音、そしてファラデー回転です。わずかな間に計算上のマージンは消えてしまいます（§ 1.3, 1.12）。",
+                "• **日を選ぶのは電源を入れる前。** Dgrd、月の距離、赤緯は、月の背後にどれだけ空の雑音があるか、月が何時間地平線上にあり、どれだけ高く昇るかを示します。同じ設備でも日によって成績は大きく違います（§ 1.4）。",
+                "• **偏波は信号を消してしまうことがある。** 直線偏波アンテナでは、ファラデー回転と空間偏波によってエコーが数分から数時間消えることがあります。故障を探す前に、待つ・繰り返す・偏波を回すだけで十分なことがよくあります（§ 1.3）。",
+                "• **プリアンプの前の 1 dB が大切。** プリアンプの前にあるケーブル、リレー、コネクターは、dB の数値から想像する以上にシステム温度を悪化させます。投資すべきはそこです（§ 1.7, 1.8）。",
+                "• **まず正しい周波数。** 上のバンドではドップラーと CFOM によってエコーが数 kHz もずれます。デコード窓の外のエコーは、信号が良くても聞こえません（§ 1.10）。",
+                "• **太陽は予測できる相手。** 太陽が月に近いと雑音が増えます。プログラムは事前に知らせるので、日を選ぶときに考慮する価値があります（§ 1.5, 1.9）。",
+                "• **聞く、比べる、記録する。** プログラムは何を期待できるかを理解する助けになります。推定値と実際の受信を、日時と状況を添えて比べることが、自分の局を知るいちばんの近道です。",
+                "各章の出典はすべて記載しています。理論と経験が一致しない箇所は、マニュアルにはっきり書いてあります。",
+                "~. Costantino IC8TEM"
+            };
             d["ja"]["S32"] = new string[] {
                 "## メイデンヘッド・ロケーター（WWL）",
                 "**メイデンヘッド・ロケーター**は、WWL（World Wide Locator）またはQTHロケーターとも呼ばれ、アマチュア無線家が自局の位置を示すために使うコードです。John Morris G4ANBが考案し、1980年4月にイングランドのメイデンヘッドで開かれた会議でIARU VHFワーキンググループが採用しました。ヨーロッパしかカバーしていなかった旧QRAロケーターに代わるものです [1]。1999年以降、測地系はGPSと同じWGS-84です [1]。YAECはロケーターから局の緯度と経度を求め、そこからすべての計算を行います。",
@@ -44681,7 +44814,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ 加法性白色ガウス雑音（AWGN）チャネルで測定した、デコード確率50 %のしきい値です。Q65では、QSO中にすでに分かっているコールサインを使う *a priori*（AP）デコードにより、サブモードに応じて1.5～3.6 dB改善します（例：Q65-60A −30.2 dB）[2]。YAECはAPなしの控えめな値を参考として表示します。数ヘルツのドップラー拡散があるとしきい値は悪化します：Q65-60Aでは5 Hzで約2 dB、10 Hzで約3 dB（[2]のグラフから読み取り）。Q65の構造、サブモード、JT65との比較は § 3.12 にあります。EMEについて、同文書は50および144 MHzでQ65-60A、432 MHzでQ65-60Bを推奨しています [2]。サブモードB～Eのトーン間隔と占有帯域幅はサブモードAの2～16倍です。",
+                "~ 加法性白色ガウス雑音（AWGN）チャネルで測定した、デコード確率50 %のしきい値です。Q65では、QSO中にすでに分かっているコールサインを使う *a priori*（AP）デコードにより、サブモードに応じて1.5～3.6 dB改善します（例：Q65-60A −30.2 dB）[2]。YAECはAPなしの控えめな値を参考として表示します。数ヘルツのドップラー拡散があるとしきい値は悪化します：Q65-60Aでは5 Hzで約2 dB、10 Hzで約3 dB（[2]のグラフから読み取り）。Q65の構造、サブモード、JT65との比較は § 1.12 にあります。EMEについて、同文書は50および144 MHzでQ65-60A、432 MHzでQ65-60Bを推奨しています [2]。サブモードB～Eのトーン間隔と占有帯域幅はサブモードAの2～16倍です。",
                 "JT65については、K1JTがデコードの種類ごとの限界を公表しています。JT65Bサブモードのシミュレーションで得られた値です [5]：",
                 "|h| JT65：デコードの種類 | >S/N（2500 Hz） | 出典",
                 "| 任意のメッセージ（フリーテキストを含む） | −24 dB | [5]",
@@ -44703,7 +44836,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 第21回EME Meeting, IC8TEM提供のプレゼンテーション。",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 2010年11月12日付の文書, IC8TEM提供。",
                 "[5] J. Taylor K1JT, EME 2006会議でのJT65に関する発表（K1JT_eme2006.pdf）：2500 Hzでの最小S/Nレベルの表。",
-                "> タブの右側にある局構成図は、選択したケーブルから損失を求めます。送信ではPA–リレー間ケーブル＋リレー＋アンテナケーブル、受信ではプリアンプ前のアンテナケーブル＋リレーと、プリアンプ後の給電ケーブルです。ケーブルの減衰量はCOAXIAL CABLESタブのデータベース（§ 3.8）から取得します。"
+                "> タブの右側にある局構成図は、選択したケーブルから損失を求めます。送信ではPA–リレー間ケーブル＋リレー＋アンテナケーブル、受信ではプリアンプ前のアンテナケーブル＋リレーと、プリアンプ後の給電ケーブルです。ケーブルの減衰量はCOAXIAL CABLESタブのデータベース（§ 1.8）から取得します。"
             };
             d["ja"]["S47"] = new string[] {
                 "## プリアンプと無線機の雑音指数 {nuovo}",
@@ -44851,7 +44984,7 @@ namespace LunaCalc
                 "利点は、複数の局や受信しているだけの人も、局ごとにドップラーを計算し直さずに同じ周波数でQSOを追えることです。YAECはこの2つの周波数をメイン画面に表示します。",
                 "### 無線機のCAT",
                 "ドップラーは絶えず変化するため、補正は周期ごとに更新する必要があります。最も簡単な方法はデジタルプログラム（例えばWSJT-Xの *Astronomical Data* ウィンドウ）に任せることで、無線機の **CAT** を通じて送信・受信VFOを設定し、無線機を正しい周波数に合わせ続けます [1] [2]。CATがない場合は、スプリット（送信用と受信用に別々のVFO）またはRITを使い、周期ごとに手動で調整できます。50および144 MHzでは可能ですが、432 MHzでは面倒になります [1]。",
-                "> 注意：CFOMでは、無線機が**送信中も**CATによる周波数変更を受け付ける必要があります。受け付けない機種もあります（例えば[2]で触れられているFT-897）。その場合でもCFOMで受信はできますが、送信は固定周波数のままです。トランスバーター（§ 3.7）を使う場合、CATは無線機を中間周波数に設定します。表示される周波数が実際の周波数になるよう、プログラムでトランスバーターのオフセットを設定してください。",
+                "> 注意：CFOMでは、無線機が**送信中も**CATによる周波数変更を受け付ける必要があります。受け付けない機種もあります（例えば[2]で触れられているFT-897）。その場合でもCFOMで受信はできますが、送信は固定周波数のままです。トランスバーター（§ 1.7）を使う場合、CATは無線機を中間周波数に設定します。表示される周波数が実際の周波数になるよう、プログラムでトランスバーターのオフセットを設定してください。",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)”（記事からは432 MHzまでのデータのみ使用） – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -44882,7 +45015,7 @@ namespace LunaCalc
             };
             d["ja"]["S412"] = new string[] {
                 "## EME用デジタルモード：Q65とJT65",
-                "EMEバジェット（§ 3.6）は、推定S/Nを選択したデジタルモードの典型的なしきい値と並べて表示します。この節では、**Q65** のしきい値の出所、信号の構成、そしてYAECのバンドでのEMEにおいてQ65が今日JT65にほぼ取って代わった理由を説明します。データは3つの文書によります：Q65の作者によるクイックスタートガイド [1]、K1JTによるJT65AとQ65-60Aの比較 [2]、G4JNTによる符号化処理の研究 [3]。",
+                "EMEバジェット（§ 1.6）は、推定S/Nを選択したデジタルモードの典型的なしきい値と並べて表示します。この節では、**Q65** のしきい値の出所、信号の構成、そしてYAECのバンドでのEMEにおいてQ65が今日JT65にほぼ取って代わった理由を説明します。データは3つの文書によります：Q65の作者によるクイックスタートガイド [1]、K1JTによるJT65AとQ65-60Aの比較 [2]、G4JNTによる符号化処理の研究 [3]。",
                 "### Q65とは",
                 "Q65はK1JT、G4WJS、K9AN、IV3NWVによりWSJT-X 2.4.0で導入された、特に困難な経路での最小限のQSO用のモードです。ドップラー拡散が数ヘルツを超える場合にはWSJT-Xのモードの中で最も感度が高く、VHF以上の対流圏散乱、レインスキャッター、電離層散乱、TEP、EMEに適しています [1]。**65トーン**のFSKを使い、2016年のQRA64から派生したもので、それと比べて次の点が新しくなっています [1]：",
                 "• Nico Palermo IV3NWVが提案した、新しい低レートのQ-ary Repeat Accumulate誤り訂正符号 [3] [4]。",
@@ -44939,7 +45072,7 @@ namespace LunaCalc
                 "~ [1]より、432 MHzまでのバンドのみ。作者は他の組み合わせを試すことを勧めています。",
                 "30 s周期は比較的強い信号でQSOレートを2倍にし、120 s周期は1回の送信あたり約3 dB有利になります [2]。",
                 "### Q65とJT65の比較",
-                "**JT65A** はほぼ20年間6 mバンドのEMEモードでした。*Deep Search* デコードを使うと2500 Hzで−28 dB（メッセージ平均化を使うと−29 dB、§ 3.6）に達し、CWを耳で聞き取るのに必要なレベルより約15 dB低いのですが、それはコールサインとロケーターのデータベースCALL3.TXTに載っている局に限られます。これらのQSOで実際に送られる情報はごくわずかです：データベースから選ばれるコールサインとロケーターで約14ビット、それに1ビットのレポートと1ビットの確認です [2]。",
+                "**JT65A** はほぼ20年間6 mバンドのEMEモードでした。*Deep Search* デコードを使うと2500 Hzで−28 dB（メッセージ平均化を使うと−29 dB、§ 1.6）に達し、CWを耳で聞き取るのに必要なレベルより約15 dB低いのですが、それはコールサインとロケーターのデータベースCALL3.TXTに載っている局に限られます。これらのQSOで実際に送られる情報はごくわずかです：データベースから選ばれるコールサインとロケーターで約14ビット、それに1ビットのレポートと1ビットの確認です [2]。",
                 "**Q65** は常に78ビットのメッセージを送ります。最小限のQSOでも、任意のコールサイン（29ビット）、実際の数値レポート（7ビット）、確認（1ビット）をデータベースなしで伝えます [2]。K1JTは−29 dB、ドップラー拡散1 Hzの信号を含むシミュレーションファイルを10個用意し（各ファイルにJT65Aが5局、Q65-60Aが5局）、4通りの方法でデコードを試みました。各テストで可能なデコード数は50です [2]：",
                 "|h| テスト | モード | DX局のコールサインとロケーター | Deep Search | >成功 | >誤り",
                 "| 1 | JT65A | 不明 | 利用不可 | 0 | 0",
@@ -44948,8 +45081,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | 既知（DX Call と DX Grid） | – | 49 | 0",
                 "~ [2]の表1より。JT65の設定：Deep、Deep Search、AP、ランダム消去パターン6、aggressive level 9。Q65：Fast、平均化オン、平均の自動クリア。",
                 "作者の結論 [2]：自局のCQへの応答について、Q65-60Aは**どの**未知の呼び出し局に対しても、JT65Aがデータベースに載っている局に対してのみ持つのとほぼ同じ感度を持ちます。それ以外のすべての局に対しては**少なくとも3 dB**感度が高く、両方のコールサインが分かっている後続のメッセージではさらに高くなります。誤デコードは測定が難しいほどまれです。JT65のメッセージ平均化はすでに特定された単一の呼び出し局に対して働き、Q65の平均化は表示帯域全体で働きます。最後に、JT65は送信エネルギーの半分を同期に割り当てますが、Q65は4分の1です。",
-                "> EMEバジェットでのJT65の−25 dBという値は、Deep SearchなしのWSJT-Xガイドの値です（§ 3.6）。Deep Searchありの−28 dBはデータベースに登録された局にのみ、平均化ありの−29 dBは任意のメッセージに適用されます。",
-                ">! **資料間の不一致。** JT65A – Q65-60A比較資料 [2] は、Deep Searchを使ったJT65Aで−29 dBとしています。一方、§ 3.6で引用しているEME 2006会議でのK1JTの発表では、Deep Searchで−28 dB、メッセージ平均化で−29 dBです。YAECは2006年の値を使います。2つの資料は異なるサブモードを対象としています：2006年のシミュレーションはJT65B、[2]はJT65Aです。",
+                "> EMEバジェットでのJT65の−25 dBという値は、Deep SearchなしのWSJT-Xガイドの値です（§ 1.6）。Deep Searchありの−28 dBはデータベースに登録された局にのみ、平均化ありの−29 dBは任意のメッセージに適用されます。",
+                ">! **資料間の不一致。** JT65A – Q65-60A比較資料 [2] は、Deep Searchを使ったJT65Aで−29 dBとしています。一方、§ 1.6で引用しているEME 2006会議でのK1JTの発表では、Deep Searchで−28 dB、メッセージ平均化で−29 dBです。YAECは2006年の値を使います。2つの資料は異なるサブモードを対象としています：2006年のシミュレーションはJT65B、[2]はJT65Aです。",
                 "### Q65の信号の作り方",
                 "G4JNTはWSJT-Xのソースコードから、メッセージから送信トーンまでの過程を再構成し、WSJT-XのプログラムQ65CODE.EXEで確認しました [3]。要約すると次のとおりです：",
                 "• **情報源符号化。** FST4、FT8、FT4、MSK144と同様に、メッセージは71ビットのデータと6ビットのタイプ、合計77ビットになります。フリーテキストは42記号のアルファベット（スペース、数字、文字、+ - . / ?）で最大13文字、§42^{13}§ は §2^{71}§ より小さい値です。テレメトリーモードは最大18桁の16進数を伝えます [3]。",
@@ -44984,7 +45117,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ [6]の例を短縮したもので、TX7MB (CI00) をDXペディションとしています。呼ぶ各局は自分の周波数にとどまり、自局あての「R CI00」を受信したらRRRに切り替えます。",
                 "> 両局から月が見える共通の時間帯は短く、とくに多くの局が大地の効果を利用する月の出と月の入りにはそうです。ライブ位置と +- 24hタブと「距離と Dgrd」タブで、月が両局から見える時間がわかります。",
-                ">⚠ 実際に信号を受信する段になると、理論上の上限についての議論は意味を失います。突然のローカルな雑音が受信を悪化させることがあり、ファラデー回転も同様です（§ 3.3）。",
+                ">⚠ 実際に信号を受信する段になると、理論上の上限についての議論は意味を失います。突然のローカルな雑音が受信を悪化させることがあり、ファラデー回転も同様です（§ 1.3）。",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 2021年4月3日（WSJT-X 2.4.0）, IC8TEM提供。",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A”（テストファイル JT65A_and_Q65-60A.zip）, IC8TEM提供 – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, 2023年10月, IC8TEM提供。",
@@ -45086,6 +45219,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["hi"] = new Dictionary<string, string[]>();
+            d["hi"]["PREF"] = new string[] {
+                "मैनुअल का यह भाग प्रोग्राम के बटनों का नहीं, बल्कि उन विचारों का वर्णन करता है जिन पर प्रोग्राम बना है। अध्यायों से पहले लेखक कुछ ऐसी अवधारणाएँ रखना चाहते हैं जो प्रोग्राम को समझने के लिए मुख्य सिद्ध हुई हैं, स्टेशन पर उनके हाल के अनुभवों के आलोक में भी।",
+                "• **गणना एक संदर्भ है, वादा नहीं।** बजट, अनुमानित S/N और डिजिटल मोड की सीमाएँ एक आदर्श लिंक का वर्णन करती हैं। रिसेप्शन के दौरान स्थानीय और मानव-निर्मित शोर, जो हर मिनट बदल सकता है, और फैराडे घूर्णन मायने रखते हैं: कुछ ही क्षणों में गणना किया गया मार्जिन मिट सकता है (§ 1.3, 1.12)।",
+                "• **दिन स्विच ऑन करने से पहले चुना जाता है।** Dgrd, चंद्रमा की दूरी और दिक्पात बताते हैं कि चंद्रमा के पीछे आकाश का कितना शोर है, वह कितने घंटे क्षितिज के ऊपर रहता है और कितना ऊँचा उठता है: वही उपकरण अलग-अलग दिनों में बहुत अलग परिणाम देते हैं (§ 1.4)।",
+                "• **ध्रुवीकरण एक सिग्नल को गायब कर सकता है।** रैखिक एंटीना के साथ फैराडे घूर्णन और स्थानिक ध्रुवीकरण किसी इको को मिनटों या घंटों तक बुझा सकते हैं; अक्सर खराबी खोजने के बजाय प्रतीक्षा करना, दोहराना या ध्रुवीकरण घुमाना ही काफ़ी होता है (§ 1.3)।",
+                "• **प्रीएम्पलीफायर से पहले हर डेसिबल मायने रखता है।** प्रीएम्पलीफायर से पहले के केबल, रिले और कनेक्टर सिस्टम तापमान को उनके dB मान से कहीं अधिक बिगाड़ते हैं: निवेश वहीं करना चाहिए (§ 1.7, 1.8)।",
+                "• **पहले सही आवृत्तियाँ।** ऊँचे बैंडों पर डॉप्लर और CFOM इको को कई kHz तक खिसका देते हैं: डिकोडिंग खिड़की से बाहर का इको अच्छे सिग्नल के बावजूद सुनाई नहीं देता (§ 1.10)।",
+                "• **सूर्य एक अनुमान योग्य प्रतिद्वंद्वी है।** जब वह चंद्रमा के पास होता है तो शोर बढ़ता है: प्रोग्राम पहले से चेतावनी देता है, और दिन चुनते समय इसका ध्यान रखना चाहिए (§ 1.5, 1.9)।",
+                "• **सुनें, तुलना करें, लिखें।** प्रोग्राम यह समझने में मदद करता है कि क्या अपेक्षा करें; अनुमानों की वास्तविक रिसेप्शन से तुलना करना, तारीख, समय और परिस्थितियों के साथ लिखकर, अपने स्टेशन को जानने का सबसे तेज़ तरीका है।",
+                "हर अध्याय के स्रोत पूरी तरह उद्धृत हैं; जहाँ सिद्धांत और अनुभव मेल नहीं खाते, मैनुअल यह खुलकर कहता है।",
+                "~. Costantino IC8TEM"
+            };
             d["hi"]["S32"] = new string[] {
                 "## मेडेनहेड लोकेटर (WWL)",
                 "**मेडेनहेड लोकेटर**, जिसे WWL (World Wide Locator) या QTH लोकेटर भी कहा जाता है, वह कोड है जिससे रेडियो एमेच्योर अपने स्टेशन की स्थिति बताते हैं। इसे John Morris G4ANB ने बनाया था और IARU VHF Working Group ने अप्रैल 1980 में इंग्लैंड के Maidenhead में हुई एक बैठक में अपनाया; इसने पुराने QRA लोकेटर की जगह ली, जो केवल यूरोप को कवर करता था [1]। 1999 से जियोडेटिक डेटम WGS-84 है, वही जो GPS में है [1]। YAEC लोकेटर से स्टेशन का अक्षांश और देशांतर निकालता है, और उन्हीं से सारी गणनाएँ करता है।",
@@ -45145,7 +45290,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ 50 % डिकोड संभावना की सीमाएँ, एडिटिव व्हाइट गॉसियन नॉइज़ (AWGN) चैनल पर मापी गईं। Q65 के लिए *a priori* (AP) डिकोडिंग, जो QSO के दौरान पहले से ज्ञात कॉलसाइनों का उपयोग करती है, सबमोड के अनुसार 1.5 से 3.6 dB जोड़ती है (उदाहरण के लिए Q65-60A −30.2 dB) [2]; YAEC AP के बिना अधिक सावधान मानों को संदर्भ के रूप में दिखाता है। कुछ हर्ट्ज़ के Doppler spread के साथ सीमा बिगड़ती है: Q65-60A के लिए 5 Hz पर लगभग 2 dB और 10 Hz पर लगभग 3 dB ([2] के चार्ट से पढ़ा गया)। Q65 की संरचना, इसके सबमोड और JT65 से तुलना § 3.12 में हैं। EME के लिए दस्तावेज़ 50 और 144 MHz पर Q65-60A और 432 MHz पर Q65-60B की सिफ़ारिश करता है [2]: सबमोड B – E का टोन अंतराल और घेरी गई बैंडविड्थ सबमोड A की 2 – 16 गुना है।",
+                "~ 50 % डिकोड संभावना की सीमाएँ, एडिटिव व्हाइट गॉसियन नॉइज़ (AWGN) चैनल पर मापी गईं। Q65 के लिए *a priori* (AP) डिकोडिंग, जो QSO के दौरान पहले से ज्ञात कॉलसाइनों का उपयोग करती है, सबमोड के अनुसार 1.5 से 3.6 dB जोड़ती है (उदाहरण के लिए Q65-60A −30.2 dB) [2]; YAEC AP के बिना अधिक सावधान मानों को संदर्भ के रूप में दिखाता है। कुछ हर्ट्ज़ के Doppler spread के साथ सीमा बिगड़ती है: Q65-60A के लिए 5 Hz पर लगभग 2 dB और 10 Hz पर लगभग 3 dB ([2] के चार्ट से पढ़ा गया)। Q65 की संरचना, इसके सबमोड और JT65 से तुलना § 1.12 में हैं। EME के लिए दस्तावेज़ 50 और 144 MHz पर Q65-60A और 432 MHz पर Q65-60B की सिफ़ारिश करता है [2]: सबमोड B – E का टोन अंतराल और घेरी गई बैंडविड्थ सबमोड A की 2 – 16 गुना है।",
                 "JT65 के लिए K1JT ने हर प्रकार की डिकोडिंग की सीमाएँ प्रकाशित की हैं, जो JT65B सबमोड के सिमुलेशन से प्राप्त हुई हैं [5]:",
                 "|h| JT65: डिकोडिंग का प्रकार | >S/N (2500 Hz) | स्रोत",
                 "| कोई भी संदेश, फ़्री टेक्स्ट सहित | −24 dB | [5]",
@@ -45167,7 +45312,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21वीं EME Meeting, IC8TEM द्वारा उपलब्ध कराई गई प्रस्तुति।",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 12 नवंबर 2010 का दस्तावेज़, IC8TEM द्वारा उपलब्ध कराया गया।",
                 "[5] J. Taylor K1JT, EME 2006 सम्मेलन में JT65 पर प्रस्तुत लेख (K1JT_eme2006.pdf): 2500 Hz में न्यूनतम S/N स्तरों की तालिका।",
-                "> टैब के दाईं ओर स्टेशन आरेख चुनी गई केबलों से नुकसान निकालता है: ट्रांसमिशन में PA–रिले केबल + रिले + एंटेना केबल, रिसेप्शन में एंटेना केबल + प्रीएम्प से पहले रिले और उसके बाद फ़ीड केबल। केबलों का एटेन्यूएशन COAXIAL CABLES टैब के डेटाबेस से आता है (§ 3.8)।"
+                "> टैब के दाईं ओर स्टेशन आरेख चुनी गई केबलों से नुकसान निकालता है: ट्रांसमिशन में PA–रिले केबल + रिले + एंटेना केबल, रिसेप्शन में एंटेना केबल + प्रीएम्प से पहले रिले और उसके बाद फ़ीड केबल। केबलों का एटेन्यूएशन COAXIAL CABLES टैब के डेटाबेस से आता है (§ 1.8)।"
             };
             d["hi"]["S47"] = new string[] {
                 "## प्रीएम्प्लीफ़ायर और रेडियो का नॉइज़ फ़िगर {nuovo}",
@@ -45315,7 +45460,7 @@ namespace LunaCalc
                 "लाभ यह है कि कई स्टेशन, और जो केवल सुन रहा है, वे भी हर एक के लिए Doppler दोबारा गणना किए बिना एक ही फ़्रीक्वेंसी पर QSO का अनुसरण कर सकते हैं। YAEC ये दोनों फ़्रीक्वेंसियाँ मुख्य स्क्रीन पर दिखाता है।",
                 "### रेडियो CAT",
                 "Doppler लगातार बदलता है, इसलिए क्षतिपूर्ति हर अवधि में अपडेट होनी चाहिए। सबसे सरल तरीका इसे डिजिटल प्रोग्राम पर छोड़ना है (उदाहरण के लिए WSJT-X की *Astronomical Data* विंडो), जो रेडियो **CAT** के माध्यम से ट्रांसमिट और रिसीव VFO सेट करता है और रेडियो को सही फ़्रीक्वेंसी पर बनाए रखता है [1] [2]। CAT के बिना आप split (ट्रांसमिशन के लिए एक VFO और रिसेप्शन के लिए एक) या RIT का उपयोग कर सकते हैं, हर अवधि में हाथ से समायोजन करते हुए: 50 और 144 MHz पर यह संभव है, 432 MHz पर असुविधाजनक हो जाता है [1]।",
-                "> सावधानी: CFOM के लिए रेडियो को CAT के माध्यम से फ़्रीक्वेंसी परिवर्तन **ट्रांसमिशन के दौरान भी** स्वीकार करना चाहिए। कुछ रिग ऐसा नहीं करते (उदाहरण के लिए [2] में उल्लिखित FT-897): उस स्थिति में आप फिर भी CFOM में रिसीव कर सकते हैं, जबकि ट्रांसमिशन एक स्थिर फ़्रीक्वेंसी पर रहता है। ट्रांसवर्टर (§ 3.7) के साथ CAT रेडियो को इंटरमीडिएट फ़्रीक्वेंसी पर सेट करता है: प्रोग्राम में ट्रांसवर्टर ऑफ़सेट सेट करें, ताकि दिखाई गई फ़्रीक्वेंसी वास्तविक हो।",
+                "> सावधानी: CFOM के लिए रेडियो को CAT के माध्यम से फ़्रीक्वेंसी परिवर्तन **ट्रांसमिशन के दौरान भी** स्वीकार करना चाहिए। कुछ रिग ऐसा नहीं करते (उदाहरण के लिए [2] में उल्लिखित FT-897): उस स्थिति में आप फिर भी CFOM में रिसीव कर सकते हैं, जबकि ट्रांसमिशन एक स्थिर फ़्रीक्वेंसी पर रहता है। ट्रांसवर्टर (§ 1.7) के साथ CAT रेडियो को इंटरमीडिएट फ़्रीक्वेंसी पर सेट करता है: प्रोग्राम में ट्रांसवर्टर ऑफ़सेट सेट करें, ताकि दिखाई गई फ़्रीक्वेंसी वास्तविक हो।",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (लेख से केवल 432 MHz तक के डेटा का उपयोग किया गया है) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -45346,7 +45491,7 @@ namespace LunaCalc
             };
             d["hi"]["S412"] = new string[] {
                 "## EME के लिए डिजिटल मोड: Q65 और JT65",
-                "EME बजट (§ 3.6) अनुमानित S/N को चुने गए डिजिटल मोड की सामान्य सीमा के साथ दिखाता है। यह खंड बताता है कि **Q65** की सीमाएँ कहाँ से आती हैं, सिग्नल कैसे बनता है और क्यों आज YAEC के बैंडों पर EME के लिए Q65 ने काफ़ी हद तक JT65 की जगह ले ली है। डेटा तीन दस्तावेज़ों से आता है: Q65 के लेखकों की क्विक-स्टार्ट गाइड [1], K1JT की JT65A – Q65-60A तुलना [2] और G4JNT का कोडिंग प्रक्रिया का अध्ययन [3]।",
+                "EME बजट (§ 1.6) अनुमानित S/N को चुने गए डिजिटल मोड की सामान्य सीमा के साथ दिखाता है। यह खंड बताता है कि **Q65** की सीमाएँ कहाँ से आती हैं, सिग्नल कैसे बनता है और क्यों आज YAEC के बैंडों पर EME के लिए Q65 ने काफ़ी हद तक JT65 की जगह ले ली है। डेटा तीन दस्तावेज़ों से आता है: Q65 के लेखकों की क्विक-स्टार्ट गाइड [1], K1JT की JT65A – Q65-60A तुलना [2] और G4JNT का कोडिंग प्रक्रिया का अध्ययन [3]।",
                 "### Q65 क्या है",
                 "Q65 को K1JT, G4WJS, K9AN और IV3NWV ने WSJT-X 2.4.0 के साथ विशेष रूप से कठिन पथों पर न्यूनतम QSO के लिए पेश किया; जब Doppler spread कुछ हर्ट्ज़ से अधिक हो तो यह WSJT-X मोडों में सबसे संवेदनशील है, और VHF से ऊपर ट्रोपोस्कैटर, रेन स्कैटर, आयनोस्फ़ेरिक स्कैटर, TEP और EME के लिए उपयुक्त है [1]। यह **65-टोन** FSK का उपयोग करता है और 2016 के QRA64 से निकला है; उसकी तुलना में यह लाता है [1]:",
                 "• एक नया लो-रेट Q-ary Repeat Accumulate एरर-करेक्टिंग कोड, जिसे Nico Palermo IV3NWV ने प्रस्तावित किया [3] [4];",
@@ -45403,7 +45548,7 @@ namespace LunaCalc
                 "~ [1] से, केवल 432 MHz तक के बैंडों के लिए। लेखक अन्य संयोजनों के साथ प्रयोग करने के लिए प्रोत्साहित करते हैं।",
                 "30 s अवधि अपेक्षाकृत मज़बूत सिग्नलों के साथ QSO दर दोगुनी करती है, 120 s अवधि प्रति एकल ट्रांसमिशन लगभग 3 dB का लाभ देती है [2]।",
                 "### Q65 और JT65 की तुलना",
-                "**JT65A** लगभग बीस वर्षों तक 6-मीटर बैंड का EME मोड रहा: *Deep Search* डिकोडिंग के साथ यह 2500 Hz में −28 dB तक पहुँचता है (संदेशों के औसत के साथ −29 dB, § 3.6), जो कान से CW पढ़ने के लिए आवश्यक स्तर से लगभग 15 dB नीचे है, पर केवल उन स्टेशनों के लिए जो कॉलसाइनों और लोकेटरों के CALL3.TXT डेटाबेस में सूचीबद्ध हैं। उन QSO में वास्तव में बहुत कम जानकारी भेजी जाती है: डेटाबेस से चुने गए कॉलसाइन और लोकेटर के लिए लगभग 14 बिट, साथ में 1-बिट रिपोर्ट और 1-बिट पावती [2]।",
+                "**JT65A** लगभग बीस वर्षों तक 6-मीटर बैंड का EME मोड रहा: *Deep Search* डिकोडिंग के साथ यह 2500 Hz में −28 dB तक पहुँचता है (संदेशों के औसत के साथ −29 dB, § 1.6), जो कान से CW पढ़ने के लिए आवश्यक स्तर से लगभग 15 dB नीचे है, पर केवल उन स्टेशनों के लिए जो कॉलसाइनों और लोकेटरों के CALL3.TXT डेटाबेस में सूचीबद्ध हैं। उन QSO में वास्तव में बहुत कम जानकारी भेजी जाती है: डेटाबेस से चुने गए कॉलसाइन और लोकेटर के लिए लगभग 14 बिट, साथ में 1-बिट रिपोर्ट और 1-बिट पावती [2]।",
                 "**Q65** हमेशा 78-बिट संदेश भेजता है: न्यूनतम QSO भी एक मनमाना कॉलसाइन (29 बिट), एक वास्तविक संख्यात्मक रिपोर्ट (7 बिट) और पावती (1 बिट) ले जाता है, डेटाबेस के बिना [2]। K1JT ने −29 dB और 1 Hz Doppler spread वाले सिग्नलों के साथ दस सिमुलेटेड फ़ाइलें तैयार कीं, प्रति फ़ाइल पाँच JT65A और पाँच Q65-60A, और उन्हें चार तरीकों से डिकोड करने की कोशिश की, प्रति परीक्षण 50 संभावित डिकोड के साथ [2]:",
                 "|h| परीक्षण | मोड | DX कॉलसाइन और लोकेटर | Deep Search | >सही | >गलत",
                 "| 1 | JT65A | ज्ञात नहीं | उपलब्ध नहीं | 0 | 0",
@@ -45412,8 +45557,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | ज्ञात (DX Call और DX Grid) | – | 49 | 0",
                 "~ [2] से, तालिका 1। JT65 सेटिंग: Deep, Deep Search, AP, 6 random erasure patterns, aggressive level 9; Q65: Fast, averaging चालू, औसत की स्वचालित सफ़ाई।",
                 "लेखक के निष्कर्ष [2]: अपने CQ के उत्तरों के लिए, Q65-60A की **किसी भी** अज्ञात कॉलर के लिए लगभग वही संवेदनशीलता है जो JT65A की केवल डेटाबेस में मौजूद कॉलरों के लिए है; अन्य सभी के लिए यह **कम से कम 3 dB** अधिक संवेदनशील है, और बाद के संदेशों में और भी अधिक, जब दोनों कॉलसाइन ज्ञात होते हैं। गलत डिकोड इतने दुर्लभ हैं कि उन्हें मापना कठिन है। JT65 संदेश औसतन पहले से पहचाने गए एकल कॉलर के लिए काम करता है, Q65 औसतन पूरे प्रदर्शित बैंड पर। अंत में, JT65 प्रेषित ऊर्जा का आधा सिंक को देता है, Q65 एक चौथाई।",
-                "> EME बजट में JT65 के लिए −25 dB मान WSJT-X गाइड का Deep Search के बिना वाला मान है (§ 3.6); Deep Search के साथ −28 dB केवल डेटाबेस में सूचीबद्ध स्टेशनों पर लागू होता है, औसत के साथ −29 dB किसी भी संदेश पर।",
-                ">! **स्रोतों के बीच असंगति।** JT65A – Q65-60A तुलना दस्तावेज़ [2] Deep Search के साथ JT65A के लिए −29 dB बताता है; जबकि § 3.6 में उद्धृत, EME 2006 सम्मेलन में K1JT का प्रस्तुत लेख Deep Search के लिए −28 dB और संदेशों के औसत के लिए −29 dB देता है। YAEC 2006 के मान उपयोग करता है। दोनों स्रोत अलग-अलग सबमोड से संबंधित हैं: 2006 के सिमुलेशन में JT65B, [2] में JT65A।",
+                "> EME बजट में JT65 के लिए −25 dB मान WSJT-X गाइड का Deep Search के बिना वाला मान है (§ 1.6); Deep Search के साथ −28 dB केवल डेटाबेस में सूचीबद्ध स्टेशनों पर लागू होता है, औसत के साथ −29 dB किसी भी संदेश पर।",
+                ">! **स्रोतों के बीच असंगति।** JT65A – Q65-60A तुलना दस्तावेज़ [2] Deep Search के साथ JT65A के लिए −29 dB बताता है; जबकि § 1.6 में उद्धृत, EME 2006 सम्मेलन में K1JT का प्रस्तुत लेख Deep Search के लिए −28 dB और संदेशों के औसत के लिए −29 dB देता है। YAEC 2006 के मान उपयोग करता है। दोनों स्रोत अलग-अलग सबमोड से संबंधित हैं: 2006 के सिमुलेशन में JT65B, [2] में JT65A।",
                 "### Q65 सिग्नल कैसे बनाता है",
                 "G4JNT ने WSJT-X स्रोत कोड से संदेश से प्रेषित टोनों तक का रास्ता पुनर्निर्मित किया, और WSJT-X प्रोग्राम Q65CODE.EXE से उसकी जाँच की [3]। संक्षेप में:",
                 "• **स्रोत कोडिंग।** FST4, FT8, FT4 और MSK144 की तरह, संदेश 71 डेटा बिट और 6 टाइप बिट, कुल 77, बन जाता है। एक मुक्त पाठ में 42-प्रतीक वर्णमाला (स्पेस, अंक, अक्षर और + - . / ?) से अधिकतम 13 अक्षर होते हैं, और §42^{13}§ §2^{71}§ से कम है; टेलीमेट्री मोड अधिकतम 18 हेक्साडेसिमल अंक ले जाता है [3]।",
@@ -45448,7 +45593,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ [6] से संक्षिप्त उदाहरण, जिसमें TX7MB (CI00) DXpedition है: हर कॉल करने वाला स्टेशन अपनी ही फ़्रीक्वेंसी पर रहता है और अपना “R CI00” प्राप्त होने पर RRR पर चला जाता है।",
                 "> चंद्रमा की साझा खिड़कियाँ छोटी होती हैं, खासकर चंद्रोदय और चंद्रास्त के समय, जब कई स्टेशन भूमि के प्रभाव का लाभ उठाते हैं: लाइव स्थिति और +- 24h टैब और “दूरी और Dgrd” टैब दिखाते हैं कि चंद्रमा दोनों स्टेशनों से कब दिखाई देता है।",
-                ">⚠ जिस क्षण आप वास्तव में सिग्नल रिसीव कर रहे होते हैं, उसी क्षण सैद्धांतिक सीमाओं की चर्चा का अर्थ समाप्त हो जाता है: अचानक आया स्थानीय शोर प्राप्ति को खराब कर सकता है, और Faraday rotation भी (§ 3.3)।",
+                ">⚠ जिस क्षण आप वास्तव में सिग्नल रिसीव कर रहे होते हैं, उसी क्षण सैद्धांतिक सीमाओं की चर्चा का अर्थ समाप्त हो जाता है: अचानक आया स्थानीय शोर प्राप्ति को खराब कर सकता है, और Faraday rotation भी (§ 1.3)।",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 अप्रैल 2021 (WSJT-X 2.4.0), IC8TEM द्वारा उपलब्ध कराया गया।",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (परीक्षण फ़ाइलें JT65A_and_Q65-60A.zip), IC8TEM द्वारा उपलब्ध कराया गया – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, अक्टूबर 2023, IC8TEM द्वारा उपलब्ध कराया गया।",
@@ -45550,6 +45695,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ko"] = new Dictionary<string, string[]>();
+            d["ko"]["PREF"] = new string[] {
+                "이 부분은 프로그램의 버튼이 아니라 프로그램의 바탕이 되는 생각을 설명합니다. 각 장에 앞서, 저자는 최근 무선국에서 겪은 경험에 비추어 프로그램을 공부하는 데 핵심이 된 몇 가지 개념을 밝혀 두고자 합니다.",
+                "• **계산은 기준이지 약속이 아닙니다.** 링크 버짓, 추정 S/N, 디지털 모드 임계값은 이상적인 경로를 설명합니다. 수신 중에는 분 단위로 바뀔 수 있는 국부 잡음과 인공 잡음, 그리고 패러데이 회전이 중요합니다. 잠깐 사이에 계산된 여유가 사라질 수 있습니다(§ 1.3, 1.12).",
+                "• **날은 전원을 켜기 전에 고릅니다.** Dgrd, 달의 거리, 적위는 달 뒤에 하늘 잡음이 얼마나 있는지, 달이 몇 시간 지평선 위에 있고 얼마나 높이 뜨는지를 알려 줍니다. 같은 장비라도 날마다 성능이 크게 다릅니다(§ 1.4).",
+                "• **편파는 신호를 사라지게 할 수 있습니다.** 선형 편파 안테나에서는 패러데이 회전과 공간 편파로 에코가 몇 분에서 몇 시간 동안 사라질 수 있습니다. 고장을 찾기보다 기다리거나 반복하거나 편파를 돌리는 것으로 충분한 경우가 많습니다(§ 1.3).",
+                "• **프리앰프 앞의 1 dB가 중요합니다.** 프리앰프 앞의 케이블, 릴레이, 커넥터는 dB 수치가 보여 주는 것보다 시스템 온도를 더 나쁘게 합니다. 투자할 곳은 바로 그곳입니다(§ 1.7, 1.8).",
+                "• **먼저 올바른 주파수.** 높은 밴드에서는 도플러와 CFOM 때문에 에코가 수 kHz까지 이동합니다. 디코딩 창 밖의 에코는 신호가 좋아도 들리지 않습니다(§ 1.10).",
+                "• **태양은 예측 가능한 상대입니다.** 태양이 달 가까이 있으면 잡음이 커집니다. 프로그램이 미리 알려 주므로 날을 고를 때 고려할 가치가 있습니다(§ 1.5, 1.9).",
+                "• **듣고, 비교하고, 기록하십시오.** 프로그램은 무엇을 기대할 수 있는지 이해하도록 돕습니다. 추정치와 실제 수신을 날짜, 시간, 조건과 함께 기록해 비교하는 것이 자신의 무선국을 아는 가장 빠른 방법입니다.",
+                "각 장의 출처는 모두 밝혀 두었으며, 이론과 경험이 맞지 않는 곳은 설명서에 분명히 적어 두었습니다.",
+                "~. Costantino IC8TEM"
+            };
             d["ko"]["S32"] = new string[] {
                 "## 메이든헤드 로케이터 (WWL)",
                 "**메이든헤드 로케이터**는 WWL(World Wide Locator) 또는 QTH 로케이터라고도 하며, 아마추어 무선사가 자기 국의 위치를 알리는 데 사용하는 코드입니다. John Morris G4ANB가 고안했고, 1980년 4월 영국 Maidenhead에서 열린 회의에서 IARU VHF 작업 그룹이 채택했습니다. 유럽만 다루던 예전의 QRA 로케이터를 대체한 것입니다 [1]. 1999년부터 측지 기준계는 GPS와 같은 WGS-84입니다 [1]. YAEC는 로케이터에서 국의 위도와 경도를 구하고, 모든 계산은 이 값에서 출발합니다.",
@@ -45609,7 +45766,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ 디코딩 확률 50 %의 임계값으로, 가산성 백색 가우스 잡음(AWGN) 채널에서 측정한 것입니다. Q65의 경우 QSO 중 이미 알려진 호출부호를 활용하는 *a priori*(AP) 디코딩이 서브모드에 따라 1.5~3.6 dB를 더해 줍니다(예: Q65-60A −30.2 dB) [2]. YAEC는 AP 없는 보수적인 값을 참고용으로 표시합니다. 수 Hz의 도플러 확산이 있으면 임계값이 나빠집니다. Q65-60A의 경우 5 Hz에서 약 2 dB, 10 Hz에서 약 3 dB입니다([2]의 그래프에서 읽은 값). Q65의 구조, 서브모드, JT65와의 비교는 § 3.12에 있습니다. EME에는 50 및 144 MHz에서 Q65-60A, 432 MHz에서 Q65-60B가 권장됩니다 [2]. 서브모드 B~E는 톤 간격과 점유 대역폭이 서브모드 A의 2~16배입니다.",
+                "~ 디코딩 확률 50 %의 임계값으로, 가산성 백색 가우스 잡음(AWGN) 채널에서 측정한 것입니다. Q65의 경우 QSO 중 이미 알려진 호출부호를 활용하는 *a priori*(AP) 디코딩이 서브모드에 따라 1.5~3.6 dB를 더해 줍니다(예: Q65-60A −30.2 dB) [2]. YAEC는 AP 없는 보수적인 값을 참고용으로 표시합니다. 수 Hz의 도플러 확산이 있으면 임계값이 나빠집니다. Q65-60A의 경우 5 Hz에서 약 2 dB, 10 Hz에서 약 3 dB입니다([2]의 그래프에서 읽은 값). Q65의 구조, 서브모드, JT65와의 비교는 § 1.12에 있습니다. EME에는 50 및 144 MHz에서 Q65-60A, 432 MHz에서 Q65-60B가 권장됩니다 [2]. 서브모드 B~E는 톤 간격과 점유 대역폭이 서브모드 A의 2~16배입니다.",
                 "JT65에 대해서는 K1JT가 디코딩 종류별 한계를 발표했으며, 이는 JT65B 서브모드의 시뮬레이션으로 얻은 값입니다 [5]:",
                 "|h| JT65: 디코딩 종류 | >S/N (2500 Hz) | 출처",
                 "| 모든 메시지(자유 텍스트 포함) | −24 dB | [5]",
@@ -45631,7 +45788,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 제21회 EME Meeting, IC8TEM 제공 발표 자료.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 2010년 11월 12일 자 문서, IC8TEM 제공.",
                 "[5] J. Taylor K1JT, EME 2006 컨퍼런스의 JT65 발표 자료(K1JT_eme2006.pdf): 2500 Hz 기준 최소 S/N 레벨 표.",
-                "> 탭 오른쪽의 국 구성도는 선택한 케이블에서 손실을 구합니다. 송신 시에는 PA–릴레이 케이블 + 릴레이 + 안테나 케이블, 수신 시에는 프리앰프 앞의 안테나 케이블 + 릴레이와 프리앰프 뒤의 급전 케이블입니다. 케이블 감쇠는 COAXIAL CABLES 탭의 데이터베이스(§ 3.8)에서 가져옵니다."
+                "> 탭 오른쪽의 국 구성도는 선택한 케이블에서 손실을 구합니다. 송신 시에는 PA–릴레이 케이블 + 릴레이 + 안테나 케이블, 수신 시에는 프리앰프 앞의 안테나 케이블 + 릴레이와 프리앰프 뒤의 급전 케이블입니다. 케이블 감쇠는 COAXIAL CABLES 탭의 데이터베이스(§ 1.8)에서 가져옵니다."
             };
             d["ko"]["S47"] = new string[] {
                 "## 프리앰프와 무선기의 잡음 지수 {nuovo}",
@@ -45779,7 +45936,7 @@ namespace LunaCalc
                 "장점은 여러 국과 청취만 하는 사람도 각자에 대해 도플러를 다시 계산하지 않고 같은 주파수에서 QSO를 따라갈 수 있다는 것입니다. YAEC는 이 두 주파수를 메인 화면에 표시합니다.",
                 "### 무선기 CAT",
                 "도플러는 계속 변하므로 보정을 주기마다 갱신해야 합니다. 가장 간단한 방법은 디지털 프로그램(예: WSJT-X의 *Astronomical Data* 창)에 맡기는 것으로, 프로그램이 무선기 **CAT**을 통해 송신 및 수신 VFO를 설정하고 무선기를 올바른 주파수에 맞춰 둡니다 [1] [2]. CAT이 없으면 스플릿(송신용 VFO 하나, 수신용 VFO 하나)이나 RIT를 사용해 주기마다 손으로 조정할 수 있습니다. 50 및 144 MHz에서는 가능하지만 432 MHz에서는 번거로워집니다 [1].",
-                "> 주의: CFOM을 쓰려면 무선기가 **송신 중에도** CAT을 통한 주파수 변경을 받아들여야 합니다. 일부 무선기는 그렇지 않습니다(예: [2]에서 언급한 FT-897). 이 경우에도 CFOM으로 수신은 할 수 있지만, 송신은 고정 주파수에 머뭅니다. 트랜스버터(§ 3.7)를 사용하면 CAT은 무선기를 중간 주파수로 설정합니다. 표시되는 주파수가 실제 주파수가 되도록 프로그램에 트랜스버터 오프셋을 설정하십시오.",
+                "> 주의: CFOM을 쓰려면 무선기가 **송신 중에도** CAT을 통한 주파수 변경을 받아들여야 합니다. 일부 무선기는 그렇지 않습니다(예: [2]에서 언급한 FT-897). 이 경우에도 CFOM으로 수신은 할 수 있지만, 송신은 고정 주파수에 머뭅니다. 트랜스버터(§ 1.7)를 사용하면 CAT은 무선기를 중간 주파수로 설정합니다. 표시되는 주파수가 실제 주파수가 되도록 프로그램에 트랜스버터 오프셋을 설정하십시오.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (이 글에서는 432 MHz까지의 데이터만 사용) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -45810,7 +45967,7 @@ namespace LunaCalc
             };
             d["ko"]["S412"] = new string[] {
                 "## EME용 디지털 모드: Q65와 JT65",
-                "EME 버짓(§ 3.6)은 추정 S/N을 선택한 디지털 모드의 일반적인 임계값과 나란히 표시합니다. 이 절에서는 **Q65** 임계값의 출처, 신호의 구성 방식, 그리고 오늘날 YAEC 밴드의 EME에서 Q65가 JT65를 대부분 대체한 이유를 설명합니다. 자료는 세 문서에서 가져왔습니다: Q65 개발자들의 빠른 시작 가이드 [1], K1JT의 JT65A – Q65-60A 비교 [2], G4JNT의 부호화 과정 연구 [3].",
+                "EME 버짓(§ 1.6)은 추정 S/N을 선택한 디지털 모드의 일반적인 임계값과 나란히 표시합니다. 이 절에서는 **Q65** 임계값의 출처, 신호의 구성 방식, 그리고 오늘날 YAEC 밴드의 EME에서 Q65가 JT65를 대부분 대체한 이유를 설명합니다. 자료는 세 문서에서 가져왔습니다: Q65 개발자들의 빠른 시작 가이드 [1], K1JT의 JT65A – Q65-60A 비교 [2], G4JNT의 부호화 과정 연구 [3].",
                 "### Q65란",
                 "Q65는 K1JT, G4WJS, K9AN, IV3NWV가 WSJT-X 2.4.0에서 도입한 모드로, 특히 어려운 경로에서의 최소 QSO를 위한 것입니다. 도플러 확산이 수 Hz를 넘으면 WSJT-X 모드 중 가장 감도가 높으며, VHF 이상에서 대류권 산란, 강우 산란, 전리층 산란, TEP, EME에 적합합니다 [1]. **65톤** FSK를 사용하며 2016년의 QRA64에서 파생되었고, 그와 비교하여 다음을 도입했습니다 [1]:",
                 "• Nico Palermo IV3NWV가 제안한 새로운 저부호율 Q-ary Repeat Accumulate 오류 정정 부호 [3] [4];",
@@ -45867,7 +46024,7 @@ namespace LunaCalc
                 "~ [1]에서 432 MHz까지의 밴드만 발췌. 개발자들은 다른 조합도 실험해 볼 것을 권합니다.",
                 "30 s 주기는 비교적 강한 신호에서 QSO 속도를 두 배로 늘리고, 120 s 주기는 개별 송신당 약 3 dB를 얻습니다 [2].",
                 "### Q65와 JT65 비교",
-                "**JT65A**는 거의 20년 동안 6미터 밴드의 EME 모드였습니다. *Deep Search* 디코딩으로 2500 Hz에서 −28 dB(메시지 평균화 시 −29 dB, § 3.6)에 도달하며, 이는 귀로 CW를 수신하는 데 필요한 레벨보다 약 15 dB 낮습니다. 다만 호출부호와 로케이터 데이터베이스인 CALL3.TXT에 등록된 국에 한해서입니다. 이러한 QSO에서 실제로 전송되는 정보는 매우 적습니다. 데이터베이스에서 고른 호출부호와 로케이터에 약 14비트, 그리고 1비트 리포트와 1비트 확인입니다 [2].",
+                "**JT65A**는 거의 20년 동안 6미터 밴드의 EME 모드였습니다. *Deep Search* 디코딩으로 2500 Hz에서 −28 dB(메시지 평균화 시 −29 dB, § 1.6)에 도달하며, 이는 귀로 CW를 수신하는 데 필요한 레벨보다 약 15 dB 낮습니다. 다만 호출부호와 로케이터 데이터베이스인 CALL3.TXT에 등록된 국에 한해서입니다. 이러한 QSO에서 실제로 전송되는 정보는 매우 적습니다. 데이터베이스에서 고른 호출부호와 로케이터에 약 14비트, 그리고 1비트 리포트와 1비트 확인입니다 [2].",
                 "**Q65**는 항상 78비트 메시지를 보냅니다. 최소 QSO에서도 임의의 호출부호(29비트), 실제 숫자 리포트(7비트), 확인(1비트)을 데이터베이스 없이 전달합니다 [2]. K1JT는 −29 dB, 도플러 확산 1 Hz의 신호를 파일마다 JT65A 5개와 Q65-60A 5개씩 담은 시뮬레이션 파일 10개를 준비하여, 네 가지 방법으로 디코딩을 시도했습니다. 시험당 가능한 디코딩은 50개입니다 [2]:",
                 "|h| 시험 | 모드 | DX 호출부호와 로케이터 | Deep Search | >정상 | >오류",
                 "| 1 | JT65A | 모름 | 사용 불가 | 0 | 0",
@@ -45876,8 +46033,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | 앎 (DX Call 및 DX Grid) | – | 49 | 0",
                 "~ [2]의 표 1. JT65 설정: Deep, Deep Search, AP, 무작위 소거 패턴 6개, aggressive 레벨 9. Q65: Fast, 평균화 켬, 평균 자동 지우기.",
                 "저자의 결론 [2]: 자신의 CQ에 대한 응답에서, Q65-60A는 **어떤** 미지의 호출국에 대해서도 JT65A가 데이터베이스에 있는 호출국에 대해서만 갖는 것과 거의 같은 감도를 가집니다. 그 밖의 모든 경우에는 **최소 3 dB** 더 감도가 높으며, 양쪽 호출부호를 모두 알게 되는 이후의 메시지에서는 더 높습니다. 잘못된 디코딩은 측정하기 어려울 만큼 드뭅니다. JT65의 메시지 평균화는 이미 확인된 한 호출국에 대해서만, Q65의 평균화는 표시된 대역 전체에 대해 동작합니다. 끝으로 JT65는 송신 에너지의 절반을 동기에 쓰고, Q65는 4분의 1을 씁니다.",
-                "> EME 버짓에서 JT65의 −25 dB 값은 Deep Search 없이 WSJT-X 가이드에 나온 값입니다(§ 3.6). Deep Search를 사용한 −28 dB는 데이터베이스에 등록된 국에만, 평균화를 사용한 −29 dB는 모든 메시지에 적용됩니다.",
-                ">! **자료 간의 불일치.** JT65A – Q65-60A 비교 문서 [2]는 Deep Search를 사용한 JT65A에 대해 −29 dB를 제시합니다. 반면 § 3.6에서 인용한 EME 2006 컨퍼런스의 K1JT 발표는 Deep Search에 −28 dB, 메시지 평균화에 −29 dB를 제시합니다. YAEC는 2006년 값을 사용합니다. 두 자료는 서로 다른 서브모드를 다룹니다. 2006년 시뮬레이션은 JT65B, [2]는 JT65A입니다.",
+                "> EME 버짓에서 JT65의 −25 dB 값은 Deep Search 없이 WSJT-X 가이드에 나온 값입니다(§ 1.6). Deep Search를 사용한 −28 dB는 데이터베이스에 등록된 국에만, 평균화를 사용한 −29 dB는 모든 메시지에 적용됩니다.",
+                ">! **자료 간의 불일치.** JT65A – Q65-60A 비교 문서 [2]는 Deep Search를 사용한 JT65A에 대해 −29 dB를 제시합니다. 반면 § 1.6에서 인용한 EME 2006 컨퍼런스의 K1JT 발표는 Deep Search에 −28 dB, 메시지 평균화에 −29 dB를 제시합니다. YAEC는 2006년 값을 사용합니다. 두 자료는 서로 다른 서브모드를 다룹니다. 2006년 시뮬레이션은 JT65B, [2]는 JT65A입니다.",
                 "### Q65가 신호를 만드는 방식",
                 "G4JNT는 WSJT-X 소스 코드로부터 메시지에서 송신 톤까지의 과정을 재구성하고, WSJT-X 프로그램 Q65CODE.EXE로 확인했습니다 [3]. 요약하면 다음과 같습니다:",
                 "• **소스 부호화.** FST4, FT8, FT4, MSK144와 마찬가지로 메시지는 데이터 71비트와 유형 6비트, 합계 77비트가 됩니다. 자유 텍스트는 42개 기호 알파벳(공백, 숫자, 문자 및 + - . / ?)에서 최대 13자이며, §42^{13}§은 §2^{71}§보다 작습니다. 텔레메트리 모드는 최대 18자리 16진수를 전달합니다 [3].",
@@ -45912,7 +46069,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ [6]의 예를 줄인 것으로, TX7MB (CI00)가 DX페디션입니다. 호출하는 각 국은 자기 주파수에 머물다가 자기 앞으로 온 “R CI00”을 수신하면 RRR로 바꿉니다.",
                 "> 두 국에서 함께 달이 보이는 시간대는 짧으며, 특히 많은 국이 지면 효과를 이용하는 월출과 월몰 때 그렇습니다. 실시간 위치 및 +- 24h 탭과 “거리와 Dgrd” 탭에서 달이 두 국 모두에서 보이는 시간을 확인할 수 있습니다.",
-                ">⚠ 실제로 신호를 수신하는 순간 이론적 한계에 관한 논의는 의미를 잃습니다. 갑작스러운 주변 잡음이 수신을 악화시킬 수 있으며, 패러데이 회전도 마찬가지입니다(§ 3.3).",
+                ">⚠ 실제로 신호를 수신하는 순간 이론적 한계에 관한 논의는 의미를 잃습니다. 갑작스러운 주변 잡음이 수신을 악화시킬 수 있으며, 패러데이 회전도 마찬가지입니다(§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 2021년 4월 3일 (WSJT-X 2.4.0), IC8TEM 제공.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (시험 파일 JT65A_and_Q65-60A.zip), IC8TEM 제공 – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, 2023년 10월, IC8TEM 제공.",
@@ -46014,6 +46171,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["id"] = new Dictionary<string, string[]>();
+            d["id"]["PREF"] = new string[] {
+                "Bagian manual ini tidak menjelaskan tombol-tombol program, melainkan gagasan yang menjadi dasar program. Sebelum bab-bab berikut, penulis ingin menyampaikan beberapa konsep yang ternyata menjadi kunci untuk mempelajari program, juga berdasarkan pengalaman terbarunya di stasiun.",
+                "• **Perhitungan adalah acuan, bukan janji.** Anggaran link, S/N perkiraan, dan ambang mode digital menggambarkan jalur yang ideal. Saat penerimaan, yang menentukan adalah derau lokal dan buatan manusia, yang dapat berubah dari menit ke menit, serta rotasi Faraday: beberapa saat saja cukup untuk menghapus margin yang dihitung (§ 1.3, 1.12).",
+                "• **Hari dipilih sebelum menyalakan perangkat.** Dgrd, jarak Bulan, dan deklinasi menunjukkan seberapa besar derau langit di belakang Bulan, berapa jam Bulan berada di atas cakrawala, dan seberapa tinggi ia naik: peralatan yang sama memberi hasil yang sangat berbeda dari hari ke hari (§ 1.4).",
+                "• **Polarisasi dapat membuat sinyal hilang.** Dengan antena linear, rotasi Faraday dan polarisasi spasial dapat memadamkan gema selama beberapa menit atau jam; sering kali cukup menunggu, mengulang, atau memutar polarisasi, alih-alih mencari kerusakan (§ 1.3).",
+                "• **Setiap desibel sebelum preamplifier berarti.** Kabel, relai, dan konektor sebelum preamplifier memperburuk suhu sistem lebih dari yang ditunjukkan nilai dB-nya: di situlah investasi paling berguna (§ 1.7, 1.8).",
+                "• **Frekuensi yang benar dulu.** Doppler dan CFOM menggeser gema hingga beberapa kHz pada pita tinggi: gema di luar jendela dekode tidak terdengar, meskipun sinyalnya bagus (§ 1.10).",
+                "• **Matahari adalah lawan yang dapat diperkirakan.** Ketika dekat dengan Bulan, derau meningkat: program memberi peringatan lebih awal, dan hal ini patut diperhitungkan saat memilih hari (§ 1.5, 1.9).",
+                "• **Dengarkan, bandingkan, catat.** Program membantu memahami apa yang dapat diharapkan; membandingkan perkiraan dengan apa yang benar-benar diterima, dengan mencatat tanggal, jam, dan kondisi, adalah cara tercepat mengenal stasiun sendiri.",
+                "Sumber setiap bab dikutip lengkap; bila teori dan pengalaman tidak sejalan, manual menyatakannya secara terbuka.",
+                "~. Costantino IC8TEM"
+            };
             d["id"]["S32"] = new string[] {
                 "## Lokator Maidenhead (WWL)",
                 "**Lokator Maidenhead**, yang juga disebut WWL (World Wide Locator) atau QTH locator, adalah kode yang dipakai radio amatir untuk menyatakan posisi stasiun mereka. Kode ini dirancang oleh John Morris G4ANB dan diadopsi oleh IARU VHF Working Group pada April 1980, dalam pertemuan di Maidenhead, Inggris; kode ini menggantikan QRA locator lama yang hanya mencakup Eropa [1]. Sejak 1999 datum geodetiknya adalah WGS-84, sama dengan GPS [1]. YAEC menurunkan lintang dan bujur stasiun dari lokator, lalu semua perhitungan dari keduanya.",
@@ -46073,7 +46242,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Ambang untuk probabilitas dekode 50 %, diukur pada kanal derau Gaussian putih aditif (AWGN). Untuk Q65, dekode *a priori* (AP), yang memakai callsign yang sudah diketahui selama QSO, menambah 1,5 hingga 3,6 dB tergantung submode (misalnya Q65-60A −30,2 dB) [2]; YAEC menampilkan nilai yang lebih hati-hati tanpa AP sebagai acuan. Dengan Doppler spread beberapa hertz ambang memburuk: untuk Q65-60A sekitar 2 dB pada 5 Hz dan sekitar 3 dB pada 10 Hz (dibaca dari grafik dalam [2]). Struktur Q65, submode-nya, dan perbandingan dengan JT65 ada di § 3.12. Untuk EME dokumen tersebut menyarankan Q65-60A di 50 dan 144 MHz dan Q65-60B di 432 MHz [2]: submode B – E memiliki jarak nada dan lebar pita terpakai 2 – 16 kali submode A.",
+                "~ Ambang untuk probabilitas dekode 50 %, diukur pada kanal derau Gaussian putih aditif (AWGN). Untuk Q65, dekode *a priori* (AP), yang memakai callsign yang sudah diketahui selama QSO, menambah 1,5 hingga 3,6 dB tergantung submode (misalnya Q65-60A −30,2 dB) [2]; YAEC menampilkan nilai yang lebih hati-hati tanpa AP sebagai acuan. Dengan Doppler spread beberapa hertz ambang memburuk: untuk Q65-60A sekitar 2 dB pada 5 Hz dan sekitar 3 dB pada 10 Hz (dibaca dari grafik dalam [2]). Struktur Q65, submode-nya, dan perbandingan dengan JT65 ada di § 1.12. Untuk EME dokumen tersebut menyarankan Q65-60A di 50 dan 144 MHz dan Q65-60B di 432 MHz [2]: submode B – E memiliki jarak nada dan lebar pita terpakai 2 – 16 kali submode A.",
                 "Untuk JT65, K1JT menerbitkan batas untuk setiap jenis dekode, yang diperoleh dari simulasi submode JT65B [5]:",
                 "|h| JT65: jenis dekode | >S/N (2500 Hz) | Sumber",
                 "| Pesan apa pun, termasuk teks bebas | −24 dB | [5]",
@@ -46095,7 +46264,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, EME Meeting ke-21, presentasi disediakan oleh IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, dokumen tanggal 12 November 2010, disediakan oleh IC8TEM.",
                 "[5] J. Taylor K1JT, makalah tentang JT65 pada konferensi EME 2006 (K1JT_eme2006.pdf): tabel tingkat S/N minimum dalam 2500 Hz.",
-                "> Diagram stasiun, di sebelah kanan tab, menurunkan redaman dari kabel yang dipilih: saat memancar kabel PA–relay + relay + kabel antena, saat menerima kabel antena + relay sebelum praamplifier dan kabel feed setelahnya. Redaman kabel berasal dari basis data tab COAXIAL CABLES (§ 3.8)."
+                "> Diagram stasiun, di sebelah kanan tab, menurunkan redaman dari kabel yang dipilih: saat memancar kabel PA–relay + relay + kabel antena, saat menerima kabel antena + relay sebelum praamplifier dan kabel feed setelahnya. Redaman kabel berasal dari basis data tab COAXIAL CABLES (§ 1.8)."
             };
             d["id"]["S47"] = new string[] {
                 "## Praamplifier dan angka derau radio {nuovo}",
@@ -46243,7 +46412,7 @@ namespace LunaCalc
                 "Keuntungannya, beberapa stasiun, dan siapa pun yang hanya mendengarkan, dapat mengikuti QSO pada frekuensi yang sama tanpa menghitung ulang Doppler untuk masing-masing. YAEC menampilkan kedua frekuensi ini di layar utama.",
                 "### CAT radio",
                 "Doppler berubah terus-menerus, sehingga kompensasi harus diperbarui setiap periode. Cara termudah adalah menyerahkannya kepada program digital (misalnya jendela *Astronomical Data* di WSJT-X) yang, melalui **CAT** radio, mengatur VFO pancar dan terima serta menjaga radio tetap pada frekuensi yang benar [1] [2]. Tanpa CAT Anda dapat memakai split (satu VFO untuk memancar dan satu untuk menerima) atau RIT, dengan menyetel secara manual setiap periode: di 50 dan 144 MHz hal ini masih bisa dilakukan, di 432 MHz menjadi merepotkan [1].",
-                "> Perhatian: untuk CFOM radio harus menerima perubahan frekuensi melalui CAT **juga saat memancar**. Beberapa radio tidak bisa (misalnya FT-897 yang disebut dalam [2]): dalam hal itu Anda tetap dapat menerima dalam CFOM, sedangkan pancaran tetap pada frekuensi tetap. Dengan transverter (§ 3.7) CAT mengatur radio pada frekuensi antara: setel offset transverter di program, agar frekuensi yang ditampilkan adalah frekuensi sebenarnya.",
+                "> Perhatian: untuk CFOM radio harus menerima perubahan frekuensi melalui CAT **juga saat memancar**. Beberapa radio tidak bisa (misalnya FT-897 yang disebut dalam [2]): dalam hal itu Anda tetap dapat menerima dalam CFOM, sedangkan pancaran tetap pada frekuensi tetap. Dengan transverter (§ 1.7) CAT mengatur radio pada frekuensi antara: setel offset transverter di program, agar frekuensi yang ditampilkan adalah frekuensi sebenarnya.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (dari artikel tersebut hanya data hingga 432 MHz yang dipakai) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -46274,7 +46443,7 @@ namespace LunaCalc
             };
             d["id"]["S412"] = new string[] {
                 "## Mode digital untuk EME: Q65 dan JT65",
-                "Budget EME (§ 3.6) menampilkan S/N yang diperkirakan di samping ambang tipikal mode digital yang dipilih. Bagian ini menjelaskan asal ambang **Q65**, bagaimana sinyal dibentuk, dan mengapa Q65 kini sebagian besar telah menggantikan JT65 untuk EME di pita YAEC. Datanya berasal dari tiga dokumen: panduan quick-start dari para pembuat Q65 [1], perbandingan JT65A – Q65-60A oleh K1JT [2], dan kajian proses pengodean oleh G4JNT [3].",
+                "Budget EME (§ 1.6) menampilkan S/N yang diperkirakan di samping ambang tipikal mode digital yang dipilih. Bagian ini menjelaskan asal ambang **Q65**, bagaimana sinyal dibentuk, dan mengapa Q65 kini sebagian besar telah menggantikan JT65 untuk EME di pita YAEC. Datanya berasal dari tiga dokumen: panduan quick-start dari para pembuat Q65 [1], perbandingan JT65A – Q65-60A oleh K1JT [2], dan kajian proses pengodean oleh G4JNT [3].",
                 "### Apa itu Q65",
                 "Q65 diperkenalkan bersama WSJT-X 2.4.0 oleh K1JT, G4WJS, K9AN dan IV3NWV untuk QSO minimal pada lintasan yang sangat sulit; ketika Doppler spread melebihi beberapa hertz, Q65 adalah mode WSJT-X yang paling sensitif, dan cocok untuk troposcatter, rain scatter, ionospheric scatter, TEP, dan EME mulai VHF ke atas [1]. Q65 memakai FSK **65 nada** dan berasal dari QRA64 tahun 2016; dibandingkan pendahulunya, Q65 memperkenalkan [1]:",
                 "• kode koreksi galat baru Q-ary Repeat Accumulate berlaju rendah, yang diusulkan oleh Nico Palermo IV3NWV [3] [4];",
@@ -46331,7 +46500,7 @@ namespace LunaCalc
                 "~ Dari [1], hanya untuk pita hingga 432 MHz. Para pembuatnya mendorong untuk bereksperimen dengan kombinasi lain.",
                 "Periode 30 s menggandakan laju QSO dengan sinyal yang relatif kuat, periode 120 s memberi perolehan sekitar 3 dB per transmisi tunggal [2].",
                 "### Perbandingan Q65 dan JT65",
-                "**JT65A** adalah mode EME di pita 6 meter selama hampir dua puluh tahun: dengan dekode *Deep Search* mode ini mencapai −28 dB dalam 2500 Hz (−29 dB dengan perataan pesan, § 3.6), sekitar 15 dB di bawah level yang diperlukan untuk menyalin CW dengan telinga, tetapi hanya untuk stasiun yang tercantum dalam basis data callsign dan lokator CALL3.TXT. Dalam QSO tersebut informasi yang sebenarnya dikirim sangat sedikit: sekitar 14 bit untuk callsign dan lokator yang dipilih dari basis data, ditambah laporan 1 bit dan konfirmasi 1 bit [2].",
+                "**JT65A** adalah mode EME di pita 6 meter selama hampir dua puluh tahun: dengan dekode *Deep Search* mode ini mencapai −28 dB dalam 2500 Hz (−29 dB dengan perataan pesan, § 1.6), sekitar 15 dB di bawah level yang diperlukan untuk menyalin CW dengan telinga, tetapi hanya untuk stasiun yang tercantum dalam basis data callsign dan lokator CALL3.TXT. Dalam QSO tersebut informasi yang sebenarnya dikirim sangat sedikit: sekitar 14 bit untuk callsign dan lokator yang dipilih dari basis data, ditambah laporan 1 bit dan konfirmasi 1 bit [2].",
                 "**Q65** selalu mengirim pesan 78 bit: bahkan QSO minimal membawa callsign sembarang (29 bit), laporan numerik yang sebenarnya (7 bit), dan konfirmasi (1 bit), tanpa basis data [2]. K1JT menyiapkan sepuluh berkas simulasi dengan sinyal −29 dB dan Doppler spread 1 Hz, lima JT65A dan lima Q65-60A per berkas, lalu mencoba mendekodenya dengan empat cara, dengan 50 kemungkinan dekode per uji [2]:",
                 "|h| Uji | Mode | Callsign dan lokator DX | Deep Search | >Benar | >Salah",
                 "| 1 | JT65A | tidak diketahui | tidak tersedia | 0 | 0",
@@ -46340,8 +46509,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | diketahui (DX Call dan DX Grid) | – | 49 | 0",
                 "~ Dari [2], tabel 1. Pengaturan JT65: Deep, Deep Search, AP, 6 pola penghapusan acak, level agresif 9; Q65: Fast, averaging aktif, penghapusan rata-rata otomatis.",
                 "Kesimpulan penulis [2]: untuk balasan atas CQ sendiri, Q65-60A memiliki, untuk pemanggil tak dikenal **mana pun**, sensitivitas yang kurang lebih sama dengan yang dimiliki JT65A hanya untuk pemanggil di basis data; untuk semua yang lain Q65-60A **setidaknya 3 dB** lebih sensitif, dan lebih lagi pada pesan berikutnya, ketika kedua callsign sudah diketahui. Dekode palsu begitu jarang sehingga sulit diukur. Perataan pesan JT65 bekerja untuk satu pemanggil yang sudah teridentifikasi, perataan Q65 untuk seluruh pita yang ditampilkan. Terakhir, JT65 mencurahkan separuh energi yang dipancarkan untuk sinkronisasi, Q65 seperempatnya.",
-                "> Nilai −25 dB untuk JT65 dalam budget EME adalah nilai dari panduan WSJT-X tanpa Deep Search (§ 3.6); −28 dB dengan Deep Search hanya berlaku untuk stasiun yang tercantum dalam basis data, −29 dB dengan perataan untuk pesan apa pun.",
-                ">! **Ketidaksesuaian antarsumber.** Dokumen perbandingan JT65A – Q65-60A [2] menyebut −29 dB untuk JT65A dengan Deep Search; sedangkan makalah K1JT pada konferensi EME 2006, yang dikutip dalam § 3.6, memberikan −28 dB untuk Deep Search dan −29 dB untuk perataan pesan. YAEC menggunakan nilai tahun 2006. Kedua sumber mengacu pada submode yang berbeda: JT65B dalam simulasi 2006, JT65A dalam [2].",
+                "> Nilai −25 dB untuk JT65 dalam budget EME adalah nilai dari panduan WSJT-X tanpa Deep Search (§ 1.6); −28 dB dengan Deep Search hanya berlaku untuk stasiun yang tercantum dalam basis data, −29 dB dengan perataan untuk pesan apa pun.",
+                ">! **Ketidaksesuaian antarsumber.** Dokumen perbandingan JT65A – Q65-60A [2] menyebut −29 dB untuk JT65A dengan Deep Search; sedangkan makalah K1JT pada konferensi EME 2006, yang dikutip dalam § 1.6, memberikan −28 dB untuk Deep Search dan −29 dB untuk perataan pesan. YAEC menggunakan nilai tahun 2006. Kedua sumber mengacu pada submode yang berbeda: JT65B dalam simulasi 2006, JT65A dalam [2].",
                 "### Bagaimana Q65 membentuk sinyal",
                 "G4JNT merekonstruksi dari kode sumber WSJT-X jalur dari pesan hingga nada yang dipancarkan, dan memeriksanya dengan program WSJT-X Q65CODE.EXE [3]. Singkatnya:",
                 "• **Pengodean sumber.** Seperti pada FST4, FT8, FT4, dan MSK144, pesan menjadi 71 bit data ditambah 6 bit tipe, total 77. Teks bebas berisi hingga 13 karakter dari alfabet 42 simbol (spasi, angka, huruf, dan + - . / ?), dan §42^{13}§ lebih kecil dari §2^{71}§; mode telemetri membawa hingga 18 digit heksadesimal [3].",
@@ -46376,7 +46545,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Contoh ringkas dari [6], dengan TX7MB (CI00) sebagai DXpedition: setiap pemanggil tetap di frekuensinya sendiri dan beralih ke RRR saat menerima “R CI00” miliknya sendiri.",
                 "> Jendela Bulan bersama itu singkat, terutama saat Bulan terbit dan terbenam, ketika banyak stasiun memanfaatkan efek tanah: tab Posisi langsung dan +- 24h dan tab Jarak dan Dgrd menunjukkan kapan Bulan terlihat dari kedua stasiun.",
-                ">⚠ Pembahasan tentang batas teoretis kehilangan maknanya begitu kita benar-benar menerima sinyal: derau lokal yang muncul tiba-tiba dapat memperburuk penerimaan, begitu pula rotasi Faraday (§ 3.3).",
+                ">⚠ Pembahasan tentang batas teoretis kehilangan maknanya begitu kita benar-benar menerima sinyal: derau lokal yang muncul tiba-tiba dapat memperburuk penerimaan, begitu pula rotasi Faraday (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 April 2021 (WSJT-X 2.4.0), disediakan oleh IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (berkas uji JT65A_and_Q65-60A.zip), disediakan oleh IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Oktober 2023, disediakan oleh IC8TEM.",
@@ -46478,6 +46647,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ru"] = new Dictionary<string, string[]>();
+            d["ru"]["PREF"] = new string[] {
+                "Эта часть руководства описывает не кнопки программы, а идеи, на которых она построена. Перед главами автор хотел бы изложить несколько понятий, которые оказались ключевыми для изучения программы, в том числе в свете его недавнего опыта на станции.",
+                "• **Расчёт — ориентир, а не обещание.** Бюджет линии, оценка S/N и пороги цифровых видов описывают идеальную трассу. При приёме важны местные и индустриальные помехи, которые могут меняться от минуты к минуте, и фарадеевское вращение: нескольких мгновений достаточно, чтобы потерять рассчитанный запас (§ 1.3, 1.12).",
+                "• **День выбирают до включения.** Dgrd, расстояние до Луны и склонение показывают, сколько шума неба за Луной, сколько часов она над горизонтом и как высоко поднимается: одна и та же аппаратура работает очень по-разному в разные дни (§ 1.4).",
+                "• **Поляризация может заставить сигнал исчезнуть.** С линейными антеннами фарадеевское вращение и пространственная поляризация могут погасить эхо на минуты или часы; часто достаточно подождать, повторить или повернуть поляризацию, а не искать неисправность (§ 1.3).",
+                "• **Каждый децибел перед предусилителем важен.** Кабели, реле и разъёмы перед предусилителем ухудшают шумовую температуру системы сильнее, чем подсказывает их значение в дБ: именно туда стоит вкладывать средства (§ 1.7, 1.8).",
+                "• **Сначала правильные частоты.** На высоких диапазонах Доплер и CFOM смещают эхо на несколько кГц: эхо вне окна декодирования не слышно даже при хорошем сигнале (§ 1.10).",
+                "• **Солнце — предсказуемый противник.** Когда оно близко к Луне, шум растёт: программа предупреждает заранее, и это стоит учитывать при выборе дней (§ 1.5, 1.9).",
+                "• **Слушать, сравнивать, записывать.** Программа помогает понять, чего ожидать; сравнение оценок с тем, что реально принято, с записью даты, времени и условий — самый быстрый способ узнать свою станцию.",
+                "Источники каждой главы приведены полностью; где теория и опыт расходятся, руководство говорит об этом прямо.",
+                "~. Costantino IC8TEM"
+            };
             d["ru"]["S32"] = new string[] {
                 "## Локатор Maidenhead (WWL)",
                 "**Локатор Maidenhead**, называемый также WWL (World Wide Locator) или QTH-локатор, — это код, которым радиолюбители указывают местоположение своей станции. Он был предложен Джоном Моррисом G4ANB и принят рабочей группой IARU по УКВ в апреле 1980 года на встрече в Мейденхеде (Англия); он заменил старый QRA-локатор, охватывавший только Европу [1]. С 1999 года геодезической основой служит WGS-84, та же, что и у GPS [1]. YAEC определяет по локатору широту и долготу станции, а по ним — все расчёты.",
@@ -46537,7 +46718,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Пороги для вероятности декодирования 50 %, измеренные в канале с аддитивным белым гауссовым шумом (AWGN). Для Q65 декодирование с *априорной* информацией (AP), использующее уже известные в ходе QSO позывные, добавляет от 1,5 до 3,6 dB в зависимости от подвида (например, Q65-60A −30,2 dB) [2]; YAEC показывает для справки более осторожные значения без AP. При доплеровском расширении в несколько герц порог ухудшается: для Q65-60A примерно на 2 dB при 5 Hz и примерно на 3 dB при 10 Hz (по графику из [2]). Структура Q65, его подвиды и сравнение с JT65 приведены в § 3.12. Для EME документ рекомендует Q65-60A на 50 и 144 MHz и Q65-60B на 432 MHz [2]: у подвидов B – E разнос тонов и занимаемая полоса в 2 – 16 раз больше, чем у подвида A.",
+                "~ Пороги для вероятности декодирования 50 %, измеренные в канале с аддитивным белым гауссовым шумом (AWGN). Для Q65 декодирование с *априорной* информацией (AP), использующее уже известные в ходе QSO позывные, добавляет от 1,5 до 3,6 dB в зависимости от подвида (например, Q65-60A −30,2 dB) [2]; YAEC показывает для справки более осторожные значения без AP. При доплеровском расширении в несколько герц порог ухудшается: для Q65-60A примерно на 2 dB при 5 Hz и примерно на 3 dB при 10 Hz (по графику из [2]). Структура Q65, его подвиды и сравнение с JT65 приведены в § 1.12. Для EME документ рекомендует Q65-60A на 50 и 144 MHz и Q65-60B на 432 MHz [2]: у подвидов B – E разнос тонов и занимаемая полоса в 2 – 16 раз больше, чем у подвида A.",
                 "Для JT65 K1JT опубликовал пределы для каждого типа декодирования, полученные моделированием подвида JT65B [5]:",
                 "|h| JT65: тип декодирования | >S/N (2500 Hz) | Источник",
                 "| Любое сообщение, включая произвольный текст | −24 dB | [5]",
@@ -46559,7 +46740,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21-й EME Meeting, презентация предоставлена IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, документ от 12 ноября 2010, предоставлен IC8TEM.",
                 "[5] J. Taylor K1JT, доклад о JT65 на конференции EME 2006 (K1JT_eme2006.pdf): таблица минимальных уровней S/N в 2500 Hz.",
-                "> Схема станции в правой части вкладки определяет потери по выбранным кабелям: на передачу — кабель УМ–реле + реле + антенный кабель, на приём — антенный кабель + реле до предусилителя и фидер после него. Затухание кабелей берётся из базы данных вкладки COAXIAL CABLES (§ 3.8)."
+                "> Схема станции в правой части вкладки определяет потери по выбранным кабелям: на передачу — кабель УМ–реле + реле + антенный кабель, на приём — антенный кабель + реле до предусилителя и фидер после него. Затухание кабелей берётся из базы данных вкладки COAXIAL CABLES (§ 1.8)."
             };
             d["ru"]["S47"] = new string[] {
                 "## Предусилитель и коэффициент шума радиостанции {nuovo}",
@@ -46707,7 +46888,7 @@ namespace LunaCalc
                 "Преимущество в том, что несколько станций, а также любой, кто только слушает, могут следить за QSO на одной частоте, не пересчитывая доплер для каждого. YAEC показывает эти две частоты на главном экране.",
                 "### CAT радиостанции",
                 "Доплер меняется непрерывно, поэтому компенсацию нужно обновлять каждый период. Проще всего поручить её цифровой программе (например, окну *Astronomical Data* в WSJT-X), которая через **CAT** радиостанции устанавливает VFO передачи и приёма и держит радиостанцию на нужной частоте [1] [2]. Без CAT можно использовать режим split (один VFO для передачи, другой для приёма) или RIT, подстраивая вручную каждый период: на 50 и 144 MHz это выполнимо, на 432 MHz становится неудобно [1].",
-                "> Внимание: для CFOM радиостанция должна принимать смену частоты через CAT **также во время передачи**. Некоторые аппараты этого не допускают (например, FT-897, упомянутый в [2]): в этом случае принимать в CFOM всё равно можно, а передача остаётся на фиксированной частоте. С трансвертером (§ 3.7) CAT устанавливает частоту радиостанции на ПЧ: задайте сдвиг трансвертера в программе, чтобы отображаемая частота была реальной.",
+                "> Внимание: для CFOM радиостанция должна принимать смену частоты через CAT **также во время передачи**. Некоторые аппараты этого не допускают (например, FT-897, упомянутый в [2]): в этом случае принимать в CFOM всё равно можно, а передача остаётся на фиксированной частоте. С трансвертером (§ 1.7) CAT устанавливает частоту радиостанции на ПЧ: задайте сдвиг трансвертера в программе, чтобы отображаемая частота была реальной.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (из статьи используются только данные до 432 MHz) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -46738,7 +46919,7 @@ namespace LunaCalc
             };
             d["ru"]["S412"] = new string[] {
                 "## Цифровые виды для EME: Q65 и JT65",
-                "Бюджет EME (§ 3.6) показывает оценочное S/N рядом с типичным порогом выбранного цифрового вида. В этом разделе объясняется, откуда берутся пороги **Q65**, как строится сигнал и почему Q65 сегодня в значительной мере вытеснил JT65 в EME на диапазонах YAEC. Данные взяты из трёх документов: краткого руководства авторов Q65 [1], сравнения JT65A – Q65-60A от K1JT [2] и исследования процесса кодирования от G4JNT [3].",
+                "Бюджет EME (§ 1.6) показывает оценочное S/N рядом с типичным порогом выбранного цифрового вида. В этом разделе объясняется, откуда берутся пороги **Q65**, как строится сигнал и почему Q65 сегодня в значительной мере вытеснил JT65 в EME на диапазонах YAEC. Данные взяты из трёх документов: краткого руководства авторов Q65 [1], сравнения JT65A – Q65-60A от K1JT [2] и исследования процесса кодирования от G4JNT [3].",
                 "### Что такое Q65",
                 "Q65 был представлен в WSJT-X 2.4.0 авторами K1JT, G4WJS, K9AN и IV3NWV для минимальных QSO на особо трудных трассах; когда доплеровское расширение превышает несколько герц, это самый чувствительный из видов WSJT-X, и он подходит для тропосферного рассеяния, рассеяния на дожде, ионосферного рассеяния, TEP и EME от УКВ и выше [1]. Он использует FSK на **65 тонах** и происходит от QRA64 2016 года; по сравнению с ним в нём появились [1]:",
                 "• новый низкоскоростной Q-ичный код с исправлением ошибок типа Repeat Accumulate, предложенный Nico Palermo IV3NWV [3] [4];",
@@ -46795,7 +46976,7 @@ namespace LunaCalc
                 "~ Из [1], только для диапазонов до 432 MHz. Авторы призывают экспериментировать с другими комбинациями.",
                 "Период 30 s удваивает темп QSO при относительно сильных сигналах, период 120 s даёт выигрыш около 3 dB на одну передачу [2].",
                 "### Сравнение Q65 и JT65",
-                "**JT65A** почти двадцать лет был видом EME на 6-метровом диапазоне: с декодированием *Deep Search* он достигает −28 dB в полосе 2500 Hz (−29 dB с усреднением сообщений, § 3.6), примерно на 15 dB ниже уровня, необходимого для приёма CW на слух, но только для станций, внесённых в базу позывных и локаторов CALL3.TXT. В таких QSO реально передаётся очень мало информации: около 14 бит на позывной и локатор, выбранные из базы, плюс 1 бит на рапорт и 1 бит на подтверждение [2].",
+                "**JT65A** почти двадцать лет был видом EME на 6-метровом диапазоне: с декодированием *Deep Search* он достигает −28 dB в полосе 2500 Hz (−29 dB с усреднением сообщений, § 1.6), примерно на 15 dB ниже уровня, необходимого для приёма CW на слух, но только для станций, внесённых в базу позывных и локаторов CALL3.TXT. В таких QSO реально передаётся очень мало информации: около 14 бит на позывной и локатор, выбранные из базы, плюс 1 бит на рапорт и 1 бит на подтверждение [2].",
                 "**Q65** всегда передаёт 78-битные сообщения: даже минимальное QSO несёт произвольный позывной (29 бит), настоящий числовой рапорт (7 бит) и подтверждение (1 бит), без базы данных [2]. K1JT подготовил десять смоделированных файлов с сигналами −29 dB и доплеровским расширением 1 Hz, по пять JT65A и пять Q65-60A в каждом файле, и попытался декодировать их четырьмя способами, по 50 возможных декодирований на тест [2]:",
                 "|h| Тест | Вид | Позывной и локатор DX | Deep Search | >Верных | >Ложных",
                 "| 1 | JT65A | неизвестны | недоступен | 0 | 0",
@@ -46804,8 +46985,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | известны (DX Call и DX Grid) | – | 49 | 0",
                 "~ Из [2], таблица 1. Настройки JT65: Deep, Deep Search, AP, 6 случайных шаблонов стирания, агрессивность 9; Q65: Fast, усреднение включено, автоматическая очистка усреднения.",
                 "Выводы автора [2]: при ответах на свой CQ Q65-60A имеет для **любого** неизвестного корреспондента примерно ту же чувствительность, какую JT65A имеет только для корреспондентов из базы; для всех остальных он чувствительнее **по крайней мере на 3 dB**, а в последующих сообщениях, когда оба позывных известны, — ещё больше. Ложные декодирования настолько редки, что их трудно измерить. Усреднение сообщений в JT65 работает для одного уже опознанного корреспондента, в Q65 — по всей отображаемой полосе. Наконец, JT65 отводит на синхронизацию половину передаваемой энергии, Q65 — четверть.",
-                "> Значение −25 dB для JT65 в бюджете EME взято из руководства WSJT-X без Deep Search (§ 3.6); −28 dB с Deep Search действуют только для станций, внесённых в базу, −29 dB с усреднением — для любого сообщения.",
-                ">! **Расхождение между источниками.** Документ сравнения JT65A – Q65-60A [2] указывает −29 dB для JT65A с Deep Search; доклад K1JT на конференции EME 2006, цитируемый в § 3.6, напротив, даёт −28 dB для Deep Search и −29 dB для усреднения сообщений. YAEC использует значения 2006 года. Два источника относятся к разным подвидам: JT65B в моделировании 2006 года, JT65A в [2].",
+                "> Значение −25 dB для JT65 в бюджете EME взято из руководства WSJT-X без Deep Search (§ 1.6); −28 dB с Deep Search действуют только для станций, внесённых в базу, −29 dB с усреднением — для любого сообщения.",
+                ">! **Расхождение между источниками.** Документ сравнения JT65A – Q65-60A [2] указывает −29 dB для JT65A с Deep Search; доклад K1JT на конференции EME 2006, цитируемый в § 1.6, напротив, даёт −28 dB для Deep Search и −29 dB для усреднения сообщений. YAEC использует значения 2006 года. Два источника относятся к разным подвидам: JT65B в моделировании 2006 года, JT65A в [2].",
                 "### Как Q65 строит сигнал",
                 "G4JNT восстановил по исходному коду WSJT-X путь от сообщения до передаваемых тонов, проверив его программой WSJT-X Q65CODE.EXE [3]. Вкратце:",
                 "• **Кодирование источника.** Как в FST4, FT8, FT4 и MSK144, сообщение превращается в 71 бит данных плюс 6 бит типа, всего 77. Свободный текст содержит до 13 символов из алфавита в 42 знака (пробел, цифры, буквы и + - . / ?), и §42^{13}§ меньше §2^{71}§; режим телеметрии передаёт до 18 шестнадцатеричных цифр [3].",
@@ -46840,7 +47021,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Сокращённый пример из [6], где DX-экспедиция — TX7MB (CI00): каждая вызывающая станция остаётся на своей частоте и переходит на RRR, когда принимает своё «R CI00».",
                 "> Общие окна видимости Луны коротки, особенно при восходе и заходе Луны, когда многие станции используют эффект земли: вкладка Положение онлайн и +- 24h и вкладка «Расстояние и Dgrd» показывают, когда Луна видна с обеих станций.",
-                ">⚠ Рассуждения о теоретических пределах теряют смысл в тот момент, когда сигналы уже принимаются: внезапный местный шум может ухудшить приём, так же как и фарадеевское вращение (§ 3.3).",
+                ">⚠ Рассуждения о теоретических пределах теряют смысл в тот момент, когда сигналы уже принимаются: внезапный местный шум может ухудшить приём, так же как и фарадеевское вращение (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 апреля 2021 (WSJT-X 2.4.0), предоставлено IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (тестовые файлы JT65A_and_Q65-60A.zip), предоставлено IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, октябрь 2023, предоставлено IC8TEM.",
@@ -46942,6 +47123,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["uk"] = new Dictionary<string, string[]>();
+            d["uk"]["PREF"] = new string[] {
+                "Ця частина посібника описує не кнопки програми, а ідеї, на яких її побудовано. Перед розділами автор хоче викласти кілька понять, що виявилися ключовими для вивчення програми, зокрема у світлі його нещодавнього досвіду на станції.",
+                "• **Розрахунок — орієнтир, а не обіцянка.** Бюджет лінії, оцінка S/N і пороги цифрових видів описують ідеальну трасу. Під час приймання важать місцеві та індустріальні завади, що можуть змінюватися щохвилини, і фарадеївське обертання: кількох миттєвостей досить, щоб утратити розрахований запас (§ 1.3, 1.12).",
+                "• **День обирають до ввімкнення.** Dgrd, відстань до Місяця і схилення показують, скільки шуму неба за Місяцем, скільки годин він над горизонтом і як високо підіймається: та сама апаратура працює дуже по-різному в різні дні (§ 1.4).",
+                "• **Поляризація може змусити сигнал зникнути.** З лінійними антенами фарадеївське обертання і просторова поляризація можуть погасити луну на хвилини або години; часто досить зачекати, повторити або повернути поляризацію, а не шукати несправність (§ 1.3).",
+                "• **Кожен децибел перед підсилювачем важливий.** Кабелі, реле і роз'єми перед попереднім підсилювачем погіршують шумову температуру системи більше, ніж підказує їхнє значення в дБ: саме туди варто вкладати кошти (§ 1.7, 1.8).",
+                "• **Спочатку правильні частоти.** На високих діапазонах Доплер і CFOM зсувають луну на кілька кГц: луну поза вікном декодування не чути навіть за доброго сигналу (§ 1.10).",
+                "• **Сонце — передбачуваний супротивник.** Коли воно близько до Місяця, шум зростає: програма попереджає заздалегідь, і це варто враховувати під час вибору днів (§ 1.5, 1.9).",
+                "• **Слухати, порівнювати, записувати.** Програма допомагає зрозуміти, чого чекати; порівняння оцінок із тим, що справді прийнято, із записом дати, часу й умов — найшвидший спосіб пізнати власну станцію.",
+                "Джерела кожного розділу наведено повністю; де теорія і досвід розходяться, посібник каже про це прямо.",
+                "~. Costantino IC8TEM"
+            };
             d["uk"]["S32"] = new string[] {
                 "## Локатор Maidenhead (WWL)",
                 "**Локатор Maidenhead**, який також називають WWL (World Wide Locator) або QTH-локатор, — це код, яким радіоаматори позначають місцезнаходження своєї станції. Його запропонував John Morris G4ANB, а прийняла Робоча група IARU з УКХ у квітні 1980 року на нараді в Мейденгеді (Англія); він замінив старий QRA-локатор, який охоплював лише Європу [1]. З 1999 року геодезичною системою відліку є WGS-84, та сама, що й у GPS [1]. YAEC визначає з локатора широту й довготу станції, а з них — усі розрахунки.",
@@ -47001,7 +47194,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Пороги для 50 % імовірності декодування, виміряні на каналі з адитивним білим гаусівським шумом (AWGN). Для Q65 декодування з *апріорною* інформацією (AP), яке використовує вже відомі під час QSO позивні, додає від 1,5 до 3,6 dB залежно від підвиду (наприклад, Q65-60A −30,2 dB) [2]; YAEC показує для довідки обережніші значення без AP. При доплерівському розширенні в кілька герц поріг погіршується: для Q65-60A приблизно на 2 dB при 5 Hz і приблизно на 3 dB при 10 Hz (зчитано з графіка в [2]). Структуру Q65, його підвиди та порівняння з JT65 наведено в § 3.12. Для EME документ рекомендує Q65-60A на 50 і 144 MHz та Q65-60B на 432 MHz [2]: підвиди B – E мають рознесення тонів і зайняту смугу в 2 – 16 разів більші, ніж у підвиду A.",
+                "~ Пороги для 50 % імовірності декодування, виміряні на каналі з адитивним білим гаусівським шумом (AWGN). Для Q65 декодування з *апріорною* інформацією (AP), яке використовує вже відомі під час QSO позивні, додає від 1,5 до 3,6 dB залежно від підвиду (наприклад, Q65-60A −30,2 dB) [2]; YAEC показує для довідки обережніші значення без AP. При доплерівському розширенні в кілька герц поріг погіршується: для Q65-60A приблизно на 2 dB при 5 Hz і приблизно на 3 dB при 10 Hz (зчитано з графіка в [2]). Структуру Q65, його підвиди та порівняння з JT65 наведено в § 1.12. Для EME документ рекомендує Q65-60A на 50 і 144 MHz та Q65-60B на 432 MHz [2]: підвиди B – E мають рознесення тонів і зайняту смугу в 2 – 16 разів більші, ніж у підвиду A.",
                 "Для JT65 K1JT опублікував межі для кожного типу декодування, отримані моделюванням підвиду JT65B [5]:",
                 "|h| JT65: тип декодування | >S/N (2500 Hz) | Джерело",
                 "| Будь-яке повідомлення, зокрема довільний текст | −24 dB | [5]",
@@ -47023,7 +47216,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21-й EME Meeting, презентацію надано IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, документ від 12 листопада 2010, надано IC8TEM.",
                 "[5] J. Taylor K1JT, доповідь про JT65 на конференції EME 2006 (K1JT_eme2006.pdf): таблиця мінімальних рівнів S/N у 2500 Hz.",
-                "> Схема станції праворуч у вкладці визначає втрати з вибраних кабелів: на передачу — кабель PA–реле + реле + антенний кабель, на прийом — антенний кабель + реле перед передпідсилювачем і фідер після нього. Загасання кабелів беруться з бази даних вкладки COAXIAL CABLES (§ 3.8)."
+                "> Схема станції праворуч у вкладці визначає втрати з вибраних кабелів: на передачу — кабель PA–реле + реле + антенний кабель, на прийом — антенний кабель + реле перед передпідсилювачем і фідер після нього. Загасання кабелів беруться з бази даних вкладки COAXIAL CABLES (§ 1.8)."
             };
             d["uk"]["S47"] = new string[] {
                 "## Передпідсилювач і коефіцієнт шуму радіостанції {nuovo}",
@@ -47171,7 +47364,7 @@ namespace LunaCalc
                 "Перевага в тому, що кілька станцій, а також ті, хто лише слухає, можуть стежити за QSO на одній частоті без перерахунку Доплера для кожної. YAEC показує ці дві частоти на головному екрані.",
                 "### CAT радіостанції",
                 "Доплер змінюється безперервно, тому компенсацію слід оновлювати щоперіоду. Найпростіше доручити це цифровій програмі (наприклад, вікну *Astronomical Data* у WSJT-X), яка через **CAT** радіостанції встановлює VFO передачі й прийому і тримає радіостанцію на правильній частоті [1] [2]. Без CAT можна використовувати split (один VFO на передачу, інший на прийом) або RIT, підлаштовуючи частоту вручну щоперіоду: на 50 і 144 MHz це здійсненно, на 432 MHz стає незручно [1].",
-                "> Увага: для CFOM радіостанція має приймати зміну частоти через CAT **також під час передачі**. Деякі апарати цього не роблять (наприклад, FT-897, згаданий у [2]): тоді можна приймати в CFOM, а передача залишається на фіксованій частоті. З трансвертером (§ 3.7) CAT встановлює радіостанцію на проміжну частоту: задайте зсув трансвертера в програмі, щоб показувана частота була реальною.",
+                "> Увага: для CFOM радіостанція має приймати зміну частоти через CAT **також під час передачі**. Деякі апарати цього не роблять (наприклад, FT-897, згаданий у [2]): тоді можна приймати в CFOM, а передача залишається на фіксованій частоті. З трансвертером (§ 1.7) CAT встановлює радіостанцію на проміжну частоту: задайте зсув трансвертера в програмі, щоб показувана частота була реальною.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (зі статті використано лише дані до 432 MHz) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -47202,7 +47395,7 @@ namespace LunaCalc
             };
             d["uk"]["S412"] = new string[] {
                 "## Цифрові види для EME: Q65 і JT65",
-                "Бюджет EME (§ 3.6) показує оцінене S/N поруч із типовим порогом вибраного цифрового виду. У цьому розділі пояснено, звідки беруться пороги **Q65**, як будується сигнал і чому Q65 сьогодні значною мірою замінив JT65 для EME на діапазонах YAEC. Дані взято з трьох документів: короткого посібника авторів Q65 [1], порівняння JT65A – Q65-60A від K1JT [2] і дослідження процесу кодування від G4JNT [3].",
+                "Бюджет EME (§ 1.6) показує оцінене S/N поруч із типовим порогом вибраного цифрового виду. У цьому розділі пояснено, звідки беруться пороги **Q65**, як будується сигнал і чому Q65 сьогодні значною мірою замінив JT65 для EME на діапазонах YAEC. Дані взято з трьох документів: короткого посібника авторів Q65 [1], порівняння JT65A – Q65-60A від K1JT [2] і дослідження процесу кодування від G4JNT [3].",
                 "### Що таке Q65",
                 "Q65 запровадили у WSJT-X 2.4.0 K1JT, G4WJS, K9AN і IV3NWV для мінімальних QSO на особливо складних трасах; коли доплерівське розширення перевищує кілька герц, це найчутливіший з видів WSJT-X, придатний для тропосферного розсіювання, розсіювання на дощі, іоносферного розсіювання, TEP та EME від УКХ і вище [1]. Він використовує FSK з **65 тонами** і походить від QRA64 2016 року; порівняно з ним він запроваджує [1]:",
                 "• новий низькошвидкісний код з виправленням помилок типу Q-ary Repeat Accumulate, запропонований Nico Palermo IV3NWV [3] [4];",
@@ -47259,7 +47452,7 @@ namespace LunaCalc
                 "~ З [1], лише для діапазонів до 432 MHz. Автори заохочують експериментувати з іншими комбінаціями.",
                 "Період 30 s подвоює темп QSO за відносно сильних сигналів, період 120 s дає приблизно 3 dB виграшу на одну передачу [2].",
                 "### Порівняння Q65 і JT65",
-                "**JT65A** майже двадцять років був видом EME у 6-метровому діапазоні: з декодуванням *Deep Search* він досягає −28 dB у 2500 Hz (−29 dB з усередненням повідомлень, § 3.6), приблизно на 15 dB нижче рівня, потрібного для приймання CW на слух, але лише для станцій, внесених до бази даних позивних і локаторів CALL3.TXT. У таких QSO насправді передається дуже мало інформації: близько 14 біт для позивного й локатора, вибраних з бази даних, плюс 1-бітний рапорт і 1-бітне підтвердження [2].",
+                "**JT65A** майже двадцять років був видом EME у 6-метровому діапазоні: з декодуванням *Deep Search* він досягає −28 dB у 2500 Hz (−29 dB з усередненням повідомлень, § 1.6), приблизно на 15 dB нижче рівня, потрібного для приймання CW на слух, але лише для станцій, внесених до бази даних позивних і локаторів CALL3.TXT. У таких QSO насправді передається дуже мало інформації: близько 14 біт для позивного й локатора, вибраних з бази даних, плюс 1-бітний рапорт і 1-бітне підтвердження [2].",
                 "**Q65** завжди передає 78-бітні повідомлення: навіть мінімальне QSO містить довільний позивний (29 біт), справжній числовий рапорт (7 біт) і підтвердження (1 біт), без бази даних [2]. K1JT підготував десять змодельованих файлів із сигналами −29 dB і доплерівським розширенням 1 Hz, по п'ять JT65A і п'ять Q65-60A у кожному файлі, і спробував декодувати їх чотирма способами, з 50 можливими декодуваннями в кожному тесті [2]:",
                 "|h| Тест | Вид | Позивний і локатор DX | Deep Search | >Правильні | >Хибні",
                 "| 1 | JT65A | невідомі | недоступний | 0 | 0",
@@ -47268,8 +47461,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | відомі (DX Call і DX Grid) | – | 49 | 0",
                 "~ З [2], таблиця 1. Налаштування JT65: Deep, Deep Search, AP, 6 випадкових шаблонів стирання, агресивний рівень 9; Q65: Fast, усереднення ввімкнене, автоматичне очищення середнього.",
                 "Висновки автора [2]: для відповідей на власний CQ Q65-60A має для **будь-якого** невідомого кореспондента приблизно таку саму чутливість, яку JT65A має лише для кореспондентів з бази даних; для всіх інших він **щонайменше на 3 dB** чутливіший, а в подальших повідомленнях, коли обидва позивні відомі, — ще більше. Хибні декодування настільки рідкісні, що їх важко виміряти. Усереднення повідомлень у JT65 працює для одного вже ідентифікованого кореспондента, у Q65 — по всій показаній смузі. Нарешті, JT65 віддає на синхронізацію половину переданої енергії, а Q65 — чверть.",
-                "> Значення −25 dB для JT65 у бюджеті EME — це значення з посібника WSJT-X без Deep Search (§ 3.6); −28 dB з Deep Search стосується лише станцій, внесених до бази даних, −29 dB з усередненням — будь-якого повідомлення.",
-                ">! **Розбіжність між джерелами.** Документ порівняння JT65A – Q65-60A [2] вказує −29 dB для JT65A з Deep Search; доповідь K1JT на конференції EME 2006, цитована в § 3.6, натомість дає −28 dB для Deep Search і −29 dB для усереднення повідомлень. YAEC використовує значення 2006 року. Два джерела стосуються різних підвидів: JT65B у моделюванні 2006 року, JT65A в [2].",
+                "> Значення −25 dB для JT65 у бюджеті EME — це значення з посібника WSJT-X без Deep Search (§ 1.6); −28 dB з Deep Search стосується лише станцій, внесених до бази даних, −29 dB з усередненням — будь-якого повідомлення.",
+                ">! **Розбіжність між джерелами.** Документ порівняння JT65A – Q65-60A [2] вказує −29 dB для JT65A з Deep Search; доповідь K1JT на конференції EME 2006, цитована в § 1.6, натомість дає −28 dB для Deep Search і −29 dB для усереднення повідомлень. YAEC використовує значення 2006 року. Два джерела стосуються різних підвидів: JT65B у моделюванні 2006 року, JT65A в [2].",
                 "### Як Q65 будує сигнал",
                 "G4JNT відтворив за вихідним кодом WSJT-X шлях від повідомлення до переданих тонів, перевіривши його програмою WSJT-X Q65CODE.EXE [3]. Коротко:",
                 "• **Кодування джерела.** Як і у FST4, FT8, FT4 і MSK144, повідомлення перетворюється на 71 біт даних плюс 6 бітів типу, разом 77. Довільний текст має до 13 символів з 42-символьного алфавіту (пробіл, цифри, літери та + - . / ?), і §42^{13}§ менше за §2^{71}§; режим телеметрії передає до 18 шістнадцяткових цифр [3].",
@@ -47304,7 +47497,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Скорочений приклад з [6], де DX-експедиція — TX7MB (CI00): кожна станція, що викликає, залишається на своїй частоті й переходить на RRR, коли приймає своє «R CI00».",
                 "> Спільні вікна видимості Місяця короткі, особливо під час сходу й заходу Місяця, коли багато станцій використовують ефект землі: вкладка Положення наживо і +- 24h і вкладка «Відстань і Dgrd» показують, коли Місяць видно з обох станцій.",
-                ">⚠ Міркування про теоретичні межі втрачають сенс тієї миті, коли сигнали вже приймаються: раптовий місцевий шум може погіршити приймання, так само як і фарадеївське обертання (§ 3.3).",
+                ">⚠ Міркування про теоретичні межі втрачають сенс тієї миті, коли сигнали вже приймаються: раптовий місцевий шум може погіршити приймання, так само як і фарадеївське обертання (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 квітня 2021 (WSJT-X 2.4.0), надано IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (тестові файли JT65A_and_Q65-60A.zip), надано IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, жовтень 2023, надано IC8TEM.",
@@ -47406,6 +47599,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["af"] = new Dictionary<string, string[]>();
+            d["af"]["PREF"] = new string[] {
+                "Hierdie deel van die handleiding beskryf nie die program se knoppies nie, maar die idees waarop die program gebou is. Voor die hoofstukke wil die outeur 'n paar begrippe uiteensit wat sleutel gebleek het om die program te bestudeer, ook in die lig van sy jongste ervarings by die stasie.",
+                "• **Die berekening is 'n verwysing, nie 'n belofte nie.** Begroting, geskatte S/N en drempels van die digitale modusse beskryf 'n ideale skakel. Tydens ontvangs tel die plaaslike en mensgemaakte geraas, wat van minuut tot minuut kan verander, en Faraday-rotasie: 'n paar oomblikke is genoeg om die berekende marge uit te wis (§ 1.3, 1.12).",
+                "• **Die dag word gekies voor jy aanskakel.** Dgrd, Maanafstand en deklinasie wys hoeveel hemelgeraas agter die Maan is, hoeveel ure dit bo die horison bly en hoe hoog dit styg: dieselfde toerusting presteer van dag tot dag baie verskillend (§ 1.4).",
+                "• **Polarisasie kan 'n sein laat verdwyn.** Met lineêre antennas kan Faraday-rotasie en ruimtelike polarisasie 'n eggo vir minute of ure doodmaak; dikwels is dit genoeg om te wag, te herhaal of die polarisasie te draai, eerder as om 'n fout te soek (§ 1.3).",
+                "• **Elke desibel voor die voorversterker tel.** Kabels, relais en koppelstukke voor die voorversterker vererger die stelseltemperatuur meer as wat hul dB-waarde aandui: dáár is dit die moeite werd om te belê (§ 1.7, 1.8).",
+                "• **Eers die regte frekwensies.** Doppler en CFOM skuif die eggo tot 'n paar kHz op die hoër bande: 'n eggo buite die dekodeervenster word nie gehoor nie, selfs met 'n goeie sein (§ 1.10).",
+                "• **Die Son is 'n voorspelbare teenstander.** Wanneer dit naby die Maan is, styg die geraas: die program waarsku vooraf, en dit is die moeite werd om dit in ag te neem wanneer jy dae kies (§ 1.5, 1.9).",
+                "• **Luister, vergelyk, teken aan.** Die program help om te verstaan wat om te verwag; om die skattings met die werklike ontvangs te vergelyk, met datum, tyd en toestande aangeteken, is die vinnigste manier om jou eie stasie te leer ken.",
+                "Die bronne van elke hoofstuk word volledig aangehaal; waar teorie en ervaring nie ooreenstem nie, sê die handleiding dit openlik.",
+                "~. Costantino IC8TEM"
+            };
             d["af"]["S32"] = new string[] {
                 "## Die Maidenhead-lokaliseerder (WWL)",
                 "Die **Maidenhead-lokaliseerder**, ook WWL (World Wide Locator) of QTH-lokaliseerder genoem, is die kode wat radioamateurs gebruik om die posisie van hul stasie aan te gee. Dit is deur John Morris G4ANB bedink en in April 1980 deur die IARU VHF-werkgroep aanvaar, tydens 'n vergadering in Maidenhead, Engeland; dit het die ou QRA-lokaliseerder vervang, wat slegs Europa gedek het [1]. Sedert 1999 is die geodetiese datum WGS-84, dieselfde as dié van GPS [1]. YAEC lei die breedte- en lengtegraad van die stasie uit die lokaliseerder af, en al die berekeninge uit hierdie waardes.",
@@ -47465,7 +47670,7 @@ namespace LunaCalc
                 "| Q65-120A | −30,8 dB | [2]",
                 "| Q65-300A | −33,8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ Drempels vir 50 % dekoderingswaarskynlikheid, gemeet op 'n kanaal met additiewe wit Gaussiese ruis (AWGN). Vir Q65 voeg *a priori* (AP) dekodering, wat die roepseine gebruik wat reeds tydens die QSO bekend is, 1,5 tot 3,6 dB by, afhangende van die submodus (byvoorbeeld Q65-60A −30,2 dB) [2]; YAEC wys die versigtiger waardes sonder AP as verwysing. Met 'n Doppler-verspreiding van 'n paar hertz word die drempel slegter: vir Q65-60A met ongeveer 2 dB by 5 Hz en ongeveer 3 dB by 10 Hz (afgelees van die grafiek in [2]). Die struktuur van Q65, sy submodusse en die vergelyking met JT65 is in § 3.12. Vir EME beveel die dokument Q65-60A op 50 en 144 MHz en Q65-60B op 432 MHz aan [2]: submodusse B – E het 'n toonspasiëring en besette bandwydte 2 – 16 keer dié van submodus A.",
+                "~ Drempels vir 50 % dekoderingswaarskynlikheid, gemeet op 'n kanaal met additiewe wit Gaussiese ruis (AWGN). Vir Q65 voeg *a priori* (AP) dekodering, wat die roepseine gebruik wat reeds tydens die QSO bekend is, 1,5 tot 3,6 dB by, afhangende van die submodus (byvoorbeeld Q65-60A −30,2 dB) [2]; YAEC wys die versigtiger waardes sonder AP as verwysing. Met 'n Doppler-verspreiding van 'n paar hertz word die drempel slegter: vir Q65-60A met ongeveer 2 dB by 5 Hz en ongeveer 3 dB by 10 Hz (afgelees van die grafiek in [2]). Die struktuur van Q65, sy submodusse en die vergelyking met JT65 is in § 1.12. Vir EME beveel die dokument Q65-60A op 50 en 144 MHz en Q65-60B op 432 MHz aan [2]: submodusse B – E het 'n toonspasiëring en besette bandwydte 2 – 16 keer dié van submodus A.",
                 "Vir JT65 het K1JT die grense vir elke soort dekodering gepubliseer, verkry uit simulasies van die JT65B-submodus [5]:",
                 "|h| JT65: soort dekodering | >S/N (2500 Hz) | Bron",
                 "| Enige boodskap, ook vrye teks | −24 dB | [5]",
@@ -47487,7 +47692,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21ste EME Meeting, aanbieding verskaf deur IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, dokument van 12 November 2010, verskaf deur IC8TEM.",
                 "[5] J. Taylor K1JT, referaat oor JT65 by die EME 2006-konferensie (K1JT_eme2006.pdf): tabel van minimum S/N-vlakke in 2500 Hz.",
-                "> Die stasiediagram, regs op die oortjie, lei die verliese af uit die gekose kabels: in uitsending PA–relaiskabel + relais + antennakabel, in ontvangs antennakabel + relais voor die voorversterker en voerkabel daarna. Die kabelverswakkings kom uit die databasis van die oortjie COAXIAL CABLES (§ 3.8)."
+                "> Die stasiediagram, regs op die oortjie, lei die verliese af uit die gekose kabels: in uitsending PA–relaiskabel + relais + antennakabel, in ontvangs antennakabel + relais voor die voorversterker en voerkabel daarna. Die kabelverswakkings kom uit die databasis van die oortjie COAXIAL CABLES (§ 1.8)."
             };
             d["af"]["S47"] = new string[] {
                 "## Die voorversterker en die ruissyfer van die radio {nuovo}",
@@ -47635,7 +47840,7 @@ namespace LunaCalc
                 "Die voordeel is dat verskeie stasies, en enigiemand wat net luister, 'n QSO op dieselfde frekwensie kan volg sonder om die Doppler vir elkeen te herbereken. YAEC toon hierdie twee frekwensies op die hoofskerm.",
                 "### Die CAT van die radio",
                 "Die Doppler verander voortdurend, dus moet die kompensasie elke periode bygewerk word. Die eenvoudigste manier is om dit aan die digitale program oor te laat (byvoorbeeld die venster *Astronomical Data* van WSJT-X) wat, deur die **CAT** van die radio, die uitsaai- en ontvangs-VFO's instel en die radio op die regte frekwensie hou [1] [2]. Sonder CAT kan jy split (een VFO vir uitsending en een vir ontvangs) of RIT gebruik en elke periode met die hand verstel: op 50 en 144 MHz is dit doenbaar, op 432 MHz word dit omslagtig [1].",
-                "> Let op: vir CFOM moet die radio die frekwensieverandering via CAT **ook tydens uitsending** aanvaar. Sommige toestelle doen dit nie (byvoorbeeld die FT-897 wat in [2] genoem word): in daardie geval kan jy steeds in CFOM ontvang, terwyl uitsending op 'n vaste frekwensie bly. Met 'n transverter (§ 3.7) stel die CAT die radio op die intermediêre frekwensie: stel die transverter-afset in die program in, sodat die getoonde frekwensie die werklike een is.",
+                "> Let op: vir CFOM moet die radio die frekwensieverandering via CAT **ook tydens uitsending** aanvaar. Sommige toestelle doen dit nie (byvoorbeeld die FT-897 wat in [2] genoem word): in daardie geval kan jy steeds in CFOM ontvang, terwyl uitsending op 'n vaste frekwensie bly. Met 'n transverter (§ 1.7) stel die CAT die radio op die intermediêre frekwensie: stel die transverter-afset in die program in, sodat die getoonde frekwensie die werklike een is.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (slegs die data tot 432 MHz word uit die artikel gebruik) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -47666,7 +47871,7 @@ namespace LunaCalc
             };
             d["af"]["S412"] = new string[] {
                 "## Digitale modusse vir EME: Q65 en JT65",
-                "Die EME-begroting (§ 3.6) wys die geskatte S/N langs die tipiese drempel van die gekose digitale modus. Hierdie afdeling verduidelik waar die **Q65**-drempels vandaan kom, hoe die sein opgebou word en waarom Q65 vandag JT65 grootliks vir EME op die YAEC-bande vervang het. Die data kom uit drie dokumente: die vinnige-begin-gids van die outeurs van Q65 [1], die vergelyking JT65A – Q65-60A deur K1JT [2] en die studie van die koderingsproses deur G4JNT [3].",
+                "Die EME-begroting (§ 1.6) wys die geskatte S/N langs die tipiese drempel van die gekose digitale modus. Hierdie afdeling verduidelik waar die **Q65**-drempels vandaan kom, hoe die sein opgebou word en waarom Q65 vandag JT65 grootliks vir EME op die YAEC-bande vervang het. Die data kom uit drie dokumente: die vinnige-begin-gids van die outeurs van Q65 [1], die vergelyking JT65A – Q65-60A deur K1JT [2] en die studie van die koderingsproses deur G4JNT [3].",
                 "### Wat Q65 is",
                 "Q65 is met WSJT-X 2.4.0 deur K1JT, G4WJS, K9AN en IV3NWV bekendgestel vir minimale QSO's oor besonder moeilike paaie; wanneer die Doppler-verspreiding 'n paar hertz oorskry, is dit die sensitiefste van die WSJT-X-modusse, en dit pas by troposfeerverstrooiing, reënverstrooiing, ionosferiese verstrooiing, TEP en EME vanaf VHF en hoër [1]. Dit gebruik FSK met **65 tone** en is afgelei van QRA64 van 2016; in vergelyking daarmee voer dit in [1]:",
                 "• 'n nuwe lae-tempo Q-êre Repeat Accumulate-foutkorreksiekode, voorgestel deur Nico Palermo IV3NWV [3] [4];",
@@ -47723,7 +47928,7 @@ namespace LunaCalc
                 "~ Uit [1], slegs vir die bande tot 432 MHz. Die outeurs moedig aan om met ander kombinasies te eksperimenteer.",
                 "Die periode van 30 s verdubbel die QSO-tempo met relatief sterk seine, die periode van 120 s wen ongeveer 3 dB per enkele uitsending [2].",
                 "### Q65 en JT65 vergelyk",
-                "**JT65A** was vir byna twintig jaar die EME-modus van die 6-meterband: met *Deep Search*-dekodering bereik dit −28 dB in 2500 Hz (−29 dB met boodskapgemiddeldes, § 3.6), ongeveer 15 dB onder die vlak wat nodig is om CW op die oor te kopieer, maar slegs vir stasies wat in die CALL3.TXT-databasis van roepseine en lokaliseerders gelys is. In daardie QSO's word baie min inligting werklik gestuur: ongeveer 14 bisse vir 'n roepsein en lokaliseerder wat uit die databasis gekies is, plus 'n verslag van 1 bis en 'n bevestiging van 1 bis [2].",
+                "**JT65A** was vir byna twintig jaar die EME-modus van die 6-meterband: met *Deep Search*-dekodering bereik dit −28 dB in 2500 Hz (−29 dB met boodskapgemiddeldes, § 1.6), ongeveer 15 dB onder die vlak wat nodig is om CW op die oor te kopieer, maar slegs vir stasies wat in die CALL3.TXT-databasis van roepseine en lokaliseerders gelys is. In daardie QSO's word baie min inligting werklik gestuur: ongeveer 14 bisse vir 'n roepsein en lokaliseerder wat uit die databasis gekies is, plus 'n verslag van 1 bis en 'n bevestiging van 1 bis [2].",
                 "**Q65** stuur altyd boodskappe van 78 bisse: selfs 'n minimale QSO dra 'n willekeurige roepsein (29 bisse), 'n werklike numeriese verslag (7 bisse) en die bevestiging (1 bis), sonder 'n databasis [2]. K1JT het tien gesimuleerde lêers voorberei met seine by −29 dB en 1 Hz Doppler-verspreiding, vyf JT65A en vyf Q65-60A per lêer, en probeer om hulle op vier maniere te dekodeer, met 50 moontlike dekoderings per toets [2]:",
                 "|h| Toets | Modus | DX-roepsein en lokaliseerder | Deep Search | >Goed | >Sleg",
                 "| 1 | JT65A | nie bekend nie | nie beskikbaar nie | 0 | 0",
@@ -47732,8 +47937,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | bekend (DX Call en DX Grid) | – | 49 | 0",
                 "~ Uit [2], tabel 1. JT65-instellings: Deep, Deep Search, AP, 6 ewekansige uitwispatrone, aggressiewe vlak 9; Q65: Fast, gemiddelde aan, outomatiese uitvee van die gemiddelde.",
                 "Die gevolgtrekkings van die outeur [2]: vir antwoorde op jou CQ het Q65-60A, vir **enige** onbekende roeper, ongeveer dieselfde sensitiwiteit wat JT65A slegs vir roepers in die databasis het; vir alle ander is dit **minstens 3 dB** sensitiewer, en nog meer in latere boodskappe, wanneer albei roepseine bekend is. Vals dekoderings is so skaars dat hulle moeilik is om te meet. JT65-boodskapgemiddeldes werk vir 'n enkele roeper wat reeds geïdentifiseer is, Q65-gemiddeldes oor die hele vertoonde band. Laastens wy JT65 die helfte van die uitgesaaide energie aan sinkronisasie, Q65 'n kwart.",
-                "> Die waarde van −25 dB vir JT65 in die EME-begroting is dié uit die WSJT-X-gids sonder Deep Search (§ 3.6); die −28 dB met Deep Search geld slegs vir stasies wat in die databasis gelys is, die −29 dB met gemiddeldes vir enige boodskap.",
-                ">! **Teenstrydigheid tussen bronne.** Die vergelykingsdokument JT65A – Q65-60A [2] gee −29 dB vir JT65A met Deep Search; K1JT se referaat by die EME 2006-konferensie, aangehaal in § 3.6, gee egter −28 dB vir Deep Search en −29 dB vir boodskapgemiddeldes. YAEC gebruik die 2006-waardes. Die twee bronne verwys na verskillende submodusse: JT65B in die 2006-simulasies, JT65A in [2].",
+                "> Die waarde van −25 dB vir JT65 in die EME-begroting is dié uit die WSJT-X-gids sonder Deep Search (§ 1.6); die −28 dB met Deep Search geld slegs vir stasies wat in die databasis gelys is, die −29 dB met gemiddeldes vir enige boodskap.",
+                ">! **Teenstrydigheid tussen bronne.** Die vergelykingsdokument JT65A – Q65-60A [2] gee −29 dB vir JT65A met Deep Search; K1JT se referaat by die EME 2006-konferensie, aangehaal in § 1.6, gee egter −28 dB vir Deep Search en −29 dB vir boodskapgemiddeldes. YAEC gebruik die 2006-waardes. Die twee bronne verwys na verskillende submodusse: JT65B in die 2006-simulasies, JT65A in [2].",
                 "### Hoe Q65 die sein opbou",
                 "G4JNT het uit die WSJT-X-bronkode die pad van die boodskap na die uitgesaaide tone gerekonstrueer en dit met die WSJT-X-program Q65CODE.EXE gekontroleer [3]. Kortliks:",
                 "• **Bronkodering.** Soos in FST4, FT8, FT4 en MSK144 word die boodskap 71 databisse plus 6 tipebisse, 77 in totaal. 'n Vrye teks het tot 13 karakters uit 'n alfabet van 42 simbole (spasie, syfers, letters en + - . / ?), en §42^{13}§ is minder as §2^{71}§; telemetriemodus dra tot 18 heksadesimale syfers [3].",
@@ -47768,7 +47973,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ Verkorte voorbeeld uit [6], met TX7MB (CI00) as die DX-ekspedisie: elke roeper bly op sy eie frekwensie en skakel oor na RRR wanneer hy sy eie “R CI00” ontvang.",
                 "> Gemeenskaplike maanvensters is kort, veral met maansopkoms en maansondergang, wanneer baie stasies die grondeffek benut: die Regstreekse posisie en +- 24h-oortjie en die oortjie Afstand en Dgrd wys wanneer die Maan vanaf albei stasies sigbaar is.",
-                ">⚠ Die bespreking van teoretiese grense verloor sy betekenis sodra jy werklik seine ontvang: 'n skielike plaaslike ruis kan ontvangs vererger, en so ook Faraday-rotasie (§ 3.3).",
+                ">⚠ Die bespreking van teoretiese grense verloor sy betekenis sodra jy werklik seine ontvang: 'n skielike plaaslike ruis kan ontvangs vererger, en so ook Faraday-rotasie (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 April 2021 (WSJT-X 2.4.0), verskaf deur IC8TEM.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (toetslêers JT65A_and_Q65-60A.zip), verskaf deur IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Oktober 2023, verskaf deur IC8TEM.",
@@ -47870,6 +48075,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["bn"] = new Dictionary<string, string[]>();
+            d["bn"]["PREF"] = new string[] {
+                "ম্যানুয়ালের এই অংশে প্রোগ্রামের বোতামের বর্ণনা নেই, আছে সেই ধারণাগুলো যার ওপর প্রোগ্রামটি গড়া। অধ্যায়গুলোর আগে লেখক এমন কিছু ধারণা তুলে ধরতে চান যা প্রোগ্রামটি শেখার জন্য মূল বলে প্রমাণিত হয়েছে, স্টেশনে তাঁর সাম্প্রতিক অভিজ্ঞতার আলোকেও।",
+                "• **হিসাব একটি নির্দেশক, প্রতিশ্রুতি নয়।** বাজেট, আনুমানিক S/N ও ডিজিটাল মোডের সীমা একটি আদর্শ সংযোগের বর্ণনা দেয়। গ্রহণের সময় গুরুত্বপূর্ণ হলো স্থানীয় ও মানবসৃষ্ট নয়েজ, যা মিনিটে মিনিটে বদলাতে পারে, এবং ফ্যারাডে ঘূর্ণন: কয়েক মুহূর্তেই হিসাব করা মার্জিন মুছে যেতে পারে (§ 1.3, 1.12)।",
+                "• **দিন বাছাই করা হয় চালু করার আগেই।** Dgrd, চাঁদের দূরত্ব ও বিষুবলম্ব জানায় চাঁদের পেছনে আকাশের নয়েজ কতটা, চাঁদ কত ঘণ্টা দিগন্তের ওপরে থাকে এবং কত উঁচুতে ওঠে: একই যন্ত্রপাতি দিনভেদে খুব ভিন্ন ফল দেয় (§ 1.4)।",
+                "• **পোলারাইজেশন একটি সংকেত উধাও করে দিতে পারে।** রৈখিক অ্যান্টেনায় ফ্যারাডে ঘূর্ণন ও স্থানিক পোলারাইজেশন কয়েক মিনিট বা ঘণ্টার জন্য প্রতিধ্বনি নিভিয়ে দিতে পারে; প্রায়ই ত্রুটি খোঁজার বদলে অপেক্ষা করা, পুনরাবৃত্তি করা বা পোলারাইজেশন ঘোরানোই যথেষ্ট (§ 1.3)।",
+                "• **প্রিঅ্যাম্প্লিফায়ারের আগের প্রতিটি ডেসিবেল গুরুত্বপূর্ণ।** প্রিঅ্যাম্প্লিফায়ারের আগের কেবল, রিলে ও সংযোগকারী সিস্টেম তাপমাত্রাকে তাদের dB মানের চেয়েও বেশি খারাপ করে: বিনিয়োগ সেখানেই করা উচিত (§ 1.7, 1.8)।",
+                "• **আগে সঠিক কম্পাঙ্ক।** উঁচু ব্যান্ডে ডপলার ও CFOM প্রতিধ্বনিকে কয়েক kHz পর্যন্ত সরিয়ে দেয়: ডিকোডিং জানালার বাইরের প্রতিধ্বনি ভালো সংকেত থাকলেও শোনা যায় না (§ 1.10)।",
+                "• **সূর্য একটি অনুমেয় প্রতিপক্ষ।** চাঁদের কাছে থাকলে নয়েজ বাড়ে: প্রোগ্রাম আগেভাগে জানিয়ে দেয়, এবং দিন বাছাইয়ে তা বিবেচনা করা উচিত (§ 1.5, 1.9)।",
+                "• **শুনুন, তুলনা করুন, লিখে রাখুন।** প্রোগ্রাম বুঝতে সাহায্য করে কী আশা করা যায়; তারিখ, সময় ও অবস্থাসহ লিখে রেখে অনুমানের সঙ্গে প্রকৃত গ্রহণের তুলনা করাই নিজের স্টেশন চেনার দ্রুততম উপায়।",
+                "প্রতিটি অধ্যায়ের উৎস পূর্ণভাবে উল্লেখ করা হয়েছে; যেখানে তত্ত্ব ও অভিজ্ঞতা মেলে না, ম্যানুয়াল তা খোলাখুলি বলে।",
+                "~. Costantino IC8TEM"
+            };
             d["bn"]["S32"] = new string[] {
                 "## মেইডেনহেড লোকেটর (WWL)",
                 "**মেইডেনহেড লোকেটর**, যাকে WWL (World Wide Locator) বা QTH লোকেটরও বলা হয়, হলো সেই কোড যা দিয়ে রেডিও অ্যামেচাররা তাঁদের স্টেশনের অবস্থান জানান। এটি উদ্ভাবন করেন John Morris G4ANB, এবং IARU VHF Working Group এটি গ্রহণ করে এপ্রিল 1980-এ, ইংল্যান্ডের Maidenhead-এ অনুষ্ঠিত এক সভায়; এটি পুরোনো QRA লোকেটরের স্থান নেয়, যা কেবল ইউরোপকে কভার করত [1]। 1999 থেকে জিওডেটিক ডেটাম হলো WGS-84, GPS-এর মতোই [1]। YAEC লোকেটর থেকে স্টেশনের অক্ষাংশ ও দ্রাঘিমাংশ বের করে, এবং সেগুলো থেকেই সমস্ত হিসাব করে।",
@@ -47929,7 +48146,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ 50 % ডিকোড সম্ভাবনার থ্রেশহোল্ড, অ্যাডিটিভ হোয়াইট গাউসিয়ান নয়েজ (AWGN) চ্যানেলে মাপা। Q65-এর ক্ষেত্রে *a priori* (AP) ডিকোডিং, যা QSO চলাকালীন আগে থেকে জানা কলসাইন ব্যবহার করে, সাবমোড অনুযায়ী 1.5 থেকে 3.6 dB যোগ করে (যেমন Q65-60A −30.2 dB) [2]; YAEC AP ছাড়া আরও সতর্ক মানগুলো রেফারেন্স হিসেবে দেখায়। কয়েক হার্টজের ডপলার স্প্রেডে থ্রেশহোল্ড খারাপ হয়: Q65-60A-এর ক্ষেত্রে 5 Hz-এ প্রায় 2 dB এবং 10 Hz-এ প্রায় 3 dB ([2]-এর চার্ট থেকে পড়া)। Q65-এর গঠন, এর সাবমোড এবং JT65-এর সাথে তুলনা § 3.12-এ রয়েছে। EME-র জন্য নথিটি 50 ও 144 MHz-এ Q65-60A এবং 432 MHz-এ Q65-60B সুপারিশ করে [2]: সাবমোড B – E-এর টোন স্পেসিং ও অধিকৃত ব্যান্ডউইডথ সাবমোড A-এর 2 – 16 গুণ।",
+                "~ 50 % ডিকোড সম্ভাবনার থ্রেশহোল্ড, অ্যাডিটিভ হোয়াইট গাউসিয়ান নয়েজ (AWGN) চ্যানেলে মাপা। Q65-এর ক্ষেত্রে *a priori* (AP) ডিকোডিং, যা QSO চলাকালীন আগে থেকে জানা কলসাইন ব্যবহার করে, সাবমোড অনুযায়ী 1.5 থেকে 3.6 dB যোগ করে (যেমন Q65-60A −30.2 dB) [2]; YAEC AP ছাড়া আরও সতর্ক মানগুলো রেফারেন্স হিসেবে দেখায়। কয়েক হার্টজের ডপলার স্প্রেডে থ্রেশহোল্ড খারাপ হয়: Q65-60A-এর ক্ষেত্রে 5 Hz-এ প্রায় 2 dB এবং 10 Hz-এ প্রায় 3 dB ([2]-এর চার্ট থেকে পড়া)। Q65-এর গঠন, এর সাবমোড এবং JT65-এর সাথে তুলনা § 1.12-এ রয়েছে। EME-র জন্য নথিটি 50 ও 144 MHz-এ Q65-60A এবং 432 MHz-এ Q65-60B সুপারিশ করে [2]: সাবমোড B – E-এর টোন স্পেসিং ও অধিকৃত ব্যান্ডউইডথ সাবমোড A-এর 2 – 16 গুণ।",
                 "JT65-এর জন্য K1JT প্রতিটি ধরনের ডিকোডিংয়ের সীমা প্রকাশ করেছেন, যা JT65B সাবমোডের সিমুলেশন থেকে পাওয়া [5]:",
                 "|h| JT65: ডিকোডিংয়ের ধরন | >S/N (2500 Hz) | উৎস",
                 "| যেকোনো বার্তা, ফ্রি টেক্সটসহ | −24 dB | [5]",
@@ -47951,7 +48168,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21তম EME Meeting, IC8TEM প্রদত্ত উপস্থাপনা।",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 12 নভেম্বর 2010 তারিখের নথি, IC8TEM প্রদত্ত।",
                 "[5] J. Taylor K1JT, EME 2006 সম্মেলনে JT65 বিষয়ক উপস্থাপনা (K1JT_eme2006.pdf): 2500 Hz-এ ন্যূনতম S/N স্তরের টেবিল।",
-                "> ট্যাবের ডানদিকের স্টেশন ডায়াগ্রাম নির্বাচিত কেবলগুলো থেকে ক্ষতি নির্ণয় করে: ট্রান্সমিশনে PA–রিলে কেবল + রিলে + অ্যান্টেনা কেবল, রিসেপশনে প্রিঅ্যাম্পের আগে অ্যান্টেনা কেবল + রিলে এবং এর পরে ফিড কেবল। কেবলের অ্যাটেনুয়েশন আসে COAXIAL CABLES ট্যাবের ডেটাবেস থেকে (§ 3.8)।"
+                "> ট্যাবের ডানদিকের স্টেশন ডায়াগ্রাম নির্বাচিত কেবলগুলো থেকে ক্ষতি নির্ণয় করে: ট্রান্সমিশনে PA–রিলে কেবল + রিলে + অ্যান্টেনা কেবল, রিসেপশনে প্রিঅ্যাম্পের আগে অ্যান্টেনা কেবল + রিলে এবং এর পরে ফিড কেবল। কেবলের অ্যাটেনুয়েশন আসে COAXIAL CABLES ট্যাবের ডেটাবেস থেকে (§ 1.8)।"
             };
             d["bn"]["S47"] = new string[] {
                 "## প্রিঅ্যাম্প এবং রেডিওর নয়েজ ফিগার {nuovo}",
@@ -48099,7 +48316,7 @@ namespace LunaCalc
                 "সুবিধা হলো, একাধিক স্টেশন এবং যে কেবল শুনছে সে-ও প্রত্যেকের জন্য ডপলার পুনরায় হিসাব না করে একই ফ্রিকোয়েন্সিতে একটি QSO অনুসরণ করতে পারে। YAEC মূল স্ক্রিনে এই দুটি ফ্রিকোয়েন্সি দেখায়।",
                 "### রেডিওর CAT",
                 "ডপলার অবিরত বদলায়, তাই প্রতিটি পিরিয়ডে কম্পেনসেশন হালনাগাদ করতে হয়। সবচেয়ে সহজ উপায় হলো এটি ডিজিটাল প্রোগ্রামের ওপর ছেড়ে দেওয়া (যেমন WSJT-X-এর *Astronomical Data* উইন্ডো), যা রেডিওর **CAT**-এর মাধ্যমে ট্রান্সমিট ও রিসিভ VFO সেট করে এবং রেডিওকে সঠিক ফ্রিকোয়েন্সিতে রাখে [1] [2]। CAT ছাড়া আপনি স্প্লিট (ট্রান্সমিশনের জন্য একটি VFO এবং রিসেপশনের জন্য একটি) বা RIT ব্যবহার করতে পারেন, প্রতিটি পিরিয়ডে হাতে সমন্বয় করে: 50 ও 144 MHz-এ এটি সম্ভব, 432 MHz-এ ঝামেলাপূর্ণ হয়ে যায় [1]।",
-                "> সতর্কতা: CFOM-এর জন্য রেডিওকে **ট্রান্সমিশনের সময়েও** CAT-এর মাধ্যমে ফ্রিকোয়েন্সি পরিবর্তন গ্রহণ করতে হবে। কিছু রিগ তা করে না (যেমন [2]-এ উল্লিখিত FT-897): সেক্ষেত্রে আপনি তবুও CFOM-এ রিসিভ করতে পারেন, কিন্তু ট্রান্সমিশন স্থির ফ্রিকোয়েন্সিতে থাকে। ট্রান্সভার্টার থাকলে (§ 3.7) CAT রেডিওকে ইন্টারমিডিয়েট ফ্রিকোয়েন্সিতে সেট করে: প্রোগ্রামে ট্রান্সভার্টারের অফসেট সেট করুন, যাতে দেখানো ফ্রিকোয়েন্সিটি আসল ফ্রিকোয়েন্সি হয়।",
+                "> সতর্কতা: CFOM-এর জন্য রেডিওকে **ট্রান্সমিশনের সময়েও** CAT-এর মাধ্যমে ফ্রিকোয়েন্সি পরিবর্তন গ্রহণ করতে হবে। কিছু রিগ তা করে না (যেমন [2]-এ উল্লিখিত FT-897): সেক্ষেত্রে আপনি তবুও CFOM-এ রিসিভ করতে পারেন, কিন্তু ট্রান্সমিশন স্থির ফ্রিকোয়েন্সিতে থাকে। ট্রান্সভার্টার থাকলে (§ 1.7) CAT রেডিওকে ইন্টারমিডিয়েট ফ্রিকোয়েন্সিতে সেট করে: প্রোগ্রামে ট্রান্সভার্টারের অফসেট সেট করুন, যাতে দেখানো ফ্রিকোয়েন্সিটি আসল ফ্রিকোয়েন্সি হয়।",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (নিবন্ধটি থেকে কেবল 432 MHz পর্যন্ত ডেটা ব্যবহার করা হয়েছে) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -48130,7 +48347,7 @@ namespace LunaCalc
             };
             d["bn"]["S412"] = new string[] {
                 "## EME-র জন্য ডিজিটাল মোড: Q65 ও JT65",
-                "EME বাজেট (§ 3.6) আনুমানিক S/N-কে নির্বাচিত ডিজিটাল মোডের সাধারণ থ্রেশহোল্ডের পাশে দেখায়। এই অংশে ব্যাখ্যা করা হয়েছে **Q65**-এর থ্রেশহোল্ডগুলো কোথা থেকে আসে, সিগন্যাল কীভাবে গঠিত হয় এবং কেন আজ YAEC-এর ব্যান্ডগুলোতে EME-র জন্য Q65 অনেকাংশে JT65-এর স্থান নিয়েছে। তথ্য এসেছে তিনটি নথি থেকে: Q65-এর লেখকদের কুইক-স্টার্ট গাইড [1], K1JT-এর JT65A – Q65-60A তুলনা [2] এবং G4JNT-এর কোডিং প্রক্রিয়ার বিশ্লেষণ [3]।",
+                "EME বাজেট (§ 1.6) আনুমানিক S/N-কে নির্বাচিত ডিজিটাল মোডের সাধারণ থ্রেশহোল্ডের পাশে দেখায়। এই অংশে ব্যাখ্যা করা হয়েছে **Q65**-এর থ্রেশহোল্ডগুলো কোথা থেকে আসে, সিগন্যাল কীভাবে গঠিত হয় এবং কেন আজ YAEC-এর ব্যান্ডগুলোতে EME-র জন্য Q65 অনেকাংশে JT65-এর স্থান নিয়েছে। তথ্য এসেছে তিনটি নথি থেকে: Q65-এর লেখকদের কুইক-স্টার্ট গাইড [1], K1JT-এর JT65A – Q65-60A তুলনা [2] এবং G4JNT-এর কোডিং প্রক্রিয়ার বিশ্লেষণ [3]।",
                 "### Q65 কী",
                 "Q65 চালু করেন K1JT, G4WJS, K9AN ও IV3NWV, WSJT-X 2.4.0-এর সাথে, বিশেষভাবে কঠিন পথে ন্যূনতম QSO-র জন্য; ডপলার স্প্রেড কয়েক হার্টজ ছাড়ালে এটি WSJT-X-এর মোডগুলোর মধ্যে সবচেয়ে সংবেদনশীল, এবং VHF ও তার ওপরে ট্রপোস্ক্যাটার, রেইন স্ক্যাটার, আয়নোস্ফেরিক স্ক্যাটার, TEP ও EME-র জন্য উপযুক্ত [1]। এটি **65-টোন** FSK ব্যবহার করে এবং 2016-এর QRA64 থেকে উদ্ভূত; তার তুলনায় এটি নিয়ে আসে [1]:",
                 "• একটি নতুন লো-রেট Q-ary Repeat Accumulate ত্রুটি-সংশোধক কোড, Nico Palermo IV3NWV-এর প্রস্তাবিত [3] [4];",
@@ -48187,7 +48404,7 @@ namespace LunaCalc
                 "~ [1] থেকে, কেবল 432 MHz পর্যন্ত ব্যান্ডের জন্য। লেখকরা অন্যান্য সমন্বয় নিয়ে পরীক্ষা করতে উৎসাহিত করেন।",
                 "30 s পিরিয়ড তুলনামূলক শক্তিশালী সিগন্যালে QSO-র হার দ্বিগুণ করে, 120 s পিরিয়ড প্রতি একক ট্রান্সমিশনে প্রায় 3 dB লাভ দেয় [2]।",
                 "### Q65 ও JT65-এর তুলনা",
-                "**JT65A** প্রায় বিশ বছর ধরে 6-মিটার ব্যান্ডের EME মোড ছিল: *Deep Search* ডিকোডিংসহ এটি 2500 Hz-এ −28 dB পর্যন্ত পৌঁছায় (বার্তার গড়সহ −29 dB, § 3.6), কানে CW কপি করার প্রয়োজনীয় স্তরের প্রায় 15 dB নিচে, কিন্তু কেবল কলসাইন ও লোকেটরের CALL3.TXT ডেটাবেসে তালিকাভুক্ত স্টেশনগুলোর জন্য। ওই QSO-গুলোতে প্রকৃতপক্ষে খুব কম তথ্য পাঠানো হয়: ডেটাবেস থেকে বাছাই করা একটি কলসাইন ও লোকেটরের জন্য প্রায় 14 বিট, সাথে 1-বিটের রিপোর্ট ও 1-বিটের স্বীকৃতি [2]।",
+                "**JT65A** প্রায় বিশ বছর ধরে 6-মিটার ব্যান্ডের EME মোড ছিল: *Deep Search* ডিকোডিংসহ এটি 2500 Hz-এ −28 dB পর্যন্ত পৌঁছায় (বার্তার গড়সহ −29 dB, § 1.6), কানে CW কপি করার প্রয়োজনীয় স্তরের প্রায় 15 dB নিচে, কিন্তু কেবল কলসাইন ও লোকেটরের CALL3.TXT ডেটাবেসে তালিকাভুক্ত স্টেশনগুলোর জন্য। ওই QSO-গুলোতে প্রকৃতপক্ষে খুব কম তথ্য পাঠানো হয়: ডেটাবেস থেকে বাছাই করা একটি কলসাইন ও লোকেটরের জন্য প্রায় 14 বিট, সাথে 1-বিটের রিপোর্ট ও 1-বিটের স্বীকৃতি [2]।",
                 "**Q65** সবসময় 78-বিটের বার্তা পাঠায়: এমনকি একটি ন্যূনতম QSO-ও একটি যেকোনো কলসাইন (29 বিট), একটি প্রকৃত সংখ্যাগত রিপোর্ট (7 বিট) এবং স্বীকৃতি (1 বিট) বহন করে, ডেটাবেস ছাড়াই [2]। K1JT −29 dB সিগন্যাল ও 1 Hz ডপলার স্প্রেডসহ দশটি সিমুলেটেড ফাইল তৈরি করেন, প্রতি ফাইলে পাঁচটি JT65A ও পাঁচটি Q65-60A, এবং চারভাবে সেগুলো ডিকোড করার চেষ্টা করেন, প্রতি পরীক্ষায় 50টি সম্ভাব্য ডিকোডসহ [2]:",
                 "|h| পরীক্ষা | মোড | DX-এর কলসাইন ও লোকেটর | Deep Search | >সঠিক | >ভুল",
                 "| 1 | JT65A | অজানা | উপলব্ধ নয় | 0 | 0",
@@ -48196,8 +48413,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | জানা (DX Call ও DX Grid) | – | 49 | 0",
                 "~ [2] থেকে, টেবিল 1। JT65-এর সেটিং: Deep, Deep Search, AP, 6টি র‍্যান্ডম ইরেজার প্যাটার্ন, অ্যাগ্রেসিভ লেভেল 9; Q65: Fast, averaging চালু, গড়ের স্বয়ংক্রিয় মুছে ফেলা।",
                 "লেখকের সিদ্ধান্ত [2]: নিজের CQ-এর উত্তরের ক্ষেত্রে, Q65-60A-এর **যেকোনো** অজানা কলারের জন্য প্রায় সেই সংবেদনশীলতা আছে যা JT65A-এর কেবল ডেটাবেসে থাকা কলারদের জন্য আছে; অন্য সবার জন্য এটি **অন্তত 3 dB** বেশি সংবেদনশীল, এবং পরবর্তী বার্তাগুলোতে, যখন দুটি কলসাইনই জানা, আরও বেশি। ভুল ডিকোড এত বিরল যে তা মাপা কঠিন। JT65-এর বার্তা averaging ইতিমধ্যে চিহ্নিত একজন কলারের জন্য কাজ করে, Q65-এর averaging প্রদর্শিত সম্পূর্ণ ব্যান্ড জুড়ে। পরিশেষে, JT65 প্রেরিত শক্তির অর্ধেক সিঙ্কে ব্যয় করে, Q65 এক-চতুর্থাংশ।",
-                "> EME বাজেটে JT65-এর −25 dB মানটি Deep Search ছাড়া WSJT-X গাইডের মান (§ 3.6); Deep Search-সহ −28 dB কেবল ডেটাবেসে তালিকাভুক্ত স্টেশনের ক্ষেত্রে প্রযোজ্য, গড়সহ −29 dB যেকোনো বার্তার ক্ষেত্রে।",
-                ">! **উৎসগুলোর মধ্যে অসঙ্গতি।** JT65A – Q65-60A তুলনামূলক নথি [2] Deep Search-সহ JT65A-এর জন্য −29 dB দেয়; অন্যদিকে § 3.6-এ উদ্ধৃত EME 2006 সম্মেলনে K1JT-এর উপস্থাপনা Deep Search-এর জন্য −28 dB এবং বার্তার গড়ের জন্য −29 dB দেয়। YAEC 2006-এর মান ব্যবহার করে। দুটি উৎস ভিন্ন সাবমোড নিয়ে: 2006-এর সিমুলেশনে JT65B, [2]-এ JT65A।",
+                "> EME বাজেটে JT65-এর −25 dB মানটি Deep Search ছাড়া WSJT-X গাইডের মান (§ 1.6); Deep Search-সহ −28 dB কেবল ডেটাবেসে তালিকাভুক্ত স্টেশনের ক্ষেত্রে প্রযোজ্য, গড়সহ −29 dB যেকোনো বার্তার ক্ষেত্রে।",
+                ">! **উৎসগুলোর মধ্যে অসঙ্গতি।** JT65A – Q65-60A তুলনামূলক নথি [2] Deep Search-সহ JT65A-এর জন্য −29 dB দেয়; অন্যদিকে § 1.6-এ উদ্ধৃত EME 2006 সম্মেলনে K1JT-এর উপস্থাপনা Deep Search-এর জন্য −28 dB এবং বার্তার গড়ের জন্য −29 dB দেয়। YAEC 2006-এর মান ব্যবহার করে। দুটি উৎস ভিন্ন সাবমোড নিয়ে: 2006-এর সিমুলেশনে JT65B, [2]-এ JT65A।",
                 "### Q65 কীভাবে সিগন্যাল তৈরি করে",
                 "G4JNT WSJT-X-এর সোর্স কোড থেকে বার্তা থেকে প্রেরিত টোন পর্যন্ত পথটি পুনর্গঠন করেছেন, এবং WSJT-X-এর প্রোগ্রাম Q65CODE.EXE দিয়ে তা যাচাই করেছেন [3]। সংক্ষেপে:",
                 "• **সোর্স কোডিং।** FST4, FT8, FT4 ও MSK144-এর মতো, বার্তাটি 71 ডেটা বিট ও 6 টাইপ বিট, মোট 77 বিটে পরিণত হয়। একটি মুক্ত টেক্সটে 42-প্রতীকের বর্ণমালা থেকে সর্বোচ্চ 13টি অক্ষর থাকে (স্পেস, অঙ্ক, অক্ষর এবং + - . / ?), এবং §42^{13}§ হলো §2^{71}§-এর চেয়ে কম; টেলিমেট্রি মোড সর্বোচ্চ 18টি হেক্সাডেসিমাল অঙ্ক বহন করে [3]।",
@@ -48232,7 +48449,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ [6] থেকে সংক্ষিপ্ত উদাহরণ, যেখানে TX7MB (CI00) হলো DXpedition: প্রতিটি কলকারী স্টেশন নিজের ফ্রিকোয়েন্সিতেই থাকে এবং নিজের “R CI00” পেলে RRR-এ চলে যায়।",
                 "> চাঁদের যৌথ সময়-জানালা ছোট, বিশেষ করে চাঁদ ওঠা ও অস্ত যাওয়ার সময়, যখন অনেক স্টেশন ভূমির প্রভাবের সুবিধা নেয়: লাইভ অবস্থান ও +- 24h ট্যাব এবং “দূরত্ব ও Dgrd” ট্যাব দেখায় কখন চাঁদ দুটি স্টেশন থেকেই দেখা যায়।",
-                ">⚠ যে মুহূর্তে বাস্তবে সংকেত রিসিভ করা হচ্ছে, তখনই তাত্ত্বিক সীমা নিয়ে আলোচনা অর্থ হারায়: হঠাৎ স্থানীয় নয়েজ গ্রহণ খারাপ করতে পারে, যেমন করতে পারে ফ্যারাডে রোটেশনও (§ 3.3)।",
+                ">⚠ যে মুহূর্তে বাস্তবে সংকেত রিসিভ করা হচ্ছে, তখনই তাত্ত্বিক সীমা নিয়ে আলোচনা অর্থ হারায়: হঠাৎ স্থানীয় নয়েজ গ্রহণ খারাপ করতে পারে, যেমন করতে পারে ফ্যারাডে রোটেশনও (§ 1.3)।",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 এপ্রিল 2021 (WSJT-X 2.4.0), IC8TEM প্রদত্ত।",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (পরীক্ষার ফাইল JT65A_and_Q65-60A.zip), IC8TEM প্রদত্ত – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, অক্টোবর 2023, IC8TEM প্রদত্ত।",
@@ -48334,6 +48551,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ar"] = new Dictionary<string, string[]>();
+            d["ar"]["PREF"] = new string[] {
+                "لا يصف هذا الجزء من الدليل أزرار البرنامج، بل الأفكار التي بُني عليها. وقبل الفصول، يودّ المؤلف أن يعرض بعض المفاهيم التي تبيّن أنها أساسية لدراسة البرنامج، على ضوء تجاربه الأخيرة في المحطة أيضًا.",
+                "• **الحساب مرجع وليس وعدًا.** ميزانية الوصلة وS/N المقدّر وعتبات الأنماط الرقمية تصف وصلة مثالية. أما أثناء الاستقبال فالمهم هو الضجيج المحلي والاصطناعي، الذي قد يتغيّر من دقيقة إلى أخرى، ودوران فاراداي: تكفي لحظات قليلة لمحو الهامش المحسوب (§ 1.3, 1.12).",
+                "• **يُختار اليوم قبل التشغيل.** يبيّن Dgrd وبُعد القمر والميل مقدار ضجيج السماء خلف القمر، وعدد الساعات التي يبقى فيها فوق الأفق، ومدى ارتفاعه: الأجهزة نفسها تعطي نتائج مختلفة جدًا من يوم إلى آخر (§ 1.4).",
+                "• **قد يجعل الاستقطاب الإشارة تختفي.** مع الهوائيات الخطية قد يُطفئ دوران فاراداي والاستقطاب المكاني الصدى لدقائق أو ساعات؛ وغالبًا يكفي الانتظار أو التكرار أو تدوير الاستقطاب بدل البحث عن عطل (§ 1.3).",
+                "• **كل ديسيبل قبل المضخّم الأولي مهم.** الكابلات والمرحّلات والموصلات قبل المضخّم الأولي تُسيء إلى حرارة النظام أكثر مما توحي به قيمتها بالـ dB: هناك يجدر الاستثمار (§ 1.7, 1.8).",
+                "• **الترددات الصحيحة أولًا.** في النطاقات العليا يُزيح دوبلر وCFOM الصدى حتى عدة kHz: الصدى الواقع خارج نافذة فك الترميز لا يُسمع حتى مع إشارة جيدة (§ 1.10).",
+                "• **الشمس خصم يمكن توقّعه.** عندما تقترب من القمر يزداد الضجيج: ينبّه البرنامج مسبقًا، ويجدر أخذ ذلك في الحسبان عند اختيار الأيام (§ 1.5, 1.9).",
+                "• **استمع، قارن، دوّن.** يساعد البرنامج على فهم ما يمكن توقّعه؛ ومقارنة التقديرات بما يُستقبل فعلًا، مع تدوين التاريخ والوقت والظروف، هي أسرع طريقة لمعرفة محطتك.",
+                "مصادر كل فصل مذكورة كاملة؛ وحيث لا تتفق النظرية مع التجربة يقول الدليل ذلك صراحة.",
+                "~. Costantino IC8TEM"
+            };
             d["ar"]["S32"] = new string[] {
                 "## محدد الموقع Maidenhead (WWL)",
                 "**محدد الموقع Maidenhead**، ويُسمّى أيضًا WWL (World Wide Locator) أو QTH locator، هو الرمز الذي يستخدمه هواة الراديو لتحديد موقع محطتهم. ابتكره John Morris G4ANB واعتمدته مجموعة عمل VHF في IARU في أبريل 1980، في اجتماع عُقد في Maidenhead بإنجلترا؛ وقد حلّ محل محدد QRA القديم الذي كان يغطي أوروبا فقط [1]. ومنذ عام 1999 أصبح المرجع الجيوديسي هو WGS-84، وهو نفسه المستخدم في GPS [1]. يستخرج YAEC خط عرض المحطة وخط طولها من محدد الموقع، ومنهما تُشتق جميع الحسابات.",
@@ -48393,7 +48622,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ عتبات احتمال فك ترميز 50 %، مقيسة على قناة ضوضاء غاوسية بيضاء مضافة (AWGN). في Q65 يضيف فك الترميز *a priori* (AP)، الذي يستخدم إشارات النداء المعروفة مسبقًا أثناء الاتصال، ما بين 1.5 و3.6 dB بحسب النمط الفرعي (مثلًا Q65-60A −30.2 dB) [2]؛ ويعرض YAEC القيم الأكثر تحفظًا بدون AP للاسترشاد. مع انتشار دوبلر قدره بضعة هرتز تسوء العتبة: في Q65-60A بنحو 2 dB عند 5 Hz ونحو 3 dB عند 10 Hz (مقروءة من المخطط في [2]). بنية Q65 وأنماطه الفرعية ومقارنته بـ JT65 موجودة في § 3.12. وللـ EME توصي الوثيقة بـ Q65-60A على 50 و144 MHz وبـ Q65-60B على 432 MHz [2]: الأنماط الفرعية B – E لها تباعد نغمات وعرض نطاق مشغول يساوي 2 – 16 ضعف ما للنمط الفرعي A.",
+                "~ عتبات احتمال فك ترميز 50 %، مقيسة على قناة ضوضاء غاوسية بيضاء مضافة (AWGN). في Q65 يضيف فك الترميز *a priori* (AP)، الذي يستخدم إشارات النداء المعروفة مسبقًا أثناء الاتصال، ما بين 1.5 و3.6 dB بحسب النمط الفرعي (مثلًا Q65-60A −30.2 dB) [2]؛ ويعرض YAEC القيم الأكثر تحفظًا بدون AP للاسترشاد. مع انتشار دوبلر قدره بضعة هرتز تسوء العتبة: في Q65-60A بنحو 2 dB عند 5 Hz ونحو 3 dB عند 10 Hz (مقروءة من المخطط في [2]). بنية Q65 وأنماطه الفرعية ومقارنته بـ JT65 موجودة في § 1.12. وللـ EME توصي الوثيقة بـ Q65-60A على 50 و144 MHz وبـ Q65-60B على 432 MHz [2]: الأنماط الفرعية B – E لها تباعد نغمات وعرض نطاق مشغول يساوي 2 – 16 ضعف ما للنمط الفرعي A.",
                 "بالنسبة إلى JT65 نشر K1JT الحدود لكل نوع من أنواع فك الترميز، وقد حُصل عليها بمحاكاة النمط الفرعي JT65B [5]:",
                 "|h| JT65: نوع فك الترميز | >S/N (2500 Hz) | المصدر",
                 "| أي رسالة، بما فيها النص الحر | −24 dB | [5]",
@@ -48415,7 +48644,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL، “Considerazioni sull'effetto suolo (Ground Gain)”، EME Meeting الحادي والعشرون، عرض قدّمه IC8TEM.",
                 "[4] Flavio Egano IK3XTV، “EME (earth-moon-earth) con una singola Yagi in 144 MHz”، وثيقة بتاريخ 12 نوفمبر 2010، قدّمها IC8TEM.",
                 "[5] J. Taylor K1JT، ورقة عن JT65 في مؤتمر EME 2006 (K1JT_eme2006.pdf): جدول أدنى مستويات S/N في 2500 Hz.",
-                "> يستخرج مخطط المحطة، على يمين التبويب، الفقد من الكابلات المختارة: في الإرسال كابل PA–المرحّل + المرحّل + كابل الهوائي، وفي الاستقبال كابل الهوائي + المرحّل قبل المضخم الأولي وكابل التغذية بعده. تأتي قيم توهين الكابلات من قاعدة بيانات تبويب COAXIAL CABLES (§ 3.8)."
+                "> يستخرج مخطط المحطة، على يمين التبويب، الفقد من الكابلات المختارة: في الإرسال كابل PA–المرحّل + المرحّل + كابل الهوائي، وفي الاستقبال كابل الهوائي + المرحّل قبل المضخم الأولي وكابل التغذية بعده. تأتي قيم توهين الكابلات من قاعدة بيانات تبويب COAXIAL CABLES (§ 1.8)."
             };
             d["ar"]["S47"] = new string[] {
                 "## المضخم الأولي ورقم الضوضاء للجهاز {nuovo}",
@@ -48563,7 +48792,7 @@ namespace LunaCalc
                 "الميزة أن عدة محطات، وكل من يستمع فقط، يمكنهم متابعة اتصال على التردد نفسه دون إعادة حساب دوبلر لكل منهم. يعرض YAEC هذين الترددين في الشاشة الرئيسية.",
                 "### CAT الجهاز",
                 "يتغير دوبلر باستمرار، لذا يجب تحديث التعويض في كل فترة. أبسط طريقة هي ترك ذلك للبرنامج الرقمي (مثلًا نافذة *Astronomical Data* في WSJT-X) الذي يضبط، عبر **CAT** الجهاز، مذبذبَي VFO للإرسال والاستقبال ويُبقي الجهاز على التردد الصحيح [1] [2]. وبدون CAT يمكنك استخدام split (مذبذب VFO للإرسال وآخر للاستقبال) أو RIT، مع الضبط يدويًا في كل فترة: على 50 و144 MHz هذا ممكن، أما على 432 MHz فيصبح مرهقًا [1].",
-                "> تنبيه: في CFOM يجب أن يقبل الجهاز تغيير التردد عبر CAT **أثناء الإرسال أيضًا**. بعض الأجهزة لا تقبل ذلك (مثلًا FT-897 المذكور في [2]): وفي هذه الحالة يمكنك الاستقبال بنمط CFOM، بينما يبقى الإرسال على تردد ثابت. مع المحوّل الترددي (§ 3.7) يضبط CAT الجهاز على التردد الوسيط: اضبط إزاحة المحوّل الترددي في البرنامج، بحيث يكون التردد المعروض هو التردد الحقيقي.",
+                "> تنبيه: في CFOM يجب أن يقبل الجهاز تغيير التردد عبر CAT **أثناء الإرسال أيضًا**. بعض الأجهزة لا تقبل ذلك (مثلًا FT-897 المذكور في [2]): وفي هذه الحالة يمكنك الاستقبال بنمط CFOM، بينما يبقى الإرسال على تردد ثابت. مع المحوّل الترددي (§ 1.7) يضبط CAT الجهاز على التردد الوسيط: اضبط إزاحة المحوّل الترددي في البرنامج، بحيث يكون التردد المعروض هو التردد الحقيقي.",
                 "[1] Bob Atkins KA1GT، “Doppler 101 for 1296 MHz EME (…and other bands)” (لم تُستخدم من المقال إلا البيانات حتى 432 MHz) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT، “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -48594,7 +48823,7 @@ namespace LunaCalc
             };
             d["ar"]["S412"] = new string[] {
                 "## الأنماط الرقمية لـ EME: Q65 وJT65",
-                "تعرض ميزانية EME (§ 3.6) نسبة S/N المقدّرة بجانب العتبة النموذجية للنمط الرقمي المختار. يشرح هذا القسم مصدر عتبات **Q65**، وكيف تُبنى الإشارة، ولماذا حلّ Q65 اليوم إلى حد كبير محل JT65 في EME على نطاقات YAEC. تأتي البيانات من ثلاث وثائق: دليل البدء السريع من مؤلفي Q65 [1]، ومقارنة JT65A – Q65-60A من K1JT [2]، ودراسة عملية الترميز من G4JNT [3].",
+                "تعرض ميزانية EME (§ 1.6) نسبة S/N المقدّرة بجانب العتبة النموذجية للنمط الرقمي المختار. يشرح هذا القسم مصدر عتبات **Q65**، وكيف تُبنى الإشارة، ولماذا حلّ Q65 اليوم إلى حد كبير محل JT65 في EME على نطاقات YAEC. تأتي البيانات من ثلاث وثائق: دليل البدء السريع من مؤلفي Q65 [1]، ومقارنة JT65A – Q65-60A من K1JT [2]، ودراسة عملية الترميز من G4JNT [3].",
                 "### ما هو Q65",
                 "قدّم K1JT وG4WJS وK9AN وIV3NWV نمط Q65 مع WSJT-X 2.4.0 للاتصالات الدنيا عبر المسارات الصعبة بشكل خاص؛ وعندما يتجاوز انتشار دوبلر بضعة هرتز يكون أكثر أنماط WSJT-X حساسية، ويناسب التشتت التروبوسفيري، والتشتت بالمطر، والتشتت الأيونوسفيري، وTEP، وEME من VHF فما فوق [1]. يستخدم FSK بـ **65 نغمة** ويُشتق من QRA64 لعام 2016؛ ومقارنةً به يقدّم [1]:",
                 "• شيفرة جديدة منخفضة المعدّل لتصحيح الأخطاء من نوع Q-ary Repeat Accumulate، اقترحها Nico Palermo IV3NWV [3] [4]؛",
@@ -48651,7 +48880,7 @@ namespace LunaCalc
                 "~ من [1]، للنطاقات حتى 432 MHz فقط. يشجع المؤلفون على تجربة تركيبات أخرى.",
                 "تضاعف فترة 30 s معدل الاتصالات مع الإشارات القوية نسبيًا، وتكسب فترة 120 s نحو 3 dB لكل إرسال مفرد [2].",
                 "### مقارنة Q65 وJT65",
-                "كان **JT65A** نمط EME في نطاق 6 أمتار لما يقرب من عشرين عامًا: مع فك الترميز *Deep Search* يصل إلى −28 dB في 2500 Hz (−29 dB مع توسيط الرسائل، § 3.6)، أي نحو 15 dB تحت المستوى اللازم لاستقبال CW بالأذن، لكن فقط للمحطات المدرجة في قاعدة بيانات CALL3.TXT لإشارات النداء ومحددات المواقع. في تلك الاتصالات تُرسل معلومات قليلة جدًا فعليًا: نحو 14 بتًا لإشارة نداء ومحدد موقع مختارين من قاعدة البيانات، إضافةً إلى تقرير من بت واحد وتأكيد من بت واحد [2].",
+                "كان **JT65A** نمط EME في نطاق 6 أمتار لما يقرب من عشرين عامًا: مع فك الترميز *Deep Search* يصل إلى −28 dB في 2500 Hz (−29 dB مع توسيط الرسائل، § 1.6)، أي نحو 15 dB تحت المستوى اللازم لاستقبال CW بالأذن، لكن فقط للمحطات المدرجة في قاعدة بيانات CALL3.TXT لإشارات النداء ومحددات المواقع. في تلك الاتصالات تُرسل معلومات قليلة جدًا فعليًا: نحو 14 بتًا لإشارة نداء ومحدد موقع مختارين من قاعدة البيانات، إضافةً إلى تقرير من بت واحد وتأكيد من بت واحد [2].",
                 "يرسل **Q65** دائمًا رسائل من 78 بتًا: حتى الاتصال الأدنى يحمل إشارة نداء اعتباطية (29 بتًا)، وتقريرًا رقميًا حقيقيًا (7 بتات)، والتأكيد (بت واحد)، دون قاعدة بيانات [2]. أعدّ K1JT عشرة ملفات محاكاة بإشارات عند −29 dB وانتشار دوبلر 1 Hz، خمس إشارات JT65A وخمس Q65-60A في كل ملف، وحاول فك ترميزها بأربع طرق، بـ 50 عملية فك ترميز ممكنة لكل اختبار [2]:",
                 "|h| الاختبار | النمط | إشارة نداء DX ومحدد موقعه | Deep Search | >صحيحة | >خاطئة",
                 "| 1 | JT65A | غير معروف | غير متاح | 0 | 0",
@@ -48660,8 +48889,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | معروف (DX Call وDX Grid) | – | 49 | 0",
                 "~ من [2]، الجدول 1. إعدادات JT65: Deep، Deep Search، AP، 6 أنماط محو عشوائية، مستوى العدوانية 9؛ Q65: Fast، التوسيط مفعّل، المسح التلقائي للمتوسط.",
                 "استنتاجات المؤلف [2]: بالنسبة إلى الردود على نداء CQ، يتمتع Q65-60A، مع **أي** مُنادٍ مجهول، بنحو الحساسية نفسها التي يتمتع بها JT65A فقط مع المنادين المدرجين في قاعدة البيانات؛ ومع جميع الآخرين يكون أكثر حساسية بـ **3 dB على الأقل**، وأكثر من ذلك في الرسائل اللاحقة عندما تكون إشارتا النداء معروفتين. فك الترميز الخاطئ نادر لدرجة يصعب معها قياسه. يعمل توسيط الرسائل في JT65 لمُنادٍ واحد محدد مسبقًا، بينما يعمل توسيط Q65 على النطاق المعروض كله. وأخيرًا، يخصص JT65 نصف الطاقة المرسلة للتزامن، وQ65 ربعها.",
-                "> قيمة −25 dB لـ JT65 في ميزانية EME هي القيمة الواردة في دليل WSJT-X بدون Deep Search (§ 3.6)؛ أما −28 dB مع Deep Search فتنطبق فقط على المحطات المدرجة في قاعدة البيانات، و−29 dB مع حساب المتوسط على أي رسالة.",
-                ">! **تعارض بين المصادر.** تذكر وثيقة المقارنة JT65A – Q65-60A [2] قيمة −29 dB لـ JT65A مع Deep Search؛ أما ورقة K1JT في مؤتمر EME 2006، المذكورة في § 3.6، فتعطي −28 dB لـ Deep Search و−29 dB لتوسيط الرسائل. يستخدم YAEC قيم 2006. يشير المصدران إلى نمطين فرعيين مختلفين: JT65B في محاكاة 2006، وJT65A في [2].",
+                "> قيمة −25 dB لـ JT65 في ميزانية EME هي القيمة الواردة في دليل WSJT-X بدون Deep Search (§ 1.6)؛ أما −28 dB مع Deep Search فتنطبق فقط على المحطات المدرجة في قاعدة البيانات، و−29 dB مع حساب المتوسط على أي رسالة.",
+                ">! **تعارض بين المصادر.** تذكر وثيقة المقارنة JT65A – Q65-60A [2] قيمة −29 dB لـ JT65A مع Deep Search؛ أما ورقة K1JT في مؤتمر EME 2006، المذكورة في § 1.6، فتعطي −28 dB لـ Deep Search و−29 dB لتوسيط الرسائل. يستخدم YAEC قيم 2006. يشير المصدران إلى نمطين فرعيين مختلفين: JT65B في محاكاة 2006، وJT65A في [2].",
                 "### كيف يبني Q65 الإشارة",
                 "أعاد G4JNT بناء المسار من الرسالة إلى النغمات المرسلة انطلاقًا من الشيفرة المصدرية لـ WSJT-X، متحققًا منه ببرنامج WSJT-X المسمى Q65CODE.EXE [3]. باختصار:",
                 "• **ترميز المصدر.** كما في FST4 وFT8 وFT4 وMSK144، تصبح الرسالة 71 بت بيانات إضافةً إلى 6 بتات للنوع، أي 77 بتًا في المجموع. يحتوي النص الحر على ما يصل إلى 13 محرفًا من أبجدية من 42 رمزًا (المسافة، والأرقام، والحروف، و+ - . / ?)، و§42^{13}§ أصغر من §2^{71}§؛ ويحمل نمط القياس عن بُعد (telemetry) ما يصل إلى 18 رقمًا ست عشريًا [3].",
@@ -48696,7 +48925,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ مثال مختصر من [6]، حيث TX7MB (CI00) هي بعثة DX: تبقى كل محطة منادية على ترددها الخاص وتنتقل إلى RRR عندما تستقبل “R CI00” الخاص بها.",
                 "> النوافذ المشتركة للقمر قصيرة، ولا سيما عند شروق القمر وغروبه، حين تستفيد محطات كثيرة من تأثير الأرض: يُظهر تبويب الموقع المباشر و +- 24h وتبويب “المسافة وDgrd” متى يكون القمر مرئيًا من المحطتين.",
-                ">⚠ تفقد مناقشة الحدود النظرية معناها لحظة استقبال الإشارات فعلًا: فقد تؤدي ضوضاء محلية مفاجئة إلى تدهور الاستقبال، وكذلك دوران فاراداي (§ 3.3).",
+                ">⚠ تفقد مناقشة الحدود النظرية معناها لحظة استقبال الإشارات فعلًا: فقد تؤدي ضوضاء محلية مفاجئة إلى تدهور الاستقبال، وكذلك دوران فاراداي (§ 1.3).",
                 "[1] Joe Taylor K1JT، Bill Somerville G4WJS، Steve Franke K9AN، Nico Palermo IV3NWV، “Quick-Start Guide to Q65”، 3 أبريل 2021 (WSJT-X 2.4.0)، قدّمه IC8TEM.",
                 "[2] Joe Taylor K1JT، “Sensitivity Comparison of JT65A and Q65-60A” (ملفات الاختبار JT65A_and_Q65-60A.zip)، قدّمه IC8TEM – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT، “The Q65 Coding Process used in WSJT-X”، أكتوبر 2023، قدّمه IC8TEM.",
@@ -48798,6 +49027,18 @@ namespace LunaCalc
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["tr"] = new Dictionary<string, string[]>();
+            d["tr"]["PREF"] = new string[] {
+                "Kılavuzun bu bölümü programın düğmelerini değil, programın üzerine kurulduğu fikirleri anlatır. Bölümlerden önce yazar, istasyondaki son deneyimlerinin ışığında da programı incelemek için anahtar olduğu görülen birkaç kavramı ortaya koymak istiyor.",
+                "• **Hesap bir referanstır, söz değildir.** Bağlantı bütçesi, tahmini S/N ve dijital mod eşikleri ideal bir bağlantıyı anlatır. Alım sırasında önemli olan, dakikadan dakikaya değişebilen yerel ve insan kaynaklı gürültü ile Faraday dönmesidir: hesaplanan payı silmek için birkaç an yeter (§ 1.3, 1.12).",
+                "• **Gün, cihazı açmadan önce seçilir.** Dgrd, Ay mesafesi ve dik açıklık; Ay'ın arkasında ne kadar gök gürültüsü olduğunu, Ay'ın kaç saat ufkun üzerinde kaldığını ve ne kadar yükseldiğini gösterir: aynı donanım günden güne çok farklı sonuç verir (§ 1.4).",
+                "• **Polarizasyon bir sinyali yok edebilir.** Doğrusal antenlerde Faraday dönmesi ve uzaysal polarizasyon bir yankıyı dakikalarca ya da saatlerce söndürebilir; çoğu zaman arıza aramak yerine beklemek, tekrarlamak ya da polarizasyonu döndürmek yeter (§ 1.3).",
+                "• **Ön yükselticiden önceki her desibel önemlidir.** Ön yükselticiden önceki kablolar, röleler ve konnektörler sistem sıcaklığını dB değerlerinin düşündürdüğünden daha fazla bozar: yatırım oraya yapılmalıdır (§ 1.7, 1.8).",
+                "• **Önce doğru frekanslar.** Yüksek bantlarda Doppler ve CFOM yankıyı birkaç kHz'e kadar kaydırır: kod çözme penceresinin dışındaki bir yankı, sinyal iyi olsa bile duyulmaz (§ 1.10).",
+                "• **Güneş öngörülebilir bir rakiptir.** Ay'a yakın olduğunda gürültü artar: program önceden uyarır ve günleri seçerken bunu hesaba katmak gerekir (§ 1.5, 1.9).",
+                "• **Dinleyin, karşılaştırın, not alın.** Program ne bekleneceğini anlamaya yardım eder; tahminleri gerçekte alınanla tarih, saat ve koşullarıyla not ederek karşılaştırmak, kendi istasyonunuzu tanımanın en hızlı yoludur.",
+                "Her bölümün kaynakları eksiksiz verilmiştir; teori ile deneyimin uyuşmadığı yerlerde kılavuz bunu açıkça söyler.",
+                "~. Costantino IC8TEM"
+            };
             d["tr"]["S32"] = new string[] {
                 "## Maidenhead lokatörü (WWL)",
                 "**Maidenhead lokatörü**, WWL (World Wide Locator) ya da QTH lokatörü olarak da bilinir; radyo amatörlerinin istasyonlarının konumunu bildirmek için kullandığı koddur. John Morris G4ANB tarafından tasarlanmış ve Nisan 1980'de İngiltere'nin Maidenhead kentinde yapılan bir toplantıda IARU VHF Çalışma Grubu tarafından kabul edilmiştir; yalnızca Avrupa'yı kapsayan eski QRA lokatörünün yerini almıştır [1]. 1999'dan beri jeodezik datum, GPS ile aynı olan WGS-84'tür [1]. YAEC istasyonun enlem ve boylamını lokatörden, tüm hesapları da bunlardan türetir.",
@@ -48857,7 +49098,7 @@ namespace LunaCalc
                 "| Q65-120A | −30.8 dB | [2]",
                 "| Q65-300A | −33.8 dB | [2]",
                 "| WSPR | −31 dB | [1]",
-                "~ %50 çözme olasılığı için eşikler, toplamsal beyaz Gauss gürültülü (AWGN) bir kanalda ölçülmüştür. Q65'te, QSO sırasında zaten bilinen çağrı işaretlerini kullanan *a priori* (AP) çözme, alt moda bağlı olarak 1,5 ile 3,6 dB kazandırır (örneğin Q65-60A −30,2 dB) [2]; YAEC daha temkinli olan AP'siz değerleri referans olarak gösterir. Birkaç hertzlik bir Doppler yayılımıyla eşik kötüleşir: Q65-60A için 5 Hz'de yaklaşık 2 dB, 10 Hz'de yaklaşık 3 dB ([2]'deki grafikten okunmuştur). Q65'in yapısı, alt modları ve JT65 ile karşılaştırması § 3.12'dedir. Belge EME için 50 ve 144 MHz'de Q65-60A'yı, 432 MHz'de Q65-60B'yi önerir [2]: B – E alt modlarının ton aralığı ve kapladığı bant genişliği A alt modununkinin 2 – 16 katıdır.",
+                "~ %50 çözme olasılığı için eşikler, toplamsal beyaz Gauss gürültülü (AWGN) bir kanalda ölçülmüştür. Q65'te, QSO sırasında zaten bilinen çağrı işaretlerini kullanan *a priori* (AP) çözme, alt moda bağlı olarak 1,5 ile 3,6 dB kazandırır (örneğin Q65-60A −30,2 dB) [2]; YAEC daha temkinli olan AP'siz değerleri referans olarak gösterir. Birkaç hertzlik bir Doppler yayılımıyla eşik kötüleşir: Q65-60A için 5 Hz'de yaklaşık 2 dB, 10 Hz'de yaklaşık 3 dB ([2]'deki grafikten okunmuştur). Q65'in yapısı, alt modları ve JT65 ile karşılaştırması § 1.12'dedir. Belge EME için 50 ve 144 MHz'de Q65-60A'yı, 432 MHz'de Q65-60B'yi önerir [2]: B – E alt modlarının ton aralığı ve kapladığı bant genişliği A alt modununkinin 2 – 16 katıdır.",
                 "JT65 için K1JT, her çözme türünün sınırlarını yayımlamıştır; bunlar JT65B alt modunun simülasyonlarıyla elde edilmiştir [5]:",
                 "|h| JT65: çözme türü | >S/N (2500 Hz) | Kaynak",
                 "| Herhangi bir mesaj, serbest metin dahil | −24 dB | [5]",
@@ -48879,7 +49120,7 @@ namespace LunaCalc
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21. EME Meeting, IC8TEM tarafından sağlanan sunum.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 12 Kasım 2010 tarihli belge, IC8TEM tarafından sağlanmıştır.",
                 "[5] J. Taylor K1JT, EME 2006 konferansında JT65 üzerine sunulan bildiri (K1JT_eme2006.pdf): 2500 Hz'de minimum S/N seviyeleri tablosu.",
-                "> Sekmenin sağındaki istasyon şeması, kayıpları seçilen kablolardan türetir: göndermede PA–röle kablosu + röle + anten kablosu, almada ön yükselteçten önce anten kablosu + röle ve ondan sonra besleme kablosu. Kablo zayıflamaları COAXIAL CABLES sekmesinin veritabanından gelir (§ 3.8)."
+                "> Sekmenin sağındaki istasyon şeması, kayıpları seçilen kablolardan türetir: göndermede PA–röle kablosu + röle + anten kablosu, almada ön yükselteçten önce anten kablosu + röle ve ondan sonra besleme kablosu. Kablo zayıflamaları COAXIAL CABLES sekmesinin veritabanından gelir (§ 1.8)."
             };
             d["tr"]["S47"] = new string[] {
                 "## Ön yükselteç ve telsizin gürültü faktörü {nuovo}",
@@ -49027,7 +49268,7 @@ namespace LunaCalc
                 "Avantajı, birkaç istasyonun ve yalnızca dinleyen herkesin, her biri için Doppler'i yeniden hesaplamadan aynı frekansta bir QSO'yu izleyebilmesidir. YAEC bu iki frekansı ana ekranda gösterir.",
                 "### Telsizin CAT'i",
                 "Doppler sürekli değişir, bu yüzden düzeltme her periyotta güncellenmelidir. En basit yol, bunu dijital programa (örneğin WSJT-X'in *Astronomical Data* penceresine) bırakmaktır; program telsizin **CAT**'i aracılığıyla gönderme ve alma VFO'larını ayarlar ve telsizi doğru frekansta tutar [1] [2]. CAT olmadan split (gönderme için bir VFO, alma için bir VFO) ya da RIT kullanılabilir ve her periyotta elle ayar yapılır: 50 ve 144 MHz'de yapılabilir, 432 MHz'de zahmetli hale gelir [1].",
-                "> Dikkat: CFOM için telsiz, frekans değişikliğini CAT üzerinden **gönderme sırasında da** kabul etmelidir. Bazı cihazlar bunu yapmaz (örneğin [2]'de anılan FT-897): bu durumda yine de CFOM'da alabilirsiniz, gönderme ise sabit bir frekansta kalır. Bir transverter ile (§ 3.7) CAT telsizi ara frekansa ayarlar: gösterilen frekansın gerçek frekans olması için programda transverter ofsetini ayarlayın.",
+                "> Dikkat: CFOM için telsiz, frekans değişikliğini CAT üzerinden **gönderme sırasında da** kabul etmelidir. Bazı cihazlar bunu yapmaz (örneğin [2]'de anılan FT-897): bu durumda yine de CFOM'da alabilirsiniz, gönderme ise sabit bir frekansta kalır. Bir transverter ile (§ 1.7) CAT telsizi ara frekansa ayarlar: gösterilen frekansın gerçek frekans olması için programda transverter ofsetini ayarlayın.",
                 "[1] Bob Atkins KA1GT, “Doppler 101 for 1296 MHz EME (…and other bands)” (makaleden yalnızca 432 MHz'e kadarki veriler kullanılmıştır) – https://bobatkins.com/radio/EME_doppler_101.html",
                 "[2] Bob Atkins KA1GT, “CFOM – Constant Frequency On Moon Doppler Mode” – https://bobatkins.com/radio/CFOM.html"
             };
@@ -49058,7 +49299,7 @@ namespace LunaCalc
             };
             d["tr"]["S412"] = new string[] {
                 "## EME için dijital modlar: Q65 ve JT65",
-                "EME bütçesi (§ 3.6), tahmini S/N'yi seçilen dijital modun tipik eşiğinin yanında gösterir. Bu bölüm **Q65** eşiklerinin nereden geldiğini, sinyalin nasıl oluşturulduğunu ve Q65'in bugün YAEC bantlarında EME için JT65'in yerini neden büyük ölçüde aldığını açıklar. Veriler üç belgeden gelir: Q65 yazarlarının hızlı başlangıç kılavuzu [1], K1JT'nin JT65A – Q65-60A karşılaştırması [2] ve G4JNT'nin kodlama süreci üzerine çalışması [3].",
+                "EME bütçesi (§ 1.6), tahmini S/N'yi seçilen dijital modun tipik eşiğinin yanında gösterir. Bu bölüm **Q65** eşiklerinin nereden geldiğini, sinyalin nasıl oluşturulduğunu ve Q65'in bugün YAEC bantlarında EME için JT65'in yerini neden büyük ölçüde aldığını açıklar. Veriler üç belgeden gelir: Q65 yazarlarının hızlı başlangıç kılavuzu [1], K1JT'nin JT65A – Q65-60A karşılaştırması [2] ve G4JNT'nin kodlama süreci üzerine çalışması [3].",
                 "### Q65 nedir",
                 "Q65, özellikle zor yollar üzerinden minimal QSO'lar için K1JT, G4WJS, K9AN ve IV3NWV tarafından WSJT-X 2.4.0 ile tanıtılmıştır; Doppler yayılımı birkaç hertzi aştığında WSJT-X modlarının en hassasıdır ve VHF'den itibaren troposcatter, rain scatter, iyonosferik saçılma, TEP ve EME için uygundur [1]. **65 tonlu** FSK kullanır ve 2016 tarihli QRA64'ten türemiştir; ona göre şunları getirir [1]:",
                 "• Nico Palermo IV3NWV tarafından önerilen, düşük oranlı yeni bir Q-ary Repeat Accumulate hata düzeltme kodu [3] [4];",
@@ -49115,7 +49356,7 @@ namespace LunaCalc
                 "~ [1]'den, yalnızca 432 MHz'e kadarki bantlar için. Yazarlar başka kombinasyonlarla deney yapmayı teşvik eder.",
                 "30 s'lik periyot görece güçlü sinyallerle QSO hızını ikiye katlar, 120 s'lik periyot ise tek gönderim başına yaklaşık 3 dB kazandırır [2].",
                 "### Q65 ve JT65 karşılaştırması",
-                "**JT65A** yaklaşık yirmi yıl boyunca 6 metre bandının EME moduydu: *Deep Search* çözmeyle 2500 Hz'de −28 dB'ye ulaşır (mesaj ortalamasıyla −29 dB, § 3.6), bu da CW'yi kulakla almak için gereken seviyenin yaklaşık 15 dB altındadır; ancak yalnızca çağrı işaretleri ve lokatörlerden oluşan CALL3.TXT veritabanında listelenen istasyonlar için. Bu QSO'larda gerçekte çok az bilgi gönderilir: veritabanından seçilen bir çağrı işareti ve lokatör için yaklaşık 14 bit, artı 1 bitlik bir rapor ve 1 bitlik bir onay [2].",
+                "**JT65A** yaklaşık yirmi yıl boyunca 6 metre bandının EME moduydu: *Deep Search* çözmeyle 2500 Hz'de −28 dB'ye ulaşır (mesaj ortalamasıyla −29 dB, § 1.6), bu da CW'yi kulakla almak için gereken seviyenin yaklaşık 15 dB altındadır; ancak yalnızca çağrı işaretleri ve lokatörlerden oluşan CALL3.TXT veritabanında listelenen istasyonlar için. Bu QSO'larda gerçekte çok az bilgi gönderilir: veritabanından seçilen bir çağrı işareti ve lokatör için yaklaşık 14 bit, artı 1 bitlik bir rapor ve 1 bitlik bir onay [2].",
                 "**Q65** her zaman 78 bitlik mesajlar gönderir: minimal bir QSO bile veritabanı olmadan rastgele bir çağrı işareti (29 bit), gerçek bir sayısal rapor (7 bit) ve onayı (1 bit) taşır [2]. K1JT, −29 dB ve 1 Hz Doppler yayılımlı sinyallerle, dosya başına beş JT65A ve beş Q65-60A olmak üzere on simüle dosya hazırlamış ve bunları test başına 50 olası çözmeyle dört şekilde çözmeyi denemiştir [2]:",
                 "|h| Test | Mod | DX çağrı işareti ve lokatörü | Deep Search | >Doğru | >Hatalı",
                 "| 1 | JT65A | bilinmiyor | mevcut değil | 0 | 0",
@@ -49124,8 +49365,8 @@ namespace LunaCalc
                 "| 4 | Q65-60A | biliniyor (DX Call ve DX Grid) | – | 49 | 0",
                 "~ [2], tablo 1'den. JT65 ayarları: Deep, Deep Search, AP, 6 rastgele silme deseni, agresiflik seviyesi 9; Q65: Fast, ortalama açık, ortalamanın otomatik temizlenmesi.",
                 "Yazarın sonuçları [2]: kendi CQ'nuza gelen yanıtlar için Q65-60A, **herhangi bir** bilinmeyen çağıran için, JT65A'nın yalnızca veritabanındaki çağıranlar için sahip olduğu hassasiyete yaklaşık eşittir; diğer tümü için **en az 3 dB** daha hassastır ve her iki çağrı işaretinin de bilindiği sonraki mesajlarda daha da fazladır. Yanlış çözmeler o kadar nadirdir ki ölçmek zordur. JT65 mesaj ortalaması zaten tanımlanmış tek bir çağıran için çalışır, Q65 ortalaması ise görüntülenen bandın tamamı üzerinde. Son olarak JT65 gönderilen enerjinin yarısını senkrona ayırır, Q65 ise dörtte birini.",
-                "> EME bütçesinde JT65 için −25 dB değeri, WSJT-X kılavuzunun Deep Search'süz değeridir (§ 3.6); Deep Search ile −28 dB yalnızca veritabanında listelenen istasyonlar için, ortalama ile −29 dB ise herhangi bir mesaj için geçerlidir.",
-                ">! **Kaynaklar arasında tutarsızlık.** JT65A – Q65-60A karşılaştırma belgesi [2], Deep Search ile JT65A için −29 dB verir; § 3.6'da alıntılanan, K1JT'nin EME 2006 konferansındaki bildirisi ise Deep Search için −28 dB, mesaj ortalaması için −29 dB verir. YAEC 2006 değerlerini kullanır. İki kaynak farklı alt modlara atıfta bulunur: 2006 simülasyonlarında JT65B, [2]'de JT65A.",
+                "> EME bütçesinde JT65 için −25 dB değeri, WSJT-X kılavuzunun Deep Search'süz değeridir (§ 1.6); Deep Search ile −28 dB yalnızca veritabanında listelenen istasyonlar için, ortalama ile −29 dB ise herhangi bir mesaj için geçerlidir.",
+                ">! **Kaynaklar arasında tutarsızlık.** JT65A – Q65-60A karşılaştırma belgesi [2], Deep Search ile JT65A için −29 dB verir; § 1.6'da alıntılanan, K1JT'nin EME 2006 konferansındaki bildirisi ise Deep Search için −28 dB, mesaj ortalaması için −29 dB verir. YAEC 2006 değerlerini kullanır. İki kaynak farklı alt modlara atıfta bulunur: 2006 simülasyonlarında JT65B, [2]'de JT65A.",
                 "### Q65 sinyali nasıl oluşturur",
                 "G4JNT, mesajdan gönderilen tonlara giden yolu WSJT-X kaynak kodundan yeniden oluşturmuş ve WSJT-X'in Q65CODE.EXE programıyla doğrulamıştır [3]. Özetle:",
                 "• **Kaynak kodlama.** FST4, FT8, FT4 ve MSK144'teki gibi mesaj 71 veri biti artı 6 tip biti, toplam 77 bit olur. Serbest bir metin, 42 sembollü bir alfabeden (boşluk, rakamlar, harfler ve + - . / ?) en fazla 13 karakter içerir ve §42^{13}§ değeri §2^{71}§'den küçüktür; telemetri modu en fazla 18 onaltılık basamak taşır [3].",
@@ -49160,7 +49401,7 @@ namespace LunaCalc
                 "| G8BCG TX7MB 73 | TX7MB G8BCG 73",
                 "~ [6]'dan kısaltılmış örnek; DXpedition olarak TX7MB (CI00): her çağıran kendi frekansında kalır ve kendi “R CI00” mesajını aldığında RRR'ye geçer.",
                 "> Ortak Ay pencereleri kısadır, özellikle birçok istasyonun zemin etkisinden yararlandığı Ay doğuşu ve batışında: Canlı konum ve +- 24h sekmesi ile Mesafe ve Dgrd sekmesi, Ay'ın her iki istasyondan ne zaman görülebildiğini gösterir.",
-                ">⚠ Teorik sınırlar üzerine tartışma, sinyaller fiilen alınmaya başladığı anda anlamını yitirir: ani bir yerel gürültü alımı kötüleştirebilir, Faraday dönmesi de öyle (§ 3.3).",
+                ">⚠ Teorik sınırlar üzerine tartışma, sinyaller fiilen alınmaya başladığı anda anlamını yitirir: ani bir yerel gürültü alımı kötüleştirebilir, Faraday dönmesi de öyle (§ 1.3).",
                 "[1] Joe Taylor K1JT, Bill Somerville G4WJS, Steve Franke K9AN, Nico Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 Nisan 2021 (WSJT-X 2.4.0), IC8TEM tarafından sağlanmıştır.",
                 "[2] Joe Taylor K1JT, “Sensitivity Comparison of JT65A and Q65-60A” (test dosyaları JT65A_and_Q65-60A.zip), IC8TEM tarafından sağlanmıştır – https://physics.princeton.edu/pulsar/k1jt/JT65A_and_Q65-60A.zip",
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Ekim 2023, IC8TEM tarafından sağlanmıştır.",

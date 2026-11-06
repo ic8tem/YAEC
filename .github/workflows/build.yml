@@ -109,6 +109,14 @@ jobs:
           import -window root shot/YAEC-dgrd.png || true
           convert shot/YAEC-dgrd.png -resize 1200x shot/small2.jpg 2>/dev/null && echo "SCREENSHOT2-B64:$(base64 -w 0 shot/small2.jpg)" || true
           kill $PID 2>/dev/null || true
+          # terza schermata: TEORIA E CONSIGLI SULL'EME (prefazione e numerazione)
+          YAEC_LINGUETTA="TEORIA E CONSIGLI SULL'EME" mono YAEC.exe &
+          PID=$!
+          sleep 35
+          import -window root shot/YAEC-teoria.png || true
+          convert shot/YAEC-teoria.png -resize 1200x shot/small3.jpg 2>/dev/null && echo "SCREENSHOT3-B64:$(base64 -w 0 shot/small3.jpg)" || true
+          kill $PID 2>/dev/null || true
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
       - uses: actions/upload-artifact@v4
         with:
           name: linux-screenshot
