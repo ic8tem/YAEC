@@ -2953,6 +2953,7 @@ namespace LunaCalc
             "S/N DX → io",
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz con il Sole · {1} dB in 2500 Hz",
+            "{0} all'antenna (perdite TX {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4251,6 +4252,7 @@ namespace LunaCalc
             "S/N DX → me",
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz with the Sun · {1} dB in 2500 Hz",
+            "{0} at the antenna (TX losses {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5549,6 +5551,7 @@ namespace LunaCalc
             "S/N DX → ich",
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz mit der Sonne · {1} dB in 2500 Hz",
+            "{0} an der Antenne (TX-Verluste {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6847,6 +6850,7 @@ namespace LunaCalc
             "S/N DX → moi",
             "en {0:0} Hz · {1} dB en 2500 Hz",
             "en {0:0} Hz avec le Soleil · {1} dB en 2500 Hz",
+            "{0} à l'antenne (pertes TX {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -8145,6 +8149,7 @@ namespace LunaCalc
             "S/N DX → yo",
             "en {0:0} Hz · {1} dB en 2500 Hz",
             "en {0:0} Hz con el Sol · {1} dB en 2500 Hz",
+            "{0} en la antena (pérdidas TX {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9443,6 +9448,7 @@ namespace LunaCalc
             "S/N DX → eu",
             "em {0:0} Hz · {1} dB em 2500 Hz",
             "em {0:0} Hz com o Sol · {1} dB em 2500 Hz",
+            "{0} na antena (perdas TX {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10741,6 +10747,7 @@ namespace LunaCalc
             "S/N DX → 我",
             "{0:0} Hz 内 · 2500 Hz 内 {1} dB",
             "{0:0} Hz 内（含太阳）· 2500 Hz 内 {1} dB",
+            "天线处 {0}（发射损耗 {1:F1} dB）· {2:F1} dBi",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -12039,6 +12046,7 @@ namespace LunaCalc
             "S/N DX → 自局",
             "{0:0} Hz · 2500 Hz 換算 {1} dB",
             "{0:0} Hz（太陽を含む）· 2500 Hz 換算 {1} dB",
+            "アンテナで {0}（送信損失 {1:F1} dB）· {2:F1} dBi",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13337,6 +13345,7 @@ namespace LunaCalc
             "S/N DX → मैं",
             "{0:0} Hz में · 2500 Hz में {1} dB",
             "{0:0} Hz में सूर्य सहित · 2500 Hz में {1} dB",
+            "एंटेना पर {0} (TX हानि {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14635,6 +14644,7 @@ namespace LunaCalc
             "S/N DX → 나",
             "{0:0} Hz · 2500 Hz 기준 {1} dB",
             "{0:0} Hz, 태양 포함 · 2500 Hz 기준 {1} dB",
+            "안테나에서 {0} (송신 손실 {1:F1} dB) · {2:F1} dBi",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15933,6 +15943,7 @@ namespace LunaCalc
             "S/N DX → saya",
             "dalam {0:0} Hz · {1} dB dalam 2500 Hz",
             "dalam {0:0} Hz dengan Matahari · {1} dB dalam 2500 Hz",
+            "{0} di antena (rugi TX {1:F1} dB) · {2:F1} dBi",
         };
 
         public static readonly string[] RU = {
@@ -17232,6 +17243,7 @@ namespace LunaCalc
             "S/N DX → я",
             "в {0:0} Гц · {1} дБ в 2500 Гц",
             "в {0:0} Гц с Солнцем · {1} дБ в 2500 Гц",
+            "{0} на антенне (потери TX {1:F1} дБ) · {2:F1} dBi",
         };
 
         public static readonly string[] UK = {
@@ -18531,6 +18543,7 @@ namespace LunaCalc
             "S/N DX → я",
             "у {0:0} Гц · {1} дБ у 2500 Гц",
             "у {0:0} Гц із Сонцем · {1} дБ у 2500 Гц",
+            "{0} на антені (втрати TX {1:F1} дБ) · {2:F1} dBi",
         };
 
         public static readonly string[] AF = {
@@ -19830,6 +19843,7 @@ namespace LunaCalc
             "S/N DX → ek",
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz met die Son · {1} dB in 2500 Hz",
+            "{0} by die antenna (TX-verliese {1:F1} dB) · {2:F1} dBi",
         };
 
         public static readonly string[] BN = {
@@ -21128,6 +21142,7 @@ namespace LunaCalc
             "S/N DX → আমি",
             "{0:0} Hz-এ · 2500 Hz-এ {1} dB",
             "{0:0} Hz-এ সূর্যসহ · 2500 Hz-এ {1} dB",
+            "অ্যান্টেনায় {0} (TX ক্ষতি {1:F1} dB) · {2:F1} dBi",
         };
 
         public static readonly string[] AR = {
@@ -22426,6 +22441,7 @@ namespace LunaCalc
             "S/N DX → أنا",
             "في {0:0} Hz · {1} dB في 2500 Hz",
             "في {0:0} Hz مع الشمس · {1} dB في 2500 Hz",
+            "{0} عند الهوائي (خسائر الإرسال {1:F1} dB) · {2:F1} dBi",
         };
 
         public static readonly string[] TR = {
@@ -23724,6 +23740,7 @@ namespace LunaCalc
             "S/N DX → ben",
             "{0:0} Hz'de · 2500 Hz'de {1} dB",
             "{0:0} Hz'de Güneş dahil · 2500 Hz'de {1} dB",
+            "antende {0} (TX kayıpları {1:F1} dB) · {2:F1} dBi",
         };
     }
 
@@ -24846,10 +24863,10 @@ namespace LunaCalc
             dtpB.Width = S(150);
             dtpB.Value = NowUtcMinute();
             dtpB.ValueChanged += (s, e) => { SyncTab3(); RecalcBudget(); };
-            Pillola bNow = new Pillola(Lang.T("Adesso").ToUpper(Lang.Cultura), StilePillola.Bordo, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            Pillola bNow = new Pillola(Lang.T("Adesso").ToUpper(Lang.Cultura), StilePillola.Pieno, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
             bNow.Margin = new Padding(S(6), S(2), S(3), S(2));
             bNow.Click += (s, e) => { dtpB.Value = NowUtcMinute(); RecalcBudget(); };
-            Pillola bRow = new Pillola(Lang.T("Usa la riga della tabella").ToUpper(Lang.Cultura), StilePillola.Bordo, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            Pillola bRow = new Pillola(Lang.T("Usa la riga della tabella").ToUpper(Lang.Cultura), StilePillola.Pieno, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
             bRow.Margin = new Padding(S(3), S(2), S(3), S(2));
             tip.SetToolTip(bRow, Lang.T("Usa l'istante della riga selezionata nella tabella della Posizione della Luna."));
             bRow.Click += (s, e) => UsaRigaSelezionata();
@@ -25440,10 +25457,10 @@ namespace LunaCalc
                 kpiC[0] = r.Ok ? Tema.OkFg : Tema.BadFg;
                 double e1 = Math.Pow(10.0, a.EirpDbW / 10.0), e2 = Math.Pow(10.0, b.EirpDbW / 10.0);
                 kpiV[1] = FmtW(e1, c) + " · " + a.EirpDbW.ToString("F1", c) + " dBW";
-                kpiS[1] = string.Format(c, Lang.T("{0} all'antenna · {1:F1} dBi"), FmtW(a.PantW, c), a.Gtx);
+                kpiS[1] = string.Format(c, Lang.T("{0} all'antenna (perdite TX {1:F1} dB) · {2:F1} dBi"), FmtW(a.PantW, c), a.LossTx, a.Gtx);
                 kpiC[1] = Color.FromArgb(31, 111, 209);
                 kpiV[2] = FmtW(e2, c) + " · " + b.EirpDbW.ToString("F1", c) + " dBW";
-                kpiS[2] = string.Format(c, Lang.T("{0} all'antenna · {1:F1} dBi"), FmtW(b.PantW, c), b.Gtx);
+                kpiS[2] = string.Format(c, Lang.T("{0} all'antenna (perdite TX {1:F1} dB) · {2:F1} dBi"), FmtW(b.PantW, c), b.LossTx, b.Gtx);
                 kpiC[2] = Color.FromArgb(217, 119, 6);
                 kpiV[3] = path.ToString("F1", c) + " dB";
                 kpiS[3] = chkPol.Checked ? string.Format(c, Lang.T("+ {0:F1} dB polarizzazione (Dpol {1:F0}°)"), pol, r.Dpol) : string.Format(c, Lang.T("polarizzazione non inclusa (Dpol {0:F0}°)"), r.Dpol);
@@ -25984,10 +26001,10 @@ namespace LunaCalc
             dtpS.Width = S(150);
             dtpS.Value = dtpB.Value;
             dtpS.ValueChanged += (s, e) => { if (!syncing) dtpB.Value = dtpS.Value; };
-            Pillola bNow = new Pillola(Lang.T("Adesso").ToUpper(Lang.Cultura), StilePillola.Bordo, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            Pillola bNow = new Pillola(Lang.T("Adesso").ToUpper(Lang.Cultura), StilePillola.Pieno, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
             bNow.Margin = new Padding(S(6), S(2), S(3), S(2));
             bNow.Click += (s, e) => { dtpB.Value = NowUtcMinute(); RecalcBudget(); };
-            Pillola bRow = new Pillola(Lang.T("Usa la riga della tabella").ToUpper(Lang.Cultura), StilePillola.Bordo, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            Pillola bRow = new Pillola(Lang.T("Usa la riga della tabella").ToUpper(Lang.Cultura), StilePillola.Pieno, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
             bRow.Margin = new Padding(S(3), S(2), S(3), S(2));
             bRow.Click += (s, e) => UsaRigaSelezionata();
             Label nb = L(Lang.T("   Parametri delle stazioni: quelli della linguetta \"Budget EME\"."));
@@ -26887,11 +26904,11 @@ namespace LunaCalc
             dtpSky.Width = S(150);
             dtpSky.Value = NowUtcMinute();
             dtpSky.ValueChanged += (s, e) => RecalcSky();
-            Button bNow = new Button();
+            Button bNow = new Pulsante();
             bNow.Text = Lang.T("Adesso");
             bNow.AutoSize = true;
             bNow.Click += (s, e) => { dtpSky.Value = NowUtcMinute(); RecalcSky(); };
-            Button bRow = new Button();
+            Button bRow = new Pulsante();
             bRow.Text = Lang.T("Usa la riga selezionata nella tabella");
             bRow.AutoSize = true;
             bRow.Click += (s, e) => { DateTime t; if (RigaSelezionata(out t)) { chkSkyLive.Checked = false; dtpSky.Value = t; RecalcSky(); } };
@@ -27606,9 +27623,9 @@ namespace LunaCalc
             cmbDbgZoom.Items.AddRange(new object[] { "75 %", "100 %", "125 %", "150 %" });
             cmbDbgZoom.SelectedIndex = 1;
             cmbDbgZoom.SelectedIndexChanged += (s, e) => { docDebug.Zoom = new float[] { 0.75f, 1f, 1.25f, 1.5f }[cmbDbgZoom.SelectedIndex]; docDebug.Aggiorna(); };
-            Button bc = new Button(); bc.Text = Lang.T("Copia negli appunti"); bc.AutoSize = true;
+            Button bc = new Pulsante(); bc.Text = Lang.T("Copia negli appunti"); bc.AutoSize = true;
             bc.Click += (s, e) => { try { Clipboard.SetText(docDebug.TestoSemplice()); } catch { } };
-            Button bw = new Button(); bw.Text = Lang.T("Salva in Word (.docx)"); bw.AutoSize = true;
+            Button bw = new Pulsante(); bw.Text = Lang.T("Salva in Word (.docx)"); bw.AutoSize = true;
             bw.Click += (s, e) =>
             {
                 using (SaveFileDialog d = new SaveFileDialog())
@@ -28039,11 +28056,11 @@ namespace LunaCalc
                 AggiornaZoomPunt();
                 if (!caricamento) SaveSettings();
             };
-            Button bMeno = new Button();
+            Button bMeno = new Pulsante();
             bMeno.Text = "−";
             bMeno.Width = S(34);
             bMeno.Click += (s, e) => CambiaZoomPunt(-1);
-            Button bPiu = new Button();
+            Button bPiu = new Pulsante();
             bPiu.Text = "+";
             bPiu.Width = S(34);
             bPiu.Click += (s, e) => CambiaZoomPunt(1);
@@ -28765,8 +28782,8 @@ namespace LunaCalc
             pills.Margin = new Padding(0, S(8), 0, 0);
             Font fp = new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold);
             Pillola bAdesso = new Pillola("▶ " + Lang.T("Adesso"), StilePillola.Pieno, Color.FromArgb(31, 111, 209), fp);
-            Pillola bMeno = new Pillola("− 1 h", StilePillola.Bordo, Color.FromArgb(31, 111, 209), fp);
-            Pillola bPiu = new Pillola("+ 1 h", StilePillola.Bordo, Color.FromArgb(31, 111, 209), fp);
+            Pillola bMeno = new Pillola("− 1 h", StilePillola.Pieno, Color.FromArgb(31, 111, 209), fp);
+            Pillola bPiu = new Pillola("+ 1 h", StilePillola.Pieno, Color.FromArgb(31, 111, 209), fp);
             chkMondoSegui = new Pillola(Lang.T("Segui l'ora attuale"), StilePillola.Casella, Color.FromArgb(31, 111, 209), fp);
             tip.SetToolTip(chkMondoSegui, Lang.T("Aggiorna da sola la mappa con l'ora attuale, minuto per minuto."));
             foreach (Pillola pp in new Pillola[] { bAdesso, bMeno, bPiu, chkMondoSegui }) { pp.Margin = new Padding(0, S(2), S(8), S(2)); pills.Controls.Add(pp); }
@@ -29217,7 +29234,7 @@ namespace LunaCalc
             bar.AutoSize = true;
             bar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             bar.Dock = DockStyle.Fill;
-            Button bUpd = new Button();
+            Button bUpd = new Pulsante();
             bUpd.Text = Lang.T("Aggiorna adesso");
             bUpd.AutoSize = true;
             bUpd.Click += (s, e) => RecalcDgrd();
@@ -29992,7 +30009,7 @@ namespace LunaCalc
         void Colora(Control c)
         {
             if (c is SkyPanel || c is MapPanel) return;
-            if (c is Pillola || c is Spunta) { c.Invalidate(); return; }
+            if (c is Pillola || c is Spunta || c is Pulsante) { c.Invalidate(); return; }
             if (c is CorniceTonda)
             {
                 CorniceTonda ct = (CorniceTonda)c;
@@ -30383,7 +30400,7 @@ namespace LunaCalc
                 txtTrkDx.Location = new Point(txtTrkDxCall.Right + S(14), S(31));
                 txtTrkDx.Width = Math.Max(S(60), Math.Min(disp - wc, S(250)));
             };
-            btnTrkCall3 = new Pillola("CALL3", StilePillola.Bordo, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 7.5F * fontFactor, FontStyle.Bold));
+            btnTrkCall3 = new Pillola("CALL3", StilePillola.Pieno, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 7.5F * fontFactor, FontStyle.Bold));
             tip.SetToolTip(btnTrkCall3, Lang.T("CALL3.TXT: nominativi e locator delle stazioni EME") + "\u0001"
                 + Lang.T("Scrivi un nominativo nella casella del locator del DX: se è nel CALL3.TXT il programma propone il suo locator e lo inserisce premendo Invio. Clic qui per aggiornare il file o copiarlo nella cartella di WSJT-X."));
             cardDx.Controls.Add(btnTrkCall3);
@@ -31817,8 +31834,8 @@ namespace LunaCalc
                 FlowLayoutPanel bt = new FlowLayoutPanel();
                 bt.AutoSize = true;
                 bt.Margin = new Padding(S(3), S(10), S(3), S(3));
-                Button ok = new Button(); ok.Text = "OK"; ok.AutoSize = true; ok.DialogResult = DialogResult.OK; ok.BackColor = Tema.Button;
-                Button an = new Button(); an.Text = Lang.T("Annulla"); an.AutoSize = true; an.DialogResult = DialogResult.Cancel; an.BackColor = Tema.Button;
+                Button ok = new Pulsante(); ok.Text = "OK"; ok.AutoSize = true; ok.DialogResult = DialogResult.OK; ok.BackColor = Tema.Button;
+                Button an = new Pulsante(); an.Text = Lang.T("Annulla"); an.AutoSize = true; an.DialogResult = DialogResult.Cancel; an.BackColor = Tema.Button;
                 StileDialogo(f, g, ok, an);
                 f.AcceptButton = ok;
                 f.CancelButton = an;
@@ -32506,12 +32523,12 @@ namespace LunaCalc
                 bt.AutoSize = true;
                 bt.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 bt.Margin = new Padding(S(3), S(10), S(3), S(3));
-                Button ok = new Button();
+                Button ok = new Pulsante();
                 ok.Text = "OK";
                 ok.AutoSize = true;
                 ok.DialogResult = DialogResult.OK;
                 ok.BackColor = Tema.Button;
-                Button an = new Button();
+                Button an = new Pulsante();
                 an.Text = Lang.T("Annulla");
                 an.AutoSize = true;
                 an.DialogResult = DialogResult.Cancel;
@@ -32965,7 +32982,7 @@ namespace LunaCalc
             sx.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             sx.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
             // il manuale si salva in Word (.docx) per stamparlo: formule in Office Math, sommario e numeri di pagina
-            Pillola bWord = new Pillola(Lang.T("Salva in Word (.docx)"), StilePillola.Bordo, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            Pillola bWord = new Pillola(Lang.T("Salva in Word (.docx)"), StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
             bWord.Margin = new Padding(S(8), 0, S(8), S(8));
             tip.SetToolTip(bWord, Lang.T("Salva tutto il manuale in un documento di Word (.docx) da stampare: formule di Equation Editor, sommario, capitoli a pagina nuova, tabelle, riquadri e figure."));
             bWord.Click += (s, e) =>
@@ -33673,7 +33690,7 @@ namespace LunaCalc
             tip.SetToolTip(cmbCaviOrd, Lang.T("Ordina la tabella per diametro o per perdita nella banda evidenziata; si può anche cliccare l'intestazione di una banda (un clic crescente, il secondo decrescente)."));
             cmbCaviOrd.SelectedIndexChanged += (s, e) => { if (!caviClicTesta) caviInv = false; RiempiCavi(); };
             Label lo = L(Lang.T("Ordina per")); lo.Margin = new Padding(S(3), S(9), S(3), S(3));
-            Pillola bAgg = new Pillola("+ " + Lang.T("Aggiungi cavo personalizzato"), StilePillola.Bordo, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 9F * fontFactor));
+            Pillola bAgg = new Pillola("+ " + Lang.T("Aggiungi cavo personalizzato"), StilePillola.Pieno, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 9F * fontFactor));
             bAgg.Margin = new Padding(S(3), S(4), S(3), S(3));
             bAgg.Click += (s, e) => AggiungiCavo();
             Label lb = L(Lang.T("Banda evidenziata")); lb.Margin = new Padding(S(3), S(9), S(3), S(3));
@@ -33795,7 +33812,7 @@ namespace LunaCalc
             foreach (double f in CaviDb.Fb) cmbCaviCalcBanda.Items.Add(f.ToString(inv) + " MHz");
             cmbCaviCalcBanda.SelectedIndex = ib;
             cmbCaviCalcBanda.SelectedIndexChanged += (s, e) => pnlCaviCalc.Invalidate();
-            Pillola bUsa = new Pillola(Lang.T("usa nel Budget EME") + " →", StilePillola.Bordo, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 8.5F * fontFactor));
+            Pillola bUsa = new Pillola(Lang.T("usa nel Budget EME") + " →", StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 8.5F * fontFactor));
             tip.SetToolTip(bUsa, Lang.T("Mette il primo cavo spuntato, con questa lunghezza, come cavo di discesa della tua stazione nel Budget EME."));
             bUsa.Click += (s, e) =>
             {
@@ -34247,8 +34264,8 @@ namespace LunaCalc
                     v[i] = Nud(0, 200, 5, 2, 80);
                     t.Controls.Add(L(string.Format(inv, "{0} MHz (dB/100 m)", CaviDb.Fb[i])), 0, 2 + i); t.Controls.Add(v[i], 1, 2 + i);
                 }
-                Button ok = new Button(); ok.Text = "OK"; ok.DialogResult = DialogResult.OK;
-                Button an = new Button(); an.Text = Lang.T("Annulla"); an.DialogResult = DialogResult.Cancel;
+                Button ok = new Pulsante(); ok.Text = "OK"; ok.DialogResult = DialogResult.OK;
+                Button an = new Pulsante(); an.Text = Lang.T("Annulla"); an.DialogResult = DialogResult.Cancel;
                 StileDialogo(f, t, ok, an);
                 f.AcceptButton = ok; f.CancelButton = an;
                 if (f.ShowDialog(this) != DialogResult.OK || nome.Text.Trim().Length == 0) return;
@@ -34913,7 +34930,7 @@ namespace LunaCalc
             bar.AutoSize = true;
             bar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             bar.Dock = DockStyle.Fill;
-            Button bOpen = new Button();
+            Button bOpen = new Pulsante();
             bOpen.Text = Lang.T("Apri file ADIF…");
             bOpen.AutoSize = true;
             bOpen.Font = new Font(this.Font, FontStyle.Bold);
@@ -34925,22 +34942,22 @@ namespace LunaCalc
             cmbMappa.SelectedIndex = 0;
             cmbMappa.Width = S(280);
             cmbMappa.SelectedIndexChanged += (s, e) => { tileQueue.Clear(); tileFailed.Clear(); map.Invalidate(); };
-            Button bPlus = new Button(); bPlus.Text = "+"; bPlus.Width = S(30);
+            Button bPlus = new Pulsante(); bPlus.Text = "+"; bPlus.Width = S(30);
             bPlus.Click += (s, e) => ZoomMappa(1, new Point(map.Width / 2, map.Height / 2));
-            Button bMinus = new Button(); bMinus.Text = "−"; bMinus.Width = S(30);
+            Button bMinus = new Pulsante(); bMinus.Text = "−"; bMinus.Width = S(30);
             bMinus.Click += (s, e) => ZoomMappa(-1, new Point(map.Width / 2, map.Height / 2));
-            Button bMe = new Button(); bMe.Text = Lang.T("Centra su di me"); bMe.AutoSize = true;
+            Button bMe = new Pulsante(); bMe.Text = Lang.T("Centra su di me"); bMe.AutoSize = true;
             bMe.Click += (s, e) => CentraMappa(me.Ok ? me.Lat : 40, me.Ok ? me.Lon : 14, Math.Max(mapZoom, 5));
-            Button bWorld = new Button(); bWorld.Text = Lang.T("Tutto il mondo"); bWorld.AutoSize = true;
+            Button bWorld = new Pulsante(); bWorld.Text = Lang.T("Tutto il mondo"); bWorld.AutoSize = true;
             bWorld.Click += (s, e) => CentraMappa(20, 0, 2);
             chkGrid = new Spunta(); chkGrid.Text = Lang.T("Reticolo Maidenhead"); chkGrid.Checked = true; chkGrid.AutoSize = true;
             chkGrid.Margin = new Padding(S(10), S(6), S(3), S(3));
             chkGrid.CheckedChanged += (s, e) => map.Invalidate();
-            Button bClear = new Button();
+            Button bClear = new Pulsante();
             bClear.Text = Lang.T("Cancella dati ADIF");
             bClear.AutoSize = true;
             bClear.Click += (s, e) => CancellaAdif();
-            btnLotw = new Button();
+            btnLotw = new Pulsante();
             btnLotw.Text = Lang.T("Scarica da LoTW…");
             btnLotw.AutoSize = true;
             btnLotw.Font = new Font(this.Font, FontStyle.Bold);
@@ -35781,8 +35798,8 @@ namespace LunaCalc
                 bt.AutoSize = true; bt.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 bt.BackColor = Color.FromArgb(240, 240, 240);
                 bt.Padding = new Padding(S(12), S(10), S(12), S(10));
-                Button no = new Button(); no.Text = Lang.T("No"); no.DialogResult = DialogResult.No;
-                Button si = new Button(); si.Text = siNo ? Lang.T("Sì") : "OK"; si.DialogResult = siNo ? DialogResult.Yes : DialogResult.OK;
+                Button no = new Pulsante(); no.Text = Lang.T("No"); no.DialogResult = DialogResult.No;
+                Button si = new Pulsante(); si.Text = siNo ? Lang.T("Sì") : "OK"; si.DialogResult = siNo ? DialogResult.Yes : DialogResult.OK;
                 foreach (Button b in new Button[] { no, si })
                 {
                     b.AutoSize = true; b.MinimumSize = new Size(S(96), S(32));
@@ -36005,7 +36022,7 @@ namespace LunaCalc
             dtp.Width = S(150);
             dtp.Anchor = AnchorStyles.Left;
             dtp.Value = NowUtcMinute();
-            Pillola btnNow = new Pillola(Lang.T("Adesso"), StilePillola.Bordo, ColPillola, new Font(Lang.FontUi, 9F * fontFactor));
+            Pillola btnNow = new Pillola(Lang.T("Adesso"), StilePillola.Pieno, ColPillola, new Font(Lang.FontUi, 9F * fontFactor));
             btnNow.Margin = new Padding(S(6), S(1), S(3), S(1));
             btnNow.Click += (s, e) => { dtp.Value = NowUtcMinute(); };
             nudDur = NudU(0.1m, 31m, 1m, 1, 100, Lang.T("giorni"), "0.#");
@@ -36075,7 +36092,7 @@ namespace LunaCalc
             btnCalc.Margin = new Padding(S(2), S(2), S(6), S(2));
             btnCalc.Click += (s, e) => Calcola();
             this.AcceptButton = btnCalc;
-            Pillola btnCsv = new Pillola(Lang.T("Esporta CSV…"), StilePillola.Bordo, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 9.5F * fontFactor));
+            Pillola btnCsv = new Pillola(Lang.T("Esporta CSV…"), StilePillola.Pieno, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 9.5F * fontFactor));
             btnCsv.Margin = new Padding(S(4), S(2), S(6), S(2));
             btnCsv.Click += (s, e) => EsportaCsv();
             pnlLive = new PannelloDisegno();
@@ -36084,7 +36101,7 @@ namespace LunaCalc
             pnlLive.Paint += DisegnaLive;
             bar.Controls.Add(btnCalc);
             bar.Controls.Add(btnCsv);
-            btnColonne = new Pillola("", StilePillola.Bordo, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 9.5F * fontFactor, FontStyle.Bold));
+            btnColonne = new Pillola("", StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 9.5F * fontFactor, FontStyle.Bold));
             btnColonne.Margin = new Padding(S(4), S(2), S(6), S(2));
             btnColonne.Click += (s, e) => ScegliColonne();
             tip.SetToolTip(btnColonne, Lang.T("Sceglie le colonne aggiuntive della tabella (da Data a MNR sono sempre visibili). La scelta viene salvata e vale anche per Esporta CSV. Le colonne aggiuntive si vedono con la casella CALCOLI APPROFONDITI."));
@@ -36440,9 +36457,9 @@ namespace LunaCalc
                 };
                 rinfresca();
                 t.Controls.Add(info); t.Controls.Add(stato); t.Controls.Add(fonti); t.Controls.Add(esito); t.Controls.Add(wsj);
-                Button agg = new Button(); agg.Text = Lang.T("Aggiorna ora");
-                Button cop = new Button(); cop.Text = Lang.T("Copia in WSJT-X");
-                Button chiudi = new Button(); chiudi.Text = Lang.T("Chiudi"); chiudi.DialogResult = DialogResult.Cancel;
+                Button agg = new Pulsante(); agg.Text = Lang.T("Aggiorna ora");
+                Button cop = new Pulsante(); cop.Text = Lang.T("Copia in WSJT-X");
+                Button chiudi = new Pulsante(); chiudi.Text = Lang.T("Chiudi"); chiudi.DialogResult = DialogResult.Cancel;
                 agg.Click += (s, e) =>
                 {
                     agg.Enabled = false; cop.Enabled = false;
@@ -37002,9 +37019,9 @@ namespace LunaCalc
                 };
                 // pulsanti: tre bianchi a sinistra, Chiudi blu a destra
                 Font fb = new Font(Lang.FontUi, 10F);
-                Pillola bTutte = new Pillola(Lang.T("Tutte"), StilePillola.Bordo, Color.FromArgb(75, 85, 99), fb);
-                Pillola bNessuna = new Pillola(Lang.T("Nessuna"), StilePillola.Bordo, Color.FromArgb(75, 85, 99), fb);
-                Pillola bPred = new Pillola(Lang.T("Predefinite"), StilePillola.Bordo, Color.FromArgb(75, 85, 99), fb);
+                Pillola bTutte = new Pillola(Lang.T("Tutte"), StilePillola.Pieno, Color.FromArgb(75, 85, 99), fb);
+                Pillola bNessuna = new Pillola(Lang.T("Nessuna"), StilePillola.Pieno, Color.FromArgb(75, 85, 99), fb);
+                Pillola bPred = new Pillola(Lang.T("Predefinite"), StilePillola.Pieno, Color.FromArgb(75, 85, 99), fb);
                 Pillola bOk = new Pillola(Lang.T("Chiudi"), StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 10F, FontStyle.Bold));
                 bOk.DialogResult = DialogResult.OK;
                 bTutte.Click += (s, e) => { for (int i = ColFisse; i < scelte.Length; i++) scelte[i] = true; pc.Invalidate(); };
@@ -37576,6 +37593,62 @@ namespace LunaCalc
             TextRenderer.DrawText(g, this.Text, this.Font, Rect(new RectangleF(xt, r.Y, Math.Max(1, r.Right - xt - h * 0.3f), r.Height)), ct, tfs);
             if (this.Focused && this.ShowFocusCues)
                 using (Pen pf = new Pen(Color.FromArgb(120, col), 1f)) { pf.DashStyle = DashStyle.Dot; g.DrawRectangle(pf, Rect(new RectangleF(xt - 2, r.Y + 3, Math.Max(1, r.Right - xt - h * 0.2f), r.Height - 6))); }
+        }
+    }
+
+    // Pulsante normale disegnato come la Pillola piena (sfondo colorato arrotondato, scritta bianca in grassetto):
+    // blu per le azioni, grigio ardesia per Annulla/Chiudi; nel tema notte un po' più chiari
+    class Pulsante : Button
+    {
+        public Color Colore = Color.Empty;
+        bool sopra, giu;
+        public Pulsante()
+        {
+            this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer
+                | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
+            this.Cursor = Cursors.Hand;
+            this.Font = new Font(this.Font, FontStyle.Bold);
+        }
+        protected override void OnFontChanged(EventArgs e)
+        {
+            if (!this.Font.Bold) { this.Font = new Font(this.Font, FontStyle.Bold); return; }
+            base.OnFontChanged(e);
+        }
+        protected override void OnMouseEnter(EventArgs e) { sopra = true; Invalidate(); base.OnMouseEnter(e); }
+        protected override void OnMouseLeave(EventArgs e) { sopra = false; giu = false; Invalidate(); base.OnMouseLeave(e); }
+        protected override void OnMouseDown(MouseEventArgs e) { giu = true; Invalidate(); base.OnMouseDown(e); }
+        protected override void OnMouseUp(MouseEventArgs e) { giu = false; Invalidate(); base.OnMouseUp(e); }
+        protected override void OnEnabledChanged(EventArgs e) { Invalidate(); base.OnEnabledChanged(e); }
+        public override Size GetPreferredSize(Size proposed)
+        {
+            Size t = TextRenderer.MeasureText(this.Text ?? "", this.Font, Size.Empty, TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
+            int h = this.Font.Height;
+            return new Size(t.Width + (int)(h * 1.8f), (int)(h * 1.9f));
+        }
+        static Color Mescola(Color a, Color b, float k)
+        {
+            return Color.FromArgb((int)(a.R + (b.R - a.R) * k), (int)(a.G + (b.G - a.G) * k), (int)(a.B + (b.B - a.B) * k));
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            Color baseC = !Colore.IsEmpty ? Colore : (this.DialogResult == DialogResult.Cancel || this.DialogResult == DialogResult.No ? Color.FromArgb(75, 85, 99) : Color.FromArgb(31, 111, 209));
+            if (Tema.Scuro) baseC = Mescola(baseC, Color.White, 0.12f);
+            Color c = !this.Enabled ? Color.FromArgb(150, 156, 166) : (giu ? Mescola(baseC, Color.Black, 0.18f) : (sopra ? Mescola(baseC, Color.White, 0.12f) : baseC));
+            int h = this.Font.Height;
+            float bw = Math.Max(1.2f, h / 9f);
+            RectangleF r = new RectangleF(1, 1, this.Width - 2.5f, this.Height - bw - 2.5f);
+            float rag = Math.Min(r.Height / 2f, h * 0.42f);
+            using (Brush om = new SolidBrush(Color.FromArgb(40, 0, 0, 0)))
+            using (GraphicsPath po = MainForm.Arrotondato(new RectangleF(r.X, r.Y + bw, r.Width, r.Height), rag)) g.FillPath(om, po);
+            using (GraphicsPath p = MainForm.Arrotondato(r, rag))
+            using (Brush b = new SolidBrush(c)) g.FillPath(b, p);
+            TextRenderer.DrawText(g, this.Text, this.Font, new Rectangle((int)r.X, (int)r.Y, (int)r.Width, (int)r.Height), Color.White,
+                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.SingleLine | TextFormatFlags.NoPrefix | TextFormatFlags.EndEllipsis);
+            if (this.Focused && this.ShowFocusCues)
+                using (Pen pf = new Pen(Color.FromArgb(160, 255, 255, 255), 1f)) { pf.DashStyle = DashStyle.Dot; g.DrawRectangle(pf, r.X + 3, r.Y + 3, r.Width - 7, r.Height - 7); }
         }
     }
 

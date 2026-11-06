@@ -140,7 +140,7 @@ jobs:
             convert shot/c.png -resize 1200x shot/c.jpg 2>/dev/null && echo "SCREENSHOT-CERCA-B64:$(base64 -w 0 shot/c.jpg)" || true
             kill $PID 2>/dev/null || true
           done
-          for T in "MANUALE D'USO" "CAVI COASSIALI"; do
+          for T in "MANUALE D'USO" "CAVI COASSIALI" "Budget EME"; do
             YAEC_LINGUETTA="$T" mono YAEC.exe &
             PID=$!
             sleep 30
