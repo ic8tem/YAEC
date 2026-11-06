@@ -33609,6 +33609,8 @@ namespace LunaCalc
             Righe(dop);
             Righe(ManualeV27.E(lg, "S411"));
             Righe(ManualeV27.E(lg, "S412"));
+            Righe(ManualeV27.E(lg, "S413"));   // 1.13 dalla prima ricezione al QSO (NJ9R)
+            Righe(ManualeV27.E(lg, "S414"));   // 1.14 le chat testuali via Internet
             // 2. Fonti, dati e crediti (con i crediti spostati qui dalla linguetta ABOUT & CREDITS)
             Capitolo(TestiManuale.T(lg, "CAP5"));
             Righe(TestiManuale.E(lg, "C5"));
@@ -42701,9 +42703,11 @@ namespace LunaCalc
                 "• **Il calcolo è un riferimento, non una promessa.** Budget, S/N stimato e soglie dei modi digitali descrivono un collegamento ideale. Durante la ricezione contano il rumore locale e antropico, che può cambiare da un minuto all'altro, e la rotazione di Faraday: pochi istanti bastano a cancellare i decibel di margine calcolati (§ 1.3, 1.12).",
                 "• **La giornata si sceglie prima di accendere.** Dgrd, distanza della Luna e declinazione dicono quanto rumore del cielo c'è dietro la Luna, quante ore resta sopra l'orizzonte e quanto sale: gli stessi apparati rendono in modo molto diverso da un giorno all'altro (§ 1.4).",
                 "• **La polarizzazione può far sparire un segnale.** Con antenne lineari la rotazione di Faraday e la polarizzazione spaziale possono spegnere un'eco per minuti o per ore; spesso basta aspettare, ripetere o ruotare la polarizzazione, invece di cercare il guasto (§ 1.3).",
-                "• **La soluzione migliore è la doppia polarizzazione.** Per le antenne la scelta migliore è sempre un sistema in doppia polarizzazione, con doppia discesa in ricezione e anche doppia ricezione, mentre in trasmissione si opera con una sola polarizzazione: così la rotazione di Faraday e la polarizzazione spaziale non spengono più l'eco (§ 1.3).",
+                "• **La soluzione migliore è la doppia polarizzazione.** Per le antenne la scelta migliore è sempre un sistema in doppia polarizzazione, con doppia discesa in ricezione e anche doppia ricezione, mentre in trasmissione si opera con una sola polarizzazione: così la rotazione di Faraday e la polarizzazione spaziale non spengono più l'eco (§ 1.3). Il relè che sceglie la polarizzazione si commuta solo in ricezione, mai durante la trasmissione (§ 1.7).",
                 "• **Il Budget EME come banco di prova.** Inserendo diverse modifiche nella linguetta Budget EME si può tentare di capire quanto le ipotesi di mantenimento del proprio impianto, o di modifica dello stesso, siano percorribili per praticare l'EME (§ 1.6).",
                 "• **L'elevazione conta.** Il vincolo di mancata elevazione ruba minuti al traffico possibile. Soprattutto, nel momento in cui si eleva il sistema di antenna, i lobi bassi diventano fondamentali per non raccogliere rumore terrestre e permettere all'antenna di entrare nella massima captazione del segnale, che solo un puntamento verso il cielo può offrire.",
+                "• **Le antenne: partire dalle tabelle.** Per scegliere e confrontare le yagi il riferimento sono le tabelle di Lionel Edwards VE7BQH (guadagno, G/T e temperatura d'antenna), pubblicate sul sito DXMaps di Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Tra i contributi più autorevoli sul progetto di yagi a basso rumore ci sono quelli di Hartmut DG7YBN, di Popa YU7EF e di Justin Johnson G0KSC. Il Budget EME di YAEC usa le tabelle di VE7BQH (§ 1.6).",
+                "• **Conoscere il proprio impianto.** Come scrive Relu NJ9R, il vero segreto è conoscere i limiti del proprio sistema, guadagni e perdite, e decidere con questi dati se si possono superare. In 144 MHz il primo banco di prova è l'eco del radar GRAVES (§ 1.11, 1.13).",
                 "• **Ogni decibel davanti al preamplificatore conta.** Cavi, relè e connettori prima del preamplificatore peggiorano la temperatura di sistema più di quanto suggerisca il loro numero in dB: è lì che conviene spendere (§ 1.7, 1.8).",
                 "• **Prima le frequenze giuste.** Il Doppler e il CFOM spostano l'eco anche di kHz alle bande alte: un'eco fuori dalla finestra di decodifica non si sente, anche con un buon segnale (§ 1.10).",
                 "• **Il Sole è un avversario prevedibile.** Quando è vicino alla Luna il rumore cresce: il programma lo segnala in anticipo, e vale la pena tenerne conto nella scelta dei giorni (§ 1.5, 1.9).",
@@ -42780,12 +42784,16 @@ namespace LunaCalc
                 "• la rifrazione conta: la Luna è sorta a −0,51°, sotto l'orizzonte ottico di −0,35°; a 200 MHz, in aria secca, l'errore di rifrazione a 0° di elevazione è di −0,49°.",
                 "IK3XTV ricorda che in teoria l'effetto suolo arriva a 6 dB, tanto che una singola yagi rende quasi come un array di 4, ma dipende molto dal terreno attorno all'antenna: è minore in città, migliore in aperta campagna e ancora di più vicino al mare. Si sfrutta al sorgere e al tramonto della Luna, tra circa 1° e 18 – 20° di elevazione [4].",
                 "> Per questo nel Budget EME il ground gain è indicato come BETA: il valore calcolato (al massimo +6 dB) è un limite teorico. Con antenne alte sul mare o array di più yagi conviene aspettarsi circa la metà e un QSB marcato a bassa elevazione [3].",
+                "### Il guadagno dell'antenna: dati dichiarati e dBd (NJ9R)",
+                "I guadagni delle schede dei costruttori vengono quasi sempre da simulazioni su suolo perfetto e con adattamento ideale a 50 Ω. NJ9R suggerisce di togliere circa 2 dB dal valore dichiarato e di ragionare in dBd e non in dBi, per non illudersi; lo stesso vale per i dati di cavi, connettori e preamplificatori [6]. Il suo esempio: una buona yagi a 5 elementi (8 dBi, 5,9 dBd) con 4,25 dB di perdite in linea lascia appena 1,5 dB di guadagno utile; con la sua prima yagi a 7 elementi (12,3 dBi, 10 dBd) riusciva a malapena a ricevere. Come punto di partenza per ricevere con un po' di margine indica circa 14 dBd [6].",
+                ">+ Nel Budget EME si può provare subito l'effetto: abbassando di 2 dB il guadagno dell'antenna si vede quanto margine resta al collegamento.",
                 "[1] WSJT-X User Guide, K1JT e WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 aprile 2021 (WSJT-X 2.4.0), fornito da IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, XXI Meeting EME, presentazione fornita da IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, documento del 12 novembre 2010, fornito da IC8TEM.",
                 "[5] J. Taylor K1JT, relazione sul JT65 alla conferenza EME 2006 (K1JT_eme2006.pdf): tabella dei livelli minimi di S/N in 2500 Hz.",
-                "> Lo schema dell'impianto, a destra nella linguetta, ricava le perdite dai cavi scelti: in trasmissione cavo PA–relè + relè + cavo antenna, in ricezione cavo antenna + relè prima del preamplificatore e cavo di discesa dopo. Le attenuazioni dei cavi vengono dal database della linguetta CAVI COASSIALI (§ 1.8)."
+                "> Lo schema dell'impianto, a destra nella linguetta, ricava le perdite dai cavi scelti: in trasmissione cavo PA–relè + relè + cavo antenna, in ricezione cavo antenna + relè prima del preamplificatore e cavo di discesa dopo. Le attenuazioni dei cavi vengono dal database della linguetta CAVI COASSIALI (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
             };
             d["it"]["S47"] = new string[] {
                 "## Il preamplificatore e la figura di rumore della radio {nuovo}",
@@ -42870,6 +42878,7 @@ namespace LunaCalc
                 "~ Tra un passo e l'altro serve almeno il tempo di commutazione dei relè (15 – 30 ms) più i loro rimbalzi: IK1UWL consiglia 100 – 200 ms, anche per il PA se ha relè interni [16].",
                 "Per il comando di trasmissione il PTT è meglio del VOX: il VOX può scattare per un rumore e non sfrutta il ritardo di circa 0,5 s con cui JT65 comincia a modulare dopo il PTT, quindi il preamplificatore resta protetto solo dal relè veloce dell'amplificatore; con il PTT quel ritardo commuta l'amplificatore prima della modulazione e si può aggiungere il sequenziatore [17].",
                 ">! **Attenzione al preamplificatore.** Il relè T/R deve isolare molto bene l'uscita aperta: con 50 dB di isolamento e 500 W all'antenna arrivano 5 mW all'ingresso del PRE. Si cerca di avere almeno 60 dB, e i più prudenti aggiungono un secondo relè che in trasmissione chiude il PRE su un carico da 50 Ω. Il pulsante PTT del microfono va disabilitato: da quel momento si trasmette solo attraverso il sequenziatore (per l'SSB, un comando a pedale sul PTT del sequenziatore, disaccoppiato da quello del PC) [16].",
+                ">! **Il relè di polarizzazione si commuta solo in ricezione.** Con due polarizzazioni (H e V) il relè che sceglie l'antenna non va mai commutato durante la trasmissione: con la potenza applicata si bruciano relè, preamplificatori o amplificatore, con danni da centinaia a migliaia di euro [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, issue 5, 19 marzo 2021 (prima edizione 19 giugno 2019), tabelle 1 e 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 luglio 2015, tabella 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC con DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, prove dal 27 febbraio 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -42886,7 +42895,8 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, maggio 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), aprile 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, gennaio 2012, § 4 «Sequenziamento relè, PA e PRE», fornita da IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentazione, luglio 2015, fornita da IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentazione, luglio 2015, fornita da IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
             };
             d["it"]["S48"] = new string[] {
                 "## Cavi coassiali e perdite",
@@ -42895,7 +42905,10 @@ namespace LunaCalc
                 "~ α in dB/100 m, ℓ lunghezza del cavo in metri. Il numero pieno è il valore della scheda; ≈ indica un valore interpolato, e uno estrapolato oltre l'ultima frequenza della scheda.",
                 "I cavi con lo stesso tipo, diametro uguale entro ±0,2 mm e attenuazione entro 0,2 dB/100 m in tutte le bande sono accorpati in una riga (≡), con il valore medio; le sigle equivalenti sono indicate con \"anche:\" (per esempio LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Le sigle cinesi 50-3, 50-5, 50-7, 50-9, 50-12 indicano il diametro del dielettrico in millimetri.",
                 "> Si possono aggiungere cavi personalizzati con le loro cinque attenuazioni: vengono salvati in data\\cavi_personali.txt e compaiono anche nelle tendine dello schema dell'impianto del Budget EME. Il fumetto di ogni riga della tabella cita la fonte di quel cavo.",
-                "[1] Le fonti dei singoli cavi: schede di Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, tramite WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogo MIL-C-17F (RG-142, RG-393), R.F. elettronica di Senago (RG-115), le tabelle di DD1US ed EA5IP (H100) e la tabella di SV1BSX per RG-58, RG-213, H-155 e H-2000 (valori da verificare)."
+                "### I connettori (NJ9R)",
+                "Anche i connettori fanno parte della linea. La regola pratica di NJ9R è di circa 1 dB ogni 8 – 10 connettori, contati tutti dal retro della radio fino all'antenna, compresi adattatori, relè e divisori: nel suo impianto a quattro antenne i 24 connettori valgono più di 2 dB, quanto 40 – 45 m di LMR-400 nuovo in 144 MHz [2]. Nel Budget EME questa perdita va sommata alle perdite accessori TX e alle perdite tra antenna e preamplificatore.",
+                "[1] Le fonti dei singoli cavi: schede di Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, tramite WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogo MIL-C-17F (RG-142, RG-393), R.F. elettronica di Senago (RG-115), le tabelle di DD1US ed EA5IP (H100) e la tabella di SV1BSX per RG-58, RG-213, H-155 e H-2000 (valori da verificare).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
             };
             d["it"]["S410"] = new string[] {
                 "## Il Doppler, la compensazione e il CFOM",
@@ -42957,10 +42970,19 @@ namespace LunaCalc
                 "> Il numero di bit dice solo quanto finemente si *legge* la posizione: la precisione reale dipende anche dai giochi meccanici, dalla flessione del sostegno, dal vento e dalla taratura del nord e dell'orizzonte.",
                 "### Array di yagi: attuatori e pulegge",
                 "Negli array di yagi (accoppiamenti di 2, 4 o più antenne) il carico in elevazione è grande e sbilanciato. Sul mercato si trovano attuatori lineari con motore a vite senza fine: in queste soluzioni la vite serve solo a regolare il moto, mentre il sostegno meccanico del carico è affidato a pulegge. La vite senza fine ha il vantaggio di non girare all'indietro sotto il carico, così l'array resta fermo anche a motore spento.",
+                "### Verificare il puntamento con il radar GRAVES (NJ9R)",
+                "Il radar francese **GRAVES** trasmette in continuo su 143,050 MHz dal locator JN27SI ed è il banco di prova più usato in 144 MHz per la ricezione via Luna. Quando la Luna è visibile sia dalla propria stazione sia da GRAVES (in YAEC basta inserire JN27SI come locator del DX), si ascolta su 143,050 MHz (oppure 143,0495 MHz) in SSB con banda audio di almeno 2,4 kHz, AGC spento, noise blanker attivo e nessun altro filtro, notch o DSP [2].",
+                "Sul waterfall l'eco di GRAVES appare come una linea tratteggiata: più è intensa, meglio è puntata l'antenna. Si muove il rotore a piccoli passi, prima in azimut e poi in elevazione, fino al massimo, e si confronta la posizione trovata con quella calcolata. NJ9R usa GRAVES anche come S-meter: con il cursore del guadagno azzerato legge la media del segnale su un minuto, e prima di ogni sessione controlla con GRAVES che l'impianto sia ancora a punto [2].",
+                "> Senza elevazione l'eco di GRAVES si riceve di solito solo con la Luna tra 0° e 15° di elevazione, al sorgere o al tramonto. Molte radio non si sintonizzano fuori dalla banda dei 2 m: in quel caso serve un ricevitore SDR [2].",
+                "### Bussola, telecamera e registro degli errori (NJ9R)",
+                "Con un rotore usato per l'HF un puntamento «quasi giusto» bastava; in EME no. NJ9R consiglia di tarare l'indicatore del rotore e poi di verificarlo all'aperto con la bussola, accettando al massimo circa 5° di errore: vento, colpi contro i fermi e scivolamenti del palo spostano l'antenna senza che l'indicatore se ne accorga [2].",
+                "• **Telecamera sul palo.** Una piccola telecamera impermeabile (del tipo per la retromarcia, 25 – 30 USD) fissata al palo e allineata all'antenna con una livella o un inclinometro mostra dove punta davvero l'antenna: NJ9R ha completato 60 – 80 QSO con il rotore guasto o con errori di 20 – 35°, guidato solo dalla telecamera. Il centro della Luna si segna sul monitor dopo aver cercato il massimo dell'eco di GRAVES. La telecamera è anche una sorgente di rumore: va spenta durante la ricezione [2].",
+                "• **Registro degli errori.** Per ogni puntamento si annotano in una tabella azimut ed elevazione della Luna calcolati, quelli letti sull'indicatore e quelli visti con la telecamera: la differenza è l'errore del proprio sistema, da correggere o da tenere a mente [2].",
                 "### Oltre i 432 MHz: i dischi",
                 "Dai 902 MHz in su si usano soprattutto i dischi parabolici, e il tool [1] è pensato per le frequenze da 1 GHz in su. Con diametri importanti il fascio si restringe a pochi decimi di grado e c'è il rischio di non centrare perfettamente la Luna: più che di motori, la stazione ha bisogno di veri attuatori meccanici in azimut ed elevazione, con una precisione di puntamento legata in gran parte alla risoluzione in bit del comando. Il tool **EME Link Budget & Analysis Tool** di OE2IGL e DF3GJ [1] indica in ±0,035° un buon sistema di inseguimento e in ±0,1° uno normale, e calcola la perdita di puntamento insieme a tutti gli altri termini del collegamento.",
                 ">+ YAEC si ferma ai 432 MHz. Per le bande superiori consigliamo il tool di OE2IGL e DF3GJ [1]: calcola il budget EME da 1 a 300 GHz con i parametri del disco (diametro, f/D, illuminatore, rugosità della superficie, efficienze), il puntamento, la librazione, il rumore del Sole e della Luna e l'attenuazione dell'atmosfera.",
-                "[1] Gerald Ihninger OE2IGL e Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL e Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
             };
             d["it"]["S412"] = new string[] {
                 "## I modi digitali per l'EME: Q65 e JT65",
@@ -43051,6 +43073,18 @@ namespace LunaCalc
                 "| q3 | il mio nominativo e quello del DX",
                 "| q4 | i due nominativi e RRR, RR73, 73 o nulla",
                 "~ Da [1]. Gli autori avvertono di non dare troppo peso ai valori di S/N mostrati dal decodificatore, che stavano ancora migliorando [1]: per confronti con il Budget EME di YAEC conviene usare più QSO e non una sola lettura.",
+                "### Le impostazioni di NJ9R per JT65B e MAP65",
+                "NJ9R, che ha iniziato in 144 MHz con il JT65B, riassume così le impostazioni che usa [7]:",
+                "|h| Programma | Dove | Impostazione",
+                "| WSJT-X | finestra principale | Enable VHF and sub-mode features, Decode after EME delay, riga vuota tra i periodi di decodifica",
+                "| WSJT-X | Advanced | Random erasure e two pass decoding (6 e 6, secondo la CPU); waterfall Most sensitive",
+                "| WSJT-X | modo | JT65, sottomodo B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; quando compare la traccia di una stazione si stringe a 50, 20 o 10 Hz (più è larga, più la decodifica soffre)",
+                "| WSJT-X | frequenze audio | TX a 1270 Hz; RX entro ±350 Hz da 1270 Hz secondo il Doppler, oppure alla frequenza annunciata in chat",
+                "| MAP65 | Station, I/O devices | proprio nominativo e locator; scheda audio, oppure interfaccia di rete per le radio IQ, a 96 000 Hz",
+                "| MAP65 | modo e decodifica | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | finestra principale | NB attivo, Monitor On, livello audio nella barra laterale tra 12 e 40",
+                "~ Da [7]. I nomi delle voci restano in inglese, come nei menu di WSJT-X e MAP65. Per il JT65 il Budget EME di YAEC usa le soglie del sottomodo B (§ 1.6).",
                 "### La procedura con le DXpedition (W7GJ)",
                 "Lance Collister W7GJ, che attiva da anni spedizioni EME in 6 m, descrive come chiamare una DXpedition in Q65-60A durante un pile-up [6]. Prima di tutto servono l'orologio del computer molto preciso e la frequenza di trasmissione molto stabile [6].",
                 "• **Turni.** La DXpedition trasmette sempre nella prima sequenza (minuti pari); chi chiama, nella seconda (minuti dispari) [6].",
@@ -43072,7 +43106,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, ottobre 2023, fornito da IC8TEM.",
                 "[4] Nico Palermo IV3NWV, presentazione alla conferenza EME 2016 sui codici QRA, citata in [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Codice sorgente di WSJT-X (file Q65_encoding_modules.F90 e altri), citato in [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revisione del 3 aprile 2023, fornito da IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revisione del 3 aprile 2023, fornito da IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
             };
             d["it"]["S54"] = new string[] {
                 "## Letteratura EME di SM5BSZ",
@@ -43175,15 +43210,47 @@ namespace LunaCalc
                 "= Dgrd = −40 · log_{10} \\frac{d}{\\t{356 903 km}} − 10 · log_{10} \\frac{T_{sky} + 80 \\t{ K}}{T_{sky,min} + 80 \\t{ K}}",
                 "= T_{sky,min} = 13 · \\p{\\frac{408}{f}}^{2,6} \\t{ K}"
             };
+            d["it"]["S413"] = new string[] {
+                "## Dalla prima ricezione al QSO: i consigli di NJ9R",
+                "Relu Jianu NJ9R ha raccolto in «2M EME the easy way» la sua esperienza di principiante in 144 MHz: un percorso pratico che comincia con l'eco di GRAVES ricevuta con una yagi a 7 elementi, senza preamplificatore. Il suo messaggio è soprattutto uno: conoscere i limiti del proprio impianto, i guadagni e le perdite, e decidere con questi dati se si possono superare [1]. Le parti tecniche sono riprese nei paragrafi dei singoli argomenti: Budget EME e guadagno delle antenne (§ 1.6), relè di polarizzazione (§ 1.7), connettori (§ 1.8), puntamento e GRAVES (§ 1.11), impostazioni di WSJT-X e MAP65 (§ 1.12), lettura delle chat (§ 1.14). Qui restano i consigli sulla stazione e sul ricevitore.",
+                "### La mappa del rumore locale",
+                "Prima di cercare la Luna conviene sapere da quali direzioni arriva il rumore. NJ9R consiglia un giro completo di 360° con l'antenna, a passi di 15 – 30° in azimut, annotando in una tabella il rumore letto con il cursore del guadagno (azzerato sul livello più basso). Chi ha l'elevazione ripete il giro da 0° a 45° a passi di 5 – 10°. Colorata come una mappa di calore, la tabella spiega perché in certe direzioni non si riceve nulla: lì il rumore locale copre l'eco [1].",
+                "> In YAEC la Ricognizione dei miei ostacoli mostra le direzioni chiuse dagli ostacoli: confrontarla con la mappa del rumore aiuta a scegliere le finestre di Luna migliori.",
+                "Case ed elettronica del vicinato sono una fonte continua di disturbi: si cercano e si riducono partendo da casa propria, ma a un certo punto si convive con quello che resta [1].",
+                "### Il ricevitore e il computer",
+                "• **Ricevitore pulito.** AGC spento, noise blanker attivo, nessun filtro, notch o DSP in ricezione; nel computer, ingresso audio alla qualità più alta e nessun miglioramento o amplificazione dell'audio di sistema [1].",
+                "• **Orologio sincronizzato.** I modi digitali richiedono l'ora esatta: NJ9R fa correggere l'orologio del computer in automatico ogni 15 minuti con un programma di sincronizzazione (NetTime) [1].",
+                "• **CALL3.TXT aggiornato.** Il file aiuta la decodifica di molti dB, perché WSJT-X e MSHV lo usano per riconoscere i nominativi; resta all'operatore il compito di scartare le decodifiche sbagliate [1]. YAEC scarica e unisce le liste di W7GJ e di WSJT-X Improved e può copiare il file nella cartella di WSJT-X.",
+                "• **Pazienza.** Se non si sente nulla, possono sommarsi più cause: Dgrd alta, polarizzazione sfavorevole, rotazione di Faraday, rumore locale in quella direzione. Conviene riprovare dopo qualche minuto, qualche ora o un altro giorno, e scegliere i giorni con la Dgrd più bassa del mese (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
+            };
+            d["it"]["S414"] = new string[] {
+                "## Le chat testuali via Internet",
+                "In EME gli appuntamenti (sked), gli annunci dei CQ e i rapporti passano quasi sempre da chat testuali su Internet. Le più usate sono queste.",
+                "• **Chat EME di N0UK.** La chat storica dei 2 m in EME, di Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); dello stesso autore è Ping Jockey Central, la chat del meteor scatter (https://www.pingjockey.net) [1].",
+                "• **EMEchat di EA8DBM.** Un'interfaccia web che riunisce le chat EME (https://www.emechat.com): le DXpedition la usano per i 2 m con la chat di N0UK e per i 70 cm e oltre con quella di HB9Q [2].",
+                "• **HB9Q logger.** Chat e registro degli sked per l'EME dai 70 cm in su (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, sezione microwave.** La chat di ON4KST è divisa in sezioni per banda (https://www.on4kst.com/chat): nella sezione microwave si incontrano gli operatori delle bande più alte, compresi quelli che lavorano in EME [3].",
+                "### Come leggere gli annunci (NJ9R)",
+                "Chi chiama CQ in chat indica di solito potenza e antenne. «H», o nessuna indicazione, fa pensare a una stazione solo orizzontale (non sempre); «HV» o «XPOL» indica due polarizzazioni ed è la stazione migliore da cercare. Tra stazioni dello stesso continente l'orizzontale con l'orizzontale funziona bene; da un continente all'altro la polarizzazione spaziale può far arrivare quasi verticale un segnale partito orizzontale, con perdite troppo grandi per una stazione piccola (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) funziona come PSK Reporter: mostra solo le stazioni che inviano rapporti, quindi può esserci attività in chat anche quando LiveCQ è vuoto [4].",
+                "• Le frequenze audio annunciate in chat aiutano a trovare le stazioni che non trasmettono a 1270 Hz; quando si riceve una stazione, è buona abitudine segnalarlo in chat [4].",
+                "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, giugno 2026, DXpedition C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
+            };
             d["en"] = new Dictionary<string, string[]>();
             d["en"]["PREF"] = new string[] {
                 "This part of the manual does not describe the program's buttons, but the ideas the program is built on. Before the chapters, the author wishes to set out a few concepts that have proved key to studying the program, also in the light of his most recent experience at the station.",
                 "• **The calculation is a reference, not a promise.** Budget, estimated S/N and digital-mode thresholds describe an ideal path. During reception what counts is local and man-made noise, which can change from one minute to the next, and Faraday rotation: a few moments are enough to wipe out the calculated margin (§ 1.3, 1.12).",
                 "• **Choose the day before switching on.** Dgrd, Moon distance and declination tell how much sky noise lies behind the Moon, how many hours it stays above the horizon and how high it rises: the same equipment performs very differently from one day to the next (§ 1.4).",
                 "• **Polarization can make a signal vanish.** With linear antennas, Faraday rotation and spatial polarization can kill an echo for minutes or hours; often it is enough to wait, repeat or rotate the polarization instead of looking for a fault (§ 1.3).",
-                "• **Dual polarization is the best solution.** For the antennas the best choice is always a dual-polarization system, with two receive feed lines and dual reception, while transmission uses a single polarization: this way Faraday rotation and spatial polarization no longer kill the echo (§ 1.3).",
+                "• **Dual polarization is the best solution.** For the antennas the best choice is always a dual-polarization system, with two receive feed lines and dual reception, while transmission uses a single polarization: this way Faraday rotation and spatial polarization no longer kill the echo (§ 1.3). The relay that selects the polarization is switched only while receiving, never during transmission (§ 1.7).",
                 "• **The EME budget as a test bench.** By entering different changes in the EME budget tab you can try to understand how far the options of keeping your installation, or of modifying it, are viable for working EME (§ 1.6).",
                 "• **Elevation matters.** Lacking elevation steals minutes from the possible traffic. Above all, once the antenna system is elevated, low sidelobes become essential so as not to pick up ground noise and to let the antenna reach the maximum signal capture that only pointing at the sky can offer.",
+                "• **Antennas: start from the tables.** To choose and compare Yagis, the reference is the tables of Lionel Edwards VE7BQH (gain, G/T and antenna temperature), published on the DXMaps site of Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Among the most authoritative contributions to low-noise Yagi design are those of Hartmut DG7YBN, Popa YU7EF and Justin Johnson G0KSC. The YAEC EME budget uses the VE7BQH tables (§ 1.6).",
+                "• **Know your own station.** As Relu NJ9R writes, the real secret is to know the limits of your own system, its gains and losses, and to decide from those figures whether they can be overcome. On 144 MHz the first test bench is the echo of the GRAVES radar (§ 1.11, 1.13).",
                 "• **Every decibel in front of the preamplifier counts.** Cables, relays and connectors before the preamplifier worsen the system temperature more than their dB figure suggests: that is where money is best spent (§ 1.7, 1.8).",
                 "• **Right frequencies first.** Doppler and CFOM shift the echo by up to several kHz on the higher bands: an echo outside the decoding window is not heard, even with a good signal (§ 1.10).",
                 "• **The Sun is a predictable opponent.** When it is close to the Moon the noise rises: the program warns in advance, and it is worth taking into account when choosing the days (§ 1.5, 1.9).",
@@ -43260,12 +43327,16 @@ namespace LunaCalc
                 "• refraction matters: the Moon rose at −0.51°, below the optical horizon of −0.35°; at 200 MHz, in dry air, the refraction error at 0° elevation is −0.49°.",
                 "IK3XTV points out that in theory the ground effect reaches 6 dB, so that a single yagi performs almost like an array of 4, but it depends a lot on the ground around the antenna: it is lower in town, better in open countryside and even more so near the sea. It is used at moonrise and moonset, between about 1° and 18 – 20° of elevation [4].",
                 "> This is why the ground gain is marked BETA in the EME budget: the calculated value (at most +6 dB) is a theoretical limit. With antennas high above the sea or arrays of several yagis, expect about half of it and marked QSB at low elevation [3].",
+                "### Antenna gain: published figures and dBd (NJ9R)",
+                "The gains in manufacturers' data sheets almost always come from simulations over perfect ground with an ideal 50 Ω match. NJ9R suggests taking about 2 dB off the stated figure and reasoning in dBd rather than dBi, so as not to fool yourself; the same applies to the figures of cables, connectors and preamplifiers [6]. His example: a good 5-element Yagi (8 dBi, 5.9 dBd) with 4.25 dB of line losses leaves barely 1.5 dB of useful gain; with his first 7-element Yagi (12.3 dBi, 10 dBd) he could only just receive. As a starting point for receiving with some margin he suggests about 14 dBd [6].",
+                ">+ You can try the effect right away in the EME budget: lowering the antenna gain by 2 dB shows how much margin the link has left.",
                 "[1] WSJT-X User Guide, K1JT and the WSJT Development Group, § 7.1 (FT4 = FT8 + 3.5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 April 2021 (WSJT-X 2.4.0), supplied by IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21st EME Meeting, presentation supplied by IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, document of 12 November 2010, supplied by IC8TEM.",
                 "[5] J. Taylor K1JT, paper on JT65 at the EME 2006 conference (K1JT_eme2006.pdf): table of minimum S/N levels in 2500 Hz.",
-                "> The station diagram, on the right of the tab, derives the losses from the chosen cables: in transmission PA–relay cable + relay + antenna cable, in reception antenna cable + relay before the preamplifier and feed cable after it. The cable attenuations come from the database of the COAXIAL CABLES tab (§ 1.8)."
+                "> The station diagram, on the right of the tab, derives the losses from the chosen cables: in transmission PA–relay cable + relay + antenna cable, in reception antenna cable + relay before the preamplifier and feed cable after it. The cable attenuations come from the database of the COAXIAL CABLES tab (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
             };
             d["en"]["S47"] = new string[] {
                 "## The preamplifier and the noise figure of the radio {nuovo}",
@@ -43350,6 +43421,7 @@ namespace LunaCalc
                 "~ Between one step and the next you need at least the relay switching time (15 – 30 ms) plus their bounce: IK1UWL recommends 100 – 200 ms, also for the PA if it has internal relays [16].",
                 "For keying the transmitter PTT is better than VOX: VOX can be tripped by noise and does not use the delay of about 0.5 s with which JT65 starts modulating after PTT, so the preamplifier is protected only by the fast relay of the amplifier; with PTT that delay switches the amplifier before modulation, and a sequencer can be added [17].",
                 ">! **Watch the preamplifier.** The T/R relay must isolate the open port very well: with 50 dB of isolation and 500 W at the antenna, 5 mW reach the PRE input. Aim for at least 60 dB; the most careful add a second relay that terminates the PRE into a 50 Ω load during transmission. Disable the microphone PTT button: from then on you transmit only through the sequencer (for SSB, a foot switch on the sequencer PTT, decoupled from the PC one) [16].",
+                ">! **The polarization relay is switched only while receiving.** With two polarizations (H and V) the relay that selects the antenna must never be switched during transmission: with power applied you burn relays, preamplifiers or the amplifier, with damage ranging from hundreds to thousands of euros [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, issue 5, 19 March 2021 (first edition 19 June 2019), tables 1 and 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 July 2015, table 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC with DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, tests from 27 February 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -43366,7 +43438,8 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, May 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, January 2012, § 4 “Sequenziamento relè, PA e PRE”, supplied by IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentation, July 2015, supplied by IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentation, July 2015, supplied by IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
             };
             d["en"]["S48"] = new string[] {
                 "## Coaxial cables and losses",
@@ -43375,7 +43448,10 @@ namespace LunaCalc
                 "~ α in dB/100 m, ℓ cable length in metres. A plain number is the data sheet value; ≈ marks an interpolated value, and e one extrapolated beyond the last frequency of the data sheet.",
                 "Cables of the same type, with the same diameter within ±0.2 mm and attenuation within 0.2 dB/100 m on all bands are grouped in one row (≡), with the mean value; equivalent names are shown with \"also:\" (for example LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). The Chinese names 50-3, 50-5, 50-7, 50-9, 50-12 give the diameter of the dielectric in millimetres.",
                 "> Custom cables can be added with their five attenuations: they are saved in data\\cavi_personali.txt and also appear in the drop-downs of the station diagram of the EME budget. The tooltip of each table row cites the source of that cable.",
-                "[1] The sources of the individual cables: data sheets by Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F catalogue (RG-142, RG-393), R.F. elettronica of Senago (RG-115), the tables by DD1US and EA5IP (H100) and the table by SV1BSX for RG-58, RG-213, H-155 and H-2000 (values to be verified)."
+                "### Connectors (NJ9R)",
+                "Connectors are part of the line too. NJ9R's rule of thumb is about 1 dB for every 8 – 10 connectors, counting all of them from the back of the radio to the antenna, adapters, relays and splitters included: in his four-antenna system the 24 connectors are worth more than 2 dB, as much as 40 – 45 m of new LMR-400 on 144 MHz [2]. In the EME budget this loss must be added to the TX accessory losses and to the losses between antenna and preamplifier.",
+                "[1] The sources of the individual cables: data sheets by Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F catalogue (RG-142, RG-393), R.F. elettronica of Senago (RG-115), the tables by DD1US and EA5IP (H100) and the table by SV1BSX for RG-58, RG-213, H-155 and H-2000 (values to be verified).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
             };
             d["en"]["S410"] = new string[] {
                 "## Doppler, compensation and CFOM",
@@ -43437,10 +43513,19 @@ namespace LunaCalc
                 "> The number of bits only says how finely the position is *read*: the real precision also depends on mechanical play, the flexing of the support, the wind and the calibration of north and of the horizon.",
                 "### Yagi arrays: actuators and pulleys",
                 "In yagi arrays (combinations of 2, 4 or more antennas) the elevation load is large and unbalanced. Linear actuators with a worm-screw motor are available on the market: in these solutions the screw only regulates the motion, while the mechanical support of the load is entrusted to pulleys. The worm screw has the advantage of not turning backwards under the load, so the array stays still even with the motor off.",
+                "### Checking the pointing with the GRAVES radar (NJ9R)",
+                "The French **GRAVES** radar transmits continuously on 143.050 MHz from locator JN27SI and is the most widely used test bench on 144 MHz for reception via the Moon. When the Moon is visible both from your station and from GRAVES (in YAEC just enter JN27SI as the DX locator), listen on 143.050 MHz (or 143.0495 MHz) in SSB with an audio bandwidth of at least 2.4 kHz, AGC off, noise blanker on and no other filter, notch or DSP [2].",
+                "On the waterfall the GRAVES echo shows up as a dashed line: the stronger it is, the better the antenna is aimed. Move the rotator in small steps, first in azimuth and then in elevation, up to the maximum, and compare the position found with the calculated one. NJ9R also uses GRAVES as an S-meter: with the gain slider zeroed he reads the signal average over one minute, and before every session he checks with GRAVES that the station is still in tune [2].",
+                "> Without elevation the GRAVES echo is usually received only with the Moon between 0° and 15° of elevation, at moonrise or moonset. Many radios do not tune outside the 2 m band: in that case an SDR receiver is needed [2].",
+                "### Compass, camera and error log (NJ9R)",
+                "With a rotator used for HF, “close enough” pointing was good enough; not so in EME. NJ9R advises calibrating the rotator indicator and then checking it outdoors with a compass, accepting at most about 5° of error: wind, knocks against the stops and slipping of the mast move the antenna without the indicator noticing [2].",
+                "• **Camera on the mast.** A small waterproof camera (the rear-view type, 25 – 30 USD) fixed to the mast and aligned with the antenna using a spirit level or an inclinometer shows where the antenna is really pointing: NJ9R completed 60 – 80 QSOs with a faulty rotator or with errors of 20 – 35°, guided only by the camera. Mark the centre of the Moon on the monitor after peaking the GRAVES echo. The camera is also a noise source: switch it off while receiving [2].",
+                "• **Error log.** For each pointing, record in a table the calculated azimuth and elevation of the Moon, those read on the indicator and those seen with the camera: the difference is the error of your system, to be corrected or kept in mind [2].",
                 "### Above 432 MHz: dishes",
                 "From 902 MHz upwards mostly parabolic dishes are used, and the tool [1] is designed for frequencies from 1 GHz upwards. With large diameters the beam narrows to a few tenths of a degree and there is a risk of not hitting the Moon perfectly: more than motors, the station needs real mechanical actuators in azimuth and elevation, with a pointing precision largely tied to the bit resolution of the control. The **EME Link Budget & Analysis Tool** by OE2IGL and DF3GJ [1] gives ±0.035° for a good tracking system and ±0.1° for a normal one, and computes the pointing loss together with all the other terms of the link.",
                 ">+ YAEC stops at 432 MHz. For the higher bands we recommend the tool by OE2IGL and DF3GJ [1]: it computes the EME budget from 1 to 300 GHz with the dish parameters (diameter, f/D, feed, surface roughness, efficiencies), pointing, libration, Sun and Moon noise and atmospheric attenuation.",
-                "[1] Gerald Ihninger OE2IGL and Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL and Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
             };
             d["en"]["S412"] = new string[] {
                 "## Digital modes for EME: Q65 and JT65",
@@ -43531,6 +43616,18 @@ namespace LunaCalc
                 "| q3 | my callsign and the DX callsign",
                 "| q4 | both callsigns and RRR, RR73, 73 or blank",
                 "~ From [1]. The authors warn not to pay too much attention to the S/N values shown by the decoder, which were still being improved [1]: for comparisons with the YAEC EME budget it is better to use several QSOs rather than a single reading.",
+                "### NJ9R's settings for JT65B and MAP65",
+                "NJ9R, who started on 144 MHz with JT65B, sums up the settings he uses as follows [7]:",
+                "|h| Program | Where | Setting",
+                "| WSJT-X | main window | Enable VHF and sub-mode features, Decode after EME delay, blank line between decoding periods",
+                "| WSJT-X | Advanced | Random erasure and two pass decoding (6 and 6, depending on the CPU); waterfall Most sensitive",
+                "| WSJT-X | mode | JT65, submode B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; once a station's trace appears, narrow it to 50, 20 or 10 Hz (the wider it is, the more decoding suffers)",
+                "| WSJT-X | audio frequencies | TX at 1270 Hz; RX within ±350 Hz of 1270 Hz depending on the Doppler, or at the frequency announced in the chat",
+                "| MAP65 | Station, I/O devices | your callsign and locator; sound card, or network interface for IQ radios, at 96 000 Hz",
+                "| MAP65 | mode and decoding | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | main window | NB on, Monitor On, audio level on the side bar between 12 and 40",
+                "~ From [7]. Item names stay in English, as in the WSJT-X and MAP65 menus. For JT65 the YAEC EME budget uses the thresholds of submode B (§ 1.6).",
                 "### The procedure with DXpeditions (W7GJ)",
                 "Lance Collister W7GJ, who has been running 6 m EME expeditions for years, describes how to call a DXpedition in Q65-60A during a pile-up [6]. First of all, the computer clock must be very accurate and the transmit frequency very stable [6].",
                 "• **Periods.** The DXpedition always transmits in the first sequence (even minutes); callers transmit in the second (odd minutes) [6].",
@@ -43552,7 +43649,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, October 2023, supplied by IC8TEM.",
                 "[4] Nico Palermo IV3NWV, presentation at the EME 2016 conference on QRA codes, cited in [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-X source code (file Q65_encoding_modules.F90 and others), cited in [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revised 3 April 2023, supplied by IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revised 3 April 2023, supplied by IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
             };
             d["en"]["S54"] = new string[] {
                 "## EME literature by SM5BSZ",
@@ -43647,15 +43745,47 @@ namespace LunaCalc
                 "> In the program: the calendar of Distance and Dgrd marks with the ☀ symbol the days with the Sun close to the Moon (orange or red); the Solar noise tab calculates, with the measured flux, how much extra noise the Sun brings at the chosen moment.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["en"]["S413"] = new string[] {
+                "## From the first reception to the QSO: NJ9R's advice",
+                "In “2M EME the easy way” Relu Jianu NJ9R collected his experience as a beginner on 144 MHz: a practical path that starts with the GRAVES echo received with a 7-element Yagi and no preamplifier. His message is above all one: know the limits of your own station, its gains and losses, and decide from those figures whether they can be overcome [1]. The technical parts are taken up in the sections on each topic: EME budget and antenna gain (§ 1.6), polarization relay (§ 1.7), connectors (§ 1.8), pointing and GRAVES (§ 1.11), WSJT-X and MAP65 settings (§ 1.12), reading the chats (§ 1.14). What remains here is the advice on the station and the receiver.",
+                "### The local noise map",
+                "Before looking for the Moon it pays to know which directions the noise comes from. NJ9R advises a full 360° turn of the antenna, in 15 – 30° steps of azimuth, recording in a table the noise read with the gain slider (zeroed on the lowest level). If you have elevation, repeat the turn from 0° to 45° in 5 – 10° steps. Coloured like a heat map, the table explains why nothing is received in certain directions: there the local noise covers the echo [1].",
+                "> In YAEC, Reconnaissance of my obstacles shows the directions closed by obstacles: comparing it with the noise map helps to choose the best Moon windows.",
+                "Houses and the neighbourhood's electronics are a constant source of interference: track them down and reduce them starting from your own home, but at some point you live with what is left [1].",
+                "### The receiver and the computer",
+                "• **Clean receiver.** AGC off, noise blanker on, no filter, notch or DSP in reception; in the computer, audio input at the highest quality and no system audio enhancement or boost [1].",
+                "• **Synchronized clock.** Digital modes need the exact time: NJ9R has the computer clock corrected automatically every 15 minutes by a synchronization program (NetTime) [1].",
+                "• **Up-to-date CALL3.TXT.** The file helps decoding by many dB, because WSJT-X and MSHV use it to recognize callsigns; it is up to the operator to discard the wrong decodes [1]. YAEC downloads and merges the W7GJ and WSJT-X Improved lists and can copy the file into the WSJT-X folder.",
+                "• **Patience.** If nothing is heard, several causes may add up: high Dgrd, unfavourable polarization, Faraday rotation, local noise in that direction. Try again after a few minutes, a few hours or another day, and choose the days with the lowest Dgrd of the month (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
+            };
+            d["en"]["S414"] = new string[] {
+                "## Text chats on the Internet",
+                "In EME, schedules (skeds), CQ announcements and reports almost always go through text chats on the Internet. These are the most used.",
+                "• **N0UK EME chat.** The historic 2 m EME chat, by Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); by the same author is Ping Jockey Central, the meteor scatter chat (https://www.pingjockey.net) [1].",
+                "• **EMEchat by EA8DBM.** A web interface that brings the EME chats together (https://www.emechat.com): DXpeditions use it for 2 m with the N0UK chat and for 70 cm and up with the HB9Q chat [2].",
+                "• **HB9Q logger.** Chat and sked log for EME from 70 cm up (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, microwave section.** The ON4KST chat is divided into sections by band (https://www.on4kst.com/chat): in the microwave section you meet the operators of the higher bands, including those working EME [3].",
+                "### How to read the announcements (NJ9R)",
+                "Whoever calls CQ in the chat usually states power and antennas. “H”, or no indication, suggests a horizontal-only station (not always); “HV” or “XPOL” means two polarizations and is the best station to look for. Between stations on the same continent horizontal to horizontal works well; from one continent to another, spatial polarization can make a signal that left horizontal arrive almost vertical, with losses too large for a small station (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) works like PSK Reporter: it shows only the stations that send reports, so there may be activity in the chat even when LiveCQ is empty [4].",
+                "• The audio frequencies announced in the chat help to find the stations that do not transmit at 1270 Hz; when you receive a station, it is good practice to report it in the chat [4].",
+                "[1] Chris Cox N0UK, EME chat – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, June 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
+            };
             d["de"] = new Dictionary<string, string[]>();
             d["de"]["PREF"] = new string[] {
                 "Dieser Teil des Handbuchs beschreibt nicht die Schaltflächen des Programms, sondern die Ideen, auf denen es aufgebaut ist. Vor den Kapiteln möchte der Autor einige Gedanken darlegen, die sich für das Studium des Programms als entscheidend erwiesen haben, auch im Licht seiner jüngsten Erfahrungen an der Station.",
                 "• **Die Rechnung ist ein Anhaltspunkt, kein Versprechen.** Budget, geschätztes S/N und Schwellen der Digitalmodi beschreiben eine ideale Verbindung. Beim Empfang zählen das lokale und menschengemachte Rauschen, das sich von Minute zu Minute ändern kann, und die Faraday-Drehung: wenige Augenblicke genügen, um die berechnete Reserve zu verlieren (§ 1.3, 1.12).",
                 "• **Den Tag wählt man vor dem Einschalten.** Dgrd, Mondentfernung und Deklination zeigen, wie viel Himmelsrauschen hinter dem Mond liegt, wie viele Stunden er über dem Horizont bleibt und wie hoch er steigt: dieselbe Anlage leistet von Tag zu Tag sehr Unterschiedliches (§ 1.4).",
                 "• **Die Polarisation kann ein Signal verschwinden lassen.** Bei linearen Antennen können Faraday-Drehung und räumliche Polarisation ein Echo für Minuten oder Stunden auslöschen; oft genügt es zu warten, zu wiederholen oder die Polarisation zu drehen, statt einen Fehler zu suchen (§ 1.3).",
-                "• **Die beste Lösung ist die Doppelpolarisation.** Bei den Antennen ist die beste Wahl immer ein System mit Doppelpolarisation, mit zwei Empfangszuleitungen und Doppelempfang, während beim Senden mit einer einzigen Polarisation gearbeitet wird: so löschen Faraday-Drehung und räumliche Polarisation das Echo nicht mehr aus (§ 1.3).",
+                "• **Die beste Lösung ist die Doppelpolarisation.** Bei den Antennen ist die beste Wahl immer ein System mit Doppelpolarisation, mit zwei Empfangszuleitungen und Doppelempfang, während beim Senden mit einer einzigen Polarisation gearbeitet wird: so löschen Faraday-Drehung und räumliche Polarisation das Echo nicht mehr aus (§ 1.3). Das Relais, das die Polarisation wählt, wird nur beim Empfang umgeschaltet, nie während des Sendens (§ 1.7).",
                 "• **Das EME-Budget als Prüfstand.** Indem man im Reiter EME-Budget verschiedene Änderungen eingibt, kann man abzuschätzen versuchen, wie weit die Möglichkeiten, die eigene Anlage beizubehalten oder sie zu ändern, für den EME-Betrieb tragfähig sind (§ 1.6).",
                 "• **Die Elevation zählt.** Fehlende Elevation stiehlt Minuten vom möglichen Funkverkehr. Vor allem werden, sobald das Antennensystem angehoben wird, niedrige Nebenkeulen entscheidend, um kein Erdrauschen aufzunehmen und der Antenne die maximale Signalaufnahme zu ermöglichen, die nur eine Ausrichtung in den Himmel bieten kann.",
+                "• **Antennen: von den Tabellen ausgehen.** Für Auswahl und Vergleich von Yagis sind die Tabellen von Lionel Edwards VE7BQH (Gewinn, G/T und Antennentemperatur) die Referenz; sie werden auf der Website DXMaps von Gabriel Sampol EA6VQ veröffentlicht (https://dxmaps.com/ve7bqh_e.html). Zu den maßgeblichsten Beiträgen zum Entwurf rauscharmer Yagis gehören die von Hartmut DG7YBN, Popa YU7EF und Justin Johnson G0KSC. Das EME-Budget von YAEC verwendet die Tabellen von VE7BQH (§ 1.6).",
+                "• **Die eigene Anlage kennen.** Wie Relu NJ9R schreibt, liegt das eigentliche Geheimnis darin, die Grenzen des eigenen Systems, Gewinne und Verluste, zu kennen und anhand dieser Daten zu entscheiden, ob sie sich überwinden lassen. Auf 144 MHz ist das Echo des GRAVES-Radars der erste Prüfstand (§ 1.11, 1.13).",
                 "• **Jedes Dezibel vor dem Vorverstärker zählt.** Kabel, Relais und Stecker vor dem Vorverstärker verschlechtern die Systemtemperatur stärker, als ihr dB-Wert vermuten lässt: dort lohnt sich jede Investition (§ 1.7, 1.8).",
                 "• **Zuerst die richtigen Frequenzen.** Doppler und CFOM verschieben das Echo auf den höheren Bändern um bis zu einige kHz: ein Echo außerhalb des Dekodierfensters wird nicht gehört, auch bei gutem Signal (§ 1.10).",
                 "• **Die Sonne ist ein berechenbarer Gegner.** Steht sie nahe beim Mond, steigt das Rauschen: das Programm warnt rechtzeitig, und das sollte man bei der Wahl der Tage berücksichtigen (§ 1.5, 1.9).",
@@ -43688,7 +43818,7 @@ namespace LunaCalc
                 "|+ **10** | eigene Station, mit dem besten Ergebnis: Er bestimmt das Gebäude oder den Antennenmast",
                 "| 12 – 14 | werden akzeptiert, bringen aber nichts: Die Genauigkeit übersteigt die eines gewöhnlichen GPS (wenige Meter) und die Größe der Antenne selbst",
                 "### Locator und Hindernisse",
-                "Für die Richtung des Mondes genügen 6 Zeichen: Der Mond ist etwa 380 000 km entfernt, und die ±4,4 km eines 6-stelligen Locators ändern Azimut und Elevation um etwa 0,04°, verglichen mit dem Öffnungswinkel der Antenne vernachlässigbar. Bei **lokalen Hindernissen** (Gebäude, Bäume, Hügel) ist es umgekehrt: Sie sind einige zehn oder hundert Meter von der Antenne entfernt, und mit 6 Zeichen kann die Station irgendwo in einem Rechteck von 7,5 × 4,6 km liegen, sodass sich die Hindernisse nicht einordnen lassen. Mit 8 Zeichen sinkt der Fehler auf etwa 450 m, mit 10 auf etwa 20 m: Das ist die Genauigkeit, die der Reiter **Reconnaissance of my obstacles** braucht, um die Bereiche, in denen die Antenne verdeckt ist, richtig zu zeichnen.",
+                "Für die Richtung des Mondes genügen 6 Zeichen: Der Mond ist etwa 380 000 km entfernt, und die ±4,4 km eines 6-stelligen Locators ändern Azimut und Elevation um etwa 0,04°, verglichen mit dem Öffnungswinkel der Antenne vernachlässigbar. Bei **lokalen Hindernissen** (Gebäude, Bäume, Hügel) ist es umgekehrt: Sie sind einige zehn oder hundert Meter von der Antenne entfernt, und mit 6 Zeichen kann die Station irgendwo in einem Rechteck von 7,5 × 4,6 km liegen, sodass sich die Hindernisse nicht einordnen lassen. Mit 8 Zeichen sinkt der Fehler auf etwa 450 m, mit 10 auf etwa 20 m: Das ist die Genauigkeit, die der Reiter **Erkundung meiner Hindernisse** braucht, um die Bereiche, in denen die Antenne verdeckt ist, richtig zu zeichnen.",
                 ">+ Praktischer Tipp: Ermitteln Sie den 10-stelligen Locator aus den GPS-Koordinaten des Punktes, an dem die Antenne steht (nicht des Hauseingangs), und tragen Sie ihn im Reiter Position live und +- 24h als **my locator** ein. Für die DX-Station genügt der 6-stellige Locator, den sie Ihnen nennt.",
                 "[1] Wikipedia, “Maidenhead Locator System” (Ursprung G4ANB und IARU-VHF-Treffen in Maidenhead 1980, Aufbau der Paare, WGS-84 seit 1999, Erweiterungen über 8 Zeichen hinaus, Klarstellung der IARU 2019, Verwendung auf KW und VHF/UHF, Entfernungen zwischen Kleinfeldmittelpunkten) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -43732,12 +43862,16 @@ namespace LunaCalc
                 "• die Refraktion zählt: Der Mond ging bei −0,51° auf, unter dem optischen Horizont von −0,35°; bei 200 MHz beträgt der Refraktionsfehler in trockener Luft bei 0° Elevation −0,49°.",
                 "IK3XTV weist darauf hin, dass der Bodeneffekt theoretisch 6 dB erreicht, sodass eine einzelne Yagi fast wie eine Gruppe aus 4 arbeitet; er hängt aber stark vom Gelände um die Antenne ab: In der Stadt ist er geringer, auf freiem Land besser und in Meeresnähe noch größer. Man nutzt ihn bei Mondaufgang und Monduntergang, zwischen etwa 1° und 18 – 20° Elevation [4].",
                 "> Deshalb ist der Bodengewinn im EME-Budget als BETA gekennzeichnet: Der berechnete Wert (höchstens +6 dB) ist eine theoretische Grenze. Mit Antennen hoch über dem Meer oder Gruppen aus mehreren Yagis sollte man etwa die Hälfte davon und ausgeprägtes QSB bei niedriger Elevation erwarten [3].",
+                "### Der Antennengewinn: Herstellerangaben und dBd (NJ9R)",
+                "Die Gewinne in den Datenblättern der Hersteller stammen fast immer aus Simulationen über idealem Boden und mit idealer Anpassung an 50 Ω. NJ9R rät, vom angegebenen Wert etwa 2 dB abzuziehen und in dBd statt in dBi zu rechnen, um sich keine Illusionen zu machen; dasselbe gilt für die Angaben zu Kabeln, Steckern und Vorverstärkern [6]. Sein Beispiel: Eine gute 5-Element-Yagi (8 dBi, 5,9 dBd) lässt bei 4,25 dB Leitungsverlusten gerade noch 1,5 dB nutzbaren Gewinn übrig; mit seiner ersten 7-Element-Yagi (12,3 dBi, 10 dBd) konnte er kaum etwas empfangen. Als Ausgangspunkt, um mit etwas Reserve zu empfangen, nennt er etwa 14 dBd [6].",
+                ">+ Im EME-Budget lässt sich die Wirkung sofort ausprobieren: Senkt man den Antennengewinn um 2 dB, sieht man, wie viel Reserve der Verbindung bleibt.",
                 "[1] WSJT-X User Guide, K1JT and the WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3. April 2021 (WSJT-X 2.4.0), zur Verfügung gestellt von IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21. EME-Meeting, Präsentation zur Verfügung gestellt von IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, Dokument vom 12. November 2010, zur Verfügung gestellt von IC8TEM.",
                 "[5] J. Taylor K1JT, Vortrag über JT65 auf der EME-Konferenz 2006 (K1JT_eme2006.pdf): Tabelle der minimalen S/N-Werte in 2500 Hz.",
-                "> Das Stationsschema rechts im Reiter leitet die Verluste aus den gewählten Kabeln ab: beim Senden Kabel PA–Relais + Relais + Antennenkabel, beim Empfang Antennenkabel + Relais vor dem Vorverstärker und Speiseleitung danach. Die Kabeldämpfungen stammen aus der Datenbank des Reiters COAXIAL CABLES (§ 1.8)."
+                "> Das Stationsschema rechts im Reiter leitet die Verluste aus den gewählten Kabeln ab: beim Senden Kabel PA–Relais + Relais + Antennenkabel, beim Empfang Antennenkabel + Relais vor dem Vorverstärker und Speiseleitung danach. Die Kabeldämpfungen stammen aus der Datenbank des Reiters KOAXIALKABEL (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
             };
             d["de"]["S47"] = new string[] {
                 "## Der Vorverstärker und die Rauschzahl des Funkgeräts {nuovo}",
@@ -43812,7 +43946,7 @@ namespace LunaCalc
                 "##+ EME-Stationen mit FT-1000MP und Transverter",
                 "Zwei dokumentierte Beispiele für den Einsatz des FT-1000MP für EME auf 144 MHz mit Transverter: die Messungen von DF9IC [3] an FT-1000MP + Javornik-Transverter (NF 0,9 – 1,4 dB mit ausgeschaltetem Vorverstärker des Funkgeräts) und die EME-Station von **W3SZ** [12] (4 × M2 2MXP32, Vorverstärker von LNA Technology an der Antenne für jede Polarisation, LMR-600 und Andrew-Hardline), die beim Senden einen **FT-1000MP Mark V** mit einem Transverter **SSB-Electronic LT2S Mk II** (ZF 28 MHz) und eine Endstufe mit 2 × GU-74B verwendet, beim Empfang dagegen die WSE-Hardware und die Software Linrad von SM5BSZ.",
                 "> Im EME-Budget ist der Transverter ein Kästchen des Stationsschemas: Er wird mit seinem Kontrollkästchen aktiviert, man wählt das Modell aus der Liste (oder „custom“), und das Programm übernimmt Rauschzahl und Verstärkung; ausgeschaltet geht er nicht in die Berechnung ein. Das Diagramm oben hilft bei der Entscheidung, ob der Vorverstärker des Funkgeräts eingeschaltet werden soll.",
-                ">! ✉ **Kennen Sie einen weiteren Transverter oder haben Sie selbst einen gebaut?** Wenn Sie weitere Transverter oder Ihren eigenen Transverter bekannt machen möchten, schreiben Sie eine E-Mail an den Autor: ccerrotta@gmail.com oder ic8tem@gmail.com. Alle Kontaktdaten stehen im Reiter **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **Kennen Sie einen weiteren Transverter oder haben Sie selbst einen gebaut?** Wenn Sie weitere Transverter oder Ihren eigenen Transverter bekannt machen möchten, schreiben Sie eine E-Mail an den Autor: ccerrotta@gmail.com oder ic8tem@gmail.com. Alle Kontaktdaten stehen im Reiter **KONTAKT ZUM AUTOR UND DANK**.",
                 "##+ Der TX/RX-Sequenzer",
                 "Mit einer Endstufe (PA) und einem Vorverstärker an der Antenne (PRE) geht die PTT des Computers nicht zum Funkgerät, sondern zu einem **Sequenzer**, der die Relais und danach die PA und das Funkgerät in der richtigen Reihenfolge schaltet [16]. Der übliche Aufbau hat zwei Speiseleitungen: Die Empfangsleitung darf einige dB verlieren, weil sie hinter einem Vorverstärker mit 15 – 20 dB liegt, während die Sendeleitung so wenig wie möglich verlieren darf (3 dB beim Senden halbieren die abgestrahlte Leistung). In Ruhestellung halten die Relais den PRE von der Antenne getrennt: ein zusätzlicher Schutz gegen Blitzentladungen [16].",
                 "|h| ^Schritt | Von RX auf TX | Von TX auf RX",
@@ -43822,6 +43956,7 @@ namespace LunaCalc
                 "~ Zwischen zwei Schritten braucht man mindestens die Umschaltzeit der Relais (15 – 30 ms) plus ihr Prellen: IK1UWL empfiehlt 100 – 200 ms, auch für die PA, wenn sie interne Relais hat [16].",
                 "Zum Tasten des Senders ist PTT besser als VOX: VOX kann durch ein Geräusch ausgelöst werden und nutzt nicht die Verzögerung von etwa 0,5 s, mit der JT65 nach der PTT zu modulieren beginnt, sodass der Vorverstärker nur durch das schnelle Relais der Endstufe geschützt ist; mit PTT schaltet diese Verzögerung die Endstufe vor der Modulation um, und man kann den Sequenzer hinzufügen [17].",
                 ">! **Vorsicht mit dem Vorverstärker.** Das T/R-Relais muss den offenen Anschluss sehr gut isolieren: Bei 50 dB Isolation und 500 W an der Antenne gelangen 5 mW an den Eingang des PRE. Anzustreben sind mindestens 60 dB; Vorsichtige fügen ein zweites Relais hinzu, das den PRE beim Senden auf eine 50-Ω-Last schaltet. Die PTT-Taste des Mikrofons wird deaktiviert: Ab dann wird nur noch über den Sequenzer gesendet (für SSB ein Fußschalter an der PTT des Sequenzers, entkoppelt von der des PCs) [16].",
+                ">! **Das Polarisationsrelais wird nur beim Empfang umgeschaltet.** Bei zwei Polarisationen (H und V) darf das Relais, das die Antenne wählt, nie während des Sendens umgeschaltet werden: Unter Leistung verbrennen Relais, Vorverstärker oder Endstufe, mit Schäden von Hunderten bis Tausenden Euro [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, Ausgabe 5, 19. März 2021 (Erstausgabe 19. Juni 2019), Tabellen 1 und 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25. Juli 2015, Tabelle 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC mit DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, Tests ab 27. Februar 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -43838,16 +43973,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, Mai 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, S. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Januar 2012, § 4 “Sequenziamento relè, PA e PRE”, bereitgestellt von IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, Präsentation, Juli 2015, bereitgestellt von IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, Präsentation, Juli 2015, bereitgestellt von IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, bereitgestellt von IC8TEM."
             };
             d["de"]["S48"] = new string[] {
                 "## Koaxialkabel und Verluste",
-                "Der Reiter **COAXIAL CABLES** sammelt die Dämpfung der bei Funkamateuren gebräuchlichsten 50-Ω-Kabel in dB pro 100 m bei 20 °C auf den fünf YAEC-Bändern. Die Datenblätter der Hersteller geben Werte bei anderen Frequenzen an; YAEC hat sie mit dem Potenzgesetz auf die Bänder umgerechnet, einer Geraden im doppelt logarithmischen Diagramm zwischen den beiden nächstgelegenen Frequenzen des Datenblatts:",
+                "Der Reiter **KOAXIALKABEL** sammelt die Dämpfung der bei Funkamateuren gebräuchlichsten 50-Ω-Kabel in dB pro 100 m bei 20 °C auf den fünf YAEC-Bändern. Die Datenblätter der Hersteller geben Werte bei anderen Frequenzen an; YAEC hat sie mit dem Potenzgesetz auf die Bänder umgerechnet, einer Geraden im doppelt logarithmischen Diagramm zwischen den beiden nächstgelegenen Frequenzen des Datenblatts:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α in dB/100 m, ℓ Kabellänge in Metern. Eine einfache Zahl ist der Datenblattwert; ≈ kennzeichnet einen interpolierten Wert und e einen über die letzte Frequenz des Datenblatts hinaus extrapolierten.",
                 "Kabel desselben Typs mit gleichem Durchmesser innerhalb ±0,2 mm und einer Dämpfung innerhalb 0,2 dB/100 m auf allen Bändern sind in einer Zeile (≡) mit dem Mittelwert zusammengefasst; gleichwertige Bezeichnungen werden mit „also:“ angezeigt (zum Beispiel LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Die chinesischen Bezeichnungen 50-3, 50-5, 50-7, 50-9, 50-12 geben den Durchmesser des Dielektrikums in Millimetern an.",
                 "> Eigene Kabel können mit ihren fünf Dämpfungswerten hinzugefügt werden: Sie werden in data\\cavi_personali.txt gespeichert und erscheinen auch in den Auswahllisten des Stationsschemas im EME-Budget. Der Tooltip jeder Tabellenzeile nennt die Quelle des betreffenden Kabels.",
-                "[1] Die Quellen der einzelnen Kabel: Datenblätter von Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, über WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, Katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica aus Senago (RG-115), die Tabellen von DD1US und EA5IP (H100) und die Tabelle von SV1BSX für RG-58, RG-213, H-155 und H-2000 (Werte zu überprüfen)."
+                "### Die Stecker (NJ9R)",
+                "Auch die Stecker gehören zur Leitung. Die Faustregel von NJ9R lautet etwa 1 dB je 8 – 10 Stecker, alle gezählt von der Rückseite des Funkgeräts bis zur Antenne, einschließlich Adapter, Relais und Leistungsteiler: In seiner Anlage mit vier Antennen machen die 24 Stecker mehr als 2 dB aus, so viel wie 40 – 45 m neues LMR-400 auf 144 MHz [2]. Im EME-Budget ist dieser Verlust zu den TX-Zubehörverlusten und zu den Verlusten zwischen Antenne und Vorverstärker hinzuzurechnen.",
+                "[1] Die Quellen der einzelnen Kabel: Datenblätter von Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, über WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, Katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica aus Senago (RG-115), die Tabellen von DD1US und EA5IP (H100) und die Tabelle von SV1BSX für RG-58, RG-213, H-155 und H-2000 (Werte zu überprüfen).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
             };
             d["de"]["S410"] = new string[] {
                 "## Doppler, Kompensation und CFOM",
@@ -43909,10 +44048,19 @@ namespace LunaCalc
                 "> Die Anzahl der Bits sagt nur, wie fein die Position *gelesen* wird: Die tatsächliche Genauigkeit hängt auch vom mechanischen Spiel, der Durchbiegung der Halterung, dem Wind und der Kalibrierung von Nord und Horizont ab.",
                 "### Yagi-Gruppen: Stellantriebe und Umlenkrollen",
                 "Bei Yagi-Gruppen (Kombinationen aus 2, 4 oder mehr Antennen) ist die Elevationslast groß und unausgeglichen. Auf dem Markt gibt es Linearantriebe mit Schneckengetriebemotor: Bei diesen Lösungen regelt die Spindel nur die Bewegung, während die mechanische Aufnahme der Last Umlenkrollen übertragen wird. Das Schneckengetriebe hat den Vorteil, dass es sich unter Last nicht zurückdreht, sodass die Gruppe auch bei ausgeschaltetem Motor stehen bleibt.",
+                "### Die Ausrichtung mit dem GRAVES-Radar prüfen (NJ9R)",
+                "Das französische Radar **GRAVES** sendet ununterbrochen auf 143,050 MHz vom Locator JN27SI aus und ist auf 144 MHz der meistgenutzte Prüfstand für den Empfang über den Mond. Wenn der Mond sowohl von der eigenen Station als auch von GRAVES aus sichtbar ist (in YAEC genügt es, JN27SI als Locator der DX-Station einzugeben), hört man auf 143,050 MHz (oder 143,0495 MHz) in SSB mit mindestens 2,4 kHz Audiobandbreite, ausgeschalteter AGC, eingeschaltetem Noise Blanker und ohne weitere Filter, Notch oder DSP [2].",
+                "Im Wasserfall erscheint das GRAVES-Echo als gestrichelte Linie: Je kräftiger sie ist, desto besser ist die Antenne ausgerichtet. Man bewegt den Rotor in kleinen Schritten, zuerst im Azimut und dann in der Elevation, bis zum Maximum und vergleicht die gefundene Position mit der berechneten. NJ9R nutzt GRAVES auch als S-Meter: Mit auf null gestelltem Verstärkungsregler liest er den Mittelwert des Signals über eine Minute ab, und vor jeder Sitzung prüft er mit GRAVES, ob die Anlage noch richtig eingestellt ist [2].",
+                "> Ohne Elevation empfängt man das GRAVES-Echo meist nur, wenn der Mond zwischen 0° und 15° Elevation steht, also bei Mondaufgang oder Monduntergang. Viele Funkgeräte lassen sich außerhalb des 2-m-Bandes nicht abstimmen: Dann braucht man einen SDR-Empfänger [2].",
+                "### Kompass, Kamera und Fehlerprotokoll (NJ9R)",
+                "Bei einem Rotor für KW genügte eine „fast richtige“ Ausrichtung; bei EME nicht. NJ9R empfiehlt, die Rotoranzeige zu kalibrieren und sie dann im Freien mit dem Kompass zu überprüfen, wobei höchstens etwa 5° Fehler zulässig sind: Wind, Schläge gegen die Endanschläge und ein Verrutschen am Mast verdrehen die Antenne, ohne dass die Anzeige es bemerkt [2].",
+                "• **Kamera am Mast.** Eine kleine wasserdichte Kamera (etwa eine Rückfahrkamera, 25 – 30 USD), am Mast befestigt und mit Wasserwaage oder Neigungsmesser parallel zur Antenne ausgerichtet, zeigt, wohin die Antenne wirklich zeigt: NJ9R hat 60 – 80 QSOs mit defektem Rotor oder mit Fehlern von 20 – 35° abgewickelt, allein von der Kamera geleitet. Die Mondmitte markiert man auf dem Monitor, nachdem man das Maximum des GRAVES-Echos gesucht hat. Die Kamera ist auch eine Rauschquelle: Beim Empfang wird sie ausgeschaltet [2].",
+                "• **Fehlerprotokoll.** Für jede Ausrichtung trägt man in eine Tabelle Azimut und Elevation des Mondes ein, und zwar die berechneten, die an der Anzeige abgelesenen und die mit der Kamera gesehenen Werte: Die Differenz ist der Fehler des eigenen Systems, den man korrigiert oder im Kopf behält [2].",
                 "### Oberhalb 432 MHz: Parabolspiegel",
                 "Ab 902 MHz werden meist Parabolspiegel verwendet, und das Werkzeug [1] ist für Frequenzen ab 1 GHz ausgelegt. Bei großen Durchmessern wird die Keule wenige Zehntel Grad schmal, und es besteht die Gefahr, den Mond nicht genau zu treffen: Mehr als Motoren braucht die Station richtige mechanische Stellantriebe in Azimut und Elevation, wobei die Ausrichtgenauigkeit weitgehend von der Bitauflösung der Steuerung abhängt. Das **EME Link Budget & Analysis Tool** von OE2IGL und DF3GJ [1] nennt ±0,035° für ein gutes Nachführsystem und ±0,1° für ein normales und berechnet den Ausrichtungsverlust zusammen mit allen anderen Termen der Verbindung.",
                 ">+ YAEC endet bei 432 MHz. Für die höheren Bänder empfehlen wir das Werkzeug von OE2IGL und DF3GJ [1]: Es berechnet das EME-Budget von 1 bis 300 GHz mit den Spiegelparametern (Durchmesser, f/D, Erreger, Oberflächenrauheit, Wirkungsgrade), Ausrichtung, Libration, Sonnen- und Mondrauschen und atmosphärischer Dämpfung.",
-                "[1] Gerald Ihninger OE2IGL und Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL und Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
             };
             d["de"]["S412"] = new string[] {
                 "## Digitale Betriebsarten für EME: Q65 und JT65",
@@ -44003,6 +44151,18 @@ namespace LunaCalc
                 "| q3 | mein Rufzeichen und das Rufzeichen der DX-Station",
                 "| q4 | beide Rufzeichen und RRR, RR73, 73 oder leer",
                 "~ Aus [1]. Die Autoren warnen davor, den vom Dekoder angezeigten S/N-Werten zu viel Bedeutung beizumessen, da diese noch verbessert wurden [1]: Für Vergleiche mit dem EME-Budget von YAEC verwendet man besser mehrere QSOs statt einer einzelnen Ablesung.",
+                "### Die Einstellungen von NJ9R für JT65B und MAP65",
+                "NJ9R, der auf 144 MHz mit JT65B begonnen hat, fasst die von ihm verwendeten Einstellungen so zusammen [7]:",
+                "|h| Programm | Wo | Einstellung",
+                "| WSJT-X | Hauptfenster | Enable VHF and sub-mode features, Decode after EME delay, Leerzeile zwischen den Dekodierperioden",
+                "| WSJT-X | Advanced | Random erasure und two pass decoding (6 und 6, je nach CPU); Wasserfall Most sensitive",
+                "| WSJT-X | Modus | JT65, Untermodus B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; sobald die Spur einer Station erscheint, verengt man auf 50, 20 oder 10 Hz (je breiter, desto mehr leidet die Dekodierung)",
+                "| WSJT-X | Audiofrequenzen | TX auf 1270 Hz; RX innerhalb ±350 Hz um 1270 Hz je nach Doppler oder auf der im Chat angekündigten Frequenz",
+                "| MAP65 | Station, I/O devices | eigenes Rufzeichen und Locator; Soundkarte oder, bei IQ-Funkgeräten, Netzwerkschnittstelle, mit 96 000 Hz",
+                "| MAP65 | Modus und Dekodierung | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | Hauptfenster | NB eingeschaltet, Monitor On, Audiopegel in der Seitenleiste zwischen 12 und 40",
+                "~ Aus [7]. Die Bezeichnungen der Optionen bleiben englisch, wie in den Menüs von WSJT-X und MAP65. Für JT65 verwendet das EME-Budget von YAEC die Schwellen des Untermodus B (§ 1.6).",
                 "### Das Verfahren mit DXpeditionen (W7GJ)",
                 "Lance Collister W7GJ, der seit Jahren EME-Expeditionen auf 6 m durchführt, beschreibt, wie man eine DXpedition in Q65-60A während eines Pile-ups anruft [6]. Vor allem müssen die Computeruhr sehr genau und die Sendefrequenz sehr stabil sein [6].",
                 "• **Perioden.** Die DXpedition sendet immer in der ersten Sequenz (gerade Minuten); die Anrufer senden in der zweiten (ungerade Minuten) [6].",
@@ -44024,7 +44184,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Oktober 2023, zur Verfügung gestellt von IC8TEM.",
                 "[4] Nico Palermo IV3NWV, Vortrag auf der Konferenz EME 2016 über QRA-Codes, zitiert in [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Quellcode von WSJT-X (Datei Q65_encoding_modules.F90 und andere), zitiert in [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, überarbeitet am 3. April 2023, zur Verfügung gestellt von IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, überarbeitet am 3. April 2023, zur Verfügung gestellt von IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
             };
             d["de"]["S54"] = new string[] {
                 "## EME-Literatur von SM5BSZ",
@@ -44119,15 +44280,47 @@ namespace LunaCalc
                 "> Im Programm: Der Kalender von Entfernung und Dgrd markiert mit dem Symbol ☀ die Tage, an denen die Sonne nahe am Mond steht (orange oder rot); der Reiter Sonnenrauschen berechnet mit dem gemessenen Fluss, wie viel zusätzliches Rauschen die Sonne im gewählten Augenblick bringt.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["de"]["S413"] = new string[] {
+                "## Vom ersten Empfang zum QSO: die Ratschläge von NJ9R",
+                "Relu Jianu NJ9R hat in „2M EME the easy way“ seine Erfahrungen als Einsteiger auf 144 MHz zusammengefasst: einen praktischen Weg, der mit dem GRAVES-Echo beginnt, empfangen mit einer 7-Element-Yagi ohne Vorverstärker. Seine Botschaft lässt sich vor allem in einem Satz sagen: die Grenzen der eigenen Anlage, Gewinne und Verluste, kennen und anhand dieser Daten entscheiden, ob sie sich überwinden lassen [1]. Die technischen Teile sind in den Abschnitten der einzelnen Themen aufgegriffen: EME-Budget und Antennengewinn (§ 1.6), Polarisationsrelais (§ 1.7), Stecker (§ 1.8), Ausrichtung und GRAVES (§ 1.11), Einstellungen von WSJT-X und MAP65 (§ 1.12), Lesen der Chats (§ 1.14). Hier folgen die Ratschläge zur Station und zum Empfänger.",
+                "### Die Karte des lokalen Rauschens",
+                "Bevor man den Mond sucht, sollte man wissen, aus welchen Richtungen das Rauschen kommt. NJ9R empfiehlt, die Antenne einmal ganz um 360° zu drehen, in Azimutschritten von 15 – 30°, und das mit dem Verstärkungsregler abgelesene Rauschen (auf den niedrigsten Pegel genullt) in eine Tabelle einzutragen. Wer Elevation hat, wiederholt die Runde von 0° bis 45° in Schritten von 5 – 10°. Wie eine Heatmap eingefärbt, erklärt die Tabelle, warum man in bestimmten Richtungen nichts empfängt: Dort überdeckt das lokale Rauschen das Echo [1].",
+                "> In YAEC zeigt die Erkundung meiner Hindernisse die durch Hindernisse verdeckten Richtungen: Der Vergleich mit der Rauschkarte hilft, die besten Mondfenster zu wählen.",
+                "Häuser und Elektronik in der Nachbarschaft sind eine ständige Störquelle: Man spürt sie auf und verringert sie, beginnend im eigenen Haus, doch irgendwann muss man mit dem leben, was übrig bleibt [1].",
+                "### Empfänger und Computer",
+                "• **Sauberer Empfänger.** AGC aus, Noise Blanker ein, beim Empfang keine Filter, Notch oder DSP; am Computer den Audioeingang in höchster Qualität und keinerlei Klangverbesserung oder Verstärkung durch das System-Audio [1].",
+                "• **Synchronisierte Uhr.** Die Digitalmodi verlangen die genaue Uhrzeit: NJ9R lässt die Uhr des Computers alle 15 Minuten automatisch von einem Synchronisationsprogramm (NetTime) korrigieren [1].",
+                "• **Aktuelle CALL3.TXT.** Die Datei bringt bei der Dekodierung viele dB, weil WSJT-X und MSHV sie zum Erkennen der Rufzeichen verwenden; falsche Dekodierungen auszusortieren bleibt Aufgabe des Operators [1]. YAEC lädt die Listen von W7GJ und von WSJT-X Improved herunter, führt sie zusammen und kann die Datei in den Ordner von WSJT-X kopieren.",
+                "• **Geduld.** Hört man nichts, können mehrere Ursachen zusammenkommen: hohe Dgrd, ungünstige Polarisation, Faraday-Drehung, lokales Rauschen in dieser Richtung. Man versucht es besser nach einigen Minuten, einigen Stunden oder an einem anderen Tag erneut und wählt die Tage mit der niedrigsten Dgrd des Monats (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
+            };
+            d["de"]["S414"] = new string[] {
+                "## Textchats im Internet",
+                "Bei EME laufen Verabredungen (Skeds), CQ-Ankündigungen und Rapporte fast immer über Textchats im Internet. Die meistgenutzten sind diese:",
+                "• **EME-Chat von N0UK.** Der traditionsreiche 2-m-EME-Chat von Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); vom selben Autor stammt Ping Jockey Central, der Meteor-Scatter-Chat (https://www.pingjockey.net) [1].",
+                "• **EMEchat von EA8DBM.** Eine Weboberfläche, die die EME-Chats zusammenführt (https://www.emechat.com): DXpeditionen nutzen sie für 2 m mit dem Chat von N0UK und für 70 cm und darüber mit dem von HB9Q [2].",
+                "• **HB9Q logger.** Chat und Sked-Verzeichnis für EME ab 70 cm aufwärts (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, Bereich microwave.** Der Chat von ON4KST ist nach Bändern in Bereiche unterteilt (https://www.on4kst.com/chat): Im Bereich microwave treffen sich die Operatoren der höheren Bänder, darunter auch diejenigen, die EME betreiben [3].",
+                "### Wie man die Ankündigungen liest (NJ9R)",
+                "Wer im Chat CQ ruft, gibt meist Leistung und Antennen an. „H“ oder gar keine Angabe lässt auf eine rein horizontale Station schließen (nicht immer); „HV“ oder „XPOL“ steht für zwei Polarisationen und ist die beste Station, nach der man suchen kann. Zwischen Stationen auf demselben Kontinent funktioniert horizontal mit horizontal gut; von Kontinent zu Kontinent kann die räumliche Polarisation ein horizontal ausgesandtes Signal fast vertikal ankommen lassen, mit Verlusten, die für eine kleine Station zu groß sind (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) funktioniert wie PSK Reporter: Es zeigt nur Stationen, die Rapporte senden; daher kann im Chat Betrieb herrschen, auch wenn LiveCQ leer ist [4].",
+                "• Die im Chat angekündigten Audiofrequenzen helfen, Stationen zu finden, die nicht auf 1270 Hz senden; empfängt man eine Station, ist es eine gute Gewohnheit, das im Chat mitzuteilen [4].",
+                "[1] Chris Cox N0UK, EME-Chat – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, Juni 2026, DXpedition C37EME: „2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface“ – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
+            };
             d["fr"] = new Dictionary<string, string[]>();
             d["fr"]["PREF"] = new string[] {
                 "Cette partie du manuel ne décrit pas les boutons du programme, mais les idées sur lesquelles il est construit. Avant les chapitres, l'auteur souhaite exposer quelques notions qui se sont révélées essentielles pour étudier le programme, à la lumière aussi de ses expériences les plus récentes à la station.",
                 "• **Le calcul est une référence, pas une promesse.** Budget, S/N estimé et seuils des modes numériques décrivent une liaison idéale. Pendant la réception comptent le bruit local et artificiel, qui peut changer d'une minute à l'autre, et la rotation de Faraday : quelques instants suffisent à effacer la marge calculée (§ 1.3, 1.12).",
                 "• **La journée se choisit avant d'allumer.** Dgrd, distance de la Lune et déclinaison indiquent combien de bruit du ciel se trouve derrière la Lune, combien d'heures elle reste au-dessus de l'horizon et à quelle hauteur elle monte : le même matériel donne des résultats très différents d'un jour à l'autre (§ 1.4).",
                 "• **La polarisation peut faire disparaître un signal.** Avec des antennes linéaires, la rotation de Faraday et la polarisation spatiale peuvent éteindre un écho pendant des minutes ou des heures ; souvent il suffit d'attendre, de répéter ou de tourner la polarisation au lieu de chercher une panne (§ 1.3).",
-                "• **La meilleure solution est la double polarisation.** Pour les antennes, le meilleur choix est toujours un système à double polarisation, avec double descente en réception et double réception, tandis qu'en émission on travaille avec une seule polarisation : ainsi la rotation de Faraday et la polarisation spatiale n'éteignent plus l'écho (§ 1.3).",
+                "• **La meilleure solution est la double polarisation.** Pour les antennes, le meilleur choix est toujours un système à double polarisation, avec double descente en réception et double réception, tandis qu'en émission on travaille avec une seule polarisation : ainsi la rotation de Faraday et la polarisation spatiale n'éteignent plus l'écho (§ 1.3). Le relais qui choisit la polarisation ne se commute qu'en réception, jamais pendant l'émission (§ 1.7).",
                 "• **Le Bilan EME comme banc d'essai.** En saisissant différentes modifications dans l'onglet Bilan EME, on peut essayer de comprendre dans quelle mesure les hypothèses de conserver son installation, ou de la modifier, sont viables pour pratiquer l'EME (§ 1.6).",
                 "• **L'élévation compte.** L'absence d'élévation vole des minutes au trafic possible. Surtout, dès que l'on élève le système d'antennes, les lobes secondaires bas deviennent essentiels pour ne pas capter le bruit terrestre et permettre à l'antenne d'atteindre la captation maximale du signal, que seul un pointage vers le ciel peut offrir.",
+                "• **Les antennes : partir des tableaux.** Pour choisir et comparer des yagis, la référence est constituée par les tableaux de Lionel Edwards VE7BQH (gain, G/T et température d'antenne), publiés sur le site DXMaps de Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Parmi les contributions les plus autorisées à la conception de yagis à faible bruit figurent celles de Hartmut DG7YBN, de Popa YU7EF et de Justin Johnson G0KSC. Le Bilan EME de YAEC utilise les tableaux de VE7BQH (§ 1.6).",
+                "• **Connaître sa propre installation.** Comme l'écrit Relu NJ9R, le vrai secret est de connaître les limites de son système, gains et pertes, et de décider à partir de ces données si on peut les dépasser. Sur 144 MHz, le premier banc d'essai est l'écho du radar GRAVES (§ 1.11, 1.13).",
                 "• **Chaque décibel avant le préamplificateur compte.** Câbles, relais et connecteurs avant le préamplificateur dégradent la température du système plus que ne le laisse penser leur valeur en dB : c'est là qu'il vaut la peine d'investir (§ 1.7, 1.8).",
                 "• **D'abord les bonnes fréquences.** Le Doppler et le CFOM déplacent l'écho jusqu'à plusieurs kHz sur les bandes hautes : un écho hors de la fenêtre de décodage n'est pas entendu, même avec un bon signal (§ 1.10).",
                 "• **Le Soleil est un adversaire prévisible.** Quand il est proche de la Lune, le bruit augmente : le programme le signale à l'avance, et il faut en tenir compte dans le choix des jours (§ 1.5, 1.9).",
@@ -44156,11 +44349,11 @@ namespace LunaCalc
                 "|h| Caractères | Usage conseillé dans YAEC",
                 "| 4 | seulement pour une estimation grossière : l'azimut et l'élévation de la Lune peuvent être faux jusqu'à environ 1°, car l'horizon local s'incline d'environ 1° tous les 111 km",
                 "| 6 | le locator du DX, les QSO et le bilan EME : l'erreur sur la direction de la Lune est de quelques centièmes de degré",
-                "| **8** | votre station, pour Reconnaissance of my obstacles : il identifie le quartier ou la colline",
+                "| **8** | votre station, pour Reconnaissance de mes obstacles : il identifie le quartier ou la colline",
                 "|+ **10** | votre station, avec le meilleur résultat : il identifie le bâtiment ou le pylône de l'antenne",
                 "| 12 – 14 | acceptés, mais ils n'apportent rien : la précision dépasse celle d'un GPS courant (quelques mètres) et la taille de l'antenne elle-même",
                 "### Locator et obstacles",
-                "Pour la direction de la Lune 6 caractères suffisent : la Lune est à environ 380 000 km, et les ±4,4 km d'un locator à 6 caractères modifient l'azimut et l'élévation d'environ 0,04°, une quantité négligeable par rapport au lobe de l'antenne. Pour les **obstacles locaux** (bâtiments, arbres, collines) c'est l'inverse : ils se trouvent à quelques dizaines ou centaines de mètres de l'antenne, et avec 6 caractères la station peut être n'importe où dans un rectangle de 7,5 × 4,6 km, si bien que les obstacles ne peuvent pas être placés. Avec 8 caractères l'erreur tombe à environ 450 m, avec 10 à environ 20 m : c'est la précision dont l'onglet **Reconnaissance of my obstacles** a besoin pour tracer correctement les zones où l'antenne est masquée.",
+                "Pour la direction de la Lune 6 caractères suffisent : la Lune est à environ 380 000 km, et les ±4,4 km d'un locator à 6 caractères modifient l'azimut et l'élévation d'environ 0,04°, une quantité négligeable par rapport au lobe de l'antenne. Pour les **obstacles locaux** (bâtiments, arbres, collines) c'est l'inverse : ils se trouvent à quelques dizaines ou centaines de mètres de l'antenne, et avec 6 caractères la station peut être n'importe où dans un rectangle de 7,5 × 4,6 km, si bien que les obstacles ne peuvent pas être placés. Avec 8 caractères l'erreur tombe à environ 450 m, avec 10 à environ 20 m : c'est la précision dont l'onglet **Reconnaissance de mes obstacles** a besoin pour tracer correctement les zones où l'antenne est masquée.",
                 ">+ Conseil pratique : tirez le locator à 10 caractères des coordonnées GPS du point où se trouve l'antenne (et non de l'entrée de la maison) et saisissez-le dans l'onglet Position en direct et +- 24h comme **my locator**. Pour le DX, le locator à 6 caractères qu'il vous donne suffit.",
                 "[1] Wikipedia, “Maidenhead Locator System” (origine G4ANB et réunion VHF de l'IARU à Maidenhead en 1980, structure des paires, WGS-84 depuis 1999, extensions au-delà de 8 caractères, précision de l'IARU de 2019, usage en HF et en VHF/UHF, distances entre centres des sous-carrés) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -44204,12 +44397,16 @@ namespace LunaCalc
                 "• la réfraction compte : la Lune s'est levée à −0,51°, sous l'horizon optique de −0,35° ; à 200 MHz, en air sec, l'erreur de réfraction à 0° d'élévation est de −0,49°.",
                 "IK3XTV rappelle qu'en théorie l'effet de sol atteint 6 dB, si bien qu'une seule yagi rend presque autant qu'un groupement de 4, mais il dépend beaucoup du terrain autour de l'antenne : il est plus faible en ville, meilleur en rase campagne et plus encore près de la mer. On en profite au lever et au coucher de la Lune, entre environ 1° et 18 – 20° d'élévation [4].",
                 "> C'est pourquoi, dans le bilan EME, le gain de sol est marqué BETA : la valeur calculée (au maximum +6 dB) est une limite théorique. Avec des antennes hautes au-dessus de la mer ou des groupements de plusieurs yagis, il faut s'attendre à environ la moitié et à un QSB marqué à basse élévation [3].",
+                "### Le gain de l'antenne : données annoncées et dBd (NJ9R)",
+                "Les gains des fiches techniques des constructeurs proviennent presque toujours de simulations sur sol parfait et avec une adaptation idéale à 50 Ω. NJ9R suggère de retrancher environ 2 dB de la valeur annoncée et de raisonner en dBd et non en dBi, pour ne pas se faire d'illusions ; il en va de même pour les données des câbles, des connecteurs et des préamplificateurs [6]. Son exemple : une bonne yagi 5 éléments (8 dBi, 5,9 dBd) avec 4,25 dB de pertes en ligne ne laisse que 1,5 dB de gain utile ; avec sa première yagi 7 éléments (12,3 dBi, 10 dBd), il recevait à peine. Comme point de départ pour recevoir avec un peu de marge, il indique environ 14 dBd [6].",
+                ">+ Dans le Bilan EME, on peut essayer l'effet tout de suite : en abaissant de 2 dB le gain de l'antenne, on voit quelle marge il reste à la liaison.",
                 "[1] WSJT-X User Guide, K1JT et le WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 avril 2021 (WSJT-X 2.4.0), fourni par IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21e Meeting EME, présentation fournie par IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, document du 12 novembre 2010, fourni par IC8TEM.",
                 "[5] J. Taylor K1JT, exposé sur le JT65 à la conférence EME 2006 (K1JT_eme2006.pdf) : tableau des niveaux minimaux de S/N en 2500 Hz.",
-                "> Le schéma de la station, à droite de l'onglet, déduit les pertes des câbles choisis : en émission câble PA–relais + relais + câble d'antenne, en réception câble d'antenne + relais avant le préampli et câble de descente après celui-ci. Les affaiblissements des câbles proviennent de la base de données de l'onglet COAXIAL CABLES (§ 1.8)."
+                "> Le schéma de la station, à droite de l'onglet, déduit les pertes des câbles choisis : en émission câble PA–relais + relais + câble d'antenne, en réception câble d'antenne + relais avant le préampli et câble de descente après celui-ci. Les affaiblissements des câbles proviennent de la base de données de l'onglet CÂBLES COAXIAUX (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
             };
             d["fr"]["S47"] = new string[] {
                 "## Le préampli et le facteur de bruit du poste {nuovo}",
@@ -44284,7 +44481,7 @@ namespace LunaCalc
                 "##+ Stations EME avec FT-1000MP et transverter",
                 "Deux exemples documentés de FT-1000MP utilisé en EME sur 144 MHz avec un transverter : les mesures de DF9IC [3] sur FT-1000MP + transverter Javornik (NF 0,9 – 1,4 dB avec le préampli du poste hors service) et la station EME de **W3SZ** [12] (4 × M2 2MXP32, préamplis LNA Technology à l'antenne pour chaque polarisation, LMR-600 et hardline Andrew), qui en émission utilise un **FT-1000MP Mark V** avec un transverter **SSB-Electronic LT2S Mk II** (FI 28 MHz) et un amplificateur 2 × GU-74B, tandis qu'en réception elle utilise le matériel WSE et le logiciel Linrad de SM5BSZ.",
                 "> Dans le bilan EME le transverter est un bloc du schéma de la station : on l'active avec sa case à cocher, on choisit le modèle dans la liste (ou « custom ») et le programme reprend son facteur de bruit et son gain ; désactivé, il n'entre pas dans le calcul. L'abaque ci-dessus aide à décider s'il faut mettre en service le préampli du poste.",
-                ">! ✉ **Vous connaissez un autre transverter ou vous en avez construit un ?** Si vous souhaitez faire connaître d'autres transverters ou votre propre transverter, écrivez un e-mail à l'auteur : ccerrotta@gmail.com ou ic8tem@gmail.com. Toutes les coordonnées se trouvent dans l'onglet **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **Vous connaissez un autre transverter ou vous en avez construit un ?** Si vous souhaitez faire connaître d'autres transverters ou votre propre transverter, écrivez un e-mail à l'auteur : ccerrotta@gmail.com ou ic8tem@gmail.com. Toutes les coordonnées se trouvent dans l'onglet **CONTACTS DE L'AUTEUR ET REMERCIEMENTS**.",
                 "##+ Le séquenceur TX/RX",
                 "Avec un amplificateur de puissance (PA) et un préampli près de l'antenne (PRE), le PTT de l'ordinateur ne va pas au poste mais à un **séquenceur**, qui commande les relais puis le PA et le poste dans le bon ordre [16]. Le schéma le plus courant comporte deux descentes : celle de réception peut perdre quelques dB, car elle se trouve après un préampli de 15 – 20 dB, tandis que celle d'émission doit perdre le moins possible (3 dB en émission divisent par deux la puissance rayonnée). Au repos, les relais tiennent le PRE isolé de l'antenne : une protection de plus contre les décharges orageuses [16].",
                 "|h| ^Étape | De RX à TX | De TX à RX",
@@ -44294,6 +44491,7 @@ namespace LunaCalc
                 "~ Entre deux étapes il faut au moins le temps de commutation des relais (15 – 30 ms) plus leurs rebonds : IK1UWL conseille 100 – 200 ms, y compris pour le PA s'il a des relais internes [16].",
                 "Pour la commande d'émission, le PTT vaut mieux que le VOX : le VOX peut se déclencher sur un bruit et ne profite pas du retard d'environ 0,5 s avec lequel JT65 commence à moduler après le PTT, de sorte que le préampli n'est protégé que par le relais rapide de l'amplificateur ; avec le PTT, ce retard commute l'amplificateur avant la modulation et l'on peut ajouter le séquenceur [17].",
                 ">! **Attention au préampli.** Le relais T/R doit très bien isoler la voie ouverte : avec 50 dB d'isolation et 500 W à l'antenne, 5 mW arrivent à l'entrée du PRE. On vise au moins 60 dB, et les plus prudents ajoutent un second relais qui, en émission, ferme le PRE sur une charge de 50 Ω. Le bouton PTT du micro doit être désactivé : dès lors on n'émet plus qu'à travers le séquenceur (en SSB, une pédale sur le PTT du séquenceur, découplée de celle du PC) [16].",
+                ">! **Le relais de polarisation ne se commute qu'en réception.** Avec deux polarisations (H et V), le relais qui choisit l'antenne ne doit jamais être commuté pendant l'émission : sous puissance, on grille relais, préamplificateurs ou amplificateur, avec des dégâts de plusieurs centaines à plusieurs milliers d'euros [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, édition 5, 19 mars 2021 (première édition 19 juin 2019), tableaux 1 et 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 juillet 2015, tableau 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC avec le DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, essais du 27 février 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -44310,16 +44508,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, mai 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), avril 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, janvier 2012, § 4 “Sequenziamento relè, PA e PRE”, fourni par IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, présentation, juillet 2015, fournie par IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, présentation, juillet 2015, fournie par IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
             };
             d["fr"]["S48"] = new string[] {
                 "## Câbles coaxiaux et pertes",
-                "L'onglet **COAXIAL CABLES** rassemble l'affaiblissement des câbles 50 Ω les plus utilisés par les radioamateurs, en dB pour 100 m à 20 °C, sur les cinq bandes de YAEC. Les fiches techniques des fabricants donnent des valeurs à des fréquences différentes ; YAEC les a ramenées aux bandes avec la loi de puissance, une droite sur le graphique log-log entre les deux fréquences les plus proches de la fiche technique :",
+                "L'onglet **CÂBLES COAXIAUX** rassemble l'affaiblissement des câbles 50 Ω les plus utilisés par les radioamateurs, en dB pour 100 m à 20 °C, sur les cinq bandes de YAEC. Les fiches techniques des fabricants donnent des valeurs à des fréquences différentes ; YAEC les a ramenées aux bandes avec la loi de puissance, une droite sur le graphique log-log entre les deux fréquences les plus proches de la fiche technique :",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α en dB/100 m, ℓ longueur du câble en mètres. Un nombre simple est la valeur de la fiche technique ; ≈ signale une valeur interpolée, et e une valeur extrapolée au-delà de la dernière fréquence de la fiche technique.",
                 "Les câbles du même type, de même diamètre à ±0,2 mm près et d'affaiblissement à 0,2 dB/100 m près sur toutes les bandes sont regroupés sur une seule ligne (≡), avec la valeur moyenne ; les noms équivalents sont indiqués avec « also: » (par exemple LMR-400 = HF400, CNT-400, 50-7 low loss ; LMR-600 = CNT-600). Les noms chinois 50-3, 50-5, 50-7, 50-9, 50-12 donnent le diamètre du diélectrique en millimètres.",
                 "> On peut ajouter des câbles personnels avec leurs cinq affaiblissements : ils sont enregistrés dans data\\cavi_personali.txt et apparaissent aussi dans les listes déroulantes du schéma de la station du bilan EME. L'infobulle de chaque ligne du tableau cite la source de ce câble.",
-                "[1] Les sources des différents câbles : fiches techniques de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogue MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), les tables de DD1US et EA5IP (H100) et la table de SV1BSX pour RG-58, RG-213, H-155 et H-2000 (valeurs à vérifier)."
+                "### Les connecteurs (NJ9R)",
+                "Les connecteurs font eux aussi partie de la ligne. La règle pratique de NJ9R est d'environ 1 dB tous les 8 – 10 connecteurs, en les comptant tous depuis l'arrière du poste jusqu'à l'antenne, adaptateurs, relais et diviseurs compris : dans son installation à quatre antennes, les 24 connecteurs valent plus de 2 dB, autant que 40 – 45 m de LMR-400 neuf sur 144 MHz [2]. Dans le Bilan EME, cette perte s'ajoute aux pertes accessoires TX et aux pertes entre l'antenne et le préamplificateur.",
+                "[1] Les sources des différents câbles : fiches techniques de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogue MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), les tables de DD1US et EA5IP (H100) et la table de SV1BSX pour RG-58, RG-213, H-155 et H-2000 (valeurs à vérifier).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
             };
             d["fr"]["S410"] = new string[] {
                 "## Doppler, compensation et CFOM",
@@ -44381,10 +44583,19 @@ namespace LunaCalc
                 "> Le nombre de bits dit seulement avec quelle finesse la position est *lue* : la précision réelle dépend aussi du jeu mécanique, de la flexion du support, du vent et de l'étalonnage du nord et de l'horizon.",
                 "### Groupements de yagis : actionneurs et poulies",
                 "Dans les groupements de yagis (combinaisons de 2, 4 antennes ou plus) la charge en élévation est importante et déséquilibrée. On trouve dans le commerce des vérins linéaires à moteur et vis sans fin : dans ces solutions la vis ne fait que régler le mouvement, tandis que le soutien mécanique de la charge est confié à des poulies. La vis sans fin a l'avantage de ne pas tourner à l'envers sous la charge, si bien que le groupement reste immobile même moteur arrêté.",
+                "### Vérifier le pointage avec le radar GRAVES (NJ9R)",
+                "Le radar français **GRAVES** émet en continu sur 143,050 MHz depuis le locator JN27SI ; c'est le banc d'essai le plus utilisé sur 144 MHz pour la réception via la Lune. Quand la Lune est visible à la fois depuis sa propre station et depuis GRAVES (dans YAEC, il suffit de saisir JN27SI comme locator du DX), on écoute sur 143,050 MHz (ou 143,0495 MHz) en SSB avec une bande audio d'au moins 2,4 kHz, AGC coupé, noise blanker en service et aucun autre filtre, notch ou DSP [2].",
+                "Dans la chute d'eau (waterfall), l'écho de GRAVES apparaît comme une ligne en pointillés : plus elle est intense, mieux l'antenne est pointée. On déplace le rotor par petits pas, d'abord en azimut puis en élévation, jusqu'au maximum, et on compare la position trouvée à la position calculée. NJ9R se sert aussi de GRAVES comme S-mètre : curseur de gain à zéro, il lit la moyenne du signal sur une minute, et avant chaque session il vérifie avec GRAVES que l'installation est toujours bien réglée [2].",
+                "> Sans élévation, on ne reçoit généralement l'écho de GRAVES qu'avec la Lune entre 0° et 15° d'élévation, à son lever ou à son coucher. Beaucoup de postes ne s'accordent pas en dehors de la bande des 2 m : il faut alors un récepteur SDR [2].",
+                "### Boussole, caméra et registre des erreurs (NJ9R)",
+                "Avec un rotor utilisé en HF, un pointage « à peu près juste » suffisait ; en EME, non. NJ9R conseille d'étalonner l'indicateur du rotor puis de le vérifier en extérieur avec une boussole, en acceptant au maximum environ 5° d'erreur : le vent, les chocs contre les butées et le glissement sur le mât déplacent l'antenne sans que l'indicateur s'en aperçoive [2].",
+                "• **Caméra sur le mât.** Une petite caméra étanche (du type caméra de recul, 25 – 30 USD), fixée au mât et alignée sur l'antenne à l'aide d'un niveau ou d'un inclinomètre, montre où l'antenne pointe réellement : NJ9R a réalisé 60 – 80 QSO avec le rotor en panne ou avec des erreurs de 20 – 35°, guidé uniquement par la caméra. Le centre de la Lune se repère sur le moniteur après avoir cherché le maximum de l'écho de GRAVES. La caméra est aussi une source de bruit : il faut l'éteindre pendant la réception [2].",
+                "• **Registre des erreurs.** Pour chaque pointage, on note dans un tableau l'azimut et l'élévation de la Lune calculés, ceux lus sur l'indicateur et ceux vus avec la caméra : la différence est l'erreur de son système, à corriger ou à garder en mémoire [2].",
                 "### Au-delà de 432 MHz : les paraboles",
                 "À partir de 902 MHz on utilise surtout des paraboles, et l'outil [1] est conçu pour les fréquences à partir de 1 GHz. Avec de grands diamètres le lobe se rétrécit à quelques dixièmes de degré et l'on risque de ne pas viser parfaitement la Lune : plus que de moteurs, la station a besoin de véritables actionneurs mécaniques en azimut et en élévation, avec une précision de pointage largement liée à la résolution en bits de la commande. L'**EME Link Budget & Analysis Tool** de OE2IGL et DF3GJ [1] indique ±0,035° pour un bon système de poursuite et ±0,1° pour un système normal, et calcule la perte de pointage avec tous les autres termes de la liaison.",
                 ">+ YAEC s'arrête à 432 MHz. Pour les bandes plus hautes nous conseillons l'outil de OE2IGL et DF3GJ [1] : il calcule le bilan EME de 1 à 300 GHz avec les paramètres de la parabole (diamètre, f/D, source, rugosité de surface, rendements), le pointage, la libration, le bruit du Soleil et de la Lune et l'affaiblissement atmosphérique.",
-                "[1] Gerald Ihninger OE2IGL et Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL et Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
             };
             d["fr"]["S412"] = new string[] {
                 "## Modes numériques pour l'EME : Q65 et JT65",
@@ -44475,6 +44686,18 @@ namespace LunaCalc
                 "| q3 | mon indicatif et l'indicatif du DX",
                 "| q4 | les deux indicatifs et RRR, RR73, 73 ou vide",
                 "~ D'après [1]. Les auteurs recommandent de ne pas accorder trop d'attention aux valeurs de S/N affichées par le décodeur, qui étaient encore en cours d'amélioration [1] : pour les comparaisons avec le bilan EME de YAEC il vaut mieux utiliser plusieurs QSO plutôt qu'une seule lecture.",
+                "### Les réglages de NJ9R pour le JT65B et MAP65",
+                "NJ9R, qui a débuté sur 144 MHz avec le JT65B, résume ainsi les réglages qu'il utilise [7] :",
+                "|h| Programme | Où | Réglage",
+                "| WSJT-X | fenêtre principale | Enable VHF and sub-mode features, Decode after EME delay, ligne vide entre les périodes de décodage",
+                "| WSJT-X | Advanced | Random erasure et two pass decoding (6 et 6, selon le CPU) ; waterfall Most sensitive",
+                "| WSJT-X | mode | JT65, sous-mode B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz ; quand la trace d'une station apparaît, on resserre à 50, 20 ou 10 Hz (plus elle est large, plus le décodage en souffre)",
+                "| WSJT-X | fréquences audio | TX à 1270 Hz ; RX à ±350 Hz de 1270 Hz selon le Doppler, ou à la fréquence annoncée sur le chat",
+                "| MAP65 | Station, I/O devices | son indicatif et son locator ; carte son, ou interface réseau pour les postes IQ, à 96 000 Hz",
+                "| MAP65 | mode et décodage | JT65B / Q65A ; Only EME calls ; Aggressive deep search",
+                "| MAP65 | fenêtre principale | NB en service, Monitor On, niveau audio dans la barre latérale entre 12 et 40",
+                "~ D'après [7]. Les noms des options restent en anglais, comme dans les menus de WSJT-X et de MAP65. Pour le JT65, le Bilan EME de YAEC utilise les seuils du sous-mode B (§ 1.6).",
                 "### La procédure avec les DXpéditions (W7GJ)",
                 "Lance Collister W7GJ, qui mène depuis des années des expéditions EME sur 6 m, décrit comment appeler une DXpédition en Q65-60A pendant un pile-up [6]. Avant tout, l'horloge de l'ordinateur doit être très précise et la fréquence d'émission très stable [6].",
                 "• **Périodes.** La DXpédition émet toujours dans la première séquence (minutes paires) ; ceux qui appellent émettent dans la seconde (minutes impaires) [6].",
@@ -44496,7 +44719,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, octobre 2023, fourni par IC8TEM.",
                 "[4] Nico Palermo IV3NWV, présentation à la conférence EME 2016 sur les codes QRA, citée dans [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Code source de WSJT-X (fichier Q65_encoding_modules.F90 et autres), cité dans [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, révisé le 3 avril 2023, fourni par IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, révisé le 3 avril 2023, fourni par IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
             };
             d["fr"]["S54"] = new string[] {
                 "## Littérature EME de SM5BSZ",
@@ -44591,15 +44815,47 @@ namespace LunaCalc
                 "> Dans le programme : le calendrier de Distance et Dgrd marque avec le symbole ☀ les jours où le Soleil est proche de la Lune (orange ou rouge) ; l'onglet Bruit solaire calcule, avec le flux mesuré, combien de bruit supplémentaire le Soleil apporte à l'instant choisi.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["fr"]["S413"] = new string[] {
+                "## De la première réception au QSO : les conseils de NJ9R",
+                "Relu Jianu NJ9R a rassemblé dans « 2M EME the easy way » son expérience de débutant sur 144 MHz : un parcours pratique qui commence par l'écho de GRAVES reçu avec une yagi 7 éléments, sans préamplificateur. Son message tient avant tout en une idée : connaître les limites de son installation, les gains et les pertes, et décider à partir de ces données si on peut les dépasser [1]. Les parties techniques sont reprises dans les paragraphes consacrés à chaque sujet : Bilan EME et gain des antennes (§ 1.6), relais de polarisation (§ 1.7), connecteurs (§ 1.8), pointage et GRAVES (§ 1.11), réglages de WSJT-X et MAP65 (§ 1.12), lecture des chats (§ 1.14). Restent ici les conseils sur la station et le récepteur.",
+                "### La carte du bruit local",
+                "Avant de chercher la Lune, il vaut mieux savoir de quelles directions vient le bruit. NJ9R conseille de faire faire à l'antenne un tour complet de 360°, par pas de 15 – 30° en azimut, en notant dans un tableau le bruit lu avec le curseur de gain (mis à zéro sur le niveau le plus bas). Si l'on dispose de l'élévation, on répète le tour de 0° à 45° par pas de 5 – 10°. Coloré comme une carte de chaleur, le tableau explique pourquoi on ne reçoit rien dans certaines directions : là, le bruit local couvre l'écho [1].",
+                "> Dans YAEC, la Reconnaissance de mes obstacles montre les directions bouchées par les obstacles : la comparer avec la carte du bruit aide à choisir les meilleures fenêtres de Lune.",
+                "Les maisons et l'électronique du voisinage sont une source permanente de perturbations : on les recherche et on les réduit en commençant par chez soi, mais à un certain moment il faut vivre avec ce qui reste [1].",
+                "### Le récepteur et l'ordinateur",
+                "• **Récepteur propre.** AGC coupé, noise blanker en service, aucun filtre, notch ou DSP en réception ; sur l'ordinateur, entrée audio à la qualité la plus élevée et aucune amélioration ni amplification de l'audio du système [1].",
+                "• **Horloge synchronisée.** Les modes numériques exigent l'heure exacte : NJ9R fait corriger automatiquement l'horloge de l'ordinateur toutes les 15 minutes par un programme de synchronisation (NetTime) [1].",
+                "• **CALL3.TXT à jour.** Ce fichier fait gagner de nombreux dB au décodage, car WSJT-X et MSHV s'en servent pour reconnaître les indicatifs ; il reste à l'opérateur la tâche d'écarter les décodages erronés [1]. YAEC télécharge et fusionne les listes de W7GJ et de WSJT-X Improved, et peut copier le fichier dans le dossier de WSJT-X.",
+                "• **Patience.** Si l'on n'entend rien, plusieurs causes peuvent s'additionner : Dgrd élevée, polarisation défavorable, rotation de Faraday, bruit local dans cette direction. Mieux vaut réessayer après quelques minutes, quelques heures ou un autre jour, et choisir les jours où la Dgrd est la plus basse du mois (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
+            };
+            d["fr"]["S414"] = new string[] {
+                "## Les chats textuels sur Internet",
+                "En EME, les rendez-vous (skeds), les annonces de CQ et les reports passent presque toujours par des chats textuels sur Internet. Voici les plus utilisés.",
+                "• **Chat EME de N0UK.** Le chat historique de l'EME sur 2 m, de Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA) ; on doit au même auteur Ping Jockey Central, le chat du meteor scatter (https://www.pingjockey.net) [1].",
+                "• **EMEchat d'EA8DBM.** Une interface web qui réunit les chats EME (https://www.emechat.com) : les DXpéditions l'utilisent pour le 2 m avec le chat de N0UK et pour le 70 cm et au-delà avec celui de HB9Q [2].",
+                "• **HB9Q logger.** Chat et registre des skeds pour l'EME à partir de 70 cm (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, section microwave.** Le chat d'ON4KST est divisé en sections par bande (https://www.on4kst.com/chat) : dans la section microwave se retrouvent les opérateurs des bandes les plus hautes, y compris ceux qui pratiquent l'EME [3].",
+                "### Comment lire les annonces (NJ9R)",
+                "Qui lance un CQ sur le chat indique généralement sa puissance et ses antennes. « H », ou aucune indication, fait penser à une station uniquement horizontale (pas toujours) ; « HV » ou « XPOL » indique deux polarisations et c'est la meilleure station à rechercher. Entre stations du même continent, l'horizontale avec l'horizontale fonctionne bien ; d'un continent à l'autre, la polarisation spatiale peut faire arriver presque vertical un signal parti horizontal, avec des pertes trop grandes pour une petite station (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) fonctionne comme PSK Reporter : il ne montre que les stations qui envoient des reports, il peut donc y avoir de l'activité sur le chat même quand LiveCQ est vide [4].",
+                "• Les fréquences audio annoncées sur le chat aident à trouver les stations qui n'émettent pas à 1270 Hz ; quand on reçoit une station, il est de bon usage de le signaler sur le chat [4].",
+                "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, juin 2026, DXpédition C37EME : « 2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface » – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
+            };
             d["es"] = new Dictionary<string, string[]>();
             d["es"]["PREF"] = new string[] {
                 "Esta parte del manual no describe los botones del programa, sino las ideas sobre las que está construido. Antes de los capítulos, el autor desea expresar algunos conceptos que han resultado clave para estudiar el programa, también a la luz de sus experiencias más recientes en la estación.",
                 "• **El cálculo es una referencia, no una promesa.** Balance, S/N estimada y umbrales de los modos digitales describen un enlace ideal. Durante la recepción cuentan el ruido local y artificial, que puede cambiar de un minuto a otro, y la rotación de Faraday: bastan unos instantes para borrar el margen calculado (§ 1.3, 1.12).",
                 "• **El día se elige antes de encender.** Dgrd, distancia de la Luna y declinación indican cuánto ruido del cielo hay detrás de la Luna, cuántas horas permanece sobre el horizonte y cuánto sube: el mismo equipo rinde de forma muy distinta de un día a otro (§ 1.4).",
                 "• **La polarización puede hacer desaparecer una señal.** Con antenas lineales, la rotación de Faraday y la polarización espacial pueden apagar un eco durante minutos u horas; a menudo basta con esperar, repetir o girar la polarización en lugar de buscar una avería (§ 1.3).",
-                "• **La mejor solución es la doble polarización.** Para las antenas la mejor opción es siempre un sistema de doble polarización, con doble bajada en recepción y doble recepción, mientras que en transmisión se opera con una sola polarización: así la rotación de Faraday y la polarización espacial ya no apagan el eco (§ 1.3).",
+                "• **La mejor solución es la doble polarización.** Para las antenas la mejor opción es siempre un sistema de doble polarización, con doble bajada en recepción y doble recepción, mientras que en transmisión se opera con una sola polarización: así la rotación de Faraday y la polarización espacial ya no apagan el eco (§ 1.3). El relé que elige la polarización solo se conmuta en recepción, nunca durante la transmisión (§ 1.7).",
                 "• **El Balance EME como banco de pruebas.** Introduciendo distintas modificaciones en la pestaña Balance EME se puede intentar entender hasta qué punto las hipótesis de mantener la propia instalación, o de modificarla, son viables para practicar EME (§ 1.6).",
                 "• **La elevación cuenta.** La falta de elevación roba minutos al tráfico posible. Sobre todo, en el momento en que se eleva el sistema de antenas, los lóbulos laterales bajos se vuelven fundamentales para no captar ruido terrestre y permitir que la antena alcance la máxima captación de señal, que solo un apuntamiento hacia el cielo puede ofrecer.",
+                "• **Las antenas: partir de las tablas.** Para elegir y comparar yagis, la referencia son las tablas de Lionel Edwards VE7BQH (ganancia, G/T y temperatura de antena), publicadas en el sitio DXMaps de Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Entre las aportaciones más autorizadas sobre el diseño de yagis de bajo ruido están las de Hartmut DG7YBN, Popa YU7EF y Justin Johnson G0KSC. El Balance EME de YAEC usa las tablas de VE7BQH (§ 1.6).",
+                "• **Conocer la propia instalación.** Como escribe Relu NJ9R, el verdadero secreto es conocer los límites del propio sistema, ganancias y pérdidas, y decidir con esos datos si se pueden superar. En 144 MHz el primer banco de pruebas es el eco del radar GRAVES (§ 1.11, 1.13).",
                 "• **Cada decibelio delante del preamplificador cuenta.** Cables, relés y conectores antes del preamplificador empeoran la temperatura del sistema más de lo que sugiere su valor en dB: ahí es donde conviene invertir (§ 1.7, 1.8).",
                 "• **Primero las frecuencias correctas.** El Doppler y el CFOM desplazan el eco hasta varios kHz en las bandas altas: un eco fuera de la ventana de decodificación no se oye, aunque la señal sea buena (§ 1.10).",
                 "• **El Sol es un adversario previsible.** Cuando está cerca de la Luna el ruido aumenta: el programa lo avisa con antelación, y conviene tenerlo en cuenta al elegir los días (§ 1.5, 1.9).",
@@ -44676,12 +44932,16 @@ namespace LunaCalc
                 "• la refracción cuenta: la Luna salió a −0,51°, por debajo del horizonte óptico de −0,35°; a 200 MHz, en aire seco, el error de refracción a 0° de elevación es de −0,49°.",
                 "IK3XTV recuerda que en teoría el efecto suelo llega a 6 dB, de modo que una sola yagi rinde casi como un sistema de 4, pero depende mucho del terreno alrededor de la antena: es menor en la ciudad, mejor en campo abierto y todavía más cerca del mar. Se aprovecha en la salida y la puesta de la Luna, entre aproximadamente 1° y 18 – 20° de elevación [4].",
                 "> Por eso en el balance EME la ganancia de suelo aparece como BETA: el valor calculado (como máximo +6 dB) es un límite teórico. Con antenas altas sobre el mar o sistemas de varias yagis conviene esperar aproximadamente la mitad y un QSB marcado a baja elevación [3].",
+                "### La ganancia de la antena: datos declarados y dBd (NJ9R)",
+                "Las ganancias de las hojas de datos de los fabricantes proceden casi siempre de simulaciones sobre suelo perfecto y con adaptación ideal a 50 Ω. NJ9R sugiere restar unos 2 dB al valor declarado y razonar en dBd y no en dBi, para no hacerse ilusiones; lo mismo vale para los datos de cables, conectores y preamplificadores [6]. Su ejemplo: una buena yagi de 5 elementos (8 dBi, 5,9 dBd) con 4,25 dB de pérdidas en la línea deja apenas 1,5 dB de ganancia útil; con su primera yagi de 7 elementos (12,3 dBi, 10 dBd) apenas conseguía recibir. Como punto de partida para recibir con algo de margen indica unos 14 dBd [6].",
+                ">+ En el Balance EME se puede probar el efecto enseguida: bajando 2 dB la ganancia de la antena se ve cuánto margen le queda al enlace.",
                 "[1] WSJT-X User Guide, K1JT y el WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 de abril de 2021 (WSJT-X 2.4.0), facilitado por IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21.º Meeting EME, presentación facilitada por IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, documento del 12 de noviembre de 2010, facilitado por IC8TEM.",
                 "[5] J. Taylor K1JT, ponencia sobre JT65 en la conferencia EME 2006 (K1JT_eme2006.pdf): tabla de los niveles mínimos de S/N en 2500 Hz.",
-                "> El esquema de la estación, a la derecha de la pestaña, deduce las pérdidas de los cables elegidos: en transmisión cable PA–relé + relé + cable de antena, en recepción cable de antena + relé antes del preamplificador y cable de bajada después de él. Las atenuaciones de los cables proceden de la base de datos de la pestaña COAXIAL CABLES (§ 1.8)."
+                "> El esquema de la estación, a la derecha de la pestaña, deduce las pérdidas de los cables elegidos: en transmisión cable PA–relé + relé + cable de antena, en recepción cable de antena + relé antes del preamplificador y cable de bajada después de él. Las atenuaciones de los cables proceden de la base de datos de la pestaña CABLES COAXIALES (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
             };
             d["es"]["S47"] = new string[] {
                 "## El preamplificador y la figura de ruido de la radio {nuovo}",
@@ -44756,7 +45016,7 @@ namespace LunaCalc
                 "##+ Estaciones EME con FT-1000MP y transverter",
                 "Dos ejemplos documentados del FT-1000MP usado para EME en 144 MHz con un transverter: las medidas de DF9IC [3] con FT-1000MP + transverter Javornik (NF 0,9 – 1,4 dB con el preamplificador de la radio desactivado) y la estación EME de **W3SZ** [12] (4 × M2 2MXP32, preamplificadores LNA Technology en la antena para cada polarización, LMR-600 y hardline Andrew), que en transmisión usa un **FT-1000MP Mark V** con un transverter **SSB-Electronic LT2S Mk II** (FI 28 MHz) y un amplificador 2 × GU-74B, mientras que en recepción usa el hardware WSE y el software Linrad de SM5BSZ.",
                 "> En el balance EME el transverter es un bloque del esquema de la estación: se activa con su casilla, se elige el modelo de la lista (o \"custom\") y el programa toma su figura de ruido y su ganancia; si está desactivado, no entra en el cálculo. El gráfico anterior ayuda a decidir si activar el preamplificador de la radio.",
-                ">! ✉ **¿Conoces otro transverter o has construido uno?** Si quieres dar a conocer otros transverters o tu propio transverter, escribe un e-mail al autor: ccerrotta@gmail.com o ic8tem@gmail.com. Todos los datos de contacto están en la pestaña **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **¿Conoces otro transverter o has construido uno?** Si quieres dar a conocer otros transverters o tu propio transverter, escribe un e-mail al autor: ccerrotta@gmail.com o ic8tem@gmail.com. Todos los datos de contacto están en la pestaña **CONTACTOS DEL AUTOR Y AGRADECIMIENTOS**.",
                 "##+ El secuenciador TX/RX",
                 "Con un amplificador de potencia (PA) y un preamplificador junto a la antena (PRE), el PTT del ordenador no va a la radio sino a un **secuenciador**, que acciona los relés y luego el PA y la radio en el orden correcto [16]. El esquema más habitual tiene dos cables de bajada: el de recepción puede perder algunos dB, porque está después de un preamplificador de 15 – 20 dB, mientras que el de transmisión debe perder lo menos posible (3 dB en transmisión reducen a la mitad la potencia radiada). En reposo, los relés mantienen el PRE aislado de la antena: una protección más contra las descargas de las tormentas [16].",
                 "|h| ^Paso | De RX a TX | De TX a RX",
@@ -44766,6 +45026,7 @@ namespace LunaCalc
                 "~ Entre un paso y otro hace falta al menos el tiempo de conmutación de los relés (15 – 30 ms) más sus rebotes: IK1UWL aconseja 100 – 200 ms, también para el PA si tiene relés internos [16].",
                 "Para el mando de transmisión el PTT es mejor que el VOX: el VOX puede dispararse por un ruido y no aprovecha el retardo de unos 0,5 s con el que JT65 empieza a modular después del PTT, así que el preamplificador queda protegido solo por el relé rápido del amplificador; con el PTT ese retardo conmuta el amplificador antes de la modulación y se puede añadir el secuenciador [17].",
                 ">! **Cuidado con el preamplificador.** El relé T/R debe aislar muy bien la puerta abierta: con 50 dB de aislamiento y 500 W en la antena llegan 5 mW a la entrada del PRE. Se procura tener al menos 60 dB, y los más prudentes añaden un segundo relé que en transmisión cierra el PRE sobre una carga de 50 Ω. Hay que desactivar el pulsador PTT del micrófono: a partir de entonces solo se transmite a través del secuenciador (para SSB, un pedal en el PTT del secuenciador, desacoplado del del PC) [16].",
+                ">! **El relé de polarización solo se conmuta en recepción.** Con dos polarizaciones (H y V), el relé que elige la antena nunca debe conmutarse durante la transmisión: con la potencia aplicada se queman relés, preamplificadores o amplificador, con daños de cientos a miles de euros [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, edición 5, 19 de marzo de 2021 (primera edición 19 de junio de 2019), tablas 1 y 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 de julio de 2015, tabla 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC con DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, pruebas del 27 de febrero de 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -44782,16 +45043,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, mayo de 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), abril de 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, enero de 2012, § 4 “Sequenziamento relè, PA e PRE”, facilitada por IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentación, julio de 2015, facilitada por IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentación, julio de 2015, facilitada por IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
             };
             d["es"]["S48"] = new string[] {
                 "## Cables coaxiales y pérdidas",
-                "La pestaña **COAXIAL CABLES** recoge la atenuación de los cables de 50 Ω más usados por los radioaficionados, en dB por 100 m a 20 °C, en las cinco bandas de YAEC. Las hojas de datos de los fabricantes dan valores a frecuencias distintas; YAEC los ha llevado a las bandas con la ley de potencia, una recta en el gráfico log-log entre las dos frecuencias más cercanas de la hoja de datos:",
+                "La pestaña **CABLES COAXIALES** recoge la atenuación de los cables de 50 Ω más usados por los radioaficionados, en dB por 100 m a 20 °C, en las cinco bandas de YAEC. Las hojas de datos de los fabricantes dan valores a frecuencias distintas; YAEC los ha llevado a las bandas con la ley de potencia, una recta en el gráfico log-log entre las dos frecuencias más cercanas de la hoja de datos:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α en dB/100 m, ℓ longitud del cable en metros. Un número sin marca es el valor de la hoja de datos; ≈ indica un valor interpolado, y e uno extrapolado más allá de la última frecuencia de la hoja de datos.",
                 "Los cables del mismo tipo, con el mismo diámetro dentro de ±0,2 mm y una atenuación dentro de 0,2 dB/100 m en todas las bandas se agrupan en una sola fila (≡), con el valor medio; los nombres equivalentes se muestran con \"also:\" (por ejemplo LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Los nombres chinos 50-3, 50-5, 50-7, 50-9, 50-12 indican el diámetro del dieléctrico en milímetros.",
                 "> Se pueden añadir cables personalizados con sus cinco atenuaciones: se guardan en data\\cavi_personali.txt y aparecen también en los desplegables del esquema de la estación del balance EME. La información emergente de cada fila de la tabla cita la fuente de ese cable.",
-                "[1] Las fuentes de cada cable: hojas de datos de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, vía WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), las tablas de DD1US y EA5IP (H100) y la tabla de SV1BSX para RG-58, RG-213, H-155 y H-2000 (valores por verificar)."
+                "### Los conectores (NJ9R)",
+                "También los conectores forman parte de la línea. La regla práctica de NJ9R es de aproximadamente 1 dB por cada 8 – 10 conectores, contando todos desde la parte trasera de la radio hasta la antena, incluidos adaptadores, relés y divisores: en su instalación de cuatro antenas los 24 conectores suman más de 2 dB, tanto como 40 – 45 m de LMR-400 nuevo en 144 MHz [2]. En el Balance EME esta pérdida debe sumarse a las pérdidas accesorios TX y a las pérdidas entre la antena y el preamplificador.",
+                "[1] Las fuentes de cada cable: hojas de datos de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, vía WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), las tablas de DD1US y EA5IP (H100) y la tabla de SV1BSX para RG-58, RG-213, H-155 y H-2000 (valores por verificar).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
             };
             d["es"]["S410"] = new string[] {
                 "## Doppler, compensación y CFOM",
@@ -44853,10 +45118,19 @@ namespace LunaCalc
                 "> El número de bits solo indica con qué finura se *lee* la posición: la precisión real depende también de los juegos mecánicos, de la flexión del soporte, del viento y de la calibración del norte y del horizonte.",
                 "### Sistemas de yagis: actuadores y poleas",
                 "En los sistemas de yagis (combinaciones de 2, 4 o más antenas) la carga en elevación es grande y desequilibrada. En el mercado existen actuadores lineales con motor de tornillo sin fin: en estas soluciones el tornillo solo regula el movimiento, mientras que el soporte mecánico de la carga se confía a poleas. El tornillo sin fin tiene la ventaja de no girar hacia atrás bajo la carga, por lo que el sistema permanece quieto incluso con el motor apagado.",
+                "### Comprobar el apuntamiento con el radar GRAVES (NJ9R)",
+                "El radar francés **GRAVES** transmite de forma continua en 143,050 MHz desde el locator JN27SI y es el banco de pruebas más usado en 144 MHz para la recepción vía Luna. Cuando la Luna es visible tanto desde la propia estación como desde GRAVES (en YAEC basta con introducir JN27SI como locator del DX), se escucha en 143,050 MHz (o 143,0495 MHz) en SSB con un ancho de banda de audio de al menos 2,4 kHz, AGC desactivado, noise blanker activado y ningún otro filtro, notch ni DSP [2].",
+                "En la cascada (waterfall) el eco de GRAVES aparece como una línea discontinua: cuanto más intensa es, mejor apuntada está la antena. Se mueve el rotor a pasos pequeños, primero en azimut y luego en elevación, hasta el máximo, y se compara la posición encontrada con la calculada. NJ9R usa GRAVES también como S-meter: con el control de ganancia a cero lee la media de la señal durante un minuto, y antes de cada sesión comprueba con GRAVES que la instalación sigue bien ajustada [2].",
+                "> Sin elevación, el eco de GRAVES suele recibirse solo con la Luna entre 0° y 15° de elevación, al salir o al ponerse. Muchas radios no sintonizan fuera de la banda de 2 m: en ese caso hace falta un receptor SDR [2].",
+                "### Brújula, cámara y registro de errores (NJ9R)",
+                "Con un rotor usado en HF bastaba un apuntamiento «casi correcto»; en EME no. NJ9R aconseja calibrar el indicador del rotor y luego comprobarlo al aire libre con la brújula, aceptando como máximo unos 5° de error: el viento, los golpes contra los topes y los deslizamientos en el mástil desplazan la antena sin que el indicador lo note [2].",
+                "• **Cámara en el mástil.** Una pequeña cámara impermeable (del tipo de las de marcha atrás, 25 – 30 USD) fijada al mástil y alineada con la antena mediante un nivel o un inclinómetro muestra hacia dónde apunta de verdad la antena: NJ9R completó 60 – 80 QSO con el rotor averiado o con errores de 20 – 35°, guiado solo por la cámara. El centro de la Luna se marca en el monitor después de buscar el máximo del eco de GRAVES. La cámara es también una fuente de ruido: hay que apagarla durante la recepción [2].",
+                "• **Registro de errores.** Para cada apuntamiento se anotan en una tabla el azimut y la elevación de la Luna calculados, los leídos en el indicador y los vistos con la cámara: la diferencia es el error del propio sistema, que hay que corregir o tener presente [2].",
                 "### Por encima de 432 MHz: parábolas",
                 "Desde 902 MHz hacia arriba se usan sobre todo parábolas, y la herramienta [1] está pensada para frecuencias desde 1 GHz hacia arriba. Con diámetros grandes el haz se estrecha a pocas décimas de grado y existe el riesgo de no apuntar perfectamente a la Luna: más que motores, la estación necesita verdaderos actuadores mecánicos en acimut y elevación, con una precisión de apuntamiento ligada en gran medida a la resolución en bits del control. La **EME Link Budget & Analysis Tool** de OE2IGL y DF3GJ [1] indica ±0,035° para un buen sistema de seguimiento y ±0,1° para uno normal, y calcula la pérdida de apuntamiento junto con todos los demás términos del enlace.",
                 ">+ YAEC se detiene en 432 MHz. Para las bandas superiores recomendamos la herramienta de OE2IGL y DF3GJ [1]: calcula el balance EME de 1 a 300 GHz con los parámetros de la parábola (diámetro, f/D, iluminador, rugosidad de la superficie, eficiencias), el apuntamiento, la libración, el ruido del Sol y de la Luna y la atenuación atmosférica.",
-                "[1] Gerald Ihninger OE2IGL y Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL y Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
             };
             d["es"]["S412"] = new string[] {
                 "## Modos digitales para EME: Q65 y JT65",
@@ -44947,6 +45221,18 @@ namespace LunaCalc
                 "| q3 | mi indicativo y el indicativo del DX",
                 "| q4 | ambos indicativos y RRR, RR73, 73 o vacío",
                 "~ De [1]. Los autores advierten de no prestar demasiada atención a los valores de S/N mostrados por el decodificador, que aún se estaban mejorando [1]: para comparar con el balance EME de YAEC es mejor usar varios QSO que una sola lectura.",
+                "### Los ajustes de NJ9R para JT65B y MAP65",
+                "NJ9R, que empezó en 144 MHz con JT65B, resume así los ajustes que utiliza [7]:",
+                "|h| Programa | Dónde | Ajuste",
+                "| WSJT-X | ventana principal | Enable VHF and sub-mode features, Decode after EME delay, línea en blanco entre los periodos de decodificación",
+                "| WSJT-X | Advanced | Random erasure y two pass decoding (6 y 6, según la CPU); waterfall Most sensitive",
+                "| WSJT-X | modo | JT65, submodo B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; cuando aparece la traza de una estación se estrecha a 50, 20 o 10 Hz (cuanto más ancho, más sufre la decodificación)",
+                "| WSJT-X | frecuencias de audio | TX en 1270 Hz; RX dentro de ±350 Hz respecto a 1270 Hz según el Doppler, o en la frecuencia anunciada en el chat",
+                "| MAP65 | Station, I/O devices | indicativo y locator propios; tarjeta de sonido, o interfaz de red para las radios IQ, a 96 000 Hz",
+                "| MAP65 | modo y decodificación | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | ventana principal | NB activado, Monitor On, nivel de audio en la barra lateral entre 12 y 40",
+                "~ Según [7]. Los nombres de las opciones se mantienen en inglés, como en los menús de WSJT-X y MAP65. Para JT65 el Balance EME de YAEC usa los umbrales del submodo B (§ 1.6).",
                 "### El procedimiento con las DXpediciones (W7GJ)",
                 "Lance Collister W7GJ, que lleva años realizando expediciones EME en 6 m, describe cómo llamar a una DXpedición en Q65-60A durante un pile-up [6]. Ante todo, el reloj del ordenador debe ser muy preciso y la frecuencia de transmisión muy estable [6].",
                 "• **Periodos.** La DXpedición transmite siempre en la primera secuencia (minutos pares); quienes llaman, en la segunda (minutos impares) [6].",
@@ -44968,7 +45254,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, octubre de 2023, facilitado por IC8TEM.",
                 "[4] Nico Palermo IV3NWV, presentación en la conferencia EME 2016 sobre los códigos QRA, citada en [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Código fuente de WSJT-X (fichero Q65_encoding_modules.F90 y otros), citado en [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revisado el 3 de abril de 2023, facilitado por IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revisado el 3 de abril de 2023, facilitado por IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
             };
             d["es"]["S54"] = new string[] {
                 "## Literatura EME de SM5BSZ",
@@ -45063,15 +45350,47 @@ namespace LunaCalc
                 "> En el programa: el calendario de Distancia y Dgrd marca con el símbolo ☀ los días con el Sol cerca de la Luna (naranja o rojo); la pestaña Ruido solar calcula, con el flujo medido, cuánto ruido adicional aporta el Sol en el instante elegido.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["es"]["S413"] = new string[] {
+                "## De la primera recepción al QSO: los consejos de NJ9R",
+                "Relu Jianu NJ9R recogió en «2M EME the easy way» su experiencia de principiante en 144 MHz: un recorrido práctico que empieza con el eco de GRAVES recibido con una yagi de 7 elementos, sin preamplificador. Su mensaje es sobre todo uno: conocer los límites de la propia instalación, las ganancias y las pérdidas, y decidir con esos datos si se pueden superar [1]. Las partes técnicas se retoman en los apartados de cada tema: Balance EME y ganancia de las antenas (§ 1.6), relé de polarización (§ 1.7), conectores (§ 1.8), apuntamiento y GRAVES (§ 1.11), ajustes de WSJT-X y MAP65 (§ 1.12), lectura de los chats (§ 1.14). Aquí quedan los consejos sobre la estación y el receptor.",
+                "### El mapa del ruido local",
+                "Antes de buscar la Luna conviene saber de qué direcciones llega el ruido. NJ9R aconseja dar una vuelta completa de 360° con la antena, a pasos de 15 – 30° en azimut, anotando en una tabla el ruido leído con el control de ganancia (puesto a cero en el nivel más bajo). Quien tenga elevación repite la vuelta de 0° a 45° a pasos de 5 – 10°. Coloreada como un mapa de calor, la tabla explica por qué en ciertas direcciones no se recibe nada: allí el ruido local tapa el eco [1].",
+                "> En YAEC el Reconocimiento de mis obstáculos muestra las direcciones cerradas por los obstáculos: compararlo con el mapa del ruido ayuda a elegir las mejores ventanas de Luna.",
+                "Las casas y la electrónica del vecindario son una fuente continua de interferencias: se buscan y se reducen empezando por la propia casa, pero llega un momento en que hay que convivir con lo que queda [1].",
+                "### El receptor y el ordenador",
+                "• **Receptor limpio.** AGC desactivado, noise blanker activado, ningún filtro, notch ni DSP en recepción; en el ordenador, entrada de audio a la máxima calidad y ninguna mejora ni amplificación del audio del sistema [1].",
+                "• **Reloj sincronizado.** Los modos digitales requieren la hora exacta: NJ9R hace que un programa de sincronización (NetTime) corrija automáticamente el reloj del ordenador cada 15 minutos [1].",
+                "• **CALL3.TXT actualizado.** El archivo ayuda a la decodificación en muchos dB, porque WSJT-X y MSHV lo usan para reconocer los indicativos; al operador le queda la tarea de descartar las decodificaciones erróneas [1]. YAEC descarga y une las listas de W7GJ y de WSJT-X Improved y puede copiar el archivo en la carpeta de WSJT-X.",
+                "• **Paciencia.** Si no se oye nada, pueden sumarse varias causas: Dgrd alta, polarización desfavorable, rotación de Faraday, ruido local en esa dirección. Conviene volver a intentarlo al cabo de unos minutos, unas horas u otro día, y elegir los días con la Dgrd más baja del mes (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
+            };
+            d["es"]["S414"] = new string[] {
+                "## Los chats de texto en Internet",
+                "En EME las citas (sked), los anuncios de CQ y los informes pasan casi siempre por chats de texto en Internet. Los más usados son estos.",
+                "• **Chat EME de N0UK.** El chat histórico de los 2 m en EME, de Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); del mismo autor es Ping Jockey Central, el chat del meteor scatter (https://www.pingjockey.net) [1].",
+                "• **EMEchat de EA8DBM.** Una interfaz web que reúne los chats EME (https://www.emechat.com): las DXpediciones la usan para los 2 m con el chat de N0UK y para los 70 cm y superiores con el de HB9Q [2].",
+                "• **HB9Q logger.** Chat y registro de skeds para el EME de 70 cm en adelante (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, sección microwave.** El chat de ON4KST está dividido en secciones por banda (https://www.on4kst.com/chat): en la sección microwave se encuentran los operadores de las bandas más altas, incluidos los que trabajan en EME [3].",
+                "### Cómo leer los anuncios (NJ9R)",
+                "Quien llama CQ en el chat suele indicar potencia y antenas. «H», o ninguna indicación, hace pensar en una estación solo horizontal (no siempre); «HV» o «XPOL» indica dos polarizaciones y es la mejor estación que buscar. Entre estaciones del mismo continente, horizontal con horizontal funciona bien; de un continente a otro la polarización espacial puede hacer llegar casi vertical una señal que salió horizontal, con pérdidas demasiado grandes para una estación pequeña (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) funciona como PSK Reporter: muestra solo las estaciones que envían informes, así que puede haber actividad en el chat aunque LiveCQ esté vacío [4].",
+                "• Las frecuencias de audio anunciadas en el chat ayudan a encontrar las estaciones que no transmiten en 1270 Hz; cuando se recibe una estación, es buena costumbre indicarlo en el chat [4].",
+                "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, junio de 2026, DXpedición C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
+            };
             d["pt"] = new Dictionary<string, string[]>();
             d["pt"]["PREF"] = new string[] {
                 "Esta parte do manual não descreve os botões do programa, mas as ideias sobre as quais ele foi construído. Antes dos capítulos, o autor deseja expor alguns conceitos que se revelaram essenciais para estudar o programa, também à luz das suas experiências mais recentes na estação.",
                 "• **O cálculo é uma referência, não uma promessa.** Balanço, S/N estimado e limiares dos modos digitais descrevem uma ligação ideal. Durante a receção contam o ruído local e artificial, que pode mudar de um minuto para o outro, e a rotação de Faraday: bastam poucos instantes para apagar a margem calculada (§ 1.3, 1.12).",
                 "• **O dia escolhe-se antes de ligar.** Dgrd, distância da Lua e declinação indicam quanto ruído do céu há atrás da Lua, quantas horas fica acima do horizonte e quanto sobe: o mesmo equipamento rende de forma muito diferente de um dia para o outro (§ 1.4).",
                 "• **A polarização pode fazer desaparecer um sinal.** Com antenas lineares, a rotação de Faraday e a polarização espacial podem apagar um eco durante minutos ou horas; muitas vezes basta esperar, repetir ou rodar a polarização, em vez de procurar uma avaria (§ 1.3).",
-                "• **A melhor solução é a dupla polarização.** Para as antenas a melhor escolha é sempre um sistema de dupla polarização, com dupla descida em receção e dupla receção, enquanto em transmissão se opera com uma só polarização: assim a rotação de Faraday e a polarização espacial deixam de apagar o eco (§ 1.3).",
+                "• **A melhor solução é a dupla polarização.** Para as antenas a melhor escolha é sempre um sistema de dupla polarização, com dupla descida em receção e dupla receção, enquanto em transmissão se opera com uma só polarização: assim a rotação de Faraday e a polarização espacial deixam de apagar o eco (§ 1.3). O relé que escolhe a polarização só é comutado em receção, nunca durante a transmissão (§ 1.7).",
                 "• **O Balanço EME como banco de ensaio.** Introduzindo diversas alterações no separador Balanço EME pode-se tentar perceber até que ponto as hipóteses de manter a própria instalação, ou de a modificar, são viáveis para praticar EME (§ 1.6).",
                 "• **A elevação conta.** A falta de elevação rouba minutos ao tráfego possível. Sobretudo, quando se eleva o sistema de antenas, os lóbulos laterais baixos tornam-se fundamentais para não captar ruído terrestre e permitir que a antena atinja a captação máxima do sinal, que só um apontamento para o céu pode oferecer.",
+                "• **As antenas: partir das tabelas.** Para escolher e comparar yagis, a referência são as tabelas de Lionel Edwards VE7BQH (ganho, G/T e temperatura de antena), publicadas no sítio DXMaps de Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Entre os contributos mais autorizados sobre o projeto de yagis de baixo ruído estão os de Hartmut DG7YBN, de Popa YU7EF e de Justin Johnson G0KSC. O Balanço EME do YAEC usa as tabelas de VE7BQH (§ 1.6).",
+                "• **Conhecer a própria instalação.** Como escreve Relu NJ9R, o verdadeiro segredo é conhecer os limites do próprio sistema, ganhos e perdas, e decidir com esses dados se é possível superá-los. Em 144 MHz, o primeiro banco de ensaio é o eco do radar GRAVES (§ 1.11, 1.13).",
                 "• **Cada decibel antes do pré-amplificador conta.** Cabos, relés e conectores antes do pré-amplificador pioram a temperatura do sistema mais do que sugere o seu valor em dB: é aí que vale a pena investir (§ 1.7, 1.8).",
                 "• **Primeiro as frequências certas.** O Doppler e o CFOM deslocam o eco até vários kHz nas bandas altas: um eco fora da janela de descodificação não se ouve, mesmo com um bom sinal (§ 1.10).",
                 "• **O Sol é um adversário previsível.** Quando está perto da Lua o ruído aumenta: o programa avisa com antecedência, e vale a pena tê-lo em conta na escolha dos dias (§ 1.5, 1.9).",
@@ -45100,11 +45419,11 @@ namespace LunaCalc
                 "|h| Caracteres | Utilização recomendada no YAEC",
                 "| 4 | apenas para uma estimativa grosseira: o azimute e a elevação da Lua podem errar até cerca de 1°, porque o horizonte local inclina-se cerca de 1° a cada 111 km",
                 "| 6 | o locator do DX, os QSO e o budget EME: o erro na direção da Lua é de poucas centésimas de grau",
-                "| **8** | a sua estação, para Reconnaissance of my obstacles: identifica o bairro ou a colina",
+                "| **8** | a sua estação, para Reconhecimento dos meus obstáculos: identifica o bairro ou a colina",
                 "|+ **10** | a sua estação, com o melhor resultado: identifica o edifício ou a torre da antena",
                 "| 12 – 14 | aceites, mas não acrescentam nada: a precisão ultrapassa a de um GPS comum (alguns metros) e a dimensão da própria antena",
                 "### Locator e obstáculos",
-                "Para a direção da Lua bastam 6 caracteres: a Lua está a cerca de 380 000 km, e os ±4,4 km de um locator de 6 caracteres alteram o azimute e a elevação em cerca de 0,04°, um valor desprezável face ao feixe da antena. Para os **obstáculos locais** (edifícios, árvores, colinas) é o contrário: estão a algumas dezenas ou centenas de metros da antena e, com 6 caracteres, a estação pode estar em qualquer ponto de um retângulo de 7,5 × 4,6 km, pelo que os obstáculos não podem ser posicionados. Com 8 caracteres o erro desce para cerca de 450 m, com 10 para cerca de 20 m: é esta a precisão de que o separador **Reconnaissance of my obstacles** precisa para desenhar corretamente as zonas em que a antena está obstruída.",
+                "Para a direção da Lua bastam 6 caracteres: a Lua está a cerca de 380 000 km, e os ±4,4 km de um locator de 6 caracteres alteram o azimute e a elevação em cerca de 0,04°, um valor desprezável face ao feixe da antena. Para os **obstáculos locais** (edifícios, árvores, colinas) é o contrário: estão a algumas dezenas ou centenas de metros da antena e, com 6 caracteres, a estação pode estar em qualquer ponto de um retângulo de 7,5 × 4,6 km, pelo que os obstáculos não podem ser posicionados. Com 8 caracteres o erro desce para cerca de 450 m, com 10 para cerca de 20 m: é esta a precisão de que o separador **Reconhecimento dos meus obstáculos** precisa para desenhar corretamente as zonas em que a antena está obstruída.",
                 ">+ Conselho prático: obtenha o locator de 10 caracteres a partir das coordenadas GPS do ponto onde está a antena (não da entrada da casa) e introduza-o no separador Posição em direto e +- 24h como **my locator**. Para o DX basta o locator de 6 caracteres que ele lhe fornece.",
                 "[1] Wikipedia, “Maidenhead Locator System” (origem G4ANB e reunião VHF da IARU em Maidenhead em 1980, estrutura dos pares, WGS-84 desde 1999, extensões para além de 8 caracteres, esclarecimento da IARU de 2019, utilização em HF e VHF/UHF, distâncias entre centros de subquadrados) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -45148,12 +45467,16 @@ namespace LunaCalc
                 "• a refração conta: a Lua nasceu a −0,51°, abaixo do horizonte ótico de −0,35°; a 200 MHz, em ar seco, o erro de refração a 0° de elevação é de −0,49°.",
                 "IK3XTV lembra que, em teoria, o efeito de solo chega a 6 dB, de modo que uma única yagi rende quase como um agrupamento de 4, mas depende muito do terreno à volta da antena: é menor na cidade, melhor em campo aberto e ainda mais perto do mar. Aproveita-se no nascer e no pôr da Lua, entre cerca de 1° e 18 – 20° de elevação [4].",
                 "> Por isso, no budget EME, o ganho de solo está marcado como BETA: o valor calculado (no máximo +6 dB) é um limite teórico. Com antenas altas acima do mar ou agrupamentos de várias yagis, convém esperar cerca de metade e um QSB acentuado a baixa elevação [3].",
+                "### O ganho da antena: dados declarados e dBd (NJ9R)",
+                "Os ganhos das fichas técnicas dos fabricantes vêm quase sempre de simulações sobre solo perfeito e com adaptação ideal a 50 Ω. NJ9R sugere tirar cerca de 2 dB ao valor declarado e raciocinar em dBd e não em dBi, para não criar ilusões; o mesmo vale para os dados de cabos, conectores e pré-amplificadores [6]. O seu exemplo: uma boa yagi de 5 elementos (8 dBi, 5,9 dBd) com 4,25 dB de perdas na linha deixa apenas 1,5 dB de ganho útil; com a sua primeira yagi de 7 elementos (12,3 dBi, 10 dBd) mal conseguia receber. Como ponto de partida para receber com alguma margem, indica cerca de 14 dBd [6].",
+                ">+ No Balanço EME pode-se experimentar o efeito de imediato: baixando 2 dB o ganho da antena, vê-se quanta margem resta à ligação.",
                 "[1] WSJT-X User Guide, K1JT and the WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 de abril de 2021 (WSJT-X 2.4.0), fornecido por IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21.º Meeting EME, apresentação fornecida por IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, documento de 12 de novembro de 2010, fornecido por IC8TEM.",
                 "[5] J. Taylor K1JT, comunicação sobre o JT65 na conferência EME 2006 (K1JT_eme2006.pdf): tabela dos níveis mínimos de S/N em 2500 Hz.",
-                "> O esquema da estação, à direita do separador, obtém as perdas a partir dos cabos escolhidos: em transmissão cabo PA–relé + relé + cabo de antena, em receção cabo de antena + relé antes do pré-amplificador e cabo de descida depois dele. As atenuações dos cabos vêm da base de dados do separador COAXIAL CABLES (§ 1.8)."
+                "> O esquema da estação, à direita do separador, obtém as perdas a partir dos cabos escolhidos: em transmissão cabo PA–relé + relé + cabo de antena, em receção cabo de antena + relé antes do pré-amplificador e cabo de descida depois dele. As atenuações dos cabos vêm da base de dados do separador CABOS COAXIAIS (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
             };
             d["pt"]["S47"] = new string[] {
                 "## O pré-amplificador e a figura de ruído do rádio {nuovo}",
@@ -45228,7 +45551,7 @@ namespace LunaCalc
                 "##+ Estações EME com FT-1000MP e transverter",
                 "Dois exemplos documentados do FT-1000MP usado em EME em 144 MHz com transverter: as medições de DF9IC [3] sobre FT-1000MP + transverter Javornik (NF 0,9 – 1,4 dB com o pré-amplificador do rádio desligado) e a estação EME de **W3SZ** [12] (4 × M2 2MXP32, pré-amplificadores LNA Technology na antena para cada polarização, LMR-600 e hardline Andrew), que em transmissão usa um **FT-1000MP Mark V** com um transverter **SSB-Electronic LT2S Mk II** (FI 28 MHz) e um amplificador 2 × GU-74B, enquanto em receção usa o hardware WSE e o software Linrad de SM5BSZ.",
                 "> No budget EME o transverter é um bloco do esquema da estação: ativa-se com a sua caixa de verificação, escolhe-se o modelo na lista (ou “custom”) e o programa obtém a sua figura de ruído e o seu ganho; desativado, não entra no cálculo. O gráfico acima ajuda a decidir se se deve ligar o pré-amplificador do rádio.",
-                ">! ✉ **Conhece outro transverter ou construiu um?** Se quiser dar a conhecer outros transverters ou o seu próprio transverter, escreva um e-mail ao autor: ccerrotta@gmail.com ou ic8tem@gmail.com. Todos os contactos estão no separador **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **Conhece outro transverter ou construiu um?** Se quiser dar a conhecer outros transverters ou o seu próprio transverter, escreva um e-mail ao autor: ccerrotta@gmail.com ou ic8tem@gmail.com. Todos os contactos estão no separador **CONTACTOS DO AUTOR E AGRADECIMENTOS**.",
                 "##+ O sequenciador TX/RX",
                 "Com um amplificador de potência (PA) e um pré-amplificador junto à antena (PRE), o PTT do computador não vai para o rádio mas para um **sequenciador**, que comanda os relés e depois o PA e o rádio pela ordem certa [16]. O esquema mais usado tem dois cabos de descida: o de receção pode perder alguns dB, porque fica depois de um pré-amplificador de 15 – 20 dB, enquanto o de transmissão deve perder o menos possível (3 dB em transmissão reduzem para metade a potência irradiada). Em repouso, os relés mantêm o PRE isolado da antena: uma proteção extra contra as descargas das trovoadas [16].",
                 "|h| ^Passo | De RX para TX | De TX para RX",
@@ -45238,6 +45561,7 @@ namespace LunaCalc
                 "~ Entre um passo e o seguinte é preciso pelo menos o tempo de comutação dos relés (15 – 30 ms) mais os seus ressaltos: IK1UWL aconselha 100 – 200 ms, também para o PA se tiver relés internos [16].",
                 "Para o comando de transmissão, o PTT é melhor do que o VOX: o VOX pode disparar com um ruído e não aproveita o atraso de cerca de 0,5 s com que o JT65 começa a modular depois do PTT, pelo que o pré-amplificador fica protegido apenas pelo relé rápido do amplificador; com o PTT, esse atraso comuta o amplificador antes da modulação e pode acrescentar-se o sequenciador [17].",
                 ">! **Atenção ao pré-amplificador.** O relé T/R deve isolar muito bem a porta aberta: com 50 dB de isolamento e 500 W na antena chegam 5 mW à entrada do PRE. Procura-se ter pelo menos 60 dB, e os mais prudentes acrescentam um segundo relé que em transmissão fecha o PRE sobre uma carga de 50 Ω. O botão PTT do microfone deve ser desativado: a partir daí transmite-se apenas através do sequenciador (em SSB, um pedal no PTT do sequenciador, desacoplado do do PC) [16].",
+                ">! **O relé de polarização só é comutado em receção.** Com duas polarizações (H e V), o relé que escolhe a antena nunca deve ser comutado durante a transmissão: com a potência aplicada queimam-se relés, pré-amplificadores ou amplificador, com danos de centenas a milhares de euros [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, edição 5, 19 de março de 2021 (primeira edição 19 de junho de 2019), tabelas 1 e 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 de julho de 2015, tabela 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC com DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, ensaios de 27 de fevereiro de 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -45254,16 +45578,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, maio de 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), abril de 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, janeiro de 2012, § 4 “Sequenziamento relè, PA e PRE”, fornecido por IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, apresentação, julho de 2015, fornecida por IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, apresentação, julho de 2015, fornecida por IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
             };
             d["pt"]["S48"] = new string[] {
                 "## Cabos coaxiais e perdas",
-                "O separador **COAXIAL CABLES** reúne a atenuação dos cabos de 50 Ω mais usados pelos radioamadores, em dB por 100 m a 20 °C, nas cinco bandas do YAEC. As folhas de dados dos fabricantes dão valores em frequências diferentes; o YAEC levou-os às bandas com a lei de potência, uma reta no gráfico log-log entre as duas frequências mais próximas da folha de dados:",
+                "O separador **CABOS COAXIAIS** reúne a atenuação dos cabos de 50 Ω mais usados pelos radioamadores, em dB por 100 m a 20 °C, nas cinco bandas do YAEC. As folhas de dados dos fabricantes dão valores em frequências diferentes; o YAEC levou-os às bandas com a lei de potência, uma reta no gráfico log-log entre as duas frequências mais próximas da folha de dados:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α em dB/100 m, ℓ comprimento do cabo em metros. Um número simples é o valor da folha de dados; ≈ indica um valor interpolado, e e um valor extrapolado para além da última frequência da folha de dados.",
                 "Os cabos do mesmo tipo, com o mesmo diâmetro dentro de ±0,2 mm e atenuação dentro de 0,2 dB/100 m em todas as bandas, são agrupados numa única linha (≡), com o valor médio; os nomes equivalentes são indicados com “also:” (por exemplo LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Os nomes chineses 50-3, 50-5, 50-7, 50-9, 50-12 indicam o diâmetro do dielétrico em milímetros.",
                 "> É possível acrescentar cabos personalizados com as suas cinco atenuações: são guardados em data\\cavi_personali.txt e aparecem também nas listas pendentes do esquema da estação do budget EME. A dica (tooltip) de cada linha da tabela cita a fonte desse cabo.",
-                "[1] As fontes de cada cabo: folhas de dados da Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), as tabelas de DD1US e EA5IP (H100) e a tabela de SV1BSX para RG-58, RG-213, H-155 e H-2000 (valores a verificar)."
+                "### Os conectores (NJ9R)",
+                "Também os conectores fazem parte da linha. A regra prática de NJ9R é de cerca de 1 dB por cada 8 – 10 conectores, contando-os todos desde a traseira do rádio até à antena, incluindo adaptadores, relés e divisores: na sua instalação de quatro antenas, os 24 conectores valem mais de 2 dB, tanto como 40 – 45 m de LMR-400 novo em 144 MHz [2]. No Balanço EME esta perda deve ser somada às perdas acessórios TX e às perdas entre a antena e o pré-amplificador.",
+                "[1] As fontes de cada cabo: folhas de dados da Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), as tabelas de DD1US e EA5IP (H100) e a tabela de SV1BSX para RG-58, RG-213, H-155 e H-2000 (valores a verificar).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
             };
             d["pt"]["S410"] = new string[] {
                 "## Doppler, compensação e CFOM",
@@ -45325,10 +45653,19 @@ namespace LunaCalc
                 "> O número de bits indica apenas com que finura a posição é *lida*: a precisão real depende também das folgas mecânicas, da flexão do suporte, do vento e da calibração do norte e do horizonte.",
                 "### Agrupamentos de yagis: atuadores e roldanas",
                 "Nos agrupamentos de yagis (combinações de 2, 4 ou mais antenas) a carga em elevação é grande e desequilibrada. Existem no mercado atuadores lineares com motor de parafuso sem-fim: nestas soluções o parafuso apenas regula o movimento, enquanto a sustentação mecânica da carga é confiada a roldanas. O parafuso sem-fim tem a vantagem de não rodar para trás sob a carga, pelo que o agrupamento fica parado mesmo com o motor desligado.",
+                "### Verificar o apontamento com o radar GRAVES (NJ9R)",
+                "O radar francês **GRAVES** transmite em contínuo em 143,050 MHz a partir do locator JN27SI e é o banco de ensaio mais usado em 144 MHz para a receção via Lua. Quando a Lua é visível tanto da própria estação como de GRAVES (no YAEC basta introduzir JN27SI como locator do DX), escuta-se em 143,050 MHz (ou 143,0495 MHz) em SSB com uma largura de banda de áudio de pelo menos 2,4 kHz, AGC desligado, noise blanker ligado e nenhum outro filtro, notch ou DSP [2].",
+                "No waterfall, o eco de GRAVES aparece como uma linha tracejada: quanto mais intensa, melhor está apontada a antena. Move-se o rotor em pequenos passos, primeiro em azimute e depois em elevação, até ao máximo, e compara-se a posição encontrada com a calculada. NJ9R usa GRAVES também como S-meter: com o cursor do ganho a zero, lê a média do sinal ao longo de um minuto, e antes de cada sessão verifica com GRAVES se a instalação continua bem afinada [2].",
+                "> Sem elevação, o eco de GRAVES recebe-se normalmente só com a Lua entre 0° e 15° de elevação, ao nascer ou ao pôr. Muitos rádios não sintonizam fora da banda dos 2 m: nesse caso é preciso um recetor SDR [2].",
+                "### Bússola, câmara e registo de erros (NJ9R)",
+                "Com um rotor usado em HF bastava um apontamento «quase certo»; em EME, não. NJ9R aconselha calibrar o indicador do rotor e depois verificá-lo ao ar livre com a bússola, aceitando no máximo cerca de 5° de erro: o vento, as pancadas contra os batentes e os deslizamentos no mastro deslocam a antena sem que o indicador se aperceba [2].",
+                "• **Câmara no mastro.** Uma pequena câmara à prova de água (do tipo das de marcha-atrás, 25 – 30 USD), fixada ao mastro e alinhada com a antena com um nível ou um inclinómetro, mostra para onde a antena aponta de facto: NJ9R completou 60 – 80 QSO com o rotor avariado ou com erros de 20 – 35°, guiado apenas pela câmara. O centro da Lua marca-se no monitor depois de procurar o máximo do eco de GRAVES. A câmara é também uma fonte de ruído: deve ser desligada durante a receção [2].",
+                "• **Registo de erros.** Para cada apontamento, anotam-se numa tabela o azimute e a elevação da Lua calculados, os lidos no indicador e os vistos com a câmara: a diferença é o erro do próprio sistema, a corrigir ou a ter em conta [2].",
                 "### Acima de 432 MHz: parabólicas",
                 "De 902 MHz para cima usam-se sobretudo antenas parabólicas, e a ferramenta [1] foi concebida para frequências a partir de 1 GHz. Com diâmetros grandes o feixe estreita para poucas décimas de grau e há o risco de não acertar perfeitamente na Lua: mais do que motores, a estação precisa de verdadeiros atuadores mecânicos em azimute e elevação, com uma precisão de apontamento largamente ligada à resolução em bits do controlo. A **EME Link Budget & Analysis Tool** de OE2IGL e DF3GJ [1] indica ±0,035° para um bom sistema de seguimento e ±0,1° para um normal, e calcula a perda de apontamento juntamente com todos os outros termos da ligação.",
                 ">+ O YAEC fica pelos 432 MHz. Para as bandas superiores recomendamos a ferramenta de OE2IGL e DF3GJ [1]: calcula o budget EME de 1 a 300 GHz com os parâmetros da parabólica (diâmetro, f/D, alimentador, rugosidade da superfície, eficiências), apontamento, libração, ruído do Sol e da Lua e atenuação atmosférica.",
-                "[1] Gerald Ihninger OE2IGL e Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL e Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
             };
             d["pt"]["S412"] = new string[] {
                 "## Modos digitais para EME: Q65 e JT65",
@@ -45419,6 +45756,18 @@ namespace LunaCalc
                 "| q3 | o meu indicativo e o indicativo do DX",
                 "| q4 | ambos os indicativos e RRR, RR73, 73 ou vazio",
                 "~ De [1]. Os autores advertem para não dar demasiada atenção aos valores de S/N mostrados pelo descodificador, que ainda estavam a ser melhorados [1]: para comparações com o budget EME do YAEC é melhor usar vários QSO do que uma única leitura.",
+                "### As configurações de NJ9R para JT65B e MAP65",
+                "NJ9R, que começou em 144 MHz com o JT65B, resume assim as configurações que usa [7]:",
+                "|h| Programa | Onde | Configuração",
+                "| WSJT-X | janela principal | Enable VHF and sub-mode features, Decode after EME delay, linha em branco entre os períodos de descodificação",
+                "| WSJT-X | Advanced | Random erasure e two pass decoding (6 e 6, conforme o CPU); waterfall Most sensitive",
+                "| WSJT-X | modo | JT65, submodo B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; quando aparece o traço de uma estação, estreita-se para 50, 20 ou 10 Hz (quanto mais largo, mais sofre a descodificação)",
+                "| WSJT-X | frequências de áudio | TX em 1270 Hz; RX dentro de ±350 Hz em torno de 1270 Hz conforme o Doppler, ou na frequência anunciada no chat",
+                "| MAP65 | Station, I/O devices | indicativo e locator próprios; placa de som, ou interface de rede para os rádios IQ, a 96 000 Hz",
+                "| MAP65 | modo e descodificação | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | janela principal | NB ligado, Monitor On, nível de áudio na barra lateral entre 12 e 40",
+                "~ De [7]. Os nomes das opções ficam em inglês, como nos menus do WSJT-X e do MAP65. Para o JT65, o Balanço EME do YAEC usa os limiares do submodo B (§ 1.6).",
                 "### O procedimento com as DXpedições (W7GJ)",
                 "Lance Collister W7GJ, que há anos realiza expedições EME em 6 m, descreve como chamar uma DXpedição em Q65-60A durante um pile-up [6]. Antes de mais, o relógio do computador tem de ser muito preciso e a frequência de transmissão muito estável [6].",
                 "• **Períodos.** A DXpedição transmite sempre na primeira sequência (minutos pares); quem chama transmite na segunda (minutos ímpares) [6].",
@@ -45440,7 +45789,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, outubro de 2023, fornecido por IC8TEM.",
                 "[4] Nico Palermo IV3NWV, apresentação na conferência EME 2016 sobre os códigos QRA, citada em [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Código-fonte do WSJT-X (ficheiro Q65_encoding_modules.F90 e outros), citado em [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revisto em 3 de abril de 2023, fornecido por IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, revisto em 3 de abril de 2023, fornecido por IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
             };
             d["pt"]["S54"] = new string[] {
                 "## Literatura EME de SM5BSZ",
@@ -45535,15 +45885,47 @@ namespace LunaCalc
                 "> No programa: o calendário de Distância e Dgrd assinala com o símbolo ☀ os dias com o Sol perto da Lua (laranja ou vermelho); o separador Ruído solar calcula, com o fluxo medido, quanto ruído adicional o Sol traz no instante escolhido.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["pt"]["S413"] = new string[] {
+                "## Da primeira receção ao QSO: os conselhos de NJ9R",
+                "Relu Jianu NJ9R reuniu em «2M EME the easy way» a sua experiência de principiante em 144 MHz: um percurso prático que começa com o eco de GRAVES recebido com uma yagi de 7 elementos, sem pré-amplificador. A sua mensagem é sobretudo uma: conhecer os limites da própria instalação, os ganhos e as perdas, e decidir com esses dados se é possível superá-los [1]. As partes técnicas são retomadas nas secções de cada tema: Balanço EME e ganho das antenas (§ 1.6), relé de polarização (§ 1.7), conectores (§ 1.8), apontamento e GRAVES (§ 1.11), configurações do WSJT-X e do MAP65 (§ 1.12), leitura dos chats (§ 1.14). Aqui ficam os conselhos sobre a estação e o recetor.",
+                "### O mapa do ruído local",
+                "Antes de procurar a Lua, convém saber de que direções chega o ruído. NJ9R aconselha dar uma volta completa de 360° com a antena, em passos de 15 – 30° em azimute, anotando numa tabela o ruído lido com o cursor do ganho (posto a zero no nível mais baixo). Quem tem elevação repete a volta de 0° a 45° em passos de 5 – 10°. Colorida como um mapa de calor, a tabela explica por que razão em certas direções não se recebe nada: aí o ruído local cobre o eco [1].",
+                "> No YAEC, o Reconhecimento dos meus obstáculos mostra as direções fechadas pelos obstáculos: compará-lo com o mapa do ruído ajuda a escolher as melhores janelas de Lua.",
+                "As casas e a eletrónica da vizinhança são uma fonte contínua de interferências: procuram-se e reduzem-se começando pela própria casa, mas a certa altura é preciso conviver com o que resta [1].",
+                "### O recetor e o computador",
+                "• **Recetor limpo.** AGC desligado, noise blanker ligado, nenhum filtro, notch ou DSP em receção; no computador, entrada de áudio na qualidade mais alta e nenhuma melhoria ou amplificação do áudio do sistema [1].",
+                "• **Relógio sincronizado.** Os modos digitais exigem a hora exata: NJ9R faz corrigir automaticamente o relógio do computador a cada 15 minutos por um programa de sincronização (NetTime) [1].",
+                "• **CALL3.TXT atualizado.** O ficheiro ajuda a descodificação em muitos dB, porque o WSJT-X e o MSHV o usam para reconhecer os indicativos; cabe ao operador a tarefa de descartar as descodificações erradas [1]. O YAEC descarrega e junta as listas de W7GJ e do WSJT-X Improved e pode copiar o ficheiro para a pasta do WSJT-X.",
+                "• **Paciência.** Se não se ouve nada, podem somar-se várias causas: Dgrd alta, polarização desfavorável, rotação de Faraday, ruído local nessa direção. Convém tentar de novo passados alguns minutos, algumas horas ou noutro dia, e escolher os dias com a Dgrd mais baixa do mês (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
+            };
+            d["pt"]["S414"] = new string[] {
+                "## Os chats de texto na Internet",
+                "Em EME, as marcações (sked), os anúncios de CQ e os relatórios passam quase sempre por chats de texto na Internet. Os mais usados são estes.",
+                "• **Chat EME de N0UK.** O chat histórico dos 2 m em EME, de Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); do mesmo autor é o Ping Jockey Central, o chat do meteor scatter (https://www.pingjockey.net) [1].",
+                "• **EMEchat de EA8DBM.** Uma interface web que reúne os chats EME (https://www.emechat.com): as DXpedições usam-na para os 2 m com o chat de N0UK e para os 70 cm e acima com o de HB9Q [2].",
+                "• **HB9Q logger.** Chat e registo dos skeds para o EME dos 70 cm para cima (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, secção microwave.** O chat de ON4KST está dividido em secções por banda (https://www.on4kst.com/chat): na secção microwave encontram-se os operadores das bandas mais altas, incluindo os que trabalham em EME [3].",
+                "### Como ler os anúncios (NJ9R)",
+                "Quem chama CQ no chat indica normalmente a potência e as antenas. «H», ou nenhuma indicação, faz pensar numa estação só horizontal (nem sempre); «HV» ou «XPOL» indica duas polarizações e é a melhor estação a procurar. Entre estações do mesmo continente, horizontal com horizontal funciona bem; de um continente para outro, a polarização espacial pode fazer chegar quase vertical um sinal que partiu horizontal, com perdas demasiado grandes para uma estação pequena (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) funciona como o PSK Reporter: mostra só as estações que enviam relatórios, por isso pode haver atividade no chat mesmo quando o LiveCQ está vazio [4].",
+                "• As frequências de áudio anunciadas no chat ajudam a encontrar as estações que não transmitem em 1270 Hz; quando se recebe uma estação, é bom hábito assinalá-lo no chat [4].",
+                "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, junho de 2026, DXpedição C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
+            };
             d["zh"] = new Dictionary<string, string[]>();
             d["zh"]["PREF"] = new string[] {
                 "本部分手册不介绍程序的按钮，而是介绍程序所依据的思想。在各章之前，作者希望阐述几个对学习本程序至关重要的概念，这些概念也来自他最近在电台中的经验。",
                 "• **计算是参考，而不是承诺。** 链路预算、估计的 S/N 和数字模式门限描述的是理想链路。接收时起作用的是本地噪声和人为噪声（可能每分钟都在变化）以及法拉第旋转：片刻之间就能抹去计算出的余量（§ 1.3, 1.12）。",
                 "• **开机之前先选好日子。** Dgrd、月球距离和赤纬说明月球背后有多少天空噪声、月球在地平线上停留多少小时以及升得多高：同一套设备在不同日子的表现差别很大（§ 1.4）。",
                 "• **极化可能让信号消失。** 使用线极化天线时，法拉第旋转和空间极化可能让回波消失几分钟甚至几小时；通常只需等待、重复或旋转极化，而不必去找故障（§ 1.3）。",
-                "• **最佳方案是双极化。** 天线的最佳选择始终是双极化系统，接收时采用双馈线和双路接收，而发射时只用一种极化：这样法拉第旋转和空间极化就不会再让回波消失（§ 1.3）。",
+                "• **最佳方案是双极化。** 天线的最佳选择始终是双极化系统，接收时采用双馈线和双路接收，而发射时只用一种极化：这样法拉第旋转和空间极化就不会再让回波消失（§ 1.3）。选择极化的继电器只能在接收时切换，绝不能在发射期间切换（§ 1.7）。",
                 "• **把 EME 链路预算当作试验台。** 在“EME 链路预算”选项卡中输入各种改动，可以尝试判断保留现有设备或对其进行改造的设想在 EME 通信中是否可行（§ 1.6）。",
                 "• **仰角很重要。** 没有仰角调节会减少可通联的时间。尤其是，一旦抬高天线系统，低旁瓣就变得至关重要，可避免拾取地面噪声，使天线达到只有指向天空才能提供的最大信号接收。",
+                "• **天线：从表格入手。** 选择和比较八木天线时，参考依据是 Lionel Edwards VE7BQH 的表格（增益、G/T 和天线温度），发布在 Gabriel Sampol EA6VQ 的 DXMaps 网站上（https://dxmaps.com/ve7bqh_e.html）。在低噪声八木天线的设计方面，最权威的贡献包括 Hartmut DG7YBN、Popa YU7EF 和 Justin Johnson G0KSC 的工作。YAEC 的“EME 链路预算”使用 VE7BQH 的表格（§ 1.6）。",
+                "• **了解自己的设备。** 正如 Relu NJ9R 所写，真正的秘诀是了解自己系统的极限——增益和损耗——并据此判断能否克服这些极限。在 144 MHz 上，第一个试验台是 GRAVES 雷达的回波（§ 1.11, 1.13）。",
                 "• **前置放大器之前的每个分贝都很重要。** 前置放大器之前的电缆、继电器和连接器对系统温度的恶化比其 dB 数值看上去更严重：投资应优先放在这里（§ 1.7, 1.8）。",
                 "• **先把频率弄对。** 在较高波段，多普勒和 CFOM 会使回波偏移达数 kHz：落在解码窗口之外的回波即使信号很好也听不到（§ 1.10）。",
                 "• **太阳是可预测的对手。** 太阳靠近月球时噪声上升：程序会提前提示，选择日期时值得考虑（§ 1.5, 1.9）。",
@@ -45572,11 +45954,11 @@ namespace LunaCalc
                 "|h| 字符数 | 在 YAEC 中的建议用途",
                 "| 4 | 仅用于粗略估算：月球的方位角和仰角可能误差约 1°，因为当地地平面每 111 km 倾斜约 1°",
                 "| 6 | DX 定位符、QSO 和 EME 链路预算：月球方向的误差只有百分之几度",
-                "| **8** | 本站，用于 Reconnaissance of my obstacles：可确定所在街区或山丘",
+                "| **8** | 本站，用于 我的障碍物勘察：可确定所在街区或山丘",
                 "|+ **10** | 本站，效果最佳：可确定所在建筑物或天线塔",
                 "| 12 – 14 | 可以接受，但没有额外作用：精度超过普通 GPS（几米）以及天线本身的尺寸",
                 "### 定位符与障碍物",
-                "对于月球方向，6 个字符就足够了：月球距离约 380 000 km，6 字符定位符的 ±4.4 km 误差只会使方位角和仰角变化约 0.04°，与天线波束相比可以忽略。对于**本地障碍物**（建筑物、树木、山丘）则正好相反：它们距离天线只有几十米或几百米，而使用 6 个字符时电台可能位于 7.5 × 4.6 km 矩形内的任何位置，因此无法确定障碍物的位置。使用 8 个字符时误差降至约 450 m，使用 10 个字符时降至约 20 m：这正是 **Reconnaissance of my obstacles** 选项卡正确绘制天线被遮挡区域所需的精度。",
+                "对于月球方向，6 个字符就足够了：月球距离约 380 000 km，6 字符定位符的 ±4.4 km 误差只会使方位角和仰角变化约 0.04°，与天线波束相比可以忽略。对于**本地障碍物**（建筑物、树木、山丘）则正好相反：它们距离天线只有几十米或几百米，而使用 6 个字符时电台可能位于 7.5 × 4.6 km 矩形内的任何位置，因此无法确定障碍物的位置。使用 8 个字符时误差降至约 450 m，使用 10 个字符时降至约 20 m：这正是 **我的障碍物勘察** 选项卡正确绘制天线被遮挡区域所需的精度。",
                 ">+ 实用建议：根据天线所在位置（而不是房屋入口）的 GPS 坐标推算出 10 字符定位符，并在 实时位置与 +- 24h 选项卡中作为 **my locator** 输入。对于 DX，对方提供的 6 字符定位符就足够了。",
                 "[1] Wikipedia, “Maidenhead Locator System”（起源：G4ANB 与 1980 年在梅登黑德召开的 IARU VHF 会议；字符对的结构；自 1999 年起采用 WGS-84；超过 8 个字符的扩展；IARU 2019 年的说明；在短波和 VHF/UHF 上的使用；子方格中心之间的距离）– https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -45620,12 +46002,16 @@ namespace LunaCalc
                 "• 折射不可忽略：月球在 −0.51° 时升起，低于 −0.35° 的光学地平线；在 200 MHz、干燥空气中，0° 仰角处的折射误差为 −0.49°。",
                 "IK3XTV 指出，理论上地面效应可达 6 dB，单副八木天线的表现几乎相当于 4 副组成的阵列，但这在很大程度上取决于天线周围的地形：在城市中较小，在开阔的乡村较好，靠近海边则更好。它在月出和月落时发挥作用，仰角约在 1° 至 18 – 20° 之间 [4]。",
                 "> 因此，EME 链路预算中的地面增益标注为 BETA：计算值（最大 +6 dB）只是理论上限。对于高架于海面之上的天线或由多副八木天线组成的阵列，预计只能得到约一半，并在低仰角时出现明显的 QSB [3]。",
+                "### 天线增益：标称数据与 dBd（NJ9R）",
+                "厂家资料中的增益几乎都来自理想地面和理想 50 Ω 匹配条件下的仿真。NJ9R 建议从标称值中减去约 2 dB，并用 dBd 而不是 dBi 来考虑，以免自欺；电缆、连接器和前置放大器的数据也是如此 [6]。他举的例子：一副好的 5 单元八木（8 dBi，5.9 dBd）加上 4.25 dB 的线路损耗，只剩下 1.5 dB 的有效增益；用他的第一副 7 单元八木（12.3 dBi，10 dBd），他勉强能够接收。作为留有一定余量进行接收的起点，他建议约 14 dBd [6]。",
+                ">+ 在“EME 链路预算”中可以立即试验其效果：把天线增益降低 2 dB，就能看出链路还剩多少余量。",
                 "[1] WSJT-X User Guide, K1JT and the WSJT Development Group, § 7.1（FT4 = FT8 + 3.5 dB）。",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 2021 年 4 月 3 日（WSJT-X 2.4.0），由 IC8TEM 提供。",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”，第 21 届 EME Meeting，演示文稿由 IC8TEM 提供。",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”，2010 年 11 月 12 日的文档，由 IC8TEM 提供。",
                 "[5] J. Taylor K1JT，2006 年 EME 会议上关于 JT65 的报告（K1JT_eme2006.pdf）：2500 Hz 内最低 S/N 电平表。",
-                "> 选项卡右侧的电台框图根据所选电缆推算损耗：发射时为 PA–继电器电缆 + 继电器 + 天线电缆，接收时为前置放大器之前的天线电缆 + 继电器，以及前置放大器之后的馈线电缆。电缆衰减取自 COAXIAL CABLES 选项卡的数据库（§ 1.8）。"
+                "> 选项卡右侧的电台框图根据所选电缆推算损耗：发射时为 PA–继电器电缆 + 继电器 + 天线电缆，接收时为前置放大器之前的天线电缆 + 继电器，以及前置放大器之后的馈线电缆。电缆衰减取自 同轴电缆 选项卡的数据库（§ 1.8）。",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
             };
             d["zh"]["S47"] = new string[] {
                 "## 前置放大器与电台的噪声系数 {nuovo}",
@@ -45700,7 +46086,7 @@ namespace LunaCalc
                 "##+ 使用 FT-1000MP 和收发转换器的 EME 电台",
                 "两个有文献记载的例子，展示 FT-1000MP 配合收发转换器用于 144 MHz EME：DF9IC 对 FT-1000MP + Javornik 收发转换器的测量 [3]（电台前置放大关闭时 NF 0.9 – 1.4 dB），以及 **W3SZ** 的 EME 电台 [12]（4 × M2 2MXP32，每个极化在天线端各有一个 LNA Technology 前置放大器，LMR-600 和 Andrew 硬馈线）：发射时使用 **FT-1000MP Mark V**，配合 **SSB-Electronic LT2S Mk II** 收发转换器（中频 28 MHz）和 2 × GU-74B 功率放大器；接收时则使用 SM5BSZ 的 WSE 硬件和 Linrad 软件。",
                 "> 在 EME 链路预算中，收发转换器是电台框图中的一个方框：勾选其复选框即可启用，从列表中选择型号（或 \"custom\"），程序便会采用其噪声系数和增益；不启用时则不参与计算。上面的图表有助于决定是否开启电台的前置放大器。",
-                ">! ✉ **您知道其他收发转换器，或者自己制作过吗？** 如果您希望介绍其他收发转换器或您自制的收发转换器，请发电子邮件给作者：ccerrotta@gmail.com 或 ic8tem@gmail.com。所有联系方式见 **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS** 选项卡。",
+                ">! ✉ **您知道其他收发转换器，或者自己制作过吗？** 如果您希望介绍其他收发转换器或您自制的收发转换器，请发电子邮件给作者：ccerrotta@gmail.com 或 ic8tem@gmail.com。所有联系方式见 **作者联系方式与致谢** 选项卡。",
                 "##+ TX/RX 时序器",
                 "使用功率放大器（PA）和天线端前置放大器（PRE）时，计算机的 PTT 不接电台，而是接到**时序器**，由它按正确顺序依次控制继电器、PA 和电台 [16]。最常见的方案有两条馈线：接收馈线可以损失几 dB，因为它位于 15 – 20 dB 的前置放大器之后；而发射馈线的损耗必须尽可能小（发射时损失 3 dB 会使辐射功率减半）。静止状态下，继电器使 PRE 与天线隔离：这也额外防护了雷电放电 [16]。",
                 "|h| ^步骤 | 从 RX 到 TX | 从 TX 到 RX",
@@ -45710,6 +46096,7 @@ namespace LunaCalc
                 "~ 相邻两步之间至少需要继电器的切换时间（15 – 30 ms）加上触点弹跳时间：IK1UWL 建议 100 – 200 ms，若 PA 内部有继电器也同样适用 [16]。",
                 "控制发射时，PTT 优于 VOX：VOX 可能被噪声误触发，也无法利用 JT65 在 PTT 之后约 0.5 s 才开始调制的延迟，因此前置放大器只能靠功率放大器的快速继电器来保护；使用 PTT 时，这段延迟使功率放大器在调制开始之前完成切换，还可以加装时序器 [17]。",
                 ">! **注意保护前置放大器。** T/R 继电器必须对断开的端口有很好的隔离：隔离度 50 dB、天线端 500 W 时，PRE 输入端会收到 5 mW。应争取至少 60 dB；更谨慎的做法是加装第二个继电器，在发射时把 PRE 接到 50 Ω 负载上。应禁用话筒上的 PTT 按钮：此后只通过时序器发射（SSB 时，在时序器的 PTT 上接一个脚踏开关，并与 PC 的 PTT 去耦）[16]。",
+                ">! **极化继电器只能在接收时切换。** 使用两种极化（H 和 V）时，选择天线的继电器绝不能在发射期间切换：带功率切换会烧毁继电器、前置放大器或功率放大器，造成数百到数千欧元的损失 [18]。",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, 第 5 版，2021 年 3 月 19 日（初版 2019 年 6 月 19 日），表 1 和表 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 2015 年 7 月 25 日，表 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC 与 DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, 测试始于 2005 年 2 月 27 日 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -45726,16 +46113,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, 2002 年 5 月 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003 年 4 月，第 18–20 页 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012 年 1 月，§ 4 “Sequenziamento relè, PA e PRE”，由 IC8TEM 提供 – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”，演示文稿，2015 年 7 月，由 IC8TEM 提供。"
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”，演示文稿，2015 年 7 月，由 IC8TEM 提供。",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
             };
             d["zh"]["S48"] = new string[] {
                 "## 同轴电缆与损耗",
-                "**COAXIAL CABLES** 选项卡汇集了业余无线电爱好者最常用的 50 Ω 电缆在 YAEC 五个频段上的衰减，单位为 dB/100 m（20 °C）。厂家数据手册给出的是不同频率下的数值；YAEC 用幂律将其换算到各频段，即在双对数图上取数据手册中两个最近频率之间的直线：",
+                "**同轴电缆** 选项卡汇集了业余无线电爱好者最常用的 50 Ω 电缆在 YAEC 五个频段上的衰减，单位为 dB/100 m（20 °C）。厂家数据手册给出的是不同频率下的数值；YAEC 用幂律将其换算到各频段，即在双对数图上取数据手册中两个最近频率之间的直线：",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α 单位为 dB/100 m，ℓ 为电缆长度（米）。普通数字为数据手册数值；≈ 表示插值得到的数值，e 表示超出数据手册最高频率外推得到的数值。",
                 "同类型、直径相差在 ±0.2 mm 以内且各频段衰减相差在 0.2 dB/100 m 以内的电缆合并为一行（≡），取平均值；等效名称以 \"also:\" 标出（例如 LMR-400 = HF400、CNT-400、50-7 低损耗；LMR-600 = CNT-600）。中国型号 50-3、50-5、50-7、50-9、50-12 表示介质直径（毫米）。",
                 "> 可以输入五个衰减值来添加自定义电缆：它们保存在 data\\cavi_personali.txt 中，也会出现在 EME 链路预算电台框图的下拉列表中。表格每一行的工具提示注明了该电缆的数据来源。",
-                "[1] 各电缆的数据来源：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell、Ecoflex、Aircom Plus）、Messi & Paoloni（Hyperflex、Ultraflex，经 WiMo）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020、XT2400）、QAXIAL（LLF195）、Caledonian Cables 的数据手册，MIL-C-17F 目录（RG-142、RG-393），Senago 的 R.F. elettronica（RG-115），DD1US 和 EA5IP 的表格（H100），以及 SV1BSX 关于 RG-58、RG-213、H-155 和 H-2000 的表格（数值有待核实）。"
+                "### 连接器（NJ9R）",
+                "连接器也是传输线的一部分。NJ9R 的经验法则是每 8 – 10 个连接器约 1 dB，从电台背面一直数到天线，包括转接头、继电器和功分器：在他的四天线系统中，24 个连接器的损耗超过 2 dB，相当于 144 MHz 上 40 – 45 m 全新 LMR-400 电缆的损耗 [2]。在“EME 链路预算”中，这部分损耗应加到“TX 附件损耗”以及天线与前置放大器之间的损耗中。",
+                "[1] 各电缆的数据来源：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell、Ecoflex、Aircom Plus）、Messi & Paoloni（Hyperflex、Ultraflex，经 WiMo）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020、XT2400）、QAXIAL（LLF195）、Caledonian Cables 的数据手册，MIL-C-17F 目录（RG-142、RG-393），Senago 的 R.F. elettronica（RG-115），DD1US 和 EA5IP 的表格（H100），以及 SV1BSX 关于 RG-58、RG-213、H-155 和 H-2000 的表格（数值有待核实）。",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
             };
             d["zh"]["S410"] = new string[] {
                 "## 多普勒、补偿与 CFOM",
@@ -45797,10 +46188,19 @@ namespace LunaCalc
                 "> 位数只说明位置*读取*的精细程度：实际精度还取决于机械间隙、支架的形变、风以及正北和地平线的校准。",
                 "### 八木阵列：执行机构与滑轮",
                 "在八木阵列（2 副、4 副或更多天线的组合）中，俯仰负载大且不平衡。市场上有采用蜗杆电机的直线执行机构：在这类方案中，丝杆只负责调节运动，负载的机械支撑则交给滑轮。蜗杆的优点是在负载作用下不会反转，因此即使电机断电，阵列也能保持不动。",
+                "### 用 GRAVES 雷达检查指向（NJ9R）",
+                "法国的 **GRAVES** 雷达从定位符 JN27SI 在 143.050 MHz 上连续发射，是 144 MHz 上检验经月面接收最常用的试验台。当自己的电台和 GRAVES 都能看到月球时（在 YAEC 中只需把 JN27SI 输入为 DX 的定位符），用 SSB 在 143.050 MHz（或 143.0495 MHz）上收听，音频带宽至少 2.4 kHz，关闭 AGC，打开噪声消隐器，不使用任何其他滤波器、陷波器或 DSP [2]。",
+                "在瀑布图上，GRAVES 的回波显示为一条虚线：越强，说明天线指向越准。以小步转动旋转器，先调方位角再调仰角，直到信号最大，然后把找到的位置与计算位置进行比较。NJ9R 还把 GRAVES 当作 S 表使用：把增益滑块调到零，读取一分钟内信号的平均值；每次运行之前，他都会用 GRAVES 检查设备是否仍然调整到位 [2]。",
+                "> 没有仰角调节时，通常只有在月球仰角处于 0° 到 15° 之间，即月出或月落时，才能收到 GRAVES 的回波。许多电台无法调谐到 2 m 波段以外：这种情况下需要 SDR 接收机 [2]。",
+                "### 指南针、摄像头和误差记录（NJ9R）",
+                "对用于 HF 的旋转器来说，指向“差不多对”就够了；在 EME 中却不行。NJ9R 建议先校准旋转器指示器，然后到室外用指南针核对，误差最多接受约 5°：风、撞击限位器以及天线杆打滑都会使天线偏移，而指示器毫无察觉 [2]。",
+                "• **杆上的摄像头。** 把一个小型防水摄像头（倒车摄像头一类，25 – 30 USD）固定在天线杆上，并用水平仪或倾角仪与天线对准，就能显示天线实际指向哪里：NJ9R 曾在旋转器损坏或误差达 20 – 35° 的情况下，仅靠摄像头引导完成了 60 – 80 次 QSO。找到 GRAVES 回波的最大值后，在监视器上标出月球中心。摄像头本身也是噪声源：接收时应将其关闭 [2]。",
+                "• **误差记录。** 每次指向时，在表格中记下计算出的月球方位角和仰角、指示器上读到的值以及摄像头看到的值：两者之差就是自己系统的误差，需要校正或牢记 [2]。",
                 "### 432 MHz 以上：抛物面天线",
                 "从 902 MHz 起主要使用抛物面天线，工具 [1] 是为 1 GHz 及以上频率设计的。口径较大时波束窄至零点几度，存在无法精确对准月球的风险：电台需要的不只是电机，而是真正的方位和俯仰机械执行机构，其指向精度在很大程度上取决于控制系统的位分辨率。OE2IGL 和 DF3GJ 的 **EME Link Budget & Analysis Tool** [1] 给出良好跟踪系统为 ±0.035°、普通系统为 ±0.1°，并将指向损耗与链路的所有其他项一起计算。",
                 ">+ YAEC 仅覆盖到 432 MHz。对于更高频段，我们推荐 OE2IGL 和 DF3GJ 的工具 [1]：它根据抛物面参数（口径、f/D、馈源、表面粗糙度、效率）、指向、天平动、太阳和月球噪声以及大气衰减，计算 1 至 300 GHz 的 EME 链路预算。",
-                "[1] Gerald Ihninger OE2IGL 与 Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL 与 Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
             };
             d["zh"]["S412"] = new string[] {
                 "## EME 数字模式：Q65 与 JT65",
@@ -45891,6 +46291,18 @@ namespace LunaCalc
                 "| q3 | 我的呼号和 DX 呼号",
                 "| q4 | 双方呼号以及 RRR、RR73、73 或空白",
                 "~ 摘自 [1]。作者提醒不要过于在意解码器显示的 S/N 数值，这些数值当时仍在改进中 [1]：与 YAEC EME 链路预算比较时，最好使用多次 QSO 的结果，而不是单次读数。",
+                "### NJ9R 的 JT65B 和 MAP65 设置",
+                "NJ9R 在 144 MHz 上从 JT65B 起步，他把自己使用的设置总结如下 [7]：",
+                "|h| 程序 | 位置 | 设置",
+                "| WSJT-X | 主窗口 | Enable VHF and sub-mode features、Decode after EME delay、解码周期之间插入空行",
+                "| WSJT-X | Advanced | Random erasure 和 two pass decoding（6 和 6，视 CPU 而定）；瀑布图 Most sensitive",
+                "| WSJT-X | 模式 | JT65，子模式 B，Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz；出现某个电台的轨迹后，收窄到 50、20 或 10 Hz（越宽，解码越受影响）",
+                "| WSJT-X | 音频频率 | TX 在 1270 Hz；RX 根据多普勒在 1270 Hz ±350 Hz 范围内，或在聊天室中公布的频率上",
+                "| MAP65 | Station, I/O devices | 自己的呼号和定位符；声卡，或用于 IQ 电台的网络接口，采样率 96 000 Hz",
+                "| MAP65 | 模式和解码 | JT65B / Q65A；Only EME calls；Aggressive deep search",
+                "| MAP65 | 主窗口 | NB 打开，Monitor On，侧栏中的音频电平在 12 到 40 之间",
+                "~ 来自 [7]。各项名称保留英文，与 WSJT-X 和 MAP65 的菜单一致。对于 JT65，YAEC 的“EME 链路预算”使用子模式 B 的门限（§ 1.6）。",
                 "### DX 远征的通联程序（W7GJ）",
                 "Lance Collister W7GJ 多年来一直组织 6 m EME 远征，他介绍了在堆积呼叫（pile-up）期间如何用 Q65-60A 呼叫 DX 远征台 [6]。首先，计算机时钟必须非常准确，发射频率必须非常稳定 [6]。",
                 "• **时段。** DX 远征台总是在第一序列（偶数分钟）发射；呼叫者在第二序列（奇数分钟）发射 [6]。",
@@ -45912,7 +46324,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, 2023 年 10 月，由 IC8TEM 提供。",
                 "[4] Nico Palermo IV3NWV，在 EME 2016 会议上关于 QRA 码的报告，引自 [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-X 源代码（文件 Q65_encoding_modules.F90 等），引自 [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 2023 年 4 月 3 日修订，由 IC8TEM 提供 – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 2023 年 4 月 3 日修订，由 IC8TEM 提供 – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
             };
             d["zh"]["S54"] = new string[] {
                 "## SM5BSZ 的 EME 文献",
@@ -46007,15 +46420,47 @@ namespace LunaCalc
                 "> 在程序中：“距离与 Dgrd”的日历用 ☀ 符号标出太阳靠近月球的日子（橙色或红色）；“太阳噪声”选项卡根据实测通量，计算太阳在所选时刻带来多少额外噪声。",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["zh"]["S413"] = new string[] {
+                "## 从第一次接收到 QSO：NJ9R 的建议",
+                "Relu Jianu NJ9R 在“2M EME the easy way”中汇集了他作为 144 MHz 初学者的经验：这是一条实用的路径，从用一副 7 单元八木、不加前置放大器接收 GRAVES 的回波开始。他最想传达的信息只有一条：了解自己设备的极限——增益和损耗——并据此判断能否克服这些极限 [1]。技术部分已分别纳入各主题的章节：EME 链路预算和天线增益（§ 1.6）、极化继电器（§ 1.7）、连接器（§ 1.8）、指向与 GRAVES（§ 1.11）、WSJT-X 和 MAP65 的设置（§ 1.12）、聊天室信息的解读（§ 1.14）。这里保留的是关于电台和接收机的建议。",
+                "### 本地噪声地图",
+                "在寻找月球之前，最好先弄清噪声来自哪些方向。NJ9R 建议让天线转一整圈 360°，方位角每步 15 – 30°，把用增益滑块（在最低电平处归零）读到的噪声记在表格里。有仰角调节的人再在 0° 到 45° 之间以 5 – 10° 为步长重复这一圈。把表格像热图一样着色，就能解释为什么在某些方向什么也收不到：那里的本地噪声盖过了回波 [1]。",
+                "> 在 YAEC 中，“我的障碍物勘察”显示被障碍物遮挡的方向：将它与噪声地图对照，有助于选择最佳的月球窗口。",
+                "邻居的房屋和电子设备是持续的干扰源：应从自己家开始查找并加以减少，但到了一定程度，就只能与剩下的干扰共处 [1]。",
+                "### 接收机和计算机",
+                "• **干净的接收机。** 接收时关闭 AGC，打开噪声消隐器，不使用任何滤波器、陷波器或 DSP；在计算机上，音频输入设为最高质量，不对系统音频做任何增强或放大 [1]。",
+                "• **时钟同步。** 数字模式需要准确的时间：NJ9R 用同步程序（NetTime）每 15 分钟自动校正一次计算机时钟 [1]。",
+                "• **保持 CALL3.TXT 最新。** 这个文件能让解码提高许多 dB，因为 WSJT-X 和 MSHV 用它来识别呼号；剔除错误的解码仍是操作者的任务 [1]。YAEC 会下载并合并 W7GJ 和 WSJT-X Improved 的列表，并可将该文件复制到 WSJT-X 的文件夹中。",
+                "• **耐心。** 如果什么也听不到，可能是多种原因叠加：Dgrd 偏高、极化不利、法拉第旋转、该方向的本地噪声。最好过几分钟、几小时或换一天再试，并选择当月 Dgrd 最低的日子（§ 1.3, 1.4）[1]。",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
+            };
+            d["zh"]["S414"] = new string[] {
+                "## 互联网文字聊天室",
+                "在 EME 中，约定通联（sked）、CQ 公告和报告几乎都通过互联网上的文字聊天室进行。最常用的有以下几个。",
+                "• **N0UK 的 EME 聊天室。** 2 m EME 的老牌聊天室，由 Chris Cox N0UK 创建（https://www.chris.org/cgi-bin/jt65emeA）；同一作者还创建了流星散射聊天室 Ping Jockey Central（https://www.pingjockey.net）[1]。",
+                "• **EA8DBM 的 EMEchat。** 一个汇集各 EME 聊天室的网页界面（https://www.emechat.com）：DX 远征在 2 m 上用它配合 N0UK 的聊天室，在 70 cm 及以上配合 HB9Q 的聊天室 [2]。",
+                "• **HB9Q logger。** 面向 70 cm 及以上 EME 的聊天室和 sked 登记（https://logger.hb9q.ch）[2]。",
+                "• **ON4KST，microwave 分区。** ON4KST 聊天室按波段分区（https://www.on4kst.com/chat）：在 microwave 分区可以遇到更高波段的操作者，包括从事 EME 的人 [3]。",
+                "### 如何解读公告（NJ9R）",
+                "在聊天室里呼叫 CQ 的人通常会注明功率和天线。“H”或没有任何注明，意味着很可能是只有水平极化的电台（并非总是如此）；“HV”或“XPOL”表示双极化，是最值得寻找的电台。同一大洲的电台之间，水平对水平效果很好；跨大洲时，空间极化可能使发出时为水平的信号到达时几乎变成垂直，对小电台来说损耗太大（§ 1.3）[4]。",
+                "• **LiveCQ**（https://livecq.eu）的工作方式与 PSK Reporter 类似：只显示发送报告的电台，因此即使 LiveCQ 上空无一台，聊天室里也可能有活动 [4]。",
+                "• 聊天室中公布的音频频率有助于找到不在 1270 Hz 发射的电台；收到某个电台时，在聊天室中告知对方是个好习惯 [4]。",
+                "[1] Chris Cox N0UK，EME 聊天室 – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS，2026 年 6 月，DX 远征 C37EME：“2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
+            };
             d["ja"] = new Dictionary<string, string[]>();
             d["ja"]["PREF"] = new string[] {
                 "このパートでは、プログラムのボタンではなく、プログラムの土台となる考え方を説明します。各章に先立ち、著者は、最近の局での経験も踏まえて、プログラムを学ぶうえで鍵となったいくつかの考えを述べておきたいと思います。",
                 "• **計算は目安であって約束ではない。** 回線計算、推定 S/N、デジタルモードのしきい値は理想的な回線を表します。受信中に効いてくるのは、分単位で変わりうるローカルノイズや人工雑音、そしてファラデー回転です。わずかな間に計算上のマージンは消えてしまいます（§ 1.3, 1.12）。",
                 "• **日を選ぶのは電源を入れる前。** Dgrd、月の距離、赤緯は、月の背後にどれだけ空の雑音があるか、月が何時間地平線上にあり、どれだけ高く昇るかを示します。同じ設備でも日によって成績は大きく違います（§ 1.4）。",
                 "• **偏波は信号を消してしまうことがある。** 直線偏波アンテナでは、ファラデー回転と空間偏波によってエコーが数分から数時間消えることがあります。故障を探す前に、待つ・繰り返す・偏波を回すだけで十分なことがよくあります（§ 1.3）。",
-                "• **最善の解決策は二重偏波。** アンテナの最善の選択は常に二重偏波システムで、受信は 2 系統のフィーダーと 2 系統の受信、送信は 1 つの偏波だけで運用します。こうすればファラデー回転や空間偏波でエコーが消えることはなくなります（§ 1.3）。",
+                "• **最善の解決策は二重偏波。** アンテナの最善の選択は常に二重偏波システムで、受信は 2 系統のフィーダーと 2 系統の受信、送信は 1 つの偏波だけで運用します。こうすればファラデー回転や空間偏波でエコーが消えることはなくなります（§ 1.3）。偏波を選ぶリレーは受信中にだけ切り替え、送信中には決して切り替えないでください（§ 1.7）。",
                 "• **EME 回線計算を試験台に。** 「EME 回線計算」タブにさまざまな変更を入力すると、現在の設備をそのまま使う案や改造する案が EME の運用にどこまで現実的かを見極めることができます（§ 1.6）。",
                 "• **仰角は重要。** 仰角を持たない制約は運用できる時間を削ります。とりわけアンテナ系を仰角方向に上げると、地面雑音を拾わず、空へ向けたときにしか得られない最大の信号捕捉をアンテナに発揮させるために、低いサイドローブが不可欠になります。",
+                "• **アンテナはまず表から。** 八木を選んだり比べたりするときの基準は、Lionel Edwards VE7BQHの表（利得、G/T、アンテナ温度）で、Gabriel Sampol EA6VQのDXMapsサイト（https://dxmaps.com/ve7bqh_e.html）に掲載されています。低雑音八木の設計で特に権威ある貢献としては、Hartmut DG7YBN、Popa YU7EF、Justin Johnson G0KSCによるものがあります。YAECの「EME 回線計算」はVE7BQHの表を使っています（§ 1.6）。",
+                "• **自分の設備を知る。** Relu NJ9Rが書いているように、本当の秘訣は自分のシステムの限界、つまり利得と損失を知り、そのデータをもとに限界を越えられるかどうかを判断することです。144 MHzでの最初の試験台はGRAVESレーダーのエコーです（§ 1.11, 1.13）。",
                 "• **プリアンプの前の 1 dB が大切。** プリアンプの前にあるケーブル、リレー、コネクターは、dB の数値から想像する以上にシステム温度を悪化させます。投資すべきはそこです（§ 1.7, 1.8）。",
                 "• **まず正しい周波数。** 上のバンドではドップラーと CFOM によってエコーが数 kHz もずれます。デコード窓の外のエコーは、信号が良くても聞こえません（§ 1.10）。",
                 "• **太陽は予測できる相手。** 太陽が月に近いと雑音が増えます。プログラムは事前に知らせるので、日を選ぶときに考慮する価値があります（§ 1.5, 1.9）。",
@@ -46044,11 +46489,11 @@ namespace LunaCalc
                 "|h| 文字数 | YAECでの推奨用途",
                 "| 4 | 大まかな見積もりのみ：地平面は111 kmごとに約1°傾くため、月の方位角と仰角が最大約1°ずれることがあります",
                 "| 6 | DX局のロケーター、QSO、EMEバジェット：月の方向の誤差は100分の数度です",
-                "| **8** | 自局、Reconnaissance of my obstacles 用：地区や丘を特定できます",
+                "| **8** | 自局、自局障害物の偵察 用：地区や丘を特定できます",
                 "|+ **10** | 自局、最良の結果：建物やアンテナタワーを特定できます",
                 "| 12 – 14 | 受け付けますが効果はありません：精度が一般的なGPS（数メートル）やアンテナ自体の大きさを上回ります",
                 "### ロケーターと障害物",
-                "月の方向には6文字で十分です。月は約380 000 km離れており、6文字ロケーターの±4.4 kmは方位角と仰角を約0.04°しか変えず、アンテナのビーム幅に比べて無視できます。**近くの障害物**（建物、木、丘）では逆です。障害物はアンテナから数十～数百メートルの距離にあり、6文字では局が7.5 × 4.6 kmの矩形内のどこにあってもよいことになるため、障害物の位置を決められません。8文字では誤差は約450 mに、10文字では約20 mに下がります。これが **Reconnaissance of my obstacles** タブでアンテナが遮られる領域を正しく描くのに必要な精度です。",
+                "月の方向には6文字で十分です。月は約380 000 km離れており、6文字ロケーターの±4.4 kmは方位角と仰角を約0.04°しか変えず、アンテナのビーム幅に比べて無視できます。**近くの障害物**（建物、木、丘）では逆です。障害物はアンテナから数十～数百メートルの距離にあり、6文字では局が7.5 × 4.6 kmの矩形内のどこにあってもよいことになるため、障害物の位置を決められません。8文字では誤差は約450 mに、10文字では約20 mに下がります。これが **自局障害物の偵察** タブでアンテナが遮られる領域を正しく描くのに必要な精度です。",
                 ">+ 実用的なヒント：10文字のロケーターは家の玄関ではなくアンテナが立っている地点のGPS座標から求め、ライブ位置と +- 24hタブの **my locator** に入力してください。DX局については、相手が伝える6文字のロケーターで十分です。",
                 "[1] Wikipedia, “Maidenhead Locator System”（G4ANBによる起源と1980年メイデンヘッドでのIARU VHF会議、ペアの構成、1999年以降のWGS-84、8文字を超える拡張、2019年のIARUによる明確化、HFおよびVHF/UHFでの使用、サブスクエア中心間の距離） – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -46092,12 +46537,16 @@ namespace LunaCalc
                 "• 屈折も重要です。月は光学的地平線の−0.35°より下の−0.51°で昇りました。200 MHz、乾燥空気中では、仰角0°での屈折誤差は−0.49°です。",
                 "IK3XTVによれば、理論上、大地の効果は6 dBに達し、1本の八木でも4本のアレイに近い性能が得られますが、アンテナ周辺の地形に大きく左右されます。市街地では小さく、開けた田園地帯では大きく、海の近くではさらに大きくなります。月の出と月の入りに、仰角約1°から18～20°の間で利用できます [4]。",
                 "> このため、EMEバジェットでは大地反射利得をBETAと表示しています。計算値（最大+6 dB）は理論上の上限です。海面から高いアンテナや複数の八木によるアレイでは、その約半分と、低仰角での顕著なQSBを見込んでください [3]。",
+                "### アンテナ利得：公称データとdBd (NJ9R)",
+                "メーカーのデータシートの利得は、ほとんどの場合、理想的な地面と理想的な50 Ω整合を仮定したシミュレーションによるものです。NJ9Rは、思い違いをしないよう公称値から約2 dBを差し引き、dBiではなくdBdで考えることを勧めています。ケーブル、コネクター、プリアンプのデータも同様です [6]。彼の例では、良質な5エレメント八木（8 dBi、5.9 dBd）でも線路損失が4.25 dBあると、有効利得はわずか1.5 dBしか残りません。最初に使った7エレメント八木（12.3 dBi、10 dBd）では、かろうじて受信できる程度でした。いくらか余裕をもって受信するための出発点として、彼は約14 dBdを挙げています [6]。",
+                ">+ 「EME 回線計算」ですぐに効果を試せます。アンテナ利得を2 dB下げると、回線にどれだけマージンが残るかがわかります。",
                 "[1] WSJT-X User Guide, K1JT and the WSJT Development Group, § 7.1（FT4 = FT8 + 3.5 dB）。",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 2021年4月3日（WSJT-X 2.4.0）, IC8TEM提供。",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 第21回EME Meeting, IC8TEM提供のプレゼンテーション。",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 2010年11月12日付の文書, IC8TEM提供。",
                 "[5] J. Taylor K1JT, EME 2006会議でのJT65に関する発表（K1JT_eme2006.pdf）：2500 Hzでの最小S/Nレベルの表。",
-                "> タブの右側にある局構成図は、選択したケーブルから損失を求めます。送信ではPA–リレー間ケーブル＋リレー＋アンテナケーブル、受信ではプリアンプ前のアンテナケーブル＋リレーと、プリアンプ後の給電ケーブルです。ケーブルの減衰量はCOAXIAL CABLESタブのデータベース（§ 1.8）から取得します。"
+                "> タブの右側にある局構成図は、選択したケーブルから損失を求めます。送信ではPA–リレー間ケーブル＋リレー＋アンテナケーブル、受信ではプリアンプ前のアンテナケーブル＋リレーと、プリアンプ後の給電ケーブルです。ケーブルの減衰量は同軸ケーブルタブのデータベース（§ 1.8）から取得します。",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
             };
             d["ja"]["S47"] = new string[] {
                 "## プリアンプと無線機の雑音指数 {nuovo}",
@@ -46172,7 +46621,7 @@ namespace LunaCalc
                 "##+ FT-1000MPとトランスバーターを使ったEME局",
                 "144 MHzのEMEでFT-1000MPをトランスバーターと組み合わせて使用した2つの記録例があります。DF9ICによるFT-1000MP + Javornikトランスバーターの測定 [3]（無線機のプリアンプOFFでNF 0.9～1.4 dB）と、**W3SZ** のEME局 [12]（4 × M2 2MXP32、各偏波ごとにアンテナ直下のLNA Technology製プリアンプ、LMR-600とAndrewハードライン）です。この局は送信では **FT-1000MP Mark V** と **SSB-Electronic LT2S Mk II** トランスバーター（IF 28 MHz）、2 × GU-74Bアンプを使い、受信ではWSEハードウェアとSM5BSZのLinradソフトウェアを使っています。",
                 "> EMEバジェットでは、トランスバーターは局構成図のボックスの一つです。チェックボックスで有効にし、リストから型番（または \"custom\"）を選ぶと、プログラムがその雑音指数と利得を取り込みます。無効のままにすると計算には入りません。上のグラフは無線機のプリアンプをONにするかどうかの判断に役立ちます。",
-                ">! ✉ **他のトランスバーターをご存じですか、または自作されましたか？** 他のトランスバーターやご自身のトランスバーターを紹介したい場合は、作者にメールしてください：ccerrotta@gmail.com または ic8tem@gmail.com。連絡先はすべて **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS** タブにあります。",
+                ">! ✉ **他のトランスバーターをご存じですか、または自作されましたか？** 他のトランスバーターやご自身のトランスバーターを紹介したい場合は、作者にメールしてください：ccerrotta@gmail.com または ic8tem@gmail.com。連絡先はすべて **作者への連絡と謝辞** タブにあります。",
                 "##+ TX/RXシーケンサー",
                 "パワーアンプ（PA）とアンテナ近くのプリアンプ（PRE）を使う場合、コンピューターのPTTは無線機ではなく**シーケンサー**に接続し、シーケンサーがリレー、次にPAと無線機を正しい順序で制御します [16]。最も一般的な構成では給電線が2本あります。受信側の線は15～20 dBのプリアンプの後にあるので数dB失っても構いませんが、送信側の線の損失はできるだけ小さくしなければなりません（送信で3 dB失うと放射電力は半分になります）。待機時にはリレーがPREをアンテナから切り離しており、雷による放電に対する保護にもなります [16]。",
                 "|h| ^ステップ | RXからTXへ | TXからRXへ",
@@ -46182,6 +46631,7 @@ namespace LunaCalc
                 "~ 各ステップの間には少なくともリレーの切替時間（15～30 ms）とチャタリングの時間が必要です。IK1UWLは100～200 msを推奨しており、PAが内部リレーを持つ場合も同様です [16]。",
                 "送信の制御にはVOXよりPTTが適しています。VOXは雑音で作動することがあり、JT65がPTTの約0.5 s後に変調を始める遅延も活用できないため、プリアンプはパワーアンプの高速リレーだけで保護されることになります。PTTならこの遅延の間にパワーアンプが変調前に切り替わり、シーケンサーを追加することもできます [17]。",
                 ">! **プリアンプに注意。** T/Rリレーは開いている側のポートを十分に分離しなければなりません。アイソレーション50 dBでアンテナに500 Wを加えると、PREの入力に5 mWが届きます。少なくとも60 dBを目指し、より慎重な人は送信中にPREを50 Ωの負荷で終端する2つ目のリレーを追加します。マイクのPTTボタンは無効にします。以後はシーケンサー経由でのみ送信します（SSBではシーケンサーのPTTにフットスイッチを付け、PCのPTTとは分離します）[16]。",
+                ">! **偏波リレーは受信中にだけ切り替える。** 2つの偏波（HとV）を使う場合、アンテナを選ぶリレーは送信中に決して切り替えてはいけません。電力がかかった状態で切り替えると、リレー、プリアンプ、またはアンプが焼損し、数百ユーロから数千ユーロの損害になります [18]。",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, 第5版, 2021年3月19日（初版2019年6月19日）, 表1および表5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 2015年7月25日, 表1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC with DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, 2005年2月27日からのテスト – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -46198,16 +46648,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, 2002年5月 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003年4月, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012年1月, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM提供 – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, プレゼンテーション, 2015年7月, IC8TEM提供。"
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, プレゼンテーション, 2015年7月, IC8TEM提供。",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
             };
             d["ja"]["S48"] = new string[] {
                 "## 同軸ケーブルと損失",
-                "**COAXIAL CABLES** タブには、アマチュア無線家がよく使う50 Ωケーブルの減衰量を、YAECの5つのバンドについて20 °Cでの100 mあたりのdBでまとめています。メーカーのデータシートは異なる周波数での値を示しているため、YAECはべき乗則、すなわちデータシートの最も近い2つの周波数の間を両対数グラフ上の直線で結ぶ方法で各バンドの値を求めています：",
+                "**同軸ケーブル** タブには、アマチュア無線家がよく使う50 Ωケーブルの減衰量を、YAECの5つのバンドについて20 °Cでの100 mあたりのdBでまとめています。メーカーのデータシートは異なる周波数での値を示しているため、YAECはべき乗則、すなわちデータシートの最も近い2つの周波数の間を両対数グラフ上の直線で結ぶ方法で各バンドの値を求めています：",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ αはdB/100 m、ℓはケーブル長（メートル）。数字のみはデータシートの値、≈ は補間値、e はデータシートの最後の周波数を超えて外挿した値を示します。",
                 "同じ種類で、直径の差が±0.2 mm以内、全バンドで減衰量の差が0.2 dB/100 m以内のケーブルは1行（≡）にまとめ、平均値を示しています。同等の名称は \"also:\" で示します（例：LMR-400 = HF400, CNT-400, 50-7 low loss；LMR-600 = CNT-600）。中国の名称50-3、50-5、50-7、50-9、50-12は誘電体の直径をミリメートルで表しています。",
                 "> ユーザー定義のケーブルは5つの減衰量を入力して追加できます。data\\cavi_personali.txt に保存され、EMEバジェットの局構成図のドロップダウンにも表示されます。表の各行のツールチップには、そのケーブルの出典が表示されます。",
-                "[1] 各ケーブルの出典：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell, Ecoflex, Aircom Plus）、Messi & Paoloni（Hyperflex, Ultraflex、WiMo経由）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020, XT2400）、QAXIAL（LLF195）、Caledonian Cablesの各データシート、MIL-C-17Fカタログ（RG-142, RG-393）、SenagoのR.F. elettronica（RG-115）、DD1USおよびEA5IPの表（H100）、RG-58、RG-213、H-155、H-2000についてはSV1BSXの表（値は要確認）。"
+                "### コネクター (NJ9R)",
+                "コネクターも伝送路の一部です。NJ9Rの経験則は、コネクター8～10個ごとに約1 dBというもので、無線機の背面からアンテナまで、アダプター、リレー、分配器も含めてすべて数えます。彼の4アンテナの設備では24個のコネクターで2 dBを超え、144 MHzでの新品のLMR-400 40～45 mに相当します [2]。「EME 回線計算」では、この損失を「TX 付属品損失」とアンテナ–プリアンプ間の損失に加えてください。",
+                "[1] 各ケーブルの出典：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell, Ecoflex, Aircom Plus）、Messi & Paoloni（Hyperflex, Ultraflex、WiMo経由）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020, XT2400）、QAXIAL（LLF195）、Caledonian Cablesの各データシート、MIL-C-17Fカタログ（RG-142, RG-393）、SenagoのR.F. elettronica（RG-115）、DD1USおよびEA5IPの表（H100）、RG-58、RG-213、H-155、H-2000についてはSV1BSXの表（値は要確認）。",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
             };
             d["ja"]["S410"] = new string[] {
                 "## ドップラー、補正とCFOM",
@@ -46269,10 +46723,19 @@ namespace LunaCalc
                 "> ビット数は位置をどれだけ細かく*読み取る*かを示すだけです。実際の精度は機械的なガタ、支持部のたわみ、風、北と水平の校正にも左右されます。",
                 "### 八木アレイ：アクチュエーターとプーリー",
                 "八木アレイ（2本、4本またはそれ以上のアンテナの組み合わせ）では、仰角方向の負荷が大きく、バランスも取れていません。市販のウォームギア・モーター付きリニアアクチュエーターがあり、これらの方式ではねじは動きを制御するだけで、負荷の機械的な支持はプーリーに任せます。ウォームギアには負荷で逆回転しないという利点があり、モーターを止めてもアレイは静止したままです。",
+                "### GRAVESレーダーでポインティングを確認する (NJ9R)",
+                "フランスの**GRAVES**レーダーはロケーターJN27SIから143.050 MHzで連続送信しており、144 MHzで月経由の受信を試す試験台として最もよく使われています。月が自局からもGRAVESからも見えるとき（YAECではDXのロケーターにJN27SIを入力するだけです）、143.050 MHz（または143.0495 MHz）をSSBで受信します。音声帯域幅は2.4 kHz以上、AGCはオフ、ノイズブランカーはオンにし、その他のフィルター、ノッチ、DSPは一切使いません [2]。",
+                "ウォーターフォール上でGRAVESのエコーは破線のように見えます。強いほどアンテナが正しく向いています。ローテーターを少しずつ、まず方位角、次に仰角の順に動かして最大点を探し、見つけた位置を計算上の位置と比べます。NJ9RはGRAVESをSメーター代わりにも使っています。ゲインスライダーをゼロにして1分間の信号の平均を読み取り、毎回の運用の前にGRAVESで設備がまだ正しく調整されているかを確認します [2]。",
+                "> 仰角を持たない場合、GRAVESのエコーは通常、月の仰角が0°～15°の間、つまり月の出か月の入りのときにしか受信できません。多くの無線機は2 mバンドの外に同調できないので、その場合はSDR受信機が必要です [2]。",
+                "### コンパス、カメラ、誤差の記録 (NJ9R)",
+                "HFで使っていたローテーターなら「だいたい合っている」ポインティングで十分でしたが、EMEではそうはいきません。NJ9Rは、ローテーターのインジケーターを校正したうえで屋外でコンパスを使って確かめ、誤差は最大でも約5°までにとどめるよう勧めています。風、ストッパーへの衝突、マストの滑りによって、インジケーターが気づかないうちにアンテナの向きがずれるからです [2]。",
+                "• **マストのカメラ。** 小型の防水カメラ（バックカメラの類、25～30 USD）をマストに取り付け、水準器か傾斜計でアンテナに合わせておけば、アンテナが実際にどこを向いているかがわかります。NJ9Rは、ローテーターが故障していたり20～35°の誤差があったりする状態で、カメラだけを頼りに60～80回のQSOを達成しました。月の中心は、GRAVESのエコーの最大点を探したあとでモニター上に印を付けておきます。カメラは雑音源でもあるので、受信中は電源を切ってください [2]。",
+                "• **誤差の記録。** ポインティングのたびに、計算した月の方位角と仰角、インジケーターの読み、カメラで見た値を表に記録します。その差が自分のシステムの誤差で、補正するか、覚えておく必要があります [2]。",
                 "### 432 MHzより上：ディッシュ",
                 "902 MHz以上では主にパラボラディッシュが使われ、ツール[1]は1 GHz以上の周波数向けに設計されています。直径が大きいとビーム幅は十分の数度まで狭まり、月を正確に捉えられない恐れがあります。モーター以上に、方位角と仰角の本格的な機械式アクチュエーターが必要で、ポインティング精度は制御系のビット分解能に大きく依存します。OE2IGLとDF3GJによる **EME Link Budget & Analysis Tool** [1] は、良好な追尾システムで±0.035°、通常のもので±0.1°としており、ポインティング損失をリンクの他のすべての項とともに計算します。",
                 ">+ YAECは432 MHzまでです。より高いバンドにはOE2IGLとDF3GJのツール[1]をお勧めします。ディッシュのパラメータ（直径、f/D、フィード、表面粗さ、効率）、ポインティング、リブレーション、太陽と月の雑音、大気減衰を考慮して1～300 GHzのEMEバジェットを計算します。",
-                "[1] Gerald Ihninger OE2IGL and Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL and Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
             };
             d["ja"]["S412"] = new string[] {
                 "## EME用デジタルモード：Q65とJT65",
@@ -46363,6 +46826,18 @@ namespace LunaCalc
                 "| q3 | 自局とDX局のコールサイン",
                 "| q4 | 両方のコールサインとRRR、RR73、73または空白",
                 "~ [1]より。作者は、デコーダーが表示するS/N値はまだ改良中だったため、あまり重視しないよう注意しています [1]。YAECのEMEバジェットとの比較には、1回の読み取りより複数のQSOを使う方がよいでしょう。",
+                "### NJ9RのJT65BとMAP65の設定",
+                "144 MHzでJT65Bから始めたNJ9Rは、使っている設定を次のようにまとめています [7]。",
+                "|h| プログラム | 場所 | 設定",
+                "| WSJT-X | メインウィンドウ | Enable VHF and sub-mode features、Decode after EME delay、デコード周期の間に空行",
+                "| WSJT-X | Advanced | Random erasureとtwo pass decoding（6と6、CPUに応じて）、ウォーターフォールはMost sensitive",
+                "| WSJT-X | モード | JT65、サブモードB、Sync −1",
+                "| WSJT-X | Ftol | 20～500 Hz。局のトレースが現れたら50、20、10 Hzに狭める（広いほどデコードが不利になる）",
+                "| WSJT-X | 音声周波数 | TXは1270 Hz。RXはドップラーに応じて1270 Hz ±350 Hz以内、またはチャットで告知された周波数",
+                "| MAP65 | Station, I/O devices | 自局のコールサインとロケーター。サウンドカード、またはIQ無線機の場合はネットワークインターフェースで、96 000 Hz",
+                "| MAP65 | モードとデコード | JT65B / Q65A、Only EME calls、Aggressive deep search",
+                "| MAP65 | メインウィンドウ | NBオン、Monitor On、サイドバーの音声レベルは12～40",
+                "~ 出典 [7]。項目名はWSJT-XとMAP65のメニューどおり英語のままにしています。JT65について、YAECの「EME 回線計算」はサブモードBのしきい値を使います（§ 1.6）。",
                 "### DXペディションとの交信手順 (W7GJ)",
                 "長年6 m EMEのペディションを運営しているLance Collister W7GJは、パイルアップ（pile-up）の中でQ65-60AでDXペディションを呼ぶ方法を説明しています [6]。まず、コンピューターの時計は非常に正確で、送信周波数は非常に安定している必要があります [6]。",
                 "• **送信周期。** DXペディションは常に第1シーケンス（偶数分）で送信し、呼ぶ側は第2シーケンス（奇数分）で送信します [6]。",
@@ -46384,7 +46859,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, 2023年10月, IC8TEM提供。",
                 "[4] Nico Palermo IV3NWV, QRA符号に関するEME 2016会議での発表, [3]で引用 – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-Xソースコード（ファイル Q65_encoding_modules.F90 ほか）, [3]で引用 – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 2023年4月3日改訂, IC8TEM提供 – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 2023年4月3日改訂, IC8TEM提供 – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
             };
             d["ja"]["S54"] = new string[] {
                 "## SM5BSZによるEME文献",
@@ -46479,15 +46955,47 @@ namespace LunaCalc
                 "> プログラムでは：「距離と Dgrd」のカレンダーは、太陽が月に近い日を☀記号（オレンジまたは赤）で示します。「太陽雑音」タブは、測定されたフラックスを使って、選んだ時点で太陽がどれだけ雑音を増やすかを計算します。",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["ja"]["S413"] = new string[] {
+                "## 初受信からQSOまで：NJ9Rのアドバイス",
+                "Relu Jianu NJ9Rは、“2M EME the easy way”に144 MHz初心者としての経験をまとめました。プリアンプなしの7エレメント八木でGRAVESのエコーを受信するところから始まる、実践的な道のりです。彼が伝えたいことは何よりも一つ、自分の設備の限界、つまり利得と損失を知り、そのデータをもとにそれを越えられるかどうかを判断することです [1]。技術的な部分は各テーマの節に取り入れてあります。EME 回線計算とアンテナ利得（§ 1.6）、偏波リレー（§ 1.7）、コネクター（§ 1.8）、ポインティングとGRAVES（§ 1.11）、WSJT-XとMAP65の設定（§ 1.12）、チャットの読み方（§ 1.14）です。ここには局と受信機についてのアドバイスを残しています。",
+                "### ローカルノイズのマップ",
+                "月を探す前に、雑音がどの方向から来るかを知っておくとよいでしょう。NJ9Rは、アンテナを方位角15～30°刻みで360°一周させ、ゲインスライダー（最も低いレベルでゼロに合わせたもの）で読んだ雑音を表に記録することを勧めています。仰角を持つ局は、0°から45°まで5～10°刻みで同じ一周を繰り返します。表をヒートマップのように色分けすると、ある方向で何も受信できない理由がわかります。そこではローカルノイズがエコーを覆い隠しているのです [1]。",
+                "> YAECでは「自局障害物の偵察」が障害物でふさがれた方向を示します。これを雑音マップと照らし合わせると、最適な月のウィンドウを選ぶのに役立ちます。",
+                "近所の家や電子機器は、絶えず妨害を出す発生源です。まず自宅から探して減らしていきますが、ある段階からは残ったものと付き合っていくしかありません [1]。",
+                "### 受信機とコンピューター",
+                "• **きれいな受信機。** 受信中はAGCオフ、ノイズブランカーオン、フィルター、ノッチ、DSPは一切使いません。コンピューターでは音声入力を最高品質にし、システム音声の補正や増幅は使いません [1]。",
+                "• **時計の同期。** デジタルモードには正確な時刻が必要です。NJ9Rは同期プログラム（NetTime）でコンピューターの時計を15分ごとに自動補正しています [1]。",
+                "• **CALL3.TXTを最新に。** WSJT-XとMSHVはこのファイルでコールサインを認識するため、デコードが何dBも有利になります。ただし、誤ったデコードを捨てるのはオペレーターの役目です [1]。YAECはW7GJとWSJT-X Improvedのリストをダウンロードして統合し、ファイルをWSJT-Xのフォルダーにコピーすることもできます。",
+                "• **忍耐。** 何も聞こえないときは、複数の原因が重なっていることがあります。高いDgrd、不利な偏波、ファラデー回転、その方向のローカルノイズなどです。数分後、数時間後、あるいは別の日にもう一度試し、その月でDgrdが最も低い日を選ぶとよいでしょう（§ 1.3, 1.4） [1]。",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
+            };
+            d["ja"]["S414"] = new string[] {
+                "## インターネットのテキストチャット",
+                "EMEでは、スケジュール（sked）、CQの告知、レポートのやりとりは、ほとんどがインターネットのテキストチャットで行われます。よく使われるのは次のとおりです。",
+                "• **N0UKのEMEチャット。** Chris Cox N0UKによる2 m EMEの老舗チャットです（https://www.chris.org/cgi-bin/jt65emeA）。同じ作者による、メテオスキャッターのチャットがPing Jockey Centralです（https://www.pingjockey.net） [1]。",
+                "• **EA8DBMのEMEchat。** EMEのチャットをまとめたウェブインターフェースです（https://www.emechat.com）。DXペディションは、2 mではN0UKのチャット、70 cm以上ではHB9Qのチャットと組み合わせてこれを使っています [2]。",
+                "• **HB9Q logger。** 70 cm以上のEME向けのチャットとsked登録簿です（https://logger.hb9q.ch） [2]。",
+                "• **ON4KST、microwaveセクション。** ON4KSTのチャットはバンドごとのセクションに分かれています（https://www.on4kst.com/chat）。microwaveセクションでは、EMEを運用する人も含め、上のバンドのオペレーターに出会えます [3]。",
+                "### 告知の読み方 (NJ9R)",
+                "チャットでCQを出す局は、ふつう出力とアンテナを書いています。「H」または何も書いていなければ、水平偏波だけの局と考えられます（いつもそうとは限りません）。「HV」や「XPOL」は二重偏波を示し、いちばん探す価値のある局です。同じ大陸の局どうしなら水平対水平でうまくいきますが、大陸間では空間偏波によって、水平で出た信号がほぼ垂直で届くことがあり、小さな局には損失が大きすぎます（§ 1.3） [4]。",
+                "• **LiveCQ**（https://livecq.eu）はPSK Reporterと同じように動作し、レポートを送っている局だけを表示します。そのため、LiveCQが空でもチャットでは運用が行われていることがあります [4]。",
+                "• チャットで告知される音声周波数は、1270 Hzで送信していない局を見つけるのに役立ちます。ある局を受信したら、チャットでそれを知らせるのがよい習慣です [4]。",
+                "[1] Chris Cox N0UK, EMEチャット – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, 2026年6月, DXペディションC37EME：“2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
+            };
             d["hi"] = new Dictionary<string, string[]>();
             d["hi"]["PREF"] = new string[] {
                 "मैनुअल का यह भाग प्रोग्राम के बटनों का नहीं, बल्कि उन विचारों का वर्णन करता है जिन पर प्रोग्राम बना है। अध्यायों से पहले लेखक कुछ ऐसी अवधारणाएँ रखना चाहते हैं जो प्रोग्राम को समझने के लिए मुख्य सिद्ध हुई हैं, स्टेशन पर उनके हाल के अनुभवों के आलोक में भी।",
                 "• **गणना एक संदर्भ है, वादा नहीं।** बजट, अनुमानित S/N और डिजिटल मोड की सीमाएँ एक आदर्श लिंक का वर्णन करती हैं। रिसेप्शन के दौरान स्थानीय और मानव-निर्मित शोर, जो हर मिनट बदल सकता है, और फैराडे घूर्णन मायने रखते हैं: कुछ ही क्षणों में गणना किया गया मार्जिन मिट सकता है (§ 1.3, 1.12)।",
                 "• **दिन स्विच ऑन करने से पहले चुना जाता है।** Dgrd, चंद्रमा की दूरी और दिक्पात बताते हैं कि चंद्रमा के पीछे आकाश का कितना शोर है, वह कितने घंटे क्षितिज के ऊपर रहता है और कितना ऊँचा उठता है: वही उपकरण अलग-अलग दिनों में बहुत अलग परिणाम देते हैं (§ 1.4)।",
                 "• **ध्रुवीकरण एक सिग्नल को गायब कर सकता है।** रैखिक एंटीना के साथ फैराडे घूर्णन और स्थानिक ध्रुवीकरण किसी इको को मिनटों या घंटों तक बुझा सकते हैं; अक्सर खराबी खोजने के बजाय प्रतीक्षा करना, दोहराना या ध्रुवीकरण घुमाना ही काफ़ी होता है (§ 1.3)।",
-                "• **सबसे अच्छा समाधान दोहरा ध्रुवीकरण है।** एंटीना के लिए सबसे अच्छा विकल्प हमेशा दोहरे ध्रुवीकरण वाली प्रणाली है, रिसेप्शन में दोहरी फ़ीडलाइन और दोहरे रिसेप्शन के साथ, जबकि ट्रांसमिशन एक ही ध्रुवीकरण से होता है: इस तरह फैराडे घूर्णन और स्थानिक ध्रुवीकरण इको को अब नहीं बुझाते (§ 1.3)।",
+                "• **सबसे अच्छा समाधान दोहरा ध्रुवीकरण है।** एंटीना के लिए सबसे अच्छा विकल्प हमेशा दोहरे ध्रुवीकरण वाली प्रणाली है, रिसेप्शन में दोहरी फ़ीडलाइन और दोहरे रिसेप्शन के साथ, जबकि ट्रांसमिशन एक ही ध्रुवीकरण से होता है: इस तरह फैराडे घूर्णन और स्थानिक ध्रुवीकरण इको को अब नहीं बुझाते (§ 1.3)। ध्रुवीकरण चुनने वाला रिले केवल रिसेप्शन में स्विच किया जाता है, ट्रांसमिशन के दौरान कभी नहीं (§ 1.7)।",
                 "• **EME बजट एक परीक्षण मंच के रूप में।** EME बजट टैब में विभिन्न बदलाव डालकर यह समझने की कोशिश की जा सकती है कि अपनी स्थापना को बनाए रखने या उसे बदलने की संभावनाएँ EME करने के लिए कितनी व्यावहारिक हैं (§ 1.6)।",
                 "• **ऊँचाई (एलिवेशन) मायने रखती है।** एलिवेशन न होने की बाध्यता संभव ट्रैफ़िक के मिनट छीन लेती है। सबसे बढ़कर, जब एंटीना प्रणाली को ऊपर उठाया जाता है, तो निम्न साइड-लोब आवश्यक हो जाते हैं ताकि धरती का शोर न आए और एंटीना अधिकतम सिग्नल ग्रहण तक पहुँचे, जो केवल आकाश की ओर इंगित करने से ही मिल सकता है।",
+                "• **एंटेना: तालिकाओं से शुरुआत करें।** यागी चुनने और उनकी तुलना करने के लिए संदर्भ Lionel Edwards VE7BQH की तालिकाएँ हैं (गेन, G/T और एंटेना तापमान), जो Gabriel Sampol EA6VQ की वेबसाइट DXMaps पर प्रकाशित हैं (https://dxmaps.com/ve7bqh_e.html)। कम नॉइज़ वाली यागी के डिज़ाइन पर सबसे प्रामाणिक योगदानों में Hartmut DG7YBN, Popa YU7EF और Justin Johnson G0KSC के योगदान शामिल हैं। YAEC का EME बजट VE7BQH की तालिकाओं का उपयोग करता है (§ 1.6)।",
+                "• **अपनी स्थापना को जानें।** जैसा कि Relu NJ9R लिखते हैं, असली रहस्य अपने सिस्टम की सीमाओं, यानी गेन और नुकसान, को जानना है, और इन्हीं आँकड़ों के आधार पर तय करना कि उन्हें पार किया जा सकता है या नहीं। 144 MHz पर पहली कसौटी GRAVES रडार की इको है (§ 1.11, 1.13)।",
                 "• **प्रीएम्पलीफायर से पहले हर डेसिबल मायने रखता है।** प्रीएम्पलीफायर से पहले के केबल, रिले और कनेक्टर सिस्टम तापमान को उनके dB मान से कहीं अधिक बिगाड़ते हैं: निवेश वहीं करना चाहिए (§ 1.7, 1.8)।",
                 "• **पहले सही आवृत्तियाँ।** ऊँचे बैंडों पर डॉप्लर और CFOM इको को कई kHz तक खिसका देते हैं: डिकोडिंग खिड़की से बाहर का इको अच्छे सिग्नल के बावजूद सुनाई नहीं देता (§ 1.10)।",
                 "• **सूर्य एक अनुमान योग्य प्रतिद्वंद्वी है।** जब वह चंद्रमा के पास होता है तो शोर बढ़ता है: प्रोग्राम पहले से चेतावनी देता है, और दिन चुनते समय इसका ध्यान रखना चाहिए (§ 1.5, 1.9)।",
@@ -46516,11 +47024,11 @@ namespace LunaCalc
                 "|h| अक्षर | YAEC में अनुशंसित उपयोग",
                 "| 4 | केवल मोटे अनुमान के लिए: चंद्रमा का अज़ीमुथ और एलिवेशन लगभग 1° तक गलत हो सकता है, क्योंकि स्थानीय क्षितिज हर 111 km पर लगभग 1° झुकता है",
                 "| 6 | DX लोकेटर, QSO और EME बजट: चंद्रमा की दिशा में त्रुटि डिग्री के कुछ सौवें हिस्से की होती है",
-                "| **8** | आपका स्टेशन, Reconnaissance of my obstacles के लिए: यह मोहल्ले या पहाड़ी की पहचान करता है",
+                "| **8** | आपका स्टेशन, मेरी बाधाओं की टोह के लिए: यह मोहल्ले या पहाड़ी की पहचान करता है",
                 "|+ **10** | आपका स्टेशन, सबसे अच्छे परिणाम के साथ: यह इमारत या एंटेना टावर की पहचान करता है",
                 "| 12 – 14 | स्वीकार्य, पर कुछ नहीं जोड़ते: सटीकता एक सामान्य GPS (कुछ मीटर) और स्वयं एंटेना के आकार से भी अधिक है",
                 "### लोकेटर और बाधाएँ",
-                "चंद्रमा की दिशा के लिए 6 अक्षर काफ़ी हैं: चंद्रमा लगभग 380 000 km दूर है, और 6 अक्षरों वाले लोकेटर के ±4.4 km अज़ीमुथ और एलिवेशन को लगभग 0.04° बदलते हैं, जो एंटेना बीम की तुलना में नगण्य है। **स्थानीय बाधाओं** (इमारतें, पेड़, पहाड़ियाँ) के लिए उल्टा है: वे एंटेना से कुछ दसियों या सैकड़ों मीटर दूर होती हैं, और 6 अक्षरों के साथ स्टेशन 7.5 × 4.6 km के आयत में कहीं भी हो सकता है, इसलिए बाधाओं को सही जगह नहीं रखा जा सकता। 8 अक्षरों के साथ त्रुटि लगभग 450 m तक घटती है, 10 के साथ लगभग 20 m तक: यही सटीकता **Reconnaissance of my obstacles** टैब को चाहिए ताकि वह उन क्षेत्रों को सही बना सके जहाँ एंटेना अवरुद्ध है।",
+                "चंद्रमा की दिशा के लिए 6 अक्षर काफ़ी हैं: चंद्रमा लगभग 380 000 km दूर है, और 6 अक्षरों वाले लोकेटर के ±4.4 km अज़ीमुथ और एलिवेशन को लगभग 0.04° बदलते हैं, जो एंटेना बीम की तुलना में नगण्य है। **स्थानीय बाधाओं** (इमारतें, पेड़, पहाड़ियाँ) के लिए उल्टा है: वे एंटेना से कुछ दसियों या सैकड़ों मीटर दूर होती हैं, और 6 अक्षरों के साथ स्टेशन 7.5 × 4.6 km के आयत में कहीं भी हो सकता है, इसलिए बाधाओं को सही जगह नहीं रखा जा सकता। 8 अक्षरों के साथ त्रुटि लगभग 450 m तक घटती है, 10 के साथ लगभग 20 m तक: यही सटीकता **मेरी बाधाओं की टोह** टैब को चाहिए ताकि वह उन क्षेत्रों को सही बना सके जहाँ एंटेना अवरुद्ध है।",
                 ">+ व्यावहारिक सुझाव: 10 अक्षरों का लोकेटर उस बिंदु के GPS निर्देशांकों से निकालें जहाँ एंटेना लगा है (घर के प्रवेश द्वार से नहीं) और उसे लाइव स्थिति और +- 24h टैब में **my locator** के रूप में दर्ज करें। DX के लिए वह जो 6 अक्षरों का लोकेटर देता है, वही काफ़ी है।",
                 "[1] Wikipedia, “Maidenhead Locator System” (उत्पत्ति G4ANB और 1980 में Maidenhead में IARU VHF बैठक, जोड़ों की संरचना, 1999 से WGS-84, 8 अक्षरों से आगे के विस्तार, IARU 2019 स्पष्टीकरण, HF और VHF/UHF पर उपयोग, सबस्क्वेयर केंद्रों के बीच दूरियाँ) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -46564,12 +47072,16 @@ namespace LunaCalc
                 "• अपवर्तन मायने रखता है: चंद्रमा −0.51° पर उदित हुआ, जो −0.35° के प्रकाशीय क्षितिज से नीचे है; 200 MHz पर, शुष्क हवा में, 0° एलिवेशन पर अपवर्तन त्रुटि −0.49° है।",
                 "IK3XTV बताते हैं कि सिद्धांत रूप में भूमि का प्रभाव 6 dB तक पहुँचता है, इतना कि एक अकेला यागी लगभग 4 के ऐरे जैसा प्रदर्शन करता है, लेकिन यह एंटेना के आसपास की ज़मीन पर बहुत निर्भर करता है: शहर में यह कम होता है, खुले ग्रामीण इलाके में बेहतर और समुद्र के पास और भी अधिक। इसका लाभ चंद्रोदय और चंद्रास्त के समय, लगभग 1° और 18 – 20° एलिवेशन के बीच मिलता है [4]।",
                 "> इसीलिए EME बजट में ग्राउंड गेन को BETA के रूप में चिह्नित किया गया है: गणना किया गया मान (अधिकतम +6 dB) एक सैद्धांतिक सीमा है। समुद्र से ऊँचे एंटेना या कई यागी वाले ऐरे के साथ, लगभग इसका आधा और कम एलिवेशन पर स्पष्ट QSB की अपेक्षा करें [3]।",
+                "### एंटेना का गेन: घोषित आँकड़े और dBd (NJ9R)",
+                "निर्माताओं की डेटाशीट में दिए गेन लगभग हमेशा आदर्श ज़मीन और 50 Ω पर आदर्श मिलान वाले सिमुलेशन से आते हैं। NJ9R सुझाव देते हैं कि घोषित मान से लगभग 2 dB घटाएँ और dBi के बजाय dBd में सोचें, ताकि कोई भ्रम न रहे; यही बात केबलों, कनेक्टरों और प्रीएम्प्लीफ़ायरों के आँकड़ों पर भी लागू होती है [6]। उनका उदाहरण: एक अच्छी 5-एलिमेंट यागी (8 dBi, 5.9 dBd) लाइन में 4.25 dB के नुकसान के साथ केवल 1.5 dB उपयोगी गेन छोड़ती है; अपनी पहली 7-एलिमेंट यागी (12.3 dBi, 10 dBd) से वे मुश्किल से ही रिसीव कर पाते थे। थोड़े मार्जिन के साथ रिसीव करने के लिए शुरुआती बिंदु के रूप में वे लगभग 14 dBd बताते हैं [6]।",
+                ">+ EME बजट में इसका असर तुरंत आज़माया जा सकता है: एंटेना का गेन 2 dB घटाकर दिखता है कि लिंक के लिए कितना मार्जिन बचता है।",
                 "[1] WSJT-X User Guide, K1JT और WSJT Development Group, § 7.1 (FT4 = FT8 + 3.5 dB)।",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 अप्रैल 2021 (WSJT-X 2.4.0), IC8TEM द्वारा उपलब्ध कराया गया।",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21वीं EME Meeting, IC8TEM द्वारा उपलब्ध कराई गई प्रस्तुति।",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 12 नवंबर 2010 का दस्तावेज़, IC8TEM द्वारा उपलब्ध कराया गया।",
                 "[5] J. Taylor K1JT, EME 2006 सम्मेलन में JT65 पर प्रस्तुत लेख (K1JT_eme2006.pdf): 2500 Hz में न्यूनतम S/N स्तरों की तालिका।",
-                "> टैब के दाईं ओर स्टेशन आरेख चुनी गई केबलों से नुकसान निकालता है: ट्रांसमिशन में PA–रिले केबल + रिले + एंटेना केबल, रिसेप्शन में एंटेना केबल + प्रीएम्प से पहले रिले और उसके बाद फ़ीड केबल। केबलों का एटेन्यूएशन COAXIAL CABLES टैब के डेटाबेस से आता है (§ 1.8)।"
+                "> टैब के दाईं ओर स्टेशन आरेख चुनी गई केबलों से नुकसान निकालता है: ट्रांसमिशन में PA–रिले केबल + रिले + एंटेना केबल, रिसेप्शन में एंटेना केबल + प्रीएम्प से पहले रिले और उसके बाद फ़ीड केबल। केबलों का एटेन्यूएशन कोएक्सियल केबल टैब के डेटाबेस से आता है (§ 1.8)।",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
             };
             d["hi"]["S47"] = new string[] {
                 "## प्रीएम्प्लीफ़ायर और रेडियो का नॉइज़ फ़िगर {nuovo}",
@@ -46644,7 +47156,7 @@ namespace LunaCalc
                 "##+ FT-1000MP और ट्रांसवर्टर वाले EME स्टेशन",
                 "144 MHz पर ट्रांसवर्टर के साथ EME के लिए इस्तेमाल किए गए FT-1000MP के दो प्रलेखित उदाहरण: FT-1000MP + Javornik ट्रांसवर्टर पर DF9IC के माप [3] (रेडियो प्रीएम्प बंद के साथ NF 0.9 – 1.4 dB) और **W3SZ** का EME स्टेशन [12] (4 × M2 2MXP32, हर ध्रुवीकरण के लिए एंटेना पर LNA Technology प्रीएम्प, LMR-600 और Andrew hardline), जो ट्रांसमिशन में **SSB-Electronic LT2S Mk II** ट्रांसवर्टर (IF 28 MHz) के साथ **FT-1000MP Mark V** और 2 × GU-74B एम्प्लीफ़ायर का उपयोग करता है, जबकि रिसेप्शन में SM5BSZ का WSE हार्डवेयर और Linrad सॉफ़्टवेयर इस्तेमाल करता है।",
                 "> EME बजट में ट्रांसवर्टर स्टेशन आरेख का एक बॉक्स है: इसे उसके चेकबॉक्स से सक्षम किया जाता है, आप सूची से मॉडल चुनते हैं (या \"custom\") और प्रोग्राम उसका नॉइज़ फ़िगर और गेन ले लेता है; बंद रहने पर यह गणना में शामिल नहीं होता। ऊपर का चार्ट यह तय करने में मदद करता है कि रेडियो प्रीएम्प चालू करना है या नहीं।",
-                ">! ✉ **क्या आप कोई और ट्रांसवर्टर जानते हैं या आपने स्वयं बनाया है?** यदि आप अन्य ट्रांसवर्टर या अपना ट्रांसवर्टर दूसरों तक पहुँचाना चाहते हैं, तो लेखक को ई-मेल लिखें: ccerrotta@gmail.com या ic8tem@gmail.com। सभी संपर्क विवरण **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS** टैब में हैं।",
+                ">! ✉ **क्या आप कोई और ट्रांसवर्टर जानते हैं या आपने स्वयं बनाया है?** यदि आप अन्य ट्रांसवर्टर या अपना ट्रांसवर्टर दूसरों तक पहुँचाना चाहते हैं, तो लेखक को ई-मेल लिखें: ccerrotta@gmail.com या ic8tem@gmail.com। सभी संपर्क विवरण **लेखक से संपर्क और आभार** टैब में हैं।",
                 "##+ TX/RX सीक्वेंसर",
                 "पावर एम्प्लीफ़ायर (PA) और एंटेना के पास प्रीएम्प्लीफ़ायर (PRE) होने पर कंप्यूटर का PTT रेडियो को नहीं, बल्कि एक **सीक्वेंसर** को जाता है, जो रिले को और फिर PA और रेडियो को सही क्रम में चलाता है [16]। सबसे आम व्यवस्था में दो फ़ीड लाइनें होती हैं: रिसीव लाइन कुछ dB खो सकती है, क्योंकि वह 15 – 20 dB के प्रीएम्प के बाद आती है, जबकि ट्रांसमिट लाइन में जितना हो सके कम लॉस होना चाहिए (ट्रांसमिशन में 3 dB विकिरित पावर को आधा कर देते हैं)। विश्राम अवस्था में रिले PRE को एंटेना से अलग रखते हैं: यह बिजली गिरने से होने वाले डिस्चार्ज के विरुद्ध एक अतिरिक्त सुरक्षा है [16]।",
                 "|h| ^चरण | RX से TX | TX से RX",
@@ -46654,6 +47166,7 @@ namespace LunaCalc
                 "~ एक चरण और अगले चरण के बीच कम से कम रिले का स्विचिंग समय (15 – 30 ms) और उनका बाउंस चाहिए: IK1UWL 100 – 200 ms की सलाह देते हैं, PA के लिए भी यदि उसमें आंतरिक रिले हों [16]।",
                 "ट्रांसमीटर को चालू करने के लिए PTT, VOX से बेहतर है: VOX किसी शोर से चालू हो सकता है और लगभग 0.5 s की उस देरी का लाभ नहीं उठाता जिसके बाद JT65 PTT के बाद मॉड्यूलेशन शुरू करता है, इसलिए प्रीएम्प्लीफ़ायर केवल एम्प्लीफ़ायर के तेज़ रिले से सुरक्षित रहता है; PTT के साथ यह देरी मॉड्यूलेशन से पहले एम्प्लीफ़ायर को स्विच कर देती है, और सीक्वेंसर भी जोड़ा जा सकता है [17]।",
                 ">! **प्रीएम्प्लीफ़ायर का ध्यान रखें।** T/R रिले को खुले पोर्ट को बहुत अच्छी तरह अलग करना चाहिए: 50 dB आइसोलेशन और एंटेना पर 500 W होने पर PRE के इनपुट तक 5 mW पहुँचते हैं। कम से कम 60 dB का लक्ष्य रखें; सबसे सावधान लोग एक दूसरा रिले जोड़ते हैं जो ट्रांसमिशन के दौरान PRE को 50 Ω लोड पर बंद कर देता है। माइक्रोफ़ोन का PTT बटन निष्क्रिय करें: उसके बाद केवल सीक्वेंसर के माध्यम से ट्रांसमिट करें (SSB के लिए सीक्वेंसर के PTT पर एक फ़ुट स्विच, PC वाले से अलग किया हुआ) [16]।",
+                ">! **ध्रुवीकरण रिले केवल रिसेप्शन में स्विच किया जाता है।** दो ध्रुवीकरणों (H और V) के साथ, एंटेना चुनने वाले रिले को ट्रांसमिशन के दौरान कभी स्विच नहीं करना चाहिए: पावर लगी होने पर रिले, प्रीएम्प्लीफ़ायर या एम्प्लीफ़ायर जल जाते हैं, और सैकड़ों से लेकर हज़ारों यूरो तक का नुकसान होता है [18]।",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, अंक 5, 19 मार्च 2021 (पहला संस्करण 19 जून 2019), तालिकाएँ 1 और 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 जुलाई 2015, तालिका 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC, DARC OV Durlach A35 के साथ, “Test of the Large Signal Behaviour of some 144 MHz Radios”, 27 फ़रवरी 2005 से परीक्षण – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -46670,16 +47183,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, मई 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), अप्रैल 2003, पृ. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, जनवरी 2012, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM द्वारा उपलब्ध कराया गया – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, प्रस्तुति, जुलाई 2015, IC8TEM द्वारा उपलब्ध कराई गई।"
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, प्रस्तुति, जुलाई 2015, IC8TEM द्वारा उपलब्ध कराई गई।",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
             };
             d["hi"]["S48"] = new string[] {
                 "## कोएक्सियल केबल और नुकसान",
-                "**COAXIAL CABLES** टैब रेडियो एमेच्योरों द्वारा सबसे अधिक इस्तेमाल की जाने वाली 50 Ω केबलों का एटेन्यूएशन, 20 °C पर dB प्रति 100 m में, YAEC के पाँच बैंडों पर एकत्र करता है। निर्माताओं की डेटा शीट अलग-अलग फ़्रीक्वेंसियों पर मान देती हैं; YAEC ने उन्हें पावर लॉ से बैंडों पर लाया है, जो डेटा शीट की दो निकटतम फ़्रीक्वेंसियों के बीच log-log चार्ट पर एक सीधी रेखा है:",
+                "**कोएक्सियल केबल** टैब रेडियो एमेच्योरों द्वारा सबसे अधिक इस्तेमाल की जाने वाली 50 Ω केबलों का एटेन्यूएशन, 20 °C पर dB प्रति 100 m में, YAEC के पाँच बैंडों पर एकत्र करता है। निर्माताओं की डेटा शीट अलग-अलग फ़्रीक्वेंसियों पर मान देती हैं; YAEC ने उन्हें पावर लॉ से बैंडों पर लाया है, जो डेटा शीट की दो निकटतम फ़्रीक्वेंसियों के बीच log-log चार्ट पर एक सीधी रेखा है:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α dB/100 m में, ℓ केबल की लंबाई मीटर में। सादा अंक डेटा शीट का मान है; ≈ इंटरपोलेट किए गए मान को दर्शाता है, और e डेटा शीट की अंतिम फ़्रीक्वेंसी से आगे एक्सट्रापोलेट किए गए मान को।",
                 "एक ही प्रकार की केबलें, जिनका व्यास ±0.2 mm के भीतर और सभी बैंडों पर एटेन्यूएशन 0.2 dB/100 m के भीतर समान हो, एक पंक्ति (≡) में औसत मान के साथ समूहित की जाती हैं; समतुल्य नाम \"also:\" के साथ दिखाए जाते हैं (उदाहरण के लिए LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600)। चीनी नाम 50-3, 50-5, 50-7, 50-9, 50-12 डाइइलेक्ट्रिक का व्यास मिलीमीटर में बताते हैं।",
                 "> कस्टम केबलें उनके पाँच एटेन्यूएशन मानों के साथ जोड़ी जा सकती हैं: वे data\\cavi_personali.txt में सहेजी जाती हैं और EME बजट के स्टेशन आरेख की ड्रॉप-डाउन सूचियों में भी दिखाई देती हैं। तालिका की हर पंक्ति का टूलटिप उस केबल का स्रोत बताता है।",
-                "[1] अलग-अलग केबलों के स्रोत: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo के माध्यम से), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables की डेटा शीट, MIL-C-17F कैटलॉग (RG-142, RG-393), Senago की R.F. elettronica (RG-115), DD1US और EA5IP की तालिकाएँ (H100) और RG-58, RG-213, H-155 और H-2000 के लिए SV1BSX की तालिका (सत्यापन आवश्यक मान)।"
+                "### कनेक्टर (NJ9R)",
+                "कनेक्टर भी लाइन का हिस्सा हैं। NJ9R का व्यावहारिक नियम है हर 8 – 10 कनेक्टर पर लगभग 1 dB, रेडियो के पिछले हिस्से से एंटेना तक सभी गिनकर, एडेप्टर, रिले और पावर डिवाइडर समेत: उनकी चार एंटेना वाली स्थापना में 24 कनेक्टर 2 dB से अधिक के बराबर हैं, यानी 144 MHz पर 40 – 45 m नए LMR-400 जितने [2]। EME बजट में यह नुकसान TX सहायक हानि में और एंटेना तथा प्रीएम्प्लीफ़ायर के बीच के नुकसान में जोड़ना चाहिए।",
+                "[1] अलग-अलग केबलों के स्रोत: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo के माध्यम से), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables की डेटा शीट, MIL-C-17F कैटलॉग (RG-142, RG-393), Senago की R.F. elettronica (RG-115), DD1US और EA5IP की तालिकाएँ (H100) और RG-58, RG-213, H-155 और H-2000 के लिए SV1BSX की तालिका (सत्यापन आवश्यक मान)।",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
             };
             d["hi"]["S410"] = new string[] {
                 "## Doppler, क्षतिपूर्ति और CFOM",
@@ -46741,10 +47258,19 @@ namespace LunaCalc
                 "> बिटों की संख्या केवल यह बताती है कि स्थिति कितनी बारीकी से *पढ़ी* जाती है: वास्तविक सटीकता यांत्रिक प्ले, सपोर्ट के झुकाव, हवा और उत्तर तथा क्षितिज के कैलिब्रेशन पर भी निर्भर करती है।",
                 "### यागी ऐरे: एक्चुएटर और पुली",
                 "यागी ऐरे (2, 4 या अधिक एंटेना के संयोजन) में एलिवेशन लोड बड़ा और असंतुलित होता है। बाज़ार में वर्म-स्क्रू मोटर वाले लीनियर एक्चुएटर उपलब्ध हैं: इन समाधानों में स्क्रू केवल गति को नियंत्रित करता है, जबकि लोड का यांत्रिक सहारा पुलियों को सौंपा जाता है। वर्म स्क्रू का लाभ यह है कि वह लोड के नीचे उल्टा नहीं घूमता, इसलिए मोटर बंद होने पर भी ऐरे स्थिर रहता है।",
+                "### GRAVES रडार से पॉइंटिंग की जाँच (NJ9R)",
+                "फ़्रांसीसी रडार **GRAVES** लोकेटर JN27SI से 143.050 MHz पर लगातार प्रसारण करता है और 144 MHz में चंद्रमा के रास्ते रिसेप्शन की सबसे अधिक इस्तेमाल होने वाली कसौटी है। जब चंद्रमा अपने स्टेशन और GRAVES दोनों से दिखाई दे रहा हो (YAEC में DX के लोकेटर के रूप में JN27SI डालना ही काफ़ी है), तो 143.050 MHz (या 143.0495 MHz) पर SSB में सुना जाता है: ऑडियो बैंडविड्थ कम से कम 2.4 kHz, AGC बंद, नॉइज़ ब्लैंकर चालू और कोई अन्य फ़िल्टर, नॉच या DSP नहीं [2]।",
+                "वॉटरफ़ॉल पर GRAVES की इको एक टूटी-टूटी (डैश वाली) रेखा के रूप में दिखती है: वह जितनी तीव्र हो, एंटेना की दिशा उतनी ही सही है। रोटेटर को छोटे-छोटे कदमों में घुमाया जाता है, पहले अज़ीमुथ में और फिर एलिवेशन में, जब तक अधिकतम न मिल जाए, और मिली हुई स्थिति की तुलना गणना की गई स्थिति से की जाती है। NJ9R GRAVES को S-meter की तरह भी इस्तेमाल करते हैं: गेन स्लाइडर को शून्य पर रखकर वे एक मिनट के दौरान सिग्नल का औसत पढ़ते हैं, और हर सत्र से पहले GRAVES से जाँचते हैं कि स्थापना अब भी ठीक से सेट है [2]।",
+                "> एलिवेशन के बिना GRAVES की इको आमतौर पर तभी मिलती है जब चंद्रमा 0° से 15° की ऊँचाई के बीच हो, यानी चंद्रोदय या चंद्रास्त के समय। कई रेडियो 2 m बैंड के बाहर ट्यून नहीं होते: उस स्थिति में SDR रिसीवर चाहिए [2]।",
+                "### कम्पास, कैमरा और त्रुटियों का रजिस्टर (NJ9R)",
+                "HF के लिए इस्तेमाल होने वाले रोटेटर के साथ “लगभग सही” पॉइंटिंग काफ़ी थी; EME में नहीं। NJ9R सलाह देते हैं कि रोटेटर के संकेतक को कैलिब्रेट करें और फिर बाहर जाकर कम्पास से उसकी जाँच करें, अधिकतम लगभग 5° की त्रुटि स्वीकार करते हुए: हवा, स्टॉप से टकराना और मस्तूल का खिसकना एंटेना को हिला देते हैं और संकेतक को इसका पता भी नहीं चलता [2]।",
+                "• **मस्तूल पर कैमरा।** एक छोटा वाटरप्रूफ़ कैमरा (रिवर्स पार्किंग कैमरे जैसा, 25 – 30 USD), जिसे मस्तूल पर लगाकर स्पिरिट लेवल या इनक्लिनोमीटर से एंटेना के साथ संरेखित किया गया हो, दिखाता है कि एंटेना वास्तव में कहाँ इंगित है: NJ9R ने खराब रोटेटर के साथ या 20 – 35° की त्रुटियों के साथ, केवल कैमरे के सहारे, 60 – 80 QSO पूरे किए। GRAVES की इको का अधिकतम खोजने के बाद मॉनिटर पर चंद्रमा का केंद्र चिह्नित किया जाता है। कैमरा नॉइज़ का स्रोत भी है: रिसेप्शन के दौरान उसे बंद रखना चाहिए [2]।",
+                "• **त्रुटियों का रजिस्टर।** हर पॉइंटिंग के लिए एक तालिका में चंद्रमा का गणना किया गया अज़ीमुथ और एलिवेशन, संकेतक पर पढ़े गए मान और कैमरे से देखे गए मान लिखे जाते हैं: इनका अंतर ही अपने सिस्टम की त्रुटि है, जिसे सुधारना है या ध्यान में रखना है [2]।",
                 "### 432 MHz से ऊपर: डिश",
                 "902 MHz से ऊपर ज़्यादातर पैराबोलिक डिश इस्तेमाल होती हैं, और टूल [1] 1 GHz से ऊपर की फ़्रीक्वेंसियों के लिए बनाया गया है। बड़े व्यास के साथ बीम डिग्री के कुछ दसवें हिस्से तक संकरी हो जाती है और चंद्रमा को पूरी तरह न साध पाने का जोखिम होता है: मोटरों से अधिक, स्टेशन को अज़ीमुथ और एलिवेशन में वास्तविक यांत्रिक एक्चुएटर चाहिए, जिनकी पॉइंटिंग सटीकता काफ़ी हद तक कंट्रोल के बिट रेज़ोल्यूशन से जुड़ी होती है। OE2IGL और DF3GJ का **EME Link Budget & Analysis Tool** [1] अच्छे ट्रैकिंग सिस्टम के लिए ±0.035° और सामान्य के लिए ±0.1° देता है, और पॉइंटिंग लॉस को लिंक के अन्य सभी पदों के साथ गणना करता है।",
                 ">+ YAEC 432 MHz पर रुक जाता है। ऊँचे बैंडों के लिए हम OE2IGL और DF3GJ के टूल [1] की सिफ़ारिश करते हैं: यह डिश पैरामीटर (व्यास, f/D, फ़ीड, सतह की खुरदुरापन, दक्षताएँ), पॉइंटिंग, लिब्रेशन, सूर्य और चंद्रमा का नॉइज़ और वायुमंडलीय एटेन्यूएशन के साथ 1 से 300 GHz तक EME बजट की गणना करता है।",
-                "[1] Gerald Ihninger OE2IGL और Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL और Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
             };
             d["hi"]["S412"] = new string[] {
                 "## EME के लिए डिजिटल मोड: Q65 और JT65",
@@ -46835,6 +47361,18 @@ namespace LunaCalc
                 "| q3 | मेरा कॉलसाइन और DX कॉलसाइन",
                 "| q4 | दोनों कॉलसाइन और RRR, RR73, 73 या खाली",
                 "~ [1] से। लेखक चेतावनी देते हैं कि डिकोडर द्वारा दिखाए गए S/N मानों पर बहुत अधिक ध्यान न दें, जिन्हें अभी सुधारा जा रहा था [1]: YAEC EME बजट से तुलना के लिए एक रीडिंग के बजाय कई QSO का उपयोग करना बेहतर है।",
+                "### JT65B और MAP65 के लिए NJ9R की सेटिंग्स",
+                "NJ9R, जिन्होंने 144 MHz में JT65B से शुरुआत की, अपनी सेटिंग्स इस तरह संक्षेप में बताते हैं [7]:",
+                "|h| प्रोग्राम | कहाँ | सेटिंग",
+                "| WSJT-X | मुख्य विंडो | Enable VHF and sub-mode features, Decode after EME delay, डिकोडिंग अवधियों के बीच खाली पंक्ति",
+                "| WSJT-X | Advanced | Random erasure और two pass decoding (6 और 6, CPU के अनुसार); वॉटरफ़ॉल Most sensitive",
+                "| WSJT-X | मोड | JT65, सब-मोड B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; किसी स्टेशन का ट्रेस दिखते ही इसे 50, 20 या 10 Hz तक संकरा किया जाता है (जितना चौड़ा, डिकोडिंग उतनी ही प्रभावित)",
+                "| WSJT-X | ऑडियो फ़्रीक्वेंसी | TX 1270 Hz पर; RX डॉप्लर के अनुसार 1270 Hz से ±350 Hz के भीतर, या चैट में घोषित फ़्रीक्वेंसी पर",
+                "| MAP65 | Station, I/O devices | अपना कॉलसाइन और लोकेटर; साउंड कार्ड, या IQ रेडियो के लिए नेटवर्क इंटरफ़ेस, 96 000 Hz पर",
+                "| MAP65 | मोड और डिकोडिंग | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | मुख्य विंडो | NB चालू, Monitor On, साइड बार में ऑडियो स्तर 12 और 40 के बीच",
+                "~ [7] से। विकल्पों के नाम अंग्रेज़ी में ही रखे गए हैं, जैसे वे WSJT-X और MAP65 के मेनू में हैं। JT65 के लिए YAEC का EME बजट सब-मोड B की सीमाओं का उपयोग करता है (§ 1.6)।",
                 "### DXpedition के साथ प्रक्रिया (W7GJ)",
                 "Lance Collister W7GJ, जो वर्षों से 6 m पर EME अभियान चला रहे हैं, बताते हैं कि pile-up के दौरान Q65-60A में किसी DXpedition को कैसे कॉल करें [6]। सबसे पहले, कंप्यूटर की घड़ी बहुत सटीक और ट्रांसमिट फ़्रीक्वेंसी बहुत स्थिर होनी चाहिए [6]।",
                 "• **अवधियाँ।** DXpedition हमेशा पहले सीक्वेंस (सम मिनट) में ट्रांसमिट करता है; कॉल करने वाले दूसरे सीक्वेंस (विषम मिनट) में [6]।",
@@ -46856,7 +47394,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, अक्टूबर 2023, IC8TEM द्वारा उपलब्ध कराया गया।",
                 "[4] Nico Palermo IV3NWV, QRA कोड पर EME 2016 सम्मेलन में प्रस्तुति, [3] में उद्धृत – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-X स्रोत कोड (फ़ाइल Q65_encoding_modules.F90 और अन्य), [3] में उद्धृत – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 3 अप्रैल 2023 को संशोधित, IC8TEM द्वारा उपलब्ध कराया गया – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 3 अप्रैल 2023 को संशोधित, IC8TEM द्वारा उपलब्ध कराया गया – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
             };
             d["hi"]["S54"] = new string[] {
                 "## SM5BSZ का EME साहित्य",
@@ -46951,15 +47490,47 @@ namespace LunaCalc
                 "> प्रोग्राम में: “दूरी और Dgrd” का कैलेंडर ☀ चिह्न से उन दिनों को चिह्नित करता है जब सूर्य चंद्रमा के पास होता है (नारंगी या लाल); “सौर शोर” टैब मापे गए फ्लक्स से गणना करता है कि चुने गए क्षण में सूर्य कितना अतिरिक्त नॉइज़ लाता है।",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["hi"]["S413"] = new string[] {
+                "## पहले रिसेप्शन से QSO तक: NJ9R की सलाह",
+                "Relu Jianu NJ9R ने “2M EME the easy way” में 144 MHz के एक नए ऑपरेटर के रूप में अपना अनुभव संकलित किया है: एक व्यावहारिक रास्ता जो बिना प्रीएम्प्लीफ़ायर के, 7-एलिमेंट यागी से प्राप्त GRAVES की इको से शुरू होता है। उनका संदेश मुख्यतः एक है: अपनी स्थापना की सीमाओं, यानी गेन और नुकसान, को जानना और इन्हीं आँकड़ों के आधार पर तय करना कि उन्हें पार किया जा सकता है या नहीं [1]। तकनीकी भाग संबंधित विषयों के अनुभागों में शामिल किए गए हैं: EME बजट और एंटेना गेन (§ 1.6), ध्रुवीकरण रिले (§ 1.7), कनेक्टर (§ 1.8), पॉइंटिंग और GRAVES (§ 1.11), WSJT-X और MAP65 की सेटिंग्स (§ 1.12), चैट पढ़ना (§ 1.14)। यहाँ स्टेशन और रिसीवर से जुड़ी सलाह दी गई है।",
+                "### स्थानीय नॉइज़ का नक्शा",
+                "चंद्रमा खोजने से पहले यह जानना उपयोगी है कि नॉइज़ किन दिशाओं से आता है। NJ9R सलाह देते हैं कि एंटेना से 360° का पूरा चक्कर लगाया जाए, अज़ीमुथ में 15 – 30° के कदमों में, और गेन स्लाइडर (सबसे निचले स्तर पर शून्य किया हुआ) से पढ़ा गया नॉइज़ एक तालिका में लिखा जाए। जिनके पास एलिवेशन है वे 0° से 45° तक 5 – 10° के कदमों में चक्कर दोहराते हैं। हीट मैप की तरह रंगी गई तालिका बताती है कि कुछ दिशाओं में कुछ भी क्यों नहीं मिलता: वहाँ स्थानीय नॉइज़ इको को ढक लेता है [1]।",
+                "> YAEC में मेरी बाधाओं की टोह बाधाओं से बंद दिशाएँ दिखाती है: इसकी तुलना नॉइज़ के नक्शे से करने पर चंद्रमा की सबसे अच्छी खिड़कियाँ चुनने में मदद मिलती है।",
+                "पड़ोस के घर और इलेक्ट्रॉनिक उपकरण व्यवधान का निरंतर स्रोत हैं: उन्हें खोजा और घटाया जाता है, शुरुआत अपने घर से करके, पर एक बिंदु के बाद जो बचता है उसके साथ ही काम चलाना पड़ता है [1]।",
+                "### रिसीवर और कंप्यूटर",
+                "• **साफ़ रिसीवर।** AGC बंद, नॉइज़ ब्लैंकर चालू, रिसेप्शन में कोई फ़िल्टर, नॉच या DSP नहीं; कंप्यूटर में ऑडियो इनपुट उच्चतम गुणवत्ता पर और सिस्टम ऑडियो का कोई एन्हांसमेंट या एम्प्लीफ़िकेशन नहीं [1]।",
+                "• **सिंक्रनाइज़ घड़ी।** डिजिटल मोड को सटीक समय चाहिए: NJ9R एक सिंक्रनाइज़ेशन प्रोग्राम (NetTime) से हर 15 मिनट में कंप्यूटर की घड़ी अपने-आप ठीक करवाते हैं [1]।",
+                "• **अद्यतन CALL3.TXT।** यह फ़ाइल डिकोडिंग में कई dB की मदद करती है, क्योंकि WSJT-X और MSHV इसका उपयोग कॉलसाइन पहचानने के लिए करते हैं; गलत डिकोड छाँटना ऑपरेटर का ही काम रहता है [1]। YAEC W7GJ और WSJT-X Improved की सूचियाँ डाउनलोड करके मिलाता है और फ़ाइल को WSJT-X के फ़ोल्डर में कॉपी कर सकता है।",
+                "• **धैर्य।** अगर कुछ सुनाई न दे, तो कई कारण एक साथ हो सकते हैं: ऊँचा Dgrd, प्रतिकूल ध्रुवीकरण, फैराडे घूर्णन, उस दिशा में स्थानीय नॉइज़। कुछ मिनट, कुछ घंटे या किसी और दिन बाद फिर कोशिश करना और महीने के सबसे कम Dgrd वाले दिन चुनना बेहतर है (§ 1.3, 1.4) [1]।",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
+            };
+            d["hi"]["S414"] = new string[] {
+                "## इंटरनेट पर टेक्स्ट चैट",
+                "EME में शेड्यूल (sked), CQ की घोषणाएँ और रिपोर्ट लगभग हमेशा इंटरनेट पर टेक्स्ट चैट के ज़रिए होती हैं। सबसे ज़्यादा इस्तेमाल होने वाले चैट ये हैं।",
+                "• **N0UK का EME चैट।** 2 m EME का ऐतिहासिक चैट, Chris Cox N0UK का (https://www.chris.org/cgi-bin/jt65emeA); इन्हीं के द्वारा बनाया गया Ping Jockey Central मीटियर स्कैटर का चैट है (https://www.pingjockey.net) [1]।",
+                "• **EA8DBM का EMEchat।** एक वेब इंटरफ़ेस जो EME चैटों को एक जगह लाता है (https://www.emechat.com): DXpedition इसे 2 m के लिए N0UK के चैट के साथ और 70 cm तथा उससे ऊपर के लिए HB9Q के चैट के साथ इस्तेमाल करते हैं [2]।",
+                "• **HB9Q logger।** 70 cm और उससे ऊपर के EME के लिए चैट और sked रजिस्टर (https://logger.hb9q.ch) [2]।",
+                "• **ON4KST, microwave अनुभाग।** ON4KST का चैट बैंड के अनुसार अनुभागों में बँटा है (https://www.on4kst.com/chat): microwave अनुभाग में ऊँचे बैंडों के ऑपरेटर मिलते हैं, जिनमें EME करने वाले भी शामिल हैं [3]।",
+                "### घोषणाएँ कैसे पढ़ें (NJ9R)",
+                "चैट में CQ करने वाला आमतौर पर पावर और एंटेना बताता है। “H”, या कोई संकेत न होना, केवल क्षैतिज स्टेशन की ओर इशारा करता है (हमेशा नहीं); “HV” या “XPOL” दो ध्रुवीकरण बताता है और ऐसा स्टेशन खोजना सबसे अच्छा है। एक ही महाद्वीप के स्टेशनों के बीच क्षैतिज से क्षैतिज अच्छा काम करता है; एक महाद्वीप से दूसरे तक स्थानिक ध्रुवीकरण क्षैतिज रूप से भेजे गए सिग्नल को लगभग ऊर्ध्वाधर बनाकर पहुँचा सकता है, जिससे छोटे स्टेशन के लिए नुकसान बहुत बड़ा हो जाता है (§ 1.3) [4]।",
+                "• **LiveCQ** (https://livecq.eu) PSK Reporter की तरह काम करता है: यह केवल रिपोर्ट भेजने वाले स्टेशन दिखाता है, इसलिए LiveCQ खाली होने पर भी चैट में गतिविधि हो सकती है [4]।",
+                "• चैट में घोषित ऑडियो फ़्रीक्वेंसी उन स्टेशनों को खोजने में मदद करती हैं जो 1270 Hz पर ट्रांसमिट नहीं करते; जब कोई स्टेशन रिसीव हो, तो चैट में बताना अच्छी आदत है [4]।",
+                "[1] Chris Cox N0UK, EME चैट – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, जून 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
+            };
             d["ko"] = new Dictionary<string, string[]>();
             d["ko"]["PREF"] = new string[] {
                 "이 부분은 프로그램의 버튼이 아니라 프로그램의 바탕이 되는 생각을 설명합니다. 각 장에 앞서, 저자는 최근 무선국에서 겪은 경험에 비추어 프로그램을 공부하는 데 핵심이 된 몇 가지 개념을 밝혀 두고자 합니다.",
                 "• **계산은 기준이지 약속이 아닙니다.** 링크 버짓, 추정 S/N, 디지털 모드 임계값은 이상적인 경로를 설명합니다. 수신 중에는 분 단위로 바뀔 수 있는 국부 잡음과 인공 잡음, 그리고 패러데이 회전이 중요합니다. 잠깐 사이에 계산된 여유가 사라질 수 있습니다(§ 1.3, 1.12).",
                 "• **날은 전원을 켜기 전에 고릅니다.** Dgrd, 달의 거리, 적위는 달 뒤에 하늘 잡음이 얼마나 있는지, 달이 몇 시간 지평선 위에 있고 얼마나 높이 뜨는지를 알려 줍니다. 같은 장비라도 날마다 성능이 크게 다릅니다(§ 1.4).",
                 "• **편파는 신호를 사라지게 할 수 있습니다.** 선형 편파 안테나에서는 패러데이 회전과 공간 편파로 에코가 몇 분에서 몇 시간 동안 사라질 수 있습니다. 고장을 찾기보다 기다리거나 반복하거나 편파를 돌리는 것으로 충분한 경우가 많습니다(§ 1.3).",
-                "• **최선의 해결책은 이중 편파입니다.** 안테나는 언제나 이중 편파 시스템이 최선이며, 수신은 두 개의 급전선과 이중 수신으로, 송신은 한 가지 편파로만 운용합니다. 이렇게 하면 패러데이 회전과 공간 편파 때문에 에코가 사라지는 일이 없어집니다(§ 1.3).",
+                "• **최선의 해결책은 이중 편파입니다.** 안테나는 언제나 이중 편파 시스템이 최선이며, 수신은 두 개의 급전선과 이중 수신으로, 송신은 한 가지 편파로만 운용합니다. 이렇게 하면 패러데이 회전과 공간 편파 때문에 에코가 사라지는 일이 없어집니다(§ 1.3). 편파를 선택하는 릴레이는 수신 중에만 전환하고, 송신 중에는 절대 전환하지 않습니다(§ 1.7).",
                 "• **EME 링크 버짓을 시험대로.** EME 링크 버짓 탭에 여러 가지 변경을 입력해 보면, 현재 설비를 유지하거나 개조하는 방안이 EME 운용에 얼마나 현실적인지 가늠해 볼 수 있습니다(§ 1.6).",
                 "• **앙각이 중요합니다.** 앙각 조절이 없다는 제약은 가능한 교신 시간을 빼앗습니다. 무엇보다 안테나 시스템을 들어 올리면, 지면 잡음을 받지 않고 하늘을 향할 때만 얻을 수 있는 최대 신호 수신에 안테나가 이르도록 낮은 사이드로브가 결정적으로 중요해집니다.",
+                "• **안테나는 표에서 출발합니다.** 야기를 고르고 비교할 때의 기준은 Lionel Edwards VE7BQH의 표(이득, G/T, 안테나 온도)로, Gabriel Sampol EA6VQ의 DXMaps 사이트(https://dxmaps.com/ve7bqh_e.html)에 게재되어 있습니다. 저잡음 야기 설계에 관해 가장 권위 있는 기여로는 Hartmut DG7YBN, Popa YU7EF, Justin Johnson G0KSC의 작업이 있습니다. YAEC의 EME 링크 버짓은 VE7BQH의 표를 사용합니다(§ 1.6).",
+                "• **자기 설비를 아십시오.** Relu NJ9R가 쓴 것처럼, 진짜 비결은 자기 시스템의 한계, 즉 이득과 손실을 알고 그 데이터로 한계를 넘을 수 있는지 판단하는 것입니다. 144 MHz에서 첫 번째 시험대는 GRAVES 레이더의 에코입니다(§ 1.11, 1.13).",
                 "• **프리앰프 앞의 1 dB가 중요합니다.** 프리앰프 앞의 케이블, 릴레이, 커넥터는 dB 수치가 보여 주는 것보다 시스템 온도를 더 나쁘게 합니다. 투자할 곳은 바로 그곳입니다(§ 1.7, 1.8).",
                 "• **먼저 올바른 주파수.** 높은 밴드에서는 도플러와 CFOM 때문에 에코가 수 kHz까지 이동합니다. 디코딩 창 밖의 에코는 신호가 좋아도 들리지 않습니다(§ 1.10).",
                 "• **태양은 예측 가능한 상대입니다.** 태양이 달 가까이 있으면 잡음이 커집니다. 프로그램이 미리 알려 주므로 날을 고를 때 고려할 가치가 있습니다(§ 1.5, 1.9).",
@@ -46988,11 +47559,11 @@ namespace LunaCalc
                 "|h| 자릿수 | YAEC에서 권장 용도",
                 "| 4 | 대략적인 추정에만: 달의 방위각과 앙각이 최대 약 1° 틀릴 수 있습니다. 지역 지평선이 111 km마다 약 1°씩 기울기 때문입니다",
                 "| 6 | DX 로케이터, QSO, EME 버짓: 달 방향의 오차는 100분의 몇 도 수준입니다",
-                "| **8** | 자기 국, Reconnaissance of my obstacles용: 동네나 언덕을 특정합니다",
+                "| **8** | 자기 국, 내 장애물 정찰용: 동네나 언덕을 특정합니다",
                 "|+ **10** | 자기 국, 최상의 결과: 건물이나 안테나 타워를 특정합니다",
                 "| 12 – 14 | 허용되지만 이점이 없습니다: 정밀도가 일반 GPS(수 미터)와 안테나 자체의 크기를 넘어섭니다",
                 "### 로케이터와 장애물",
-                "달의 방향에는 6자리면 충분합니다. 달은 약 380 000 km 떨어져 있으며, 6자리 로케이터의 ±4.4 km는 방위각과 앙각을 약 0.04° 바꿀 뿐으로, 안테나 빔에 비하면 무시할 만합니다. **주변 장애물**(건물, 나무, 언덕)은 정반대입니다. 이들은 안테나에서 수십~수백 미터 거리에 있으며, 6자리로는 국이 7.5 × 4.6 km 사각형 안 어디에나 있을 수 있어 장애물의 위치를 정할 수 없습니다. 8자리면 오차가 약 450 m, 10자리면 약 20 m로 줄어듭니다. 이것이 **Reconnaissance of my obstacles** 탭에서 안테나가 가려지는 구역을 정확히 그리는 데 필요한 정밀도입니다.",
+                "달의 방향에는 6자리면 충분합니다. 달은 약 380 000 km 떨어져 있으며, 6자리 로케이터의 ±4.4 km는 방위각과 앙각을 약 0.04° 바꿀 뿐으로, 안테나 빔에 비하면 무시할 만합니다. **주변 장애물**(건물, 나무, 언덕)은 정반대입니다. 이들은 안테나에서 수십~수백 미터 거리에 있으며, 6자리로는 국이 7.5 × 4.6 km 사각형 안 어디에나 있을 수 있어 장애물의 위치를 정할 수 없습니다. 8자리면 오차가 약 450 m, 10자리면 약 20 m로 줄어듭니다. 이것이 **내 장애물 정찰** 탭에서 안테나가 가려지는 구역을 정확히 그리는 데 필요한 정밀도입니다.",
                 ">+ 실용 팁: 10자리 로케이터는 (집 현관이 아니라) 안테나가 서 있는 지점의 GPS 좌표에서 구하여 실시간 위치 및 +- 24h 탭의 **my locator**에 입력하십시오. DX는 상대가 알려 주는 6자리 로케이터로 충분합니다.",
                 "[1] Wikipedia, “Maidenhead Locator System” (G4ANB의 고안과 1980년 Maidenhead IARU VHF 회의, 쌍의 구조, 1999년부터 WGS-84, 8자리를 넘는 확장, 2019년 IARU의 설명, HF 및 VHF/UHF에서의 사용, 서브스퀘어 중심 간 거리) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -47036,12 +47607,16 @@ namespace LunaCalc
                 "• 굴절도 중요합니다. 달은 −0.35°인 광학 지평선보다 낮은 −0.51°에서 떠올랐습니다. 200 MHz, 건조한 공기에서 앙각 0°의 굴절 오차는 −0.49°입니다.",
                 "IK3XTV는 이론상 지면 효과가 6 dB에 이르러 야기 하나가 4개 어레이에 가까운 성능을 내지만, 안테나 주변 지형에 크게 좌우된다고 말합니다. 도시에서는 작고, 탁 트인 시골에서는 더 크며, 바다 가까이에서는 더욱 큽니다. 월출과 월몰 때 앙각 약 1°에서 18~20° 사이에서 활용합니다 [4].",
                 "> 그래서 EME 버짓에서 지면 이득은 BETA로 표시됩니다. 계산값(최대 +6 dB)은 이론적 한계입니다. 바다 위 높은 곳의 안테나나 여러 야기로 된 어레이에서는 그 절반 정도와 낮은 앙각에서의 뚜렷한 QSB를 예상하는 것이 좋습니다 [3].",
+                "### 안테나 이득: 공칭 데이터와 dBd (NJ9R)",
+                "제조사 데이터 시트의 이득은 거의 언제나 완전한 지면과 이상적인 50 Ω 정합을 가정한 시뮬레이션에서 나온 값입니다. NJ9R는 착각하지 않도록 공칭값에서 약 2 dB를 빼고 dBi가 아닌 dBd로 생각하라고 권합니다. 케이블, 커넥터, 프리앰프의 데이터도 마찬가지입니다 [6]. 그의 예를 들면, 좋은 5엘리먼트 야기(8 dBi, 5.9 dBd)라도 선로 손실이 4.25 dB이면 유효 이득은 1.5 dB밖에 남지 않습니다. 그의 첫 7엘리먼트 야기(12.3 dBi, 10 dBd)로는 겨우 수신할 수 있었습니다. 어느 정도 여유를 두고 수신하기 위한 출발점으로 그는 약 14 dBd를 제시합니다 [6].",
+                ">+ EME 링크 버짓에서 바로 효과를 시험해 볼 수 있습니다. 안테나 이득을 2 dB 낮추면 링크에 여유가 얼마나 남는지 알 수 있습니다.",
                 "[1] WSJT-X User Guide, K1JT 및 WSJT Development Group, § 7.1 (FT4 = FT8 + 3.5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 2021년 4월 3일 (WSJT-X 2.4.0), IC8TEM 제공.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 제21회 EME Meeting, IC8TEM 제공 발표 자료.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 2010년 11월 12일 자 문서, IC8TEM 제공.",
                 "[5] J. Taylor K1JT, EME 2006 컨퍼런스의 JT65 발표 자료(K1JT_eme2006.pdf): 2500 Hz 기준 최소 S/N 레벨 표.",
-                "> 탭 오른쪽의 국 구성도는 선택한 케이블에서 손실을 구합니다. 송신 시에는 PA–릴레이 케이블 + 릴레이 + 안테나 케이블, 수신 시에는 프리앰프 앞의 안테나 케이블 + 릴레이와 프리앰프 뒤의 급전 케이블입니다. 케이블 감쇠는 COAXIAL CABLES 탭의 데이터베이스(§ 1.8)에서 가져옵니다."
+                "> 탭 오른쪽의 국 구성도는 선택한 케이블에서 손실을 구합니다. 송신 시에는 PA–릴레이 케이블 + 릴레이 + 안테나 케이블, 수신 시에는 프리앰프 앞의 안테나 케이블 + 릴레이와 프리앰프 뒤의 급전 케이블입니다. 케이블 감쇠는 동축 케이블 탭의 데이터베이스(§ 1.8)에서 가져옵니다.",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
             };
             d["ko"]["S47"] = new string[] {
                 "## 프리앰프와 무선기의 잡음 지수 {nuovo}",
@@ -47116,7 +47691,7 @@ namespace LunaCalc
                 "##+ FT-1000MP와 트랜스버터를 사용하는 EME 국",
                 "144 MHz EME에 FT-1000MP를 트랜스버터와 함께 사용한 두 가지 문서화된 사례: DF9IC [3]의 FT-1000MP + Javornik 트랜스버터 측정(무선기 프리앰프를 끈 상태에서 NF 0.9~1.4 dB)과 **W3SZ** [12]의 EME 국(4 × M2 2MXP32, 각 편파마다 안테나측 LNA Technology 프리앰프, LMR-600과 Andrew 하드라인)입니다. 이 국은 송신에 **FT-1000MP Mark V**와 **SSB-Electronic LT2S Mk II** 트랜스버터(IF 28 MHz), 2 × GU-74B 증폭기를 사용하고, 수신에는 SM5BSZ의 WSE 하드웨어와 Linrad 소프트웨어를 사용합니다.",
                 "> EME 버짓에서 트랜스버터는 국 구성도의 한 상자입니다. 체크박스로 활성화하고 목록에서 모델(또는 \"custom\")을 고르면 프로그램이 그 잡음 지수와 이득을 가져옵니다. 꺼 두면 계산에 포함되지 않습니다. 위의 그래프는 무선기 프리앰프를 켤지 결정하는 데 도움이 됩니다.",
-                ">! ✉ **다른 트랜스버터를 알고 계시거나 직접 만드셨습니까?** 다른 트랜스버터나 직접 만든 트랜스버터를 소개하고 싶으시면 작성자에게 이메일을 보내 주십시오: ccerrotta@gmail.com 또는 ic8tem@gmail.com. 모든 연락처는 **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS** 탭에 있습니다.",
+                ">! ✉ **다른 트랜스버터를 알고 계시거나 직접 만드셨습니까?** 다른 트랜스버터나 직접 만든 트랜스버터를 소개하고 싶으시면 작성자에게 이메일을 보내 주십시오: ccerrotta@gmail.com 또는 ic8tem@gmail.com. 모든 연락처는 **저자 연락처 및 감사의 말** 탭에 있습니다.",
                 "##+ TX/RX 시퀀서",
                 "파워 앰프(PA)와 안테나 근처의 프리앰프(PRE)를 사용할 때 컴퓨터의 PTT는 무선기가 아니라 **시퀀서**로 가며, 시퀀서가 릴레이를, 이어서 PA와 무선기를 올바른 순서로 제어합니다 [16]. 가장 흔한 구성은 급전선이 두 개입니다. 수신 선로는 15~20 dB 프리앰프 뒤에 있으므로 몇 dB를 잃어도 되지만, 송신 선로는 손실이 가능한 한 작아야 합니다(송신에서 3 dB를 잃으면 방사 전력이 절반이 됩니다). 대기 상태에서 릴레이는 PRE를 안테나에서 분리해 두므로 낙뢰 방전에 대한 추가 보호도 됩니다 [16].",
                 "|h| ^단계 | RX에서 TX로 | TX에서 RX로",
@@ -47126,6 +47701,7 @@ namespace LunaCalc
                 "~ 각 단계 사이에는 최소한 릴레이 전환 시간(15~30 ms)과 접점 바운스 시간이 필요합니다. IK1UWL은 100~200 ms를 권장하며, PA에 내부 릴레이가 있는 경우에도 마찬가지입니다 [16].",
                 "송신 제어에는 VOX보다 PTT가 낫습니다. VOX는 잡음으로 작동할 수 있고, JT65가 PTT 후 약 0.5 s 지나서 변조를 시작하는 지연을 활용하지 못하므로 프리앰프는 파워 앰프의 고속 릴레이로만 보호됩니다. PTT를 쓰면 그 지연 동안 파워 앰프가 변조 전에 전환되며, 시퀀서를 추가할 수도 있습니다 [17].",
                 ">! **프리앰프에 주의하세요.** T/R 릴레이는 열린 쪽 포트를 매우 잘 격리해야 합니다. 격리도 50 dB에 안테나 500 W이면 PRE 입력에 5 mW가 도달합니다. 최소 60 dB를 목표로 하며, 더 신중한 사람은 송신 중에 PRE를 50 Ω 부하로 종단하는 두 번째 릴레이를 추가합니다. 마이크의 PTT 버튼은 비활성화합니다. 그 후로는 시퀀서를 통해서만 송신합니다(SSB에서는 시퀀서의 PTT에 풋 스위치를 달고 PC의 PTT와 분리합니다) [16].",
+                ">! **편파 릴레이는 수신 중에만 전환합니다.** 두 편파(H와 V)를 쓸 때 안테나를 선택하는 릴레이는 송신 중에 절대 전환해서는 안 됩니다. 전력이 걸린 상태에서 전환하면 릴레이, 프리앰프 또는 증폭기가 타 버려 수백에서 수천 유로의 손해가 납니다 [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, 제5판, 2021년 3월 19일 (초판 2019년 6월 19일), 표 1 및 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 2015년 7월 25일, 표 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC 및 DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, 2005년 2월 27일부터의 시험 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -47142,16 +47718,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, 2002년 5월 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003년 4월, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012년 1월, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM 제공 – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, 발표 자료, 2015년 7월, IC8TEM 제공."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, 발표 자료, 2015년 7월, IC8TEM 제공.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
             };
             d["ko"]["S48"] = new string[] {
                 "## 동축 케이블과 손실",
-                "**COAXIAL CABLES** 탭에는 아마추어 무선사가 가장 많이 사용하는 50 Ω 케이블의 감쇠가 YAEC의 다섯 밴드에 대해 20 °C에서 100 m당 dB로 정리되어 있습니다. 제조사 데이터 시트는 서로 다른 주파수의 값을 제시하므로, YAEC는 데이터 시트에서 가장 가까운 두 주파수 사이를 로그-로그 그래프상의 직선, 즉 거듭제곱 법칙으로 밴드 주파수에 맞추었습니다:",
+                "**동축 케이블** 탭에는 아마추어 무선사가 가장 많이 사용하는 50 Ω 케이블의 감쇠가 YAEC의 다섯 밴드에 대해 20 °C에서 100 m당 dB로 정리되어 있습니다. 제조사 데이터 시트는 서로 다른 주파수의 값을 제시하므로, YAEC는 데이터 시트에서 가장 가까운 두 주파수 사이를 로그-로그 그래프상의 직선, 즉 거듭제곱 법칙으로 밴드 주파수에 맞추었습니다:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α는 dB/100 m, ℓ은 미터 단위의 케이블 길이입니다. 숫자만 있으면 데이터 시트 값이고, ≈는 내삽한 값, e는 데이터 시트의 마지막 주파수를 넘어 외삽한 값입니다.",
                 "같은 종류이고 지름이 ±0.2 mm 이내, 모든 밴드에서 감쇠가 0.2 dB/100 m 이내인 케이블은 한 행(≡)으로 묶어 평균값을 표시합니다. 동등한 이름은 \"also:\"로 표시합니다(예: LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). 중국식 이름 50-3, 50-5, 50-7, 50-9, 50-12는 유전체의 지름을 밀리미터로 나타냅니다.",
                 "> 사용자 케이블은 다섯 개의 감쇠값과 함께 추가할 수 있습니다. data\\cavi_personali.txt에 저장되며 EME 버짓 국 구성도의 드롭다운에도 나타납니다. 표의 각 행 툴팁에는 해당 케이블의 출처가 표시됩니다.",
-                "[1] 개별 케이블의 출처: Times Microwave(LMR), RFS(CELLFLEX LCF/SCF), CommScope Andrew(HELIAX LDF/FSJ), Siva Cavi(HF 240/287/400), SSB-Electronic(Aircell, Ecoflex, Aircom Plus), Messi & Paoloni(Hyperflex, Ultraflex, WiMo 경유), Symair, SYV50-7(szansy.com), Belden(H1000), Prospecta(RT5020, XT2400), QAXIAL(LLF195), Caledonian Cables의 데이터 시트, MIL-C-17F 카탈로그(RG-142, RG-393), Senago의 R.F. elettronica(RG-115), DD1US와 EA5IP의 표(H100), 그리고 RG-58, RG-213, H-155, H-2000에 대한 SV1BSX의 표(확인이 필요한 값)."
+                "### 커넥터 (NJ9R)",
+                "커넥터도 선로의 일부입니다. NJ9R의 경험칙은 커넥터 8~10개마다 약 1 dB이며, 무선기 뒷면에서 안테나까지 어댑터, 릴레이, 분배기를 포함해 모두 셉니다. 그의 4안테나 설비에서는 커넥터 24개가 2 dB를 넘으며, 이는 144 MHz에서 새 LMR-400 40~45 m에 해당합니다 [2]. EME 링크 버짓에서는 이 손실을 TX 부속 손실과 안테나–프리앰프 사이의 손실에 더해야 합니다.",
+                "[1] 개별 케이블의 출처: Times Microwave(LMR), RFS(CELLFLEX LCF/SCF), CommScope Andrew(HELIAX LDF/FSJ), Siva Cavi(HF 240/287/400), SSB-Electronic(Aircell, Ecoflex, Aircom Plus), Messi & Paoloni(Hyperflex, Ultraflex, WiMo 경유), Symair, SYV50-7(szansy.com), Belden(H1000), Prospecta(RT5020, XT2400), QAXIAL(LLF195), Caledonian Cables의 데이터 시트, MIL-C-17F 카탈로그(RG-142, RG-393), Senago의 R.F. elettronica(RG-115), DD1US와 EA5IP의 표(H100), 그리고 RG-58, RG-213, H-155, H-2000에 대한 SV1BSX의 표(확인이 필요한 값).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
             };
             d["ko"]["S410"] = new string[] {
                 "## 도플러, 보정 및 CFOM",
@@ -47213,10 +47793,19 @@ namespace LunaCalc
                 "> 비트 수는 위치를 얼마나 세밀하게 *읽는지*를 나타낼 뿐입니다. 실제 정밀도는 기계적 유격, 지지대의 휨, 바람, 북쪽과 지평선의 교정에도 좌우됩니다.",
                 "### 야기 어레이: 액추에이터와 풀리",
                 "야기 어레이(안테나 2개, 4개 또는 그 이상의 조합)에서는 앙각 부하가 크고 불균형합니다. 시중에는 웜 스크류 모터를 사용하는 리니어 액추에이터가 있습니다. 이러한 방식에서는 스크류가 움직임만 조절하고, 부하의 기계적 지지는 풀리가 담당합니다. 웜 스크류는 부하에 의해 역회전하지 않는다는 장점이 있어, 모터가 꺼져 있어도 어레이가 그대로 유지됩니다.",
+                "### GRAVES 레이더로 지향 확인하기 (NJ9R)",
+                "프랑스의 **GRAVES** 레이더는 로케이터 JN27SI에서 143.050 MHz로 연속 송신하며, 144 MHz에서 달을 경유한 수신을 시험하는 데 가장 널리 쓰이는 시험대입니다. 달이 자기 국과 GRAVES 양쪽에서 모두 보일 때(YAEC에서는 DX 로케이터에 JN27SI를 입력하기만 하면 됩니다), 143.050 MHz(또는 143.0495 MHz)를 SSB로 수신합니다. 오디오 대역폭은 2.4 kHz 이상, AGC는 끄고, 노이즈 블랭커는 켜고, 그 밖의 필터, 노치, DSP는 전혀 사용하지 않습니다 [2].",
+                "워터폴에서 GRAVES의 에코는 점선처럼 보입니다. 강할수록 안테나가 잘 지향된 것입니다. 로테이터를 조금씩, 먼저 방위각, 다음에 앙각 순으로 움직여 최대점을 찾고, 찾은 위치를 계산된 위치와 비교합니다. NJ9R는 GRAVES를 S 미터로도 사용합니다. 게인 슬라이더를 0으로 두고 1분 동안의 신호 평균을 읽으며, 매번 운용 전에 GRAVES로 설비가 여전히 제대로 조정되어 있는지 확인합니다 [2].",
+                "> 앙각 조절이 없으면 GRAVES의 에코는 보통 달의 앙각이 0°~15° 사이일 때, 즉 월출이나 월몰 무렵에만 수신됩니다. 많은 무선기는 2 m 밴드 밖으로 동조되지 않으므로, 그런 경우에는 SDR 수신기가 필요합니다 [2].",
+                "### 나침반, 카메라, 오차 기록 (NJ9R)",
+                "HF용으로 쓰던 로테이터라면 “거의 맞는” 지향으로 충분했지만, EME에서는 그렇지 않습니다. NJ9R는 로테이터 인디케이터를 교정한 뒤 실외에서 나침반으로 확인하고, 오차는 최대 약 5°까지만 허용하라고 권합니다. 바람, 스토퍼에 부딪히는 충격, 마스트의 미끄러짐이 인디케이터도 모르는 사이에 안테나 방향을 틀어 놓기 때문입니다 [2].",
+                "• **마스트의 카메라.** 작은 방수 카메라(후방 카메라 종류, 25~30 USD)를 마스트에 고정하고 수준기나 경사계로 안테나와 정렬해 두면, 안테나가 실제로 어디를 향하는지 보여 줍니다. NJ9R는 로테이터가 고장 났거나 20~35°의 오차가 있는 상태에서 오직 카메라에 의지해 60~80회의 QSO를 완료했습니다. 달의 중심은 GRAVES 에코의 최대점을 찾은 뒤 모니터에 표시해 둡니다. 카메라도 잡음원이므로 수신 중에는 꺼야 합니다 [2].",
+                "• **오차 기록.** 지향할 때마다 계산된 달의 방위각과 앙각, 인디케이터에서 읽은 값, 카메라로 본 값을 표에 적어 둡니다. 그 차이가 자기 시스템의 오차이며, 보정하거나 기억해 두어야 합니다 [2].",
                 "### 432 MHz 이상: 접시 안테나",
                 "902 MHz 이상에서는 주로 파라볼라 접시 안테나를 사용하며, 도구 [1]은 1 GHz 이상의 주파수용으로 설계되었습니다. 지름이 크면 빔이 0.몇 도로 좁아져 달을 정확히 맞추지 못할 위험이 있습니다. 모터보다도 방위각과 앙각에 본격적인 기계식 액추에이터가 필요하며, 지향 정밀도는 제어의 비트 분해능에 크게 좌우됩니다. OE2IGL과 DF3GJ의 **EME Link Budget & Analysis Tool** [1]은 좋은 추적 시스템에 대해 ±0.035°, 일반적인 시스템에 대해 ±0.1°를 제시하며, 지향 손실을 링크의 다른 모든 항과 함께 계산합니다.",
                 ">+ YAEC는 432 MHz까지만 다룹니다. 더 높은 밴드에는 OE2IGL과 DF3GJ의 도구 [1]을 권장합니다. 접시 안테나 파라미터(지름, f/D, 피드, 표면 거칠기, 효율), 지향, 칭동, 태양과 달의 잡음, 대기 감쇠를 고려하여 1~300 GHz의 EME 버짓을 계산합니다.",
-                "[1] Gerald Ihninger OE2IGL 및 Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL 및 Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
             };
             d["ko"]["S412"] = new string[] {
                 "## EME용 디지털 모드: Q65와 JT65",
@@ -47307,6 +47896,18 @@ namespace LunaCalc
                 "| q3 | 내 호출부호와 DX 호출부호",
                 "| q4 | 양쪽 호출부호와 RRR, RR73, 73 또는 공백",
                 "~ [1]에서. 개발자들은 디코더가 표시하는 S/N 값이 아직 개선 중이었으므로 너무 신경 쓰지 말라고 경고합니다 [1]. YAEC EME 버짓과 비교할 때는 한 번의 판독보다 여러 QSO를 사용하는 것이 좋습니다.",
+                "### NJ9R의 JT65B 및 MAP65 설정",
+                "144 MHz에서 JT65B로 시작한 NJ9R는 자신이 쓰는 설정을 다음과 같이 정리합니다 [7].",
+                "|h| 프로그램 | 위치 | 설정",
+                "| WSJT-X | 메인 창 | Enable VHF and sub-mode features, Decode after EME delay, 디코딩 주기 사이에 빈 줄",
+                "| WSJT-X | Advanced | Random erasure와 two pass decoding(6과 6, CPU에 따라); 워터폴 Most sensitive",
+                "| WSJT-X | 모드 | JT65, 서브모드 B, Sync −1",
+                "| WSJT-X | Ftol | 20~500 Hz. 어떤 국의 궤적이 나타나면 50, 20 또는 10 Hz로 좁힘(넓을수록 디코딩이 불리)",
+                "| WSJT-X | 오디오 주파수 | TX는 1270 Hz. RX는 도플러에 따라 1270 Hz ±350 Hz 이내, 또는 채팅에서 알린 주파수",
+                "| MAP65 | Station, I/O devices | 자기 호출부호와 로케이터. 사운드 카드, 또는 IQ 무선기의 경우 네트워크 인터페이스, 96 000 Hz",
+                "| MAP65 | 모드와 디코딩 | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | 메인 창 | NB 켬, Monitor On, 사이드바의 오디오 레벨 12~40",
+                "~ 출처 [7]. 항목 이름은 WSJT-X와 MAP65 메뉴처럼 영어로 두었습니다. JT65의 경우 YAEC의 EME 링크 버짓은 서브모드 B의 임계값을 사용합니다(§ 1.6).",
                 "### DX페디션과의 교신 절차 (W7GJ)",
                 "수년간 6 m EME 원정을 운영해 온 Lance Collister W7GJ는 파일업(pile-up) 중에 Q65-60A로 DX페디션을 호출하는 방법을 설명합니다 [6]. 무엇보다 컴퓨터 시계는 매우 정확해야 하고 송신 주파수는 매우 안정적이어야 합니다 [6].",
                 "• **송신 주기.** DX페디션은 항상 첫 번째 시퀀스(짝수 분)에 송신하고, 호출하는 국은 두 번째 시퀀스(홀수 분)에 송신합니다 [6].",
@@ -47328,7 +47929,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, 2023년 10월, IC8TEM 제공.",
                 "[4] Nico Palermo IV3NWV, QRA 부호에 관한 EME 2016 컨퍼런스 발표, [3]에서 인용 – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-X 소스 코드 (Q65_encoding_modules.F90 파일 등), [3]에서 인용 – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 2023년 4월 3일 개정, IC8TEM 제공 – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 2023년 4월 3일 개정, IC8TEM 제공 – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
             };
             d["ko"]["S54"] = new string[] {
                 "## SM5BSZ의 EME 문헌",
@@ -47423,15 +48025,47 @@ namespace LunaCalc
                 "> 프로그램에서: “거리와 Dgrd”의 달력은 태양이 달에 가까운 날을 ☀ 기호(주황색 또는 빨간색)로 표시하고, “태양 잡음” 탭은 측정된 플럭스로 선택한 순간에 태양이 잡음을 얼마나 더하는지 계산합니다.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["ko"]["S413"] = new string[] {
+                "## 첫 수신에서 QSO까지: NJ9R의 조언",
+                "Relu Jianu NJ9R는 “2M EME the easy way”에 144 MHz 초보자로서의 경험을 정리했습니다. 프리앰프 없이 7엘리먼트 야기로 GRAVES의 에코를 수신하는 데서 시작하는 실용적인 길잡이입니다. 그가 전하려는 메시지는 무엇보다 하나입니다. 자기 설비의 한계, 즉 이득과 손실을 알고 그 데이터로 한계를 넘을 수 있는지 판단하라는 것입니다 [1]. 기술적인 내용은 각 주제의 절에 반영했습니다. EME 링크 버짓과 안테나 이득(§ 1.6), 편파 릴레이(§ 1.7), 커넥터(§ 1.8), 지향과 GRAVES(§ 1.11), WSJT-X와 MAP65 설정(§ 1.12), 채팅 읽기(§ 1.14)입니다. 여기에는 무선국과 수신기에 관한 조언을 남겨 둡니다.",
+                "### 국부 잡음 지도",
+                "달을 찾기 전에 잡음이 어느 방향에서 오는지 알아 두는 것이 좋습니다. NJ9R는 안테나를 방위각 15~30° 간격으로 360° 한 바퀴 돌리면서, 게인 슬라이더(가장 낮은 레벨에서 0으로 맞춘 것)로 읽은 잡음을 표에 기록하라고 권합니다. 앙각 조절이 있다면 0°에서 45°까지 5~10° 간격으로 같은 일주를 반복합니다. 표를 히트맵처럼 색칠하면 어떤 방향에서 아무것도 수신되지 않는 이유가 드러납니다. 그곳에서는 국부 잡음이 에코를 덮고 있는 것입니다 [1].",
+                "> YAEC에서는 내 장애물 정찰이 장애물로 막힌 방향을 보여 줍니다. 이를 잡음 지도와 비교하면 가장 좋은 달 창을 고르는 데 도움이 됩니다.",
+                "이웃의 주택과 전자 기기는 끊임없는 방해의 원천입니다. 자기 집부터 찾아서 줄여 나가지만, 어느 시점부터는 남은 것과 함께 지낼 수밖에 없습니다 [1].",
+                "### 수신기와 컴퓨터",
+                "• **깨끗한 수신기.** 수신 시 AGC는 끄고 노이즈 블랭커는 켜며, 필터, 노치, DSP는 전혀 사용하지 않습니다. 컴퓨터에서는 오디오 입력을 최고 품질로 두고, 시스템 오디오의 향상이나 증폭 기능은 쓰지 않습니다 [1].",
+                "• **시계 동기화.** 디지털 모드에는 정확한 시각이 필요합니다. NJ9R는 동기화 프로그램(NetTime)으로 컴퓨터 시계를 15분마다 자동으로 보정합니다 [1].",
+                "• **최신 CALL3.TXT.** WSJT-X와 MSHV는 이 파일로 호출부호를 인식하므로 디코딩이 여러 dB 유리해집니다. 잘못된 디코딩을 걸러 내는 것은 여전히 운용자의 몫입니다 [1]. YAEC는 W7GJ와 WSJT-X Improved의 목록을 내려받아 합치고, 파일을 WSJT-X 폴더에 복사할 수 있습니다.",
+                "• **인내.** 아무것도 들리지 않으면 여러 원인이 겹쳤을 수 있습니다. 높은 Dgrd, 불리한 편파, 패러데이 회전, 그 방향의 국부 잡음 등입니다. 몇 분 또는 몇 시간 뒤나 다른 날 다시 시도하고, 그달에 Dgrd가 가장 낮은 날을 고르는 것이 좋습니다(§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
+            };
+            d["ko"]["S414"] = new string[] {
+                "## 인터넷 텍스트 채팅",
+                "EME에서는 약속(sked), CQ 공지, 리포트가 거의 언제나 인터넷 텍스트 채팅을 통해 오갑니다. 가장 많이 쓰이는 것은 다음과 같습니다.",
+                "• **N0UK의 EME 채팅.** Chris Cox N0UK가 만든 2 m EME의 오래된 채팅입니다(https://www.chris.org/cgi-bin/jt65emeA). 같은 사람이 만든 Ping Jockey Central은 유성 산란(meteor scatter) 채팅입니다(https://www.pingjockey.net) [1].",
+                "• **EA8DBM의 EMEchat.** EME 채팅들을 한데 모은 웹 인터페이스입니다(https://www.emechat.com). DX페디션은 2 m에서는 N0UK 채팅과, 70 cm 이상에서는 HB9Q 채팅과 함께 이것을 사용합니다 [2].",
+                "• **HB9Q logger.** 70 cm 이상 EME를 위한 채팅 및 sked 등록부입니다(https://logger.hb9q.ch) [2].",
+                "• **ON4KST, microwave 섹션.** ON4KST 채팅은 밴드별 섹션으로 나뉘어 있습니다(https://www.on4kst.com/chat). microwave 섹션에서는 EME를 운용하는 사람들을 포함해 높은 밴드의 운용자들을 만날 수 있습니다 [3].",
+                "### 공지 읽는 법 (NJ9R)",
+                "채팅에서 CQ를 내는 사람은 보통 출력과 안테나를 적습니다. “H” 또는 아무 표시가 없으면 수평 편파만 있는 국이라고 짐작할 수 있습니다(항상 그렇지는 않습니다). “HV”나 “XPOL”은 두 편파를 뜻하며, 가장 찾아볼 만한 국입니다. 같은 대륙의 국끼리는 수평 대 수평으로 잘 됩니다. 대륙 간에는 공간 편파 때문에 수평으로 떠난 신호가 거의 수직으로 도착할 수 있어, 작은 국에는 손실이 너무 큽니다(§ 1.3) [4].",
+                "• **LiveCQ**(https://livecq.eu)는 PSK Reporter처럼 동작합니다. 리포트를 보내는 국만 보여 주므로, LiveCQ가 비어 있어도 채팅에서는 활동이 있을 수 있습니다 [4].",
+                "• 채팅에서 알린 오디오 주파수는 1270 Hz에서 송신하지 않는 국을 찾는 데 도움이 됩니다. 어떤 국을 수신하면 채팅에 알리는 것이 좋은 습관입니다 [4].",
+                "[1] Chris Cox N0UK, EME 채팅 – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, 2026년 6월, DX페디션 C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
+            };
             d["id"] = new Dictionary<string, string[]>();
             d["id"]["PREF"] = new string[] {
                 "Bagian manual ini tidak menjelaskan tombol-tombol program, melainkan gagasan yang menjadi dasar program. Sebelum bab-bab berikut, penulis ingin menyampaikan beberapa konsep yang ternyata menjadi kunci untuk mempelajari program, juga berdasarkan pengalaman terbarunya di stasiun.",
                 "• **Perhitungan adalah acuan, bukan janji.** Anggaran link, S/N perkiraan, dan ambang mode digital menggambarkan jalur yang ideal. Saat penerimaan, yang menentukan adalah derau lokal dan buatan manusia, yang dapat berubah dari menit ke menit, serta rotasi Faraday: beberapa saat saja cukup untuk menghapus margin yang dihitung (§ 1.3, 1.12).",
                 "• **Hari dipilih sebelum menyalakan perangkat.** Dgrd, jarak Bulan, dan deklinasi menunjukkan seberapa besar derau langit di belakang Bulan, berapa jam Bulan berada di atas cakrawala, dan seberapa tinggi ia naik: peralatan yang sama memberi hasil yang sangat berbeda dari hari ke hari (§ 1.4).",
                 "• **Polarisasi dapat membuat sinyal hilang.** Dengan antena linear, rotasi Faraday dan polarisasi spasial dapat memadamkan gema selama beberapa menit atau jam; sering kali cukup menunggu, mengulang, atau memutar polarisasi, alih-alih mencari kerusakan (§ 1.3).",
-                "• **Solusi terbaik adalah polarisasi ganda.** Untuk antena, pilihan terbaik selalu sistem polarisasi ganda, dengan dua saluran turun untuk penerimaan dan penerimaan ganda, sedangkan pemancaran memakai satu polarisasi saja: dengan begitu rotasi Faraday dan polarisasi spasial tidak lagi memadamkan gema (§ 1.3).",
+                "• **Solusi terbaik adalah polarisasi ganda.** Untuk antena, pilihan terbaik selalu sistem polarisasi ganda, dengan dua saluran turun untuk penerimaan dan penerimaan ganda, sedangkan pemancaran memakai satu polarisasi saja: dengan begitu rotasi Faraday dan polarisasi spasial tidak lagi memadamkan gema (§ 1.3). Relay yang memilih polarisasi hanya dipindahkan saat menerima, tidak pernah saat memancar (§ 1.7).",
                 "• **Anggaran EME sebagai bangku uji.** Dengan memasukkan berbagai perubahan di tab Anggaran EME, Anda dapat mencoba memahami sejauh mana pilihan mempertahankan instalasi sendiri, atau mengubahnya, layak untuk melakukan EME (§ 1.6).",
                 "• **Elevasi itu penting.** Keterbatasan tanpa elevasi mencuri menit dari lalu lintas yang mungkin. Terutama, saat sistem antena dinaikkan elevasinya, lobus samping yang rendah menjadi sangat penting agar tidak menangkap derau bumi dan memungkinkan antena mencapai penangkapan sinal maksimum yang hanya dapat diberikan oleh pengarahan ke langit.",
+                "• **Antena: mulailah dari tabel.** Untuk memilih dan membandingkan yagi, acuannya adalah tabel Lionel Edwards VE7BQH (penguatan, G/T, dan suhu antena), yang diterbitkan di situs DXMaps milik Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Di antara kontribusi paling berwibawa tentang perancangan yagi berderau rendah adalah karya Hartmut DG7YBN, Popa YU7EF, dan Justin Johnson G0KSC. Anggaran EME di YAEC memakai tabel VE7BQH (§ 1.6).",
+                "• **Kenali instalasi sendiri.** Seperti ditulis Relu NJ9R, rahasia sesungguhnya adalah mengenal batas sistem sendiri, penguatan dan rugi-ruginya, lalu dengan data itu memutuskan apakah batas tersebut dapat dilampaui. Di 144 MHz, bangku uji pertama adalah gema radar GRAVES (§ 1.11, 1.13).",
                 "• **Setiap desibel sebelum preamplifier berarti.** Kabel, relai, dan konektor sebelum preamplifier memperburuk suhu sistem lebih dari yang ditunjukkan nilai dB-nya: di situlah investasi paling berguna (§ 1.7, 1.8).",
                 "• **Frekuensi yang benar dulu.** Doppler dan CFOM menggeser gema hingga beberapa kHz pada pita tinggi: gema di luar jendela dekode tidak terdengar, meskipun sinyalnya bagus (§ 1.10).",
                 "• **Matahari adalah lawan yang dapat diperkirakan.** Ketika dekat dengan Bulan, derau meningkat: program memberi peringatan lebih awal, dan hal ini patut diperhitungkan saat memilih hari (§ 1.5, 1.9).",
@@ -47460,11 +48094,11 @@ namespace LunaCalc
                 "|h| Karakter | Penggunaan yang disarankan di YAEC",
                 "| 4 | hanya untuk perkiraan kasar: azimut dan elevasi Bulan bisa meleset hingga sekitar 1°, karena horizon lokal miring sekitar 1° setiap 111 km",
                 "| 6 | lokator DX, QSO, dan budget EME: galat arah Bulan hanya beberapa perseratus derajat",
-                "| **8** | stasiun Anda, untuk Reconnaissance of my obstacles: mengidentifikasi lingkungan sekitar atau bukit",
+                "| **8** | stasiun Anda, untuk Pengintaian rintangan saya: mengidentifikasi lingkungan sekitar atau bukit",
                 "|+ **10** | stasiun Anda, dengan hasil terbaik: mengidentifikasi gedung atau menara antena",
                 "| 12 – 14 | diterima, tetapi tidak menambah apa-apa: presisinya melebihi GPS biasa (beberapa meter) dan ukuran antena itu sendiri",
                 "### Lokator dan rintangan",
-                "Untuk arah Bulan 6 karakter sudah cukup: Bulan berjarak sekitar 380 000 km, dan ±4,4 km dari lokator 6 karakter mengubah azimut dan elevasi sekitar 0,04°, jumlah yang dapat diabaikan dibandingkan berkas antena. Untuk **rintangan lokal** (gedung, pohon, bukit) justru sebaliknya: rintangan itu berjarak beberapa puluh atau ratus meter dari antena, dan dengan 6 karakter stasiun bisa berada di mana saja dalam persegi panjang 7,5 × 4,6 km, sehingga rintangan tidak dapat ditempatkan. Dengan 8 karakter galat turun menjadi sekitar 450 m, dengan 10 menjadi sekitar 20 m: inilah presisi yang dibutuhkan tab **Reconnaissance of my obstacles** untuk menggambar dengan benar zona tempat antena terhalang.",
+                "Untuk arah Bulan 6 karakter sudah cukup: Bulan berjarak sekitar 380 000 km, dan ±4,4 km dari lokator 6 karakter mengubah azimut dan elevasi sekitar 0,04°, jumlah yang dapat diabaikan dibandingkan berkas antena. Untuk **rintangan lokal** (gedung, pohon, bukit) justru sebaliknya: rintangan itu berjarak beberapa puluh atau ratus meter dari antena, dan dengan 6 karakter stasiun bisa berada di mana saja dalam persegi panjang 7,5 × 4,6 km, sehingga rintangan tidak dapat ditempatkan. Dengan 8 karakter galat turun menjadi sekitar 450 m, dengan 10 menjadi sekitar 20 m: inilah presisi yang dibutuhkan tab **Pengintaian rintangan saya** untuk menggambar dengan benar zona tempat antena terhalang.",
                 ">+ Saran praktis: turunkan lokator 10 karakter dari koordinat GPS titik tempat antena berdiri (bukan pintu masuk rumah) dan masukkan di tab Posisi langsung dan +- 24h sebagai **my locator**. Untuk DX, lokator 6 karakter yang ia berikan kepada Anda sudah cukup.",
                 "[1] Wikipedia, “Maidenhead Locator System” (asal-usul G4ANB dan pertemuan IARU VHF di Maidenhead tahun 1980, struktur pasangan, WGS-84 sejak 1999, perluasan di atas 8 karakter, klarifikasi IARU 2019, penggunaan di HF dan VHF/UHF, jarak antara titik tengah subsquare) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -47508,12 +48142,16 @@ namespace LunaCalc
                 "• refraksi berpengaruh: Bulan terbit pada −0,51°, di bawah horizon optik −0,35°; pada 200 MHz, di udara kering, galat refraksi pada elevasi 0° adalah −0,49°.",
                 "IK3XTV mengingatkan bahwa secara teori efek tanah mencapai 6 dB, sehingga satu yagi tunggal berkinerja hampir seperti susunan 4 yagi, tetapi hal ini sangat bergantung pada medan di sekitar antena: lebih kecil di kota, lebih baik di pedesaan terbuka, dan lebih baik lagi di dekat laut. Efek ini dimanfaatkan saat Bulan terbit dan terbenam, antara sekitar 1° dan 18 – 20° elevasi [4].",
                 "> Karena itu penguatan tanah ditandai BETA dalam budget EME: nilai yang dihitung (maksimum +6 dB) adalah batas teoretis. Dengan antena yang tinggi di atas laut atau susunan beberapa yagi, perkirakan sekitar separuhnya dan QSB yang nyata pada elevasi rendah [3].",
+                "### Penguatan antena: data yang dinyatakan dan dBd (NJ9R)",
+                "Penguatan pada lembar data pembuat hampir selalu berasal dari simulasi di atas tanah sempurna dan dengan penyesuaian ideal 50 Ω. NJ9R menyarankan untuk mengurangi sekitar 2 dB dari nilai yang dinyatakan dan berpikir dalam dBd, bukan dBi, agar tidak terbuai ilusi; hal yang sama berlaku untuk data kabel, konektor, dan praamplifier [6]. Contohnya: yagi 5 elemen yang bagus (8 dBi, 5,9 dBd) dengan rugi saluran 4,25 dB hanya menyisakan 1,5 dB penguatan efektif; dengan yagi 7 elemen pertamanya (12,3 dBi, 10 dBd) ia nyaris tidak dapat menerima. Sebagai titik awal untuk menerima dengan sedikit margin, ia menyebut sekitar 14 dBd [6].",
+                ">+ Di Anggaran EME efeknya dapat langsung dicoba: dengan menurunkan penguatan antena sebesar 2 dB terlihat berapa margin yang tersisa bagi hubungan.",
                 "[1] WSJT-X User Guide, K1JT dan WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 April 2021 (WSJT-X 2.4.0), disediakan oleh IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, EME Meeting ke-21, presentasi disediakan oleh IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, dokumen tanggal 12 November 2010, disediakan oleh IC8TEM.",
                 "[5] J. Taylor K1JT, makalah tentang JT65 pada konferensi EME 2006 (K1JT_eme2006.pdf): tabel tingkat S/N minimum dalam 2500 Hz.",
-                "> Diagram stasiun, di sebelah kanan tab, menurunkan redaman dari kabel yang dipilih: saat memancar kabel PA–relay + relay + kabel antena, saat menerima kabel antena + relay sebelum praamplifier dan kabel feed setelahnya. Redaman kabel berasal dari basis data tab COAXIAL CABLES (§ 1.8)."
+                "> Diagram stasiun, di sebelah kanan tab, menurunkan redaman dari kabel yang dipilih: saat memancar kabel PA–relay + relay + kabel antena, saat menerima kabel antena + relay sebelum praamplifier dan kabel feed setelahnya. Redaman kabel berasal dari basis data tab KABEL KOAKSIAL (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
             };
             d["id"]["S47"] = new string[] {
                 "## Praamplifier dan angka derau radio {nuovo}",
@@ -47588,7 +48226,7 @@ namespace LunaCalc
                 "##+ Stasiun EME dengan FT-1000MP dan transverter",
                 "Dua contoh terdokumentasi penggunaan FT-1000MP untuk EME di 144 MHz dengan transverter: pengukuran DF9IC [3] pada FT-1000MP + transverter Javornik (NF 0,9 – 1,4 dB dengan preamp radio mati) dan stasiun EME **W3SZ** [12] (4 × M2 2MXP32, preamp LNA Technology di antena untuk setiap polarisasi, LMR-600 dan hardline Andrew), yang saat memancar memakai **FT-1000MP Mark V** dengan transverter **SSB-Electronic LT2S Mk II** (IF 28 MHz) dan amplifier 2 × GU-74B, sedangkan saat menerima memakai perangkat keras WSE dan perangkat lunak Linrad karya SM5BSZ.",
                 "> Dalam budget EME, transverter adalah salah satu kotak pada diagram stasiun: transverter diaktifkan dengan kotak centangnya, Anda memilih model dari daftar (atau \"custom\") dan program mengambil angka derau serta penguatannya; jika tidak diaktifkan, transverter tidak masuk perhitungan. Grafik di atas membantu memutuskan apakah preamp radio perlu dinyalakan.",
-                ">! ✉ **Anda mengetahui transverter lain atau pernah membuatnya?** Jika Anda ingin memperkenalkan transverter lain atau transverter buatan Anda sendiri, kirimkan e-mail kepada penulis: ccerrotta@gmail.com atau ic8tem@gmail.com. Semua detail kontak ada di tab **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **Anda mengetahui transverter lain atau pernah membuatnya?** Jika Anda ingin memperkenalkan transverter lain atau transverter buatan Anda sendiri, kirimkan e-mail kepada penulis: ccerrotta@gmail.com atau ic8tem@gmail.com. Semua detail kontak ada di tab **KONTAK PENULIS DAN UCAPAN TERIMA KASIH**.",
                 "##+ Sequencer TX/RX",
                 "Dengan power amplifier (PA) dan praamplifier di dekat antena (PRE), PTT komputer tidak masuk ke radio melainkan ke sebuah **sequencer**, yang menggerakkan relay lalu PA dan radio dalam urutan yang benar [16]. Susunan yang paling umum memiliki dua kabel feed: jalur terima boleh kehilangan beberapa dB, karena berada setelah preamp 15 – 20 dB, sedangkan jalur pancar harus kehilangan sesedikit mungkin (3 dB saat memancar membuat daya yang dipancarkan menjadi setengahnya). Saat diam, relay menjaga PRE terisolasi dari antena: perlindungan tambahan terhadap pelepasan muatan petir [16].",
                 "|h| ^Langkah | Dari RX ke TX | Dari TX ke RX",
@@ -47598,6 +48236,7 @@ namespace LunaCalc
                 "~ Di antara satu langkah dan langkah berikutnya diperlukan setidaknya waktu perpindahan relay (15 – 30 ms) ditambah pantulan kontaknya: IK1UWL menyarankan 100 – 200 ms, juga untuk PA jika memiliki relay internal [16].",
                 "Untuk mengendalikan pemancar, PTT lebih baik daripada VOX: VOX dapat terpicu oleh derau dan tidak memanfaatkan jeda sekitar 0,5 s sebelum JT65 mulai memodulasi setelah PTT, sehingga praamplifier hanya dilindungi oleh relay cepat pada amplifier; dengan PTT, jeda itu memindahkan amplifier sebelum modulasi dimulai, dan sequencer dapat ditambahkan [17].",
                 ">! **Perhatikan praamplifier.** Relay T/R harus mengisolasi port yang terbuka dengan sangat baik: dengan isolasi 50 dB dan 500 W di antena, 5 mW sampai ke input PRE. Usahakan setidaknya 60 dB; yang paling berhati-hati menambahkan relay kedua yang saat memancar menutup PRE dengan beban 50 Ω. Nonaktifkan tombol PTT mikrofon: sejak itu Anda hanya memancar melalui sequencer (untuk SSB, sakelar kaki pada PTT sequencer, terpisah dari PTT PC) [16].",
+                ">! **Relay polarisasi hanya dipindahkan saat menerima.** Dengan dua polarisasi (H dan V), relay yang memilih antena tidak boleh dipindahkan saat memancar: bila dipindahkan dengan daya terpasang, relay, praamplifier, atau amplifier akan terbakar, dengan kerugian ratusan hingga ribuan euro [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, edisi 5, 19 Maret 2021 (edisi pertama 19 Juni 2019), tabel 1 dan 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 Juli 2015, tabel 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC bersama DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, pengujian sejak 27 Februari 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -47614,16 +48253,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, Mei 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, hlm. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Januari 2012, § 4 “Sequenziamento relè, PA e PRE”, disediakan oleh IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasi, Juli 2015, disediakan oleh IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasi, Juli 2015, disediakan oleh IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
             };
             d["id"]["S48"] = new string[] {
                 "## Kabel koaksial dan redaman",
-                "Tab **COAXIAL CABLES** menghimpun redaman kabel 50 Ω yang paling banyak dipakai radio amatir, dalam dB per 100 m pada 20 °C, di lima pita YAEC. Lembar data pembuat memberikan nilai pada frekuensi yang berbeda-beda; YAEC menyesuaikannya ke pita-pita tersebut dengan hukum pangkat, yaitu garis lurus pada grafik log-log di antara dua frekuensi terdekat dari lembar data:",
+                "Tab **KABEL KOAKSIAL** menghimpun redaman kabel 50 Ω yang paling banyak dipakai radio amatir, dalam dB per 100 m pada 20 °C, di lima pita YAEC. Lembar data pembuat memberikan nilai pada frekuensi yang berbeda-beda; YAEC menyesuaikannya ke pita-pita tersebut dengan hukum pangkat, yaitu garis lurus pada grafik log-log di antara dua frekuensi terdekat dari lembar data:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α dalam dB/100 m, ℓ panjang kabel dalam meter. Angka biasa adalah nilai lembar data; ≈ menandai nilai hasil interpolasi, dan e nilai hasil ekstrapolasi di luar frekuensi terakhir lembar data.",
                 "Kabel dengan jenis yang sama, diameter yang sama dalam ±0,2 mm dan redaman dalam 0,2 dB/100 m di semua pita dikelompokkan dalam satu baris (≡), dengan nilai rata-ratanya; nama yang setara ditampilkan dengan \"also:\" (misalnya LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Nama Tiongkok 50-3, 50-5, 50-7, 50-9, 50-12 menyatakan diameter dielektrik dalam milimeter.",
                 "> Kabel kustom dapat ditambahkan dengan lima nilai redamannya: kabel tersebut disimpan di data\\cavi_personali.txt dan juga muncul di daftar drop-down diagram stasiun pada budget EME. Tooltip setiap baris tabel menyebutkan sumber kabel tersebut.",
-                "[1] Sumber masing-masing kabel: lembar data dari Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, melalui WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica dari Senago (RG-115), tabel dari DD1US dan EA5IP (H100) serta tabel dari SV1BSX untuk RG-58, RG-213, H-155 dan H-2000 (nilai perlu diverifikasi)."
+                "### Konektor (NJ9R)",
+                "Konektor juga merupakan bagian dari saluran. Aturan praktis NJ9R adalah sekitar 1 dB untuk setiap 8 – 10 konektor, semuanya dihitung dari bagian belakang radio sampai antena, termasuk adaptor, relay, dan pembagi: pada instalasinya yang terdiri atas empat antena, 24 konektor bernilai lebih dari 2 dB, setara dengan 40 – 45 m LMR-400 baru di 144 MHz [2]. Di Anggaran EME, rugi ini harus ditambahkan ke rugi aksesori TX dan ke rugi antara antena dan praamplifier.",
+                "[1] Sumber masing-masing kabel: lembar data dari Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, melalui WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica dari Senago (RG-115), tabel dari DD1US dan EA5IP (H100) serta tabel dari SV1BSX untuk RG-58, RG-213, H-155 dan H-2000 (nilai perlu diverifikasi).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
             };
             d["id"]["S410"] = new string[] {
                 "## Doppler, kompensasi, dan CFOM",
@@ -47685,10 +48328,19 @@ namespace LunaCalc
                 "> Jumlah bit hanya menyatakan seberapa halus posisi *dibaca*: presisi sebenarnya juga bergantung pada kelonggaran mekanis, lenturan penyangga, angin, serta kalibrasi arah utara dan horizon.",
                 "### Susunan yagi: aktuator dan katrol",
                 "Pada susunan yagi (kombinasi 2, 4, atau lebih antena) beban elevasinya besar dan tidak seimbang. Di pasaran tersedia aktuator linear dengan motor ulir cacing (worm screw): dalam solusi ini ulir hanya mengatur gerakan, sedangkan penopangan mekanis beban diserahkan kepada katrol. Ulir cacing memiliki keuntungan tidak berputar balik akibat beban, sehingga susunan antena tetap diam meskipun motor mati.",
+                "### Memeriksa pengarahan dengan radar GRAVES (NJ9R)",
+                "Radar Prancis **GRAVES** memancar terus-menerus pada 143,050 MHz dari lokator JN27SI dan merupakan bangku uji yang paling banyak dipakai di 144 MHz untuk penerimaan lewat Bulan. Ketika Bulan terlihat baik dari stasiun sendiri maupun dari GRAVES (di YAEC cukup memasukkan JN27SI sebagai lokator DX), dengarkan 143,050 MHz (atau 143,0495 MHz) dalam SSB dengan lebar pita audio sedikitnya 2,4 kHz, AGC mati, noise blanker aktif, dan tanpa filter, notch, atau DSP lainnya [2].",
+                "Di waterfall, gema GRAVES tampak sebagai garis putus-putus: makin kuat, makin tepat arah antena. Gerakkan rotator sedikit demi sedikit, pertama dalam azimut lalu dalam elevasi, hingga mencapai maksimum, lalu bandingkan posisi yang ditemukan dengan posisi yang dihitung. NJ9R juga memakai GRAVES sebagai S-meter: dengan slider gain di nol, ia membaca rata-rata sinyal selama satu menit, dan sebelum setiap sesi ia memeriksa dengan GRAVES bahwa instalasinya masih tersetel dengan benar [2].",
+                "> Tanpa elevasi, gema GRAVES biasanya hanya dapat diterima ketika Bulan berada pada elevasi antara 0° dan 15°, saat terbit atau terbenam. Banyak radio tidak dapat disetel di luar pita 2 m: dalam hal itu diperlukan penerima SDR [2].",
+                "### Kompas, kamera, dan catatan kesalahan (NJ9R)",
+                "Dengan rotator untuk HF, pengarahan yang “hampir tepat” sudah cukup; dalam EME tidak. NJ9R menyarankan untuk mengkalibrasi indikator rotator lalu memeriksanya di luar ruangan dengan kompas, dengan kesalahan paling banyak sekitar 5°: angin, benturan pada stopper, dan tiang yang tergelincir menggeser antena tanpa disadari indikator [2].",
+                "• **Kamera di tiang.** Kamera kecil tahan air (jenis kamera mundur mobil, 25 – 30 USD) yang dipasang pada tiang dan disejajarkan dengan antena memakai waterpas atau inklinometer menunjukkan ke mana antena benar-benar mengarah: NJ9R telah menyelesaikan 60 – 80 QSO dengan rotator rusak atau dengan kesalahan 20 – 35°, hanya dipandu kamera. Pusat Bulan ditandai pada monitor setelah mencari maksimum gema GRAVES. Kamera juga merupakan sumber derau: matikan saat menerima [2].",
+                "• **Catatan kesalahan.** Untuk setiap pengarahan, catat dalam tabel azimut dan elevasi Bulan yang dihitung, yang terbaca pada indikator, dan yang terlihat lewat kamera: selisihnya adalah kesalahan sistem Anda, yang perlu dikoreksi atau diingat [2].",
                 "### Di atas 432 MHz: antena parabola",
                 "Mulai 902 MHz ke atas sebagian besar dipakai antena parabola, dan alat [1] dirancang untuk frekuensi mulai 1 GHz ke atas. Dengan diameter besar, berkas menyempit hingga beberapa persepuluh derajat dan ada risiko tidak mengenai Bulan dengan sempurna: lebih dari sekadar motor, stasiun membutuhkan aktuator mekanis sungguhan untuk azimut dan elevasi, dengan presisi pengarahan yang sangat bergantung pada resolusi bit sistem kendali. **EME Link Budget & Analysis Tool** karya OE2IGL dan DF3GJ [1] memberikan ±0,035° untuk sistem tracking yang baik dan ±0,1° untuk sistem biasa, serta menghitung kerugian pengarahan bersama semua suku lain dari link.",
                 ">+ YAEC berhenti di 432 MHz. Untuk pita yang lebih tinggi kami menyarankan alat karya OE2IGL dan DF3GJ [1]: alat ini menghitung budget EME dari 1 hingga 300 GHz dengan parameter antena parabola (diameter, f/D, feed, kekasaran permukaan, efisiensi), pengarahan, librasi, derau Matahari dan Bulan, serta redaman atmosfer.",
-                "[1] Gerald Ihninger OE2IGL dan Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL dan Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
             };
             d["id"]["S412"] = new string[] {
                 "## Mode digital untuk EME: Q65 dan JT65",
@@ -47779,6 +48431,18 @@ namespace LunaCalc
                 "| q3 | callsign saya dan callsign DX",
                 "| q4 | kedua callsign dan RRR, RR73, 73 atau kosong",
                 "~ Dari [1]. Para pembuatnya mengingatkan agar tidak terlalu memperhatikan nilai S/N yang ditampilkan dekoder, yang saat itu masih terus diperbaiki [1]: untuk perbandingan dengan budget EME YAEC lebih baik memakai beberapa QSO daripada satu pembacaan saja.",
+                "### Pengaturan NJ9R untuk JT65B dan MAP65",
+                "NJ9R, yang memulai di 144 MHz dengan JT65B, merangkum pengaturan yang ia pakai sebagai berikut [7]:",
+                "|h| Program | Lokasi | Pengaturan",
+                "| WSJT-X | jendela utama | Enable VHF and sub-mode features, Decode after EME delay, baris kosong di antara periode dekode",
+                "| WSJT-X | Advanced | Random erasure dan two pass decoding (6 dan 6, tergantung CPU); waterfall Most sensitive",
+                "| WSJT-X | mode | JT65, submode B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; ketika jejak sebuah stasiun muncul, persempit menjadi 50, 20, atau 10 Hz (makin lebar, makin terganggu dekodenya)",
+                "| WSJT-X | frekuensi audio | TX pada 1270 Hz; RX dalam ±350 Hz dari 1270 Hz sesuai Doppler, atau pada frekuensi yang diumumkan di chat",
+                "| MAP65 | Station, I/O devices | callsign dan lokator sendiri; kartu suara, atau antarmuka jaringan untuk radio IQ, pada 96 000 Hz",
+                "| MAP65 | mode dan dekode | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | jendela utama | NB aktif, Monitor On, level audio di bilah samping antara 12 dan 40",
+                "~ Dari [7]. Nama-nama opsi tetap dalam bahasa Inggris, seperti di menu WSJT-X dan MAP65. Untuk JT65, Anggaran EME di YAEC memakai ambang submode B (§ 1.6).",
                 "### Prosedur dengan DXpedition (W7GJ)",
                 "Lance Collister W7GJ, yang bertahun-tahun menjalankan ekspedisi EME di 6 m, menjelaskan cara memanggil DXpedition dalam Q65-60A saat terjadi pile-up [6]. Pertama-tama, jam komputer harus sangat akurat dan frekuensi pancar harus sangat stabil [6].",
                 "• **Periode.** DXpedition selalu memancar pada sekuens pertama (menit genap); pemanggil memancar pada sekuens kedua (menit ganjil) [6].",
@@ -47800,7 +48464,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Oktober 2023, disediakan oleh IC8TEM.",
                 "[4] Nico Palermo IV3NWV, presentasi pada konferensi EME 2016 tentang kode QRA, dikutip dalam [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Kode sumber WSJT-X (berkas Q65_encoding_modules.F90 dan lainnya), dikutip dalam [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, direvisi 3 April 2023, disediakan oleh IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, direvisi 3 April 2023, disediakan oleh IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
             };
             d["id"]["S54"] = new string[] {
                 "## Literatur EME karya SM5BSZ",
@@ -47895,15 +48560,47 @@ namespace LunaCalc
                 "> Dalam program: kalender Jarak dan Dgrd menandai dengan simbol ☀ hari-hari ketika Matahari dekat dengan Bulan (oranye atau merah); tab Derau matahari menghitung, dengan fluks terukur, berapa banyak derau tambahan yang dibawa Matahari pada saat yang dipilih.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["id"]["S413"] = new string[] {
+                "## Dari penerimaan pertama hingga QSO: saran NJ9R",
+                "Relu Jianu NJ9R merangkum dalam “2M EME the easy way” pengalamannya sebagai pemula di 144 MHz: jalur praktis yang dimulai dengan menerima gema GRAVES memakai yagi 7 elemen tanpa praamplifier. Pesannya terutama satu: kenali batas instalasi sendiri, penguatan dan rugi-ruginya, lalu dengan data itu putuskan apakah batas tersebut dapat dilampaui [1]. Bagian-bagian teknisnya sudah dimasukkan ke subbab masing-masing topik: Anggaran EME dan penguatan antena (§ 1.6), relay polarisasi (§ 1.7), konektor (§ 1.8), pengarahan dan GRAVES (§ 1.11), pengaturan WSJT-X dan MAP65 (§ 1.12), membaca chat (§ 1.14). Di sini tersisa saran tentang stasiun dan penerima.",
+                "### Peta derau lokal",
+                "Sebelum mencari Bulan, sebaiknya ketahui dari arah mana derau datang. NJ9R menyarankan satu putaran penuh 360° dengan antena, dengan langkah 15 – 30° dalam azimut, sambil mencatat dalam tabel derau yang terbaca dengan slider gain (dinolkan pada level terendah). Yang memiliki elevasi mengulangi putaran dari 0° sampai 45° dengan langkah 5 – 10°. Bila diwarnai seperti peta panas, tabel itu menjelaskan mengapa dari arah tertentu tidak ada yang diterima: di sana derau lokal menutupi gema [1].",
+                "> Di YAEC, Pengintaian rintangan saya menunjukkan arah yang tertutup rintangan: membandingkannya dengan peta derau membantu memilih jendela Bulan terbaik.",
+                "Rumah dan perangkat elektronik tetangga merupakan sumber gangguan yang terus-menerus: cari dan kurangi mulai dari rumah sendiri, tetapi pada titik tertentu kita harus hidup berdampingan dengan sisanya [1].",
+                "### Penerima dan komputer",
+                "• **Penerima yang bersih.** AGC mati, noise blanker aktif, tanpa filter, notch, atau DSP saat menerima; di komputer, masukan audio pada kualitas tertinggi dan tanpa peningkatan atau penguatan audio sistem [1].",
+                "• **Jam tersinkron.** Mode digital memerlukan waktu yang tepat: NJ9R membiarkan jam komputer dikoreksi otomatis setiap 15 menit oleh program sinkronisasi (NetTime) [1].",
+                "• **CALL3.TXT yang mutakhir.** Berkas ini membantu dekode hingga banyak dB, karena WSJT-X dan MSHV memakainya untuk mengenali callsign; membuang dekode yang salah tetap menjadi tugas operator [1]. YAEC mengunduh dan menggabungkan daftar dari W7GJ dan WSJT-X Improved serta dapat menyalin berkas itu ke folder WSJT-X.",
+                "• **Kesabaran.** Jika tidak terdengar apa pun, beberapa penyebab bisa bertumpuk: Dgrd tinggi, polarisasi yang tidak menguntungkan, rotasi Faraday, derau lokal di arah itu. Sebaiknya coba lagi beberapa menit, beberapa jam, atau satu hari kemudian, dan pilih hari dengan Dgrd terendah dalam bulan itu (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
+            };
+            d["id"]["S414"] = new string[] {
+                "## Chat teks melalui Internet",
+                "Dalam EME, janji jadwal (sked), pengumuman CQ, dan laporan hampir selalu melewati chat teks di Internet. Yang paling banyak dipakai adalah berikut ini.",
+                "• **Chat EME N0UK.** Chat bersejarah untuk EME 2 m, milik Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); dari pembuat yang sama ada Ping Jockey Central, chat untuk meteor scatter (https://www.pingjockey.net) [1].",
+                "• **EMEchat dari EA8DBM.** Antarmuka web yang menghimpun chat-chat EME (https://www.emechat.com): DXpedition memakainya untuk 2 m bersama chat N0UK dan untuk 70 cm ke atas bersama chat HB9Q [2].",
+                "• **HB9Q logger.** Chat dan daftar sked untuk EME dari 70 cm ke atas (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, bagian microwave.** Chat ON4KST dibagi menjadi bagian-bagian per pita (https://www.on4kst.com/chat): di bagian microwave Anda bertemu operator pita-pita yang lebih tinggi, termasuk mereka yang bekerja di EME [3].",
+                "### Cara membaca pengumuman (NJ9R)",
+                "Yang memanggil CQ di chat biasanya menyebutkan daya dan antenanya. “H”, atau tanpa keterangan, menandakan stasiun yang hanya horizontal (tidak selalu); “HV” atau “XPOL” menunjukkan dua polarisasi dan merupakan stasiun terbaik untuk dicari. Antarstasiun di benua yang sama, horizontal dengan horizontal bekerja baik; antarbenua, polarisasi spasial dapat membuat sinyal yang berangkat horizontal tiba hampir vertikal, dengan rugi yang terlalu besar bagi stasiun kecil (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) bekerja seperti PSK Reporter: hanya menampilkan stasiun yang mengirim laporan, jadi bisa saja ada aktivitas di chat meskipun LiveCQ kosong [4].",
+                "• Frekuensi audio yang diumumkan di chat membantu menemukan stasiun yang tidak memancar pada 1270 Hz; bila Anda menerima suatu stasiun, sebaiknya biasakan memberitahukannya di chat [4].",
+                "[1] Chris Cox N0UK, chat EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, Juni 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
+            };
             d["ru"] = new Dictionary<string, string[]>();
             d["ru"]["PREF"] = new string[] {
                 "Эта часть руководства описывает не кнопки программы, а идеи, на которых она построена. Перед главами автор хотел бы изложить несколько понятий, которые оказались ключевыми для изучения программы, в том числе в свете его недавнего опыта на станции.",
                 "• **Расчёт — ориентир, а не обещание.** Бюджет линии, оценка S/N и пороги цифровых видов описывают идеальную трассу. При приёме важны местные и индустриальные помехи, которые могут меняться от минуты к минуте, и фарадеевское вращение: нескольких мгновений достаточно, чтобы потерять рассчитанный запас (§ 1.3, 1.12).",
                 "• **День выбирают до включения.** Dgrd, расстояние до Луны и склонение показывают, сколько шума неба за Луной, сколько часов она над горизонтом и как высоко поднимается: одна и та же аппаратура работает очень по-разному в разные дни (§ 1.4).",
                 "• **Поляризация может заставить сигнал исчезнуть.** С линейными антеннами фарадеевское вращение и пространственная поляризация могут погасить эхо на минуты или часы; часто достаточно подождать, повторить или повернуть поляризацию, а не искать неисправность (§ 1.3).",
-                "• **Лучшее решение — двойная поляризация.** Для антенн лучшим выбором всегда является система с двойной поляризацией, с двумя фидерами и двойным приёмом, тогда как передача ведётся в одной поляризации: так фарадеевское вращение и пространственная поляризация больше не гасят эхо (§ 1.3).",
+                "• **Лучшее решение — двойная поляризация.** Для антенн лучшим выбором всегда является система с двойной поляризацией, с двумя фидерами и двойным приёмом, тогда как передача ведётся в одной поляризации: так фарадеевское вращение и пространственная поляризация больше не гасят эхо (§ 1.3). Реле, выбирающее поляризацию, переключают только на приёме и никогда во время передачи (§ 1.7).",
                 "• **Бюджет EME как испытательный стенд.** Вводя разные изменения на вкладке «Бюджет EME», можно попытаться понять, насколько варианты сохранить свою установку или изменить её пригодны для работы через EME (§ 1.6).",
                 "• **Угол места важен.** Отсутствие подъёма по углу места отнимает минуты возможной работы. Прежде всего, когда антенная система поднимается по углу места, низкий уровень боковых лепестков становится решающим, чтобы не принимать шум земли и позволить антенне достичь максимального приёма сигнала, который даёт только наведение в небо.",
+                "• **Антенны: начинать с таблиц.** При выборе и сравнении Яги ориентиром служат таблицы Lionel Edwards VE7BQH (усиление, G/T и температура антенны), опубликованные на сайте DXMaps Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Среди самых авторитетных работ по проектированию малошумящих Яги — работы Hartmut DG7YBN, Popa YU7EF и Justin Johnson G0KSC. Бюджет EME в YAEC использует таблицы VE7BQH (§ 1.6).",
+                "• **Знать свою установку.** Как пишет Relu NJ9R, настоящий секрет — знать пределы своей системы, её усиления и потери, и по этим данным решать, можно ли их преодолеть. На 144 MHz первым испытательным стендом служит эхо радара GRAVES (§ 1.11, 1.13).",
                 "• **Каждый децибел перед предусилителем важен.** Кабели, реле и разъёмы перед предусилителем ухудшают шумовую температуру системы сильнее, чем подсказывает их значение в дБ: именно туда стоит вкладывать средства (§ 1.7, 1.8).",
                 "• **Сначала правильные частоты.** На высоких диапазонах Доплер и CFOM смещают эхо на несколько кГц: эхо вне окна декодирования не слышно даже при хорошем сигнале (§ 1.10).",
                 "• **Солнце — предсказуемый противник.** Когда оно близко к Луне, шум растёт: программа предупреждает заранее, и это стоит учитывать при выборе дней (§ 1.5, 1.9).",
@@ -47932,11 +48629,11 @@ namespace LunaCalc
                 "|h| Символов | Рекомендуемое использование в YAEC",
                 "| 4 | только для грубой оценки: азимут и угол места Луны могут ошибаться примерно до 1°, потому что местный горизонт наклоняется примерно на 1° каждые 111 km",
                 "| 6 | локатор DX, QSO и бюджет EME: ошибка направления на Луну — несколько сотых градуса",
-                "| **8** | ваша станция, для Reconnaissance of my obstacles: определяет район или холм",
+                "| **8** | ваша станция, для Разведка моих препятствий: определяет район или холм",
                 "|+ **10** | ваша станция, с наилучшим результатом: определяет здание или антенную мачту",
                 "| 12 – 14 | принимаются, но ничего не добавляют: точность превышает точность обычного GPS (несколько метров) и размеры самой антенны",
                 "### Локатор и препятствия",
-                "Для направления на Луну достаточно 6 символов: Луна находится примерно в 380 000 km, и ±4,4 km 6-символьного локатора меняют азимут и угол места примерно на 0,04° — пренебрежимо мало по сравнению с диаграммой направленности антенны. Для **местных препятствий** (зданий, деревьев, холмов) всё наоборот: они находятся в нескольких десятках или сотнях метров от антенны, и при 6 символах станция может быть где угодно в прямоугольнике 7,5 × 4,6 km, так что препятствия невозможно расположить. При 8 символах ошибка снижается примерно до 450 m, при 10 — примерно до 20 m: именно такая точность нужна вкладке **Reconnaissance of my obstacles**, чтобы правильно нарисовать зоны, где антенна закрыта.",
+                "Для направления на Луну достаточно 6 символов: Луна находится примерно в 380 000 km, и ±4,4 km 6-символьного локатора меняют азимут и угол места примерно на 0,04° — пренебрежимо мало по сравнению с диаграммой направленности антенны. Для **местных препятствий** (зданий, деревьев, холмов) всё наоборот: они находятся в нескольких десятках или сотнях метров от антенны, и при 6 символах станция может быть где угодно в прямоугольнике 7,5 × 4,6 km, так что препятствия невозможно расположить. При 8 символах ошибка снижается примерно до 450 m, при 10 — примерно до 20 m: именно такая точность нужна вкладке **Разведка моих препятствий**, чтобы правильно нарисовать зоны, где антенна закрыта.",
                 ">+ Практический совет: определите 10-символьный локатор по GPS-координатам точки, где стоит антенна (а не входа в дом), и введите его во вкладке Положение онлайн и +- 24h как **my locator**. Для DX достаточно 6-символьного локатора, который он вам сообщает.",
                 "[1] Wikipedia, “Maidenhead Locator System” (происхождение: G4ANB и встреча IARU по УКВ в Мейденхеде в 1980 году, структура пар, WGS-84 с 1999 года, расширения свыше 8 символов, уточнение IARU 2019 года, использование на КВ и УКВ, расстояния между центрами малых квадратов) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -47980,12 +48677,16 @@ namespace LunaCalc
                 "• рефракция важна: Луна взошла на −0,51°, ниже оптического горизонта −0,35°; на 200 MHz в сухом воздухе ошибка рефракции при угле места 0° составляет −0,49°.",
                 "IK3XTV напоминает, что теоретически эффект земли достигает 6 dB, так что одиночная Яги работает почти как решётка из 4 антенн, но многое зависит от местности вокруг антенны: в городе он меньше, на открытой местности больше, а у моря ещё больше. Его используют при восходе и заходе Луны, при углах места примерно от 1° до 18 – 20° [4].",
                 "> Поэтому в бюджете EME усиление за счёт земли помечено как BETA: рассчитанное значение (не более +6 dB) — теоретический предел. С антеннами высоко над морем или решётками из нескольких Яги стоит ожидать примерно половину и заметный QSB на малых углах места [3].",
+                "### Усиление антенны: заявленные данные и dBd (NJ9R)",
+                "Усиление в технических описаниях производителей почти всегда получено моделированием над идеальной землёй и с идеальным согласованием на 50 Ω. NJ9R предлагает вычитать из заявленного значения около 2 dB и рассуждать в dBd, а не в dBi, чтобы не питать иллюзий; то же относится к данным кабелей, разъёмов и предусилителей [6]. Его пример: хорошая 5-элементная Яги (8 dBi, 5,9 dBd) при 4,25 dB потерь в линии оставляет всего 1,5 dB полезного усиления; со своей первой 7-элементной Яги (12,3 dBi, 10 dBd) он едва мог что-то принять. В качестве отправной точки для приёма с небольшим запасом он называет около 14 dBd [6].",
+                ">+ В бюджете EME эффект можно проверить сразу: уменьшив усиление антенны на 2 dB, видно, какой запас остаётся у связи.",
                 "[1] WSJT-X User Guide, K1JT и WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 апреля 2021 (WSJT-X 2.4.0), предоставлено IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21-й EME Meeting, презентация предоставлена IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, документ от 12 ноября 2010, предоставлен IC8TEM.",
                 "[5] J. Taylor K1JT, доклад о JT65 на конференции EME 2006 (K1JT_eme2006.pdf): таблица минимальных уровней S/N в 2500 Hz.",
-                "> Схема станции в правой части вкладки определяет потери по выбранным кабелям: на передачу — кабель УМ–реле + реле + антенный кабель, на приём — антенный кабель + реле до предусилителя и фидер после него. Затухание кабелей берётся из базы данных вкладки COAXIAL CABLES (§ 1.8)."
+                "> Схема станции в правой части вкладки определяет потери по выбранным кабелям: на передачу — кабель УМ–реле + реле + антенный кабель, на приём — антенный кабель + реле до предусилителя и фидер после него. Затухание кабелей берётся из базы данных вкладки КОАКСИАЛЬНЫЕ КАБЕЛИ (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
             };
             d["ru"]["S47"] = new string[] {
                 "## Предусилитель и коэффициент шума радиостанции {nuovo}",
@@ -48060,7 +48761,7 @@ namespace LunaCalc
                 "##+ EME-станции с FT-1000MP и трансвертером",
                 "Два документированных примера использования FT-1000MP для EME на 144 MHz с трансвертером: измерения DF9IC [3] на FT-1000MP + трансвертер Javornik (NF 0,9 – 1,4 dB с выключенным предусилителем радиостанции) и EME-станция **W3SZ** [12] (4 × M2 2MXP32, предусилители LNA Technology у антенны для каждой поляризации, LMR-600 и жёсткий кабель Andrew), которая на передачу использует **FT-1000MP Mark V** с трансвертером **SSB-Electronic LT2S Mk II** (ПЧ 28 MHz) и усилителем на 2 × GU-74B, а на приём — аппаратуру WSE и программу Linrad от SM5BSZ.",
                 "> В бюджете EME трансвертер — это блок схемы станции: он включается своим флажком, модель выбирается из списка (или \"custom\"), и программа берёт его коэффициент шума и усиление; если он выключен, в расчёт не входит. График выше помогает решить, включать ли предусилитель радиостанции.",
-                ">! ✉ **Знаете другой трансвертер или построили свой?** Если вы хотите рассказать о других трансвертерах или о своём собственном, напишите автору по e-mail: ccerrotta@gmail.com или ic8tem@gmail.com. Все контактные данные — во вкладке **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **Знаете другой трансвертер или построили свой?** Если вы хотите рассказать о других трансвертерах или о своём собственном, напишите автору по e-mail: ccerrotta@gmail.com или ic8tem@gmail.com. Все контактные данные — во вкладке **КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ**.",
                 "##+ Секвенсор TX/RX",
                 "При наличии усилителя мощности (PA) и предусилителя у антенны (PRE) PTT компьютера подаётся не на радиостанцию, а на **секвенсор**, который в правильном порядке переключает реле, а затем PA и радиостанцию [16]. В самой распространённой схеме два фидера: приёмный может терять несколько dB, так как стоит после предусилителя на 15 – 20 dB, а передающий должен терять как можно меньше (3 dB потерь на передаче вдвое уменьшают излучаемую мощность). В исходном положении реле держат PRE отключённым от антенны: дополнительная защита от грозовых разрядов [16].",
                 "|h| ^Шаг | С RX на TX | С TX на RX",
@@ -48070,6 +48771,7 @@ namespace LunaCalc
                 "~ Между шагами нужно выдержать как минимум время переключения реле (15 – 30 ms) плюс дребезг контактов: IK1UWL советует 100 – 200 ms, в том числе для PA, если у него есть внутренние реле [16].",
                 "Для управления передачей PTT лучше, чем VOX: VOX может сработать от шума и не использует задержку около 0,5 s, с которой JT65 начинает модуляцию после PTT, поэтому предусилитель защищён только быстрым реле усилителя; с PTT эта задержка переключает усилитель до начала модуляции, и можно добавить секвенсор [17].",
                 ">! **Берегите предусилитель.** Реле T/R должно очень хорошо развязывать разомкнутый порт: при развязке 50 dB и 500 W на антенне на вход PRE попадает 5 mW. Стремятся иметь не менее 60 dB, а самые осторожные добавляют второе реле, которое на передаче замыкает PRE на нагрузку 50 Ω. Кнопку PTT микрофона нужно отключить: с этого момента передача идёт только через секвенсор (для SSB — педаль на PTT секвенсора, развязанная с PTT компьютера) [16].",
+                ">! **Реле поляризации переключают только на приёме.** При двух поляризациях (H и V) реле, выбирающее антенну, никогда нельзя переключать во время передачи: под мощностью сгорают реле, предусилители или усилитель, а ущерб составляет от сотен до тысяч евро [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, выпуск 5, 19 марта 2021 (первое издание 19 июня 2019), таблицы 1 и 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 июля 2015, таблица 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC совместно с DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, испытания от 27 февраля 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -48086,16 +48788,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, май 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), апрель 2003, с. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, январь 2012, § 4 “Sequenziamento relè, PA e PRE”, предоставлено IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентация, июль 2015, предоставлена IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентация, июль 2015, предоставлена IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
             };
             d["ru"]["S48"] = new string[] {
                 "## Коаксиальные кабели и потери",
-                "Вкладка **COAXIAL CABLES** содержит затухание 50-омных кабелей, наиболее используемых радиолюбителями, в dB на 100 m при 20 °C, на пяти диапазонах YAEC. Технические описания производителей дают значения на других частотах; YAEC привела их к диапазонам по степенному закону — прямой на графике в двойном логарифмическом масштабе между двумя ближайшими частотами из описания:",
+                "Вкладка **КОАКСИАЛЬНЫЕ КАБЕЛИ** содержит затухание 50-омных кабелей, наиболее используемых радиолюбителями, в dB на 100 m при 20 °C, на пяти диапазонах YAEC. Технические описания производителей дают значения на других частотах; YAEC привела их к диапазонам по степенному закону — прямой на графике в двойном логарифмическом масштабе между двумя ближайшими частотами из описания:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α в dB/100 m, ℓ — длина кабеля в метрах. Число без пометок — значение из технического описания; ≈ обозначает интерполированное значение, а e — экстраполированное за последнюю частоту описания.",
                 "Кабели одного типа с одинаковым диаметром в пределах ±0,2 mm и затуханием в пределах 0,2 dB/100 m на всех диапазонах объединены в одну строку (≡) со средним значением; эквивалентные названия показаны с пометкой \"also:\" (например, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Китайские названия 50-3, 50-5, 50-7, 50-9, 50-12 указывают диаметр диэлектрика в миллиметрах.",
                 "> Можно добавлять собственные кабели с их пятью значениями затухания: они сохраняются в data\\cavi_personali.txt и появляются также в выпадающих списках схемы станции бюджета EME. Всплывающая подсказка каждой строки таблицы указывает источник данных для этого кабеля.",
-                "[1] Источники данных по отдельным кабелям: технические описания Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica из Сенаго (RG-115), таблицы DD1US и EA5IP (H100) и таблица SV1BSX для RG-58, RG-213, H-155 и H-2000 (значения требуют проверки)."
+                "### Разъёмы (NJ9R)",
+                "Разъёмы тоже входят в линию. Практическое правило NJ9R — около 1 dB на каждые 8 – 10 разъёмов, считая все от задней панели трансивера до антенны, включая переходники, реле и делители: в его установке из четырёх антенн 24 разъёма дают больше 2 dB — столько же, сколько 40 – 45 m нового LMR-400 на 144 MHz [2]. В бюджете EME эти потери нужно прибавить к значению «Потери аксессуаров TX» и к потерям между антенной и предусилителем.",
+                "[1] Источники данных по отдельным кабелям: технические описания Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica из Сенаго (RG-115), таблицы DD1US и EA5IP (H100) и таблица SV1BSX для RG-58, RG-213, H-155 и H-2000 (значения требуют проверки).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
             };
             d["ru"]["S410"] = new string[] {
                 "## Доплер, компенсация и CFOM",
@@ -48157,10 +48863,19 @@ namespace LunaCalc
                 "> Число бит говорит только о том, насколько тонко положение *считывается*: реальная точность зависит также от механических люфтов, прогиба опоры, ветра и калибровки севера и горизонта.",
                 "### Решётки Яги: приводы и шкивы",
                 "В решётках Яги (комбинациях из 2, 4 и более антенн) нагрузка по углу места велика и несбалансированна. В продаже имеются линейные приводы с червячным мотор-редуктором: в таких решениях винт только регулирует движение, а механическое удержание нагрузки возлагается на шкивы. Преимущество червячной передачи в том, что под нагрузкой она не проворачивается назад, поэтому решётка остаётся неподвижной даже при выключенном двигателе.",
+                "### Проверка наведения по радару GRAVES (NJ9R)",
+                "Французский радар **GRAVES** непрерывно излучает на 143,050 MHz из локатора JN27SI и служит самым распространённым испытательным стендом на 144 MHz для приёма через Луну. Когда Луна видна и со своей станции, и с GRAVES (в YAEC достаточно ввести JN27SI как локатор DX), слушают на 143,050 MHz (или 143,0495 MHz) в SSB с полосой звука не менее 2,4 kHz, с выключенной АРУ, включённым подавителем импульсных помех (noise blanker) и без каких-либо других фильтров, notch или DSP [2].",
+                "На водопаде эхо GRAVES выглядит как пунктирная линия: чем она ярче, тем точнее наведена антенна. Поворотное устройство двигают маленькими шагами, сначала по азимуту, затем по углу места, до максимума, и сравнивают найденное положение с рассчитанным. NJ9R использует GRAVES и как S-метр: при обнулённом ползунке усиления он считывает средний уровень сигнала за минуту, а перед каждым сеансом проверяет по GRAVES, что установка по-прежнему в порядке [2].",
+                "> Без подъёма по углу места эхо GRAVES обычно принимается только при угле места Луны от 0° до 15°, на восходе или заходе. Многие трансиверы не перестраиваются за пределы диапазона 2 m: в этом случае нужен SDR-приёмник [2].",
+                "### Компас, камера и журнал ошибок (NJ9R)",
+                "С поворотным устройством для КВ наведения «почти точно» было достаточно; в EME — нет. NJ9R советует откалибровать указатель поворотного устройства, а затем проверить его на улице по компасу, допуская ошибку не более примерно 5°: ветер, удары об упоры и проскальзывание мачты сдвигают антенну, а указатель этого не замечает [2].",
+                "• **Камера на мачте.** Небольшая водонепроницаемая камера (вроде камер заднего вида, 25 – 30 USD), закреплённая на мачте и выровненная по антенне с помощью уровня или инклинометра, показывает, куда антенна направлена на самом деле: NJ9R провёл 60 – 80 QSO с неисправным поворотным устройством или с ошибками 20 – 35°, ориентируясь только по камере. Центр Луны отмечают на мониторе после поиска максимума эха GRAVES. Камера — ещё и источник шума: на время приёма её выключают [2].",
+                "• **Журнал ошибок.** Для каждого наведения в таблицу записывают рассчитанные азимут и угол места Луны, значения по указателю и значения, видимые через камеру: разница — это ошибка вашей системы, которую нужно исправить или учитывать [2].",
                 "### Выше 432 MHz: параболические антенны",
                 "Начиная с 902 MHz используются в основном параболические антенны, и инструмент [1] рассчитан на частоты от 1 GHz и выше. При больших диаметрах диаграмма сужается до нескольких десятых градуса, и есть риск не попасть точно в Луну: станции нужны не столько двигатели, сколько настоящие механические приводы по азимуту и углу места, а точность наведения во многом определяется разрядностью системы управления. **EME Link Budget & Analysis Tool** от OE2IGL и DF3GJ [1] указывает ±0,035° для хорошей системы сопровождения и ±0,1° для обычной и рассчитывает потери наведения вместе со всеми остальными составляющими линии.",
                 ">+ YAEC ограничивается 432 MHz. Для высших диапазонов рекомендуем инструмент OE2IGL и DF3GJ [1]: он рассчитывает бюджет EME от 1 до 300 GHz с параметрами параболы (диаметр, f/D, облучатель, шероховатость поверхности, КПД), наведением, либрацией, шумом Солнца и Луны и атмосферным затуханием.",
-                "[1] Gerald Ihninger OE2IGL и Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL и Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
             };
             d["ru"]["S412"] = new string[] {
                 "## Цифровые виды для EME: Q65 и JT65",
@@ -48251,6 +48966,18 @@ namespace LunaCalc
                 "| q3 | мой позывной и позывной DX",
                 "| q4 | оба позывных и RRR, RR73, 73 или пусто",
                 "~ Из [1]. Авторы предупреждают, что не стоит придавать слишком большое значение значениям S/N, показываемым декодером, которые тогда ещё дорабатывались [1]: для сравнения с бюджетом EME YAEC лучше использовать несколько QSO, а не одно показание.",
+                "### Настройки NJ9R для JT65B и MAP65",
+                "NJ9R, начинавший на 144 MHz с JT65B, так резюмирует используемые им настройки [7]:",
+                "|h| Программа | Где | Настройка",
+                "| WSJT-X | главное окно | Enable VHF and sub-mode features, Decode after EME delay, пустая строка между периодами декодирования",
+                "| WSJT-X | Advanced | Random erasure и two pass decoding (6 и 6, в зависимости от CPU); водопад Most sensitive",
+                "| WSJT-X | режим | JT65, подрежим B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; когда появляется след станции, сужают до 50, 20 или 10 Hz (чем шире, тем хуже декодирование)",
+                "| WSJT-X | звуковые частоты | TX на 1270 Hz; RX в пределах ±350 Hz от 1270 Hz в зависимости от доплера или на частоте, объявленной в чате",
+                "| MAP65 | Station, I/O devices | свой позывной и локатор; звуковая карта или, для IQ-трансиверов, сетевой интерфейс, на 96 000 Hz",
+                "| MAP65 | режим и декодирование | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | главное окно | NB включён, Monitor On, уровень звука на боковой шкале от 12 до 40",
+                "~ Из [7]. Названия пунктов оставлены на английском, как в меню WSJT-X и MAP65. Для JT65 бюджет EME в YAEC использует пороги подрежима B (§ 1.6).",
                 "### Порядок работы с DX-экспедициями (W7GJ)",
                 "Lance Collister W7GJ, много лет проводящий EME-экспедиции на 6 m, описывает, как вызывать DX-экспедицию в Q65-60A во время пайл-апа (pile-up) [6]. Прежде всего часы компьютера должны быть очень точными, а частота передачи — очень стабильной [6].",
                 "• **Периоды.** DX-экспедиция всегда передаёт в первой последовательности (чётные минуты); вызывающие — во второй (нечётные минуты) [6].",
@@ -48272,7 +48999,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, октябрь 2023, предоставлено IC8TEM.",
                 "[4] Nico Palermo IV3NWV, доклад о кодах QRA на конференции EME 2016, цитируется в [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Исходный код WSJT-X (файл Q65_encoding_modules.F90 и другие), цитируется в [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, редакция от 3 апреля 2023, предоставлено IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, редакция от 3 апреля 2023, предоставлено IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
             };
             d["ru"]["S54"] = new string[] {
                 "## Литература по EME от SM5BSZ",
@@ -48367,15 +49095,47 @@ namespace LunaCalc
                 "> В программе: календарь «Расстояние и Dgrd» отмечает символом ☀ дни, когда Солнце близко к Луне (оранжевым или красным); вкладка «Шум Солнца» рассчитывает по измеренному потоку, сколько дополнительного шума даёт Солнце в выбранный момент.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["ru"]["S413"] = new string[] {
+                "## От первого приёма до QSO: советы NJ9R",
+                "Relu Jianu NJ9R собрал в «2M EME the easy way» свой опыт новичка на 144 MHz: практический путь, который начинается с эха GRAVES, принятого на 7-элементную Яги без предусилителя. Главная его мысль одна: знать пределы своей установки, её усиления и потери, и по этим данным решать, можно ли их преодолеть [1]. Технические части перенесены в разделы по отдельным темам: бюджет EME и усиление антенн (§ 1.6), реле поляризации (§ 1.7), разъёмы (§ 1.8), наведение и GRAVES (§ 1.11), настройки WSJT-X и MAP65 (§ 1.12), чтение чатов (§ 1.14). Здесь остаются советы по станции и приёмнику.",
+                "### Карта местного шума",
+                "Прежде чем искать Луну, полезно знать, с каких направлений приходит шум. NJ9R советует сделать антенной полный оборот на 360° с шагом 15 – 30° по азимуту, записывая в таблицу шум, считанный по ползунку усиления (обнулённому на самом низком уровне). У кого есть подъём по углу места, повторяют обход от 0° до 45° с шагом 5 – 10°. Раскрашенная как тепловая карта, таблица объясняет, почему в некоторых направлениях ничего не принимается: там местный шум перекрывает эхо [1].",
+                "> В YAEC «Разведка моих препятствий» показывает направления, закрытые препятствиями: сравнение с картой шума помогает выбрать лучшие окна Луны.",
+                "Дома и электроника соседей — постоянный источник помех: их ищут и уменьшают, начиная со своего дома, но в какой-то момент приходится мириться с тем, что остаётся [1].",
+                "### Приёмник и компьютер",
+                "• **Чистый приёмник.** АРУ выключена, подавитель импульсных помех включён, никаких фильтров, notch или DSP на приёме; в компьютере — звуковой вход с наивысшим качеством и никаких улучшений или усиления звука в системе [1].",
+                "• **Синхронизированные часы.** Цифровым видам нужно точное время: NJ9R настроил автоматическую коррекцию часов компьютера каждые 15 минут программой синхронизации (NetTime) [1].",
+                "• **Актуальный CALL3.TXT.** Файл улучшает декодирование на много dB, потому что WSJT-X и MSHV используют его для распознавания позывных; отбрасывать ошибочные декодирования остаётся задачей оператора [1]. YAEC загружает и объединяет списки W7GJ и WSJT-X Improved и может скопировать файл в папку WSJT-X.",
+                "• **Терпение.** Если ничего не слышно, могут складываться несколько причин: высокая Dgrd, неблагоприятная поляризация, фарадеевское вращение, местный шум в этом направлении. Стоит повторить попытку через несколько минут, несколько часов или в другой день и выбирать дни с самой низкой Dgrd в месяце (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
+            };
+            d["ru"]["S414"] = new string[] {
+                "## Текстовые чаты в Интернете",
+                "В EME договорённости о связи (sked), объявления CQ и рапорты почти всегда проходят через текстовые чаты в Интернете. Чаще всего используются следующие.",
+                "• **EME-чат N0UK.** Исторический чат 2 m EME, созданный Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); тому же автору принадлежит Ping Jockey Central — чат метеорного рассеяния (https://www.pingjockey.net) [1].",
+                "• **EMEchat от EA8DBM.** Веб-интерфейс, объединяющий EME-чаты (https://www.emechat.com): DX-экспедиции используют его на 2 m вместе с чатом N0UK, а на 70 cm и выше — с чатом HB9Q [2].",
+                "• **HB9Q logger.** Чат и журнал скедов для EME от 70 cm и выше (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, раздел microwave.** Чат ON4KST разделён на разделы по диапазонам (https://www.on4kst.com/chat): в разделе microwave встречаются операторы высших диапазонов, в том числе работающие через EME [3].",
+                "### Как читать объявления (NJ9R)",
+                "Тот, кто даёт CQ в чате, обычно указывает мощность и антенны. «H» или отсутствие указания наводит на мысль о станции только с горизонтальной поляризацией (не всегда); «HV» или «XPOL» означает две поляризации — такую станцию лучше всего искать. Между станциями одного континента горизонтальная поляризация с горизонтальной работает хорошо; между континентами пространственная поляризация может превратить сигнал, ушедший горизонтальным, почти в вертикальный, с потерями, слишком большими для маленькой станции (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) работает как PSK Reporter: показывает только станции, которые отправляют рапорты, поэтому в чате может быть активность, даже когда LiveCQ пуст [4].",
+                "• Звуковые частоты, объявленные в чате, помогают найти станции, которые передают не на 1270 Hz; когда вы принимаете станцию, хорошая привычка — сообщить об этом в чате [4].",
+                "[1] Chris Cox N0UK, EME-чат – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, июнь 2026, DX-экспедиция C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
+                "[3] Чат ON4KST – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
+            };
             d["uk"] = new Dictionary<string, string[]>();
             d["uk"]["PREF"] = new string[] {
                 "Ця частина посібника описує не кнопки програми, а ідеї, на яких її побудовано. Перед розділами автор хоче викласти кілька понять, що виявилися ключовими для вивчення програми, зокрема у світлі його нещодавнього досвіду на станції.",
                 "• **Розрахунок — орієнтир, а не обіцянка.** Бюджет лінії, оцінка S/N і пороги цифрових видів описують ідеальну трасу. Під час приймання важать місцеві та індустріальні завади, що можуть змінюватися щохвилини, і фарадеївське обертання: кількох миттєвостей досить, щоб утратити розрахований запас (§ 1.3, 1.12).",
                 "• **День обирають до ввімкнення.** Dgrd, відстань до Місяця і схилення показують, скільки шуму неба за Місяцем, скільки годин він над горизонтом і як високо підіймається: та сама апаратура працює дуже по-різному в різні дні (§ 1.4).",
                 "• **Поляризація може змусити сигнал зникнути.** З лінійними антенами фарадеївське обертання і просторова поляризація можуть погасити луну на хвилини або години; часто досить зачекати, повторити або повернути поляризацію, а не шукати несправність (§ 1.3).",
-                "• **Найкраще рішення — подвійна поляризація.** Для антен найкращим вибором завжди є система з подвійною поляризацією, з двома фідерами і подвійним прийманням, тоді як передавання ведеться в одній поляризації: так фарадеївське обертання і просторова поляризація більше не гасять луну (§ 1.3).",
+                "• **Найкраще рішення — подвійна поляризація.** Для антен найкращим вибором завжди є система з подвійною поляризацією, з двома фідерами і подвійним прийманням, тоді як передавання ведеться в одній поляризації: так фарадеївське обертання і просторова поляризація більше не гасять луну (§ 1.3). Реле, що вибирає поляризацію, перемикають лише на прийманні й ніколи під час передавання (§ 1.7).",
                 "• **Бюджет EME як випробувальний стенд.** Вводячи різні зміни на вкладці «Бюджет EME», можна спробувати зрозуміти, наскільки варіанти зберегти свою установку або змінити її придатні для роботи через EME (§ 1.6).",
                 "• **Кут місця важливий.** Відсутність підйому за кутом місця забирає хвилини можливої роботи. Насамперед, коли антенну систему піднімають за кутом місця, низький рівень бічних пелюсток стає вирішальним, щоб не приймати шум землі й дозволити антені досягти максимального приймання сигналу, яке дає лише спрямування в небо.",
+                "• **Антени: почати з таблиць.** Для вибору й порівняння яг орієнтиром є таблиці Lionel Edwards VE7BQH (підсилення, G/T і температура антени), опубліковані на сайті DXMaps Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Серед найавторитетніших праць із проєктування малошумних яг — роботи Hartmut DG7YBN, Popa YU7EF і Justin Johnson G0KSC. Бюджет EME у YAEC використовує таблиці VE7BQH (§ 1.6).",
+                "• **Знати свою установку.** Як пише Relu NJ9R, справжній секрет — знати межі своєї системи, її підсилення і втрати, і за цими даними вирішувати, чи можна їх подолати. На 144 MHz першим випробувальним стендом є луна радара GRAVES (§ 1.11, 1.13).",
                 "• **Кожен децибел перед підсилювачем важливий.** Кабелі, реле і роз'єми перед попереднім підсилювачем погіршують шумову температуру системи більше, ніж підказує їхнє значення в дБ: саме туди варто вкладати кошти (§ 1.7, 1.8).",
                 "• **Спочатку правильні частоти.** На високих діапазонах Доплер і CFOM зсувають луну на кілька кГц: луну поза вікном декодування не чути навіть за доброго сигналу (§ 1.10).",
                 "• **Сонце — передбачуваний супротивник.** Коли воно близько до Місяця, шум зростає: програма попереджає заздалегідь, і це варто враховувати під час вибору днів (§ 1.5, 1.9).",
@@ -48404,11 +49164,11 @@ namespace LunaCalc
                 "|h| Символів | Рекомендоване використання в YAEC",
                 "| 4 | лише для грубої оцінки: азимут і кут місця Місяця можуть мати похибку до приблизно 1°, бо місцевий горизонт нахиляється приблизно на 1° на кожні 111 km",
                 "| 6 | локатор DX, QSO та бюджет EME: похибка напрямку на Місяць — кілька сотих градуса",
-                "| **8** | ваша станція, для Reconnaissance of my obstacles: визначає район або пагорб",
+                "| **8** | ваша станція, для Розвідка моїх перешкод: визначає район або пагорб",
                 "|+ **10** | ваша станція, з найкращим результатом: визначає будівлю або антенну щоглу",
                 "| 12 – 14 | приймаються, але нічого не додають: точність перевищує точність звичайного GPS (кілька метрів) і розміри самої антени",
                 "### Локатор і перешкоди",
-                "Для напрямку на Місяць досить 6 символів: Місяць віддалений приблизно на 380 000 km, а ±4,4 km 6-символьного локатора змінюють азимут і кут місця приблизно на 0,04° — нехтовно мало порівняно з шириною діаграми спрямованості антени. Для **місцевих перешкод** (будівлі, дерева, пагорби) усе навпаки: вони розташовані за кілька десятків або сотень метрів від антени, а з 6 символами станція може бути будь-де в прямокутнику 7,5 × 4,6 km, тож перешкоди неможливо правильно розмістити. З 8 символами похибка зменшується приблизно до 450 m, з 10 — приблизно до 20 m: саме таку точність потребує вкладка **Reconnaissance of my obstacles**, щоб правильно намалювати зони, де антена закрита.",
+                "Для напрямку на Місяць досить 6 символів: Місяць віддалений приблизно на 380 000 km, а ±4,4 km 6-символьного локатора змінюють азимут і кут місця приблизно на 0,04° — нехтовно мало порівняно з шириною діаграми спрямованості антени. Для **місцевих перешкод** (будівлі, дерева, пагорби) усе навпаки: вони розташовані за кілька десятків або сотень метрів від антени, а з 6 символами станція може бути будь-де в прямокутнику 7,5 × 4,6 km, тож перешкоди неможливо правильно розмістити. З 8 символами похибка зменшується приблизно до 450 m, з 10 — приблизно до 20 m: саме таку точність потребує вкладка **Розвідка моїх перешкод**, щоб правильно намалювати зони, де антена закрита.",
                 ">+ Практична порада: визначте 10-символьний локатор за GPS-координатами точки, де стоїть антена (а не входу до будинку), і введіть його у вкладці Положення наживо і +- 24h як **my locator**. Для DX досить 6-символьного локатора, який він вам передає.",
                 "[1] Wikipedia, “Maidenhead Locator System” (походження: G4ANB і нарада IARU з УКХ у Мейденгеді 1980 року, структура пар, WGS-84 з 1999 року, розширення понад 8 символів, уточнення IARU 2019 року, використання на КХ і УКХ/ДМХ, відстані між центрами підквадратів) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -48452,12 +49212,16 @@ namespace LunaCalc
                 "• рефракція має значення: Місяць зійшов на −0,51°, нижче оптичного горизонту −0,35°; на 200 MHz у сухому повітрі похибка рефракції при куті місця 0° становить −0,49°.",
                 "IK3XTV нагадує, що теоретично ефект землі сягає 6 dB, тож одна яга працює майже як система з 4 антен, але багато залежить від місцевості навколо антени: у місті він менший, на відкритій місцевості більший, а біля моря ще більший. Його використовують під час сходу й заходу Місяця, на кутах місця приблизно від 1° до 18 – 20° [4].",
                 "> Тому в бюджеті EME підсилення від землі позначено як BETA: розраховане значення (не більше +6 dB) — теоретична межа. З антенами високо над морем або системами з кількох яг варто очікувати приблизно половину і помітний QSB на малих кутах місця [3].",
+                "### Підсилення антени: заявлені дані та dBd (NJ9R)",
+                "Підсилення в технічних описах виробників майже завжди отримане моделюванням над ідеальною землею та з ідеальним узгодженням на 50 Ω. NJ9R пропонує віднімати від заявленого значення близько 2 dB і міркувати в dBd, а не в dBi, щоб не тішити себе ілюзіями; те саме стосується даних кабелів, роз'ємів і передпідсилювачів [6]. Його приклад: добра 5-елементна яга (8 dBi, 5,9 dBd) з 4,25 dB втрат у лінії залишає лише 1,5 dB корисного підсилення; зі своєю першою 7-елементною ягою (12,3 dBi, 10 dBd) він ледве міг щось прийняти. Як відправну точку для приймання з невеликим запасом він називає близько 14 dBd [6].",
+                ">+ У бюджеті EME ефект можна перевірити одразу: зменшивши підсилення антени на 2 dB, видно, який запас лишається у зв'язку.",
                 "[1] WSJT-X User Guide, K1JT і WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 квітня 2021 (WSJT-X 2.4.0), надано IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21-й EME Meeting, презентацію надано IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, документ від 12 листопада 2010, надано IC8TEM.",
                 "[5] J. Taylor K1JT, доповідь про JT65 на конференції EME 2006 (K1JT_eme2006.pdf): таблиця мінімальних рівнів S/N у 2500 Hz.",
-                "> Схема станції праворуч у вкладці визначає втрати з вибраних кабелів: на передачу — кабель PA–реле + реле + антенний кабель, на прийом — антенний кабель + реле перед передпідсилювачем і фідер після нього. Загасання кабелів беруться з бази даних вкладки COAXIAL CABLES (§ 1.8)."
+                "> Схема станції праворуч у вкладці визначає втрати з вибраних кабелів: на передачу — кабель PA–реле + реле + антенний кабель, на прийом — антенний кабель + реле перед передпідсилювачем і фідер після нього. Загасання кабелів беруться з бази даних вкладки КОАКСІАЛЬНІ КАБЕЛІ (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
             };
             d["uk"]["S47"] = new string[] {
                 "## Передпідсилювач і коефіцієнт шуму радіостанції {nuovo}",
@@ -48532,7 +49296,7 @@ namespace LunaCalc
                 "##+ Станції EME з FT-1000MP і трансвертером",
                 "Два задокументовані приклади використання FT-1000MP для EME на 144 MHz із трансвертером: вимірювання DF9IC [3] на FT-1000MP + трансвертер Javornik (NF 0,9 – 1,4 dB з вимкненим передпідсилювачем радіостанції) і станція EME **W3SZ** [12] (4 × M2 2MXP32, передпідсилювачі LNA Technology біля антени для кожної поляризації, LMR-600 і жорсткий кабель Andrew), яка на передачу використовує **FT-1000MP Mark V** з трансвертером **SSB-Electronic LT2S Mk II** (ПЧ 28 MHz) і підсилювачем 2 × GU-74B, а на прийом — апаратуру WSE і програму Linrad від SM5BSZ.",
                 "> У бюджеті EME трансвертер — це блок на схемі станції: його вмикають прапорцем, вибирають модель зі списку (або \"custom\"), і програма бере його коефіцієнт шуму та підсилення; якщо він вимкнений, то в розрахунок не входить. Графік вище допомагає вирішити, чи вмикати передпідсилювач радіостанції.",
-                ">! ✉ **Знаєте інший трансвертер або побудували власний?** Якщо хочете розповісти про інші трансвертери або про свій власний, напишіть автору: ccerrotta@gmail.com або ic8tem@gmail.com. Усі контакти — у вкладці **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **Знаєте інший трансвертер або побудували власний?** Якщо хочете розповісти про інші трансвертери або про свій власний, напишіть автору: ccerrotta@gmail.com або ic8tem@gmail.com. Усі контакти — у вкладці **КОНТАКТИ АВТОРА І ПОДЯКИ**.",
                 "##+ Секвенсор TX/RX",
                 "За наявності підсилювача потужності (PA) і передпідсилювача біля антени (PRE) PTT комп'ютера подається не на радіостанцію, а на **секвенсор**, який у правильному порядку перемикає реле, а потім PA і радіостанцію [16]. У найпоширенішій схемі два фідери: приймальний може втрачати кілька dB, бо стоїть після передпідсилювача на 15 – 20 dB, а передавальний має втрачати якомога менше (3 dB втрат на передачі вдвічі зменшують випромінювану потужність). У вихідному положенні реле тримають PRE відключеним від антени: додатковий захист від грозових розрядів [16].",
                 "|h| ^Крок | З RX на TX | З TX на RX",
@@ -48542,6 +49306,7 @@ namespace LunaCalc
                 "~ Між кроками потрібно витримати щонайменше час перемикання реле (15 – 30 ms) плюс брязкіт контактів: IK1UWL радить 100 – 200 ms, зокрема й для PA, якщо він має внутрішні реле [16].",
                 "Для керування передачею PTT кращий за VOX: VOX може спрацювати від шуму і не використовує затримку близько 0,5 s, з якою JT65 починає модуляцію після PTT, тому передпідсилювач захищений лише швидким реле підсилювача; з PTT ця затримка перемикає підсилювач до початку модуляції, і можна додати секвенсор [17].",
                 ">! **Бережіть передпідсилювач.** Реле T/R має дуже добре розв'язувати розімкнений порт: при розв'язці 50 dB і 500 W на антені на вхід PRE потрапляє 5 mW. Прагнуть мати щонайменше 60 dB, а найобережніші додають друге реле, яке на передачі замикає PRE на навантаження 50 Ω. Кнопку PTT мікрофона слід вимкнути: відтоді передача йде лише через секвенсор (для SSB — педаль на PTT секвенсора, розв'язана з PTT комп'ютера) [16].",
+                ">! **Реле поляризації перемикають лише на прийманні.** За двох поляризацій (H і V) реле, що вибирає антену, ніколи не можна перемикати під час передавання: під потужністю згорають реле, передпідсилювачі або підсилювач, а збитки сягають від сотень до тисяч євро [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, випуск 5, 19 березня 2021 (перше видання 19 червня 2019), таблиці 1 і 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 липня 2015, таблиця 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC разом з DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, тести від 27 лютого 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -48558,16 +49323,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, травень 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), квітень 2003, с. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, січень 2012, § 4 “Sequenziamento relè, PA e PRE”, надано IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентація, липень 2015, надано IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентація, липень 2015, надано IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
             };
             d["uk"]["S48"] = new string[] {
                 "## Коаксіальні кабелі та втрати",
-                "Вкладка **COAXIAL CABLES** містить загасання кабелів 50 Ω, найуживаніших серед радіоаматорів, у dB на 100 m при 20 °C, на п'яти діапазонах YAEC. Технічні описи виробників наводять значення на інших частотах; YAEC привів їх до діапазонів за степеневим законом — прямою лінією на графіку в подвійному логарифмічному масштабі між двома найближчими частотами технічного опису:",
+                "Вкладка **КОАКСІАЛЬНІ КАБЕЛІ** містить загасання кабелів 50 Ω, найуживаніших серед радіоаматорів, у dB на 100 m при 20 °C, на п'яти діапазонах YAEC. Технічні описи виробників наводять значення на інших частотах; YAEC привів їх до діапазонів за степеневим законом — прямою лінією на графіку в подвійному логарифмічному масштабі між двома найближчими частотами технічного опису:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α у dB/100 m, ℓ — довжина кабелю в метрах. Число без позначок — значення з технічного опису; ≈ позначає інтерпольоване значення, а e — екстрапольоване за останню частоту технічного опису.",
                 "Кабелі одного типу з однаковим діаметром у межах ±0,2 mm і загасанням у межах 0,2 dB/100 m на всіх діапазонах згруповано в один рядок (≡) із середнім значенням; еквівалентні назви показано з \"also:\" (наприклад, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Китайські назви 50-3, 50-5, 50-7, 50-9, 50-12 вказують діаметр діелектрика в міліметрах.",
                 "> Власні кабелі можна додати з їхніми п'ятьма значеннями загасання: вони зберігаються в data\\cavi_personali.txt і також з'являються у випадних списках схеми станції в бюджеті EME. Підказка кожного рядка таблиці вказує джерело даних цього кабелю.",
-                "[1] Джерела даних окремих кабелів: технічні описи Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica із Сенаго (RG-115), таблиці DD1US та EA5IP (H100) і таблиця SV1BSX для RG-58, RG-213, H-155 та H-2000 (значення потребують перевірки)."
+                "### Роз'єми (NJ9R)",
+                "Роз'єми теж є частиною лінії. Практичне правило NJ9R — близько 1 dB на кожні 8 – 10 роз'ємів, рахуючи всі від задньої панелі трансивера до антени, разом із перехідниками, реле й дільниками: в його установці з чотирьох антен 24 роз'єми дають понад 2 dB — стільки ж, скільки 40 – 45 m нового LMR-400 на 144 MHz [2]. У бюджеті EME ці втрати слід додати до значення «Втрати аксесуарів TX» і до втрат між антеною та передпідсилювачем.",
+                "[1] Джерела даних окремих кабелів: технічні описи Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica із Сенаго (RG-115), таблиці DD1US та EA5IP (H100) і таблиця SV1BSX для RG-58, RG-213, H-155 та H-2000 (значення потребують перевірки).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
             };
             d["uk"]["S410"] = new string[] {
                 "## Доплер, компенсація і CFOM",
@@ -48629,10 +49398,19 @@ namespace LunaCalc
                 "> Кількість бітів говорить лише про те, наскільки дрібно *зчитується* положення: реальна точність залежить також від механічних люфтів, прогину опори, вітру та калібрування півночі й горизонту.",
                 "### Системи яг: приводи та шківи",
                 "У системах яг (комбінаціях з 2, 4 або більше антен) навантаження по куту місця велике й незбалансоване. На ринку є лінійні приводи з черв'ячним двигуном: у таких рішеннях гвинт лише регулює рух, а механічне утримання навантаження покладено на шківи. Черв'ячна передача має ту перевагу, що не прокручується назад під навантаженням, тож система залишається нерухомою навіть з вимкненим двигуном.",
+                "### Перевірка наведення за радаром GRAVES (NJ9R)",
+                "Французький радар **GRAVES** безперервно випромінює на 143,050 MHz з локатора JN27SI і є найпоширенішим випробувальним стендом на 144 MHz для приймання через Місяць. Коли Місяць видно і з власної станції, і з GRAVES (у YAEC досить ввести JN27SI як локатор DX), слухають на 143,050 MHz (або 143,0495 MHz) в SSB зі звуковою смугою щонайменше 2,4 kHz, з вимкненим АРП, увімкненим подавлювачем імпульсних завад (noise blanker) і без жодних інших фільтрів, notch чи DSP [2].",
+                "На водоспаді луна GRAVES має вигляд пунктирної лінії: що вона яскравіша, то краще наведена антена. Поворотний пристрій рухають малими кроками, спочатку за азимутом, потім за кутом місця, до максимуму, і порівнюють знайдене положення з розрахованим. NJ9R використовує GRAVES і як S-метр: з обнуленим повзунком підсилення він зчитує середній рівень сигналу за хвилину, а перед кожним сеансом перевіряє за GRAVES, що установка й далі налаштована [2].",
+                "> Без підйому за кутом місця луну GRAVES зазвичай приймають лише тоді, коли Місяць перебуває між 0° і 15° кута місця, під час сходу або заходу. Багато трансиверів не перебудовуються за межі діапазону 2 m: тоді потрібен SDR-приймач [2].",
+                "### Компас, камера і журнал похибок (NJ9R)",
+                "З поворотним пристроєм для КХ наведення «майже точно» вистачало; в EME — ні. NJ9R радить відкалібрувати індикатор поворотного пристрою, а потім перевірити його надворі за компасом, допускаючи похибку не більше приблизно 5°: вітер, удари об упори і прослизання щогли зсувають антену, а індикатор цього не помічає [2].",
+                "• **Камера на щоглі.** Невелика водонепроникна камера (на кшталт камер заднього огляду, 25 – 30 USD), закріплена на щоглі й вирівняна за антеною за допомогою рівня чи інклінометра, показує, куди насправді спрямована антена: NJ9R провів 60 – 80 QSO з несправним поворотним пристроєм або з похибками 20 – 35°, орієнтуючись лише за камерою. Центр Місяця позначають на моніторі після пошуку максимуму луни GRAVES. Камера — ще й джерело шуму: на час приймання її вимикають [2].",
+                "• **Журнал похибок.** Для кожного наведення в таблицю записують розраховані азимут і кут місця Місяця, значення з індикатора і значення, видимі через камеру: різниця — це похибка вашої системи, яку треба виправити або мати на увазі [2].",
                 "### Вище 432 MHz: параболічні антени",
                 "Від 902 MHz і вище здебільшого використовують параболічні антени, а інструмент [1] розрахований на частоти від 1 GHz і вище. З великими діаметрами діаграма звужується до кількох десятих градуса, і є ризик не влучити точно в Місяць: більше, ніж двигуни, станції потрібні справжні механічні приводи за азимутом і кутом місця, з точністю наведення, значною мірою пов'язаною з бітовою роздільною здатністю системи керування. **EME Link Budget & Analysis Tool** від OE2IGL і DF3GJ [1] вказує ±0,035° для доброї системи стеження і ±0,1° для звичайної та обчислює втрати наведення разом з усіма іншими складовими радіолінії.",
                 ">+ YAEC обмежується 432 MHz. Для вищих діапазонів рекомендуємо інструмент OE2IGL і DF3GJ [1]: він обчислює бюджет EME від 1 до 300 GHz з параметрами параболи (діаметр, f/D, опромінювач, шорсткість поверхні, ККД), наведенням, лібрацією, шумом Сонця й Місяця та атмосферним загасанням.",
-                "[1] Gerald Ihninger OE2IGL і Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL і Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
             };
             d["uk"]["S412"] = new string[] {
                 "## Цифрові види для EME: Q65 і JT65",
@@ -48723,6 +49501,18 @@ namespace LunaCalc
                 "| q3 | мій позивний і позивний DX",
                 "| q4 | обидва позивні та RRR, RR73, 73 або порожньо",
                 "~ З [1]. Автори застерігають не надавати надто великого значення величинам S/N, які показує декодер, бо їх ще вдосконалювали [1]: для порівнянь з бюджетом EME YAEC краще використовувати кілька QSO, а не одне зчитування.",
+                "### Налаштування NJ9R для JT65B і MAP65",
+                "NJ9R, який починав на 144 MHz з JT65B, так підсумовує налаштування, якими користується [7]:",
+                "|h| Програма | Де | Налаштування",
+                "| WSJT-X | головне вікно | Enable VHF and sub-mode features, Decode after EME delay, порожній рядок між періодами декодування",
+                "| WSJT-X | Advanced | Random erasure і two pass decoding (6 і 6, залежно від CPU); водоспад Most sensitive",
+                "| WSJT-X | режим | JT65, підрежим B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; коли з'являється слід станції, звужують до 50, 20 або 10 Hz (що ширше, то гірше декодування)",
+                "| WSJT-X | звукові частоти | TX на 1270 Hz; RX у межах ±350 Hz від 1270 Hz залежно від Доплера або на частоті, оголошеній у чаті",
+                "| MAP65 | Station, I/O devices | власний позивний і локатор; звукова карта або, для IQ-трансиверів, мережевий інтерфейс, на 96 000 Hz",
+                "| MAP65 | режим і декодування | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | головне вікно | NB увімкнено, Monitor On, рівень звуку на бічній шкалі від 12 до 40",
+                "~ З [7]. Назви пунктів залишено англійською, як у меню WSJT-X і MAP65. Для JT65 бюджет EME у YAEC використовує пороги підрежиму B (§ 1.6).",
                 "### Порядок роботи з DX-експедиціями (W7GJ)",
                 "Lance Collister W7GJ, який роками проводить EME-експедиції на 6 m, описує, як викликати DX-експедицію в Q65-60A під час пайл-апу (pile-up) [6]. Насамперед годинник комп'ютера має бути дуже точним, а частота передачі — дуже стабільною [6].",
                 "• **Періоди.** DX-експедиція завжди передає в першій послідовності (парні хвилини); ті, хто викликає, — у другій (непарні хвилини) [6].",
@@ -48744,7 +49534,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, жовтень 2023, надано IC8TEM.",
                 "[4] Nico Palermo IV3NWV, доповідь на конференції EME 2016 про коди QRA, згадано в [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] Вихідний код WSJT-X (файл Q65_encoding_modules.F90 та інші), згадано в [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, редакція від 3 квітня 2023, надано IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, редакція від 3 квітня 2023, надано IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
             };
             d["uk"]["S54"] = new string[] {
                 "## Література з EME від SM5BSZ",
@@ -48839,15 +49630,47 @@ namespace LunaCalc
                 "> У програмі: календар «Відстань і Dgrd» позначає символом ☀ дні, коли Сонце близько до Місяця (помаранчевим або червоним); вкладка «Шум Сонця» обчислює за виміряним потоком, скільки додаткового шуму дає Сонце у вибрану мить.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["uk"]["S413"] = new string[] {
+                "## Від першого приймання до QSO: поради NJ9R",
+                "Relu Jianu NJ9R зібрав у «2M EME the easy way» свій досвід початківця на 144 MHz: практичний шлях, що починається з луни GRAVES, прийнятої на 7-елементну ягу без передпідсилювача. Його головна думка одна: знати межі своєї установки, її підсилення і втрати, і за цими даними вирішувати, чи можна їх подолати [1]. Технічні частини перенесено до розділів окремих тем: бюджет EME і підсилення антен (§ 1.6), реле поляризації (§ 1.7), роз'єми (§ 1.8), наведення і GRAVES (§ 1.11), налаштування WSJT-X і MAP65 (§ 1.12), читання чатів (§ 1.14). Тут залишаються поради щодо станції та приймача.",
+                "### Карта місцевого шуму",
+                "Перш ніж шукати Місяць, варто знати, з яких напрямків приходить шум. NJ9R радить зробити антеною повний оберт на 360° з кроком 15 – 30° за азимутом, записуючи в таблицю шум, зчитаний за повзунком підсилення (обнуленим на найнижчому рівні). Хто має підйом за кутом місця, повторює обхід від 0° до 45° з кроком 5 – 10°. Розфарбована як теплова карта, таблиця пояснює, чому в деяких напрямках нічого не приймається: там місцевий шум перекриває луну [1].",
+                "> У YAEC «Розвідка моїх перешкод» показує напрямки, закриті перешкодами: порівняння з картою шуму допомагає вибрати найкращі вікна Місяця.",
+                "Будинки й електроніка сусідів — постійне джерело завад: їх шукають і зменшують, починаючи з власного дому, але зрештою доводиться миритися з тим, що залишається [1].",
+                "### Приймач і комп'ютер",
+                "• **Чистий приймач.** АРП вимкнено, подавлювач імпульсних завад увімкнено, жодних фільтрів, notch чи DSP на прийманні; у комп'ютері — звуковий вхід з найвищою якістю і жодних покращень чи підсилення звуку в системі [1].",
+                "• **Синхронізований годинник.** Цифрові види потребують точного часу: NJ9R налаштував автоматичне коригування годинника комп'ютера кожні 15 хвилин програмою синхронізації (NetTime) [1].",
+                "• **Актуальний CALL3.TXT.** Файл покращує декодування на багато dB, бо WSJT-X і MSHV використовують його для розпізнавання позивних; відкидати хибні декодування залишається завданням оператора [1]. YAEC завантажує й об'єднує списки W7GJ і WSJT-X Improved і може скопіювати файл до теки WSJT-X.",
+                "• **Терпіння.** Якщо нічого не чути, можуть накладатися кілька причин: висока Dgrd, несприятлива поляризація, фарадеївське обертання, місцевий шум у цьому напрямку. Варто спробувати знову за кілька хвилин, кілька годин або іншого дня і вибирати дні з найнижчою Dgrd у місяці (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
+            };
+            d["uk"]["S414"] = new string[] {
+                "## Текстові чати в Інтернеті",
+                "В EME домовленості про зв'язок (sked), оголошення CQ і рапорти майже завжди проходять через текстові чати в Інтернеті. Найуживаніші з них такі.",
+                "• **EME-чат N0UK.** Історичний чат 2 m EME, створений Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); тому ж автору належить Ping Jockey Central — чат метеорного розсіювання (https://www.pingjockey.net) [1].",
+                "• **EMEchat від EA8DBM.** Вебінтерфейс, що об'єднує EME-чати (https://www.emechat.com): DX-експедиції користуються ним на 2 m разом із чатом N0UK, а на 70 cm і вище — з чатом HB9Q [2].",
+                "• **HB9Q logger.** Чат і журнал скедів для EME від 70 cm і вище (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, розділ microwave.** Чат ON4KST поділено на розділи за діапазонами (https://www.on4kst.com/chat): у розділі microwave зустрічаються оператори найвищих діапазонів, зокрема ті, хто працює через EME [3].",
+                "### Як читати оголошення (NJ9R)",
+                "Хто дає CQ у чаті, зазвичай вказує потужність і антени. «H» або відсутність вказівки наводить на думку про станцію лише з горизонтальною поляризацією (не завжди); «HV» або «XPOL» означає дві поляризації — таку станцію найкраще шукати. Між станціями одного континенту горизонтальна поляризація з горизонтальною працює добре; між континентами просторова поляризація може зробити сигнал, що вийшов горизонтальним, майже вертикальним, із втратами, завеликими для малої станції (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) працює як PSK Reporter: показує лише станції, що надсилають рапорти, тож у чаті може бути активність, навіть коли LiveCQ порожній [4].",
+                "• Звукові частоти, оголошені в чаті, допомагають знайти станції, які передають не на 1270 Hz; коли ви приймаєте станцію, добра звичка — повідомити про це в чаті [4].",
+                "[1] Chris Cox N0UK, EME-чат – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, червень 2026, DX-експедиція C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
+                "[3] Чат ON4KST – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
+            };
             d["af"] = new Dictionary<string, string[]>();
             d["af"]["PREF"] = new string[] {
                 "Hierdie deel van die handleiding beskryf nie die program se knoppies nie, maar die idees waarop die program gebou is. Voor die hoofstukke wil die outeur 'n paar begrippe uiteensit wat sleutel gebleek het om die program te bestudeer, ook in die lig van sy jongste ervarings by die stasie.",
                 "• **Die berekening is 'n verwysing, nie 'n belofte nie.** Begroting, geskatte S/N en drempels van die digitale modusse beskryf 'n ideale skakel. Tydens ontvangs tel die plaaslike en mensgemaakte geraas, wat van minuut tot minuut kan verander, en Faraday-rotasie: 'n paar oomblikke is genoeg om die berekende marge uit te wis (§ 1.3, 1.12).",
                 "• **Die dag word gekies voor jy aanskakel.** Dgrd, Maanafstand en deklinasie wys hoeveel hemelgeraas agter die Maan is, hoeveel ure dit bo die horison bly en hoe hoog dit styg: dieselfde toerusting presteer van dag tot dag baie verskillend (§ 1.4).",
                 "• **Polarisasie kan 'n sein laat verdwyn.** Met lineêre antennas kan Faraday-rotasie en ruimtelike polarisasie 'n eggo vir minute of ure doodmaak; dikwels is dit genoeg om te wag, te herhaal of die polarisasie te draai, eerder as om 'n fout te soek (§ 1.3).",
-                "• **Die beste oplossing is dubbele polarisasie.** Vir die antennas is die beste keuse altyd 'n stelsel met dubbele polarisasie, met twee ontvangsvoerlyne en dubbele ontvangs, terwyl daar met een polarisasie uitgesaai word: so maak Faraday-rotasie en ruimtelike polarisasie die eggo nie meer dood nie (§ 1.3).",
+                "• **Die beste oplossing is dubbele polarisasie.** Vir die antennas is die beste keuse altyd 'n stelsel met dubbele polarisasie, met twee ontvangsvoerlyne en dubbele ontvangs, terwyl daar met een polarisasie uitgesaai word: so maak Faraday-rotasie en ruimtelike polarisasie die eggo nie meer dood nie (§ 1.3). Die relais wat die polarisasie kies, word slegs tydens ontvangs geskakel, nooit tydens uitsending nie (§ 1.7).",
                 "• **Die EME-begroting as toetsbank.** Deur verskillende veranderinge in die oortjie EME-begroting in te voer, kan jy probeer verstaan hoe haalbaar die opsies is om jou installasie te behou, of dit te verander, om EME te beoefen (§ 1.6).",
                 "• **Elevasie tel.** Die beperking van geen elevasie steel minute van die moontlike verkeer. Bowenal, sodra die antennastelsel gelig word, word lae sylobbe noodsaaklik om nie aardgeraas op te tel nie en die antenna die maksimum seinopvangs te laat bereik wat net 'n rigting na die hemel kan bied.",
+                "• **Die antennas: begin by die tabelle.** Om yagi's te kies en te vergelyk, is die tabelle van Lionel Edwards VE7BQH (wins, G/T en antennatemperatuur) die verwysing; hulle is gepubliseer op die DXMaps-webwerf van Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). Onder die gesaghebbendste bydraes oor die ontwerp van laeruis-yagi's is dié van Hartmut DG7YBN, Popa YU7EF en Justin Johnson G0KSC. YAEC se EME-begroting gebruik die tabelle van VE7BQH (§ 1.6).",
+                "• **Ken jou eie installasie.** Soos Relu NJ9R skryf, is die ware geheim om die grense van jou stelsel te ken, die winste en die verliese, en met hierdie data te besluit of dit oorkom kan word. Op 144 MHz is die eggo van die GRAVES-radar die eerste toetsbank (§ 1.11, 1.13).",
                 "• **Elke desibel voor die voorversterker tel.** Kabels, relais en koppelstukke voor die voorversterker vererger die stelseltemperatuur meer as wat hul dB-waarde aandui: dáár is dit die moeite werd om te belê (§ 1.7, 1.8).",
                 "• **Eers die regte frekwensies.** Doppler en CFOM skuif die eggo tot 'n paar kHz op die hoër bande: 'n eggo buite die dekodeervenster word nie gehoor nie, selfs met 'n goeie sein (§ 1.10).",
                 "• **Die Son is 'n voorspelbare teenstander.** Wanneer dit naby die Maan is, styg die geraas: die program waarsku vooraf, en dit is die moeite werd om dit in ag te neem wanneer jy dae kies (§ 1.5, 1.9).",
@@ -48876,11 +49699,11 @@ namespace LunaCalc
                 "|h| Karakters | Aanbevole gebruik in YAEC",
                 "| 4 | slegs vir 'n rowwe skatting: die azimut en elevasie van die Maan kan tot ongeveer 1° verkeerd wees, omdat die plaaslike horison ongeveer 1° elke 111 km kantel",
                 "| 6 | die DX-lokaliseerder, QSO's en die EME-begroting: die fout in die rigting van die Maan is 'n paar honderdstes van 'n graad",
-                "| **8** | jou stasie, vir Reconnaissance of my obstacles: dit identifiseer die woonbuurt of die heuwel",
+                "| **8** | jou stasie, vir Verkenning van my hindernisse: dit identifiseer die woonbuurt of die heuwel",
                 "|+ **10** | jou stasie, met die beste resultaat: dit identifiseer die gebou of die antennatoring",
                 "| 12 – 14 | aanvaar, maar dit voeg niks by nie: die presisie oortref dié van 'n gewone GPS ('n paar meter) en die grootte van die antenna self",
                 "### Lokaliseerder en hindernisse",
-                "Vir die rigting van die Maan is 6 karakters genoeg: die Maan is ongeveer 380 000 km ver, en die ±4,4 km van 'n lokaliseerder met 6 karakters verander die azimut en elevasie met ongeveer 0,04°, 'n weglaatbare hoeveelheid in vergelyking met die antennabundel. Vir **plaaslike hindernisse** (geboue, bome, heuwels) is dit andersom: hulle is 'n paar tiene of honderde meter van die antenna af, en met 6 karakters kan die stasie enige plek in 'n reghoek van 7,5 × 4,6 km wees, sodat die hindernisse nie geplaas kan word nie. Met 8 karakters daal die fout tot ongeveer 450 m, met 10 tot ongeveer 20 m: dit is die presisie wat die oortjie **Reconnaissance of my obstacles** nodig het om die sones waar die antenna geblokkeer word, korrek te teken.",
+                "Vir die rigting van die Maan is 6 karakters genoeg: die Maan is ongeveer 380 000 km ver, en die ±4,4 km van 'n lokaliseerder met 6 karakters verander die azimut en elevasie met ongeveer 0,04°, 'n weglaatbare hoeveelheid in vergelyking met die antennabundel. Vir **plaaslike hindernisse** (geboue, bome, heuwels) is dit andersom: hulle is 'n paar tiene of honderde meter van die antenna af, en met 6 karakters kan die stasie enige plek in 'n reghoek van 7,5 × 4,6 km wees, sodat die hindernisse nie geplaas kan word nie. Met 8 karakters daal die fout tot ongeveer 450 m, met 10 tot ongeveer 20 m: dit is die presisie wat die oortjie **Verkenning van my hindernisse** nodig het om die sones waar die antenna geblokkeer word, korrek te teken.",
                 ">+ Praktiese wenk: lei die lokaliseerder met 10 karakters af uit die GPS-koördinate van die punt waar die antenna staan (nie van die ingang van die huis nie) en voer dit in die Regstreekse posisie en +- 24h-oortjie in as **my locator**. Vir die DX is die lokaliseerder met 6 karakters wat hy aan jou gee, genoeg.",
                 "[1] Wikipedia, “Maidenhead Locator System” (oorsprong G4ANB en IARU VHF-vergadering in Maidenhead in 1980, struktuur van die pare, WGS-84 sedert 1999, uitbreidings bo 8 karakters, IARU-verduideliking van 2019, gebruik op HF en VHF/UHF, afstande tussen middelpunte van subvierkante) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -48924,12 +49747,16 @@ namespace LunaCalc
                 "• refraksie tel: die Maan het by −0,51° opgekom, onder die optiese horison van −0,35°; by 200 MHz, in droë lug, is die refraksiefout by 0° elevasie −0,49°.",
                 "IK3XTV wys daarop dat die grondeffek in teorie 6 dB bereik, sodat 'n enkele yagi amper soos 'n stelsel van 4 presteer, maar dit hang baie af van die terrein rondom die antenna: dit is laer in die stad, beter op die oop platteland en nog meer naby die see. Dit word benut met maansopkoms en maansondergang, tussen ongeveer 1° en 18 – 20° elevasie [4].",
                 "> Daarom word die grondwins in die EME-begroting as BETA gemerk: die berekende waarde (hoogstens +6 dB) is 'n teoretiese grens. Met antennas hoog bo die see of stelsels van verskeie yagi's moet jy ongeveer die helfte daarvan en duidelike QSB by lae elevasie verwag [3].",
+                "### Antennawins: verklaarde data en dBd (NJ9R)",
+                "Die winste op vervaardigers se datablaaie kom byna altyd uit simulasies oor perfekte grond en met ideale aanpassing by 50 Ω. NJ9R stel voor dat jy ongeveer 2 dB van die verklaarde waarde aftrek en in dBd eerder as in dBi dink, om jouself nie te mislei nie; dieselfde geld vir die data van kabels, koppelstukke en voorversterkers [6]. Sy voorbeeld: 'n goeie 5-element-yagi (8 dBi, 5,9 dBd) met 4,25 dB lynverliese laat net 1,5 dB bruikbare wins oor; met sy eerste 7-element-yagi (12,3 dBi, 10 dBd) kon hy skaars ontvang. As beginpunt om met 'n bietjie marge te ontvang, noem hy ongeveer 14 dBd [6].",
+                ">+ In die EME-begroting kan jy die effek dadelik probeer: verlaag die antennawins met 2 dB en sien hoeveel marge vir die verbinding oorbly.",
                 "[1] WSJT-X User Guide, K1JT and the WSJT Development Group, § 7.1 (FT4 = FT8 + 3.5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 April 2021 (WSJT-X 2.4.0), verskaf deur IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21ste EME Meeting, aanbieding verskaf deur IC8TEM.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, dokument van 12 November 2010, verskaf deur IC8TEM.",
                 "[5] J. Taylor K1JT, referaat oor JT65 by die EME 2006-konferensie (K1JT_eme2006.pdf): tabel van minimum S/N-vlakke in 2500 Hz.",
-                "> Die stasiediagram, regs op die oortjie, lei die verliese af uit die gekose kabels: in uitsending PA–relaiskabel + relais + antennakabel, in ontvangs antennakabel + relais voor die voorversterker en voerkabel daarna. Die kabelverswakkings kom uit die databasis van die oortjie COAXIAL CABLES (§ 1.8)."
+                "> Die stasiediagram, regs op die oortjie, lei die verliese af uit die gekose kabels: in uitsending PA–relaiskabel + relais + antennakabel, in ontvangs antennakabel + relais voor die voorversterker en voerkabel daarna. Die kabelverswakkings kom uit die databasis van die oortjie KOAKSIALE KABELS (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
             };
             d["af"]["S47"] = new string[] {
                 "## Die voorversterker en die ruissyfer van die radio {nuovo}",
@@ -49004,7 +49831,7 @@ namespace LunaCalc
                 "##+ EME-stasies met FT-1000MP en transverter",
                 "Twee gedokumenteerde voorbeelde van die FT-1000MP wat vir EME op 144 MHz met 'n transverter gebruik word: die metings deur DF9IC [3] op FT-1000MP + Javornik-transverter (NF 0,9 – 1,4 dB met die radio-voorversterker af) en die EME-stasie van **W3SZ** [12] (4 × M2 2MXP32, LNA Technology-voorversterkers by die antenna vir elke polarisasie, LMR-600 en Andrew-hardline), wat in uitsending 'n **FT-1000MP Mark V** met 'n **SSB-Electronic LT2S Mk II**-transverter (MF 28 MHz) en 'n 2 × GU-74B-versterker gebruik, terwyl dit in ontvangs die WSE-hardeware en die Linrad-sagteware van SM5BSZ gebruik.",
                 "> In die EME-begroting is die transverter 'n blok van die stasiediagram: dit word met sy merkblokkie geaktiveer, jy kies die model uit die lys (of \"custom\") en die program neem sy ruissyfer en wins oor; as dit af is, tel dit nie in die berekening nie. Die grafiek hierbo help om te besluit of die radio-voorversterker aangeskakel moet word.",
-                ">! ✉ **Ken jy nog 'n transverter of het jy self een gebou?** As jy ander transverters of jou eie transverter bekend wil maak, stuur 'n e-pos aan die outeur: ccerrotta@gmail.com of ic8tem@gmail.com. Alle kontakbesonderhede is in die oortjie **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **Ken jy nog 'n transverter of het jy self een gebou?** As jy ander transverters of jou eie transverter bekend wil maak, stuur 'n e-pos aan die outeur: ccerrotta@gmail.com of ic8tem@gmail.com. Alle kontakbesonderhede is in die oortjie **KONTAK MET DIE OUTEUR EN ERKENNINGS**.",
                 "##+ Die TX/RX-sekwenseerder",
                 "Met 'n kragversterker (PA) en 'n voorversterker naby die antenna (PRE) gaan die rekenaar se PTT nie na die radio nie, maar na 'n **sekwenseerder**, wat die relais en daarna die PA en die radio in die regte volgorde aanstuur [16]. Die algemeenste opstelling het twee voerkabels: die ontvangslyn mag 'n paar dB verloor, omdat dit ná 'n voorversterker van 15 – 20 dB kom, terwyl die uitsaailyn so min as moontlik moet verloor (3 dB tydens uitsending halveer die uitgestraalde krag). In rus hou die relais die PRE van die antenna geïsoleer: ekstra beskerming teen weerligontladings [16].",
                 "|h| ^Stap | Van RX na TX | Van TX na RX",
@@ -49014,6 +49841,7 @@ namespace LunaCalc
                 "~ Tussen een stap en die volgende is minstens die skakeltyd van die relais (15 – 30 ms) plus hul bons nodig: IK1UWL beveel 100 – 200 ms aan, ook vir die PA as dit interne relais het [16].",
                 "Om die sender te sleutel is PTT beter as VOX: VOX kan deur geraas geaktiveer word en benut nie die vertraging van ongeveer 0,5 s waarmee JT65 ná die PTT begin moduleer nie, sodat die voorversterker slegs deur die vinnige relais van die versterker beskerm word; met PTT skakel daardie vertraging die versterker oor voor die modulasie, en 'n sekwenseerder kan bygevoeg word [17].",
                 ">! **Pas die voorversterker op.** Die T/R-relais moet die oop poort baie goed isoleer: met 50 dB isolasie en 500 W by die antenna bereik 5 mW die PRE se inset. Mik vir minstens 60 dB; die versigtigstes voeg 'n tweede relais by wat die PRE tydens uitsending op 'n 50 Ω-las termineer. Deaktiveer die mikrofoon se PTT-knoppie: van dan af saai jy slegs deur die sekwenseerder uit (vir SSB 'n voetskakelaar op die sekwenseerder se PTT, ontkoppel van dié van die PC) [16].",
+                ">! **Die polarisasierelais word slegs tydens ontvangs geskakel.** Met twee polarisasies (H en V) mag die relais wat die antenna kies nooit tydens uitsending geskakel word nie: met krag toegepas brand relais, voorversterkers of die versterker uit, met skade van honderde tot duisende euro [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, uitgawe 5, 19 Maart 2021 (eerste uitgawe 19 Junie 2019), tabelle 1 en 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 Julie 2015, tabel 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC met DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, toetse vanaf 27 Februarie 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -49030,16 +49858,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, Mei 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, bl. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Januarie 2012, § 4 “Sequenziamento relè, PA e PRE”, verskaf deur IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, aanbieding, Julie 2015, verskaf deur IC8TEM."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, aanbieding, Julie 2015, verskaf deur IC8TEM.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
             };
             d["af"]["S48"] = new string[] {
                 "## Koaksiale kabels en verliese",
-                "Die oortjie **COAXIAL CABLES** versamel die verswakking van die 50 Ω-kabels wat die meeste deur radioamateurs gebruik word, in dB per 100 m by 20 °C, op die vyf YAEC-bande. Die datablaaie van die vervaardigers gee waardes by verskillende frekwensies; YAEC het dit met die magswet na die bande herlei, 'n reguit lyn op die log-log-grafiek tussen die twee naaste frekwensies van die datablad:",
+                "Die oortjie **KOAKSIALE KABELS** versamel die verswakking van die 50 Ω-kabels wat die meeste deur radioamateurs gebruik word, in dB per 100 m by 20 °C, op die vyf YAEC-bande. Die datablaaie van die vervaardigers gee waardes by verskillende frekwensies; YAEC het dit met die magswet na die bande herlei, 'n reguit lyn op die log-log-grafiek tussen die twee naaste frekwensies van die datablad:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α in dB/100 m, ℓ kabellengte in meter. 'n Gewone getal is die databladwaarde; ≈ merk 'n geïnterpoleerde waarde, en e een wat verby die laaste frekwensie van die datablad geëkstrapoleer is.",
                 "Kabels van dieselfde tipe, met dieselfde deursnee binne ±0,2 mm en verswakking binne 0,2 dB/100 m op alle bande, word in een ry saamgegroepeer (≡), met die gemiddelde waarde; gelykwaardige name word met \"also:\" getoon (byvoorbeeld LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Die Chinese name 50-3, 50-5, 50-7, 50-9, 50-12 gee die deursnee van die diëlektrikum in millimeter.",
                 "> Eie kabels kan met hul vyf verswakkings bygevoeg word: hulle word in data\\cavi_personali.txt gestoor en verskyn ook in die aftreklyste van die stasiediagram van die EME-begroting. Die wenkteks van elke tabelry noem die bron van daardie kabel.",
-                "[1] Die bronne van die individuele kabels: datablaaie van Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F-katalogus (RG-142, RG-393), R.F. elettronica van Senago (RG-115), die tabelle van DD1US en EA5IP (H100) en die tabel van SV1BSX vir RG-58, RG-213, H-155 en H-2000 (waardes moet nog geverifieer word)."
+                "### Koppelstukke (NJ9R)",
+                "Koppelstukke is ook deel van die lyn. NJ9R se praktiese reël is ongeveer 1 dB vir elke 8 – 10 koppelstukke, almal getel van die agterkant van die radio tot by die antenna, insluitend adapters, relais en verdelers: in sy installasie met vier antennas is die 24 koppelstukke meer as 2 dB werd, soveel as 40 – 45 m nuwe LMR-400 op 144 MHz [2]. In die EME-begroting moet hierdie verlies by die TX-bykomstigheidsverliese en by die verliese tussen antenna en voorversterker getel word.",
+                "[1] Die bronne van die individuele kabels: datablaaie van Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F-katalogus (RG-142, RG-393), R.F. elettronica van Senago (RG-115), die tabelle van DD1US en EA5IP (H100) en die tabel van SV1BSX vir RG-58, RG-213, H-155 en H-2000 (waardes moet nog geverifieer word).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
             };
             d["af"]["S410"] = new string[] {
                 "## Doppler, kompensasie en CFOM",
@@ -49101,10 +49933,19 @@ namespace LunaCalc
                 "> Die aantal bisse sê net hoe fyn die posisie *gelees* word: die werklike presisie hang ook af van meganiese speling, die buiging van die steun, die wind en die kalibrasie van noord en van die horison.",
                 "### Yagi-stelsels: aktueerders en katrolle",
                 "In yagi-stelsels (kombinasies van 2, 4 of meer antennas) is die elevasielas groot en ongebalanseerd. Lineêre aktueerders met 'n wurmskroefmotor is op die mark beskikbaar: in hierdie oplossings reguleer die skroef slegs die beweging, terwyl die meganiese ondersteuning van die las aan katrolle toevertrou word. Die wurmskroef het die voordeel dat dit nie onder die las terugdraai nie, sodat die stelsel stil bly selfs met die motor af.",
+                "### Kontroleer die rigting met die GRAVES-radar (NJ9R)",
+                "Die Franse **GRAVES**-radar saai voortdurend op 143,050 MHz uit vanaf lokaliseerder JN27SI en is die mees gebruikte toetsbank op 144 MHz vir ontvangs via die Maan. Wanneer die Maan sowel vanaf jou eie stasie as vanaf GRAVES sigbaar is (in YAEC voer jy bloot JN27SI as die DX-lokaliseerder in), luister jy op 143,050 MHz (of 143,0495 MHz) in SSB met 'n oudiobandwydte van minstens 2,4 kHz, AGC af, ruisonderdrukker (noise blanker) aan en geen ander filter, notch of DSP nie [2].",
+                "Op die waterval verskyn die GRAVES-eggo as 'n stippellyn: hoe sterker dit is, hoe beter is die antenna gerig. Beweeg die rotator in klein stappe, eers in azimut en dan in elevasie, tot by die maksimum, en vergelyk die gevonde posisie met die berekende een. NJ9R gebruik GRAVES ook as S-meter: met die winsskuif op nul lees hy die gemiddelde sein oor een minuut af, en voor elke sessie kontroleer hy met GRAVES dat die installasie nog reg ingestel is [2].",
+                "> Sonder elevasie word die GRAVES-eggo gewoonlik slegs ontvang wanneer die Maan tussen 0° en 15° elevasie is, met maansopkoms of maansondergang. Baie radio's kan nie buite die 2 m-band ingestem word nie: dan is 'n SDR-ontvanger nodig [2].",
+                "### Kompas, kamera en foutelogboek (NJ9R)",
+                "Met 'n rotator wat vir HF gebruik is, was 'n “amper reg” rigting genoeg; in EME nie. NJ9R raai aan om die rotator se aanwyser te kalibreer en dit dan buite met 'n kompas na te gaan, met hoogstens ongeveer 5° fout: wind, stampe teen die stoppers en 'n mas wat gly, skuif die antenna sonder dat die aanwyser dit agterkom [2].",
+                "• **Kamera op die mas.** 'n Klein waterdigte kamera (soos 'n trukamera, 25 – 30 USD), aan die mas vasgemaak en met 'n waterpas of inklinometer met die antenna belyn, wys waarheen die antenna werklik wys: NJ9R het 60 – 80 QSO's met 'n stukkende rotator of met foute van 20 – 35° voltooi, slegs deur die kamera gelei. Die middel van die Maan word op die monitor gemerk nadat die maksimum van die GRAVES-eggo gesoek is. Die kamera is ook 'n ruisbron: skakel dit tydens ontvangs af [2].",
+                "• **Foutelogboek.** Teken vir elke rigting in 'n tabel die berekende azimut en elevasie van die Maan aan, die waardes wat op die aanwyser gelees word en dié wat met die kamera gesien word: die verskil is die fout van jou stelsel, om reg te stel of in gedagte te hou [2].",
                 "### Bo 432 MHz: skottels",
                 "Vanaf 902 MHz en hoër word meestal paraboliese skottels gebruik, en die hulpmiddel [1] is ontwerp vir frekwensies vanaf 1 GHz en hoër. Met groot deursnee vernou die bundel tot 'n paar tiendes van 'n graad en is daar 'n risiko om die Maan nie perfek te tref nie: meer as motors het die stasie ware meganiese aktueerders in azimut en elevasie nodig, met 'n rigtingspresisie wat grootliks aan die bisresolusie van die beheer gekoppel is. Die **EME Link Budget & Analysis Tool** van OE2IGL en DF3GJ [1] gee ±0,035° vir 'n goeie volgstelsel en ±0,1° vir 'n normale een, en bereken die rigtingsverlies saam met al die ander terme van die skakel.",
                 ">+ YAEC stop by 432 MHz. Vir die hoër bande beveel ons die hulpmiddel van OE2IGL en DF3GJ [1] aan: dit bereken die EME-begroting van 1 tot 300 GHz met die skottelparameters (deursnee, f/D, voer, oppervlakruheid, doeltreffendhede), rigting, librasie, Son- en Maanruis en atmosferiese verswakking.",
-                "[1] Gerald Ihninger OE2IGL en Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL en Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
             };
             d["af"]["S412"] = new string[] {
                 "## Digitale modusse vir EME: Q65 en JT65",
@@ -49195,6 +50036,18 @@ namespace LunaCalc
                 "| q3 | my roepsein en die DX-roepsein",
                 "| q4 | albei roepseine en RRR, RR73, 73 of leeg",
                 "~ Uit [1]. Die outeurs waarsku om nie te veel aandag te gee aan die S/N-waardes wat die dekodeerder toon nie, wat nog verbeter is [1]: vir vergelykings met die YAEC EME-begroting is dit beter om verskeie QSO's te gebruik eerder as 'n enkele lesing.",
+                "### NJ9R se instellings vir JT65B en MAP65",
+                "NJ9R, wat op 144 MHz met JT65B begin het, som die instellings wat hy gebruik so op [7]:",
+                "|h| Program | Waar | Instelling",
+                "| WSJT-X | hoofvenster | Enable VHF and sub-mode features, Decode after EME delay, leë reël tussen dekodeerperiodes",
+                "| WSJT-X | Advanced | Random erasure en two pass decoding (6 en 6, na gelang van die CPU); waterval Most sensitive",
+                "| WSJT-X | modus | JT65, submodus B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; wanneer 'n stasie se spoor verskyn, vernou dit na 50, 20 of 10 Hz (hoe wyer, hoe meer ly die dekodering)",
+                "| WSJT-X | oudiofrekwensies | TX op 1270 Hz; RX binne ±350 Hz van 1270 Hz na gelang van die Doppler, of op die frekwensie wat op die klets aangekondig is",
+                "| MAP65 | Station, I/O devices | eie roepsein en lokaliseerder; klankkaart, of netwerkkoppelvlak vir IQ-radio's, op 96 000 Hz",
+                "| MAP65 | modus en dekodering | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | hoofvenster | NB aan, Monitor On, oudiovlak op die sybalk tussen 12 en 40",
+                "~ Uit [7]. Die name van die items bly in Engels, soos in die kieslyste van WSJT-X en MAP65. Vir JT65 gebruik YAEC se EME-begroting die drempels van submodus B (§ 1.6).",
                 "### Die prosedure met DX-ekspedisies (W7GJ)",
                 "Lance Collister W7GJ, wat al jare lank EME-ekspedisies op 6 m bedryf, beskryf hoe om 'n DX-ekspedisie in Q65-60A tydens 'n pile-up te roep [6]. Eerstens moet die rekenaar se horlosie baie akkuraat wees en die sendfrekwensie baie stabiel [6].",
                 "• **Periodes.** Die DX-ekspedisie stuur altyd in die eerste reeks (ewe minute); roepers stuur in die tweede (onewe minute) [6].",
@@ -49216,7 +50069,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Oktober 2023, verskaf deur IC8TEM.",
                 "[4] Nico Palermo IV3NWV, aanbieding by die EME 2016-konferensie oor QRA-kodes, aangehaal in [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-X-bronkode (lêer Q65_encoding_modules.F90 en ander), aangehaal in [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, hersien op 3 April 2023, verskaf deur IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, hersien op 3 April 2023, verskaf deur IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
             };
             d["af"]["S54"] = new string[] {
                 "## EME-literatuur deur SM5BSZ",
@@ -49311,15 +50165,47 @@ namespace LunaCalc
                 "> In die program: die kalender van Afstand en Dgrd merk met die simbool ☀ die dae waarop die Son naby die Maan is (oranje of rooi); die oortjie Songeraas bereken, met die gemete vloed, hoeveel ekstra ruis die Son op die gekose oomblik bydra.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["af"]["S413"] = new string[] {
+                "## Van die eerste ontvangs tot die QSO: NJ9R se raad",
+                "Relu Jianu NJ9R het in “2M EME the easy way” sy ervaring as beginner op 144 MHz saamgevat: 'n praktiese pad wat begin met die GRAVES-eggo, ontvang met 'n 7-element-yagi sonder voorversterker. Sy boodskap is bowenal een: ken die grense van jou installasie, die winste en die verliese, en besluit met hierdie data of dit oorkom kan word [1]. Die tegniese dele word in die afdelings oor die afsonderlike onderwerpe behandel: EME-begroting en antennawins (§ 1.6), polarisasierelais (§ 1.7), koppelstukke (§ 1.8), rigting en GRAVES (§ 1.11), instellings van WSJT-X en MAP65 (§ 1.12), lees van die kletse (§ 1.14). Hier bly die raad oor die stasie en die ontvanger.",
+                "### Die kaart van plaaslike ruis",
+                "Voordat jy die Maan soek, is dit goed om te weet uit watter rigtings die ruis kom. NJ9R raai 'n volle draai van 360° met die antenna aan, in stappe van 15 – 30° in azimut, terwyl jy die ruis wat met die winsskuif (op die laagste vlak op nul gestel) gelees word, in 'n tabel aanteken. Wie elevasie het, herhaal die draai van 0° tot 45° in stappe van 5 – 10°. Ingekleur soos 'n hittekaart, verduidelik die tabel waarom in sekere rigtings niks ontvang word nie: daar bedek die plaaslike ruis die eggo [1].",
+                "> In YAEC wys die Verkenning van my hindernisse die rigtings wat deur hindernisse geblokkeer word: om dit met die ruiskaart te vergelyk help om die beste maanvensters te kies.",
+                "Huise en elektronika in die buurt is 'n voortdurende bron van steurings: jy soek en verminder dit, met jou eie huis as beginpunt, maar op 'n sekere punt leef jy met wat oorbly [1].",
+                "### Die ontvanger en die rekenaar",
+                "• **Skoon ontvanger.** AGC af, ruisonderdrukker aan, geen filter, notch of DSP in ontvangs nie; op die rekenaar die oudio-inset op die hoogste kwaliteit en geen verbetering of versterking van die stelseloudio nie [1].",
+                "• **Gesinchroniseerde horlosie.** Digitale modusse vereis die presiese tyd: NJ9R laat die rekenaar se horlosie elke 15 minute outomaties deur 'n sinchronisasieprogram (NetTime) regstel [1].",
+                "• **Bygewerkte CALL3.TXT.** Die lêer help die dekodering met baie dB, omdat WSJT-X en MSHV dit gebruik om roepseine te herken; dit bly die operateur se taak om verkeerde dekoderings uit te gooi [1]. YAEC laai die lyste van W7GJ en WSJT-X Improved af, voeg dit saam en kan die lêer na die WSJT-X-gids kopieer.",
+                "• **Geduld.** As jy niks hoor nie, kan verskeie oorsake saamval: hoë Dgrd, ongunstige polarisasie, Faraday-rotasie, plaaslike ruis in daardie rigting. Dit is die moeite werd om na 'n paar minute, 'n paar uur of op 'n ander dag weer te probeer en die dae met die laagste Dgrd van die maand te kies (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
+            };
+            d["af"]["S414"] = new string[] {
+                "## Tekskletse op die internet",
+                "In EME gaan afsprake (sked), CQ-aankondigings en verslae byna altyd deur tekskletse op die internet. Die mees gebruikte is die volgende.",
+                "• **N0UK se EME-klets.** Die historiese 2 m-EME-klets van Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA); van dieselfde outeur is Ping Jockey Central, die klets vir meteoorverstrooiing (https://www.pingjockey.net) [1].",
+                "• **EMEchat van EA8DBM.** 'n Webkoppelvlak wat die EME-kletse saambring (https://www.emechat.com): DX-ekspedisies gebruik dit vir 2 m met die klets van N0UK en vir 70 cm en hoër met dié van HB9Q [2].",
+                "• **HB9Q logger.** Klets en sked-logboek vir EME vanaf 70 cm en hoër (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, microwave-afdeling.** Die ON4KST-klets is per band in afdelings verdeel (https://www.on4kst.com/chat): in die microwave-afdeling ontmoet die operateurs van die hoër bande mekaar, insluitend dié wat EME werk [3].",
+                "### Hoe om die aankondigings te lees (NJ9R)",
+                "Wie op die klets CQ roep, gee gewoonlik krag en antennas aan. “H”, of geen aanduiding nie, dui op 'n stasie met slegs horisontale polarisasie (nie altyd nie); “HV” of “XPOL” dui op twee polarisasies en is die beste stasie om na te soek. Tussen stasies op dieselfde kontinent werk horisontaal met horisontaal goed; van een kontinent na 'n ander kan ruimtelike polarisasie 'n sein wat horisontaal vertrek het amper vertikaal laat aankom, met verliese te groot vir 'n klein stasie (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) werk soos PSK Reporter: dit wys slegs stasies wat verslae stuur, so daar kan aktiwiteit op die klets wees selfs wanneer LiveCQ leeg is [4].",
+                "• Die oudiofrekwensies wat op die klets aangekondig word, help om stasies te vind wat nie op 1270 Hz uitsaai nie; wanneer jy 'n stasie ontvang, is dit 'n goeie gewoonte om dit op die klets te meld [4].",
+                "[1] Chris Cox N0UK, EME-klets – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, Junie 2026, DX-ekspedisie C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST-klets – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
+            };
             d["bn"] = new Dictionary<string, string[]>();
             d["bn"]["PREF"] = new string[] {
                 "ম্যানুয়ালের এই অংশে প্রোগ্রামের বোতামের বর্ণনা নেই, আছে সেই ধারণাগুলো যার ওপর প্রোগ্রামটি গড়া। অধ্যায়গুলোর আগে লেখক এমন কিছু ধারণা তুলে ধরতে চান যা প্রোগ্রামটি শেখার জন্য মূল বলে প্রমাণিত হয়েছে, স্টেশনে তাঁর সাম্প্রতিক অভিজ্ঞতার আলোকেও।",
                 "• **হিসাব একটি নির্দেশক, প্রতিশ্রুতি নয়।** বাজেট, আনুমানিক S/N ও ডিজিটাল মোডের সীমা একটি আদর্শ সংযোগের বর্ণনা দেয়। গ্রহণের সময় গুরুত্বপূর্ণ হলো স্থানীয় ও মানবসৃষ্ট নয়েজ, যা মিনিটে মিনিটে বদলাতে পারে, এবং ফ্যারাডে ঘূর্ণন: কয়েক মুহূর্তেই হিসাব করা মার্জিন মুছে যেতে পারে (§ 1.3, 1.12)।",
                 "• **দিন বাছাই করা হয় চালু করার আগেই।** Dgrd, চাঁদের দূরত্ব ও বিষুবলম্ব জানায় চাঁদের পেছনে আকাশের নয়েজ কতটা, চাঁদ কত ঘণ্টা দিগন্তের ওপরে থাকে এবং কত উঁচুতে ওঠে: একই যন্ত্রপাতি দিনভেদে খুব ভিন্ন ফল দেয় (§ 1.4)।",
                 "• **পোলারাইজেশন একটি সংকেত উধাও করে দিতে পারে।** রৈখিক অ্যান্টেনায় ফ্যারাডে ঘূর্ণন ও স্থানিক পোলারাইজেশন কয়েক মিনিট বা ঘণ্টার জন্য প্রতিধ্বনি নিভিয়ে দিতে পারে; প্রায়ই ত্রুটি খোঁজার বদলে অপেক্ষা করা, পুনরাবৃত্তি করা বা পোলারাইজেশন ঘোরানোই যথেষ্ট (§ 1.3)।",
-                "• **সবচেয়ে ভালো সমাধান দ্বৈত পোলারাইজেশন।** অ্যান্টেনার জন্য সেরা পছন্দ সবসময় দ্বৈত পোলারাইজেশনের ব্যবস্থা, গ্রহণে দুটি ফিডলাইন ও দ্বৈত গ্রহণসহ, আর প্রেরণ হয় একটিমাত্র পোলারাইজেশনে: এভাবে ফ্যারাডে ঘূর্ণন ও স্থানিক পোলারাইজেশন আর প্রতিধ্বনি নিভিয়ে দেয় না (§ 1.3)।",
+                "• **সবচেয়ে ভালো সমাধান দ্বৈত পোলারাইজেশন।** অ্যান্টেনার জন্য সেরা পছন্দ সবসময় দ্বৈত পোলারাইজেশনের ব্যবস্থা, গ্রহণে দুটি ফিডলাইন ও দ্বৈত গ্রহণসহ, আর প্রেরণ হয় একটিমাত্র পোলারাইজেশনে: এভাবে ফ্যারাডে ঘূর্ণন ও স্থানিক পোলারাইজেশন আর প্রতিধ্বনি নিভিয়ে দেয় না (§ 1.3)। পোলারাইজেশন বাছাইয়ের রিলে কেবল গ্রহণের সময় সুইচ করা হয়, প্রেরণের সময় কখনো নয় (§ 1.7)।",
                 "• **পরীক্ষার মঞ্চ হিসেবে EME বাজেট।** EME বাজেট ট্যাবে বিভিন্ন পরিবর্তন বসিয়ে বোঝার চেষ্টা করা যায় নিজের স্থাপনা বজায় রাখা বা বদলানোর বিকল্পগুলো EME চর্চার জন্য কতটা বাস্তবসম্মত (§ 1.6)।",
                 "• **উচ্চতা-কোণ গুরুত্বপূর্ণ।** উচ্চতা-কোণ না থাকার সীমাবদ্ধতা সম্ভাব্য যোগাযোগের মিনিট কেড়ে নেয়। সবচেয়ে বড় কথা, অ্যান্টেনা ব্যবস্থাকে ওপরে তুললে নিম্ন পার্শ্ব-লোব অপরিহার্য হয়ে ওঠে, যাতে ভূমির নয়েজ ধরা না পড়ে এবং অ্যান্টেনা সেই সর্বোচ্চ সংকেত গ্রহণে পৌঁছায় যা কেবল আকাশমুখী লক্ষ্যই দিতে পারে।",
+                "• **অ্যান্টেনা: শুরু হোক টেবিল থেকে।** ইয়াগি বাছাই ও তুলনার মানদণ্ড হলো Lionel Edwards VE7BQH-এর টেবিল (গেইন, G/T ও অ্যান্টেনা তাপমাত্রা), যা Gabriel Sampol EA6VQ-এর DXMaps সাইটে প্রকাশিত (https://dxmaps.com/ve7bqh_e.html)। কম নয়েজের ইয়াগি নকশায় সবচেয়ে প্রামাণিক অবদানগুলোর মধ্যে রয়েছে Hartmut DG7YBN, Popa YU7EF ও Justin Johnson G0KSC-এর কাজ। YAEC-এর EME বাজেট VE7BQH-এর টেবিল ব্যবহার করে (§ 1.6)।",
+                "• **নিজের স্থাপনা চিনুন।** Relu NJ9R যেমন লেখেন, আসল রহস্য হলো নিজের সিস্টেমের সীমা, অর্থাৎ গেইন ও লস, জানা এবং এই তথ্যের ভিত্তিতে ঠিক করা সেগুলো অতিক্রম করা যায় কি না। 144 MHz-এ প্রথম পরীক্ষাক্ষেত্র হলো GRAVES রাডারের প্রতিধ্বনি (§ 1.11, 1.13)।",
                 "• **প্রিঅ্যাম্প্লিফায়ারের আগের প্রতিটি ডেসিবেল গুরুত্বপূর্ণ।** প্রিঅ্যাম্প্লিফায়ারের আগের কেবল, রিলে ও সংযোগকারী সিস্টেম তাপমাত্রাকে তাদের dB মানের চেয়েও বেশি খারাপ করে: বিনিয়োগ সেখানেই করা উচিত (§ 1.7, 1.8)।",
                 "• **আগে সঠিক কম্পাঙ্ক।** উঁচু ব্যান্ডে ডপলার ও CFOM প্রতিধ্বনিকে কয়েক kHz পর্যন্ত সরিয়ে দেয়: ডিকোডিং জানালার বাইরের প্রতিধ্বনি ভালো সংকেত থাকলেও শোনা যায় না (§ 1.10)।",
                 "• **সূর্য একটি অনুমেয় প্রতিপক্ষ।** চাঁদের কাছে থাকলে নয়েজ বাড়ে: প্রোগ্রাম আগেভাগে জানিয়ে দেয়, এবং দিন বাছাইয়ে তা বিবেচনা করা উচিত (§ 1.5, 1.9)।",
@@ -49348,11 +50234,11 @@ namespace LunaCalc
                 "|h| অক্ষর | YAEC-এ প্রস্তাবিত ব্যবহার",
                 "| 4 | কেবল মোটামুটি অনুমানের জন্য: চাঁদের অ্যাজিমাথ ও এলিভেশন প্রায় 1° পর্যন্ত ভুল হতে পারে, কারণ স্থানীয় দিগন্ত প্রতি 111 km-এ প্রায় 1° হেলে যায়",
                 "| 6 | DX লোকেটর, QSO এবং EME বাজেট: চাঁদের দিকনির্ণয়ে ত্রুটি এক ডিগ্রির কয়েক শতাংশ মাত্র",
-                "| **8** | আপনার স্টেশন, Reconnaissance of my obstacles-এর জন্য: এটি পাড়া বা পাহাড়টিকে চিহ্নিত করে",
+                "| **8** | আপনার স্টেশন, আমার বাধাগুলির অনুসন্ধান-এর জন্য: এটি পাড়া বা পাহাড়টিকে চিহ্নিত করে",
                 "|+ **10** | আপনার স্টেশন, সেরা ফলাফলসহ: এটি ভবন বা অ্যান্টেনা টাওয়ারটিকে চিহ্নিত করে",
                 "| 12 – 14 | গ্রহণযোগ্য, কিন্তু কিছু যোগ করে না: নির্ভুলতা একটি সাধারণ GPS-এর (কয়েক মিটার) এবং অ্যান্টেনার নিজের আকারের চেয়েও বেশি",
                 "### লোকেটর ও প্রতিবন্ধক",
-                "চাঁদের দিকের জন্য 6 অক্ষরই যথেষ্ট: চাঁদ প্রায় 380 000 km দূরে, এবং 6-অক্ষরের লোকেটরের ±4.4 km অ্যাজিমাথ ও এলিভেশনকে প্রায় 0.04° বদলায়, যা অ্যান্টেনার বিমের তুলনায় নগণ্য। **স্থানীয় প্রতিবন্ধকের** (ভবন, গাছ, পাহাড়) ক্ষেত্রে ব্যাপারটা উল্টো: এগুলো অ্যান্টেনা থেকে কয়েক দশ বা কয়েকশো মিটার দূরে, এবং 6 অক্ষরে স্টেশন 7.5 × 4.6 km আয়তক্ষেত্রের যেকোনো জায়গায় থাকতে পারে, তাই প্রতিবন্ধকগুলোর অবস্থান নির্ধারণ করা যায় না। 8 অক্ষরে ত্রুটি নেমে আসে প্রায় 450 m-এ, 10 অক্ষরে প্রায় 20 m-এ: **Reconnaissance of my obstacles** ট্যাবের ঠিক এই নির্ভুলতাই দরকার, যাতে অ্যান্টেনা যেসব অঞ্চলে বাধাগ্রস্ত সেগুলো সঠিকভাবে আঁকা যায়।",
+                "চাঁদের দিকের জন্য 6 অক্ষরই যথেষ্ট: চাঁদ প্রায় 380 000 km দূরে, এবং 6-অক্ষরের লোকেটরের ±4.4 km অ্যাজিমাথ ও এলিভেশনকে প্রায় 0.04° বদলায়, যা অ্যান্টেনার বিমের তুলনায় নগণ্য। **স্থানীয় প্রতিবন্ধকের** (ভবন, গাছ, পাহাড়) ক্ষেত্রে ব্যাপারটা উল্টো: এগুলো অ্যান্টেনা থেকে কয়েক দশ বা কয়েকশো মিটার দূরে, এবং 6 অক্ষরে স্টেশন 7.5 × 4.6 km আয়তক্ষেত্রের যেকোনো জায়গায় থাকতে পারে, তাই প্রতিবন্ধকগুলোর অবস্থান নির্ধারণ করা যায় না। 8 অক্ষরে ত্রুটি নেমে আসে প্রায় 450 m-এ, 10 অক্ষরে প্রায় 20 m-এ: **আমার বাধাগুলির অনুসন্ধান** ট্যাবের ঠিক এই নির্ভুলতাই দরকার, যাতে অ্যান্টেনা যেসব অঞ্চলে বাধাগ্রস্ত সেগুলো সঠিকভাবে আঁকা যায়।",
                 ">+ ব্যবহারিক পরামর্শ: অ্যান্টেনা যেখানে বসানো সেই বিন্দুর (বাড়ির প্রবেশপথের নয়) GPS স্থানাঙ্ক থেকে 10-অক্ষরের লোকেটর বের করুন এবং লাইভ অবস্থান ও +- 24h ট্যাবে **my locator** হিসেবে লিখুন। DX-এর জন্য তিনি আপনাকে যে 6-অক্ষরের লোকেটর দেন সেটাই যথেষ্ট।",
                 "[1] Wikipedia, “Maidenhead Locator System” (উৎপত্তি: G4ANB এবং 1980-এ Maidenhead-এ IARU VHF সভা, জোড়াগুলোর গঠন, 1999 থেকে WGS-84, 8 অক্ষরের বাইরের সম্প্রসারণ, IARU 2019-এর স্পষ্টীকরণ, HF ও VHF/UHF-এ ব্যবহার, সাবস্কোয়ার কেন্দ্রগুলোর মধ্যে দূরত্ব) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -49396,12 +50282,16 @@ namespace LunaCalc
                 "• প্রতিসরণ গুরুত্বপূর্ণ: চাঁদ উঠেছিল −0.51°-এ, −0.35°-এর আলোকীয় দিগন্তের নিচে; 200 MHz-এ, শুষ্ক বাতাসে, 0° এলিভেশনে প্রতিসরণ ত্রুটি −0.49°।",
                 "IK3XTV মনে করিয়ে দেন যে তাত্ত্বিকভাবে ভূমির প্রভাব 6 dB পর্যন্ত পৌঁছায়, ফলে একটি একক ইয়াগি প্রায় 4টির অ্যারের মতো কাজ করে, তবে এটি অ্যান্টেনার চারপাশের ভূমির ওপর অনেকটাই নির্ভর করে: শহরে এটি কম, খোলা গ্রামাঞ্চলে বেশি এবং সমুদ্রের কাছে আরও বেশি। চাঁদ ওঠা ও অস্ত যাওয়ার সময়, প্রায় 1° থেকে 18 – 20° এলিভেশনের মধ্যে এর সুবিধা পাওয়া যায় [4]।",
                 "> এই কারণেই EME বাজেটে গ্রাউন্ড গেইনকে BETA হিসেবে চিহ্নিত করা হয়েছে: গণনা করা মান (সর্বোচ্চ +6 dB) একটি তাত্ত্বিক সীমা। সমুদ্র থেকে উঁচু অ্যান্টেনা বা একাধিক ইয়াগির অ্যারের ক্ষেত্রে এর প্রায় অর্ধেক এবং নিম্ন এলিভেশনে স্পষ্ট QSB আশা করুন [3]।",
+                "### অ্যান্টেনার গেইন: ঘোষিত তথ্য ও dBd (NJ9R)",
+                "নির্মাতাদের ডেটাশিটের গেইন প্রায় সবসময় আসে নিখুঁত ভূমি ও 50 Ω-এ আদর্শ ম্যাচিং ধরে করা সিমুলেশন থেকে। NJ9R পরামর্শ দেন ঘোষিত মান থেকে প্রায় 2 dB বাদ দিতে এবং dBi নয়, dBd-তে ভাবতে, যাতে ভ্রান্ত আশা না জাগে; কেবল, সংযোগকারী ও প্রিঅ্যাম্পের তথ্যের ক্ষেত্রেও একই কথা [6]। তাঁর উদাহরণ: একটি ভালো 5-এলিমেন্ট ইয়াগি (8 dBi, 5.9 dBd) লাইনে 4.25 dB লসের পর মাত্র 1.5 dB কার্যকর গেইন রাখে; তাঁর প্রথম 7-এলিমেন্ট ইয়াগি (12.3 dBi, 10 dBd) দিয়ে তিনি কোনোমতে গ্রহণ করতে পারতেন। কিছুটা মার্জিন রেখে গ্রহণের সূচনাবিন্দু হিসেবে তিনি প্রায় 14 dBd উল্লেখ করেন [6]।",
+                ">+ EME বাজেটে প্রভাবটি সঙ্গে সঙ্গে পরীক্ষা করা যায়: অ্যান্টেনার গেইন 2 dB কমালেই দেখা যায় সংযোগে কতটা মার্জিন অবশিষ্ট থাকে।",
                 "[1] WSJT-X User Guide, K1JT and the WSJT Development Group, § 7.1 (FT4 = FT8 + 3.5 dB)।",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 এপ্রিল 2021 (WSJT-X 2.4.0), IC8TEM প্রদত্ত।",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21তম EME Meeting, IC8TEM প্রদত্ত উপস্থাপনা।",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 12 নভেম্বর 2010 তারিখের নথি, IC8TEM প্রদত্ত।",
                 "[5] J. Taylor K1JT, EME 2006 সম্মেলনে JT65 বিষয়ক উপস্থাপনা (K1JT_eme2006.pdf): 2500 Hz-এ ন্যূনতম S/N স্তরের টেবিল।",
-                "> ট্যাবের ডানদিকের স্টেশন ডায়াগ্রাম নির্বাচিত কেবলগুলো থেকে ক্ষতি নির্ণয় করে: ট্রান্সমিশনে PA–রিলে কেবল + রিলে + অ্যান্টেনা কেবল, রিসেপশনে প্রিঅ্যাম্পের আগে অ্যান্টেনা কেবল + রিলে এবং এর পরে ফিড কেবল। কেবলের অ্যাটেনুয়েশন আসে COAXIAL CABLES ট্যাবের ডেটাবেস থেকে (§ 1.8)।"
+                "> ট্যাবের ডানদিকের স্টেশন ডায়াগ্রাম নির্বাচিত কেবলগুলো থেকে ক্ষতি নির্ণয় করে: ট্রান্সমিশনে PA–রিলে কেবল + রিলে + অ্যান্টেনা কেবল, রিসেপশনে প্রিঅ্যাম্পের আগে অ্যান্টেনা কেবল + রিলে এবং এর পরে ফিড কেবল। কেবলের অ্যাটেনুয়েশন আসে কোঅ্যাক্সিয়াল কেবল ট্যাবের ডেটাবেস থেকে (§ 1.8)।",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
             };
             d["bn"]["S47"] = new string[] {
                 "## প্রিঅ্যাম্প এবং রেডিওর নয়েজ ফিগার {nuovo}",
@@ -49476,7 +50366,7 @@ namespace LunaCalc
                 "##+ FT-1000MP ও ট্রান্সভার্টারসহ EME স্টেশন",
                 "ট্রান্সভার্টারসহ 144 MHz-এ EME-র জন্য ব্যবহৃত FT-1000MP-এর দুটি নথিভুক্ত উদাহরণ: FT-1000MP + Javornik ট্রান্সভার্টারে DF9IC-এর পরিমাপ [3] (রেডিওর প্রিঅ্যাম্প বন্ধ রেখে NF 0.9 – 1.4 dB) এবং **W3SZ**-এর EME স্টেশন [12] (4 × M2 2MXP32, প্রতিটি পোলারাইজেশনের জন্য অ্যান্টেনায় LNA Technology প্রিঅ্যাম্প, LMR-600 ও Andrew হার্ডলাইন), যা ট্রান্সমিশনে একটি **FT-1000MP Mark V**, একটি **SSB-Electronic LT2S Mk II** ট্রান্সভার্টার (IF 28 MHz) এবং একটি 2 × GU-74B অ্যামপ্লিফায়ার ব্যবহার করে, আর রিসেপশনে SM5BSZ-এর WSE হার্ডওয়্যার ও Linrad সফটওয়্যার ব্যবহার করে।",
                 "> EME বাজেটে ট্রান্সভার্টার হলো স্টেশন ডায়াগ্রামের একটি বাক্স: এটি নিজের চেকবক্স দিয়ে সক্রিয় করা হয়, তালিকা থেকে মডেল বেছে নেওয়া হয় (বা \"custom\") এবং প্রোগ্রাম তার নয়েজ ফিগার ও গেইন নিয়ে নেয়; বন্ধ রাখলে এটি হিসাবে প্রবেশ করে না। ওপরের চার্টটি রেডিওর প্রিঅ্যাম্প চালু করবেন কি না তা ঠিক করতে সাহায্য করে।",
-                ">! ✉ **আপনি কি অন্য কোনো ট্রান্সভার্টার জানেন, বা নিজে তৈরি করেছেন?** অন্য ট্রান্সভার্টার বা আপনার নিজের ট্রান্সভার্টারকে পরিচিত করাতে চাইলে লেখককে ই-মেইল করুন: ccerrotta@gmail.com বা ic8tem@gmail.com। সমস্ত যোগাযোগের তথ্য **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS** ট্যাবে রয়েছে।",
+                ">! ✉ **আপনি কি অন্য কোনো ট্রান্সভার্টার জানেন, বা নিজে তৈরি করেছেন?** অন্য ট্রান্সভার্টার বা আপনার নিজের ট্রান্সভার্টারকে পরিচিত করাতে চাইলে লেখককে ই-মেইল করুন: ccerrotta@gmail.com বা ic8tem@gmail.com। সমস্ত যোগাযোগের তথ্য **লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা** ট্যাবে রয়েছে।",
                 "##+ TX/RX সিকোয়েন্সার",
                 "পাওয়ার অ্যামপ্লিফায়ার (PA) এবং অ্যান্টেনার কাছে প্রিঅ্যাম্প (PRE) থাকলে কম্পিউটারের PTT রেডিওতে নয়, একটি **সিকোয়েন্সার**-এ যায়, যা সঠিক ক্রমে রিলেগুলো এবং তারপর PA ও রেডিও চালায় [16]। সবচেয়ে প্রচলিত ব্যবস্থায় দুটি ফিড লাইন থাকে: রিসিভ লাইন কয়েক dB হারাতে পারে, কারণ এটি 15 – 20 dB-এর একটি প্রিঅ্যাম্পের পরে থাকে, কিন্তু ট্রান্সমিট লাইনকে যত কম সম্ভব হারাতে হবে (ট্রান্সমিশনে 3 dB হারালে বিকিরিত পাওয়ার অর্ধেক হয়ে যায়)। বিশ্রাম অবস্থায় রিলেগুলো PRE-কে অ্যান্টেনা থেকে বিচ্ছিন্ন রাখে: বজ্রপাতের ডিসচার্জের বিরুদ্ধে এটি একটি বাড়তি সুরক্ষা [16]।",
                 "|h| ^ধাপ | RX থেকে TX | TX থেকে RX",
@@ -49486,6 +50376,7 @@ namespace LunaCalc
                 "~ এক ধাপ ও পরের ধাপের মধ্যে অন্তত রিলের সুইচিং সময় (15 – 30 ms) এবং তাদের বাউন্সের সময় লাগে: IK1UWL 100 – 200 ms-এর পরামর্শ দেন, PA-এর ভেতরে রিলে থাকলে সেটির জন্যও [16]।",
                 "ট্রান্সমিটার চালু করার জন্য VOX-এর চেয়ে PTT ভালো: VOX কোনো শব্দে চালু হয়ে যেতে পারে এবং PTT-এর পরে JT65 যে প্রায় 0.5 s দেরিতে মডুলেশন শুরু করে, সেই দেরির সুবিধা নেয় না, ফলে প্রিঅ্যাম্প শুধু অ্যামপ্লিফায়ারের দ্রুত রিলে দিয়েই সুরক্ষিত থাকে; PTT-তে সেই দেরি মডুলেশনের আগেই অ্যামপ্লিফায়ার সুইচ করে দেয়, এবং সিকোয়েন্সারও যোগ করা যায় [17]।",
                 ">! **প্রিঅ্যাম্পের দিকে খেয়াল রাখুন।** T/R রিলেকে খোলা পোর্টটি খুব ভালোভাবে বিচ্ছিন্ন করতে হবে: 50 dB আইসোলেশন ও অ্যান্টেনায় 500 W থাকলে PRE-এর ইনপুটে 5 mW পৌঁছায়। অন্তত 60 dB-এর লক্ষ্য রাখুন; সবচেয়ে সতর্করা একটি দ্বিতীয় রিলে যোগ করেন, যা ট্রান্সমিশনের সময় PRE-কে একটি 50 Ω লোডে টার্মিনেট করে। মাইক্রোফোনের PTT বোতাম নিষ্ক্রিয় করুন: তারপর থেকে কেবল সিকোয়েন্সারের মাধ্যমেই ট্রান্সমিট করুন (SSB-এর জন্য সিকোয়েন্সারের PTT-তে একটি ফুট সুইচ, PC-এরটি থেকে আলাদা করা) [16]।",
+                ">! **পোলারাইজেশন রিলে কেবল গ্রহণের সময় সুইচ করা হয়।** দুটি পোলারাইজেশনে (H ও V) অ্যান্টেনা বাছাইয়ের রিলে কখনো প্রেরণের সময় সুইচ করা যাবে না: পাওয়ার প্রয়োগ অবস্থায় রিলে, প্রিঅ্যাম্প বা অ্যাম্প্লিফায়ার পুড়ে যায়, যার ক্ষতি কয়েকশো থেকে কয়েক হাজার ইউরো পর্যন্ত [18]।",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, সংস্করণ 5, 19 মার্চ 2021 (প্রথম সংস্করণ 19 জুন 2019), টেবিল 1 ও 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 জুলাই 2015, টেবিল 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC, DARC OV Durlach A35-এর সাথে, “Test of the Large Signal Behaviour of some 144 MHz Radios”, 27 ফেব্রুয়ারি 2005 থেকে পরীক্ষা – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -49502,16 +50393,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, মে 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), এপ্রিল 2003, পৃ. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, জানুয়ারি 2012, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM কর্তৃক সরবরাহকৃত – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, উপস্থাপনা, জুলাই 2015, IC8TEM প্রদত্ত।"
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, উপস্থাপনা, জুলাই 2015, IC8TEM প্রদত্ত।",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
             };
             d["bn"]["S48"] = new string[] {
                 "## কোঅ্যাক্সিয়াল কেবল ও লস",
-                "**COAXIAL CABLES** ট্যাবে রেডিও অ্যামেচারদের সবচেয়ে বেশি ব্যবহৃত 50 Ω কেবলগুলোর অ্যাটেনুয়েশন সংগ্রহ করা আছে, 20 °C-এ প্রতি 100 m-এ dB-তে, YAEC-এর পাঁচটি ব্যান্ডে। নির্মাতাদের ডেটা শিট বিভিন্ন ফ্রিকোয়েন্সিতে মান দেয়; YAEC পাওয়ার ল দিয়ে সেগুলোকে ব্যান্ডগুলোতে এনেছে, অর্থাৎ ডেটা শিটের নিকটতম দুটি ফ্রিকোয়েন্সির মধ্যে লগ-লগ চার্টে একটি সরলরেখা:",
+                "**কোঅ্যাক্সিয়াল কেবল** ট্যাবে রেডিও অ্যামেচারদের সবচেয়ে বেশি ব্যবহৃত 50 Ω কেবলগুলোর অ্যাটেনুয়েশন সংগ্রহ করা আছে, 20 °C-এ প্রতি 100 m-এ dB-তে, YAEC-এর পাঁচটি ব্যান্ডে। নির্মাতাদের ডেটা শিট বিভিন্ন ফ্রিকোয়েন্সিতে মান দেয়; YAEC পাওয়ার ল দিয়ে সেগুলোকে ব্যান্ডগুলোতে এনেছে, অর্থাৎ ডেটা শিটের নিকটতম দুটি ফ্রিকোয়েন্সির মধ্যে লগ-লগ চার্টে একটি সরলরেখা:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α হলো dB/100 m-এ, ℓ হলো মিটারে কেবলের দৈর্ঘ্য। শুধু সংখ্যা মানে ডেটা শিটের মান; ≈ চিহ্ন একটি ইন্টারপোলেটেড মান বোঝায়, এবং e ডেটা শিটের শেষ ফ্রিকোয়েন্সির বাইরে এক্সট্রাপোলেটেড মান।",
                 "একই ধরনের কেবল, যাদের ব্যাস ±0.2 mm-এর মধ্যে এবং সব ব্যান্ডে অ্যাটেনুয়েশন 0.2 dB/100 m-এর মধ্যে, একটি সারিতে (≡) গড় মানসহ একত্র করা হয়েছে; সমতুল্য নামগুলো \"also:\" দিয়ে দেখানো হয় (যেমন LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600)। চীনা নাম 50-3, 50-5, 50-7, 50-9, 50-12 মিলিমিটারে ডাইইলেকট্রিকের ব্যাস নির্দেশ করে।",
                 "> নিজস্ব কেবল তাদের পাঁচটি অ্যাটেনুয়েশনসহ যোগ করা যায়: এগুলো data\\cavi_personali.txt-এ সংরক্ষিত হয় এবং EME বাজেটের স্টেশন ডায়াগ্রামের ড্রপ-ডাউনেও দেখা যায়। টেবিলের প্রতিটি সারির টুলটিপ সেই কেবলের উৎস উল্লেখ করে।",
-                "[1] প্রতিটি কেবলের উৎস: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo মারফত), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables-এর ডেটা শিট, MIL-C-17F ক্যাটালগ (RG-142, RG-393), Senago-র R.F. elettronica (RG-115), DD1US ও EA5IP-এর টেবিল (H100) এবং RG-58, RG-213, H-155 ও H-2000-এর জন্য SV1BSX-এর টেবিল (মান যাচাইসাপেক্ষ)।"
+                "### সংযোগকারী (NJ9R)",
+                "সংযোগকারীও লাইনের অংশ। NJ9R-এর ব্যবহারিক নিয়ম হলো প্রতি 8 – 10টি সংযোগকারীতে প্রায় 1 dB, রেডিওর পেছন থেকে অ্যান্টেনা পর্যন্ত সবগুলো গুনে, অ্যাডাপ্টার, রিলে ও পাওয়ার ডিভাইডারসহ: তাঁর চার-অ্যান্টেনার স্থাপনায় 24টি সংযোগকারীর লস 2 dB-এর বেশি, যা 144 MHz-এ 40 – 45 m নতুন LMR-400-এর সমান [2]। EME বাজেটে এই লস TX আনুষঙ্গিক ক্ষতি এবং অ্যান্টেনা ও প্রিঅ্যাম্পের মধ্যবর্তী লসের সঙ্গে যোগ করতে হবে।",
+                "[1] প্রতিটি কেবলের উৎস: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo মারফত), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables-এর ডেটা শিট, MIL-C-17F ক্যাটালগ (RG-142, RG-393), Senago-র R.F. elettronica (RG-115), DD1US ও EA5IP-এর টেবিল (H100) এবং RG-58, RG-213, H-155 ও H-2000-এর জন্য SV1BSX-এর টেবিল (মান যাচাইসাপেক্ষ)।",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
             };
             d["bn"]["S410"] = new string[] {
                 "## ডপলার, কম্পেনসেশন ও CFOM",
@@ -49573,10 +50468,19 @@ namespace LunaCalc
                 "> বিটের সংখ্যা কেবল বলে অবস্থান কত সূক্ষ্মভাবে *পড়া* হয়: প্রকৃত নির্ভুলতা যান্ত্রিক প্লে, সাপোর্টের বাঁকা হওয়া, বাতাস এবং উত্তর ও দিগন্তের ক্যালিব্রেশনের ওপরও নির্ভর করে।",
                 "### ইয়াগি অ্যারে: অ্যাকচুয়েটর ও পুলি",
                 "ইয়াগি অ্যারেতে (2, 4 বা তার বেশি অ্যান্টেনার সমন্বয়) এলিভেশনের ভার বড় এবং অসম। বাজারে ওয়ার্ম-স্ক্রু মোটরসহ লিনিয়ার অ্যাকচুয়েটর পাওয়া যায়: এই সমাধানগুলোতে স্ক্রু কেবল গতি নিয়ন্ত্রণ করে, আর ভারের যান্ত্রিক সাপোর্টের দায়িত্ব থাকে পুলির ওপর। ওয়ার্ম স্ক্রুর সুবিধা হলো ভারের চাপে এটি উল্টো দিকে ঘোরে না, তাই মোটর বন্ধ থাকলেও অ্যারে স্থির থাকে।",
+                "### GRAVES রাডার দিয়ে পয়েন্টিং যাচাই (NJ9R)",
+                "ফরাসি রাডার **GRAVES** লোকেটর JN27SI থেকে 143.050 MHz-এ অবিরাম সম্প্রচার করে এবং 144 MHz-এ চাঁদের মাধ্যমে গ্রহণ পরীক্ষার সবচেয়ে প্রচলিত মানদণ্ড। যখন চাঁদ নিজের স্টেশন ও GRAVES দুই জায়গা থেকেই দৃশ্যমান (YAEC-এ DX-এর লোকেটর হিসেবে JN27SI বসালেই চলে), তখন 143.050 MHz-এ (বা 143.0495 MHz-এ) SSB-তে শোনা হয়: অডিও ব্যান্ডউইথ অন্তত 2.4 kHz, AGC বন্ধ, নয়েজ ব্লাঙ্কার চালু এবং অন্য কোনো ফিল্টার, নচ বা DSP ছাড়া [2]।",
+                "ওয়াটারফলে GRAVES-এর প্রতিধ্বনি একটি ভাঙা ভাঙা (ড্যাশযুক্ত) রেখা হিসেবে দেখা যায়: রেখা যত তীব্র, অ্যান্টেনার লক্ষ্য তত সঠিক। রোটেটর ছোট ছোট ধাপে ঘোরানো হয়, প্রথমে অ্যাজিমাথে, পরে এলিভেশনে, সর্বোচ্চ না পাওয়া পর্যন্ত, তারপর পাওয়া অবস্থানকে গণনা করা অবস্থানের সঙ্গে মেলানো হয়। NJ9R GRAVES-কে S-meter হিসেবেও ব্যবহার করেন: গেইন স্লাইডার শূন্যে রেখে তিনি এক মিনিট ধরে সংকেতের গড় পড়েন, এবং প্রতিটি সেশনের আগে GRAVES দিয়ে যাচাই করেন যে স্থাপনা এখনও ঠিকঠাক আছে [2]।",
+                "> এলিভেশন ছাড়া GRAVES-এর প্রতিধ্বনি সাধারণত কেবল তখনই পাওয়া যায় যখন চাঁদ 0° থেকে 15° উচ্চতায় থাকে, অর্থাৎ চন্দ্রোদয় বা চন্দ্রাস্তের সময়। অনেক রেডিও 2 m ব্যান্ডের বাইরে টিউন হয় না: সেক্ষেত্রে একটি SDR রিসিভার দরকার [2]।",
+                "### কম্পাস, ক্যামেরা ও ত্রুটির খাতা (NJ9R)",
+                "HF-এ ব্যবহৃত রোটেটরে “প্রায় ঠিক” পয়েন্টিং যথেষ্ট ছিল; EME-তে নয়। NJ9R পরামর্শ দেন রোটেটরের নির্দেশক ক্যালিব্রেট করে তারপর বাইরে গিয়ে কম্পাস দিয়ে যাচাই করতে, সর্বোচ্চ প্রায় 5° ত্রুটি মেনে নিয়ে: বাতাস, স্টপে ধাক্কা এবং মাস্তুলের পিছলে যাওয়া অ্যান্টেনাকে সরিয়ে দেয়, অথচ নির্দেশক তা টেরই পায় না [2]।",
+                "• **মাস্তুলে ক্যামেরা।** একটি ছোট জলরোধী ক্যামেরা (রিভার্স পার্কিং ক্যামেরার মতো, 25 – 30 USD), মাস্তুলে বসিয়ে স্পিরিট লেভেল বা ইনক্লিনোমিটার দিয়ে অ্যান্টেনার সঙ্গে সারিবদ্ধ করলে দেখায় অ্যান্টেনা আসলে কোথায় তাক করা: নষ্ট রোটেটর নিয়ে বা 20 – 35° ত্রুটি নিয়ে, শুধু ক্যামেরার ভরসায়, NJ9R 60 – 80টি QSO সম্পন্ন করেছেন। GRAVES-এর প্রতিধ্বনির সর্বোচ্চ খুঁজে পাওয়ার পর মনিটরে চাঁদের কেন্দ্র চিহ্নিত করা হয়। ক্যামেরা নিজেও নয়েজের উৎস: গ্রহণের সময় এটি বন্ধ রাখতে হবে [2]।",
+                "• **ত্রুটির খাতা।** প্রতিবার পয়েন্টিংয়ের সময় একটি টেবিলে লেখা হয় চাঁদের গণনা করা অ্যাজিমাথ ও এলিভেশন, নির্দেশকে পড়া মান এবং ক্যামেরায় দেখা মান: পার্থক্যটাই নিজের সিস্টেমের ত্রুটি, যা সংশোধন করতে হবে বা মনে রাখতে হবে [2]।",
                 "### 432 MHz-এর ওপরে: ডিশ",
                 "902 MHz থেকে ওপরে বেশিরভাগ ক্ষেত্রে প্যারাবোলিক ডিশ ব্যবহৃত হয়, এবং টুল [1] 1 GHz ও তার ওপরের ফ্রিকোয়েন্সির জন্য তৈরি। বড় ব্যাসে বিম এক ডিগ্রির কয়েক দশমাংশে সরু হয়ে যায় এবং চাঁদকে নিখুঁতভাবে লক্ষ্য না করতে পারার ঝুঁকি থাকে: মোটরের চেয়েও বেশি, স্টেশনের দরকার অ্যাজিমাথ ও এলিভেশনে প্রকৃত যান্ত্রিক অ্যাকচুয়েটর, যার পয়েন্টিং নির্ভুলতা মূলত কন্ট্রোলের বিট রেজোলিউশনের সাথে যুক্ত। OE2IGL ও DF3GJ-এর **EME Link Budget & Analysis Tool** [1] একটি ভালো ট্র্যাকিং সিস্টেমের জন্য ±0.035° এবং সাধারণ সিস্টেমের জন্য ±0.1° দেয়, এবং লিংকের অন্যান্য সব পদের সাথে পয়েন্টিং লসও গণনা করে।",
                 ">+ YAEC 432 MHz-এ থেমে যায়। উচ্চতর ব্যান্ডের জন্য আমরা OE2IGL ও DF3GJ-এর টুলটি [1] সুপারিশ করি: এটি ডিশের প্যারামিটার (ব্যাস, f/D, ফিড, পৃষ্ঠের অমসৃণতা, দক্ষতা), পয়েন্টিং, লিব্রেশন, সূর্য ও চাঁদের নয়েজ এবং বায়ুমণ্ডলীয় অ্যাটেনুয়েশনসহ 1 থেকে 300 GHz পর্যন্ত EME বাজেট গণনা করে।",
-                "[1] Gerald Ihninger OE2IGL and Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL and Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
             };
             d["bn"]["S412"] = new string[] {
                 "## EME-র জন্য ডিজিটাল মোড: Q65 ও JT65",
@@ -49667,6 +50571,18 @@ namespace LunaCalc
                 "| q3 | আমার কলসাইন ও DX-এর কলসাইন",
                 "| q4 | দুটি কলসাইন এবং RRR, RR73, 73 বা ফাঁকা",
                 "~ [1] থেকে। লেখকরা সতর্ক করেন যে ডিকোডারের দেখানো S/N মানগুলোর ওপর বেশি গুরুত্ব দেওয়া উচিত নয়, কারণ সেগুলো তখনও উন্নত করা হচ্ছিল [1]: YAEC-এর EME বাজেটের সাথে তুলনার জন্য একটি মাত্র রিডিংয়ের চেয়ে কয়েকটি QSO ব্যবহার করা ভালো।",
+                "### JT65B ও MAP65-এর জন্য NJ9R-এর সেটিংস",
+                "144 MHz-এ JT65B দিয়ে শুরু করা NJ9R তাঁর ব্যবহৃত সেটিংস এভাবে সংক্ষেপে বলেন [7]:",
+                "|h| প্রোগ্রাম | কোথায় | সেটিং",
+                "| WSJT-X | প্রধান উইন্ডো | Enable VHF and sub-mode features, Decode after EME delay, ডিকোডিং পর্যায়গুলোর মাঝে ফাঁকা লাইন",
+                "| WSJT-X | Advanced | Random erasure ও two pass decoding (6 ও 6, CPU অনুযায়ী); ওয়াটারফল Most sensitive",
+                "| WSJT-X | মোড | JT65, সাব-মোড B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; কোনো স্টেশনের রেখা দেখা দিলে 50, 20 বা 10 Hz-এ সংকুচিত করা হয় (যত চওড়া, ডিকোডিং তত ক্ষতিগ্রস্ত)",
+                "| WSJT-X | অডিও কম্পাঙ্ক | TX 1270 Hz-এ; RX ডপলার অনুযায়ী 1270 Hz-এর ±350 Hz-এর মধ্যে, অথবা চ্যাটে ঘোষিত কম্পাঙ্কে",
+                "| MAP65 | Station, I/O devices | নিজের কলসাইন ও লোকেটর; সাউন্ড কার্ড, অথবা IQ রেডিওর জন্য নেটওয়ার্ক ইন্টারফেস, 96 000 Hz-এ",
+                "| MAP65 | মোড ও ডিকোডিং | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | প্রধান উইন্ডো | NB চালু, Monitor On, পার্শ্ব বারে অডিও লেভেল 12 থেকে 40-এর মধ্যে",
+                "~ [7] থেকে। বিকল্পগুলোর নাম ইংরেজিতেই রাখা হয়েছে, যেমন WSJT-X ও MAP65-এর মেনুতে আছে। JT65-এর জন্য YAEC-এর EME বাজেট সাব-মোড B-এর সীমা ব্যবহার করে (§ 1.6)।",
                 "### DXpedition-এর সঙ্গে কাজের পদ্ধতি (W7GJ)",
                 "Lance Collister W7GJ, যিনি বহু বছর ধরে 6 m-এ EME অভিযান পরিচালনা করছেন, বর্ণনা করেছেন pile-up চলাকালীন Q65-60A-তে কীভাবে একটি DXpedition-কে কল করতে হয় [6]। সবার আগে, কম্পিউটারের ঘড়ি খুব নির্ভুল এবং ট্রান্সমিট ফ্রিকোয়েন্সি খুব স্থিতিশীল হতে হবে [6]।",
                 "• **পর্যায়।** DXpedition সবসময় প্রথম সিকোয়েন্সে (জোড় মিনিট) ট্রান্সমিট করে; যারা কল করে তারা দ্বিতীয়টিতে (বিজোড় মিনিট) [6]।",
@@ -49688,7 +50604,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, অক্টোবর 2023, IC8TEM প্রদত্ত।",
                 "[4] Nico Palermo IV3NWV, QRA কোড বিষয়ে EME 2016 সম্মেলনে উপস্থাপনা, [3]-এ উদ্ধৃত – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-X-এর সোর্স কোড (Q65_encoding_modules.F90 ফাইল ও অন্যান্য), [3]-এ উদ্ধৃত – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 3 এপ্রিল 2023 তারিখে সংশোধিত, IC8TEM প্রদত্ত – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 3 এপ্রিল 2023 তারিখে সংশোধিত, IC8TEM প্রদত্ত – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
             };
             d["bn"]["S54"] = new string[] {
                 "## SM5BSZ-এর EME সাহিত্য",
@@ -49783,15 +50700,47 @@ namespace LunaCalc
                 "> প্রোগ্রামে: “দূরত্ব ও Dgrd”-এর ক্যালেন্ডার ☀ চিহ্ন দিয়ে সেই দিনগুলো চিহ্নিত করে যখন সূর্য চাঁদের কাছে থাকে (কমলা বা লাল); “সৌর নয়েজ” ট্যাব মাপা ফ্লাক্স দিয়ে গণনা করে বেছে নেওয়া মুহূর্তে সূর্য কতটা অতিরিক্ত নয়েজ আনে।",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["bn"]["S413"] = new string[] {
+                "## প্রথম গ্রহণ থেকে QSO পর্যন্ত: NJ9R-এর পরামর্শ",
+                "Relu Jianu NJ9R “2M EME the easy way”-তে 144 MHz-এ নবাগত হিসেবে তাঁর অভিজ্ঞতা সংকলন করেছেন: একটি ব্যবহারিক পথ, যার শুরু প্রিঅ্যাম্প ছাড়া 7-এলিমেন্ট ইয়াগিতে ধরা GRAVES-এর প্রতিধ্বনি দিয়ে। তাঁর বার্তা মূলত একটিই: নিজের স্থাপনার সীমা, অর্থাৎ গেইন ও লস, জানা এবং এই তথ্যের ভিত্তিতে ঠিক করা সেগুলো অতিক্রম করা যায় কি না [1]। প্রযুক্তিগত অংশগুলো সংশ্লিষ্ট বিষয়ের অনুচ্ছেদে নেওয়া হয়েছে: EME বাজেট ও অ্যান্টেনার গেইন (§ 1.6), পোলারাইজেশন রিলে (§ 1.7), সংযোগকারী (§ 1.8), পয়েন্টিং ও GRAVES (§ 1.11), WSJT-X ও MAP65-এর সেটিংস (§ 1.12), চ্যাট পড়া (§ 1.14)। এখানে রইল স্টেশন ও রিসিভার নিয়ে পরামর্শ।",
+                "### স্থানীয় নয়েজের মানচিত্র",
+                "চাঁদ খোঁজার আগে জেনে রাখা ভালো নয়েজ কোন কোন দিক থেকে আসে। NJ9R পরামর্শ দেন অ্যান্টেনা নিয়ে পুরো 360° ঘুরে আসতে, অ্যাজিমাথে 15 – 30° ধাপে, এবং গেইন স্লাইডার (সর্বনিম্ন স্তরে শূন্য করা) দিয়ে পড়া নয়েজ একটি টেবিলে লিখে রাখতে। যাঁদের এলিভেশন আছে তাঁরা 0° থেকে 45° পর্যন্ত 5 – 10° ধাপে এই ঘোরা পুনরাবৃত্তি করেন। হিট ম্যাপের মতো রং করা টেবিলটি বোঝায় কেন কিছু দিকে কিছুই ধরা পড়ে না: সেখানে স্থানীয় নয়েজ প্রতিধ্বনিকে ঢেকে দেয় [1]।",
+                "> YAEC-এ আমার বাধাগুলির অনুসন্ধান দেখায় কোন দিকগুলো বাধায় বন্ধ: নয়েজের মানচিত্রের সঙ্গে এর তুলনা করলে চাঁদের সেরা সময়-জানালা বেছে নিতে সুবিধা হয়।",
+                "প্রতিবেশীদের বাড়ি ও ইলেকট্রনিক যন্ত্র বিঘ্নের অবিরাম উৎস: নিজের বাড়ি থেকে শুরু করে সেগুলো খুঁজে কমানো হয়, কিন্তু একসময় যা থেকে যায় তা নিয়েই চলতে হয় [1]।",
+                "### রিসিভার ও কম্পিউটার",
+                "• **পরিষ্কার রিসিভার।** AGC বন্ধ, নয়েজ ব্লাঙ্কার চালু, গ্রহণে কোনো ফিল্টার, নচ বা DSP নয়; কম্পিউটারে অডিও ইনপুট সর্বোচ্চ মানে এবং সিস্টেম অডিওর কোনো এনহ্যান্সমেন্ট বা বিবর্ধন নয় [1]।",
+                "• **সিঙ্ক্রোনাইজড ঘড়ি।** ডিজিটাল মোডে সঠিক সময় দরকার: NJ9R একটি সিঙ্ক্রোনাইজেশন প্রোগ্রাম (NetTime) দিয়ে প্রতি 15 মিনিটে কম্পিউটারের ঘড়ি স্বয়ংক্রিয়ভাবে ঠিক করিয়ে নেন [1]।",
+                "• **হালনাগাদ CALL3.TXT।** ফাইলটি ডিকোডিংয়ে অনেক dB সাহায্য করে, কারণ WSJT-X ও MSHV কলসাইন চিনতে এটি ব্যবহার করে; ভুল ডিকোড বাদ দেওয়ার দায়িত্ব অপারেটরেরই থাকে [1]। YAEC W7GJ ও WSJT-X Improved-এর তালিকা ডাউনলোড করে একত্র করে এবং ফাইলটি WSJT-X-এর ফোল্ডারে কপি করতে পারে।",
+                "• **ধৈর্য।** কিছু শোনা না গেলে একাধিক কারণ একসঙ্গে কাজ করতে পারে: উঁচু Dgrd, প্রতিকূল পোলারাইজেশন, ফ্যারাডে ঘূর্ণন, সেই দিকে স্থানীয় নয়েজ। কয়েক মিনিট, কয়েক ঘণ্টা পরে বা অন্য দিনে আবার চেষ্টা করা এবং মাসের সবচেয়ে কম Dgrd-এর দিনগুলো বেছে নেওয়া ভালো (§ 1.3, 1.4) [1]।",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
+            };
+            d["bn"]["S414"] = new string[] {
+                "## ইন্টারনেটে টেক্সট চ্যাট",
+                "EME-তে অ্যাপয়েন্টমেন্ট (sked), CQ-এর ঘোষণা ও রিপোর্ট প্রায় সবসময় ইন্টারনেটের টেক্সট চ্যাটের মাধ্যমে চলে। সবচেয়ে বেশি ব্যবহৃত চ্যাটগুলো নিচে দেওয়া হলো।",
+                "• **N0UK-এর EME চ্যাট।** 2 m EME-র ঐতিহ্যবাহী চ্যাট, Chris Cox N0UK-এর (https://www.chris.org/cgi-bin/jt65emeA); একই লেখকের Ping Jockey Central হলো মিটিয়র স্ক্যাটারের চ্যাট (https://www.pingjockey.net) [1]।",
+                "• **EA8DBM-এর EMEchat।** EME চ্যাটগুলোকে এক জায়গায় আনা একটি ওয়েব ইন্টারফেস (https://www.emechat.com): DXpedition-গুলো 2 m-এর জন্য N0UK-এর চ্যাট এবং 70 cm ও তার ওপরের জন্য HB9Q-এর চ্যাটসহ এটি ব্যবহার করে [2]।",
+                "• **HB9Q logger।** 70 cm ও তার ওপরের EME-র জন্য চ্যাট ও sked-এর খাতা (https://logger.hb9q.ch) [2]।",
+                "• **ON4KST, microwave বিভাগ।** ON4KST-এর চ্যাট ব্যান্ড অনুযায়ী বিভাগে ভাগ করা (https://www.on4kst.com/chat): microwave বিভাগে উঁচু ব্যান্ডের অপারেটরদের দেখা মেলে, EME-তে কাজ করা অপারেটররাও সেখানে থাকেন [3]।",
+                "### ঘোষণা কীভাবে পড়বেন (NJ9R)",
+                "চ্যাটে যিনি CQ দেন তিনি সাধারণত পাওয়ার ও অ্যান্টেনা উল্লেখ করেন। “H”, বা কোনো উল্লেখ না থাকা, ইঙ্গিত দেয় স্টেশনটি কেবল অনুভূমিক (সবসময় নয়); “HV” বা “XPOL” মানে দুটি পোলারাইজেশন, এবং এমন স্টেশনই খোঁজার জন্য সেরা। একই মহাদেশের স্টেশনগুলোর মধ্যে অনুভূমিক-থেকে-অনুভূমিক ভালো কাজ করে; এক মহাদেশ থেকে অন্য মহাদেশে স্থানিক পোলারাইজেশন অনুভূমিকভাবে পাঠানো সংকেতকে প্রায় উল্লম্ব অবস্থায় পৌঁছে দিতে পারে, যাতে ছোট স্টেশনের জন্য লস অতিরিক্ত বড় হয়ে যায় (§ 1.3) [4]।",
+                "• **LiveCQ** (https://livecq.eu) PSK Reporter-এর মতো কাজ করে: এটি কেবল রিপোর্ট পাঠানো স্টেশনগুলো দেখায়, তাই LiveCQ ফাঁকা থাকলেও চ্যাটে কার্যকলাপ থাকতে পারে [4]।",
+                "• চ্যাটে ঘোষিত অডিও কম্পাঙ্ক সেই স্টেশনগুলো খুঁজে পেতে সাহায্য করে যারা 1270 Hz-এ প্রেরণ করে না; কোনো স্টেশন গ্রহণ করলে চ্যাটে তা জানানো ভালো অভ্যাস [4]।",
+                "[1] Chris Cox N0UK, EME চ্যাট – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, জুন 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
+            };
             d["ar"] = new Dictionary<string, string[]>();
             d["ar"]["PREF"] = new string[] {
                 "لا يصف هذا الجزء من الدليل أزرار البرنامج، بل الأفكار التي بُني عليها. وقبل الفصول، يودّ المؤلف أن يعرض بعض المفاهيم التي تبيّن أنها أساسية لدراسة البرنامج، على ضوء تجاربه الأخيرة في المحطة أيضًا.",
                 "• **الحساب مرجع وليس وعدًا.** ميزانية الوصلة وS/N المقدّر وعتبات الأنماط الرقمية تصف وصلة مثالية. أما أثناء الاستقبال فالمهم هو الضجيج المحلي والاصطناعي، الذي قد يتغيّر من دقيقة إلى أخرى، ودوران فاراداي: تكفي لحظات قليلة لمحو الهامش المحسوب (§ 1.3, 1.12).",
                 "• **يُختار اليوم قبل التشغيل.** يبيّن Dgrd وبُعد القمر والميل مقدار ضجيج السماء خلف القمر، وعدد الساعات التي يبقى فيها فوق الأفق، ومدى ارتفاعه: الأجهزة نفسها تعطي نتائج مختلفة جدًا من يوم إلى آخر (§ 1.4).",
                 "• **قد يجعل الاستقطاب الإشارة تختفي.** مع الهوائيات الخطية قد يُطفئ دوران فاراداي والاستقطاب المكاني الصدى لدقائق أو ساعات؛ وغالبًا يكفي الانتظار أو التكرار أو تدوير الاستقطاب بدل البحث عن عطل (§ 1.3).",
-                "• **أفضل حل هو الاستقطاب المزدوج.** أفضل خيار للهوائيات هو دائمًا نظام مزدوج الاستقطاب، مع خطّي تغذية للاستقبال واستقبال مزدوج، بينما يجري الإرسال باستقطاب واحد فقط: وهكذا لا يعود دوران فاراداي والاستقطاب المكاني يُطفئان الصدى (§ 1.3).",
+                "• **أفضل حل هو الاستقطاب المزدوج.** أفضل خيار للهوائيات هو دائمًا نظام مزدوج الاستقطاب، مع خطّي تغذية للاستقبال واستقبال مزدوج، بينما يجري الإرسال باستقطاب واحد فقط: وهكذا لا يعود دوران فاراداي والاستقطاب المكاني يُطفئان الصدى (§ 1.3). المرحّل الذي يختار الاستقطاب لا يُبدَّل إلا أثناء الاستقبال، ولا يُبدَّل أبدًا أثناء الإرسال (§ 1.7).",
                 "• **ميزانية EME منصةً للتجربة.** بإدخال تعديلات مختلفة في تبويب «ميزانية EME» يمكن محاولة فهم مدى قابلية خيارات الإبقاء على التركيب الحالي أو تعديله لممارسة EME (§ 1.6).",
                 "• **زاوية الارتفاع مهمة.** إن قيد غياب زاوية الارتفاع يسرق دقائق من الحركة الممكنة. والأهم أنه عند رفع منظومة الهوائي تصبح الفصوص الجانبية المنخفضة أساسية لتجنّب التقاط ضجيج الأرض والسماح للهوائي ببلوغ أقصى التقاط للإشارة، وهو ما لا يوفّره إلا التوجيه نحو السماء.",
+                "• **الهوائيات: البداية من الجداول.** المرجع في اختيار هوائيات ياغي ومقارنتها هو جداول Lionel Edwards VE7BQH (الكسب وG/T وحرارة الهوائي)، المنشورة على موقع DXMaps لـ Gabriel Sampol EA6VQ (https://dxmaps.com/ve7bqh_e.html). ومن أكثر الإسهامات موثوقية في تصميم هوائيات ياغي منخفضة الضوضاء إسهامات Hartmut DG7YBN وPopa YU7EF وJustin Johnson G0KSC. تستخدم ميزانية EME في YAEC جداول VE7BQH (§ 1.6).",
+                "• **اعرف منظومتك.** كما يكتب Relu NJ9R، السر الحقيقي هو معرفة حدود نظامك، أي الكسب والفقد، والحكم بهذه البيانات على إمكانية تجاوزها. وعلى 144 MHz يكون أول اختبار هو صدى رادار GRAVES (§ 1.11, 1.13).",
                 "• **كل ديسيبل قبل المضخّم الأولي مهم.** الكابلات والمرحّلات والموصلات قبل المضخّم الأولي تُسيء إلى حرارة النظام أكثر مما توحي به قيمتها بالـ dB: هناك يجدر الاستثمار (§ 1.7, 1.8).",
                 "• **الترددات الصحيحة أولًا.** في النطاقات العليا يُزيح دوبلر وCFOM الصدى حتى عدة kHz: الصدى الواقع خارج نافذة فك الترميز لا يُسمع حتى مع إشارة جيدة (§ 1.10).",
                 "• **الشمس خصم يمكن توقّعه.** عندما تقترب من القمر يزداد الضجيج: ينبّه البرنامج مسبقًا، ويجدر أخذ ذلك في الحسبان عند اختيار الأيام (§ 1.5, 1.9).",
@@ -49820,11 +50769,11 @@ namespace LunaCalc
                 "|h| عدد المحارف | الاستخدام الموصى به في YAEC",
                 "| 4 | للتقدير التقريبي فقط: قد يخطئ سمت القمر وارتفاعه بما يصل إلى نحو 1°، لأن الأفق المحلي يميل بنحو 1° كل 111 km",
                 "| 6 | محدد موقع محطة DX، والاتصالات (QSO)، وميزانية EME: الخطأ في اتجاه القمر بضعة أجزاء من مئة من الدرجة",
-                "| **8** | محطتك، لتبويب Reconnaissance of my obstacles: يحدد الحي أو التلة",
+                "| **8** | محطتك، لتبويب استطلاع عوائقي: يحدد الحي أو التلة",
                 "|+ **10** | محطتك، بأفضل نتيجة: يحدد المبنى أو برج الهوائي",
                 "| 12 – 14 | مقبولة، لكنها لا تضيف شيئًا: الدقة تتجاوز دقة جهاز GPS عادي (بضعة أمتار) وحجم الهوائي نفسه",
                 "### محدد الموقع والعوائق",
-                "لاتجاه القمر تكفي 6 محارف: فالقمر يبعد نحو 380 000 km، والـ ±4.4 km لمحدد من 6 محارف تغيّر السمت والارتفاع بنحو 0.04°، وهو مقدار مهمل مقارنةً بحزمة الهوائي. أما **العوائق المحلية** (المباني، الأشجار، التلال) فالأمر معكوس: فهي على بعد بضع عشرات أو مئات من الأمتار من الهوائي، ومع 6 محارف قد تكون المحطة في أي مكان داخل مستطيل 7.5 × 4.6 km، فلا يمكن تحديد مواضع العوائق. مع 8 محارف ينخفض الخطأ إلى نحو 450 m، ومع 10 محارف إلى نحو 20 m: هذه هي الدقة التي يحتاجها تبويب **Reconnaissance of my obstacles** لرسم المناطق التي يُحجب فيها الهوائي بشكل صحيح.",
+                "لاتجاه القمر تكفي 6 محارف: فالقمر يبعد نحو 380 000 km، والـ ±4.4 km لمحدد من 6 محارف تغيّر السمت والارتفاع بنحو 0.04°، وهو مقدار مهمل مقارنةً بحزمة الهوائي. أما **العوائق المحلية** (المباني، الأشجار، التلال) فالأمر معكوس: فهي على بعد بضع عشرات أو مئات من الأمتار من الهوائي، ومع 6 محارف قد تكون المحطة في أي مكان داخل مستطيل 7.5 × 4.6 km، فلا يمكن تحديد مواضع العوائق. مع 8 محارف ينخفض الخطأ إلى نحو 450 m، ومع 10 محارف إلى نحو 20 m: هذه هي الدقة التي يحتاجها تبويب **استطلاع عوائقي** لرسم المناطق التي يُحجب فيها الهوائي بشكل صحيح.",
                 ">+ نصيحة عملية: استخرج محدد الموقع ذا العشرة محارف من إحداثيات GPS للنقطة التي يقف فيها الهوائي (لا لمدخل المنزل) وأدخله في تبويب الموقع المباشر و +- 24h بوصفه **my locator**. أما محطة DX فيكفيك محدد الموقع ذو الستة محارف الذي يعطيك إياه.",
                 "[1] Wikipedia، “Maidenhead Locator System” (النشأة على يد G4ANB واجتماع IARU VHF في Maidenhead عام 1980، بنية الأزواج، WGS-84 منذ 1999، الامتدادات بعد 8 محارف، توضيح IARU لعام 2019، الاستخدام على HF وVHF/UHF، المسافات بين مراكز المربعات الفرعية) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -49868,12 +50817,16 @@ namespace LunaCalc
                 "• الانكسار مهم: أشرق القمر عند −0.51°، تحت الأفق البصري البالغ −0.35°؛ وعند 200 MHz، في هواء جاف، يبلغ خطأ الانكسار عند ارتفاع 0° قيمة −0.49°.",
                 "يذكّر IK3XTV بأن تأثير الأرض يبلغ نظريًا 6 dB، حتى إن هوائي ياغي واحدًا يؤدي تقريبًا كمصفوفة من 4، لكنه يتوقف كثيرًا على الأرض المحيطة بالهوائي: فهو أقل في المدينة، وأفضل في الريف المفتوح، وأفضل من ذلك قرب البحر. ويُستفاد منه عند شروق القمر وغروبه، بين نحو 1° و18 – 20° من الارتفاع [4].",
                 "> لهذا يُعلَّم كسب الأرض في ميزانية EME بأنه BETA: فالقيمة المحسوبة (+6 dB كحد أقصى) حدٌّ نظري. ومع هوائيات مرتفعة فوق البحر أو مصفوفات من عدة هوائيات ياغي، توقّع نحو نصفها وQSB واضحًا عند الارتفاع المنخفض [3].",
+                "### كسب الهوائي: البيانات المعلنة وdBd (NJ9R)",
+                "تأتي قيم الكسب في نشرات الصانعين في الغالب من محاكاة فوق أرض مثالية ومع مواءمة مثالية على 50 Ω. يقترح NJ9R طرح نحو 2 dB من القيمة المعلنة والتفكير بوحدة dBd لا dBi، تجنبًا للأوهام؛ والأمر نفسه ينطبق على بيانات الكابلات والموصلات والمضخمات الأولية [6]. مثاله: هوائي ياغي جيد من 5 عناصر (8 dBi، 5.9 dBd) مع 4.25 dB من الفقد في الخط لا يترك سوى 1.5 dB من الكسب المفيد؛ ومع أول هوائي ياغي له من 7 عناصر (12.3 dBi، 10 dBd) كان بالكاد يستقبل. ويذكر نحو 14 dBd نقطةَ انطلاق للاستقبال ببعض الهامش [6].",
+                ">+ يمكن تجربة الأثر فورًا في ميزانية EME: بخفض كسب الهوائي بمقدار 2 dB يظهر مقدار الهامش المتبقي للوصلة.",
                 "[1] WSJT-X User Guide، K1JT وWSJT Development Group، § 7.1 (FT4 = FT8 + 3.5 dB).",
                 "[2] J. Taylor K1JT، B. Somerville G4WJS، S. Franke K9AN، N. Palermo IV3NWV، “Quick-Start Guide to Q65”، 3 أبريل 2021 (WSJT-X 2.4.0)، قدّمه IC8TEM.",
                 "[3] Giorgio Marchi IK1UWL، “Considerazioni sull'effetto suolo (Ground Gain)”، EME Meeting الحادي والعشرون، عرض قدّمه IC8TEM.",
                 "[4] Flavio Egano IK3XTV، “EME (earth-moon-earth) con una singola Yagi in 144 MHz”، وثيقة بتاريخ 12 نوفمبر 2010، قدّمها IC8TEM.",
                 "[5] J. Taylor K1JT، ورقة عن JT65 في مؤتمر EME 2006 (K1JT_eme2006.pdf): جدول أدنى مستويات S/N في 2500 Hz.",
-                "> يستخرج مخطط المحطة، على يمين التبويب، الفقد من الكابلات المختارة: في الإرسال كابل PA–المرحّل + المرحّل + كابل الهوائي، وفي الاستقبال كابل الهوائي + المرحّل قبل المضخم الأولي وكابل التغذية بعده. تأتي قيم توهين الكابلات من قاعدة بيانات تبويب COAXIAL CABLES (§ 1.8)."
+                "> يستخرج مخطط المحطة، على يمين التبويب، الفقد من الكابلات المختارة: في الإرسال كابل PA–المرحّل + المرحّل + كابل الهوائي، وفي الاستقبال كابل الهوائي + المرحّل قبل المضخم الأولي وكابل التغذية بعده. تأتي قيم توهين الكابلات من قاعدة بيانات تبويب الكابلات المحورية (§ 1.8).",
+                "[6] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
             };
             d["ar"]["S47"] = new string[] {
                 "## المضخم الأولي ورقم الضوضاء للجهاز {nuovo}",
@@ -49948,7 +50901,7 @@ namespace LunaCalc
                 "##+ محطات EME مع FT-1000MP ومحوّل ترددي",
                 "مثالان موثّقان على استخدام FT-1000MP لـ EME على 144 MHz مع محوّل ترددي: قياسات DF9IC [3] على FT-1000MP + محوّل Javornik (رقم ضوضاء 0.9 – 1.4 dB مع إيقاف المضخم الأولي للجهاز) ومحطة EME الخاصة بـ **W3SZ** [12] (4 × M2 2MXP32، ومضخمات أولية LNA Technology عند الهوائي لكل استقطاب، وكابلات LMR-600 وAndrew hardline)، التي تستخدم في الإرسال جهاز **FT-1000MP Mark V** مع محوّل ترددي **SSB-Electronic LT2S Mk II** (IF 28 MHz) ومضخم 2 × GU-74B، بينما تستخدم في الاستقبال عتاد WSE وبرنامج Linrad من SM5BSZ.",
                 "> في ميزانية EME يمثّل المحوّل الترددي مربعًا في مخطط المحطة: يُفعَّل بخانة الاختيار الخاصة به، وتختار الطراز من القائمة (أو \"custom\") فيأخذ البرنامج رقم ضوضائه وكسبه؛ وإذا تُرك معطّلًا فلا يدخل في الحساب. يساعد المخطط أعلاه على تقرير ما إذا كان يجب تشغيل المضخم الأولي للجهاز.",
-                ">! ✉ **هل تعرف محوّلًا تردديًا آخر أو صنعت واحدًا بنفسك؟** إذا رغبت في التعريف بمحوّلات ترددية أخرى أو بمحوّلك الخاص، فاكتب رسالة بريد إلكتروني إلى المؤلف: ccerrotta@gmail.com أو ic8tem@gmail.com. جميع بيانات الاتصال موجودة في تبويب **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS**.",
+                ">! ✉ **هل تعرف محوّلًا تردديًا آخر أو صنعت واحدًا بنفسك؟** إذا رغبت في التعريف بمحوّلات ترددية أخرى أو بمحوّلك الخاص، فاكتب رسالة بريد إلكتروني إلى المؤلف: ccerrotta@gmail.com أو ic8tem@gmail.com. جميع بيانات الاتصال موجودة في تبويب **التواصل مع المؤلف والشكر**.",
                 "##+ مُسلسِل TX/RX",
                 "عند استخدام مضخم قدرة (PA) ومضخم أولي قرب الهوائي (PRE)، لا يذهب PTT الحاسوب إلى الجهاز بل إلى **مُسلسِل**، يتحكم في المرحّلات ثم في PA والجهاز بالترتيب الصحيح [16]. يضم الترتيب الأكثر شيوعًا خطّي تغذية: يمكن لخط الاستقبال أن يفقد بضعة dB لأنه يأتي بعد مضخم أولي بكسب 15 – 20 dB، بينما يجب أن يفقد خط الإرسال أقل ما يمكن (فقد 3 dB في الإرسال ينصّف القدرة المُشعّة). وفي وضع الراحة تُبقي المرحّلات PRE معزولًا عن الهوائي: حماية إضافية من تفريغات البرق [16].",
                 "|h| ^الخطوة | من RX إلى TX | من TX إلى RX",
@@ -49958,6 +50911,7 @@ namespace LunaCalc
                 "~ بين خطوة وأخرى يلزم على الأقل زمن تبديل المرحّلات (15 – 30 ms) مضافًا إليه ارتدادها: ينصح IK1UWL بـ 100 – 200 ms، وكذلك لـ PA إذا كانت فيه مرحّلات داخلية [16].",
                 "للتحكم في الإرسال يُفضَّل PTT على VOX: فقد يعمل VOX بسبب ضجيج، ولا يستفيد من التأخير البالغ نحو 0.5 s الذي يبدأ بعده JT65 التعديل بعد PTT، فيبقى المضخم الأولي محميًا فقط بالمرحّل السريع لمضخم القدرة؛ أما مع PTT فإن هذا التأخير يبدّل مضخم القدرة قبل التعديل، ويمكن إضافة المُسلسِل [17].",
                 ">! **انتبه إلى المضخم الأولي.** يجب أن يعزل مرحّل T/R المنفذ المفتوح عزلًا جيدًا جدًا: مع عزل 50 dB و500 W عند الهوائي يصل 5 mW إلى دخل PRE. يُستهدف 60 dB على الأقل، ويضيف الأكثر حذرًا مرحّلًا ثانيًا يُنهي PRE أثناء الإرسال على حمل 50 Ω. يجب تعطيل زر PTT في الميكروفون: من ذلك الحين لا يُرسَل إلا عبر المُسلسِل (في SSB، مفتاح قدم على PTT المُسلسِل، مفصول عن PTT الحاسوب) [16].",
+                ">! **مرحّل الاستقطاب لا يُبدَّل إلا أثناء الاستقبال.** مع استقطابين (H وV) لا يجوز أبدًا تبديل المرحّل الذي يختار الهوائي أثناء الإرسال: فمع وجود القدرة تحترق المرحّلات أو المضخمات الأولية أو المضخم، بأضرار تتراوح من مئات إلى آلاف اليوروهات [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ، “Icom IC-9700 Test Report”، الإصدار 5، 19 مارس 2021 (الطبعة الأولى 19 يونيو 2019)، الجدولان 1 و5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ، “Yaesu FT-991 Test Report”، 25 يوليو 2015، الجدول 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC مع DARC OV Durlach A35، “Test of the Large Signal Behaviour of some 144 MHz Radios”، اختبارات من 27 فبراير 2005 – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -49974,16 +50928,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory، “Icom IC-746PRO”، QST Product Review، مايو 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX، “The Yaesu FT-897 HF/VHF/UHF Transceiver”، RadCom (RSGB)، أبريل 2003، ص. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL، “EME (Earth-Moon-Earth) – Guida operativa”، يناير 2012، § 4 “Sequenziamento relè, PA e PRE”، مقدَّم من IC8TEM – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG، “Beginner's Guide to Small-station EME”، عرض تقديمي، يوليو 2015، قدّمه IC8TEM."
+                "[17] Paul Bock K4MSG، “Beginner's Guide to Small-station EME”، عرض تقديمي، يوليو 2015، قدّمه IC8TEM.",
+                "[18] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
             };
             d["ar"]["S48"] = new string[] {
                 "## الكابلات المحورية والفقد",
-                "يجمع تبويب **COAXIAL CABLES** توهين كابلات 50 Ω الأكثر استخدامًا لدى هواة الراديو، بالـ dB لكل 100 m عند 20 °C، على نطاقات YAEC الخمسة. تعطي صحائف بيانات الصانعين القيم عند ترددات مختلفة؛ وقد نقلها YAEC إلى النطاقات بقانون القوة، أي خط مستقيم على المخطط اللوغاريتمي-اللوغاريتمي بين أقرب ترددين في صحيفة البيانات:",
+                "يجمع تبويب **الكابلات المحورية** توهين كابلات 50 Ω الأكثر استخدامًا لدى هواة الراديو، بالـ dB لكل 100 m عند 20 °C، على نطاقات YAEC الخمسة. تعطي صحائف بيانات الصانعين القيم عند ترددات مختلفة؛ وقد نقلها YAEC إلى النطاقات بقانون القوة، أي خط مستقيم على المخطط اللوغاريتمي-اللوغاريتمي بين أقرب ترددين في صحيفة البيانات:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α بوحدة dB/100 m، وℓ طول الكابل بالأمتار. الرقم المجرد هو قيمة صحيفة البيانات؛ وتدل ≈ على قيمة مستوفاة (interpolated)، وتدل e على قيمة مستقرأة خارج آخر تردد في صحيفة البيانات.",
                 "الكابلات من النوع نفسه، ذات القطر نفسه ضمن ±0.2 mm والتوهين ضمن 0.2 dB/100 m على جميع النطاقات، تُجمع في صف واحد (≡) بالقيمة المتوسطة؛ وتُعرض الأسماء المكافئة بعد \"also:\" (مثلًا LMR-400 = HF400، CNT-400، 50-7 low loss؛ LMR-600 = CNT-600). الأسماء الصينية 50-3، 50-5، 50-7، 50-9، 50-12 تعطي قطر العازل بالمليمترات.",
                 "> يمكن إضافة كابلات مخصصة بقيم توهينها الخمس: تُحفظ في data\\cavi_personali.txt وتظهر أيضًا في القوائم المنسدلة لمخطط المحطة في ميزانية EME. يذكر التلميح (tooltip) لكل صف في الجدول مصدر ذلك الكابل.",
-                "[1] مصادر الكابلات المفردة: صحائف بيانات Times Microwave (LMR)، RFS (CELLFLEX LCF/SCF)، CommScope Andrew (HELIAX LDF/FSJ)، Siva Cavi (HF 240/287/400)، SSB-Electronic (Aircell، Ecoflex، Aircom Plus)، Messi & Paoloni (Hyperflex، Ultraflex، عبر WiMo)، Symair، SYV50-7 (szansy.com)، Belden (H1000)، Prospecta (RT5020، XT2400)، QAXIAL (LLF195)، Caledonian Cables، كتالوج MIL-C-17F (RG-142، RG-393)، R.F. elettronica في Senago (RG-115)، جداول DD1US وEA5IP (H100) وجدول SV1BSX لكابلات RG-58 وRG-213 وH-155 وH-2000 (قيم تحتاج إلى تحقق)."
+                "### الموصلات (NJ9R)",
+                "الموصلات أيضًا جزء من الخط. القاعدة العملية لدى NJ9R هي نحو 1 dB لكل 8 – 10 موصلات، تُعدّ جميعها من خلف جهاز الراديو حتى الهوائي، بما فيها المهايئات والمرحّلات ومقسّمات القدرة: في منظومته ذات الهوائيات الأربعة تساوي الموصلات الـ 24 أكثر من 2 dB، أي ما يعادل 40 – 45 m من كابل LMR-400 جديد على 144 MHz [2]. وفي ميزانية EME يجب جمع هذا الفقد مع خسائر ملحقات الإرسال ومع الفقد بين الهوائي والمضخم الأولي.",
+                "[1] مصادر الكابلات المفردة: صحائف بيانات Times Microwave (LMR)، RFS (CELLFLEX LCF/SCF)، CommScope Andrew (HELIAX LDF/FSJ)، Siva Cavi (HF 240/287/400)، SSB-Electronic (Aircell، Ecoflex، Aircom Plus)، Messi & Paoloni (Hyperflex، Ultraflex، عبر WiMo)، Symair، SYV50-7 (szansy.com)، Belden (H1000)، Prospecta (RT5020، XT2400)، QAXIAL (LLF195)، Caledonian Cables، كتالوج MIL-C-17F (RG-142، RG-393)، R.F. elettronica في Senago (RG-115)، جداول DD1US وEA5IP (H100) وجدول SV1BSX لكابلات RG-58 وRG-213 وH-155 وH-2000 (قيم تحتاج إلى تحقق).",
+                "[2] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
             };
             d["ar"]["S410"] = new string[] {
                 "## دوبلر والتعويض وCFOM",
@@ -50045,10 +51003,19 @@ namespace LunaCalc
                 "> عدد البتات يدل فقط على مدى دقة *قراءة* الموضع: الدقة الحقيقية تعتمد أيضًا على الخلوص الميكانيكي، وانثناء الحامل، والرياح، ومعايرة الشمال والأفق.",
                 "### مصفوفات ياغي: المشغّلات والبكرات",
                 "في مصفوفات ياغي (تركيبات من 2 أو 4 هوائيات أو أكثر) يكون حمل الارتفاع كبيرًا وغير متوازن. تتوفر في السوق مشغّلات خطية بمحرك ذي لولب دودي: في هذه الحلول ينظّم اللولب الحركة فقط، بينما يُعهد بالحمل الميكانيكي إلى البكرات. ميزة اللولب الدودي أنه لا يدور عكسيًا تحت الحمل، فتبقى المصفوفة ثابتة حتى مع توقف المحرك.",
+                "### التحقق من التوجيه برادار GRAVES (NJ9R)",
+                "يبث الرادار الفرنسي **GRAVES** باستمرار على 143.050 MHz من محدد الموقع JN27SI، وهو أكثر وسائل الاختبار استخدامًا على 144 MHz للاستقبال عبر القمر. عندما يكون القمر مرئيًا من محطتك ومن GRAVES معًا (يكفي في YAEC إدخال JN27SI محددًا لموقع DX)، يُستمع على 143.050 MHz (أو 143.0495 MHz) بنمط SSB بعرض نطاق صوتي لا يقل عن 2.4 kHz، مع إيقاف AGC وتشغيل مانع الضوضاء النبضية (noise blanker) ومن دون أي مرشح أو notch أو DSP آخر [2].",
+                "يظهر صدى GRAVES على الشلال (waterfall) خطًا متقطعًا: كلما كان أشد كان توجيه الهوائي أدق. يُحرَّك المدوّر بخطوات صغيرة، في السمت أولًا ثم في الارتفاع، حتى بلوغ القيمة القصوى، ثم يُقارَن الموضع الذي وُجد بالموضع المحسوب. ويستخدم NJ9R إشارة GRAVES أيضًا بمثابة S-meter: مع ضبط منزلق الكسب على الصفر يقرأ متوسط الإشارة على مدى دقيقة، وقبل كل جلسة يتحقق بواسطة GRAVES من أن المنظومة ما زالت مضبوطة [2].",
+                "> من دون زاوية ارتفاع لا يُستقبل صدى GRAVES عادةً إلا والقمر بين 0° و15° من الارتفاع، عند شروقه أو غروبه. كثير من أجهزة الراديو لا تُضبط خارج نطاق 2 m: في هذه الحالة يلزم مستقبل SDR [2].",
+                "### البوصلة والكاميرا وسجل الأخطاء (NJ9R)",
+                "مع مدوّر مستخدم في HF كان التوجيه «الصحيح تقريبًا» كافيًا؛ أما في EME فلا. ينصح NJ9R بمعايرة مؤشر المدوّر ثم التحقق منه في الخارج بالبوصلة، مع قبول خطأ أقصاه نحو 5°: فالرياح والاصطدام بالمصدّات وانزلاق السارية تُزيح الهوائي دون أن يلاحظ المؤشر ذلك [2].",
+                "• **كاميرا على السارية.** كاميرا صغيرة مقاومة للماء (من نوع كاميرات الرجوع للخلف في السيارات، 25 – 30 USD)، مثبتة على السارية ومحاذاة مع الهوائي بميزان تسوية أو مقياس ميل، تُظهر الاتجاه الذي يشير إليه الهوائي فعلًا: أتمّ NJ9R ما بين 60 – 80 QSO والمدوّر معطّل أو بأخطاء 20 – 35°، مسترشدًا بالكاميرا وحدها. يُعلَّم مركز القمر على الشاشة بعد البحث عن القيمة القصوى لصدى GRAVES. والكاميرا مصدر ضوضاء أيضًا: يجب إطفاؤها أثناء الاستقبال [2].",
+                "• **سجل الأخطاء.** لكل توجيه يُدوَّن في جدول سمت القمر وارتفاعه المحسوبان، والقيمتان المقروءتان على المؤشر، والقيمتان المرئيتان بالكاميرا: الفرق هو خطأ نظامك، فإما أن يُصحَّح وإما أن يُؤخذ في الحسبان [2].",
                 "### فوق 432 MHz: الأطباق",
                 "من 902 MHz فما فوق تُستخدم غالبًا الأطباق المكافئة، والأداة [1] مصممة للترددات من 1 GHz فما فوق. مع الأقطار الكبيرة تضيق الحزمة إلى بضعة أعشار الدرجة ويوجد خطر عدم إصابة القمر بدقة: أكثر من المحركات، تحتاج المحطة إلى مشغّلات ميكانيكية حقيقية في السمت والارتفاع، بدقة توجيه ترتبط إلى حد كبير بدقة البتات في منظومة التحكم. تعطي أداة **EME Link Budget & Analysis Tool** من OE2IGL وDF3GJ [1] قيمة ±0.035° لمنظومة تتبع جيدة و±0.1° لمنظومة عادية، وتحسب فقد التوجيه مع جميع حدود الوصلة الأخرى.",
                 ">+ يتوقف YAEC عند 432 MHz. للنطاقات الأعلى نوصي بأداة OE2IGL وDF3GJ [1]: فهي تحسب ميزانية EME من 1 إلى 300 GHz بمعاملات الطبق (القطر، f/D، المغذّي، خشونة السطح، الكفاءات)، والتوجيه، والتأرجح القمري (libration)، وضوضاء الشمس والقمر، والتوهين الجوي.",
-                "[1] Gerald Ihninger OE2IGL وJoachim Köppen DF3GJ، “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL وJoachim Köppen DF3GJ، “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
             };
             d["ar"]["S412"] = new string[] {
                 "## الأنماط الرقمية لـ EME: Q65 وJT65",
@@ -50139,6 +51106,18 @@ namespace LunaCalc
                 "| q3 | إشارة ندائي وإشارة نداء DX",
                 "| q4 | إشارتا النداء وRRR أو RR73 أو 73 أو فراغ",
                 "~ من [1]. يحذّر المؤلفون من إيلاء اهتمام زائد لقيم S/N التي يعرضها فاك الترميز، إذ كانت لا تزال قيد التحسين [1]: وللمقارنة مع ميزانية EME في YAEC يُفضَّل استخدام عدة اتصالات بدلًا من قراءة واحدة.",
+                "### إعدادات NJ9R لـ JT65B وMAP65",
+                "يلخّص NJ9R، الذي بدأ على 144 MHz بنمط JT65B، الإعدادات التي يستخدمها كما يلي [7]:",
+                "|h| البرنامج | الموضع | الإعداد",
+                "| WSJT-X | النافذة الرئيسية | Enable VHF and sub-mode features، Decode after EME delay، سطر فارغ بين فترات فك الترميز",
+                "| WSJT-X | Advanced | Random erasure وtwo pass decoding (6 و6، بحسب CPU)؛ الشلال Most sensitive",
+                "| WSJT-X | النمط | JT65، النمط الفرعي B، Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz؛ عند ظهور أثر محطة يُضيَّق إلى 50 أو 20 أو 10 Hz (كلما اتسع تأثر فك الترميز أكثر)",
+                "| WSJT-X | الترددات الصوتية | TX على 1270 Hz؛ RX ضمن ±350 Hz من 1270 Hz بحسب دوبلر، أو على التردد المعلن في الدردشة",
+                "| MAP65 | Station، I/O devices | إشارة النداء ومحدد الموقع الخاصان بك؛ بطاقة الصوت، أو واجهة الشبكة لأجهزة الراديو IQ، على 96 000 Hz",
+                "| MAP65 | النمط وفك الترميز | JT65B / Q65A؛ Only EME calls؛ Aggressive deep search",
+                "| MAP65 | النافذة الرئيسية | NB مفعّل، Monitor On، مستوى الصوت في الشريط الجانبي بين 12 و40",
+                "~ عن [7]. تبقى أسماء الخيارات بالإنجليزية كما في قوائم WSJT-X وMAP65. بالنسبة إلى JT65 تستخدم ميزانية EME في YAEC عتبات النمط الفرعي B (§ 1.6).",
                 "### إجراء العمل مع بعثات DX (W7GJ)",
                 "يصف Lance Collister W7GJ، الذي يدير منذ سنوات بعثات EME على 6 m، كيفية مناداة بعثة DX بنمط Q65-60A أثناء التزاحم (pile-up) [6]. وقبل كل شيء، يجب أن تكون ساعة الحاسوب دقيقة جدًا وتردد الإرسال مستقرًا جدًا [6].",
                 "• **الفترات.** ترسل بعثة DX دائمًا في التسلسل الأول (الدقائق الزوجية)؛ ويرسل المنادون في الثاني (الدقائق الفردية) [6].",
@@ -50160,7 +51139,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT، “The Q65 Coding Process used in WSJT-X”، أكتوبر 2023، قدّمه IC8TEM.",
                 "[4] Nico Palermo IV3NWV، عرض في مؤتمر EME 2016 حول شيفرات QRA، مذكور في [3] – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] الشيفرة المصدرية لـ WSJT-X (الملف Q65_encoding_modules.F90 وغيره)، مذكورة في [3] – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ، “Q65-60A QSO Procedure and Tips for EME DXpeditions”، مراجعة 3 أبريل 2023، قدّمه IC8TEM – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ، “Q65-60A QSO Procedure and Tips for EME DXpeditions”، مراجعة 3 أبريل 2023، قدّمه IC8TEM – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
             };
             d["ar"]["S54"] = new string[] {
                 "## أدبيات EME من SM5BSZ",
@@ -50255,15 +51235,47 @@ namespace LunaCalc
                 "> في البرنامج: يعلّم تقويم “المسافة وDgrd” بالرمز ☀ الأيام التي تكون فيها الشمس قريبة من القمر (برتقالي أو أحمر)؛ ويحسب تبويب “ضجيج الشمس”، بالتدفق المقيس، مقدار الضوضاء الإضافية التي تجلبها الشمس في اللحظة المختارة.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
+            d["ar"]["S413"] = new string[] {
+                "## من أول استقبال إلى QSO: نصائح NJ9R",
+                "جمع Relu Jianu NJ9R في «2M EME the easy way» تجربته مبتدئًا على 144 MHz: مسار عملي يبدأ بصدى GRAVES مستقبَلًا بهوائي ياغي من 7 عناصر من دون مضخم أولي. ورسالته في الأساس واحدة: معرفة حدود منظومتك، أي الكسب والفقد، والحكم بهذه البيانات على إمكانية تجاوزها [1]. أُدرجت الأجزاء التقنية في أقسام المواضيع المعنية: ميزانية EME وكسب الهوائيات (§ 1.6)، ومرحّل الاستقطاب (§ 1.7)، والموصلات (§ 1.8)، والتوجيه وGRAVES (§ 1.11)، وإعدادات WSJT-X وMAP65 (§ 1.12)، وقراءة الدردشات (§ 1.14). ويبقى هنا ما يخص المحطة والمستقبل من نصائح.",
+                "### خريطة الضوضاء المحلية",
+                "قبل البحث عن القمر يحسن معرفة الاتجاهات التي تأتي منها الضوضاء. ينصح NJ9R بدورة كاملة بالهوائي على 360°، بخطوات من 15 – 30° في السمت، مع تدوين الضوضاء المقروءة بمنزلق الكسب (المضبوط على الصفر عند أدنى مستوى) في جدول. ومن لديه زاوية ارتفاع يكرر الدورة من 0° إلى 45° بخطوات من 5 – 10°. وإذا لُوِّن الجدول كخريطة حرارية فإنه يفسر لماذا لا يُستقبل شيء في اتجاهات معينة: هناك تغطي الضوضاء المحلية الصدى [1].",
+                "> في YAEC يُظهر استطلاع عوائقي الاتجاهات التي تسدها العوائق: ومقارنته بخريطة الضوضاء تساعد على اختيار أفضل نوافذ القمر.",
+                "منازل الجيران وأجهزتهم الإلكترونية مصدر دائم للتشويش: يُبحث عنها ويُحدّ منها بدءًا من منزلك، لكن في مرحلة ما لا بد من التعايش مع ما يتبقى [1].",
+                "### المستقبل والحاسوب",
+                "• **مستقبل نظيف.** AGC متوقف، ومانع الضوضاء النبضية (noise blanker) مفعّل، ولا مرشحات ولا notch ولا DSP في الاستقبال؛ وفي الحاسوب، دخل الصوت بأعلى جودة ومن دون أي تحسين أو تضخيم لصوت النظام [1].",
+                "• **ساعة متزامنة.** تتطلب الأنماط الرقمية الوقت الدقيق: يجعل NJ9R ساعة الحاسوب تُصحَّح تلقائيًا كل 15 دقيقة ببرنامج مزامنة (NetTime) [1].",
+                "• **ملف CALL3.TXT محدَّث.** يعين الملف فك الترميز بعدة dB، لأن WSJT-X وMSHV يستخدمانه للتعرف على إشارات النداء؛ ويبقى على المشغّل استبعاد عمليات فك الترميز الخاطئة [1]. يُنزّل YAEC قائمتي W7GJ وWSJT-X Improved ويدمجهما، ويمكنه نسخ الملف إلى مجلد WSJT-X.",
+                "• **الصبر.** إذا لم يُسمع شيء فقد تجتمع عدة أسباب: Dgrd مرتفع، واستقطاب غير مواتٍ، ودوران فاراداي، وضوضاء محلية في ذلك الاتجاه. يحسن إعادة المحاولة بعد بضع دقائق أو بضع ساعات أو في يوم آخر، واختيار أيام الشهر ذات Dgrd الأدنى (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
+            };
+            d["ar"]["S414"] = new string[] {
+                "## الدردشات النصية عبر الإنترنت",
+                "في EME تمر المواعيد (sked) وإعلانات CQ والتقارير في الغالب عبر دردشات نصية على الإنترنت. وهذه أكثرها استخدامًا.",
+                "• **دردشة EME لدى N0UK.** الدردشة التاريخية لـ EME على 2 m، من إعداد Chris Cox N0UK (https://www.chris.org/cgi-bin/jt65emeA)؛ وللمؤلف نفسه Ping Jockey Central، دردشة الانتثار النيزكي (meteor scatter) (https://www.pingjockey.net) [1].",
+                "• **EMEchat من EA8DBM.** واجهة ويب تجمع دردشات EME (https://www.emechat.com): تستخدمها بعثات DXpedition لنطاق 2 m مع دردشة N0UK، ولنطاق 70 cm وما فوقه مع دردشة HB9Q [2].",
+                "• **HB9Q logger.** دردشة وسجل مواعيد sked لـ EME من 70 cm فما فوق (https://logger.hb9q.ch) [2].",
+                "• **ON4KST، قسم microwave.** دردشة ON4KST مقسمة إلى أقسام بحسب النطاق (https://www.on4kst.com/chat): في قسم microwave يلتقي مشغّلو النطاقات الأعلى، ومنهم من يعمل في EME [3].",
+                "### كيف تُقرأ الإعلانات (NJ9R)",
+                "من ينادي CQ في الدردشة يذكر عادةً القدرة والهوائيات. «H»، أو غياب أي إشارة، يوحي بمحطة أفقية فقط (ليس دائمًا)؛ أما «HV» أو «XPOL» فيدل على استقطابين، وهي أفضل محطة يُبحث عنها. بين محطات القارة نفسها يعمل الأفقي مع الأفقي جيدًا؛ أما من قارة إلى أخرى فقد يجعل الاستقطاب المكاني إشارة انطلقت أفقية تصل شبه عمودية، بفقد أكبر من أن تتحمله محطة صغيرة (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) يعمل مثل PSK Reporter: لا يعرض إلا المحطات التي ترسل تقارير، لذا قد يكون هناك نشاط في الدردشة حتى عندما يكون LiveCQ فارغًا [4].",
+                "• تساعد الترددات الصوتية المعلنة في الدردشة على العثور على المحطات التي لا ترسل على 1270 Hz؛ وعند استقبال محطة ما، من العادات الحسنة الإشارة إلى ذلك في الدردشة [4].",
+                "[1] Chris Cox N0UK، دردشة EME – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS، يونيو 2026، DXpedition C37EME: «2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface» – https://eme.radio",
+                "[3] ON4KST chat – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
+            };
             d["tr"] = new Dictionary<string, string[]>();
             d["tr"]["PREF"] = new string[] {
                 "Kılavuzun bu bölümü programın düğmelerini değil, programın üzerine kurulduğu fikirleri anlatır. Bölümlerden önce yazar, istasyondaki son deneyimlerinin ışığında da programı incelemek için anahtar olduğu görülen birkaç kavramı ortaya koymak istiyor.",
                 "• **Hesap bir referanstır, söz değildir.** Bağlantı bütçesi, tahmini S/N ve dijital mod eşikleri ideal bir bağlantıyı anlatır. Alım sırasında önemli olan, dakikadan dakikaya değişebilen yerel ve insan kaynaklı gürültü ile Faraday dönmesidir: hesaplanan payı silmek için birkaç an yeter (§ 1.3, 1.12).",
                 "• **Gün, cihazı açmadan önce seçilir.** Dgrd, Ay mesafesi ve dik açıklık; Ay'ın arkasında ne kadar gök gürültüsü olduğunu, Ay'ın kaç saat ufkun üzerinde kaldığını ve ne kadar yükseldiğini gösterir: aynı donanım günden güne çok farklı sonuç verir (§ 1.4).",
                 "• **Polarizasyon bir sinyali yok edebilir.** Doğrusal antenlerde Faraday dönmesi ve uzaysal polarizasyon bir yankıyı dakikalarca ya da saatlerce söndürebilir; çoğu zaman arıza aramak yerine beklemek, tekrarlamak ya da polarizasyonu döndürmek yeter (§ 1.3).",
-                "• **En iyi çözüm çift polarizasyondur.** Antenler için en iyi seçim her zaman çift polarizasyonlu bir sistemdir; alımda iki besleme hattı ve çift alım kullanılır, gönderim ise tek polarizasyonla yapılır: böylece Faraday dönmesi ve uzaysal polarizasyon artık yankıyı söndürmez (§ 1.3).",
+                "• **En iyi çözüm çift polarizasyondur.** Antenler için en iyi seçim her zaman çift polarizasyonlu bir sistemdir; alımda iki besleme hattı ve çift alım kullanılır, gönderim ise tek polarizasyonla yapılır: böylece Faraday dönmesi ve uzaysal polarizasyon artık yankıyı söndürmez (§ 1.3). Polarizasyonu seçen röle yalnızca alımda anahtarlanır, gönderme sırasında asla (§ 1.7).",
                 "• **Deneme tezgâhı olarak EME bütçesi.** EME bütçesi sekmesine çeşitli değişiklikler girerek, kendi tesisatınızı korumanın ya da değiştirmenin EME yapmak için ne kadar uygulanabilir olduğunu anlamaya çalışabilirsiniz (§ 1.6).",
                 "• **Yükselme açısı önemlidir.** Yükselme açısının olmaması mümkün trafikten dakikalar çalar. Hepsinden önemlisi, anten sistemi yükseltildiğinde, yer gürültüsünü toplamamak ve antenin yalnızca gökyüzüne yönlendirmenin sağlayabileceği en yüksek sinyal alımına ulaşmasını sağlamak için düşük yan loblar belirleyici hâle gelir.",
+                "• **Antenler: tablolardan başlayın.** Yagileri seçmek ve karşılaştırmak için başvuru kaynağı Lionel Edwards VE7BQH'nin tablolarıdır (kazanç, G/T ve anten sıcaklığı); bu tablolar Gabriel Sampol EA6VQ'nun DXMaps sitesinde yayımlanır (https://dxmaps.com/ve7bqh_e.html). Düşük gürültülü yagi tasarımına yapılan en yetkin katkılar arasında Hartmut DG7YBN, Popa YU7EF ve Justin Johnson G0KSC'nin çalışmaları yer alır. YAEC'nin EME bütçesi VE7BQH tablolarını kullanır (§ 1.6).",
+                "• **Kendi tesisatınızı tanıyın.** Relu NJ9R'nin yazdığı gibi asıl sır, sisteminizin sınırlarını, kazançlarını ve kayıplarını bilmek ve bu verilere dayanarak bunların aşılıp aşılamayacağına karar vermektir. 144 MHz'de ilk deneme tezgâhı GRAVES radarının yankısıdır (§ 1.11, 1.13).",
                 "• **Ön yükselticiden önceki her desibel önemlidir.** Ön yükselticiden önceki kablolar, röleler ve konnektörler sistem sıcaklığını dB değerlerinin düşündürdüğünden daha fazla bozar: yatırım oraya yapılmalıdır (§ 1.7, 1.8).",
                 "• **Önce doğru frekanslar.** Yüksek bantlarda Doppler ve CFOM yankıyı birkaç kHz'e kadar kaydırır: kod çözme penceresinin dışındaki bir yankı, sinyal iyi olsa bile duyulmaz (§ 1.10).",
                 "• **Güneş öngörülebilir bir rakiptir.** Ay'a yakın olduğunda gürültü artar: program önceden uyarır ve günleri seçerken bunu hesaba katmak gerekir (§ 1.5, 1.9).",
@@ -50292,11 +51304,11 @@ namespace LunaCalc
                 "|h| Karakter | YAEC'de önerilen kullanım",
                 "| 4 | yalnızca kaba bir tahmin için: Ay'ın azimut ve yükselişi yaklaşık 1°'ye kadar hatalı olabilir, çünkü yerel ufuk her 111 km'de yaklaşık 1° eğilir",
                 "| 6 | DX lokatörü, QSO'lar ve EME bütçesi: Ay yönündeki hata derecenin birkaç yüzde biri kadardır",
-                "| **8** | kendi istasyonunuz, Reconnaissance of my obstacles için: mahalleyi ya da tepeyi belirler",
+                "| **8** | kendi istasyonunuz, Engellerimin keşfi için: mahalleyi ya da tepeyi belirler",
                 "|+ **10** | kendi istasyonunuz, en iyi sonuçla: binayı ya da anten kulesini belirler",
                 "| 12 – 14 | kabul edilir ama bir şey katmaz: hassasiyet sıradan bir GPS'inkini (birkaç metre) ve antenin kendi boyutunu aşar",
                 "### Lokatör ve engeller",
-                "Ay'ın yönü için 6 karakter yeterlidir: Ay yaklaşık 380 000 km uzaktadır ve 6 karakterlik bir lokatörün ±4,4 km'si azimut ve yükselişi yaklaşık 0,04° değiştirir; bu, anten hüzmesine göre ihmal edilebilir bir miktardır. **Yerel engeller** (binalar, ağaçlar, tepeler) için durum tersidir: antenden birkaç on ya da yüz metre uzaktadırlar ve 6 karakterle istasyon 7,5 × 4,6 km'lik bir dikdörtgenin herhangi bir yerinde olabilir, dolayısıyla engeller konumlandırılamaz. 8 karakterle hata yaklaşık 450 m'ye, 10 karakterle yaklaşık 20 m'ye düşer: **Reconnaissance of my obstacles** sekmesinin antenin engellendiği bölgeleri doğru çizebilmesi için gereken hassasiyet budur.",
+                "Ay'ın yönü için 6 karakter yeterlidir: Ay yaklaşık 380 000 km uzaktadır ve 6 karakterlik bir lokatörün ±4,4 km'si azimut ve yükselişi yaklaşık 0,04° değiştirir; bu, anten hüzmesine göre ihmal edilebilir bir miktardır. **Yerel engeller** (binalar, ağaçlar, tepeler) için durum tersidir: antenden birkaç on ya da yüz metre uzaktadırlar ve 6 karakterle istasyon 7,5 × 4,6 km'lik bir dikdörtgenin herhangi bir yerinde olabilir, dolayısıyla engeller konumlandırılamaz. 8 karakterle hata yaklaşık 450 m'ye, 10 karakterle yaklaşık 20 m'ye düşer: **Engellerimin keşfi** sekmesinin antenin engellendiği bölgeleri doğru çizebilmesi için gereken hassasiyet budur.",
                 ">+ Pratik öneri: 10 karakterlik lokatörü antenin bulunduğu noktanın (evin girişinin değil) GPS koordinatlarından türetin ve Canlı konum ve +- 24h sekmesine **my locator** olarak girin. DX için onun size verdiği 6 karakterlik lokatör yeterlidir.",
                 "[1] Wikipedia, “Maidenhead Locator System” (origin G4ANB and IARU VHF meeting in Maidenhead in 1980, structure of the pairs, WGS-84 since 1999, extensions beyond 8 characters, IARU 2019 clarification, use on HF and VHF/UHF, distances between subsquare centres) – https://en.wikipedia.org/wiki/Maidenhead_Locator_System"
             };
@@ -50340,12 +51352,16 @@ namespace LunaCalc
                 "• kırılma önemlidir: Ay, −0,35°'lik optik ufkun altında, −0,51°'de doğdu; 200 MHz'de, kuru havada, 0° yükselişteki kırılma hatası −0,49°'dir.",
                 "IK3XTV, teoride zemin etkisinin 6 dB'e ulaştığını, öyle ki tek bir yaginin neredeyse 4'lü bir dizi gibi çalıştığını, ancak bunun antenin çevresindeki araziye çok bağlı olduğunu hatırlatır: şehirde daha az, açık kırsalda daha iyi, deniz kenarında ise daha da iyidir. Ay doğarken ve batarken, yaklaşık 1° ile 18 – 20° yükseliş arasında yararlanılır [4].",
                 "> Bu yüzden EME bütçesinde zemin kazancı BETA olarak işaretlenmiştir: hesaplanan değer (en fazla +6 dB) teorik bir sınırdır. Deniz üzerinde yüksek antenlerle ya da birkaç yagiden oluşan dizilerle bunun yaklaşık yarısını ve düşük yükselişte belirgin QSB beklemek gerekir [3].",
+                "### Anten kazancı: beyan edilen veriler ve dBd (NJ9R)",
+                "Üreticilerin veri sayfalarındaki kazançlar neredeyse her zaman kusursuz bir zemin üzerinde ve 50 Ω'a ideal uyumla yapılan simülasyonlardan gelir. NJ9R, kendinizi kandırmamak için beyan edilen değerden yaklaşık 2 dB düşmeyi ve dBi yerine dBd ile düşünmeyi önerir; aynısı kabloların, konnektörlerin ve ön yükselticilerin verileri için de geçerlidir [6]. Onun örneği: iyi bir 5 elemanlı yagi (8 dBi, 5,9 dBd), hatta 4,25 dB kayıpla yalnızca 1,5 dB yararlı kazanç bırakır; ilk 7 elemanlı yagisiyle (12,3 dBi, 10 dBd) güçlükle alım yapabiliyordu. Biraz payla alım yapmak için başlangıç noktası olarak yaklaşık 14 dBd'yi gösterir [6].",
+                ">+ EME bütçesinde etkiyi hemen deneyebilirsiniz: anten kazancını 2 dB düşürünce bağlantıya ne kadar pay kaldığı görülür.",
                 "[1] WSJT-X User Guide, K1JT ve WSJT Development Group, § 7.1 (FT4 = FT8 + 3,5 dB).",
                 "[2] J. Taylor K1JT, B. Somerville G4WJS, S. Franke K9AN, N. Palermo IV3NWV, “Quick-Start Guide to Q65”, 3 Nisan 2021 (WSJT-X 2.4.0), IC8TEM tarafından sağlanmıştır.",
                 "[3] Giorgio Marchi IK1UWL, “Considerazioni sull'effetto suolo (Ground Gain)”, 21. EME Meeting, IC8TEM tarafından sağlanan sunum.",
                 "[4] Flavio Egano IK3XTV, “EME (earth-moon-earth) con una singola Yagi in 144 MHz”, 12 Kasım 2010 tarihli belge, IC8TEM tarafından sağlanmıştır.",
                 "[5] J. Taylor K1JT, EME 2006 konferansında JT65 üzerine sunulan bildiri (K1JT_eme2006.pdf): 2500 Hz'de minimum S/N seviyeleri tablosu.",
-                "> Sekmenin sağındaki istasyon şeması, kayıpları seçilen kablolardan türetir: göndermede PA–röle kablosu + röle + anten kablosu, almada ön yükselteçten önce anten kablosu + röle ve ondan sonra besleme kablosu. Kablo zayıflamaları COAXIAL CABLES sekmesinin veritabanından gelir (§ 1.8)."
+                "> Sekmenin sağındaki istasyon şeması, kayıpları seçilen kablolardan türetir: göndermede PA–röle kablosu + röle + anten kablosu, almada ön yükselteçten önce anten kablosu + röle ve ondan sonra besleme kablosu. Kablo zayıflamaları KOAKSİYEL KABLOLAR sekmesinin veritabanından gelir (§ 1.8).",
+                "[6] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
             };
             d["tr"]["S47"] = new string[] {
                 "## Ön yükselteç ve telsizin gürültü faktörü {nuovo}",
@@ -50420,7 +51436,7 @@ namespace LunaCalc
                 "##+ FT-1000MP ve transverter'lı EME istasyonları",
                 "144 MHz'de transverter ile EME için kullanılan FT-1000MP'nin belgelenmiş iki örneği: DF9IC'nin FT-1000MP + Javornik transverter üzerindeki ölçümleri [3] (telsiz ön yükselteci kapalıyken NF 0,9 – 1,4 dB) ve **W3SZ**'nin EME istasyonu [12] (4 × M2 2MXP32, her polarizasyon için antende LNA Technology ön yükselteçleri, LMR-600 ve Andrew hardline); bu istasyon göndermede bir **SSB-Electronic LT2S Mk II** transverter (IF 28 MHz) ve 2 × GU-74B amplifikatörlü bir **FT-1000MP Mark V** kullanırken, almada WSE donanımını ve SM5BSZ'nin Linrad yazılımını kullanır.",
                 "> EME bütçesinde transverter, istasyon şemasının bir kutusudur: onay kutusuyla etkinleştirilir, modeli listeden (ya da \"custom\") seçersiniz ve program gürültü faktörünü ve kazancını alır; kapalı bırakılırsa hesaba girmez. Yukarıdaki grafik, telsiz ön yükseltecinin açılıp açılmayacağına karar vermeye yardımcı olur.",
-                ">! ✉ **Başka bir transverter biliyor musunuz ya da kendiniz mi yaptınız?** Başka transverter'ları ya da kendi transverter'ınızı tanıtmak isterseniz yazara e-posta gönderin: ccerrotta@gmail.com veya ic8tem@gmail.com. Tüm iletişim bilgileri **AUTHOR CONTACTS AND ACKNOWLEDGEMENTS** sekmesindedir.",
+                ">! ✉ **Başka bir transverter biliyor musunuz ya da kendiniz mi yaptınız?** Başka transverter'ları ya da kendi transverter'ınızı tanıtmak isterseniz yazara e-posta gönderin: ccerrotta@gmail.com veya ic8tem@gmail.com. Tüm iletişim bilgileri **YAZARLA İLETİŞİM VE TEŞEKKÜRLER** sekmesindedir.",
                 "##+ TX/RX sıralayıcı",
                 "Bir güç yükselteci (PA) ve antenin yakınında bir ön yükselteç (PRE) varsa, bilgisayarın PTT'si telsize değil bir **sıralayıcıya** gider; sıralayıcı röleleri, ardından PA'yı ve telsizi doğru sırayla sürer [16]. En yaygın düzende iki besleme hattı vardır: alma hattı birkaç dB kaybedebilir, çünkü 15 – 20 dB'lik bir ön yükseltecin arkasındadır; gönderme hattı ise olabildiğince az kaybetmelidir (gönderme sırasında 3 dB, yayılan gücü yarıya indirir). Bekleme durumunda röleler PRE'yi antenden yalıtılmış tutar: yıldırım boşalmalarına karşı ek bir koruma [16].",
                 "|h| ^Adım | RX'ten TX'e | TX'ten RX'e",
@@ -50430,6 +51446,7 @@ namespace LunaCalc
                 "~ Bir adımla sonraki arasında en az rölelerin anahtarlama süresi (15 – 30 ms) artı kontak sıçramaları gerekir: IK1UWL 100 – 200 ms önerir, dahili rölesi varsa PA için de [16].",
                 "Göndermeyi kumanda etmek için PTT, VOX'tan daha iyidir: VOX bir gürültüyle tetiklenebilir ve JT65'in PTT'den sonra yaklaşık 0,5 s gecikmeyle modülasyona başlamasından yararlanmaz, bu yüzden ön yükselteç yalnızca yükseltecin hızlı rölesiyle korunur; PTT ile bu gecikme yükselteci modülasyondan önce anahtarlar ve bir sıralayıcı eklenebilir [17].",
                 ">! **Ön yükseltece dikkat.** T/R rölesi açık portu çok iyi yalıtmalıdır: 50 dB yalıtım ve antende 500 W ile PRE girişine 5 mW ulaşır. En az 60 dB hedeflenir; en tedbirliler, gönderme sırasında PRE'yi 50 Ω'luk bir yüke sonlandıran ikinci bir röle ekler. Mikrofonun PTT düğmesi devre dışı bırakılmalıdır: o andan itibaren yalnızca sıralayıcı üzerinden gönderme yapılır (SSB için sıralayıcının PTT'sine bağlı, PC'ninkinden ayrılmış bir ayak anahtarı) [16].",
+                ">! **Polarizasyon rölesi yalnızca alımda anahtarlanır.** İki polarizasyonla (H ve V) anteni seçen röle asla gönderme sırasında anahtarlanmamalıdır: güç uygulanmışken röleler, ön yükselticiler ya da güç yükselteci yanar ve yüzlerce ile binlerce avro arasında hasar oluşur [18].",
                 "[1] Adam Farson VA7OJ/AB4OJ, “Icom IC-9700 Test Report”, 5. sayı, 19 Mart 2021 (ilk baskı 19 Haziran 2019), tablo 1 ve 5 – https://www.qsl.net/ab4oj/icom/ic9700/9700notes.pdf",
                 "[2] Adam M. Farson VA7OJ/AB4OJ, “Yaesu FT-991 Test Report”, 25 Temmuz 2015, tablo 1 – https://www.qsl.net/ab4oj/test/docs/ft991notes.pdf",
                 "[3] DF9IC ve DARC OV Durlach A35, “Test of the Large Signal Behaviour of some 144 MHz Radios”, 27 Şubat 2005 tarihli testler – https://www.df9ic.de/tech/trxtest/trxtest.html",
@@ -50446,16 +51463,20 @@ namespace LunaCalc
                 "[14] ARRL Laboratory, “Icom IC-746PRO”, QST Product Review, Mayıs 2002 – https://www.radiomanual.info/schemi/ICOM_HF/IC-746Pro_review_ARRL_2002.pdf",
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), Nisan 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Ocak 2012, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM tarafından sağlanmıştır – http://www.qsl.net/ik3xtv",
-                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, sunum, Temmuz 2015, IC8TEM tarafından sağlanmıştır."
+                "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, sunum, Temmuz 2015, IC8TEM tarafından sağlanmıştır.",
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
             };
             d["tr"]["S48"] = new string[] {
                 "## Koaksiyel kablolar ve kayıplar",
-                "**COAXIAL CABLES** sekmesi, radyo amatörlerince en çok kullanılan 50 Ω kabloların zayıflamasını, 20 °C'de 100 m başına dB olarak, beş YAEC bandında toplar. Üreticilerin veri sayfaları farklı frekanslarda değerler verir; YAEC bunları üs yasasıyla, yani veri sayfasının en yakın iki frekansı arasında log-log grafikte bir doğruyla bantlara uyarlamıştır:",
+                "**KOAKSİYEL KABLOLAR** sekmesi, radyo amatörlerince en çok kullanılan 50 Ω kabloların zayıflamasını, 20 °C'de 100 m başına dB olarak, beş YAEC bandında toplar. Üreticilerin veri sayfaları farklı frekanslarda değerler verir; YAEC bunları üs yasasıyla, yani veri sayfasının en yakın iki frekansı arasında log-log grafikte bir doğruyla bantlara uyarlamıştır:",
                 "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
                 "~ α dB/100 m cinsinden, ℓ metre cinsinden kablo uzunluğu. Yalın bir sayı veri sayfası değeridir; ≈ ara değerlemeyle bulunmuş bir değeri, e ise veri sayfasının son frekansının ötesine dış değerlemeyle bulunmuş bir değeri gösterir.",
                 "Aynı tipte, çapı ±0,2 mm ve zayıflaması tüm bantlarda 0,2 dB/100 m içinde olan kablolar, ortalama değerle tek bir satırda (≡) toplanır; eşdeğer adlar \"also:\" ile gösterilir (örneğin LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Çince adlar 50-3, 50-5, 50-7, 50-9, 50-12 dielektriğin milimetre cinsinden çapını verir.",
                 "> Özel kablolar beş zayıflama değeriyle eklenebilir: data\\cavi_personali.txt dosyasına kaydedilir ve EME bütçesinin istasyon şemasındaki açılır listelerde de görünür. Her tablo satırının araç ipucu o kablonun kaynağını belirtir.",
-                "[1] Tek tek kabloların kaynakları: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo aracılığıyla), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables veri sayfaları, MIL-C-17F kataloğu (RG-142, RG-393), Senago'daki R.F. elettronica (RG-115), DD1US ve EA5IP tabloları (H100) ve RG-58, RG-213, H-155 ve H-2000 için SV1BSX tablosu (doğrulanması gereken değerler)."
+                "### Konnektörler (NJ9R)",
+                "Konnektörler de hattın bir parçasıdır. NJ9R'nin pratik kuralı, telsizin arkasından antene kadar adaptörler, röleler ve bölücüler dahil hepsi sayıldığında her 8 – 10 konnektör için yaklaşık 1 dB'dir: onun dört antenli tesisatında 24 konnektör 2 dB'den fazlasına, yani 144 MHz'de 40 – 45 m yeni LMR-400 kadarına karşılık gelir [2]. EME bütçesinde bu kayıp, TX aksesuar kayıplarına ve anten ile ön yükseltici arasındaki kayıplara eklenmelidir.",
+                "[1] Tek tek kabloların kaynakları: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo aracılığıyla), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables veri sayfaları, MIL-C-17F kataloğu (RG-142, RG-393), Senago'daki R.F. elettronica (RG-115), DD1US ve EA5IP tabloları (H100) ve RG-58, RG-213, H-155 ve H-2000 için SV1BSX tablosu (doğrulanması gereken değerler).",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
             };
             d["tr"]["S410"] = new string[] {
                 "## Doppler, düzeltme ve CFOM",
@@ -50517,10 +51538,19 @@ namespace LunaCalc
                 "> Bit sayısı yalnızca konumun ne kadar ince *okunduğunu* söyler: gerçek hassasiyet ayrıca mekanik boşluklara, desteğin esnemesine, rüzgâra ve kuzey ile ufkun kalibrasyonuna bağlıdır.",
                 "### Yagi dizileri: aktüatörler ve makaralar",
                 "Yagi dizilerinde (2, 4 ya da daha fazla antenin kombinasyonları) yükseliş yükü büyük ve dengesizdir. Piyasada sonsuz vida motorlu doğrusal aktüatörler bulunur: bu çözümlerde vida yalnızca hareketi düzenler, yükün mekanik taşınması ise makaralara bırakılır. Sonsuz vidanın avantajı yük altında geri dönmemesidir; böylece dizi motor kapalıyken bile yerinde kalır.",
+                "### Yönlendirmeyi GRAVES radarıyla doğrulamak (NJ9R)",
+                "Fransız **GRAVES** radarı JN27SI lokatöründen 143,050 MHz'de sürekli yayın yapar ve 144 MHz'de Ay üzerinden alım için en çok kullanılan deneme tezgâhıdır. Ay hem kendi istasyonunuzdan hem de GRAVES'ten görülebildiğinde (YAEC'de DX lokatörü olarak JN27SI girmek yeterlidir), 143,050 MHz'de (ya da 143,0495 MHz'de) SSB'de, en az 2,4 kHz ses bant genişliğiyle, AGC kapalı, gürültü engelleyici (noise blanker) açık ve başka hiçbir filtre, notch ya da DSP olmadan dinlenir [2].",
+                "Şelale ekranında GRAVES yankısı kesik kesik bir çizgi olarak görünür: ne kadar yoğunsa anten o kadar iyi yönlendirilmiştir. Rotor küçük adımlarla, önce azimutta sonra yükselişte, maksimuma kadar hareket ettirilir ve bulunan konum hesaplananla karşılaştırılır. NJ9R GRAVES'i S-metre olarak da kullanır: kazanç sürgüsü sıfırlanmışken sinyalin bir dakikalık ortalamasını okur ve her oturumdan önce tesisatın hâlâ ayarlı olduğunu GRAVES ile kontrol eder [2].",
+                "> Yükseliş hareketi olmadan GRAVES yankısı genellikle yalnızca Ay 0° ile 15° yükseliş arasındayken, doğarken ya da batarken alınır. Birçok telsiz 2 m bandının dışına ayarlanamaz: bu durumda bir SDR alıcı gerekir [2].",
+                "### Pusula, kamera ve hata kaydı (NJ9R)",
+                "HF için kullanılan bir rotorla “neredeyse doğru” bir yönlendirme yeterdi; EME'de yetmez. NJ9R, rotor göstergesini kalibre etmeyi ve ardından dışarıda pusulayla doğrulamayı, en fazla yaklaşık 5° hatayı kabul etmeyi önerir: rüzgâr, durdurucu uçlara çarpmalar ve direğin kayması, göstergenin fark etmesine yol açmadan anteni kaydırır [2].",
+                "• **Direkte kamera.** Direğe sabitlenmiş ve bir su terazisi ya da eğim ölçerle antene hizalanmış küçük, su geçirmez bir kamera (geri görüş kamerası türünden, 25 – 30 USD), antenin gerçekte nereye baktığını gösterir: NJ9R, arızalı rotorla ya da 20 – 35°'lik hatalarla, yalnızca kameraya bakarak 60 – 80 QSO tamamlamıştır. Ay'ın merkezi, GRAVES yankısının maksimumu arandıktan sonra monitörde işaretlenir. Kamera aynı zamanda bir gürültü kaynağıdır: alım sırasında kapatılmalıdır [2].",
+                "• **Hata kaydı.** Her yönlendirme için bir tabloya Ay'ın hesaplanan azimut ve yükselişi, göstergede okunan değerler ve kamerada görülen değerler not edilir: aradaki fark kendi sisteminizin hatasıdır; düzeltilmeli ya da akılda tutulmalıdır [2].",
                 "### 432 MHz'in üzerinde: çanaklar",
                 "902 MHz'den itibaren çoğunlukla parabolik çanaklar kullanılır ve [1] aracı 1 GHz ve üzeri frekanslar için tasarlanmıştır. Büyük çaplarda hüzme derecenin birkaç onda birine daralır ve Ay'ı tam olarak tutturamama riski vardır: istasyonun motorlardan çok, azimut ve yükselişte gerçek mekanik aktüatörlere ihtiyacı vardır; yönlendirme hassasiyeti büyük ölçüde kontrolün bit çözünürlüğüne bağlıdır. OE2IGL ve DF3GJ'nin **EME Link Budget & Analysis Tool** aracı [1] iyi bir izleme sistemi için ±0,035°, normal bir sistem için ±0,1° verir ve yönlendirme kaybını bağlantının diğer tüm terimleriyle birlikte hesaplar.",
                 ">+ YAEC 432 MHz'de durur. Daha yüksek bantlar için OE2IGL ve DF3GJ'nin aracını [1] öneririz: çanak parametreleriyle (çap, f/D, besleyici, yüzey pürüzlülüğü, verimler), yönlendirme, librasyon, Güneş ve Ay gürültüsü ve atmosferik zayıflamayla 1'den 300 GHz'e kadar EME bütçesini hesaplar.",
-                "[1] Gerald Ihninger OE2IGL ve Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html"
+                "[1] Gerald Ihninger OE2IGL ve Joachim Köppen DF3GJ, “EME Link Budget & Analysis Tool (1-300 GHz)” – https://wettersat.bplaced.net/EME/EME.html",
+                "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
             };
             d["tr"]["S412"] = new string[] {
                 "## EME için dijital modlar: Q65 ve JT65",
@@ -50611,6 +51641,18 @@ namespace LunaCalc
                 "| q3 | benim çağrı işaretim ve DX çağrı işareti",
                 "| q4 | her iki çağrı işareti ve RRR, RR73, 73 ya da boş",
                 "~ [1]'den. Yazarlar, çözücünün gösterdiği ve hâlâ iyileştirilmekte olan S/N değerlerine fazla önem verilmemesi konusunda uyarır [1]: YAEC EME bütçesiyle karşılaştırmalar için tek bir okuma yerine birkaç QSO kullanmak daha iyidir.",
+                "### NJ9R'nin JT65B ve MAP65 ayarları",
+                "144 MHz'e JT65B ile başlayan NJ9R, kullandığı ayarları şöyle özetler [7]:",
+                "|h| Program | Nerede | Ayar",
+                "| WSJT-X | ana pencere | Enable VHF and sub-mode features, Decode after EME delay, çözme periyotları arasında boş satır",
+                "| WSJT-X | Advanced | Random erasure ve two pass decoding (CPU'ya göre 6 ve 6); şelale Most sensitive",
+                "| WSJT-X | mod | JT65, alt mod B, Sync −1",
+                "| WSJT-X | Ftol | 20 – 500 Hz; bir istasyonun izi göründüğünde 50, 20 ya da 10 Hz'e daraltılır (ne kadar genişse çözme o kadar zorlanır)",
+                "| WSJT-X | ses frekansları | TX 1270 Hz'de; RX, Doppler'e göre 1270 Hz'in ±350 Hz yakınında ya da sohbette duyurulan frekansta",
+                "| MAP65 | Station, I/O devices | kendi çağrı işareti ve lokatör; ses kartı ya da IQ telsizler için ağ arayüzü, 96 000 Hz'de",
+                "| MAP65 | mod ve çözme | JT65B / Q65A; Only EME calls; Aggressive deep search",
+                "| MAP65 | ana pencere | NB açık, Monitor On, yan çubuktaki ses seviyesi 12 ile 40 arasında",
+                "~ [7]'den. Öğe adları, WSJT-X ve MAP65 menülerindeki gibi İngilizce bırakılmıştır. JT65 için YAEC'nin EME bütçesi B alt modunun eşiklerini kullanır (§ 1.6).",
                 "### DXpedition'larla çalışma yöntemi (W7GJ)",
                 "Yıllardır 6 m'de EME seferleri düzenleyen Lance Collister W7GJ, bir pile-up sırasında Q65-60A ile bir DXpedition'ın nasıl çağrılacağını anlatır [6]. Her şeyden önce bilgisayar saati çok hassas, gönderme frekansı da çok kararlı olmalıdır [6].",
                 "• **Periyotlar.** DXpedition her zaman birinci sekansta (çift dakikalar) gönderir; çağıranlar ise ikincide (tek dakikalar) [6].",
@@ -50632,7 +51674,8 @@ namespace LunaCalc
                 "[3] Andy Talbot G4JNT, “The Q65 Coding Process used in WSJT-X”, Ekim 2023, IC8TEM tarafından sağlanmıştır.",
                 "[4] Nico Palermo IV3NWV, QRA kodları üzerine EME 2016 konferansındaki sunum, [3]'te anılmıştır – http://www.eme2016.org/wp-content/uploads/2016/08/EME-2016-IV3NWV-Presentation.pdf",
                 "[5] WSJT-X kaynak kodu (Q65_encoding_modules.F90 dosyası ve diğerleri), [3]'te anılmıştır – https://wsjt.sourceforge.io/wsjtx.html",
-                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 3 Nisan 2023'te gözden geçirilmiş, IC8TEM tarafından sağlanmıştır – http://www.bigskyspaces.com/w7gj/"
+                "[6] Lance Collister W7GJ, “Q65-60A QSO Procedure and Tips for EME DXpeditions”, 3 Nisan 2023'te gözden geçirilmiş, IC8TEM tarafından sağlanmıştır – http://www.bigskyspaces.com/w7gj/",
+                "[7] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
             };
             d["tr"]["S54"] = new string[] {
                 "## SM5BSZ'nin EME literatürü",
@@ -50726,6 +51769,36 @@ namespace LunaCalc
                 "• Alıcının ufkunun altındaki Güneş, Yeni Ay'da bile hesaba katılmaz.",
                 "> Programda: Mesafe ve Dgrd takvimi, Güneş'in Ay'a yakın olduğu günleri ☀ simgesiyle işaretler (turuncu veya kırmızı); Güneş gürültüsü sekmesi, ölçülen akıyla, seçilen anda Güneş'in ne kadar ek gürültü getirdiğini hesaplar.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
+            };
+            d["tr"]["S413"] = new string[] {
+                "## İlk alımdan QSO'ya: NJ9R'nin önerileri",
+                "Relu Jianu NJ9R, “2M EME the easy way” adlı çalışmasında 144 MHz'deki acemilik deneyimini topladı: 7 elemanlı bir yagiyle, ön yükseltici olmadan alınan GRAVES yankısıyla başlayan pratik bir yol. Mesajı her şeyden önce tektir: tesisatınızın sınırlarını, kazançlarını ve kayıplarını bilmek ve bu verilere dayanarak bunların aşılıp aşılamayacağına karar vermek [1]. Teknik kısımlar ilgili konuların bölümlerinde ele alınmıştır: EME bütçesi ve anten kazancı (§ 1.6), polarizasyon rölesi (§ 1.7), konnektörler (§ 1.8), yönlendirme ve GRAVES (§ 1.11), WSJT-X ve MAP65 ayarları (§ 1.12), sohbetlerin okunması (§ 1.14). Burada istasyon ve alıcıyla ilgili öneriler kalır.",
+                "### Yerel gürültü haritası",
+                "Ay'ı aramadan önce gürültünün hangi yönlerden geldiğini bilmek iyi olur. NJ9R, antenle azimutta 15 – 30°'lik adımlarla tam bir 360° tur atmayı ve kazanç sürgüsüyle (en düşük seviyede sıfırlanmış) okunan gürültüyü bir tabloya not etmeyi önerir. Yükseliş hareketi olanlar turu 0° ile 45° arasında 5 – 10°'lik adımlarla tekrarlar. Isı haritası gibi renklendirilen tablo, bazı yönlerde neden hiçbir şey alınamadığını açıklar: orada yerel gürültü yankıyı örter [1].",
+                "> YAEC'de Engellerimin keşfi, engellerin kapattığı yönleri gösterir: bunu gürültü haritasıyla karşılaştırmak en iyi Ay pencerelerini seçmeye yardımcı olur.",
+                "Komşuların evleri ve elektronik cihazları sürekli bir parazit kaynağıdır: kendi evinizden başlayarak aranır ve azaltılır, ama bir noktada geriye kalanla yaşamak gerekir [1].",
+                "### Alıcı ve bilgisayar",
+                "• **Temiz alıcı.** AGC kapalı, gürültü engelleyici açık, alımda hiçbir filtre, notch ya da DSP yok; bilgisayarda ses girişi en yüksek kalitede ve sistem sesinde hiçbir iyileştirme ya da yükseltme yok [1].",
+                "• **Senkronize saat.** Dijital modlar kesin saat gerektirir: NJ9R, bilgisayar saatini bir senkronizasyon programıyla (NetTime) her 15 dakikada bir otomatik olarak düzelttirir [1].",
+                "• **Güncel CALL3.TXT.** Dosya çözmeye birçok dB kazandırır, çünkü WSJT-X ve MSHV çağrı işaretlerini tanımak için onu kullanır; yanlış çözümleri ayıklamak operatöre kalır [1]. YAEC, W7GJ ve WSJT-X Improved listelerini indirip birleştirir ve dosyayı WSJT-X klasörüne kopyalayabilir.",
+                "• **Sabır.** Hiçbir şey duyulmuyorsa birden fazla neden üst üste gelebilir: yüksek Dgrd, elverişsiz polarizasyon, Faraday dönmesi, o yöndeki yerel gürültü. Birkaç dakika, birkaç saat sonra ya da başka bir gün yeniden denemek ve ayın en düşük Dgrd'li günlerini seçmek iyi olur (§ 1.3, 1.4) [1].",
+                "[1] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
+            };
+            d["tr"]["S414"] = new string[] {
+                "## İnternet üzerindeki metin sohbetleri",
+                "EME'de randevular (sked), CQ duyuruları ve raporlar neredeyse her zaman İnternet üzerindeki metin sohbetlerinden geçer. En çok kullanılanlar şunlardır.",
+                "• **N0UK EME sohbeti.** Chris Cox N0UK'nin 2 m EME için tarihî sohbeti (https://www.chris.org/cgi-bin/jt65emeA); meteor scatter sohbeti Ping Jockey Central de aynı yazarındır (https://www.pingjockey.net) [1].",
+                "• **EA8DBM'nin EMEchat'i.** EME sohbetlerini bir araya getiren bir web arayüzü (https://www.emechat.com): DXpedition'lar bunu 2 m için N0UK sohbetiyle, 70 cm ve üzeri için HB9Q sohbetiyle kullanır [2].",
+                "• **HB9Q logger.** 70 cm ve üzerindeki EME için sohbet ve sked kaydı (https://logger.hb9q.ch) [2].",
+                "• **ON4KST, microwave bölümü.** ON4KST sohbeti bantlara göre bölümlere ayrılmıştır (https://www.on4kst.com/chat): microwave bölümünde, EME çalışanlar da dahil olmak üzere, en yüksek bantların operatörleri buluşur [3].",
+                "### Duyurular nasıl okunur (NJ9R)",
+                "Sohbette CQ çağıran genellikle gücünü ve antenlerini belirtir. “H” ya da hiçbir belirtme olmaması, yalnızca yatay polarizasyonlu bir istasyonu düşündürür (her zaman değil); “HV” ya da “XPOL” iki polarizasyonu gösterir ve aranacak en iyi istasyondur. Aynı kıtadaki istasyonlar arasında yatayla yatay iyi çalışır; kıtalar arasında ise uzaysal polarizasyon, yatay olarak çıkan bir sinyalin neredeyse dikey gelmesine yol açabilir ve kayıplar küçük bir istasyon için fazla büyük olur (§ 1.3) [4].",
+                "• **LiveCQ** (https://livecq.eu) PSK Reporter gibi çalışır: yalnızca rapor gönderen istasyonları gösterir; bu yüzden LiveCQ boşken bile sohbette etkinlik olabilir [4].",
+                "• Sohbette duyurulan ses frekansları, 1270 Hz'de göndermeyen istasyonları bulmaya yardımcı olur; bir istasyonu aldığınızda bunu sohbette bildirmek iyi bir alışkanlıktır [4].",
+                "[1] Chris Cox N0UK, EME sohbeti – https://www.chris.org/cgi-bin/jt65emeA ; Ping Jockey Central – https://www.pingjockey.net",
+                "[2] 432 AND ABOVE EME NEWS, Haziran 2026, DXpedition C37EME: “2 m on N0UK EME chat, 70 cm and above on HB9Q chat, both through the EA8DBM web interface” – https://eme.radio",
+                "[3] ON4KST sohbeti – https://www.on4kst.com/chat",
+                "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
             };
         }
 
