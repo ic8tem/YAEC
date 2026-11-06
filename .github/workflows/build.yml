@@ -101,7 +101,7 @@ jobs:
           apt-cache search mono | grep -iE "cert|mono-devel|mono-complete" | head || true
           which cert-sync mozroots || true
           mono --version | head -1 || true
-          head -c 200 "$HOME/.local/share/YAEC/data/solar-radio-flux.json" 2>/dev/null; echo
+          head -c 200 "$HOME/.local/share/YAEC/data/solar-radio-flux.json" 2>/dev/null || echo "solar-radio-flux.json assente"; echo
           head -5 "$HOME/.local/share/YAEC/data/CALL3.TXT" 2>/dev/null || true
           YAEC_LINGUETTA="Distanza e Dgrd" mono YAEC.exe &
           PID=$!

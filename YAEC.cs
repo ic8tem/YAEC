@@ -38157,8 +38157,91 @@ namespace LunaCalc
             return "";
         }
 
+        // Linux e macOS con Mono: spesso Mono non ha il suo archivio dei certificati radice (pacchetto
+        // ca-certificates-mono assente) e ogni HTTPS fallisce con TrustFailure. In quel caso la catena del server
+        // si verifica con le autorità radice del sistema operativo (il file PEM di /etc/ssl): la verifica resta
+        // completa (nome del server, date, catena fino a una radice del sistema), cambia solo l'elenco delle radici.
+        static List<System.Security.Cryptography.X509Certificates.X509Certificate2> radiciSistema;
+        static HashSet<string> impronteRadici;
+        static bool verificaPronta;
+
+        internal static void PreparaVerificaCertificati()
+        {
+            if (Piattaforma.Windows || verificaPronta) return;
+            verificaPronta = true;
+            try { ServicePointManager.ServerCertificateValidationCallback = VerificaCertificato; } catch { }
+        }
+
+        static void CaricaRadici()
+        {
+            if (radiciSistema != null) return;
+            List<System.Security.Cryptography.X509Certificates.X509Certificate2> l = new List<System.Security.Cryptography.X509Certificates.X509Certificate2>();
+            HashSet<string> imp = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            string[] file = { "/etc/ssl/certs/ca-certificates.crt", "/etc/pki/tls/certs/ca-bundle.crt", "/etc/ssl/ca-bundle.pem",
+                "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem", "/etc/ssl/cert.pem", "/usr/local/etc/openssl/cert.pem", "/opt/homebrew/etc/ca-certificates/cert.pem" };
+            foreach (string f in file)
+            {
+                try
+                {
+                    if (!File.Exists(f)) continue;
+                    string t = File.ReadAllText(f);
+                    const string A = "-----BEGIN CERTIFICATE-----", B = "-----END CERTIFICATE-----";
+                    int i = 0;
+                    while ((i = t.IndexOf(A, i, StringComparison.Ordinal)) >= 0)
+                    {
+                        int j = t.IndexOf(B, i, StringComparison.Ordinal);
+                        if (j < 0) break;
+                        try
+                        {
+                            byte[] der = Convert.FromBase64String(t.Substring(i + A.Length, j - i - A.Length).Replace("\r", "").Replace("\n", "").Trim());
+                            System.Security.Cryptography.X509Certificates.X509Certificate2 c = new System.Security.Cryptography.X509Certificates.X509Certificate2(der);
+                            if (imp.Add(c.Thumbprint)) l.Add(c);
+                        }
+                        catch { }
+                        i = j + B.Length;
+                    }
+                    if (l.Count > 0) break;
+                }
+                catch { }
+            }
+            impronteRadici = imp;
+            radiciSistema = l;
+        }
+
+        static bool VerificaCertificato(object mittente, System.Security.Cryptography.X509Certificates.X509Certificate cert,
+            System.Security.Cryptography.X509Certificates.X509Chain catena, System.Net.Security.SslPolicyErrors errori)
+        {
+            if (errori == System.Net.Security.SslPolicyErrors.None) return true;
+            // nome del server sbagliato o certificato assente: sempre rifiutato
+            if ((errori & ~System.Net.Security.SslPolicyErrors.RemoteCertificateChainErrors) != 0 || cert == null) return false;
+            try
+            {
+                CaricaRadici();
+                if (radiciSistema.Count == 0) return false;
+                using (System.Security.Cryptography.X509Certificates.X509Chain c = new System.Security.Cryptography.X509Certificates.X509Chain())
+                {
+                    c.ChainPolicy.RevocationMode = System.Security.Cryptography.X509Certificates.X509RevocationMode.NoCheck;
+                    c.ChainPolicy.VerificationFlags = System.Security.Cryptography.X509Certificates.X509VerificationFlags.AllowUnknownCertificateAuthority;
+                    foreach (System.Security.Cryptography.X509Certificates.X509Certificate2 r in radiciSistema) c.ChainPolicy.ExtraStore.Add(r);
+                    if (catena != null)
+                        foreach (System.Security.Cryptography.X509Certificates.X509ChainElement el in catena.ChainElements) c.ChainPolicy.ExtraStore.Add(el.Certificate);
+                    c.Build(new System.Security.Cryptography.X509Certificates.X509Certificate2(cert));
+                    if (c.ChainElements.Count < 2) return false;
+                    foreach (System.Security.Cryptography.X509Certificates.X509ChainElement el in c.ChainElements)
+                        foreach (System.Security.Cryptography.X509Certificates.X509ChainStatus st in el.ChainElementStatus)
+                            if (st.Status != System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.NoError
+                                && st.Status != System.Security.Cryptography.X509Certificates.X509ChainStatusFlags.UntrustedRoot)
+                                return false;
+                    // la radice della catena deve essere una delle autorità del sistema
+                    return impronteRadici.Contains(c.ChainElements[c.ChainElements.Count - 1].Certificate.Thumbprint);
+                }
+            }
+            catch { return false; }
+        }
+
         internal static byte[] Scarica(string url, int timeoutMs)
         {
+            PreparaVerificaCertificati();
             try
             {
                 ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072 | (SecurityProtocolType)768 | SecurityProtocolType.Tls;
@@ -38318,6 +38401,7 @@ namespace LunaCalc
         // e Mono non segue da solo quel passaggio)
         static byte[] ScaricaConRinvii(string url, int timeoutMs)
         {
+            Dati.PreparaVerificaCertificati();
             try { ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072 | (SecurityProtocolType)768 | SecurityProtocolType.Tls; } catch { }
             for (int salto = 0; salto < 8; salto++)
             {
@@ -49202,6 +49286,7 @@ namespace LunaCalc
             AppDomain.CurrentDomain.UnhandledException += (s, e) => RegistraErrore(e.ExceptionObject as Exception, true);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Dati.PreparaVerificaCertificati();   // Linux/macOS: HTTPS verificato con le autorità radice del sistema
             // tutti i dati nella sottocartella "data" dell'eseguibile (spostando quelli delle versioni precedenti)
             Dati.Prepara();
             // lingua e nominativo letti dalle impostazioni prima di aprire le finestre (lingua predefinita: inglese)
