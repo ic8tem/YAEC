@@ -66,17 +66,24 @@ jobs:
         run: |
           cp win/YAEC.exe .
           packaging/linux/build-linux.sh "${{ steps.ver.outputs.version }}" dist
-      - name: Prova di avvio con Mono (senza schermo, Xvfb)
+      - name: Prova di avvio con Mono (schermo virtuale Xvfb) e schermata
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil libgdiplus xvfb fonts-dejavu-core > /dev/null
-          set +e
-          timeout 40 xvfb-run -a mono YAEC.exe
-          rc=$?
-          set -e
-          echo "exit code: $rc (124 = ancora in esecuzione dopo 40 s: avvio riuscito)"
+          sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil libgdiplus xvfb imagemagick fonts-dejavu-core > /dev/null
+          Xvfb :99 -screen 0 1600x1000x24 &
+          export DISPLAY=:99
+          sleep 2
+          mono YAEC.exe &
+          PID=$!
+          sleep 45
+          mkdir -p shot
+          import -window root shot/YAEC-linux-mono.png || true
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
-          if [ $rc -ne 124 ]; then exit 1; fi
+          if kill -0 $PID 2>/dev/null; then echo "YAEC in esecuzione dopo 45 s: avvio riuscito"; kill $PID; else echo "YAEC si e' chiuso"; exit 1; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-screenshot
+          path: shot/
       - uses: actions/upload-artifact@v4
         with:
           name: linux
