@@ -34664,7 +34664,6 @@ namespace LunaCalc
             if (pnlContScroll == null || pnlContatti == null) return;
             int w = Math.Max(S(700), pnlContScroll.ClientSize.Width);
             if (contAltezza <= 0)
-                using (Graphics g = pnlContatti.CreateGraphics())
                 using (Bitmap bm = new Bitmap(Math.Max(1, w), 10))
                 using (Graphics gb = Graphics.FromImage(bm)) { PreparaGrafica(gb); pnlContatti.Width = w; ContenutoContatti(gb, new Rectangle(0, 0, w, pnlContScroll.ClientSize.Height), false); }
             int h = Math.Max(pnlContScroll.ClientSize.Height, (int)Math.Ceiling(contAltezza));
@@ -34769,14 +34768,17 @@ namespace LunaCalc
                 using (Brush om = new SolidBrush(Color.FromArgb(110, 0, 0, 0))) g.FillEllipse(om, av.X - S(1), av.Y + S(5), dl + S(2), dl + S(2));
                 using (Brush al = new SolidBrush(Color.FromArgb(140, 255, 255, 255))) g.FillEllipse(al, av.X - S(4), av.Y - S(4), dl + S(8), dl + S(8));
                 if (contLuna != null)
-                    using (GraphicsPath gp = new GraphicsPath())
+                {
+                    // la Luna dentro il cerchio con un pennello a trama (niente SetClip: con Mono, nella pagina
+                    // scorrevole, il ritaglio con un tracciato dava OutOfMemory di GDI+)
+                    float lw = contLuna.Width, lh = contLuna.Height, kk = Math.Max(dl / lw, dl / lh);
+                    using (TextureBrush tb = new TextureBrush(contLuna, WrapMode.Clamp))
                     {
-                        gp.AddEllipse(av);
-                        Region old = g.Clip; g.SetClip(gp, CombineMode.Intersect);
-                        float lw = contLuna.Width, lh = contLuna.Height, kk = Math.Max(dl / lw, dl / lh);
-                        g.DrawImage(contLuna, av.X + (dl - lw * kk) / 2, av.Y + (dl - lh * kk) / 2, lw * kk, lh * kk);
-                        g.Clip = old;
+                        tb.TranslateTransform(av.X + (dl - lw * kk) / 2, av.Y + (dl - lh * kk) / 2);
+                        tb.ScaleTransform(kk, kk);
+                        g.FillEllipse(tb, av);
                     }
+                }
                 float xt = av.Right + S(26);
                 RectangleF rt1 = new RectangleF(xt, y + S(22), cr.Width - xt - S(20), S(42));
                 RectangleF rt2 = new RectangleF(xt, y + S(64), cr.Width - xt - S(20), S(24));
