@@ -2963,6 +2963,14 @@ namespace LunaCalc
             "Pastello indaco",
             "Pastello marrone",
             "Ci sono anche otto schemi pastello chiari: azzurro, arancione, acquamarina, verde, rosa, lilla, indaco e marrone.",
+            "per l'incitamento a non mollare",
+            "nell'ambiente dell'EME",
+            "un pensiero e un ricordo a",
+            "Giorgio IK1UWL, pioniere italiano dell'EME",
+            "a tutti gli autori degli articoli e di prodotti hardware o software",
+            "che comunemente si trovano negli impianti degli operatori EME di tutto il mondo",
+            "Citato nel manuale TEORIA E CONSIGLI SULL'EME:",
+            "1.2 - Budget EME con gli indicatori EIRP mia, EIRP del DX, perdita di tratta e S/N nei due sensi (con il Sole); formule del documento Word di una sola grandezza, dentro i margini; pulsanti pieni e menu a tendina piatti con bordo arrotondato in tutti gli schemi; otto schemi di colori pastello; caselle dei valori con le frecce affiancate; i tre giorni migliori in ordine di data; sfondo del cielo sfocato; DEBUG FORMULE tradotto; manuale TEORIA E CONSIGLI SULL'EME con i consigli di Relu NJ9R (GRAVES, puntamento, connettori, guadagno delle antenne, JT65B e MAP65, relè di polarizzazione), i nuovi paragrafi sulla prima ricezione e sulle chat via Internet e le tabelle di VE7BQH nella prefazione; ringraziamenti a NJ9R, il ricordo di IK1UWL e gli autori di articoli, hardware e software, con il fumetto delle loro opere.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4271,6 +4279,14 @@ namespace LunaCalc
             "Pastel indigo",
             "Pastel brown",
             "There are also eight light pastel schemes: light blue, orange, aquamarine, green, pink, lilac, indigo and brown.",
+            "for the encouragement not to give up",
+            "in the EME community",
+            "a thought and a memory for",
+            "Giorgio IK1UWL, Italian EME pioneer",
+            "to all the authors of articles and of hardware or software products",
+            "commonly found in the stations of EME operators all over the world",
+            "Cited in the THEORY AND TIPS ON EME manual:",
+            "1.2 - EME budget with the indicators My EIRP, DX EIRP, path loss and S/N in both directions (with the Sun); Word document formulas in a single size, within the margins; filled buttons and flat drop-down lists with rounded borders in all schemes; eight pastel colour schemes; value boxes with side-by-side arrows; the three best days in date order; blurred sky background; FORMULA DEBUG translated; THEORY AND TIPS ON EME manual with the advice of Relu NJ9R (GRAVES, pointing, connectors, antenna gain, JT65B and MAP65, polarization relay), the new sections on the first reception and on internet chats, and the VE7BQH tables in the preface; thanks to NJ9R, the memory of IK1UWL and the authors of articles, hardware and software, with a tooltip on their works.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5579,6 +5595,14 @@ namespace LunaCalc
             "Pastell Indigo",
             "Pastell Braun",
             "Es gibt außerdem acht helle Pastellschemata: Hellblau, Orange, Aquamarin, Grün, Rosa, Flieder, Indigo und Braun.",
+            "für die Ermutigung, nicht aufzugeben",
+            "in der EME-Gemeinschaft",
+            "ein Gedanke und eine Erinnerung an",
+            "Giorgio IK1UWL, italienischer EME-Pionier",
+            "allen Autoren von Artikeln und von Hardware- oder Softwareprodukten,",
+            "die man üblicherweise in den Stationen der EME-Funker in aller Welt findet",
+            "Zitiert im Handbuch THEORIE UND TIPPS ZU EME:",
+            "1.2 - EME-Budget mit den Anzeigen Meine EIRP, EIRP des DX, Streckendämpfung und S/N in beide Richtungen (mit der Sonne); Formeln des Word-Dokuments in einer einzigen Größe, innerhalb der Ränder; gefüllte Schaltflächen und flache Auswahllisten mit abgerundetem Rand in allen Schemata; acht Pastell-Farbschemata; Wertfelder mit nebeneinanderliegenden Pfeilen; die drei besten Tage nach Datum geordnet; unscharfer Himmelshintergrund; FORMEL-DEBUG übersetzt; Handbuch THEORIE UND TIPPS ZU EME mit den Ratschlägen von Relu NJ9R (GRAVES, Ausrichtung, Stecker, Antennengewinn, JT65B und MAP65, Polarisationsrelais), den neuen Abschnitten zum ersten Empfang und zu den Internet-Chats und den VE7BQH-Tabellen im Vorwort; Dank an NJ9R, Erinnerung an IK1UWL und an die Autoren von Artikeln, Hardware und Software, mit einem Tooltip zu ihren Werken.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6887,6 +6911,14 @@ namespace LunaCalc
             "Pastel indigo",
             "Pastel marron",
             "Il existe aussi huit schémas pastel clairs : bleu ciel, orange, aigue-marine, vert, rose, lilas, indigo et marron.",
+            "pour l'encouragement à ne pas abandonner",
+            "dans le monde de l'EME",
+            "une pensée et un souvenir pour",
+            "Giorgio IK1UWL, pionnier italien de l'EME",
+            "à tous les auteurs des articles et des produits matériels ou logiciels",
+            "que l'on trouve couramment dans les stations des opérateurs EME du monde entier",
+            "Cité dans le manuel THÉORIE ET CONSEILS SUR L'EME :",
+            "1.2 - Bilan EME avec les indicateurs Ma PIRE, PIRE du DX, perte de trajet et S/B dans les deux sens (avec le Soleil) ; formules du document Word d'une seule taille, dans les marges ; boutons pleins et listes déroulantes plates à bord arrondi dans tous les thèmes ; huit thèmes de couleurs pastel ; cases de valeurs avec les flèches côte à côte ; les trois meilleurs jours dans l'ordre chronologique ; fond du ciel flou ; DÉBOGAGE DES FORMULES traduit ; manuel THÉORIE ET CONSEILS SUR L'EME avec les conseils de Relu NJ9R (GRAVES, pointage, connecteurs, gain des antennes, JT65B et MAP65, relais de polarisation), les nouvelles sections sur la première réception et sur les chats Internet, et les tableaux de VE7BQH dans la préface ; remerciements à NJ9R, souvenir d'IK1UWL et des auteurs d'articles, de matériel et de logiciels, avec une infobulle sur leurs travaux.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -8195,6 +8227,14 @@ namespace LunaCalc
             "Pastel índigo",
             "Pastel marrón",
             "Hay también ocho esquemas pastel claros: celeste, naranja, aguamarina, verde, rosa, lila, índigo y marrón.",
+            "por el ánimo para no rendirse",
+            "en el mundo del EME",
+            "un pensamiento y un recuerdo para",
+            "Giorgio IK1UWL, pionero italiano del EME",
+            "a todos los autores de artículos y de productos de hardware o software",
+            "que se encuentran habitualmente en las estaciones de los operadores EME de todo el mundo",
+            "Citado en el manual TEORÍA Y CONSEJOS SOBRE EME:",
+            "1.2 - Balance EME con los indicadores Mi PIRE, PIRE del DX, pérdida de trayecto y S/R en los dos sentidos (con el Sol); fórmulas del documento Word de un solo tamaño, dentro de los márgenes; botones rellenos y listas desplegables planas con borde redondeado en todos los esquemas; ocho esquemas de colores pastel; casillas de valores con las flechas una al lado de la otra; los tres mejores días en orden de fecha; fondo del cielo desenfocado; DEPURACIÓN DE FÓRMULAS traducido; manual TEORÍA Y CONSEJOS SOBRE EME con los consejos de Relu NJ9R (GRAVES, apuntamiento, conectores, ganancia de las antenas, JT65B y MAP65, relé de polarización), los nuevos apartados sobre la primera recepción y sobre los chats de Internet y las tablas de VE7BQH en el prefacio; agradecimientos a NJ9R, el recuerdo de IK1UWL y los autores de artículos, hardware y software, con un globo de ayuda sobre sus obras.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9503,6 +9543,14 @@ namespace LunaCalc
             "Pastel índigo",
             "Pastel castanho",
             "Há também oito esquemas pastel claros: azul-claro, laranja, água-marinha, verde, rosa, lilás, índigo e castanho.",
+            "pelo incentivo a não desistir",
+            "no meio do EME",
+            "um pensamento e uma lembrança para",
+            "Giorgio IK1UWL, pioneiro italiano do EME",
+            "a todos os autores de artigos e de produtos de hardware ou software",
+            "que se encontram habitualmente nas estações dos operadores EME de todo o mundo",
+            "Citado no manual TEORIA E CONSELHOS SOBRE EME:",
+            "1.2 - Balanço EME com os indicadores A minha EIRP, EIRP do DX, perda de percurso e S/R nos dois sentidos (com o Sol); fórmulas do documento Word num só tamanho, dentro das margens; botões preenchidos e listas pendentes planas com rebordo arredondado em todos os esquemas; oito esquemas de cores pastel; caixas de valores com as setas lado a lado; os três melhores dias por ordem de data; fundo do céu desfocado; DEPURAÇÃO DE FÓRMULAS traduzido; manual TEORIA E CONSELHOS SOBRE EME com os conselhos de Relu NJ9R (GRAVES, apontamento, conectores, ganho das antenas, JT65B e MAP65, relé de polarização), as novas secções sobre a primeira receção e sobre os chats na Internet e as tabelas de VE7BQH no prefácio; agradecimentos a NJ9R, a memória de IK1UWL e os autores de artigos, hardware e software, com um balão de ajuda sobre as suas obras.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10811,6 +10859,14 @@ namespace LunaCalc
             "柔和靛蓝",
             "柔和棕色",
             "另有八种浅色柔和配色：天蓝、橙色、海蓝、绿色、粉红、淡紫、靛蓝和棕色。",
+            "感谢他鼓励大家不要放弃",
+            "在 EME 圈子里",
+            "深切怀念",
+            "Giorgio IK1UWL，意大利 EME 先驱",
+            "感谢所有文章以及硬件或软件产品的作者，",
+            "这些作品常见于世界各地 EME 操作员的电台中",
+            "在《EME 理论与建议》手册中的引用：",
+            "1.2 - EME 链路预算新增指标：我的 EIRP、DX 的 EIRP、路径损耗以及双向 S/N（含太阳）；Word 文档中的公式统一为一种大小并保持在页边距内；所有配色方案中的按钮改为填充样式，下拉列表改为扁平圆角样式；八种粉彩配色方案；数值框的上下箭头并排显示；三个最佳日期按日期排序；天空背景模糊；公式调试已翻译；《EME 理论与建议》手册加入 Relu NJ9R 的建议（GRAVES、指向、连接器、天线增益、JT65B 与 MAP65、极化继电器）、关于首次接收和网络聊天室的新章节，并在序言中加入 VE7BQH 天线表；致谢 NJ9R，缅怀 IK1UWL，感谢文章、硬件和软件的作者，并以提示框介绍他们的作品。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -12119,6 +12175,14 @@ namespace LunaCalc
             "パステルインディゴ",
             "パステルブラウン",
             "明るいパステル配色も 8 種類あります：水色、オレンジ、アクアマリン、グリーン、ピンク、ライラック、インディゴ、ブラウン。",
+            "あきらめないよう励ましてくれたことに",
+            "EME の世界で",
+            "思いと追悼を",
+            "Giorgio IK1UWL、イタリアの EME の先駆者",
+            "記事、ハードウェア、ソフトウェアの作者の皆さんへ。",
+            "世界中の EME 局の設備で広く使われています",
+            "「EME の理論とアドバイス」マニュアルでの引用箇所：",
+            "1.2 - EME 回線計算に「自局 EIRP」「DX の EIRP」「経路損失」「双方向の S/N（太陽を含む）」の表示を追加。Word 文書の数式を単一サイズにして余白内に収めた。すべての配色でボタンを塗りつぶし型、ドロップダウンを角丸のフラット型に。パステル配色を 8 種類追加。数値ボックスの矢印を横並びに。ベスト 3 日を日付順に。空の背景をぼかした。数式デバッグを翻訳。「EME の理論とアドバイス」マニュアルに Relu NJ9R の助言（GRAVES、指向、コネクター、アンテナ利得、JT65B と MAP65、偏波リレー）、最初の受信とインターネットチャットに関する新しい節、序文に VE7BQH の表を追加。NJ9R への謝辞、IK1UWL の追悼、記事・ハードウェア・ソフトウェアの作者への謝辞と、その作品を示すツールチップを追加。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13427,6 +13491,14 @@ namespace LunaCalc
             "पेस्टल नील",
             "पेस्टल भूरा",
             "आठ हल्की पेस्टल योजनाएँ भी हैं: आसमानी, नारंगी, एक्वामरीन, हरा, गुलाबी, बकाइनी, नील और भूरा।",
+            "हार न मानने के प्रोत्साहन के लिए",
+            "EME समुदाय में",
+            "स्मरण और श्रद्धांजलि",
+            "Giorgio IK1UWL, इटली में EME के अग्रणी",
+            "लेखों और हार्डवेयर या सॉफ़्टवेयर उत्पादों के सभी रचनाकारों को,",
+            "जो दुनिया भर के EME ऑपरेटरों के स्टेशनों में आम तौर पर मिलते हैं",
+            "EME सिद्धांत और सुझाव मैनुअल में उल्लेख:",
+            "1.2 - EME बजट में मेरी EIRP, DX की EIRP, पथ हानि और दोनों दिशाओं में S/N (सूर्य सहित) के संकेतक; Word दस्तावेज़ के सूत्र एक ही आकार में, हाशियों के भीतर; सभी योजनाओं में भरे हुए बटन और गोल किनारे वाली सपाट ड्रॉप-डाउन सूचियाँ; आठ पेस्टल रंग योजनाएँ; मान बॉक्स में अगल-बगल तीर; तीन सबसे अच्छे दिन तिथि के क्रम में; धुंधली आकाश पृष्ठभूमि; सूत्र डिबग का अनुवाद; EME सिद्धांत और सुझाव मैनुअल में Relu NJ9R की सलाह (GRAVES, पॉइंटिंग, कनेक्टर, एंटेना गेन, JT65B और MAP65, ध्रुवीकरण रिले), पहले रिसेप्शन और इंटरनेट चैट पर नए खंड, और प्रस्तावना में VE7BQH की तालिकाएँ; NJ9R को धन्यवाद, IK1UWL की स्मृति और लेखों, हार्डवेयर व सॉफ़्टवेयर के रचनाकारों को आभार, उनकी कृतियों के टूलटिप के साथ।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14735,6 +14807,14 @@ namespace LunaCalc
             "파스텔 남색",
             "파스텔 갈색",
             "밝은 파스텔 색 구성도 여덟 가지 있습니다: 하늘색, 주황, 아쿠아마린, 초록, 분홍, 라일락, 남색, 갈색.",
+            "포기하지 말라는 격려에 대해",
+            "EME 커뮤니티에서",
+            "추모하며 기억합니다",
+            "Giorgio IK1UWL, 이탈리아 EME의 개척자",
+            "기사와 하드웨어·소프트웨어 제품의 모든 저자에게,",
+            "전 세계 EME 운용자들의 국에서 흔히 볼 수 있는 것들",
+            "EME 이론과 조언 매뉴얼의 인용 위치:",
+            "1.2 - EME 링크 버짓에 내 EIRP, DX의 EIRP, 경로 손실, 양방향 S/N(태양 포함) 표시 추가; Word 문서의 수식을 한 가지 크기로 여백 안에 맞춤; 모든 테마에서 채워진 버튼과 둥근 테두리의 평면 드롭다운 목록; 파스텔 색 테마 8종; 값 상자의 화살표를 나란히 배치; 가장 좋은 3일을 날짜순으로; 하늘 배경 흐림 처리; 수식 디버그 번역; EME 이론과 조언 매뉴얼에 Relu NJ9R의 조언(GRAVES, 지향, 커넥터, 안테나 이득, JT65B와 MAP65, 편파 릴레이), 첫 수신과 인터넷 채팅에 관한 새 절, 서문에 VE7BQH 표 추가; NJ9R에 대한 감사, IK1UWL 추모, 기사·하드웨어·소프트웨어 저자들에 대한 감사와 그들의 작업을 보여 주는 도움말.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -16043,6 +16123,14 @@ namespace LunaCalc
             "Pastel nila",
             "Pastel cokelat",
             "Ada juga delapan skema pastel terang: biru muda, jingga, biru laut, hijau, merah muda, ungu muda, nila dan cokelat.",
+            "atas dorongan untuk tidak menyerah",
+            "di komunitas EME",
+            "kenangan dan penghormatan untuk",
+            "Giorgio IK1UWL, pelopor EME Italia",
+            "kepada semua penulis artikel dan pembuat produk perangkat keras atau perangkat lunak",
+            "yang umum ditemukan di stasiun operator EME di seluruh dunia",
+            "Dikutip dalam manual TEORI DAN TIPS EME:",
+            "1.2 - Anggaran EME dengan indikator EIRP saya, EIRP DX, rugi lintasan dan S/N dua arah (dengan Matahari); rumus dokumen Word dalam satu ukuran, di dalam margin; tombol penuh dan daftar tarik-turun datar bertepi bulat di semua skema; delapan skema warna pastel; kotak nilai dengan panah berdampingan; tiga hari terbaik menurut urutan tanggal; latar langit yang diburamkan; DEBUG RUMUS diterjemahkan; manual TEORI DAN TIPS EME dengan saran Relu NJ9R (GRAVES, pengarahan, konektor, penguatan antena, JT65B dan MAP65, relay polarisasi), bagian baru tentang penerimaan pertama dan chat internet, serta tabel VE7BQH di kata pengantar; ucapan terima kasih kepada NJ9R, kenangan untuk IK1UWL dan para penulis artikel, perangkat keras dan perangkat lunak, dengan tooltip tentang karya mereka.",
         };
 
         public static readonly string[] RU = {
@@ -17352,6 +17440,14 @@ namespace LunaCalc
             "Пастельный индиго",
             "Пастельный коричневый",
             "Есть также восемь светлых пастельных схем: голубая, оранжевая, аквамарин, зелёная, розовая, сиреневая, индиго и коричневая.",
+            "за призыв не сдаваться",
+            "в сообществе EME",
+            "светлая память",
+            "Giorgio IK1UWL, пионер EME в Италии",
+            "всем авторам статей, аппаратуры и программ,",
+            "которые обычно встречаются на станциях EME-операторов по всему миру",
+            "Упоминается в руководстве ТЕОРИЯ И СОВЕТЫ ПО EME:",
+            "1.2 - Бюджет EME с показателями «Моя ЭИИМ», «ЭИИМ DX», потери на трассе и S/N в обоих направлениях (с учётом Солнца); формулы документа Word одного размера, в пределах полей; залитые кнопки и плоские выпадающие списки со скруглённой рамкой во всех схемах; восемь пастельных цветовых схем; поля значений со стрелками рядом; три лучших дня в порядке дат; размытый фон неба; ОТЛАДКА ФОРМУЛ переведена; руководство ТЕОРИЯ И СОВЕТЫ ПО EME с советами Relu NJ9R (GRAVES, наведение, разъёмы, усиление антенн, JT65B и MAP65, реле поляризации), новыми разделами о первом приёме и об интернет-чатах и таблицами VE7BQH в предисловии; благодарность NJ9R, память об IK1UWL и благодарность авторам статей, аппаратуры и программ с подсказкой об их работах.",
         };
 
         public static readonly string[] UK = {
@@ -18661,6 +18757,14 @@ namespace LunaCalc
             "Пастельний індиго",
             "Пастельний коричневий",
             "Є також вісім світлих пастельних схем: блакитна, помаранчева, аквамарин, зелена, рожева, бузкова, індиго і коричнева.",
+            "за заклик не здаватися",
+            "у спільноті EME",
+            "світла пам'ять",
+            "Giorgio IK1UWL, піонер EME в Італії",
+            "усім авторам статей, апаратури та програм,",
+            "які зазвичай є на станціях EME-операторів по всьому світу",
+            "Згадується в посібнику ТЕОРІЯ ТА ПОРАДИ ЩОДО EME:",
+            "1.2 - Бюджет EME з показниками «Моя ЕІВП», «ЕІВП DX», втрати на трасі та S/N в обох напрямках (з урахуванням Сонця); формули документа Word одного розміру, у межах полів; заповнені кнопки та пласкі випадні списки із заокругленою рамкою в усіх схемах; вісім пастельних колірних схем; поля значень зі стрілками поруч; три найкращі дні в порядку дат; розмитий фон неба; НАЛАГОДЖЕННЯ ФОРМУЛ перекладено; посібник ТЕОРІЯ ТА ПОРАДИ ЩОДО EME з порадами Relu NJ9R (GRAVES, наведення, роз'єми, підсилення антен, JT65B і MAP65, реле поляризації), новими розділами про перший прийом та інтернет-чати й таблицями VE7BQH у передмові; подяка NJ9R, пам'ять про IK1UWL та подяка авторам статей, апаратури й програм із підказкою про їхні роботи.",
         };
 
         public static readonly string[] AF = {
@@ -19970,6 +20074,14 @@ namespace LunaCalc
             "Pastel indigo",
             "Pastel bruin",
             "Daar is ook agt ligte pastelskemas: ligblou, oranje, akwamaryn, groen, pienk, lila, indigo en bruin.",
+            "vir die aanmoediging om nie op te gee nie",
+            "in die EME-gemeenskap",
+            "'n gedagte en herinnering aan",
+            "Giorgio IK1UWL, Italiaanse EME-pionier",
+            "aan al die skrywers van artikels en van hardeware- of sagtewareprodukte",
+            "wat algemeen in die stasies van EME-operateurs regoor die wêreld gevind word",
+            "Aangehaal in die handleiding TEORIE EN WENKE OOR EME:",
+            "1.2 - EME-begroting met die aanwysers My EIRP, EIRP van die DX, padverlies en S/N in albei rigtings (met die Son); formules van die Word-dokument in een grootte, binne die kantlyne; gevulde knoppies en plat aftreklyste met geronde rand in alle skemas; agt pastelkleurskemas; waardekassies met die pyltjies langs mekaar; die drie beste dae in datumvolgorde; vaag hemelagtergrond; FORMULE-ONTFOUTING vertaal; handleiding TEORIE EN WENKE OOR EME met die raad van Relu NJ9R (GRAVES, rigting, verbindings, antennewins, JT65B en MAP65, polarisasierelê), die nuwe afdelings oor die eerste ontvangs en oor internetklets, en die VE7BQH-tabelle in die voorwoord; dank aan NJ9R, die herinnering aan IK1UWL en die skrywers van artikels, hardeware en sagteware, met 'n wenk oor hul werk.",
         };
 
         public static readonly string[] BN = {
@@ -21278,6 +21390,14 @@ namespace LunaCalc
             "প্যাস্টেল নীল",
             "প্যাস্টেল বাদামি",
             "আটটি হালকা প্যাস্টেল বিন্যাসও আছে: আকাশি, কমলা, অ্যাকোয়ামেরিন, সবুজ, গোলাপি, লাইলাক, নীল ও বাদামি।",
+            "হাল না ছাড়ার অনুপ্রেরণার জন্য",
+            "EME সম্প্রদায়ে",
+            "স্মরণ ও শ্রদ্ধা",
+            "Giorgio IK1UWL, ইতালির EME-এর পথিকৃৎ",
+            "নিবন্ধ এবং হার্ডওয়্যার বা সফটওয়্যার পণ্যের সকল রচয়িতাকে,",
+            "যা সারা বিশ্বের EME অপারেটরদের স্টেশনে সাধারণত পাওয়া যায়",
+            "EME তত্ত্ব ও পরামর্শ ম্যানুয়ালে উল্লেখ:",
+            "1.2 - EME বাজেটে আমার EIRP, DX-এর EIRP, পথের ক্ষতি এবং দুই দিকের S/N (সূর্যসহ) সূচক; Word নথির সূত্র একই আকারে, মার্জিনের ভেতরে; সব স্কিমে ভরাট বোতাম ও গোলাকার প্রান্তের সমতল ড্রপ-ডাউন তালিকা; আটটি প্যাস্টেল রঙের স্কিম; মানের বাক্সে পাশাপাশি তীর; সেরা তিন দিন তারিখের ক্রমে; ঝাপসা আকাশের পটভূমি; সূত্র ডিবাগ অনূদিত; EME তত্ত্ব ও পরামর্শ ম্যানুয়ালে Relu NJ9R-এর পরামর্শ (GRAVES, তাক করা, কানেক্টর, অ্যান্টেনার গেইন, JT65B ও MAP65, পোলারাইজেশন রিলে), প্রথম রিসেপশন ও ইন্টারনেট চ্যাট নিয়ে নতুন অংশ এবং ভূমিকায় VE7BQH-এর সারণি; NJ9R-কে ধন্যবাদ, IK1UWL-এর স্মরণ এবং নিবন্ধ, হার্ডওয়্যার ও সফটওয়্যারের রচয়িতাদের প্রতি কৃতজ্ঞতা, তাঁদের কাজের টুলটিপসহ।",
         };
 
         public static readonly string[] AR = {
@@ -22586,6 +22706,14 @@ namespace LunaCalc
             "نيلي باستيل",
             "بني باستيل",
             "هناك أيضًا ثمانية أنظمة ألوان باستيل فاتحة: سماوي، برتقالي، زبرجدي، أخضر، وردي، ليلكي، نيلي وبني.",
+            "للتشجيع على عدم الاستسلام",
+            "في مجتمع EME",
+            "تحية وذكرى إلى",
+            "Giorgio IK1UWL، رائد EME الإيطالي",
+            "إلى جميع مؤلفي المقالات ومنتجات العتاد أو البرمجيات",
+            "التي توجد عادةً في محطات مشغّلي EME حول العالم",
+            "مذكور في دليل نظرية EME ونصائح:",
+            "1.2 - ميزانية EME مع مؤشرات قدرتي EIRP وقدرة DX EIRP وخسارة المسار ونسبة S/N في الاتجاهين (مع الشمس)؛ معادلات مستند Word بحجم واحد داخل الهوامش؛ أزرار ممتلئة وقوائم منسدلة مسطحة بحواف مستديرة في جميع المخططات؛ ثمانية مخططات ألوان باستيل؛ مربعات القيم بأسهم متجاورة؛ أفضل ثلاثة أيام بترتيب التاريخ؛ خلفية سماء ضبابية؛ ترجمة تصحيح الصيغ؛ دليل نظرية EME ونصائح مع نصائح Relu NJ9R (GRAVES، التوجيه، الموصلات، كسب الهوائيات، JT65B وMAP65، مرحّل الاستقطاب)، وأقسام جديدة عن الاستقبال الأول وعن الدردشات عبر الإنترنت، وجداول VE7BQH في المقدمة؛ شكر لـ NJ9R، وذكرى IK1UWL، وشكر لمؤلفي المقالات والعتاد والبرمجيات مع تلميح عن أعمالهم.",
         };
 
         public static readonly string[] TR = {
@@ -23894,6 +24022,14 @@ namespace LunaCalc
             "Pastel çivit",
             "Pastel kahverengi",
             "Ayrıca sekiz açık pastel düzen vardır: açık mavi, turuncu, akuamarin, yeşil, pembe, leylak, çivit ve kahverengi.",
+            "pes etmeme yönündeki teşviki için",
+            "EME camiasında",
+            "saygı ve anıyla",
+            "Giorgio IK1UWL, İtalyan EME öncüsü",
+            "makalelerin ve donanım ya da yazılım ürünlerinin tüm yazarlarına,",
+            "ki bunlar dünyanın her yerindeki EME operatörlerinin istasyonlarında yaygın olarak bulunur",
+            "EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzunda geçtiği yerler:",
+            "1.2 - EME bütçesinde Benim EIRP, DX'in EIRP'si, yol kaybı ve iki yönde S/N (Güneş dahil) göstergeleri; Word belgesindeki formüller tek boyutta, kenar boşlukları içinde; tüm şemalarda dolu düğmeler ve yuvarlak kenarlı düz açılır listeler; sekiz pastel renk şeması; yan yana oklu değer kutuları; en iyi üç gün tarih sırasına göre; bulanık gökyüzü arka planı; FORMÜL HATA AYIKLAMA çevrildi; EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzuna Relu NJ9R'nin önerileri (GRAVES, yönlendirme, konektörler, anten kazancı, JT65B ve MAP65, polarizasyon rölesi), ilk alım ve internet sohbetleri üzerine yeni bölümler ve önsözde VE7BQH tabloları; NJ9R'ye teşekkür, IK1UWL'nin anısı ve makale, donanım ve yazılım yazarlarına teşekkür, eserleri hakkında ipucu balonuyla.",
         };
     }
 
@@ -30117,7 +30253,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.1";
+        public const string Versione = "1.2";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -33135,6 +33271,7 @@ namespace LunaCalc
             Lang.T("1.0 - Prima versione stabile, per Windows, Linux e macOS (Linux e macOS con Mono; i dati in ~/.local/share/YAEC/data o in ~/Library/Application Support/YAEC/data); installatore per Windows e pacchetti per Linux e macOS creati su GitHub; le versioni precedenti si chiamano beta. Nuova linguetta Luna sul mondo (elevazione della Luna sulle terre emerse di tutto il mondo, stazione DX con un clic, stato della tua antenna); manuale diviso in MANUALE D'USO APPROFONDITO e TEORIA E CONSIGLI SULL'EME; gruppi Aiuto e tools e Credits and thanks; linguetta Export in Excel dei calcoli; niente più margine sul modo: S/N in 2500 Hz con la soglia tipica come riferimento e i limiti del JT65 nel manuale; nel manuale anche la tabella del Q65 per TX1 – TX6, la rotazione di Faraday e la sintesi dell'articolo di SM5BSZ; tabella dei cavi ordinabile per perdita, con nuovi cavi Messi & Paoloni, SSB (SeaTex per ambienti marini, Aircom Premium), Belden e Tasker; caselle con l'unità senza scritte residue."),
             Lang.T("1.0.1 - Nella pagina della release su GitHub c'è il file SHA256SUMS.txt con le impronte SHA-256 di tutti i pacchetti: servono a verificare che i file scaricati siano proprio quelli originali (istruzioni nel README)."),
             Lang.T("1.1 - Posizione live e +- 24h (ex Tracciamento) anche nel passato e nel futuro: giorno dal calendario e ora trascinando la linea rossa, frequenza nel riquadro Eco e frequenze; casella del nominativo del DX con il CALL3.TXT scaricato da W7GJ e da WSJT-X Improved e fuso, locator proposto e copia nella cartella di WSJT-X; Distanza e Dgrd senza classifica, con la declinazione sovrapposta, righe colorate come il grafico e ore utili in verde a scelta; caselle di spunta nello stile del programma; cavi ordinati per diametro nelle tendine e per nome, costruttore e tipo nella tabella, con fonti tradotte; Budget EME con i soli modi a 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) e schema dell'impianto che si adatta ai testi; MANUALE D'USO con la rassegna di tutte le schermate; TEORIA E CONSIGLI SULL'EME con la prefazione dell'autore, numerazione da 1 e formule del rumore solare; HTTPS su Linux e macOS con i certificati del sistema."),
+            Lang.T("1.2 - Budget EME con gli indicatori EIRP mia, EIRP del DX, perdita di tratta e S/N nei due sensi (con il Sole); formule del documento Word di una sola grandezza, dentro i margini; pulsanti pieni e menu a tendina piatti con bordo arrotondato in tutti gli schemi; otto schemi di colori pastello; caselle dei valori con le frecce affiancate; i tre giorni migliori in ordine di data; sfondo del cielo sfocato; DEBUG FORMULE tradotto; manuale TEORIA E CONSIGLI SULL'EME con i consigli di Relu NJ9R (GRAVES, puntamento, connettori, guadagno delle antenne, JT65B e MAP65, relè di polarizzazione), i nuovi paragrafi sulla prima ricezione e sulle chat via Internet e le tabelle di VE7BQH nella prefazione; ringraziamenti a NJ9R, il ricordo di IK1UWL e gli autori di articoli, hardware e software, con il fumetto delle loro opere."),
         };
 
                     _AboutVersioniLg = Lang.Idx;
@@ -34474,17 +34611,39 @@ namespace LunaCalc
         readonly List<KeyValuePair<RectangleF, string>> contattiLink = new List<KeyValuePair<RectangleF, string>>();
         Image logoAri;
 
+        // pastiglie dei ringraziamenti con il loro fumetto (che cosa ha scritto o costruito e dove è citato)
+        readonly List<KeyValuePair<RectangleF, string>> contattiTip = new List<KeyValuePair<RectangleF, string>>();
+        ToolTip contTip = new ToolTip();
+        string contTipAttuale;
+        Panel pnlContScroll;
+        float contAltezza;
+
         void BuildContattiTab(TabPage tp)
         {
+            // pagina scorrevole: con tutti i ringraziamenti può essere più alta della finestra
+            pnlContScroll = new Panel();
+            pnlContScroll.Dock = DockStyle.Fill;
+            pnlContScroll.AutoScroll = true;
             pnlContatti = new PannelloDisegno();
-            pnlContatti.Dock = DockStyle.Fill;
+            pnlContatti.Location = new Point(0, 0);
             pnlContatti.Paint += DisegnaContatti;
+            pnlContScroll.Controls.Add(pnlContatti);
+            pnlContScroll.Resize += (s, e) => DimensionaContatti();
+            Fumetto.Stile(contTip);
             pnlContatti.MouseMove += (s, e) =>
             {
                 bool su = false;
                 foreach (KeyValuePair<RectangleF, string> kv in contattiLink) if (kv.Key.Contains(e.Location)) su = true;
                 pnlContatti.Cursor = su ? Cursors.Hand : Cursors.Default;
+                string tt = null;
+                foreach (KeyValuePair<RectangleF, string> kv in contattiTip) if (kv.Key.Contains(e.Location)) { tt = kv.Value; break; }
+                if (tt == contTipAttuale) return;
+                contTipAttuale = tt;
+                if (tt == null) { contTip.Hide(pnlContatti); return; }
+                Fumetto.Ultimo = tt;
+                contTip.Show(tt, pnlContatti, e.X + S(16), e.Y + S(18), 20000);
             };
+            pnlContatti.MouseLeave += (s, e) => { contTip.Hide(pnlContatti); contTipAttuale = null; };
             pnlContatti.MouseClick += (s, e) =>
             {
                 foreach (KeyValuePair<RectangleF, string> kv in contattiLink)
@@ -34496,7 +34655,72 @@ namespace LunaCalc
                     }
             };
             try { logoAri = SplashForm.LogoAri(); } catch { logoAri = null; }
-            tp.Controls.Add(pnlContatti);
+            tp.Controls.Add(pnlContScroll);
+            DimensionaContatti();
+        }
+
+        void DimensionaContatti()
+        {
+            if (pnlContScroll == null || pnlContatti == null) return;
+            int w = Math.Max(S(700), pnlContScroll.ClientSize.Width);
+            if (contAltezza <= 0)
+                using (Graphics g = pnlContatti.CreateGraphics())
+                using (Bitmap bm = new Bitmap(Math.Max(1, w), 10))
+                using (Graphics gb = Graphics.FromImage(bm)) { PreparaGrafica(gb); pnlContatti.Width = w; ContenutoContatti(gb, new Rectangle(0, 0, w, pnlContScroll.ClientSize.Height), false); }
+            int h = Math.Max(pnlContScroll.ClientSize.Height, (int)Math.Ceiling(contAltezza));
+            if (h > pnlContScroll.ClientSize.Height) w = Math.Max(S(700), pnlContScroll.ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
+            if (pnlContatti.Width != w || pnlContatti.Height != h) pnlContatti.Size = new Size(w, h);
+            pnlContatti.Invalidate();
+        }
+
+        // ringraziamenti: chi, che cosa ha scritto o costruito, dove è citato (§ del manuale TEORIA E CONSIGLI SULL'EME)
+        // 0 = pastiglia normale, 1 = in evidenza (K1JT), 2 = ricordo
+        static readonly string[][] GrazieAutori = {
+            new string[] { "K1JT", "prof. Joe Taylor", "WSJT-X, JT65, Q65 – “Quick-Start Guide to Q65”, “Sensitivity Comparison of JT65A and Q65-60A”, K1JT_eme2006", "1.6, 1.12", "1" },
+            new string[] { "KA1GT", "Bob", "“Doppler 101 for 1296 MHz EME”, “CFOM – Constant Frequency On Moon Doppler Mode”", "1.10" },
+            new string[] { "VE7BQH", "Lionel", "VE7BQH antenna tables (G/T, Ta)", "PREF, 1.6" },
+            new string[] { "W7GJ", "Lance", "“Q65-60A QSO Procedure and Tips for EME DXpeditions”, CALL3.TXT", "1.12, 1.13" },
+            new string[] { "SM5BSZ", "Leif", "Linrad, “Selecting Polarisation for EME”", "1.3, 1.7, 2" },
+            new string[] { "I2FAK", "Franco", "“Radioamatori – To the moon and back con I2FAK Franco” (YouTube)", "1.3, 1.4, 1.5" },
+            new string[] { "IK3XTV", "Flavio", "“EME (earth-moon-earth) con una singola Yagi in 144 MHz”", "1.6" },
+            new string[] { "IV3NWV", "Nico", "Q65, QRA codes (EME 2016)", "1.6, 1.12" },
+            new string[] { "K9AN", "Steve", "Q65 – “Quick-Start Guide to Q65”", "1.6, 1.12" },
+            new string[] { "G4WJS", "Bill †", "WSJT-X, Q65 – “Quick-Start Guide to Q65”", "1.6, 1.12" },
+            new string[] { "G4JNT", "Andy", "“The Q65 Coding Process used in WSJT-X”", "1.12" },
+            new string[] { "K4MSG", "Paul", "“Beginner's Guide to Small-station EME”", "1.3, 1.7" },
+            new string[] { "W3SZ", "Roger", "EME station (SSB-Electronic LT2S Mk II)", "1.7" },
+            new string[] { "OE2IGL", "Gerald", "“EME Link Budget & Analysis Tool (1-300 GHz)”", "1.11, 2" },
+            new string[] { "DF3GJ", "Joachim", "“EME Link Budget & Analysis Tool (1-300 GHz)”", "1.11, 2" },
+            new string[] { "VA7OJ / AB4OJ", "Adam †", "“Icom IC-9700 Test Report”, “Yaesu FT-991 Test Report”", "1.7" },
+            new string[] { "G3SJX", "Peter", "“The Yaesu FT-897 HF/VHF/UHF Transceiver” (RadCom)", "1.7" },
+            new string[] { "SM0JHF", "Henryk", "“Moonbouncers Are Also Contesters”", "2" },
+            new string[] { "DG7YBN", "Hartmut", "TANT, VE7BQH antenna tables", "PREF" },
+            new string[] { "YU7EF", "Popa", "EF low-noise Yagis", "PREF" },
+            new string[] { "G0KSC", "Justin", "LFA Yagis (InnovAntennas)", "PREF" },
+            new string[] { "EA6VQ", "Gabriel", "DXMaps", "PREF" },
+            new string[] { "DF9IC", "Henning", "“Test of the Large Signal Behaviour of some 144 MHz Radios”", "1.7" },
+            new string[] { "DD1US", "Matthias", "Coax cable tables (dd1us.de)", "1.8" },
+            new string[] { "EA5IP", "Antonio", "Coax cable tables (qsl.net/ea5ip)", "1.8" },
+            new string[] { "SV1BSX", "Mak †", "Coax cable tables", "1.8" },
+            new string[] { "HA1YA", "Gabi", "ME2T-PRO-II / ME2HT-PRO-II 144 MHz transverter", "1.7" },
+            new string[] { "DB6NT", "Michael", "Kuhne electronic: TR 144 H +40, MKU 144 G2", "1.7" },
+            new string[] { "N0UK", "Chris", "N0UK EME chat, Ping Jockey Central", "1.14" },
+            new string[] { "EA8DBM / LY3UM", "Aleksandr", "EMEchat", "1.14" },
+            new string[] { "HB9Q / KT6Q", "Daniel", "HB9Q logger", "1.14" },
+            new string[] { "ON4KST", "Alain", "ON4KST chat", "1.12, 1.14" } };
+
+        // fumetto di una pastiglia: opere e paragrafi del manuale TEORIA E CONSIGLI SULL'EME
+        static string FumettoGrazie(string call, string nome, string opere, string par)
+        {
+            List<string> p = new List<string>();
+            foreach (string x in par.Split(','))
+            {
+                string t = x.Trim();
+                if (t == "PREF") p.Add(Lang.T("Prefazione dell'autore"));
+                else if (t == "2") p.Add("§ 2");
+                else p.Add("§ " + t);
+            }
+            return call + "  " + nome + "\u0001" + opere + "\n\n" + Lang.T("Citato nel manuale TEORIA E CONSIGLI SULL'EME:") + " " + string.Join(", ", p.ToArray());
         }
 
         Bitmap contLuna, contCielo;
@@ -34505,8 +34729,15 @@ namespace LunaCalc
         {
             Graphics g = e.Graphics;
             PreparaGrafica(g);
+            float prima = contAltezza;
+            ContenutoContatti(g, pnlContatti.ClientRectangle, true);
+            if (Math.Abs(contAltezza - prima) > 1) BeginInvoke((Action)DimensionaContatti);
+        }
+
+        void ContenutoContatti(Graphics g, Rectangle cr, bool disegna)
+        {
             contattiLink.Clear();
-            Rectangle cr = pnlContatti.ClientRectangle;
+            contattiTip.Clear();
             // sfondo: la sfera celeste arcobaleno, a tutta pagina (cover)
             if (contCielo == null) { try { contCielo = SplashForm.CieloImg(); } catch { contCielo = null; } }
             if (contLuna == null) contLuna = SplashForm.LunaImg();
@@ -34625,40 +34856,76 @@ namespace LunaCalc
                 TestoRicco(g, ntr, fd, fdb, Color.FromArgb(29, 36, 51), nota.Left + S(18), nota.Top + S(11), nota.Width - S(36), 1.45f, true);
                 y += hn + S(20);
 
-                // ringraziamenti: patrocinio e beta-tester, nominativi come pastiglie
-                string[][] grazie = {
-                    new string[] { Lang.T("per il patrocinio della"), "Sezione ARI \"Valle del Liri\"", "IZ0JNY|Ivan" },
-                    new string[] { Lang.T("per il controllo in regime di"), Lang.T("beta-tester"), "IZ7NLJ|Fabio", "I2NOY|Maurizio", "IK4GNG|Gilberto" } };
-                float rh = S(62), ht = S(70) + rh * grazie.Length;
+                // ringraziamenti (bozzetto approvato): patrocinio, beta-tester, NJ9R, il ricordo di IK1UWL
+                // e gli autori di articoli e di prodotti hardware o software; nominativi come pastiglie con fumetto
+                List<string[]> grazie = new List<string[]>();
+                grazie.Add(new string[] { Lang.T("per il patrocinio della"), "Sezione ARI \"Valle del Liri\"", "IZ0JNY|Ivan" });
+                grazie.Add(new string[] { Lang.T("per il controllo in regime di"), Lang.T("beta-tester"), "IZ7NLJ|Fabio", "I2NOY|Maurizio", "IK4GNG|Gilberto" });
+                grazie.Add(new string[] { Lang.T("per l'incitamento a non mollare"), Lang.T("nell'ambiente dell'EME"),
+                    "NJ9R|Relu|0|" + FumettoGrazie("NJ9R", "Relu", "“2M EME the easy way… the secret sauce to success”", "PREF, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13, 1.14") });
+                grazie.Add(new string[] { Lang.T("un pensiero e un ricordo a"), Lang.T("Giorgio IK1UWL, pioniere italiano dell'EME"),
+                    "IK1UWL|Giorgio †|2|" + FumettoGrazie("IK1UWL", "Giorgio †", "“EME (Earth-Moon-Earth) – Guida operativa”, “Considerazioni sull'effetto suolo (Ground Gain)”", "1.6, 1.7") });
+                List<string> aut = new List<string>();
+                aut.Add(Lang.T("a tutti gli autori degli articoli e di prodotti hardware o software"));
+                aut.Add(Lang.T("che comunemente si trovano negli impianti degli operatori EME di tutto il mondo"));
+                foreach (string[] ga in GrazieAutori)
+                    aut.Add(ga[0] + "|" + ga[1] + "|" + (ga.Length > 4 ? ga[4] : "0") + "|" + FumettoGrazie(ga[0], ga[1], ga[2], ga[3]));
+                grazie.Add(aut.ToArray());
+
+                float colLab = Math.Min(S(330), wtot * 0.34f);
+                float xc0 = x + S(22) + colLab + S(22), xcMax = x + wtot - S(22);
+                // altezza di ogni riga: etichetta a capo nella colonna, pastiglie che vanno a capo nello spazio a destra
+                float[] hRiga = new float[grazie.Count];
+                for (int i = 0; i < grazie.Count; i++)
+                {
+                    float hl = S(10) + TestoRicco(g, grazie[i][0], fd, fd, testo, 0, 0, colLab, 1.4f, false)
+                             + TestoRicco(g, grazie[i][1], fdb, fdb, titCard, 0, 0, colLab, 1.4f, false) + S(12);
+                    float xc = xc0, yc = S(15);
+                    for (int j = 2; j < grazie[i].Length; j++)
+                    {
+                        string[] pz = grazie[i][j].Split('|');
+                        float wc = g.MeasureString(pz[0], fchb).Width + g.MeasureString(pz[1], fch).Width + S(26);
+                        if (xc > xc0 && xc + wc > xcMax) { xc = xc0; yc += S(38); }
+                        xc += wc + S(10);
+                    }
+                    hRiga[i] = Math.Max(Math.Max(S(62), hl), yc + S(30) + S(15));
+                }
+                float ht = S(70);
+                foreach (float hr in hRiga) ht += hr;
                 RectangleF thx = new RectangleF(x, y, wtot, ht);
                 Scheda(g, thx, Color.Empty);
                 RectangleF ich = new RectangleF(thx.Left + S(22), thx.Top + S(16), S(30), S(30));
                 IconaQuadra(g, ich, Color.FromArgb(214, 48, 49), "♥", fb);
                 Testo(g, Spaziato(Lang.T("RINGRAZIAMENTI")), fk, Color.FromArgb(214, 48, 49), new RectangleF(ich.Right + S(10), ich.Top, thx.Width - S(80), ich.Height), StringAlignment.Near, StringAlignment.Center);
                 float yr = ich.Bottom + S(12);
-                float colLab = Math.Min(S(300), thx.Width * 0.36f);
                 using (Pen lin = new Pen(Tema.Scuro ? Color.FromArgb(70, 80, 95) : Color.FromArgb(237, 240, 245)))
-                    for (int i = 0; i < grazie.Length; i++)
+                    for (int i = 0; i < grazie.Count; i++)
                     {
                         g.DrawLine(lin, thx.Left + S(22), yr, thx.Right - S(22), yr);
-                        Testo(g, grazie[i][0], fd, testo, new RectangleF(thx.Left + S(22), yr + S(10), colLab, S(20)), StringAlignment.Near, StringAlignment.Near);
-                        Testo(g, grazie[i][1], fdb, titCard, new RectangleF(thx.Left + S(22), yr + S(30), colLab, S(20)), StringAlignment.Near, StringAlignment.Near);
-                        float xc = thx.Left + S(22) + colLab + S(18), yc = yr + S(15);
+                        float hl0 = TestoRicco(g, grazie[i][0], fd, fd, testo, thx.Left + S(22), yr + S(10), colLab, 1.4f, true);
+                        TestoRicco(g, grazie[i][1], fdb, fdb, titCard, thx.Left + S(22), yr + S(10) + hl0, colLab, 1.4f, true);
+                        float xc = xc0, yc = yr + S(15);
                         for (int j = 2; j < grazie[i].Length; j++)
                         {
                             string[] pz = grazie[i][j].Split('|');
                             float w1 = g.MeasureString(pz[0], fchb).Width, w2 = g.MeasureString(pz[1], fch).Width;
-                            RectangleF chip = new RectangleF(xc, yc, w1 + w2 + S(26), S(30));
+                            float wc = w1 + w2 + S(26);
+                            if (xc > xc0 && xc + wc > xcMax) { xc = xc0; yc += S(38); }
+                            RectangleF chip = new RectangleF(xc, yc, wc, S(30));
+                            string tipo = pz.Length > 2 ? pz[2] : "0";
+                            Color fondo = tipo == "1" ? Color.FromArgb(227, 236, 255) : tipo == "2" ? Color.FromArgb(243, 238, 252) : Color.FromArgb(241, 245, 251);
+                            Color bordo = tipo == "1" ? Color.FromArgb(159, 182, 232) : tipo == "2" ? Color.FromArgb(201, 182, 234) : Color.FromArgb(214, 224, 239);
                             using (GraphicsPath p = Arrotondato(chip, S(15)))
                             {
-                                using (Brush b = new SolidBrush(Color.FromArgb(241, 245, 251))) g.FillPath(b, p);
-                                using (Pen pn = new Pen(Color.FromArgb(214, 224, 239))) g.DrawPath(pn, p);
+                                using (Brush b = new SolidBrush(fondo)) g.FillPath(b, p);
+                                using (Pen pn = new Pen(bordo)) g.DrawPath(pn, p);
                             }
                             Testo(g, pz[0], fchb, blu, new RectangleF(chip.X + S(10), chip.Y, w1 + S(4), chip.Height), StringAlignment.Near, StringAlignment.Center);
                             Testo(g, pz[1], fch, Color.FromArgb(29, 36, 51), new RectangleF(chip.X + S(12) + w1, chip.Y, w2 + S(6), chip.Height), StringAlignment.Near, StringAlignment.Center);
+                            if (pz.Length > 3) contattiTip.Add(new KeyValuePair<RectangleF, string>(chip, string.Join("|", pz, 3, pz.Length - 3)));
                             xc = chip.Right + S(10);
                         }
-                        yr += rh;
+                        yr += hRiga[i];
                     }
                 y += ht;
 
@@ -34682,6 +34949,7 @@ namespace LunaCalc
                     Testo(g, "www.ariliri.it", fu, link, new RectangleF(xb, pat.Top + S(76), sl.Width + S(4), S(22)), StringAlignment.Near, StringAlignment.Near);
                     contattiLink.Add(new KeyValuePair<RectangleF, string>(new RectangleF(xb, pat.Top + S(76), sl.Width, S(22)), "https://www.ariliri.it"));
                 }
+                contAltezza = Math.Max(y, pat.Bottom) + S(30);
             }
         }
 

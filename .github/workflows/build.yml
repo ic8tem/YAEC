@@ -141,7 +141,7 @@ jobs:
             kill $PID 2>/dev/null || true
           done
           echo "tema=pastello-azzurro" >> "$HOME/.local/share/YAEC/data/impostazioni.txt"
-          for T in "MANUALE D'USO" "CAVI COASSIALI" "Budget EME" "Distanza e Dgrd"; do
+          for T in "CONTATTI DELL'AUTORE E RINGRAZIAMENTI" "MANUALE D'USO" "Budget EME"; do
             YAEC_LINGUETTA="$T" mono YAEC.exe &
             PID=$!
             sleep 30

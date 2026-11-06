@@ -1,4 +1,4 @@
-﻿YAEC - Yet Another EME Calc  1.1
+﻿YAEC - Yet Another EME Calc  1.2
 by Costantino IC8TEM
 =================================
 
@@ -9,25 +9,25 @@ Source code and downloads: https://github.com/ic8tem/YAEC
 All the versions before 1.0 are called beta (beta 1 ... beta 30).
 
 INSTALLATION - WINDOWS
-1. Download YAEC-1.1-Setup.exe from the "Releases" page on GitHub and run it.
+1. Download YAEC-1.2-Setup.exe from the "Releases" page on GitHub and run it.
    If SmartScreen shows a warning: "More info" -> "Run anyway".
    It installs into Documents\YAEC (no administrator rights needed), with
    Start menu and desktop shortcuts and the uninstaller.
-2. Portable alternative: YAEC-1.1-windows-portable.zip, extract it into a
+2. Portable alternative: YAEC-1.2-windows-portable.zip, extract it into a
    folder where you can write (e.g. Documents\YAEC) and run YAEC.exe.
 3. To build it yourself: extract the source zip and double-click
    "compila.bat" (it uses the C# compiler that is already part of Windows).
 
 INSTALLATION - LINUX (all distributions, the same program)
 YAEC runs with Mono (the open-source .NET runtime maintained by WineHQ).
-- Debian, Ubuntu, Mint: download yaec_1.1_all.deb and install it with
-      sudo apt install ./yaec_1.1_all.deb
+- Debian, Ubuntu, Mint: download yaec_1.2_all.deb and install it with
+      sudo apt install ./yaec_1.2_all.deb
   (apt installs Mono as well). Start it from the applications menu or with
   the command "yaec".
 - Fedora:   sudo dnf install mono-complete
   Arch:     sudo pacman -S mono
   openSUSE: sudo zypper install mono-complete
-  then extract YAEC-1.1-linux.tar.gz and run ./install.sh (installs into
+  then extract YAEC-1.2-linux.tar.gz and run ./install.sh (installs into
   ~/.local, no root needed), or simply ./yaec from the extracted folder.
 - Data: ~/.local/share/YAEC/data
 
@@ -35,15 +35,15 @@ INSTALLATION - macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/ or
    the "Framework Mono" package from WineHQ) and XQuartz (https://www.xquartz.org):
    on macOS the Windows Forms window of Mono is drawn through X11.
-2. Download YAEC-1.1-macOS.dmg, open it and drag YAEC into Applications.
+2. Download YAEC-1.2-macOS.dmg, open it and drag YAEC into Applications.
    The first time, right-click YAEC -> Open (the app is not signed by Apple).
 - Data: ~/Library/Application Support/YAEC/data
 
 CHECKING THE DOWNLOADED FILES (SHA-256)
 The release page also has SHA256SUMS.txt with the SHA-256 fingerprint of every
 package. Compare it with the fingerprint of the file you downloaded:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.1-Setup.exe -Algorithm SHA256
-  or in the command prompt: certutil -hashfile YAEC-1.1-Setup.exe SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2-Setup.exe -Algorithm SHA256
+  or in the command prompt: certutil -hashfile YAEC-1.2-Setup.exe SHA256
 - Linux:  sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS:  shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 If the two values differ, do not install the file: download it again from
@@ -67,6 +67,30 @@ SETTINGS
 - Linux: ~/.local/share/YAEC/data   macOS: ~/Library/Application Support/YAEC/data
 - The LoTW password is stored encrypted for the current user (DPAPI on
   Windows, the Mono key store on Linux and macOS).
+
+WHAT'S NEW IN 1.2
+- EME budget: indicators My EIRP and DX EIRP (with the antenna power and
+  the TX losses), path loss, S/N me -> DX and DX -> me (with the Sun when it
+  is calculated, and in 2500 Hz). The equations of the Word document use one
+  size for the whole document, so the longest one stays within the margins.
+- Program style: filled buttons and flat drop-down lists with rounded borders
+  in every colour scheme; value boxes with thin side-by-side arrows; eight
+  pastel colour schemes (light blue, orange, aquamarine, green, pink, lilac,
+  indigo, brown).
+- Distance and Dgrd: the three best days in date order (the star keeps the
+  rank). Blurred sky background on the start screen and on the contacts page.
+  FORMULA DEBUG translated in every language.
+- THEORY AND TIPS ON EME manual: the advice of Relu NJ9R ("2M EME the easy
+  way"): GRAVES radar as test bench, compass, mast camera and error log,
+  connectors, published antenna gain and dBd, JT65B and MAP65 settings,
+  polarization relay never switched in TX; new sections 1.13 "From the first
+  reception to the QSO" and 1.14 "Text chats on the Internet" (N0UK, EMEchat
+  of EA8DBM, HB9Q logger, ON4KST); VE7BQH antenna tables in the preface.
+  Tab names translated in the manuals of all languages.
+- AUTHOR CONTACTS AND ACKNOWLEDGEMENTS: thanks to NJ9R, a memory of Giorgio
+  IK1UWL, and to the authors of articles and of hardware and software
+  products found in EME stations all over the world; each callsign has a
+  tooltip with the works and where they are cited in the manual.
 
 WHAT'S NEW IN 1.1
 - Live position and +- 24h (formerly Tracking) also shows the past and the
