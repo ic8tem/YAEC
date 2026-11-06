@@ -29710,13 +29710,13 @@ namespace LunaCalc
                 if (cmbTrkMhz != null)
                 {
                     int yc = (int)(y - S(3));
-                    int xk = (int)(rc.Right - S(14) - cmbTrkKhz.Width);
-                    int xp = xk - lblTrkPunto.Width;
-                    int xm = xp - cmbTrkMhz.Width;
-                    if (cmbTrkMhz.Location != new Point(xm, yc)) cmbTrkMhz.Location = new Point(xm, yc);
-                    if (cmbTrkKhz.Location != new Point(xk, yc)) cmbTrkKhz.Location = new Point(xk, yc);
-                    Point pp = new Point(xp, yc + (cmbTrkMhz.Height - lblTrkPunto.Height) / 2);
-                    if (lblTrkPunto.Location != pp) lblTrkPunto.Location = pp;
+                    int xfk = (int)(rc.Right - S(14) - cmbTrkKhz.Width);
+                    int xfp = xfk - lblTrkPunto.Width;
+                    int xfm = xfp - cmbTrkMhz.Width;
+                    if (cmbTrkMhz.Location != new Point(xfm, yc)) cmbTrkMhz.Location = new Point(xfm, yc);
+                    if (cmbTrkKhz.Location != new Point(xfk, yc)) cmbTrkKhz.Location = new Point(xfk, yc);
+                    Point pfp = new Point(xfp, yc + (cmbTrkMhz.Height - lblTrkPunto.Height) / 2);
+                    if (lblTrkPunto.Location != pfp) lblTrkPunto.Location = pfp;
                 }
                 y += cmbTrkMhz != null ? Math.Max(S(22), cmbTrkMhz.Height + S(2)) : S(22);
                 RigaDato(g, x, y, wi, lh, Lang.T("Eco proprio"), trk.EcoTxt, fl, fv, Tema.Fore); y += lh + S(2);
