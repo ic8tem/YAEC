@@ -28939,8 +28939,8 @@ namespace LunaCalc
             // giorno (UTC): calendario a comparsa; l'ora si sceglie trascinando la linea rossa delle 24 ore
             dtpTrkGiorno = new DateTimePicker();
             dtpTrkGiorno.Format = DateTimePickerFormat.Custom;
-            dtpTrkGiorno.CustomFormat = "ddd dd/MM/yyyy";
-            dtpTrkGiorno.Font = new Font(Lang.FontUi, 12F * fontFactor, FontStyle.Bold);
+            dtpTrkGiorno.CustomFormat = "dd/MM/yyyy";
+            dtpTrkGiorno.Font = new Font(Lang.FontUi, 11F * fontFactor, FontStyle.Bold);
             dtpTrkGiorno.Value = DateTime.UtcNow.Date;
             tip.SetToolTip(dtpTrkGiorno, Lang.T("Giorno del tracciamento (UTC): apri il calendario per scegliere un giorno passato o futuro; l'ora si sceglie trascinando la linea rossa delle 24 ore in basso."));
             btnTrkAdesso = new Pillola("▶ " + Lang.T("Adesso"), StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 8.5F * fontFactor, FontStyle.Bold));
@@ -28950,7 +28950,7 @@ namespace LunaCalc
             cardFreq.Layout += (s, e) =>
             {
                 dtpTrkGiorno.Location = new Point(S(14), S(29));
-                dtpTrkGiorno.Width = Math.Max(S(90), Math.Min(cardFreq.Width - S(28), S(190)));
+                dtpTrkGiorno.Width = Math.Max(S(90), Math.Min(cardFreq.Width - S(28), S(150)));
                 btnTrkAdesso.Location = new Point(S(14), dtpTrkGiorno.Bottom + S(4));
             };
             cardFreq.Paint += (s, e) => DisegnaScheda(e.Graphics, cardFreq, Lang.T("Giorno (UTC)"), null, Color.Empty, "", Tema.Muted,
@@ -29705,8 +29705,9 @@ namespace LunaCalc
                 Testo(g, trk.SorgeTramonta, fs, Tema.Muted, new RectangleF(xt, cyf + S(16), wt, S(38)), StringAlignment.Near, StringAlignment.Near);
                 // --- Eco e frequenze (CFOM)
                 x = rc.Left + pad; y = rc.Top + S(8); wi = rc.Width - pad - S(14);
-                Testo(g, Lang.T("ECO E FREQUENZE (CFOM)"), fh, Tema.Muted, new RectangleF(x, y, wi, S(18)), StringAlignment.Near, StringAlignment.Near);
-                // frequenza (MHz . kHz) a destra del titolo
+                // frequenza (MHz . kHz) a destra del titolo, che si accorcia per lasciarle posto
+                float wTitCfom = cmbTrkMhz != null ? Math.Max(S(40), rc.Right - S(14) - cmbTrkKhz.Width - lblTrkPunto.Width - cmbTrkMhz.Width - S(8) - x) : wi;
+                Testo(g, Lang.T("ECO E FREQUENZE (CFOM)"), fh, Tema.Muted, new RectangleF(x, y, wTitCfom, S(18)), StringAlignment.Near, StringAlignment.Near);
                 if (cmbTrkMhz != null)
                 {
                     int yc = (int)(y - S(3));
