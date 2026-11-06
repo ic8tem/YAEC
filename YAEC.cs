@@ -24846,7 +24846,8 @@ namespace LunaCalc
         {
             if (pnlImp == null || pnlImpHost == null || bMe == null || bDx == null) return;
             BudgetUi u = impSel == 0 ? bMe : bDx;
-            int W = Math.Max(S(400), pnlImpHost.ClientSize.Width - 2);
+            // si lascia sempre il posto della barra di scorrimento verticale: così non compare mai quella orizzontale
+            int W = Math.Max(S(400), pnlImpHost.ClientSize.Width - 2 - (pnlImpHost.VerticalScroll.Visible ? 0 : SystemInformation.VerticalScrollBarWidth));
             float avail = pnlImpHost.ClientSize.Height - 2;
             using (Graphics g = pnlImp.CreateGraphics())
             using (Font ft = FontPx(Lang.FontUi, S(13), true))
@@ -25084,7 +25085,8 @@ namespace LunaCalc
                 // riquadri
                 Riquadro(g, RCavoAnt, cLinea, Lang.T("CAVO ANTENNA – RELÈ"), ft);
                 float wca = g.MeasureString(Lang.T("CAVO ANTENNA – RELÈ"), ft).Width;
-                Testo(g, Lang.T("TX e RX"), fp, Tema.Muted, new RectangleF(RCavoAnt.Left + S(10) + wca, RCavoAnt.Top + S(5), Math.Max(1, RCavoAnt.Width - wca - S(20)), S(22)), StringAlignment.Near, StringAlignment.Center);
+                if (g.MeasureString(Lang.T("TX e RX"), fp).Width <= RCavoAnt.Width - wca - S(20))   // solo se c'è posto accanto al titolo
+                    Testo(g, Lang.T("TX e RX"), fp, Tema.Muted, new RectangleF(RCavoAnt.Left + S(10) + wca, RCavoAnt.Top + S(5), Math.Max(1, RCavoAnt.Width - wca - S(20)), S(22)), StringAlignment.Near, StringAlignment.Center);
                 Etichetta(g, Lang.T("Tipo"), RCavoAnt, 0, fl, 0, S(156)); Etichetta(g, Lang.T("Lunghezza"), RCavoAnt, 1, fl, 0, S(84));
                 Piede(g, impCavoAnt, fr, cAnt, RCavoAnt, Linee(0, 2));
                 Riquadro(g, RReleBox, cLinea, Lang.T("RELÈ COASSIALE TX / RX"), ft);
