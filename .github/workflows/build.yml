@@ -70,6 +70,9 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil libgdiplus xvfb imagemagick fonts-dejavu-core > /dev/null
+          # impostazioni di prova: stazione IC8TEM a Capri e un DX, lingua italiana
+          mkdir -p "$HOME/.local/share/YAEC/data"
+          printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\n' > "$HOME/.local/share/YAEC/data/impostazioni.txt"
           Xvfb :99 -screen 0 1600x1000x24 &
           export DISPLAY=:99
           sleep 2
