@@ -2897,6 +2897,16 @@ namespace LunaCalc
             "CALL3.TXT aggiornato: {0:N0} nominativi da W7GJ e WSJT-X Improved ({1:N0} solo nella seconda, {2:N0} con locator diverso: vale W7GJ)",
             "CALL3.TXT aggiornato: {0:N0} nominativi (solo {1}, l'altra fonte non risponde)",
             "CALL3.TXT non aggiornato: ",
+            "Quanti giorni mostrare nel grafico e nella tabella.",
+            "decl. ",
+            "declinazione della Luna (scala blu a sinistra, dentro il grafico)",
+            "Nominativo del DX",
+            "Se il nominativo è nel CALL3.TXT il locator si riempie da solo. Se il locator l'hai scritto tu e il CALL3.TXT ne indica un altro, premi Invio sul nominativo per usare quello del CALL3.TXT.",
+            "Stazione DX — nominativo e locator WWL",
+            "CALL3.TXT: {0} · Invio sul nominativo per usarlo",
+            "nominativo non presente nel CALL3.TXT: inserisci il locator",
+            "Il nominativo e il locator della stazione che vuoi ascoltare o collegare. Se il nominativo è nel CALL3.TXT il locator si riempie da solo; se il locator è valido, la seconda stazione si attiva in tutte le linguette.",
+            " · locator dal CALL3.TXT",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4139,6 +4149,16 @@ namespace LunaCalc
             "CALL3.TXT updated: {0:N0} callsigns from W7GJ and WSJT-X Improved ({1:N0} only in the second, {2:N0} with a different locator: W7GJ wins)",
             "CALL3.TXT updated: {0:N0} callsigns (only {1}, the other source does not respond)",
             "CALL3.TXT not updated: ",
+            "How many days to show in the chart and in the table.",
+            "decl. ",
+            "Moon declination (blue scale on the left, inside the chart)",
+            "DX callsign",
+            "If the callsign is in CALL3.TXT the locator fills in by itself. If you typed the locator yourself and CALL3.TXT gives a different one, press Enter on the callsign to use the CALL3.TXT one.",
+            "DX station — callsign and WWL locator",
+            "CALL3.TXT: {0} · press Enter on the callsign to use it",
+            "callsign not in CALL3.TXT: enter the locator",
+            "The callsign and locator of the station you want to hear or work. If the callsign is in CALL3.TXT the locator fills in by itself; if the locator is valid, the second station is enabled in all tabs.",
+            " · locator from CALL3.TXT",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5381,6 +5401,16 @@ namespace LunaCalc
             "CALL3.TXT aktualisiert: {0:N0} Rufzeichen von W7GJ und WSJT-X Improved ({1:N0} nur in der zweiten, {2:N0} mit anderem Locator: W7GJ gilt)",
             "CALL3.TXT aktualisiert: {0:N0} Rufzeichen (nur {1}, die andere Quelle antwortet nicht)",
             "CALL3.TXT nicht aktualisiert: ",
+            "Wie viele Tage im Diagramm und in der Tabelle angezeigt werden.",
+            "Dekl. ",
+            "Monddeklination (blaue Skala links, im Diagramm)",
+            "Rufzeichen des DX",
+            "Steht das Rufzeichen in der CALL3.TXT, wird der Locator automatisch ausgefüllt. Hast du den Locator selbst eingegeben und die CALL3.TXT nennt einen anderen, drücke Enter im Rufzeichenfeld, um den aus der CALL3.TXT zu verwenden.",
+            "DX-Station — Rufzeichen und WWL-Locator",
+            "CALL3.TXT: {0} · Enter im Rufzeichen zum Übernehmen",
+            "Rufzeichen nicht in der CALL3.TXT: Locator eingeben",
+            "Rufzeichen und Locator der Station, die du hören oder arbeiten willst. Steht das Rufzeichen in der CALL3.TXT, wird der Locator automatisch ausgefüllt; ist der Locator gültig, wird die zweite Station in allen Reitern aktiviert.",
+            " · Locator aus der CALL3.TXT",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6623,6 +6653,16 @@ namespace LunaCalc
             "CALL3.TXT mis à jour : {0:N0} indicatifs de W7GJ et WSJT-X Improved ({1:N0} seulement dans la seconde, {2:N0} avec un locator différent : W7GJ prévaut)",
             "CALL3.TXT mis à jour : {0:N0} indicatifs (seulement {1}, l'autre source ne répond pas)",
             "CALL3.TXT non mis à jour : ",
+            "Nombre de jours à afficher dans le graphique et dans le tableau.",
+            "décl. ",
+            "déclinaison de la Lune (échelle bleue à gauche, dans le graphique)",
+            "Indicatif du DX",
+            "Si l'indicatif figure dans CALL3.TXT, le locator se remplit tout seul. Si vous avez tapé le locator vous-même et que CALL3.TXT en indique un autre, appuyez sur Entrée dans l'indicatif pour utiliser celui de CALL3.TXT.",
+            "Station DX — indicatif et locator WWL",
+            "CALL3.TXT : {0} · Entrée dans l'indicatif pour l'utiliser",
+            "indicatif absent de CALL3.TXT : saisissez le locator",
+            "L'indicatif et le locator de la station que vous voulez écouter ou contacter. Si l'indicatif figure dans CALL3.TXT, le locator se remplit tout seul ; si le locator est valide, la seconde station s'active dans tous les onglets.",
+            " · locator de CALL3.TXT",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7865,6 +7905,16 @@ namespace LunaCalc
             "CALL3.TXT actualizado: {0:N0} indicativos de W7GJ y WSJT-X Improved ({1:N0} solo en la segunda, {2:N0} con locator distinto: vale W7GJ)",
             "CALL3.TXT actualizado: {0:N0} indicativos (solo {1}, la otra fuente no responde)",
             "CALL3.TXT no actualizado: ",
+            "Cuántos días mostrar en el gráfico y en la tabla.",
+            "decl. ",
+            "declinación de la Luna (escala azul a la izquierda, dentro del gráfico)",
+            "Indicativo del DX",
+            "Si el indicativo está en CALL3.TXT el locator se rellena solo. Si escribiste el locator tú y CALL3.TXT indica otro, pulsa Intro en el indicativo para usar el de CALL3.TXT.",
+            "Estación DX — indicativo y locator WWL",
+            "CALL3.TXT: {0} · Intro en el indicativo para usarlo",
+            "indicativo no presente en CALL3.TXT: introduce el locator",
+            "El indicativo y el locator de la estación que quieres escuchar o contactar. Si el indicativo está en CALL3.TXT el locator se rellena solo; si el locator es válido, la segunda estación se activa en todas las pestañas.",
+            " · locator de CALL3.TXT",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9107,6 +9157,16 @@ namespace LunaCalc
             "CALL3.TXT atualizado: {0:N0} indicativos de W7GJ e WSJT-X Improved ({1:N0} só na segunda, {2:N0} com locator diferente: vale W7GJ)",
             "CALL3.TXT atualizado: {0:N0} indicativos (só {1}, a outra fonte não responde)",
             "CALL3.TXT não atualizado: ",
+            "Quantos dias mostrar no gráfico e na tabela.",
+            "decl. ",
+            "declinação da Lua (escala azul à esquerda, dentro do gráfico)",
+            "Indicativo do DX",
+            "Se o indicativo estiver no CALL3.TXT o locator preenche-se sozinho. Se escreveu o locator e o CALL3.TXT indica outro, prima Enter no indicativo para usar o do CALL3.TXT.",
+            "Estação DX — indicativo e locator WWL",
+            "CALL3.TXT: {0} · Enter no indicativo para o usar",
+            "indicativo não presente no CALL3.TXT: introduza o locator",
+            "O indicativo e o locator da estação que quer ouvir ou contactar. Se o indicativo estiver no CALL3.TXT o locator preenche-se sozinho; se o locator for válido, a segunda estação ativa-se em todos os separadores.",
+            " · locator do CALL3.TXT",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10349,6 +10409,16 @@ namespace LunaCalc
             "CALL3.TXT 已更新:来自 W7GJ 和 WSJT-X Improved 的 {0:N0} 个呼号({1:N0} 个仅在后者中,{2:N0} 个定位不同:以 W7GJ 为准)",
             "CALL3.TXT 已更新:{0:N0} 个呼号(仅 {1},另一来源无响应)",
             "CALL3.TXT 未更新:",
+            "图表和表格中显示的天数。",
+            "赤纬 ",
+            "月球赤纬（蓝色刻度在图内左侧）",
+            "DX 呼号",
+            "若呼号在 CALL3.TXT 中，网格定位会自动填入。若定位是你手动输入的而 CALL3.TXT 给出另一个，在呼号框中按回车即可改用 CALL3.TXT 的定位。",
+            "DX 电台 — 呼号与 WWL 定位",
+            "CALL3.TXT：{0} · 在呼号框按回车使用",
+            "CALL3.TXT 中没有该呼号：请输入网格定位",
+            "你想收听或联络的电台的呼号与网格定位。若呼号在 CALL3.TXT 中，定位会自动填入；若定位有效，第二电台会在所有选项卡中启用。",
+            " · 定位来自 CALL3.TXT",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11591,6 +11661,16 @@ namespace LunaCalc
             "CALL3.TXT を更新:W7GJ と WSJT-X Improved から {0:N0} 局(後者のみ {1:N0}、ロケーター相違 {2:N0}:W7GJ を優先)",
             "CALL3.TXT を更新:{0:N0} 局({1} のみ、もう一方の取得元は応答なし)",
             "CALL3.TXT は更新されませんでした: ",
+            "グラフと表に表示する日数。",
+            "赤緯 ",
+            "月の赤緯（青い目盛りはグラフ内の左側）",
+            "DX のコールサイン",
+            "コールサインが CALL3.TXT にあればロケーターは自動で入ります。ロケーターを手入力していて CALL3.TXT の値と違う場合は、コールサイン欄で Enter を押すと CALL3.TXT の値を使います。",
+            "DX 局 — コールサインと WWL ロケーター",
+            "CALL3.TXT：{0} · コールサイン欄で Enter で使用",
+            "CALL3.TXT にないコールサイン：ロケーターを入力してください",
+            "受信または交信したい局のコールサインとロケーター。コールサインが CALL3.TXT にあればロケーターは自動で入ります。ロケーターが有効なら、すべてのタブで第 2 局が有効になります。",
+            " · ロケーターは CALL3.TXT から",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12833,6 +12913,16 @@ namespace LunaCalc
             "CALL3.TXT अपडेट: W7GJ और WSJT-X Improved से {0:N0} कॉलसाइन ({1:N0} केवल दूसरी में, {2:N0} अलग लोकेटर के साथ: W7GJ मान्य)",
             "CALL3.TXT अपडेट: {0:N0} कॉलसाइन (केवल {1}, दूसरा स्रोत उत्तर नहीं दे रहा)",
             "CALL3.TXT अपडेट नहीं हुआ: ",
+            "चार्ट और तालिका में कितने दिन दिखाने हैं।",
+            "दिक्पात ",
+            "चंद्रमा का दिक्पात (नीला पैमाना बाईं ओर, चार्ट के भीतर)",
+            "DX का कॉलसाइन",
+            "यदि कॉलसाइन CALL3.TXT में है तो लोकेटर अपने-आप भर जाता है। यदि लोकेटर आपने स्वयं लिखा है और CALL3.TXT कोई दूसरा बताता है, तो CALL3.TXT वाला उपयोग करने के लिए कॉलसाइन पर Enter दबाएँ।",
+            "DX स्टेशन — कॉलसाइन और WWL लोकेटर",
+            "CALL3.TXT: {0} · उपयोग के लिए कॉलसाइन पर Enter",
+            "कॉलसाइन CALL3.TXT में नहीं है: लोकेटर डालें",
+            "जिस स्टेशन को आप सुनना या उससे संपर्क करना चाहते हैं उसका कॉलसाइन और लोकेटर। यदि कॉलसाइन CALL3.TXT में है तो लोकेटर अपने-आप भर जाता है; यदि लोकेटर मान्य है तो दूसरा स्टेशन सभी टैब में सक्रिय हो जाता है।",
+            " · लोकेटर CALL3.TXT से",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14075,6 +14165,16 @@ namespace LunaCalc
             "CALL3.TXT 업데이트: W7GJ와 WSJT-X Improved에서 호출부호 {0:N0}개 (두 번째에만 {1:N0}개, 로케이터 다름 {2:N0}개: W7GJ 우선)",
             "CALL3.TXT 업데이트: 호출부호 {0:N0}개 ({1}만, 다른 출처는 응답 없음)",
             "CALL3.TXT 업데이트 안 됨: ",
+            "그래프와 표에 표시할 일수.",
+            "적위 ",
+            "달의 적위(파란 눈금은 그래프 안 왼쪽)",
+            "DX 호출부호",
+            "호출부호가 CALL3.TXT에 있으면 로케이터가 자동으로 채워집니다. 로케이터를 직접 입력했는데 CALL3.TXT의 값이 다르면 호출부호 칸에서 Enter를 눌러 CALL3.TXT의 값을 사용하세요.",
+            "DX 국 — 호출부호와 WWL 로케이터",
+            "CALL3.TXT: {0} · 호출부호에서 Enter로 사용",
+            "CALL3.TXT에 없는 호출부호: 로케이터를 입력하세요",
+            "듣거나 교신하려는 국의 호출부호와 로케이터입니다. 호출부호가 CALL3.TXT에 있으면 로케이터가 자동으로 채워지고, 로케이터가 유효하면 모든 탭에서 두 번째 국이 활성화됩니다.",
+            " · 로케이터: CALL3.TXT",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15317,6 +15417,16 @@ namespace LunaCalc
             "CALL3.TXT diperbarui: {0:N0} callsign dari W7GJ dan WSJT-X Improved ({1:N0} hanya di yang kedua, {2:N0} dengan lokator berbeda: berlaku W7GJ)",
             "CALL3.TXT diperbarui: {0:N0} callsign (hanya {1}, sumber lain tidak merespons)",
             "CALL3.TXT tidak diperbarui: ",
+            "Berapa hari yang ditampilkan di grafik dan tabel.",
+            "dekl. ",
+            "deklinasi Bulan (skala biru di kiri, di dalam grafik)",
+            "Callsign DX",
+            "Jika callsign ada di CALL3.TXT, lokator terisi sendiri. Jika Anda mengetik lokator sendiri dan CALL3.TXT menunjukkan yang lain, tekan Enter di callsign untuk memakai lokator dari CALL3.TXT.",
+            "Stasiun DX — callsign dan lokator WWL",
+            "CALL3.TXT: {0} · Enter di callsign untuk memakainya",
+            "callsign tidak ada di CALL3.TXT: masukkan lokator",
+            "Callsign dan lokator stasiun yang ingin Anda dengar atau hubungi. Jika callsign ada di CALL3.TXT, lokator terisi sendiri; jika lokator valid, stasiun kedua aktif di semua tab.",
+            " · lokator dari CALL3.TXT",
         };
 
         public static readonly string[] RU = {
@@ -16560,6 +16670,16 @@ namespace LunaCalc
             "CALL3.TXT обновлён: {0:N0} позывных от W7GJ и WSJT-X Improved ({1:N0} только во втором, {2:N0} с другим локатором: действует W7GJ)",
             "CALL3.TXT обновлён: {0:N0} позывных (только {1}, другой источник не отвечает)",
             "CALL3.TXT не обновлён: ",
+            "Сколько дней показывать на графике и в таблице.",
+            "скл. ",
+            "склонение Луны (синяя шкала слева, внутри графика)",
+            "Позывной DX",
+            "Если позывной есть в CALL3.TXT, локатор заполняется сам. Если вы ввели локатор вручную, а CALL3.TXT указывает другой, нажмите Enter в поле позывного, чтобы взять локатор из CALL3.TXT.",
+            "Станция DX — позывной и локатор WWL",
+            "CALL3.TXT: {0} · Enter в поле позывного — использовать",
+            "позывного нет в CALL3.TXT: введите локатор",
+            "Позывной и локатор станции, которую вы хотите слушать или провести с ней связь. Если позывной есть в CALL3.TXT, локатор заполняется сам; если локатор верен, вторая станция включается на всех вкладках.",
+            " · локатор из CALL3.TXT",
         };
 
         public static readonly string[] UK = {
@@ -17803,6 +17923,16 @@ namespace LunaCalc
             "CALL3.TXT оновлено: {0:N0} позивних від W7GJ і WSJT-X Improved ({1:N0} лише в другому, {2:N0} з іншим локатором: діє W7GJ)",
             "CALL3.TXT оновлено: {0:N0} позивних (лише {1}, інше джерело не відповідає)",
             "CALL3.TXT не оновлено: ",
+            "Скільки днів показувати на графіку і в таблиці.",
+            "схил. ",
+            "схилення Місяця (синя шкала ліворуч, усередині графіка)",
+            "Позивний DX",
+            "Якщо позивний є в CALL3.TXT, локатор заповнюється сам. Якщо ви ввели локатор вручну, а CALL3.TXT вказує інший, натисніть Enter у полі позивного, щоб узяти локатор із CALL3.TXT.",
+            "Станція DX — позивний і локатор WWL",
+            "CALL3.TXT: {0} · Enter у полі позивного — використати",
+            "позивного немає в CALL3.TXT: введіть локатор",
+            "Позивний і локатор станції, яку ви хочете слухати або провести з нею зв'язок. Якщо позивний є в CALL3.TXT, локатор заповнюється сам; якщо локатор правильний, друга станція вмикається на всіх вкладках.",
+            " · локатор із CALL3.TXT",
         };
 
         public static readonly string[] AF = {
@@ -19046,6 +19176,16 @@ namespace LunaCalc
             "CALL3.TXT bygewerk: {0:N0} roepseine van W7GJ en WSJT-X Improved ({1:N0} slegs in die tweede, {2:N0} met 'n ander lokator: W7GJ geld)",
             "CALL3.TXT bygewerk: {0:N0} roepseine (slegs {1}, die ander bron antwoord nie)",
             "CALL3.TXT nie bygewerk nie: ",
+            "Hoeveel dae in die grafiek en die tabel gewys word.",
+            "dekl. ",
+            "Maan se deklinasie (blou skaal links, binne die grafiek)",
+            "Roepsein van die DX",
+            "As die roepsein in CALL3.TXT is, word die lokator vanself ingevul. As jy die lokator self ingetik het en CALL3.TXT 'n ander een gee, druk Enter op die roepsein om dié van CALL3.TXT te gebruik.",
+            "DX-stasie — roepsein en WWL-lokator",
+            "CALL3.TXT: {0} · Enter op die roepsein om dit te gebruik",
+            "roepsein nie in CALL3.TXT nie: tik die lokator in",
+            "Die roepsein en lokator van die stasie wat jy wil hoor of werk. As die roepsein in CALL3.TXT is, word die lokator vanself ingevul; as die lokator geldig is, word die tweede stasie in alle oortjies geaktiveer.",
+            " · lokator uit CALL3.TXT",
         };
 
         public static readonly string[] BN = {
@@ -20288,6 +20428,16 @@ namespace LunaCalc
             "CALL3.TXT হালনাগাদ: W7GJ ও WSJT-X Improved থেকে {0:N0}টি কলসাইন ({1:N0}টি শুধু দ্বিতীয়টিতে, {2:N0}টির লোকেটর ভিন্ন: W7GJ প্রাধান্য পায়)",
             "CALL3.TXT হালনাগাদ: {0:N0}টি কলসাইন (শুধু {1}, অন্য উৎস সাড়া দিচ্ছে না)",
             "CALL3.TXT হালনাগাদ হয়নি: ",
+            "চার্ট ও সারণিতে কত দিন দেখানো হবে।",
+            "বিষুবলম্ব ",
+            "চাঁদের বিষুবলম্ব (নীল স্কেল বাঁয়ে, চার্টের ভেতরে)",
+            "DX-এর কলসাইন",
+            "কলসাইনটি CALL3.TXT-এ থাকলে লোকেটর নিজে থেকেই বসে যায়। লোকেটর আপনি নিজে লিখে থাকলে এবং CALL3.TXT অন্য একটি দেখালে, CALL3.TXT-এরটি ব্যবহার করতে কলসাইনে Enter চাপুন।",
+            "DX স্টেশন — কলসাইন ও WWL লোকেটর",
+            "CALL3.TXT: {0} · ব্যবহার করতে কলসাইনে Enter",
+            "কলসাইন CALL3.TXT-এ নেই: লোকেটর লিখুন",
+            "যে স্টেশন শুনতে বা যার সঙ্গে যোগাযোগ করতে চান তার কলসাইন ও লোকেটর। কলসাইনটি CALL3.TXT-এ থাকলে লোকেটর নিজে থেকেই বসে যায়; লোকেটর বৈধ হলে সব ট্যাবে দ্বিতীয় স্টেশন চালু হয়।",
+            " · লোকেটর CALL3.TXT থেকে",
         };
 
         public static readonly string[] AR = {
@@ -21530,6 +21680,16 @@ namespace LunaCalc
             "تم تحديث CALL3.TXT: {0:N0} نداء من W7GJ وWSJT-X Improved ({1:N0} في الثانية فقط، {2:N0} بمحدد موقع مختلف: يُعتمد W7GJ)",
             "تم تحديث CALL3.TXT: {0:N0} نداء ({1} فقط، المصدر الآخر لا يستجيب)",
             "لم يُحدَّث CALL3.TXT: ",
+            "عدد الأيام المعروضة في المخطط والجدول.",
+            "الميل ",
+            "ميل القمر (المقياس الأزرق على اليسار داخل المخطط)",
+            "نداء محطة DX",
+            "إذا كان النداء موجودًا في CALL3.TXT يُملأ محدد الموقع تلقائيًا. وإذا كتبت محدد الموقع بنفسك وأشار CALL3.TXT إلى آخر، فاضغط Enter في خانة النداء لاستخدام ما في CALL3.TXT.",
+            "محطة DX — النداء ومحدد الموقع WWL",
+            "CALL3.TXT: {0} · اضغط Enter في النداء لاستخدامه",
+            "النداء غير موجود في CALL3.TXT: أدخل محدد الموقع",
+            "نداء ومحدد موقع المحطة التي تريد الاستماع إليها أو الاتصال بها. إذا كان النداء في CALL3.TXT يُملأ محدد الموقع تلقائيًا؛ وإذا كان محدد الموقع صالحًا تُفعَّل المحطة الثانية في كل التبويبات.",
+            " · محدد الموقع من CALL3.TXT",
         };
 
         public static readonly string[] TR = {
@@ -22772,6 +22932,16 @@ namespace LunaCalc
             "CALL3.TXT güncellendi: W7GJ ve WSJT-X Improved'dan {0:N0} çağrı işareti ({1:N0} yalnızca ikincide, {2:N0} farklı lokatörlü: W7GJ geçerli)",
             "CALL3.TXT güncellendi: {0:N0} çağrı işareti (yalnızca {1}, diğer kaynak yanıt vermiyor)",
             "CALL3.TXT güncellenmedi: ",
+            "Grafikte ve tabloda kaç gün gösterileceği.",
+            "dik aç. ",
+            "Ay'ın dik açıklığı (mavi ölçek solda, grafiğin içinde)",
+            "DX çağrı işareti",
+            "Çağrı işareti CALL3.TXT içindeyse lokatör kendiliğinden dolar. Lokatörü kendiniz yazdıysanız ve CALL3.TXT başka birini gösteriyorsa, CALL3.TXT'dekini kullanmak için çağrı işaretinde Enter'a basın.",
+            "DX istasyonu — çağrı işareti ve WWL lokatörü",
+            "CALL3.TXT: {0} · kullanmak için çağrı işaretinde Enter",
+            "çağrı işareti CALL3.TXT'de yok: lokatörü girin",
+            "Dinlemek veya bağlantı kurmak istediğiniz istasyonun çağrı işareti ve lokatörü. Çağrı işareti CALL3.TXT içindeyse lokatör kendiliğinden dolar; lokatör geçerliyse ikinci istasyon tüm sekmelerde etkinleşir.",
+            " · lokatör CALL3.TXT'den",
         };
     }
 
@@ -27814,6 +27984,7 @@ namespace LunaCalc
                 if (e.Button != MouseButtons.Left || !mondoRett.Contains(e.Location)) return;
                 double la, lo;
                 MondoPuntoA(e.Location, out la, out lo);
+                if (txtDxCall != null) { caricamento = true; try { txtDxCall.Text = ""; } finally { caricamento = false; } dxCallPrec = ""; }
                 dx.Loc.Text = Locator.Da(la, lo, 6);
                 if (!chkDx.Checked) chkDx.Checked = true;
                 pnlMondo.Invalidate();
@@ -28031,7 +28202,8 @@ namespace LunaCalc
                     using (Brush bd = new SolidBrush(Color.FromArgb(217, 119, 6))) g.FillEllipse(bd, pd.X - S(6), pd.Y - S(6), S(12), S(12));
                     using (Pen pw = new Pen(Color.White, S(1.5f))) g.DrawEllipse(pw, pd.X - S(6), pd.Y - S(6), S(12), S(12));
                     double eDx = MondoElevA(dx.Lat, dx.Lon);
-                    EtichettaMappa(g, Locator.Da(dx.Lat, dx.Lon, 6), fb, " · El " + eDx.ToString("0.0", c2) + "°", pd.X + S(10), pd.Y + S(4));
+                    string nomeDx = txtDxCall != null && txtDxCall.Text.Trim().Length > 0 ? txtDxCall.Text.Trim() + " · " : "";
+                    EtichettaMappa(g, nomeDx + Locator.Da(dx.Lat, dx.Lon, 6), fb, " · El " + eDx.ToString("0.0", c2) + "°", pd.X + S(10), pd.Y + S(4));
                 }
                 // la mia stazione: stella blu
                 if (mondoMeOk)
@@ -28283,7 +28455,6 @@ namespace LunaCalc
             lvDg.FullRowSelect = true;
             lvDg.GridLines = true;
             lvDg.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            lvDg.Columns.Add(Lang.T("Classifica"), S(75));
             lvDg.Columns.Add(Lang.T("Giorno (UTC)"), S(110));
             lvDg.Columns.Add(Lang.T("Luna"), S(90));
             lvDg.Columns.Add(Lang.T("Ore utili"), S(70), HorizontalAlignment.Right);
@@ -28410,17 +28581,17 @@ namespace LunaCalc
         {
             if (lvDg == null) return;
             lvDg.BeginUpdate();
-            // senza CALCOLI APPROFONDITI la classifica è corta: giorno, ora migliore, Dgrd, ore utili
-            int[] largh = { 75, 110, 90, 70, 120, 75, 120, 190, 70, 95 };
-            bool[] sempre = { true, true, false, true, true, true, false, false, false, true };
+            // senza CALCOLI APPROFONDITI la tabella è corta: giorno, ora migliore, Dgrd, ore utili
+            int[] largh = { 130, 90, 70, 120, 75, 120, 190, 70, 95 };
+            bool[] sempre = { true, false, true, true, true, false, false, false, true };
             for (int c = 0; c < lvDg.Columns.Count && c < largh.Length; c++) lvDg.Columns[c].Width = (sempre[c] || complessi) ? S(largh[c]) : 0;
             lvDg.Items.Clear();
             foreach (GiornoEme gg in dgGiorni)
             {
                 bool valido = !double.IsNaN(gg.Score);
                 if (chkDgSoloUtili.Checked && !valido) continue;
-                ListViewItem it = new ListViewItem(valido ? (gg.Rango <= 3 ? "★ " + gg.Rango.ToString(ci) + "°" : gg.Rango.ToString(ci) + "°") : "-");
-                it.SubItems.Add(gg.Giorno.ToString("ddd dd/MM/yyyy", itCi));
+                // i 3 giorni migliori hanno la stella con il numero, come sul grafico
+                ListViewItem it = new ListViewItem((valido && gg.Rango <= 3 ? "★" + gg.Rango.ToString(ci) + "  " : "") + gg.Giorno.ToString("ddd dd/MM/yyyy", itCi));
                 it.SubItems.Add(gg.LunaNuova ? Lang.T("● Luna nuova") : (gg.LunaPiena ? Lang.T("Luna piena") : ""));
                 it.SubItems.Add(gg.Ore.ToString("0.0", ci));
                 it.SubItems.Add(valido ? gg.Score.ToString("F2", ci) : Lang.T("nessuna finestra"));
@@ -28429,12 +28600,27 @@ namespace LunaCalc
                 it.SubItems.Add(gg.DistMedia.ToString("N0", ci));
                 it.SubItems.Add(valido ? gg.Tsky.ToString("F0", ci) : "");
                 it.SubItems.Add(double.IsNaN(gg.Sep) ? "" : (gg.SoleLiv > 0 ? "☀ " : "") + gg.Sep.ToString("F0", ci));
-                if (valido && gg.Rango <= 3) it.BackColor = Tema.OkBg;
-                else if (!valido) it.ForeColor = Tema.SottoFg;
+                // stessi colori delle fasce del grafico: verde = 3 giorni migliori, rosso/arancione = Sole vicino alla Luna
+                Color cf = ColoreFasciaDg(gg, valido);
+                if (!cf.IsEmpty) it.BackColor = cf;
+                if (!valido) it.ForeColor = Tema.SottoFg;
                 if (gg.Giorno == dgStart) it.Font = new Font(lvDg.Font, FontStyle.Bold);
                 lvDg.Items.Add(it);
             }
             lvDg.EndUpdate();
+        }
+
+        // Colore pieno della fascia del giorno sul grafico (stessa trasparenza, sullo sfondo del grafico)
+        Color ColoreFasciaDg(GiornoEme gg, bool valido)
+        {
+            Color c; int alfa;
+            if (valido && gg.Rango <= 3) { c = Color.FromArgb(40, 180, 80); alfa = 55; }
+            else if (gg.SoleLiv == 2) { c = Color.FromArgb(230, 60, 40); alfa = 50; }
+            else if (gg.SoleLiv == 1) { c = Color.FromArgb(240, 160, 30); alfa = 30; }
+            else return Color.Empty;
+            Color f = Tema.ChartBg;
+            Func<int, int, int> m = (x, y) => (x * alfa + y * (255 - alfa)) / 255;
+            return Color.FromArgb(m(c.R, f.R), m(c.G, f.G), m(c.B, f.B));
         }
 
         Color ColoreDg()
@@ -28626,15 +28812,9 @@ namespace LunaCalc
             if (dgT.Count < 2) return;
             int ml = S(56), mr = S(70), mt = S(40), mb = S(36);
             RectangleF a = new RectangleF(ml, mt, Math.Max(10, cr.Width - ml - mr), Math.Max(10, cr.Height - mt - mb));
-            // striscia della declinazione sotto il grafico, con lo stesso asse dei giorni
-            RectangleF dRet = RectangleF.Empty;
-            if (chkDgDec != null && chkDgDec.Checked && dgDec.Count == dgT.Count && a.Height > S(240))
-            {
-                float hd = Math.Max(S(78), a.Height * 0.24f), gap = S(26);
-                dRet = new RectangleF(a.Left, a.Bottom - hd, a.Width, hd);
-                a.Height -= hd + gap;
-            }
-            float yFine = dRet.IsEmpty ? a.Bottom : dRet.Bottom;
+            // declinazione della Luna sovrapposta al grafico, con la sua scala blu dentro il bordo sinistro
+            bool conDec = chkDgDec != null && chkDgDec.Checked && dgDec.Count == dgT.Count;
+            float yFine = a.Bottom;
             double t0 = dgStart.Ticks, t1 = dgEnd.Ticks;
             // distanza media diurna
             double kmin = double.MaxValue, kmax = double.MinValue;
@@ -28704,7 +28884,6 @@ namespace LunaCalc
                 {
                     float x = X(dgStart.AddDays(d));
                     g.DrawLine(gp, x, a.Top, x, a.Bottom);
-                    if (!dRet.IsEmpty) g.DrawLine(gp, x, dRet.Top, x, dRet.Bottom);
                     if (d % passo == 0 && d < giorni)
                         g.DrawString(dgStart.AddDays(d).ToString("dd/MM", inv), fs, txt, x + 2, yFine + S(3));
                 }
@@ -28777,7 +28956,7 @@ namespace LunaCalc
                 }
             }
 
-            if (!dRet.IsEmpty) DisegnaDeclinazione(g, dRet, X, fs, fb);
+            if (conDec) DisegnaDeclinazione(g, a, X, fs, fb);
 
             // adesso
             DateTime now = DateTime.UtcNow;
@@ -28789,8 +28968,14 @@ namespace LunaCalc
             }
             // legenda (in basso a sinistra, dove la Dgrd è vicina a 0 dB solo raramente)
             {
-                float lx = a.Left + S(8), ly = a.Bottom - S(54);
-                using (Brush bg = new SolidBrush(Color.FromArgb(220, Tema.ChartBg))) g.FillRectangle(bg, lx - 4, ly - 3, S(390), S(50));
+                float lx = a.Left + S(8) + (conDec ? S(34) : 0), ly = a.Bottom - S(54) - (conDec ? S(15) : 0);
+                using (Brush bg = new SolidBrush(Color.FromArgb(220, Tema.ChartBg))) g.FillRectangle(bg, lx - 4, ly - 3, S(390), S(conDec ? 65 : 50));
+                if (conDec)
+                {
+                    using (Pen p4 = new Pen(ColoreDec(), 1.8f)) g.DrawLine(p4, lx, ly + S(52), lx + S(24), ly + S(52));
+                    using (Brush tt4 = new SolidBrush(Tema.ChartText))
+                        g.DrawString(Lang.T("declinazione della Luna (scala blu a sinistra, dentro il grafico)"), fs, tt4, lx + S(30), ly + S(45));
+                }
                 using (Pen p1 = new Pen(cDg, (float)dgSpDg)) g.DrawLine(p1, lx, ly + S(7), lx + S(24), ly + S(7));
                 using (Pen p2 = new Pen(cOk, (float)dgSpDg + 2f)) g.DrawLine(p2, lx, ly + S(22), lx + S(24), ly + S(22));
                 using (Pen p3 = new Pen(cKm, (float)dgSpKm)) g.DrawLine(p3, lx, ly + S(37), lx + S(24), ly + S(37));
@@ -28805,50 +28990,33 @@ namespace LunaCalc
             fb.Dispose();
         }
 
-        // Striscia della declinazione della Luna (geocentrica), sotto il grafico Dgrd/distanza.
-        // Verde: Luna dalla parte del mio emisfero (più alta e più ore sopra l'orizzonte); arancione: dalla parte opposta.
+        Color ColoreDec() { return Tema.Scuro ? Color.FromArgb(110, 175, 255) : Color.FromArgb(31, 111, 209); }
+
+        // Declinazione della Luna (geocentrica) sovrapposta al grafico Dgrd/distanza: curva blu con la sua scala
+        // (±30°) scritta dentro il bordo sinistro, linea punteggiata dello zero, massimi a nord e a sud con la data.
         void DisegnaDeclinazione(Graphics g, RectangleF d, Func<DateTime, float> X, Font fs, Font fb)
         {
             const double DecScala = 30.0;
             Func<double, float> Yc = vc => d.Top + (float)((DecScala - Math.Max(-DecScala, Math.Min(DecScala, vc))) / (2 * DecScala) * d.Height);
-            Color cDec = Tema.Scuro ? Color.FromArgb(110, 175, 255) : Color.FromArgb(31, 111, 209);
-            Color cMio = Tema.Scuro ? Color.FromArgb(90, 210, 120) : Color.FromArgb(20, 150, 70);
-            Color cOpp = Color.FromArgb(240, 150, 40);
-            bool nord = me.Lat >= 0;
+            Color cDec = ColoreDec();
             float y0 = Yc(0);
-            using (Pen gp = new Pen(Tema.ChartGrid))
             using (Brush tdc = new SolidBrush(cDec))
+            using (Brush bg = new SolidBrush(Color.FromArgb(200, Tema.ChartBg)))
             {
-                g.DrawRectangle(gp, d.Left, d.Top, d.Width, d.Height);
-                for (int v = -20; v <= 20; v += 20)
+                for (int v = -20; v <= 20; v += 10)
                 {
                     float y = Yc(v);
-                    if (v != 0) g.DrawLine(gp, d.Left, y, d.Right, y);
                     string sv = (v > 0 ? "+" : (v < 0 ? "−" : "")) + Math.Abs(v).ToString(ci) + "°";
-                    g.DrawString(sv, fs, tdc, d.Left - g.MeasureString(sv, fs).Width - 4, y - S(7));
+                    SizeF sz = g.MeasureString(sv, fs);
+                    g.FillRectangle(bg, d.Left + 2, y - sz.Height / 2, sz.Width + 2, sz.Height);
+                    g.DrawString(sv, fs, tdc, d.Left + 3, y - sz.Height / 2);
+                    using (Pen pt = new Pen(cDec, 1f)) g.DrawLine(pt, d.Left, y, d.Left + 2, y);
                 }
-                using (Pen p0 = new Pen(Tema.ChartText, 1f)) { p0.DashStyle = DashStyle.Dot; g.DrawLine(p0, d.Left, y0, d.Right, y0); }
+                using (Pen p0 = new Pen(Color.FromArgb(150, cDec), 1f)) { p0.DashStyle = DashStyle.Dot; g.DrawLine(p0, d.Left + S(30), y0, d.Right, y0); }
             }
             int n = dgT.Count;
             PointF[] pts = new PointF[n];
             for (int i = 0; i < n; i++) pts[i] = new PointF(X(dgT[i]), Yc(dgDec[i]));
-            // area tra la curva e lo zero: sopra (nord) e sotto (sud) con il colore del mio emisfero o di quello opposto
-            using (GraphicsPath area = new GraphicsPath())
-            {
-                PointF[] poli = new PointF[n + 2];
-                Array.Copy(pts, poli, n);
-                poli[n] = new PointF(pts[n - 1].X, y0);
-                poli[n + 1] = new PointF(pts[0].X, y0);
-                area.AddPolygon(poli);
-                GraphicsState st = g.Save();
-                g.SetClip(new RectangleF(d.Left, d.Top, d.Width, y0 - d.Top));
-                using (Brush bn = new SolidBrush(Color.FromArgb(Tema.Scuro ? 70 : 55, nord ? cMio : cOpp))) g.FillPath(bn, area);
-                g.Restore(st);
-                st = g.Save();
-                g.SetClip(new RectangleF(d.Left, y0, d.Width, d.Bottom - y0));
-                using (Brush bs = new SolidBrush(Color.FromArgb(Tema.Scuro ? 70 : 55, nord ? cOpp : cMio))) g.FillPath(bs, area);
-                g.Restore(st);
-            }
             using (Pen pc = new Pen(cDec, 1.8f)) g.DrawLines(pc, pts);
             // massimi a nord e a sud: punto e valore con la data (un estremo per ogni finestra di ±1 giorno)
             using (Brush tdc = new SolidBrush(cDec))
@@ -28864,33 +29032,14 @@ namespace LunaCalc
                         if (dgDec[j] < dgDec[i] || (dgDec[j] == dgDec[i] && j < i)) mn = false;
                     }
                     if (!(mx && Math.Abs(dgDec[i]) > 5) && !(mn && Math.Abs(dgDec[i]) > 5)) continue;
-                    // un estremo vicino al bordo del periodo non è affidabile
                     if (i < Fin / 2 || i > n - 1 - Fin / 2) continue;
                     g.FillEllipse(tdc, pts[i].X - S(3), pts[i].Y - S(3), S(6), S(6));
-                    string et = (dgDec[i] > 0 ? "+" : "−") + Math.Abs(dgDec[i]).ToString("0.0", ci) + "° " + dgT[i].ToString("dd/MM", inv);
+                    string et = Lang.T("decl. ") + (dgDec[i] > 0 ? "+" : "−") + Math.Abs(dgDec[i]).ToString("0.0", ci) + "° " + dgT[i].ToString("dd/MM", inv);
                     SizeF sz = g.MeasureString(et, fb);
-                    float xe = Math.Min(d.Right - sz.Width - 2, Math.Max(d.Left + 2, pts[i].X - sz.Width / 2));
-                    float ye = mx ? pts[i].Y + S(4) : pts[i].Y - sz.Height - S(4);
-                    using (Brush bg = new SolidBrush(Color.FromArgb(200, Tema.ChartBg))) g.FillRectangle(bg, xe - 2, ye, sz.Width + 4, sz.Height);
+                    float xe = Math.Min(d.Right - sz.Width - 2, Math.Max(d.Left + S(34), pts[i].X - sz.Width / 2));
+                    float ye = mx ? pts[i].Y + S(5) : pts[i].Y - sz.Height - S(5);
+                    using (Brush bg = new SolidBrush(Color.FromArgb(210, Tema.ChartBg))) g.FillRectangle(bg, xe - 2, ye, sz.Width + 4, sz.Height);
                     g.DrawString(et, fb, tdc, xe, ye);
-                }
-                // titolo e legenda, sopra la striscia
-                string tit = Lang.T("Declinazione della Luna (°)");
-                SizeF szt = g.MeasureString(tit, fb);
-                g.DrawString(tit, fb, tdc, d.Left, d.Top - szt.Height - 2);
-                float lx = d.Left + szt.Width + S(18), ly = d.Top - szt.Height;
-                using (Brush b1 = new SolidBrush(Color.FromArgb(150, cMio))) g.FillRectangle(b1, lx, ly + S(2), S(11), S(11));
-                using (Brush tt = new SolidBrush(Tema.ChartText))
-                {
-                    string l1 = Lang.T("Luna più alta e più ore sopra l'orizzonte per ") + me.Loc.Text.Trim();
-                    g.DrawString(l1, fs, tt, lx + S(15), ly);
-                    lx += S(15) + g.MeasureString(l1, fs).Width + S(14);
-                    string l2 = Lang.T("Luna dalla parte dell'emisfero opposto");
-                    if (lx + S(15) + g.MeasureString(l2, fs).Width <= d.Right)
-                    {
-                        using (Brush b2 = new SolidBrush(Color.FromArgb(150, cOpp))) g.FillRectangle(b2, lx, ly + S(2), S(11), S(11));
-                        g.DrawString(l2, fs, tt, lx + S(15), ly);
-                    }
                 }
             }
         }
@@ -29226,13 +29375,15 @@ namespace LunaCalc
         DateTime? trkScelto;                 // null = in diretta
         DateTimePicker dtpTrkGiorno;
         Pillola btnTrkAdesso, btnTrkCall3;
-        string dxCall3 = "", dxCall3Grid = "";   // nominativo preso da CALL3.TXT e il suo locator
+        TextBox txtTrkDxCall, txtDxCall;          // nominativo del DX (schermata principale e Posizione della Luna)
+        bool syncCall;
+        string dxCallPrec = "";                   // nominativo precedente: se il locator era il suo, si sostituisce
         bool trkTrascina, trkSyncGiorno;
         RectangleF trkStrRett;               // zona della striscia delle 24 ore (per trascinare la linea)
         float trkStrBx, trkStrBw;
         Label lblTrkPunto;
         TableLayoutPanel barImp;
-        string subMe = "", subDx = "", badgeMe = "", subFreq = "";
+        string subMe = "", subDx = "", badgeMe = "", subFreq = "", subDxTag = "";
         Color subMeCol = Color.Gray, subDxCol = Color.Gray;
         static readonly Color ColPillola = Color.FromArgb(37, 84, 160);   // pulsanti bianchi con bordo (ADESSO, USA LA RIGA…)
         static readonly Color ColBlu = Color.FromArgb(31, 111, 209), ColArancio = Color.FromArgb(217, 119, 6),
@@ -29320,7 +29471,7 @@ namespace LunaCalc
             top.Dock = DockStyle.Fill;
             top.ColumnCount = 6;
             top.RowCount = 1;
-            foreach (float v in new float[] { 1.45f, 1.45f, 1f, 0.9f, 0.8f, 0.8f }) top.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, v * 100f));
+            foreach (float v in new float[] { 1.35f, 2.25f, 0.95f, 0.85f, 0.8f, 0.8f }) top.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, v * 100f));
             top.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
             top.Margin = new Padding(S(11), S(10), S(11), 0);
             top.Padding = new Padding(0);
@@ -29332,6 +29483,12 @@ namespace LunaCalc
 
             txtTrkLoc = new TextBox();
             txtTrkDx = new TextBox();
+            txtTrkDxCall = new TextBox();
+            txtTrkDxCall.Font = new Font(FamigliaNumeri, 19F * fontFactor, FontStyle.Bold);
+            txtTrkDxCall.MaxLength = 13;
+            txtTrkDxCall.CharacterCasing = CharacterCasing.Upper;
+            txtTrkDxCall.BorderStyle = BorderStyle.None;
+            tip.SetToolTip(txtTrkDxCall, Lang.T("Nominativo del DX") + "\u0001" + Lang.T("Se il nominativo è nel CALL3.TXT il locator si riempie da solo. Se il locator l'hai scritto tu e il CALL3.TXT ne indica un altro, premi Invio sul nominativo per usare quello del CALL3.TXT."));
             foreach (TextBox tb in new TextBox[] { txtTrkLoc, txtTrkDx })
             {
                 tb.Font = new Font(FamigliaNumeri, 19F * fontFactor, FontStyle.Bold);
@@ -29342,8 +29499,17 @@ namespace LunaCalc
             }
             cardMe.Controls.Add(txtTrkLoc);
             cardDx.Controls.Add(txtTrkDx);
+            cardDx.Controls.Add(txtTrkDxCall);
             cardMe.Layout += (s, e) => { txtTrkLoc.Location = new Point(S(18), S(31)); txtTrkLoc.Width = Math.Max(S(60), Math.Min(cardMe.Width - S(40), S(250))); };
-            cardDx.Layout += (s, e) => { txtTrkDx.Location = new Point(S(18), S(31)); txtTrkDx.Width = Math.Max(S(60), Math.Min(cardDx.Width - S(40), S(250))); };
+            cardDx.Layout += (s, e) =>
+            {
+                // due caselle affiancate: nominativo (circa 4 parti su 10) e locator
+                int disp = Math.Max(S(120), cardDx.Width - S(36) - S(14));
+                int wc = Math.Max(S(60), Math.Min(S(150), (int)(disp * 0.42f)));
+                txtTrkDxCall.Location = new Point(S(18), S(31)); txtTrkDxCall.Width = wc;
+                txtTrkDx.Location = new Point(txtTrkDxCall.Right + S(14), S(31));
+                txtTrkDx.Width = Math.Max(S(60), Math.Min(disp - wc, S(250)));
+            };
             btnTrkCall3 = new Pillola("CALL3", StilePillola.Bordo, Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 7.5F * fontFactor, FontStyle.Bold));
             tip.SetToolTip(btnTrkCall3, Lang.T("CALL3.TXT: nominativi e locator delle stazioni EME") + "\u0001"
                 + Lang.T("Scrivi un nominativo nella casella del locator del DX: se è nel CALL3.TXT il programma propone il suo locator e lo inserisce premendo Invio. Clic qui per aggiornare il file o copiarlo nella cartella di WSJT-X."));
@@ -29353,14 +29519,19 @@ namespace LunaCalc
                 Size sb = btnTrkCall3.GetPreferredSize(Size.Empty);
                 int wt;
                 using (Font ft = FontPx(Lang.FontUi, S(12), false))
-                    wt = TextRenderer.MeasureText(Lang.T("QTH - Locator WWL DX").ToUpper(Lang.Cultura), ft).Width;
+                    wt = TextRenderer.MeasureText(Lang.T("Stazione DX — nominativo e locator WWL").ToUpper(Lang.Cultura), ft).Width;
                 btnTrkCall3.Location = new Point(cardDx.Width - S(11) - sb.Width, S(4));
                 btnTrkCall3.Visible = S(12) + wt + S(6) + sb.Width + S(11) <= cardDx.Width;
             };
             btnTrkCall3.Click += (s, e) => FinestraCall3();
             AgganciaCall3(txtTrkDx);
+            AgganciaNominativo(txtTrkDxCall);
             cardMe.Paint += (s, e) => DisegnaScheda(e.Graphics, cardMe, Lang.T("QTH - Locator WWL mio"), null, Color.Empty, subMe, subMeCol, badgeMe, txtTrkLoc, ColBlu, S(2));
-            cardDx.Paint += (s, e) => DisegnaScheda(e.Graphics, cardDx, Lang.T("QTH - Locator WWL DX"), null, Color.Empty, subDx, subDxCol, "", txtTrkDx, Tema.Linea, 1f);
+            cardDx.Paint += (s, e) =>
+            {
+                DisegnaScheda(e.Graphics, cardDx, Lang.T("Stazione DX — nominativo e locator WWL"), null, Color.Empty, subDx, subDxCol, "", txtTrkDx, Tema.Linea, 1f, subDxTag);
+                DisegnaCornice(e.Graphics, txtTrkDxCall, Tema.Linea, 1f);
+            };
             txtTrkLoc.TextChanged += (s, e) =>
             {
                 if (syncLoc) return;
@@ -29501,7 +29672,18 @@ namespace LunaCalc
         }
 
         // Scheda della riga in alto: titolo, valore grande o casella con bordo, riga sotto con eventuale etichetta verde
-        void DisegnaScheda(Graphics g, Control p, string titolo, string valore, Color cv, string sotto, Color cs, string badge, Control box, Color bordo, float spess)
+        // Cornice arrotondata di una casella di testo dentro una scheda (come quella di DisegnaScheda)
+        void DisegnaCornice(Graphics g, Control box, Color bordo, float spess)
+        {
+            RectangleF rb = new RectangleF(box.Left - S(7), box.Top - S(4), box.Width + S(14), box.Height + S(8));
+            using (GraphicsPath gp = Arrotondato(rb, S(5)))
+            {
+                using (Brush b = new SolidBrush(Tema.Field)) g.FillPath(b, gp);
+                using (Pen pn = new Pen(bordo, spess)) g.DrawPath(pn, gp);
+            }
+        }
+
+        void DisegnaScheda(Graphics g, Control p, string titolo, string valore, Color cv, string sotto, Color cs, string badge, Control box, Color bordo, float spess, string tagSotto = null)
         {
             PreparaGrafica(g);
             RectangleF r = new RectangleF(0, 0, p.ClientSize.Width - S(3), p.ClientSize.Height - S(5));
@@ -29527,6 +29709,16 @@ namespace LunaCalc
                 if (!string.IsNullOrEmpty(sotto) || !string.IsNullOrEmpty(badge))
                 {
                     float y = r.Bottom - S(26), x = r.Left + S(12), wMax = r.Width - S(22);
+                    if (!string.IsNullOrEmpty(tagSotto))
+                    {
+                        // etichetta verde prima della riga sotto (es. "CALL3.TXT": locator preso dall'elenco)
+                        SizeF st = g.MeasureString(tagSotto, fb);
+                        RectangleF rt = new RectangleF(x, y + S(1), st.Width + S(10), S(18));
+                        using (GraphicsPath gp = Arrotondato(rt, S(8)))
+                        using (Brush b = new SolidBrush(Tema.Scuro ? Color.FromArgb(70, Tema.OkFg) : Color.FromArgb(227, 244, 232))) g.FillPath(b, gp);
+                        Testo(g, tagSotto, fb, Tema.OkFg, rt, StringAlignment.Center, StringAlignment.Center);
+                        x += rt.Width + S(6); wMax -= rt.Width + S(6);
+                    }
                     float ws = string.IsNullOrEmpty(sotto) ? 0 : Math.Min(wMax, g.MeasureString(sotto, fs).Width);
                     if (ws > 0) Testo(g, sotto, fs, cs, new RectangleF(x, y, ws + S(2), S(20)), StringAlignment.Near, StringAlignment.Center);
                     if (!string.IsNullOrEmpty(badge))
@@ -30522,10 +30714,15 @@ namespace LunaCalc
             }
             if (btnTrkAdesso != null && btnTrkAdesso.Visible == trk.Diretta) { btnTrkAdesso.Visible = !trk.Diretta; cardFreq.Invalidate(); }
             if (txtTrkLoc.ForeColor != CVal) txtTrkLoc.ForeColor = CVal;
-            if (txtTrkDx.ForeColor != ColArancio) txtTrkDx.ForeColor = ColArancio;
-            if (txtTrkLoc.BackColor != Tema.Field) { txtTrkLoc.BackColor = Tema.Field; txtTrkDx.BackColor = Tema.Field; }
+            if (txtTrkDx.ForeColor != ColArancio) { txtTrkDx.ForeColor = ColArancio; txtTrkDxCall.ForeColor = ColArancio; }
+            if (txtTrkLoc.BackColor != Tema.Field) { txtTrkLoc.BackColor = Tema.Field; txtTrkDx.BackColor = Tema.Field; txtTrkDxCall.BackColor = Tema.Field; }
             // riga sotto il locator del DX
-            if (txtTrkDx.Text.Trim().Length == 0) { subDx = Lang.T("inserisci il locator della stazione da ascoltare"); subDxCol = Tema.Muted; }
+            string g3c;
+            int st3 = StatoCall3(out g3c);
+            subDxTag = "";
+            if (st3 == 2) { subDx = string.Format(Lang.T("CALL3.TXT: {0} · Invio sul nominativo per usarlo"), g3c); subDxCol = Tema.Scuro ? ColArancio : Color.FromArgb(194, 124, 14); }
+            else if (txtTrkDx.Text.Trim().Length == 0 && st3 == 3) { subDx = Lang.T("nominativo non presente nel CALL3.TXT: inserisci il locator"); subDxCol = Tema.Muted; }
+            else if (txtTrkDx.Text.Trim().Length == 0) { subDx = Lang.T("inserisci il locator della stazione da ascoltare"); subDxCol = Tema.Muted; }
             else if (!dx.Ok)
             {
                 string c3, g3 = ProponiCall3(txtTrkDx.Text, out c3);
@@ -30534,7 +30731,8 @@ namespace LunaCalc
             }
             else
             {
-                subDx = (NomeDxCall3().Length > 0 ? NomeDxCall3() + " · " : "") + SottoLocator(txtTrkDx.Text, dx.Lat, dx.Lon) + (chkDx.Checked ? "" : Lang.T("   (seconda stazione disattivata)"));
+                if (st3 == 1) subDxTag = "CALL3.TXT";
+                subDx = SottoLocator(txtTrkDx.Text, dx.Lat, dx.Lon) + (chkDx.Checked ? "" : Lang.T("   (seconda stazione disattivata)"));
                 subDxCol = Tema.Muted;
             }
             trk.DxValido = dx.Ok;
@@ -31108,7 +31306,7 @@ namespace LunaCalc
             return new string[][] {
                 new string[] { Lang.T("Posizione live e +- 24h e impostazioni generali") },
                 new string[] { Lang.T("QTH - Locator WWL mio"), Lang.T("Il Maidenhead locator della tua stazione, da 4 a 14 caratteri: il programma usa il centro del quadrato. Più caratteri inserisci, più la posizione è precisa: per gli ostacoli vicini usa 8 o 10 caratteri (vedi il manuale, § 2.2).") },
-                new string[] { Lang.T("QTH - Locator WWL DX"), Lang.T("Il locator della stazione che vuoi ascoltare o collegare. Se è valido, la seconda stazione si attiva in tutte le linguette.") },
+                new string[] { Lang.T("Stazione DX — nominativo e locator WWL"), Lang.T("Il nominativo e il locator della stazione che vuoi ascoltare o collegare. Se il nominativo è nel CALL3.TXT il locator si riempie da solo; se il locator è valido, la seconda stazione si attiva in tutte le linguette.") },
                 new string[] { Lang.T("Frequenza (MHz / kHz)"), Lang.T("Frequenza di lavoro: i MHz (dall'elenco o scritti) più i kHz da 000 a 999. È la frequenza CFOM usata per Doppler, Tsky e Dgrd.") },
                 new string[] { Lang.T("CALCOLI APPROFONDITI"), Lang.T("Mostra i dati avanzati (colonne da Dpol in poi, tutte le righe del Budget EME) e attiva la linguetta Rumore solare.") },
                 new string[] { Lang.T("ATTIVA VISIONE DATI COMPLESSI NELLA SCHERMATA PRINCIPALE"), Lang.T("Mostra in basso a destra l'S/N stimato in questo istante.") },
@@ -31119,7 +31317,7 @@ namespace LunaCalc
                 new string[] { Lang.T("Schema di colori"), Lang.T("Chiaro o notte (blu scuro, per l'uso di notte): vale per tutte le linguette.") },
                 new string[] { Lang.T("Caratteri delle tabelle / dei moduli (pt)"), Lang.T("Dimensione di tutti i caratteri del programma: si applica subito a tabelle, finestre e caselle.") },
                 new string[] { Lang.T("Distanza e Dgrd") },
-                new string[] { Lang.T("Giorni da oggi (fino a 61)"), Lang.T("Quanti giorni mostrare nel grafico e nella classifica.") },
+                new string[] { Lang.T("Giorni da oggi (fino a 61)"), Lang.T("Quanti giorni mostrare nel grafico e nella tabella.") },
                 new string[] { Lang.T("Solo giorni con finestra utile"), Lang.T("Nasconde i giorni in cui la Luna non entra mai nei limiti della tua antenna (e del DX, se attivo).") },
                 new string[] { Lang.T("Volta celeste") },
                 new string[] { Lang.T("Segui l'ora attuale (ogni minuto)"), Lang.T("Aggiorna il cielo ogni minuto; senza spunta puoi scegliere l'istante.") },
@@ -34403,6 +34601,10 @@ namespace LunaCalc
             timer.Start();
             UpdateLive();
 
+            // solo per le prove automatiche: YAEC_LINGUETTA=<nome> apre quella linguetta all'avvio
+            string lgProva = Environment.GetEnvironmentVariable("YAEC_LINGUETTA");
+            if (!string.IsNullOrEmpty(lgProva)) this.Shown += (s, e) => ApriLinguettaPerNome(this, lgProva);
+
             this.Load += (s, e) =>
             {
                 int d = split.Height - S(170);
@@ -34786,8 +34988,16 @@ namespace LunaCalc
             chkDx.Checked = true;
             tip.SetToolTip(chkDx, Lang.T("Confronta con la seconda stazione"));
             chkDx.CheckedChanged += (s, e) => { EnableDx(); UpdateLive(); };
-            dx = BuildStation(g2, 0, "", 0);
+            dx = BuildStation(g2, 1, "", 0);
             AgganciaCall3(dx.Loc);
+            txtDxCall = new TextBox();
+            txtDxCall.MaxLength = 13;
+            txtDxCall.CharacterCasing = CharacterCasing.Upper;
+            txtDxCall.Font = new Font(FamigliaNumeri, 9.5F * fontFactor, FontStyle.Bold);
+            txtDxCall.Width = S(128);
+            tip.SetToolTip(txtDxCall, Lang.T("Nominativo del DX") + "\u0001" + Lang.T("Se il nominativo è nel CALL3.TXT il locator si riempie da solo. Se il locator l'hai scritto tu e il CALL3.TXT ne indica un altro, premi Invio sul nominativo per usare quello del CALL3.TXT."));
+            g2.Controls.Add(L(Lang.T("Nominativo")), 0, 0); g2.Controls.Add(txtDxCall, 1, 0);
+            AgganciaNominativo(txtDxCall);
             gbDx = SchedaCampi(Lang.T("Seconda stazione (DX)"), Color.FromArgb(217, 119, 6), g2, chkDx);
             top.Controls.Add(gbDx, 1, 0);
 
@@ -35091,7 +35301,32 @@ namespace LunaCalc
                 if (g3 != null) { dx.Coord.ForeColor = Tema.OkFg; dx.Coord.Text = string.Format(Lang.T("{0} nel CALL3.TXT: {1} (premi Invio per usarlo)"), c3, g3); }
                 else { dx.Coord.ForeColor = Color.Firebrick; dx.Coord.Text = Lang.T("Locator non valido"); }
             }
-            if (dx.Ok && NomeDxCall3().Length > 0) dx.Coord.Text = NomeDxCall3() + " · " + dx.Coord.Text;
+            string gc;
+            if (dx.Ok && txtDxCall != null && StatoCall3(out gc) == 1)
+            {
+                int k = dx.Coord.Text.IndexOf('\n');
+                dx.Coord.Text = k < 0 ? dx.Coord.Text + Lang.T(" · locator dal CALL3.TXT") : dx.Coord.Text.Substring(0, k) + Lang.T(" · locator dal CALL3.TXT") + dx.Coord.Text.Substring(k);
+            }
+        }
+
+        // Cerca la linguetta con quel titolo (anche dentro le macro linguette) e la apre
+        static bool ApriLinguettaPerNome(Control c, string nome)
+        {
+            foreach (Control x in c.Controls)
+            {
+                TabControl tc = x as TabControl;
+                if (tc != null)
+                    foreach (TabPage tp in tc.TabPages)
+                    {
+                        if (string.Equals(tp.Text.Trim(), nome, StringComparison.OrdinalIgnoreCase) || ApriLinguettaPerNome(tp, nome))
+                        {
+                            tc.SelectedTab = tp;
+                            return true;
+                        }
+                    }
+                else if (ApriLinguettaPerNome(x, nome)) return true;
+            }
+            return false;
         }
 
         // Se il testo non è un locator ma un nominativo presente nel CALL3.TXT, il locator da proporre
@@ -35104,14 +35339,65 @@ namespace LunaCalc
             return Call3.Cerca(t, out call);
         }
 
-        // Nominativo del DX preso dal CALL3.TXT, finché il locator resta quello
-        string NomeDxCall3()
+        // Stato del nominativo del DX rispetto al CALL3.TXT: 0 = nessun nominativo o elenco vuoto, 1 = locator uguale
+        // a quello dell'elenco, 2 = l'elenco indica un altro locator, 3 = nominativo non presente nell'elenco
+        int StatoCall3(out string grid)
         {
-            if (dxCall3.Length == 0 || dx == null || dx.Loc == null) return "";
-            return string.Equals(dx.Loc.Text.Trim(), dxCall3Grid, StringComparison.OrdinalIgnoreCase) ? dxCall3 : "";
+            grid = null;
+            if (txtDxCall == null) return 0;
+            string call = txtDxCall.Text.Trim(), c;
+            if (call.Length < 3) return 0;
+            grid = Call3.Cerca(call, out c);
+            if (grid == null) return Call3.Conteggio > 0 ? 3 : 0;
+            string loc = dx.Loc.Text.Trim().ToUpperInvariant();
+            if (loc.Length >= 4 && (loc.StartsWith(grid, StringComparison.Ordinal) || grid.StartsWith(loc, StringComparison.Ordinal))) return 1;
+            return 2;
         }
 
-        // Invio in una casella del locator del DX: se contiene un nominativo del CALL3.TXT, lo sostituisce col suo locator
+        // Locator dal CALL3.TXT per il nominativo scritto: si mette se la casella è vuota o conteneva il locator
+        // del nominativo precedente (cioè non scritto a mano); con forza = true (Invio) si mette sempre
+        void LocatorDaNominativo(bool forza)
+        {
+            string call = txtDxCall.Text.Trim(), c, cp;
+            string g = call.Length >= 3 ? Call3.Cerca(call, out c) : null;
+            string gPrec = dxCallPrec.Length >= 3 ? Call3.Cerca(dxCallPrec, out cp) : null;
+            dxCallPrec = call;
+            if (g == null) return;
+            string loc = dx.Loc.Text.Trim().ToUpperInvariant();
+            bool daElenco = gPrec != null && loc.Length >= 4 && (loc.StartsWith(gPrec, StringComparison.Ordinal) || gPrec.StartsWith(loc, StringComparison.Ordinal));
+            if (forza || loc.Length == 0 || daElenco) dx.Loc.Text = g;
+        }
+
+        // Casella del nominativo del DX: le due caselle (schermata principale e Posizione della Luna) restano uguali
+        void AgganciaNominativo(TextBox tb)
+        {
+            tb.TextChanged += (s, e) =>
+            {
+                if (syncCall) return;
+                syncCall = true;
+                if (txtDxCall != null && tb != txtDxCall) txtDxCall.Text = tb.Text;
+                if (txtTrkDxCall != null && tb != txtTrkDxCall) txtTrkDxCall.Text = tb.Text;
+                syncCall = false;
+                if (txtDxCall == null || caricamento) return;
+                LocatorDaNominativo(false);
+                UpdateLocators();
+                if (cardDx != null) { AggiornaTracciamento(false); cardDx.Invalidate(); }
+                if (pnlMondo != null) pnlMondo.Invalidate();
+            };
+            tb.PreviewKeyDown += (s, e) => { if (e.KeyCode == Keys.Enter) e.IsInputKey = true; };
+            tb.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode != Keys.Enter) return;
+                e.Handled = true; e.SuppressKeyPress = true;
+                if (txtDxCall == null) return;
+                LocatorDaNominativo(true);
+                UpdateLocators();
+                if (cardDx != null) { AggiornaTracciamento(false); cardDx.Invalidate(); }
+            };
+        }
+
+        // Invio in una casella del locator del DX: se contiene un nominativo del CALL3.TXT, il nominativo va
+        // nella sua casella e il locator al suo posto
         void AgganciaCall3(TextBox tb)
         {
             tb.PreviewKeyDown += (s, e) =>
@@ -35125,9 +35411,9 @@ namespace LunaCalc
                 string c, g = ProponiCall3(tb.Text, out c);
                 if (g == null) return;
                 e.Handled = true; e.SuppressKeyPress = true;
-                dxCall3 = c; dxCall3Grid = g;
                 tb.Text = g;
                 tb.SelectionStart = tb.Text.Length;
+                if (txtDxCall != null) { caricamento = true; try { txtDxCall.Text = c; } finally { caricamento = false; } dxCallPrec = c; UpdateLocators(); }
             };
         }
 
@@ -35825,6 +36111,7 @@ namespace LunaCalc
                 lines.Add("el2=" + me.El2.Value.ToString(inv));
                 lines.Add("dx=" + (chkDx.Checked ? "1" : "0"));
                 lines.Add("dx_locator=" + dx.Loc.Text.Trim());
+                if (txtDxCall != null) lines.Add("dx_nominativo=" + txtDxCall.Text.Trim());
                 lines.Add("dx_quota=" + dx.H.Value.ToString(inv));
                 lines.Add("dx_az1=" + dx.Az1.Value.ToString(inv));
                 lines.Add("dx_az2=" + dx.Az2.Value.ToString(inv));
@@ -35968,6 +36255,7 @@ namespace LunaCalc
                         case "el2": SetNud(me.El2, v); break;
                         case "dx": chkDx.Checked = v == "1"; break;
                         case "dx_locator": dx.Loc.Text = v; break;
+                        case "dx_nominativo": if (txtDxCall != null) { txtDxCall.Text = v; dxCallPrec = v.Trim(); } break;
                         case "dx_quota": SetNud(dx.H, v); break;
                         case "dx_az1": SetNud(dx.Az1, v); break;
                         case "dx_az2": SetNud(dx.Az2, v); break;
@@ -37685,7 +37973,7 @@ namespace LunaCalc
     {
         public const string Nome = "CALL3.TXT";
         public static readonly string[][] Fonti = {
-            new string[] { "W7GJ", "http://www.bigskyspaces.com/w7gj/CALL3.TXT", "http://www.bigskyspaces.com/w7gj/call3.txt" },
+            new string[] { "W7GJ", "http://www.bigskyspaces.com/w7gj/CALL3.TXT", "https://www.bigskyspaces.com/w7gj/call3.txt", "http://www.bigskyspaces.com/w7gj/call3.txt" },
             new string[] { "WSJT-X Improved (SourceForge)", "https://downloads.sourceforge.net/project/wsjt-x-improved/Additional%20Files/CALL3.TXT",
                 "https://sourceforge.net/projects/wsjt-x-improved/files/Additional%20Files/CALL3.TXT/download" } };
         public const int GiorniValidita = 7;
@@ -41103,7 +41391,7 @@ namespace LunaCalc
                 "• **Collegamenti tra emisferi**: in un QSO nord – sud le due stazioni preferiscono declinazioni opposte; le finestre comuni più lunghe cadono spesso con la Luna vicina all'equatore celeste (declinazione intorno a 0°), quando nessuna delle due stazioni è sfavorita.",
                 "• **Ciclo di 18,6 anni**: l'ampiezza dell'escursione mensile cambia lentamente, da circa ±18,3° a circa ±28,6°. Il massimo (lunistizio maggiore) c'è stato nel 2024 – 2025; verso il 2034 l'escursione sarà minima, con mesi meno estremi: la Luna non scenderà più così in basso, ma nemmeno salirà così in alto.",
                 "• **Declinazione e rumore**: la Luna tocca la declinazione più bassa quando passa davanti al Sagittario, la zona più rumorosa del cielo, e quella più alta nel Toro e nei Gemelli, dove il cielo è più freddo. Per le stazioni dell'emisfero nord la settimana della declinazione più bassa somma quindi Luna bassa, poche ore utili e Tsky alta [1].",
-                "> Nel programma: sotto il grafico della linguetta Distanza e Dgrd la curva della declinazione mostra i massimi a nord e a sud con la data; la zona verde indica quando la Luna è dalla parte del tuo emisfero (la curva si nasconde con la casella Curva della declinazione). Il valore di ogni istante è nella colonna facoltativa Declinazione (°) della Posizione della Luna e nel Posizione live e +- 24h.",
+                "> Nel programma: nel grafico della linguetta Distanza e Dgrd la curva blu della declinazione è sovrapposta alla Dgrd e alla distanza, con la sua scala (±30°) scritta in blu dentro il bordo sinistro e i massimi a nord e a sud con la data (la curva si nasconde con la casella Curva della declinazione). Il valore di ogni istante è nella colonna facoltativa Declinazione (°) della Posizione della Luna e nel Posizione live e +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["it"]["S45"] = new string[] {
@@ -41575,7 +41863,7 @@ namespace LunaCalc
                 "• **Links between hemispheres**: in a north – south QSO the two stations prefer opposite declinations; the longest common windows often come with the Moon near the celestial equator (declination around 0°), when neither station is at a disadvantage.",
                 "• **18.6-year cycle**: the width of the monthly swing changes slowly, from about ±18.3° to about ±28.6°. The maximum (major lunar standstill) was in 2024 – 2025; towards 2034 the swing will be at its minimum, with less extreme months: the Moon will not go so low, but it will not climb so high either.",
                 "• **Declination and noise**: the Moon reaches its lowest declination when it passes in front of Sagittarius, the noisiest part of the sky, and its highest in Taurus and Gemini, where the sky is colder. For stations in the northern hemisphere, the week of lowest declination therefore combines a low Moon, few useful hours and high Tsky [1].",
-                "> In the program: below the chart of the Distance and Dgrd tab, the declination curve shows the northern and southern maxima with their date; the green area shows when the Moon is on the side of your hemisphere (hide the curve with the Declination curve box). The value at each instant is in the optional Declination (°) column of the Moon position tab and in Live position and +- 24h.",
+                "> In the program: in the chart of the Distance and Dgrd tab, the blue declination curve is drawn over the Dgrd and the distance, with its own scale (±30°) written in blue inside the left edge and the northern and southern maxima with their date (hide the curve with the Declination curve box). The value at each instant is in the optional Declination (°) column of the Moon position tab and in Live position and +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["en"]["S45"] = new string[] {
@@ -42039,7 +42327,7 @@ namespace LunaCalc
                 "• **Verbindungen zwischen den Hemisphären**: In einem Nord – Süd-QSO bevorzugen die beiden Stationen entgegengesetzte Deklinationen; die längsten gemeinsamen Fenster ergeben sich oft, wenn der Mond nahe am Himmelsäquator steht (Deklination um 0°) und keine der beiden Stationen benachteiligt ist.",
                 "• **Zyklus von 18,6 Jahren**: Die Weite des monatlichen Hubs ändert sich langsam, von etwa ±18,3° bis etwa ±28,6°. Das Maximum (große Mondwende) lag in den Jahren 2024 – 2025; gegen 2034 wird der Hub am kleinsten sein, mit weniger extremen Monaten: Der Mond sinkt dann nicht mehr so tief, steigt aber auch nicht mehr so hoch.",
                 "• **Deklination und Rauschen**: Die tiefste Deklination erreicht der Mond, wenn er vor dem Schützen vorbeizieht, dem am stärksten rauschenden Bereich des Himmels, und die höchste in Stier und Zwillingen, wo der Himmel kälter ist. Für Stationen auf der Nordhalbkugel vereint die Woche der tiefsten Deklination daher einen tiefen Mond, wenige nutzbare Stunden und eine hohe Tsky [1].",
-                "> Im Programm: Unter dem Diagramm des Reiters Entfernung und Dgrd zeigt die Deklinationskurve die nördlichen und südlichen Maxima mit Datum; der grüne Bereich zeigt, wann der Mond auf der Seite Ihrer Hemisphäre steht (die Kurve lässt sich mit dem Kästchen Deklinationskurve ausblenden). Der Wert zu jedem Zeitpunkt steht in der optionalen Spalte Deklination (°) des Reiters Mondposition und im Reiter Position live und +- 24h.",
+                "> Im Programm: Im Diagramm des Reiters Entfernung und Dgrd liegt die blaue Deklinationskurve über Dgrd und Entfernung, mit eigener Skala (±30°) in Blau innerhalb des linken Rands und den nördlichen und südlichen Maxima mit Datum (die Kurve lässt sich mit dem Kästchen Deklinationskurve ausblenden). Der Wert zu jedem Zeitpunkt steht in der optionalen Spalte Deklination (°) des Reiters Mondposition und im Reiter Position live und +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["de"]["S45"] = new string[] {
@@ -42503,7 +42791,7 @@ namespace LunaCalc
                 "• **Liaisons entre hémisphères** : dans un QSO nord – sud, les deux stations préfèrent des déclinaisons opposées ; les fenêtres communes les plus longues tombent souvent avec la Lune proche de l'équateur céleste (déclinaison autour de 0°), quand aucune des deux stations n'est défavorisée.",
                 "• **Cycle de 18,6 ans** : l'amplitude de l'excursion mensuelle change lentement, d'environ ±18,3° à environ ±28,6°. Le maximum (lunistice majeur) a eu lieu en 2024 – 2025 ; vers 2034, l'excursion sera minimale, avec des mois moins extrêmes : la Lune ne descendra plus aussi bas, mais elle ne montera pas non plus aussi haut.",
                 "• **Déclinaison et bruit** : la Lune atteint sa déclinaison la plus basse quand elle passe devant le Sagittaire, la zone la plus bruyante du ciel, et la plus haute dans le Taureau et les Gémeaux, où le ciel est plus froid. Pour les stations de l'hémisphère nord, la semaine de la déclinaison la plus basse cumule donc une Lune basse, peu d'heures utiles et une Tsky élevée [1].",
-                "> Dans le programme : sous le graphique de l'onglet Distance et Dgrd, la courbe de déclinaison montre les maxima nord et sud avec leur date ; la zone verte indique quand la Lune est du côté de votre hémisphère (la courbe se masque avec la case Courbe de déclinaison). La valeur à chaque instant se trouve dans la colonne facultative Déclinaison (°) de l'onglet Position de la Lune et dans l'onglet Position en direct et +- 24h.",
+                "> Dans le programme : dans le graphique de l'onglet Distance et Dgrd, la courbe bleue de déclinaison est superposée à la Dgrd et à la distance, avec sa propre échelle (±30°) écrite en bleu à l'intérieur du bord gauche et les maxima nord et sud avec leur date (la courbe se masque avec la case Courbe de déclinaison). La valeur à chaque instant se trouve dans la colonne facultative Déclinaison (°) de l'onglet Position de la Lune et dans l'onglet Position en direct et +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["fr"]["S45"] = new string[] {
@@ -42967,7 +43255,7 @@ namespace LunaCalc
                 "• **Enlaces entre hemisferios**: en un QSO norte – sur las dos estaciones prefieren declinaciones opuestas; las ventanas comunes más largas suelen darse con la Luna cerca del ecuador celeste (declinación en torno a 0°), cuando ninguna de las dos estaciones está en desventaja.",
                 "• **Ciclo de 18,6 años**: la amplitud de la oscilación mensual cambia lentamente, de unos ±18,3° a unos ±28,6°. El máximo (parada lunar mayor) se produjo en 2024 – 2025; hacia 2034 la oscilación será mínima, con meses menos extremos: la Luna ya no bajará tanto, pero tampoco subirá tan alto.",
                 "• **Declinación y ruido**: la Luna alcanza su declinación más baja cuando pasa por delante de Sagitario, la zona más ruidosa del cielo, y la más alta en Tauro y Géminis, donde el cielo es más frío. Para las estaciones del hemisferio norte, la semana de declinación más baja reúne por tanto Luna baja, pocas horas útiles y Tsky alta [1].",
-                "> En el programa: debajo del gráfico de la pestaña Distancia y Dgrd, la curva de declinación muestra los máximos norte y sur con su fecha; la zona verde indica cuándo la Luna está del lado de tu hemisferio (la curva se oculta con la casilla Curva de declinación). El valor de cada instante está en la columna opcional Declinación (°) de la pestaña Posición de la Luna y en la pestaña Posición en vivo y +- 24h.",
+                "> En el programa: en el gráfico de la pestaña Distancia y Dgrd, la curva azul de declinación se superpone a la Dgrd y a la distancia, con su propia escala (±30°) escrita en azul dentro del borde izquierdo y los máximos norte y sur con su fecha (la curva se oculta con la casilla Curva de declinación). El valor de cada instante está en la columna opcional Declinación (°) de la pestaña Posición de la Luna y en la pestaña Posición en vivo y +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["es"]["S45"] = new string[] {
@@ -43431,7 +43719,7 @@ namespace LunaCalc
                 "• **Ligações entre hemisférios**: num QSO norte – sul as duas estações preferem declinações opostas; as janelas comuns mais longas ocorrem muitas vezes com a Lua perto do equador celeste (declinação por volta de 0°), quando nenhuma das duas estações fica em desvantagem.",
                 "• **Ciclo de 18,6 anos**: a amplitude da excursão mensal muda lentamente, de cerca de ±18,3° a cerca de ±28,6°. O máximo (lunistício maior) foi em 2024 – 2025; por volta de 2034 a excursão será mínima, com meses menos extremos: a Lua não descerá tão baixo, mas também não subirá tão alto.",
                 "• **Declinação e ruído**: a Lua atinge a declinação mais baixa quando passa à frente do Sagitário, a zona mais ruidosa do céu, e a mais alta no Touro e nos Gémeos, onde o céu é mais frio. Para as estações do hemisfério norte, a semana da declinação mais baixa junta portanto Lua baixa, poucas horas úteis e Tsky alta [1].",
-                "> No programa: por baixo do gráfico do separador Distância e Dgrd, a curva da declinação mostra os máximos a norte e a sul com a data; a zona verde indica quando a Lua está do lado do seu hemisfério (a curva oculta-se com a caixa Curva da declinação). O valor de cada instante está na coluna opcional Declinação (°) do separador Posição da Lua e no separador Posição em direto e +- 24h.",
+                "> No programa: no gráfico do separador Distância e Dgrd, a curva azul da declinação sobrepõe-se à Dgrd e à distância, com a sua escala (±30°) escrita a azul dentro da margem esquerda e os máximos a norte e a sul com a data (a curva oculta-se com a caixa Curva da declinação). O valor de cada instante está na coluna opcional Declinação (°) do separador Posição da Lua e no separador Posição em direto e +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["pt"]["S45"] = new string[] {
@@ -43895,7 +44183,7 @@ namespace LunaCalc
                 "• **南北半球之间的通联**：在北 – 南 QSO 中，两个电台偏好相反的赤纬；最长的共同窗口常出现在月球靠近天赤道（赤纬约 0°）时，此时两个电台都不吃亏。",
                 "• **18.6 年周期**：每月摆动的幅度缓慢变化，从约 ±18.3° 到约 ±28.6°。最大值（月球大静止）出现在 2024 – 2025 年；到 2034 年前后摆动将最小，各月不那么极端：月球不会降得那么低，但也不会升得那么高。",
                 "• **赤纬与噪声**：月球经过人马座（天空中噪声最强的区域）前方时赤纬最低，在金牛座和双子座时赤纬最高，那里的天空较冷。因此，对北半球的电台来说，赤纬最低的那一周同时意味着月球低、可用时间少、Tsky 高 [1]。",
-                "> 在程序中：“距离与 Dgrd”选项卡的图表下方，赤纬曲线显示北向和南向最大值及其日期；绿色区域表示月球位于你所在半球一侧的时段（可用“赤纬曲线”复选框隐藏该曲线）。每个时刻的数值见“月球位置”选项卡中的可选列“赤纬 (°)”以及 实时位置与 +- 24h 选项卡。",
+                "> 在程序中：“距离与 Dgrd”选项卡的图表中，蓝色赤纬曲线叠加在 Dgrd 和距离曲线上，其刻度（±30°）以蓝色标在左边框内侧，并标出北向和南向最大值及其日期（可用“赤纬曲线”复选框隐藏该曲线）。每个时刻的数值见“月球位置”选项卡中的可选列“赤纬 (°)”以及 实时位置与 +- 24h 选项卡。",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["zh"]["S45"] = new string[] {
@@ -44359,7 +44647,7 @@ namespace LunaCalc
                 "• **半球間の交信**：北 – 南のQSOでは、2つの局は互いに反対の赤緯を好みます。最も長い共通ウィンドウは、月が天の赤道の近く（赤緯0°前後）にあって、どちらの局も不利にならないときに得られることがよくあります。",
                 "• **18.6年周期**：月ごとの振れ幅はゆっくり変わり、約±18.3°から約±28.6°までになります。最大（メジャー・ルナー・スタンドスティル）は2024 – 2025年でした。2034年ごろには振れ幅が最小になり、極端さの少ない月が続きます。月はそれほど低くは下がりませんが、それほど高くも昇りません。",
                 "• **赤緯と雑音**：月の赤緯が最も低くなるのは、空で最も雑音の多いいて座の前を通るときで、最も高くなるのは空が冷たいおうし座とふたご座にいるときです。したがって北半球の局にとって、赤緯が最も低い週は、低い月、少ない有効時間、高いTskyが重なります [1]。",
-                "> プログラムでは：「距離と Dgrd」タブのグラフの下にある赤緯曲線は、北と南の最大値を日付とともに示します。緑の領域は、月が自分の半球の側にある期間を示します（曲線は「赤緯曲線」チェックボックスで非表示にできます）。各時点の値は、「月の位置」タブのオプション列「赤緯 (°)」とライブ位置と +- 24hタブにあります。",
+                "> プログラムでは：「距離と Dgrd」タブのグラフでは、青い赤緯曲線が Dgrd と距離に重ねて描かれ、その目盛り（±30°）は左端の内側に青で表示され、北と南の最大値が日付とともに示されます（曲線は「赤緯曲線」チェックボックスで非表示にできます）。各時点の値は、「月の位置」タブのオプション列「赤緯 (°)」とライブ位置と +- 24hタブにあります。",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ja"]["S45"] = new string[] {
@@ -44823,7 +45111,7 @@ namespace LunaCalc
                 "• **गोलार्धों के बीच संपर्क**: उत्तर – दक्षिण QSO में दोनों स्टेशन विपरीत दिक्पात पसंद करते हैं; सबसे लंबी साझा खिड़कियाँ अक्सर तब मिलती हैं जब चंद्रमा खगोलीय विषुवत के पास होता है (दिक्पात लगभग 0°), जब कोई भी स्टेशन नुकसान में नहीं होता।",
                 "• **18.6 वर्ष का चक्र**: मासिक उतार-चढ़ाव की चौड़ाई धीरे-धीरे बदलती है, लगभग ±18.3° से लगभग ±28.6° तक। अधिकतम (मेजर लूनर स्टैंडस्टिल) 2024 – 2025 में था; 2034 के आसपास यह उतार-चढ़ाव न्यूनतम होगा, कम चरम महीनों के साथ: चंद्रमा उतना नीचे नहीं जाएगा, पर उतना ऊँचा भी नहीं चढ़ेगा।",
                 "• **दिक्पात और शोर**: चंद्रमा अपने सबसे निचले दिक्पात पर तब पहुँचता है जब वह धनु के सामने से गुजरता है, जो आकाश का सबसे शोर वाला भाग है, और सबसे ऊँची पर वृषभ और मिथुन में, जहाँ आकाश अधिक ठंडा है। इसलिए उत्तरी गोलार्ध के स्टेशनों के लिए सबसे निचले दिक्पात वाला सप्ताह नीचा चंद्रमा, कम उपयोगी घंटे और ऊँचा Tsky एक साथ लाता है [1]।",
-                "> प्रोग्राम में: “दूरी और Dgrd” टैब के चार्ट के नीचे दिक्पात वक्र उत्तरी और दक्षिणी अधिकतम को उनकी तारीख के साथ दिखाता है; हरा क्षेत्र बताता है कि चंद्रमा कब आपके गोलार्ध की ओर है (वक्र को “दिक्पात वक्र” बॉक्स से छिपाया जा सकता है)। हर क्षण का मान “चंद्रमा की स्थिति” टैब के वैकल्पिक कॉलम “दिक्पात (°)” में और लाइव स्थिति और +- 24h टैब में है।",
+                "> प्रोग्राम में: “दूरी और Dgrd” टैब के चार्ट में नीला दिक्पात वक्र Dgrd और दूरी के ऊपर बना होता है; उसका पैमाना (±30°) बाएँ किनारे के भीतर नीले रंग में लिखा है और उत्तरी व दक्षिणी अधिकतम उनकी तारीख के साथ दिखते हैं (वक्र को “दिक्पात वक्र” बॉक्स से छिपाया जा सकता है)। हर क्षण का मान “चंद्रमा की स्थिति” टैब के वैकल्पिक कॉलम “दिक्पात (°)” में और लाइव स्थिति और +- 24h टैब में है।",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["hi"]["S45"] = new string[] {
@@ -45287,7 +45575,7 @@ namespace LunaCalc
                 "• **반구 간 교신**: 북 – 남 QSO에서는 두 국이 서로 반대의 적위를 선호합니다. 가장 긴 공통 시간 창은 달이 천구 적도 가까이(적위 0° 부근) 있어 어느 국도 불리하지 않을 때 나타나는 경우가 많습니다.",
                 "• **18.6년 주기**: 월간 변동 폭은 약 ±18.3°에서 약 ±28.6°까지 천천히 바뀝니다. 최대(대정지, major lunar standstill)는 2024 – 2025년이었고, 2034년 무렵에는 변동 폭이 최소가 되어 덜 극단적인 달이 이어집니다. 달은 그렇게 낮게 내려가지 않지만, 그렇게 높이 오르지도 않습니다.",
                 "• **적위와 잡음**: 달은 하늘에서 잡음이 가장 큰 궁수자리 앞을 지날 때 적위가 가장 낮고, 하늘이 더 차가운 황소자리와 쌍둥이자리에 있을 때 가장 높습니다. 따라서 북반구 국에게 적위가 가장 낮은 주는 낮은 달, 적은 유효 시간, 높은 Tsky가 겹치는 시기입니다 [1].",
-                "> 프로그램에서: “거리와 Dgrd” 탭의 그래프 아래에 있는 적위 곡선은 북쪽과 남쪽 최대값을 날짜와 함께 보여 주며, 녹색 영역은 달이 자신의 반구 쪽에 있는 때를 나타냅니다(곡선은 “적위 곡선” 확인란으로 숨길 수 있습니다). 각 시점의 값은 “달의 위치” 탭의 선택 열 “적위 (°)”와 실시간 위치 및 +- 24h 탭에 있습니다.",
+                "> 프로그램에서: “거리와 Dgrd” 탭의 그래프에서 파란 적위 곡선은 Dgrd와 거리 위에 겹쳐 그려지며, 그 눈금(±30°)은 왼쪽 테두리 안쪽에 파란색으로 표시되고 북쪽과 남쪽 최대값이 날짜와 함께 나타납니다(곡선은 “적위 곡선” 확인란으로 숨길 수 있습니다). 각 시점의 값은 “달의 위치” 탭의 선택 열 “적위 (°)”와 실시간 위치 및 +- 24h 탭에 있습니다.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ko"]["S45"] = new string[] {
@@ -45751,7 +46039,7 @@ namespace LunaCalc
                 "• **Hubungan antarbelahan bumi**: dalam QSO utara – selatan kedua stasiun menyukai deklinasi yang berlawanan; jendela bersama terpanjang sering terjadi saat Bulan dekat ekuator langit (deklinasi sekitar 0°), ketika tidak ada stasiun yang dirugikan.",
                 "• **Siklus 18,6 tahun**: lebar ayunan bulanan berubah perlahan, dari sekitar ±18,3° hingga sekitar ±28,6°. Maksimumnya (titik henti bulan mayor) terjadi pada 2024 – 2025; menjelang 2034 ayunan akan minimum, dengan bulan-bulan yang kurang ekstrem: Bulan tidak akan turun serendah itu, tetapi juga tidak akan naik setinggi itu.",
                 "• **Deklinasi dan derau**: Bulan mencapai deklinasi terendahnya saat melintas di depan Sagitarius, bagian langit yang paling berderau, dan tertinggi di Taurus dan Gemini, tempat langit lebih dingin. Bagi stasiun di belahan bumi utara, minggu deklinasi terendah karena itu menggabungkan Bulan yang rendah, sedikit jam yang berguna, dan Tsky yang tinggi [1].",
-                "> Dalam program: di bawah grafik tab Jarak dan Dgrd, kurva deklinasi menampilkan maksimum utara dan selatan beserta tanggalnya; area hijau menunjukkan kapan Bulan berada di sisi belahan bumi Anda (kurva dapat disembunyikan dengan kotak Kurva deklinasi). Nilai pada setiap saat ada di kolom opsional Deklinasi (°) pada tab Posisi Bulan dan di tab Posisi langsung dan +- 24h.",
+                "> Dalam program: pada grafik tab Jarak dan Dgrd, kurva deklinasi biru ditumpangkan pada Dgrd dan jarak, dengan skalanya sendiri (±30°) yang ditulis biru di dalam tepi kiri serta maksimum utara dan selatan beserta tanggalnya (kurva dapat disembunyikan dengan kotak Kurva deklinasi). Nilai pada setiap saat ada di kolom opsional Deklinasi (°) pada tab Posisi Bulan dan di tab Posisi langsung dan +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["id"]["S45"] = new string[] {
@@ -46215,7 +46503,7 @@ namespace LunaCalc
                 "• **Связи между полушариями**: в QSO север – юг две станции предпочитают противоположные склонения; самые длинные общие окна часто приходятся на время, когда Луна близка к небесному экватору (склонение около 0°) и ни одна из станций не находится в невыгодном положении.",
                 "• **Цикл 18,6 года**: размах месячных колебаний медленно меняется — примерно от ±18,3° до примерно ±28,6°. Максимум (большое лунное стояние) пришёлся на 2024 – 2025 годы; к 2034 году размах станет минимальным, а месяцы — менее экстремальными: Луна не будет опускаться так низко, но и не будет подниматься так высоко.",
                 "• **Склонение и шум**: самого низкого склонения Луна достигает, когда проходит перед Стрельцом, самой шумной областью неба, а самого высокого — в Тельце и Близнецах, где небо холоднее. Поэтому для станций северного полушария неделя самого низкого склонения сочетает низкую Луну, мало полезных часов и высокую Tsky [1].",
-                "> В программе: под графиком вкладки «Расстояние и Dgrd» кривая склонения показывает северные и южные максимумы с датой; зелёная зона показывает, когда Луна находится на стороне вашего полушария (кривую можно скрыть флажком «Кривая склонения»). Значение в каждый момент есть в необязательном столбце «Склонение (°)» вкладки «Положение Луны» и на вкладке Положение онлайн и +- 24h.",
+                "> В программе: на графике вкладки «Расстояние и Dgrd» синяя кривая склонения наложена на Dgrd и расстояние; её шкала (±30°) подписана синим у левого края внутри графика, а северные и южные максимумы показаны с датой (кривую можно скрыть флажком «Кривая склонения»). Значение в каждый момент есть в необязательном столбце «Склонение (°)» вкладки «Положение Луны» и на вкладке Положение онлайн и +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ru"]["S45"] = new string[] {
@@ -46679,7 +46967,7 @@ namespace LunaCalc
                 "• **Зв'язки між півкулями**: у QSO північ – південь дві станції віддають перевагу протилежним схиленням; найдовші спільні вікна часто припадають на час, коли Місяць близько до небесного екватора (схилення близько 0°) і жодна зі станцій не перебуває в невигідному становищі.",
                 "• **Цикл 18,6 року**: розмах місячних коливань повільно змінюється — приблизно від ±18,3° до приблизно ±28,6°. Максимум (велике місячне стояння) припав на 2024 – 2025 роки; близько 2034 року розмах буде мінімальним, а місяці — менш екстремальними: Місяць не опускатиметься так низько, але й не підніматиметься так високо.",
                 "• **Схилення і шум**: найнижчого схилення Місяць досягає, коли проходить перед Стрільцем, найбільш шумною ділянкою неба, а найвищого — у Тельці та Близнюках, де небо холодніше. Тому для станцій північної півкулі тиждень найнижчого схилення поєднує низький Місяць, мало корисних годин і високу Tsky [1].",
-                "> У програмі: під графіком вкладки «Відстань і Dgrd» крива схилення показує північні й південні максимуми з датою; зелена зона показує, коли Місяць перебуває на боці вашої півкулі (криву можна приховати прапорцем «Крива схилення»). Значення в кожен момент є в необов'язковому стовпці «Схилення (°)» вкладки «Положення Місяця» та на вкладці Положення наживо і +- 24h.",
+                "> У програмі: на графіку вкладки «Відстань і Dgrd» синя крива схилення накладена на Dgrd і відстань; її шкала (±30°) підписана синім біля лівого краю всередині графіка, а північні й південні максимуми показано з датою (криву можна приховати прапорцем «Крива схилення»). Значення в кожен момент є в необов'язковому стовпці «Схилення (°)» вкладки «Положення Місяця» та на вкладці Положення наживо і +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["uk"]["S45"] = new string[] {
@@ -47143,7 +47431,7 @@ namespace LunaCalc
                 "• **Verbindings tussen halfronde**: in 'n noord – suid-QSO verkies die twee stasies teenoorgestelde deklinasies; die langste gemeenskaplike vensters val dikwels wanneer die Maan naby die hemelewenaar is (deklinasie rondom 0°), wanneer geeneen van die twee stasies benadeel is nie.",
                 "• **Siklus van 18,6 jaar**: die wydte van die maandelikse swaai verander stadig, van ongeveer ±18,3° tot ongeveer ±28,6°. Die maksimum (groot maanstilstand) was in 2024 – 2025; teen 2034 sal die swaai op sy kleinste wees, met minder uiterste maande: die Maan sal nie so laag sak nie, maar ook nie so hoog klim nie.",
                 "• **Deklinasie en ruis**: die Maan bereik sy laagste deklinasie wanneer dit voor die Boogskutter verbygaan, die raserigste deel van die hemel, en sy hoogste in die Stier en die Tweeling, waar die hemel kouer is. Vir stasies in die noordelike halfrond kombineer die week van die laagste deklinasie dus 'n lae Maan, min bruikbare ure en 'n hoë Tsky [1].",
-                "> In die program: onder die grafiek van die oortjie Afstand en Dgrd wys die deklinasiekurwe die noordelike en suidelike maksima met hul datum; die groen gebied wys wanneer die Maan aan die kant van jou halfrond is (versteek die kurwe met die blokkie Deklinasiekurwe). Die waarde op elke oomblik is in die opsionele kolom Deklinasie (°) van die oortjie Maanposisie en in die Regstreekse posisie en +- 24h-oortjie.",
+                "> In die program: in die grafiek van die oortjie Afstand en Dgrd word die blou deklinasiekurwe oor die Dgrd en die afstand geteken, met sy eie skaal (±30°) in blou binne die linkerrand en die noordelike en suidelike maksima met hul datum (versteek die kurwe met die blokkie Deklinasiekurwe). Die waarde op elke oomblik is in die opsionele kolom Deklinasie (°) van die oortjie Maanposisie en in die Regstreekse posisie en +- 24h-oortjie.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["af"]["S45"] = new string[] {
@@ -47607,7 +47895,7 @@ namespace LunaCalc
                 "• **গোলার্ধের মধ্যে যোগাযোগ**: উত্তর – দক্ষিণ QSO-তে দুই স্টেশন বিপরীত বিষুবলম্ব পছন্দ করে; সবচেয়ে দীর্ঘ সাধারণ উইন্ডো প্রায়ই আসে যখন চাঁদ খগোলীয় বিষুবরেখার কাছে থাকে (বিষুবলম্ব প্রায় 0°), যখন কোনো স্টেশনই অসুবিধায় থাকে না।",
                 "• **18.6 বছরের চক্র**: মাসিক দোলনের বিস্তার ধীরে ধীরে বদলায়, প্রায় ±18.3° থেকে প্রায় ±28.6° পর্যন্ত। সর্বোচ্চটি (মেজর লুনার স্ট্যান্ডস্টিল) হয়েছিল 2024 – 2025-এ; 2034-এর দিকে দোলন সবচেয়ে কম হবে, মাসগুলো কম চরম হবে: চাঁদ আর অত নিচে নামবে না, তবে অত উঁচুতেও উঠবে না।",
                 "• **বিষুবলম্ব ও নয়েজ**: চাঁদ সবচেয়ে কম বিষুবলম্বে পৌঁছায় যখন এটি ধনুর সামনে দিয়ে যায়, যা আকাশের সবচেয়ে নয়েজপূর্ণ অঞ্চল, আর সবচেয়ে বেশি বিষুবলম্বে পৌঁছায় বৃষ ও মিথুনে, যেখানে আকাশ বেশি ঠান্ডা। তাই উত্তর গোলার্ধের স্টেশনগুলোর জন্য সবচেয়ে কম বিষুবলম্বের সপ্তাহে একসঙ্গে আসে নিচু চাঁদ, অল্প কাজের ঘণ্টা এবং উঁচু Tsky [1]।",
-                "> প্রোগ্রামে: “দূরত্ব ও Dgrd” ট্যাবের চার্টের নিচে বিষুবলম্ব বক্ররেখা উত্তর ও দক্ষিণের সর্বোচ্চ মান তারিখসহ দেখায়; সবুজ অঞ্চল দেখায় কখন চাঁদ আপনার গোলার্ধের দিকে থাকে (“বিষুবলম্ব বক্ররেখা” বাক্স দিয়ে বক্ররেখাটি লুকানো যায়)। প্রতিটি মুহূর্তের মান “চাঁদের অবস্থান” ট্যাবের ঐচ্ছিক কলাম “বিষুবলম্ব (°)”-এ এবং লাইভ অবস্থান ও +- 24h ট্যাবে আছে।",
+                "> প্রোগ্রামে: “দূরত্ব ও Dgrd” ট্যাবের চার্টে নীল বিষুবলম্ব বক্ররেখাটি Dgrd ও দূরত্বের ওপর আঁকা থাকে; এর স্কেল (±30°) বাঁ প্রান্তের ভেতরে নীল রঙে লেখা, আর উত্তর ও দক্ষিণের সর্বোচ্চ মান তারিখসহ দেখানো হয় (“বিষুবলম্ব বক্ররেখা” বাক্স দিয়ে বক্ররেখাটি লুকানো যায়)। প্রতিটি মুহূর্তের মান “চাঁদের অবস্থান” ট্যাবের ঐচ্ছিক কলাম “বিষুবলম্ব (°)”-এ এবং লাইভ অবস্থান ও +- 24h ট্যাবে আছে।",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["bn"]["S45"] = new string[] {
@@ -48071,7 +48359,7 @@ namespace LunaCalc
                 "• **الاتصالات بين نصفي الكرة**: في QSO شمال – جنوب تفضّل المحطتان ميلين متعاكسين؛ وكثيرًا ما تقع أطول النوافذ المشتركة حين يكون القمر قرب خط الاستواء السماوي (ميل نحو 0°)، حين لا تكون أيٌّ من المحطتين في وضع غير مواتٍ.",
                 "• **دورة 18.6 سنة**: يتغير اتساع التأرجح الشهري ببطء، من نحو ±18.3° إلى نحو ±28.6°. وكان الحد الأقصى (التوقف القمري الكبير) في 2024 – 2025؛ ونحو 2034 سيكون التأرجح في أدناه، مع أشهر أقل تطرفًا: لن ينخفض القمر إلى هذا الحد، لكنه لن يرتفع إلى هذا الحد أيضًا.",
                 "• **الميل والضوضاء**: يبلغ القمر أدنى ميل له حين يمر أمام القوس، أكثر مناطق السماء ضوضاءً، وأعلى ميل في الثور والجوزاء، حيث السماء أبرد. لذلك فإن أسبوع أدنى ميل يجمع، لمحطات نصف الكرة الشمالي، بين قمر منخفض وساعات مفيدة قليلة وTsky مرتفعة [1].",
-                "> في البرنامج: تحت مخطط تبويب “المسافة وDgrd” يُظهر منحنى الميل الحدّين الأقصيين شمالًا وجنوبًا مع تاريخهما؛ وتبيّن المنطقة الخضراء متى يكون القمر في جهة نصف الكرة الذي تقع فيه محطتك (يُخفى المنحنى بخانة “منحنى الميل”). وقيمة كل لحظة موجودة في العمود الاختياري “الميل (°)” في تبويب “موقع القمر” وفي تبويب الموقع المباشر و +- 24h.",
+                "> في البرنامج: في مخطط تبويب “المسافة وDgrd” يُرسم منحنى الميل الأزرق فوق Dgrd والمسافة، ومقياسه (±30°) مكتوب بالأزرق داخل الحافة اليسرى، مع الحدّين الأقصيين شمالًا وجنوبًا وتاريخهما (يُخفى المنحنى بخانة “منحنى الميل”). وقيمة كل لحظة موجودة في العمود الاختياري “الميل (°)” في تبويب “موقع القمر” وفي تبويب الموقع المباشر و +- 24h.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["ar"]["S45"] = new string[] {
@@ -48535,7 +48823,7 @@ namespace LunaCalc
                 "• **Yarımküreler arası bağlantılar**: kuzey – güney bir QSO'da iki istasyon zıt dik açıklıkları tercih eder; en uzun ortak pencereler çoğu zaman Ay gök ekvatoruna yakınken (dik açıklık 0° civarında), yani istasyonlardan hiçbiri dezavantajlı değilken oluşur.",
                 "• **18,6 yıllık döngü**: aylık salınımın genişliği yavaşça değişir, yaklaşık ±18,3°'den yaklaşık ±28,6°'ye kadar. En büyük değer (büyük Ay duraklaması) 2024 – 2025'te yaşandı; 2034'e doğru salınım en küçük olacak ve aylar daha az uç olacak: Ay o kadar alçalmayacak, ama o kadar yükselmeyecek de.",
                 "• **Dik açıklık ve gürültü**: Ay en düşük dik açıklığına gökyüzünün en gürültülü bölgesi olan Yay'ın önünden geçerken, en yüksek dik açıklığına ise gökyüzünün daha soğuk olduğu Boğa ve İkizler'de ulaşır. Bu yüzden kuzey yarımküredeki istasyonlar için en düşük dik açıklık haftası alçak Ay'ı, az sayıda yararlı saati ve yüksek Tsky'yi bir araya getirir [1].",
-                "> Programda: Mesafe ve Dgrd sekmesinin grafiğinin altında dik açıklık eğrisi kuzeydeki ve güneydeki en büyük değerleri tarihleriyle gösterir; yeşil alan Ay'ın sizin yarımkürenizin tarafında olduğu zamanı gösterir (eğri Dik açıklık eğrisi kutusuyla gizlenir). Her andaki değer, Ay konumu sekmesindeki isteğe bağlı Dik açıklık (°) sütununda ve Canlı konum ve +- 24h sekmesinde bulunur.",
+                "> Programda: Mesafe ve Dgrd sekmesinin grafiğinde mavi dik açıklık eğrisi Dgrd ve mesafenin üzerine çizilir; kendi ölçeği (±30°) sol kenarın içinde mavi olarak yazılıdır ve kuzeydeki ve güneydeki en büyük değerler tarihleriyle gösterilir (eğri Dik açıklık eğrisi kutusuyla gizlenir). Her andaki değer, Ay konumu sekmesindeki isteğe bağlı Dik açıklık (°) sütununda ve Canlı konum ve +- 24h sekmesinde bulunur.",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s"
             };
             d["tr"]["S45"] = new string[] {

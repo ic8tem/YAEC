@@ -84,7 +84,7 @@ jobs:
           sudo apt-get install -y -qq mono-runtime libmono-system-windows-forms4.0-cil libmono-system-web-extensions4.0-cil libmono-system-security4.0-cil libmono-system-io-compression-filesystem4.0-cil libgdiplus xvfb imagemagick fonts-dejavu-core > /dev/null
           # impostazioni di prova: stazione IC8TEM a Capri e un DX, lingua italiana
           mkdir -p "$HOME/.local/share/YAEC/data"
-          printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\n' > "$HOME/.local/share/YAEC/data/impostazioni.txt"
+          printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=W7GJ\n' > "$HOME/.local/share/YAEC/data/impostazioni.txt"
           Xvfb :99 -screen 0 1600x1000x24 &
           export DISPLAY=:99
           sleep 2
@@ -96,6 +96,15 @@ jobs:
           convert shot/YAEC-linux-mono.png -resize 1200x shot/small.jpg 2>/dev/null && echo "SCREENSHOT-B64:$(base64 -w 0 shot/small.jpg)" || true
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           if kill -0 $PID 2>/dev/null; then echo "YAEC in esecuzione dopo 45 s: avvio riuscito"; kill $PID; else echo "YAEC si e' chiuso"; exit 1; fi
+          # seconda schermata: linguetta Distanza e Dgrd (e CALL3.TXT ormai scaricato)
+          ls -la "$HOME/.local/share/YAEC/data" || true
+          head -3 "$HOME/.local/share/YAEC/data/CALL3.TXT" 2>/dev/null || true
+          YAEC_LINGUETTA="Distanza e Dgrd" mono YAEC.exe &
+          PID=$!
+          sleep 40
+          import -window root shot/YAEC-dgrd.png || true
+          convert shot/YAEC-dgrd.png -resize 1200x shot/small2.jpg 2>/dev/null && echo "SCREENSHOT2-B64:$(base64 -w 0 shot/small2.jpg)" || true
+          kill $PID 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
           name: linux-screenshot
