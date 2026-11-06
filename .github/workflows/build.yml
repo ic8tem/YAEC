@@ -78,6 +78,7 @@ jobs:
           sleep 45
           mkdir -p shot
           import -window root shot/YAEC-linux-mono.png || true
+          convert shot/YAEC-linux-mono.png -resize 1200x shot/small.jpg 2>/dev/null && echo "SCREENSHOT-B64:$(base64 -w 0 shot/small.jpg)" || true
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           if kill -0 $PID 2>/dev/null; then echo "YAEC in esecuzione dopo 45 s: avvio riuscito"; kill $PID; else echo "YAEC si e' chiuso"; exit 1; fi
       - uses: actions/upload-artifact@v4
