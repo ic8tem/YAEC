@@ -1,11 +1,11 @@
-﻿; YAEC - Yet Another EME Calc 1.0 - a cura di Costantino IC8TEM
+﻿; YAEC - Yet Another EME Calc 1.0.1 - a cura di Costantino IC8TEM
 ; Script per Inno Setup (gratuito, https://jrsoftware.org). Su GitHub lo compila il flusso di lavoro
 ; .github/workflows/build.yml; a mano: dopo compila.bat aprilo con Inno Setup e premi Compile.
 ; I dati del programma restano nella sottocartella "data" accanto a YAEC.exe:
 ; per questo l'installazione va nella cartella dell'utente, dove si può scrivere.
 
 #ifndef MyAppVersion
-  #define MyAppVersion "1.0"
+  #define MyAppVersion "1.0.1"
 #endif
 
 [Setup]

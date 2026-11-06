@@ -130,6 +130,9 @@ jobs:
           TAG="v${V}"
           if gh release view "$TAG" >/dev/null 2>&1; then echo "La release $TAG esiste gia'."; exit 0; fi
           rm -f out/windows/YAEC.exe
+          # impronte SHA-256 di tutti i pacchetti
+          ( cd out && for f in windows/* linux/* macos/*; do sha256sum "$f" | sed 's|  .*/|  |'; done ) > SHA256SUMS.txt
+          cat SHA256SUMS.txt
           cat > notes.md <<NOTES
           YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
 
@@ -137,6 +140,8 @@ jobs:
           - **Linux**: yaec_${V}_all.deb (Debian, Ubuntu, Mint: sudo apt install ./yaec_${V}_all.deb) oppure YAEC-${V}-linux.tar.gz (tutte le distribuzioni, con Mono).
           - **macOS** (sperimentale): YAEC-${V}-macOS.dmg; servono Mono e XQuartz.
 
+          Impronte SHA-256 di tutti i file in SHA256SUMS.txt (come verificarle: README.txt).
+
           Le versioni precedenti alla 1.0 si chiamano beta. Dettagli nel file README.txt.
           NOTES
-          gh release create "$TAG" out/windows/* out/linux/* out/macos/* --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
+          gh release create "$TAG" out/windows/* out/linux/* out/macos/* SHA256SUMS.txt --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md

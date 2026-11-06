@@ -1,4 +1,4 @@
-﻿YAEC - Yet Another EME Calc  1.0
+﻿YAEC - Yet Another EME Calc  1.0.1
 by Costantino IC8TEM
 =================================
 
@@ -9,25 +9,25 @@ Source code and downloads: https://github.com/ic8tem/YAEC
 All the versions before 1.0 are called beta (beta 1 ... beta 30).
 
 INSTALLATION - WINDOWS
-1. Download YAEC-1.0-Setup.exe from the "Releases" page on GitHub and run it.
+1. Download YAEC-1.0.1-Setup.exe from the "Releases" page on GitHub and run it.
    If SmartScreen shows a warning: "More info" -> "Run anyway".
    It installs into Documents\YAEC (no administrator rights needed), with
    Start menu and desktop shortcuts and the uninstaller.
-2. Portable alternative: YAEC-1.0-windows-portable.zip, extract it into a
+2. Portable alternative: YAEC-1.0.1-windows-portable.zip, extract it into a
    folder where you can write (e.g. Documents\YAEC) and run YAEC.exe.
 3. To build it yourself: extract the source zip and double-click
    "compila.bat" (it uses the C# compiler that is already part of Windows).
 
 INSTALLATION - LINUX (all distributions, the same program)
 YAEC runs with Mono (the open-source .NET runtime maintained by WineHQ).
-- Debian, Ubuntu, Mint: download yaec_1.0_all.deb and install it with
-      sudo apt install ./yaec_1.0_all.deb
+- Debian, Ubuntu, Mint: download yaec_1.0.1_all.deb and install it with
+      sudo apt install ./yaec_1.0.1_all.deb
   (apt installs Mono as well). Start it from the applications menu or with
   the command "yaec".
 - Fedora:   sudo dnf install mono-complete
   Arch:     sudo pacman -S mono
   openSUSE: sudo zypper install mono-complete
-  then extract YAEC-1.0-linux.tar.gz and run ./install.sh (installs into
+  then extract YAEC-1.0.1-linux.tar.gz and run ./install.sh (installs into
   ~/.local, no root needed), or simply ./yaec from the extracted folder.
 - Data: ~/.local/share/YAEC/data
 
@@ -35,9 +35,19 @@ INSTALLATION - macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/ or
    the "Framework Mono" package from WineHQ) and XQuartz (https://www.xquartz.org):
    on macOS the Windows Forms window of Mono is drawn through X11.
-2. Download YAEC-1.0-macOS.dmg, open it and drag YAEC into Applications.
+2. Download YAEC-1.0.1-macOS.dmg, open it and drag YAEC into Applications.
    The first time, right-click YAEC -> Open (the app is not signed by Apple).
 - Data: ~/Library/Application Support/YAEC/data
+
+CHECKING THE DOWNLOADED FILES (SHA-256)
+The release page also has SHA256SUMS.txt with the SHA-256 fingerprint of every
+package. Compare it with the fingerprint of the file you downloaded:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.0.1-Setup.exe -Algorithm SHA256
+  or in the command prompt: certutil -hashfile YAEC-1.0.1-Setup.exe SHA256
+- Linux:  sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS:  shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+If the two values differ, do not install the file: download it again from
+https://github.com/ic8tem/YAEC/releases
 
 LANGUAGE
 - The program starts in English. The language is chosen in the general settings
@@ -57,6 +67,11 @@ SETTINGS
 - Linux: ~/.local/share/YAEC/data   macOS: ~/Library/Application Support/YAEC/data
 - The LoTW password is stored encrypted for the current user (DPAPI on
   Windows, the Mono key store on Linux and macOS).
+
+WHAT'S NEW IN 1.0.1
+- The GitHub release page has SHA256SUMS.txt with the SHA-256 fingerprints
+  of all the packages, to check that the downloaded files are the original
+  ones (see "Checking the downloaded files" above).
 
 WHAT'S NEW IN 1.0
 - First stable version, for Windows, Linux and macOS. The installer for
@@ -486,3 +501,5 @@ APPROFONDITO e TEORIA E CONSIGLI SULL'EME; gruppi Aiuto e tools e Credits and th
 S/N in 2500 Hz al posto del margine sul modo, con i limiti del JT65 nel manuale;
 tabella Q65 TX1 - TX6, rotazione di Faraday e sintesi di SM5BSZ nel manuale; cavi
 ordinabili per perdita e nuovi cavi Messi & Paoloni, SSB, Belden e Tasker.
+Novita' 1.0.1: nella pagina della release il file SHA256SUMS.txt con le impronte
+SHA-256 dei pacchetti, per verificare che i file scaricati siano quelli originali.
