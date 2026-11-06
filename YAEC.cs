@@ -2954,6 +2954,15 @@ namespace LunaCalc
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz con il Sole · {1} dB in 2500 Hz",
             "{0} all'antenna (perdite TX {1:F1} dB) · {2:F1} dBi",
+            "Pastello azzurro",
+            "Pastello arancione",
+            "Pastello acquamarina",
+            "Pastello verde",
+            "Pastello rosa",
+            "Pastello lilla",
+            "Pastello indaco",
+            "Pastello marrone",
+            "Ci sono anche otto schemi pastello chiari: azzurro, arancione, acquamarina, verde, rosa, lilla, indaco e marrone.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -3671,7 +3680,7 @@ namespace LunaCalc
             "formula",
             "values",
             "result",
-            "DEBUG FORMULE",
+            "FORMULA DEBUG",
             "INPUT PARAMETERS",
             "My station",
             "not included",
@@ -3706,12 +3715,12 @@ namespace LunaCalc
             "H. H. Sauer and D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Geomagnetic latitude",
             "Dipole of the IGRF-14 model, 2025 north geomagnetic pole (80.8° N, 72.8° W), from the World Data Center for Geomagnetism, Kyoto.",
-            "beta 26 - New two-level tab selection (groups and tabs); Black colour scheme and Night scheme in blue tones; editable colour and thickness for the two Dgrd curves and days with the Sun near the Moon; warnings of possible polar cap (PCA) and auroral absorption for both stations; checkbox for the blur in the Pointing map; grey diagonal lines outside the limits in the Sky view and labels that no longer overlap; new DEBUG FORMULE tab; Moon icon; PDF manuals in all 14 languages.",
+            "beta 26 - New two-level tab selection (groups and tabs); Black colour scheme and Night scheme in blue tones; editable colour and thickness for the two Dgrd curves and days with the Sun near the Moon; warnings of possible polar cap (PCA) and auroral absorption for both stations; checkbox for the blur in the Pointing map; grey diagonal lines outside the limits in the Sky view and labels that no longer overlap; new FORMULA DEBUG tab; Moon icon; PDF manuals in all 14 languages.",
             "The ☀ symbol marks the days when the Moon is near the Sun (red: within 3 beamwidths, orange: within 6): solar noise can spoil reception. Colour and thickness of the two curves are changed in the bar above the chart.",
             "The zones outside the limits of your antenna are covered with light grey diagonal lines.",
             "The \"Blur the zones outside the limits\" box turns the blur on or off.",
             "HOW TO CHOOSE THE TABS",
-            "The tabs are gathered in five groups in the bar at the top: Live (Live position and +- 24h, Pointing map, Sky view), Planning (Distance and Dgrd, Moon position), Link (EME budget, Solar noise, Export calculations to Excel, DEBUG FORMULE), Log (WWL map and ADIF), Help (INSTRUCTIONS, ABOUT & CREDITS). Click a group in the first row and then the tab in the second; every group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
+            "The tabs are gathered in five groups in the bar at the top: Live (Live position and +- 24h, Pointing map, Sky view), Planning (Distance and Dgrd, Moon position), Link (EME budget, Solar noise, Export calculations to Excel, FORMULA DEBUG), Log (WWL map and ADIF), Help (INSTRUCTIONS, ABOUT & CREDITS). Click a group in the first row and then the tab in the second; every group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
             "Colour scheme (general settings): Light, Night (blue tones) or Black (black background, suited to use in the dark and to OLED screens).",
             "THE SUN NEAR THE MOON",
             "Around new Moon the Moon passes close to the Sun in the sky. The Sun is a very strong radio source (from tens to thousands of SFU depending on frequency and solar activity): when it enters the main lobe or the first side lobes of the antenna, the system noise temperature rises by many dB and the Moon echo can disappear, even with an excellent Dgrd.",
@@ -3723,7 +3732,7 @@ namespace LunaCalc
             "YAEC computes the geomagnetic latitude with the dipole of the IGRF-14 model (2025 north geomagnetic pole: 80.8° N, 72.8° W). When you enter a locator, yours or the DX's, that falls in one of these zones, a warning appears and then stays on the main screen. Before a QSO with polar or auroral stations, check the NOAA D-RAP forecasts (D Region Absorption Predictions) and the proton event alerts.",
             "Literature: H. H. Sauer and D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); IGRF geomagnetic poles from the World Data Center for Geomagnetism, Kyoto.",
             "All the parameters and formulas of the EME budget and of Solar noise, for both directions (you → DX and DX → you), with the substituted values and the result of every step: wavelength, radar cross-section of the Moon, path loss, EIRP, signal along the receiving chain, MDS and margin, noise figure with Friis, temperatures, noise and S/N, and for the Sun flux, beam, pattern attenuation, effective area and noise increase. It is enabled with the \"IN-DEPTH CALCULATIONS\" box; the button at the bottom copies everything to the clipboard.",
-            "The DEBUG FORMULE tab is enabled with the \"IN-DEPTH CALCULATIONS\" box in the Live position and +- 24h tab.",
+            "The FORMULA DEBUG tab is enabled with the \"IN-DEPTH CALCULATIONS\" box in the Live position and +- 24h tab.",
             // v27
             "custom",
             "DX distance (km)",
@@ -3746,7 +3755,7 @@ namespace LunaCalc
             "Use the table row",
             "Use the time of the row selected in the Moon position table.",
             "polarisation loss",
-            "Synchronised box: it is the same IN-DEPTH CALCULATIONS box you find in the green estimated S/N card of the Live position and +- 24h tab; change it here and it changes there too, and vice versa. When off, the EME budget switches to the simplified mode and the Solar noise, Export calculations to Excel and DEBUG FORMULE tabs turn grey.",
+            "Synchronised box: it is the same IN-DEPTH CALCULATIONS box you find in the green estimated S/N card of the Live position and +- 24h tab; change it here and it changes there too, and vice versa. When off, the EME budget switches to the simplified mode and the Solar noise, Export calculations to Excel and FORMULA DEBUG tabs turn grey.",
             "TRANSMIT AND RECEIVE SYSTEM",
             "ANTENNA – RELAY CABLE",
             "Type",
@@ -3891,7 +3900,7 @@ namespace LunaCalc
             "WSJT-X guide (K1JT and the WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 about −20 dB, FT4 3.5 dB less sensitive than FT8. Q65: K1JT, G4WJS, K9AN and IV3NWV, “Quick-Start Guide to Q65” (3 April 2021), 50 % decode threshold without AP: Q65-30A −24.8 dB, Q65-60A −27.6 dB, Q65-120A −30.8 dB. All values are referred to 2500 Hz.",
             "Logo and patronage",
             "Logo of the ARI \"Valle del Liri\" Section (03-04), used under the patronage of the Section.",
-            "beta 27 - Bands up to 432 MHz; start-up screen with the logo and the patronage of the ARI Valle del Liri Section; thank-you line in the closing window; Bengali, Arabic and Turkish languages (17 languages); main screen with four coloured cards, GO TO CALCULATIONS and GO TO SKY VIEW, locators up to 14 characters, font chooser and dark tooltips; Reconnaissance of my obstacles with grey opacity and tone; highlighted day in Distance and Dgrd; Columns button in Moon position; EME budget with the TX/RX system diagram; Solar noise with sources, indicators and spectrum; DEBUG FORMULE in Word style with .docx saving; new COAXIAL CABLES, AUTHOR CONTACTS and LICENCE tabs; manual inside the program (IN-DEPTH USER MANUAL).",
+            "beta 27 - Bands up to 432 MHz; start-up screen with the logo and the patronage of the ARI Valle del Liri Section; thank-you line in the closing window; Bengali, Arabic and Turkish languages (17 languages); main screen with four coloured cards, GO TO CALCULATIONS and GO TO SKY VIEW, locators up to 14 characters, font chooser and dark tooltips; Reconnaissance of my obstacles with grey opacity and tone; highlighted day in Distance and Dgrd; Columns button in Moon position; EME budget with the TX/RX system diagram; Solar noise with sources, indicators and spectrum; FORMULA DEBUG in Word style with .docx saving; new COAXIAL CABLES, AUTHOR CONTACTS and LICENCE tabs; manual inside the program (IN-DEPTH USER MANUAL).",
             "Search the manual: type a word and press Enter; Enter again for the next result.",
             "USER MANUAL",
             "The formulas are the same in all languages.",
@@ -3953,7 +3962,7 @@ namespace LunaCalc
             "Useful and free",
             "The program is free and you can use it without limits for your amateur radio activity, for study and for teaching. It is meant to make QSOs happen, not to sell something.",
             "Transparent",
-            "The source is always delivered with the program; every formula is visible in the DEBUG FORMULE tab and every data item gives its source. No black boxes.",
+            "The source is always delivered with the program; every formula is visible in the FORMULA DEBUG tab and every data item gives its source. No black boxes.",
             "Honest",
             "Measured, derived and estimated values are kept apart; what is not verified is declared as such. An uncertain result is shown as uncertain, not presented as certain.",
             "Respectful",
@@ -3990,7 +3999,7 @@ namespace LunaCalc
             "At the top four indicators, on the left the data source (NOAA RSTN recommended, or F10.7 from NOAA or Penticton, or a custom address) with the stations, on the right the solar flux spectrum with the extrapolation to the working frequency.",
             "This manual, inside the program and in all languages: clickable index, search, formulas and sources.",
             "It is laid out like a Word document, with the formulas in Equation Editor style: it can be copied to the clipboard or saved as Word (.docx).",
-            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position, Moon over the world), Link (EME budget, Solar noise, Export calculations to Excel, DEBUG FORMULE), Log (WWL map and ADIF), Help and tools (USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
+            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position, Moon over the world), Link (EME budget, Solar noise, Export calculations to Excel, FORMULA DEBUG), Log (WWL map and ADIF), Help and tools (USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
             "Thank you for using me: I hope I have been useful to you.",
             "No",
             "Yes",
@@ -4253,6 +4262,15 @@ namespace LunaCalc
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz with the Sun · {1} dB in 2500 Hz",
             "{0} at the antenna (TX losses {1:F1} dB) · {2:F1} dBi",
+            "Pastel light blue",
+            "Pastel orange",
+            "Pastel aquamarine",
+            "Pastel green",
+            "Pastel pink",
+            "Pastel lilac",
+            "Pastel indigo",
+            "Pastel brown",
+            "There are also eight light pastel schemes: light blue, orange, aquamarine, green, pink, lilac, indigo and brown.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -4970,7 +4988,7 @@ namespace LunaCalc
             "Formel",
             "Werte",
             "Ergebnis",
-            "DEBUG FORMULE",
+            "FORMEL-DEBUG",
             "EINGABEPARAMETER",
             "Meine Station",
             "nicht enthalten",
@@ -5005,12 +5023,12 @@ namespace LunaCalc
             "H. H. Sauer und D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, Bd. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Geomagnetische Breite",
             "Dipol des Modells IGRF-14, geomagnetischer Nordpol 2025 (80,8° N, 72,8° W), vom World Data Center for Geomagnetism, Kyoto.",
-            "beta 26 - Neue Auswahl der Registerkarten auf zwei Ebenen (Gruppen und Registerkarten); Farbschema Schwarz und Schema Nacht in Blautönen; Farbe und Dicke der beiden Dgrd-Kurven einstellbar und Tage mit der Sonne nahe am Mond; Warnungen vor möglicher Polkappen- (PCA) und Polarlichtabsorption für beide Stationen; Kästchen für die Weichzeichnung in der Ausrichtungskarte; graue Diagonalstreifen außerhalb der Grenzen in der Himmelsansicht und Beschriftungen ohne Überlappung; neue Registerkarte DEBUG FORMULE; Mond-Symbol; PDF-Handbücher in allen 14 Sprachen.",
+            "beta 26 - Neue Auswahl der Registerkarten auf zwei Ebenen (Gruppen und Registerkarten); Farbschema Schwarz und Schema Nacht in Blautönen; Farbe und Dicke der beiden Dgrd-Kurven einstellbar und Tage mit der Sonne nahe am Mond; Warnungen vor möglicher Polkappen- (PCA) und Polarlichtabsorption für beide Stationen; Kästchen für die Weichzeichnung in der Ausrichtungskarte; graue Diagonalstreifen außerhalb der Grenzen in der Himmelsansicht und Beschriftungen ohne Überlappung; neue Registerkarte FORMEL-DEBUG; Mond-Symbol; PDF-Handbücher in allen 14 Sprachen.",
             "Das Symbol ☀ markiert die Tage, an denen der Mond nahe an der Sonne steht (rot: innerhalb von 3 Keulenbreiten, orange: innerhalb von 6): das Sonnenrauschen kann den Empfang verschlechtern. Farbe und Dicke der beiden Kurven werden in der Leiste über dem Diagramm geändert.",
             "Die Zonen außerhalb der Grenzen deiner Antenne sind mit hellgrauen Diagonalstreifen bedeckt.",
             "Das Kästchen \"Zonen außerhalb der Grenzen weichzeichnen\" schaltet die Weichzeichnung ein oder aus.",
             "SO WÄHLT MAN DIE REGISTERKARTEN",
-            "Die Registerkarten sind in der Leiste oben in fünf Gruppen gesammelt: Live (Position live und +- 24h, Ausrichtungskarte, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, DEBUG FORMULE), Log (WWL-Karte und ADIF), Hilfe (ANLEITUNG, ABOUT & CREDITS). Klicke eine Gruppe in der ersten Zeile und dann die Registerkarte in der zweiten; jede Gruppe merkt sich die zuletzt geöffnete Registerkarte. Die grauen Registerkarten werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
+            "Die Registerkarten sind in der Leiste oben in fünf Gruppen gesammelt: Live (Position live und +- 24h, Ausrichtungskarte, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, FORMEL-DEBUG), Log (WWL-Karte und ADIF), Hilfe (ANLEITUNG, ABOUT & CREDITS). Klicke eine Gruppe in der ersten Zeile und dann die Registerkarte in der zweiten; jede Gruppe merkt sich die zuletzt geöffnete Registerkarte. Die grauen Registerkarten werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
             "Farbschema (allgemeine Einstellungen): Hell, Nacht (Blautöne) oder Schwarz (schwarzer Hintergrund, geeignet für die Nutzung im Dunkeln und für OLED-Bildschirme).",
             "DIE SONNE NAHE AM MOND",
             "Um Neumond herum zieht der Mond am Himmel nahe an der Sonne vorbei. Die Sonne ist eine sehr starke Radioquelle (je nach Frequenz und Sonnenaktivität zehn bis tausende SFU): gerät sie in die Hauptkeule oder in die ersten Nebenkeulen der Antenne, steigt die Systemrauschtemperatur um viele dB und das Mondecho kann verschwinden, selbst bei einer ausgezeichneten Dgrd.",
@@ -5022,7 +5040,7 @@ namespace LunaCalc
             "YAEC berechnet die geomagnetische Breite mit dem Dipol des Modells IGRF-14 (geomagnetischer Nordpol 2025: 80,8° N, 72,8° W). Gibst du einen Locator ein, deinen oder den des DX, der in eine dieser Zonen fällt, erscheint eine Warnung, die danach im Hauptbildschirm stehen bleibt. Vor einem QSO mit polaren oder Polarlicht-Stationen prüfe die D-RAP-Vorhersagen der NOAA (D Region Absorption Predictions) und die Warnungen vor Protonenereignissen.",
             "Literatur: H. H. Sauer und D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, Bd. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); geomagnetische IGRF-Pole vom World Data Center for Geomagnetism, Kyoto.",
             "Alle Parameter und Formeln des EME-Budgets und des Sonnenrauschens, für beide Richtungen (du → DX und DX → du), mit den eingesetzten Werten und dem Ergebnis jedes Schritts: Wellenlänge, Radarquerschnitt des Mondes, Wegverlust, EIRP, Signal entlang der Empfangskette, MDS und Reserve, Rauschzahl nach Friis, Temperaturen, Rauschen und S/N, und für die Sonne Fluss, Keule, Dämpfung durch das Diagramm, wirksame Fläche und Rauschzunahme. Wird mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert; die Schaltfläche unten kopiert alles in die Zwischenablage.",
-            "Die Registerkarte DEBUG FORMULE wird mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" in der Registerkarte Position live und +- 24h aktiviert.",
+            "Die Registerkarte FORMEL-DEBUG wird mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" in der Registerkarte Position live und +- 24h aktiviert.",
             // v27
             "benutzerdefiniert",
             "Entfernung DX (km)",
@@ -5045,7 +5063,7 @@ namespace LunaCalc
             "Tabellenzeile verwenden",
             "Den Zeitpunkt der in der Mondpositionstabelle gewählten Zeile verwenden.",
             "Polarisationsverlust",
-            "Synchronisiertes Kästchen: es ist dasselbe Kästchen VERTIEFTE BERECHNUNGEN wie in der grünen Karte des geschätzten S/N im Reiter Position live und +- 24h; ändert man es hier, ändert es sich auch dort und umgekehrt. Ausgeschaltet geht das EME-Budget in den vereinfachten Modus und die Reiter Sonnenrauschen, Export der Berechnungen nach Excel und DEBUG FORMULE werden grau.",
+            "Synchronisiertes Kästchen: es ist dasselbe Kästchen VERTIEFTE BERECHNUNGEN wie in der grünen Karte des geschätzten S/N im Reiter Position live und +- 24h; ändert man es hier, ändert es sich auch dort und umgekehrt. Ausgeschaltet geht das EME-Budget in den vereinfachten Modus und die Reiter Sonnenrauschen, Export der Berechnungen nach Excel und FORMEL-DEBUG werden grau.",
             "SENDE- UND EMPFANGSANLAGE",
             "KABEL ANTENNE – RELAIS",
             "Typ",
@@ -5190,7 +5208,7 @@ namespace LunaCalc
             "WSJT-X-Anleitung (K1JT und WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 etwa −20 dB, FT4 3,5 dB weniger empfindlich als FT8. Q65: K1JT, G4WJS, K9AN und IV3NWV, „Quick-Start Guide to Q65“ (3. April 2021), Schwelle für 50 % Dekodierung ohne AP: Q65-30A −24,8 dB, Q65-60A −27,6 dB, Q65-120A −30,8 dB. Alle Werte bezogen auf 2500 Hz.",
             "Logo und Schirmherrschaft",
             "Logo der ARI-Sektion \"Valle del Liri\" (03-04), verwendet mit der Schirmherrschaft der Sektion.",
-            "beta 27 - Bänder nur bis 432 MHz; Startbildschirm mit dem Logo und der Schirmherrschaft der ARI-Sektion Valle del Liri; Dankeszeile im Schließfenster; Sprachen Bengalisch, Arabisch und Türkisch (17 Sprachen); Hauptbildschirm mit vier farbigen Karten, ZU DEN BERECHNUNGEN und ZUR HIMMELSANSICHT, Locator bis 14 Zeichen, Schriftartwahl und dunkle Tooltips; Erkundung meiner Hindernisse mit Deckkraft und Ton des Graus; hervorgehobener Tag in Entfernung und Dgrd; Spalten-Schaltfläche in der Mondposition; EME-Budget mit dem Schema der TX/RX-Anlage; Sonnenrauschen mit Quellen, Indikatoren und Spektrum; DEBUG FORMULE im Word-Stil mit Speichern als .docx; neue Reiter KOAXIALKABEL, KONTAKT ZUM AUTOR und LIZENZ; Handbuch im Programm (AUSFÜHRLICHES BENUTZERHANDBUCH).",
+            "beta 27 - Bänder nur bis 432 MHz; Startbildschirm mit dem Logo und der Schirmherrschaft der ARI-Sektion Valle del Liri; Dankeszeile im Schließfenster; Sprachen Bengalisch, Arabisch und Türkisch (17 Sprachen); Hauptbildschirm mit vier farbigen Karten, ZU DEN BERECHNUNGEN und ZUR HIMMELSANSICHT, Locator bis 14 Zeichen, Schriftartwahl und dunkle Tooltips; Erkundung meiner Hindernisse mit Deckkraft und Ton des Graus; hervorgehobener Tag in Entfernung und Dgrd; Spalten-Schaltfläche in der Mondposition; EME-Budget mit dem Schema der TX/RX-Anlage; Sonnenrauschen mit Quellen, Indikatoren und Spektrum; FORMEL-DEBUG im Word-Stil mit Speichern als .docx; neue Reiter KOAXIALKABEL, KONTAKT ZUM AUTOR und LIZENZ; Handbuch im Programm (AUSFÜHRLICHES BENUTZERHANDBUCH).",
             "Im Handbuch suchen: ein Wort eingeben und Enter drücken; erneut Enter für das nächste Ergebnis.",
             "BENUTZERHANDBUCH",
             "Die Formeln sind in allen Sprachen gleich.",
@@ -5252,7 +5270,7 @@ namespace LunaCalc
             "Nützlich und kostenlos",
             "Das Programm ist kostenlos und kann ohne Einschränkungen für den Amateurfunk, zum Lernen und zum Unterrichten verwendet werden. Es soll QSOs ermöglichen, nicht etwas verkaufen.",
             "Transparent",
-            "Der Quellcode wird immer mit dem Programm geliefert; jede Formel ist im Reiter DEBUG FORMULE sichtbar und jede Angabe nennt ihre Quelle. Keine Blackboxen.",
+            "Der Quellcode wird immer mit dem Programm geliefert; jede Formel ist im Reiter FORMEL-DEBUG sichtbar und jede Angabe nennt ihre Quelle. Keine Blackboxen.",
             "Ehrlich",
             "Gemessene, abgeleitete und geschätzte Werte werden getrennt; was nicht geprüft ist, wird als solches erklärt. Ein unsicheres Ergebnis wird als unsicher angegeben, nicht als sicher dargestellt.",
             "Respektvoll",
@@ -5289,7 +5307,7 @@ namespace LunaCalc
             "Oben vier Indikatoren, links die Datenquelle (NOAA RSTN empfohlen, oder F10.7 von NOAA oder Penticton, oder eine eigene Adresse) mit den Stationen, rechts das Spektrum des Sonnenflusses mit der Extrapolation zur Arbeitsfrequenz.",
             "Dieses Handbuch, im Programm und in allen Sprachen: anklickbares Inhaltsverzeichnis, Suche, Formeln und Quellen.",
             "Es ist wie ein Word-Dokument gestaltet, mit Formeln im Stil des Formel-Editors: es kann in die Zwischenablage kopiert oder als Word (.docx) gespeichert werden.",
-            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition, Mond über der Welt), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, DEBUG FORMULE), Log (WWL-Karte und ADIF), Hilfe und Tools (BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (ABOUT & CREDITS, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
+            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition, Mond über der Welt), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, FORMEL-DEBUG), Log (WWL-Karte und ADIF), Hilfe und Tools (BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (ABOUT & CREDITS, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
             "Danke, dass du mich benutzt hast: ich hoffe, ich war dir nützlich.",
             "Nein",
             "Ja",
@@ -5552,6 +5570,15 @@ namespace LunaCalc
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz mit der Sonne · {1} dB in 2500 Hz",
             "{0} an der Antenne (TX-Verluste {1:F1} dB) · {2:F1} dBi",
+            "Pastell Hellblau",
+            "Pastell Orange",
+            "Pastell Aquamarin",
+            "Pastell Grün",
+            "Pastell Rosa",
+            "Pastell Flieder",
+            "Pastell Indigo",
+            "Pastell Braun",
+            "Es gibt außerdem acht helle Pastellschemata: Hellblau, Orange, Aquamarin, Grün, Rosa, Flieder, Indigo und Braun.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6269,7 +6296,7 @@ namespace LunaCalc
             "formule",
             "valeurs",
             "résultat",
-            "DEBUG FORMULE",
+            "DÉBOGAGE DES FORMULES",
             "PARAMÈTRES D'ENTRÉE",
             "Ma station",
             "non incluse",
@@ -6304,12 +6331,12 @@ namespace LunaCalc
             "H. H. Sauer et D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008) ; NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Latitude géomagnétique",
             "Dipôle du modèle IGRF-14, pôle nord géomagnétique 2025 (80,8° N, 72,8° O), d'après le World Data Center for Geomagnetism de Kyoto.",
-            "beta 26 - Nouveau choix des onglets sur deux niveaux (groupes et onglets) ; schéma de couleurs Noir et schéma Nuit dans les tons de bleu ; couleur et épaisseur modifiables pour les deux courbes Dgrd et jours avec le Soleil proche de la Lune ; avertissements d'absorption polaire (PCA) et aurorale possible pour les deux stations ; case pour l'estompage dans la Carte de pointage ; hachures diagonales grises hors limites dans la Voûte céleste et textes qui ne se chevauchent plus ; nouvel onglet DEBUG FORMULE ; icône de la Lune ; manuels PDF dans les 14 langues.",
+            "beta 26 - Nouveau choix des onglets sur deux niveaux (groupes et onglets) ; schéma de couleurs Noir et schéma Nuit dans les tons de bleu ; couleur et épaisseur modifiables pour les deux courbes Dgrd et jours avec le Soleil proche de la Lune ; avertissements d'absorption polaire (PCA) et aurorale possible pour les deux stations ; case pour l'estompage dans la Carte de pointage ; hachures diagonales grises hors limites dans la Voûte céleste et textes qui ne se chevauchent plus ; nouvel onglet DÉBOGAGE DES FORMULES ; icône de la Lune ; manuels PDF dans les 14 langues.",
             "Le symbole ☀ marque les jours où la Lune est proche du Soleil (rouge : à moins de 3 largeurs de faisceau, orange : à moins de 6) : le bruit solaire peut dégrader la réception. La couleur et l'épaisseur des deux courbes se changent dans la barre au-dessus du graphique.",
             "Les zones hors des limites de votre antenne sont couvertes de hachures diagonales gris clair.",
             "La case \"Estomper les zones hors limites\" active ou désactive l'estompage.",
             "COMMENT CHOISIR LES ONGLETS",
-            "Les onglets sont réunis en cinq groupes dans la barre du haut : En direct (Position en direct et +- 24h, Carte de pointage, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DEBUG FORMULE), Log (Carte WWL et ADIF), Aide (INSTRUCTIONS, ABOUT & CREDITS). Cliquez sur un groupe dans la première ligne puis sur l'onglet dans la seconde ; chaque groupe se souvient du dernier onglet ouvert. Les onglets grisés s'activent avec la case \"CALCULS APPROFONDIS\".",
+            "Les onglets sont réunis en cinq groupes dans la barre du haut : En direct (Position en direct et +- 24h, Carte de pointage, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DÉBOGAGE DES FORMULES), Log (Carte WWL et ADIF), Aide (INSTRUCTIONS, ABOUT & CREDITS). Cliquez sur un groupe dans la première ligne puis sur l'onglet dans la seconde ; chaque groupe se souvient du dernier onglet ouvert. Les onglets grisés s'activent avec la case \"CALCULS APPROFONDIS\".",
             "Schéma de couleurs (paramètres généraux) : Clair, Nuit (tons de bleu) ou Noir (fond noir, adapté à l'utilisation dans l'obscurité et aux écrans OLED).",
             "LE SOLEIL PROCHE DE LA LUNE",
             "Autour de la nouvelle Lune, la Lune passe près du Soleil dans le ciel. Le Soleil est une radiosource très puissante (de dizaines à des milliers de SFU selon la fréquence et l'activité solaire) : quand il entre dans le lobe principal ou dans les premiers lobes secondaires de l'antenne, la température de bruit du système monte de nombreux dB et l'écho lunaire peut disparaître, même avec un excellent Dgrd.",
@@ -6321,7 +6348,7 @@ namespace LunaCalc
             "YAEC calcule la latitude géomagnétique avec le dipôle du modèle IGRF-14 (pôle nord géomagnétique 2025 : 80,8° N, 72,8° O). Quand vous saisissez un locator, le vôtre ou celui du DX, qui tombe dans l'une de ces zones, un avertissement apparaît puis reste sur l'écran principal. Avant un QSO avec des stations polaires ou aurorales, consultez les prévisions D-RAP de la NOAA (D Region Absorption Predictions) et les alertes d'événements protoniques.",
             "Bibliographie : H. H. Sauer et D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399 ; NOAA SWPC, D Region Absorption Predictions (D-RAP) ; pôles géomagnétiques IGRF du World Data Center for Geomagnetism de Kyoto.",
             "Tous les paramètres et toutes les formules du Bilan EME et du Bruit solaire, dans les deux sens (vous → DX et DX → vous), avec les valeurs substituées et le résultat de chaque étape : longueur d'onde, surface équivalente radar de la Lune, perte de trajet, PIRE, signal le long de la chaîne de réception, MDS et marge, facteur de bruit avec Friis, températures, bruit et S/N, et pour le Soleil flux, faisceau, atténuation du diagramme, surface effective et augmentation du bruit. S'active avec la case \"CALCULS APPROFONDIS\" ; le bouton en bas copie tout dans le presse-papiers.",
-            "L'onglet DEBUG FORMULE s'active avec la case \"CALCULS APPROFONDIS\" dans l'onglet Position en direct et +- 24h.",
+            "L'onglet DÉBOGAGE DES FORMULES s'active avec la case \"CALCULS APPROFONDIS\" dans l'onglet Position en direct et +- 24h.",
             // v27
             "personnalisé",
             "Distance DX (km)",
@@ -6344,7 +6371,7 @@ namespace LunaCalc
             "utiliser la ligne du tableau",
             "Utiliser l'instant de la ligne choisie dans le tableau de position de la Lune.",
             "perte de polarisation",
-            "Case synchronisée : c'est la même case CALCULS APPROFONDIS que dans la carte verte du S/N estimé de l'onglet Position en direct et +- 24h ; la changer ici la change aussi là-bas et inversement. Désactivée, le Bilan EME passe en mode simplifié et les onglets Bruit solaire, Export des calculs vers Excel et DEBUG FORMULE deviennent gris.",
+            "Case synchronisée : c'est la même case CALCULS APPROFONDIS que dans la carte verte du S/N estimé de l'onglet Position en direct et +- 24h ; la changer ici la change aussi là-bas et inversement. Désactivée, le Bilan EME passe en mode simplifié et les onglets Bruit solaire, Export des calculs vers Excel et DÉBOGAGE DES FORMULES deviennent gris.",
             "INSTALLATION D'ÉMISSION ET DE RÉCEPTION",
             "CÂBLE ANTENNE – RELAIS",
             "Type",
@@ -6489,7 +6516,7 @@ namespace LunaCalc
             "Guide WSJT-X (K1JT et WSJT Development Group), § 7.1 : JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 environ −20 dB, FT4 3,5 dB moins sensible que FT8. Q65 : K1JT, G4WJS, K9AN et IV3NWV, « Quick-Start Guide to Q65 » (3 avril 2021), seuil à 50 % de décodage sans AP : Q65-30A −24,8 dB, Q65-60A −27,6 dB, Q65-120A −30,8 dB. Toutes les valeurs sont rapportées à 2500 Hz.",
             "Logo et patronage",
             "Logo de la section ARI « Valle del Liri » (03-04), utilisé avec le patronage de la section.",
-            "beta 27 - bandes jusqu'à 432 MHz seulement ; écran de démarrage avec le logo et le patronage de la section ARI Valle del Liri ; ligne de remerciement dans la fenêtre de fermeture ; langues bengali, arabe et turc (17 langues) ; écran principal avec quatre cartes colorées, ALLER AUX CALCULS et ALLER À LA VOÛTE CÉLESTE, locator jusqu'à 14 caractères, choix de la police et infobulles sombres ; Reconnaissance de mes obstacles avec opacité et ton du gris ; jour mis en évidence dans Distance et Dgrd ; bouton Colonnes dans Position de la Lune ; Bilan EME avec le schéma de l'installation TX/RX ; Bruit solaire avec sources, indicateurs et spectre ; DEBUG FORMULE en style Word avec enregistrement .docx ; nouveaux onglets CÂBLES COAXIAUX, CONTACTS DE L'AUTEUR et LICENCE ; manuel dans le programme (MANUEL D'UTILISATION DÉTAILLÉ).",
+            "beta 27 - bandes jusqu'à 432 MHz seulement ; écran de démarrage avec le logo et le patronage de la section ARI Valle del Liri ; ligne de remerciement dans la fenêtre de fermeture ; langues bengali, arabe et turc (17 langues) ; écran principal avec quatre cartes colorées, ALLER AUX CALCULS et ALLER À LA VOÛTE CÉLESTE, locator jusqu'à 14 caractères, choix de la police et infobulles sombres ; Reconnaissance de mes obstacles avec opacité et ton du gris ; jour mis en évidence dans Distance et Dgrd ; bouton Colonnes dans Position de la Lune ; Bilan EME avec le schéma de l'installation TX/RX ; Bruit solaire avec sources, indicateurs et spectre ; DÉBOGAGE DES FORMULES en style Word avec enregistrement .docx ; nouveaux onglets CÂBLES COAXIAUX, CONTACTS DE L'AUTEUR et LICENCE ; manuel dans le programme (MANUEL D'UTILISATION DÉTAILLÉ).",
             "Rechercher dans le manuel : taper un mot et appuyer sur Entrée ; Entrée de nouveau pour le résultat suivant.",
             "MANUEL D'UTILISATION",
             "Les formules sont les mêmes dans toutes les langues.",
@@ -6551,7 +6578,7 @@ namespace LunaCalc
             "Utile et gratuit",
             "Le programme est gratuit et peut être utilisé sans limites pour la radio d'amateur, pour apprendre et pour enseigner. Il est fait pour faciliter les QSO, pas pour vendre quelque chose.",
             "Transparent",
-            "Le code source est toujours fourni avec le programme ; chaque formule est visible dans l'onglet DEBUG FORMULE et chaque donnée indique sa source. Pas de boîtes noires.",
+            "Le code source est toujours fourni avec le programme ; chaque formule est visible dans l'onglet DÉBOGAGE DES FORMULES et chaque donnée indique sa source. Pas de boîtes noires.",
             "Honnête",
             "Les valeurs mesurées, déduites et estimées sont distinguées ; ce qui n'est pas vérifié est déclaré comme tel. Un résultat incertain est dit incertain, pas présenté comme sûr.",
             "Respectueux",
@@ -6588,7 +6615,7 @@ namespace LunaCalc
             "En haut quatre indicateurs, à gauche la source des données (NOAA RSTN recommandée, ou F10.7 de NOAA ou de Penticton, ou une adresse personnalisée) avec les stations, à droite le spectre du flux solaire avec l'extrapolation jusqu'à la fréquence de travail.",
             "Ce manuel, dans le programme et dans toutes les langues : sommaire cliquable, recherche, formules et sources.",
             "Il est mis en page comme un document Word, avec les formules dans le style de l'éditeur d'équations : il peut être copié dans le presse-papiers ou enregistré en Word (.docx).",
-            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune, La Lune sur le monde), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DEBUG FORMULE), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (ABOUT & CREDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
+            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune, La Lune sur le monde), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DÉBOGAGE DES FORMULES), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (ABOUT & CREDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
             "Merci de m'avoir utilisé : j'espère t'avoir été utile.",
             "Non",
             "Oui",
@@ -6851,6 +6878,15 @@ namespace LunaCalc
             "en {0:0} Hz · {1} dB en 2500 Hz",
             "en {0:0} Hz avec le Soleil · {1} dB en 2500 Hz",
             "{0} à l'antenne (pertes TX {1:F1} dB) · {2:F1} dBi",
+            "Pastel bleu ciel",
+            "Pastel orange",
+            "Pastel aigue-marine",
+            "Pastel vert",
+            "Pastel rose",
+            "Pastel lilas",
+            "Pastel indigo",
+            "Pastel marron",
+            "Il existe aussi huit schémas pastel clairs : bleu ciel, orange, aigue-marine, vert, rose, lilas, indigo et marron.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7568,7 +7604,7 @@ namespace LunaCalc
             "fórmula",
             "valores",
             "resultado",
-            "DEBUG FORMULE",
+            "DEPURACIÓN DE FÓRMULAS",
             "PARÁMETROS DE ENTRADA",
             "Mi estación",
             "no incluida",
@@ -7603,12 +7639,12 @@ namespace LunaCalc
             "H. H. Sauer y D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Latitud geomagnética",
             "Dipolo del modelo IGRF-14, polo norte geomagnético 2025 (80,8° N, 72,8° O), del World Data Center for Geomagnetism de Kioto.",
-            "beta 26 - Nueva selección de pestañas en dos niveles (grupos y pestañas); esquema de colores Negro y esquema Noche en tonos de azul; color y grosor modificables para las dos curvas de la Dgrd y días con el Sol cerca de la Luna; avisos de posible absorción polar (PCA) y auroral para ambas estaciones; casilla para el difuminado en el Mapa de apuntamiento; rayas diagonales grises fuera de los límites en la Bóveda celeste y textos que ya no se superponen; nueva pestaña DEBUG FORMULE; icono de la Luna; manuales PDF en los 14 idiomas.",
+            "beta 26 - Nueva selección de pestañas en dos niveles (grupos y pestañas); esquema de colores Negro y esquema Noche en tonos de azul; color y grosor modificables para las dos curvas de la Dgrd y días con el Sol cerca de la Luna; avisos de posible absorción polar (PCA) y auroral para ambas estaciones; casilla para el difuminado en el Mapa de apuntamiento; rayas diagonales grises fuera de los límites en la Bóveda celeste y textos que ya no se superponen; nueva pestaña DEPURACIÓN DE FÓRMULAS; icono de la Luna; manuales PDF en los 14 idiomas.",
             "El símbolo ☀ marca los días en que la Luna está cerca del Sol (rojo: a menos de 3 anchuras de haz, naranja: a menos de 6): el ruido solar puede empeorar la recepción. El color y el grosor de las dos curvas se cambian en la barra sobre el gráfico.",
             "Las zonas fuera de los límites de tu antena están cubiertas con rayas diagonales gris claro.",
             "La casilla \"Difuminar las zonas fuera de los límites\" activa o desactiva el difuminado.",
             "CÓMO SE ELIGEN LAS PESTAÑAS",
-            "Las pestañas están reunidas en cinco grupos en la barra superior: En directo (Posición en vivo y +- 24h, Mapa de apuntamiento, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEBUG FORMULE), Log (Mapa WWL y ADIF), Ayuda (INSTRUCCIONES, ABOUT & CREDITS). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
+            "Las pestañas están reunidas en cinco grupos en la barra superior: En directo (Posición en vivo y +- 24h, Mapa de apuntamiento, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEPURACIÓN DE FÓRMULAS), Log (Mapa WWL y ADIF), Ayuda (INSTRUCCIONES, ABOUT & CREDITS). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
             "Esquema de colores (ajustes generales): Claro, Noche (tonos de azul) o Negro (fondo negro, adecuado para el uso a oscuras y para pantallas OLED).",
             "EL SOL CERCA DE LA LUNA",
             "Alrededor de la luna nueva la Luna pasa cerca del Sol en el cielo. El Sol es una radiofuente muy potente (de decenas a miles de SFU según la frecuencia y la actividad solar): cuando entra en el lóbulo principal o en los primeros lóbulos laterales de la antena, la temperatura de ruido del sistema sube muchos dB y el eco de la Luna puede desaparecer, incluso con una Dgrd excelente.",
@@ -7620,7 +7656,7 @@ namespace LunaCalc
             "YAEC calcula la latitud geomagnética con el dipolo del modelo IGRF-14 (polo norte geomagnético 2025: 80,8° N, 72,8° O). Cuando escribes un locator, tuyo o del DX, que cae en una de estas zonas, aparece un aviso que luego se queda en la pantalla principal. Antes de un QSO con estaciones polares o aurorales consulta las previsiones D-RAP de la NOAA (D Region Absorption Predictions) y las alertas de eventos de protones.",
             "Bibliografía: H. H. Sauer y D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); polos geomagnéticos IGRF del World Data Center for Geomagnetism de Kioto.",
             "Todos los parámetros y fórmulas del Balance EME y del Ruido solar, en ambos sentidos (tú → DX y DX → tú), con los valores sustituidos y el resultado de cada paso: longitud de onda, sección radar de la Luna, pérdida de trayecto, PIRE, señal a lo largo de la cadena de recepción, MDS y margen, figura de ruido con Friis, temperaturas, ruido y S/N, y para el Sol flujo, haz, atenuación del diagrama, área efectiva y aumento del ruido. Se activa con la casilla \"CÁLCULOS DETALLADOS\"; el botón inferior copia todo al portapapeles.",
-            "La pestaña DEBUG FORMULE se activa con la casilla \"CÁLCULOS DETALLADOS\" en la pestaña Posición en vivo y +- 24h.",
+            "La pestaña DEPURACIÓN DE FÓRMULAS se activa con la casilla \"CÁLCULOS DETALLADOS\" en la pestaña Posición en vivo y +- 24h.",
             // v27
             "personalizado",
             "Distancia DX (km)",
@@ -7643,7 +7679,7 @@ namespace LunaCalc
             "usar la fila de la tabla",
             "Usar el instante de la fila elegida en la tabla de posición de la Luna.",
             "pérdida de polarización",
-            "Casilla sincronizada: es la misma casilla CÁLCULOS DETALLADOS de la tarjeta verde del S/N estimado en la pestaña Posición en vivo y +- 24h; cambiarla aquí la cambia también allí y viceversa. Desactivada, el Balance EME pasa al modo simplificado y las pestañas Ruido solar, Exportar los cálculos a Excel y DEBUG FORMULE quedan en gris.",
+            "Casilla sincronizada: es la misma casilla CÁLCULOS DETALLADOS de la tarjeta verde del S/N estimado en la pestaña Posición en vivo y +- 24h; cambiarla aquí la cambia también allí y viceversa. Desactivada, el Balance EME pasa al modo simplificado y las pestañas Ruido solar, Exportar los cálculos a Excel y DEPURACIÓN DE FÓRMULAS quedan en gris.",
             "INSTALACIÓN DE TRANSMISIÓN Y RECEPCIÓN",
             "CABLE ANTENA – RELÉ",
             "Tipo",
@@ -7788,7 +7824,7 @@ namespace LunaCalc
             "Guía de WSJT-X (K1JT y WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 unos −20 dB, FT4 3,5 dB menos sensible que FT8. Q65: K1JT, G4WJS, K9AN e IV3NWV, “Quick-Start Guide to Q65” (3 de abril de 2021), umbral del 50 % de decodificación sin AP: Q65-30A −24,8 dB, Q65-60A −27,6 dB, Q65-120A −30,8 dB. Todos los valores referidos a 2500 Hz.",
             "Logo y patrocinio",
             "Logo de la sección ARI \"Valle del Liri\" (03-04), usado con el patrocinio de la sección.",
-            "beta 27 - bandas solo hasta 432 MHz; pantalla de inicio con el logo y el patrocinio de la sección ARI Valle del Liri; línea de agradecimiento en la ventana de cierre; idiomas bengalí, árabe y turco (17 idiomas); pantalla principal con cuatro tarjetas de color, IR A LOS CÁLCULOS e IR A LA BÓVEDA CELESTE, locator hasta 14 caracteres, elección del tipo de letra y ayudas emergentes oscuras; Reconocimiento de mis obstáculos con opacidad y tono del gris; día resaltado en Distancia y Dgrd; botón Columnas en Posición de la Luna; Balance EME con el esquema de la instalación TX/RX; Ruido solar con fuentes, indicadores y espectro; DEBUG FORMULE en estilo Word con guardado .docx; nuevas pestañas CABLES COAXIALES, CONTACTOS DEL AUTOR y LICENCIA; manual dentro del programa (MANUAL DE USO DETALLADO).",
+            "beta 27 - bandas solo hasta 432 MHz; pantalla de inicio con el logo y el patrocinio de la sección ARI Valle del Liri; línea de agradecimiento en la ventana de cierre; idiomas bengalí, árabe y turco (17 idiomas); pantalla principal con cuatro tarjetas de color, IR A LOS CÁLCULOS e IR A LA BÓVEDA CELESTE, locator hasta 14 caracteres, elección del tipo de letra y ayudas emergentes oscuras; Reconocimiento de mis obstáculos con opacidad y tono del gris; día resaltado en Distancia y Dgrd; botón Columnas en Posición de la Luna; Balance EME con el esquema de la instalación TX/RX; Ruido solar con fuentes, indicadores y espectro; DEPURACIÓN DE FÓRMULAS en estilo Word con guardado .docx; nuevas pestañas CABLES COAXIALES, CONTACTOS DEL AUTOR y LICENCIA; manual dentro del programa (MANUAL DE USO DETALLADO).",
             "Buscar en el manual: escribe una palabra y pulsa Intro; Intro otra vez para el resultado siguiente.",
             "MANUAL DE USO",
             "Las fórmulas son las mismas en todos los idiomas.",
@@ -7850,7 +7886,7 @@ namespace LunaCalc
             "Útil y gratuito",
             "El programa es gratuito y se puede usar sin límites para la radioafición, para aprender y para enseñar. Está hecho para facilitar los QSO, no para vender algo.",
             "Transparente",
-            "El código fuente se entrega siempre con el programa; cada fórmula es visible en la pestaña DEBUG FORMULE y cada dato indica su fuente. Sin cajas negras.",
+            "El código fuente se entrega siempre con el programa; cada fórmula es visible en la pestaña DEPURACIÓN DE FÓRMULAS y cada dato indica su fuente. Sin cajas negras.",
             "Honesto",
             "Se distinguen los valores medidos, deducidos y estimados; lo que no está verificado se declara como tal. Un resultado incierto se dice incierto, no se presenta como seguro.",
             "Respetuoso",
@@ -7887,7 +7923,7 @@ namespace LunaCalc
             "Arriba cuatro indicadores, a la izquierda la fuente de los datos (NOAA RSTN recomendada, o F10.7 de NOAA o de Penticton, o una dirección personalizada) con las estaciones, a la derecha el espectro del flujo solar con la extrapolación hasta la frecuencia de trabajo.",
             "Este manual, dentro del programa y en todos los idiomas: índice con clic, búsqueda, fórmulas y fuentes.",
             "Está maquetado como un documento Word, con las fórmulas al estilo del editor de ecuaciones: se puede copiar al portapapeles o guardar en Word (.docx).",
-            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna, Luna sobre el mundo), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEBUG FORMULE), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ABOUT & CREDITS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
+            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna, Luna sobre el mundo), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEPURACIÓN DE FÓRMULAS), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ABOUT & CREDITS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
             "Gracias por usarme: espero haberte sido útil.",
             "No",
             "Sí",
@@ -8150,6 +8186,15 @@ namespace LunaCalc
             "en {0:0} Hz · {1} dB en 2500 Hz",
             "en {0:0} Hz con el Sol · {1} dB en 2500 Hz",
             "{0} en la antena (pérdidas TX {1:F1} dB) · {2:F1} dBi",
+            "Pastel celeste",
+            "Pastel naranja",
+            "Pastel aguamarina",
+            "Pastel verde",
+            "Pastel rosa",
+            "Pastel lila",
+            "Pastel índigo",
+            "Pastel marrón",
+            "Hay también ocho esquemas pastel claros: celeste, naranja, aguamarina, verde, rosa, lila, índigo y marrón.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -8867,7 +8912,7 @@ namespace LunaCalc
             "fórmula",
             "valores",
             "resultado",
-            "DEBUG FORMULE",
+            "DEPURAÇÃO DE FÓRMULAS",
             "PARÂMETROS DE ENTRADA",
             "A minha estação",
             "não incluída",
@@ -8902,12 +8947,12 @@ namespace LunaCalc
             "H. H. Sauer e D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Latitude geomagnética",
             "Dipolo do modelo IGRF-14, polo norte geomagnético 2025 (80,8° N, 72,8° O), do World Data Center for Geomagnetism de Quioto.",
-            "beta 26 - Nova escolha dos separadores em dois níveis (grupos e separadores); esquema de cores Preto e esquema Noite em tons de azul; cor e espessura editáveis para as duas curvas da Dgrd e dias com o Sol perto da Lua; avisos de possível absorção polar (PCA) e auroral para as duas estações; caixa para a desfocagem no Mapa de apontamento; riscas diagonais cinzentas fora dos limites na Abóbada celeste e textos que já não se sobrepõem; novo separador DEBUG FORMULE; ícone da Lua; manuais PDF nas 14 línguas.",
+            "beta 26 - Nova escolha dos separadores em dois níveis (grupos e separadores); esquema de cores Preto e esquema Noite em tons de azul; cor e espessura editáveis para as duas curvas da Dgrd e dias com o Sol perto da Lua; avisos de possível absorção polar (PCA) e auroral para as duas estações; caixa para a desfocagem no Mapa de apontamento; riscas diagonais cinzentas fora dos limites na Abóbada celeste e textos que já não se sobrepõem; novo separador DEPURAÇÃO DE FÓRMULAS; ícone da Lua; manuais PDF nas 14 línguas.",
             "O símbolo ☀ marca os dias em que a Lua está perto do Sol (vermelho: a menos de 3 larguras de feixe, laranja: a menos de 6): o ruído solar pode piorar a receção. A cor e a espessura das duas curvas mudam-se na barra por cima do gráfico.",
             "As zonas fora dos limites da tua antena estão cobertas por riscas diagonais cinzento-claras.",
             "A caixa \"Desfocar as zonas fora dos limites\" liga ou desliga a desfocagem.",
             "COMO SE ESCOLHEM OS SEPARADORES",
-            "Os separadores estão reunidos em cinco grupos na barra de cima: Em direto (Posição em direto e +- 24h, Mapa de apontamento, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEBUG FORMULE), Log (Mapa WWL e ADIF), Ajuda (INSTRUÇÕES, ABOUT & CREDITS). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra o último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
+            "Os separadores estão reunidos em cinco grupos na barra de cima: Em direto (Posição em direto e +- 24h, Mapa de apontamento, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEPURAÇÃO DE FÓRMULAS), Log (Mapa WWL e ADIF), Ajuda (INSTRUÇÕES, ABOUT & CREDITS). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra o último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
             "Esquema de cores (definições gerais): Claro, Noite (tons de azul) ou Preto (fundo preto, adequado ao uso no escuro e aos ecrãs OLED).",
             "O SOL PERTO DA LUA",
             "Por volta da lua nova a Lua passa perto do Sol no céu. O Sol é uma radiofonte muito forte (de dezenas a milhares de SFU conforme a frequência e a atividade solar): quando entra no lobo principal ou nos primeiros lobos laterais da antena, a temperatura de ruído do sistema sobe muitos dB e o eco da Lua pode desaparecer, mesmo com uma Dgrd ótima.",
@@ -8919,7 +8964,7 @@ namespace LunaCalc
             "O YAEC calcula a latitude geomagnética com o dipolo do modelo IGRF-14 (polo norte geomagnético 2025: 80,8° N, 72,8° O). Quando escreves um locator, teu ou do DX, que cai numa destas zonas, aparece um aviso que depois fica no ecrã principal. Antes de um QSO com estações polares ou aurorais consulta as previsões D-RAP da NOAA (D Region Absorption Predictions) e os alertas de eventos de protões.",
             "Bibliografia: H. H. Sauer e D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); polos geomagnéticos IGRF do World Data Center for Geomagnetism de Quioto.",
             "Todos os parâmetros e fórmulas do Balanço EME e do Ruído solar, nos dois sentidos (tu → DX e DX → tu), com os valores substituídos e o resultado de cada passo: comprimento de onda, secção radar da Lua, perda de percurso, PIRE, sinal ao longo da cadeia de receção, MDS e margem, figura de ruído com Friis, temperaturas, ruído e S/N, e para o Sol fluxo, feixe, atenuação do diagrama, área efetiva e aumento do ruído. Ativa-se com a caixa \"CÁLCULOS APROFUNDADOS\"; o botão em baixo copia tudo para a área de transferência.",
-            "O separador DEBUG FORMULE ativa-se com a caixa \"CÁLCULOS APROFUNDADOS\" no separador Posição em direto e +- 24h.",
+            "O separador DEPURAÇÃO DE FÓRMULAS ativa-se com a caixa \"CÁLCULOS APROFUNDADOS\" no separador Posição em direto e +- 24h.",
             // v27
             "personalizado",
             "Distância DX (km)",
@@ -8942,7 +8987,7 @@ namespace LunaCalc
             "usar a linha da tabela",
             "Usar o instante da linha escolhida na tabela da posição da Lua.",
             "perda de polarização",
-            "Caixa sincronizada: é a mesma caixa CÁLCULOS APROFUNDADOS do cartão verde do S/N estimado no separador Posição em direto e +- 24h; alterá-la aqui altera-a também lá e vice-versa. Desligada, o Balanço EME passa ao modo simplificado e os separadores Ruído solar, Exportar os cálculos para Excel e DEBUG FORMULE ficam a cinzento.",
+            "Caixa sincronizada: é a mesma caixa CÁLCULOS APROFUNDADOS do cartão verde do S/N estimado no separador Posição em direto e +- 24h; alterá-la aqui altera-a também lá e vice-versa. Desligada, o Balanço EME passa ao modo simplificado e os separadores Ruído solar, Exportar os cálculos para Excel e DEPURAÇÃO DE FÓRMULAS ficam a cinzento.",
             "INSTALAÇÃO DE EMISSÃO E RECEÇÃO",
             "CABO ANTENA – RELÉ",
             "Tipo",
@@ -9087,7 +9132,7 @@ namespace LunaCalc
             "Guia do WSJT-X (K1JT e WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 cerca de −20 dB, FT4 3,5 dB menos sensível que o FT8. Q65: K1JT, G4WJS, K9AN e IV3NWV, “Quick-Start Guide to Q65” (3 de abril de 2021), limiar de 50 % de descodificação sem AP: Q65-30A −24,8 dB, Q65-60A −27,6 dB, Q65-120A −30,8 dB. Todos os valores referidos a 2500 Hz.",
             "Logótipo e patrocínio",
             "Logótipo da secção ARI \"Valle del Liri\" (03-04), usado com o patrocínio da secção.",
-            "beta 27 - bandas só até 432 MHz; ecrã de arranque com o logótipo e o patrocínio da secção ARI Valle del Liri; linha de agradecimento na janela de fecho; línguas bengali, árabe e turco (17 línguas); ecrã principal com quatro cartões coloridos, IR PARA OS CÁLCULOS e IR PARA A ABÓBADA CELESTE, locator até 14 caracteres, escolha do tipo de letra e dicas escuras; Reconhecimento dos meus obstáculos com opacidade e tom do cinzento; dia destacado em Distância e Dgrd; botão Colunas na Posição da Lua; Balanço EME com o esquema da instalação TX/RX; Ruído solar com fontes, indicadores e espectro; DEBUG FORMULE em estilo Word com gravação .docx; novos separadores CABOS COAXIAIS, CONTACTOS DO AUTOR e LICENÇA; manual dentro do programa (MANUAL DE UTILIZAÇÃO APROFUNDADO).",
+            "beta 27 - bandas só até 432 MHz; ecrã de arranque com o logótipo e o patrocínio da secção ARI Valle del Liri; linha de agradecimento na janela de fecho; línguas bengali, árabe e turco (17 línguas); ecrã principal com quatro cartões coloridos, IR PARA OS CÁLCULOS e IR PARA A ABÓBADA CELESTE, locator até 14 caracteres, escolha do tipo de letra e dicas escuras; Reconhecimento dos meus obstáculos com opacidade e tom do cinzento; dia destacado em Distância e Dgrd; botão Colunas na Posição da Lua; Balanço EME com o esquema da instalação TX/RX; Ruído solar com fontes, indicadores e espectro; DEPURAÇÃO DE FÓRMULAS em estilo Word com gravação .docx; novos separadores CABOS COAXIAIS, CONTACTOS DO AUTOR e LICENÇA; manual dentro do programa (MANUAL DE UTILIZAÇÃO APROFUNDADO).",
             "Pesquisar no manual: escreve uma palavra e prime Enter; Enter de novo para o resultado seguinte.",
             "MANUAL DE UTILIZAÇÃO",
             "As fórmulas são as mesmas em todas as línguas.",
@@ -9149,7 +9194,7 @@ namespace LunaCalc
             "Útil e gratuito",
             "O programa é gratuito e pode ser usado sem limites para o radioamadorismo, para aprender e para ensinar. Foi feito para facilitar os QSO, não para vender algo.",
             "Transparente",
-            "O código-fonte é sempre fornecido com o programa; cada fórmula é visível no separador DEBUG FORMULE e cada dado indica a sua fonte. Sem caixas negras.",
+            "O código-fonte é sempre fornecido com o programa; cada fórmula é visível no separador DEPURAÇÃO DE FÓRMULAS e cada dado indica a sua fonte. Sem caixas negras.",
             "Honesto",
             "Distinguem-se os valores medidos, deduzidos e estimados; o que não está verificado é declarado como tal. Um resultado incerto é dito incerto, não apresentado como seguro.",
             "Respeitador",
@@ -9186,7 +9231,7 @@ namespace LunaCalc
             "Em cima quatro indicadores, à esquerda a fonte dos dados (NOAA RSTN recomendada, ou F10.7 da NOAA ou de Penticton, ou um endereço personalizado) com as estações, à direita o espectro do fluxo solar com a extrapolação até à frequência de trabalho.",
             "Este manual, dentro do programa e em todas as línguas: índice clicável, pesquisa, fórmulas e fontes.",
             "Está paginado como um documento Word, com as fórmulas no estilo do editor de equações: pode ser copiado para a área de transferência ou guardado em Word (.docx).",
-            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua, Lua sobre o mundo), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEBUG FORMULE), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (ABOUT & CREDITS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
+            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua, Lua sobre o mundo), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEPURAÇÃO DE FÓRMULAS), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (ABOUT & CREDITS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
             "Obrigado por me teres usado: espero ter-te sido útil.",
             "Não",
             "Sim",
@@ -9449,6 +9494,15 @@ namespace LunaCalc
             "em {0:0} Hz · {1} dB em 2500 Hz",
             "em {0:0} Hz com o Sol · {1} dB em 2500 Hz",
             "{0} na antena (perdas TX {1:F1} dB) · {2:F1} dBi",
+            "Pastel azul-claro",
+            "Pastel laranja",
+            "Pastel água-marinha",
+            "Pastel verde",
+            "Pastel rosa",
+            "Pastel lilás",
+            "Pastel índigo",
+            "Pastel castanho",
+            "Há também oito esquemas pastel claros: azul-claro, laranja, água-marinha, verde, rosa, lilás, índigo e castanho.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10166,7 +10220,7 @@ namespace LunaCalc
             "公式",
             "数值",
             "结果",
-            "DEBUG FORMULE",
+            "公式调试",
             "输入参数",
             "我的电台",
             "未计入",
@@ -10201,12 +10255,12 @@ namespace LunaCalc
             "H. H. Sauer 与 D. C. Wilkinson，\"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"，Space Weather，第 6 卷（2008）；NOAA 空间天气预报中心，D Region Absorption Predictions（D-RAP）。",
             "地磁纬度",
             "IGRF-14 模型偶极子，2025 年地磁北极（80.8° N，72.8° W），来自京都地磁世界数据中心（World Data Center for Geomagnetism, Kyoto）。",
-            "beta 26 - 新的两级选项卡选择（组与选项卡）；黑色配色方案以及蓝色调的夜间方案；两条 Dgrd 曲线的颜色和粗细可调，并标出太阳靠近月球的日子；为两个台站提示可能的极盖吸收（PCA）和极光吸收；指向地图中的模糊开关；天穹中超出限制区域的灰色斜线，文字不再重叠；新的 DEBUG FORMULE 选项卡；月亮图标；全部 14 种语言的 PDF 手册。",
+            "beta 26 - 新的两级选项卡选择（组与选项卡）；黑色配色方案以及蓝色调的夜间方案；两条 Dgrd 曲线的颜色和粗细可调，并标出太阳靠近月球的日子；为两个台站提示可能的极盖吸收（PCA）和极光吸收；指向地图中的模糊开关；天穹中超出限制区域的灰色斜线，文字不再重叠；新的 公式调试 选项卡；月亮图标；全部 14 种语言的 PDF 手册。",
             "☀ 符号标出月球靠近太阳的日子（红色：3 个波束宽度以内，橙色：6 个以内）：太阳噪声可能影响接收。两条曲线的颜色和粗细可在图表上方的工具栏中更改。",
             "超出您天线限制的区域以浅灰色斜线覆盖。",
             "“模糊超出限制的区域”复选框用于开启或关闭模糊效果。",
             "如何选择选项卡",
-            "选项卡在顶部栏中分为五组：实时（实时位置与 +- 24h、指向地图、天穹）、规划（距离与 Dgrd、月球位置）、通联（EME 链路预算、太阳噪声、计算结果导出到 Excel、DEBUG FORMULE）、日志（WWL 与 ADIF 地图）、帮助（使用说明、ABOUT & CREDITS）。先在第一行点击一个组，再在第二行点击选项卡；每个组都会记住上次打开的选项卡。灰色的选项卡需勾选“深入计算”复选框后才能使用。",
+            "选项卡在顶部栏中分为五组：实时（实时位置与 +- 24h、指向地图、天穹）、规划（距离与 Dgrd、月球位置）、通联（EME 链路预算、太阳噪声、计算结果导出到 Excel、公式调试）、日志（WWL 与 ADIF 地图）、帮助（使用说明、ABOUT & CREDITS）。先在第一行点击一个组，再在第二行点击选项卡；每个组都会记住上次打开的选项卡。灰色的选项卡需勾选“深入计算”复选框后才能使用。",
             "配色方案（常规设置）：浅色、夜间（蓝色调）或黑色（黑色背景，适合在黑暗环境中使用及 OLED 屏幕）。",
             "太阳靠近月球",
             "新月前后，月球在天空中从太阳附近经过。太阳是极强的射电源（随频率和太阳活动不同，从几十到几千 SFU）：当它进入天线的主瓣或第一旁瓣时，系统噪声温度会上升许多 dB，即使 Dgrd 很好，月面回波也可能消失。",
@@ -10218,7 +10272,7 @@ namespace LunaCalc
             "YAEC 用 IGRF-14 模型的偶极子计算地磁纬度（2025 年地磁北极：80.8° N，72.8° W）。当您输入的网格定位（您自己的或 DX 的）落在这些区域内时，会出现警告，并保留在主界面上。与极区或极光带台站通联前，请查看 NOAA 的 D-RAP 预报（D Region Absorption Predictions）以及质子事件警报。",
             "文献：H. H. Sauer 与 D. C. Wilkinson，\"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"，Space Weather，第 6 卷（2008），doi:10.1029/2008SW000399；NOAA SWPC，D Region Absorption Predictions（D-RAP）；IGRF 地磁极，来自京都地磁世界数据中心（World Data Center for Geomagnetism, Kyoto）。",
             "EME 链路预算和太阳噪声的全部参数与公式，包括两个方向（您 → DX 和 DX → 您），给出代入的数值和每一步的结果：波长、月球雷达截面、路径损耗、EIRP、接收链路各级信号、MDS 与余量、Friis 噪声系数、温度、噪声和信噪比；太阳部分包括流量、波束、方向图衰减、有效面积和噪声增加。需勾选“深入计算”复选框才能使用；底部按钮可将全部内容复制到剪贴板。",
-            "DEBUG FORMULE 选项卡需在实时位置与 +- 24h选项卡中勾选“深入计算”复选框后才能使用。",
+            "公式调试 选项卡需在实时位置与 +- 24h选项卡中勾选“深入计算”复选框后才能使用。",
             // v27
             "自定义",
             "DX 距离 (km)",
@@ -10241,7 +10295,7 @@ namespace LunaCalc
             "使用表格中的行",
             "使用月球位置表中所选行的时刻。",
             "极化损耗",
-            "同步复选框：它与实时位置与 +- 24h页估计 S/N 绿色卡片中的“深入计算”是同一个复选框；在此处更改，那里也会改变，反之亦然。关闭时，EME 链路预算进入简化模式，太阳噪声、计算结果导出到 Excel 和 DEBUG FORMULE 页变为灰色。",
+            "同步复选框：它与实时位置与 +- 24h页估计 S/N 绿色卡片中的“深入计算”是同一个复选框；在此处更改，那里也会改变，反之亦然。关闭时，EME 链路预算进入简化模式，太阳噪声、计算结果导出到 Excel 和 公式调试 页变为灰色。",
             "收发设备",
             "天线 – 继电器电缆",
             "类型",
@@ -10386,7 +10440,7 @@ namespace LunaCalc
             "WSJT-X 指南 (K1JT 与 WSJT Development Group) § 7.1：JT65 −25 dB、JT9 −27 dB、JT4 −23 dB、FT8 约 −20 dB、FT4 比 FT8 灵敏度低 3.5 dB。Q65：K1JT、G4WJS、K9AN 与 IV3NWV，“Quick-Start Guide to Q65”(2021 年 4 月 3 日)，无 AP 时 50 % 解码门限：Q65-30A −24.8 dB、Q65-60A −27.6 dB、Q65-120A −30.8 dB。所有数值均折算到 2500 Hz。",
             "徽标与赞助",
             "ARI “Valle del Liri” 分会 (03-04) 的徽标，经分会赞助使用。",
-            "beta 27 - 波段仅到 432 MHz；启动画面带 ARI Valle del Liri 分会的徽标与赞助；关闭窗口中的致谢语；新增孟加拉语、阿拉伯语和土耳其语 (共 17 种语言)；主界面四张彩色卡片、“前往计算”和“前往天穹”按钮、定位符最多 14 个字符、字体选择和深色提示；我的障碍物勘察增加灰色不透明度与色调；距离与 Dgrd 中可突出显示某天；月球位置中的“列”按钮；EME 链路预算带收发设备框图；太阳噪声带来源、指示和频谱；DEBUG FORMULE 采用 Word 样式并可保存为 .docx；新页面：同轴电缆、作者联系方式和许可证；程序内手册 (详细使用手册)。",
+            "beta 27 - 波段仅到 432 MHz；启动画面带 ARI Valle del Liri 分会的徽标与赞助；关闭窗口中的致谢语；新增孟加拉语、阿拉伯语和土耳其语 (共 17 种语言)；主界面四张彩色卡片、“前往计算”和“前往天穹”按钮、定位符最多 14 个字符、字体选择和深色提示；我的障碍物勘察增加灰色不透明度与色调；距离与 Dgrd 中可突出显示某天；月球位置中的“列”按钮；EME 链路预算带收发设备框图；太阳噪声带来源、指示和频谱；公式调试 采用 Word 样式并可保存为 .docx；新页面：同轴电缆、作者联系方式和许可证；程序内手册 (详细使用手册)。",
             "在手册中搜索：输入一个词并按 Enter；再按 Enter 查看下一个结果。",
             "使用手册",
             "公式在所有语言中相同。",
@@ -10448,7 +10502,7 @@ namespace LunaCalc
             "有用且免费",
             "本程序免费，可不受限制地用于业余无线电、学习和教学。它是为了方便 QSO，而不是为了推销什么。",
             "透明",
-            "源代码始终随程序提供；每个公式都可在 DEBUG FORMULE 页查看，每个数据都注明来源。没有黑箱。",
+            "源代码始终随程序提供；每个公式都可在 公式调试 页查看，每个数据都注明来源。没有黑箱。",
             "诚实",
             "区分测量值、推导值和估计值；未经核实的内容如实说明。不确定的结果就说不确定，不当作确定的呈现。",
             "尊重",
@@ -10485,7 +10539,7 @@ namespace LunaCalc
             "上方四个指示，左侧为数据来源 (推荐 NOAA RSTN，或 NOAA、彭蒂克顿的 F10.7，或自定义地址) 及台站，右侧为太阳流量频谱及外推到工作频率的曲线。",
             "本手册，内置于程序并提供所有语言：可点击目录、搜索、公式和来源。",
             "它像 Word 文档一样排版，公式采用公式编辑器风格：可复制到剪贴板或保存为 Word (.docx)。",
-            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置、月照全球)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、DEBUG FORMULE)、日志 (WWL 与 ADIF 地图)、帮助与工具 (使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (ABOUT & CREDITS、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
+            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置、月照全球)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、公式调试)、日志 (WWL 与 ADIF 地图)、帮助与工具 (使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (ABOUT & CREDITS、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
             "感谢使用我：希望我对你有所帮助。",
             "否",
             "是",
@@ -10748,6 +10802,15 @@ namespace LunaCalc
             "{0:0} Hz 内 · 2500 Hz 内 {1} dB",
             "{0:0} Hz 内（含太阳）· 2500 Hz 内 {1} dB",
             "天线处 {0}（发射损耗 {1:F1} dB）· {2:F1} dBi",
+            "柔和天蓝",
+            "柔和橙色",
+            "柔和海蓝",
+            "柔和绿色",
+            "柔和粉红",
+            "柔和淡紫",
+            "柔和靛蓝",
+            "柔和棕色",
+            "另有八种浅色柔和配色：天蓝、橙色、海蓝、绿色、粉红、淡紫、靛蓝和棕色。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11465,7 +11528,7 @@ namespace LunaCalc
             "式",
             "値",
             "結果",
-            "DEBUG FORMULE",
+            "数式デバッグ",
             "入力パラメーター",
             "自局",
             "含まない",
@@ -11500,12 +11563,12 @@ namespace LunaCalc
             "H. H. Sauer、D. C. Wilkinson、\"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"、Space Weather、第 6 巻（2008）；NOAA 宇宙天気予報センター、D Region Absorption Predictions（D-RAP）。",
             "地磁気緯度",
             "IGRF-14 モデルの双極子、2025 年の地磁気北極（80.8° N、72.8° W）、京都大学 地磁気世界資料解析センター（World Data Center for Geomagnetism, Kyoto）による。",
-            "beta 26 - 2 段のタブ選択（グループとタブ）；ブラック配色と青系のナイト配色；2 本の Dgrd 曲線の色と太さを変更可能、太陽が月に近い日を表示；両局の極冠吸収（PCA）とオーロラ吸収の可能性の警告；指向マップのぼかしチェックボックス；天球の制限外の灰色の斜線と重ならない文字；新しい DEBUG FORMULE タブ；月のアイコン；全 14 言語の PDF マニュアル。",
+            "beta 26 - 2 段のタブ選択（グループとタブ）；ブラック配色と青系のナイト配色；2 本の Dgrd 曲線の色と太さを変更可能、太陽が月に近い日を表示；両局の極冠吸収（PCA）とオーロラ吸収の可能性の警告；指向マップのぼかしチェックボックス；天球の制限外の灰色の斜線と重ならない文字；新しい 数式デバッグ タブ；月のアイコン；全 14 言語の PDF マニュアル。",
             "☀ 記号は月が太陽に近い日を示します（赤：ビーム幅の 3 倍以内、オレンジ：6 倍以内）。太陽雑音で受信が悪化することがあります。2 本の曲線の色と太さはグラフ上のバーで変更します。",
             "アンテナの制限外の領域は薄い灰色の斜線で覆われます。",
             "「制限外の領域をぼかす」チェックボックスでぼかしのオン・オフを切り替えます。",
             "タブの選び方",
-            "タブは上部のバーで 5 つのグループにまとめられています：ライブ（ライブ位置と +- 24h、指向マップ、天球）、計画（距離と Dgrd、月の位置）、交信（EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、DEBUG FORMULE）、ログ（WWL・ADIF 地図）、ヘルプ（使い方、ABOUT & CREDITS）。1 段目でグループを、2 段目でタブをクリックします。各グループは最後に開いたタブを覚えています。灰色のタブは「詳細な計算」チェックボックスで有効になります。",
+            "タブは上部のバーで 5 つのグループにまとめられています：ライブ（ライブ位置と +- 24h、指向マップ、天球）、計画（距離と Dgrd、月の位置）、交信（EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、数式デバッグ）、ログ（WWL・ADIF 地図）、ヘルプ（使い方、ABOUT & CREDITS）。1 段目でグループを、2 段目でタブをクリックします。各グループは最後に開いたタブを覚えています。灰色のタブは「詳細な計算」チェックボックスで有効になります。",
             "配色（一般設定）：ライト、ナイト（青系）、ブラック（黒背景、暗所での使用や OLED 画面に適します）。",
             "月の近くの太陽",
             "新月の前後、月は空で太陽の近くを通ります。太陽は非常に強い電波源です（周波数と太陽活動により数十から数千 SFU）。アンテナの主ローブや最初のサイドローブに入ると、システム雑音温度が何 dB も上がり、Dgrd が非常に良くても月のエコーが消えることがあります。",
@@ -11517,7 +11580,7 @@ namespace LunaCalc
             "YAEC は IGRF-14 モデルの双極子で地磁気緯度を計算します（2025 年の地磁気北極：80.8° N、72.8° W）。自局または DX のロケーターがこれらの領域に入ると警告が表示され、その後メイン画面に残ります。極域やオーロラ帯の局と QSO する前に、NOAA の D-RAP 予報（D Region Absorption Predictions）とプロトン現象の警報を確認してください。",
             "文献：H. H. Sauer、D. C. Wilkinson、\"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"、Space Weather、第 6 巻（2008）、doi:10.1029/2008SW000399；NOAA SWPC、D Region Absorption Predictions（D-RAP）；京都大学 地磁気世界資料解析センター（World Data Center for Geomagnetism, Kyoto）の IGRF 地磁気極。",
             "EME 回線計算と太陽雑音のすべてのパラメーターと式を、両方向（自局 → DX、DX → 自局）について、代入した値と各ステップの結果とともに表示します：波長、月のレーダー断面積、伝搬損失、EIRP、受信系の各段の信号、MDS とマージン、Friis による雑音指数、温度、雑音と S/N、太陽についてはフラックス、ビーム、パターンによる減衰、実効面積、雑音の増加。「詳細な計算」チェックボックスで有効になり、下のボタンですべてをクリップボードにコピーできます。",
-            "DEBUG FORMULE タブは、ライブ位置と +- 24hタブの「詳細な計算」チェックボックスで有効になります。",
+            "数式デバッグ タブは、ライブ位置と +- 24hタブの「詳細な計算」チェックボックスで有効になります。",
             // v27
             "カスタム",
             "DX 距離 (km)",
@@ -11540,7 +11603,7 @@ namespace LunaCalc
             "表の行を使う",
             "月の位置の表で選んだ行の時刻を使います。",
             "偏波損失",
-            "同期チェックボックス：ライブ位置と +- 24hタブの推定 S/N 緑カードにある「詳細な計算」と同じものです。ここで変えるとそちらも変わり、逆も同様です。オフにすると EME 回線計算は簡易モードになり、太陽雑音、計算結果を Excel へエクスポート、DEBUG FORMULE の各タブはグレーになります。",
+            "同期チェックボックス：ライブ位置と +- 24hタブの推定 S/N 緑カードにある「詳細な計算」と同じものです。ここで変えるとそちらも変わり、逆も同様です。オフにすると EME 回線計算は簡易モードになり、太陽雑音、計算結果を Excel へエクスポート、数式デバッグ の各タブはグレーになります。",
             "送受信設備",
             "アンテナ – リレー間ケーブル",
             "種類",
@@ -11685,7 +11748,7 @@ namespace LunaCalc
             "WSJT-X ガイド (K1JT と WSJT Development Group) § 7.1：JT65 −25 dB、JT9 −27 dB、JT4 −23 dB、FT8 約 −20 dB、FT4 は FT8 より 3.5 dB 感度が低い。Q65：K1JT、G4WJS、K9AN、IV3NWV「Quick-Start Guide to Q65」(2021 年 4 月 3 日)、AP なしで 50 % デコードのしきい値：Q65-30A −24.8 dB、Q65-60A −27.6 dB、Q65-120A −30.8 dB。すべて 2500 Hz 換算。",
             "ロゴと後援",
             "ARI「Valle del Liri」支部 (03-04) のロゴ。支部の後援のもとで使用。",
-            "beta 27 - バンドは 432 MHz まで；ARI Valle del Liri 支部のロゴと後援入りの起動画面；終了ウィンドウにお礼の一行；ベンガル語、アラビア語、トルコ語を追加 (17 言語)；メイン画面に 4 枚の色付きカード、「計算へ」と「天球へ」、ロケーター最大 14 文字、フォント選択、ダークなツールチップ；自局障害物の偵察にグレーの不透明度と濃さ；距離と Dgrd で日の強調；月の位置に列ボタン；EME 回線計算に TX/RX 設備の系統図；太陽雑音にソース、指標、スペクトル；DEBUG FORMULE を Word スタイルにし .docx 保存に対応；新タブ「同軸ケーブル」「作者への連絡」「ライセンス」；プログラム内マニュアル (詳細取扱説明書)。",
+            "beta 27 - バンドは 432 MHz まで；ARI Valle del Liri 支部のロゴと後援入りの起動画面；終了ウィンドウにお礼の一行；ベンガル語、アラビア語、トルコ語を追加 (17 言語)；メイン画面に 4 枚の色付きカード、「計算へ」と「天球へ」、ロケーター最大 14 文字、フォント選択、ダークなツールチップ；自局障害物の偵察にグレーの不透明度と濃さ；距離と Dgrd で日の強調；月の位置に列ボタン；EME 回線計算に TX/RX 設備の系統図；太陽雑音にソース、指標、スペクトル；数式デバッグ を Word スタイルにし .docx 保存に対応；新タブ「同軸ケーブル」「作者への連絡」「ライセンス」；プログラム内マニュアル (詳細取扱説明書)。",
             "マニュアル内を検索：語を入力して Enter、もう一度 Enter で次の結果。",
             "取扱説明書",
             "数式はすべての言語で同じです。",
@@ -11747,7 +11810,7 @@ namespace LunaCalc
             "役に立ち無料",
             "本プログラムは無料で、アマチュア無線、学習、教育のために制限なく使えます。QSO を助けるためのものであり、何かを売るためのものではありません。",
             "透明",
-            "ソースコードは常にプログラムと一緒に提供されます。すべての数式は DEBUG FORMULE タブで見られ、すべてのデータに出典があります。ブラックボックスはありません。",
+            "ソースコードは常にプログラムと一緒に提供されます。すべての数式は 数式デバッグ タブで見られ、すべてのデータに出典があります。ブラックボックスはありません。",
             "誠実",
             "測定値、導出値、推定値を区別し、未確認のものはそう明示します。不確かな結果は不確かと述べ、確かなもののようには示しません。",
             "敬意",
@@ -11784,7 +11847,7 @@ namespace LunaCalc
             "上部に 4 つの指標、左にデータソース (推奨は NOAA RSTN、または NOAA かペンティクトンの F10.7、またはカスタムアドレス) と観測所、右に運用周波数までの外挿付き太陽電波束スペクトル。",
             "このマニュアル。プログラム内にあり全言語対応：クリックできる目次、検索、数式、出典。",
             "Word 文書のようにレイアウトされ、数式は数式エディター風です：クリップボードにコピーしたり Word (.docx) で保存したりできます。",
-            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置、世界から見た月)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、DEBUG FORMULE)、ログ (WWL・ADIF 地図)、ヘルプとツール (取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (ABOUT & CREDITS、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
+            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置、世界から見た月)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、数式デバッグ)、ログ (WWL・ADIF 地図)、ヘルプとツール (取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (ABOUT & CREDITS、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
             "使ってくれてありがとう：お役に立てたなら幸いです。",
             "いいえ",
             "はい",
@@ -12047,6 +12110,15 @@ namespace LunaCalc
             "{0:0} Hz · 2500 Hz 換算 {1} dB",
             "{0:0} Hz（太陽を含む）· 2500 Hz 換算 {1} dB",
             "アンテナで {0}（送信損失 {1:F1} dB）· {2:F1} dBi",
+            "パステル水色",
+            "パステルオレンジ",
+            "パステルアクアマリン",
+            "パステルグリーン",
+            "パステルピンク",
+            "パステルライラック",
+            "パステルインディゴ",
+            "パステルブラウン",
+            "明るいパステル配色も 8 種類あります：水色、オレンジ、アクアマリン、グリーン、ピンク、ライラック、インディゴ、ブラウン。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12764,7 +12836,7 @@ namespace LunaCalc
             "सूत्र",
             "मान",
             "परिणाम",
-            "DEBUG FORMULE",
+            "सूत्र डिबग",
             "इनपुट पैरामीटर",
             "मेरा स्टेशन",
             "शामिल नहीं",
@@ -12799,12 +12871,12 @@ namespace LunaCalc
             "H. H. Sauer और D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, खंड 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP)।",
             "भूचुंबकीय अक्षांश",
             "IGRF-14 मॉडल का द्विध्रुव, 2025 का भूचुंबकीय उत्तरी ध्रुव (80.8° N, 72.8° W), World Data Center for Geomagnetism, Kyoto से।",
-            "beta 26 - दो स्तरों पर टैब चयन (समूह और टैब); काली रंग योजना और नीले रंगों वाली रात योजना; दोनों Dgrd वक्रों का रंग और मोटाई बदलने योग्य तथा चंद्रमा के पास सूर्य वाले दिन; दोनों स्टेशनों के लिए संभावित ध्रुवीय (PCA) और ध्रुवीय-ज्योति अवशोषण की चेतावनी; लक्ष्य मानचित्र में धुंधलापन के लिए चेकबॉक्स; आकाश दृश्य में सीमाओं से बाहर धूसर तिरछी रेखाएँ और एक-दूसरे पर न चढ़ने वाले लेबल; नया DEBUG FORMULE टैब; चंद्रमा का आइकन; सभी 14 भाषाओं में PDF मैनुअल।",
+            "beta 26 - दो स्तरों पर टैब चयन (समूह और टैब); काली रंग योजना और नीले रंगों वाली रात योजना; दोनों Dgrd वक्रों का रंग और मोटाई बदलने योग्य तथा चंद्रमा के पास सूर्य वाले दिन; दोनों स्टेशनों के लिए संभावित ध्रुवीय (PCA) और ध्रुवीय-ज्योति अवशोषण की चेतावनी; लक्ष्य मानचित्र में धुंधलापन के लिए चेकबॉक्स; आकाश दृश्य में सीमाओं से बाहर धूसर तिरछी रेखाएँ और एक-दूसरे पर न चढ़ने वाले लेबल; नया सूत्र डिबग टैब; चंद्रमा का आइकन; सभी 14 भाषाओं में PDF मैनुअल।",
             "☀ चिह्न उन दिनों को दिखाता है जब चंद्रमा सूर्य के पास होता है (लाल: 3 बीम-चौड़ाइयों के भीतर, नारंगी: 6 के भीतर): सौर शोर प्राप्ति बिगाड़ सकता है। दोनों वक्रों का रंग और मोटाई चार्ट के ऊपर की पट्टी में बदली जाती है।",
             "आपके एंटीना की सीमाओं से बाहर के क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके हैं।",
             "\"सीमाओं से बाहर के क्षेत्र धुंधले करें\" बॉक्स धुंधलापन चालू या बंद करता है।",
             "टैब कैसे चुनें",
-            "टैब ऊपर की पट्टी में पाँच समूहों में रखे गए हैं: लाइव (लाइव स्थिति और +- 24h, लक्ष्य मानचित्र, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, DEBUG FORMULE), लॉग (WWL मानचित्र और ADIF), सहायता (निर्देश, ABOUT & CREDITS)। पहली पंक्ति में किसी समूह पर और फिर दूसरी पंक्ति में टैब पर क्लिक करें; हर समूह पिछली बार खुला टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
+            "टैब ऊपर की पट्टी में पाँच समूहों में रखे गए हैं: लाइव (लाइव स्थिति और +- 24h, लक्ष्य मानचित्र, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, सूत्र डिबग), लॉग (WWL मानचित्र और ADIF), सहायता (निर्देश, ABOUT & CREDITS)। पहली पंक्ति में किसी समूह पर और फिर दूसरी पंक्ति में टैब पर क्लिक करें; हर समूह पिछली बार खुला टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
             "रंग योजना (सामान्य सेटिंग्स): हल्का, रात (नीले रंग) या काला (काली पृष्ठभूमि, अँधेरे में उपयोग और OLED स्क्रीन के लिए उपयुक्त)।",
             "चंद्रमा के पास सूर्य",
             "अमावस्या के आसपास चंद्रमा आकाश में सूर्य के पास से गुज़रता है। सूर्य एक बहुत शक्तिशाली रेडियो स्रोत है (आवृत्ति और सौर गतिविधि के अनुसार दसियों से हज़ारों SFU तक): जब वह एंटीना के मुख्य लोब या पहले साइड लोब में आता है, तो सिस्टम शोर तापमान कई dB बढ़ जाता है और चंद्रमा की प्रतिध्वनि गायब हो सकती है, चाहे Dgrd बहुत अच्छा हो।",
@@ -12816,7 +12888,7 @@ namespace LunaCalc
             "YAEC भूचुंबकीय अक्षांश की गणना IGRF-14 मॉडल के द्विध्रुव से करता है (2025 का भूचुंबकीय उत्तरी ध्रुव: 80.8° N, 72.8° W)। जब आप कोई लोकेटर, अपना या DX का, लिखते हैं जो इनमें से किसी क्षेत्र में आता है, तो एक चेतावनी दिखती है जो बाद में मुख्य स्क्रीन पर बनी रहती है। ध्रुवीय या ध्रुवीय-ज्योति स्टेशनों के साथ QSO से पहले NOAA के D-RAP पूर्वानुमान (D Region Absorption Predictions) और प्रोटॉन घटनाओं की चेतावनियाँ देखें।",
             "साहित्य: H. H. Sauer और D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, खंड 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); World Data Center for Geomagnetism, Kyoto से IGRF भूचुंबकीय ध्रुव।",
             "EME बजट और सौर शोर के सभी पैरामीटर और सूत्र, दोनों दिशाओं (आप → DX और DX → आप) के लिए, रखे गए मानों और हर चरण के परिणाम सहित: तरंगदैर्ध्य, चंद्रमा का रडार अनुप्रस्थ काट, पथ हानि, EIRP, प्राप्ति शृंखला में संकेत, MDS और मार्जिन, Friis से नॉइज़ फ़िगर, तापमान, शोर और S/N, और सूर्य के लिए फ़्लक्स, बीम, पैटर्न क्षीणन, प्रभावी क्षेत्र और शोर वृद्धि। यह \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होता है; नीचे का बटन सब कुछ क्लिपबोर्ड पर कॉपी करता है।",
-            "DEBUG FORMULE टैब लाइव स्थिति और +- 24h टैब के \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होता है।",
+            "सूत्र डिबग टैब लाइव स्थिति और +- 24h टैब के \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होता है।",
             // v27
             "कस्टम",
             "DX दूरी (km)",
@@ -12839,7 +12911,7 @@ namespace LunaCalc
             "तालिका की पंक्ति का उपयोग करें",
             "चंद्रमा की स्थिति तालिका में चुनी गई पंक्ति का समय उपयोग करें।",
             "ध्रुवीकरण हानि",
-            "सिंक्रनाइज़्ड बॉक्स: यह वही विस्तृत गणनाएँ बॉक्स है जो लाइव स्थिति और +- 24h टैब में अनुमानित S/N के हरे कार्ड में है; यहाँ बदलने से वहाँ भी बदलता है और उल्टा भी। बंद होने पर EME बजट सरल मोड में चला जाता है और सौर शोर, गणनाओं का Excel में निर्यात तथा DEBUG FORMULE टैब धूसर हो जाते हैं।",
+            "सिंक्रनाइज़्ड बॉक्स: यह वही विस्तृत गणनाएँ बॉक्स है जो लाइव स्थिति और +- 24h टैब में अनुमानित S/N के हरे कार्ड में है; यहाँ बदलने से वहाँ भी बदलता है और उल्टा भी। बंद होने पर EME बजट सरल मोड में चला जाता है और सौर शोर, गणनाओं का Excel में निर्यात तथा सूत्र डिबग टैब धूसर हो जाते हैं।",
             "प्रसारण और रिसेप्शन व्यवस्था",
             "केबल एंटेना – रिले",
             "प्रकार",
@@ -12984,7 +13056,7 @@ namespace LunaCalc
             "WSJT-X गाइड (K1JT और WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 लगभग −20 dB, FT4 FT8 से 3.5 dB कम संवेदनशील। Q65: K1JT, G4WJS, K9AN और IV3NWV, “Quick-Start Guide to Q65” (3 अप्रैल 2021), AP के बिना 50 % डिकोड की सीमा: Q65-30A −24.8 dB, Q65-60A −27.6 dB, Q65-120A −30.8 dB। सभी मान 2500 Hz के सापेक्ष।",
             "लोगो और संरक्षण",
             "ARI \"Valle del Liri\" अनुभाग (03-04) का लोगो, अनुभाग के संरक्षण के साथ प्रयुक्त।",
-            "beta 27 - बैंड केवल 432 MHz तक; ARI Valle del Liri अनुभाग के लोगो और संरक्षण के साथ आरंभ स्क्रीन; बंद करने की खिड़की में धन्यवाद पंक्ति; बंगाली, अरबी और तुर्की भाषाएँ (17 भाषाएँ); चार रंगीन कार्डों वाली मुख्य स्क्रीन, गणनाओं पर जाएँ और आकाश दृश्य पर जाएँ, 14 अक्षरों तक लोकेटर, फ़ॉन्ट चयन और गहरे टूलटिप; मेरी बाधाओं की टोह में धूसर की अपारदर्शिता और रंग; दूरी और Dgrd में दिन उभारना; चंद्रमा की स्थिति में स्तंभ बटन; TX/RX व्यवस्था आरेख के साथ EME बजट; स्रोत, संकेतक और स्पेक्ट्रम के साथ सौर शोर; Word शैली में DEBUG FORMULE और .docx में सहेजना; नए टैब कोएक्सियल केबल, लेखक से संपर्क और लाइसेंस; प्रोग्राम के भीतर मैनुअल (विस्तृत उपयोगकर्ता मैनुअल)।",
+            "beta 27 - बैंड केवल 432 MHz तक; ARI Valle del Liri अनुभाग के लोगो और संरक्षण के साथ आरंभ स्क्रीन; बंद करने की खिड़की में धन्यवाद पंक्ति; बंगाली, अरबी और तुर्की भाषाएँ (17 भाषाएँ); चार रंगीन कार्डों वाली मुख्य स्क्रीन, गणनाओं पर जाएँ और आकाश दृश्य पर जाएँ, 14 अक्षरों तक लोकेटर, फ़ॉन्ट चयन और गहरे टूलटिप; मेरी बाधाओं की टोह में धूसर की अपारदर्शिता और रंग; दूरी और Dgrd में दिन उभारना; चंद्रमा की स्थिति में स्तंभ बटन; TX/RX व्यवस्था आरेख के साथ EME बजट; स्रोत, संकेतक और स्पेक्ट्रम के साथ सौर शोर; Word शैली में सूत्र डिबग और .docx में सहेजना; नए टैब कोएक्सियल केबल, लेखक से संपर्क और लाइसेंस; प्रोग्राम के भीतर मैनुअल (विस्तृत उपयोगकर्ता मैनुअल)।",
             "मैनुअल में खोजें: एक शब्द लिखें और Enter दबाएँ; अगले परिणाम के लिए फिर Enter।",
             "उपयोगकर्ता मैनुअल",
             "सूत्र सभी भाषाओं में समान हैं।",
@@ -13046,7 +13118,7 @@ namespace LunaCalc
             "उपयोगी और निःशुल्क",
             "प्रोग्राम निःशुल्क है और शौकिया रेडियो, सीखने और पढ़ाने के लिए बिना सीमा के उपयोग किया जा सकता है। यह QSO आसान बनाने के लिए है, कुछ बेचने के लिए नहीं।",
             "पारदर्शी",
-            "स्रोत कोड हमेशा प्रोग्राम के साथ दिया जाता है; हर सूत्र DEBUG FORMULE टैब में दिखता है और हर डेटा अपना स्रोत बताता है। कोई ब्लैक बॉक्स नहीं।",
+            "स्रोत कोड हमेशा प्रोग्राम के साथ दिया जाता है; हर सूत्र सूत्र डिबग टैब में दिखता है और हर डेटा अपना स्रोत बताता है। कोई ब्लैक बॉक्स नहीं।",
             "ईमानदार",
             "मापे गए, निकाले गए और अनुमानित मानों में अंतर किया जाता है; जो सत्यापित नहीं है उसे वैसा ही घोषित किया जाता है। अनिश्चित परिणाम को अनिश्चित कहा जाता है, निश्चित के रूप में प्रस्तुत नहीं किया जाता।",
             "सम्मानपूर्ण",
@@ -13083,7 +13155,7 @@ namespace LunaCalc
             "ऊपर चार संकेतक, बाईं ओर डेटा स्रोत (NOAA RSTN अनुशंसित, या NOAA अथवा पेंटिक्टन का F10.7, या कस्टम पता) स्टेशनों के साथ, दाईं ओर कार्य आवृत्ति तक एक्सट्रापोलेशन सहित सौर फ्लक्स स्पेक्ट्रम।",
             "यह मैनुअल, प्रोग्राम के भीतर और सभी भाषाओं में: क्लिक योग्य विषय-सूची, खोज, सूत्र और स्रोत।",
             "यह Word दस्तावेज़ की तरह सजा है, सूत्र समीकरण संपादक की शैली में: इसे क्लिपबोर्ड में कॉपी या Word (.docx) में सहेजा जा सकता है।",
-            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति, विश्व पर चंद्रमा), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, DEBUG FORMULE), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (ABOUT & CREDITS, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
+            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति, विश्व पर चंद्रमा), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, सूत्र डिबग), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (ABOUT & CREDITS, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
             "मुझे उपयोग करने के लिए धन्यवाद: आशा है मैं आपके काम आया।",
             "नहीं",
             "हाँ",
@@ -13346,6 +13418,15 @@ namespace LunaCalc
             "{0:0} Hz में · 2500 Hz में {1} dB",
             "{0:0} Hz में सूर्य सहित · 2500 Hz में {1} dB",
             "एंटेना पर {0} (TX हानि {1:F1} dB) · {2:F1} dBi",
+            "पेस्टल आसमानी",
+            "पेस्टल नारंगी",
+            "पेस्टल एक्वामरीन",
+            "पेस्टल हरा",
+            "पेस्टल गुलाबी",
+            "पेस्टल बकाइनी",
+            "पेस्टल नील",
+            "पेस्टल भूरा",
+            "आठ हल्की पेस्टल योजनाएँ भी हैं: आसमानी, नारंगी, एक्वामरीन, हरा, गुलाबी, बकाइनी, नील और भूरा।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14063,7 +14144,7 @@ namespace LunaCalc
             "공식",
             "값",
             "결과",
-            "DEBUG FORMULE",
+            "수식 디버그",
             "입력 매개변수",
             "내 국",
             "포함하지 않음",
@@ -14098,12 +14179,12 @@ namespace LunaCalc
             "H. H. Sauer, D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, 제6권(2008); NOAA 우주기상예보센터, D Region Absorption Predictions(D-RAP).",
             "지자기 위도",
             "IGRF-14 모델의 쌍극자, 2025년 지자기 북극(80.8° N, 72.8° W), 교토 지자기 세계자료센터(World Data Center for Geomagnetism, Kyoto) 자료.",
-            "beta 26 - 두 단계 탭 선택(그룹과 탭); 검정 색 구성과 파란 톤의 야간 구성; 두 Dgrd 곡선의 색과 굵기 변경 가능, 태양이 달 가까이 있는 날 표시; 두 국에 대한 극관 흡수(PCA)와 오로라 흡수 가능성 경고; 지향 지도의 흐림 체크박스; 하늘 보기의 제한 밖 회색 대각선과 겹치지 않는 글자; 새 DEBUG FORMULE 탭; 달 아이콘; 14개 언어 모두의 PDF 설명서.",
+            "beta 26 - 두 단계 탭 선택(그룹과 탭); 검정 색 구성과 파란 톤의 야간 구성; 두 Dgrd 곡선의 색과 굵기 변경 가능, 태양이 달 가까이 있는 날 표시; 두 국에 대한 극관 흡수(PCA)와 오로라 흡수 가능성 경고; 지향 지도의 흐림 체크박스; 하늘 보기의 제한 밖 회색 대각선과 겹치지 않는 글자; 새 수식 디버그 탭; 달 아이콘; 14개 언어 모두의 PDF 설명서.",
             "☀ 기호는 달이 태양 가까이 있는 날을 표시합니다(빨강: 빔폭 3배 이내, 주황: 6배 이내): 태양 잡음 때문에 수신이 나빠질 수 있습니다. 두 곡선의 색과 굵기는 그래프 위 막대에서 바꿉니다.",
             "안테나 제한 밖 영역은 연회색 대각선으로 덮여 있습니다.",
             "\"제한 밖 영역 흐리게\" 체크박스로 흐림을 켜거나 끕니다.",
             "탭 고르는 방법",
-            "탭은 위쪽 막대에 다섯 그룹으로 모여 있습니다: 실시간(실시간 위치 및 +- 24h, 지향 지도, 하늘 보기), 계획(거리와 Dgrd, 달의 위치), 교신(EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, DEBUG FORMULE), 로그(WWL 지도와 ADIF), 도움말(사용법, ABOUT & CREDITS). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 누르세요. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 체크박스로 활성화됩니다.",
+            "탭은 위쪽 막대에 다섯 그룹으로 모여 있습니다: 실시간(실시간 위치 및 +- 24h, 지향 지도, 하늘 보기), 계획(거리와 Dgrd, 달의 위치), 교신(EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, 수식 디버그), 로그(WWL 지도와 ADIF), 도움말(사용법, ABOUT & CREDITS). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 누르세요. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 체크박스로 활성화됩니다.",
             "색 구성(일반 설정): 밝게, 야간(파란 톤), 검정(검은 배경, 어두운 곳에서 사용하거나 OLED 화면에 적합).",
             "달 가까이의 태양",
             "초승달 무렵에는 하늘에서 달이 태양 가까이 지나갑니다. 태양은 매우 강한 전파원입니다(주파수와 태양 활동에 따라 수십에서 수천 SFU): 안테나의 주엽이나 첫 부엽에 들어오면 시스템 잡음 온도가 수 dB 이상 올라가고, Dgrd가 매우 좋아도 달 에코가 사라질 수 있습니다.",
@@ -14115,7 +14196,7 @@ namespace LunaCalc
             "YAEC는 IGRF-14 모델의 쌍극자로 지자기 위도를 계산합니다(2025년 지자기 북극: 80.8° N, 72.8° W). 내 로케이터나 DX 로케이터가 이 지역에 들어가면 경고가 나타나고 그 뒤 주 화면에 남습니다. 극지나 오로라대 국과 QSO하기 전에 NOAA의 D-RAP 예보(D Region Absorption Predictions)와 양성자 현상 경보를 확인하세요.",
             "문헌: H. H. Sauer, D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, 제6권(2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions(D-RAP); 교토 지자기 세계자료센터(World Data Center for Geomagnetism, Kyoto)의 IGRF 지자기극.",
             "EME 링크 버짓과 태양 잡음의 모든 매개변수와 공식을 두 방향(나 → DX, DX → 나)에 대해 대입한 값과 각 단계의 결과와 함께 보여 줍니다: 파장, 달의 레이더 단면적, 경로 손실, EIRP, 수신 체인의 신호, MDS와 여유, Friis 잡음 지수, 온도, 잡음과 S/N, 그리고 태양의 플럭스, 빔, 패턴 감쇠, 유효 면적, 잡음 증가. \"심화 계산\" 체크박스로 활성화되며, 아래 버튼은 모든 내용을 클립보드에 복사합니다.",
-            "DEBUG FORMULE 탭은 실시간 위치 및 +- 24h 탭의 \"심화 계산\" 체크박스로 활성화됩니다.",
+            "수식 디버그 탭은 실시간 위치 및 +- 24h 탭의 \"심화 계산\" 체크박스로 활성화됩니다.",
             // v27
             "사용자 지정",
             "DX 거리 (km)",
@@ -14138,7 +14219,7 @@ namespace LunaCalc
             "표의 행 사용",
             "달의 위치 표에서 선택한 행의 시각을 사용합니다.",
             "편파 손실",
-            "동기화된 확인란: 실시간 위치 및 +- 24h 탭의 추정 S/N 녹색 카드에 있는 심화 계산과 같은 확인란입니다. 여기서 바꾸면 그쪽도 바뀌고 반대도 마찬가지입니다. 끄면 EME 링크 버짓은 간이 모드가 되고 태양 잡음, 계산 결과 Excel 내보내기, DEBUG FORMULE 탭은 회색이 됩니다.",
+            "동기화된 확인란: 실시간 위치 및 +- 24h 탭의 추정 S/N 녹색 카드에 있는 심화 계산과 같은 확인란입니다. 여기서 바꾸면 그쪽도 바뀌고 반대도 마찬가지입니다. 끄면 EME 링크 버짓은 간이 모드가 되고 태양 잡음, 계산 결과 Excel 내보내기, 수식 디버그 탭은 회색이 됩니다.",
             "송수신 설비",
             "안테나 – 릴레이 케이블",
             "종류",
@@ -14283,7 +14364,7 @@ namespace LunaCalc
             "WSJT-X 안내서 (K1JT와 WSJT Development Group) § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 약 −20 dB, FT4는 FT8보다 3.5 dB 덜 민감. Q65: K1JT, G4WJS, K9AN, IV3NWV, “Quick-Start Guide to Q65” (2021년 4월 3일), AP 없이 50 % 디코딩 문턱값: Q65-30A −24.8 dB, Q65-60A −27.6 dB, Q65-120A −30.8 dB. 모든 값은 2500 Hz 기준.",
             "로고와 후원",
             "ARI \"Valle del Liri\" 지부 (03-04)의 로고, 지부의 후원으로 사용.",
-            "beta 27 - 밴드는 432 MHz까지만; ARI Valle del Liri 지부의 로고와 후원이 담긴 시작 화면; 종료 창의 감사 문구; 벵골어, 아랍어, 터키어 추가 (17개 언어); 메인 화면에 네 개의 색 카드, 계산으로 및 하늘 보기로 버튼, 로케이터 최대 14자, 글꼴 선택, 어두운 도움말; 내 장애물 정찰에 회색 불투명도와 톤; 거리와 Dgrd에서 날짜 강조; 달의 위치에 열 버튼; EME 링크 버짓에 TX/RX 설비 계통도; 태양 잡음에 출처, 지표, 스펙트럼; DEBUG FORMULE을 Word 스타일로, .docx 저장 지원; 새 탭 동축 케이블, 저자 연락처, 라이선스; 프로그램 안의 설명서 (상세 사용 설명서).",
+            "beta 27 - 밴드는 432 MHz까지만; ARI Valle del Liri 지부의 로고와 후원이 담긴 시작 화면; 종료 창의 감사 문구; 벵골어, 아랍어, 터키어 추가 (17개 언어); 메인 화면에 네 개의 색 카드, 계산으로 및 하늘 보기로 버튼, 로케이터 최대 14자, 글꼴 선택, 어두운 도움말; 내 장애물 정찰에 회색 불투명도와 톤; 거리와 Dgrd에서 날짜 강조; 달의 위치에 열 버튼; EME 링크 버짓에 TX/RX 설비 계통도; 태양 잡음에 출처, 지표, 스펙트럼; 수식 디버그을 Word 스타일로, .docx 저장 지원; 새 탭 동축 케이블, 저자 연락처, 라이선스; 프로그램 안의 설명서 (상세 사용 설명서).",
             "설명서에서 검색: 단어를 입력하고 Enter, 다시 Enter로 다음 결과.",
             "사용 설명서",
             "수식은 모든 언어에서 같습니다.",
@@ -14345,7 +14426,7 @@ namespace LunaCalc
             "유용하고 무료",
             "프로그램은 무료이며 아마추어 무선, 학습, 교육에 제한 없이 쓸 수 있습니다. QSO를 돕기 위한 것이지 무엇을 팔기 위한 것이 아닙니다.",
             "투명",
-            "소스 코드는 항상 프로그램과 함께 제공됩니다. 모든 수식은 DEBUG FORMULE 탭에서 볼 수 있고 모든 데이터에는 출처가 있습니다. 블랙박스는 없습니다.",
+            "소스 코드는 항상 프로그램과 함께 제공됩니다. 모든 수식은 수식 디버그 탭에서 볼 수 있고 모든 데이터에는 출처가 있습니다. 블랙박스는 없습니다.",
             "정직",
             "측정값, 유도값, 추정값을 구분하고 확인되지 않은 것은 그렇다고 밝힙니다. 불확실한 결과는 불확실하다고 말하며 확실한 것처럼 보이지 않습니다.",
             "존중",
@@ -14382,7 +14463,7 @@ namespace LunaCalc
             "위쪽에 네 지표, 왼쪽에 데이터 출처 (NOAA RSTN 권장, 또는 NOAA나 펜틱턴의 F10.7, 또는 사용자 주소)와 관측소, 오른쪽에 운용 주파수까지 외삽한 태양 플럭스 스펙트럼.",
             "이 설명서로, 프로그램 안에 있으며 모든 언어를 지원합니다: 클릭 가능한 목차, 검색, 수식, 출처.",
             "Word 문서처럼 배치되고 수식은 수식 편집기 양식입니다: 클립보드로 복사하거나 Word (.docx)로 저장할 수 있습니다.",
-            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치, 세계 위의 달), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, DEBUG FORMULE), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (ABOUT & CREDITS, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
+            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치, 세계 위의 달), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, 수식 디버그), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (ABOUT & CREDITS, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
             "사용해 주셔서 감사합니다: 도움이 되었기를 바랍니다.",
             "아니요",
             "예",
@@ -14645,6 +14726,15 @@ namespace LunaCalc
             "{0:0} Hz · 2500 Hz 기준 {1} dB",
             "{0:0} Hz, 태양 포함 · 2500 Hz 기준 {1} dB",
             "안테나에서 {0} (송신 손실 {1:F1} dB) · {2:F1} dBi",
+            "파스텔 하늘색",
+            "파스텔 주황",
+            "파스텔 아쿠아마린",
+            "파스텔 초록",
+            "파스텔 분홍",
+            "파스텔 라일락",
+            "파스텔 남색",
+            "파스텔 갈색",
+            "밝은 파스텔 색 구성도 여덟 가지 있습니다: 하늘색, 주황, 아쿠아마린, 초록, 분홍, 라일락, 남색, 갈색.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15362,7 +15452,7 @@ namespace LunaCalc
             "rumus",
             "nilai",
             "hasil",
-            "DEBUG FORMULE",
+            "DEBUG RUMUS",
             "PARAMETER MASUKAN",
             "Stasiun saya",
             "tidak disertakan",
@@ -15397,12 +15487,12 @@ namespace LunaCalc
             "H. H. Sauer dan D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Lintang geomagnetik",
             "Dipol model IGRF-14, kutub utara geomagnetik 2025 (80,8° LU, 72,8° BB), dari World Data Center for Geomagnetism, Kyoto.",
-            "beta 26 - Pemilihan tab baru dua tingkat (kelompok dan tab); skema warna Hitam dan skema Malam bernuansa biru; warna dan ketebalan kedua kurva Dgrd dapat diubah serta hari-hari dengan Matahari dekat Bulan; peringatan kemungkinan penyerapan kutub (PCA) dan aurora untuk kedua stasiun; kotak centang untuk pengaburan di Peta pengarahan; garis diagonal abu-abu di luar batas di Kubah langit dan tulisan yang tidak lagi bertumpuk; tab baru DEBUG FORMULE; ikon Bulan; manual PDF dalam ke-14 bahasa.",
+            "beta 26 - Pemilihan tab baru dua tingkat (kelompok dan tab); skema warna Hitam dan skema Malam bernuansa biru; warna dan ketebalan kedua kurva Dgrd dapat diubah serta hari-hari dengan Matahari dekat Bulan; peringatan kemungkinan penyerapan kutub (PCA) dan aurora untuk kedua stasiun; kotak centang untuk pengaburan di Peta pengarahan; garis diagonal abu-abu di luar batas di Kubah langit dan tulisan yang tidak lagi bertumpuk; tab baru DEBUG RUMUS; ikon Bulan; manual PDF dalam ke-14 bahasa.",
             "Simbol ☀ menandai hari-hari ketika Bulan dekat Matahari (merah: dalam 3 lebar berkas, oranye: dalam 6): derau matahari dapat memperburuk penerimaan. Warna dan ketebalan kedua kurva diubah di bilah di atas grafik.",
             "Zona di luar batas antena Anda ditutupi garis diagonal abu-abu muda.",
             "Kotak \"Kaburkan zona di luar batas\" menyalakan atau mematikan pengaburan.",
             "CARA MEMILIH TAB",
-            "Tab dikumpulkan dalam lima kelompok di bilah atas: Langsung (Posisi langsung dan +- 24h, Peta pengarahan, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG FORMULE), Log (Peta WWL dan ADIF), Bantuan (PETUNJUK, ABOUT & CREDITS). Klik sebuah kelompok di baris pertama lalu tab di baris kedua; setiap kelompok mengingat tab terakhir yang dibuka. Tab berwarna abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
+            "Tab dikumpulkan dalam lima kelompok di bilah atas: Langsung (Posisi langsung dan +- 24h, Peta pengarahan, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG RUMUS), Log (Peta WWL dan ADIF), Bantuan (PETUNJUK, ABOUT & CREDITS). Klik sebuah kelompok di baris pertama lalu tab di baris kedua; setiap kelompok mengingat tab terakhir yang dibuka. Tab berwarna abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
             "Skema warna (pengaturan umum): Terang, Malam (nuansa biru) atau Hitam (latar hitam, cocok untuk penggunaan dalam gelap dan untuk layar OLED).",
             "MATAHARI DEKAT BULAN",
             "Sekitar bulan baru, Bulan melintas dekat Matahari di langit. Matahari adalah sumber radio yang sangat kuat (dari puluhan hingga ribuan SFU menurut frekuensi dan aktivitas matahari): ketika masuk ke lobus utama atau lobus samping pertama antena, suhu derau sistem naik banyak dB dan gema Bulan dapat hilang, meskipun Dgrd sangat baik.",
@@ -15414,7 +15504,7 @@ namespace LunaCalc
             "YAEC menghitung lintang geomagnetik dengan dipol model IGRF-14 (kutub utara geomagnetik 2025: 80,8° LU, 72,8° BB). Ketika Anda menulis lokator, milik Anda atau milik DX, yang jatuh di salah satu zona ini, muncul peringatan yang kemudian tetap tampil di layar utama. Sebelum QSO dengan stasiun kutub atau aurora, periksa prakiraan D-RAP dari NOAA (D Region Absorption Predictions) dan peringatan peristiwa proton.",
             "Pustaka: H. H. Sauer dan D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); kutub geomagnetik IGRF dari World Data Center for Geomagnetism, Kyoto.",
             "Semua parameter dan rumus Anggaran EME dan Derau matahari, untuk kedua arah (Anda → DX dan DX → Anda), dengan nilai yang dimasukkan dan hasil setiap langkah: panjang gelombang, penampang radar Bulan, rugi lintasan, EIRP, sinyal sepanjang rantai penerima, MDS dan margin, angka derau dengan Friis, suhu, derau dan S/N, serta untuk Matahari fluks, berkas, pelemahan pola, luas efektif dan kenaikan derau. Diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\"; tombol di bawah menyalin semuanya ke papan klip.",
-            "Tab DEBUG FORMULE diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\" di tab Posisi langsung dan +- 24h.",
+            "Tab DEBUG RUMUS diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\" di tab Posisi langsung dan +- 24h.",
             // v27
             "kustom",
             "Jarak DX (km)",
@@ -15437,7 +15527,7 @@ namespace LunaCalc
             "gunakan baris tabel",
             "Gunakan waktu dari baris yang dipilih di tabel posisi Bulan.",
             "rugi polarisasi",
-            "Kotak tersinkron: ini kotak PERHITUNGAN MENDALAM yang sama dengan kartu hijau S/N perkiraan di tab Posisi langsung dan +- 24h; mengubahnya di sini juga mengubahnya di sana dan sebaliknya. Jika mati, Anggaran EME beralih ke mode sederhana dan tab Derau matahari, Ekspor perhitungan ke Excel serta DEBUG FORMULE menjadi abu-abu.",
+            "Kotak tersinkron: ini kotak PERHITUNGAN MENDALAM yang sama dengan kartu hijau S/N perkiraan di tab Posisi langsung dan +- 24h; mengubahnya di sini juga mengubahnya di sana dan sebaliknya. Jika mati, Anggaran EME beralih ke mode sederhana dan tab Derau matahari, Ekspor perhitungan ke Excel serta DEBUG RUMUS menjadi abu-abu.",
             "INSTALASI PEMANCAR DAN PENERIMA",
             "KABEL ANTENA – RELAI",
             "Jenis",
@@ -15582,7 +15672,7 @@ namespace LunaCalc
             "Panduan WSJT-X (K1JT dan WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 sekitar −20 dB, FT4 3,5 dB kurang peka dibanding FT8. Q65: K1JT, G4WJS, K9AN dan IV3NWV, “Quick-Start Guide to Q65” (3 April 2021), ambang 50 % dekode tanpa AP: Q65-30A −24,8 dB, Q65-60A −27,6 dB, Q65-120A −30,8 dB. Semua nilai mengacu ke 2500 Hz.",
             "Logo dan dukungan",
             "Logo seksi ARI \"Valle del Liri\" (03-04), digunakan dengan dukungan seksi tersebut.",
-            "beta 27 - pita hanya hingga 432 MHz; layar pembuka dengan logo dan dukungan seksi ARI Valle del Liri; baris terima kasih di jendela penutupan; bahasa Bengali, Arab dan Turki (17 bahasa); layar utama dengan empat kartu berwarna, KE PERHITUNGAN dan KE KUBAH LANGIT, locator hingga 14 karakter, pilihan jenis huruf dan tooltip gelap; Pengintaian rintangan saya dengan opasitas dan nada abu-abu; hari yang disorot di Jarak dan Dgrd; tombol Kolom di Posisi Bulan; Anggaran EME dengan skema instalasi TX/RX; Derau matahari dengan sumber, indikator dan spektrum; DEBUG FORMULE bergaya Word dengan simpan .docx; tab baru KABEL KOAKSIAL, KONTAK PENULIS dan LISENSI; manual di dalam program (MANUAL PENGGUNAAN LENGKAP).",
+            "beta 27 - pita hanya hingga 432 MHz; layar pembuka dengan logo dan dukungan seksi ARI Valle del Liri; baris terima kasih di jendela penutupan; bahasa Bengali, Arab dan Turki (17 bahasa); layar utama dengan empat kartu berwarna, KE PERHITUNGAN dan KE KUBAH LANGIT, locator hingga 14 karakter, pilihan jenis huruf dan tooltip gelap; Pengintaian rintangan saya dengan opasitas dan nada abu-abu; hari yang disorot di Jarak dan Dgrd; tombol Kolom di Posisi Bulan; Anggaran EME dengan skema instalasi TX/RX; Derau matahari dengan sumber, indikator dan spektrum; DEBUG RUMUS bergaya Word dengan simpan .docx; tab baru KABEL KOAKSIAL, KONTAK PENULIS dan LISENSI; manual di dalam program (MANUAL PENGGUNAAN LENGKAP).",
             "Cari di manual: ketik sebuah kata dan tekan Enter; Enter lagi untuk hasil berikutnya.",
             "MANUAL PENGGUNAAN",
             "Rumus sama di semua bahasa.",
@@ -15644,7 +15734,7 @@ namespace LunaCalc
             "Berguna dan gratis",
             "Program ini gratis dan dapat dipakai tanpa batas untuk radio amatir, untuk belajar dan untuk mengajar. Ia dibuat untuk memudahkan QSO, bukan untuk menjual sesuatu.",
             "Transparan",
-            "Kode sumber selalu disertakan bersama program; setiap rumus terlihat di tab DEBUG FORMULE dan setiap data menyebut sumbernya. Tanpa kotak hitam.",
+            "Kode sumber selalu disertakan bersama program; setiap rumus terlihat di tab DEBUG RUMUS dan setiap data menyebut sumbernya. Tanpa kotak hitam.",
             "Jujur",
             "Nilai terukur, turunan dan perkiraan dibedakan; yang belum diverifikasi dinyatakan demikian. Hasil yang tidak pasti disebut tidak pasti, tidak disajikan sebagai pasti.",
             "Menghormati",
@@ -15681,7 +15771,7 @@ namespace LunaCalc
             "Di atas empat indikator, di kiri sumber data (NOAA RSTN disarankan, atau F10.7 dari NOAA atau Penticton, atau alamat kustom) dengan stasiun-stasiunnya, di kanan spektrum fluks matahari dengan ekstrapolasi hingga frekuensi kerja.",
             "Manual ini, di dalam program dan dalam semua bahasa: daftar isi yang dapat diklik, pencarian, rumus dan sumber.",
             "Ditata seperti dokumen Word, dengan rumus bergaya editor persamaan: dapat disalin ke papan klip atau disimpan sebagai Word (.docx).",
-            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan, Bulan di atas dunia), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG FORMULE), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (ABOUT & CREDITS, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
+            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan, Bulan di atas dunia), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG RUMUS), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (ABOUT & CREDITS, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
             "Terima kasih telah memakai saya: semoga saya bermanfaat bagimu.",
             "Tidak",
             "Ya",
@@ -15944,6 +16034,15 @@ namespace LunaCalc
             "dalam {0:0} Hz · {1} dB dalam 2500 Hz",
             "dalam {0:0} Hz dengan Matahari · {1} dB dalam 2500 Hz",
             "{0} di antena (rugi TX {1:F1} dB) · {2:F1} dBi",
+            "Pastel biru muda",
+            "Pastel jingga",
+            "Pastel biru laut",
+            "Pastel hijau",
+            "Pastel merah muda",
+            "Pastel ungu muda",
+            "Pastel nila",
+            "Pastel cokelat",
+            "Ada juga delapan skema pastel terang: biru muda, jingga, biru laut, hijau, merah muda, ungu muda, nila dan cokelat.",
         };
 
         public static readonly string[] RU = {
@@ -16662,7 +16761,7 @@ namespace LunaCalc
             "формула",
             "значения",
             "результат",
-            "DEBUG FORMULE",
+            "ОТЛАДКА ФОРМУЛ",
             "ВХОДНЫЕ ПАРАМЕТРЫ",
             "Моя станция",
             "не учитывается",
@@ -16697,12 +16796,12 @@ namespace LunaCalc
             "H. H. Sauer и D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, т. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Геомагнитная широта",
             "Диполь модели IGRF-14, северный геомагнитный полюс 2025 г. (80,8° с. ш., 72,8° з. д.), по данным World Data Center for Geomagnetism, Киото.",
-            "beta 26 - Новый двухуровневый выбор вкладок (группы и вкладки); цветовая схема Чёрная и схема Ночь в синих тонах; настраиваемые цвет и толщина двух кривых Dgrd и дни с Солнцем рядом с Луной; предупреждения о возможном полярном (PCA) и авроральном поглощении для обеих станций; флажок размытия на Карте наведения; серые диагональные линии вне ограничений на Небесном своде и надписи без наложений; новая вкладка DEBUG FORMULE; значок Луны; PDF-руководства на всех 14 языках.",
+            "beta 26 - Новый двухуровневый выбор вкладок (группы и вкладки); цветовая схема Чёрная и схема Ночь в синих тонах; настраиваемые цвет и толщина двух кривых Dgrd и дни с Солнцем рядом с Луной; предупреждения о возможном полярном (PCA) и авроральном поглощении для обеих станций; флажок размытия на Карте наведения; серые диагональные линии вне ограничений на Небесном своде и надписи без наложений; новая вкладка ОТЛАДКА ФОРМУЛ; значок Луны; PDF-руководства на всех 14 языках.",
             "Символ ☀ отмечает дни, когда Луна рядом с Солнцем (красный: в пределах 3 ширин луча, оранжевый: в пределах 6): шум Солнца может ухудшить приём. Цвет и толщина двух кривых меняются на панели над графиком.",
             "Зоны вне ограничений вашей антенны покрыты светло-серыми диагональными линиями.",
             "Флажок «Размывать зоны вне ограничений» включает и выключает размытие.",
             "КАК ВЫБИРАТЬ ВКЛАДКИ",
-            "Вкладки собраны в пять групп на панели вверху: В реальном времени (Положение онлайн и +- 24h, Карта наведения, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, DEBUG FORMULE), Журнал (Карта WWL и ADIF), Справка (ИНСТРУКЦИИ, ABOUT & CREDITS). Нажмите группу в первой строке, а затем вкладку во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
+            "Вкладки собраны в пять групп на панели вверху: В реальном времени (Положение онлайн и +- 24h, Карта наведения, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, ОТЛАДКА ФОРМУЛ), Журнал (Карта WWL и ADIF), Справка (ИНСТРУКЦИИ, ABOUT & CREDITS). Нажмите группу в первой строке, а затем вкладку во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
             "Цветовая схема (общие настройки): Светлая, Ночь (синие тона) или Чёрная (чёрный фон, удобна в темноте и для OLED-экранов).",
             "СОЛНЦЕ РЯДОМ С ЛУНОЙ",
             "Около новолуния Луна проходит по небу рядом с Солнцем. Солнце — очень сильный радиоисточник (от десятков до тысяч SFU в зависимости от частоты и солнечной активности): когда оно попадает в главный или первые боковые лепестки антенны, шумовая температура системы растёт на много дБ, и лунное эхо может исчезнуть даже при отличной Dgrd.",
@@ -16714,7 +16813,7 @@ namespace LunaCalc
             "YAEC вычисляет геомагнитную широту по диполю модели IGRF-14 (северный геомагнитный полюс 2025 г.: 80,8° с. ш., 72,8° з. д.). Когда вы вводите локатор, свой или DX, попадающий в одну из этих зон, появляется предупреждение, которое затем остаётся на главном экране. Перед QSO с полярными или авроральными станциями проверьте прогнозы NOAA D-RAP (D Region Absorption Predictions) и предупреждения о протонных событиях.",
             "Литература: H. H. Sauer и D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, т. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); геомагнитные полюса IGRF из World Data Center for Geomagnetism, Киото.",
             "Все параметры и формулы Бюджета EME и Шума Солнца в обоих направлениях (вы → DX и DX → вы), с подставленными значениями и результатом каждого шага: длина волны, ЭПР Луны, потери на трассе, EIRP, сигнал по приёмному тракту, MDS и запас, коэффициент шума по Фриису, температуры, шум и S/N, а для Солнца поток, луч, ослабление диаграммой, эффективная площадь и рост шума. Включается флажком \"УГЛУБЛЁННЫЕ РАСЧЁТЫ\"; кнопка внизу копирует всё в буфер обмена.",
-            "Вкладка DEBUG FORMULE включается флажком \"УГЛУБЛЁННЫЕ РАСЧЁТЫ\" на вкладке Положение онлайн и +- 24h.",
+            "Вкладка ОТЛАДКА ФОРМУЛ включается флажком \"УГЛУБЛЁННЫЕ РАСЧЁТЫ\" на вкладке Положение онлайн и +- 24h.",
             // v27
             "пользовательский",
             "Расстояние DX (км)",
@@ -16737,7 +16836,7 @@ namespace LunaCalc
             "взять строку таблицы",
             "Использовать момент строки, выбранной в таблице положения Луны.",
             "поляризационные потери",
-            "Синхронизированный флажок: это тот же флажок УГЛУБЛЁННЫЕ РАСЧЁТЫ, что и в зелёной карточке оценки S/N на вкладке Положение онлайн и +- 24h; изменение здесь меняет его и там, и наоборот. Если он выключен, Бюджет EME переходит в упрощённый режим, а вкладки Шум Солнца, Экспорт расчётов в Excel и DEBUG FORMULE становятся серыми.",
+            "Синхронизированный флажок: это тот же флажок УГЛУБЛЁННЫЕ РАСЧЁТЫ, что и в зелёной карточке оценки S/N на вкладке Положение онлайн и +- 24h; изменение здесь меняет его и там, и наоборот. Если он выключен, Бюджет EME переходит в упрощённый режим, а вкладки Шум Солнца, Экспорт расчётов в Excel и ОТЛАДКА ФОРМУЛ становятся серыми.",
             "ПЕРЕДАЮЩАЯ И ПРИЁМНАЯ УСТАНОВКА",
             "КАБЕЛЬ АНТЕННА – РЕЛЕ",
             "Тип",
@@ -16882,7 +16981,7 @@ namespace LunaCalc
             "Руководство WSJT-X (K1JT и WSJT Development Group), § 7.1: JT65 −25 дБ, JT9 −27 дБ, JT4 −23 дБ, FT8 около −20 дБ, FT4 на 3,5 дБ менее чувствителен, чем FT8. Q65: K1JT, G4WJS, K9AN и IV3NWV, «Quick-Start Guide to Q65» (3 апреля 2021), порог 50 % декодирования без AP: Q65-30A −24,8 дБ, Q65-60A −27,6 дБ, Q65-120A −30,8 дБ. Все значения приведены к 2500 Гц.",
             "Логотип и патронат",
             "Логотип секции ARI «Valle del Liri» (03-04), используется с патронатом секции.",
-            "beta 27 - диапазоны только до 432 МГц; заставка с логотипом и патронатом секции ARI Valle del Liri; строка благодарности в окне закрытия; бенгальский, арабский и турецкий языки (17 языков); главный экран с четырьмя цветными карточками, К РАСЧЁТАМ и К НЕБЕСНОМУ СВОДУ, локатор до 14 символов, выбор шрифта и тёмные подсказки; Разведка моих препятствий с непрозрачностью и тоном серого; выделение дня в Расстоянии и Dgrd; кнопка Столбцы в Положении Луны; Бюджет EME со схемой установки TX/RX; Шум Солнца с источниками, индикаторами и спектром; DEBUG FORMULE в стиле Word с сохранением в .docx; новые вкладки КОАКСИАЛЬНЫЕ КАБЕЛИ, КОНТАКТЫ АВТОРА и ЛИЦЕНЗИЯ; руководство внутри программы (ПОДРОБНОЕ РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ).",
+            "beta 27 - диапазоны только до 432 МГц; заставка с логотипом и патронатом секции ARI Valle del Liri; строка благодарности в окне закрытия; бенгальский, арабский и турецкий языки (17 языков); главный экран с четырьмя цветными карточками, К РАСЧЁТАМ и К НЕБЕСНОМУ СВОДУ, локатор до 14 символов, выбор шрифта и тёмные подсказки; Разведка моих препятствий с непрозрачностью и тоном серого; выделение дня в Расстоянии и Dgrd; кнопка Столбцы в Положении Луны; Бюджет EME со схемой установки TX/RX; Шум Солнца с источниками, индикаторами и спектром; ОТЛАДКА ФОРМУЛ в стиле Word с сохранением в .docx; новые вкладки КОАКСИАЛЬНЫЕ КАБЕЛИ, КОНТАКТЫ АВТОРА и ЛИЦЕНЗИЯ; руководство внутри программы (ПОДРОБНОЕ РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ).",
             "Поиск в руководстве: введите слово и нажмите Enter; снова Enter — следующий результат.",
             "РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ",
             "Формулы одинаковы на всех языках.",
@@ -16944,7 +17043,7 @@ namespace LunaCalc
             "Полезная и бесплатная",
             "Программа бесплатна и может использоваться без ограничений для любительской радиосвязи, для учёбы и преподавания. Она создана, чтобы помогать проводить QSO, а не чтобы что-то продавать.",
             "Прозрачная",
-            "Исходный код всегда поставляется вместе с программой; каждая формула видна на вкладке DEBUG FORMULE, и для каждого значения указан источник. Никаких чёрных ящиков.",
+            "Исходный код всегда поставляется вместе с программой; каждая формула видна на вкладке ОТЛАДКА ФОРМУЛ, и для каждого значения указан источник. Никаких чёрных ящиков.",
             "Честная",
             "Измеренные, выведенные и оценочные значения различаются; то, что не проверено, так и обозначается. Неопределённый результат называется неопределённым, а не выдаётся за надёжный.",
             "Уважительная",
@@ -16981,7 +17080,7 @@ namespace LunaCalc
             "Вверху четыре индикатора, слева источник данных (рекомендуется NOAA RSTN, либо F10.7 от NOAA или Пентиктона, либо свой адрес) со станциями, справа спектр солнечного потока с экстраполяцией до рабочей частоты.",
             "Это руководство, внутри программы и на всех языках: кликабельное оглавление, поиск, формулы и источники.",
             "Оно свёрстано как документ Word, с формулами в стиле редактора уравнений: его можно скопировать в буфер обмена или сохранить в Word (.docx).",
-            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны, Луна над миром), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, DEBUG FORMULE), Журнал (Карта WWL и ADIF), Справка и инструменты (РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (ABOUT & CREDITS, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
+            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны, Луна над миром), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, ОТЛАДКА ФОРМУЛ), Журнал (Карта WWL и ADIF), Справка и инструменты (РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (ABOUT & CREDITS, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
             "Спасибо, что пользовались мной: надеюсь, я был вам полезен.",
             "Нет",
             "Да",
@@ -17244,6 +17343,15 @@ namespace LunaCalc
             "в {0:0} Гц · {1} дБ в 2500 Гц",
             "в {0:0} Гц с Солнцем · {1} дБ в 2500 Гц",
             "{0} на антенне (потери TX {1:F1} дБ) · {2:F1} dBi",
+            "Пастельный голубой",
+            "Пастельный оранжевый",
+            "Пастельный аквамарин",
+            "Пастельный зелёный",
+            "Пастельный розовый",
+            "Пастельный сиреневый",
+            "Пастельный индиго",
+            "Пастельный коричневый",
+            "Есть также восемь светлых пастельных схем: голубая, оранжевая, аквамарин, зелёная, розовая, сиреневая, индиго и коричневая.",
         };
 
         public static readonly string[] UK = {
@@ -17962,7 +18070,7 @@ namespace LunaCalc
             "формула",
             "значення",
             "результат",
-            "DEBUG FORMULE",
+            "НАЛАГОДЖЕННЯ ФОРМУЛ",
             "ВХІДНІ ПАРАМЕТРИ",
             "Моя станція",
             "не враховано",
@@ -17997,12 +18105,12 @@ namespace LunaCalc
             "H. H. Sauer і D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, т. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Геомагнітна широта",
             "Диполь моделі IGRF-14, північний геомагнітний полюс 2025 р. (80,8° пн. ш., 72,8° зх. д.), за даними World Data Center for Geomagnetism, Кіото.",
-            "beta 26 - Новий дворівневий вибір вкладок (групи і вкладки); колірна схема Чорна і схема Ніч у синіх тонах; змінні колір і товщина двох кривих Dgrd та дні з Сонцем поруч із Місяцем; попередження про можливе полярне (PCA) й авроральне поглинання для обох станцій; позначка розмиття на Мапі наведення; сірі діагональні лінії поза межами на Небесному склепінні та написи без накладань; нова вкладка DEBUG FORMULE; значок Місяця; PDF-посібники всіма 14 мовами.",
+            "beta 26 - Новий дворівневий вибір вкладок (групи і вкладки); колірна схема Чорна і схема Ніч у синіх тонах; змінні колір і товщина двох кривих Dgrd та дні з Сонцем поруч із Місяцем; попередження про можливе полярне (PCA) й авроральне поглинання для обох станцій; позначка розмиття на Мапі наведення; сірі діагональні лінії поза межами на Небесному склепінні та написи без накладань; нова вкладка НАЛАГОДЖЕННЯ ФОРМУЛ; значок Місяця; PDF-посібники всіма 14 мовами.",
             "Символ ☀ позначає дні, коли Місяць поруч із Сонцем (червоний: у межах 3 ширин променя, помаранчевий: у межах 6): шум Сонця може погіршити приймання. Колір і товщина двох кривих змінюються на панелі над графіком.",
             "Зони поза межами вашої антени вкриті світло-сірими діагональними лініями.",
             "Позначка «Розмивати зони поза межами» вмикає і вимикає розмиття.",
             "ЯК ВИБИРАТИ ВКЛАДКИ",
-            "Вкладки зібрано в п'ять груп на панелі вгорі: Наживо (Положення наживо і +- 24h, Мапа наведення, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, DEBUG FORMULE), Журнал (Мапа WWL і ADIF), Довідка (ІНСТРУКЦІЇ, ABOUT & CREDITS). Натисніть групу в першому рядку, а потім вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються позначкою «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
+            "Вкладки зібрано в п'ять груп на панелі вгорі: Наживо (Положення наживо і +- 24h, Мапа наведення, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, НАЛАГОДЖЕННЯ ФОРМУЛ), Журнал (Мапа WWL і ADIF), Довідка (ІНСТРУКЦІЇ, ABOUT & CREDITS). Натисніть групу в першому рядку, а потім вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються позначкою «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
             "Колірна схема (загальні налаштування): Світла, Ніч (сині тони) або Чорна (чорне тло, зручна в темряві та для OLED-екранів).",
             "СОНЦЕ ПОРУЧ ІЗ МІСЯЦЕМ",
             "Біля молодика Місяць проходить небом поруч із Сонцем. Сонце — дуже сильне радіоджерело (від десятків до тисяч SFU залежно від частоти і сонячної активності): коли воно потрапляє в головну або перші бічні пелюстки антени, шумова температура системи зростає на багато дБ, і місячне відлуння може зникнути навіть за чудової Dgrd.",
@@ -18014,7 +18122,7 @@ namespace LunaCalc
             "YAEC обчислює геомагнітну широту за диполем моделі IGRF-14 (північний геомагнітний полюс 2025 р.: 80,8° пн. ш., 72,8° зх. д.). Коли ви вводите локатор, свій або DX, що потрапляє в одну з цих зон, з'являється попередження, яке потім залишається на головному екрані. Перед QSO з полярними або авроральними станціями перевірте прогнози NOAA D-RAP (D Region Absorption Predictions) і попередження про протонні події.",
             "Література: H. H. Sauer і D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, т. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); геомагнітні полюси IGRF з World Data Center for Geomagnetism, Кіото.",
             "Усі параметри і формули Бюджету EME та Шуму Сонця в обох напрямках (ви → DX і DX → ви), з підставленими значеннями і результатом кожного кроку: довжина хвилі, ЕПР Місяця, втрати на трасі, EIRP, сигнал уздовж приймального тракту, MDS і запас, коефіцієнт шуму за Фріісом, температури, шум і S/N, а для Сонця потік, промінь, послаблення діаграмою, ефективна площа і зростання шуму. Вмикається позначкою \"ПОГЛИБЛЕНІ РОЗРАХУНКИ\"; кнопка внизу копіює все в буфер обміну.",
-            "Вкладка DEBUG FORMULE вмикається позначкою \"ПОГЛИБЛЕНІ РОЗРАХУНКИ\" на вкладці Положення наживо і +- 24h.",
+            "Вкладка НАЛАГОДЖЕННЯ ФОРМУЛ вмикається позначкою \"ПОГЛИБЛЕНІ РОЗРАХУНКИ\" на вкладці Положення наживо і +- 24h.",
             // v27
             "користувацький",
             "Відстань DX (км)",
@@ -18037,7 +18145,7 @@ namespace LunaCalc
             "взяти рядок таблиці",
             "Використати момент рядка, вибраного в таблиці положення Місяця.",
             "поляризаційні втрати",
-            "Синхронізований прапорець: це той самий прапорець ПОГЛИБЛЕНІ РОЗРАХУНКИ, що й у зеленій картці оцінки S/N на вкладці Положення наживо і +- 24h; зміна тут змінює його і там, і навпаки. Якщо його вимкнено, Бюджет EME переходить у спрощений режим, а вкладки Шум Сонця, Експорт розрахунків в Excel та DEBUG FORMULE стають сірими.",
+            "Синхронізований прапорець: це той самий прапорець ПОГЛИБЛЕНІ РОЗРАХУНКИ, що й у зеленій картці оцінки S/N на вкладці Положення наживо і +- 24h; зміна тут змінює його і там, і навпаки. Якщо його вимкнено, Бюджет EME переходить у спрощений режим, а вкладки Шум Сонця, Експорт розрахунків в Excel та НАЛАГОДЖЕННЯ ФОРМУЛ стають сірими.",
             "ПЕРЕДАВАЛЬНА І ПРИЙМАЛЬНА УСТАНОВКА",
             "КАБЕЛЬ АНТЕНА – РЕЛЕ",
             "Тип",
@@ -18182,7 +18290,7 @@ namespace LunaCalc
             "Посібник WSJT-X (K1JT і WSJT Development Group), § 7.1: JT65 −25 дБ, JT9 −27 дБ, JT4 −23 дБ, FT8 близько −20 дБ, FT4 на 3,5 дБ менш чутливий, ніж FT8. Q65: K1JT, G4WJS, K9AN і IV3NWV, «Quick-Start Guide to Q65» (3 квітня 2021), поріг 50 % декодування без AP: Q65-30A −24,8 дБ, Q65-60A −27,6 дБ, Q65-120A −30,8 дБ. Усі значення приведено до 2500 Гц.",
             "Логотип і патронат",
             "Логотип секції ARI «Valle del Liri» (03-04), використовується з патронатом секції.",
-            "beta 27 - діапазони лише до 432 МГц; заставка з логотипом і патронатом секції ARI Valle del Liri; рядок подяки у вікні закриття; бенгальська, арабська та турецька мови (17 мов); головний екран із чотирма кольоровими картками, ДО РОЗРАХУНКІВ і ДО НЕБЕСНОГО СКЛЕПІННЯ, локатор до 14 символів, вибір шрифту і темні підказки; Розвідка моїх перешкод з непрозорістю і тоном сірого; виділення дня у Відстані і Dgrd; кнопка Стовпці в Положенні Місяця; Бюджет EME зі схемою установки TX/RX; Шум Сонця з джерелами, індикаторами і спектром; DEBUG FORMULE у стилі Word зі збереженням у .docx; нові вкладки КОАКСІАЛЬНІ КАБЕЛІ, КОНТАКТИ АВТОРА і ЛІЦЕНЗІЯ; посібник усередині програми (ДОКЛАДНИЙ ПОСІБНИК КОРИСТУВАЧА).",
+            "beta 27 - діапазони лише до 432 МГц; заставка з логотипом і патронатом секції ARI Valle del Liri; рядок подяки у вікні закриття; бенгальська, арабська та турецька мови (17 мов); головний екран із чотирма кольоровими картками, ДО РОЗРАХУНКІВ і ДО НЕБЕСНОГО СКЛЕПІННЯ, локатор до 14 символів, вибір шрифту і темні підказки; Розвідка моїх перешкод з непрозорістю і тоном сірого; виділення дня у Відстані і Dgrd; кнопка Стовпці в Положенні Місяця; Бюджет EME зі схемою установки TX/RX; Шум Сонця з джерелами, індикаторами і спектром; НАЛАГОДЖЕННЯ ФОРМУЛ у стилі Word зі збереженням у .docx; нові вкладки КОАКСІАЛЬНІ КАБЕЛІ, КОНТАКТИ АВТОРА і ЛІЦЕНЗІЯ; посібник усередині програми (ДОКЛАДНИЙ ПОСІБНИК КОРИСТУВАЧА).",
             "Пошук у посібнику: введіть слово і натисніть Enter; знову Enter — наступний результат.",
             "ПОСІБНИК КОРИСТУВАЧА",
             "Формули однакові всіма мовами.",
@@ -18244,7 +18352,7 @@ namespace LunaCalc
             "Корисна і безкоштовна",
             "Програма безкоштовна і може використовуватися без обмежень для аматорського радіозв'язку, для навчання і викладання. Її створено, щоб допомагати проводити QSO, а не щоб щось продавати.",
             "Прозора",
-            "Вихідний код завжди постачається разом із програмою; кожну формулу видно на вкладці DEBUG FORMULE, і для кожного значення вказано джерело. Жодних чорних скриньок.",
+            "Вихідний код завжди постачається разом із програмою; кожну формулу видно на вкладці НАЛАГОДЖЕННЯ ФОРМУЛ, і для кожного значення вказано джерело. Жодних чорних скриньок.",
             "Чесна",
             "Виміряні, виведені й оцінені значення розрізняються; те, що не перевірено, так і позначається. Невизначений результат називається невизначеним, а не видається за надійний.",
             "Шаноблива",
@@ -18281,7 +18389,7 @@ namespace LunaCalc
             "Угорі чотири індикатори, ліворуч джерело даних (рекомендовано NOAA RSTN, або F10.7 від NOAA чи Пентіктона, або власна адреса) зі станціями, праворуч спектр сонячного потоку з екстраполяцією до робочої частоти.",
             "Цей посібник, усередині програми і всіма мовами: зміст із посиланнями, пошук, формули і джерела.",
             "Його зверстано як документ Word, із формулами в стилі редактора рівнянь: його можна скопіювати в буфер обміну або зберегти у Word (.docx).",
-            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця, Місяць над світом), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, DEBUG FORMULE), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ABOUT & CREDITS, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
+            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця, Місяць над світом), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, НАЛАГОДЖЕННЯ ФОРМУЛ), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ABOUT & CREDITS, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
             "Дякую, що користувалися мною: сподіваюся, я був вам корисний.",
             "Ні",
             "Так",
@@ -18544,6 +18652,15 @@ namespace LunaCalc
             "у {0:0} Гц · {1} дБ у 2500 Гц",
             "у {0:0} Гц із Сонцем · {1} дБ у 2500 Гц",
             "{0} на антені (втрати TX {1:F1} дБ) · {2:F1} dBi",
+            "Пастельний блакитний",
+            "Пастельний помаранчевий",
+            "Пастельний аквамарин",
+            "Пастельний зелений",
+            "Пастельний рожевий",
+            "Пастельний бузковий",
+            "Пастельний індиго",
+            "Пастельний коричневий",
+            "Є також вісім світлих пастельних схем: блакитна, помаранчева, аквамарин, зелена, рожева, бузкова, індиго і коричнева.",
         };
 
         public static readonly string[] AF = {
@@ -19262,7 +19379,7 @@ namespace LunaCalc
             "formule",
             "waardes",
             "uitslag",
-            "DEBUG FORMULE",
+            "FORMULE-ONTFOUTING",
             "INSETPARAMETERS",
             "My stasie",
             "nie ingesluit nie",
@@ -19297,12 +19414,12 @@ namespace LunaCalc
             "H. H. Sauer en D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Geomagnetiese breedte",
             "Dipool van die IGRF-14-model, geomagnetiese noordpool 2025 (80,8° N, 72,8° W), van die World Data Center for Geomagnetism, Kyoto.",
-            "beta 26 - Nuwe keuse van oortjies op twee vlakke (groepe en oortjies); kleurskema Swart en Nag-skema in bloutinte; kleur en dikte van die twee Dgrd-kurwes verstelbaar en dae met die Son naby die Maan; waarskuwings oor moontlike poolkap- (PCA) en aurora-absorpsie vir albei stasies; blokkie vir die vervaging in die Rigkaart; grys skuinslyne buite die grense in die Lugaansig en byskrifte wat nie meer oorvleuel nie; nuwe oortjie DEBUG FORMULE; Maan-ikoon; PDF-handleidings in al 14 tale.",
+            "beta 26 - Nuwe keuse van oortjies op twee vlakke (groepe en oortjies); kleurskema Swart en Nag-skema in bloutinte; kleur en dikte van die twee Dgrd-kurwes verstelbaar en dae met die Son naby die Maan; waarskuwings oor moontlike poolkap- (PCA) en aurora-absorpsie vir albei stasies; blokkie vir die vervaging in die Rigkaart; grys skuinslyne buite die grense in die Lugaansig en byskrifte wat nie meer oorvleuel nie; nuwe oortjie FORMULE-ONTFOUTING; Maan-ikoon; PDF-handleidings in al 14 tale.",
             "Die simbool ☀ merk die dae wanneer die Maan naby die Son is (rooi: binne 3 bundelwydtes, oranje: binne 6): songeraas kan ontvangs bederf. Kleur en dikte van die twee kurwes word in die balk bo die grafiek verander.",
             "Die sones buite die grense van jou antenna is met liggrys skuinslyne bedek.",
             "Die blokkie \"Vervaag die sones buite die grense\" skakel die vervaging aan of af.",
             "HOE OM DIE OORTJIES TE KIES",
-            "Die oortjies is in vyf groepe in die balk bo bymekaargemaak: Regstreeks (Regstreekse posisie en +- 24h, Rigkaart, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, DEBUG FORMULE), Logboek (WWL-kaart en ADIF), Hulp (INSTRUKSIES, ABOUT & CREDITS). Klik 'n groep in die eerste ry en dan die oortjie in die tweede; elke groep onthou die laaste oortjie wat oopgemaak is. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
+            "Die oortjies is in vyf groepe in die balk bo bymekaargemaak: Regstreeks (Regstreekse posisie en +- 24h, Rigkaart, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, FORMULE-ONTFOUTING), Logboek (WWL-kaart en ADIF), Hulp (INSTRUKSIES, ABOUT & CREDITS). Klik 'n groep in die eerste ry en dan die oortjie in die tweede; elke groep onthou die laaste oortjie wat oopgemaak is. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
             "Kleurskema (algemene instellings): Lig, Nag (bloutinte) of Swart (swart agtergrond, geskik vir gebruik in die donker en vir OLED-skerms).",
             "DIE SON NABY DIE MAAN",
             "Rondom nuwemaan beweeg die Maan naby die Son in die lug verby. Die Son is 'n baie sterk radiobron (van tientalle tot duisende SFU, na gelang van frekwensie en sonaktiwiteit): wanneer dit in die hooflob of die eerste sylobbe van die antenna kom, styg die stelselgeraastemperatuur met baie dB en kan die maaneggo verdwyn, selfs met 'n uitstekende Dgrd.",
@@ -19314,7 +19431,7 @@ namespace LunaCalc
             "YAEC bereken die geomagnetiese breedte met die dipool van die IGRF-14-model (geomagnetiese noordpool 2025: 80,8° N, 72,8° W). Wanneer jy 'n locator invoer, joune of dié van die DX, wat in een van hierdie sones val, verskyn 'n waarskuwing wat daarna op die hoofskerm bly. Gaan voor 'n QSO met pool- of aurorastasies die NOAA D-RAP-voorspellings (D Region Absorption Predictions) en die waarskuwings oor protongebeure na.",
             "Literatuur: H. H. Sauer en D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); IGRF geomagnetiese pole van die World Data Center for Geomagnetism, Kyoto.",
             "Al die parameters en formules van die EME-begroting en die Songeraas, vir albei rigtings (jy → DX en DX → jy), met die ingevulde waardes en die uitslag van elke stap: golflengte, radardeursnee van die Maan, padverlies, EIRP, sein langs die ontvangsketting, MDS en marge, geraassyfer met Friis, temperature, geraas en S/N, en vir die Son vloed, bundel, patroonverswakking, effektiewe oppervlakte en geraastoename. Word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer; die knoppie onder kopieer alles na die knipbord.",
-            "Die oortjie DEBUG FORMULE word met die blokkie \"DIEPGAANDE BEREKENINGE\" in die Regstreekse posisie en +- 24h-oortjie geaktiveer.",
+            "Die oortjie FORMULE-ONTFOUTING word met die blokkie \"DIEPGAANDE BEREKENINGE\" in die Regstreekse posisie en +- 24h-oortjie geaktiveer.",
             // v27
             "pasgemaak",
             "Afstand DX (km)",
@@ -19337,7 +19454,7 @@ namespace LunaCalc
             "gebruik die tabelry",
             "Gebruik die oomblik van die ry wat in die maanposisietabel gekies is.",
             "polarisasieverlies",
-            "Gesinchroniseerde blokkie: dit is dieselfde DIEPGAANDE BEREKENINGE-blokkie as in die groen kaart van die geskatte S/N op die Regstreekse posisie en +- 24h-oortjie; verander dit hier en dit verander ook daar en andersom. Afgeskakel gaan die EME-begroting na die vereenvoudigde modus en die Songeraas-, Uitvoer van berekeninge na Excel- en DEBUG FORMULE-oortjies word grys.",
+            "Gesinchroniseerde blokkie: dit is dieselfde DIEPGAANDE BEREKENINGE-blokkie as in die groen kaart van die geskatte S/N op die Regstreekse posisie en +- 24h-oortjie; verander dit hier en dit verander ook daar en andersom. Afgeskakel gaan die EME-begroting na die vereenvoudigde modus en die Songeraas-, Uitvoer van berekeninge na Excel- en FORMULE-ONTFOUTING-oortjies word grys.",
             "UITSAAI- EN ONTVANGSINSTALLASIE",
             "KABEL ANTENNA – RELÊ",
             "Tipe",
@@ -19482,7 +19599,7 @@ namespace LunaCalc
             "WSJT-X-gids (K1JT en WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 ongeveer −20 dB, FT4 3,5 dB minder sensitief as FT8. Q65: K1JT, G4WJS, K9AN en IV3NWV, “Quick-Start Guide to Q65” (3 April 2021), drempel vir 50 % dekodering sonder AP: Q65-30A −24,8 dB, Q65-60A −27,6 dB, Q65-120A −30,8 dB. Alle waardes verwys na 2500 Hz.",
             "Logo en beskerming",
             "Logo van die ARI-afdeling \"Valle del Liri\" (03-04), gebruik met die beskerming van die afdeling.",
-            "beta 27 - bande net tot 432 MHz; beginskerm met die logo en die beskerming van die ARI-afdeling Valle del Liri; dankiereël in die sluitvenster; tale Bengaals, Arabies en Turks (17 tale); hoofskerm met vier gekleurde kaarte, NA DIE BEREKENINGE en NA LUGAANSIG, locator tot 14 karakters, lettertipekeuse en donker wenke; Verkenning van my hindernisse met ondeursigtigheid en tint van die grys; uitgeligte dag in Afstand en Dgrd; Kolomme-knoppie in Maanposisie; EME-begroting met die skema van die TX/RX-installasie; Songeraas met bronne, aanwysers en spektrum; DEBUG FORMULE in Word-styl met stoor as .docx; nuwe oortjies KOAKSIALE KABELS, KONTAK MET DIE OUTEUR en LISENSIE; handleiding binne die program (UITGEBREIDE GEBRUIKERSHANDLEIDING).",
+            "beta 27 - bande net tot 432 MHz; beginskerm met die logo en die beskerming van die ARI-afdeling Valle del Liri; dankiereël in die sluitvenster; tale Bengaals, Arabies en Turks (17 tale); hoofskerm met vier gekleurde kaarte, NA DIE BEREKENINGE en NA LUGAANSIG, locator tot 14 karakters, lettertipekeuse en donker wenke; Verkenning van my hindernisse met ondeursigtigheid en tint van die grys; uitgeligte dag in Afstand en Dgrd; Kolomme-knoppie in Maanposisie; EME-begroting met die skema van die TX/RX-installasie; Songeraas met bronne, aanwysers en spektrum; FORMULE-ONTFOUTING in Word-styl met stoor as .docx; nuwe oortjies KOAKSIALE KABELS, KONTAK MET DIE OUTEUR en LISENSIE; handleiding binne die program (UITGEBREIDE GEBRUIKERSHANDLEIDING).",
             "Soek in die handleiding: tik 'n woord en druk Enter; weer Enter vir die volgende resultaat.",
             "GEBRUIKERSHANDLEIDING",
             "Die formules is dieselfde in alle tale.",
@@ -19544,7 +19661,7 @@ namespace LunaCalc
             "Nuttig en gratis",
             "Die program is gratis en kan sonder beperkings vir amateurradio, om te leer en om te onderrig gebruik word. Dit is gemaak om QSO's makliker te maak, nie om iets te verkoop nie.",
             "Deursigtig",
-            "Die bronkode word altyd saam met die program verskaf; elke formule is sigbaar op die DEBUG FORMULE-oortjie en elke gegewe noem sy bron. Geen swart bokse nie.",
+            "Die bronkode word altyd saam met die program verskaf; elke formule is sigbaar op die FORMULE-ONTFOUTING-oortjie en elke gegewe noem sy bron. Geen swart bokse nie.",
             "Eerlik",
             "Gemete, afgeleide en geskatte waardes word onderskei; wat nie nagegaan is nie, word as sulks verklaar. 'n Onseker resultaat word onseker genoem, nie as seker voorgestel nie.",
             "Respekvol",
@@ -19581,7 +19698,7 @@ namespace LunaCalc
             "Bo vier aanwysers, links die databron (NOAA RSTN aanbeveel, of F10.7 van NOAA of Penticton, of 'n eie adres) met die stasies, regs die spektrum van die sonvloed met die ekstrapolasie tot die werkfrekwensie.",
             "Hierdie handleiding, binne die program en in alle tale: klikbare inhoudsopgawe, soek, formules en bronne.",
             "Dit is soos 'n Word-dokument uitgelê, met die formules in die styl van die vergelykingsredigeerder: dit kan na die knipbord gekopieer of as Word (.docx) gestoor word.",
-            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie, Maan oor die wêreld), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, DEBUG FORMULE), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (ABOUT & CREDITS, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
+            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie, Maan oor die wêreld), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, FORMULE-ONTFOUTING), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (ABOUT & CREDITS, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
             "Dankie dat jy my gebruik het: ek hoop ek was vir jou nuttig.",
             "Nee",
             "Ja",
@@ -19844,6 +19961,15 @@ namespace LunaCalc
             "in {0:0} Hz · {1} dB in 2500 Hz",
             "in {0:0} Hz met die Son · {1} dB in 2500 Hz",
             "{0} by die antenna (TX-verliese {1:F1} dB) · {2:F1} dBi",
+            "Pastel ligblou",
+            "Pastel oranje",
+            "Pastel akwamaryn",
+            "Pastel groen",
+            "Pastel pienk",
+            "Pastel lila",
+            "Pastel indigo",
+            "Pastel bruin",
+            "Daar is ook agt ligte pastelskemas: ligblou, oranje, akwamaryn, groen, pienk, lila, indigo en bruin.",
         };
 
         public static readonly string[] BN = {
@@ -20562,7 +20688,7 @@ namespace LunaCalc
             "",
             "",
             "",
-            "DEBUG FORMULE",
+            "সূত্র ডিবাগ",
             "",
             "",
             "ধরা হয়নি",
@@ -20597,7 +20723,7 @@ namespace LunaCalc
             "H. H. Sauer ও D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, খণ্ড 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP)।",
             "ভূচৌম্বক অক্ষাংশ",
             "IGRF-14 মডেলের দ্বিমেরু, 2025-এর উত্তর ভূচৌম্বক মেরু (80.8° উ, 72.8° প), World Data Center for Geomagnetism, কিয়োটো থেকে।",
-            "beta 26 - নতুন দুই-স্তরের ট্যাব বাছাই (দল ও ট্যাব); কালো রঙের বিন্যাস ও নীল আভায় রাতের বিন্যাস; দুটি Dgrd বক্ররেখা ও চাঁদের কাছে সূর্যের দিনের জন্য সম্পাদনযোগ্য রং ও পুরুত্ব; দুই স্টেশনের জন্য সম্ভাব্য মেরু টুপি (PCA) ও মেরুজ্যোতি শোষণের সতর্কতা; লক্ষ্য মানচিত্রে ঝাপসার বাক্স; আকাশ-গম্বুজে সীমার বাইরে ধূসর কর্ণরেখা ও আর না-মেশা লেবেল; নতুন DEBUG FORMULE ট্যাব; চাঁদের আইকন; সব 14 ভাষায় PDF ম্যানুয়াল।",
+            "beta 26 - নতুন দুই-স্তরের ট্যাব বাছাই (দল ও ট্যাব); কালো রঙের বিন্যাস ও নীল আভায় রাতের বিন্যাস; দুটি Dgrd বক্ররেখা ও চাঁদের কাছে সূর্যের দিনের জন্য সম্পাদনযোগ্য রং ও পুরুত্ব; দুই স্টেশনের জন্য সম্ভাব্য মেরু টুপি (PCA) ও মেরুজ্যোতি শোষণের সতর্কতা; লক্ষ্য মানচিত্রে ঝাপসার বাক্স; আকাশ-গম্বুজে সীমার বাইরে ধূসর কর্ণরেখা ও আর না-মেশা লেবেল; নতুন সূত্র ডিবাগ ট্যাব; চাঁদের আইকন; সব 14 ভাষায় PDF ম্যানুয়াল।",
             "☀ চিহ্ন সেই দিনগুলি দেখায় যখন চাঁদ সূর্যের কাছে (লাল: 3 বিম-প্রস্থের মধ্যে, কমলা: 6-এর মধ্যে): সৌর নয়েজ গ্রহণ নষ্ট করতে পারে। দুটি বক্ররেখার রং ও পুরুত্ব গ্রাফের ওপরের দণ্ডে বদলানো যায়।",
             "আপনার অ্যান্টেনার সীমার বাইরের অঞ্চল হালকা ধূসর কর্ণরেখায় ঢাকা।",
             "\"সীমার বাইরের অঞ্চল ঝাপসা করুন\" বাক্স ঝাপসা চালু বা বন্ধ করে।",
@@ -20614,7 +20740,7 @@ namespace LunaCalc
             "YAEC ভূচৌম্বক অক্ষাংশ হিসাব করে IGRF-14 মডেলের দ্বিমেরু দিয়ে (2025-এর উত্তর ভূচৌম্বক মেরু: 80.8° উ, 72.8° প)। আপনার বা DX-এর এমন লোকেটর দিলে যা এই অঞ্চলগুলির একটিতে পড়ে, একটি সতর্কতা আসে এবং পরে মূল পর্দায় থেকে যায়। মেরু বা মেরুজ্যোতি অঞ্চলের স্টেশনের সঙ্গে QSO-র আগে NOAA D-RAP পূর্বাভাস (D Region Absorption Predictions) ও প্রোটন ঘটনার সতর্কতা দেখুন।",
             "সাহিত্য: H. H. Sauer ও D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, খণ্ড 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); World Data Center for Geomagnetism, কিয়োটো থেকে IGRF ভূচৌম্বক মেরু।",
             "EME বাজেট ও সৌর নয়েজের সব প্যারামিটার ও সূত্র, দুই দিকের জন্য (তুমি → DX ও DX → তুমি), বসানো মান ও প্রতিটি ধাপের ফলসহ: তরঙ্গদৈর্ঘ্য, চাঁদের রাডার প্রস্থচ্ছেদ, পথ ক্ষতি, EIRP, গ্রহণ শৃঙ্খল বরাবর সিগন্যাল, MDS ও মার্জিন, Friis দিয়ে নয়েজ ফিগার, তাপমাত্রা, নয়েজ ও S/N, এবং সূর্যের জন্য ফ্লাক্স, বিম, প্যাটার্ন ক্ষয়, কার্যকর ক্ষেত্রফল ও নয়েজ বৃদ্ধি। \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়; নিচের বোতাম সবকিছু ক্লিপবোর্ডে কপি করে।",
-            "DEBUG FORMULE ট্যাব লাইভ অবস্থান ও +- 24h ট্যাবের \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
+            "সূত্র ডিবাগ ট্যাব লাইভ অবস্থান ও +- 24h ট্যাবের \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
             "নিজস্ব",
             "DX দূরত্ব (km)",
             "সূর্য – চাঁদ (°)",
@@ -20636,7 +20762,7 @@ namespace LunaCalc
             "টেবিলের সারি ব্যবহার করুন",
             "চাঁদের অবস্থান টেবিলে নির্বাচিত সারির সময় ব্যবহার করুন।",
             "পোলারাইজেশন ক্ষতি",
-            "সিঙ্ক্রোনাইজড বাক্স: এটি লাইভ অবস্থান ও +- 24h ট্যাবের আনুমানিক S/N-এর সবুজ কার্ডে থাকা গভীর হিসাব বাক্সটিই; এখানে বদলালে সেখানেও বদলায়, উল্টোটাও। বন্ধ থাকলে EME বাজেট সরল মোডে যায় এবং সৌর নয়েজ, হিসাব Excel-এ রপ্তানি ও DEBUG FORMULE ট্যাব ধূসর হয়ে যায়।",
+            "সিঙ্ক্রোনাইজড বাক্স: এটি লাইভ অবস্থান ও +- 24h ট্যাবের আনুমানিক S/N-এর সবুজ কার্ডে থাকা গভীর হিসাব বাক্সটিই; এখানে বদলালে সেখানেও বদলায়, উল্টোটাও। বন্ধ থাকলে EME বাজেট সরল মোডে যায় এবং সৌর নয়েজ, হিসাব Excel-এ রপ্তানি ও সূত্র ডিবাগ ট্যাব ধূসর হয়ে যায়।",
             "সম্প্রচার ও গ্রহণ ব্যবস্থা",
             "কেবল অ্যান্টেনা – রিলে",
             "ধরন",
@@ -20781,7 +20907,7 @@ namespace LunaCalc
             "WSJT-X নির্দেশিকা (K1JT ও WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 প্রায় −20 dB, FT4 FT8-এর চেয়ে 3.5 dB কম সংবেদনশীল। Q65: K1JT, G4WJS, K9AN ও IV3NWV, “Quick-Start Guide to Q65” (3 এপ্রিল 2021), AP ছাড়া 50 % ডিকোডের সীমা: Q65-30A −24.8 dB, Q65-60A −27.6 dB, Q65-120A −30.8 dB। সব মান 2500 Hz সাপেক্ষে।",
             "লোগো ও পৃষ্ঠপোষকতা",
             "ARI \"Valle del Liri\" শাখার (03-04) লোগো, শাখার পৃষ্ঠপোষকতায় ব্যবহৃত।",
-            "beta 27 - ব্যান্ড কেবল 432 MHz পর্যন্ত; ARI Valle del Liri শাখার লোগো ও পৃষ্ঠপোষকতাসহ শুরুর পর্দা; বন্ধের জানালায় ধন্যবাদের লাইন; বাংলা, আরবি ও তুর্কি ভাষা (17টি ভাষা); চারটি রঙিন কার্ডসহ মূল পর্দা, হিসাবে যান ও আকাশ-গম্বুজে যান, 14 অক্ষর পর্যন্ত লোকেটর, ফন্ট নির্বাচন ও গাঢ় টুলটিপ; আমার বাধাগুলির অনুসন্ধানে ধূসরের অস্বচ্ছতা ও রং; দূরত্ব ও Dgrd-এ দিন হাইলাইট; চাঁদের অবস্থানে কলাম বোতাম; TX/RX ব্যবস্থার চিত্রসহ EME বাজেট; উৎস, নির্দেশক ও বর্ণালিসহ সৌর নয়েজ; Word শৈলীতে DEBUG FORMULE ও .docx সংরক্ষণ; নতুন ট্যাব কোঅ্যাক্সিয়াল কেবল, লেখকের সঙ্গে যোগাযোগ ও লাইসেন্স; প্রোগ্রামের ভেতরে ম্যানুয়াল (বিস্তারিত ব্যবহার নির্দেশিকা)।",
+            "beta 27 - ব্যান্ড কেবল 432 MHz পর্যন্ত; ARI Valle del Liri শাখার লোগো ও পৃষ্ঠপোষকতাসহ শুরুর পর্দা; বন্ধের জানালায় ধন্যবাদের লাইন; বাংলা, আরবি ও তুর্কি ভাষা (17টি ভাষা); চারটি রঙিন কার্ডসহ মূল পর্দা, হিসাবে যান ও আকাশ-গম্বুজে যান, 14 অক্ষর পর্যন্ত লোকেটর, ফন্ট নির্বাচন ও গাঢ় টুলটিপ; আমার বাধাগুলির অনুসন্ধানে ধূসরের অস্বচ্ছতা ও রং; দূরত্ব ও Dgrd-এ দিন হাইলাইট; চাঁদের অবস্থানে কলাম বোতাম; TX/RX ব্যবস্থার চিত্রসহ EME বাজেট; উৎস, নির্দেশক ও বর্ণালিসহ সৌর নয়েজ; Word শৈলীতে সূত্র ডিবাগ ও .docx সংরক্ষণ; নতুন ট্যাব কোঅ্যাক্সিয়াল কেবল, লেখকের সঙ্গে যোগাযোগ ও লাইসেন্স; প্রোগ্রামের ভেতরে ম্যানুয়াল (বিস্তারিত ব্যবহার নির্দেশিকা)।",
             "ম্যানুয়ালে খুঁজুন: একটি শব্দ লিখে Enter চাপুন; পরের ফলের জন্য আবার Enter।",
             "ব্যবহার নির্দেশিকা",
             "সূত্রগুলি সব ভাষায় একই।",
@@ -20843,7 +20969,7 @@ namespace LunaCalc
             "উপকারী ও বিনামূল্যে",
             "প্রোগ্রামটি বিনামূল্যে এবং অপেশাদার রেডিও, শেখা ও শেখানোর জন্য সীমাহীনভাবে ব্যবহার করা যায়। এটি QSO সহজ করার জন্য, কিছু বিক্রির জন্য নয়।",
             "স্বচ্ছ",
-            "সোর্স কোড সবসময় প্রোগ্রামের সঙ্গে দেওয়া হয়; প্রতিটি সূত্র DEBUG FORMULE ট্যাবে দেখা যায় এবং প্রতিটি তথ্য তার উৎস জানায়। কোনো ব্ল্যাক বক্স নেই।",
+            "সোর্স কোড সবসময় প্রোগ্রামের সঙ্গে দেওয়া হয়; প্রতিটি সূত্র সূত্র ডিবাগ ট্যাবে দেখা যায় এবং প্রতিটি তথ্য তার উৎস জানায়। কোনো ব্ল্যাক বক্স নেই।",
             "সৎ",
             "মাপা, নির্ণীত ও আনুমানিক মান আলাদা করা হয়; যা যাচাই হয়নি তা সেভাবেই ঘোষণা করা হয়। অনিশ্চিত ফলকে অনিশ্চিত বলা হয়, নিশ্চিত হিসেবে দেখানো হয় না।",
             "শ্রদ্ধাশীল",
@@ -20880,7 +21006,7 @@ namespace LunaCalc
             "ওপরে চারটি নির্দেশক, বামে স্টেশনসহ তথ্যের উৎস (NOAA RSTN প্রস্তাবিত, অথবা NOAA বা পেন্টিকটনের F10.7, অথবা নিজস্ব ঠিকানা), ডানে কাজের কম্পাঙ্ক পর্যন্ত এক্সট্রাপোলেশনসহ সৌর ফ্লাক্সের বর্ণালি।",
             "এই ম্যানুয়াল, প্রোগ্রামের ভেতরে ও সব ভাষায়: ক্লিকযোগ্য সূচি, অনুসন্ধান, সূত্র ও উৎস।",
             "এটি Word নথির মতো সাজানো, সূত্রগুলি সমীকরণ সম্পাদকের শৈলীতে: ক্লিপবোর্ডে কপি বা Word (.docx) হিসেবে সংরক্ষণ করা যায়।",
-            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান, বিশ্বের উপরে চাঁদ), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, DEBUG FORMULE), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (ABOUT & CREDITS, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
+            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান, বিশ্বের উপরে চাঁদ), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, সূত্র ডিবাগ), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (ABOUT & CREDITS, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
             "আমাকে ব্যবহার করার জন্য ধন্যবাদ: আশা করি আপনার কাজে লেগেছি।",
             "না",
             "হ্যাঁ",
@@ -21143,6 +21269,15 @@ namespace LunaCalc
             "{0:0} Hz-এ · 2500 Hz-এ {1} dB",
             "{0:0} Hz-এ সূর্যসহ · 2500 Hz-এ {1} dB",
             "অ্যান্টেনায় {0} (TX ক্ষতি {1:F1} dB) · {2:F1} dBi",
+            "প্যাস্টেল আকাশি",
+            "প্যাস্টেল কমলা",
+            "প্যাস্টেল অ্যাকোয়ামেরিন",
+            "প্যাস্টেল সবুজ",
+            "প্যাস্টেল গোলাপি",
+            "প্যাস্টেল লাইলাক",
+            "প্যাস্টেল নীল",
+            "প্যাস্টেল বাদামি",
+            "আটটি হালকা প্যাস্টেল বিন্যাসও আছে: আকাশি, কমলা, অ্যাকোয়ামেরিন, সবুজ, গোলাপি, লাইলাক, নীল ও বাদামি।",
         };
 
         public static readonly string[] AR = {
@@ -21861,7 +21996,7 @@ namespace LunaCalc
             "",
             "",
             "",
-            "DEBUG FORMULE",
+            "تصحيح الصيغ",
             "",
             "",
             "غير محسوب",
@@ -21896,7 +22031,7 @@ namespace LunaCalc
             "H. H. Sauer وD. C. Wilkinson، \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"، Space Weather، المجلد 6 (2008)؛ NOAA Space Weather Prediction Center، D Region Absorption Predictions (D-RAP).",
             "خط العرض المغناطيسي الأرضي",
             "ثنائي القطب لنموذج IGRF-14، القطب المغناطيسي الأرضي الشمالي 2025 (80.8° ش، 72.8° غ)، من World Data Center for Geomagnetism، كيوتو.",
-            "beta 26 - اختيار جديد للتبويبات على مستويين (مجموعات وتبويبات)؛ نظام ألوان أسود ونظام ليلي بدرجات الأزرق؛ لون وسُمك قابلان للتحرير لمنحنيي Dgrd والأيام مع الشمس قرب القمر؛ تحذيرات من امتصاص الغطاء القطبي (PCA) والامتصاص الشفقي المحتملين للمحطتين؛ خانة للتمويه في خريطة التوجيه؛ خطوط قطرية رمادية خارج الحدود في قبة السماء وتسميات لم تعد تتداخل؛ تبويب DEBUG FORMULE جديد؛ أيقونة القمر؛ أدلة PDF بكل اللغات الـ 14.",
+            "beta 26 - اختيار جديد للتبويبات على مستويين (مجموعات وتبويبات)؛ نظام ألوان أسود ونظام ليلي بدرجات الأزرق؛ لون وسُمك قابلان للتحرير لمنحنيي Dgrd والأيام مع الشمس قرب القمر؛ تحذيرات من امتصاص الغطاء القطبي (PCA) والامتصاص الشفقي المحتملين للمحطتين؛ خانة للتمويه في خريطة التوجيه؛ خطوط قطرية رمادية خارج الحدود في قبة السماء وتسميات لم تعد تتداخل؛ تبويب تصحيح الصيغ جديد؛ أيقونة القمر؛ أدلة PDF بكل اللغات الـ 14.",
             "يدل الرمز ☀ على الأيام التي يكون فيها القمر قرب الشمس (أحمر: ضمن 3 عروض حزمة، برتقالي: ضمن 6): قد يفسد ضجيج الشمس الاستقبال. يُغيَّر لون وسُمك المنحنيين في الشريط فوق الرسم.",
             "المناطق خارج حدود هوائيك مغطاة بخطوط قطرية رمادية فاتحة.",
             "خانة \"تمويه المناطق خارج الحدود\" تشغّل التمويه أو توقفه.",
@@ -21913,7 +22048,7 @@ namespace LunaCalc
             "يحسب YAEC خط العرض المغناطيسي الأرضي بثنائي القطب لنموذج IGRF-14 (القطب المغناطيسي الأرضي الشمالي 2025: 80.8° ش، 72.8° غ). عندما تُدخل محدِّد موقع، لك أو لـ DX، يقع في إحدى هذه المناطق يظهر تحذير يبقى بعدها في الشاشة الرئيسية. قبل اتصال مع محطات قطبية أو شفقية تحقق من توقعات NOAA D-RAP (D Region Absorption Predictions) وتنبيهات أحداث البروتونات.",
             "المراجع: H. H. Sauer وD. C. Wilkinson، \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"، Space Weather، المجلد 6 (2008)، doi:10.1029/2008SW000399؛ NOAA SWPC، D Region Absorption Predictions (D-RAP)؛ أقطاب IGRF المغناطيسية الأرضية من World Data Center for Geomagnetism، كيوتو.",
             "كل معاملات وصيغ ميزانية EME وضجيج الشمس، للاتجاهين (أنت → DX وDX → أنت)، مع القيم المعوَّضة ونتيجة كل خطوة: الطول الموجي، المقطع الراداري للقمر، خسارة المسار، EIRP، الإشارة على طول سلسلة الاستقبال، MDS والهامش، عامل الضجيج بـ Friis، الحرارات، الضجيج وS/N، وللشمس التدفق والحزمة وتوهين النمط والمساحة الفعالة وزيادة الضجيج. يُفعَّل بخانة \"الحسابات المعمّقة\"؛ والزر في الأسفل ينسخ كل شيء إلى الحافظة.",
-            "يُفعَّل تبويب DEBUG FORMULE بخانة \"الحسابات المعمّقة\" في تبويب الموقع المباشر و +- 24h.",
+            "يُفعَّل تبويب تصحيح الصيغ بخانة \"الحسابات المعمّقة\" في تبويب الموقع المباشر و +- 24h.",
             "مخصص",
             "مسافة DX (km)",
             "الشمس – القمر (°)",
@@ -21935,7 +22070,7 @@ namespace LunaCalc
             "استخدم صف الجدول",
             "استخدم لحظة الصف المختار في جدول موقع القمر.",
             "خسارة الاستقطاب",
-            "خانة متزامنة: هي نفس خانة الحسابات المعمّقة الموجودة في البطاقة الخضراء لـ S/N المقدَّر في تبويب الموقع المباشر و +- 24h؛ تغييرها هنا يغيّرها هناك والعكس. عند إلغائها تنتقل ميزانية EME إلى الوضع المبسّط وتصبح تبويبات الضجيج الشمسي وتصدير الحسابات إلى Excel وDEBUG FORMULE رمادية.",
+            "خانة متزامنة: هي نفس خانة الحسابات المعمّقة الموجودة في البطاقة الخضراء لـ S/N المقدَّر في تبويب الموقع المباشر و +- 24h؛ تغييرها هنا يغيّرها هناك والعكس. عند إلغائها تنتقل ميزانية EME إلى الوضع المبسّط وتصبح تبويبات الضجيج الشمسي وتصدير الحسابات إلى Excel وتصحيح الصيغ رمادية.",
             "منظومة الإرسال والاستقبال",
             "كابل الهوائي – المرحّل",
             "النوع",
@@ -22080,7 +22215,7 @@ namespace LunaCalc
             "دليل WSJT-X (K1JT وWSJT Development Group)، § 7.1: JT65 −25 dB، JT9 −27 dB، JT4 −23 dB، FT8 نحو −20 dB، FT4 أقل حساسية من FT8 بمقدار 3.5 dB. Q65: K1JT وG4WJS وK9AN وIV3NWV، “Quick-Start Guide to Q65” (3 أبريل 2021)، عتبة فك الترميز بنسبة 50 % دون AP: Q65-30A −24.8 dB، Q65-60A −27.6 dB، Q65-120A −30.8 dB. كل القيم منسوبة إلى 2500 Hz.",
             "الشعار والرعاية",
             "شعار فرع ARI \"Valle del Liri\" (03-04)، مستخدم برعاية الفرع.",
-            "beta 27 - النطاقات حتى 432 MHz فقط؛ شاشة بدء بشعار فرع ARI Valle del Liri ورعايته؛ سطر شكر في نافذة الإغلاق؛ اللغات البنغالية والعربية والتركية (17 لغة)؛ شاشة رئيسية بأربع بطاقات ملونة، إلى الحسابات وإلى قبة السماء، محدِّد موقع حتى 14 حرفًا، اختيار الخط وتلميحات داكنة؛ استطلاع عوائقي مع عتامة الرمادي ودرجته؛ إبراز اليوم في المسافة وDgrd؛ زر الأعمدة في موقع القمر؛ ميزانية EME مع مخطط منظومة الإرسال والاستقبال؛ ضجيج الشمس مع المصادر والمؤشرات والطيف؛ DEBUG FORMULE بأسلوب Word مع الحفظ بصيغة .docx؛ تبويبات جديدة: الكابلات المحورية، التواصل مع المؤلف، الترخيص؛ الدليل داخل البرنامج (دليل الاستخدام المفصّل).",
+            "beta 27 - النطاقات حتى 432 MHz فقط؛ شاشة بدء بشعار فرع ARI Valle del Liri ورعايته؛ سطر شكر في نافذة الإغلاق؛ اللغات البنغالية والعربية والتركية (17 لغة)؛ شاشة رئيسية بأربع بطاقات ملونة، إلى الحسابات وإلى قبة السماء، محدِّد موقع حتى 14 حرفًا، اختيار الخط وتلميحات داكنة؛ استطلاع عوائقي مع عتامة الرمادي ودرجته؛ إبراز اليوم في المسافة وDgrd؛ زر الأعمدة في موقع القمر؛ ميزانية EME مع مخطط منظومة الإرسال والاستقبال؛ ضجيج الشمس مع المصادر والمؤشرات والطيف؛ تصحيح الصيغ بأسلوب Word مع الحفظ بصيغة .docx؛ تبويبات جديدة: الكابلات المحورية، التواصل مع المؤلف، الترخيص؛ الدليل داخل البرنامج (دليل الاستخدام المفصّل).",
             "البحث في الدليل: اكتب كلمة واضغط Enter؛ اضغط Enter مرة أخرى للنتيجة التالية.",
             "دليل الاستخدام",
             "الصيغ هي نفسها في كل اللغات.",
@@ -22142,7 +22277,7 @@ namespace LunaCalc
             "مفيد ومجاني",
             "البرنامج مجاني ويمكن استخدامه بلا قيود لهواية اللاسلكي وللتعلم والتعليم. صُنع لتسهيل الاتصالات، لا لبيع شيء.",
             "شفاف",
-            "تُرفق الشيفرة المصدرية دائمًا مع البرنامج؛ كل صيغة ظاهرة في تبويب DEBUG FORMULE وكل معلومة تذكر مصدرها. لا صناديق سوداء.",
+            "تُرفق الشيفرة المصدرية دائمًا مع البرنامج؛ كل صيغة ظاهرة في تبويب تصحيح الصيغ وكل معلومة تذكر مصدرها. لا صناديق سوداء.",
             "صادق",
             "يُفرَّق بين القيم المقيسة والمستنتجة والمقدَّرة؛ وما لم يُتحقق منه يُصرَّح بذلك. النتيجة غير المؤكدة تُقال غير مؤكدة ولا تُقدَّم على أنها أكيدة.",
             "محترِم",
@@ -22179,7 +22314,7 @@ namespace LunaCalc
             "في الأعلى أربعة مؤشرات، على اليسار مصدر البيانات (NOAA RSTN موصى به، أو F10.7 من NOAA أو بنتكتون، أو عنوان مخصص) مع المحطات، على اليمين طيف تدفق الشمس مع الاستقراء حتى تردد العمل.",
             "هذا الدليل، داخل البرنامج وبكل اللغات: فهرس قابل للنقر، وبحث، وصيغ، ومصادر.",
             "مُنسَّق مثل مستند Word، والصيغ بأسلوب محرر المعادلات: يمكن نسخه إلى الحافظة أو حفظه بصيغة Word (.docx).",
-            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر، القمر فوق العالم)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، DEBUG FORMULE)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (ABOUT & CREDITS، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
+            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر، القمر فوق العالم)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، تصحيح الصيغ)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (ABOUT & CREDITS، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
             "شكرًا لاستخدامك إياي: أرجو أن أكون قد أفدتك.",
             "لا",
             "نعم",
@@ -22442,6 +22577,15 @@ namespace LunaCalc
             "في {0:0} Hz · {1} dB في 2500 Hz",
             "في {0:0} Hz مع الشمس · {1} dB في 2500 Hz",
             "{0} عند الهوائي (خسائر الإرسال {1:F1} dB) · {2:F1} dBi",
+            "سماوي باستيل",
+            "برتقالي باستيل",
+            "زبرجدي باستيل",
+            "أخضر باستيل",
+            "وردي باستيل",
+            "ليلكي باستيل",
+            "نيلي باستيل",
+            "بني باستيل",
+            "هناك أيضًا ثمانية أنظمة ألوان باستيل فاتحة: سماوي، برتقالي، زبرجدي، أخضر، وردي، ليلكي، نيلي وبني.",
         };
 
         public static readonly string[] TR = {
@@ -23160,7 +23304,7 @@ namespace LunaCalc
             "",
             "",
             "",
-            "DEBUG FORMULE",
+            "FORMÜL HATA AYIKLAMA",
             "",
             "",
             "dahil değil",
@@ -23195,7 +23339,7 @@ namespace LunaCalc
             "H. H. Sauer ve D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, cilt 6 (2008); NOAA Space Weather Prediction Center, D Region Absorption Predictions (D-RAP).",
             "Jeomanyetik enlem",
             "IGRF-14 modelinin dipolü, 2025 kuzey jeomanyetik kutbu (80,8° K, 72,8° B), World Data Center for Geomagnetism, Kyoto'dan.",
-            "beta 26 - Yeni iki düzeyli sekme seçimi (gruplar ve sekmeler); Siyah renk düzeni ve mavi tonlarda Gece düzeni; iki Dgrd eğrisi için düzenlenebilir renk ve kalınlık ve Güneş'in Ay'a yakın olduğu günler; iki istasyon için olası kutup başlığı (PCA) ve kutup ışığı soğurması uyarıları; Yönlendirme haritasında bulanıklık kutusu; Gök kubbesinde sınırlar dışında gri çapraz çizgiler ve artık çakışmayan etiketler; yeni DEBUG FORMULE sekmesi; Ay simgesi; 14 dilin tümünde PDF kılavuzlar.",
+            "beta 26 - Yeni iki düzeyli sekme seçimi (gruplar ve sekmeler); Siyah renk düzeni ve mavi tonlarda Gece düzeni; iki Dgrd eğrisi için düzenlenebilir renk ve kalınlık ve Güneş'in Ay'a yakın olduğu günler; iki istasyon için olası kutup başlığı (PCA) ve kutup ışığı soğurması uyarıları; Yönlendirme haritasında bulanıklık kutusu; Gök kubbesinde sınırlar dışında gri çapraz çizgiler ve artık çakışmayan etiketler; yeni FORMÜL HATA AYIKLAMA sekmesi; Ay simgesi; 14 dilin tümünde PDF kılavuzlar.",
             "☀ simgesi Ay'ın Güneş'e yakın olduğu günleri gösterir (kırmızı: 3 hüzme genişliği içinde, turuncu: 6 içinde): güneş gürültüsü alışı bozabilir. İki eğrinin rengi ve kalınlığı grafiğin üstündeki çubuktan değiştirilir.",
             "Anteninizin sınırları dışındaki bölgeler açık gri çapraz çizgilerle kaplıdır.",
             "\"Sınır dışı bölgeleri bulanıklaştır\" kutusu bulanıklığı açar ya da kapatır.",
@@ -23212,7 +23356,7 @@ namespace LunaCalc
             "YAEC jeomanyetik enlemi IGRF-14 modelinin dipolüyle hesaplar (2025 kuzey jeomanyetik kutbu: 80,8° K, 72,8° B). Bu bölgelerden birine düşen bir lokatör girdiğinizde, sizinki ya da DX'inki, bir uyarı çıkar ve ardından ana ekranda kalır. Kutup ya da kutup ışığı istasyonlarıyla bir QSO'dan önce NOAA D-RAP tahminlerini (D Region Absorption Predictions) ve proton olayı uyarılarını kontrol edin.",
             "Kaynaklar: H. H. Sauer ve D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, cilt 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); World Data Center for Geomagnetism, Kyoto'dan IGRF jeomanyetik kutupları.",
             "EME bütçesinin ve Güneş gürültüsünün tüm parametreleri ve formülleri, iki yön için (sen → DX ve DX → sen), yerine konmuş değerler ve her adımın sonucuyla: dalga boyu, Ay'ın radar kesit alanı, yol kaybı, EIRP, alış zinciri boyunca sinyal, MDS ve pay, Friis ile gürültü faktörü, sıcaklıklar, gürültü ve S/N, Güneş için de akı, hüzme, desen zayıflaması, etkin alan ve gürültü artışı. \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir; alttaki düğme her şeyi panoya kopyalar.",
-            "DEBUG FORMULE sekmesi Canlı konum ve +- 24h sekmesindeki \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
+            "FORMÜL HATA AYIKLAMA sekmesi Canlı konum ve +- 24h sekmesindeki \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
             "özel",
             "DX mesafesi (km)",
             "Güneş – Ay (°)",
@@ -23234,7 +23378,7 @@ namespace LunaCalc
             "tablo satırını kullan",
             "Ay konumu tablosunda seçilen satırın anını kullan.",
             "polarizasyon kaybı",
-            "Eşzamanlı kutu: Canlı konum ve +- 24h sekmesindeki tahmini S/N yeşil kartında bulunan AYRINTILI HESAPLAR kutusunun aynısıdır; burada değiştirmek orada da değiştirir, tersi de geçerlidir. Kapalıyken EME Bütçesi basit moda geçer, Güneş gürültüsü, Hesaplamaları Excel'e aktar ve DEBUG FORMULE sekmeleri griye döner.",
+            "Eşzamanlı kutu: Canlı konum ve +- 24h sekmesindeki tahmini S/N yeşil kartında bulunan AYRINTILI HESAPLAR kutusunun aynısıdır; burada değiştirmek orada da değiştirir, tersi de geçerlidir. Kapalıyken EME Bütçesi basit moda geçer, Güneş gürültüsü, Hesaplamaları Excel'e aktar ve FORMÜL HATA AYIKLAMA sekmeleri griye döner.",
             "YAYIN VE ALIŞ DÜZENEĞİ",
             "ANTEN – RÖLE KABLOSU",
             "Tür",
@@ -23379,7 +23523,7 @@ namespace LunaCalc
             "WSJT-X kılavuzu (K1JT ve WSJT Development Group), § 7.1: JT65 −25 dB, JT9 −27 dB, JT4 −23 dB, FT8 yaklaşık −20 dB, FT4 FT8'den 3,5 dB daha az duyarlı. Q65: K1JT, G4WJS, K9AN ve IV3NWV, “Quick-Start Guide to Q65” (3 Nisan 2021), AP olmadan %50 çözme eşiği: Q65-30A −24,8 dB, Q65-60A −27,6 dB, Q65-120A −30,8 dB. Tüm değerler 2500 Hz'e göredir.",
             "Logo ve himaye",
             "ARI \"Valle del Liri\" şubesinin (03-04) logosu, şubenin himayesiyle kullanılmıştır.",
-            "beta 27 - bantlar yalnızca 432 MHz'e kadar; ARI Valle del Liri şubesinin logosu ve himayesiyle açılış ekranı; kapanış penceresinde teşekkür satırı; Bengalce, Arapça ve Türkçe diller (17 dil); dört renkli kartlı ana ekran, HESAPLARA GİT ve GÖK KUBBESİNE GİT, 14 karaktere kadar lokatör, yazı tipi seçimi ve koyu ipuçları; Engellerimin keşfi'nde gri opaklığı ve tonu; Mesafe ve Dgrd'de vurgulanan gün; Ay konumunda Sütunlar düğmesi; TX/RX düzeneği şemalı EME Bütçesi; kaynaklar, göstergeler ve spektrumlu Güneş gürültüsü; Word tarzında DEBUG FORMULE ve .docx olarak kaydetme; yeni sekmeler KOAKSİYEL KABLOLAR, YAZARLA İLETİŞİM ve LİSANS; program içinde kılavuz (AYRINTILI KULLANIM KILAVUZU).",
+            "beta 27 - bantlar yalnızca 432 MHz'e kadar; ARI Valle del Liri şubesinin logosu ve himayesiyle açılış ekranı; kapanış penceresinde teşekkür satırı; Bengalce, Arapça ve Türkçe diller (17 dil); dört renkli kartlı ana ekran, HESAPLARA GİT ve GÖK KUBBESİNE GİT, 14 karaktere kadar lokatör, yazı tipi seçimi ve koyu ipuçları; Engellerimin keşfi'nde gri opaklığı ve tonu; Mesafe ve Dgrd'de vurgulanan gün; Ay konumunda Sütunlar düğmesi; TX/RX düzeneği şemalı EME Bütçesi; kaynaklar, göstergeler ve spektrumlu Güneş gürültüsü; Word tarzında FORMÜL HATA AYIKLAMA ve .docx olarak kaydetme; yeni sekmeler KOAKSİYEL KABLOLAR, YAZARLA İLETİŞİM ve LİSANS; program içinde kılavuz (AYRINTILI KULLANIM KILAVUZU).",
             "Kılavuzda ara: bir sözcük yazıp Enter'a basın; sonraki sonuç için yeniden Enter.",
             "KULLANIM KILAVUZU",
             "Formüller tüm dillerde aynıdır.",
@@ -23441,7 +23585,7 @@ namespace LunaCalc
             "Yararlı ve ücretsiz",
             "Program ücretsizdir ve amatör telsizcilik, öğrenme ve öğretme için sınırsız kullanılabilir. QSO'ları kolaylaştırmak için yapılmıştır, bir şey satmak için değil.",
             "Şeffaf",
-            "Kaynak kod her zaman programla birlikte verilir; her formül DEBUG FORMULE sekmesinde görülebilir ve her veri kaynağını belirtir. Kara kutu yok.",
+            "Kaynak kod her zaman programla birlikte verilir; her formül FORMÜL HATA AYIKLAMA sekmesinde görülebilir ve her veri kaynağını belirtir. Kara kutu yok.",
             "Dürüst",
             "Ölçülen, çıkarılan ve tahmin edilen değerler ayrılır; doğrulanmamış olan öyle belirtilir. Belirsiz bir sonuç belirsiz diye söylenir, kesinmiş gibi sunulmaz.",
             "Saygılı",
@@ -23478,7 +23622,7 @@ namespace LunaCalc
             "Üstte dört gösterge, solda istasyonlarıyla veri kaynağı (önerilen NOAA RSTN, ya da NOAA veya Penticton F10.7, ya da özel adres), sağda çalışma frekansına kadar dışdeğerlemeli güneş akısı spektrumu.",
             "Bu kılavuz, program içinde ve tüm dillerde: tıklanabilir içindekiler, arama, formüller ve kaynaklar.",
             "Bir Word belgesi gibi düzenlenmiştir, formüller denklem düzenleyicisi tarzındadır: panoya kopyalanabilir ya da Word (.docx) olarak kaydedilebilir.",
-            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu, Dünya üzerinde Ay), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, DEBUG FORMULE), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (ABOUT & CREDITS, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
+            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu, Dünya üzerinde Ay), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, FORMÜL HATA AYIKLAMA), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (ABOUT & CREDITS, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
             "Beni kullandığın için teşekkürler: umarım işine yaramışımdır.",
             "Hayır",
             "Evet",
@@ -23741,6 +23885,15 @@ namespace LunaCalc
             "{0:0} Hz'de · 2500 Hz'de {1} dB",
             "{0:0} Hz'de Güneş dahil · 2500 Hz'de {1} dB",
             "antende {0} (TX kayıpları {1:F1} dB) · {2:F1} dBi",
+            "Pastel açık mavi",
+            "Pastel turuncu",
+            "Pastel akuamarin",
+            "Pastel yeşil",
+            "Pastel pembe",
+            "Pastel leylak",
+            "Pastel çivit",
+            "Pastel kahverengi",
+            "Ayrıca sekiz açık pastel düzen vardır: açık mavi, turuncu, akuamarin, yeşil, pembe, leylak, çivit ve kahverengi.",
         };
     }
 
@@ -23849,7 +24002,22 @@ namespace LunaCalc
     static class Tema
     {
         public static bool Scuro;
-        public static int Schema;   // 0 chiaro, 1 notte (blu), 2 nero
+        public static int Schema;   // 0 chiaro, 1 notte (blu), 2 nero, 3 – 10 pastello (vedi Pastelli)
+        // schemi pastello chiari: nome nelle impostazioni, nome da tradurre, tinta (colore pieno di riferimento)
+        public static readonly string[] PastelloChiave = { "azzurro", "arancione", "acquamarina", "verde", "rosa", "lilla", "indaco", "marrone" };
+        public static readonly string[] PastelloNome = { "Pastello azzurro", "Pastello arancione", "Pastello acquamarina", "Pastello verde", "Pastello rosa", "Pastello lilla", "Pastello indaco", "Pastello marrone" };
+        static readonly Color[] PastelloTinta = {
+            Color.FromArgb(70, 150, 230), Color.FromArgb(240, 140, 50), Color.FromArgb(40, 180, 170), Color.FromArgb(80, 170, 90),
+            Color.FromArgb(230, 110, 160), Color.FromArgb(160, 120, 210), Color.FromArgb(80, 90, 190), Color.FromArgb(150, 105, 70) };
+        public static string Chiave { get { return Schema == 2 ? "nero" : (Schema == 1 ? "scuro" : (Schema >= 3 ? "pastello-" + PastelloChiave[Schema - 3] : "chiaro")); } }
+        public static int DaChiave(string k)
+        {
+            if (k == "nero") return 2;
+            if (k == "scuro") return 1;
+            if (k != null && k.StartsWith("pastello-")) { int i = Array.IndexOf(PastelloChiave, k.Substring(9)); if (i >= 0) return 3 + i; }
+            return 0;
+        }
+        static Color Mix(Color tinta, float k) { return Color.FromArgb((int)(255 + (tinta.R - 255) * k), (int)(255 + (tinta.G - 255) * k), (int)(255 + (tinta.B - 255) * k)); }
         public static Color Back, Fore, Muted, Field, FieldFore, Section, Accent, OkFg, BadFg, WarnFg,
             OkBg, SoloBg, SottoFg, SnBg, MarginBg, Warn1, Warn2, ChartBg, ChartGrid, ChartText, Button,
             Carta, Linea, Limiti;   // riquadri disegnati, loro bordi, limiti dell'antenna
@@ -23860,8 +24028,8 @@ namespace LunaCalc
 
         public static void Imposta(int schema)
         {
-            Schema = Math.Max(0, Math.Min(2, schema));
-            Scuro = Schema != 0;
+            Schema = Math.Max(0, Math.Min(2 + PastelloTinta.Length, schema));
+            Scuro = Schema == 1 || Schema == 2;
             if (Schema == 2)
             {
                 // nero: sfondo nero pieno, riquadri grigio molto scuro, colori di stato accesi
@@ -23888,6 +24056,14 @@ namespace LunaCalc
                 Button = SystemColors.Control;
                 Carta = Color.White; Linea = Color.FromArgb(213, 220, 234); Limiti = Color.FromArgb(181, 131, 0);
                 Accent = Color.FromArgb(31, 111, 209); OkFg = Color.FromArgb(19, 150, 80); WarnFg = Color.FromArgb(217, 123, 0);
+                if (Schema >= 3)
+                {
+                    // pastello: lo schema chiaro con fondo, riquadri, campi e grafici tinti di un colore tenue
+                    Color t = PastelloTinta[Schema - 3];
+                    Back = Mix(t, 0.24f); Section = Mix(t, 0.34f); Field = Mix(t, 0.05f); Carta = Mix(t, 0.08f);
+                    ChartBg = Mix(t, 0.06f); ChartGrid = Mix(t, 0.22f); Linea = Mix(t, 0.30f); Button = Mix(t, 0.18f);
+                    SnBg = Mix(t, 0.12f); MarginBg = Mix(t, 0.14f);
+                }
             }
             else
             {
@@ -29543,6 +29719,9 @@ namespace LunaCalc
             PreparaGrafica(g);
             Rectangle cr = pnlDgTop.ClientRectangle;
             if (cr.Width < 100 || cr.Height < 40) return;
+            // i tre giorni migliori in ordine cronologico; la stella dice il loro posto in classifica
+            List<GiornoEme> tre = dgOrd.GetRange(0, Math.Min(3, dgOrd.Count));
+            tre.Sort((x1, x2) => x1.Giorno.CompareTo(x2.Giorno));
             float gap = S(14), w = (cr.Width - S(12) - 2 * gap) / 3f, h = cr.Height - S(12);
             using (Font fd = FontPx(Lang.FontUi, Math.Min(S(22), h * 0.2f), true))
             using (Font fo = FontPx(FamigliaNumeri, Math.Min(S(30), h * 0.27f), true))
@@ -29552,20 +29731,20 @@ namespace LunaCalc
                 for (int i = 0; i < 3; i++)
                 {
                     RectangleF r = new RectangleF(cr.Left + S(4) + i * (w + gap), cr.Top + S(4), w, h);
-                    if (i >= dgOrd.Count)
+                    if (i >= tre.Count)
                     {
                         Scheda(g, r, Color.Empty);
                         if (i == 0)
                             Testo(g, lblDg.Text, fs, Tema.Muted, new RectangleF(r.Left + S(20), r.Top, r.Width - S(30), r.Height), StringAlignment.Near, StringAlignment.Center);
                         continue;
                     }
-                    GiornoEme gg = dgOrd[i];
+                    GiornoEme gg = tre[i];
                     Scheda(g, r, Tema.OkFg);
                     float rf = Math.Min(S(30), h * 0.3f);
                     PointF cm = new PointF(r.Left + S(22) + rf, r.Top + r.Height / 2f);
                     DisegnaFase(g, cm, rf, double.IsNaN(gg.Illum) ? 0.5 : gg.Illum, gg.Crescente);
                     float x = cm.X + rf + S(18), wt = r.Right - x - S(10);
-                    Testo(g, "★ " + (i + 1).ToString(ci) + "°", fr, Tema.OkFg, new RectangleF(r.Right - S(80), r.Top + S(6), S(70), S(28)), StringAlignment.Far, StringAlignment.Near);
+                    Testo(g, "★ " + gg.Rango.ToString(ci) + "°", fr, Tema.OkFg, new RectangleF(r.Right - S(80), r.Top + S(6), S(70), S(28)), StringAlignment.Far, StringAlignment.Near);
                     string giorno = gg.Giorno.ToString("dddd dd/MM", itCi);
                     if (giorno.Length > 0) giorno = char.ToUpper(giorno[0]) + giorno.Substring(1);
                     float y = r.Top + h * 0.1f;
@@ -32207,7 +32386,7 @@ namespace LunaCalc
                 new string[] { Lang.T("Nominativo radioamatoriale"), Lang.T("Il nominativo di chi usa il programma: compare nel titolo della finestra, nella schermata principale e sulla mappa.") },
                 new string[] { "Lingua / Language", Lang.T("La lingua dell'interfaccia (si applica subito).") },
                 new string[] { Lang.T("Carattere del programma"), Lang.T("Carattere usato in tutto il programma (si applica subito). Con \"Predefinito del sistema\" si usa quello adatto alla lingua scelta.") },
-                new string[] { Lang.T("Schema di colori"), Lang.T("Chiaro o notte (blu scuro, per l'uso di notte): vale per tutte le linguette.") },
+                new string[] { Lang.T("Schema di colori"), Lang.T("Chiaro o notte (blu scuro, per l'uso di notte): vale per tutte le linguette.") + " " + Lang.T("Ci sono anche otto schemi pastello chiari: azzurro, arancione, acquamarina, verde, rosa, lilla, indaco e marrone.") },
                 new string[] { Lang.T("Caratteri delle tabelle / dei moduli (pt)"), Lang.T("Dimensione di tutti i caratteri del programma: si applica subito a tabelle, finestre e caselle.") },
                 new string[] { Lang.T("Distanza e Dgrd") },
                 new string[] { Lang.T("Giorni da oggi (fino a 61)"), Lang.T("Quanti giorni mostrare nel grafico e nella tabella.") },
@@ -32578,6 +32757,8 @@ namespace LunaCalc
             cmbTema = new Tendina();
             cmbTema.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTema.Items.AddRange(new object[] { Lang.T("Chiaro"), Lang.T("Notte"), Lang.T("Nero") });
+            foreach (string pn in Tema.PastelloNome) cmbTema.Items.Add(Lang.T(pn));
+            cmbTema.DropDownWidth = S(200);
             cmbTema.SelectedIndex = Tema.Schema;
             cmbTema.Width = S(100);
             cmbTema.SelectedIndexChanged += (s, e) =>
@@ -34450,8 +34631,8 @@ namespace LunaCalc
                 RectangleF thx = new RectangleF(x, y, wtot, ht);
                 Scheda(g, thx, Color.Empty);
                 RectangleF ich = new RectangleF(thx.Left + S(22), thx.Top + S(16), S(30), S(30));
-                IconaQuadra(g, ich, Color.FromArgb(23, 128, 61), "♥", fb);
-                Testo(g, Spaziato(Lang.T("RINGRAZIAMENTI")), fk, Tema.Muted, new RectangleF(ich.Right + S(10), ich.Top, thx.Width - S(80), ich.Height), StringAlignment.Near, StringAlignment.Center);
+                IconaQuadra(g, ich, Color.FromArgb(214, 48, 49), "♥", fb);
+                Testo(g, Spaziato(Lang.T("RINGRAZIAMENTI")), fk, Color.FromArgb(214, 48, 49), new RectangleF(ich.Right + S(10), ich.Top, thx.Width - S(80), ich.Height), StringAlignment.Near, StringAlignment.Center);
                 float yr = ich.Bottom + S(12);
                 float colLab = Math.Min(S(300), thx.Width * 0.36f);
                 using (Pen lin = new Pen(Tema.Scuro ? Color.FromArgb(70, 80, 95) : Color.FromArgb(237, 240, 245)))
@@ -34797,7 +34978,7 @@ namespace LunaCalc
             w("", 5F, false);
             w(Lang.T("COME SI SCELGONO LE LINGUETTE"), 11F, true);
             w(Lang.T("Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna, Luna sul mondo), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\"."), 10F, false);
-            w(Lang.T("Schema di colori (impostazioni generali): Chiaro, Notte (toni di blu) o Nero (sfondo nero, adatto all'uso al buio e agli schermi OLED)."), 10F, false);
+            w(Lang.T("Schema di colori (impostazioni generali): Chiaro, Notte (toni di blu) o Nero (sfondo nero, adatto all'uso al buio e agli schermi OLED).") + " " + Lang.T("Ci sono anche otto schemi pastello chiari: azzurro, arancione, acquamarina, verde, rosa, lilla, indaco e marrone."), 10F, false);
             w("", 5F, false);
             if (conLinguette) w(Lang.T("LE LINGUETTE"), 11F, true);
             if (conLinguette)
@@ -35572,7 +35753,7 @@ namespace LunaCalc
             float.TryParse(LeggiImpostazione("font_tabelle"), NumberStyles.Float, inv, out fontTabelle);
             if (fontTabelle < 7 || fontTabelle > 18) fontTabelle = 9F;
             string tm = LeggiImpostazione("tema");
-            Tema.Imposta(tm == "nero" ? 2 : (tm == "scuro" ? 1 : 0));
+            Tema.Imposta(Tema.DaChiave(tm));
             this.Font = new Font(Lang.FontUi, fm);
             this.AutoScaleMode = AutoScaleMode.None;
             using (Graphics g = this.CreateGraphics()) scale = g.DpiX / 96f;
@@ -35842,10 +36023,11 @@ namespace LunaCalc
 
         NumericUpDown Nud(decimal min, decimal max, decimal val, int decimals, int width)
         {
-            NumericUpDown n = new NumericUpDown();
+            NudUnita n = new NudUnita();
             n.Minimum = min; n.Maximum = max; n.DecimalPlaces = decimals;
             n.Value = val; n.Width = S(width);
             n.Increment = decimals > 0 ? 0.5m : 1m;
+            n.SenzaFrecce = true;
             n.TextAlign = HorizontalAlignment.Right;
             n.Anchor = AnchorStyles.Left;
             return n;
@@ -37167,7 +37349,7 @@ namespace LunaCalc
                 lines.Add("banda=" + curBand.ToString(inv));
                 lines.Add("polbudget=" + (chkPol.Checked ? "1" : "0"));
                 lines.Add("bw=" + cmbBw.Text);
-                lines.Add("tema=" + (Tema.Schema == 2 ? "nero" : (Tema.Schema == 1 ? "scuro" : "chiaro")));
+                lines.Add("tema=" + Tema.Chiave);
                 lines.Add("lingua=" + Lang.Codici[cmbLingua.SelectedIndex]);
                 lines.Add("font_nome=" + (cmbFontNome != null && cmbFontNome.SelectedItem is VoceFont && ((VoceFont)cmbFontNome.SelectedItem).Tipo == 2 ? ((VoceFont)cmbFontNome.SelectedItem).Nome : ""));
                 lines.Add("nominativo=" + txtCall.Text.Trim());
@@ -37437,6 +37619,58 @@ namespace LunaCalc
             using (SolidBrush b = new SolidBrush(this.BackColor))   // lo stesso fondo della casella interna, anche da spenta e con i temi scuri
                 e.Graphics.FillRectangle(b, this.ClientRectangle);
             base.OnPaint(e);
+            if (senzaFrecce) DisegnaFrecce(e.Graphics);
+        }
+
+        // Al posto delle frecce di sistema: due "v" sottili affiancate (su e giù), come nelle caselle dei valori
+        // dei programmi moderni. Clic a sinistra = aumenta, a destra = diminuisce; restano rotellina e tasti freccia.
+        int zonaSu = -1;   // -1 nessuna, 0 su, 1 giù (sotto il mouse)
+        Rectangle ZonaFrecce()
+        {
+            int x0 = this.Controls.Count > 1 ? this.Controls[1].Right : this.ClientSize.Width - SystemInformation.VerticalScrollBarWidth;
+            return new Rectangle(x0, 0, Math.Max(0, this.ClientSize.Width - x0), this.ClientSize.Height);
+        }
+        void DisegnaFrecce(Graphics g)
+        {
+            Rectangle z = ZonaFrecce();
+            if (z.Width < 8) return;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            Color cf = !this.Enabled ? Color.FromArgb(160, 166, 176) : (Tema.Scuro ? Color.FromArgb(200, 206, 216) : Color.FromArgb(75, 85, 99));
+            using (Pen sep = new Pen(Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(214, 218, 226))) g.DrawLine(sep, z.Left, z.Top + 3, z.Left, z.Bottom - 4);
+            float w2 = z.Width / 2f, cy = z.Top + z.Height / 2f, d = Math.Max(2.2f, Math.Min(w2 * 0.28f, z.Height / 6f));
+            for (int k = 0; k < 2; k++)
+            {
+                float cx = z.Left + w2 * k + w2 / 2f;
+                if (zonaSu == k && this.Enabled)
+                    using (Brush bh = new SolidBrush(Color.FromArgb(40, 31, 111, 209))) g.FillRectangle(bh, z.Left + w2 * k + 1, z.Top + 1, w2 - 1, z.Height - 2);
+                using (Pen pv = new Pen(cf, Math.Max(1.2f, z.Height / 16f)))
+                {
+                    pv.StartCap = LineCap.Round; pv.EndCap = LineCap.Round; pv.LineJoin = LineJoin.Round;
+                    if (k == 0) g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy + d / 2f), new PointF(cx, cy - d / 2f), new PointF(cx + d, cy + d / 2f) });
+                    else g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy - d / 2f), new PointF(cx, cy + d / 2f), new PointF(cx + d, cy - d / 2f) });
+                }
+            }
+        }
+        int ZonaDi(Point p)
+        {
+            Rectangle z = ZonaFrecce();
+            if (!senzaFrecce || z.Width < 8 || !z.Contains(p)) return -1;
+            return p.X < z.Left + z.Width / 2 ? 0 : 1;
+        }
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            int k = ZonaDi(e.Location);
+            if (k != zonaSu) { zonaSu = k; Invalidate(); }
+            this.Cursor = k >= 0 ? Cursors.Hand : Cursors.Default;
+        }
+        protected override void OnMouseLeave(EventArgs e) { base.OnMouseLeave(e); if (zonaSu != -1) { zonaSu = -1; Invalidate(); } }
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            if (e.Button != MouseButtons.Left || !this.Enabled) return;
+            int k = ZonaDi(e.Location);
+            if (k == 0) UpButton(); else if (k == 1) DownButton();
         }
 
         protected override void UpdateEditText()
@@ -38073,8 +38307,8 @@ namespace LunaCalc
                 "For each day of the Distance and Dgrd tab, the minimum angular separation between Sun and Moon is computed over the useful hours with the Moon above the horizon and compared with the receiving beamwidth estimated from the gain, θ ≈ √(41253/G): within 3 beamwidths the day is marked in red, within 6 in orange. The noise increase itself is estimated in the Solar noise tab.",
                 "## Polar and auroral absorption",
                 "The geomagnetic latitude of each station is computed with the centred dipole of IGRF-14 (2025 north geomagnetic pole at 80.8° N, 72.8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). A station beyond the polar circles (|φ| ≥ 66.56°) or with |φm| > 75° is in the polar cap (possible PCA); with 60° ≤ |φm| ≤ 75° it is in the auroral zone. The warning appears when a locator is changed and stays on the main screen.",
-                "## Tabs, Pointing map and DEBUG FORMULE",
-                "The tabs are grouped on two levels (groups and tabs of the group), drawn by the program above the pages. The Pointing map projects the local sky onto the map (horizon = outer circle, zenith = centre, radius proportional to 90° - elevation) and can blur the zones outside the limits; in the Sky view the same zones are covered with light grey diagonal lines. The DEBUG FORMULE tab repeats the whole Budget EME and Solar noise calculation step by step, with the formulas, the substituted values and the results."
+                "## Tabs, Pointing map and FORMULA DEBUG",
+                "The tabs are grouped on two levels (groups and tabs of the group), drawn by the program above the pages. The Pointing map projects the local sky onto the map (horizon = outer circle, zenith = centre, radius proportional to 90° - elevation) and can blur the zones outside the limits; in the Sky view the same zones are covered with light grey diagonal lines. The FORMULA DEBUG tab repeats the whole Budget EME and Solar noise calculation step by step, with the formulas, the substituted values and the results."
             };
             elenchi["en"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2nd edition: Moon, Sun, nutation, parallax, sidereal time.",
@@ -38146,8 +38380,8 @@ namespace LunaCalc
                 "Für jeden Tag der Registerkarte Entfernung und Dgrd wird der kleinste Winkelabstand zwischen Sonne und Mond in den nutzbaren Stunden mit dem Mond über dem Horizont berechnet und mit der aus dem Gewinn geschätzten Empfangskeulenbreite θ ≈ √(41253/G) verglichen: innerhalb von 3 Keulenbreiten wird der Tag rot markiert, innerhalb von 6 orange. Die eigentliche Rauschzunahme wird in der Registerkarte Sonnenrauschen geschätzt.",
                 "## Polar- und Polarlichtabsorption",
                 "Die geomagnetische Breite jeder Station wird mit dem zentrierten Dipol von IGRF-14 berechnet (geomagnetischer Nordpol 2025 bei 80,8° N, 72,8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Eine Station jenseits der Polarkreise (|φ| ≥ 66,56°) oder mit |φm| > 75° liegt in der Polkappe (mögliche PCA); mit 60° ≤ |φm| ≤ 75° liegt sie in der Polarlichtzone. Die Warnung erscheint beim Ändern eines Locators und bleibt im Hauptbildschirm stehen.",
-                "## Registerkarten, Ausrichtungskarte und DEBUG FORMULE",
-                "Die Registerkarten sind auf zwei Ebenen gruppiert (Gruppen und Registerkarten der Gruppe), vom Programm über den Seiten gezeichnet. Die Ausrichtungskarte projiziert den lokalen Himmel auf die Karte (Horizont = äußerer Kreis, Zenit = Mitte, Radius proportional zu 90° - Elevation) und kann die Zonen außerhalb der Grenzen weichzeichnen; in der Himmelsansicht sind dieselben Zonen mit hellgrauen Diagonalstreifen bedeckt. Die Registerkarte DEBUG FORMULE wiederholt Schritt für Schritt die ganze Berechnung von EME-Budget und Sonnenrauschen, mit den Formeln, den eingesetzten Werten und den Ergebnissen."
+                "## Registerkarten, Ausrichtungskarte und FORMEL-DEBUG",
+                "Die Registerkarten sind auf zwei Ebenen gruppiert (Gruppen und Registerkarten der Gruppe), vom Programm über den Seiten gezeichnet. Die Ausrichtungskarte projiziert den lokalen Himmel auf die Karte (Horizont = äußerer Kreis, Zenit = Mitte, Radius proportional zu 90° - Elevation) und kann die Zonen außerhalb der Grenzen weichzeichnen; in der Himmelsansicht sind dieselben Zonen mit hellgrauen Diagonalstreifen bedeckt. Die Registerkarte FORMEL-DEBUG wiederholt Schritt für Schritt die ganze Berechnung von EME-Budget und Sonnenrauschen, mit den Formeln, den eingesetzten Werten und den Ergebnissen."
             };
             elenchi["de"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2. Auflage: Mond, Sonne, Nutation, Parallaxe, Sternzeit.",
@@ -38219,8 +38453,8 @@ namespace LunaCalc
                 "Pour chaque jour de l'onglet Distance et Dgrd, la distance angulaire minimale entre le Soleil et la Lune est calculée sur les heures utiles avec la Lune au-dessus de l'horizon et comparée à la largeur du faisceau de réception estimée à partir du gain, θ ≈ √(41253/G) : à moins de 3 largeurs de faisceau le jour est marqué en rouge, à moins de 6 en orange. L'augmentation du bruit elle-même est estimée dans l'onglet Bruit solaire.",
                 "## Absorption polaire et aurorale",
                 "La latitude géomagnétique de chaque station est calculée avec le dipôle centré de l'IGRF-14 (pôle nord géomagnétique 2025 à 80,8° N, 72,8° O) : sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Une station au-delà des cercles polaires (|φ| ≥ 66,56°) ou avec |φm| > 75° est dans la calotte polaire (PCA possible) ; avec 60° ≤ |φm| ≤ 75° elle est dans la zone aurorale. L'avertissement apparaît quand on change un locator et reste sur l'écran principal.",
-                "## Onglets, Carte de pointage et DEBUG FORMULE",
-                "Les onglets sont regroupés sur deux niveaux (groupes et onglets du groupe), dessinés par le programme au-dessus des pages. La Carte de pointage projette le ciel local sur la carte (horizon = cercle extérieur, zénith = centre, rayon proportionnel à 90° - élévation) et peut estomper les zones hors limites ; dans la Voûte céleste, les mêmes zones sont couvertes de hachures diagonales gris clair. L'onglet DEBUG FORMULE refait pas à pas tout le calcul du Bilan EME et du Bruit solaire, avec les formules, les valeurs substituées et les résultats."
+                "## Onglets, Carte de pointage et DÉBOGAGE DES FORMULES",
+                "Les onglets sont regroupés sur deux niveaux (groupes et onglets du groupe), dessinés par le programme au-dessus des pages. La Carte de pointage projette le ciel local sur la carte (horizon = cercle extérieur, zénith = centre, rayon proportionnel à 90° - élévation) et peut estomper les zones hors limites ; dans la Voûte céleste, les mêmes zones sont couvertes de hachures diagonales gris clair. L'onglet DÉBOGAGE DES FORMULES refait pas à pas tout le calcul du Bilan EME et du Bruit solaire, avec les formules, les valeurs substituées et les résultats."
             };
             elenchi["fr"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2e édition : Lune, Soleil, nutation, parallaxe, temps sidéral.",
@@ -38292,8 +38526,8 @@ namespace LunaCalc
                 "Para cada día de la pestaña Distancia y Dgrd se calcula la distancia angular mínima entre el Sol y la Luna en las horas útiles con la Luna sobre el horizonte y se compara con la anchura del haz de recepción estimada a partir de la ganancia, θ ≈ √(41253/G): dentro de 3 anchuras de haz el día se marca en rojo, dentro de 6 en naranja. El aumento del ruido en sí se estima en la pestaña Ruido solar.",
                 "## Absorción polar y auroral",
                 "La latitud geomagnética de cada estación se calcula con el dipolo centrado del IGRF-14 (polo norte geomagnético 2025 en 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Una estación más allá de los círculos polares (|φ| ≥ 66,56°) o con |φm| > 75° está en el casquete polar (posible PCA); con 60° ≤ |φm| ≤ 75° está en la zona auroral. El aviso aparece al cambiar un locator y queda en la pantalla principal.",
-                "## Pestañas, Mapa de apuntamiento y DEBUG FORMULE",
-                "Las pestañas se agrupan en dos niveles (grupos y pestañas del grupo), dibujados por el programa encima de las páginas. El Mapa de apuntamiento proyecta el cielo local sobre el mapa (horizonte = círculo exterior, cenit = centro, radio proporcional a 90° - elevación) y puede difuminar las zonas fuera de los límites; en la Bóveda celeste las mismas zonas se cubren con rayas diagonales gris claro. La pestaña DEBUG FORMULE repite paso a paso todo el cálculo del Balance EME y del Ruido solar, con las fórmulas, los valores sustituidos y los resultados."
+                "## Pestañas, Mapa de apuntamiento y DEPURACIÓN DE FÓRMULAS",
+                "Las pestañas se agrupan en dos niveles (grupos y pestañas del grupo), dibujados por el programa encima de las páginas. El Mapa de apuntamiento proyecta el cielo local sobre el mapa (horizonte = círculo exterior, cenit = centro, radio proporcional a 90° - elevación) y puede difuminar las zonas fuera de los límites; en la Bóveda celeste las mismas zonas se cubren con rayas diagonales gris claro. La pestaña DEPURACIÓN DE FÓRMULAS repite paso a paso todo el cálculo del Balance EME y del Ruido solar, con las fórmulas, los valores sustituidos y los resultados."
             };
             elenchi["es"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2.ª edición: Luna, Sol, nutación, paralaje, tiempo sidéreo.",
@@ -38365,8 +38599,8 @@ namespace LunaCalc
                 "Para cada dia do separador Distância e Dgrd calcula-se a distância angular mínima entre o Sol e a Lua nas horas úteis com a Lua acima do horizonte e compara-se com a largura do feixe de receção estimada a partir do ganho, θ ≈ √(41253/G): dentro de 3 larguras de feixe o dia é marcado a vermelho, dentro de 6 a laranja. O aumento do ruído propriamente dito é estimado no separador Ruído solar.",
                 "## Absorção polar e auroral",
                 "A latitude geomagnética de cada estação é calculada com o dipolo centrado do IGRF-14 (polo norte geomagnético 2025 a 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Uma estação além dos círculos polares (|φ| ≥ 66,56°) ou com |φm| > 75° está na calote polar (possível PCA); com 60° ≤ |φm| ≤ 75° está na zona auroral. O aviso aparece quando se muda um locator e fica no ecrã principal.",
-                "## Separadores, Mapa de apontamento e DEBUG FORMULE",
-                "Os separadores estão agrupados em dois níveis (grupos e separadores do grupo), desenhados pelo programa por cima das páginas. O Mapa de apontamento projeta o céu local no mapa (horizonte = círculo exterior, zénite = centro, raio proporcional a 90° - elevação) e pode desfocar as zonas fora dos limites; na Abóbada celeste as mesmas zonas ficam cobertas por riscas diagonais cinzento-claras. O separador DEBUG FORMULE repete passo a passo todo o cálculo do Balanço EME e do Ruído solar, com as fórmulas, os valores substituídos e os resultados."
+                "## Separadores, Mapa de apontamento e DEPURAÇÃO DE FÓRMULAS",
+                "Os separadores estão agrupados em dois níveis (grupos e separadores do grupo), desenhados pelo programa por cima das páginas. O Mapa de apontamento projeta o céu local no mapa (horizonte = círculo exterior, zénite = centro, raio proporcional a 90° - elevação) e pode desfocar as zonas fora dos limites; na Abóbada celeste as mesmas zonas ficam cobertas por riscas diagonais cinzento-claras. O separador DEPURAÇÃO DE FÓRMULAS repete passo a passo todo o cálculo do Balanço EME e do Ruído solar, com as fórmulas, os valores substituídos e os resultados."
             };
             elenchi["pt"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2.ª edição: Lua, Sol, nutação, paralaxe, tempo sideral.",
@@ -38438,8 +38672,8 @@ namespace LunaCalc
                 "在距离与 Dgrd 选项卡中，对每一天在月球位于地平线以上的有用时段内计算太阳与月球的最小角距，并与由增益估算的接收波束宽度 θ ≈ √(41253/G) 比较：在 3 个波束宽度以内该日标为红色，6 个以内标为橙色。噪声的实际增加在太阳噪声选项卡中估算。",
                 "## 极盖吸收与极光吸收",
                 "每个台站的地磁纬度用 IGRF-14 中心偶极子计算（2025 年地磁北极位于 80.8° N、72.8° W）：sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)。位于极圈以外（|φ| ≥ 66.56°）或 |φm| > 75° 的台站处于极盖区（可能出现 PCA）；60° ≤ |φm| ≤ 75° 时处于极光带。更改网格定位时会出现警告，并保留在主界面上。",
-                "## 选项卡、指向地图与 DEBUG FORMULE",
-                "选项卡分为两级（组以及组内选项卡），由程序绘制在页面上方。指向地图将本地天空投影到地图上（地平线 = 外圆，天顶 = 圆心，半径与 90° - 仰角成正比），并可模糊超出限制的区域；在天穹中，相同区域以浅灰色斜线覆盖。DEBUG FORMULE 选项卡逐步重复 EME 链路预算和太阳噪声的全部计算，给出公式、代入的数值和结果。"
+                "## 选项卡、指向地图与 公式调试",
+                "选项卡分为两级（组以及组内选项卡），由程序绘制在页面上方。指向地图将本地天空投影到地图上（地平线 = 外圆，天顶 = 圆心，半径与 90° - 仰角成正比），并可模糊超出限制的区域；在天穹中，相同区域以浅灰色斜线覆盖。公式调试 选项卡逐步重复 EME 链路预算和太阳噪声的全部计算，给出公式、代入的数值和结果。"
             };
             elenchi["zh"]["C5"] = new string[] {
                 "• Jean Meeus，《Astronomical Algorithms》第 2 版：月球、太阳、章动、视差、恒星时。",
@@ -38511,8 +38745,8 @@ namespace LunaCalc
                 "距離と Dgrd タブでは、各日について月が地平線上にある有効時間内の太陽と月の最小離角を計算し、利得から推定した受信ビーム幅 θ ≈ √(41253/G) と比較します。ビーム幅の 3 倍以内なら赤、6 倍以内ならオレンジで表示します。実際の雑音の増加は太陽雑音タブで推定します。",
                 "## 極冠吸収とオーロラ吸収",
                 "各局の地磁気緯度は IGRF-14 の中心双極子（2025 年の地磁気北極は 80.8° N、72.8° W）で計算します：sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)。極圏の外側（|φ| ≥ 66.56°）または |φm| > 75° の局は極冠域（PCA の可能性）、60° ≤ |φm| ≤ 75° の局はオーロラ帯にあります。警告はロケーターを変更したときに表示され、メイン画面に残ります。",
-                "## タブ、指向マップと DEBUG FORMULE",
-                "タブは 2 段（グループとグループ内のタブ）にまとめられ、プログラムがページの上に描きます。指向マップは局所の空を地図上に投影し（地平線 = 外側の円、天頂 = 中心、半径は 90° - 仰角に比例）、制限外の領域をぼかすことができます。天球では同じ領域が薄い灰色の斜線で覆われます。DEBUG FORMULE タブは、EME 回線計算と太陽雑音の計算全体を、式、代入した値、結果とともに順を追って示します。"
+                "## タブ、指向マップと 数式デバッグ",
+                "タブは 2 段（グループとグループ内のタブ）にまとめられ、プログラムがページの上に描きます。指向マップは局所の空を地図上に投影し（地平線 = 外側の円、天頂 = 中心、半径は 90° - 仰角に比例）、制限外の領域をぼかすことができます。天球では同じ領域が薄い灰色の斜線で覆われます。数式デバッグ タブは、EME 回線計算と太陽雑音の計算全体を、式、代入した値、結果とともに順を追って示します。"
             };
             elenchi["ja"]["C5"] = new string[] {
                 "• Jean Meeus、Astronomical Algorithms 第 2 版：月、太陽、章動、視差、恒星時。",
@@ -38584,8 +38818,8 @@ namespace LunaCalc
                 "दूरी और Dgrd टैब के हर दिन के लिए, क्षितिज के ऊपर चंद्रमा वाले उपयोगी घंटों में सूर्य और चंद्रमा के बीच न्यूनतम कोणीय दूरी गणना की जाती है और गेन से अनुमानित प्राप्ति बीम-चौड़ाई θ ≈ √(41253/G) से तुलना की जाती है: 3 बीम-चौड़ाइयों के भीतर दिन लाल रंग से, 6 के भीतर नारंगी से चिह्नित होता है। शोर में वास्तविक वृद्धि का अनुमान सौर शोर टैब में होता है।",
                 "## ध्रुवीय और ध्रुवीय-ज्योति अवशोषण",
                 "हर स्टेशन का भूचुंबकीय अक्षांश IGRF-14 के केंद्रित द्विध्रुव (2025 का भूचुंबकीय उत्तरी ध्रुव 80.8° N, 72.8° W) से गणना किया जाता है: sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)। ध्रुवीय वृत्तों के पार (|φ| ≥ 66.56°) या |φm| > 75° वाला स्टेशन ध्रुवीय टोपी में है (संभावित PCA); 60° ≤ |φm| ≤ 75° होने पर वह ध्रुवीय-ज्योति क्षेत्र में है। लोकेटर बदलने पर चेतावनी दिखती है और मुख्य स्क्रीन पर बनी रहती है।",
-                "## टैब, लक्ष्य मानचित्र और DEBUG FORMULE",
-                "टैब दो स्तरों (समूह और समूह के टैब) में व्यवस्थित हैं, जिन्हें प्रोग्राम पृष्ठों के ऊपर बनाता है। लक्ष्य मानचित्र स्थानीय आकाश को मानचित्र पर प्रक्षेपित करता है (क्षितिज = बाहरी वृत्त, शिरोबिंदु = केंद्र, त्रिज्या 90° - उन्नयन के अनुपात में) और सीमाओं से बाहर के क्षेत्रों को धुंधला कर सकता है; आकाश दृश्य में वही क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके होते हैं। DEBUG FORMULE टैब EME बजट और सौर शोर की पूरी गणना को चरण-दर-चरण, सूत्रों, रखे गए मानों और परिणामों के साथ दोहराता है।"
+                "## टैब, लक्ष्य मानचित्र और सूत्र डिबग",
+                "टैब दो स्तरों (समूह और समूह के टैब) में व्यवस्थित हैं, जिन्हें प्रोग्राम पृष्ठों के ऊपर बनाता है। लक्ष्य मानचित्र स्थानीय आकाश को मानचित्र पर प्रक्षेपित करता है (क्षितिज = बाहरी वृत्त, शिरोबिंदु = केंद्र, त्रिज्या 90° - उन्नयन के अनुपात में) और सीमाओं से बाहर के क्षेत्रों को धुंधला कर सकता है; आकाश दृश्य में वही क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके होते हैं। सूत्र डिबग टैब EME बजट और सौर शोर की पूरी गणना को चरण-दर-चरण, सूत्रों, रखे गए मानों और परिणामों के साथ दोहराता है।"
             };
             elenchi["hi"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, दूसरा संस्करण: चंद्रमा, सूर्य, न्यूटेशन, लंबन, नाक्षत्र समय।",
@@ -38657,8 +38891,8 @@ namespace LunaCalc
                 "거리와 Dgrd 탭에서는 날마다 달이 지평선 위에 있는 유효 시간 동안 태양과 달 사이의 최소 각거리를 계산하고, 이득에서 추정한 수신 빔폭 θ ≈ √(41253/G)와 비교합니다. 빔폭 3배 이내이면 빨강, 6배 이내이면 주황으로 표시합니다. 실제 잡음 증가는 태양 잡음 탭에서 추정합니다.",
                 "## 극관 흡수와 오로라 흡수",
                 "각 국의 지자기 위도는 IGRF-14 중심 쌍극자(2025년 지자기 북극 80.8° N, 72.8° W)로 계산합니다: sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). 극권 너머(|φ| ≥ 66.56°)이거나 |φm| > 75°인 국은 극관 지역(PCA 가능), 60° ≤ |φm| ≤ 75°이면 오로라대에 있습니다. 경고는 로케이터를 바꿀 때 나타나고 주 화면에 남습니다.",
-                "## 탭, 지향 지도와 DEBUG FORMULE",
-                "탭은 두 단계(그룹과 그룹 안의 탭)로 묶여 있으며 프로그램이 페이지 위에 그립니다. 지향 지도는 국소 하늘을 지도 위에 투영하고(지평선 = 바깥 원, 천정 = 중심, 반지름은 90° - 앙각에 비례) 제한 밖 영역을 흐리게 할 수 있습니다. 하늘 보기에서는 같은 영역이 연회색 대각선으로 덮입니다. DEBUG FORMULE 탭은 EME 링크 버짓과 태양 잡음의 전체 계산을 공식, 대입한 값, 결과와 함께 단계별로 보여 줍니다."
+                "## 탭, 지향 지도와 수식 디버그",
+                "탭은 두 단계(그룹과 그룹 안의 탭)로 묶여 있으며 프로그램이 페이지 위에 그립니다. 지향 지도는 국소 하늘을 지도 위에 투영하고(지평선 = 바깥 원, 천정 = 중심, 반지름은 90° - 앙각에 비례) 제한 밖 영역을 흐리게 할 수 있습니다. 하늘 보기에서는 같은 영역이 연회색 대각선으로 덮입니다. 수식 디버그 탭은 EME 링크 버짓과 태양 잡음의 전체 계산을 공식, 대입한 값, 결과와 함께 단계별로 보여 줍니다."
             };
             elenchi["ko"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms 제2판: 달, 태양, 장동, 시차, 항성시.",
@@ -38730,8 +38964,8 @@ namespace LunaCalc
                 "Untuk setiap hari di tab Jarak dan Dgrd, jarak sudut minimum antara Matahari dan Bulan dihitung pada jam-jam berguna dengan Bulan di atas cakrawala dan dibandingkan dengan lebar berkas penerimaan yang diperkirakan dari gain, θ ≈ √(41253/G): dalam 3 lebar berkas hari itu ditandai merah, dalam 6 oranye. Kenaikan derau itu sendiri diperkirakan di tab Derau matahari.",
                 "## Penyerapan kutub dan aurora",
                 "Lintang geomagnetik setiap stasiun dihitung dengan dipol terpusat IGRF-14 (kutub utara geomagnetik 2025 di 80,8° LU, 72,8° BB): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Stasiun di luar lingkaran kutub (|φ| ≥ 66,56°) atau dengan |φm| > 75° berada di tudung kutub (kemungkinan PCA); dengan 60° ≤ |φm| ≤ 75° berada di zona aurora. Peringatan muncul ketika lokator diubah dan tetap tampil di layar utama.",
-                "## Tab, Peta pengarahan dan DEBUG FORMULE",
-                "Tab dikelompokkan dalam dua tingkat (kelompok dan tab dalam kelompok), digambar oleh program di atas halaman. Peta pengarahan memproyeksikan langit lokal ke peta (cakrawala = lingkaran luar, zenit = pusat, jari-jari sebanding dengan 90° - elevasi) dan dapat mengaburkan zona di luar batas; di Kubah langit zona yang sama ditutupi garis diagonal abu-abu muda. Tab DEBUG FORMULE mengulang langkah demi langkah seluruh perhitungan Anggaran EME dan Derau matahari, dengan rumus, nilai yang dimasukkan dan hasilnya."
+                "## Tab, Peta pengarahan dan DEBUG RUMUS",
+                "Tab dikelompokkan dalam dua tingkat (kelompok dan tab dalam kelompok), digambar oleh program di atas halaman. Peta pengarahan memproyeksikan langit lokal ke peta (cakrawala = lingkaran luar, zenit = pusat, jari-jari sebanding dengan 90° - elevasi) dan dapat mengaburkan zona di luar batas; di Kubah langit zona yang sama ditutupi garis diagonal abu-abu muda. Tab DEBUG RUMUS mengulang langkah demi langkah seluruh perhitungan Anggaran EME dan Derau matahari, dengan rumus, nilai yang dimasukkan dan hasilnya."
             };
             elenchi["id"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, edisi ke-2: Bulan, Matahari, nutasi, paralaks, waktu sideris.",
@@ -38803,8 +39037,8 @@ namespace LunaCalc
                 "Для каждого дня вкладки «Расстояние и Dgrd» вычисляется минимальное угловое расстояние между Солнцем и Луной в полезные часы с Луной над горизонтом и сравнивается с шириной приёмного луча, оценённой по усилению, θ ≈ √(41253/G): в пределах 3 ширин луча день отмечается красным, в пределах 6 — оранжевым. Само увеличение шума оценивается на вкладке «Шум Солнца».",
                 "## Полярное и авроральное поглощение",
                 "Геомагнитная широта каждой станции вычисляется по центральному диполю IGRF-14 (северный геомагнитный полюс 2025 г. на 80,8° с. ш., 72,8° з. д.): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Станция за полярным кругом (|φ| ≥ 66,56°) или с |φm| > 75° находится в полярной шапке (возможен PCA); при 60° ≤ |φm| ≤ 75° — в авроральной зоне. Предупреждение появляется при смене локатора и остаётся на главном экране.",
-                "## Вкладки, Карта наведения и DEBUG FORMULE",
-                "Вкладки сгруппированы в два уровня (группы и вкладки группы), которые программа рисует над страницами. Карта наведения проецирует местное небо на карту (горизонт = внешний круг, зенит = центр, радиус пропорционален 90° - угол места) и может размывать зоны вне ограничений; на Небесном своде те же зоны покрыты светло-серыми диагональными линиями. Вкладка DEBUG FORMULE шаг за шагом повторяет весь расчёт Бюджета EME и Шума Солнца, с формулами, подставленными значениями и результатами."
+                "## Вкладки, Карта наведения и ОТЛАДКА ФОРМУЛ",
+                "Вкладки сгруппированы в два уровня (группы и вкладки группы), которые программа рисует над страницами. Карта наведения проецирует местное небо на карту (горизонт = внешний круг, зенит = центр, радиус пропорционален 90° - угол места) и может размывать зоны вне ограничений; на Небесном своде те же зоны покрыты светло-серыми диагональными линиями. Вкладка ОТЛАДКА ФОРМУЛ шаг за шагом повторяет весь расчёт Бюджета EME и Шума Солнца, с формулами, подставленными значениями и результатами."
             };
             elenchi["ru"]["C5"] = new string[] {
                 "• Жан Меёс, Astronomical Algorithms, 2-е издание: Луна, Солнце, нутация, параллакс, звёздное время.",
@@ -38876,8 +39110,8 @@ namespace LunaCalc
                 "Для кожного дня вкладки «Відстань і Dgrd» обчислюється мінімальна кутова відстань між Сонцем і Місяцем у корисні години з Місяцем над горизонтом і порівнюється з шириною приймального променя, оціненою за підсиленням, θ ≈ √(41253/G): у межах 3 ширин променя день позначається червоним, у межах 6 — помаранчевим. Саме зростання шуму оцінюється на вкладці «Шум Сонця».",
                 "## Полярне та авроральне поглинання",
                 "Геомагнітна широта кожної станції обчислюється за центральним диполем IGRF-14 (північний геомагнітний полюс 2025 р. на 80,8° пн. ш., 72,8° зх. д.): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Станція за полярним колом (|φ| ≥ 66,56°) або з |φm| > 75° перебуває в полярній шапці (можливий PCA); за 60° ≤ |φm| ≤ 75° — в авроральній зоні. Попередження з'являється під час зміни локатора і залишається на головному екрані.",
-                "## Вкладки, Мапа наведення і DEBUG FORMULE",
-                "Вкладки згруповано у два рівні (групи і вкладки групи), які програма малює над сторінками. Мапа наведення проєктує місцеве небо на мапу (горизонт = зовнішнє коло, зеніт = центр, радіус пропорційний 90° - кут місця) і може розмивати зони поза межами; на Небесному склепінні ті самі зони вкриті світло-сірими діагональними лініями. Вкладка DEBUG FORMULE крок за кроком повторює весь розрахунок Бюджету EME і Шуму Сонця, з формулами, підставленими значеннями і результатами."
+                "## Вкладки, Мапа наведення і НАЛАГОДЖЕННЯ ФОРМУЛ",
+                "Вкладки згруповано у два рівні (групи і вкладки групи), які програма малює над сторінками. Мапа наведення проєктує місцеве небо на мапу (горизонт = зовнішнє коло, зеніт = центр, радіус пропорційний 90° - кут місця) і може розмивати зони поза межами; на Небесному склепінні ті самі зони вкриті світло-сірими діагональними лініями. Вкладка НАЛАГОДЖЕННЯ ФОРМУЛ крок за кроком повторює весь розрахунок Бюджету EME і Шуму Сонця, з формулами, підставленими значеннями і результатами."
             };
             elenchi["uk"]["C5"] = new string[] {
                 "• Жан Меєс, Astronomical Algorithms, 2-ге видання: Місяць, Сонце, нутація, паралакс, зоряний час.",
@@ -38949,8 +39183,8 @@ namespace LunaCalc
                 "Vir elke dag van die oortjie Afstand en Dgrd word die kleinste hoekafstand tussen Son en Maan oor die bruikbare ure met die Maan bo die horison bereken en vergelyk met die ontvangsbundelwydte wat uit die wins geskat word, θ ≈ √(41253/G): binne 3 bundelwydtes word die dag rooi gemerk, binne 6 oranje. Die werklike geraastoename word in die oortjie Songeraas geskat.",
                 "## Pool- en aurora-absorpsie",
                 "Die geomagnetiese breedte van elke stasie word bereken met die gesentreerde dipool van IGRF-14 (geomagnetiese noordpool 2025 op 80,8° N, 72,8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). 'n Stasie buite die poolsirkels (|φ| ≥ 66,56°) of met |φm| > 75° is in die poolkap (moontlike PCA); met 60° ≤ |φm| ≤ 75° is dit in die aurorasone. Die waarskuwing verskyn wanneer 'n locator verander word en bly op die hoofskerm.",
-                "## Oortjies, Rigkaart en DEBUG FORMULE",
-                "Die oortjies is op twee vlakke gegroepeer (groepe en oortjies van die groep), deur die program bo die bladsye geteken. Die Rigkaart projekteer die plaaslike lug op die kaart (horison = buitenste sirkel, senit = middel, radius eweredig aan 90° - elevasie) en kan die sones buite die grense vervaag; in die Lugaansig is dieselfde sones met liggrys skuinslyne bedek. Die oortjie DEBUG FORMULE herhaal stap vir stap die hele berekening van die EME-begroting en die Songeraas, met die formules, die ingevulde waardes en die uitslae."
+                "## Oortjies, Rigkaart en FORMULE-ONTFOUTING",
+                "Die oortjies is op twee vlakke gegroepeer (groepe en oortjies van die groep), deur die program bo die bladsye geteken. Die Rigkaart projekteer die plaaslike lug op die kaart (horison = buitenste sirkel, senit = middel, radius eweredig aan 90° - elevasie) en kan die sones buite die grense vervaag; in die Lugaansig is dieselfde sones met liggrys skuinslyne bedek. Die oortjie FORMULE-ONTFOUTING herhaal stap vir stap die hele berekening van die EME-begroting en die Songeraas, met die formules, die ingevulde waardes en die uitslae."
             };
             elenchi["af"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2de uitgawe: Maan, Son, nutasie, parallaks, sterretyd.",
@@ -40124,7 +40358,44 @@ namespace LunaCalc
             for (int j = 0; j < 180; j++)
                 for (int i = 0; i < 360; i++)
                     b.SetPixel(i, j, MainForm.Spettro(CieloGsm.Tsky(360 - i - 0.5, 90 - j - 0.5, 144), lo, hi));
-            return b;
+            return Sfoca(b, 25);
+        }
+
+        // Sfocatura dello sfondo (percentuale: 100 % = raggio di 16 pixel sull'immagine 360 × 180): tre passate di media
+        // mobile orizzontale (che gira attorno, come la sfera celeste) e verticale, quasi una gaussiana
+        public static Bitmap Sfoca(Bitmap src, int percento)
+        {
+            int r = (int)Math.Round(16 * percento / 100.0);
+            if (r < 1) return src;
+            int w = src.Width, h = src.Height;
+            int[] px = new int[w * h * 3];
+            for (int j = 0; j < h; j++)
+                for (int i = 0; i < w; i++) { Color c = src.GetPixel(i, j); int k = (j * w + i) * 3; px[k] = c.R; px[k + 1] = c.G; px[k + 2] = c.B; }
+            int[] tmp = new int[px.Length];
+            for (int pass = 0; pass < 3; pass++)
+            {
+                for (int j = 0; j < h; j++)
+                    for (int i = 0; i < w; i++)
+                        for (int ch = 0; ch < 3; ch++)
+                        {
+                            int sum = 0;
+                            for (int d = -r; d <= r; d++) sum += px[(j * w + ((i + d) % w + w) % w) * 3 + ch];
+                            tmp[(j * w + i) * 3 + ch] = sum / (2 * r + 1);
+                        }
+                for (int j = 0; j < h; j++)
+                    for (int i = 0; i < w; i++)
+                        for (int ch = 0; ch < 3; ch++)
+                        {
+                            int sum = 0;
+                            for (int d = -r; d <= r; d++) sum += tmp[(Math.Max(0, Math.Min(h - 1, j + d)) * w + i) * 3 + ch];
+                            px[(j * w + i) * 3 + ch] = sum / (2 * r + 1);
+                        }
+            }
+            Bitmap o = new Bitmap(w, h);
+            for (int j = 0; j < h; j++)
+                for (int i = 0; i < w; i++) { int k = (j * w + i) * 3; o.SetPixel(i, j, Color.FromArgb(px[k], px[k + 1], px[k + 2])); }
+            src.Dispose();
+            return o;
         }
 
         public static Image LogoAri()
@@ -40211,6 +40482,7 @@ namespace LunaCalc
                     double ra = 360 - i - 0.5, dec = 90 - j - 0.5;
                     cielo.SetPixel(i, j, MainForm.Spettro(CieloGsm.Tsky(ra, dec, 144), lo, hi));
                 }
+            cielo = Sfoca(cielo, 25);   // sfondo sfocato del 25 %
             try
             {
                 using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(LUNA_JPG)))
@@ -43034,7 +43306,7 @@ namespace LunaCalc
                 "@fine",
                 "For the best configuration, with the values substituted:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **In practice.** The preamplifier should be mounted at the antenna, before the feed cable and right after the coaxial relay (which must protect it during transmission with a sequencer). Its gain must be high enough to make the cable and the radio negligible: as a rule, at least 10 dB more than the sum of the cable loss and the radio noise figure (in the example 1.6 + 16 ≈ 18 dB → with 20 dB the radio still weighs 1.7 dB; with the internal preamp on it weighs only 0.05 dB). Too much gain, however, reduces the dynamic range of the radio: with a good LNA at the antenna it is often better to keep the internal preamp off and choose a 20 – 26 dB LNA. In the EME budget these choices are made in the diagram of the receiving installation, and the DEBUG FORMULE tab shows the calculation step by step.",
+                ">! **In practice.** The preamplifier should be mounted at the antenna, before the feed cable and right after the coaxial relay (which must protect it during transmission with a sequencer). Its gain must be high enough to make the cable and the radio negligible: as a rule, at least 10 dB more than the sum of the cable loss and the radio noise figure (in the example 1.6 + 16 ≈ 18 dB → with 20 dB the radio still weighs 1.7 dB; with the internal preamp on it weighs only 0.05 dB). Too much gain, however, reduces the dynamic range of the radio: with a good LNA at the antenna it is often better to keep the internal preamp off and choose a 20 – 26 dB LNA. In the EME budget these choices are made in the diagram of the receiving installation, and the FORMULA DEBUG tab shows the calculation step by step.",
                 "##+ The transverter (optional)",
                 "With a transverter the radio works at an intermediate frequency (usually 28 MHz for 144 MHz) and the transverter becomes the stage that counts for noise: it enters the Friis formula after the feed cable, and the radio that follows it weighs less the more the transverter gains.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -43506,7 +43778,7 @@ namespace LunaCalc
                 "@fine",
                 "Für die beste Konfiguration, mit eingesetzten Werten:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **In der Praxis.** Der Vorverstärker sollte an der Antenne montiert werden, vor der Speiseleitung und direkt nach dem Koaxrelais (das ihn beim Senden mit einem Sequenzer schützen muss). Seine Verstärkung muss hoch genug sein, damit Kabel und Funkgerät vernachlässigbar werden: als Faustregel mindestens 10 dB mehr als die Summe aus Kabeldämpfung und Rauschzahl des Funkgeräts (im Beispiel 1,6 + 16 ≈ 18 dB → mit 20 dB fällt das Funkgerät noch mit 1,7 dB ins Gewicht; mit eingeschaltetem internem Vorverstärker nur mit 0,05 dB). Zu viel Verstärkung verringert jedoch den Dynamikbereich des Funkgeräts: Mit einem guten LNA an der Antenne ist es oft besser, den internen Vorverstärker auszuschalten und einen LNA mit 20 – 26 dB zu wählen. Im EME-Budget werden diese Entscheidungen im Schema der Empfangsanlage getroffen, und der Reiter DEBUG FORMULE zeigt die Berechnung Schritt für Schritt.",
+                ">! **In der Praxis.** Der Vorverstärker sollte an der Antenne montiert werden, vor der Speiseleitung und direkt nach dem Koaxrelais (das ihn beim Senden mit einem Sequenzer schützen muss). Seine Verstärkung muss hoch genug sein, damit Kabel und Funkgerät vernachlässigbar werden: als Faustregel mindestens 10 dB mehr als die Summe aus Kabeldämpfung und Rauschzahl des Funkgeräts (im Beispiel 1,6 + 16 ≈ 18 dB → mit 20 dB fällt das Funkgerät noch mit 1,7 dB ins Gewicht; mit eingeschaltetem internem Vorverstärker nur mit 0,05 dB). Zu viel Verstärkung verringert jedoch den Dynamikbereich des Funkgeräts: Mit einem guten LNA an der Antenne ist es oft besser, den internen Vorverstärker auszuschalten und einen LNA mit 20 – 26 dB zu wählen. Im EME-Budget werden diese Entscheidungen im Schema der Empfangsanlage getroffen, und der Reiter FORMEL-DEBUG zeigt die Berechnung Schritt für Schritt.",
                 "##+ Der Transverter (optional)",
                 "Mit einem Transverter arbeitet das Funkgerät auf einer Zwischenfrequenz (meist 28 MHz für 144 MHz), und der Transverter wird zur für das Rauschen maßgeblichen Stufe: Er geht nach der Speiseleitung in die Friis-Formel ein, und das nachfolgende Funkgerät fällt umso weniger ins Gewicht, je mehr der Transverter verstärkt.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -43978,7 +44250,7 @@ namespace LunaCalc
                 "@fine",
                 "Pour la meilleure configuration, avec les valeurs remplacées :",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **En pratique.** Le préampli doit être monté à l'antenne, avant le câble de descente et juste après le relais coaxial (qui doit le protéger pendant l'émission grâce à un séquenceur). Son gain doit être assez élevé pour rendre le câble et le poste négligeables : en règle générale, au moins 10 dB de plus que la somme de l'affaiblissement du câble et du facteur de bruit du poste (dans l'exemple 1,6 + 16 ≈ 18 dB → avec 20 dB le poste pèse encore 1,7 dB ; avec le préampli interne en service il ne pèse que 0,05 dB). Un gain trop élevé réduit toutefois la dynamique du poste : avec un bon LNA à l'antenne il vaut souvent mieux laisser le préampli interne hors service et choisir un LNA de 20 – 26 dB. Dans le bilan EME ces choix se font dans le schéma de l'installation de réception, et l'onglet DEBUG FORMULE montre le calcul pas à pas.",
+                ">! **En pratique.** Le préampli doit être monté à l'antenne, avant le câble de descente et juste après le relais coaxial (qui doit le protéger pendant l'émission grâce à un séquenceur). Son gain doit être assez élevé pour rendre le câble et le poste négligeables : en règle générale, au moins 10 dB de plus que la somme de l'affaiblissement du câble et du facteur de bruit du poste (dans l'exemple 1,6 + 16 ≈ 18 dB → avec 20 dB le poste pèse encore 1,7 dB ; avec le préampli interne en service il ne pèse que 0,05 dB). Un gain trop élevé réduit toutefois la dynamique du poste : avec un bon LNA à l'antenne il vaut souvent mieux laisser le préampli interne hors service et choisir un LNA de 20 – 26 dB. Dans le bilan EME ces choix se font dans le schéma de l'installation de réception, et l'onglet DÉBOGAGE DES FORMULES montre le calcul pas à pas.",
                 "##+ Le transverter (facultatif)",
                 "Avec un transverter le poste travaille sur une fréquence intermédiaire (généralement 28 MHz pour 144 MHz) et le transverter devient l'étage qui compte pour le bruit : il entre dans la formule de Friis après le câble de descente, et le poste qui le suit pèse d'autant moins que le transverter a de gain.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -44450,7 +44722,7 @@ namespace LunaCalc
                 "@fine",
                 "Para la mejor configuración, sustituyendo los valores:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **En la práctica.** El preamplificador debe montarse en la antena, antes del cable de bajada y justo después del relé coaxial (que debe protegerlo durante la transmisión con un secuenciador). Su ganancia debe ser lo bastante alta para que el cable y la radio sean despreciables: como regla, al menos 10 dB más que la suma de la pérdida del cable y la figura de ruido de la radio (en el ejemplo 1,6 + 16 ≈ 18 dB → con 20 dB la radio pesa aún 1,7 dB; con el preamplificador interno activado pesa solo 0,05 dB). Sin embargo, demasiada ganancia reduce el rango dinámico de la radio: con un buen LNA en la antena a menudo es mejor mantener desactivado el preamplificador interno y elegir un LNA de 20 – 26 dB. En el balance EME estas elecciones se hacen en el esquema de la instalación receptora, y la pestaña DEBUG FORMULE muestra el cálculo paso a paso.",
+                ">! **En la práctica.** El preamplificador debe montarse en la antena, antes del cable de bajada y justo después del relé coaxial (que debe protegerlo durante la transmisión con un secuenciador). Su ganancia debe ser lo bastante alta para que el cable y la radio sean despreciables: como regla, al menos 10 dB más que la suma de la pérdida del cable y la figura de ruido de la radio (en el ejemplo 1,6 + 16 ≈ 18 dB → con 20 dB la radio pesa aún 1,7 dB; con el preamplificador interno activado pesa solo 0,05 dB). Sin embargo, demasiada ganancia reduce el rango dinámico de la radio: con un buen LNA en la antena a menudo es mejor mantener desactivado el preamplificador interno y elegir un LNA de 20 – 26 dB. En el balance EME estas elecciones se hacen en el esquema de la instalación receptora, y la pestaña DEPURACIÓN DE FÓRMULAS muestra el cálculo paso a paso.",
                 "##+ El transverter (opcional)",
                 "Con un transverter la radio trabaja en una frecuencia intermedia (normalmente 28 MHz para 144 MHz) y el transverter pasa a ser la etapa que cuenta para el ruido: entra en la fórmula de Friis después del cable de bajada, y la radio que le sigue pesa tanto menos cuanto más gana el transverter.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -44922,7 +45194,7 @@ namespace LunaCalc
                 "@fine",
                 "Para a melhor configuração, com os valores substituídos:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **Na prática.** O pré-amplificador deve ser montado na antena, antes do cabo de descida e logo a seguir ao relé coaxial (que deve protegê-lo durante a transmissão com um sequenciador). O seu ganho deve ser suficientemente elevado para tornar desprezáveis o cabo e o rádio: como regra, pelo menos 10 dB acima da soma da perda do cabo e da figura de ruído do rádio (no exemplo 1,6 + 16 ≈ 18 dB → com 20 dB o rádio ainda pesa 1,7 dB; com o pré-amplificador interno ligado pesa apenas 0,05 dB). Ganho a mais, porém, reduz a gama dinâmica do rádio: com um bom LNA na antena é muitas vezes preferível manter desligado o pré-amplificador interno e escolher um LNA de 20 – 26 dB. No budget EME estas escolhas fazem-se no esquema da instalação de receção, e o separador DEBUG FORMULE mostra o cálculo passo a passo.",
+                ">! **Na prática.** O pré-amplificador deve ser montado na antena, antes do cabo de descida e logo a seguir ao relé coaxial (que deve protegê-lo durante a transmissão com um sequenciador). O seu ganho deve ser suficientemente elevado para tornar desprezáveis o cabo e o rádio: como regra, pelo menos 10 dB acima da soma da perda do cabo e da figura de ruído do rádio (no exemplo 1,6 + 16 ≈ 18 dB → com 20 dB o rádio ainda pesa 1,7 dB; com o pré-amplificador interno ligado pesa apenas 0,05 dB). Ganho a mais, porém, reduz a gama dinâmica do rádio: com um bom LNA na antena é muitas vezes preferível manter desligado o pré-amplificador interno e escolher um LNA de 20 – 26 dB. No budget EME estas escolhas fazem-se no esquema da instalação de receção, e o separador DEPURAÇÃO DE FÓRMULAS mostra o cálculo passo a passo.",
                 "##+ O transverter (opcional)",
                 "Com um transverter o rádio trabalha numa frequência intermédia (normalmente 28 MHz para 144 MHz) e o transverter passa a ser o andar que conta para o ruído: entra na fórmula de Friis depois do cabo de descida, e o rádio que se lhe segue pesa tanto menos quanto mais o transverter ganha.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -45394,7 +45666,7 @@ namespace LunaCalc
                 "@fine",
                 "对于最佳配置，代入数值后：",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **实际做法。** 前置放大器应安装在天线端，位于馈线电缆之前、紧接同轴继电器之后（发射时必须用时序器保护它）。其增益必须足够高，使电缆和电台的影响可以忽略：通常应比电缆损耗与电台噪声系数之和至少高 10 dB（例中 1.6 + 16 ≈ 18 dB → 增益为 20 dB 时电台仍占 1.7 dB；若开启内置前置放大器，则只占 0.05 dB）。但增益过高会降低电台的动态范围：天线端有优质 LNA 时，通常最好关闭内置前置放大器，并选用 20 – 26 dB 的 LNA。在 EME 链路预算中，这些选择在接收系统框图中设置，DEBUG FORMULE 选项卡会逐步显示计算过程。",
+                ">! **实际做法。** 前置放大器应安装在天线端，位于馈线电缆之前、紧接同轴继电器之后（发射时必须用时序器保护它）。其增益必须足够高，使电缆和电台的影响可以忽略：通常应比电缆损耗与电台噪声系数之和至少高 10 dB（例中 1.6 + 16 ≈ 18 dB → 增益为 20 dB 时电台仍占 1.7 dB；若开启内置前置放大器，则只占 0.05 dB）。但增益过高会降低电台的动态范围：天线端有优质 LNA 时，通常最好关闭内置前置放大器，并选用 20 – 26 dB 的 LNA。在 EME 链路预算中，这些选择在接收系统框图中设置，公式调试 选项卡会逐步显示计算过程。",
                 "##+ 收发转换器（transverter，可选）",
                 "使用收发转换器时，电台工作在中频（144 MHz 通常为 28 MHz），收发转换器成为决定噪声的那一级：它在 Friis 公式中位于馈线电缆之后，其后的电台的影响随收发转换器增益的增大而减小。",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -45866,7 +46138,7 @@ namespace LunaCalc
                 "@fine",
                 "最良の構成について、数値を代入すると：",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **実際には。** プリアンプはアンテナ側、給電ケーブルの前で同軸リレーの直後に取り付けます（送信中はシーケンサーを使って同軸リレーでプリアンプを保護する必要があります）。その利得はケーブルと無線機の影響を無視できるほど大きくなければなりません。目安として、ケーブル損失と無線機の雑音指数の合計より少なくとも10 dB大きくします（例では1.6 + 16 ≈ 18 dB → 20 dBでは無線機の影響はまだ1.7 dB、内蔵プリアンプONならわずか0.05 dB）。ただし利得が大きすぎると無線機のダイナミックレンジが低下します。アンテナ直下に良いLNAがある場合は、内蔵プリアンプをOFFにして20～26 dBのLNAを選ぶ方がよいことが多いです。EMEバジェットでは、これらの選択は受信設備の構成図で行い、DEBUG FORMULEタブで計算の各段階を確認できます。",
+                ">! **実際には。** プリアンプはアンテナ側、給電ケーブルの前で同軸リレーの直後に取り付けます（送信中はシーケンサーを使って同軸リレーでプリアンプを保護する必要があります）。その利得はケーブルと無線機の影響を無視できるほど大きくなければなりません。目安として、ケーブル損失と無線機の雑音指数の合計より少なくとも10 dB大きくします（例では1.6 + 16 ≈ 18 dB → 20 dBでは無線機の影響はまだ1.7 dB、内蔵プリアンプONならわずか0.05 dB）。ただし利得が大きすぎると無線機のダイナミックレンジが低下します。アンテナ直下に良いLNAがある場合は、内蔵プリアンプをOFFにして20～26 dBのLNAを選ぶ方がよいことが多いです。EMEバジェットでは、これらの選択は受信設備の構成図で行い、数式デバッグタブで計算の各段階を確認できます。",
                 "##+ トランスバーター（オプション）",
                 "トランスバーターを使うと、無線機は中間周波数（144 MHzでは通常28 MHz）で動作し、雑音に関してはトランスバーターが重要な段になります。トランスバーターはFriisの式で給電ケーブルの後に入り、その後に続く無線機の影響はトランスバーターの利得が大きいほど小さくなります。",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -46338,7 +46610,7 @@ namespace LunaCalc
                 "@fine",
                 "सबसे अच्छे कॉन्फ़िगरेशन के लिए, मान रखकर:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **व्यवहार में।** प्रीएम्प्लीफ़ायर एंटेना पर, फ़ीड केबल से पहले और कोएक्सियल रिले के ठीक बाद लगाया जाना चाहिए (जिसे सीक्वेंसर के साथ ट्रांसमिशन के दौरान उसकी रक्षा करनी चाहिए)। उसका गेन इतना अधिक होना चाहिए कि केबल और रेडियो नगण्य हो जाएँ: नियम के तौर पर, केबल लॉस और रेडियो नॉइज़ फ़िगर के योग से कम से कम 10 dB अधिक (उदाहरण में 1.6 + 16 ≈ 18 dB → 20 dB के साथ रेडियो का असर अब भी 1.7 dB है; आंतरिक प्रीएम्प चालू होने पर केवल 0.05 dB)। फिर भी बहुत अधिक गेन रेडियो की डायनैमिक रेंज घटाता है: एंटेना पर अच्छे LNA के साथ अक्सर आंतरिक प्रीएम्प बंद रखना और 20 – 26 dB का LNA चुनना बेहतर होता है। EME बजट में ये चुनाव रिसीविंग इंस्टॉलेशन के आरेख में किए जाते हैं, और DEBUG FORMULE टैब गणना चरण-दर-चरण दिखाता है।",
+                ">! **व्यवहार में।** प्रीएम्प्लीफ़ायर एंटेना पर, फ़ीड केबल से पहले और कोएक्सियल रिले के ठीक बाद लगाया जाना चाहिए (जिसे सीक्वेंसर के साथ ट्रांसमिशन के दौरान उसकी रक्षा करनी चाहिए)। उसका गेन इतना अधिक होना चाहिए कि केबल और रेडियो नगण्य हो जाएँ: नियम के तौर पर, केबल लॉस और रेडियो नॉइज़ फ़िगर के योग से कम से कम 10 dB अधिक (उदाहरण में 1.6 + 16 ≈ 18 dB → 20 dB के साथ रेडियो का असर अब भी 1.7 dB है; आंतरिक प्रीएम्प चालू होने पर केवल 0.05 dB)। फिर भी बहुत अधिक गेन रेडियो की डायनैमिक रेंज घटाता है: एंटेना पर अच्छे LNA के साथ अक्सर आंतरिक प्रीएम्प बंद रखना और 20 – 26 dB का LNA चुनना बेहतर होता है। EME बजट में ये चुनाव रिसीविंग इंस्टॉलेशन के आरेख में किए जाते हैं, और सूत्र डिबग टैब गणना चरण-दर-चरण दिखाता है।",
                 "##+ ट्रांसवर्टर (वैकल्पिक)",
                 "ट्रांसवर्टर के साथ रेडियो एक इंटरमीडिएट फ़्रीक्वेंसी (144 MHz के लिए आमतौर पर 28 MHz) पर काम करता है और ट्रांसवर्टर नॉइज़ के लिए निर्णायक स्टेज बन जाता है: यह फ़ीड केबल के बाद Friis सूत्र में आता है, और उसके बाद आने वाले रेडियो का असर उतना ही कम होता है जितना अधिक ट्रांसवर्टर का गेन होता है।",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -46810,7 +47082,7 @@ namespace LunaCalc
                 "@fine",
                 "최적 구성에 값을 대입하면:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **실제로는.** 프리앰프는 안테나 쪽, 급전 케이블 앞, 동축 릴레이 바로 뒤에 설치해야 합니다(송신 중에는 시퀀서로 동축 릴레이가 프리앰프를 보호해야 합니다). 이득은 케이블과 무선기를 무시할 수 있을 만큼 높아야 합니다. 대체로 케이블 손실과 무선기 잡음 지수의 합보다 최소 10 dB 더 커야 합니다(예에서 1.6 + 16 ≈ 18 dB → 20 dB 이득이면 무선기가 아직 1.7 dB 영향을 주고, 내장 프리앰프를 켜면 0.05 dB에 불과합니다). 그러나 이득이 너무 크면 무선기의 다이내믹 레인지가 줄어듭니다. 안테나측에 좋은 LNA가 있다면 내장 프리앰프를 끄고 20~26 dB의 LNA를 고르는 편이 나은 경우가 많습니다. EME 버짓에서는 이러한 선택을 수신 설비 구성도에서 하며, DEBUG FORMULE 탭에서 계산 과정을 단계별로 볼 수 있습니다.",
+                ">! **실제로는.** 프리앰프는 안테나 쪽, 급전 케이블 앞, 동축 릴레이 바로 뒤에 설치해야 합니다(송신 중에는 시퀀서로 동축 릴레이가 프리앰프를 보호해야 합니다). 이득은 케이블과 무선기를 무시할 수 있을 만큼 높아야 합니다. 대체로 케이블 손실과 무선기 잡음 지수의 합보다 최소 10 dB 더 커야 합니다(예에서 1.6 + 16 ≈ 18 dB → 20 dB 이득이면 무선기가 아직 1.7 dB 영향을 주고, 내장 프리앰프를 켜면 0.05 dB에 불과합니다). 그러나 이득이 너무 크면 무선기의 다이내믹 레인지가 줄어듭니다. 안테나측에 좋은 LNA가 있다면 내장 프리앰프를 끄고 20~26 dB의 LNA를 고르는 편이 나은 경우가 많습니다. EME 버짓에서는 이러한 선택을 수신 설비 구성도에서 하며, 수식 디버그 탭에서 계산 과정을 단계별로 볼 수 있습니다.",
                 "##+ 트랜스버터 (선택 사항)",
                 "트랜스버터를 사용하면 무선기는 중간 주파수(144 MHz의 경우 보통 28 MHz)에서 동작하고, 잡음에서 중요한 단은 트랜스버터가 됩니다. 트랜스버터는 Friis 공식에서 급전 케이블 다음에 들어가며, 그 뒤의 무선기는 트랜스버터 이득이 클수록 영향이 작아집니다.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -47282,7 +47554,7 @@ namespace LunaCalc
                 "@fine",
                 "Untuk konfigurasi terbaik, dengan nilai-nilai yang disubstitusikan:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **Dalam praktik.** Praamplifier sebaiknya dipasang di antena, sebelum kabel feed dan tepat setelah relay koaksial (yang harus melindunginya saat memancar dengan sequencer). Penguatannya harus cukup tinggi agar kabel dan radio dapat diabaikan: sebagai aturan, setidaknya 10 dB lebih besar dari jumlah redaman kabel dan angka derau radio (pada contoh 1,6 + 16 ≈ 18 dB → dengan 20 dB radio masih menyumbang 1,7 dB; dengan preamp internal aktif hanya 0,05 dB). Namun penguatan yang terlalu besar mengurangi rentang dinamis radio: dengan LNA yang baik di antena sering kali lebih baik mematikan preamp internal dan memilih LNA 20 – 26 dB. Dalam budget EME pilihan ini dibuat pada diagram instalasi penerima, dan tab DEBUG FORMULE menampilkan perhitungannya langkah demi langkah.",
+                ">! **Dalam praktik.** Praamplifier sebaiknya dipasang di antena, sebelum kabel feed dan tepat setelah relay koaksial (yang harus melindunginya saat memancar dengan sequencer). Penguatannya harus cukup tinggi agar kabel dan radio dapat diabaikan: sebagai aturan, setidaknya 10 dB lebih besar dari jumlah redaman kabel dan angka derau radio (pada contoh 1,6 + 16 ≈ 18 dB → dengan 20 dB radio masih menyumbang 1,7 dB; dengan preamp internal aktif hanya 0,05 dB). Namun penguatan yang terlalu besar mengurangi rentang dinamis radio: dengan LNA yang baik di antena sering kali lebih baik mematikan preamp internal dan memilih LNA 20 – 26 dB. Dalam budget EME pilihan ini dibuat pada diagram instalasi penerima, dan tab DEBUG RUMUS menampilkan perhitungannya langkah demi langkah.",
                 "##+ Transverter (opsional)",
                 "Dengan transverter, radio bekerja pada frekuensi antara (biasanya 28 MHz untuk 144 MHz) dan transverter menjadi tingkat yang menentukan derau: transverter masuk ke rumus Friis setelah kabel feed, dan radio yang mengikutinya semakin kecil pengaruhnya semakin besar penguatan transverter.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -47754,7 +48026,7 @@ namespace LunaCalc
                 "@fine",
                 "Для лучшей конфигурации, с подставленными значениями:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **На практике.** Предусилитель следует устанавливать у антенны, перед фидером и сразу после коаксиального реле (которое должно защищать его во время передачи с помощью секвенсора). Его усиление должно быть достаточно большим, чтобы влияние кабеля и радиостанции стало пренебрежимым: как правило, по крайней мере на 10 dB больше суммы затухания кабеля и коэффициента шума радиостанции (в примере 1,6 + 16 ≈ 18 dB → при 20 dB радиостанция ещё добавляет 1,7 dB; с включённым внутренним предусилителем — всего 0,05 dB). Однако слишком большое усиление уменьшает динамический диапазон радиостанции: с хорошим МШУ у антенны часто лучше держать внутренний предусилитель выключенным и выбрать МШУ с усилением 20 – 26 dB. В бюджете EME этот выбор делается на схеме приёмной установки, а вкладка DEBUG FORMULE показывает расчёт шаг за шагом.",
+                ">! **На практике.** Предусилитель следует устанавливать у антенны, перед фидером и сразу после коаксиального реле (которое должно защищать его во время передачи с помощью секвенсора). Его усиление должно быть достаточно большим, чтобы влияние кабеля и радиостанции стало пренебрежимым: как правило, по крайней мере на 10 dB больше суммы затухания кабеля и коэффициента шума радиостанции (в примере 1,6 + 16 ≈ 18 dB → при 20 dB радиостанция ещё добавляет 1,7 dB; с включённым внутренним предусилителем — всего 0,05 dB). Однако слишком большое усиление уменьшает динамический диапазон радиостанции: с хорошим МШУ у антенны часто лучше держать внутренний предусилитель выключенным и выбрать МШУ с усилением 20 – 26 dB. В бюджете EME этот выбор делается на схеме приёмной установки, а вкладка ОТЛАДКА ФОРМУЛ показывает расчёт шаг за шагом.",
                 "##+ Трансвертер (необязательно)",
                 "С трансвертером радиостанция работает на промежуточной частоте (обычно 28 MHz для 144 MHz), и каскадом, определяющим шум, становится трансвертер: он входит в формулу Фрииса после фидера, а следующая за ним радиостанция влияет тем меньше, чем больше усиление трансвертера.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -48226,7 +48498,7 @@ namespace LunaCalc
                 "@fine",
                 "Для найкращої конфігурації, з підставленими значеннями:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **На практиці.** Передпідсилювач слід встановлювати біля антени, перед фідером і одразу після коаксіального реле (яке має захищати його під час передачі за допомогою секвенсора). Його підсилення має бути досить великим, щоб вплив кабелю й радіостанції став нехтовно малим: як правило, щонайменше на 10 dB більше за суму втрат кабелю і коефіцієнта шуму радіостанції (у прикладі 1,6 + 16 ≈ 18 dB → з 20 dB радіостанція ще додає 1,7 dB; з увімкненим внутрішнім передпідсилювачем — лише 0,05 dB). Проте надмірне підсилення зменшує динамічний діапазон радіостанції: з добрим LNA біля антени часто краще тримати внутрішній передпідсилювач вимкненим і вибрати LNA на 20 – 26 dB. У бюджеті EME ці параметри задаються на схемі приймальної установки, а вкладка DEBUG FORMULE показує розрахунок крок за кроком.",
+                ">! **На практиці.** Передпідсилювач слід встановлювати біля антени, перед фідером і одразу після коаксіального реле (яке має захищати його під час передачі за допомогою секвенсора). Його підсилення має бути досить великим, щоб вплив кабелю й радіостанції став нехтовно малим: як правило, щонайменше на 10 dB більше за суму втрат кабелю і коефіцієнта шуму радіостанції (у прикладі 1,6 + 16 ≈ 18 dB → з 20 dB радіостанція ще додає 1,7 dB; з увімкненим внутрішнім передпідсилювачем — лише 0,05 dB). Проте надмірне підсилення зменшує динамічний діапазон радіостанції: з добрим LNA біля антени часто краще тримати внутрішній передпідсилювач вимкненим і вибрати LNA на 20 – 26 dB. У бюджеті EME ці параметри задаються на схемі приймальної установки, а вкладка НАЛАГОДЖЕННЯ ФОРМУЛ показує розрахунок крок за кроком.",
                 "##+ Трансвертер (необов'язково)",
                 "З трансвертером радіостанція працює на проміжній частоті (зазвичай 28 MHz для 144 MHz), і саме трансвертер стає каскадом, що визначає шум: він входить у формулу Фрііса після фідера, а радіостанція після нього впливає тим менше, чим більше підсилення трансвертера.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -48698,7 +48970,7 @@ namespace LunaCalc
                 "@fine",
                 "Vir die beste konfigurasie, met die waardes ingevul:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **In die praktyk.** Die voorversterker moet by die antenna gemonteer word, voor die voerkabel en direk na die koaksiale relais (wat dit tydens uitsending met 'n sekwenseerder moet beskerm). Sy wins moet hoog genoeg wees om die kabel en die radio weglaatbaar te maak: as reël minstens 10 dB meer as die som van die kabelverlies en die ruissyfer van die radio (in die voorbeeld 1,6 + 16 ≈ 18 dB → met 20 dB weeg die radio nog 1,7 dB; met die interne voorversterker aan weeg dit slegs 0,05 dB). Te veel wins verminder egter die dinamiese bereik van die radio: met 'n goeie LNA by die antenna is dit dikwels beter om die interne voorversterker af te hou en 'n LNA van 20 – 26 dB te kies. In die EME-begroting word hierdie keuses in die diagram van die ontvangsinstallasie gemaak, en die oortjie DEBUG FORMULE toon die berekening stap vir stap.",
+                ">! **In die praktyk.** Die voorversterker moet by die antenna gemonteer word, voor die voerkabel en direk na die koaksiale relais (wat dit tydens uitsending met 'n sekwenseerder moet beskerm). Sy wins moet hoog genoeg wees om die kabel en die radio weglaatbaar te maak: as reël minstens 10 dB meer as die som van die kabelverlies en die ruissyfer van die radio (in die voorbeeld 1,6 + 16 ≈ 18 dB → met 20 dB weeg die radio nog 1,7 dB; met die interne voorversterker aan weeg dit slegs 0,05 dB). Te veel wins verminder egter die dinamiese bereik van die radio: met 'n goeie LNA by die antenna is dit dikwels beter om die interne voorversterker af te hou en 'n LNA van 20 – 26 dB te kies. In die EME-begroting word hierdie keuses in die diagram van die ontvangsinstallasie gemaak, en die oortjie FORMULE-ONTFOUTING toon die berekening stap vir stap.",
                 "##+ Die transverter (opsioneel)",
                 "Met 'n transverter werk die radio op 'n intermediêre frekwensie (gewoonlik 28 MHz vir 144 MHz) en die transverter word die trap wat vir ruis tel: dit kom in die Friis-formule na die voerkabel, en die radio wat daarop volg, weeg minder hoe meer die transverter versterk.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -49170,7 +49442,7 @@ namespace LunaCalc
                 "@fine",
                 "সেরা কনফিগারেশনের জন্য, মানগুলো বসিয়ে:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **ব্যবহারিক ক্ষেত্রে।** প্রিঅ্যাম্পটি অ্যান্টেনায় লাগানো উচিত, ফিড কেবলের আগে এবং কোঅ্যাক্সিয়াল রিলের ঠিক পরে (যা একটি সিকোয়েন্সারের সাহায্যে ট্রান্সমিশনের সময় একে রক্ষা করবে)। এর গেইন এতটা বেশি হতে হবে যাতে কেবল ও রেডিও নগণ্য হয়ে যায়: নিয়ম হিসেবে, কেবলের লস ও রেডিওর নয়েজ ফিগারের যোগফলের চেয়ে অন্তত 10 dB বেশি (উদাহরণে 1.6 + 16 ≈ 18 dB → 20 dB গেইনে রেডিও তখনও 1.7 dB প্রভাব ফেলে; অভ্যন্তরীণ প্রিঅ্যাম্প চালু থাকলে মাত্র 0.05 dB)। তবে অতিরিক্ত গেইন রেডিওর ডায়নামিক রেঞ্জ কমিয়ে দেয়: অ্যান্টেনায় একটি ভালো LNA থাকলে প্রায়ই অভ্যন্তরীণ প্রিঅ্যাম্প বন্ধ রেখে 20 – 26 dB-এর একটি LNA বেছে নেওয়া ভালো। EME বাজেটে এই পছন্দগুলো রিসিভিং ইনস্টলেশনের ডায়াগ্রামে করা হয়, এবং DEBUG FORMULE ট্যাব ধাপে ধাপে হিসাবটি দেখায়।",
+                ">! **ব্যবহারিক ক্ষেত্রে।** প্রিঅ্যাম্পটি অ্যান্টেনায় লাগানো উচিত, ফিড কেবলের আগে এবং কোঅ্যাক্সিয়াল রিলের ঠিক পরে (যা একটি সিকোয়েন্সারের সাহায্যে ট্রান্সমিশনের সময় একে রক্ষা করবে)। এর গেইন এতটা বেশি হতে হবে যাতে কেবল ও রেডিও নগণ্য হয়ে যায়: নিয়ম হিসেবে, কেবলের লস ও রেডিওর নয়েজ ফিগারের যোগফলের চেয়ে অন্তত 10 dB বেশি (উদাহরণে 1.6 + 16 ≈ 18 dB → 20 dB গেইনে রেডিও তখনও 1.7 dB প্রভাব ফেলে; অভ্যন্তরীণ প্রিঅ্যাম্প চালু থাকলে মাত্র 0.05 dB)। তবে অতিরিক্ত গেইন রেডিওর ডায়নামিক রেঞ্জ কমিয়ে দেয়: অ্যান্টেনায় একটি ভালো LNA থাকলে প্রায়ই অভ্যন্তরীণ প্রিঅ্যাম্প বন্ধ রেখে 20 – 26 dB-এর একটি LNA বেছে নেওয়া ভালো। EME বাজেটে এই পছন্দগুলো রিসিভিং ইনস্টলেশনের ডায়াগ্রামে করা হয়, এবং সূত্র ডিবাগ ট্যাব ধাপে ধাপে হিসাবটি দেখায়।",
                 "##+ ট্রান্সভার্টার (ঐচ্ছিক)",
                 "ট্রান্সভার্টার থাকলে রেডিও একটি ইন্টারমিডিয়েট ফ্রিকোয়েন্সিতে কাজ করে (144 MHz-এর জন্য সাধারণত 28 MHz) এবং নয়েজের ক্ষেত্রে ট্রান্সভার্টারই নির্ধারক স্টেজ হয়ে ওঠে: এটি ফিড কেবলের পরে Friis সূত্রে প্রবেশ করে, এবং এর পরের রেডিওটি ট্রান্সভার্টারের গেইন যত বেশি, তত কম প্রভাব ফেলে।",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -49642,7 +49914,7 @@ namespace LunaCalc
                 "@fine",
                 "لأفضل تهيئة، بعد التعويض بالقيم:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **عمليًا.** يجب تركيب المضخم الأولي عند الهوائي، قبل كابل التغذية ومباشرةً بعد المرحّل المحوري (الذي يجب أن يحميه أثناء الإرسال بواسطة مُسلسِل sequencer). ويجب أن يكون كسبه كبيرًا بما يكفي لجعل تأثير الكابل والجهاز مهملًا: كقاعدة، أكثر بـ 10 dB على الأقل من مجموع فقد الكابل ورقم ضوضاء الجهاز (في المثال 1.6 + 16 ≈ 18 dB → مع 20 dB ما زال الجهاز يؤثر بـ 1.7 dB؛ ومع تشغيل المضخم الأولي الداخلي لا يؤثر إلا بـ 0.05 dB). لكن الكسب الزائد يقلل المدى الديناميكي للجهاز: مع LNA جيد عند الهوائي يكون من الأفضل غالبًا إبقاء المضخم الأولي الداخلي متوقفًا واختيار LNA بكسب 20 – 26 dB. في ميزانية EME تُجرى هذه الاختيارات في مخطط منظومة الاستقبال، ويعرض تبويب DEBUG FORMULE الحساب خطوة بخطوة.",
+                ">! **عمليًا.** يجب تركيب المضخم الأولي عند الهوائي، قبل كابل التغذية ومباشرةً بعد المرحّل المحوري (الذي يجب أن يحميه أثناء الإرسال بواسطة مُسلسِل sequencer). ويجب أن يكون كسبه كبيرًا بما يكفي لجعل تأثير الكابل والجهاز مهملًا: كقاعدة، أكثر بـ 10 dB على الأقل من مجموع فقد الكابل ورقم ضوضاء الجهاز (في المثال 1.6 + 16 ≈ 18 dB → مع 20 dB ما زال الجهاز يؤثر بـ 1.7 dB؛ ومع تشغيل المضخم الأولي الداخلي لا يؤثر إلا بـ 0.05 dB). لكن الكسب الزائد يقلل المدى الديناميكي للجهاز: مع LNA جيد عند الهوائي يكون من الأفضل غالبًا إبقاء المضخم الأولي الداخلي متوقفًا واختيار LNA بكسب 20 – 26 dB. في ميزانية EME تُجرى هذه الاختيارات في مخطط منظومة الاستقبال، ويعرض تبويب تصحيح الصيغ الحساب خطوة بخطوة.",
                 "##+ المحوّل الترددي (transverter) (اختياري)",
                 "مع المحوّل الترددي يعمل الجهاز على تردد وسيط (عادةً 28 MHz لنطاق 144 MHz) ويصبح المحوّل الترددي هو المرحلة الحاسمة في الضوضاء: فهو يدخل في معادلة Friis بعد كابل التغذية، ويقل تأثير الجهاز الذي يليه كلما زاد كسب المحوّل الترددي.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -50114,7 +50386,7 @@ namespace LunaCalc
                 "@fine",
                 "En iyi yapılandırma için, değerler yerine konduğunda:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **Uygulamada.** Ön yükselteç antene, besleme kablosundan önce ve koaksiyel rölenin hemen arkasına monte edilmelidir (röle, bir sıralayıcı (sequencer) ile gönderme sırasında onu korumalıdır). Kazancı, kabloyu ve telsizi ihmal edilebilir kılacak kadar yüksek olmalıdır: kural olarak kablo kaybı ile telsizin gürültü faktörünün toplamından en az 10 dB fazla (örnekte 1,6 + 16 ≈ 18 dB → 20 dB ile telsiz hâlâ 1,7 dB etkiler; dahili ön yükselteç açıkken yalnızca 0,05 dB etkiler). Ancak fazla kazanç telsizin dinamik aralığını azaltır: antende iyi bir LNA varken dahili ön yükselteci kapalı tutmak ve 20 – 26 dB'lik bir LNA seçmek çoğu zaman daha iyidir. EME bütçesinde bu seçimler alıcı tesisatın şemasında yapılır ve DEBUG FORMULE sekmesi hesabı adım adım gösterir.",
+                ">! **Uygulamada.** Ön yükselteç antene, besleme kablosundan önce ve koaksiyel rölenin hemen arkasına monte edilmelidir (röle, bir sıralayıcı (sequencer) ile gönderme sırasında onu korumalıdır). Kazancı, kabloyu ve telsizi ihmal edilebilir kılacak kadar yüksek olmalıdır: kural olarak kablo kaybı ile telsizin gürültü faktörünün toplamından en az 10 dB fazla (örnekte 1,6 + 16 ≈ 18 dB → 20 dB ile telsiz hâlâ 1,7 dB etkiler; dahili ön yükselteç açıkken yalnızca 0,05 dB etkiler). Ancak fazla kazanç telsizin dinamik aralığını azaltır: antende iyi bir LNA varken dahili ön yükselteci kapalı tutmak ve 20 – 26 dB'lik bir LNA seçmek çoğu zaman daha iyidir. EME bütçesinde bu seçimler alıcı tesisatın şemasında yapılır ve FORMÜL HATA AYIKLAMA sekmesi hesabı adım adım gösterir.",
                 "##+ Transverter (isteğe bağlı)",
                 "Bir transverter ile telsiz bir ara frekansta çalışır (144 MHz için genellikle 28 MHz) ve gürültü açısından önemli olan kat transverter olur: Friis formülüne besleme kablosundan sonra girer ve onu izleyen telsiz, transverter ne kadar çok kazanırsa o kadar az etkiler.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
