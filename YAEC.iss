@@ -5,7 +5,7 @@
 ; per questo l'installazione va nella cartella dell'utente, dove si può scrivere.
 
 #ifndef MyAppVersion
-  #define MyAppVersion "1.0.1"
+  #define MyAppVersion "1.1"
 #endif
 
 [Setup]

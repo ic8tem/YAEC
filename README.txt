@@ -1,4 +1,4 @@
-﻿YAEC - Yet Another EME Calc  1.0.1
+﻿YAEC - Yet Another EME Calc  1.1
 by Costantino IC8TEM
 =================================
 
@@ -9,25 +9,25 @@ Source code and downloads: https://github.com/ic8tem/YAEC
 All the versions before 1.0 are called beta (beta 1 ... beta 30).
 
 INSTALLATION - WINDOWS
-1. Download YAEC-1.0.1-Setup.exe from the "Releases" page on GitHub and run it.
+1. Download YAEC-1.1-Setup.exe from the "Releases" page on GitHub and run it.
    If SmartScreen shows a warning: "More info" -> "Run anyway".
    It installs into Documents\YAEC (no administrator rights needed), with
    Start menu and desktop shortcuts and the uninstaller.
-2. Portable alternative: YAEC-1.0.1-windows-portable.zip, extract it into a
+2. Portable alternative: YAEC-1.1-windows-portable.zip, extract it into a
    folder where you can write (e.g. Documents\YAEC) and run YAEC.exe.
 3. To build it yourself: extract the source zip and double-click
    "compila.bat" (it uses the C# compiler that is already part of Windows).
 
 INSTALLATION - LINUX (all distributions, the same program)
 YAEC runs with Mono (the open-source .NET runtime maintained by WineHQ).
-- Debian, Ubuntu, Mint: download yaec_1.0.1_all.deb and install it with
-      sudo apt install ./yaec_1.0.1_all.deb
+- Debian, Ubuntu, Mint: download yaec_1.1_all.deb and install it with
+      sudo apt install ./yaec_1.1_all.deb
   (apt installs Mono as well). Start it from the applications menu or with
   the command "yaec".
 - Fedora:   sudo dnf install mono-complete
   Arch:     sudo pacman -S mono
   openSUSE: sudo zypper install mono-complete
-  then extract YAEC-1.0.1-linux.tar.gz and run ./install.sh (installs into
+  then extract YAEC-1.1-linux.tar.gz and run ./install.sh (installs into
   ~/.local, no root needed), or simply ./yaec from the extracted folder.
 - Data: ~/.local/share/YAEC/data
 
@@ -35,15 +35,15 @@ INSTALLATION - macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/ or
    the "Framework Mono" package from WineHQ) and XQuartz (https://www.xquartz.org):
    on macOS the Windows Forms window of Mono is drawn through X11.
-2. Download YAEC-1.0.1-macOS.dmg, open it and drag YAEC into Applications.
+2. Download YAEC-1.1-macOS.dmg, open it and drag YAEC into Applications.
    The first time, right-click YAEC -> Open (the app is not signed by Apple).
 - Data: ~/Library/Application Support/YAEC/data
 
 CHECKING THE DOWNLOADED FILES (SHA-256)
 The release page also has SHA256SUMS.txt with the SHA-256 fingerprint of every
 package. Compare it with the fingerprint of the file you downloaded:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.0.1-Setup.exe -Algorithm SHA256
-  or in the command prompt: certutil -hashfile YAEC-1.0.1-Setup.exe SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.1-Setup.exe -Algorithm SHA256
+  or in the command prompt: certutil -hashfile YAEC-1.1-Setup.exe SHA256
 - Linux:  sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS:  shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 If the two values differ, do not install the file: download it again from
@@ -67,6 +67,26 @@ SETTINGS
 - Linux: ~/.local/share/YAEC/data   macOS: ~/Library/Application Support/YAEC/data
 - The LoTW password is stored encrypted for the current user (DPAPI on
   Windows, the Mono key store on Linux and macOS).
+
+WHAT'S NEW IN 1.1
+- Live position and +- 24h (formerly Tracking) also shows the past and the
+  future: choose the day in the calendar and the time by dragging the red
+  line of the 24 hours; the frequency moved into the Echo and frequencies box.
+- DX callsign box next to the locator. CALL3.TXT is downloaded at start-up
+  from W7GJ and from WSJT-X Improved, merged by callsign (W7GJ wins) and
+  refreshed every 7 days; the callsign fills in the locator, and the CALL3
+  button copies the file into the WSJT-X folder.
+- Distance and Dgrd: no ranking column, declination overlaid on the chart,
+  table rows colored like the chart bands, optional green usable hours.
+- Tickboxes in the program's style, with the color of each tab.
+- Coaxial cables: drop-down lists sorted by diameter; the table also sorts by
+  name, manufacturer and type; sources and manufacturers translated.
+- EME budget: only the 60 s modes (JT65, Q65-60A, Q65-60B, Q65-60C, custom);
+  the station diagram adapts to long texts.
+- USER MANUAL (renamed) reviews every screen; THEORY AND TIPS ON EME has the
+  author's preface, numbering from 1 and the solar noise formulas.
+- Linux and macOS: HTTPS checked against the system certificates (NOAA and
+  SourceForge downloads work even without ca-certificates-mono).
 
 WHAT'S NEW IN 1.0.1
 - The GitHub release page has SHA256SUMS.txt with the SHA-256 fingerprints

@@ -2946,6 +2946,7 @@ namespace LunaCalc
             "I recapiti dell'autore (e-mail, profilo QRZ.com) e i ringraziamenti a chi ha contribuito al programma.",
             "Il testo della licenza con cui il programma è distribuito.",
             "S = flusso solare in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = costante di Boltzmann (1,380649·10⁻²³ J/K); G = guadagno lineare dell'antenna; λ = lunghezza d'onda; θ = distanza angolare tra Sole e Luna; a = guadagno del diagramma verso il Sole, mai sotto il livello dei lobi laterali impostato (10 dB più basso nei lobi posteriori); ΔN = aumento del rumore dovuto al Sole.",
+            "1.1 - Posizione live e +- 24h (ex Tracciamento) anche nel passato e nel futuro: giorno dal calendario e ora trascinando la linea rossa, frequenza nel riquadro Eco e frequenze; casella del nominativo del DX con il CALL3.TXT scaricato da W7GJ e da WSJT-X Improved e fuso, locator proposto e copia nella cartella di WSJT-X; Distanza e Dgrd senza classifica, con la declinazione sovrapposta, righe colorate come il grafico e ore utili in verde a scelta; caselle di spunta nello stile del programma; cavi ordinati per diametro nelle tendine e per nome, costruttore e tipo nella tabella, con fonti tradotte; Budget EME con i soli modi a 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) e schema dell'impianto che si adatta ai testi; MANUALE D'USO con la rassegna di tutte le schermate; TEORIA E CONSIGLI SULL'EME con la prefazione dell'autore, numerazione da 1 e formule del rumore solare; HTTPS su Linux e macOS con i certificati del sistema.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4237,6 +4238,7 @@ namespace LunaCalc
             "The author's contacts (e-mail, QRZ.com profile) and thanks to those who contributed to the program.",
             "The text of the license under which the program is distributed.",
             "S = solar flux in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann constant (1.380649·10⁻²³ J/K); G = linear antenna gain; λ = wavelength; θ = angular distance between Sun and Moon; a = pattern gain towards the Sun, never below the set side-lobe level (10 dB lower in the back lobes); ΔN = noise increase due to the Sun.",
+            "1.1 - Live position and +- 24h (formerly Tracking) also in the past and in the future: day from the calendar and time by dragging the red line, frequency in the Echo and frequencies box; DX callsign box with CALL3.TXT downloaded from W7GJ and WSJT-X Improved and merged, suggested locator and copy into the WSJT-X folder; Distance and Dgrd without the ranking, with the declination overlaid, rows colored like the chart and optional green usable hours; tickboxes in the program's style; cables sorted by diameter in the drop-down lists and by name, manufacturer and type in the table, with translated sources; EME budget with only the 60 s modes (JT65, Q65-60A, Q65-60B, Q65-60C) and a station diagram that adapts to the texts; USER MANUAL reviewing every screen; THEORY AND TIPS ON EME with the author's preface, numbering from 1 and the solar noise formulas; HTTPS on Linux and macOS with the system certificates.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5528,6 +5530,7 @@ namespace LunaCalc
             "Die Kontaktdaten des Autors (E-Mail, QRZ.com-Profil) und der Dank an alle, die zum Programm beigetragen haben.",
             "Der Text der Lizenz, unter der das Programm verbreitet wird.",
             "S = Sonnenfluss in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann-Konstante (1,380649·10⁻²³ J/K); G = linearer Antennengewinn; λ = Wellenlänge; θ = Winkelabstand zwischen Sonne und Mond; a = Gewinn des Diagramms in Richtung Sonne, nie unter dem eingestellten Nebenkeulenpegel (in den rückwärtigen Keulen 10 dB tiefer); ΔN = Rauschzunahme durch die Sonne.",
+            "1.1 - Position live und +- 24h (früher Verfolgung) auch in Vergangenheit und Zukunft: Tag aus dem Kalender und Uhrzeit durch Ziehen der roten Linie, Frequenz im Feld Echo und Frequenzen; Rufzeichenfeld des DX mit der CALL3.TXT von W7GJ und WSJT-X Improved, zusammengeführt, mit vorgeschlagenem Locator und Kopie in den WSJT-X-Ordner; Entfernung und Dgrd ohne Rangliste, mit überlagerter Deklination, Zeilen in den Farben des Diagramms und wahlweise grünen nutzbaren Stunden; Kontrollkästchen im Stil des Programms; Kabel in den Auswahllisten nach Durchmesser und in der Tabelle nach Name, Hersteller und Typ sortiert, mit übersetzten Quellen; EME-Budget nur mit den 60-s-Modi (JT65, Q65-60A, Q65-60B, Q65-60C) und einem Anlagenschema, das sich den Texten anpasst; BENUTZERHANDBUCH mit allen Bildschirmen; THEORIE UND TIPPS ZU EME mit dem Vorwort des Autors, Nummerierung ab 1 und den Formeln des Sonnenrauschens; HTTPS unter Linux und macOS mit den Zertifikaten des Systems.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6819,6 +6822,7 @@ namespace LunaCalc
             "Les coordonnées de l'auteur (e-mail, profil QRZ.com) et les remerciements à ceux qui ont contribué au programme.",
             "Le texte de la licence sous laquelle le programme est distribué.",
             "S = flux solaire en SFU (10⁻²² W·m⁻²·Hz⁻¹) ; k = constante de Boltzmann (1,380649·10⁻²³ J/K) ; G = gain linéaire de l'antenne ; λ = longueur d'onde ; θ = distance angulaire entre le Soleil et la Lune ; a = gain du diagramme vers le Soleil, jamais sous le niveau des lobes secondaires choisi (10 dB plus bas dans les lobes arrière) ; ΔN = augmentation du bruit due au Soleil.",
+            "1.1 - Position en direct et +- 24h (ex Suivi) aussi dans le passé et le futur : jour choisi dans le calendrier et heure en faisant glisser la ligne rouge, fréquence dans le cadre Écho et fréquences ; case de l'indicatif du DX avec CALL3.TXT téléchargé depuis W7GJ et WSJT-X Improved et fusionné, locator proposé et copie dans le dossier de WSJT-X ; Distance et Dgrd sans classement, avec la déclinaison superposée, des lignes colorées comme le graphique et des heures utiles en vert au choix ; cases à cocher dans le style du programme ; câbles triés par diamètre dans les listes et par nom, fabricant et type dans le tableau, avec sources traduites ; Bilan EME avec les seuls modes à 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) et schéma de l'installation qui s'adapte aux textes ; MANUEL D'UTILISATION passant en revue tous les écrans ; THÉORIE ET CONSEILS SUR L'EME avec la préface de l'auteur, une numérotation à partir de 1 et les formules du bruit solaire ; HTTPS sous Linux et macOS avec les certificats du système.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -8110,6 +8114,7 @@ namespace LunaCalc
             "Los datos de contacto del autor (correo, perfil de QRZ.com) y los agradecimientos a quienes han contribuido al programa.",
             "El texto de la licencia con la que se distribuye el programa.",
             "S = flujo solar en SFU (10⁻²² W·m⁻²·Hz⁻¹); k = constante de Boltzmann (1,380649·10⁻²³ J/K); G = ganancia lineal de la antena; λ = longitud de onda; θ = distancia angular entre el Sol y la Luna; a = ganancia del diagrama hacia el Sol, nunca por debajo del nivel de lóbulos laterales fijado (10 dB más bajo en los lóbulos traseros); ΔN = aumento del ruido debido al Sol.",
+            "1.1 - Posición en vivo y +- 24h (antes Seguimiento) también en el pasado y en el futuro: día desde el calendario y hora arrastrando la línea roja, frecuencia en el recuadro Eco y frecuencias; casilla del indicativo del DX con CALL3.TXT descargado de W7GJ y de WSJT-X Improved y fusionado, locator propuesto y copia en la carpeta de WSJT-X; Distancia y Dgrd sin clasificación, con la declinación superpuesta, filas coloreadas como el gráfico y horas útiles en verde a elección; casillas de verificación con el estilo del programa; cables ordenados por diámetro en las listas y por nombre, fabricante y tipo en la tabla, con fuentes traducidas; Balance EME solo con los modos de 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) y esquema de la instalación que se adapta a los textos; MANUAL DE USO con el repaso de todas las pantallas; TEORÍA Y CONSEJOS SOBRE EME con el prefacio del autor, numeración desde 1 y fórmulas del ruido solar; HTTPS en Linux y macOS con los certificados del sistema.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9401,6 +9406,7 @@ namespace LunaCalc
             "Os contactos do autor (e-mail, perfil QRZ.com) e os agradecimentos a quem contribuiu para o programa.",
             "O texto da licença com que o programa é distribuído.",
             "S = fluxo solar em SFU (10⁻²² W·m⁻²·Hz⁻¹); k = constante de Boltzmann (1,380649·10⁻²³ J/K); G = ganho linear da antena; λ = comprimento de onda; θ = distância angular entre o Sol e a Lua; a = ganho do diagrama na direção do Sol, nunca abaixo do nível de lóbulos laterais definido (10 dB mais baixo nos lóbulos traseiros); ΔN = aumento do ruído devido ao Sol.",
+            "1.1 - Posição em direto e +- 24h (antes Seguimento) também no passado e no futuro: dia no calendário e hora arrastando a linha vermelha, frequência no quadro Eco e frequências; caixa do indicativo do DX com o CALL3.TXT descarregado de W7GJ e do WSJT-X Improved e fundido, locator proposto e cópia para a pasta do WSJT-X; Distância e Dgrd sem classificação, com a declinação sobreposta, linhas coloridas como o gráfico e horas úteis a verde à escolha; caixas de verificação no estilo do programa; cabos ordenados por diâmetro nas listas e por nome, fabricante e tipo na tabela, com fontes traduzidas; Balanço EME só com os modos de 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) e esquema da instalação que se adapta aos textos; MANUAL DE UTILIZAÇÃO com a revisão de todos os ecrãs; TEORIA E CONSELHOS SOBRE EME com o prefácio do autor, numeração a partir de 1 e fórmulas do ruído solar; HTTPS em Linux e macOS com os certificados do sistema.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10692,6 +10698,7 @@ namespace LunaCalc
             "作者的联系方式（电子邮件、QRZ.com 资料页）以及对为程序作出贡献者的致谢。",
             "程序发布所依据的许可证全文。",
             "S = 太阳流量，单位 SFU（10⁻²² W·m⁻²·Hz⁻¹）；k = 玻尔兹曼常数（1.380649·10⁻²³ J/K）；G = 天线线性增益；λ = 波长；θ = 太阳与月球的角距；a = 方向图朝向太阳的增益，不低于所设旁瓣电平（后瓣再低 10 dB）；ΔN = 太阳引起的噪声增加。",
+            "1.1 - 实时位置与 +- 24h（原“跟踪”）也可查看过去和未来：用日历选择日期，拖动红线选择时间，频率移到“回波与频率”框；DX 呼号框，CALL3.TXT 从 W7GJ 和 WSJT-X Improved 下载并合并，自动建议定位并可复制到 WSJT-X 文件夹；距离与 Dgrd 去掉排名，叠加赤纬曲线，表格行颜色与图表一致，可选绿色可用时段；复选框采用程序风格；下拉列表中电缆按直径排序，表格可按名称、制造商和类型排序，来源已翻译；EME 链路预算只保留 60 s 模式（JT65、Q65-60A、Q65-60B、Q65-60C），设备示意图随文字自动调整；使用手册逐一介绍所有界面；EME 理论与建议加入作者序言、编号从 1 开始并给出太阳噪声公式；Linux 和 macOS 上使用系统证书进行 HTTPS。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11983,6 +11990,7 @@ namespace LunaCalc
             "著者の連絡先（電子メール、QRZ.com のプロフィール）と、プログラムに協力した方々への謝辞。",
             "プログラムの配布条件となるライセンスの全文。",
             "S = 太陽フラックス（SFU、10⁻²² W·m⁻²·Hz⁻¹）、k = ボルツマン定数（1.380649·10⁻²³ J/K）、G = アンテナの線形利得、λ = 波長、θ = 太陽と月の離角、a = 太陽方向のパターン利得（設定したサイドローブレベルより下にはならず、バックローブではさらに 10 dB 低い）、ΔN = 太陽による雑音の増加。",
+            "1.1 - ライブ位置と +- 24h（旧「追尾」）で過去と未来も表示：カレンダーで日を、赤い線のドラッグで時刻を選択し、周波数は「エコーと周波数」枠へ。DX のコールサイン欄を追加し、W7GJ と WSJT-X Improved からダウンロードして統合した CALL3.TXT でロケーターを提案、WSJT-X フォルダーへのコピーも可能。距離と Dgrd は順位列を廃止し、赤緯を重ねて表示、行をグラフと同じ色に、利用可能時間の緑表示は任意に。チェックボックスをプログラムのスタイルに統一。ケーブルはドロップダウンで直径順、表で名前・メーカー・種類順に並べ替え可能、出典も翻訳。EME 回線計算は 60 秒のモード（JT65、Q65-60A、Q65-60B、Q65-60C）のみとし、設備図は文字の長さに合わせて調整。取扱説明書で全画面を紹介。EME の理論とヒントに著者まえがき、1 からの番号、太陽雑音の数式を追加。Linux と macOS ではシステムの証明書で HTTPS。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13274,6 +13282,7 @@ namespace LunaCalc
             "लेखक के संपर्क (ई-मेल, QRZ.com प्रोफ़ाइल) और प्रोग्राम में योगदान देने वालों का आभार।",
             "वह लाइसेंस पाठ जिसके अंतर्गत प्रोग्राम वितरित किया जाता है।",
             "S = SFU में सौर फ़्लक्स (10⁻²² W·m⁻²·Hz⁻¹); k = बोल्ट्ज़मान स्थिरांक (1.380649·10⁻²³ J/K); G = एंटीना का रैखिक लाभ; λ = तरंगदैर्ध्य; θ = सूर्य और चंद्रमा के बीच कोणीय दूरी; a = सूर्य की ओर पैटर्न का लाभ, निर्धारित साइड-लोब स्तर से कभी कम नहीं (पिछले लोब में 10 dB और कम); ΔN = सूर्य के कारण शोर में वृद्धि।",
+            "1.1 - लाइव स्थिति और +- 24h (पहले ट्रैकिंग) अब अतीत और भविष्य में भी: कैलेंडर से दिन और लाल रेखा खींचकर समय, आवृत्ति इको और आवृत्तियाँ बॉक्स में; DX कॉलसाइन बॉक्स, W7GJ और WSJT-X Improved से डाउनलोड करके मिलाए गए CALL3.TXT के साथ, सुझाया गया लोकेटर और WSJT-X फ़ोल्डर में कॉपी; दूरी और Dgrd बिना रैंकिंग के, दिक्पात ऊपर से, पंक्तियाँ चार्ट के रंगों में और वैकल्पिक हरे उपयोगी घंटे; प्रोग्राम की शैली में चेकबॉक्स; ड्रॉपडाउन में केबल व्यास से और तालिका में नाम, निर्माता और प्रकार से क्रमबद्ध, अनूदित स्रोतों के साथ; EME बजट में केवल 60 s मोड (JT65, Q65-60A, Q65-60B, Q65-60C) और पाठ के अनुसार ढलने वाला स्टेशन आरेख; उपयोगकर्ता मैनुअल में सभी स्क्रीनों की समीक्षा; EME पर सिद्धांत और सुझाव में लेखक की प्रस्तावना, 1 से क्रमांकन और सौर शोर के सूत्र; Linux और macOS पर सिस्टम प्रमाणपत्रों के साथ HTTPS।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14565,6 +14574,7 @@ namespace LunaCalc
             "저자의 연락처(이메일, QRZ.com 프로필)와 프로그램에 기여한 분들에 대한 감사의 말.",
             "프로그램이 배포되는 라이선스의 전문.",
             "S = 태양 플럭스(SFU, 10⁻²² W·m⁻²·Hz⁻¹); k = 볼츠만 상수(1.380649·10⁻²³ J/K); G = 안테나 선형 이득; λ = 파장; θ = 태양과 달 사이의 각거리; a = 태양 방향의 패턴 이득으로, 설정한 사이드로브 레벨보다 낮아지지 않음(백로브에서는 10 dB 더 낮음); ΔN = 태양에 의한 잡음 증가.",
+            "1.1 - 실시간 위치 및 +- 24h(이전 추적)에서 과거와 미래도 표시: 달력으로 날짜를, 빨간 선을 끌어 시간을 고르고 주파수는 에코와 주파수 상자로 이동; DX 호출부호 칸 추가, W7GJ와 WSJT-X Improved에서 내려받아 합친 CALL3.TXT로 로케이터를 제안하고 WSJT-X 폴더로 복사 가능; 거리와 Dgrd에서 순위 열을 없애고 적위를 겹쳐 표시, 행을 그래프와 같은 색으로, 사용 가능 시간의 녹색 표시는 선택; 확인란을 프로그램 스타일로 통일; 드롭다운의 케이블은 직경순, 표는 이름·제조사·종류로 정렬 가능하며 출처도 번역; EME 링크 버짓은 60초 모드(JT65, Q65-60A, Q65-60B, Q65-60C)만 남기고 설비도는 글자 길이에 맞춰 조정; 사용 설명서에서 모든 화면을 소개; EME 이론과 조언에 저자 서문, 1부터의 번호, 태양 잡음 공식 추가; Linux와 macOS에서 시스템 인증서로 HTTPS.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15856,6 +15866,7 @@ namespace LunaCalc
             "Kontak penulis (e-mail, profil QRZ.com) dan ucapan terima kasih kepada yang telah berkontribusi pada program.",
             "Teks lisensi yang menjadi dasar distribusi program.",
             "S = fluks matahari dalam SFU (10⁻²² W·m⁻²·Hz⁻¹); k = konstanta Boltzmann (1,380649·10⁻²³ J/K); G = penguatan linear antena; λ = panjang gelombang; θ = jarak sudut antara Matahari dan Bulan; a = penguatan pola ke arah Matahari, tidak pernah di bawah tingkat lobus samping yang ditetapkan (10 dB lebih rendah di lobus belakang); ΔN = kenaikan derau akibat Matahari.",
+            "1.1 - Posisi langsung dan +- 24h (dulu Pelacakan) juga untuk masa lalu dan masa depan: hari dari kalender dan jam dengan menyeret garis merah, frekuensi di kotak Gema dan frekuensi; kotak callsign DX dengan CALL3.TXT yang diunduh dari W7GJ dan WSJT-X Improved lalu digabung, lokator yang disarankan dan salinan ke folder WSJT-X; Jarak dan Dgrd tanpa peringkat, dengan deklinasi ditumpangkan, baris berwarna seperti grafik dan jam berguna hijau opsional; kotak centang bergaya program; kabel diurutkan menurut diameter di daftar pilihan serta menurut nama, pabrikan dan tipe di tabel, dengan sumber yang diterjemahkan; Anggaran EME hanya dengan mode 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) dan skema instalasi yang menyesuaikan teks; MANUAL PENGGUNAAN yang meninjau semua layar; TEORI DAN TIPS EME dengan kata pengantar penulis, penomoran dari 1 dan rumus derau matahari; HTTPS di Linux dan macOS dengan sertifikat sistem.",
         };
 
         public static readonly string[] RU = {
@@ -17148,6 +17159,7 @@ namespace LunaCalc
             "Контакты автора (e-mail, профиль QRZ.com) и благодарности тем, кто помог программе.",
             "Текст лицензии, на условиях которой распространяется программа.",
             "S = солнечный поток в SFU (10⁻²² Вт·м⁻²·Гц⁻¹); k = постоянная Больцмана (1,380649·10⁻²³ Дж/К); G = линейное усиление антенны; λ = длина волны; θ = угловое расстояние между Солнцем и Луной; a = усиление диаграммы в направлении Солнца, не ниже заданного уровня боковых лепестков (в задних лепестках на 10 дБ ниже); ΔN = рост шума из-за Солнца.",
+            "1.1 - «Положение онлайн и +- 24h» (бывшее «Сопровождение») также в прошлом и будущем: день из календаря и время перетаскиванием красной линии, частота в блоке «Эхо и частоты»; поле позывного DX с CALL3.TXT, загруженным с W7GJ и WSJT-X Improved и объединённым, с предложенным локатором и копированием в папку WSJT-X; «Расстояние и Dgrd» без рейтинга, с наложенным склонением, строками в цветах графика и зелёными полезными часами по выбору; флажки в стиле программы; кабели в списках упорядочены по диаметру, в таблице — по названию, производителю и типу, источники переведены; бюджет EME только с 60-секундными видами (JT65, Q65-60A, Q65-60B, Q65-60C) и схемой станции, подстраивающейся под тексты; РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ с обзором всех экранов; ТЕОРИЯ И СОВЕТЫ ПО EME с предисловием автора, нумерацией с 1 и формулами солнечного шума; HTTPS в Linux и macOS с сертификатами системы.",
         };
 
         public static readonly string[] UK = {
@@ -18440,6 +18452,7 @@ namespace LunaCalc
             "Контакти автора (e-mail, профіль QRZ.com) і подяки тим, хто допоміг програмі.",
             "Текст ліцензії, на умовах якої поширюється програма.",
             "S = сонячний потік у SFU (10⁻²² Вт·м⁻²·Гц⁻¹); k = стала Больцмана (1,380649·10⁻²³ Дж/К); G = лінійне підсилення антени; λ = довжина хвилі; θ = кутова відстань між Сонцем і Місяцем; a = підсилення діаграми в напрямку Сонця, не нижче заданого рівня бічних пелюсток (у задніх пелюстках на 10 дБ нижче); ΔN = зростання шуму через Сонце.",
+            "1.1 - «Положення наживо і +- 24h» (колишній «Супровід») також у минулому й майбутньому: день із календаря і час перетягуванням червоної лінії, частота в блоці «Луна і частоти»; поле позивного DX із CALL3.TXT, завантаженим з W7GJ і WSJT-X Improved та об'єднаним, із запропонованим локатором і копіюванням до теки WSJT-X; «Відстань і Dgrd» без рейтингу, з накладеним схиленням, рядками в кольорах графіка й зеленими корисними годинами за вибором; прапорці в стилі програми; кабелі у списках упорядковано за діаметром, у таблиці — за назвою, виробником і типом, джерела перекладено; бюджет EME лише з 60-секундними видами (JT65, Q65-60A, Q65-60B, Q65-60C) і схемою станції, що підлаштовується під тексти; ПОСІБНИК КОРИСТУВАЧА з оглядом усіх екранів; ТЕОРІЯ І ПОРАДИ ЩОДО EME з передмовою автора, нумерацією з 1 і формулами сонячного шуму; HTTPS у Linux і macOS із сертифікатами системи.",
         };
 
         public static readonly string[] AF = {
@@ -19732,6 +19745,7 @@ namespace LunaCalc
             "Die outeur se kontakbesonderhede (e-pos, QRZ.com-profiel) en dank aan almal wat tot die program bygedra het.",
             "Die teks van die lisensie waaronder die program versprei word.",
             "S = sonvloed in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann-konstante (1,380649·10⁻²³ J/K); G = lineêre antennawins; λ = golflengte; θ = hoekafstand tussen Son en Maan; a = wins van die patroon na die Son, nooit onder die ingestelde sylobvlak nie (10 dB laer in die agterlobbe); ΔN = geraastoename weens die Son.",
+            "1.1 - Regstreekse posisie en +- 24h (voorheen Volg) ook in die verlede en die toekoms: dag uit die kalender en tyd deur die rooi lyn te sleep, frekwensie in die blok Eggo en frekwensies; roepseinblokkie van die DX met CALL3.TXT wat van W7GJ en WSJT-X Improved afgelaai en saamgevoeg word, voorgestelde lokator en kopie na die WSJT-X-gids; Afstand en Dgrd sonder rangorde, met die deklinasie daaroor, rye in die kleure van die grafiek en opsionele groen bruikbare ure; merkblokkies in die styl van die program; kabels in die aftreklyste volgens deursnee en in die tabel volgens naam, vervaardiger en tipe gesorteer, met vertaalde bronne; EME-begroting met net die 60 s-modusse (JT65, Q65-60A, Q65-60B, Q65-60C) en 'n stasieskema wat by die tekste aanpas; GEBRUIKERSHANDLEIDING wat elke skerm bespreek; TEORIE EN WENKE OOR EME met die outeur se voorwoord, nommering vanaf 1 en die formules van sonruis; HTTPS op Linux en macOS met die stelsel se sertifikate.",
         };
 
         public static readonly string[] BN = {
@@ -21023,6 +21037,7 @@ namespace LunaCalc
             "লেখকের যোগাযোগ (ই-মেইল, QRZ.com প্রোফাইল) এবং প্রোগ্রামে যাঁরা অবদান রেখেছেন তাঁদের প্রতি কৃতজ্ঞতা।",
             "যে লাইসেন্সের অধীনে প্রোগ্রামটি বিতরণ করা হয় তার পাঠ।",
             "S = SFU-তে সৌর ফ্লাক্স (10⁻²² W·m⁻²·Hz⁻¹); k = বোল্টজম্যান ধ্রুবক (1.380649·10⁻²³ J/K); G = অ্যান্টেনার রৈখিক লাভ; λ = তরঙ্গদৈর্ঘ্য; θ = সূর্য ও চাঁদের মধ্যে কৌণিক দূরত্ব; a = সূর্যের দিকে প্যাটার্নের লাভ, নির্ধারিত পার্শ্ব-লোব স্তরের নিচে কখনো নয় (পেছনের লোবে আরও 10 dB কম); ΔN = সূর্যের কারণে নয়েজ বৃদ্ধি।",
+            "1.1 - লাইভ অবস্থান ও +- 24h (আগের ট্র্যাকিং) এখন অতীত ও ভবিষ্যতেও: ক্যালেন্ডার থেকে দিন ও লাল রেখা টেনে সময়, কম্পাঙ্ক প্রতিধ্বনি ও কম্পাঙ্ক ঘরে; DX কলসাইনের ঘর, W7GJ ও WSJT-X Improved থেকে ডাউনলোড করে একত্র করা CALL3.TXT-সহ, প্রস্তাবিত লোকেটর ও WSJT-X ফোল্ডারে কপি; দূরত্ব ও Dgrd ক্রমতালিকা ছাড়া, বিষুবলম্ব ওপরে আঁকা, সারি গ্রাফের রঙে এবং ঐচ্ছিক সবুজ ব্যবহারযোগ্য ঘণ্টা; প্রোগ্রামের শৈলীতে টিকবক্স; ড্রপডাউনে কেবল ব্যাস অনুযায়ী এবং সারণিতে নাম, নির্মাতা ও ধরন অনুযায়ী সাজানো, অনূদিত উৎসসহ; EME বাজেটে কেবল 60 s মোড (JT65, Q65-60A, Q65-60B, Q65-60C) এবং লেখার সঙ্গে মানিয়ে নেওয়া স্টেশন চিত্র; ব্যবহার নির্দেশিকায় সব পর্দার পর্যালোচনা; EME তত্ত্ব ও পরামর্শে লেখকের ভূমিকা, 1 থেকে ক্রমিক নম্বর ও সৌর নয়েজের সূত্র; Linux ও macOS-এ সিস্টেমের সনদ দিয়ে HTTPS।",
         };
 
         public static readonly string[] AR = {
@@ -22314,6 +22329,7 @@ namespace LunaCalc
             "بيانات الاتصال بالمؤلف (البريد الإلكتروني وملف QRZ.com) والشكر لمن أسهموا في البرنامج.",
             "نص الترخيص الذي يُوزَّع البرنامج بموجبه.",
             "S = التدفق الشمسي بوحدة SFU ‏(10⁻²² W·m⁻²·Hz⁻¹)؛ k = ثابت بولتزمان (1.380649·10⁻²³ J/K)؛ G = الكسب الخطي للهوائي؛ λ = طول الموجة؛ θ = المسافة الزاوية بين الشمس والقمر؛ a = كسب المخطط باتجاه الشمس، لا يقل أبدًا عن مستوى الفصوص الجانبية المحدد (أقل بـ 10 dB في الفصوص الخلفية)؛ ΔN = زيادة الضجيج بسبب الشمس.",
+            "1.1 - «الموقع المباشر و +- 24h» (التتبع سابقًا) يعرض الماضي والمستقبل أيضًا: اليوم من التقويم والوقت بسحب الخط الأحمر، والتردد في إطار الصدى والترددات؛ خانة نداء محطة DX مع CALL3.TXT المنزّل من W7GJ ومن WSJT-X Improved والمدموج، ومحدد موقع مقترح ونسخ إلى مجلد WSJT-X؛ «المسافة وDgrd» بلا ترتيب، مع الميل فوق المخطط وصفوف بألوان المخطط وساعات مفيدة خضراء اختيارية؛ خانات اختيار بأسلوب البرنامج؛ الكبلات مرتبة حسب القطر في القوائم المنسدلة وحسب الاسم والمصنّع والنوع في الجدول، مع ترجمة المصادر؛ ميزانية EME بالأنماط ذات 60 ثانية فقط (JT65 وQ65-60A وQ65-60B وQ65-60C) ومخطط محطة يتكيّف مع النصوص؛ دليل الاستخدام يستعرض كل الشاشات؛ النظرية والنصائح حول EME مع مقدمة المؤلف وترقيم يبدأ من 1 وصيغ ضجيج الشمس؛ HTTPS على Linux وmacOS بشهادات النظام.",
         };
 
         public static readonly string[] TR = {
@@ -23605,6 +23621,7 @@ namespace LunaCalc
             "Yazarın iletişim bilgileri (e-posta, QRZ.com profili) ve programa katkıda bulunanlara teşekkürler.",
             "Programın dağıtıldığı lisansın metni.",
             "S = SFU cinsinden güneş akısı (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann sabiti (1,380649·10⁻²³ J/K); G = antenin doğrusal kazancı; λ = dalga boyu; θ = Güneş ile Ay arasındaki açısal uzaklık; a = diyagramın Güneş yönündeki kazancı, ayarlanan yan lob seviyesinin altına asla inmez (arka loblarda 10 dB daha düşük); ΔN = Güneş nedeniyle gürültü artışı.",
+            "1.1 - Canlı konum ve +- 24h (eski Takip) geçmişte ve gelecekte de: gün takvimden, saat kırmızı çizgiyi sürükleyerek, frekans Yankı ve frekanslar kutusunda; W7GJ ve WSJT-X Improved'dan indirilip birleştirilen CALL3.TXT ile DX çağrı işareti kutusu, önerilen lokatör ve WSJT-X klasörüne kopyalama; Mesafe ve Dgrd sıralama sütunu olmadan, üst üste çizilen dik açıklık, grafikle aynı renkte satırlar ve isteğe bağlı yeşil kullanılabilir saatlerle; programın stilinde onay kutuları; açılır listelerde çapa göre, tabloda ada, üreticiye ve türe göre sıralanan kablolar, çevrilmiş kaynaklarla; yalnızca 60 s modlarıyla (JT65, Q65-60A, Q65-60B, Q65-60C) EME bütçesi ve metinlere uyum sağlayan tesis şeması; tüm ekranları gözden geçiren KULLANIM KILAVUZU; yazarın önsözü, 1'den başlayan numaralandırma ve güneş gürültüsü formülleriyle EME ÜZERİNE TEORİ VE ÖNERİLER; Linux ve macOS'ta sistem sertifikalarıyla HTTPS.",
         };
     }
 
@@ -29791,7 +29808,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.0.1";
+        public const string Versione = "1.1";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -32804,6 +32821,7 @@ namespace LunaCalc
             Lang.T("beta 30 - Curva della declinazione della Luna sotto il grafico di Distanza e Dgrd, con i massimi a nord e a sud e la zona favorevole al tuo emisfero; nuovo paragrafo del manuale sulla declinazione (ciclo mensile, elevazione massima e ore sopra l'orizzonte, collegamenti tra emisferi, ciclo di 18,6 anni, rumore); dati di I2FAK sul Sagittario precisati per il Nord Italia e sopra i 5° di elevazione."),
             Lang.T("1.0 - Prima versione stabile, per Windows, Linux e macOS (Linux e macOS con Mono; i dati in ~/.local/share/YAEC/data o in ~/Library/Application Support/YAEC/data); installatore per Windows e pacchetti per Linux e macOS creati su GitHub; le versioni precedenti si chiamano beta. Nuova linguetta Luna sul mondo (elevazione della Luna sulle terre emerse di tutto il mondo, stazione DX con un clic, stato della tua antenna); manuale diviso in MANUALE D'USO APPROFONDITO e TEORIA E CONSIGLI SULL'EME; gruppi Aiuto e tools e Credits and thanks; linguetta Export in Excel dei calcoli; niente più margine sul modo: S/N in 2500 Hz con la soglia tipica come riferimento e i limiti del JT65 nel manuale; nel manuale anche la tabella del Q65 per TX1 – TX6, la rotazione di Faraday e la sintesi dell'articolo di SM5BSZ; tabella dei cavi ordinabile per perdita, con nuovi cavi Messi & Paoloni, SSB (SeaTex per ambienti marini, Aircom Premium), Belden e Tasker; caselle con l'unità senza scritte residue."),
             Lang.T("1.0.1 - Nella pagina della release su GitHub c'è il file SHA256SUMS.txt con le impronte SHA-256 di tutti i pacchetti: servono a verificare che i file scaricati siano proprio quelli originali (istruzioni nel README)."),
+            Lang.T("1.1 - Posizione live e +- 24h (ex Tracciamento) anche nel passato e nel futuro: giorno dal calendario e ora trascinando la linea rossa, frequenza nel riquadro Eco e frequenze; casella del nominativo del DX con il CALL3.TXT scaricato da W7GJ e da WSJT-X Improved e fuso, locator proposto e copia nella cartella di WSJT-X; Distanza e Dgrd senza classifica, con la declinazione sovrapposta, righe colorate come il grafico e ore utili in verde a scelta; caselle di spunta nello stile del programma; cavi ordinati per diametro nelle tendine e per nome, costruttore e tipo nella tabella, con fonti tradotte; Budget EME con i soli modi a 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) e schema dell'impianto che si adatta ai testi; MANUALE D'USO con la rassegna di tutte le schermate; TEORIA E CONSIGLI SULL'EME con la prefazione dell'autore, numerazione da 1 e formule del rumore solare; HTTPS su Linux e macOS con i certificati del sistema."),
         };
 
                     _AboutVersioniLg = Lang.Idx;
