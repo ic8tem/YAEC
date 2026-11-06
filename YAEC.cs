@@ -2945,6 +2945,7 @@ namespace LunaCalc
             "Il database dei cavi coassiali a 50 Ω con l'attenuazione a 50, 70, 144, 222 e 432 MHz e le fonti di ogni valore; si ordina per diametro, perdita, nome, costruttore o tipo (anche cliccando l'intestazione delle colonne), si filtra per tipo e diametro e si cerca per nome. A destra il calcolo della perdita di una tratta e il grafico dei cavi spuntati; il pulsante \"usa nel Budget EME\" porta il cavo nel Budget. Si possono aggiungere cavi personalizzati.",
             "I recapiti dell'autore (e-mail, profilo QRZ.com) e i ringraziamenti a chi ha contribuito al programma.",
             "Il testo della licenza con cui il programma è distribuito.",
+            "S = flusso solare in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = costante di Boltzmann (1,380649·10⁻²³ J/K); G = guadagno lineare dell'antenna; λ = lunghezza d'onda; θ = distanza angolare tra Sole e Luna; a = guadagno del diagramma verso il Sole, mai sotto il livello dei lobi laterali impostato (10 dB più basso nei lobi posteriori); ΔN = aumento del rumore dovuto al Sole.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4235,6 +4236,7 @@ namespace LunaCalc
             "The database of 50 Ω coaxial cables with the attenuation at 50, 70, 144, 222 and 432 MHz and the source of every value; it sorts by diameter, loss, name, manufacturer or type (also by clicking the column headers), filters by type and diameter and searches by name. On the right, the loss of a run and the chart of the ticked cables; the \"use in EME Budget\" button takes the cable to the Budget. Custom cables can be added.",
             "The author's contacts (e-mail, QRZ.com profile) and thanks to those who contributed to the program.",
             "The text of the license under which the program is distributed.",
+            "S = solar flux in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann constant (1.380649·10⁻²³ J/K); G = linear antenna gain; λ = wavelength; θ = angular distance between Sun and Moon; a = pattern gain towards the Sun, never below the set side-lobe level (10 dB lower in the back lobes); ΔN = noise increase due to the Sun.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5525,6 +5527,7 @@ namespace LunaCalc
             "Die Datenbank der 50-Ω-Koaxialkabel mit der Dämpfung bei 50, 70, 144, 222 und 432 MHz und den Quellen jedes Werts; sie lässt sich nach Durchmesser, Dämpfung, Name, Hersteller oder Typ sortieren (auch per Klick auf die Spaltenköpfe), nach Typ und Durchmesser filtern und nach Namen durchsuchen. Rechts die Dämpfung einer Strecke und das Diagramm der markierten Kabel; die Schaltfläche „im EME-Budget verwenden“ übernimmt das Kabel ins Budget. Eigene Kabel können hinzugefügt werden.",
             "Die Kontaktdaten des Autors (E-Mail, QRZ.com-Profil) und der Dank an alle, die zum Programm beigetragen haben.",
             "Der Text der Lizenz, unter der das Programm verbreitet wird.",
+            "S = Sonnenfluss in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann-Konstante (1,380649·10⁻²³ J/K); G = linearer Antennengewinn; λ = Wellenlänge; θ = Winkelabstand zwischen Sonne und Mond; a = Gewinn des Diagramms in Richtung Sonne, nie unter dem eingestellten Nebenkeulenpegel (in den rückwärtigen Keulen 10 dB tiefer); ΔN = Rauschzunahme durch die Sonne.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6815,6 +6818,7 @@ namespace LunaCalc
             "La base de données des câbles coaxiaux 50 Ω avec l'atténuation à 50, 70, 144, 222 et 432 MHz et les sources de chaque valeur ; on la trie par diamètre, perte, nom, fabricant ou type (aussi en cliquant sur les en-têtes de colonnes), on la filtre par type et diamètre et on y cherche par nom. À droite, la perte d'un tronçon et le graphique des câbles cochés ; le bouton « utiliser dans le Budget EME » envoie le câble au Budget. On peut ajouter des câbles personnalisés.",
             "Les coordonnées de l'auteur (e-mail, profil QRZ.com) et les remerciements à ceux qui ont contribué au programme.",
             "Le texte de la licence sous laquelle le programme est distribué.",
+            "S = flux solaire en SFU (10⁻²² W·m⁻²·Hz⁻¹) ; k = constante de Boltzmann (1,380649·10⁻²³ J/K) ; G = gain linéaire de l'antenne ; λ = longueur d'onde ; θ = distance angulaire entre le Soleil et la Lune ; a = gain du diagramme vers le Soleil, jamais sous le niveau des lobes secondaires choisi (10 dB plus bas dans les lobes arrière) ; ΔN = augmentation du bruit due au Soleil.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -8105,6 +8109,7 @@ namespace LunaCalc
             "La base de datos de cables coaxiales de 50 Ω con la atenuación a 50, 70, 144, 222 y 432 MHz y las fuentes de cada valor; se ordena por diámetro, pérdida, nombre, fabricante o tipo (también pulsando los encabezados de las columnas), se filtra por tipo y diámetro y se busca por nombre. A la derecha, la pérdida de un tramo y el gráfico de los cables marcados; el botón «usar en el Balance EME» lleva el cable al Balance. Se pueden añadir cables personalizados.",
             "Los datos de contacto del autor (correo, perfil de QRZ.com) y los agradecimientos a quienes han contribuido al programa.",
             "El texto de la licencia con la que se distribuye el programa.",
+            "S = flujo solar en SFU (10⁻²² W·m⁻²·Hz⁻¹); k = constante de Boltzmann (1,380649·10⁻²³ J/K); G = ganancia lineal de la antena; λ = longitud de onda; θ = distancia angular entre el Sol y la Luna; a = ganancia del diagrama hacia el Sol, nunca por debajo del nivel de lóbulos laterales fijado (10 dB más bajo en los lóbulos traseros); ΔN = aumento del ruido debido al Sol.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9395,6 +9400,7 @@ namespace LunaCalc
             "A base de dados dos cabos coaxiais de 50 Ω com a atenuação a 50, 70, 144, 222 e 432 MHz e as fontes de cada valor; ordena-se por diâmetro, perda, nome, fabricante ou tipo (também clicando nos cabeçalhos das colunas), filtra-se por tipo e diâmetro e pesquisa-se por nome. À direita, a perda de um troço e o gráfico dos cabos assinalados; o botão «usar no Balanço EME» leva o cabo para o Balanço. Podem acrescentar-se cabos personalizados.",
             "Os contactos do autor (e-mail, perfil QRZ.com) e os agradecimentos a quem contribuiu para o programa.",
             "O texto da licença com que o programa é distribuído.",
+            "S = fluxo solar em SFU (10⁻²² W·m⁻²·Hz⁻¹); k = constante de Boltzmann (1,380649·10⁻²³ J/K); G = ganho linear da antena; λ = comprimento de onda; θ = distância angular entre o Sol e a Lua; a = ganho do diagrama na direção do Sol, nunca abaixo do nível de lóbulos laterais definido (10 dB mais baixo nos lóbulos traseiros); ΔN = aumento do ruído devido ao Sol.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10685,6 +10691,7 @@ namespace LunaCalc
             "50 Ω 同轴电缆数据库，含 50、70、144、222 和 432 MHz 的衰减及每个数值的来源；可按直径、损耗、名称、制造商或类型排序（也可点击列标题），按类型和直径筛选并按名称搜索。右侧是某段线路的损耗计算和所勾选电缆的图表；“用于 EME 预算”按钮可把电缆带入预算。可以添加自定义电缆。",
             "作者的联系方式（电子邮件、QRZ.com 资料页）以及对为程序作出贡献者的致谢。",
             "程序发布所依据的许可证全文。",
+            "S = 太阳流量，单位 SFU（10⁻²² W·m⁻²·Hz⁻¹）；k = 玻尔兹曼常数（1.380649·10⁻²³ J/K）；G = 天线线性增益；λ = 波长；θ = 太阳与月球的角距；a = 方向图朝向太阳的增益，不低于所设旁瓣电平（后瓣再低 10 dB）；ΔN = 太阳引起的噪声增加。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11975,6 +11982,7 @@ namespace LunaCalc
             "50 Ω 同軸ケーブルのデータベースで、50・70・144・222・432 MHz の減衰量と各値の出典を収録しています。直径、損失、名前、メーカー、種類で並べ替え（列見出しのクリックでも可）、種類と直径で絞り込み、名前で検索できます。右側は区間の損失計算とチェックしたケーブルのグラフで、「EME 回線計算で使用」ボタンでケーブルを回線計算に送ります。独自のケーブルも追加できます。",
             "著者の連絡先（電子メール、QRZ.com のプロフィール）と、プログラムに協力した方々への謝辞。",
             "プログラムの配布条件となるライセンスの全文。",
+            "S = 太陽フラックス（SFU、10⁻²² W·m⁻²·Hz⁻¹）、k = ボルツマン定数（1.380649·10⁻²³ J/K）、G = アンテナの線形利得、λ = 波長、θ = 太陽と月の離角、a = 太陽方向のパターン利得（設定したサイドローブレベルより下にはならず、バックローブではさらに 10 dB 低い）、ΔN = 太陽による雑音の増加。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13265,6 +13273,7 @@ namespace LunaCalc
             "50 Ω समाक्षीय केबलों का डेटाबेस, 50, 70, 144, 222 और 432 MHz पर क्षीणन और हर मान के स्रोत के साथ; इसे व्यास, हानि, नाम, निर्माता या प्रकार से क्रमबद्ध किया जा सकता है (स्तंभ शीर्षक पर क्लिक करके भी), प्रकार और व्यास से छाना और नाम से खोजा जा सकता है। दाईं ओर एक खंड की हानि की गणना और चुने गए केबलों का ग्राफ़; \"EME बजट में उपयोग करें\" बटन केबल को बजट में ले जाता है। अपने केबल भी जोड़े जा सकते हैं।",
             "लेखक के संपर्क (ई-मेल, QRZ.com प्रोफ़ाइल) और प्रोग्राम में योगदान देने वालों का आभार।",
             "वह लाइसेंस पाठ जिसके अंतर्गत प्रोग्राम वितरित किया जाता है।",
+            "S = SFU में सौर फ़्लक्स (10⁻²² W·m⁻²·Hz⁻¹); k = बोल्ट्ज़मान स्थिरांक (1.380649·10⁻²³ J/K); G = एंटीना का रैखिक लाभ; λ = तरंगदैर्ध्य; θ = सूर्य और चंद्रमा के बीच कोणीय दूरी; a = सूर्य की ओर पैटर्न का लाभ, निर्धारित साइड-लोब स्तर से कभी कम नहीं (पिछले लोब में 10 dB और कम); ΔN = सूर्य के कारण शोर में वृद्धि।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14555,6 +14564,7 @@ namespace LunaCalc
             "50 Ω 동축 케이블 데이터베이스로, 50·70·144·222·432 MHz의 감쇠와 각 값의 출처를 담고 있습니다. 직경, 손실, 이름, 제조사, 종류로 정렬하고(열 머리글을 눌러도 됨) 종류와 직경으로 거르며 이름으로 검색할 수 있습니다. 오른쪽에는 구간 손실 계산과 체크한 케이블의 그래프가 있으며 \"EME 버짓에 사용\" 버튼으로 케이블을 버짓에 넣습니다. 사용자 케이블을 추가할 수 있습니다.",
             "저자의 연락처(이메일, QRZ.com 프로필)와 프로그램에 기여한 분들에 대한 감사의 말.",
             "프로그램이 배포되는 라이선스의 전문.",
+            "S = 태양 플럭스(SFU, 10⁻²² W·m⁻²·Hz⁻¹); k = 볼츠만 상수(1.380649·10⁻²³ J/K); G = 안테나 선형 이득; λ = 파장; θ = 태양과 달 사이의 각거리; a = 태양 방향의 패턴 이득으로, 설정한 사이드로브 레벨보다 낮아지지 않음(백로브에서는 10 dB 더 낮음); ΔN = 태양에 의한 잡음 증가.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15845,6 +15855,7 @@ namespace LunaCalc
             "Basis data kabel koaksial 50 Ω dengan redaman pada 50, 70, 144, 222 dan 432 MHz serta sumber setiap nilai; dapat diurutkan menurut diameter, rugi, nama, pabrikan atau tipe (juga dengan mengklik judul kolom), disaring menurut tipe dan diameter, dan dicari menurut nama. Di kanan, perhitungan rugi suatu ruas dan grafik kabel yang dicentang; tombol \"pakai di Anggaran EME\" membawa kabel ke Anggaran. Kabel kustom dapat ditambahkan.",
             "Kontak penulis (e-mail, profil QRZ.com) dan ucapan terima kasih kepada yang telah berkontribusi pada program.",
             "Teks lisensi yang menjadi dasar distribusi program.",
+            "S = fluks matahari dalam SFU (10⁻²² W·m⁻²·Hz⁻¹); k = konstanta Boltzmann (1,380649·10⁻²³ J/K); G = penguatan linear antena; λ = panjang gelombang; θ = jarak sudut antara Matahari dan Bulan; a = penguatan pola ke arah Matahari, tidak pernah di bawah tingkat lobus samping yang ditetapkan (10 dB lebih rendah di lobus belakang); ΔN = kenaikan derau akibat Matahari.",
         };
 
         public static readonly string[] RU = {
@@ -17136,6 +17147,7 @@ namespace LunaCalc
             "База данных коаксиальных кабелей 50 Ом с затуханием на 50, 70, 144, 222 и 432 МГц и источниками каждого значения; её можно упорядочить по диаметру, потерям, названию, производителю или типу (также щелчком по заголовкам столбцов), отфильтровать по типу и диаметру и искать по названию. Справа — расчёт потерь отрезка и график отмеченных кабелей; кнопка «использовать в бюджете EME» переносит кабель в бюджет. Можно добавить свои кабели.",
             "Контакты автора (e-mail, профиль QRZ.com) и благодарности тем, кто помог программе.",
             "Текст лицензии, на условиях которой распространяется программа.",
+            "S = солнечный поток в SFU (10⁻²² Вт·м⁻²·Гц⁻¹); k = постоянная Больцмана (1,380649·10⁻²³ Дж/К); G = линейное усиление антенны; λ = длина волны; θ = угловое расстояние между Солнцем и Луной; a = усиление диаграммы в направлении Солнца, не ниже заданного уровня боковых лепестков (в задних лепестках на 10 дБ ниже); ΔN = рост шума из-за Солнца.",
         };
 
         public static readonly string[] UK = {
@@ -18427,6 +18439,7 @@ namespace LunaCalc
             "База даних коаксіальних кабелів 50 Ом зі згасанням на 50, 70, 144, 222 і 432 МГц та джерелами кожного значення; її можна впорядкувати за діаметром, втратами, назвою, виробником або типом (також клацанням по заголовках стовпців), відфільтрувати за типом і діаметром і шукати за назвою. Праворуч — розрахунок втрат відрізка і графік позначених кабелів; кнопка «використати в бюджеті EME» переносить кабель до бюджету. Можна додати власні кабелі.",
             "Контакти автора (e-mail, профіль QRZ.com) і подяки тим, хто допоміг програмі.",
             "Текст ліцензії, на умовах якої поширюється програма.",
+            "S = сонячний потік у SFU (10⁻²² Вт·м⁻²·Гц⁻¹); k = стала Больцмана (1,380649·10⁻²³ Дж/К); G = лінійне підсилення антени; λ = довжина хвилі; θ = кутова відстань між Сонцем і Місяцем; a = підсилення діаграми в напрямку Сонця, не нижче заданого рівня бічних пелюсток (у задніх пелюстках на 10 дБ нижче); ΔN = зростання шуму через Сонце.",
         };
 
         public static readonly string[] AF = {
@@ -19718,6 +19731,7 @@ namespace LunaCalc
             "Die databasis van 50 Ω-koaksiale kabels met die verswakking by 50, 70, 144, 222 en 432 MHz en die bronne van elke waarde; dit word gesorteer volgens deursnee, verlies, naam, vervaardiger of tipe (ook deur op die kolomopskrifte te klik), gefiltreer volgens tipe en deursnee en volgens naam deursoek. Regs die verlies van 'n lopie en die grafiek van die gemerkte kabels; die knoppie \"gebruik in die EME-begroting\" neem die kabel na die Begroting. Eie kabels kan bygevoeg word.",
             "Die outeur se kontakbesonderhede (e-pos, QRZ.com-profiel) en dank aan almal wat tot die program bygedra het.",
             "Die teks van die lisensie waaronder die program versprei word.",
+            "S = sonvloed in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann-konstante (1,380649·10⁻²³ J/K); G = lineêre antennawins; λ = golflengte; θ = hoekafstand tussen Son en Maan; a = wins van die patroon na die Son, nooit onder die ingestelde sylobvlak nie (10 dB laer in die agterlobbe); ΔN = geraastoename weens die Son.",
         };
 
         public static readonly string[] BN = {
@@ -21008,6 +21022,7 @@ namespace LunaCalc
             "50 Ω সমাক্ষ কেবলের ডেটাবেস, 50, 70, 144, 222 ও 432 MHz-এ ক্ষয় এবং প্রতিটি মানের উৎসসহ; ব্যাস, ক্ষতি, নাম, নির্মাতা বা ধরন অনুযায়ী সাজানো যায় (কলামের শিরোনামে ক্লিক করেও), ধরন ও ব্যাস দিয়ে ছাঁকা যায় এবং নাম দিয়ে খোঁজা যায়। ডানে একটি অংশের ক্ষতির হিসাব ও টিক দেওয়া কেবলগুলোর গ্রাফ; \"EME বাজেটে ব্যবহার\" বোতাম কেবলটিকে বাজেটে নিয়ে যায়। নিজস্ব কেবল যোগ করা যায়।",
             "লেখকের যোগাযোগ (ই-মেইল, QRZ.com প্রোফাইল) এবং প্রোগ্রামে যাঁরা অবদান রেখেছেন তাঁদের প্রতি কৃতজ্ঞতা।",
             "যে লাইসেন্সের অধীনে প্রোগ্রামটি বিতরণ করা হয় তার পাঠ।",
+            "S = SFU-তে সৌর ফ্লাক্স (10⁻²² W·m⁻²·Hz⁻¹); k = বোল্টজম্যান ধ্রুবক (1.380649·10⁻²³ J/K); G = অ্যান্টেনার রৈখিক লাভ; λ = তরঙ্গদৈর্ঘ্য; θ = সূর্য ও চাঁদের মধ্যে কৌণিক দূরত্ব; a = সূর্যের দিকে প্যাটার্নের লাভ, নির্ধারিত পার্শ্ব-লোব স্তরের নিচে কখনো নয় (পেছনের লোবে আরও 10 dB কম); ΔN = সূর্যের কারণে নয়েজ বৃদ্ধি।",
         };
 
         public static readonly string[] AR = {
@@ -22298,6 +22313,7 @@ namespace LunaCalc
             "قاعدة بيانات الكبلات المحورية 50 Ω مع التوهين عند 50 و70 و144 و222 و432 MHz ومصادر كل قيمة؛ تُرتّب حسب القطر أو الفقد أو الاسم أو المصنّع أو النوع (أيضًا بالنقر على عناوين الأعمدة)، وتُرشّح حسب النوع والقطر ويُبحث فيها بالاسم. على اليمين حساب فقد مقطع ومخطط الكبلات المحددة؛ ويأخذ زر «استخدم في ميزانية EME» الكبل إلى الميزانية. يمكن إضافة كبلات مخصّصة.",
             "بيانات الاتصال بالمؤلف (البريد الإلكتروني وملف QRZ.com) والشكر لمن أسهموا في البرنامج.",
             "نص الترخيص الذي يُوزَّع البرنامج بموجبه.",
+            "S = التدفق الشمسي بوحدة SFU ‏(10⁻²² W·m⁻²·Hz⁻¹)؛ k = ثابت بولتزمان (1.380649·10⁻²³ J/K)؛ G = الكسب الخطي للهوائي؛ λ = طول الموجة؛ θ = المسافة الزاوية بين الشمس والقمر؛ a = كسب المخطط باتجاه الشمس، لا يقل أبدًا عن مستوى الفصوص الجانبية المحدد (أقل بـ 10 dB في الفصوص الخلفية)؛ ΔN = زيادة الضجيج بسبب الشمس.",
         };
 
         public static readonly string[] TR = {
@@ -23588,6 +23604,7 @@ namespace LunaCalc
             "Ölçümleri 50, 70, 144, 222 ve 432 MHz'deki zayıflama ve her değerin kaynağıyla birlikte 50 Ω koaksiyel kablo veritabanı; çapa, kayba, ada, üreticiye ya da türe göre sıralanır (sütun başlıklarına tıklayarak da), tür ve çapa göre süzülür ve adla aranır. Sağda bir hattın kaybı ve işaretlenen kabloların grafiği; \"EME Bütçesinde kullan\" düğmesi kabloyu Bütçeye taşır. Özel kablolar eklenebilir.",
             "Yazarın iletişim bilgileri (e-posta, QRZ.com profili) ve programa katkıda bulunanlara teşekkürler.",
             "Programın dağıtıldığı lisansın metni.",
+            "S = SFU cinsinden güneş akısı (10⁻²² W·m⁻²·Hz⁻¹); k = Boltzmann sabiti (1,380649·10⁻²³ J/K); G = antenin doğrusal kazancı; λ = dalga boyu; θ = Güneş ile Ay arasındaki açısal uzaklık; a = diyagramın Güneş yönündeki kazancı, ayarlanan yan lob seviyesinin altına asla inmez (arka loblarda 10 dB daha düşük); ΔN = Güneş nedeniyle gürültü artışı.",
         };
     }
 
@@ -33212,7 +33229,26 @@ namespace LunaCalc
             else { Righe(S4(5)); Righe(ManualeV27.E(lg, "S46")); }
             Righe(ManualeV27.E(lg, "S47"));
             Righe(ManualeV27.E(lg, "S48"));
-            Righe(S4(6));
+            // 1.9 Rumore solare: le formule in stile Equation Editor (le stesse del DEBUG FORMULE)
+            List<string> rsol = new List<string>(S4(6));
+            for (int i = 0; i < rsol.Count; i++)
+            {
+                const string fSol = "T = S·Ae/(2k)";
+                int k = rsol[i].IndexOf(fSol, StringComparison.Ordinal);
+                if (k < 0) continue;
+                string prima = rsol[i].Substring(0, k).TrimEnd(), dopo = rsol[i].Substring(k + fSol.Length).TrimStart(',', '，', '、', ' ');
+                if (dopo.Length > 0) dopo = char.ToUpper(dopo[0], Lang.Cultura) + dopo.Substring(1);
+                rsol[i] = prima;
+                rsol.InsertRange(i + 1, new string[] {
+                    "= T_{sun} = \\frac{S · 10^{−22} · A_{e}}{2k} · a",
+                    "= A_{e} = \\frac{G · λ^2}{4π}",
+                    "= a = exp \\p{−4 ln 2 · \\p{\\frac{θ}{θ_{3dB}}}^2} \\quad θ_{3dB} = \\sqrt{\\frac{41253}{G}}",
+                    "= ΔN = 10 · log_{10} \\frac{T_{sys} + T_{sun}}{T_{sys}} \\t{ dB}",
+                    "~ " + Lang.T("S = flusso solare in SFU (10⁻²² W·m⁻²·Hz⁻¹); k = costante di Boltzmann (1,380649·10⁻²³ J/K); G = guadagno lineare dell'antenna; λ = lunghezza d'onda; θ = distanza angolare tra Sole e Luna; a = guadagno del diagramma verso il Sole, mai sotto il livello dei lobi laterali impostato (10 dB più basso nei lobi posteriori); ΔN = aumento del rumore dovuto al Sole.") });
+                if (dopo.Length > 0) rsol.Insert(i + 6, dopo);
+                break;
+            }
+            Righe(rsol);
             List<string> dop = new List<string>(ManualeV27.E(lg, "S410"));
             List<string> vecchio = S4(2);
             if (dop.Count > 0 && vecchio.Count > 1) dop.InsertRange(1, vecchio.GetRange(1, vecchio.Count - 1));
@@ -40138,7 +40174,12 @@ namespace LunaCalc
         // "§ 1.3" è il simbolo di paragrafo dei rimandi
         public static bool Apre(string t, int i)
         {
-            return i + 1 < t.Length && t[i + 1] != ' ' && t.IndexOf('§', i + 1) > i + 1;
+            if (i + 1 >= t.Length || t[i + 1] == ' ' || t[i + 1] == '\u00A0' || t.IndexOf('§', i + 1) <= i + 1) return false;
+            // "§3.6" scritto senza spazio è comunque un rimando a un paragrafo, non una formula
+            int k = i + 1;
+            while (k < t.Length && char.IsDigit(t[k])) k++;
+            if (k > i + 1 && k + 1 < t.Length && t[k] == '.' && char.IsDigit(t[k + 1])) return false;
+            return true;
         }
 
         public static readonly StringFormat Sf = CreaSf();
