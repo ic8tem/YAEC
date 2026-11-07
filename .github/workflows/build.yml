@@ -239,6 +239,44 @@ jobs:
           git add -A
           git commit -qm "Font test ${GITHUB_SHA::7}"
           git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:prova-caratteri
+      - name: Schermate per gli articoli (solo con [articolo] nel messaggio del commit)
+        if: contains(github.event.head_commit.message, '[articolo]')
+        run: |
+          sudo apt-get install -y -qq xdotool fonts-noto-core > /dev/null 2>&1 || true
+          fc-cache -f > /dev/null
+          Xvfb :95 -screen 0 1920x1080x24 &
+          export DISPLAY=:95
+          sleep 2
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          {
+            printf 'lingua=it\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
+            printf 'locator=JN81MA\nquota=50\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
+            printf 'b144_me_p=500\nb144_me_nant=2\nb144_me_gant=14\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
+            printf 'b144_dx_p=500\nb144_dx_nant=4\nb144_dx_gant=14.5\nb144_dx_pregain=25\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=30\nb144_dx_lendis=30\n'
+          } > "$F"
+          mkdir -p articolo
+          i=0
+          for T in "Posizione live e +- 24h" "Distanza e Dgrd" "Posizione della Luna" "Budget EME" "Volta celeste" "Luna sul mondo" "Rumore solare" "Radar GRAVES" "Ricognizione dei miei ostacoli" "Controllo dei calcoli" "CAVI COASSIALI"; do
+            i=$((i+1))
+            YAEC_LINGUETTA="$T" mono YAEC.exe &
+            PID=$!
+            sleep 25
+            W=$(xdotool search --name "YAEC" | head -1)
+            if [ -n "$W" ]; then xdotool windowmove $W 0 0 windowsize $W 1920 1080; fi
+            sleep 12
+            import -window root "articolo/$(printf %02d $i)-${T// /_}.png" || true
+            kill $PID 2>/dev/null || true; sleep 2
+          done
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+          H=$(git config --get http.https://github.com/.extraheader)
+          U=$(git remote get-url origin)
+          cd articolo
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Article screenshots ${GITHUB_SHA::7}"
+          git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:articolo
       - name: Schermate per il README (solo con [schermate] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[schermate]')
         run: |
