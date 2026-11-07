@@ -165,6 +165,28 @@ jobs:
             convert shot/x.png -resize 1200x shot/x.jpg 2>/dev/null && echo "SCREENSHOT-${T// /_}-B64:$(base64 -w 0 shot/x.jpg)" || true
             kill $PID 2>/dev/null || true
           done
+          # Volta celeste con limiti dell'antenna (az 285 -> 80, el 0 -> 12): riquadri viola della zona puntabile
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          cp "$F" /tmp/imp.bak
+          sed -i '/^az1=/d;/^az2=/d;/^el1=/d;/^el2=/d' "$F"; printf 'az1=285\naz2=80\nel1=0\nel2=12\n' >> "$F"
+          YAEC_LINGUETTA="Volta celeste" mono YAEC.exe &
+          PID=$!
+          sleep 30
+          import -window root shot/v.png || true
+          convert shot/v.png -resize 1400x shot/v.jpg 2>/dev/null && echo "SCREENSHOT-VOLTA-B64:$(base64 -w 0 shot/v.jpg)" || true
+          kill $PID 2>/dev/null || true
+          cp /tmp/imp.bak "$F"
+          # finestra di chiusura (pulsanti Si'/No) in italiano, inglese ed ebraico
+          for LG in it en he; do
+            sed -i '/^lingua=/d' "$F"; echo "lingua=$LG" >> "$F"
+            YAEC_CHIUSURA=1 mono YAEC.exe &
+            PID=$!
+            sleep 30
+            import -window root shot/c.png || true
+            convert shot/c.png -trim +repage shot/c.jpg 2>/dev/null && echo "SCREENSHOT-CHIUSURA-$LG-B64:$(base64 -w 0 shot/c.jpg)" || true
+            kill $PID 2>/dev/null || true
+          done
+          cp /tmp/imp.bak "$F"
           # lingue nuove e schema pastello rosa: schermata principale in ebraico, urdu e olandese
           sed -i '/^tema=/d' "$HOME/.local/share/YAEC/data/impostazioni.txt"; echo "tema=pastello-rosa" >> "$HOME/.local/share/YAEC/data/impostazioni.txt"
           for LG in he ur nl; do

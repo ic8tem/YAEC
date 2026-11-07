@@ -2527,7 +2527,7 @@ namespace LunaCalc
             "Salva in Word (.docx)",
             "Direzione",
             "Zoom",
-            "Debug delle formule – Budget EME e Rumore solare",
+            "Controllo dei calcoli – Budget EME e Rumore solare",
             "Istante e banda",
             "Parametri di ingresso",
             "Cavo PA – relè + relè + cavo antenna",
@@ -2992,6 +2992,7 @@ namespace LunaCalc
             "1.3 - Nove lingue nuove: olandese, estone, lettone, lituano, svedese, norvegese, islandese, ebraico e urdu (26 in tutto), con i manuali; licenza e LEGGIMI in tutte le lingue, licenza nella lingua dell'installatore; pulsante GRAVES; Connettori in TX e Connettori in RX nel Budget EME (consiglio di NJ9R); separatore trascinabile tra la colonna sinistra e lo schema del Budget EME; casella del velo grigio nella Ricognizione dei miei ostacoli; DEBUG FORMULE diventa Controllo dei calcoli e ABOUT & CREDITS diventa INFORMAZIONI E CREDITI; capitoli tecnici del manuale d'uso in bengalese, arabo e turco; schemi pastello corretti; la finestra del CALL3.TXT si chiude da sola dopo l'aggiornamento; pulsanti delle finestre di dialogo distanziati.",
             "Stazione attiva negli ultimi 90 giorni (chat EME di N0UK), ultimo messaggio il {0}",
             "Caratteri consigliati per YAEC",
+            "Riquadri viola tratteggiati = zona che la tua antenna può puntare.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -3864,7 +3865,7 @@ namespace LunaCalc
             "Save as Word (.docx)",
             "Direction",
             "Zoom",
-            "Formula debug – EME budget and Solar noise",
+            "Calculation check – EME budget and Solar noise",
             "Time and band",
             "Input parameters",
             "PA – relay cable + relay + antenna cable",
@@ -4329,6 +4330,7 @@ namespace LunaCalc
             "1.3 - Nine new languages: Dutch, Estonian, Latvian, Lithuanian, Swedish, Norwegian, Icelandic, Hebrew and Urdu (26 in all), with the manuals; licence and README in all languages, licence in the installer's language; GRAVES button; TX connectors and RX connectors in the EME budget (advice from NJ9R); draggable splitter between the left column and the EME budget diagram; Grey veil checkbox in Reconnaissance of my obstacles; FORMULA DEBUG becomes Calculation check and ABOUT & CREDITS is now translated in every language; technical chapters of the user manual in Bengali, Arabic and Turkish; pastel schemes fixed; the CALL3.TXT window closes by itself after the update; dialog box buttons spaced out.",
             "Station active in the last 90 days (N0UK EME chat), last message on {0}",
             "Fonts recommended for YAEC",
+            "Dashed purple boxes = area your antenna can point at.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5201,7 +5203,7 @@ namespace LunaCalc
             "Als Word speichern (.docx)",
             "Richtung",
             "Zoom",
-            "Debug der Formeln – EME-Budget und Sonnenrauschen",
+            "Rechenkontrolle – EME-Budget und Sonnenrauschen",
             "Zeitpunkt und Band",
             "Eingabeparameter",
             "Kabel PA – Relais + Relais + Antennenkabel",
@@ -5666,6 +5668,7 @@ namespace LunaCalc
             "1.3 - Neun neue Sprachen: Niederländisch, Estnisch, Lettisch, Litauisch, Schwedisch, Norwegisch, Isländisch, Hebräisch und Urdu (insgesamt 26), mit den Handbüchern; Lizenz und LIESMICH in allen Sprachen, Lizenz in der Sprache des Installationsprogramms; Schaltfläche GRAVES; Stecker TX und Stecker RX im EME-Budget (Rat von NJ9R); verschiebbarer Trenner zwischen der linken Spalte und dem Schema des EME-Budgets; Kontrollkästchen Grauer Schleier in Erkundung meiner Hindernisse; FORMEL-DEBUG wird zu Rechenkontrolle und ABOUT & CREDITS wird zu INFO UND NACHWEISE; technische Kapitel des Benutzerhandbuchs auf Bengalisch, Arabisch und Türkisch; Pastell-Schemata korrigiert; das Fenster der CALL3.TXT schließt sich nach der Aktualisierung von selbst; Schaltflächen der Dialogfenster mit mehr Abstand.",
             "Station in den letzten 90 Tagen aktiv (EME-Chat von N0UK), letzte Nachricht am {0}",
             "Für YAEC empfohlene Schriftarten",
+            "Violett gestrichelte Rahmen = Bereich, den deine Antenne anpeilen kann.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6538,7 +6541,7 @@ namespace LunaCalc
             "Enregistrer en Word (.docx)",
             "Direction",
             "Zoom",
-            "Debug des formules – Bilan EME et bruit solaire",
+            "Contrôle des calculs – Bilan EME et bruit solaire",
             "Instant et bande",
             "Paramètres d'entrée",
             "Câble PA – relais + relais + câble d'antenne",
@@ -7003,6 +7006,7 @@ namespace LunaCalc
             "1.3 - Neuf nouvelles langues : néerlandais, estonien, letton, lituanien, suédois, norvégien, islandais, hébreu et ourdou (26 au total), avec les manuels ; licence et LISEZMOI dans toutes les langues, licence dans la langue du programme d'installation ; bouton GRAVES ; Connecteurs TX et Connecteurs RX dans le Bilan EME (conseil de NJ9R) ; séparateur déplaçable entre la colonne de gauche et le schéma du Bilan EME ; case Voile gris dans Reconnaissance de mes obstacles ; DÉBOGAGE DES FORMULES devient Contrôle des calculs et ABOUT & CREDITS devient À PROPOS ET CRÉDITS ; chapitres techniques du manuel d'utilisation en bengali, arabe et turc ; thèmes pastel corrigés ; la fenêtre du CALL3.TXT se ferme d'elle-même après la mise à jour ; boutons des boîtes de dialogue espacés.",
             "Station active au cours des 90 derniers jours (chat EME de N0UK), dernier message le {0}",
             "Polices recommandées pour YAEC",
+            "Cadres violets en pointillés = zone que ton antenne peut viser.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7875,7 +7879,7 @@ namespace LunaCalc
             "Guardar en Word (.docx)",
             "Dirección",
             "Zoom",
-            "Debug de las fórmulas – Balance EME y ruido solar",
+            "Control de los cálculos – Balance EME y ruido solar",
             "Instante y banda",
             "Parámetros de entrada",
             "Cable PA – relé + relé + cable de antena",
@@ -8340,6 +8344,7 @@ namespace LunaCalc
             "1.3 - Nueve idiomas nuevos: neerlandés, estonio, letón, lituano, sueco, noruego, islandés, hebreo y urdu (26 en total), con los manuales; licencia y LÉAME en todos los idiomas, licencia en el idioma del instalador; botón GRAVES; Conectores TX y Conectores RX en el Balance EME (consejo de NJ9R); separador arrastrable entre la columna izquierda y el esquema del Balance EME; casilla Velo gris en Reconocimiento de mis obstáculos; DEPURACIÓN DE FÓRMULAS pasa a ser Control de los cálculos y ABOUT & CREDITS pasa a ser ACERCA DE Y CRÉDITOS; capítulos técnicos del manual de uso en bengalí, árabe y turco; esquemas pastel corregidos; la ventana del CALL3.TXT se cierra sola después de la actualización; botones de los cuadros de diálogo espaciados.",
             "Estación activa en los últimos 90 días (chat EME de N0UK), último mensaje el {0}",
             "Fuentes recomendadas para YAEC",
+            "Recuadros morados discontinuos = zona a la que tu antena puede apuntar.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9212,7 +9217,7 @@ namespace LunaCalc
             "Guardar em Word (.docx)",
             "Direção",
             "Zoom",
-            "Debug das fórmulas – Balanço EME e ruído solar",
+            "Verificação dos cálculos – Balanço EME e ruído solar",
             "Instante e banda",
             "Parâmetros de entrada",
             "Cabo PA – relé + relé + cabo da antena",
@@ -9677,6 +9682,7 @@ namespace LunaCalc
             "1.3 - Nove novas línguas: neerlandês, estónio, letão, lituano, sueco, norueguês, islandês, hebraico e urdu (26 no total), com os manuais; licença e LEIA-ME em todas as línguas, licença na língua do instalador; botão GRAVES; Conectores TX e Conectores RX no Balanço EME (conselho de NJ9R); separador arrastável entre a coluna esquerda e o esquema do Balanço EME; caixa Véu cinzento no Reconhecimento dos meus obstáculos; DEPURAÇÃO DE FÓRMULAS passa a Verificação dos cálculos e ABOUT & CREDITS passa a SOBRE E CRÉDITOS; capítulos técnicos do manual de utilização em bengali, árabe e turco; esquemas pastel corrigidos; a janela do CALL3.TXT fecha-se sozinha após a atualização; botões das caixas de diálogo espaçados.",
             "Estação ativa nos últimos 90 dias (chat EME de N0UK), última mensagem em {0}",
             "Tipos de letra recomendados para o YAEC",
+            "Retângulos roxos tracejados = zona para onde a tua antena pode apontar.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -11014,6 +11020,7 @@ namespace LunaCalc
             "1.3 - 新增九种语言：荷兰语、爱沙尼亚语、拉脱维亚语、立陶宛语、瑞典语、挪威语、冰岛语、希伯来语和乌尔都语（共 26 种），并附手册；许可协议和 README 提供所有语言版本，许可协议以安装程序的语言显示；新增 GRAVES 按钮；EME 链路预算中新增 TX 连接器和 RX 连接器（NJ9R 的建议）；左栏与 EME 链路预算示意图之间新增可拖动的分隔条；我的障碍物勘察中新增灰色遮罩复选框；公式调试更名为计算核查，ABOUT & CREDITS 更名为关于与鸣谢；用户手册的技术章节新增孟加拉语、阿拉伯语和土耳其语版本；修正粉彩配色方案；CALL3.TXT 窗口在更新后自动关闭；对话框按钮间距加大。",
             "最近 90 天内活跃的电台（N0UK 的 EME 聊天室），最后一条消息：{0}",
             "推荐用于 YAEC 的字体",
+            "紫色虚线框 = 你的天线可以指向的区域。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11886,7 +11893,7 @@ namespace LunaCalc
             "Word で保存 (.docx)",
             "方向",
             "ズーム",
-            "数式のデバッグ – EME 回線計算と太陽雑音",
+            "計算のチェック – EME 回線計算と太陽雑音",
             "時刻とバンド",
             "入力パラメーター",
             "PA – リレー間ケーブル + リレー + アンテナケーブル",
@@ -12351,6 +12358,7 @@ namespace LunaCalc
             "1.3 - 新しい言語を 9 つ追加：オランダ語、エストニア語、ラトビア語、リトアニア語、スウェーデン語、ノルウェー語、アイスランド語、ヘブライ語、ウルドゥー語（計 26 言語）、マニュアル付き。ライセンスと README を全言語で用意し、ライセンスはインストーラーの言語で表示。GRAVES ボタンを追加。EME 回線計算に「TXコネクター数」と「RXコネクター数」を追加（NJ9R の助言）。左の列と EME 回線計算の図の間にドラッグ可能な区切りを追加。自局障害物の偵察に「グレーのベール」チェックボックスを追加。数式デバッグを計算のチェックに、ABOUT & CREDITS を概要とクレジットに改名。ユーザーマニュアルの技術章をベンガル語、アラビア語、トルコ語で用意。パステル配色を修正。CALL3.TXT のウィンドウが更新後に自動で閉じるように。ダイアログのボタンの間隔を広げた。",
             "過去 90 日間にアクティブな局（N0UK の EME チャット）、最後のメッセージ：{0}",
             "YAEC におすすめのフォント",
+            "紫の破線の枠 = アンテナを向けられる範囲。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13223,7 +13231,7 @@ namespace LunaCalc
             "Word में सहेजें (.docx)",
             "दिशा",
             "ज़ूम",
-            "सूत्रों का डिबग – EME बजट और सौर शोर",
+            "गणना की जाँच – EME बजट और सौर शोर",
             "समय और बैंड",
             "इनपुट पैरामीटर",
             "केबल PA – रिले + रिले + एंटेना केबल",
@@ -13688,6 +13696,7 @@ namespace LunaCalc
             "1.3 - नौ नई भाषाएँ: डच, एस्टोनियाई, लातवियाई, लिथुआनियाई, स्वीडिश, नॉर्वेजियाई, आइसलैंडिक, हिब्रू और उर्दू (कुल 26), मैनुअल सहित; लाइसेंस और README सभी भाषाओं में, लाइसेंस इंस्टॉलर की भाषा में; GRAVES बटन; EME बजट में TX कनेक्टर और RX कनेक्टर (NJ9R की सलाह); बाएँ स्तंभ और EME बजट के आरेख के बीच खींचने योग्य विभाजक; मेरी बाधाओं की टोह में धूसर परत चेकबॉक्स; सूत्र डिबग अब गणना की जाँच है और ABOUT & CREDITS अब परिचय और श्रेय है; उपयोगकर्ता मैनुअल के तकनीकी अध्याय बांग्ला, अरबी और तुर्की में; पेस्टल योजनाएँ ठीक की गईं; CALL3.TXT की विंडो अपडेट के बाद अपने-आप बंद हो जाती है; डायलॉग बॉक्स के बटनों के बीच अधिक दूरी।",
             "पिछले 90 दिनों में सक्रिय स्टेशन (N0UK का EME चैट), अंतिम संदेश {0} को",
             "YAEC के लिए अनुशंसित फ़ॉन्ट",
+            "बैंगनी डैश वाले बॉक्स = वह क्षेत्र जिसकी ओर तुम्हारा एंटीना इशारा कर सकता है।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -15025,6 +15034,7 @@ namespace LunaCalc
             "1.3 - 새 언어 9개: 네덜란드어, 에스토니아어, 라트비아어, 리투아니아어, 스웨덴어, 노르웨이어, 아이슬란드어, 히브리어, 우르두어(총 26개), 매뉴얼 포함; 라이선스와 README를 모든 언어로 제공, 라이선스는 설치 프로그램의 언어로 표시; GRAVES 버튼; EME 링크 버짓에 TX 커넥터 수와 RX 커넥터 수 추가(NJ9R의 조언); 왼쪽 열과 EME 링크 버짓 도식 사이에 끌어서 옮길 수 있는 구분선; 내 장애물 정찰에 회색 베일 확인란; 수식 디버그는 계산 검증으로, ABOUT & CREDITS는 정보 및 크레딧으로 이름 변경; 사용자 매뉴얼의 기술 장을 벵골어, 아랍어, 터키어로 제공; 파스텔 테마 수정; CALL3.TXT 창이 업데이트 후 자동으로 닫힘; 대화 상자 버튼 간격 조정.",
             "최근 90일 동안 활동한 국 (N0UK EME 채팅), 마지막 메시지 {0}",
             "YAEC 권장 글꼴",
+            "보라색 점선 상자 = 안테나가 향할 수 있는 영역.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15897,7 +15907,7 @@ namespace LunaCalc
             "Simpan sebagai Word (.docx)",
             "Arah",
             "Zoom",
-            "Debug rumus – Anggaran EME dan derau matahari",
+            "Pemeriksaan perhitungan – Anggaran EME dan derau matahari",
             "Waktu dan pita",
             "Parameter masukan",
             "Kabel PA – relai + relai + kabel antena",
@@ -16362,6 +16372,7 @@ namespace LunaCalc
             "1.3 - Sembilan bahasa baru: Belanda, Estonia, Latvia, Lituania, Swedia, Norwegia, Islandia, Ibrani dan Urdu (total 26), beserta manualnya; lisensi dan README dalam semua bahasa, lisensi dalam bahasa penginstal; tombol GRAVES; Konektor TX dan Konektor RX di Anggaran EME (saran dari NJ9R); pemisah yang dapat diseret antara kolom kiri dan skema Anggaran EME; kotak centang Selubung abu-abu di Pengintaian rintangan saya; DEBUG RUMUS menjadi Pemeriksaan perhitungan dan ABOUT & CREDITS menjadi TENTANG DAN KREDIT; bab teknis manual pengguna dalam bahasa Bengali, Arab dan Turki; skema pastel diperbaiki; jendela CALL3.TXT tertutup sendiri setelah pembaruan; tombol kotak dialog diberi jarak.",
             "Stasiun aktif dalam 90 hari terakhir (obrolan EME N0UK), pesan terakhir pada {0}",
             "Fon yang disarankan untuk YAEC",
+            "Kotak ungu putus-putus = area yang dapat dituju antenamu.",
         };
 
         public static readonly string[] RU = {
@@ -17235,7 +17246,7 @@ namespace LunaCalc
             "Сохранить в Word (.docx)",
             "Направление",
             "Масштаб",
-            "Отладка формул – Бюджет EME и шум Солнца",
+            "Проверка расчётов – Бюджет EME и шум Солнца",
             "Момент и диапазон",
             "Входные параметры",
             "Кабель PA – реле + реле + антенный кабель",
@@ -17700,6 +17711,7 @@ namespace LunaCalc
             "1.3 - Девять новых языков: нидерландский, эстонский, латышский, литовский, шведский, норвежский, исландский, иврит и урду (всего 26), с руководствами; лицензия и README на всех языках, лицензия на языке установщика; кнопка GRAVES; «Разъёмов TX» и «Разъёмов RX» в окне «Бюджет EME» (совет NJ9R); перетаскиваемый разделитель между левой колонкой и схемой бюджета EME; флажок «Серая вуаль» в окне «Разведка моих препятствий»; ОТЛАДКА ФОРМУЛ теперь называется «Проверка расчётов», а ABOUT & CREDITS — О ПРОГРАММЕ И ИСТОЧНИКИ; технические главы руководства пользователя на бенгальском, арабском и турецком; исправлены пастельные схемы; окно CALL3.TXT закрывается само после обновления; увеличены промежутки между кнопками диалоговых окон.",
             "Станция активна за последние 90 дней (EME-чат N0UK), последнее сообщение {0}",
             "Шрифты, рекомендуемые для YAEC",
+            "Фиолетовые пунктирные рамки = область, на которую может быть наведена твоя антенна.",
         };
 
         public static readonly string[] UK = {
@@ -18573,7 +18585,7 @@ namespace LunaCalc
             "Зберегти у Word (.docx)",
             "Напрямок",
             "Масштаб",
-            "Налагодження формул – Бюджет EME і шум Сонця",
+            "Перевірка розрахунків – Бюджет EME і шум Сонця",
             "Момент і діапазон",
             "Вхідні параметри",
             "Кабель PA – реле + реле + антенний кабель",
@@ -19038,6 +19050,7 @@ namespace LunaCalc
             "1.3 - Дев’ять нових мов: нідерландська, естонська, латиська, литовська, шведська, норвезька, ісландська, іврит і урду (усього 26), з посібниками; ліцензія та README всіма мовами, ліцензія мовою інсталятора; кнопка GRAVES; «Роз’ємів TX» і «Роз’ємів RX» у вікні «Бюджет EME» (порада NJ9R); перетягуваний роздільник між лівою колонкою та схемою бюджету EME; прапорець «Сіра вуаль» у вікні «Розвідка моїх перешкод»; НАЛАГОДЖЕННЯ ФОРМУЛ тепер називається «Перевірка розрахунків», а ABOUT & CREDITS — ПРО ПРОГРАМУ ТА ДЖЕРЕЛА; технічні розділи посібника користувача бенгальською, арабською та турецькою; виправлено пастельні схеми; вікно CALL3.TXT закривається саме після оновлення; збільшено проміжки між кнопками діалогових вікон.",
             "Станція активна протягом останніх 90 днів (EME-чат N0UK), останнє повідомлення {0}",
             "Шрифти, рекомендовані для YAEC",
+            "Фіолетові пунктирні рамки = область, на яку може бути наведена твоя антена.",
         };
 
         public static readonly string[] AF = {
@@ -19911,7 +19924,7 @@ namespace LunaCalc
             "Stoor as Word (.docx)",
             "Rigting",
             "Zoem",
-            "Debug van die formules – EME-begroting en songeraas",
+            "Kontrole van die berekeninge – EME-begroting en songeraas",
             "Oomblik en band",
             "Invoerparameters",
             "Kabel PA – relê + relê + antennakabel",
@@ -20376,6 +20389,7 @@ namespace LunaCalc
             "1.3 - Nege nuwe tale: Nederlands, Estnies, Letties, Litaus, Sweeds, Noors, Yslands, Hebreeus en Oerdoe (26 altesaam), met die handleidings; lisensie en README in alle tale, lisensie in die taal van die installeerder; GRAVES-knoppie; TX-verbindings en RX-verbindings in die EME-begroting (raad van NJ9R); versleepbare skeier tussen die linkerkolom en die skema van die EME-begroting; merkblokkie Grys sluier in Verkenning van my hindernisse; FORMULE-ONTFOUTING word Kontrole van die berekeninge en ABOUT & CREDITS word OOR DIE PROGRAM EN BRONNE; tegniese hoofstukke van die gebruikershandleiding in Bengaals, Arabies en Turks; pastelskemas reggestel; die CALL3.TXT-venster maak vanself toe ná die bywerking; knoppies van die dialoogvensters verder uitmekaar.",
             "Stasie aktief in die afgelope 90 dae (N0UK se EME-klets), laaste boodskap op {0}",
             "Lettertipes aanbeveel vir YAEC",
+            "Pers stippelraampies = gebied waarna jou antenna kan wys.",
         };
 
         public static readonly string[] BN = {
@@ -21248,7 +21262,7 @@ namespace LunaCalc
             "Word হিসেবে সংরক্ষণ (.docx)",
             "দিক",
             "জুম",
-            "সূত্রের ডিবাগ – EME বাজেট ও সৌর নয়েজ",
+            "গণনা যাচাই – EME বাজেট ও সৌর নয়েজ",
             "সময় ও ব্যান্ড",
             "ইনপুট প্যারামিটার",
             "কেবল PA – রিলে + রিলে + অ্যান্টেনা কেবল",
@@ -21713,6 +21727,7 @@ namespace LunaCalc
             "1.3 - নয়টি নতুন ভাষা: ডাচ, এস্তোনীয়, লাটভীয়, লিথুয়ানীয়, সুইডিশ, নরওয়েজীয়, আইসল্যান্ডীয়, হিব্রু ও উর্দু (মোট 26টি), ম্যানুয়ালসহ; লাইসেন্স ও README সব ভাষায়, লাইসেন্স ইনস্টলারের ভাষায়; GRAVES বোতাম; EME বাজেটে TX কানেক্টর ও RX কানেক্টর (NJ9R-এর পরামর্শ); বাঁ দিকের কলাম ও EME বাজেটের নকশার মধ্যে টেনে সরানো যায় এমন বিভাজক; আমার বাধাগুলির অনুসন্ধান-এ ধূসর আবরণ চেকবক্স; সূত্র ডিবাগ এখন গণনা যাচাই এবং ABOUT & CREDITS এখন পরিচিতি ও কৃতিত্ব; ব্যবহারকারী ম্যানুয়ালের প্রযুক্তিগত অধ্যায় বাংলা, আরবি ও তুর্কি ভাষায়; প্যাস্টেল স্কিম সংশোধিত; হালনাগাদের পর CALL3.TXT-এর উইন্ডো নিজে থেকেই বন্ধ হয়; ডায়ালগ বক্সের বোতামগুলির মধ্যে ফাঁক বাড়ানো হয়েছে।",
             "গত 90 দিনে সক্রিয় স্টেশন (N0UK-এর EME চ্যাট), শেষ বার্তা {0}",
             "YAEC-এর জন্য প্রস্তাবিত ফন্ট",
+            "বেগুনি ড্যাশ দেওয়া বাক্স = যে এলাকায় তোমার অ্যান্টেনা তাক করতে পারে।",
         };
 
         public static readonly string[] AR = {
@@ -23050,6 +23065,7 @@ namespace LunaCalc
             "1.3 - تسع لغات جديدة: الهولندية والإستونية واللاتفية والليتوانية والسويدية والنرويجية والآيسلندية والعبرية والأردية (26 لغة في المجموع)، مع الأدلة؛ الترخيص وملف README بجميع اللغات، والترخيص بلغة برنامج التثبيت؛ زر GRAVES؛ موصلات TX وموصلات RX في ميزانية EME (نصيحة من NJ9R)؛ فاصل قابل للسحب بين العمود الأيسر ومخطط ميزانية EME؛ خانة اختيار الغشاء الرمادي في استطلاع عوائقي؛ تصحيح الصيغ أصبح التحقق من الحسابات، وABOUT & CREDITS أصبح حول البرنامج والمصادر؛ الفصول التقنية من دليل الاستخدام بالبنغالية والعربية والتركية؛ تصحيح مخططات ألوان الباستيل؛ نافذة CALL3.TXT تُغلق تلقائيًا بعد التحديث؛ تباعد أزرار نوافذ الحوار.",
             "محطة نشطة خلال آخر 90 يومًا (دردشة EME لدى N0UK)، آخر رسالة في {0}",
             "الخطوط الموصى بها لـ YAEC",
+            "المربعات البنفسجية المتقطعة = المنطقة التي يمكن لهوائيك التوجّه إليها.",
         };
 
         public static readonly string[] TR = {
@@ -23922,7 +23938,7 @@ namespace LunaCalc
             "Word olarak kaydet (.docx)",
             "Yön",
             "Yakınlaştırma",
-            "Formül hata ayıklama – EME bütçesi ve güneş gürültüsü",
+            "Hesapların kontrolü – EME bütçesi ve güneş gürültüsü",
             "An ve bant",
             "Giriş parametreleri",
             "PA – röle kablosu + röle + anten kablosu",
@@ -24387,6 +24403,7 @@ namespace LunaCalc
             "1.3 - Dokuz yeni dil: Felemenkçe, Estonca, Letonca, Litvanca, İsveççe, Norveççe, İzlandaca, İbranice ve Urduca (toplam 26), kılavuzlarıyla birlikte; lisans ve README tüm dillerde, lisans yükleyicinin dilinde; GRAVES düğmesi; EME bütçesinde TX konektörleri ve RX konektörleri (NJ9R'nin önerisi); sol sütun ile EME bütçesi şeması arasında sürüklenebilir ayırıcı; Engellerimin keşfi penceresinde Gri örtü onay kutusu; FORMÜL HATA AYIKLAMA artık Hesapların kontrolü, ABOUT & CREDITS artık HAKKINDA VE KAYNAKLAR; kullanım kılavuzunun teknik bölümleri Bengalce, Arapça ve Türkçe; pastel şemalar düzeltildi; CALL3.TXT penceresi güncellemeden sonra kendiliğinden kapanıyor; iletişim kutusu düğmeleri arasındaki boşluk artırıldı.",
             "Son 90 günde etkin istasyon (N0UK EME sohbeti), son mesaj {0}",
             "YAEC için önerilen yazı tipleri",
+            "Mor kesikli kutular = anteninin yönelebildiği bölge.",
         };
 
         public static readonly string[] NL = {
@@ -25259,7 +25276,7 @@ namespace LunaCalc
             "Opslaan als Word (.docx)",
             "Richting",
             "Zoom",
-            "Debug van de formules – EME-budget en Zonneruis",
+            "Controle van de berekeningen – EME-budget en Zonneruis",
             "Tijdstip en band",
             "Invoerparameters",
             "Kabel PA – relais + relais + antennekabel",
@@ -25724,6 +25741,7 @@ namespace LunaCalc
             "1.3 - Negen nieuwe talen: Nederlands, Estisch, Lets, Litouws, Zweeds, Noors, IJslands, Hebreeuws en Urdu (26 in totaal), met de handleidingen; licentie en LEESMIJ in alle talen, licentie in de taal van het installatieprogramma; knop GRAVES; TX-connectoren en RX-connectoren in het EME-budget (advies van NJ9R); versleepbare scheidingslijn tussen de linkerkolom en het schema van het EME-budget; selectievakje Grijze sluier in Verkenning van mijn obstakels; DEBUG FORMULES wordt Controle van de berekeningen en ABOUT & CREDITS wordt INFORMATIE EN CREDITS; technische hoofdstukken van de gebruikershandleiding in het Bengaals, Arabisch en Turks; pastelschema's gecorrigeerd; het venster van CALL3.TXT sluit vanzelf na de update; knoppen van de dialoogvensters verder uit elkaar.",
             "Station actief in de afgelopen 90 dagen (EME-chat van N0UK), laatste bericht op {0}",
             "Aanbevolen lettertypen voor YAEC",
+            "Paarse gestippelde kaders = gebied waarop je antenne kan richten.",
         };
 
         public static readonly string[] ET = {
@@ -26596,7 +26614,7 @@ namespace LunaCalc
             "Salvesta Wordi (.docx)",
             "Suund",
             "Suum",
-            "Valemite silumine – EME eelarve ja Päikese müra",
+            "Arvutuste kontroll – EME eelarve ja Päikese müra",
             "Hetk ja sagedusala",
             "Sisendparameetrid",
             "Kaabel PA – relee + relee + antennikaabel",
@@ -27061,6 +27079,7 @@ namespace LunaCalc
             "1.3 - Üheksa uut keelt: hollandi, eesti, läti, leedu, rootsi, norra, islandi, heebrea ja urdu (kokku 26), koos juhenditega; litsents ja README kõigis keeltes, litsents paigaldusprogrammi keeles; nupp GRAVES; „TX pistikud“ ja „RX pistikud“ aknas „EME eelarve“ (NJ9R-i soovitus); lohistatav eraldaja vasaku veeru ja akna „EME eelarve“ skeemi vahel; märkeruut „Hall loor“ aknas „Minu takistuste kaardistus“; VALEMITE DEBUG on nüüd „Arvutuste kontroll“ ja ABOUT & CREDITS on nüüd TEAVE JA AUTORID; kasutusjuhendi tehnilised peatükid bengali, araabia ja türgi keeles; pastelsed skeemid parandatud; CALL3.TXT aken sulgub pärast uuendamist ise; dialoogiakende nupud on üksteisest kaugemal.",
             "Jaam on olnud aktiivne viimase 90 päeva jooksul (N0UK EME-vestlus), viimane sõnum {0}",
             "YAEC-i jaoks soovitatud kirjatüübid",
+            "Lillad katkendjoontega raamid = ala, kuhu su antenn saab suunata.",
         };
 
         public static readonly string[] LV = {
@@ -27933,7 +27952,7 @@ namespace LunaCalc
             "Saglabāt Word formātā (.docx)",
             "Virziens",
             "Tālummaiņa",
-            "Formulu atkļūdošana – „EME budžets” un „Saules troksnis”",
+            "Aprēķinu pārbaude – „EME budžets” un „Saules troksnis”",
             "Brīdis un diapazons",
             "Ieejas parametri",
             "Kabelis PA – relejs + relejs + antenas kabelis",
@@ -28398,6 +28417,7 @@ namespace LunaCalc
             "1.3 - Deviņas jaunas valodas: nīderlandiešu, igauņu, latviešu, lietuviešu, zviedru, norvēģu, islandiešu, ivrita un urdu (kopā 26), ar rokasgrāmatām; licence un README visās valodās, licence instalētāja valodā; poga GRAVES; „TX savienotāji” un „RX savienotāji” logā „EME budžets” (NJ9R ieteikums); pārvietojams atdalītājs starp kreiso kolonnu un loga „EME budžets” shēmu; izvēles rūtiņa „Pelēks plīvurs” logā „Manu šķēršļu izpēte”; „FORMULU ATKĻŪDOŠANA” tagad ir „Aprēķinu pārbaude” un ABOUT & CREDITS tagad ir „INFORMĀCIJA UN AUTORI”; lietošanas rokasgrāmatas tehniskās nodaļas bengāļu, arābu un turku valodā; pasteļkrāsu shēmas izlabotas; CALL3.TXT logs pēc atjaunināšanas aizveras pats; dialoglodziņu pogām lielākas atstarpes.",
             "Stacija aktīva pēdējo 90 dienu laikā (N0UK EME tērzēšana), pēdējā ziņa {0}",
             "YAEC ieteicamie fonti",
+            "Violeti raustīti rāmji = zona, uz kuru tava antena var notēmēt.",
         };
 
         public static readonly string[] LT = {
@@ -29270,7 +29290,7 @@ namespace LunaCalc
             "Išsaugoti Word (.docx)",
             "Kryptis",
             "Mastelis",
-            "Formulių derinimas – EME biudžetas ir Saulės triukšmas",
+            "Skaičiavimų patikra – EME biudžetas ir Saulės triukšmas",
             "Momentas ir diapazonas",
             "Įėjimo parametrai",
             "Kabelis PA – relė + relė + antenos kabelis",
@@ -29735,6 +29755,7 @@ namespace LunaCalc
             "1.3 - Devynios naujos kalbos: olandų, estų, latvių, lietuvių, švedų, norvegų, islandų, hebrajų ir urdu (iš viso 26), su vadovais; licencija ir README visomis kalbomis, licencija diegimo programos kalba; mygtukas GRAVES; TX jungtys ir RX jungtys lange EME biudžetas (NJ9R patarimas); perkeliamas skirtukas tarp kairiojo stulpelio ir EME biudžeto schemos; žymimasis langelis Pilkas šydas lange Mano kliūčių žvalgyba; FORMULIŲ DERINIMAS dabar vadinasi Skaičiavimų patikra, o ABOUT & CREDITS – INFORMACIJA IR ŠALTINIAI; naudotojo vadovo techniniai skyriai bengalų, arabų ir turkų kalbomis; pataisytos pastelinės schemos; CALL3.TXT langas po atnaujinimo užsidaro pats; padidinti tarpai tarp dialogo langų mygtukų.",
             "Stotis aktyvi per pastarąsias 90 dienų (N0UK EME pokalbiai), paskutinė žinutė {0}",
             "YAEC rekomenduojami šriftai",
+            "Violetiniai brūkšniuoti rėmeliai = sritis, į kurią gali nukreipti savo anteną.",
         };
 
         public static readonly string[] SV = {
@@ -30607,7 +30628,7 @@ namespace LunaCalc
             "Spara i Word (.docx)",
             "Riktning",
             "Zoom",
-            "Formel-debug – EME-budget och Solbrus",
+            "Kontroll av beräkningarna – EME-budget och Solbrus",
             "Tidpunkt och band",
             "Indataparametrar",
             "Kabel PA – relä + relä + antennkabel",
@@ -31072,6 +31093,7 @@ namespace LunaCalc
             "1.3 - Nio nya språk: nederländska, estniska, lettiska, litauiska, svenska, norska, isländska, hebreiska och urdu (26 totalt), med manualerna; licens och README på alla språk, licens på installationsprogrammets språk; knappen GRAVES; TX-kontakter och RX-kontakter i EME-budget (råd från NJ9R); flyttbar avdelare mellan den vänstra kolumnen och schemat i EME-budget; kryssrutan Grå slöja i Rekognosering av mina hinder; FORMEL-DEBUG blir Kontroll av beräkningarna och ABOUT & CREDITS blir INFORMATION OCH ERKÄNNANDEN; tekniska kapitel i användarmanualen på bengali, arabiska och turkiska; pastellscheman rättade; fönstret för CALL3.TXT stängs automatiskt efter uppdateringen; knapparna i dialogrutorna har fått mer avstånd.",
             "Station aktiv de senaste 90 dagarna (N0UK:s EME-chatt), senaste meddelandet {0}",
             "Rekommenderade typsnitt för YAEC",
+            "Lila streckade rutor = område som din antenn kan riktas mot.",
         };
 
         public static readonly string[] NB = {
@@ -31944,7 +31966,7 @@ namespace LunaCalc
             "Lagre i Word (.docx)",
             "Retning",
             "Zoom",
-            "Debug av formlene – EME-budsjett og Solstøy",
+            "Kontroll av beregningene – EME-budsjett og Solstøy",
             "Tidspunkt og bånd",
             "Inngangsparametere",
             "Kabel PA – relé + relé + antennekabel",
@@ -32409,6 +32431,7 @@ namespace LunaCalc
             "1.3 - Ni nye språk: nederlandsk, estisk, latvisk, litauisk, svensk, norsk, islandsk, hebraisk og urdu (totalt 26), med manualene; lisens og README på alle språk, lisens på installasjonsprogrammets språk; knappen GRAVES; TX-kontakter og RX-kontakter i EME-budsjett (råd fra NJ9R); flyttbar skillelinje mellom venstre kolonne og skjemaet i EME-budsjett; avkrysningsboksen Grått slør i Kartlegging av mine hindringer; DEBUG AV FORMLER blir Kontroll av beregningene og ABOUT & CREDITS blir INFORMASJON OG KREDITERING; tekniske kapitler i brukermanualen på bengali, arabisk og tyrkisk; pastellskjemaene rettet; vinduet for CALL3.TXT lukkes av seg selv etter oppdateringen; knappene i dialogboksene har fått mer avstand.",
             "Stasjon aktiv de siste 90 dagene (N0UKs EME-chat), siste melding {0}",
             "Anbefalte skrifttyper for YAEC",
+            "Lilla stiplede rammer = område antennen din kan peke mot.",
         };
 
         public static readonly string[] IS = {
@@ -33281,7 +33304,7 @@ namespace LunaCalc
             "Vista sem Word (.docx)",
             "Stefna",
             "Aðdráttur",
-            "Villuleit formúla – EME-aflreikningur og Sólarsuð",
+            "Yfirferð útreikninga – EME-aflreikningur og Sólarsuð",
             "Tímapunktur og band",
             "Inntaksfæribreytur",
             "Kapall PA – liði + liði + loftnetskapall",
@@ -33746,6 +33769,7 @@ namespace LunaCalc
             "1.3 - Níu ný tungumál: hollenska, eistneska, lettneska, litháíska, sænska, norska, íslenska, hebreska og úrdú (26 alls), með handbókunum; leyfi og README á öllum tungumálum, leyfi á tungumáli uppsetningarforritsins; GRAVES-hnappur; TX-tengi og RX-tengi í glugganum EME-aflreikningur (ráð frá NJ9R); færanleg skil milli vinstri dálksins og skýringarmyndarinnar í EME-aflreikningur; gátreiturinn Grá hula í Könnun á hindrunum mínum; DEBUG FORMÚLA verður Yfirferð útreikninga og ABOUT & CREDITS verður UPPLÝSINGAR OG HEIMILDIR; tæknikaflar notendahandbókarinnar á bengölsku, arabísku og tyrknesku; pastellitasamsetningar lagfærðar; glugginn fyrir CALL3.TXT lokast sjálfkrafa eftir uppfærsluna; meira bil á milli hnappa í samskiptagluggum.",
             "Stöð virk síðustu 90 daga (EME-spjall N0UK), síðustu skilaboð {0}",
             "Leturgerðir sem mælt er með fyrir YAEC",
+            "Fjólubláir strikaðir rammar = svæði sem loftnetið þitt getur beinst að.",
         };
 
         public static readonly string[] HE = {
@@ -34618,7 +34642,7 @@ namespace LunaCalc
             "שמור ב-Word (.docx)",
             "כיוון",
             "זום",
-            "ניפוי הנוסחאות – תקציב EME ורעש שמש",
+            "בדיקת החישובים – תקציב EME ורעש שמש",
             "רגע ותחום",
             "פרמטרי קלט",
             "כבל PA – ממסר + ממסר + כבל אנטנה",
@@ -35083,6 +35107,7 @@ namespace LunaCalc
             "1.3 - תשע שפות חדשות: הולנדית, אסטונית, לטבית, ליטאית, שוודית, נורווגית, איסלנדית, עברית ואורדו (26 בסך הכול), עם המדריכים; רישיון ו-README בכל השפות, רישיון בשפת תוכנית ההתקנה; לחצן GRAVES; מחברי TX ומחברי RX בחלון תקציב EME (עצה של NJ9R); מפריד שניתן לגרור בין העמודה השמאלית לתרשים של תקציב EME; תיבת הסימון מסך אפור בחלון סקר המכשולים שלי; DEBUG נוסחאות נקרא כעת בדיקת החישובים, ו-ABOUT & CREDITS נקרא כעת מידע וקרדיטים; הפרקים הטכניים של מדריך המשתמש בבנגלית, בערבית ובטורקית; ערכות הפסטל תוקנו; חלון ה-CALL3.TXT נסגר מעצמו לאחר העדכון; הוגדל המרווח בין הלחצנים בתיבות הדו-שיח.",
             "תחנה פעילה ב־90 הימים האחרונים (צ'אט ה־EME של N0UK), הודעה אחרונה ב־{0}",
             "גופנים מומלצים ל־YAEC",
+            "מסגרות סגולות מקווקוות = האזור שהאנטנה שלך יכולה לכוון אליו.",
         };
 
         public static readonly string[] UR = {
@@ -35955,7 +35980,7 @@ namespace LunaCalc
             "Word (.docx) میں محفوظ کریں",
             "سمت",
             "زوم",
-            "فارمولوں کی ڈیبگ – EME بجٹ اور شمسی شور",
+            "حسابات کی جانچ – EME بجٹ اور شمسی شور",
             "لمحہ اور بینڈ",
             "ان پٹ پیرامیٹرز",
             "PA – ریلے کیبل + ریلے + اینٹینا کیبل",
@@ -36420,6 +36445,7 @@ namespace LunaCalc
             "1.3 - نو نئی زبانیں: ڈچ، اسٹونین، لیٹوین، لتھوینین، سویڈش، نارویجین، آئس لینڈک، عبرانی اور اردو (کل 26)، مینوئلز کے ساتھ؛ لائسنس اور README تمام زبانوں میں، لائسنس انسٹالر کی زبان میں؛ GRAVES بٹن؛ EME بجٹ میں TX کنیکٹرز اور RX کنیکٹرز (NJ9R کا مشورہ)؛ بائیں کالم اور EME بجٹ کے خاکے کے درمیان کھینچا جا سکنے والا جداکار؛ میری رکاوٹوں کا جائزہ میں سرمئی پردہ چیک باکس؛ فارمولا DEBUG اب حسابات کی جانچ ہے اور ABOUT & CREDITS اب معلومات اور کریڈٹس ہے؛ صارف مینوئل کے تکنیکی ابواب بنگالی، عربی اور ترکی میں؛ پیسٹل اسکیمیں درست کی گئیں؛ CALL3.TXT کی ونڈو اپ ڈیٹ کے بعد خود بند ہو جاتی ہے؛ ڈائیلاگ باکسز کے بٹنوں کے درمیان فاصلہ بڑھایا گیا۔",
             "گزشتہ 90 دنوں میں فعال اسٹیشن (N0UK کی EME چیٹ)، آخری پیغام {0} کو",
             "YAEC کے لیے تجویز کردہ فونٹس",
+            "جامنی ڈیش والے خانے = وہ علاقہ جس کی طرف تمہارا اینٹینا رخ کر سکتا ہے۔",
         };
     }
 
@@ -40011,7 +40037,7 @@ namespace LunaCalc
                 Lang.T("{0} UTC - Luna da {1}: Az {2:F1}°  El {3:F1}°  Dec {4:F2}°  Tsky dietro la Luna {5:F0} K a {6} MHz.   Sole: Az {7:F1}°  El {8:F1}°, a {9:F1}° dalla Luna.\nCielo visto dalla tua stazione: azimut in orizzontale (N-E-S-O-N), elevazione in verticale, orizzonte = riga piatta a 0°. Colori = rumore del cielo alla frequenza di lavoro (blu = minimo, rosso = massimo; Global Sky Model). Puntini bianchi = piano galattico, puntini chiari = eclittica; linea viola = orizzonte del DX; linee gialle = limiti della tua antenna. Flussi delle radiosorgenti indicativi."),
                 FmtDT(skyT), me.Loc.Text.Trim(), skyMoon.Az, skyMoon.El, skyMoon.Dec, tsky, f.ToString("0.###", ci),
                 skySunAz, skySunEl, Moon.Separation(skySunRa, skySunDec, skyMoon.Ra, skyMoon.Dec))
-                + (chkSkyLim.Checked ? " " + Lang.T("Zone a righe diagonali grigie = fuori dai limiti della tua antenna.") : "");
+                + (chkSkyLim.Checked ? " " + Lang.T("Zone a righe diagonali grigie = fuori dai limiti della tua antenna.") + " " + Lang.T("Riquadri viola tratteggiati = zona che la tua antenna può puntare.") : "");
             sky.Invalidate();
         }
 
@@ -40092,6 +40118,7 @@ namespace LunaCalc
                     lp.DashStyle = DashStyle.Dash;
                     double e1 = (double)me.El1.Value, e2 = (double)me.El2.Value, z1 = (double)me.Az1.Value, z2 = (double)me.Az2.Value;
                     // zone fuori dai limiti dell'antenna: righe diagonali grigio chiaro
+                    List<RectangleF> visibili = new List<RectangleF>();   // zone dove l'antenna può puntare
                     using (Region fuori = new Region(a))
                     {
                         double e1c = Math.Max(SkyElMin, e1), e2c = Math.Min(90.0, e2);
@@ -40101,13 +40128,14 @@ namespace LunaCalc
                         {
                             float yt = Y(e2c), yb = Y(e1c);
                             double s1 = ((z1 % 360.0) + 360.0) % 360.0, s2 = z2 >= 360 ? 360.0 : ((z2 % 360.0) + 360.0) % 360.0;
-                            if (azLib) fuori.Exclude(new RectangleF(a.Left, yt, a.Width, yb - yt));
-                            else if (s1 < s2) fuori.Exclude(new RectangleF(Xd(s1), yt, Xd(s2) - Xd(s1), yb - yt));
+                            if (azLib) visibili.Add(new RectangleF(a.Left, yt, a.Width, yb - yt));
+                            else if (s1 < s2) visibili.Add(new RectangleF(Xd(s1), yt, Xd(s2) - Xd(s1), yb - yt));
                             else
                             {
-                                fuori.Exclude(new RectangleF(Xd(s1), yt, Xd(360) - Xd(s1), yb - yt));
-                                fuori.Exclude(new RectangleF(Xd(0), yt, Xd(s2) - Xd(0), yb - yt));
+                                visibili.Add(new RectangleF(Xd(s1), yt, Xd(360) - Xd(s1), yb - yt));
+                                visibili.Add(new RectangleF(Xd(0), yt, Xd(s2) - Xd(0), yb - yt));
                             }
+                            foreach (RectangleF rv in visibili) fuori.Exclude(rv);
                         }
                         Region primaClip = g.Clip;
                         g.SetClip(fuori, CombineMode.Intersect);
@@ -40122,6 +40150,16 @@ namespace LunaCalc
                     {
                         g.DrawLine(lp, X(z1), a.Top, X(z1), a.Bottom);
                         g.DrawLine(lp, X(z2), a.Top, X(z2), a.Bottom);
+                    }
+                    // riquadri della zona puntabile: viola tratteggiato, spessore doppio delle linee gialle
+                    using (Pen vp = new Pen(Color.FromArgb(240, 147, 51, 234), lp.Width * 2f))
+                    {
+                        vp.DashStyle = DashStyle.Dash;
+                        Region primaClip = g.Clip;
+                        g.SetClip(a, CombineMode.Intersect);
+                        foreach (RectangleF rv in visibili)
+                            if (rv.Width > 1 && rv.Height > 1) g.DrawRectangle(vp, rv.X, rv.Y, rv.Width, rv.Height);
+                        g.Clip = primaClip;
                     }
                 }
             }
@@ -40507,7 +40545,7 @@ namespace LunaCalc
             if (docDebug == null || tabs == null || tabs.SelectedTab != tpDebug) return;
             dbg = new List<DocBlocco>();
             dbgSez = 0;
-            dbg.Add(DocBlocco.P(DocTipo.Titolo, Lang.T("Debug delle formule – Budget EME e Rumore solare")));
+            dbg.Add(DocBlocco.P(DocTipo.Titolo, Lang.T("Controllo dei calcoli – Budget EME e Rumore solare")));
             BudgetParams.Freq = curBand;
             BudgetParams pm = BudgetParams.FromUi(bMe), pd = BudgetParams.FromUi(bDx);
             if (!me.Ok || !chkDx.Checked || !dx.Ok)
@@ -48689,6 +48727,14 @@ namespace LunaCalc
             // solo per le prove automatiche: YAEC_LINGUETTA=<nome> apre quella linguetta all'avvio
             string lgProva = Environment.GetEnvironmentVariable("YAEC_LINGUETTA");
             if (!string.IsNullOrEmpty(lgProva)) this.Shown += (s, e) => ApriLinguettaPerNome(this, lgProva);
+            // solo per le prove automatiche: YAEC_CHIUSURA=1 apre la finestra di chiusura dopo 5 secondi
+            if (Environment.GetEnvironmentVariable("YAEC_CHIUSURA") == "1") this.Shown += (s, e) =>
+            {
+                System.Windows.Forms.Timer tc = new System.Windows.Forms.Timer();
+                tc.Interval = 5000;
+                tc.Tick += (s2, e2) => { tc.Stop(); tc.Dispose(); Close(); };
+                tc.Start();
+            };
             // solo per le prove automatiche: YAEC_GIRO=<cartella> apre una linguetta alla volta; per ognuna scrive
             // <n>.txt con il nome e aspetta che la prova crei ok<n> (dopo la schermata), poi passa alla successiva
             string giro = Environment.GetEnvironmentVariable("YAEC_GIRO");
@@ -48859,7 +48905,7 @@ namespace LunaCalc
                 for (int i = pulsanti.Length - 1; i >= 0; i--)
                 {
                     x -= wb[i];
-                    pulsanti[i].SetBounds(x, (hbar - hb) / 2, wb[i], hb);
+                    pulsanti[i].SetBounds(Lang.Rtl ? w - x - wb[i] : x, (hbar - hb) / 2, wb[i], hb);
                     x -= gap;
                 }
                 f.ClientSize = new Size(w, sc.Height + 1 + hbar);
@@ -48911,32 +48957,51 @@ namespace LunaCalc
                 t.Controls.Add(pb, 0, 0); t.Controls.Add(testi, 1, 0);
                 // linea sottile e barra grigia dei pulsanti
                 Panel linea = new Panel(); linea.Height = 1; linea.BackColor = Color.FromArgb(222, 226, 232);
-                FlowLayoutPanel bt = new FlowLayoutPanel();
-                bt.FlowDirection = FlowDirection.RightToLeft;   // con la finestra da destra a sinistra si rispecchia da sola
-                bt.WrapContents = false;
-                bt.AutoSize = true; bt.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                // barra dei pulsanti disposta a mano (come StileDialogo): con il pannello automatico, sugli schermi
+                // ingranditi i pulsanti potevano sovrapporsi o uscire dal bordo destro
+                Panel bt = new Panel();
                 bt.BackColor = Color.FromArgb(240, 240, 240);
-                bt.Padding = new Padding(S(12), S(10), S(12), S(10));
                 Button no = new Pulsante(); no.Text = Lang.T("No"); no.DialogResult = DialogResult.No;
                 Button si = new Pulsante(); si.Text = siNo ? Lang.T("Sì") : "OK"; si.DialogResult = siNo ? DialogResult.Yes : DialogResult.OK;
-                foreach (Button b in new Button[] { no, si })
+                Button[] pulsanti = siNo ? new Button[] { si, no } : new Button[] { si };
+                foreach (Button b in pulsanti)
                 {
-                    b.AutoSize = true; b.MinimumSize = new Size(S(96), S(32));
-                    b.Margin = new Padding(S(6), 0, 0, 0);
+                    b.AutoSize = false;
                     b.BackColor = Color.FromArgb(252, 252, 252);
                     b.UseVisualStyleBackColor = false;
+                    bt.Controls.Add(b);
                 }
-                if (siNo) bt.Controls.Add(no);
-                bt.Controls.Add(si);
                 f.Controls.Add(t); f.Controls.Add(linea); f.Controls.Add(bt);
-                // misure: contenuto sopra, barra sotto, larghezza della parte più larga
-                Size st = t.GetPreferredSize(Size.Empty), sb = bt.GetPreferredSize(Size.Empty);
-                int w = Math.Max(Math.Max(st.Width, sb.Width), S(380));
-                t.Location = new Point(0, 0); t.Width = w;
-                bt.AutoSize = false;
-                linea.SetBounds(0, st.Height, w, 1);
-                bt.SetBounds(0, st.Height + 1, w, sb.Height);
-                f.ClientSize = new Size(w, st.Height + 1 + sb.Height);
+                Action disponi = () =>
+                {
+                    int pad = S(14), gap = S(12), hb = S(32), wtot = 0;
+                    int[] wb = new int[pulsanti.Length];
+                    for (int i = 0; i < pulsanti.Length; i++)
+                    {
+                        Size ps = pulsanti[i].GetPreferredSize(Size.Empty);
+                        wb[i] = Math.Max(S(96), ps.Width + S(8));
+                        hb = Math.Max(hb, ps.Height + S(4));
+                        wtot += wb[i] + (i > 0 ? gap : 0);
+                    }
+                    Size st = t.GetPreferredSize(Size.Empty);
+                    int w = Math.Max(Math.Max(st.Width, wtot + 2 * pad), S(380));
+                    int hbar = hb + 2 * S(10);
+                    t.Location = new Point(0, 0); t.Width = w;
+                    linea.SetBounds(0, st.Height, w, 1);
+                    bt.SetBounds(0, st.Height + 1, w, hbar);
+                    // Sì poi No, allineati a destra (a sinistra, rispecchiati, nelle lingue da destra a sinistra)
+                    int x = w - pad;
+                    for (int i = pulsanti.Length - 1; i >= 0; i--)
+                    {
+                        x -= wb[i];
+                        int xx = Lang.Rtl ? w - x - wb[i] : x;
+                        pulsanti[i].SetBounds(xx, (hbar - hb) / 2, wb[i], hb);
+                        x -= gap;
+                    }
+                    f.ClientSize = new Size(w, st.Height + 1 + hbar);
+                };
+                disponi();
+                f.Load += (s2, e2) => disponi();   // di nuovo con caratteri e scala definitivi
                 f.AcceptButton = si; f.CancelButton = siNo ? no : si;
                 f.StartPosition = owner is Form && ((Form)owner).Visible ? FormStartPosition.CenterParent : FormStartPosition.CenterScreen;
                 f.Shown += (s2, e2) => si.Focus();
