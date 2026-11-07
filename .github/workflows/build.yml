@@ -147,7 +147,7 @@ jobs:
           import -window root shot/f.png || true
           convert shot/f.png -resize 1200x shot/f.jpg 2>/dev/null && echo "SCREENSHOT-FONDO-B64:$(base64 -w 0 shot/f.jpg)" || true
           kill $PID 2>/dev/null || true
-          for T in "MANUALE D'USO" "Budget EME"; do
+          for T in "Budget EME" "Ricognizione dei miei ostacoli" "Controllo dei calcoli"; do
             YAEC_LINGUETTA="$T" mono YAEC.exe &
             PID=$!
             sleep 30

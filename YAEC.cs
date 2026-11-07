@@ -2372,7 +2372,7 @@ namespace LunaCalc
             "formula",
             "valori",
             "risultato",
-            "DEBUG FORMULE",
+            "Controllo dei calcoli",
             "PARAMETRI DI INGRESSO",
             "Mia stazione",
             "non inclusa",
@@ -2412,7 +2412,7 @@ namespace LunaCalc
             "Le zone fuori dai limiti della tua antenna sono coperte da righe diagonali grigio chiaro.",
             "La casella \"Sfuma le zone fuori dai limiti\" accende o spegne la sfocatura.",
             "COME SI SCELGONO LE LINGUETTE",
-            "Le linguette sono raccolte in cinque gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Mappa di puntamento, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto (ISTRUZIONI, ABOUT & CREDITS). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
+            "Le linguette sono raccolte in cinque gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Mappa di puntamento, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, Controllo dei calcoli), Log (Mappa WWL e ADIF), Aiuto (ISTRUZIONI, ABOUT & CREDITS). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
             "Schema di colori (impostazioni generali): Chiaro, Notte (toni di blu) o Nero (sfondo nero, adatto all'uso al buio e agli schermi OLED).",
             "IL SOLE VICINO ALLA LUNA",
             "Intorno alla luna nuova la Luna passa vicino al Sole nel cielo. Il Sole è una radiosorgente fortissima (da decine a migliaia di SFU secondo la frequenza e l'attività solare): quando entra nel lobo principale o nei primi lobi laterali dell'antenna, la temperatura di rumore del sistema sale di molti dB e l'eco della Luna può sparire, anche con una Dgrd ottima.",
@@ -2424,7 +2424,7 @@ namespace LunaCalc
             "YAEC calcola la latitudine geomagnetica con il dipolo del modello IGRF-14 (polo nord geomagnetico 2025: 80,8° N, 72,8° O). Quando scrivi un locator, tuo o del DX, che cade in una di queste zone, compare un avviso, che resta poi nella schermata principale. Prima di un QSO con stazioni polari o aurorali controlla le previsioni D-RAP della NOAA (D Region Absorption Predictions) e gli avvisi di eventi protonici.",
             "Letteratura: H. H. Sauer e D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); poli geomagnetici IGRF dal World Data Center for Geomagnetism di Kyoto.",
             "Tutti i parametri e le formule del Budget EME e del Rumore solare, per entrambe le direzioni (tu → DX e DX → tu), con i valori sostituiti e il risultato di ogni passaggio: lunghezza d'onda, sezione radar della Luna, perdita di tratta, EIRP, segnale lungo la catena di ricezione, MDS e margine, figura di rumore con Friis, temperature, rumore e S/N, e per il Sole flusso, fascio, attenuazione del diagramma, area efficace e aumento del rumore. Si attiva con la casella \"CALCOLI APPROFONDITI\"; il pulsante in basso copia tutto negli appunti.",
-            "La linguetta DEBUG FORMULE si attiva con la casella \"CALCOLI APPROFONDITI\" nella linguetta Posizione live e +- 24h.",
+            "La linguetta Controllo dei calcoli si attiva con la casella \"CALCOLI APPROFONDITI\" nella linguetta Posizione live e +- 24h.",
             // v27
             "personalizzato",
             "Distanza DX (km)",
@@ -2447,7 +2447,7 @@ namespace LunaCalc
             "Usa la riga della tabella",
             "Usa l'istante della riga selezionata nella tabella della Posizione della Luna.",
             "perdita di polarizzazione",
-            "Casella sincronizzata: è la stessa casella CALCOLI APPROFONDITI che trovi nel riquadro verde dell'S/N stimato, nella linguetta Posizione live e +- 24h; se la cambi qui cambia anche là, e viceversa. Spenta, il Budget EME passa alla modalità semplificata e le linguette Rumore solare, Export in Excel dei calcoli e DEBUG FORMULE diventano grigie.",
+            "Casella sincronizzata: è la stessa casella CALCOLI APPROFONDITI che trovi nel riquadro verde dell'S/N stimato, nella linguetta Posizione live e +- 24h; se la cambi qui cambia anche là, e viceversa. Spenta, il Budget EME passa alla modalità semplificata e le linguette Rumore solare, Export in Excel dei calcoli e Controllo dei calcoli diventano grigie.",
             "IMPIANTO DI TRASMISSIONE E RICEZIONE",
             "CAVO ANTENNA – RELÈ",
             "Tipo",
@@ -2654,7 +2654,7 @@ namespace LunaCalc
             "Utile e gratuito",
             "Il programma è gratuito e lo puoi usare senza limiti per la tua attività radioamatoriale, per studio e per insegnamento. Serve a far nascere QSO, non a vendere qualcosa.",
             "Trasparente",
-            "Il sorgente è sempre consegnato insieme al programma; ogni formula è visibile nella linguetta DEBUG FORMULE e ogni dato riporta la sua fonte. Niente scatole nere.",
+            "Il sorgente è sempre consegnato insieme al programma; ogni formula è visibile nella linguetta Controllo dei calcoli e ogni dato riporta la sua fonte. Niente scatole nere.",
             "Onesto",
             "I valori misurati, quelli ricavati e quelli stimati sono distinti; ciò che non è verificato viene dichiarato come tale. Un risultato incerto è indicato come incerto, non presentato come certo.",
             "Rispettoso",
@@ -2691,7 +2691,7 @@ namespace LunaCalc
             "In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.",
             "Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.",
             "È impaginato come un documento di Word, con le formule in stile Equation Editor: si può copiare negli appunti o salvare in Word (.docx).",
-            "Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna, Luna sul mondo), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
+            "Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna, Luna sul mondo), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, Controllo dei calcoli), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (INFORMAZIONI E CREDITI, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\".",
             "Grazie per avermi usato: spero di esserti stato utile.",
             "No",
             "Sì",
@@ -2972,6 +2972,18 @@ namespace LunaCalc
             "Citato nel manuale TEORIA E CONSIGLI SULL'EME:",
             "1.2 - Budget EME con gli indicatori EIRP mia, EIRP del DX, perdita di tratta e S/N nei due sensi (con il Sole); formule del documento Word di una sola grandezza, dentro i margini; pulsanti pieni e menu a tendina piatti con bordo arrotondato in tutti gli schemi; otto schemi di colori pastello; caselle dei valori con le frecce affiancate; i tre giorni migliori in ordine di data; sfondo del cielo sfocato; DEBUG FORMULE tradotto; manuale TEORIA E CONSIGLI SULL'EME con i consigli di Relu NJ9R (GRAVES, puntamento, connettori, guadagno delle antenne, JT65B e MAP65, relè di polarizzazione), i nuovi paragrafi sulla prima ricezione e sulle chat via Internet e le tabelle di VE7BQH nella prefazione; ringraziamenti a NJ9R, il ricordo di IK1UWL e gli autori di articoli, hardware e software, con il fumetto delle loro opere.",
             "1.2.1 - La pagina CONTATTI DELL'AUTORE E RINGRAZIAMENTI si apre di nuovo correttamente su Linux e macOS; il rimando per i transverter indica il § 1.7.1.",
+            "INFORMAZIONI E CREDITI",
+            "Radar GRAVES come stazione DX",
+            "Mette come DX il radar francese GRAVES (143,050 MHz, locator JN27SI): le finestre comuni con GRAVES sono i momenti in cui puoi ricevere la sua eco dalla Luna e verificare ricevitore e puntamento. Vedi il manuale TEORIA E CONSIGLI SULL'EME, § 1.11.",
+            "Connettori stimati",
+            "Numero stimato di connettori nella linea tra il PA e l'antenna, compresi adattatori, relè e divisori. Regola pratica di NJ9R: circa 1 dB ogni 8 – 10 connettori, cioè 0,11 dB ciascuno. Contano tutti in trasmissione; in ricezione conta la metà, quelli dal lato dell'antenna prima del preampli.",
+            "cavo {0:F2} + relè {1:F2} + antenna {2:F2} + connettori {3:F2} = {4:F2} dB → {5} all'antenna",
+            "prima del preampli: {0:F2} + {1:F2} + connettori {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB in TX, {3:F2} dB in RX prima del preampli",
+            "Perdite TX (cavo PA–relè + relè + cavo antenna + connettori)",
+            "Velo grigio",
+            "Applica il velo grigio alle zone fuori dai limiti e scurisce la mappa fuori dall'orizzonte. Senza spunta l'immagine di fondo resta com'è, senza velo né scurimento.",
+            "Trascina per allargare o stringere lo schema dell'impianto; doppio clic per tornare alla larghezza iniziale.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -3689,7 +3701,7 @@ namespace LunaCalc
             "formula",
             "values",
             "result",
-            "FORMULA DEBUG",
+            "Calculation check",
             "INPUT PARAMETERS",
             "My station",
             "not included",
@@ -3729,7 +3741,7 @@ namespace LunaCalc
             "The zones outside the limits of your antenna are covered with light grey diagonal lines.",
             "The \"Blur the zones outside the limits\" box turns the blur on or off.",
             "HOW TO CHOOSE THE TABS",
-            "The tabs are gathered in five groups in the bar at the top: Live (Live position and +- 24h, Pointing map, Sky view), Planning (Distance and Dgrd, Moon position), Link (EME budget, Solar noise, Export calculations to Excel, FORMULA DEBUG), Log (WWL map and ADIF), Help (INSTRUCTIONS, ABOUT & CREDITS). Click a group in the first row and then the tab in the second; every group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
+            "The tabs are gathered in five groups in the bar at the top: Live (Live position and +- 24h, Pointing map, Sky view), Planning (Distance and Dgrd, Moon position), Link (EME budget, Solar noise, Export calculations to Excel, Calculation check), Log (WWL map and ADIF), Help (INSTRUCTIONS, ABOUT & CREDITS). Click a group in the first row and then the tab in the second; every group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
             "Colour scheme (general settings): Light, Night (blue tones) or Black (black background, suited to use in the dark and to OLED screens).",
             "THE SUN NEAR THE MOON",
             "Around new Moon the Moon passes close to the Sun in the sky. The Sun is a very strong radio source (from tens to thousands of SFU depending on frequency and solar activity): when it enters the main lobe or the first side lobes of the antenna, the system noise temperature rises by many dB and the Moon echo can disappear, even with an excellent Dgrd.",
@@ -3741,7 +3753,7 @@ namespace LunaCalc
             "YAEC computes the geomagnetic latitude with the dipole of the IGRF-14 model (2025 north geomagnetic pole: 80.8° N, 72.8° W). When you enter a locator, yours or the DX's, that falls in one of these zones, a warning appears and then stays on the main screen. Before a QSO with polar or auroral stations, check the NOAA D-RAP forecasts (D Region Absorption Predictions) and the proton event alerts.",
             "Literature: H. H. Sauer and D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); IGRF geomagnetic poles from the World Data Center for Geomagnetism, Kyoto.",
             "All the parameters and formulas of the EME budget and of Solar noise, for both directions (you → DX and DX → you), with the substituted values and the result of every step: wavelength, radar cross-section of the Moon, path loss, EIRP, signal along the receiving chain, MDS and margin, noise figure with Friis, temperatures, noise and S/N, and for the Sun flux, beam, pattern attenuation, effective area and noise increase. It is enabled with the \"IN-DEPTH CALCULATIONS\" box; the button at the bottom copies everything to the clipboard.",
-            "The FORMULA DEBUG tab is enabled with the \"IN-DEPTH CALCULATIONS\" box in the Live position and +- 24h tab.",
+            "The Calculation check tab is enabled with the \"IN-DEPTH CALCULATIONS\" box in the Live position and +- 24h tab.",
             // v27
             "custom",
             "DX distance (km)",
@@ -3764,7 +3776,7 @@ namespace LunaCalc
             "Use the table row",
             "Use the time of the row selected in the Moon position table.",
             "polarisation loss",
-            "Synchronised box: it is the same IN-DEPTH CALCULATIONS box you find in the green estimated S/N card of the Live position and +- 24h tab; change it here and it changes there too, and vice versa. When off, the EME budget switches to the simplified mode and the Solar noise, Export calculations to Excel and FORMULA DEBUG tabs turn grey.",
+            "Synchronised box: it is the same IN-DEPTH CALCULATIONS box you find in the green estimated S/N card of the Live position and +- 24h tab; change it here and it changes there too, and vice versa. When off, the EME budget switches to the simplified mode and the Solar noise, Export calculations to Excel and Calculation check tabs turn grey.",
             "TRANSMIT AND RECEIVE SYSTEM",
             "ANTENNA – RELAY CABLE",
             "Type",
@@ -3971,7 +3983,7 @@ namespace LunaCalc
             "Useful and free",
             "The program is free and you can use it without limits for your amateur radio activity, for study and for teaching. It is meant to make QSOs happen, not to sell something.",
             "Transparent",
-            "The source is always delivered with the program; every formula is visible in the FORMULA DEBUG tab and every data item gives its source. No black boxes.",
+            "The source is always delivered with the program; every formula is visible in the Calculation check tab and every data item gives its source. No black boxes.",
             "Honest",
             "Measured, derived and estimated values are kept apart; what is not verified is declared as such. An uncertain result is shown as uncertain, not presented as certain.",
             "Respectful",
@@ -4008,7 +4020,7 @@ namespace LunaCalc
             "At the top four indicators, on the left the data source (NOAA RSTN recommended, or F10.7 from NOAA or Penticton, or a custom address) with the stations, on the right the solar flux spectrum with the extrapolation to the working frequency.",
             "This manual, inside the program and in all languages: clickable index, search, formulas and sources.",
             "It is laid out like a Word document, with the formulas in Equation Editor style: it can be copied to the clipboard or saved as Word (.docx).",
-            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position, Moon over the world), Link (EME budget, Solar noise, Export calculations to Excel, FORMULA DEBUG), Log (WWL map and ADIF), Help and tools (USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
+            "The tabs are gathered in six groups in the bar at the top: Live (Live position and +- 24h, Reconnaissance of my obstacles, Sky view), Planning (Distance and Dgrd, Moon position, Moon over the world), Link (EME budget, Solar noise, Export calculations to Excel, Calculation check), Log (WWL map and ADIF), Help and tools (USER MANUAL, THEORY AND TIPS ON EME, COAXIAL CABLES), Credits and thanks (ABOUT & CREDITS, AUTHOR CONTACTS AND ACKNOWLEDGEMENTS, LICENCE). Click a group in the first row and then the tab in the second; each group remembers the last tab opened. The grey tabs are enabled with the \"IN-DEPTH CALCULATIONS\" box.",
             "Thank you for using me: I hope I have been useful to you.",
             "No",
             "Yes",
@@ -4289,6 +4301,18 @@ namespace LunaCalc
             "Cited in the THEORY AND TIPS ON EME manual:",
             "1.2 - EME budget with the indicators My EIRP, DX EIRP, path loss and S/N in both directions (with the Sun); Word document formulas in a single size, within the margins; filled buttons and flat drop-down lists with rounded borders in all schemes; eight pastel colour schemes; value boxes with side-by-side arrows; the three best days in date order; blurred sky background; FORMULA DEBUG translated; THEORY AND TIPS ON EME manual with the advice of Relu NJ9R (GRAVES, pointing, connectors, antenna gain, JT65B and MAP65, polarization relay), the new sections on the first reception and on internet chats, and the VE7BQH tables in the preface; thanks to NJ9R, the memory of IK1UWL and the authors of articles, hardware and software, with a tooltip on their works.",
             "1.2.1 - The AUTHOR CONTACTS AND ACKNOWLEDGEMENTS page opens correctly again on Linux and macOS; the reference for the transverters points to § 1.7.1.",
+            "ABOUT & CREDITS",
+            "GRAVES radar as DX station",
+            "Sets the French GRAVES radar (143.050 MHz, locator JN27SI) as the DX: the common windows with GRAVES are the moments when you can receive its echo from the Moon and check your receiver and pointing. See the THEORY AND TIPS ON EME manual, § 1.11.",
+            "Estimated connectors",
+            "Estimated number of connectors in the line between the PA and the antenna, adapters, relays and splitters included. NJ9R's rule of thumb: about 1 dB every 8 – 10 connectors, that is 0.11 dB each. All of them count in transmission; in reception half of them count, those on the antenna side before the preamp.",
+            "cable {0:F2} + relay {1:F2} + antenna {2:F2} + connectors {3:F2} = {4:F2} dB → {5} at the antenna",
+            "before the preamp: {0:F2} + {1:F2} + connectors {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB in TX, {3:F2} dB in RX before the preamp",
+            "TX losses (PA–relay cable + relay + antenna cable + connectors)",
+            "Grey veil",
+            "Applies the grey veil to the zones outside the limits and darkens the map outside the horizon. Unticked, the background image stays as it is, with no veil and no darkening.",
+            "Drag to widen or narrow the station diagram; double-click to go back to the initial width.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5006,7 +5030,7 @@ namespace LunaCalc
             "Formel",
             "Werte",
             "Ergebnis",
-            "FORMEL-DEBUG",
+            "Rechenkontrolle",
             "EINGABEPARAMETER",
             "Meine Station",
             "nicht enthalten",
@@ -5046,7 +5070,7 @@ namespace LunaCalc
             "Die Zonen außerhalb der Grenzen deiner Antenne sind mit hellgrauen Diagonalstreifen bedeckt.",
             "Das Kästchen \"Zonen außerhalb der Grenzen weichzeichnen\" schaltet die Weichzeichnung ein oder aus.",
             "SO WÄHLT MAN DIE REGISTERKARTEN",
-            "Die Registerkarten sind in der Leiste oben in fünf Gruppen gesammelt: Live (Position live und +- 24h, Ausrichtungskarte, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, FORMEL-DEBUG), Log (WWL-Karte und ADIF), Hilfe (ANLEITUNG, ABOUT & CREDITS). Klicke eine Gruppe in der ersten Zeile und dann die Registerkarte in der zweiten; jede Gruppe merkt sich die zuletzt geöffnete Registerkarte. Die grauen Registerkarten werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
+            "Die Registerkarten sind in der Leiste oben in fünf Gruppen gesammelt: Live (Position live und +- 24h, Ausrichtungskarte, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, Rechenkontrolle), Log (WWL-Karte und ADIF), Hilfe (ANLEITUNG, ABOUT & CREDITS). Klicke eine Gruppe in der ersten Zeile und dann die Registerkarte in der zweiten; jede Gruppe merkt sich die zuletzt geöffnete Registerkarte. Die grauen Registerkarten werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
             "Farbschema (allgemeine Einstellungen): Hell, Nacht (Blautöne) oder Schwarz (schwarzer Hintergrund, geeignet für die Nutzung im Dunkeln und für OLED-Bildschirme).",
             "DIE SONNE NAHE AM MOND",
             "Um Neumond herum zieht der Mond am Himmel nahe an der Sonne vorbei. Die Sonne ist eine sehr starke Radioquelle (je nach Frequenz und Sonnenaktivität zehn bis tausende SFU): gerät sie in die Hauptkeule oder in die ersten Nebenkeulen der Antenne, steigt die Systemrauschtemperatur um viele dB und das Mondecho kann verschwinden, selbst bei einer ausgezeichneten Dgrd.",
@@ -5058,7 +5082,7 @@ namespace LunaCalc
             "YAEC berechnet die geomagnetische Breite mit dem Dipol des Modells IGRF-14 (geomagnetischer Nordpol 2025: 80,8° N, 72,8° W). Gibst du einen Locator ein, deinen oder den des DX, der in eine dieser Zonen fällt, erscheint eine Warnung, die danach im Hauptbildschirm stehen bleibt. Vor einem QSO mit polaren oder Polarlicht-Stationen prüfe die D-RAP-Vorhersagen der NOAA (D Region Absorption Predictions) und die Warnungen vor Protonenereignissen.",
             "Literatur: H. H. Sauer und D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, Bd. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); geomagnetische IGRF-Pole vom World Data Center for Geomagnetism, Kyoto.",
             "Alle Parameter und Formeln des EME-Budgets und des Sonnenrauschens, für beide Richtungen (du → DX und DX → du), mit den eingesetzten Werten und dem Ergebnis jedes Schritts: Wellenlänge, Radarquerschnitt des Mondes, Wegverlust, EIRP, Signal entlang der Empfangskette, MDS und Reserve, Rauschzahl nach Friis, Temperaturen, Rauschen und S/N, und für die Sonne Fluss, Keule, Dämpfung durch das Diagramm, wirksame Fläche und Rauschzunahme. Wird mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert; die Schaltfläche unten kopiert alles in die Zwischenablage.",
-            "Die Registerkarte FORMEL-DEBUG wird mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" in der Registerkarte Position live und +- 24h aktiviert.",
+            "Die Registerkarte Rechenkontrolle wird mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" in der Registerkarte Position live und +- 24h aktiviert.",
             // v27
             "benutzerdefiniert",
             "Entfernung DX (km)",
@@ -5081,7 +5105,7 @@ namespace LunaCalc
             "Tabellenzeile verwenden",
             "Den Zeitpunkt der in der Mondpositionstabelle gewählten Zeile verwenden.",
             "Polarisationsverlust",
-            "Synchronisiertes Kästchen: es ist dasselbe Kästchen VERTIEFTE BERECHNUNGEN wie in der grünen Karte des geschätzten S/N im Reiter Position live und +- 24h; ändert man es hier, ändert es sich auch dort und umgekehrt. Ausgeschaltet geht das EME-Budget in den vereinfachten Modus und die Reiter Sonnenrauschen, Export der Berechnungen nach Excel und FORMEL-DEBUG werden grau.",
+            "Synchronisiertes Kästchen: es ist dasselbe Kästchen VERTIEFTE BERECHNUNGEN wie in der grünen Karte des geschätzten S/N im Reiter Position live und +- 24h; ändert man es hier, ändert es sich auch dort und umgekehrt. Ausgeschaltet geht das EME-Budget in den vereinfachten Modus und die Reiter Sonnenrauschen, Export der Berechnungen nach Excel und Rechenkontrolle werden grau.",
             "SENDE- UND EMPFANGSANLAGE",
             "KABEL ANTENNE – RELAIS",
             "Typ",
@@ -5288,7 +5312,7 @@ namespace LunaCalc
             "Nützlich und kostenlos",
             "Das Programm ist kostenlos und kann ohne Einschränkungen für den Amateurfunk, zum Lernen und zum Unterrichten verwendet werden. Es soll QSOs ermöglichen, nicht etwas verkaufen.",
             "Transparent",
-            "Der Quellcode wird immer mit dem Programm geliefert; jede Formel ist im Reiter FORMEL-DEBUG sichtbar und jede Angabe nennt ihre Quelle. Keine Blackboxen.",
+            "Der Quellcode wird immer mit dem Programm geliefert; jede Formel ist im Reiter Rechenkontrolle sichtbar und jede Angabe nennt ihre Quelle. Keine Blackboxen.",
             "Ehrlich",
             "Gemessene, abgeleitete und geschätzte Werte werden getrennt; was nicht geprüft ist, wird als solches erklärt. Ein unsicheres Ergebnis wird als unsicher angegeben, nicht als sicher dargestellt.",
             "Respektvoll",
@@ -5325,7 +5349,7 @@ namespace LunaCalc
             "Oben vier Indikatoren, links die Datenquelle (NOAA RSTN empfohlen, oder F10.7 von NOAA oder Penticton, oder eine eigene Adresse) mit den Stationen, rechts das Spektrum des Sonnenflusses mit der Extrapolation zur Arbeitsfrequenz.",
             "Dieses Handbuch, im Programm und in allen Sprachen: anklickbares Inhaltsverzeichnis, Suche, Formeln und Quellen.",
             "Es ist wie ein Word-Dokument gestaltet, mit Formeln im Stil des Formel-Editors: es kann in die Zwischenablage kopiert oder als Word (.docx) gespeichert werden.",
-            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition, Mond über der Welt), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, FORMEL-DEBUG), Log (WWL-Karte und ADIF), Hilfe und Tools (BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (ABOUT & CREDITS, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
+            "Die Reiter sind in sechs Gruppen in der Leiste oben zusammengefasst: Live (Position live und +- 24h, Erkundung meiner Hindernisse, Himmelsansicht), Planung (Entfernung und Dgrd, Mondposition, Mond über der Welt), Verbindung (EME-Budget, Sonnenrauschen, Export der Berechnungen nach Excel, Rechenkontrolle), Log (WWL-Karte und ADIF), Hilfe und Tools (BENUTZERHANDBUCH, THEORIE UND TIPPS ZU EME, KOAXIALKABEL), Credits and thanks (INFO UND NACHWEISE, KONTAKT ZUM AUTOR UND DANK, LIZENZ). Eine Gruppe in der ersten Zeile und dann den Reiter in der zweiten anklicken; jede Gruppe merkt sich den zuletzt geöffneten Reiter. Die grauen Reiter werden mit dem Kästchen \"VERTIEFTE BERECHNUNGEN\" aktiviert.",
             "Danke, dass du mich benutzt hast: ich hoffe, ich war dir nützlich.",
             "Nein",
             "Ja",
@@ -5606,6 +5630,18 @@ namespace LunaCalc
             "Zitiert im Handbuch THEORIE UND TIPPS ZU EME:",
             "1.2 - EME-Budget mit den Anzeigen Meine EIRP, EIRP des DX, Streckendämpfung und S/N in beide Richtungen (mit der Sonne); Formeln des Word-Dokuments in einer einzigen Größe, innerhalb der Ränder; gefüllte Schaltflächen und flache Auswahllisten mit abgerundetem Rand in allen Schemata; acht Pastell-Farbschemata; Wertfelder mit nebeneinanderliegenden Pfeilen; die drei besten Tage nach Datum geordnet; unscharfer Himmelshintergrund; FORMEL-DEBUG übersetzt; Handbuch THEORIE UND TIPPS ZU EME mit den Ratschlägen von Relu NJ9R (GRAVES, Ausrichtung, Stecker, Antennengewinn, JT65B und MAP65, Polarisationsrelais), den neuen Abschnitten zum ersten Empfang und zu den Internet-Chats und den VE7BQH-Tabellen im Vorwort; Dank an NJ9R, Erinnerung an IK1UWL und an die Autoren von Artikeln, Hardware und Software, mit einem Tooltip zu ihren Werken.",
             "1.2.1 - Die Seite KONTAKT ZUM AUTOR UND DANK öffnet sich unter Linux und macOS wieder korrekt; der Verweis für die Transverter zeigt auf § 1.7.1.",
+            "INFO UND NACHWEISE",
+            "GRAVES-Radar als DX-Station",
+            "Setzt das französische GRAVES-Radar (143,050 MHz, Locator JN27SI) als DX: Die gemeinsamen Fenster mit GRAVES sind die Zeiten, in denen du sein Echo vom Mond empfangen und Empfänger und Ausrichtung prüfen kannst. Siehe das Handbuch THEORIE UND TIPPS ZU EME, § 1.11.",
+            "Geschätzte Stecker",
+            "Geschätzte Zahl der Stecker in der Leitung zwischen PA und Antenne, einschließlich Adapter, Relais und Leistungsteiler. Faustregel von NJ9R: etwa 1 dB je 8 – 10 Stecker, also 0,11 dB pro Stecker. Beim Senden zählen alle; beim Empfang die Hälfte, die auf der Antennenseite vor dem Vorverstärker.",
+            "Kabel {0:F2} + Relais {1:F2} + Antenne {2:F2} + Stecker {3:F2} = {4:F2} dB → {5} an der Antenne",
+            "vor dem Vorverstärker: {0:F2} + {1:F2} + Stecker {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB beim Senden, {3:F2} dB beim Empfang vor dem Vorverstärker",
+            "TX-Verluste (Kabel PA–Relais + Relais + Antennenkabel + Stecker)",
+            "Grauer Schleier",
+            "Legt den grauen Schleier über die Zonen außerhalb der Grenzen und dunkelt die Karte außerhalb des Horizonts ab. Ohne Haken bleibt das Hintergrundbild unverändert, ohne Schleier und ohne Abdunklung.",
+            "Ziehen, um das Stationsschema breiter oder schmaler zu machen; Doppelklick stellt die ursprüngliche Breite wieder her.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6323,7 +6359,7 @@ namespace LunaCalc
             "formule",
             "valeurs",
             "résultat",
-            "DÉBOGAGE DES FORMULES",
+            "Contrôle des calculs",
             "PARAMÈTRES D'ENTRÉE",
             "Ma station",
             "non incluse",
@@ -6363,7 +6399,7 @@ namespace LunaCalc
             "Les zones hors des limites de votre antenne sont couvertes de hachures diagonales gris clair.",
             "La case \"Estomper les zones hors limites\" active ou désactive l'estompage.",
             "COMMENT CHOISIR LES ONGLETS",
-            "Les onglets sont réunis en cinq groupes dans la barre du haut : En direct (Position en direct et +- 24h, Carte de pointage, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DÉBOGAGE DES FORMULES), Log (Carte WWL et ADIF), Aide (INSTRUCTIONS, ABOUT & CREDITS). Cliquez sur un groupe dans la première ligne puis sur l'onglet dans la seconde ; chaque groupe se souvient du dernier onglet ouvert. Les onglets grisés s'activent avec la case \"CALCULS APPROFONDIS\".",
+            "Les onglets sont réunis en cinq groupes dans la barre du haut : En direct (Position en direct et +- 24h, Carte de pointage, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, Contrôle des calculs), Log (Carte WWL et ADIF), Aide (INSTRUCTIONS, ABOUT & CREDITS). Cliquez sur un groupe dans la première ligne puis sur l'onglet dans la seconde ; chaque groupe se souvient du dernier onglet ouvert. Les onglets grisés s'activent avec la case \"CALCULS APPROFONDIS\".",
             "Schéma de couleurs (paramètres généraux) : Clair, Nuit (tons de bleu) ou Noir (fond noir, adapté à l'utilisation dans l'obscurité et aux écrans OLED).",
             "LE SOLEIL PROCHE DE LA LUNE",
             "Autour de la nouvelle Lune, la Lune passe près du Soleil dans le ciel. Le Soleil est une radiosource très puissante (de dizaines à des milliers de SFU selon la fréquence et l'activité solaire) : quand il entre dans le lobe principal ou dans les premiers lobes secondaires de l'antenne, la température de bruit du système monte de nombreux dB et l'écho lunaire peut disparaître, même avec un excellent Dgrd.",
@@ -6375,7 +6411,7 @@ namespace LunaCalc
             "YAEC calcule la latitude géomagnétique avec le dipôle du modèle IGRF-14 (pôle nord géomagnétique 2025 : 80,8° N, 72,8° O). Quand vous saisissez un locator, le vôtre ou celui du DX, qui tombe dans l'une de ces zones, un avertissement apparaît puis reste sur l'écran principal. Avant un QSO avec des stations polaires ou aurorales, consultez les prévisions D-RAP de la NOAA (D Region Absorption Predictions) et les alertes d'événements protoniques.",
             "Bibliographie : H. H. Sauer et D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399 ; NOAA SWPC, D Region Absorption Predictions (D-RAP) ; pôles géomagnétiques IGRF du World Data Center for Geomagnetism de Kyoto.",
             "Tous les paramètres et toutes les formules du Bilan EME et du Bruit solaire, dans les deux sens (vous → DX et DX → vous), avec les valeurs substituées et le résultat de chaque étape : longueur d'onde, surface équivalente radar de la Lune, perte de trajet, PIRE, signal le long de la chaîne de réception, MDS et marge, facteur de bruit avec Friis, températures, bruit et S/N, et pour le Soleil flux, faisceau, atténuation du diagramme, surface effective et augmentation du bruit. S'active avec la case \"CALCULS APPROFONDIS\" ; le bouton en bas copie tout dans le presse-papiers.",
-            "L'onglet DÉBOGAGE DES FORMULES s'active avec la case \"CALCULS APPROFONDIS\" dans l'onglet Position en direct et +- 24h.",
+            "L'onglet Contrôle des calculs s'active avec la case \"CALCULS APPROFONDIS\" dans l'onglet Position en direct et +- 24h.",
             // v27
             "personnalisé",
             "Distance DX (km)",
@@ -6398,7 +6434,7 @@ namespace LunaCalc
             "utiliser la ligne du tableau",
             "Utiliser l'instant de la ligne choisie dans le tableau de position de la Lune.",
             "perte de polarisation",
-            "Case synchronisée : c'est la même case CALCULS APPROFONDIS que dans la carte verte du S/N estimé de l'onglet Position en direct et +- 24h ; la changer ici la change aussi là-bas et inversement. Désactivée, le Bilan EME passe en mode simplifié et les onglets Bruit solaire, Export des calculs vers Excel et DÉBOGAGE DES FORMULES deviennent gris.",
+            "Case synchronisée : c'est la même case CALCULS APPROFONDIS que dans la carte verte du S/N estimé de l'onglet Position en direct et +- 24h ; la changer ici la change aussi là-bas et inversement. Désactivée, le Bilan EME passe en mode simplifié et les onglets Bruit solaire, Export des calculs vers Excel et Contrôle des calculs deviennent gris.",
             "INSTALLATION D'ÉMISSION ET DE RÉCEPTION",
             "CÂBLE ANTENNE – RELAIS",
             "Type",
@@ -6605,7 +6641,7 @@ namespace LunaCalc
             "Utile et gratuit",
             "Le programme est gratuit et peut être utilisé sans limites pour la radio d'amateur, pour apprendre et pour enseigner. Il est fait pour faciliter les QSO, pas pour vendre quelque chose.",
             "Transparent",
-            "Le code source est toujours fourni avec le programme ; chaque formule est visible dans l'onglet DÉBOGAGE DES FORMULES et chaque donnée indique sa source. Pas de boîtes noires.",
+            "Le code source est toujours fourni avec le programme ; chaque formule est visible dans l'onglet Contrôle des calculs et chaque donnée indique sa source. Pas de boîtes noires.",
             "Honnête",
             "Les valeurs mesurées, déduites et estimées sont distinguées ; ce qui n'est pas vérifié est déclaré comme tel. Un résultat incertain est dit incertain, pas présenté comme sûr.",
             "Respectueux",
@@ -6642,7 +6678,7 @@ namespace LunaCalc
             "En haut quatre indicateurs, à gauche la source des données (NOAA RSTN recommandée, ou F10.7 de NOAA ou de Penticton, ou une adresse personnalisée) avec les stations, à droite le spectre du flux solaire avec l'extrapolation jusqu'à la fréquence de travail.",
             "Ce manuel, dans le programme et dans toutes les langues : sommaire cliquable, recherche, formules et sources.",
             "Il est mis en page comme un document Word, avec les formules dans le style de l'éditeur d'équations : il peut être copié dans le presse-papiers ou enregistré en Word (.docx).",
-            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune, La Lune sur le monde), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, DÉBOGAGE DES FORMULES), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (ABOUT & CREDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
+            "Les onglets sont regroupés en six groupes dans la barre du haut : En direct (Position en direct et +- 24h, Reconnaissance de mes obstacles, Voûte céleste), Planification (Distance et Dgrd, Position de la Lune, La Lune sur le monde), Liaison (Bilan EME, Bruit solaire, Export des calculs vers Excel, Contrôle des calculs), Log (Carte WWL et ADIF), Aide et outils (MANUEL D'UTILISATION, THÉORIE ET CONSEILS SUR L'EME, CÂBLES COAXIAUX), Credits and thanks (À PROPOS ET CRÉDITS, CONTACTS DE L'AUTEUR ET REMERCIEMENTS, LICENCE). Cliquer sur un groupe dans la première ligne puis sur l'onglet dans la deuxième ; chaque groupe se souvient du dernier onglet ouvert. Les onglets gris s'activent avec la case « CALCULS APPROFONDIS ».",
             "Merci de m'avoir utilisé : j'espère t'avoir été utile.",
             "Non",
             "Oui",
@@ -6923,6 +6959,18 @@ namespace LunaCalc
             "Cité dans le manuel THÉORIE ET CONSEILS SUR L'EME :",
             "1.2 - Bilan EME avec les indicateurs Ma PIRE, PIRE du DX, perte de trajet et S/B dans les deux sens (avec le Soleil) ; formules du document Word d'une seule taille, dans les marges ; boutons pleins et listes déroulantes plates à bord arrondi dans tous les thèmes ; huit thèmes de couleurs pastel ; cases de valeurs avec les flèches côte à côte ; les trois meilleurs jours dans l'ordre chronologique ; fond du ciel flou ; DÉBOGAGE DES FORMULES traduit ; manuel THÉORIE ET CONSEILS SUR L'EME avec les conseils de Relu NJ9R (GRAVES, pointage, connecteurs, gain des antennes, JT65B et MAP65, relais de polarisation), les nouvelles sections sur la première réception et sur les chats Internet, et les tableaux de VE7BQH dans la préface ; remerciements à NJ9R, souvenir d'IK1UWL et des auteurs d'articles, de matériel et de logiciels, avec une infobulle sur leurs travaux.",
             "1.2.1 - La page CONTACTS DE L'AUTEUR ET REMERCIEMENTS s'ouvre de nouveau correctement sous Linux et macOS ; le renvoi pour les transverters indique le § 1.7.1.",
+            "À PROPOS ET CRÉDITS",
+            "Radar GRAVES comme station DX",
+            "Définit le radar français GRAVES (143,050 MHz, locator JN27SI) comme DX : les fenêtres communes avec GRAVES sont les moments où vous pouvez recevoir son écho lunaire et vérifier récepteur et pointage. Voir le manuel THÉORIE ET CONSEILS SUR L'EME, § 1.11.",
+            "Connecteurs estimés",
+            "Nombre estimé de connecteurs dans la ligne entre le PA et l'antenne, adaptateurs, relais et coupleurs compris. Règle pratique de NJ9R : environ 1 dB tous les 8 – 10 connecteurs, soit 0,11 dB chacun. Ils comptent tous en émission ; en réception, la moitié compte, ceux du côté de l'antenne avant le préampli.",
+            "câble {0:F2} + relais {1:F2} + antenne {2:F2} + connecteurs {3:F2} = {4:F2} dB → {5} à l'antenne",
+            "avant le préampli : {0:F2} + {1:F2} + connecteurs {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB en TX, {3:F2} dB en RX avant le préampli",
+            "Pertes TX (câble PA–relais + relais + câble d'antenne + connecteurs)",
+            "Voile gris",
+            "Applique le voile gris aux zones hors limites et assombrit la carte au-delà de l'horizon. Non cochée, l'image de fond reste telle quelle, sans voile ni assombrissement.",
+            "Faites glisser pour élargir ou rétrécir le schéma de l'installation ; double-clic pour revenir à la largeur initiale.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -7640,7 +7688,7 @@ namespace LunaCalc
             "fórmula",
             "valores",
             "resultado",
-            "DEPURACIÓN DE FÓRMULAS",
+            "Control de los cálculos",
             "PARÁMETROS DE ENTRADA",
             "Mi estación",
             "no incluida",
@@ -7680,7 +7728,7 @@ namespace LunaCalc
             "Las zonas fuera de los límites de tu antena están cubiertas con rayas diagonales gris claro.",
             "La casilla \"Difuminar las zonas fuera de los límites\" activa o desactiva el difuminado.",
             "CÓMO SE ELIGEN LAS PESTAÑAS",
-            "Las pestañas están reunidas en cinco grupos en la barra superior: En directo (Posición en vivo y +- 24h, Mapa de apuntamiento, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEPURACIÓN DE FÓRMULAS), Log (Mapa WWL y ADIF), Ayuda (INSTRUCCIONES, ABOUT & CREDITS). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
+            "Las pestañas están reunidas en cinco grupos en la barra superior: En directo (Posición en vivo y +- 24h, Mapa de apuntamiento, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, Control de los cálculos), Log (Mapa WWL y ADIF), Ayuda (INSTRUCCIONES, ABOUT & CREDITS). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
             "Esquema de colores (ajustes generales): Claro, Noche (tonos de azul) o Negro (fondo negro, adecuado para el uso a oscuras y para pantallas OLED).",
             "EL SOL CERCA DE LA LUNA",
             "Alrededor de la luna nueva la Luna pasa cerca del Sol en el cielo. El Sol es una radiofuente muy potente (de decenas a miles de SFU según la frecuencia y la actividad solar): cuando entra en el lóbulo principal o en los primeros lóbulos laterales de la antena, la temperatura de ruido del sistema sube muchos dB y el eco de la Luna puede desaparecer, incluso con una Dgrd excelente.",
@@ -7692,7 +7740,7 @@ namespace LunaCalc
             "YAEC calcula la latitud geomagnética con el dipolo del modelo IGRF-14 (polo norte geomagnético 2025: 80,8° N, 72,8° O). Cuando escribes un locator, tuyo o del DX, que cae en una de estas zonas, aparece un aviso que luego se queda en la pantalla principal. Antes de un QSO con estaciones polares o aurorales consulta las previsiones D-RAP de la NOAA (D Region Absorption Predictions) y las alertas de eventos de protones.",
             "Bibliografía: H. H. Sauer y D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); polos geomagnéticos IGRF del World Data Center for Geomagnetism de Kioto.",
             "Todos los parámetros y fórmulas del Balance EME y del Ruido solar, en ambos sentidos (tú → DX y DX → tú), con los valores sustituidos y el resultado de cada paso: longitud de onda, sección radar de la Luna, pérdida de trayecto, PIRE, señal a lo largo de la cadena de recepción, MDS y margen, figura de ruido con Friis, temperaturas, ruido y S/N, y para el Sol flujo, haz, atenuación del diagrama, área efectiva y aumento del ruido. Se activa con la casilla \"CÁLCULOS DETALLADOS\"; el botón inferior copia todo al portapapeles.",
-            "La pestaña DEPURACIÓN DE FÓRMULAS se activa con la casilla \"CÁLCULOS DETALLADOS\" en la pestaña Posición en vivo y +- 24h.",
+            "La pestaña Control de los cálculos se activa con la casilla \"CÁLCULOS DETALLADOS\" en la pestaña Posición en vivo y +- 24h.",
             // v27
             "personalizado",
             "Distancia DX (km)",
@@ -7715,7 +7763,7 @@ namespace LunaCalc
             "usar la fila de la tabla",
             "Usar el instante de la fila elegida en la tabla de posición de la Luna.",
             "pérdida de polarización",
-            "Casilla sincronizada: es la misma casilla CÁLCULOS DETALLADOS de la tarjeta verde del S/N estimado en la pestaña Posición en vivo y +- 24h; cambiarla aquí la cambia también allí y viceversa. Desactivada, el Balance EME pasa al modo simplificado y las pestañas Ruido solar, Exportar los cálculos a Excel y DEPURACIÓN DE FÓRMULAS quedan en gris.",
+            "Casilla sincronizada: es la misma casilla CÁLCULOS DETALLADOS de la tarjeta verde del S/N estimado en la pestaña Posición en vivo y +- 24h; cambiarla aquí la cambia también allí y viceversa. Desactivada, el Balance EME pasa al modo simplificado y las pestañas Ruido solar, Exportar los cálculos a Excel y Control de los cálculos quedan en gris.",
             "INSTALACIÓN DE TRANSMISIÓN Y RECEPCIÓN",
             "CABLE ANTENA – RELÉ",
             "Tipo",
@@ -7922,7 +7970,7 @@ namespace LunaCalc
             "Útil y gratuito",
             "El programa es gratuito y se puede usar sin límites para la radioafición, para aprender y para enseñar. Está hecho para facilitar los QSO, no para vender algo.",
             "Transparente",
-            "El código fuente se entrega siempre con el programa; cada fórmula es visible en la pestaña DEPURACIÓN DE FÓRMULAS y cada dato indica su fuente. Sin cajas negras.",
+            "El código fuente se entrega siempre con el programa; cada fórmula es visible en la pestaña Control de los cálculos y cada dato indica su fuente. Sin cajas negras.",
             "Honesto",
             "Se distinguen los valores medidos, deducidos y estimados; lo que no está verificado se declara como tal. Un resultado incierto se dice incierto, no se presenta como seguro.",
             "Respetuoso",
@@ -7959,7 +8007,7 @@ namespace LunaCalc
             "Arriba cuatro indicadores, a la izquierda la fuente de los datos (NOAA RSTN recomendada, o F10.7 de NOAA o de Penticton, o una dirección personalizada) con las estaciones, a la derecha el espectro del flujo solar con la extrapolación hasta la frecuencia de trabajo.",
             "Este manual, dentro del programa y en todos los idiomas: índice con clic, búsqueda, fórmulas y fuentes.",
             "Está maquetado como un documento Word, con las fórmulas al estilo del editor de ecuaciones: se puede copiar al portapapeles o guardar en Word (.docx).",
-            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna, Luna sobre el mundo), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, DEPURACIÓN DE FÓRMULAS), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ABOUT & CREDITS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
+            "Las pestañas están reunidas en seis grupos en la barra de arriba: En directo (Posición en vivo y +- 24h, Reconocimiento de mis obstáculos, Bóveda celeste), Planificación (Distancia y Dgrd, Posición de la Luna, Luna sobre el mundo), Enlace (Balance EME, Ruido solar, Exportar los cálculos a Excel, Control de los cálculos), Log (Mapa WWL y ADIF), Ayuda y herramientas (MANUAL DE USO, TEORÍA Y CONSEJOS SOBRE EME, CABLES COAXIALES), Credits and thanks (ACERCA DE Y CRÉDITOS, CONTACTOS DEL AUTOR Y AGRADECIMIENTOS, LICENCIA). Haz clic en un grupo en la primera fila y luego en la pestaña en la segunda; cada grupo recuerda la última pestaña abierta. Las pestañas en gris se activan con la casilla \"CÁLCULOS DETALLADOS\".",
             "Gracias por usarme: espero haberte sido útil.",
             "No",
             "Sí",
@@ -8240,6 +8288,18 @@ namespace LunaCalc
             "Citado en el manual TEORÍA Y CONSEJOS SOBRE EME:",
             "1.2 - Balance EME con los indicadores Mi PIRE, PIRE del DX, pérdida de trayecto y S/R en los dos sentidos (con el Sol); fórmulas del documento Word de un solo tamaño, dentro de los márgenes; botones rellenos y listas desplegables planas con borde redondeado en todos los esquemas; ocho esquemas de colores pastel; casillas de valores con las flechas una al lado de la otra; los tres mejores días en orden de fecha; fondo del cielo desenfocado; DEPURACIÓN DE FÓRMULAS traducido; manual TEORÍA Y CONSEJOS SOBRE EME con los consejos de Relu NJ9R (GRAVES, apuntamiento, conectores, ganancia de las antenas, JT65B y MAP65, relé de polarización), los nuevos apartados sobre la primera recepción y sobre los chats de Internet y las tablas de VE7BQH en el prefacio; agradecimientos a NJ9R, el recuerdo de IK1UWL y los autores de artículos, hardware y software, con un globo de ayuda sobre sus obras.",
             "1.2.1 - La página CONTACTOS DEL AUTOR Y AGRADECIMIENTOS vuelve a abrirse correctamente en Linux y macOS; la referencia para los transverters indica el § 1.7.1.",
+            "ACERCA DE Y CRÉDITOS",
+            "Radar GRAVES como estación DX",
+            "Pone como DX el radar francés GRAVES (143,050 MHz, locator JN27SI): las ventanas comunes con GRAVES son los momentos en que puedes recibir su eco de la Luna y comprobar receptor y apuntamiento. Ver el manual TEORÍA Y CONSEJOS SOBRE EME, § 1.11.",
+            "Conectores estimados",
+            "Número estimado de conectores en la línea entre el PA y la antena, incluidos adaptadores, relés y divisores. Regla práctica de NJ9R: alrededor de 1 dB cada 8 – 10 conectores, es decir 0,11 dB cada uno. En transmisión cuentan todos; en recepción cuenta la mitad, los del lado de la antena antes del previo.",
+            "cable {0:F2} + relé {1:F2} + antena {2:F2} + conectores {3:F2} = {4:F2} dB → {5} en la antena",
+            "antes del previo: {0:F2} + {1:F2} + conectores {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB en TX, {3:F2} dB en RX antes del previo",
+            "Pérdidas TX (cable PA–relé + relé + cable de antena + conectores)",
+            "Velo gris",
+            "Aplica el velo gris a las zonas fuera de los límites y oscurece el mapa fuera del horizonte. Sin marcar, la imagen de fondo queda tal cual, sin velo ni oscurecimiento.",
+            "Arrastra para ensanchar o estrechar el esquema de la instalación; doble clic para volver al ancho inicial.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -8957,7 +9017,7 @@ namespace LunaCalc
             "fórmula",
             "valores",
             "resultado",
-            "DEPURAÇÃO DE FÓRMULAS",
+            "Verificação dos cálculos",
             "PARÂMETROS DE ENTRADA",
             "A minha estação",
             "não incluída",
@@ -8997,7 +9057,7 @@ namespace LunaCalc
             "As zonas fora dos limites da tua antena estão cobertas por riscas diagonais cinzento-claras.",
             "A caixa \"Desfocar as zonas fora dos limites\" liga ou desliga a desfocagem.",
             "COMO SE ESCOLHEM OS SEPARADORES",
-            "Os separadores estão reunidos em cinco grupos na barra de cima: Em direto (Posição em direto e +- 24h, Mapa de apontamento, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEPURAÇÃO DE FÓRMULAS), Log (Mapa WWL e ADIF), Ajuda (INSTRUÇÕES, ABOUT & CREDITS). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra o último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
+            "Os separadores estão reunidos em cinco grupos na barra de cima: Em direto (Posição em direto e +- 24h, Mapa de apontamento, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, Verificação dos cálculos), Log (Mapa WWL e ADIF), Ajuda (INSTRUÇÕES, ABOUT & CREDITS). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra o último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
             "Esquema de cores (definições gerais): Claro, Noite (tons de azul) ou Preto (fundo preto, adequado ao uso no escuro e aos ecrãs OLED).",
             "O SOL PERTO DA LUA",
             "Por volta da lua nova a Lua passa perto do Sol no céu. O Sol é uma radiofonte muito forte (de dezenas a milhares de SFU conforme a frequência e a atividade solar): quando entra no lobo principal ou nos primeiros lobos laterais da antena, a temperatura de ruído do sistema sobe muitos dB e o eco da Lua pode desaparecer, mesmo com uma Dgrd ótima.",
@@ -9009,7 +9069,7 @@ namespace LunaCalc
             "O YAEC calcula a latitude geomagnética com o dipolo do modelo IGRF-14 (polo norte geomagnético 2025: 80,8° N, 72,8° O). Quando escreves um locator, teu ou do DX, que cai numa destas zonas, aparece um aviso que depois fica no ecrã principal. Antes de um QSO com estações polares ou aurorais consulta as previsões D-RAP da NOAA (D Region Absorption Predictions) e os alertas de eventos de protões.",
             "Bibliografia: H. H. Sauer e D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); polos geomagnéticos IGRF do World Data Center for Geomagnetism de Quioto.",
             "Todos os parâmetros e fórmulas do Balanço EME e do Ruído solar, nos dois sentidos (tu → DX e DX → tu), com os valores substituídos e o resultado de cada passo: comprimento de onda, secção radar da Lua, perda de percurso, PIRE, sinal ao longo da cadeia de receção, MDS e margem, figura de ruído com Friis, temperaturas, ruído e S/N, e para o Sol fluxo, feixe, atenuação do diagrama, área efetiva e aumento do ruído. Ativa-se com a caixa \"CÁLCULOS APROFUNDADOS\"; o botão em baixo copia tudo para a área de transferência.",
-            "O separador DEPURAÇÃO DE FÓRMULAS ativa-se com a caixa \"CÁLCULOS APROFUNDADOS\" no separador Posição em direto e +- 24h.",
+            "O separador Verificação dos cálculos ativa-se com a caixa \"CÁLCULOS APROFUNDADOS\" no separador Posição em direto e +- 24h.",
             // v27
             "personalizado",
             "Distância DX (km)",
@@ -9032,7 +9092,7 @@ namespace LunaCalc
             "usar a linha da tabela",
             "Usar o instante da linha escolhida na tabela da posição da Lua.",
             "perda de polarização",
-            "Caixa sincronizada: é a mesma caixa CÁLCULOS APROFUNDADOS do cartão verde do S/N estimado no separador Posição em direto e +- 24h; alterá-la aqui altera-a também lá e vice-versa. Desligada, o Balanço EME passa ao modo simplificado e os separadores Ruído solar, Exportar os cálculos para Excel e DEPURAÇÃO DE FÓRMULAS ficam a cinzento.",
+            "Caixa sincronizada: é a mesma caixa CÁLCULOS APROFUNDADOS do cartão verde do S/N estimado no separador Posição em direto e +- 24h; alterá-la aqui altera-a também lá e vice-versa. Desligada, o Balanço EME passa ao modo simplificado e os separadores Ruído solar, Exportar os cálculos para Excel e Verificação dos cálculos ficam a cinzento.",
             "INSTALAÇÃO DE EMISSÃO E RECEÇÃO",
             "CABO ANTENA – RELÉ",
             "Tipo",
@@ -9239,7 +9299,7 @@ namespace LunaCalc
             "Útil e gratuito",
             "O programa é gratuito e pode ser usado sem limites para o radioamadorismo, para aprender e para ensinar. Foi feito para facilitar os QSO, não para vender algo.",
             "Transparente",
-            "O código-fonte é sempre fornecido com o programa; cada fórmula é visível no separador DEPURAÇÃO DE FÓRMULAS e cada dado indica a sua fonte. Sem caixas negras.",
+            "O código-fonte é sempre fornecido com o programa; cada fórmula é visível no separador Verificação dos cálculos e cada dado indica a sua fonte. Sem caixas negras.",
             "Honesto",
             "Distinguem-se os valores medidos, deduzidos e estimados; o que não está verificado é declarado como tal. Um resultado incerto é dito incerto, não apresentado como seguro.",
             "Respeitador",
@@ -9276,7 +9336,7 @@ namespace LunaCalc
             "Em cima quatro indicadores, à esquerda a fonte dos dados (NOAA RSTN recomendada, ou F10.7 da NOAA ou de Penticton, ou um endereço personalizado) com as estações, à direita o espectro do fluxo solar com a extrapolação até à frequência de trabalho.",
             "Este manual, dentro do programa e em todas as línguas: índice clicável, pesquisa, fórmulas e fontes.",
             "Está paginado como um documento Word, com as fórmulas no estilo do editor de equações: pode ser copiado para a área de transferência ou guardado em Word (.docx).",
-            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua, Lua sobre o mundo), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, DEPURAÇÃO DE FÓRMULAS), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (ABOUT & CREDITS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
+            "Os separadores estão reunidos em seis grupos na barra de cima: Em direto (Posição em direto e +- 24h, Reconhecimento dos meus obstáculos, Abóbada celeste), Planeamento (Distância e Dgrd, Posição da Lua, Lua sobre o mundo), Ligação (Balanço EME, Ruído solar, Exportar os cálculos para Excel, Verificação dos cálculos), Log (Mapa WWL e ADIF), Ajuda e ferramentas (MANUAL DE UTILIZAÇÃO, TEORIA E CONSELHOS SOBRE EME, CABOS COAXIAIS), Credits and thanks (SOBRE E CRÉDITOS, CONTACTOS DO AUTOR E AGRADECIMENTOS, LICENÇA). Clica num grupo na primeira linha e depois no separador na segunda; cada grupo lembra-se do último separador aberto. Os separadores a cinzento ativam-se com a caixa \"CÁLCULOS APROFUNDADOS\".",
             "Obrigado por me teres usado: espero ter-te sido útil.",
             "Não",
             "Sim",
@@ -9557,6 +9617,18 @@ namespace LunaCalc
             "Citado no manual TEORIA E CONSELHOS SOBRE EME:",
             "1.2 - Balanço EME com os indicadores A minha EIRP, EIRP do DX, perda de percurso e S/R nos dois sentidos (com o Sol); fórmulas do documento Word num só tamanho, dentro das margens; botões preenchidos e listas pendentes planas com rebordo arredondado em todos os esquemas; oito esquemas de cores pastel; caixas de valores com as setas lado a lado; os três melhores dias por ordem de data; fundo do céu desfocado; DEPURAÇÃO DE FÓRMULAS traduzido; manual TEORIA E CONSELHOS SOBRE EME com os conselhos de Relu NJ9R (GRAVES, apontamento, conectores, ganho das antenas, JT65B e MAP65, relé de polarização), as novas secções sobre a primeira receção e sobre os chats na Internet e as tabelas de VE7BQH no prefácio; agradecimentos a NJ9R, a memória de IK1UWL e os autores de artigos, hardware e software, com um balão de ajuda sobre as suas obras.",
             "1.2.1 - A página CONTACTOS DO AUTOR E AGRADECIMENTOS volta a abrir corretamente em Linux e macOS; a referência para os transverters indica o § 1.7.1.",
+            "SOBRE E CRÉDITOS",
+            "Radar GRAVES como estação DX",
+            "Define como DX o radar francês GRAVES (143,050 MHz, locator JN27SI): as janelas comuns com o GRAVES são os momentos em que podes receber o seu eco da Lua e verificar o recetor e o apontamento. Ver o manual TEORIA E CONSELHOS SOBRE EME, § 1.11.",
+            "Conectores estimados",
+            "Número estimado de conectores na linha entre o PA e a antena, incluindo adaptadores, relés e divisores. Regra prática de NJ9R: cerca de 1 dB por cada 8 – 10 conectores, ou seja 0,11 dB cada. Na transmissão contam todos; na receção conta metade, os do lado da antena antes do pré-amplificador.",
+            "cabo {0:F2} + relé {1:F2} + antena {2:F2} + conectores {3:F2} = {4:F2} dB → {5} na antena",
+            "antes do pré-amplificador: {0:F2} + {1:F2} + conectores {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB em TX, {3:F2} dB em RX antes do pré-amplificador",
+            "Perdas TX (cabo PA–relé + relé + cabo da antena + conectores)",
+            "Véu cinzento",
+            "Aplica o véu cinzento às zonas fora dos limites e escurece o mapa fora do horizonte. Sem visto, a imagem de fundo fica como está, sem véu nem escurecimento.",
+            "Arrasta para alargar ou estreitar o esquema da instalação; duplo clique para voltar à largura inicial.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -10274,7 +10346,7 @@ namespace LunaCalc
             "公式",
             "数值",
             "结果",
-            "公式调试",
+            "计算核查",
             "输入参数",
             "我的电台",
             "未计入",
@@ -10314,7 +10386,7 @@ namespace LunaCalc
             "超出您天线限制的区域以浅灰色斜线覆盖。",
             "“模糊超出限制的区域”复选框用于开启或关闭模糊效果。",
             "如何选择选项卡",
-            "选项卡在顶部栏中分为五组：实时（实时位置与 +- 24h、指向地图、天穹）、规划（距离与 Dgrd、月球位置）、通联（EME 链路预算、太阳噪声、计算结果导出到 Excel、公式调试）、日志（WWL 与 ADIF 地图）、帮助（使用说明、ABOUT & CREDITS）。先在第一行点击一个组，再在第二行点击选项卡；每个组都会记住上次打开的选项卡。灰色的选项卡需勾选“深入计算”复选框后才能使用。",
+            "选项卡在顶部栏中分为五组：实时（实时位置与 +- 24h、指向地图、天穹）、规划（距离与 Dgrd、月球位置）、通联（EME 链路预算、太阳噪声、计算结果导出到 Excel、计算核查）、日志（WWL 与 ADIF 地图）、帮助（使用说明、ABOUT & CREDITS）。先在第一行点击一个组，再在第二行点击选项卡；每个组都会记住上次打开的选项卡。灰色的选项卡需勾选“深入计算”复选框后才能使用。",
             "配色方案（常规设置）：浅色、夜间（蓝色调）或黑色（黑色背景，适合在黑暗环境中使用及 OLED 屏幕）。",
             "太阳靠近月球",
             "新月前后，月球在天空中从太阳附近经过。太阳是极强的射电源（随频率和太阳活动不同，从几十到几千 SFU）：当它进入天线的主瓣或第一旁瓣时，系统噪声温度会上升许多 dB，即使 Dgrd 很好，月面回波也可能消失。",
@@ -10326,7 +10398,7 @@ namespace LunaCalc
             "YAEC 用 IGRF-14 模型的偶极子计算地磁纬度（2025 年地磁北极：80.8° N，72.8° W）。当您输入的网格定位（您自己的或 DX 的）落在这些区域内时，会出现警告，并保留在主界面上。与极区或极光带台站通联前，请查看 NOAA 的 D-RAP 预报（D Region Absorption Predictions）以及质子事件警报。",
             "文献：H. H. Sauer 与 D. C. Wilkinson，\"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"，Space Weather，第 6 卷（2008），doi:10.1029/2008SW000399；NOAA SWPC，D Region Absorption Predictions（D-RAP）；IGRF 地磁极，来自京都地磁世界数据中心（World Data Center for Geomagnetism, Kyoto）。",
             "EME 链路预算和太阳噪声的全部参数与公式，包括两个方向（您 → DX 和 DX → 您），给出代入的数值和每一步的结果：波长、月球雷达截面、路径损耗、EIRP、接收链路各级信号、MDS 与余量、Friis 噪声系数、温度、噪声和信噪比；太阳部分包括流量、波束、方向图衰减、有效面积和噪声增加。需勾选“深入计算”复选框才能使用；底部按钮可将全部内容复制到剪贴板。",
-            "公式调试 选项卡需在实时位置与 +- 24h选项卡中勾选“深入计算”复选框后才能使用。",
+            "计算核查 选项卡需在实时位置与 +- 24h选项卡中勾选“深入计算”复选框后才能使用。",
             // v27
             "自定义",
             "DX 距离 (km)",
@@ -10349,7 +10421,7 @@ namespace LunaCalc
             "使用表格中的行",
             "使用月球位置表中所选行的时刻。",
             "极化损耗",
-            "同步复选框：它与实时位置与 +- 24h页估计 S/N 绿色卡片中的“深入计算”是同一个复选框；在此处更改，那里也会改变，反之亦然。关闭时，EME 链路预算进入简化模式，太阳噪声、计算结果导出到 Excel 和 公式调试 页变为灰色。",
+            "同步复选框：它与实时位置与 +- 24h页估计 S/N 绿色卡片中的“深入计算”是同一个复选框；在此处更改，那里也会改变，反之亦然。关闭时，EME 链路预算进入简化模式，太阳噪声、计算结果导出到 Excel 和 计算核查 页变为灰色。",
             "收发设备",
             "天线 – 继电器电缆",
             "类型",
@@ -10429,7 +10501,7 @@ namespace LunaCalc
             "保存为 Word (.docx)",
             "方向",
             "缩放",
-            "公式调试 – EME 链路预算与太阳噪声",
+            "计算核查 – EME 链路预算与太阳噪声",
             "时刻与波段",
             "输入参数",
             "PA – 继电器电缆 + 继电器 + 天线电缆",
@@ -10556,7 +10628,7 @@ namespace LunaCalc
             "有用且免费",
             "本程序免费，可不受限制地用于业余无线电、学习和教学。它是为了方便 QSO，而不是为了推销什么。",
             "透明",
-            "源代码始终随程序提供；每个公式都可在 公式调试 页查看，每个数据都注明来源。没有黑箱。",
+            "源代码始终随程序提供；每个公式都可在 计算核查 页查看，每个数据都注明来源。没有黑箱。",
             "诚实",
             "区分测量值、推导值和估计值；未经核实的内容如实说明。不确定的结果就说不确定，不当作确定的呈现。",
             "尊重",
@@ -10593,7 +10665,7 @@ namespace LunaCalc
             "上方四个指示，左侧为数据来源 (推荐 NOAA RSTN，或 NOAA、彭蒂克顿的 F10.7，或自定义地址) 及台站，右侧为太阳流量频谱及外推到工作频率的曲线。",
             "本手册，内置于程序并提供所有语言：可点击目录、搜索、公式和来源。",
             "它像 Word 文档一样排版，公式采用公式编辑器风格：可复制到剪贴板或保存为 Word (.docx)。",
-            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置、月照全球)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、公式调试)、日志 (WWL 与 ADIF 地图)、帮助与工具 (使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (ABOUT & CREDITS、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
+            "页面在顶部栏中分为六组：实时 (实时位置与 +- 24h、我的障碍物勘察、天穹)、规划 (距离与 Dgrd、月球位置、月照全球)、通联 (EME 链路预算、太阳噪声、计算结果导出到 Excel、计算核查)、日志 (WWL 与 ADIF 地图)、帮助与工具 (使用手册、EME 理论与建议、同轴电缆)、Credits and thanks (关于与鸣谢、作者联系方式与致谢、许可证)。先在第一行单击组，再在第二行单击页面；每组会记住上次打开的页面。灰色页面通过“深入计算”复选框启用。",
             "感谢使用我：希望我对你有所帮助。",
             "否",
             "是",
@@ -10874,6 +10946,18 @@ namespace LunaCalc
             "在《EME 理论与建议》手册中的引用：",
             "1.2 - EME 链路预算新增指标：我的 EIRP、DX 的 EIRP、路径损耗以及双向 S/N（含太阳）；Word 文档中的公式统一为一种大小并保持在页边距内；所有配色方案中的按钮改为填充样式，下拉列表改为扁平圆角样式；八种粉彩配色方案；数值框的上下箭头并排显示；三个最佳日期按日期排序；天空背景模糊；公式调试已翻译；《EME 理论与建议》手册加入 Relu NJ9R 的建议（GRAVES、指向、连接器、天线增益、JT65B 与 MAP65、极化继电器）、关于首次接收和网络聊天室的新章节，并在序言中加入 VE7BQH 天线表；致谢 NJ9R，缅怀 IK1UWL，感谢文章、硬件和软件的作者，并以提示框介绍他们的作品。",
             "1.2.1 - 作者联系方式与致谢页面在 Linux 和 macOS 上恢复正常打开；变频器的参考章节改为 § 1.7.1。",
+            "关于与鸣谢",
+            "将 GRAVES 雷达设为 DX 电台",
+            "将法国 GRAVES 雷达（143.050 MHz，定位符 JN27SI）设为 DX：与 GRAVES 的共同窗口就是你能接收到其月面回波、检查接收机和指向的时段。参见《EME 理论与建议》手册 § 1.11。",
+            "估计连接器数",
+            "PA 与天线之间线路上估计的连接器数量，包括转接头、继电器和功分器。NJ9R 的经验法则：大约每 8 – 10 个连接器 1 dB，即每个 0.11 dB。发射时全部计入；接收时只计一半，即天线一侧、前置放大器之前的那些。",
+            "电缆 {0:F2} + 继电器 {1:F2} + 天线 {2:F2} + 连接器 {3:F2} = {4:F2} dB → 天线处 {5}",
+            "前置放大器之前：{0:F2} + {1:F2} + 连接器 {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = 发射 {2:F2} dB，接收（前置放大器之前）{3:F2} dB",
+            "TX 损耗 (PA–继电器电缆 + 继电器 + 天线电缆 + 连接器)",
+            "灰色遮罩",
+            "在限制范围之外的区域加上灰色遮罩，并把地平线以外的地图调暗。不勾选时背景图像保持原样，不加遮罩也不调暗。",
+            "拖动可加宽或缩窄设备示意图；双击恢复初始宽度。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -11591,7 +11675,7 @@ namespace LunaCalc
             "式",
             "値",
             "結果",
-            "数式デバッグ",
+            "計算のチェック",
             "入力パラメーター",
             "自局",
             "含まない",
@@ -11631,7 +11715,7 @@ namespace LunaCalc
             "アンテナの制限外の領域は薄い灰色の斜線で覆われます。",
             "「制限外の領域をぼかす」チェックボックスでぼかしのオン・オフを切り替えます。",
             "タブの選び方",
-            "タブは上部のバーで 5 つのグループにまとめられています：ライブ（ライブ位置と +- 24h、指向マップ、天球）、計画（距離と Dgrd、月の位置）、交信（EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、数式デバッグ）、ログ（WWL・ADIF 地図）、ヘルプ（使い方、ABOUT & CREDITS）。1 段目でグループを、2 段目でタブをクリックします。各グループは最後に開いたタブを覚えています。灰色のタブは「詳細な計算」チェックボックスで有効になります。",
+            "タブは上部のバーで 5 つのグループにまとめられています：ライブ（ライブ位置と +- 24h、指向マップ、天球）、計画（距離と Dgrd、月の位置）、交信（EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、計算のチェック）、ログ（WWL・ADIF 地図）、ヘルプ（使い方、ABOUT & CREDITS）。1 段目でグループを、2 段目でタブをクリックします。各グループは最後に開いたタブを覚えています。灰色のタブは「詳細な計算」チェックボックスで有効になります。",
             "配色（一般設定）：ライト、ナイト（青系）、ブラック（黒背景、暗所での使用や OLED 画面に適します）。",
             "月の近くの太陽",
             "新月の前後、月は空で太陽の近くを通ります。太陽は非常に強い電波源です（周波数と太陽活動により数十から数千 SFU）。アンテナの主ローブや最初のサイドローブに入ると、システム雑音温度が何 dB も上がり、Dgrd が非常に良くても月のエコーが消えることがあります。",
@@ -11643,7 +11727,7 @@ namespace LunaCalc
             "YAEC は IGRF-14 モデルの双極子で地磁気緯度を計算します（2025 年の地磁気北極：80.8° N、72.8° W）。自局または DX のロケーターがこれらの領域に入ると警告が表示され、その後メイン画面に残ります。極域やオーロラ帯の局と QSO する前に、NOAA の D-RAP 予報（D Region Absorption Predictions）とプロトン現象の警報を確認してください。",
             "文献：H. H. Sauer、D. C. Wilkinson、\"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"、Space Weather、第 6 巻（2008）、doi:10.1029/2008SW000399；NOAA SWPC、D Region Absorption Predictions（D-RAP）；京都大学 地磁気世界資料解析センター（World Data Center for Geomagnetism, Kyoto）の IGRF 地磁気極。",
             "EME 回線計算と太陽雑音のすべてのパラメーターと式を、両方向（自局 → DX、DX → 自局）について、代入した値と各ステップの結果とともに表示します：波長、月のレーダー断面積、伝搬損失、EIRP、受信系の各段の信号、MDS とマージン、Friis による雑音指数、温度、雑音と S/N、太陽についてはフラックス、ビーム、パターンによる減衰、実効面積、雑音の増加。「詳細な計算」チェックボックスで有効になり、下のボタンですべてをクリップボードにコピーできます。",
-            "数式デバッグ タブは、ライブ位置と +- 24hタブの「詳細な計算」チェックボックスで有効になります。",
+            "計算のチェック タブは、ライブ位置と +- 24hタブの「詳細な計算」チェックボックスで有効になります。",
             // v27
             "カスタム",
             "DX 距離 (km)",
@@ -11666,7 +11750,7 @@ namespace LunaCalc
             "表の行を使う",
             "月の位置の表で選んだ行の時刻を使います。",
             "偏波損失",
-            "同期チェックボックス：ライブ位置と +- 24hタブの推定 S/N 緑カードにある「詳細な計算」と同じものです。ここで変えるとそちらも変わり、逆も同様です。オフにすると EME 回線計算は簡易モードになり、太陽雑音、計算結果を Excel へエクスポート、数式デバッグ の各タブはグレーになります。",
+            "同期チェックボックス：ライブ位置と +- 24hタブの推定 S/N 緑カードにある「詳細な計算」と同じものです。ここで変えるとそちらも変わり、逆も同様です。オフにすると EME 回線計算は簡易モードになり、太陽雑音、計算結果を Excel へエクスポート、計算のチェック の各タブはグレーになります。",
             "送受信設備",
             "アンテナ – リレー間ケーブル",
             "種類",
@@ -11873,7 +11957,7 @@ namespace LunaCalc
             "役に立ち無料",
             "本プログラムは無料で、アマチュア無線、学習、教育のために制限なく使えます。QSO を助けるためのものであり、何かを売るためのものではありません。",
             "透明",
-            "ソースコードは常にプログラムと一緒に提供されます。すべての数式は 数式デバッグ タブで見られ、すべてのデータに出典があります。ブラックボックスはありません。",
+            "ソースコードは常にプログラムと一緒に提供されます。すべての数式は 計算のチェック タブで見られ、すべてのデータに出典があります。ブラックボックスはありません。",
             "誠実",
             "測定値、導出値、推定値を区別し、未確認のものはそう明示します。不確かな結果は不確かと述べ、確かなもののようには示しません。",
             "敬意",
@@ -11910,7 +11994,7 @@ namespace LunaCalc
             "上部に 4 つの指標、左にデータソース (推奨は NOAA RSTN、または NOAA かペンティクトンの F10.7、またはカスタムアドレス) と観測所、右に運用周波数までの外挿付き太陽電波束スペクトル。",
             "このマニュアル。プログラム内にあり全言語対応：クリックできる目次、検索、数式、出典。",
             "Word 文書のようにレイアウトされ、数式は数式エディター風です：クリップボードにコピーしたり Word (.docx) で保存したりできます。",
-            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置、世界から見た月)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、数式デバッグ)、ログ (WWL・ADIF 地図)、ヘルプとツール (取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (ABOUT & CREDITS、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
+            "タブは上部バーで 6 つのグループにまとめられています：ライブ (ライブ位置と +- 24h、自局障害物の偵察、天球)、計画 (距離と Dgrd、月の位置、世界から見た月)、交信 (EME 回線計算、太陽雑音、計算結果を Excel へエクスポート、計算のチェック)、ログ (WWL・ADIF 地図)、ヘルプとツール (取扱説明書、EME の理論とアドバイス、同軸ケーブル)、Credits and thanks (概要とクレジット、作者への連絡と謝辞、ライセンス)。1 行目でグループを、2 行目でタブをクリックします。各グループは最後に開いたタブを覚えています。グレーのタブは「詳細な計算」チェックボックスで有効になります。",
             "使ってくれてありがとう：お役に立てたなら幸いです。",
             "いいえ",
             "はい",
@@ -12191,6 +12275,18 @@ namespace LunaCalc
             "「EME の理論とアドバイス」マニュアルでの引用箇所：",
             "1.2 - EME 回線計算に「自局 EIRP」「DX の EIRP」「経路損失」「双方向の S/N（太陽を含む）」の表示を追加。Word 文書の数式を単一サイズにして余白内に収めた。すべての配色でボタンを塗りつぶし型、ドロップダウンを角丸のフラット型に。パステル配色を 8 種類追加。数値ボックスの矢印を横並びに。ベスト 3 日を日付順に。空の背景をぼかした。数式デバッグを翻訳。「EME の理論とアドバイス」マニュアルに Relu NJ9R の助言（GRAVES、指向、コネクター、アンテナ利得、JT65B と MAP65、偏波リレー）、最初の受信とインターネットチャットに関する新しい節、序文に VE7BQH の表を追加。NJ9R への謝辞、IK1UWL の追悼、記事・ハードウェア・ソフトウェアの作者への謝辞と、その作品を示すツールチップを追加。",
             "1.2.1 - 作者への連絡と謝辞のページが Linux と macOS で再び正しく開くようになりました。トランスバーターの参照先を § 1.7.1 に修正。",
+            "概要とクレジット",
+            "GRAVES レーダーを DX 局に",
+            "フランスの GRAVES レーダー（143.050 MHz、ロケーター JN27SI）を DX に設定します。GRAVES との共通ウィンドウは、月からのエコーを受信して受信機と指向を確認できる時間帯です。マニュアル「EME の理論とアドバイス」§ 1.11 を参照。",
+            "推定コネクター数",
+            "PA とアンテナの間のラインにある推定コネクター数（アダプター、リレー、分配器を含む）。NJ9R の目安：コネクター 8 ～ 10 個で約 1 dB、つまり 1 個あたり 0.11 dB。送信ではすべてが効き、受信ではアンテナ側・プリアンプ前の半分が効きます。",
+            "ケーブル {0:F2} + リレー {1:F2} + アンテナ {2:F2} + コネクター {3:F2} = {4:F2} dB → アンテナで {5}",
+            "プリアンプ前：{0:F2} + {1:F2} + コネクター {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = 送信 {2:F2} dB、受信（プリアンプ前）{3:F2} dB",
+            "TX 損失 (PA–リレー間ケーブル + リレー + アンテナケーブル + コネクター)",
+            "グレーのベール",
+            "制限外の区域にグレーのベールをかけ、地平線の外の地図を暗くします。チェックを外すと背景画像はそのままで、ベールも暗くする処理もかかりません。",
+            "ドラッグで設備図の幅を広げたり狭めたりできます。ダブルクリックで初期の幅に戻ります。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -12908,7 +13004,7 @@ namespace LunaCalc
             "सूत्र",
             "मान",
             "परिणाम",
-            "सूत्र डिबग",
+            "गणना की जाँच",
             "इनपुट पैरामीटर",
             "मेरा स्टेशन",
             "शामिल नहीं",
@@ -12948,7 +13044,7 @@ namespace LunaCalc
             "आपके एंटीना की सीमाओं से बाहर के क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके हैं।",
             "\"सीमाओं से बाहर के क्षेत्र धुंधले करें\" बॉक्स धुंधलापन चालू या बंद करता है।",
             "टैब कैसे चुनें",
-            "टैब ऊपर की पट्टी में पाँच समूहों में रखे गए हैं: लाइव (लाइव स्थिति और +- 24h, लक्ष्य मानचित्र, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, सूत्र डिबग), लॉग (WWL मानचित्र और ADIF), सहायता (निर्देश, ABOUT & CREDITS)। पहली पंक्ति में किसी समूह पर और फिर दूसरी पंक्ति में टैब पर क्लिक करें; हर समूह पिछली बार खुला टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
+            "टैब ऊपर की पट्टी में पाँच समूहों में रखे गए हैं: लाइव (लाइव स्थिति और +- 24h, लक्ष्य मानचित्र, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, गणना की जाँच), लॉग (WWL मानचित्र और ADIF), सहायता (निर्देश, ABOUT & CREDITS)। पहली पंक्ति में किसी समूह पर और फिर दूसरी पंक्ति में टैब पर क्लिक करें; हर समूह पिछली बार खुला टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
             "रंग योजना (सामान्य सेटिंग्स): हल्का, रात (नीले रंग) या काला (काली पृष्ठभूमि, अँधेरे में उपयोग और OLED स्क्रीन के लिए उपयुक्त)।",
             "चंद्रमा के पास सूर्य",
             "अमावस्या के आसपास चंद्रमा आकाश में सूर्य के पास से गुज़रता है। सूर्य एक बहुत शक्तिशाली रेडियो स्रोत है (आवृत्ति और सौर गतिविधि के अनुसार दसियों से हज़ारों SFU तक): जब वह एंटीना के मुख्य लोब या पहले साइड लोब में आता है, तो सिस्टम शोर तापमान कई dB बढ़ जाता है और चंद्रमा की प्रतिध्वनि गायब हो सकती है, चाहे Dgrd बहुत अच्छा हो।",
@@ -12960,7 +13056,7 @@ namespace LunaCalc
             "YAEC भूचुंबकीय अक्षांश की गणना IGRF-14 मॉडल के द्विध्रुव से करता है (2025 का भूचुंबकीय उत्तरी ध्रुव: 80.8° N, 72.8° W)। जब आप कोई लोकेटर, अपना या DX का, लिखते हैं जो इनमें से किसी क्षेत्र में आता है, तो एक चेतावनी दिखती है जो बाद में मुख्य स्क्रीन पर बनी रहती है। ध्रुवीय या ध्रुवीय-ज्योति स्टेशनों के साथ QSO से पहले NOAA के D-RAP पूर्वानुमान (D Region Absorption Predictions) और प्रोटॉन घटनाओं की चेतावनियाँ देखें।",
             "साहित्य: H. H. Sauer और D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, खंड 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); World Data Center for Geomagnetism, Kyoto से IGRF भूचुंबकीय ध्रुव।",
             "EME बजट और सौर शोर के सभी पैरामीटर और सूत्र, दोनों दिशाओं (आप → DX और DX → आप) के लिए, रखे गए मानों और हर चरण के परिणाम सहित: तरंगदैर्ध्य, चंद्रमा का रडार अनुप्रस्थ काट, पथ हानि, EIRP, प्राप्ति शृंखला में संकेत, MDS और मार्जिन, Friis से नॉइज़ फ़िगर, तापमान, शोर और S/N, और सूर्य के लिए फ़्लक्स, बीम, पैटर्न क्षीणन, प्रभावी क्षेत्र और शोर वृद्धि। यह \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होता है; नीचे का बटन सब कुछ क्लिपबोर्ड पर कॉपी करता है।",
-            "सूत्र डिबग टैब लाइव स्थिति और +- 24h टैब के \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होता है।",
+            "गणना की जाँच टैब लाइव स्थिति और +- 24h टैब के \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होता है।",
             // v27
             "कस्टम",
             "DX दूरी (km)",
@@ -12983,7 +13079,7 @@ namespace LunaCalc
             "तालिका की पंक्ति का उपयोग करें",
             "चंद्रमा की स्थिति तालिका में चुनी गई पंक्ति का समय उपयोग करें।",
             "ध्रुवीकरण हानि",
-            "सिंक्रनाइज़्ड बॉक्स: यह वही विस्तृत गणनाएँ बॉक्स है जो लाइव स्थिति और +- 24h टैब में अनुमानित S/N के हरे कार्ड में है; यहाँ बदलने से वहाँ भी बदलता है और उल्टा भी। बंद होने पर EME बजट सरल मोड में चला जाता है और सौर शोर, गणनाओं का Excel में निर्यात तथा सूत्र डिबग टैब धूसर हो जाते हैं।",
+            "सिंक्रनाइज़्ड बॉक्स: यह वही विस्तृत गणनाएँ बॉक्स है जो लाइव स्थिति और +- 24h टैब में अनुमानित S/N के हरे कार्ड में है; यहाँ बदलने से वहाँ भी बदलता है और उल्टा भी। बंद होने पर EME बजट सरल मोड में चला जाता है और सौर शोर, गणनाओं का Excel में निर्यात तथा गणना की जाँच टैब धूसर हो जाते हैं।",
             "प्रसारण और रिसेप्शन व्यवस्था",
             "केबल एंटेना – रिले",
             "प्रकार",
@@ -13190,7 +13286,7 @@ namespace LunaCalc
             "उपयोगी और निःशुल्क",
             "प्रोग्राम निःशुल्क है और शौकिया रेडियो, सीखने और पढ़ाने के लिए बिना सीमा के उपयोग किया जा सकता है। यह QSO आसान बनाने के लिए है, कुछ बेचने के लिए नहीं।",
             "पारदर्शी",
-            "स्रोत कोड हमेशा प्रोग्राम के साथ दिया जाता है; हर सूत्र सूत्र डिबग टैब में दिखता है और हर डेटा अपना स्रोत बताता है। कोई ब्लैक बॉक्स नहीं।",
+            "स्रोत कोड हमेशा प्रोग्राम के साथ दिया जाता है; हर सूत्र गणना की जाँच टैब में दिखता है और हर डेटा अपना स्रोत बताता है। कोई ब्लैक बॉक्स नहीं।",
             "ईमानदार",
             "मापे गए, निकाले गए और अनुमानित मानों में अंतर किया जाता है; जो सत्यापित नहीं है उसे वैसा ही घोषित किया जाता है। अनिश्चित परिणाम को अनिश्चित कहा जाता है, निश्चित के रूप में प्रस्तुत नहीं किया जाता।",
             "सम्मानपूर्ण",
@@ -13227,7 +13323,7 @@ namespace LunaCalc
             "ऊपर चार संकेतक, बाईं ओर डेटा स्रोत (NOAA RSTN अनुशंसित, या NOAA अथवा पेंटिक्टन का F10.7, या कस्टम पता) स्टेशनों के साथ, दाईं ओर कार्य आवृत्ति तक एक्सट्रापोलेशन सहित सौर फ्लक्स स्पेक्ट्रम।",
             "यह मैनुअल, प्रोग्राम के भीतर और सभी भाषाओं में: क्लिक योग्य विषय-सूची, खोज, सूत्र और स्रोत।",
             "यह Word दस्तावेज़ की तरह सजा है, सूत्र समीकरण संपादक की शैली में: इसे क्लिपबोर्ड में कॉपी या Word (.docx) में सहेजा जा सकता है।",
-            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति, विश्व पर चंद्रमा), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, सूत्र डिबग), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (ABOUT & CREDITS, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
+            "टैब ऊपर की पट्टी में छह समूहों में हैं: लाइव (लाइव स्थिति और +- 24h, मेरी बाधाओं की टोह, आकाश दृश्य), योजना (दूरी और Dgrd, चंद्रमा की स्थिति, विश्व पर चंद्रमा), संपर्क (EME बजट, सौर शोर, गणनाओं का Excel में निर्यात, गणना की जाँच), लॉग (WWL मानचित्र और ADIF), सहायता और टूल (उपयोगकर्ता मैनुअल, EME सिद्धांत और सुझाव, कोएक्सियल केबल), Credits and thanks (परिचय और श्रेय, लेखक से संपर्क और आभार, लाइसेंस)। पहली पंक्ति में समूह पर और फिर दूसरी में टैब पर क्लिक करें; हर समूह अंतिम खोला गया टैब याद रखता है। धूसर टैब \"विस्तृत गणनाएँ\" बॉक्स से सक्रिय होते हैं।",
             "मुझे उपयोग करने के लिए धन्यवाद: आशा है मैं आपके काम आया।",
             "नहीं",
             "हाँ",
@@ -13508,6 +13604,18 @@ namespace LunaCalc
             "EME सिद्धांत और सुझाव मैनुअल में उल्लेख:",
             "1.2 - EME बजट में मेरी EIRP, DX की EIRP, पथ हानि और दोनों दिशाओं में S/N (सूर्य सहित) के संकेतक; Word दस्तावेज़ के सूत्र एक ही आकार में, हाशियों के भीतर; सभी योजनाओं में भरे हुए बटन और गोल किनारे वाली सपाट ड्रॉप-डाउन सूचियाँ; आठ पेस्टल रंग योजनाएँ; मान बॉक्स में अगल-बगल तीर; तीन सबसे अच्छे दिन तिथि के क्रम में; धुंधली आकाश पृष्ठभूमि; सूत्र डिबग का अनुवाद; EME सिद्धांत और सुझाव मैनुअल में Relu NJ9R की सलाह (GRAVES, पॉइंटिंग, कनेक्टर, एंटेना गेन, JT65B और MAP65, ध्रुवीकरण रिले), पहले रिसेप्शन और इंटरनेट चैट पर नए खंड, और प्रस्तावना में VE7BQH की तालिकाएँ; NJ9R को धन्यवाद, IK1UWL की स्मृति और लेखों, हार्डवेयर व सॉफ़्टवेयर के रचनाकारों को आभार, उनकी कृतियों के टूलटिप के साथ।",
             "1.2.1 - लेखक से संपर्क और आभार पृष्ठ Linux और macOS पर फिर से सही खुलता है; ट्रांसवर्टर का संदर्भ अब § 1.7.1 है।",
+            "परिचय और श्रेय",
+            "GRAVES रडार को DX स्टेशन के रूप में",
+            "फ़्रांसीसी GRAVES रडार (143.050 MHz, लोकेटर JN27SI) को DX बनाता है: GRAVES के साथ साझा विंडो वे समय हैं जब आप चंद्रमा से उसकी प्रतिध्वनि पा सकते हैं और रिसीवर व पॉइंटिंग जाँच सकते हैं। EME सिद्धांत और सुझाव मैनुअल, § 1.11 देखें।",
+            "अनुमानित कनेक्टर",
+            "PA और एंटेना के बीच लाइन में कनेक्टरों की अनुमानित संख्या, एडेप्टर, रिले और स्प्लिटर सहित। NJ9R का व्यावहारिक नियम: लगभग हर 8 – 10 कनेक्टर पर 1 dB, यानी प्रत्येक 0.11 dB। ट्रांसमिशन में सभी गिने जाते हैं; रिसेप्शन में आधे, एंटेना की ओर प्रीएम्प से पहले वाले।",
+            "केबल {0:F2} + रिले {1:F2} + एंटेना {2:F2} + कनेक्टर {3:F2} = {4:F2} dB → एंटेना पर {5}",
+            "प्रीएम्प से पहले: {0:F2} + {1:F2} + कनेक्टर {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = TX में {2:F2} dB, RX में प्रीएम्प से पहले {3:F2} dB",
+            "TX हानि (केबल PA–रिले + रिले + एंटेना केबल + कनेक्टर)",
+            "धूसर परत",
+            "सीमाओं से बाहर के क्षेत्रों पर धूसर परत लगाता है और क्षितिज के बाहर मानचित्र को गहरा करता है। बिना टिक के पृष्ठभूमि चित्र जैसा है वैसा रहता है, न परत न गहरापन।",
+            "स्टेशन आरेख को चौड़ा या संकरा करने के लिए खींचें; प्रारंभिक चौड़ाई पर लौटने के लिए डबल-क्लिक करें।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -14225,7 +14333,7 @@ namespace LunaCalc
             "공식",
             "값",
             "결과",
-            "수식 디버그",
+            "계산 검증",
             "입력 매개변수",
             "내 국",
             "포함하지 않음",
@@ -14265,7 +14373,7 @@ namespace LunaCalc
             "안테나 제한 밖 영역은 연회색 대각선으로 덮여 있습니다.",
             "\"제한 밖 영역 흐리게\" 체크박스로 흐림을 켜거나 끕니다.",
             "탭 고르는 방법",
-            "탭은 위쪽 막대에 다섯 그룹으로 모여 있습니다: 실시간(실시간 위치 및 +- 24h, 지향 지도, 하늘 보기), 계획(거리와 Dgrd, 달의 위치), 교신(EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, 수식 디버그), 로그(WWL 지도와 ADIF), 도움말(사용법, ABOUT & CREDITS). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 누르세요. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 체크박스로 활성화됩니다.",
+            "탭은 위쪽 막대에 다섯 그룹으로 모여 있습니다: 실시간(실시간 위치 및 +- 24h, 지향 지도, 하늘 보기), 계획(거리와 Dgrd, 달의 위치), 교신(EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, 계산 검증), 로그(WWL 지도와 ADIF), 도움말(사용법, ABOUT & CREDITS). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 누르세요. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 체크박스로 활성화됩니다.",
             "색 구성(일반 설정): 밝게, 야간(파란 톤), 검정(검은 배경, 어두운 곳에서 사용하거나 OLED 화면에 적합).",
             "달 가까이의 태양",
             "초승달 무렵에는 하늘에서 달이 태양 가까이 지나갑니다. 태양은 매우 강한 전파원입니다(주파수와 태양 활동에 따라 수십에서 수천 SFU): 안테나의 주엽이나 첫 부엽에 들어오면 시스템 잡음 온도가 수 dB 이상 올라가고, Dgrd가 매우 좋아도 달 에코가 사라질 수 있습니다.",
@@ -14277,7 +14385,7 @@ namespace LunaCalc
             "YAEC는 IGRF-14 모델의 쌍극자로 지자기 위도를 계산합니다(2025년 지자기 북극: 80.8° N, 72.8° W). 내 로케이터나 DX 로케이터가 이 지역에 들어가면 경고가 나타나고 그 뒤 주 화면에 남습니다. 극지나 오로라대 국과 QSO하기 전에 NOAA의 D-RAP 예보(D Region Absorption Predictions)와 양성자 현상 경보를 확인하세요.",
             "문헌: H. H. Sauer, D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, 제6권(2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions(D-RAP); 교토 지자기 세계자료센터(World Data Center for Geomagnetism, Kyoto)의 IGRF 지자기극.",
             "EME 링크 버짓과 태양 잡음의 모든 매개변수와 공식을 두 방향(나 → DX, DX → 나)에 대해 대입한 값과 각 단계의 결과와 함께 보여 줍니다: 파장, 달의 레이더 단면적, 경로 손실, EIRP, 수신 체인의 신호, MDS와 여유, Friis 잡음 지수, 온도, 잡음과 S/N, 그리고 태양의 플럭스, 빔, 패턴 감쇠, 유효 면적, 잡음 증가. \"심화 계산\" 체크박스로 활성화되며, 아래 버튼은 모든 내용을 클립보드에 복사합니다.",
-            "수식 디버그 탭은 실시간 위치 및 +- 24h 탭의 \"심화 계산\" 체크박스로 활성화됩니다.",
+            "계산 검증 탭은 실시간 위치 및 +- 24h 탭의 \"심화 계산\" 체크박스로 활성화됩니다.",
             // v27
             "사용자 지정",
             "DX 거리 (km)",
@@ -14300,7 +14408,7 @@ namespace LunaCalc
             "표의 행 사용",
             "달의 위치 표에서 선택한 행의 시각을 사용합니다.",
             "편파 손실",
-            "동기화된 확인란: 실시간 위치 및 +- 24h 탭의 추정 S/N 녹색 카드에 있는 심화 계산과 같은 확인란입니다. 여기서 바꾸면 그쪽도 바뀌고 반대도 마찬가지입니다. 끄면 EME 링크 버짓은 간이 모드가 되고 태양 잡음, 계산 결과 Excel 내보내기, 수식 디버그 탭은 회색이 됩니다.",
+            "동기화된 확인란: 실시간 위치 및 +- 24h 탭의 추정 S/N 녹색 카드에 있는 심화 계산과 같은 확인란입니다. 여기서 바꾸면 그쪽도 바뀌고 반대도 마찬가지입니다. 끄면 EME 링크 버짓은 간이 모드가 되고 태양 잡음, 계산 결과 Excel 내보내기, 계산 검증 탭은 회색이 됩니다.",
             "송수신 설비",
             "안테나 – 릴레이 케이블",
             "종류",
@@ -14380,7 +14488,7 @@ namespace LunaCalc
             "Word로 저장 (.docx)",
             "방향",
             "확대/축소",
-            "수식 디버그 – EME 링크 버짓과 태양 잡음",
+            "계산 검증 – EME 링크 버짓과 태양 잡음",
             "시각과 밴드",
             "입력 매개변수",
             "PA – 릴레이 케이블 + 릴레이 + 안테나 케이블",
@@ -14507,7 +14615,7 @@ namespace LunaCalc
             "유용하고 무료",
             "프로그램은 무료이며 아마추어 무선, 학습, 교육에 제한 없이 쓸 수 있습니다. QSO를 돕기 위한 것이지 무엇을 팔기 위한 것이 아닙니다.",
             "투명",
-            "소스 코드는 항상 프로그램과 함께 제공됩니다. 모든 수식은 수식 디버그 탭에서 볼 수 있고 모든 데이터에는 출처가 있습니다. 블랙박스는 없습니다.",
+            "소스 코드는 항상 프로그램과 함께 제공됩니다. 모든 수식은 계산 검증 탭에서 볼 수 있고 모든 데이터에는 출처가 있습니다. 블랙박스는 없습니다.",
             "정직",
             "측정값, 유도값, 추정값을 구분하고 확인되지 않은 것은 그렇다고 밝힙니다. 불확실한 결과는 불확실하다고 말하며 확실한 것처럼 보이지 않습니다.",
             "존중",
@@ -14544,7 +14652,7 @@ namespace LunaCalc
             "위쪽에 네 지표, 왼쪽에 데이터 출처 (NOAA RSTN 권장, 또는 NOAA나 펜틱턴의 F10.7, 또는 사용자 주소)와 관측소, 오른쪽에 운용 주파수까지 외삽한 태양 플럭스 스펙트럼.",
             "이 설명서로, 프로그램 안에 있으며 모든 언어를 지원합니다: 클릭 가능한 목차, 검색, 수식, 출처.",
             "Word 문서처럼 배치되고 수식은 수식 편집기 양식입니다: 클립보드로 복사하거나 Word (.docx)로 저장할 수 있습니다.",
-            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치, 세계 위의 달), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, 수식 디버그), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (ABOUT & CREDITS, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
+            "탭은 위쪽 막대에서 여섯 그룹으로 묶여 있습니다: 실시간 (실시간 위치 및 +- 24h, 내 장애물 정찰, 하늘 보기), 계획 (거리와 Dgrd, 달의 위치, 세계 위의 달), 교신 (EME 링크 버짓, 태양 잡음, 계산 결과 Excel 내보내기, 계산 검증), 로그 (WWL 지도와 ADIF), 도움말 및 도구 (사용 설명서, EME 이론과 조언, 동축 케이블), Credits and thanks (정보 및 크레딧, 저자 연락처 및 감사의 말, 라이선스). 첫째 줄에서 그룹을, 둘째 줄에서 탭을 클릭합니다. 각 그룹은 마지막으로 연 탭을 기억합니다. 회색 탭은 \"심화 계산\" 확인란으로 켜집니다.",
             "사용해 주셔서 감사합니다: 도움이 되었기를 바랍니다.",
             "아니요",
             "예",
@@ -14825,6 +14933,18 @@ namespace LunaCalc
             "EME 이론과 조언 매뉴얼의 인용 위치:",
             "1.2 - EME 링크 버짓에 내 EIRP, DX의 EIRP, 경로 손실, 양방향 S/N(태양 포함) 표시 추가; Word 문서의 수식을 한 가지 크기로 여백 안에 맞춤; 모든 테마에서 채워진 버튼과 둥근 테두리의 평면 드롭다운 목록; 파스텔 색 테마 8종; 값 상자의 화살표를 나란히 배치; 가장 좋은 3일을 날짜순으로; 하늘 배경 흐림 처리; 수식 디버그 번역; EME 이론과 조언 매뉴얼에 Relu NJ9R의 조언(GRAVES, 지향, 커넥터, 안테나 이득, JT65B와 MAP65, 편파 릴레이), 첫 수신과 인터넷 채팅에 관한 새 절, 서문에 VE7BQH 표 추가; NJ9R에 대한 감사, IK1UWL 추모, 기사·하드웨어·소프트웨어 저자들에 대한 감사와 그들의 작업을 보여 주는 도움말.",
             "1.2.1 - 저자 연락처 및 감사의 말 페이지가 Linux와 macOS에서 다시 올바르게 열립니다. 트랜스버터 참조를 § 1.7.1로 수정.",
+            "정보 및 크레딧",
+            "GRAVES 레이더를 DX 국으로",
+            "프랑스 GRAVES 레이더(143.050 MHz, 로케이터 JN27SI)를 DX로 설정합니다. GRAVES와의 공통 창은 달에서 돌아오는 에코를 받아 수신기와 지향을 점검할 수 있는 시간입니다. EME 이론과 조언 매뉴얼 § 1.11 참조.",
+            "추정 커넥터 수",
+            "PA와 안테나 사이 선로에 있는 커넥터의 추정 개수(어댑터, 릴레이, 분배기 포함). NJ9R의 경험칙: 커넥터 8 ~ 10개마다 약 1 dB, 즉 개당 0.11 dB. 송신에서는 모두 반영되고, 수신에서는 안테나 쪽 프리앰프 앞의 절반만 반영됩니다.",
+            "케이블 {0:F2} + 릴레이 {1:F2} + 안테나 {2:F2} + 커넥터 {3:F2} = {4:F2} dB → 안테나에서 {5}",
+            "프리앰프 앞: {0:F2} + {1:F2} + 커넥터 {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = 송신 {2:F2} dB, 수신(프리앰프 앞) {3:F2} dB",
+            "TX 손실 (PA–릴레이 케이블 + 릴레이 + 안테나 케이블 + 커넥터)",
+            "회색 베일",
+            "한계 밖 영역에 회색 베일을 씌우고 지평선 밖의 지도를 어둡게 합니다. 체크를 해제하면 배경 이미지는 베일도 어둡게 하기도 없이 그대로 남습니다.",
+            "끌어서 설비 도식의 폭을 넓히거나 줄입니다. 두 번 클릭하면 처음 폭으로 돌아갑니다.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -15542,7 +15662,7 @@ namespace LunaCalc
             "rumus",
             "nilai",
             "hasil",
-            "DEBUG RUMUS",
+            "Pemeriksaan perhitungan",
             "PARAMETER MASUKAN",
             "Stasiun saya",
             "tidak disertakan",
@@ -15582,7 +15702,7 @@ namespace LunaCalc
             "Zona di luar batas antena Anda ditutupi garis diagonal abu-abu muda.",
             "Kotak \"Kaburkan zona di luar batas\" menyalakan atau mematikan pengaburan.",
             "CARA MEMILIH TAB",
-            "Tab dikumpulkan dalam lima kelompok di bilah atas: Langsung (Posisi langsung dan +- 24h, Peta pengarahan, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG RUMUS), Log (Peta WWL dan ADIF), Bantuan (PETUNJUK, ABOUT & CREDITS). Klik sebuah kelompok di baris pertama lalu tab di baris kedua; setiap kelompok mengingat tab terakhir yang dibuka. Tab berwarna abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
+            "Tab dikumpulkan dalam lima kelompok di bilah atas: Langsung (Posisi langsung dan +- 24h, Peta pengarahan, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, Pemeriksaan perhitungan), Log (Peta WWL dan ADIF), Bantuan (PETUNJUK, ABOUT & CREDITS). Klik sebuah kelompok di baris pertama lalu tab di baris kedua; setiap kelompok mengingat tab terakhir yang dibuka. Tab berwarna abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
             "Skema warna (pengaturan umum): Terang, Malam (nuansa biru) atau Hitam (latar hitam, cocok untuk penggunaan dalam gelap dan untuk layar OLED).",
             "MATAHARI DEKAT BULAN",
             "Sekitar bulan baru, Bulan melintas dekat Matahari di langit. Matahari adalah sumber radio yang sangat kuat (dari puluhan hingga ribuan SFU menurut frekuensi dan aktivitas matahari): ketika masuk ke lobus utama atau lobus samping pertama antena, suhu derau sistem naik banyak dB dan gema Bulan dapat hilang, meskipun Dgrd sangat baik.",
@@ -15594,7 +15714,7 @@ namespace LunaCalc
             "YAEC menghitung lintang geomagnetik dengan dipol model IGRF-14 (kutub utara geomagnetik 2025: 80,8° LU, 72,8° BB). Ketika Anda menulis lokator, milik Anda atau milik DX, yang jatuh di salah satu zona ini, muncul peringatan yang kemudian tetap tampil di layar utama. Sebelum QSO dengan stasiun kutub atau aurora, periksa prakiraan D-RAP dari NOAA (D Region Absorption Predictions) dan peringatan peristiwa proton.",
             "Pustaka: H. H. Sauer dan D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); kutub geomagnetik IGRF dari World Data Center for Geomagnetism, Kyoto.",
             "Semua parameter dan rumus Anggaran EME dan Derau matahari, untuk kedua arah (Anda → DX dan DX → Anda), dengan nilai yang dimasukkan dan hasil setiap langkah: panjang gelombang, penampang radar Bulan, rugi lintasan, EIRP, sinyal sepanjang rantai penerima, MDS dan margin, angka derau dengan Friis, suhu, derau dan S/N, serta untuk Matahari fluks, berkas, pelemahan pola, luas efektif dan kenaikan derau. Diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\"; tombol di bawah menyalin semuanya ke papan klip.",
-            "Tab DEBUG RUMUS diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\" di tab Posisi langsung dan +- 24h.",
+            "Tab Pemeriksaan perhitungan diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\" di tab Posisi langsung dan +- 24h.",
             // v27
             "kustom",
             "Jarak DX (km)",
@@ -15617,7 +15737,7 @@ namespace LunaCalc
             "gunakan baris tabel",
             "Gunakan waktu dari baris yang dipilih di tabel posisi Bulan.",
             "rugi polarisasi",
-            "Kotak tersinkron: ini kotak PERHITUNGAN MENDALAM yang sama dengan kartu hijau S/N perkiraan di tab Posisi langsung dan +- 24h; mengubahnya di sini juga mengubahnya di sana dan sebaliknya. Jika mati, Anggaran EME beralih ke mode sederhana dan tab Derau matahari, Ekspor perhitungan ke Excel serta DEBUG RUMUS menjadi abu-abu.",
+            "Kotak tersinkron: ini kotak PERHITUNGAN MENDALAM yang sama dengan kartu hijau S/N perkiraan di tab Posisi langsung dan +- 24h; mengubahnya di sini juga mengubahnya di sana dan sebaliknya. Jika mati, Anggaran EME beralih ke mode sederhana dan tab Derau matahari, Ekspor perhitungan ke Excel serta Pemeriksaan perhitungan menjadi abu-abu.",
             "INSTALASI PEMANCAR DAN PENERIMA",
             "KABEL ANTENA – RELAI",
             "Jenis",
@@ -15824,7 +15944,7 @@ namespace LunaCalc
             "Berguna dan gratis",
             "Program ini gratis dan dapat dipakai tanpa batas untuk radio amatir, untuk belajar dan untuk mengajar. Ia dibuat untuk memudahkan QSO, bukan untuk menjual sesuatu.",
             "Transparan",
-            "Kode sumber selalu disertakan bersama program; setiap rumus terlihat di tab DEBUG RUMUS dan setiap data menyebut sumbernya. Tanpa kotak hitam.",
+            "Kode sumber selalu disertakan bersama program; setiap rumus terlihat di tab Pemeriksaan perhitungan dan setiap data menyebut sumbernya. Tanpa kotak hitam.",
             "Jujur",
             "Nilai terukur, turunan dan perkiraan dibedakan; yang belum diverifikasi dinyatakan demikian. Hasil yang tidak pasti disebut tidak pasti, tidak disajikan sebagai pasti.",
             "Menghormati",
@@ -15861,7 +15981,7 @@ namespace LunaCalc
             "Di atas empat indikator, di kiri sumber data (NOAA RSTN disarankan, atau F10.7 dari NOAA atau Penticton, atau alamat kustom) dengan stasiun-stasiunnya, di kanan spektrum fluks matahari dengan ekstrapolasi hingga frekuensi kerja.",
             "Manual ini, di dalam program dan dalam semua bahasa: daftar isi yang dapat diklik, pencarian, rumus dan sumber.",
             "Ditata seperti dokumen Word, dengan rumus bergaya editor persamaan: dapat disalin ke papan klip atau disimpan sebagai Word (.docx).",
-            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan, Bulan di atas dunia), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, DEBUG RUMUS), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (ABOUT & CREDITS, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
+            "Tab dikumpulkan dalam enam grup di bilah atas: Langsung (Posisi langsung dan +- 24h, Pengintaian rintangan saya, Kubah langit), Perencanaan (Jarak dan Dgrd, Posisi Bulan, Bulan di atas dunia), Hubungan (Anggaran EME, Derau matahari, Ekspor perhitungan ke Excel, Pemeriksaan perhitungan), Log (Peta WWL dan ADIF), Bantuan dan alat (MANUAL PENGGUNAAN, TEORI DAN TIPS EME, KABEL KOAKSIAL), Credits and thanks (TENTANG DAN KREDIT, KONTAK PENULIS DAN UCAPAN TERIMA KASIH, LISENSI). Klik grup di baris pertama lalu tab di baris kedua; setiap grup mengingat tab terakhir yang dibuka. Tab abu-abu diaktifkan dengan kotak \"PERHITUNGAN MENDALAM\".",
             "Terima kasih telah memakai saya: semoga saya bermanfaat bagimu.",
             "Tidak",
             "Ya",
@@ -16142,6 +16262,18 @@ namespace LunaCalc
             "Dikutip dalam manual TEORI DAN TIPS EME:",
             "1.2 - Anggaran EME dengan indikator EIRP saya, EIRP DX, rugi lintasan dan S/N dua arah (dengan Matahari); rumus dokumen Word dalam satu ukuran, di dalam margin; tombol penuh dan daftar tarik-turun datar bertepi bulat di semua skema; delapan skema warna pastel; kotak nilai dengan panah berdampingan; tiga hari terbaik menurut urutan tanggal; latar langit yang diburamkan; DEBUG RUMUS diterjemahkan; manual TEORI DAN TIPS EME dengan saran Relu NJ9R (GRAVES, pengarahan, konektor, penguatan antena, JT65B dan MAP65, relay polarisasi), bagian baru tentang penerimaan pertama dan chat internet, serta tabel VE7BQH di kata pengantar; ucapan terima kasih kepada NJ9R, kenangan untuk IK1UWL dan para penulis artikel, perangkat keras dan perangkat lunak, dengan tooltip tentang karya mereka.",
             "1.2.1 - Halaman KONTAK PENULIS DAN UCAPAN TERIMA KASIH kembali terbuka dengan benar di Linux dan macOS; rujukan untuk transverter kini menunjuk § 1.7.1.",
+            "TENTANG DAN KREDIT",
+            "Radar GRAVES sebagai stasiun DX",
+            "Menjadikan radar Prancis GRAVES (143,050 MHz, locator JN27SI) sebagai DX: jendela bersama dengan GRAVES adalah saat Anda dapat menerima gemanya dari Bulan dan memeriksa penerima serta pengarahan. Lihat manual TEORI DAN TIPS EME, § 1.11.",
+            "Perkiraan konektor",
+            "Perkiraan jumlah konektor pada saluran antara PA dan antena, termasuk adaptor, relai, dan pembagi. Aturan praktis NJ9R: sekitar 1 dB setiap 8 – 10 konektor, yaitu 0,11 dB per konektor. Saat memancar semuanya dihitung; saat menerima hanya separuh, yang di sisi antena sebelum preamp.",
+            "kabel {0:F2} + relai {1:F2} + antena {2:F2} + konektor {3:F2} = {4:F2} dB → {5} di antena",
+            "sebelum preamp: {0:F2} + {1:F2} + konektor {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB saat TX, {3:F2} dB saat RX sebelum preamp",
+            "Rugi TX (kabel PA–relai + relai + kabel antena + konektor)",
+            "Selubung abu-abu",
+            "Menerapkan selubung abu-abu pada zona di luar batas dan menggelapkan peta di luar cakrawala. Tanpa centang, gambar latar tetap apa adanya, tanpa selubung dan tanpa penggelapan.",
+            "Seret untuk melebarkan atau menyempitkan skema instalasi; klik ganda untuk kembali ke lebar awal.",
         };
 
         public static readonly string[] RU = {
@@ -16860,7 +16992,7 @@ namespace LunaCalc
             "формула",
             "значения",
             "результат",
-            "ОТЛАДКА ФОРМУЛ",
+            "Проверка расчётов",
             "ВХОДНЫЕ ПАРАМЕТРЫ",
             "Моя станция",
             "не учитывается",
@@ -16900,7 +17032,7 @@ namespace LunaCalc
             "Зоны вне ограничений вашей антенны покрыты светло-серыми диагональными линиями.",
             "Флажок «Размывать зоны вне ограничений» включает и выключает размытие.",
             "КАК ВЫБИРАТЬ ВКЛАДКИ",
-            "Вкладки собраны в пять групп на панели вверху: В реальном времени (Положение онлайн и +- 24h, Карта наведения, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, ОТЛАДКА ФОРМУЛ), Журнал (Карта WWL и ADIF), Справка (ИНСТРУКЦИИ, ABOUT & CREDITS). Нажмите группу в первой строке, а затем вкладку во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
+            "Вкладки собраны в пять групп на панели вверху: В реальном времени (Положение онлайн и +- 24h, Карта наведения, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, Проверка расчётов), Журнал (Карта WWL и ADIF), Справка (ИНСТРУКЦИИ, ABOUT & CREDITS). Нажмите группу в первой строке, а затем вкладку во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
             "Цветовая схема (общие настройки): Светлая, Ночь (синие тона) или Чёрная (чёрный фон, удобна в темноте и для OLED-экранов).",
             "СОЛНЦЕ РЯДОМ С ЛУНОЙ",
             "Около новолуния Луна проходит по небу рядом с Солнцем. Солнце — очень сильный радиоисточник (от десятков до тысяч SFU в зависимости от частоты и солнечной активности): когда оно попадает в главный или первые боковые лепестки антенны, шумовая температура системы растёт на много дБ, и лунное эхо может исчезнуть даже при отличной Dgrd.",
@@ -16912,7 +17044,7 @@ namespace LunaCalc
             "YAEC вычисляет геомагнитную широту по диполю модели IGRF-14 (северный геомагнитный полюс 2025 г.: 80,8° с. ш., 72,8° з. д.). Когда вы вводите локатор, свой или DX, попадающий в одну из этих зон, появляется предупреждение, которое затем остаётся на главном экране. Перед QSO с полярными или авроральными станциями проверьте прогнозы NOAA D-RAP (D Region Absorption Predictions) и предупреждения о протонных событиях.",
             "Литература: H. H. Sauer и D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, т. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); геомагнитные полюса IGRF из World Data Center for Geomagnetism, Киото.",
             "Все параметры и формулы Бюджета EME и Шума Солнца в обоих направлениях (вы → DX и DX → вы), с подставленными значениями и результатом каждого шага: длина волны, ЭПР Луны, потери на трассе, EIRP, сигнал по приёмному тракту, MDS и запас, коэффициент шума по Фриису, температуры, шум и S/N, а для Солнца поток, луч, ослабление диаграммой, эффективная площадь и рост шума. Включается флажком \"УГЛУБЛЁННЫЕ РАСЧЁТЫ\"; кнопка внизу копирует всё в буфер обмена.",
-            "Вкладка ОТЛАДКА ФОРМУЛ включается флажком \"УГЛУБЛЁННЫЕ РАСЧЁТЫ\" на вкладке Положение онлайн и +- 24h.",
+            "Вкладка Проверка расчётов включается флажком \"УГЛУБЛЁННЫЕ РАСЧЁТЫ\" на вкладке Положение онлайн и +- 24h.",
             // v27
             "пользовательский",
             "Расстояние DX (км)",
@@ -16935,7 +17067,7 @@ namespace LunaCalc
             "взять строку таблицы",
             "Использовать момент строки, выбранной в таблице положения Луны.",
             "поляризационные потери",
-            "Синхронизированный флажок: это тот же флажок УГЛУБЛЁННЫЕ РАСЧЁТЫ, что и в зелёной карточке оценки S/N на вкладке Положение онлайн и +- 24h; изменение здесь меняет его и там, и наоборот. Если он выключен, Бюджет EME переходит в упрощённый режим, а вкладки Шум Солнца, Экспорт расчётов в Excel и ОТЛАДКА ФОРМУЛ становятся серыми.",
+            "Синхронизированный флажок: это тот же флажок УГЛУБЛЁННЫЕ РАСЧЁТЫ, что и в зелёной карточке оценки S/N на вкладке Положение онлайн и +- 24h; изменение здесь меняет его и там, и наоборот. Если он выключен, Бюджет EME переходит в упрощённый режим, а вкладки Шум Солнца, Экспорт расчётов в Excel и Проверка расчётов становятся серыми.",
             "ПЕРЕДАЮЩАЯ И ПРИЁМНАЯ УСТАНОВКА",
             "КАБЕЛЬ АНТЕННА – РЕЛЕ",
             "Тип",
@@ -17142,7 +17274,7 @@ namespace LunaCalc
             "Полезная и бесплатная",
             "Программа бесплатна и может использоваться без ограничений для любительской радиосвязи, для учёбы и преподавания. Она создана, чтобы помогать проводить QSO, а не чтобы что-то продавать.",
             "Прозрачная",
-            "Исходный код всегда поставляется вместе с программой; каждая формула видна на вкладке ОТЛАДКА ФОРМУЛ, и для каждого значения указан источник. Никаких чёрных ящиков.",
+            "Исходный код всегда поставляется вместе с программой; каждая формула видна на вкладке Проверка расчётов, и для каждого значения указан источник. Никаких чёрных ящиков.",
             "Честная",
             "Измеренные, выведенные и оценочные значения различаются; то, что не проверено, так и обозначается. Неопределённый результат называется неопределённым, а не выдаётся за надёжный.",
             "Уважительная",
@@ -17179,7 +17311,7 @@ namespace LunaCalc
             "Вверху четыре индикатора, слева источник данных (рекомендуется NOAA RSTN, либо F10.7 от NOAA или Пентиктона, либо свой адрес) со станциями, справа спектр солнечного потока с экстраполяцией до рабочей частоты.",
             "Это руководство, внутри программы и на всех языках: кликабельное оглавление, поиск, формулы и источники.",
             "Оно свёрстано как документ Word, с формулами в стиле редактора уравнений: его можно скопировать в буфер обмена или сохранить в Word (.docx).",
-            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны, Луна над миром), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, ОТЛАДКА ФОРМУЛ), Журнал (Карта WWL и ADIF), Справка и инструменты (РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (ABOUT & CREDITS, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
+            "Вкладки объединены в шесть групп в верхней панели: В реальном времени (Положение онлайн и +- 24h, Разведка моих препятствий, Небесный свод), Планирование (Расстояние и Dgrd, Положение Луны, Луна над миром), Связь (Бюджет EME, Шум Солнца, Экспорт расчётов в Excel, Проверка расчётов), Журнал (Карта WWL и ADIF), Справка и инструменты (РУКОВОДСТВО ПОЛЬЗОВАТЕЛЯ, ТЕОРИЯ И СОВЕТЫ ПО EME, КОАКСИАЛЬНЫЕ КАБЕЛИ), Credits and thanks (О ПРОГРАММЕ И ИСТОЧНИКИ, КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ, ЛИЦЕНЗИЯ). Щёлкните по группе в первой строке, затем по вкладке во второй; каждая группа помнит последнюю открытую вкладку. Серые вкладки включаются флажком «УГЛУБЛЁННЫЕ РАСЧЁТЫ».",
             "Спасибо, что пользовались мной: надеюсь, я был вам полезен.",
             "Нет",
             "Да",
@@ -17460,6 +17592,18 @@ namespace LunaCalc
             "Упоминается в руководстве ТЕОРИЯ И СОВЕТЫ ПО EME:",
             "1.2 - Бюджет EME с показателями «Моя ЭИИМ», «ЭИИМ DX», потери на трассе и S/N в обоих направлениях (с учётом Солнца); формулы документа Word одного размера, в пределах полей; залитые кнопки и плоские выпадающие списки со скруглённой рамкой во всех схемах; восемь пастельных цветовых схем; поля значений со стрелками рядом; три лучших дня в порядке дат; размытый фон неба; ОТЛАДКА ФОРМУЛ переведена; руководство ТЕОРИЯ И СОВЕТЫ ПО EME с советами Relu NJ9R (GRAVES, наведение, разъёмы, усиление антенн, JT65B и MAP65, реле поляризации), новыми разделами о первом приёме и об интернет-чатах и таблицами VE7BQH в предисловии; благодарность NJ9R, память об IK1UWL и благодарность авторам статей, аппаратуры и программ с подсказкой об их работах.",
             "1.2.1 - Страница КОНТАКТЫ АВТОРА И БЛАГОДАРНОСТИ снова правильно открывается в Linux и macOS; ссылка для трансвертеров указывает на § 1.7.1.",
+            "О ПРОГРАММЕ И ИСТОЧНИКИ",
+            "Радар GRAVES как станция DX",
+            "Делает DX французский радар GRAVES (143,050 МГц, локатор JN27SI): общие окна с GRAVES — это моменты, когда можно принять его эхо от Луны и проверить приёмник и наведение. См. руководство ТЕОРИЯ И СОВЕТЫ ПО EME, § 1.11.",
+            "Разъёмов (оценка)",
+            "Оценочное число разъёмов в линии между PA и антенной, включая переходники, реле и делители. Практическое правило NJ9R: около 1 дБ на каждые 8 – 10 разъёмов, то есть 0,11 дБ на разъём. При передаче учитываются все; при приёме — половина, со стороны антенны до предусилителя.",
+            "кабель {0:F2} + реле {1:F2} + антенна {2:F2} + разъёмы {3:F2} = {4:F2} дБ → {5} на антенне",
+            "до предусилителя: {0:F2} + {1:F2} + разъёмы {2:F2} = {3:F2} дБ",
+            "{0} × {1:F2} дБ = {2:F2} дБ при TX, {3:F2} дБ при RX до предусилителя",
+            "Потери TX (кабель PA–реле + реле + антенный кабель + разъёмы)",
+            "Серая вуаль",
+            "Накладывает серую вуаль на зоны вне пределов и затемняет карту за горизонтом. Без флажка фоновое изображение остаётся как есть, без вуали и затемнения.",
+            "Перетащите, чтобы расширить или сузить схему станции; двойной щелчок возвращает исходную ширину.",
         };
 
         public static readonly string[] UK = {
@@ -18178,7 +18322,7 @@ namespace LunaCalc
             "формула",
             "значення",
             "результат",
-            "НАЛАГОДЖЕННЯ ФОРМУЛ",
+            "Перевірка розрахунків",
             "ВХІДНІ ПАРАМЕТРИ",
             "Моя станція",
             "не враховано",
@@ -18218,7 +18362,7 @@ namespace LunaCalc
             "Зони поза межами вашої антени вкриті світло-сірими діагональними лініями.",
             "Позначка «Розмивати зони поза межами» вмикає і вимикає розмиття.",
             "ЯК ВИБИРАТИ ВКЛАДКИ",
-            "Вкладки зібрано в п'ять груп на панелі вгорі: Наживо (Положення наживо і +- 24h, Мапа наведення, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, НАЛАГОДЖЕННЯ ФОРМУЛ), Журнал (Мапа WWL і ADIF), Довідка (ІНСТРУКЦІЇ, ABOUT & CREDITS). Натисніть групу в першому рядку, а потім вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються позначкою «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
+            "Вкладки зібрано в п'ять груп на панелі вгорі: Наживо (Положення наживо і +- 24h, Мапа наведення, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, Перевірка розрахунків), Журнал (Мапа WWL і ADIF), Довідка (ІНСТРУКЦІЇ, ABOUT & CREDITS). Натисніть групу в першому рядку, а потім вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються позначкою «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
             "Колірна схема (загальні налаштування): Світла, Ніч (сині тони) або Чорна (чорне тло, зручна в темряві та для OLED-екранів).",
             "СОНЦЕ ПОРУЧ ІЗ МІСЯЦЕМ",
             "Біля молодика Місяць проходить небом поруч із Сонцем. Сонце — дуже сильне радіоджерело (від десятків до тисяч SFU залежно від частоти і сонячної активності): коли воно потрапляє в головну або перші бічні пелюстки антени, шумова температура системи зростає на багато дБ, і місячне відлуння може зникнути навіть за чудової Dgrd.",
@@ -18230,7 +18374,7 @@ namespace LunaCalc
             "YAEC обчислює геомагнітну широту за диполем моделі IGRF-14 (північний геомагнітний полюс 2025 р.: 80,8° пн. ш., 72,8° зх. д.). Коли ви вводите локатор, свій або DX, що потрапляє в одну з цих зон, з'являється попередження, яке потім залишається на головному екрані. Перед QSO з полярними або авроральними станціями перевірте прогнози NOAA D-RAP (D Region Absorption Predictions) і попередження про протонні події.",
             "Література: H. H. Sauer і D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, т. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); геомагнітні полюси IGRF з World Data Center for Geomagnetism, Кіото.",
             "Усі параметри і формули Бюджету EME та Шуму Сонця в обох напрямках (ви → DX і DX → ви), з підставленими значеннями і результатом кожного кроку: довжина хвилі, ЕПР Місяця, втрати на трасі, EIRP, сигнал уздовж приймального тракту, MDS і запас, коефіцієнт шуму за Фріісом, температури, шум і S/N, а для Сонця потік, промінь, послаблення діаграмою, ефективна площа і зростання шуму. Вмикається позначкою \"ПОГЛИБЛЕНІ РОЗРАХУНКИ\"; кнопка внизу копіює все в буфер обміну.",
-            "Вкладка НАЛАГОДЖЕННЯ ФОРМУЛ вмикається позначкою \"ПОГЛИБЛЕНІ РОЗРАХУНКИ\" на вкладці Положення наживо і +- 24h.",
+            "Вкладка Перевірка розрахунків вмикається позначкою \"ПОГЛИБЛЕНІ РОЗРАХУНКИ\" на вкладці Положення наживо і +- 24h.",
             // v27
             "користувацький",
             "Відстань DX (км)",
@@ -18253,7 +18397,7 @@ namespace LunaCalc
             "взяти рядок таблиці",
             "Використати момент рядка, вибраного в таблиці положення Місяця.",
             "поляризаційні втрати",
-            "Синхронізований прапорець: це той самий прапорець ПОГЛИБЛЕНІ РОЗРАХУНКИ, що й у зеленій картці оцінки S/N на вкладці Положення наживо і +- 24h; зміна тут змінює його і там, і навпаки. Якщо його вимкнено, Бюджет EME переходить у спрощений режим, а вкладки Шум Сонця, Експорт розрахунків в Excel та НАЛАГОДЖЕННЯ ФОРМУЛ стають сірими.",
+            "Синхронізований прапорець: це той самий прапорець ПОГЛИБЛЕНІ РОЗРАХУНКИ, що й у зеленій картці оцінки S/N на вкладці Положення наживо і +- 24h; зміна тут змінює його і там, і навпаки. Якщо його вимкнено, Бюджет EME переходить у спрощений режим, а вкладки Шум Сонця, Експорт розрахунків в Excel та Перевірка розрахунків стають сірими.",
             "ПЕРЕДАВАЛЬНА І ПРИЙМАЛЬНА УСТАНОВКА",
             "КАБЕЛЬ АНТЕНА – РЕЛЕ",
             "Тип",
@@ -18460,7 +18604,7 @@ namespace LunaCalc
             "Корисна і безкоштовна",
             "Програма безкоштовна і може використовуватися без обмежень для аматорського радіозв'язку, для навчання і викладання. Її створено, щоб допомагати проводити QSO, а не щоб щось продавати.",
             "Прозора",
-            "Вихідний код завжди постачається разом із програмою; кожну формулу видно на вкладці НАЛАГОДЖЕННЯ ФОРМУЛ, і для кожного значення вказано джерело. Жодних чорних скриньок.",
+            "Вихідний код завжди постачається разом із програмою; кожну формулу видно на вкладці Перевірка розрахунків, і для кожного значення вказано джерело. Жодних чорних скриньок.",
             "Чесна",
             "Виміряні, виведені й оцінені значення розрізняються; те, що не перевірено, так і позначається. Невизначений результат називається невизначеним, а не видається за надійний.",
             "Шаноблива",
@@ -18497,7 +18641,7 @@ namespace LunaCalc
             "Угорі чотири індикатори, ліворуч джерело даних (рекомендовано NOAA RSTN, або F10.7 від NOAA чи Пентіктона, або власна адреса) зі станціями, праворуч спектр сонячного потоку з екстраполяцією до робочої частоти.",
             "Цей посібник, усередині програми і всіма мовами: зміст із посиланнями, пошук, формули і джерела.",
             "Його зверстано як документ Word, із формулами в стилі редактора рівнянь: його можна скопіювати в буфер обміну або зберегти у Word (.docx).",
-            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця, Місяць над світом), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, НАЛАГОДЖЕННЯ ФОРМУЛ), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ABOUT & CREDITS, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
+            "Вкладки об'єднано в шість груп у верхній панелі: Наживо (Положення наживо і +- 24h, Розвідка моїх перешкод, Небесне склепіння), Планування (Відстань і Dgrd, Положення Місяця, Місяць над світом), Зв'язок (Бюджет EME, Шум Сонця, Експорт розрахунків в Excel, Перевірка розрахунків), Журнал (Мапа WWL і ADIF), Довідка та інструменти (ПОСІБНИК КОРИСТУВАЧА, ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, КОАКСІАЛЬНІ КАБЕЛІ), Credits and thanks (ПРО ПРОГРАМУ ТА ДЖЕРЕЛА, КОНТАКТИ АВТОРА І ПОДЯКИ, ЛІЦЕНЗІЯ). Клацніть на групу в першому рядку, потім на вкладку в другому; кожна група пам'ятає останню відкриту вкладку. Сірі вкладки вмикаються прапорцем «ПОГЛИБЛЕНІ РОЗРАХУНКИ».",
             "Дякую, що користувалися мною: сподіваюся, я був вам корисний.",
             "Ні",
             "Так",
@@ -18778,6 +18922,18 @@ namespace LunaCalc
             "Згадується в посібнику ТЕОРІЯ ТА ПОРАДИ ЩОДО EME:",
             "1.2 - Бюджет EME з показниками «Моя ЕІВП», «ЕІВП DX», втрати на трасі та S/N в обох напрямках (з урахуванням Сонця); формули документа Word одного розміру, у межах полів; заповнені кнопки та пласкі випадні списки із заокругленою рамкою в усіх схемах; вісім пастельних колірних схем; поля значень зі стрілками поруч; три найкращі дні в порядку дат; розмитий фон неба; НАЛАГОДЖЕННЯ ФОРМУЛ перекладено; посібник ТЕОРІЯ ТА ПОРАДИ ЩОДО EME з порадами Relu NJ9R (GRAVES, наведення, роз'єми, підсилення антен, JT65B і MAP65, реле поляризації), новими розділами про перший прийом та інтернет-чати й таблицями VE7BQH у передмові; подяка NJ9R, пам'ять про IK1UWL та подяка авторам статей, апаратури й програм із підказкою про їхні роботи.",
             "1.2.1 - Сторінка КОНТАКТИ АВТОРА І ПОДЯКИ знову правильно відкривається в Linux і macOS; посилання для трансвертерів вказує на § 1.7.1.",
+            "ПРО ПРОГРАМУ ТА ДЖЕРЕЛА",
+            "Радар GRAVES як станція DX",
+            "Робить DX французький радар GRAVES (143,050 МГц, локатор JN27SI): спільні вікна з GRAVES — це моменти, коли можна прийняти його луну від Місяця й перевірити приймач і наведення. Див. посібник ТЕОРІЯ ТА ПОРАДИ ЩОДО EME, § 1.11.",
+            "Роз’ємів (оцінка)",
+            "Оцінена кількість роз’ємів у лінії між PA та антеною, включно з перехідниками, реле й дільниками. Практичне правило NJ9R: близько 1 дБ на кожні 8 – 10 роз’ємів, тобто 0,11 дБ на роз’єм. При передаванні враховуються всі; при прийманні — половина, з боку антени до попереднього підсилювача.",
+            "кабель {0:F2} + реле {1:F2} + антена {2:F2} + роз’єми {3:F2} = {4:F2} дБ → {5} на антені",
+            "до попереднього підсилювача: {0:F2} + {1:F2} + роз’єми {2:F2} = {3:F2} дБ",
+            "{0} × {1:F2} дБ = {2:F2} дБ при TX, {3:F2} дБ при RX до попереднього підсилювача",
+            "Втрати TX (кабель PA–реле + реле + антенний кабель + роз’єми)",
+            "Сіра вуаль",
+            "Накладає сіру вуаль на зони поза межами та затемнює мапу за горизонтом. Без позначки фонове зображення лишається як є, без вуалі й затемнення.",
+            "Перетягніть, щоб розширити чи звузити схему станції; подвійне клацання повертає початкову ширину.",
         };
 
         public static readonly string[] AF = {
@@ -19496,7 +19652,7 @@ namespace LunaCalc
             "formule",
             "waardes",
             "uitslag",
-            "FORMULE-ONTFOUTING",
+            "Kontrole van die berekeninge",
             "INSETPARAMETERS",
             "My stasie",
             "nie ingesluit nie",
@@ -19536,7 +19692,7 @@ namespace LunaCalc
             "Die sones buite die grense van jou antenna is met liggrys skuinslyne bedek.",
             "Die blokkie \"Vervaag die sones buite die grense\" skakel die vervaging aan of af.",
             "HOE OM DIE OORTJIES TE KIES",
-            "Die oortjies is in vyf groepe in die balk bo bymekaargemaak: Regstreeks (Regstreekse posisie en +- 24h, Rigkaart, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, FORMULE-ONTFOUTING), Logboek (WWL-kaart en ADIF), Hulp (INSTRUKSIES, ABOUT & CREDITS). Klik 'n groep in die eerste ry en dan die oortjie in die tweede; elke groep onthou die laaste oortjie wat oopgemaak is. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
+            "Die oortjies is in vyf groepe in die balk bo bymekaargemaak: Regstreeks (Regstreekse posisie en +- 24h, Rigkaart, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, Kontrole van die berekeninge), Logboek (WWL-kaart en ADIF), Hulp (INSTRUKSIES, ABOUT & CREDITS). Klik 'n groep in die eerste ry en dan die oortjie in die tweede; elke groep onthou die laaste oortjie wat oopgemaak is. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
             "Kleurskema (algemene instellings): Lig, Nag (bloutinte) of Swart (swart agtergrond, geskik vir gebruik in die donker en vir OLED-skerms).",
             "DIE SON NABY DIE MAAN",
             "Rondom nuwemaan beweeg die Maan naby die Son in die lug verby. Die Son is 'n baie sterk radiobron (van tientalle tot duisende SFU, na gelang van frekwensie en sonaktiwiteit): wanneer dit in die hooflob of die eerste sylobbe van die antenna kom, styg die stelselgeraastemperatuur met baie dB en kan die maaneggo verdwyn, selfs met 'n uitstekende Dgrd.",
@@ -19548,7 +19704,7 @@ namespace LunaCalc
             "YAEC bereken die geomagnetiese breedte met die dipool van die IGRF-14-model (geomagnetiese noordpool 2025: 80,8° N, 72,8° W). Wanneer jy 'n locator invoer, joune of dié van die DX, wat in een van hierdie sones val, verskyn 'n waarskuwing wat daarna op die hoofskerm bly. Gaan voor 'n QSO met pool- of aurorastasies die NOAA D-RAP-voorspellings (D Region Absorption Predictions) en die waarskuwings oor protongebeure na.",
             "Literatuur: H. H. Sauer en D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, vol. 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); IGRF geomagnetiese pole van die World Data Center for Geomagnetism, Kyoto.",
             "Al die parameters en formules van die EME-begroting en die Songeraas, vir albei rigtings (jy → DX en DX → jy), met die ingevulde waardes en die uitslag van elke stap: golflengte, radardeursnee van die Maan, padverlies, EIRP, sein langs die ontvangsketting, MDS en marge, geraassyfer met Friis, temperature, geraas en S/N, en vir die Son vloed, bundel, patroonverswakking, effektiewe oppervlakte en geraastoename. Word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer; die knoppie onder kopieer alles na die knipbord.",
-            "Die oortjie FORMULE-ONTFOUTING word met die blokkie \"DIEPGAANDE BEREKENINGE\" in die Regstreekse posisie en +- 24h-oortjie geaktiveer.",
+            "Die oortjie Kontrole van die berekeninge word met die blokkie \"DIEPGAANDE BEREKENINGE\" in die Regstreekse posisie en +- 24h-oortjie geaktiveer.",
             // v27
             "pasgemaak",
             "Afstand DX (km)",
@@ -19571,7 +19727,7 @@ namespace LunaCalc
             "gebruik die tabelry",
             "Gebruik die oomblik van die ry wat in die maanposisietabel gekies is.",
             "polarisasieverlies",
-            "Gesinchroniseerde blokkie: dit is dieselfde DIEPGAANDE BEREKENINGE-blokkie as in die groen kaart van die geskatte S/N op die Regstreekse posisie en +- 24h-oortjie; verander dit hier en dit verander ook daar en andersom. Afgeskakel gaan die EME-begroting na die vereenvoudigde modus en die Songeraas-, Uitvoer van berekeninge na Excel- en FORMULE-ONTFOUTING-oortjies word grys.",
+            "Gesinchroniseerde blokkie: dit is dieselfde DIEPGAANDE BEREKENINGE-blokkie as in die groen kaart van die geskatte S/N op die Regstreekse posisie en +- 24h-oortjie; verander dit hier en dit verander ook daar en andersom. Afgeskakel gaan die EME-begroting na die vereenvoudigde modus en die Songeraas-, Uitvoer van berekeninge na Excel- en Kontrole van die berekeninge-oortjies word grys.",
             "UITSAAI- EN ONTVANGSINSTALLASIE",
             "KABEL ANTENNA – RELÊ",
             "Tipe",
@@ -19778,7 +19934,7 @@ namespace LunaCalc
             "Nuttig en gratis",
             "Die program is gratis en kan sonder beperkings vir amateurradio, om te leer en om te onderrig gebruik word. Dit is gemaak om QSO's makliker te maak, nie om iets te verkoop nie.",
             "Deursigtig",
-            "Die bronkode word altyd saam met die program verskaf; elke formule is sigbaar op die FORMULE-ONTFOUTING-oortjie en elke gegewe noem sy bron. Geen swart bokse nie.",
+            "Die bronkode word altyd saam met die program verskaf; elke formule is sigbaar op die Kontrole van die berekeninge-oortjie en elke gegewe noem sy bron. Geen swart bokse nie.",
             "Eerlik",
             "Gemete, afgeleide en geskatte waardes word onderskei; wat nie nagegaan is nie, word as sulks verklaar. 'n Onseker resultaat word onseker genoem, nie as seker voorgestel nie.",
             "Respekvol",
@@ -19815,7 +19971,7 @@ namespace LunaCalc
             "Bo vier aanwysers, links die databron (NOAA RSTN aanbeveel, of F10.7 van NOAA of Penticton, of 'n eie adres) met die stasies, regs die spektrum van die sonvloed met die ekstrapolasie tot die werkfrekwensie.",
             "Hierdie handleiding, binne die program en in alle tale: klikbare inhoudsopgawe, soek, formules en bronne.",
             "Dit is soos 'n Word-dokument uitgelê, met die formules in die styl van die vergelykingsredigeerder: dit kan na die knipbord gekopieer of as Word (.docx) gestoor word.",
-            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie, Maan oor die wêreld), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, FORMULE-ONTFOUTING), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (ABOUT & CREDITS, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
+            "Die oortjies is in ses groepe in die balk bo saamgevoeg: Regstreeks (Regstreekse posisie en +- 24h, Verkenning van my hindernisse, Lugaansig), Beplanning (Afstand en Dgrd, Maanposisie, Maan oor die wêreld), Verbinding (EME-begroting, Songeraas, Uitvoer van berekeninge na Excel, Kontrole van die berekeninge), Logboek (WWL-kaart en ADIF), Hulp en gereedskap (GEBRUIKERSHANDLEIDING, TEORIE EN WENKE OOR EME, KOAKSIALE KABELS), Credits and thanks (OOR DIE PROGRAM EN BRONNE, KONTAK MET DIE OUTEUR EN ERKENNINGS, LISENSIE). Klik op 'n groep in die eerste ry en dan op die oortjie in die tweede; elke groep onthou die laaste oortjie wat oop was. Die grys oortjies word met die blokkie \"DIEPGAANDE BEREKENINGE\" geaktiveer.",
             "Dankie dat jy my gebruik het: ek hoop ek was vir jou nuttig.",
             "Nee",
             "Ja",
@@ -20096,6 +20252,18 @@ namespace LunaCalc
             "Aangehaal in die handleiding TEORIE EN WENKE OOR EME:",
             "1.2 - EME-begroting met die aanwysers My EIRP, EIRP van die DX, padverlies en S/N in albei rigtings (met die Son); formules van die Word-dokument in een grootte, binne die kantlyne; gevulde knoppies en plat aftreklyste met geronde rand in alle skemas; agt pastelkleurskemas; waardekassies met die pyltjies langs mekaar; die drie beste dae in datumvolgorde; vaag hemelagtergrond; FORMULE-ONTFOUTING vertaal; handleiding TEORIE EN WENKE OOR EME met die raad van Relu NJ9R (GRAVES, rigting, verbindings, antennewins, JT65B en MAP65, polarisasierelê), die nuwe afdelings oor die eerste ontvangs en oor internetklets, en die VE7BQH-tabelle in die voorwoord; dank aan NJ9R, die herinnering aan IK1UWL en die skrywers van artikels, hardeware en sagteware, met 'n wenk oor hul werk.",
             "1.2.1 - Die bladsy KONTAK MET DIE OUTEUR EN ERKENNINGS maak weer korrek oop op Linux en macOS; die verwysing vir die transverters wys na § 1.7.1.",
+            "OOR DIE PROGRAM EN BRONNE",
+            "GRAVES-radar as DX-stasie",
+            "Stel die Franse GRAVES-radar (143,050 MHz, locator JN27SI) as die DX: die gemeenskaplike vensters met GRAVES is die oomblikke waarin jy sy eggo van die Maan kan ontvang en jou ontvanger en rigting kan toets. Sien die handleiding TEORIE EN WENKE OOR EME, § 1.11.",
+            "Geskatte verbindings",
+            "Geskatte aantal verbindings in die lyn tussen die PA en die antenna, adapters, relês en verdelers ingesluit. NJ9R se vuistreël: ongeveer 1 dB elke 8 – 10 verbindings, dus 0,11 dB elk. By uitsending tel almal; by ontvangs tel die helfte, dié aan die antennakant voor die voorversterker.",
+            "kabel {0:F2} + relê {1:F2} + antenna {2:F2} + verbindings {3:F2} = {4:F2} dB → {5} by die antenna",
+            "voor die voorversterker: {0:F2} + {1:F2} + verbindings {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB by TX, {3:F2} dB by RX voor die voorversterker",
+            "TX-verliese (kabel PA–relê + relê + antennakabel + verbindings)",
+            "Grys sluier",
+            "Lê die grys sluier oor die sones buite die grense en verdonker die kaart buite die horison. Sonder merkie bly die agtergrondbeeld soos dit is, sonder sluier of verdonkering.",
+            "Sleep om die stasieskema wyer of smaller te maak; dubbelklik om na die oorspronklike breedte terug te gaan.",
         };
 
         public static readonly string[] BN = {
@@ -20814,7 +20982,7 @@ namespace LunaCalc
             "",
             "",
             "",
-            "সূত্র ডিবাগ",
+            "গণনা যাচাই",
             "",
             "",
             "ধরা হয়নি",
@@ -20866,7 +21034,7 @@ namespace LunaCalc
             "YAEC ভূচৌম্বক অক্ষাংশ হিসাব করে IGRF-14 মডেলের দ্বিমেরু দিয়ে (2025-এর উত্তর ভূচৌম্বক মেরু: 80.8° উ, 72.8° প)। আপনার বা DX-এর এমন লোকেটর দিলে যা এই অঞ্চলগুলির একটিতে পড়ে, একটি সতর্কতা আসে এবং পরে মূল পর্দায় থেকে যায়। মেরু বা মেরুজ্যোতি অঞ্চলের স্টেশনের সঙ্গে QSO-র আগে NOAA D-RAP পূর্বাভাস (D Region Absorption Predictions) ও প্রোটন ঘটনার সতর্কতা দেখুন।",
             "সাহিত্য: H. H. Sauer ও D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, খণ্ড 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); World Data Center for Geomagnetism, কিয়োটো থেকে IGRF ভূচৌম্বক মেরু।",
             "EME বাজেট ও সৌর নয়েজের সব প্যারামিটার ও সূত্র, দুই দিকের জন্য (তুমি → DX ও DX → তুমি), বসানো মান ও প্রতিটি ধাপের ফলসহ: তরঙ্গদৈর্ঘ্য, চাঁদের রাডার প্রস্থচ্ছেদ, পথ ক্ষতি, EIRP, গ্রহণ শৃঙ্খল বরাবর সিগন্যাল, MDS ও মার্জিন, Friis দিয়ে নয়েজ ফিগার, তাপমাত্রা, নয়েজ ও S/N, এবং সূর্যের জন্য ফ্লাক্স, বিম, প্যাটার্ন ক্ষয়, কার্যকর ক্ষেত্রফল ও নয়েজ বৃদ্ধি। \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়; নিচের বোতাম সবকিছু ক্লিপবোর্ডে কপি করে।",
-            "সূত্র ডিবাগ ট্যাব লাইভ অবস্থান ও +- 24h ট্যাবের \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
+            "গণনা যাচাই ট্যাব লাইভ অবস্থান ও +- 24h ট্যাবের \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
             "নিজস্ব",
             "DX দূরত্ব (km)",
             "সূর্য – চাঁদ (°)",
@@ -20888,7 +21056,7 @@ namespace LunaCalc
             "টেবিলের সারি ব্যবহার করুন",
             "চাঁদের অবস্থান টেবিলে নির্বাচিত সারির সময় ব্যবহার করুন।",
             "পোলারাইজেশন ক্ষতি",
-            "সিঙ্ক্রোনাইজড বাক্স: এটি লাইভ অবস্থান ও +- 24h ট্যাবের আনুমানিক S/N-এর সবুজ কার্ডে থাকা গভীর হিসাব বাক্সটিই; এখানে বদলালে সেখানেও বদলায়, উল্টোটাও। বন্ধ থাকলে EME বাজেট সরল মোডে যায় এবং সৌর নয়েজ, হিসাব Excel-এ রপ্তানি ও সূত্র ডিবাগ ট্যাব ধূসর হয়ে যায়।",
+            "সিঙ্ক্রোনাইজড বাক্স: এটি লাইভ অবস্থান ও +- 24h ট্যাবের আনুমানিক S/N-এর সবুজ কার্ডে থাকা গভীর হিসাব বাক্সটিই; এখানে বদলালে সেখানেও বদলায়, উল্টোটাও। বন্ধ থাকলে EME বাজেট সরল মোডে যায় এবং সৌর নয়েজ, হিসাব Excel-এ রপ্তানি ও গণনা যাচাই ট্যাব ধূসর হয়ে যায়।",
             "সম্প্রচার ও গ্রহণ ব্যবস্থা",
             "কেবল অ্যান্টেনা – রিলে",
             "ধরন",
@@ -21095,7 +21263,7 @@ namespace LunaCalc
             "উপকারী ও বিনামূল্যে",
             "প্রোগ্রামটি বিনামূল্যে এবং অপেশাদার রেডিও, শেখা ও শেখানোর জন্য সীমাহীনভাবে ব্যবহার করা যায়। এটি QSO সহজ করার জন্য, কিছু বিক্রির জন্য নয়।",
             "স্বচ্ছ",
-            "সোর্স কোড সবসময় প্রোগ্রামের সঙ্গে দেওয়া হয়; প্রতিটি সূত্র সূত্র ডিবাগ ট্যাবে দেখা যায় এবং প্রতিটি তথ্য তার উৎস জানায়। কোনো ব্ল্যাক বক্স নেই।",
+            "সোর্স কোড সবসময় প্রোগ্রামের সঙ্গে দেওয়া হয়; প্রতিটি সূত্র গণনা যাচাই ট্যাবে দেখা যায় এবং প্রতিটি তথ্য তার উৎস জানায়। কোনো ব্ল্যাক বক্স নেই।",
             "সৎ",
             "মাপা, নির্ণীত ও আনুমানিক মান আলাদা করা হয়; যা যাচাই হয়নি তা সেভাবেই ঘোষণা করা হয়। অনিশ্চিত ফলকে অনিশ্চিত বলা হয়, নিশ্চিত হিসেবে দেখানো হয় না।",
             "শ্রদ্ধাশীল",
@@ -21132,7 +21300,7 @@ namespace LunaCalc
             "ওপরে চারটি নির্দেশক, বামে স্টেশনসহ তথ্যের উৎস (NOAA RSTN প্রস্তাবিত, অথবা NOAA বা পেন্টিকটনের F10.7, অথবা নিজস্ব ঠিকানা), ডানে কাজের কম্পাঙ্ক পর্যন্ত এক্সট্রাপোলেশনসহ সৌর ফ্লাক্সের বর্ণালি।",
             "এই ম্যানুয়াল, প্রোগ্রামের ভেতরে ও সব ভাষায়: ক্লিকযোগ্য সূচি, অনুসন্ধান, সূত্র ও উৎস।",
             "এটি Word নথির মতো সাজানো, সূত্রগুলি সমীকরণ সম্পাদকের শৈলীতে: ক্লিপবোর্ডে কপি বা Word (.docx) হিসেবে সংরক্ষণ করা যায়।",
-            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান, বিশ্বের উপরে চাঁদ), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, সূত্র ডিবাগ), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (ABOUT & CREDITS, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
+            "ট্যাবগুলি ওপরের দণ্ডে ছয়টি দলে সাজানো: সরাসরি (লাইভ অবস্থান ও +- 24h, আমার বাধাগুলির অনুসন্ধান, আকাশ-গম্বুজ), পরিকল্পনা (দূরত্ব ও Dgrd, চাঁদের অবস্থান, বিশ্বের উপরে চাঁদ), যোগাযোগ (EME বাজেট, সৌর নয়েজ, হিসাব Excel-এ রপ্তানি, গণনা যাচাই), লগ (WWL মানচিত্র ও ADIF), সহায়তা ও টুল (ব্যবহার নির্দেশিকা, EME তত্ত্ব ও পরামর্শ, কোঅ্যাক্সিয়াল কেবল), Credits and thanks (পরিচিতি ও কৃতিত্ব, লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা, লাইসেন্স)। প্রথম সারিতে দলে, তারপর দ্বিতীয় সারিতে ট্যাবে ক্লিক করুন; প্রতিটি দল শেষ খোলা ট্যাব মনে রাখে। ধূসর ট্যাবগুলি \"গভীর হিসাব\" বাক্স দিয়ে চালু হয়।",
             "আমাকে ব্যবহার করার জন্য ধন্যবাদ: আশা করি আপনার কাজে লেগেছি।",
             "না",
             "হ্যাঁ",
@@ -21413,6 +21581,18 @@ namespace LunaCalc
             "EME তত্ত্ব ও পরামর্শ ম্যানুয়ালে উল্লেখ:",
             "1.2 - EME বাজেটে আমার EIRP, DX-এর EIRP, পথের ক্ষতি এবং দুই দিকের S/N (সূর্যসহ) সূচক; Word নথির সূত্র একই আকারে, মার্জিনের ভেতরে; সব স্কিমে ভরাট বোতাম ও গোলাকার প্রান্তের সমতল ড্রপ-ডাউন তালিকা; আটটি প্যাস্টেল রঙের স্কিম; মানের বাক্সে পাশাপাশি তীর; সেরা তিন দিন তারিখের ক্রমে; ঝাপসা আকাশের পটভূমি; সূত্র ডিবাগ অনূদিত; EME তত্ত্ব ও পরামর্শ ম্যানুয়ালে Relu NJ9R-এর পরামর্শ (GRAVES, তাক করা, কানেক্টর, অ্যান্টেনার গেইন, JT65B ও MAP65, পোলারাইজেশন রিলে), প্রথম রিসেপশন ও ইন্টারনেট চ্যাট নিয়ে নতুন অংশ এবং ভূমিকায় VE7BQH-এর সারণি; NJ9R-কে ধন্যবাদ, IK1UWL-এর স্মরণ এবং নিবন্ধ, হার্ডওয়্যার ও সফটওয়্যারের রচয়িতাদের প্রতি কৃতজ্ঞতা, তাঁদের কাজের টুলটিপসহ।",
             "1.2.1 - লেখকের সঙ্গে যোগাযোগ ও কৃতজ্ঞতা পৃষ্ঠাটি Linux ও macOS-এ আবার ঠিকভাবে খোলে; ট্রান্সভার্টারের রেফারেন্স এখন § 1.7.1।",
+            "পরিচিতি ও কৃতিত্ব",
+            "GRAVES রাডারকে DX স্টেশন হিসেবে",
+            "ফরাসি GRAVES রাডারকে (143.050 MHz, লোকেটর JN27SI) DX হিসেবে বসায়: GRAVES-এর সঙ্গে সাধারণ উইন্ডোগুলোই সেই সময়, যখন চাঁদ থেকে তার প্রতিধ্বনি গ্রহণ করে রিসিভার ও তাক করা যাচাই করা যায়। EME তত্ত্ব ও পরামর্শ ম্যানুয়াল, § 1.11 দেখুন।",
+            "আনুমানিক কানেক্টর",
+            "PA ও অ্যান্টেনার মধ্যবর্তী লাইনে কানেক্টরের আনুমানিক সংখ্যা, অ্যাডাপ্টার, রিলে ও স্প্লিটারসহ। NJ9R-এর ব্যবহারিক নিয়ম: প্রতি 8 – 10টি কানেক্টরে প্রায় 1 dB, অর্থাৎ প্রতিটি 0.11 dB। ট্রান্সমিশনে সবগুলো গণ্য হয়; রিসেপশনে অর্ধেক, অ্যান্টেনার দিকে প্রিঅ্যাম্পের আগের গুলো।",
+            "কেবল {0:F2} + রিলে {1:F2} + অ্যান্টেনা {2:F2} + কানেক্টর {3:F2} = {4:F2} dB → অ্যান্টেনায় {5}",
+            "প্রিঅ্যাম্পের আগে: {0:F2} + {1:F2} + কানেক্টর {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = TX-এ {2:F2} dB, RX-এ প্রিঅ্যাম্পের আগে {3:F2} dB",
+            "TX ক্ষতি (কেবল PA–রিলে + রিলে + অ্যান্টেনা কেবল + কানেক্টর)",
+            "ধূসর আবরণ",
+            "সীমার বাইরের অঞ্চলে ধূসর আবরণ দেয় এবং দিগন্তের বাইরের মানচিত্র গাঢ় করে। টিক না থাকলে পটভূমির ছবি যেমন আছে তেমনই থাকে, কোনো আবরণ বা গাঢ় করা ছাড়া।",
+            "স্টেশনের নকশা চওড়া বা সরু করতে টানুন; শুরুর প্রস্থে ফিরতে ডাবল-ক্লিক করুন।",
         };
 
         public static readonly string[] AR = {
@@ -22131,7 +22311,7 @@ namespace LunaCalc
             "",
             "",
             "",
-            "تصحيح الصيغ",
+            "التحقق من الحسابات",
             "",
             "",
             "غير محسوب",
@@ -22183,7 +22363,7 @@ namespace LunaCalc
             "يحسب YAEC خط العرض المغناطيسي الأرضي بثنائي القطب لنموذج IGRF-14 (القطب المغناطيسي الأرضي الشمالي 2025: 80.8° ش، 72.8° غ). عندما تُدخل محدِّد موقع، لك أو لـ DX، يقع في إحدى هذه المناطق يظهر تحذير يبقى بعدها في الشاشة الرئيسية. قبل اتصال مع محطات قطبية أو شفقية تحقق من توقعات NOAA D-RAP (D Region Absorption Predictions) وتنبيهات أحداث البروتونات.",
             "المراجع: H. H. Sauer وD. C. Wilkinson، \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\"، Space Weather، المجلد 6 (2008)، doi:10.1029/2008SW000399؛ NOAA SWPC، D Region Absorption Predictions (D-RAP)؛ أقطاب IGRF المغناطيسية الأرضية من World Data Center for Geomagnetism، كيوتو.",
             "كل معاملات وصيغ ميزانية EME وضجيج الشمس، للاتجاهين (أنت → DX وDX → أنت)، مع القيم المعوَّضة ونتيجة كل خطوة: الطول الموجي، المقطع الراداري للقمر، خسارة المسار، EIRP، الإشارة على طول سلسلة الاستقبال، MDS والهامش، عامل الضجيج بـ Friis، الحرارات، الضجيج وS/N، وللشمس التدفق والحزمة وتوهين النمط والمساحة الفعالة وزيادة الضجيج. يُفعَّل بخانة \"الحسابات المعمّقة\"؛ والزر في الأسفل ينسخ كل شيء إلى الحافظة.",
-            "يُفعَّل تبويب تصحيح الصيغ بخانة \"الحسابات المعمّقة\" في تبويب الموقع المباشر و +- 24h.",
+            "يُفعَّل تبويب التحقق من الحسابات بخانة \"الحسابات المعمّقة\" في تبويب الموقع المباشر و +- 24h.",
             "مخصص",
             "مسافة DX (km)",
             "الشمس – القمر (°)",
@@ -22205,7 +22385,7 @@ namespace LunaCalc
             "استخدم صف الجدول",
             "استخدم لحظة الصف المختار في جدول موقع القمر.",
             "خسارة الاستقطاب",
-            "خانة متزامنة: هي نفس خانة الحسابات المعمّقة الموجودة في البطاقة الخضراء لـ S/N المقدَّر في تبويب الموقع المباشر و +- 24h؛ تغييرها هنا يغيّرها هناك والعكس. عند إلغائها تنتقل ميزانية EME إلى الوضع المبسّط وتصبح تبويبات الضجيج الشمسي وتصدير الحسابات إلى Excel وتصحيح الصيغ رمادية.",
+            "خانة متزامنة: هي نفس خانة الحسابات المعمّقة الموجودة في البطاقة الخضراء لـ S/N المقدَّر في تبويب الموقع المباشر و +- 24h؛ تغييرها هنا يغيّرها هناك والعكس. عند إلغائها تنتقل ميزانية EME إلى الوضع المبسّط وتصبح تبويبات الضجيج الشمسي وتصدير الحسابات إلى Excel والتحقق من الحسابات رمادية.",
             "منظومة الإرسال والاستقبال",
             "كابل الهوائي – المرحّل",
             "النوع",
@@ -22285,7 +22465,7 @@ namespace LunaCalc
             "حفظ بصيغة Word (.docx)",
             "الاتجاه",
             "تكبير",
-            "تصحيح الصيغ – ميزانية EME وضجيج الشمس",
+            "التحقق من الحسابات – ميزانية EME وضجيج الشمس",
             "اللحظة والنطاق",
             "معاملات الإدخال",
             "كابل PA – المرحّل + المرحّل + كابل الهوائي",
@@ -22412,7 +22592,7 @@ namespace LunaCalc
             "مفيد ومجاني",
             "البرنامج مجاني ويمكن استخدامه بلا قيود لهواية اللاسلكي وللتعلم والتعليم. صُنع لتسهيل الاتصالات، لا لبيع شيء.",
             "شفاف",
-            "تُرفق الشيفرة المصدرية دائمًا مع البرنامج؛ كل صيغة ظاهرة في تبويب تصحيح الصيغ وكل معلومة تذكر مصدرها. لا صناديق سوداء.",
+            "تُرفق الشيفرة المصدرية دائمًا مع البرنامج؛ كل صيغة ظاهرة في تبويب التحقق من الحسابات وكل معلومة تذكر مصدرها. لا صناديق سوداء.",
             "صادق",
             "يُفرَّق بين القيم المقيسة والمستنتجة والمقدَّرة؛ وما لم يُتحقق منه يُصرَّح بذلك. النتيجة غير المؤكدة تُقال غير مؤكدة ولا تُقدَّم على أنها أكيدة.",
             "محترِم",
@@ -22449,7 +22629,7 @@ namespace LunaCalc
             "في الأعلى أربعة مؤشرات، على اليسار مصدر البيانات (NOAA RSTN موصى به، أو F10.7 من NOAA أو بنتكتون، أو عنوان مخصص) مع المحطات، على اليمين طيف تدفق الشمس مع الاستقراء حتى تردد العمل.",
             "هذا الدليل، داخل البرنامج وبكل اللغات: فهرس قابل للنقر، وبحث، وصيغ، ومصادر.",
             "مُنسَّق مثل مستند Word، والصيغ بأسلوب محرر المعادلات: يمكن نسخه إلى الحافظة أو حفظه بصيغة Word (.docx).",
-            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر، القمر فوق العالم)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، تصحيح الصيغ)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (ABOUT & CREDITS، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
+            "التبويبات مجمّعة في ست مجموعات في الشريط العلوي: مباشر (الموقع المباشر و +- 24h، استطلاع عوائقي، قبة السماء)، التخطيط (المسافة وDgrd، موقع القمر، القمر فوق العالم)، الاتصال (ميزانية EME، ضجيج الشمس، تصدير الحسابات إلى Excel، التحقق من الحسابات)، السجل (خريطة WWL وADIF)، المساعدة والأدوات (دليل الاستخدام، نظرية EME ونصائح، الكابلات المحورية)، Credits and thanks (حول البرنامج والمصادر، التواصل مع المؤلف والشكر، الترخيص). انقر على مجموعة في الصف الأول ثم على التبويب في الصف الثاني؛ كل مجموعة تتذكر آخر تبويب فُتح. تُفعَّل التبويبات الرمادية بخانة \"الحسابات المعمّقة\".",
             "شكرًا لاستخدامك إياي: أرجو أن أكون قد أفدتك.",
             "لا",
             "نعم",
@@ -22730,6 +22910,18 @@ namespace LunaCalc
             "مذكور في دليل نظرية EME ونصائح:",
             "1.2 - ميزانية EME مع مؤشرات قدرتي EIRP وقدرة DX EIRP وخسارة المسار ونسبة S/N في الاتجاهين (مع الشمس)؛ معادلات مستند Word بحجم واحد داخل الهوامش؛ أزرار ممتلئة وقوائم منسدلة مسطحة بحواف مستديرة في جميع المخططات؛ ثمانية مخططات ألوان باستيل؛ مربعات القيم بأسهم متجاورة؛ أفضل ثلاثة أيام بترتيب التاريخ؛ خلفية سماء ضبابية؛ ترجمة تصحيح الصيغ؛ دليل نظرية EME ونصائح مع نصائح Relu NJ9R (GRAVES، التوجيه، الموصلات، كسب الهوائيات، JT65B وMAP65، مرحّل الاستقطاب)، وأقسام جديدة عن الاستقبال الأول وعن الدردشات عبر الإنترنت، وجداول VE7BQH في المقدمة؛ شكر لـ NJ9R، وذكرى IK1UWL، وشكر لمؤلفي المقالات والعتاد والبرمجيات مع تلميح عن أعمالهم.",
             "1.2.1 - صفحة التواصل مع المؤلف والشكر تُفتح مجددًا بشكل صحيح على Linux وmacOS؛ والإحالة الخاصة بالمحوّلات تشير إلى § 1.7.1.",
+            "حول البرنامج والمصادر",
+            "رادار GRAVES كمحطة DX",
+            "يجعل الرادار الفرنسي GRAVES (‏143.050 MHz، محدد الموقع JN27SI) محطة DX: النوافذ المشتركة مع GRAVES هي الأوقات التي يمكنك فيها استقبال صداه من القمر والتحقق من المستقبِل والتوجيه. انظر دليل نظرية EME ونصائح، § 1.11.",
+            "عدد الموصلات التقديري",
+            "العدد التقديري للموصلات في الخط بين PA والهوائي، بما فيها المهايئات والمرحّلات والمقسّمات. القاعدة العملية لـ NJ9R: نحو 1 dB لكل 8 – 10 موصلات، أي 0.11 dB لكل موصل. تُحتسب كلها في الإرسال؛ وفي الاستقبال يُحتسب نصفها، تلك الموجودة في جهة الهوائي قبل المضخم الأولي.",
+            "كابل {0:F2} + مرحّل {1:F2} + هوائي {2:F2} + موصلات {3:F2} = {4:F2} dB → {5} عند الهوائي",
+            "قبل المضخم الأولي: {0:F2} + {1:F2} + موصلات {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = {2:F2} dB في الإرسال، {3:F2} dB في الاستقبال قبل المضخم الأولي",
+            "خسائر الإرسال (كابل PA–المرحّل + المرحّل + كابل الهوائي + الموصلات)",
+            "الغشاء الرمادي",
+            "يضع الغشاء الرمادي على المناطق خارج الحدود ويُعتم الخريطة خارج الأفق. من دون علامة تبقى صورة الخلفية كما هي، بلا غشاء ولا تعتيم.",
+            "اسحب لتوسيع مخطط المحطة أو تضييقه؛ انقر نقرًا مزدوجًا للعودة إلى العرض الأصلي.",
         };
 
         public static readonly string[] TR = {
@@ -23448,7 +23640,7 @@ namespace LunaCalc
             "",
             "",
             "",
-            "FORMÜL HATA AYIKLAMA",
+            "Hesapların kontrolü",
             "",
             "",
             "dahil değil",
@@ -23500,7 +23692,7 @@ namespace LunaCalc
             "YAEC jeomanyetik enlemi IGRF-14 modelinin dipolüyle hesaplar (2025 kuzey jeomanyetik kutbu: 80,8° K, 72,8° B). Bu bölgelerden birine düşen bir lokatör girdiğinizde, sizinki ya da DX'inki, bir uyarı çıkar ve ardından ana ekranda kalır. Kutup ya da kutup ışığı istasyonlarıyla bir QSO'dan önce NOAA D-RAP tahminlerini (D Region Absorption Predictions) ve proton olayı uyarılarını kontrol edin.",
             "Kaynaklar: H. H. Sauer ve D. C. Wilkinson, \"Global mapping of ionospheric HF/VHF radio wave absorption due to solar energetic protons\", Space Weather, cilt 6 (2008), doi:10.1029/2008SW000399; NOAA SWPC, D Region Absorption Predictions (D-RAP); World Data Center for Geomagnetism, Kyoto'dan IGRF jeomanyetik kutupları.",
             "EME bütçesinin ve Güneş gürültüsünün tüm parametreleri ve formülleri, iki yön için (sen → DX ve DX → sen), yerine konmuş değerler ve her adımın sonucuyla: dalga boyu, Ay'ın radar kesit alanı, yol kaybı, EIRP, alış zinciri boyunca sinyal, MDS ve pay, Friis ile gürültü faktörü, sıcaklıklar, gürültü ve S/N, Güneş için de akı, hüzme, desen zayıflaması, etkin alan ve gürültü artışı. \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir; alttaki düğme her şeyi panoya kopyalar.",
-            "FORMÜL HATA AYIKLAMA sekmesi Canlı konum ve +- 24h sekmesindeki \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
+            "Hesapların kontrolü sekmesi Canlı konum ve +- 24h sekmesindeki \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
             "özel",
             "DX mesafesi (km)",
             "Güneş – Ay (°)",
@@ -23522,7 +23714,7 @@ namespace LunaCalc
             "tablo satırını kullan",
             "Ay konumu tablosunda seçilen satırın anını kullan.",
             "polarizasyon kaybı",
-            "Eşzamanlı kutu: Canlı konum ve +- 24h sekmesindeki tahmini S/N yeşil kartında bulunan AYRINTILI HESAPLAR kutusunun aynısıdır; burada değiştirmek orada da değiştirir, tersi de geçerlidir. Kapalıyken EME Bütçesi basit moda geçer, Güneş gürültüsü, Hesaplamaları Excel'e aktar ve FORMÜL HATA AYIKLAMA sekmeleri griye döner.",
+            "Eşzamanlı kutu: Canlı konum ve +- 24h sekmesindeki tahmini S/N yeşil kartında bulunan AYRINTILI HESAPLAR kutusunun aynısıdır; burada değiştirmek orada da değiştirir, tersi de geçerlidir. Kapalıyken EME Bütçesi basit moda geçer, Güneş gürültüsü, Hesaplamaları Excel'e aktar ve Hesapların kontrolü sekmeleri griye döner.",
             "YAYIN VE ALIŞ DÜZENEĞİ",
             "ANTEN – RÖLE KABLOSU",
             "Tür",
@@ -23729,7 +23921,7 @@ namespace LunaCalc
             "Yararlı ve ücretsiz",
             "Program ücretsizdir ve amatör telsizcilik, öğrenme ve öğretme için sınırsız kullanılabilir. QSO'ları kolaylaştırmak için yapılmıştır, bir şey satmak için değil.",
             "Şeffaf",
-            "Kaynak kod her zaman programla birlikte verilir; her formül FORMÜL HATA AYIKLAMA sekmesinde görülebilir ve her veri kaynağını belirtir. Kara kutu yok.",
+            "Kaynak kod her zaman programla birlikte verilir; her formül Hesapların kontrolü sekmesinde görülebilir ve her veri kaynağını belirtir. Kara kutu yok.",
             "Dürüst",
             "Ölçülen, çıkarılan ve tahmin edilen değerler ayrılır; doğrulanmamış olan öyle belirtilir. Belirsiz bir sonuç belirsiz diye söylenir, kesinmiş gibi sunulmaz.",
             "Saygılı",
@@ -23766,7 +23958,7 @@ namespace LunaCalc
             "Üstte dört gösterge, solda istasyonlarıyla veri kaynağı (önerilen NOAA RSTN, ya da NOAA veya Penticton F10.7, ya da özel adres), sağda çalışma frekansına kadar dışdeğerlemeli güneş akısı spektrumu.",
             "Bu kılavuz, program içinde ve tüm dillerde: tıklanabilir içindekiler, arama, formüller ve kaynaklar.",
             "Bir Word belgesi gibi düzenlenmiştir, formüller denklem düzenleyicisi tarzındadır: panoya kopyalanabilir ya da Word (.docx) olarak kaydedilebilir.",
-            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu, Dünya üzerinde Ay), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, FORMÜL HATA AYIKLAMA), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (ABOUT & CREDITS, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
+            "Sekmeler üst çubukta altı grupta toplanmıştır: Canlı (Canlı konum ve +- 24h, Engellerimin keşfi, Gök kubbesi), Planlama (Mesafe ve Dgrd, Ay konumu, Dünya üzerinde Ay), Bağlantı (EME Bütçesi, Güneş gürültüsü, Hesaplamaları Excel'e aktar, Hesapların kontrolü), Kayıt (WWL haritası ve ADIF), Yardım ve araçlar (KULLANIM KILAVUZU, EME ÜZERİNE TEORİ VE ÖNERİLER, KOAKSİYEL KABLOLAR), Credits and thanks (HAKKINDA VE KAYNAKLAR, YAZARLA İLETİŞİM VE TEŞEKKÜRLER, LİSANS). İlk satırda bir gruba, sonra ikinci satırda sekmeye tıklayın; her grup en son açılan sekmeyi hatırlar. Gri sekmeler \"AYRINTILI HESAPLAR\" kutusuyla etkinleşir.",
             "Beni kullandığın için teşekkürler: umarım işine yaramışımdır.",
             "Hayır",
             "Evet",
@@ -24047,6 +24239,18 @@ namespace LunaCalc
             "EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzunda geçtiği yerler:",
             "1.2 - EME bütçesinde Benim EIRP, DX'in EIRP'si, yol kaybı ve iki yönde S/N (Güneş dahil) göstergeleri; Word belgesindeki formüller tek boyutta, kenar boşlukları içinde; tüm şemalarda dolu düğmeler ve yuvarlak kenarlı düz açılır listeler; sekiz pastel renk şeması; yan yana oklu değer kutuları; en iyi üç gün tarih sırasına göre; bulanık gökyüzü arka planı; FORMÜL HATA AYIKLAMA çevrildi; EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzuna Relu NJ9R'nin önerileri (GRAVES, yönlendirme, konektörler, anten kazancı, JT65B ve MAP65, polarizasyon rölesi), ilk alım ve internet sohbetleri üzerine yeni bölümler ve önsözde VE7BQH tabloları; NJ9R'ye teşekkür, IK1UWL'nin anısı ve makale, donanım ve yazılım yazarlarına teşekkür, eserleri hakkında ipucu balonuyla.",
             "1.2.1 - YAZARLA İLETİŞİM VE TEŞEKKÜRLER sayfası Linux ve macOS'ta yeniden doğru açılıyor; transverterler için yapılan atıf artık § 1.7.1'i gösteriyor.",
+            "HAKKINDA VE KAYNAKLAR",
+            "DX istasyonu olarak GRAVES radarı",
+            "Fransız GRAVES radarını (143,050 MHz, lokatör JN27SI) DX olarak ayarlar: GRAVES ile ortak pencereler, Ay'dan gelen yankısını alıp alıcını ve yönlendirmeni kontrol edebileceğin anlardır. EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzu, § 1.11'e bak.",
+            "Tahmini konektör",
+            "PA ile anten arasındaki hatta, adaptörler, röleler ve bölücüler dahil tahmini konektör sayısı. NJ9R'nin pratik kuralı: her 8 – 10 konektörde yaklaşık 1 dB, yani konektör başına 0,11 dB. Gönderimde hepsi sayılır; alımda yarısı, anten tarafında ön yükselticiden önce olanlar.",
+            "kablo {0:F2} + röle {1:F2} + anten {2:F2} + konektörler {3:F2} = {4:F2} dB → antende {5}",
+            "ön yükselticiden önce: {0:F2} + {1:F2} + konektörler {2:F2} = {3:F2} dB",
+            "{0} × {1:F2} dB = TX'te {2:F2} dB, RX'te ön yükselticiden önce {3:F2} dB",
+            "TX kayıpları (PA–röle kablosu + röle + anten kablosu + konektörler)",
+            "Gri örtü",
+            "Sınırların dışındaki bölgelere gri örtü uygular ve ufkun dışındaki haritayı koyulaştırır. İşaretsizken arka plan görüntüsü olduğu gibi kalır; örtü de koyulaştırma da olmaz.",
+            "İstasyon şemasını genişletmek ya da daraltmak için sürükle; başlangıç genişliğine dönmek için çift tıkla.",
         };
     }
 
@@ -24247,7 +24451,7 @@ namespace LunaCalc
     class BudgetUi
     {
         public NumericUpDown P, CavoTx, AccTx, GAnt, NAnt, PreLoss, PreGain, PostLoss, TvGain, Mds, Nf, GroundH, TvCavo, TvNf, Tant;
-        public NumericUpDown LenAnt, Rele, LenPa, LenDis, SnReq;
+        public NumericUpDown LenAnt, Rele, Conn, LenPa, LenDis, SnReq;
         public ComboBox CavoAnt, CavoPa, CavoDis, Modo, TvMod;
         public CheckBox Ground, TvOn;
         public Control Card;          // scheda della stazione (v28c)
@@ -24264,11 +24468,16 @@ namespace LunaCalc
         // schema dell'impianto (v27): cavi scelti dal database, lunghezze, relè, transverter, modo
         public double CavoAnt = -1, LenAnt = 3, Rele = 0.3, CavoPa = -1, LenPa = 30, CavoDis = -1, LenDis = 30, TvOn = 0, TvGainSet = 25, Modo = 0, SnReq = -25, TvMod = -1;
         public double LossAnt, LossPa, LossDis;   // perdite dei cavi calcolate alla frequenza della banda
+        // connettori stimati nella linea tra PA e antenna (regola pratica di NJ9R: circa 1 dB ogni 8 – 10 connettori):
+        // contano tutti in trasmissione e, in ricezione, la metà (quelli dal lato dell'antenna, prima del preampli)
+        public const double DbConnettore = 0.11;
+        public double Conn = 0, LossConn;
+        public double LossConnRx { get { return LossConn / 2.0; } }
 
         public static double Freq = 144;   // frequenza della banda corrente, per le perdite dei cavi
 
         public static readonly string[] Keys = { "p", "cavotx", "acctx", "gant", "nant", "preloss", "pregain", "postloss", "tvgain", "mds", "nf", "groundon", "groundh", "tvcavo", "tvnf", "tant",
-            "cavoant", "lenant", "rele", "cavopa", "lenpa", "cavodis", "lendis", "tvon", "tvgainset", "modo", "snreq", "tvmod" };
+            "cavoant", "lenant", "rele", "cavopa", "lenpa", "cavodis", "lendis", "tvon", "tvgainset", "modo", "snreq", "tvmod", "conn" };
 
         // Transverter della tabella del manuale (§ 3.7.2) con figura di rumore e guadagno dichiarati dai costruttori;
         // l'ultima voce della tendina è "personalizzato" (TvMod = -1)
@@ -24332,9 +24541,10 @@ namespace LunaCalc
             LossAnt = PerditaCavo(CavoAnt, LenAnt);
             LossPa = PerditaCavo(CavoPa, LenPa);
             LossDis = PerditaCavo(CavoDis, LenDis);
+            LossConn = Math.Max(0, Conn) * DbConnettore;
             CavoTx = LossPa;
-            AccTx = Rele + LossAnt;
-            PreLoss = LossAnt + Rele;
+            AccTx = Rele + LossAnt + LossConn;
+            PreLoss = LossAnt + Rele + LossConnRx;
             PostLoss = LossDis;
             TvGain = TvOn > 0.5 ? TvGainSet : 0;
         }
@@ -24364,6 +24574,7 @@ namespace LunaCalc
             b.Tant = (double)u.Tant.Value;
             b.CavoAnt = MainForm.IndiceCavo(u.CavoAnt); b.LenAnt = (double)u.LenAnt.Value;
             b.Rele = (double)u.Rele.Value;
+            b.Conn = (double)u.Conn.Value;
             b.CavoPa = MainForm.IndiceCavo(u.CavoPa); b.LenPa = (double)u.LenPa.Value;
             b.CavoDis = MainForm.IndiceCavo(u.CavoDis); b.LenDis = (double)u.LenDis.Value;
             b.TvOn = u.TvOn.Checked ? 1 : 0;
@@ -24401,7 +24612,7 @@ namespace LunaCalc
             Set(u.TvCavo, TvCavo);
             Set(u.TvNf, TvNf);
             Set(u.Tant, Tant);
-            MainForm.ScegliCavo(u.CavoAnt, (int)Math.Round(CavoAnt)); Set(u.LenAnt, LenAnt); Set(u.Rele, Rele);
+            MainForm.ScegliCavo(u.CavoAnt, (int)Math.Round(CavoAnt)); Set(u.LenAnt, LenAnt); Set(u.Rele, Rele); Set(u.Conn, Conn);
             MainForm.ScegliCavo(u.CavoPa, (int)Math.Round(CavoPa)); Set(u.LenPa, LenPa);
             MainForm.ScegliCavo(u.CavoDis, (int)Math.Round(CavoDis)); Set(u.LenDis, LenDis);
             u.TvOn.Checked = TvOn > 0.5;
@@ -24427,7 +24638,7 @@ namespace LunaCalc
                 case "groundon": return GroundOn; case "groundh": return GroundH; case "tvcavo": return TvCavo; case "tvnf": return TvNf; case "tant": return Tant;
                 case "cavoant": return CavoAnt; case "lenant": return LenAnt; case "rele": return Rele; case "cavopa": return CavoPa; case "lenpa": return LenPa;
                 case "cavodis": return CavoDis; case "lendis": return LenDis; case "tvon": return TvOn; case "tvgainset": return TvGainSet; case "modo": return Modo; case "snreq": return SnReq;
-                case "tvmod": return TvMod;
+                case "tvmod": return TvMod; case "conn": return Conn;
                 default: return Mds;
             }
         }
@@ -24450,7 +24661,7 @@ namespace LunaCalc
                 case "cavoant": CavoAnt = v; break; case "lenant": LenAnt = v; break; case "rele": Rele = v; break;
                 case "cavopa": CavoPa = v; break; case "lenpa": LenPa = v; break; case "cavodis": CavoDis = v; break; case "lendis": LenDis = v; break;
                 case "tvon": TvOn = v; break; case "tvgainset": TvGainSet = v; break; case "modo": Modo = v; break; case "snreq": SnReq = v; break;
-                case "tvmod": TvMod = v; break;
+                case "tvmod": TvMod = v; break; case "conn": Conn = Math.Max(0, Math.Round(v)); break;
             }
         }
     }
@@ -24893,6 +25104,7 @@ namespace LunaCalc
             b.Nf = NudBU(0m, 10m, 0.05m, 2, "dB", null);
             b.LenAnt = NudBU(0m, 500m, 0.5m, 1, "m", "0.#");
             b.Rele = NudBU(0m, 3m, 0.05m, 2, "dB", "0.0#");
+            b.Conn = NudBU(0m, 60m, 1m, 0, "", "0");
             b.LenPa = NudBU(0m, 500m, 1m, 1, "m", "0.#");
             b.LenDis = NudBU(0m, 500m, 1m, 1, "m", "0.#");
             b.SnReq = NudBU(-40m, 20m, 0.5m, 1, "dB", "0.#");
@@ -24979,6 +25191,7 @@ namespace LunaCalc
             tip.SetToolTip(b.Mds, Lang.T("Segnale minimo rilevabile della radio (MDS), tra -100 e -140 dBm."));
             tip.SetToolTip(b.LenAnt, Lang.T("Lunghezza del cavo tra l'antenna e il relè coassiale: la sua perdita vale sia in trasmissione sia in ricezione (prima del preampli)."));
             tip.SetToolTip(b.Rele, Lang.T("Perdita di inserzione del relè coassiale TX/RX (tipica 0,3 dB): conta in trasmissione e, in ricezione, prima del preampli."));
+            tip.SetToolTip(b.Conn, Lang.T("Connettori stimati") + "\u0001" + Lang.T("Numero stimato di connettori nella linea tra il PA e l'antenna, compresi adattatori, relè e divisori. Regola pratica di NJ9R: circa 1 dB ogni 8 – 10 connettori, cioè 0,11 dB ciascuno. Contano tutti in trasmissione; in ricezione conta la metà, quelli dal lato dell'antenna prima del preampli."));
             tip.SetToolTip(b.LenPa, Lang.T("Lunghezza del cavo tra l'amplificatore (PA) e il relè coassiale."));
             tip.SetToolTip(b.LenDis, Lang.T("Lunghezza del cavo di discesa tra il preamplificatore in antenna e la stazione."));
             tip.SetToolTip(b.TvOn, Lang.T("Attiva il transverter quando la radio non lavora direttamente sulla banda scelta: entra nella catena di ricezione con il suo guadagno e la sua figura di rumore."));
@@ -25008,7 +25221,7 @@ namespace LunaCalc
             };
             tip.SetToolTip(b.Ground, Lang.T("Antenna fissa sull'orizzonte (senza rotore di elevazione): aggiunge al guadagno il\n\"ground gain\" dovuto alla riflessione sul terreno, calcolato all'elevazione della Luna.\nModello: terreno piano e riflettente, polarizzazione orizzontale (massimo +6 dB)."));
             tip.SetToolTip(b.GroundH, Lang.T("Altezza del centro elettrico dell'antenna sopra il terreno (m).\nDetermina gli angoli dei lobi: il primo lobo è a asin(λ/4h). Con 0 si applica +6 dB fisso."));
-            b.Schema.AddRange(new Control[] { b.Tant, b.CavoAnt, b.LenAnt, b.Rele, b.P, b.CavoPa, b.LenPa, b.PreGain, b.Nf, b.CavoDis, b.LenDis, b.TvOn, b.TvMod, b.TvGain, b.TvNf, b.TvCavo, b.Mds, b.Modo, b.SnReq });
+            b.Schema.AddRange(new Control[] { b.Tant, b.CavoAnt, b.LenAnt, b.Rele, b.Conn, b.P, b.CavoPa, b.LenPa, b.PreGain, b.Nf, b.CavoDis, b.LenDis, b.TvOn, b.TvMod, b.TvGain, b.TvNf, b.TvCavo, b.Mds, b.Modo, b.SnReq });
 
             PannelloDisegno card = new PannelloDisegno();
             card.Dock = DockStyle.Fill;
@@ -25160,7 +25373,7 @@ namespace LunaCalc
         // risultati mostrati nei riquadri (KPI) e nello schema
         string[] kpiV = new string[6], kpiS = new string[6];
         Color[] kpiC = new Color[6];
-        string impAnt = "", impCavoAnt = "", impTx = "", impPre = "", impDis = "", impRadio = "", impTsky = "";
+        string impAnt = "", impCavoAnt = "", impTx = "", impPre = "", impConn = "", impDis = "", impRadio = "", impTsky = "";
 
         void BuildBudgetTab(TabPage tp)
         {
@@ -25168,10 +25381,12 @@ namespace LunaCalc
 
             TableLayoutPanel root = new TableLayoutPanel();
             root.Dock = DockStyle.Fill;
-            root.ColumnCount = 2;
+            root.ColumnCount = 3;
             root.RowCount = 2;
             root.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f));
-            root.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, S(560)));
+            root.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, S(10)));   // separatore trascinabile
+            root.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, S(budgetSchemaLarg)));
+            budgetRoot = root;
             root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             root.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
             root.Padding = new Padding(S(4));
@@ -25231,10 +25446,11 @@ namespace LunaCalc
             chkComplessiB.Aggiorna();
             chkComplessiB.Anchor = AnchorStyles.Right | AnchorStyles.Top;
             chkComplessiB.Margin = new Padding(S(6), S(4), S(10), S(4));
-            tip.SetToolTip(chkComplessiB, Lang.T("CALCOLI APPROFONDITI") + "\u0001" + Lang.T("Casella sincronizzata: è la stessa casella CALCOLI APPROFONDITI che trovi nel riquadro verde dell'S/N stimato, nella linguetta Posizione live e +- 24h; se la cambi qui cambia anche là, e viceversa. Spenta, il Budget EME passa alla modalità semplificata e le linguette Rumore solare, Export in Excel dei calcoli e DEBUG FORMULE diventano grigie."));
+            tip.SetToolTip(chkComplessiB, Lang.T("CALCOLI APPROFONDITI") + "\u0001" + Lang.T("Casella sincronizzata: è la stessa casella CALCOLI APPROFONDITI che trovi nel riquadro verde dell'S/N stimato, nella linguetta Posizione live e +- 24h; se la cambi qui cambia anche là, e viceversa. Spenta, il Budget EME passa alla modalità semplificata e le linguette Rumore solare, Export in Excel dei calcoli e Controllo dei calcoli diventano grigie."));
             chkComplessiB.CheckedChanged += (s, e) => { if (chkComplessi.Checked != chkComplessiB.Checked) chkComplessi.Checked = chkComplessiB.Checked; };
             root.Controls.Add(bar, 0, 0);
             root.Controls.Add(chkComplessiB, 1, 0);
+            root.SetColumnSpan(chkComplessiB, 2);
 
             // colonna sinistra: stazioni, indicatori, tabella
             TableLayoutPanel sx = new TableLayoutPanel();
@@ -25305,7 +25521,40 @@ namespace LunaCalc
             foreach (BudgetUi u in new BudgetUi[] { bMe, bDx })
                 foreach (Control c in u.Schema) pnlImp.Controls.Add(c);
             pnlImpHost.Controls.Add(pnlImp);
-            root.Controls.Add(pnlImpHost, 1, 1);
+            root.Controls.Add(pnlImpHost, 2, 1);
+
+            // separatore tra la colonna sinistra e lo schema: si trascina con il mouse, le due parti si ridisegnano da sole
+            Panel sep = new Panel();
+            sep.Dock = DockStyle.Fill;
+            sep.Margin = new Padding(0);
+            sep.Cursor = Cursors.VSplit;
+            tip.SetToolTip(sep, Lang.T("Trascina per allargare o stringere lo schema dell'impianto; doppio clic per tornare alla larghezza iniziale."));
+            bool trascina = false; int x0 = 0, w0 = 0;
+            Action<int> applica = w =>
+            {
+                int max = Math.Max(S(360), root.ClientSize.Width - S(620));
+                w = Math.Max(S(360), Math.Min(max, w));
+                root.ColumnStyles[2].Width = w;
+                budgetSchemaLarg = (int)Math.Round(w * 100.0 / S(100));
+            };
+            sep.MouseDown += (s, e) => { if (e.Button == MouseButtons.Left) { trascina = true; x0 = Cursor.Position.X; w0 = (int)root.ColumnStyles[2].Width; sep.Capture = true; sep.Invalidate(); } };
+            sep.MouseMove += (s, e) => { if (trascina) applica(w0 - (Cursor.Position.X - x0)); };
+            sep.MouseUp += (s, e) => { if (trascina) { trascina = false; sep.Capture = false; sep.Invalidate(); if (!caricamento) SaveSettings(); } };
+            sep.DoubleClick += (s, e) => { applica(S(560)); if (!caricamento) SaveSettings(); };
+            sep.Paint += (s, e) =>
+            {
+                Graphics g = e.Graphics;
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                float cx = sep.Width / 2f;
+                using (Pen pl = new Pen(trascina ? Color.FromArgb(124, 58, 237) : (Tema.Scuro ? Tema.Linea : Color.FromArgb(200, 206, 216)), trascina ? S(3) : S(2)))
+                    g.DrawLine(pl, cx, S(4), cx, sep.Height - S(4));
+                // maniglia al centro: tre puntini
+                using (Brush b = new SolidBrush(Tema.Scuro ? Color.FromArgb(160, 170, 185) : Color.FromArgb(110, 120, 135)))
+                    for (int k = -1; k <= 1; k++) g.FillEllipse(b, cx - S(2.5f), sep.Height / 2f + k * S(9) - S(2.5f), S(5), S(5));
+            };
+            sep.Resize += (s, e) => sep.Invalidate();
+            root.Controls.Add(sep, 1, 1);
+            root.Resize += (s, e) => applica((int)root.ColumnStyles[2].Width);
 
             lblBNote = new Label();   // la nota ora è nel fumetto della tabella
             tip.SetToolTip(pnlTabB, Lang.T("Perdita di tratta: equazione radar con riflettività lunare 0,065 e distanze topocentriche delle due stazioni nell'istante scelto. Guadagno totale = G + 10·log10(N) (accoppiamento ideale). Il margine sul MDS confronta il segnale all'ingresso della radio con il suo MDS: non tiene conto del rumore di cielo e del preamplificatore (vedi Dgrd nella prima linguetta)."));
@@ -25319,6 +25568,8 @@ namespace LunaCalc
         // ---- schema dell'impianto: riquadri calcolati dai testi (si adattano a caratteri dal 90 al 150 %)
         RectangleF RAnt, RCavoAnt, RRele, RReleBox, RTx, RLna, RPre, RDis, RTv, RCavetti, RRadio;
         float impRh, impXl;
+        TableLayoutPanel budgetRoot;
+        int budgetSchemaLarg = 560;   // larghezza dello schema dell'impianto nel Budget EME (unità logiche, separatore trascinabile)
         // riquadri dello schema (0 cavo antenna, 1 relè, 2 TX, 3 preampli, 4 discesa): true = etichetta sopra la casella,
         // quando etichetta e casella non stanno sulla stessa riga (lingue con testi lunghi o finestra stretta)
         readonly bool[] impPila = new bool[5];
@@ -25348,7 +25599,7 @@ namespace LunaCalc
                 Func<string, float> Tw = t => g.MeasureString(t, ft).Width;
                 // larghezza dei riquadri di destra: etichetta + casella, titolo
                 float wR = Math.Max(Lw(Lang.T("Tipo")) + fc, Lw(Lang.T("Lunghezza")) + fn);
-                foreach (string t in new string[] { Lang.T("Perdita di inserzione"), Lang.T("Guadagno"), Lang.T("Figura di rumore"), Lang.T("Cavetti fino alla radio") })
+                foreach (string t in new string[] { Lang.T("Perdita di inserzione"), Lang.T("Connettori stimati"), Lang.T("Guadagno"), Lang.T("Figura di rumore"), Lang.T("Cavetti fino alla radio") })
                     wR = Math.Max(wR, Lw(t) + fn);
                 wR += 2 * pad + S(14);
                 foreach (string t in new string[] { Lang.T("CAVO ANTENNA – RELÈ") + "  " + Lang.T("TX e RX"), Lang.T("RELÈ COASSIALE TX / RX"), Lang.T("PREAMPLIFICATORE"), Lang.T("CAVO DI DISCESA") })
@@ -25370,12 +25621,12 @@ namespace LunaCalc
                     return m + 2 * pad;
                 };
                 impPila[0] = Serve(new string[] { Lang.T("Tipo"), Lang.T("Lunghezza") }, new int[] { fc, fn }) > wR;
-                impPila[1] = Serve(new string[] { Lang.T("Perdita di inserzione") }, new int[] { fn }) > wR;
+                impPila[1] = Serve(new string[] { Lang.T("Perdita di inserzione"), Lang.T("Connettori stimati") }, new int[] { fn, fn }) > wR;
                 impPila[2] = Serve(new string[] { Lang.T("Potenza in uscita"), Lang.T("Cavo PA – relè"), Lang.T("Lunghezza") }, new int[] { fn, fc, fn }) > wTx;
                 impPila[3] = Serve(new string[] { Lang.T("Guadagno"), Lang.T("Figura di rumore") }, new int[] { fn, fn }) > wR;
                 impPila[4] = Serve(new string[] { Lang.T("Tipo"), Lang.T("Lunghezza") }, new int[] { fc, fn }) > wR;
                 float hCa = S(26) + Linee(0, 2) * rh + Fh(impCavoAnt, wR) + S(6);
-                float hRe = S(26) + Linee(1, 1) * rh + S(6);
+                float hRe = S(26) + Linee(1, 2) * rh + Fh(impConn, wR) + S(6);
                 float hTx = S(26) + Linee(2, 3) * rh + Fh(impTx, wTx) + S(6);
                 float hPre = S(26) + Linee(3, 2) * rh + Fh(impPre, wR) + S(6);
                 float hDis = S(26) + Linee(4, 2) * rh + Fh(impDis, wR) + S(6);
@@ -25411,7 +25662,7 @@ namespace LunaCalc
                 {
                     Campo(v.Tant, RAnt.Right - fn, RAnt.Top + S(18), fn, rh);
                     Riga2(v.CavoAnt, RCavoAnt, 0, fc, 0); Riga2(v.LenAnt, RCavoAnt, 1, fn, 0);
-                    Riga2(v.Rele, RReleBox, 0, fn, 1);
+                    Riga2(v.Rele, RReleBox, 0, fn, 1); Riga2(v.Conn, RReleBox, 1, fn, 1);
                     Riga2(v.P, RTx, 0, fn, 2); Riga2(v.CavoPa, RTx, 1, fc, 2); Riga2(v.LenPa, RTx, 2, fn, 2);
                     Riga2(v.PreGain, RPre, 0, fn, 3); Riga2(v.Nf, RPre, 1, fn, 3);
                     Riga2(v.CavoDis, RDis, 0, fc, 4); Riga2(v.LenDis, RDis, 1, fn, 4);
@@ -25576,7 +25827,8 @@ namespace LunaCalc
                 Etichetta(g, Lang.T("Tipo"), RCavoAnt, 0, fl, 0, S(156)); Etichetta(g, Lang.T("Lunghezza"), RCavoAnt, 1, fl, 0, S(84));
                 Piede(g, impCavoAnt, fr, cAnt, RCavoAnt, Linee(0, 2));
                 Riquadro(g, RReleBox, cLinea, Lang.T("RELÈ COASSIALE TX / RX"), ft);
-                Etichetta(g, Lang.T("Perdita di inserzione"), RReleBox, 0, fl, 1, S(84));
+                Etichetta(g, Lang.T("Perdita di inserzione"), RReleBox, 0, fl, 1, S(84)); Etichetta(g, Lang.T("Connettori stimati"), RReleBox, 1, fl, 1, S(84));
+                Piede(g, impConn, fr, cLinea, RReleBox, Linee(1, 2));
                 Riquadro(g, RTx, cTx, Lang.T("TRASMETTITORE · PA"), ft);
                 Etichetta(g, Lang.T("Potenza in uscita"), RTx, 0, fl, 2, S(84)); Etichetta(g, Lang.T("Cavo PA – relè"), RTx, 1, fl, 2, S(156)); Etichetta(g, Lang.T("Lunghezza"), RTx, 2, fl, 2, S(84));
                 Piede(g, impTx, fr, cTx, RTx, Linee(2, 3));
@@ -25751,8 +26003,18 @@ namespace LunaCalc
             impAnt = Lang.T("ANTENNA") + " · " + p.NAnt + " × " + p.GAnt.ToString("F1", c) + " dBi = " + gt.ToString("F1", c) + " dBi";
             impCavoAnt = (nomeAnt.Length > 0 ? (p.LossAnt / Math.Max(0.001, p.LenAnt) * 100).ToString("F1", c) + " dB/100 m · " : "") + string.Format(c, "{0} MHz → {1:F2} dB", f, p.LossAnt);
             double txTot = p.CavoTx + p.AccTx;
-            impTx = string.Format(c, Lang.T("cavo {0:F2} + relè {1:F2} + antenna {2:F2} = {3:F2} dB → {4} all'antenna"), p.LossPa, p.Rele, p.LossAnt, txTot, FmtW(p.P * Math.Pow(10.0, -txTot / 10.0), c));
-            impPre = string.Format(c, Lang.T("prima del preampli: {0:F2} + {1:F2} = {2:F2} dB"), p.LossAnt, p.Rele, p.PreLoss);
+            if (p.LossConn > 0)
+            {
+                impTx = string.Format(c, Lang.T("cavo {0:F2} + relè {1:F2} + antenna {2:F2} + connettori {3:F2} = {4:F2} dB → {5} all'antenna"), p.LossPa, p.Rele, p.LossAnt, p.LossConn, txTot, FmtW(p.P * Math.Pow(10.0, -txTot / 10.0), c));
+                impPre = string.Format(c, Lang.T("prima del preampli: {0:F2} + {1:F2} + connettori {2:F2} = {3:F2} dB"), p.LossAnt, p.Rele, p.LossConnRx, p.PreLoss);
+                impConn = string.Format(c, Lang.T("{0} × {1:F2} dB = {2:F2} dB in TX, {3:F2} dB in RX prima del preampli"), (int)Math.Round(p.Conn), BudgetParams.DbConnettore, p.LossConn, p.LossConnRx);
+            }
+            else
+            {
+                impTx = string.Format(c, Lang.T("cavo {0:F2} + relè {1:F2} + antenna {2:F2} = {3:F2} dB → {4} all'antenna"), p.LossPa, p.Rele, p.LossAnt, txTot, FmtW(p.P * Math.Pow(10.0, -txTot / 10.0), c));
+                impPre = string.Format(c, Lang.T("prima del preampli: {0:F2} + {1:F2} = {2:F2} dB"), p.LossAnt, p.Rele, p.PreLoss);
+                impConn = "";
+            }
             impDis = (nomeDis.Length > 0 ? (p.LossDis / Math.Max(0.001, p.LenDis) * 100).ToString("F1", c) + " dB/100 m · " : "") + string.Format(c, "{0} MHz → {1:F2} dB", f, p.LossDis);
             double nr, nft = NfFriis(p, bw, out nr);
             double te = 290.0 * (Math.Pow(10.0, nft / 10.0) - 1.0);
@@ -26128,9 +26390,10 @@ namespace LunaCalc
 
                 SezioneB(Lang.T("TRASMISSIONE  (") + curBand.ToString(inv) + " MHz)");
                 RigaB(Lang.T("Potenza in uscita"), FmtW(pm.P, ci) + "   (" + Dbw(a.PdBW) + ")", FmtW(pd.P, ci) + "   (" + Dbw(b.PdBW) + ")");
-                RigaB(Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna)"),
-                    string.Format(ci, "{0:F2} + {1:F2} + {2:F2} = {3}", pm.LossPa, pm.Rele, pm.LossAnt, Db(a.LossTx)),
-                    string.Format(ci, "{0:F2} + {1:F2} + {2:F2} = {3}", pd.LossPa, pd.Rele, pd.LossAnt, Db(b.LossTx)));
+                bool conConn = pm.LossConn > 0 || pd.LossConn > 0;
+                RigaB(conConn ? Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna + connettori)") : Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna)"),
+                    string.Format(ci, "{0:F2} + {1:F2} + {2:F2}", pm.LossPa, pm.Rele, pm.LossAnt) + (conConn ? string.Format(ci, " + {0:F2}", pm.LossConn) : "") + " = " + Db(a.LossTx),
+                    string.Format(ci, "{0:F2} + {1:F2} + {2:F2}", pd.LossPa, pd.Rele, pd.LossAnt) + (conConn ? string.Format(ci, " + {0:F2}", pd.LossConn) : "") + " = " + Db(b.LossTx));
                 RigaB(Lang.T("Potenza all'antenna"), FmtW(a.PantW, ci) + "   (" + Dbw(a.PdBW - a.LossTx) + ")",
                     FmtW(b.PantW, ci) + "   (" + Dbw(b.PdBW - b.LossTx) + ")");
                 RigaB(Lang.T("Guadagno antenna TX (in spazio libero)"), GainTxt(pm, a.Gtx - ggMe), GainTxt(pd, b.Gtx - ggDx));
@@ -27963,7 +28226,7 @@ namespace LunaCalc
                     d.Filter = "Word (*.docx)|*.docx";
                     d.FileName = "YAEC_debug_" + curBand.ToString(inv) + "MHz_" + DateTime.UtcNow.ToString("yyyyMMdd_HHmm", inv) + ".docx";
                     if (d.ShowDialog(this) != DialogResult.OK) return;
-                    try { docDebug.SalvaDocx(d.FileName, Lang.T("DEBUG FORMULE")); }
+                    try { docDebug.SalvaDocx(d.FileName, Lang.T("Controllo dei calcoli")); }
                     catch (Exception ex) { Messaggio(this, Lang.T("Impossibile salvare il file:\n") + ex.Message, "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
             };
@@ -27978,7 +28241,7 @@ namespace LunaCalc
             docDebug.Pagine = true;
             docDebug.Scala = scale;
             docDebug.Rtl = Lang.Rtl;
-            docDebug.Intestazione = "YAEC " + Versione + " · " + Lang.T("DEBUG FORMULE");
+            docDebug.Intestazione = "YAEC " + Versione + " · " + Lang.T("Controllo dei calcoli");
             root.Controls.Add(docDebug, 0, 1);
             tp.Controls.Add(root);
         }
@@ -28098,7 +28361,10 @@ namespace LunaCalc
             DSez(titolo);
             double lambda = 299.792458 / freq;
             DPasso(Lang.T("Potenza in uscita"), "P_{dBW} = 10 · log_{10} P", "10 · log_{10} " + Fd(tx.P, "0.###"), Fd(t.PdBW, "0.00") + " dBW");
-            DPasso(Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna)"), "L_{TX} = L_{PA} + L_{relè} + L_{ant}", Fd(tx.LossPa, "0.00") + " + " + Fd(tx.Rele, "0.00") + " + " + Fd(tx.LossAnt, "0.00"), Fd(t.LossTx, "0.00") + " dB");
+            if (tx.LossConn > 0)
+                DPasso(Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna + connettori)"), "L_{TX} = L_{PA} + L_{relè} + L_{ant} + n_{conn} · " + Fd(BudgetParams.DbConnettore, "0.00"), Fd(tx.LossPa, "0.00") + " + " + Fd(tx.Rele, "0.00") + " + " + Fd(tx.LossAnt, "0.00") + " + " + Fd(tx.Conn, "0") + " · " + Fd(BudgetParams.DbConnettore, "0.00"), Fd(t.LossTx, "0.00") + " dB");
+            else
+                DPasso(Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna)"), "L_{TX} = L_{PA} + L_{relè} + L_{ant}", Fd(tx.LossPa, "0.00") + " + " + Fd(tx.Rele, "0.00") + " + " + Fd(tx.LossAnt, "0.00"), Fd(t.LossTx, "0.00") + " dB");
             DPasso(Lang.T("Potenza all'antenna"), "P_{ant} = P · 10^{−L_{TX}/10}", Fd(tx.P, "0.###") + " · 10^{−" + Fd(t.LossTx, "0.00") + "/10}", Fd(t.PantW, "0.0") + " W");
             if (tx.GroundOn > 0.5)
                 DPasso(Lang.T("BETA - ground gain antenna TX senza elevazione"), "G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}}",
@@ -28313,6 +28579,8 @@ namespace LunaCalc
 
         // Grigio delle zone fuori dai limiti: opacità (solo nella Ricognizione) e tono condiviso da tutte le mappe
         int grigioOpacita = 59, grigioTono = 9;     // percentuali; tono 0 = bianco, 100 = nero
+        bool grigioVelo = true;                     // casella del velo grigio: spenta = nessun velo né scurimento sulla mappa
+        Spunta chkVelo;
         TrackBar tbOpacita, tbTonoPunt, tbTonoSky;
         Label lblOpacita, lblTonoPunt;
         TableLayoutPanel pnlGrigi;
@@ -28344,7 +28612,7 @@ namespace LunaCalc
         // Gli slider servono solo se le zone fuori dai limiti sono disegnate
         void AbilitaGrigi()
         {
-            if (tbOpacita != null && chkPuntSfuma != null) { tbOpacita.Enabled = chkPuntSfuma.Checked; tbTonoPunt.Enabled = chkPuntSfuma.Checked; }
+            if (tbOpacita != null && chkPuntSfuma != null) { tbOpacita.Enabled = chkPuntSfuma.Checked && grigioVelo; tbTonoPunt.Enabled = chkPuntSfuma.Checked && grigioVelo; }
             if (tbTonoSky != null && chkSkyLim != null) tbTonoSky.Enabled = chkSkyLim.Checked;
         }
 
@@ -28439,7 +28707,7 @@ namespace LunaCalc
             pnlGrigi = new TableLayoutPanel();
             pnlGrigi.AutoSize = true;
             pnlGrigi.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            pnlGrigi.ColumnCount = 3;
+            pnlGrigi.ColumnCount = 4;
             pnlGrigi.BackColor = Color.FromArgb(245, 247, 250);
             pnlGrigi.Padding = new Padding(S(8), S(4), S(8), S(4));
             pnlGrigi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -28455,8 +28723,23 @@ namespace LunaCalc
             Label l1 = new Label(); l1.Text = Lang.T("Opacità del grigio"); l1.AutoSize = true; l1.ForeColor = Color.FromArgb(29, 36, 51); l1.Anchor = AnchorStyles.Left;
             Label l2 = new Label(); l2.Text = Lang.T("Tono del grigio"); l2.AutoSize = true; l2.ForeColor = Color.FromArgb(29, 36, 51); l2.Anchor = AnchorStyles.Left;
             foreach (Label l in new Label[] { lblOpacita, lblTonoPunt }) l.Anchor = AnchorStyles.Left;
-            pnlGrigi.Controls.Add(l1, 0, 0); pnlGrigi.Controls.Add(tbOpacita, 1, 0); pnlGrigi.Controls.Add(lblOpacita, 2, 0);
-            pnlGrigi.Controls.Add(l2, 0, 1); pnlGrigi.Controls.Add(tbTonoPunt, 1, 1); pnlGrigi.Controls.Add(lblTonoPunt, 2, 1);
+            chkVelo = new Spunta();
+            chkVelo.Text = "";
+            chkVelo.AutoSize = true;
+            chkVelo.Checked = grigioVelo;
+            chkVelo.Anchor = AnchorStyles.Left;
+            chkVelo.Margin = new Padding(0, 0, S(6), 0);
+            tip.SetToolTip(chkVelo, Lang.T("Velo grigio") + "\u0001" + Lang.T("Applica il velo grigio alle zone fuori dai limiti e scurisce la mappa fuori dall'orizzonte. Senza spunta l'immagine di fondo resta com'è, senza velo né scurimento."));
+            chkVelo.CheckedChanged += (s, e) =>
+            {
+                grigioVelo = chkVelo.Checked;
+                AbilitaGrigi();
+                pnlPunt.Invalidate();
+                if (!caricamento) SaveSettings();
+            };
+            pnlGrigi.Controls.Add(chkVelo, 0, 0); pnlGrigi.SetRowSpan(chkVelo, 2);
+            pnlGrigi.Controls.Add(l1, 1, 0); pnlGrigi.Controls.Add(tbOpacita, 2, 0); pnlGrigi.Controls.Add(lblOpacita, 3, 0);
+            pnlGrigi.Controls.Add(l2, 1, 1); pnlGrigi.Controls.Add(tbTonoPunt, 2, 1); pnlGrigi.Controls.Add(lblTonoPunt, 3, 1);
             pnlPunt.Controls.Add(pnlGrigi);
             pnlPunt.Resize += (s, e) => { pnlGrigi.Location = new Point(pnlPunt.ClientSize.Width - pnlGrigi.Width - S(10), S(10)); };
             tp.Controls.Add(root);
@@ -28632,11 +28915,13 @@ namespace LunaCalc
                             g.InterpolationMode = InterpolationMode.HighQualityBilinear;
                             g.DrawImage(piccola, -W / 28f, -H / 28f, W + W / 14f, H + H / 14f);
                         }
-                        using (Brush velo = new SolidBrush(Color.FromArgb(grigioOpacita * 255 / 100, GrigioRgb, GrigioRgb, Math.Min(255, GrigioRgb + 6)))) g.FillRegion(velo, fuori);
+                        if (grigioVelo)
+                            using (Brush velo = new SolidBrush(Color.FromArgb(grigioOpacita * 255 / 100, GrigioRgb, GrigioRgb, Math.Min(255, GrigioRgb + 6)))) g.FillRegion(velo, fuori);
                         g.Clip = vecchia;
                     }
                 }
-                // fuori dall'orizzonte la mappa resta visibile ma un po' più scura
+                // fuori dall'orizzonte la mappa resta visibile ma un po' più scura (solo con il velo grigio)
+                if (grigioVelo)
                 using (GraphicsPath esterno = new GraphicsPath())
                 {
                     esterno.AddRectangle(new RectangleF(0, 0, W, H));
@@ -30600,6 +30885,18 @@ namespace LunaCalc
         DateTime? trkScelto;                 // null = in diretta
         DateTimePicker dtpTrkGiorno;
         Pillola btnTrkAdesso, btnTrkCall3;
+        Pillola btnTrkGraves;
+        // il radar GRAVES (Broye-Aubigney-Montseugny, 47,35° N 5,52° E) come stazione DX: nominativo, locator e confronto attivo
+        void ImpostaGraves()
+        {
+            if (txtDxCall != null) txtDxCall.Text = "GRAVES";
+            if (txtTrkDxCall != null && txtTrkDxCall.Text != "GRAVES") txtTrkDxCall.Text = "GRAVES";
+            if (dx != null) dx.Loc.Text = "JN27SI";
+            if (txtTrkDx != null && txtTrkDx.Text != "JN27SI") txtTrkDx.Text = "JN27SI";
+            if (chkDx != null && !chkDx.Checked) chkDx.Checked = true;
+            trkWinCalc = DateTime.MinValue;
+            AggiornaTracciamento(true);
+        }
         TextBox txtTrkDxCall, txtDxCall;          // nominativo del DX (schermata principale e Posizione della Luna)
         bool syncCall;
         string dxCallPrec = "";                   // nominativo precedente: se il locator era il suo, si sostituisce
@@ -30749,6 +31046,20 @@ namespace LunaCalc
                 btnTrkCall3.Visible = S(12) + wt + S(6) + sb.Width + S(11) <= cardDx.Width;
             };
             btnTrkCall3.Click += (s, e) => FinestraCall3();
+            // pulsante GRAVES: il radar francese (143,050 MHz, JN27SI) diventa la stazione DX
+            btnTrkGraves = new Pillola("GRAVES", StilePillola.Pieno, Color.FromArgb(124, 58, 237), new Font(Lang.FontUi, 7.5F * fontFactor, FontStyle.Bold));
+            tip.SetToolTip(btnTrkGraves, Lang.T("Radar GRAVES come stazione DX") + "\u0001" + Lang.T("Mette come DX il radar francese GRAVES (143,050 MHz, locator JN27SI): le finestre comuni con GRAVES sono i momenti in cui puoi ricevere la sua eco dalla Luna e verificare ricevitore e puntamento. Vedi il manuale TEORIA E CONSIGLI SULL'EME, § 1.11."));
+            cardDx.Controls.Add(btnTrkGraves);
+            cardDx.Layout += (s, e) =>
+            {
+                Size sb = btnTrkCall3.GetPreferredSize(Size.Empty), sg = btnTrkGraves.GetPreferredSize(Size.Empty);
+                int wt;
+                using (Font ft = FontPx(Lang.FontUi, S(12), false))
+                    wt = TextRenderer.MeasureText(Lang.T("Stazione DX — nominativo e locator WWL").ToUpper(Lang.Cultura), ft).Width;
+                btnTrkGraves.Location = new Point(cardDx.Width - S(11) - sb.Width - S(6) - sg.Width, S(4));
+                btnTrkGraves.Visible = S(12) + wt + S(6) + sg.Width + S(6) + sb.Width + S(11) <= cardDx.Width;
+            };
+            btnTrkGraves.Click += (s, e) => ImpostaGraves();
             AgganciaCall3(txtTrkDx);
             AgganciaNominativo(txtTrkDxCall);
             cardMe.Paint += (s, e) => DisegnaScheda(e.Graphics, cardMe, Lang.T("QTH - Locator WWL mio"), null, Color.Empty, subMe, subMeCol, badgeMe, txtTrkLoc, ColBlu, S(2));
@@ -32271,6 +32582,7 @@ namespace LunaCalc
             AggiungiParametro(Lang.T("Potenza in uscita (W)"), bMe.P, bDx.P);
             AggiungiParametro(Lang.T("Cavo PA – relè: lunghezza (m)"), bMe.LenPa, bDx.LenPa);
             AggiungiParametro(Lang.T("Relè coassiale: perdita (dB)"), bMe.Rele, bDx.Rele);
+            AggiungiParametro(Lang.T("Connettori stimati"), bMe.Conn, bDx.Conn);
             AggiungiParametro(Lang.T("Cavo antenna – relè: lunghezza (m)"), bMe.LenAnt, bDx.LenAnt);
             AggiungiParametro(Lang.T("Guadagno singola antenna (dBi)"), bMe.GAnt, bDx.GAnt);
             AggiungiParametro(Lang.T("Numero di antenne"), bMe.NAnt, bDx.NAnt);
@@ -33621,10 +33933,10 @@ namespace LunaCalc
                 string[][] gruppi = {
                     new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Volta celeste") },
                     new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
-                    new string[] { Lang.T("Collegamento"), Lang.T("Budget EME"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("DEBUG FORMULE") },
+                    new string[] { Lang.T("Collegamento"), Lang.T("Budget EME"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
                     new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
                     new string[] { Lang.T("Aiuto e tools"), Lang.T("MANUALE D'USO"), Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("CAVI COASSIALI") },
-                    new string[] { "Credits and thanks", "ABOUT & CREDITS", Lang.T("CONTATTI DELL'AUTORE E RINGRAZIAMENTI"), Lang.T("LICENZA D'USO") } };
+                    new string[] { "Credits and thanks", Lang.T("INFORMAZIONI E CREDITI"), Lang.T("CONTATTI DELL'AUTORE E RINGRAZIAMENTI"), Lang.T("LICENZA D'USO") } };
                 foreach (string[] gr in gruppi)
                 {
                     Sotto(gr[0]);
@@ -35129,7 +35441,7 @@ namespace LunaCalc
                 // quattro schede dei principi
                 string[][] pr = {
                     new string[] { "✦", Lang.T("Utile e gratuito"), Lang.T("Il programma è gratuito e lo puoi usare senza limiti per la tua attività radioamatoriale, per studio e per insegnamento. Serve a far nascere QSO, non a vendere qualcosa.") },
-                    new string[] { "◎", Lang.T("Trasparente"), Lang.T("Il sorgente è sempre consegnato insieme al programma; ogni formula è visibile nella linguetta DEBUG FORMULE e ogni dato riporta la sua fonte. Niente scatole nere.") },
+                    new string[] { "◎", Lang.T("Trasparente"), Lang.T("Il sorgente è sempre consegnato insieme al programma; ogni formula è visibile nella linguetta Controllo dei calcoli e ogni dato riporta la sua fonte. Niente scatole nere.") },
                     new string[] { "≈", Lang.T("Onesto"), Lang.T("I valori misurati, quelli ricavati e quelli stimati sono distinti; ciò che non è verificato viene dichiarato come tale. Un risultato incerto è indicato come incerto, non presentato come certo.") },
                     new string[] { "✓", Lang.T("Rispettoso"), Lang.T("Rispetta il lavoro di chi ha misurato, scritto e pubblicato prima di noi, la privacy di chi lo usa (nessun dato raccolto, niente pubblicità) e le regole del servizio di radioamatore.") } };
                 Color[] cpr = { Color.FromArgb(31, 111, 209), Color.FromArgb(23, 128, 61), Color.FromArgb(180, 83, 9), Color.FromArgb(91, 63, 168) };
@@ -35243,14 +35555,14 @@ namespace LunaCalc
                 new string[] { Lang.T("Budget EME"), Lang.T("Bilancio del collegamento per ogni banda scelta (da 50 a 432 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP mia e del DX, perdita di tratta, S/N io → DX e DX → io nella banda passante scelta e con il Sole, riportato anche a 2500 Hz) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.") },
                 new string[] { Lang.T("Rumore solare"), Lang.T("Scarica dal web i flussi solari misurati dalla rete RSTN e stima quanto il Sole aumenta il rumore del ricevitore, in base alla distanza angolare tra Sole e Luna e al diagramma dell'antenna. Utile vicino alla luna nuova.") + " " + Lang.T("In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.") },
                 new string[] { Lang.T("Mappa WWL e ADIF"), Lang.T("Mappa del mondo con il reticolo Maidenhead; caricando il file ADIF del log si colorano i quadrati lavorati (arancione), confermati via LoTW (verde) o solo con QSL (blu), anche per banda e solo EME.") + " " + Lang.T("Con \"Scarica da LoTW…\" il log viene scaricato direttamente da LoTW (nome utente e password vengono chiesti e memorizzati nelle impostazioni).") },
-                new string[] { "ABOUT & CREDITS", Lang.T("Crediti con i link e storia delle versioni.") },
+                new string[] { Lang.T("INFORMAZIONI E CREDITI"), Lang.T("Crediti con i link e storia delle versioni.") },
                 new string[] { Lang.T("CAVI COASSIALI"), Lang.T("Il database dei cavi coassiali a 50 Ω con l'attenuazione a 50, 70, 144, 222 e 432 MHz e le fonti di ogni valore; si ordina per diametro, perdita, nome, costruttore o tipo (anche cliccando l'intestazione delle colonne), si filtra per tipo e diametro e si cerca per nome. A destra il calcolo della perdita di una tratta e il grafico dei cavi spuntati; il pulsante \"usa nel Budget EME\" porta il cavo nel Budget. Si possono aggiungere cavi personalizzati.") },
                 new string[] { Lang.T("CONTATTI DELL'AUTORE E RINGRAZIAMENTI"), Lang.T("I recapiti dell'autore (e-mail, profilo QRZ.com) e i ringraziamenti a chi ha contribuito al programma.") },
                 new string[] { Lang.T("LICENZA D'USO"), Lang.T("Il testo della licenza con cui il programma è distribuito.") },
                 new string[] { Lang.T("MANUALE D'USO"), Lang.T("Questo manuale, dentro il programma e in tutte le lingue: indice cliccabile, ricerca, formule e fonti.") },
                 new string[] { Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("Come funziona l'EME e come lavorarlo al meglio: rumore del cielo e Dgrd, Sole, polarizzazione, budget del collegamento, Doppler, procedure operative e fonti; indice cliccabile, ricerca e formule, come il manuale.") },
                 new string[] { Lang.T("Export in Excel dei calcoli"), Lang.T("Lo stesso Budget EME in forma di foglio Excel: le caselle verdi si modificano e i risultati si aggiornano subito.") },
-                new string[] { Lang.T("DEBUG FORMULE"), Lang.T("Tutti i parametri e le formule del Budget EME e del Rumore solare, per entrambe le direzioni (tu → DX e DX → tu), con i valori sostituiti e il risultato di ogni passaggio: lunghezza d'onda, sezione radar della Luna, perdita di tratta, EIRP, segnale lungo la catena di ricezione, MDS e margine, figura di rumore con Friis, temperature, rumore e S/N, e per il Sole flusso, fascio, attenuazione del diagramma, area efficace e aumento del rumore. Si attiva con la casella \"CALCOLI APPROFONDITI\"; il pulsante in basso copia tutto negli appunti.") + " " + Lang.T("È impaginato come un documento di Word, con le formule in stile Equation Editor: si può copiare negli appunti o salvare in Word (.docx).") }
+                new string[] { Lang.T("Controllo dei calcoli"), Lang.T("Tutti i parametri e le formule del Budget EME e del Rumore solare, per entrambe le direzioni (tu → DX e DX → tu), con i valori sostituiti e il risultato di ogni passaggio: lunghezza d'onda, sezione radar della Luna, perdita di tratta, EIRP, segnale lungo la catena di ricezione, MDS e margine, figura di rumore con Friis, temperature, rumore e S/N, e per il Sole flusso, fascio, attenuazione del diagramma, area efficace e aumento del rumore. Si attiva con la casella \"CALCOLI APPROFONDITI\"; il pulsante in basso copia tutto negli appunti.") + " " + Lang.T("È impaginato come un documento di Word, con le formule in stile Equation Editor: si può copiare negli appunti o salvare in Word (.docx).") }
             };
         }
 
@@ -35270,7 +35582,7 @@ namespace LunaCalc
             w(Lang.T("5. Premi \"Calcola tabella\": le righe verdi sono quelle utili, il riquadro in basso elenca le finestre."), 10F, false);
             w("", 5F, false);
             w(Lang.T("COME SI SCELGONO LE LINGUETTE"), 11F, true);
-            w(Lang.T("Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna, Luna sul mondo), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, DEBUG FORMULE), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (ABOUT & CREDITS, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\"."), 10F, false);
+            w(Lang.T("Le linguette sono raccolte in sei gruppi nella barra in alto: In diretta (Posizione live e +- 24h, Ricognizione dei miei ostacoli, Volta celeste), Pianificazione (Distanza e Dgrd, Posizione della Luna, Luna sul mondo), Collegamento (Budget EME, Rumore solare, Export in Excel dei calcoli, Controllo dei calcoli), Log (Mappa WWL e ADIF), Aiuto e tools (MANUALE D'USO, TEORIA E CONSIGLI SULL'EME, CAVI COASSIALI), Credits and thanks (INFORMAZIONI E CREDITI, CONTATTI DELL'AUTORE E RINGRAZIAMENTI, LICENZA D'USO). Clicca un gruppo nella prima riga e poi la linguetta nella seconda; ogni gruppo ricorda l'ultima linguetta aperta. Le linguette in grigio si attivano con la casella \"CALCOLI APPROFONDITI\"."), 10F, false);
             w(Lang.T("Schema di colori (impostazioni generali): Chiaro, Notte (toni di blu) o Nero (sfondo nero, adatto all'uso al buio e agli schermi OLED).") + " " + Lang.T("Ci sono anche otto schemi pastello chiari: azzurro, arancione, acquamarina, verde, rosa, lilla, indaco e marrone."), 10F, false);
             w("", 5F, false);
             if (conLinguette) w(Lang.T("LE LINGUETTE"), 11F, true);
@@ -36199,31 +36511,50 @@ namespace LunaCalc
             try { f.Icon = this.Icon; } catch { }
             contenuto.BackColor = f.BackColor;
             Panel linea = new Panel(); linea.Height = 1; linea.BackColor = Tema.Scuro ? Tema.Linea : Color.FromArgb(222, 226, 232);
-            FlowLayoutPanel bt = new FlowLayoutPanel();
-            bt.FlowDirection = FlowDirection.RightToLeft;
-            bt.WrapContents = false;
-            bt.AutoSize = true; bt.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            // barra dei pulsanti disposta a mano: con le dimensioni automatiche i pulsanti potevano
+            // sovrapporsi o uscire dal fondo della finestra (schermi con ingrandimento al 125-150%)
+            Panel bt = new Panel();
             bt.BackColor = Tema.Scuro ? Tema.Section : Color.FromArgb(240, 240, 240);
-            bt.Padding = new Padding(S(12), S(10), S(12), S(10));
-            for (int i = pulsanti.Length - 1; i >= 0; i--)
+            foreach (Button b in pulsanti)
             {
-                Button b = pulsanti[i];
                 if (b.Parent != null) b.Parent.Controls.Remove(b);
-                b.AutoSize = true; b.MinimumSize = new Size(S(96), S(32));
-                b.Margin = new Padding(S(6), 0, 0, 0);
-                b.BackColor = Tema.Scuro ? Tema.Button : Color.FromArgb(252, 252, 252);
+                b.AutoSize = false;
+                b.BackColor = bt.BackColor;
                 b.ForeColor = Tema.Fore;
                 b.UseVisualStyleBackColor = false;
                 bt.Controls.Add(b);
             }
             f.Controls.Add(contenuto); f.Controls.Add(linea); f.Controls.Add(bt);
-            Size sc = contenuto.GetPreferredSize(Size.Empty), sb = bt.GetPreferredSize(Size.Empty);
-            int w = Math.Max(Math.Max(sc.Width, sb.Width), S(380));
-            contenuto.Location = new Point(0, 0);
-            bt.AutoSize = false;
-            linea.SetBounds(0, sc.Height, w, 1);
-            bt.SetBounds(0, sc.Height + 1, w, sb.Height);
-            f.ClientSize = new Size(w, sc.Height + 1 + sb.Height);
+            Action disponi = () =>
+            {
+                int pad = S(14), gap = S(14);
+                int hb = S(34), wtot = 0;
+                int[] wb = new int[pulsanti.Length];
+                for (int i = 0; i < pulsanti.Length; i++)
+                {
+                    Size ps = pulsanti[i].GetPreferredSize(Size.Empty);
+                    wb[i] = Math.Max(S(100), ps.Width + S(8));
+                    hb = Math.Max(hb, ps.Height + S(4));
+                    wtot += wb[i] + (i > 0 ? gap : 0);
+                }
+                Size sc = contenuto.GetPreferredSize(Size.Empty);
+                int w = Math.Max(Math.Max(sc.Width, wtot + 2 * pad), S(380));
+                int hbar = hb + 2 * S(12);
+                contenuto.Location = new Point(0, 0);
+                linea.SetBounds(0, sc.Height, w, 1);
+                bt.SetBounds(0, sc.Height + 1, w, hbar);
+                // in ordine da destra: l'ultimo pulsante (Annulla) sta a destra, come prima
+                int x = w - pad;
+                for (int i = pulsanti.Length - 1; i >= 0; i--)
+                {
+                    x -= wb[i];
+                    pulsanti[i].SetBounds(x, (hbar - hb) / 2, wb[i], hb);
+                    x -= gap;
+                }
+                f.ClientSize = new Size(w, sc.Height + 1 + hbar);
+            };
+            disponi();
+            f.Load += (s, e) => disponi();   // di nuovo con i caratteri e la scala definitivi
         }
 
         DialogResult FinestraStile(IWin32Window owner, string titolo, string domanda, string nota, Icon icona, bool siNo)
@@ -36487,6 +36818,11 @@ namespace LunaCalc
             txtDxCall.Width = S(128);
             tip.SetToolTip(txtDxCall, Lang.T("Nominativo del DX") + "\u0001" + Lang.T("Se il nominativo è nel CALL3.TXT il locator si riempie da solo. Se il locator l'hai scritto tu e il CALL3.TXT ne indica un altro, premi Invio sul nominativo per usare quello del CALL3.TXT."));
             g2.Controls.Add(L(Lang.T("Nominativo")), 0, 0); g2.Controls.Add(txtDxCall, 1, 0);
+            Pillola btnGraves = new Pillola("GRAVES", StilePillola.Pieno, Color.FromArgb(124, 58, 237), new Font(Lang.FontUi, 8F * fontFactor, FontStyle.Bold));
+            btnGraves.Margin = new Padding(S(6), S(1), S(3), S(1));
+            tip.SetToolTip(btnGraves, Lang.T("Radar GRAVES come stazione DX") + "\u0001" + Lang.T("Mette come DX il radar francese GRAVES (143,050 MHz, locator JN27SI): le finestre comuni con GRAVES sono i momenti in cui puoi ricevere la sua eco dalla Luna e verificare ricevitore e puntamento. Vedi il manuale TEORIA E CONSIGLI SULL'EME, § 1.11."));
+            btnGraves.Click += (s, e) => ImpostaGraves();
+            g2.Controls.Add(btnGraves, 2, 0);
             AgganciaNominativo(txtDxCall);
             gbDx = SchedaCampi(Lang.T("Seconda stazione (DX)"), Color.FromArgb(217, 119, 6), g2, chkDx);
             top.Controls.Add(gbDx, 1, 0);
@@ -36650,7 +36986,7 @@ namespace LunaCalc
             tpMondo = new TabPage(Lang.T("Luna sul mondo"));
             tpMap = new TabPage(Lang.T("Mappa WWL e ADIF"));
             BuildMapTab(tpMap);
-            tpAbout = new TabPage("ABOUT & CREDITS");
+            tpAbout = new TabPage(Lang.T("INFORMAZIONI E CREDITI"));
             BuildAboutTab(tpAbout);
             tpCavi = new TabPage(Lang.T("CAVI COASSIALI"));
             BuildCaviTab(tpCavi);
@@ -36662,7 +36998,7 @@ namespace LunaCalc
             tpEme = new TabPage(Lang.T("TEORIA E CONSIGLI SULL'EME"));
             tpExcel = new TabPage(Lang.T("Export in Excel dei calcoli"));
             BuildExcelTab(tpExcel);
-            tpDebug = new TabPage(Lang.T("DEBUG FORMULE"));
+            tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
             foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
@@ -36681,7 +37017,7 @@ namespace LunaCalc
                 else if (e.TabPage == tpDebug && !complessi)
                 {
                     e.Cancel = true;
-                    Messaggio(this, Lang.T("La linguetta DEBUG FORMULE si attiva con la casella \"CALCOLI APPROFONDITI\" nella linguetta Posizione live e +- 24h."),
+                    Messaggio(this, Lang.T("La linguetta Controllo dei calcoli si attiva con la casella \"CALCOLI APPROFONDITI\" nella linguetta Posizione live e +- 24h."),
                         "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (e.TabPage == tpExcel && !complessi)
@@ -37624,6 +37960,8 @@ namespace LunaCalc
                 if (chkDgVerde != null) lines.Add("dg_verde=" + (chkDgVerde.Checked ? "1" : "0"));
                 if (chkPuntSfuma != null) lines.Add("punt_sfuma=" + (chkPuntSfuma.Checked ? "1" : "0"));
                 lines.Add("grigio_opacita=" + grigioOpacita.ToString(inv));
+                lines.Add("grigio_velo=" + (grigioVelo ? "1" : "0"));
+                lines.Add("budget_schema=" + budgetSchemaLarg.ToString(inv));
                 List<string> cs_ = new List<string>();
                 for (int i = ColFisse; i < colScelte.Length; i++) if (colScelte[i]) cs_.Add(i.ToString(inv));
                 lines.Add("colonne=" + (cs_.Count == 0 ? "-" : string.Join(",", cs_.ToArray())));
@@ -37791,6 +38129,8 @@ namespace LunaCalc
                                 break;
                             }
                         case "grigio_opacita": { int gv; if (int.TryParse(v, NumberStyles.Integer, inv, out gv)) ImpostaGrigi(gv, grigioTono); break; }
+                        case "budget_schema": { int bw2; if (int.TryParse(v, NumberStyles.Integer, inv, out bw2)) { budgetSchemaLarg = Math.Max(300, Math.Min(1500, bw2)); if (budgetRoot != null) budgetRoot.ColumnStyles[2].Width = S(budgetSchemaLarg); } break; }
+                        case "grigio_velo": grigioVelo = v != "0"; if (chkVelo != null) chkVelo.Checked = grigioVelo; break;
                         case "grigio_tono": { int gv; if (int.TryParse(v, NumberStyles.Integer, inv, out gv)) ImpostaGrigi(grigioOpacita, gv); break; }
                         case "punt_mappa":
                             {
@@ -38527,8 +38867,8 @@ namespace LunaCalc
                 "Per ogni giorno della linguetta Distanza e Dgrd si calcola la distanza angolare minima tra Sole e Luna nelle ore utili con la Luna sopra l'orizzonte e la si confronta con la larghezza del fascio di ricezione stimata dal guadagno, θ ≈ √(41253/G): entro 3 larghezze del fascio il giorno è segnato in rosso, entro 6 in arancione. L'aumento del rumore vero e proprio è stimato nella linguetta Rumore solare.",
                 "## Assorbimento polare e aurorale",
                 "La latitudine geomagnetica di ogni stazione è calcolata con il dipolo centrato dell'IGRF-14 (polo nord geomagnetico 2025 a 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Una stazione oltre i circoli polari (|φ| ≥ 66,56°) o con |φm| > 75° è nella calotta polare (possibile PCA); con 60° ≤ |φm| ≤ 75° è nella zona aurorale. L'avviso compare quando si cambia un locator e resta nella schermata principale.",
-                "## Linguette, Ricognizione dei miei ostacoli e DEBUG FORMULE",
-                "Le linguette sono raccolte su due livelli (gruppi e linguette del gruppo), disegnati dal programma sopra le pagine. La Ricognizione dei miei ostacoli proietta il cielo locale sulla mappa (orizzonte = cerchio esterno, zenit = centro, raggio proporzionale a 90° - elevazione) e può sfocare le zone fuori dai limiti; nella Volta celeste le stesse zone sono coperte da righe diagonali grigio chiaro. La linguetta DEBUG FORMULE ripete passo per passo tutto il calcolo del Budget EME e del Rumore solare, con le formule, i valori sostituiti e i risultati."
+                "## Linguette, Ricognizione dei miei ostacoli e Controllo dei calcoli",
+                "Le linguette sono raccolte su due livelli (gruppi e linguette del gruppo), disegnati dal programma sopra le pagine. La Ricognizione dei miei ostacoli proietta il cielo locale sulla mappa (orizzonte = cerchio esterno, zenit = centro, raggio proporzionale a 90° - elevazione) e può sfocare le zone fuori dai limiti; nella Volta celeste le stesse zone sono coperte da righe diagonali grigio chiaro. La linguetta Controllo dei calcoli ripete passo per passo tutto il calcolo del Budget EME e del Rumore solare, con le formule, i valori sostituiti e i risultati."
             };
             elenchi["it"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2ª edizione: Luna, Sole, nutazione, parallasse, tempo siderale.",
@@ -38600,8 +38940,8 @@ namespace LunaCalc
                 "For each day of the Distance and Dgrd tab, the minimum angular separation between Sun and Moon is computed over the useful hours with the Moon above the horizon and compared with the receiving beamwidth estimated from the gain, θ ≈ √(41253/G): within 3 beamwidths the day is marked in red, within 6 in orange. The noise increase itself is estimated in the Solar noise tab.",
                 "## Polar and auroral absorption",
                 "The geomagnetic latitude of each station is computed with the centred dipole of IGRF-14 (2025 north geomagnetic pole at 80.8° N, 72.8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). A station beyond the polar circles (|φ| ≥ 66.56°) or with |φm| > 75° is in the polar cap (possible PCA); with 60° ≤ |φm| ≤ 75° it is in the auroral zone. The warning appears when a locator is changed and stays on the main screen.",
-                "## Tabs, Reconnaissance of my obstacles and FORMULA DEBUG",
-                "The tabs are grouped on two levels (groups and tabs of the group), drawn by the program above the pages. The Reconnaissance of my obstacles projects the local sky onto the map (horizon = outer circle, zenith = centre, radius proportional to 90° - elevation) and can blur the zones outside the limits; in the Sky view the same zones are covered with light grey diagonal lines. The FORMULA DEBUG tab repeats the whole Budget EME and Solar noise calculation step by step, with the formulas, the substituted values and the results."
+                "## Tabs, Reconnaissance of my obstacles and Calculation check",
+                "The tabs are grouped on two levels (groups and tabs of the group), drawn by the program above the pages. The Reconnaissance of my obstacles projects the local sky onto the map (horizon = outer circle, zenith = centre, radius proportional to 90° - elevation) and can blur the zones outside the limits; in the Sky view the same zones are covered with light grey diagonal lines. The Calculation check tab repeats the whole Budget EME and Solar noise calculation step by step, with the formulas, the substituted values and the results."
             };
             elenchi["en"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2nd edition: Moon, Sun, nutation, parallax, sidereal time.",
@@ -38673,8 +39013,8 @@ namespace LunaCalc
                 "Für jeden Tag der Registerkarte Entfernung und Dgrd wird der kleinste Winkelabstand zwischen Sonne und Mond in den nutzbaren Stunden mit dem Mond über dem Horizont berechnet und mit der aus dem Gewinn geschätzten Empfangskeulenbreite θ ≈ √(41253/G) verglichen: innerhalb von 3 Keulenbreiten wird der Tag rot markiert, innerhalb von 6 orange. Die eigentliche Rauschzunahme wird in der Registerkarte Sonnenrauschen geschätzt.",
                 "## Polar- und Polarlichtabsorption",
                 "Die geomagnetische Breite jeder Station wird mit dem zentrierten Dipol von IGRF-14 berechnet (geomagnetischer Nordpol 2025 bei 80,8° N, 72,8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Eine Station jenseits der Polarkreise (|φ| ≥ 66,56°) oder mit |φm| > 75° liegt in der Polkappe (mögliche PCA); mit 60° ≤ |φm| ≤ 75° liegt sie in der Polarlichtzone. Die Warnung erscheint beim Ändern eines Locators und bleibt im Hauptbildschirm stehen.",
-                "## Registerkarten, Erkundung meiner Hindernisse und FORMEL-DEBUG",
-                "Die Registerkarten sind auf zwei Ebenen gruppiert (Gruppen und Registerkarten der Gruppe), vom Programm über den Seiten gezeichnet. Die Erkundung meiner Hindernisse projiziert den lokalen Himmel auf die Karte (Horizont = äußerer Kreis, Zenit = Mitte, Radius proportional zu 90° - Elevation) und kann die Zonen außerhalb der Grenzen weichzeichnen; in der Himmelsansicht sind dieselben Zonen mit hellgrauen Diagonalstreifen bedeckt. Die Registerkarte FORMEL-DEBUG wiederholt Schritt für Schritt die ganze Berechnung von EME-Budget und Sonnenrauschen, mit den Formeln, den eingesetzten Werten und den Ergebnissen."
+                "## Registerkarten, Erkundung meiner Hindernisse und Rechenkontrolle",
+                "Die Registerkarten sind auf zwei Ebenen gruppiert (Gruppen und Registerkarten der Gruppe), vom Programm über den Seiten gezeichnet. Die Erkundung meiner Hindernisse projiziert den lokalen Himmel auf die Karte (Horizont = äußerer Kreis, Zenit = Mitte, Radius proportional zu 90° - Elevation) und kann die Zonen außerhalb der Grenzen weichzeichnen; in der Himmelsansicht sind dieselben Zonen mit hellgrauen Diagonalstreifen bedeckt. Die Registerkarte Rechenkontrolle wiederholt Schritt für Schritt die ganze Berechnung von EME-Budget und Sonnenrauschen, mit den Formeln, den eingesetzten Werten und den Ergebnissen."
             };
             elenchi["de"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2. Auflage: Mond, Sonne, Nutation, Parallaxe, Sternzeit.",
@@ -38746,8 +39086,8 @@ namespace LunaCalc
                 "Pour chaque jour de l'onglet Distance et Dgrd, la distance angulaire minimale entre le Soleil et la Lune est calculée sur les heures utiles avec la Lune au-dessus de l'horizon et comparée à la largeur du faisceau de réception estimée à partir du gain, θ ≈ √(41253/G) : à moins de 3 largeurs de faisceau le jour est marqué en rouge, à moins de 6 en orange. L'augmentation du bruit elle-même est estimée dans l'onglet Bruit solaire.",
                 "## Absorption polaire et aurorale",
                 "La latitude géomagnétique de chaque station est calculée avec le dipôle centré de l'IGRF-14 (pôle nord géomagnétique 2025 à 80,8° N, 72,8° O) : sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Une station au-delà des cercles polaires (|φ| ≥ 66,56°) ou avec |φm| > 75° est dans la calotte polaire (PCA possible) ; avec 60° ≤ |φm| ≤ 75° elle est dans la zone aurorale. L'avertissement apparaît quand on change un locator et reste sur l'écran principal.",
-                "## Onglets, Reconnaissance de mes obstacles et DÉBOGAGE DES FORMULES",
-                "Les onglets sont regroupés sur deux niveaux (groupes et onglets du groupe), dessinés par le programme au-dessus des pages. La Reconnaissance de mes obstacles projette le ciel local sur la carte (horizon = cercle extérieur, zénith = centre, rayon proportionnel à 90° - élévation) et peut estomper les zones hors limites ; dans la Voûte céleste, les mêmes zones sont couvertes de hachures diagonales gris clair. L'onglet DÉBOGAGE DES FORMULES refait pas à pas tout le calcul du Bilan EME et du Bruit solaire, avec les formules, les valeurs substituées et les résultats."
+                "## Onglets, Reconnaissance de mes obstacles et Contrôle des calculs",
+                "Les onglets sont regroupés sur deux niveaux (groupes et onglets du groupe), dessinés par le programme au-dessus des pages. La Reconnaissance de mes obstacles projette le ciel local sur la carte (horizon = cercle extérieur, zénith = centre, rayon proportionnel à 90° - élévation) et peut estomper les zones hors limites ; dans la Voûte céleste, les mêmes zones sont couvertes de hachures diagonales gris clair. L'onglet Contrôle des calculs refait pas à pas tout le calcul du Bilan EME et du Bruit solaire, avec les formules, les valeurs substituées et les résultats."
             };
             elenchi["fr"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2e édition : Lune, Soleil, nutation, parallaxe, temps sidéral.",
@@ -38819,8 +39159,8 @@ namespace LunaCalc
                 "Para cada día de la pestaña Distancia y Dgrd se calcula la distancia angular mínima entre el Sol y la Luna en las horas útiles con la Luna sobre el horizonte y se compara con la anchura del haz de recepción estimada a partir de la ganancia, θ ≈ √(41253/G): dentro de 3 anchuras de haz el día se marca en rojo, dentro de 6 en naranja. El aumento del ruido en sí se estima en la pestaña Ruido solar.",
                 "## Absorción polar y auroral",
                 "La latitud geomagnética de cada estación se calcula con el dipolo centrado del IGRF-14 (polo norte geomagnético 2025 en 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Una estación más allá de los círculos polares (|φ| ≥ 66,56°) o con |φm| > 75° está en el casquete polar (posible PCA); con 60° ≤ |φm| ≤ 75° está en la zona auroral. El aviso aparece al cambiar un locator y queda en la pantalla principal.",
-                "## Pestañas, Reconocimiento de mis obstáculos y DEPURACIÓN DE FÓRMULAS",
-                "Las pestañas se agrupan en dos niveles (grupos y pestañas del grupo), dibujados por el programa encima de las páginas. El Reconocimiento de mis obstáculos proyecta el cielo local sobre el mapa (horizonte = círculo exterior, cenit = centro, radio proporcional a 90° - elevación) y puede difuminar las zonas fuera de los límites; en la Bóveda celeste las mismas zonas se cubren con rayas diagonales gris claro. La pestaña DEPURACIÓN DE FÓRMULAS repite paso a paso todo el cálculo del Balance EME y del Ruido solar, con las fórmulas, los valores sustituidos y los resultados."
+                "## Pestañas, Reconocimiento de mis obstáculos y Control de los cálculos",
+                "Las pestañas se agrupan en dos niveles (grupos y pestañas del grupo), dibujados por el programa encima de las páginas. El Reconocimiento de mis obstáculos proyecta el cielo local sobre el mapa (horizonte = círculo exterior, cenit = centro, radio proporcional a 90° - elevación) y puede difuminar las zonas fuera de los límites; en la Bóveda celeste las mismas zonas se cubren con rayas diagonales gris claro. La pestaña Control de los cálculos repite paso a paso todo el cálculo del Balance EME y del Ruido solar, con las fórmulas, los valores sustituidos y los resultados."
             };
             elenchi["es"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2.ª edición: Luna, Sol, nutación, paralaje, tiempo sidéreo.",
@@ -38892,8 +39232,8 @@ namespace LunaCalc
                 "Para cada dia do separador Distância e Dgrd calcula-se a distância angular mínima entre o Sol e a Lua nas horas úteis com a Lua acima do horizonte e compara-se com a largura do feixe de receção estimada a partir do ganho, θ ≈ √(41253/G): dentro de 3 larguras de feixe o dia é marcado a vermelho, dentro de 6 a laranja. O aumento do ruído propriamente dito é estimado no separador Ruído solar.",
                 "## Absorção polar e auroral",
                 "A latitude geomagnética de cada estação é calculada com o dipolo centrado do IGRF-14 (polo norte geomagnético 2025 a 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Uma estação além dos círculos polares (|φ| ≥ 66,56°) ou com |φm| > 75° está na calote polar (possível PCA); com 60° ≤ |φm| ≤ 75° está na zona auroral. O aviso aparece quando se muda um locator e fica no ecrã principal.",
-                "## Separadores, Reconhecimento dos meus obstáculos e DEPURAÇÃO DE FÓRMULAS",
-                "Os separadores estão agrupados em dois níveis (grupos e separadores do grupo), desenhados pelo programa por cima das páginas. O Reconhecimento dos meus obstáculos projeta o céu local no mapa (horizonte = círculo exterior, zénite = centro, raio proporcional a 90° - elevação) e pode desfocar as zonas fora dos limites; na Abóbada celeste as mesmas zonas ficam cobertas por riscas diagonais cinzento-claras. O separador DEPURAÇÃO DE FÓRMULAS repete passo a passo todo o cálculo do Balanço EME e do Ruído solar, com as fórmulas, os valores substituídos e os resultados."
+                "## Separadores, Reconhecimento dos meus obstáculos e Verificação dos cálculos",
+                "Os separadores estão agrupados em dois níveis (grupos e separadores do grupo), desenhados pelo programa por cima das páginas. O Reconhecimento dos meus obstáculos projeta o céu local no mapa (horizonte = círculo exterior, zénite = centro, raio proporcional a 90° - elevação) e pode desfocar as zonas fora dos limites; na Abóbada celeste as mesmas zonas ficam cobertas por riscas diagonais cinzento-claras. O separador Verificação dos cálculos repete passo a passo todo o cálculo do Balanço EME e do Ruído solar, com as fórmulas, os valores substituídos e os resultados."
             };
             elenchi["pt"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2.ª edição: Lua, Sol, nutação, paralaxe, tempo sideral.",
@@ -38965,8 +39305,8 @@ namespace LunaCalc
                 "在距离与 Dgrd 选项卡中，对每一天在月球位于地平线以上的有用时段内计算太阳与月球的最小角距，并与由增益估算的接收波束宽度 θ ≈ √(41253/G) 比较：在 3 个波束宽度以内该日标为红色，6 个以内标为橙色。噪声的实际增加在太阳噪声选项卡中估算。",
                 "## 极盖吸收与极光吸收",
                 "每个台站的地磁纬度用 IGRF-14 中心偶极子计算（2025 年地磁北极位于 80.8° N、72.8° W）：sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)。位于极圈以外（|φ| ≥ 66.56°）或 |φm| > 75° 的台站处于极盖区（可能出现 PCA）；60° ≤ |φm| ≤ 75° 时处于极光带。更改网格定位时会出现警告，并保留在主界面上。",
-                "## 选项卡、我的障碍物勘察与 公式调试",
-                "选项卡分为两级（组以及组内选项卡），由程序绘制在页面上方。我的障碍物勘察将本地天空投影到地图上（地平线 = 外圆，天顶 = 圆心，半径与 90° - 仰角成正比），并可模糊超出限制的区域；在天穹中，相同区域以浅灰色斜线覆盖。公式调试 选项卡逐步重复 EME 链路预算和太阳噪声的全部计算，给出公式、代入的数值和结果。"
+                "## 选项卡、我的障碍物勘察与 计算核查",
+                "选项卡分为两级（组以及组内选项卡），由程序绘制在页面上方。我的障碍物勘察将本地天空投影到地图上（地平线 = 外圆，天顶 = 圆心，半径与 90° - 仰角成正比），并可模糊超出限制的区域；在天穹中，相同区域以浅灰色斜线覆盖。计算核查 选项卡逐步重复 EME 链路预算和太阳噪声的全部计算，给出公式、代入的数值和结果。"
             };
             elenchi["zh"]["C5"] = new string[] {
                 "• Jean Meeus，《Astronomical Algorithms》第 2 版：月球、太阳、章动、视差、恒星时。",
@@ -39038,8 +39378,8 @@ namespace LunaCalc
                 "距離と Dgrd タブでは、各日について月が地平線上にある有効時間内の太陽と月の最小離角を計算し、利得から推定した受信ビーム幅 θ ≈ √(41253/G) と比較します。ビーム幅の 3 倍以内なら赤、6 倍以内ならオレンジで表示します。実際の雑音の増加は太陽雑音タブで推定します。",
                 "## 極冠吸収とオーロラ吸収",
                 "各局の地磁気緯度は IGRF-14 の中心双極子（2025 年の地磁気北極は 80.8° N、72.8° W）で計算します：sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)。極圏の外側（|φ| ≥ 66.56°）または |φm| > 75° の局は極冠域（PCA の可能性）、60° ≤ |φm| ≤ 75° の局はオーロラ帯にあります。警告はロケーターを変更したときに表示され、メイン画面に残ります。",
-                "## タブ、自局障害物の偵察と 数式デバッグ",
-                "タブは 2 段（グループとグループ内のタブ）にまとめられ、プログラムがページの上に描きます。自局障害物の偵察は局所の空を地図上に投影し（地平線 = 外側の円、天頂 = 中心、半径は 90° - 仰角に比例）、制限外の領域をぼかすことができます。天球では同じ領域が薄い灰色の斜線で覆われます。数式デバッグ タブは、EME 回線計算と太陽雑音の計算全体を、式、代入した値、結果とともに順を追って示します。"
+                "## タブ、自局障害物の偵察と 計算のチェック",
+                "タブは 2 段（グループとグループ内のタブ）にまとめられ、プログラムがページの上に描きます。自局障害物の偵察は局所の空を地図上に投影し（地平線 = 外側の円、天頂 = 中心、半径は 90° - 仰角に比例）、制限外の領域をぼかすことができます。天球では同じ領域が薄い灰色の斜線で覆われます。計算のチェック タブは、EME 回線計算と太陽雑音の計算全体を、式、代入した値、結果とともに順を追って示します。"
             };
             elenchi["ja"]["C5"] = new string[] {
                 "• Jean Meeus、Astronomical Algorithms 第 2 版：月、太陽、章動、視差、恒星時。",
@@ -39111,8 +39451,8 @@ namespace LunaCalc
                 "दूरी और Dgrd टैब के हर दिन के लिए, क्षितिज के ऊपर चंद्रमा वाले उपयोगी घंटों में सूर्य और चंद्रमा के बीच न्यूनतम कोणीय दूरी गणना की जाती है और गेन से अनुमानित प्राप्ति बीम-चौड़ाई θ ≈ √(41253/G) से तुलना की जाती है: 3 बीम-चौड़ाइयों के भीतर दिन लाल रंग से, 6 के भीतर नारंगी से चिह्नित होता है। शोर में वास्तविक वृद्धि का अनुमान सौर शोर टैब में होता है।",
                 "## ध्रुवीय और ध्रुवीय-ज्योति अवशोषण",
                 "हर स्टेशन का भूचुंबकीय अक्षांश IGRF-14 के केंद्रित द्विध्रुव (2025 का भूचुंबकीय उत्तरी ध्रुव 80.8° N, 72.8° W) से गणना किया जाता है: sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)। ध्रुवीय वृत्तों के पार (|φ| ≥ 66.56°) या |φm| > 75° वाला स्टेशन ध्रुवीय टोपी में है (संभावित PCA); 60° ≤ |φm| ≤ 75° होने पर वह ध्रुवीय-ज्योति क्षेत्र में है। लोकेटर बदलने पर चेतावनी दिखती है और मुख्य स्क्रीन पर बनी रहती है।",
-                "## टैब, मेरी बाधाओं की टोह और सूत्र डिबग",
-                "टैब दो स्तरों (समूह और समूह के टैब) में व्यवस्थित हैं, जिन्हें प्रोग्राम पृष्ठों के ऊपर बनाता है। मेरी बाधाओं की टोह स्थानीय आकाश को मानचित्र पर प्रक्षेपित करता है (क्षितिज = बाहरी वृत्त, शिरोबिंदु = केंद्र, त्रिज्या 90° - उन्नयन के अनुपात में) और सीमाओं से बाहर के क्षेत्रों को धुंधला कर सकता है; आकाश दृश्य में वही क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके होते हैं। सूत्र डिबग टैब EME बजट और सौर शोर की पूरी गणना को चरण-दर-चरण, सूत्रों, रखे गए मानों और परिणामों के साथ दोहराता है।"
+                "## टैब, मेरी बाधाओं की टोह और गणना की जाँच",
+                "टैब दो स्तरों (समूह और समूह के टैब) में व्यवस्थित हैं, जिन्हें प्रोग्राम पृष्ठों के ऊपर बनाता है। मेरी बाधाओं की टोह स्थानीय आकाश को मानचित्र पर प्रक्षेपित करता है (क्षितिज = बाहरी वृत्त, शिरोबिंदु = केंद्र, त्रिज्या 90° - उन्नयन के अनुपात में) और सीमाओं से बाहर के क्षेत्रों को धुंधला कर सकता है; आकाश दृश्य में वही क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके होते हैं। गणना की जाँच टैब EME बजट और सौर शोर की पूरी गणना को चरण-दर-चरण, सूत्रों, रखे गए मानों और परिणामों के साथ दोहराता है।"
             };
             elenchi["hi"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, दूसरा संस्करण: चंद्रमा, सूर्य, न्यूटेशन, लंबन, नाक्षत्र समय।",
@@ -39184,8 +39524,8 @@ namespace LunaCalc
                 "거리와 Dgrd 탭에서는 날마다 달이 지평선 위에 있는 유효 시간 동안 태양과 달 사이의 최소 각거리를 계산하고, 이득에서 추정한 수신 빔폭 θ ≈ √(41253/G)와 비교합니다. 빔폭 3배 이내이면 빨강, 6배 이내이면 주황으로 표시합니다. 실제 잡음 증가는 태양 잡음 탭에서 추정합니다.",
                 "## 극관 흡수와 오로라 흡수",
                 "각 국의 지자기 위도는 IGRF-14 중심 쌍극자(2025년 지자기 북극 80.8° N, 72.8° W)로 계산합니다: sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). 극권 너머(|φ| ≥ 66.56°)이거나 |φm| > 75°인 국은 극관 지역(PCA 가능), 60° ≤ |φm| ≤ 75°이면 오로라대에 있습니다. 경고는 로케이터를 바꿀 때 나타나고 주 화면에 남습니다.",
-                "## 탭, 내 장애물 정찰와 수식 디버그",
-                "탭은 두 단계(그룹과 그룹 안의 탭)로 묶여 있으며 프로그램이 페이지 위에 그립니다. 내 장애물 정찰는 국소 하늘을 지도 위에 투영하고(지평선 = 바깥 원, 천정 = 중심, 반지름은 90° - 앙각에 비례) 제한 밖 영역을 흐리게 할 수 있습니다. 하늘 보기에서는 같은 영역이 연회색 대각선으로 덮입니다. 수식 디버그 탭은 EME 링크 버짓과 태양 잡음의 전체 계산을 공식, 대입한 값, 결과와 함께 단계별로 보여 줍니다."
+                "## 탭, 내 장애물 정찰와 계산 검증",
+                "탭은 두 단계(그룹과 그룹 안의 탭)로 묶여 있으며 프로그램이 페이지 위에 그립니다. 내 장애물 정찰는 국소 하늘을 지도 위에 투영하고(지평선 = 바깥 원, 천정 = 중심, 반지름은 90° - 앙각에 비례) 제한 밖 영역을 흐리게 할 수 있습니다. 하늘 보기에서는 같은 영역이 연회색 대각선으로 덮입니다. 계산 검증 탭은 EME 링크 버짓과 태양 잡음의 전체 계산을 공식, 대입한 값, 결과와 함께 단계별로 보여 줍니다."
             };
             elenchi["ko"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms 제2판: 달, 태양, 장동, 시차, 항성시.",
@@ -39257,8 +39597,8 @@ namespace LunaCalc
                 "Untuk setiap hari di tab Jarak dan Dgrd, jarak sudut minimum antara Matahari dan Bulan dihitung pada jam-jam berguna dengan Bulan di atas cakrawala dan dibandingkan dengan lebar berkas penerimaan yang diperkirakan dari gain, θ ≈ √(41253/G): dalam 3 lebar berkas hari itu ditandai merah, dalam 6 oranye. Kenaikan derau itu sendiri diperkirakan di tab Derau matahari.",
                 "## Penyerapan kutub dan aurora",
                 "Lintang geomagnetik setiap stasiun dihitung dengan dipol terpusat IGRF-14 (kutub utara geomagnetik 2025 di 80,8° LU, 72,8° BB): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Stasiun di luar lingkaran kutub (|φ| ≥ 66,56°) atau dengan |φm| > 75° berada di tudung kutub (kemungkinan PCA); dengan 60° ≤ |φm| ≤ 75° berada di zona aurora. Peringatan muncul ketika lokator diubah dan tetap tampil di layar utama.",
-                "## Tab, Pengintaian rintangan saya dan DEBUG RUMUS",
-                "Tab dikelompokkan dalam dua tingkat (kelompok dan tab dalam kelompok), digambar oleh program di atas halaman. Pengintaian rintangan saya memproyeksikan langit lokal ke peta (cakrawala = lingkaran luar, zenit = pusat, jari-jari sebanding dengan 90° - elevasi) dan dapat mengaburkan zona di luar batas; di Kubah langit zona yang sama ditutupi garis diagonal abu-abu muda. Tab DEBUG RUMUS mengulang langkah demi langkah seluruh perhitungan Anggaran EME dan Derau matahari, dengan rumus, nilai yang dimasukkan dan hasilnya."
+                "## Tab, Pengintaian rintangan saya dan Pemeriksaan perhitungan",
+                "Tab dikelompokkan dalam dua tingkat (kelompok dan tab dalam kelompok), digambar oleh program di atas halaman. Pengintaian rintangan saya memproyeksikan langit lokal ke peta (cakrawala = lingkaran luar, zenit = pusat, jari-jari sebanding dengan 90° - elevasi) dan dapat mengaburkan zona di luar batas; di Kubah langit zona yang sama ditutupi garis diagonal abu-abu muda. Tab Pemeriksaan perhitungan mengulang langkah demi langkah seluruh perhitungan Anggaran EME dan Derau matahari, dengan rumus, nilai yang dimasukkan dan hasilnya."
             };
             elenchi["id"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, edisi ke-2: Bulan, Matahari, nutasi, paralaks, waktu sideris.",
@@ -39330,8 +39670,8 @@ namespace LunaCalc
                 "Для каждого дня вкладки «Расстояние и Dgrd» вычисляется минимальное угловое расстояние между Солнцем и Луной в полезные часы с Луной над горизонтом и сравнивается с шириной приёмного луча, оценённой по усилению, θ ≈ √(41253/G): в пределах 3 ширин луча день отмечается красным, в пределах 6 — оранжевым. Само увеличение шума оценивается на вкладке «Шум Солнца».",
                 "## Полярное и авроральное поглощение",
                 "Геомагнитная широта каждой станции вычисляется по центральному диполю IGRF-14 (северный геомагнитный полюс 2025 г. на 80,8° с. ш., 72,8° з. д.): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Станция за полярным кругом (|φ| ≥ 66,56°) или с |φm| > 75° находится в полярной шапке (возможен PCA); при 60° ≤ |φm| ≤ 75° — в авроральной зоне. Предупреждение появляется при смене локатора и остаётся на главном экране.",
-                "## Вкладки, Разведка моих препятствий и ОТЛАДКА ФОРМУЛ",
-                "Вкладки сгруппированы в два уровня (группы и вкладки группы), которые программа рисует над страницами. Разведка моих препятствий проецирует местное небо на карту (горизонт = внешний круг, зенит = центр, радиус пропорционален 90° - угол места) и может размывать зоны вне ограничений; на Небесном своде те же зоны покрыты светло-серыми диагональными линиями. Вкладка ОТЛАДКА ФОРМУЛ шаг за шагом повторяет весь расчёт Бюджета EME и Шума Солнца, с формулами, подставленными значениями и результатами."
+                "## Вкладки, Разведка моих препятствий и Проверка расчётов",
+                "Вкладки сгруппированы в два уровня (группы и вкладки группы), которые программа рисует над страницами. Разведка моих препятствий проецирует местное небо на карту (горизонт = внешний круг, зенит = центр, радиус пропорционален 90° - угол места) и может размывать зоны вне ограничений; на Небесном своде те же зоны покрыты светло-серыми диагональными линиями. Вкладка Проверка расчётов шаг за шагом повторяет весь расчёт Бюджета EME и Шума Солнца, с формулами, подставленными значениями и результатами."
             };
             elenchi["ru"]["C5"] = new string[] {
                 "• Жан Меёс, Astronomical Algorithms, 2-е издание: Луна, Солнце, нутация, параллакс, звёздное время.",
@@ -39403,8 +39743,8 @@ namespace LunaCalc
                 "Для кожного дня вкладки «Відстань і Dgrd» обчислюється мінімальна кутова відстань між Сонцем і Місяцем у корисні години з Місяцем над горизонтом і порівнюється з шириною приймального променя, оціненою за підсиленням, θ ≈ √(41253/G): у межах 3 ширин променя день позначається червоним, у межах 6 — помаранчевим. Саме зростання шуму оцінюється на вкладці «Шум Сонця».",
                 "## Полярне та авроральне поглинання",
                 "Геомагнітна широта кожної станції обчислюється за центральним диполем IGRF-14 (північний геомагнітний полюс 2025 р. на 80,8° пн. ш., 72,8° зх. д.): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Станція за полярним колом (|φ| ≥ 66,56°) або з |φm| > 75° перебуває в полярній шапці (можливий PCA); за 60° ≤ |φm| ≤ 75° — в авроральній зоні. Попередження з'являється під час зміни локатора і залишається на головному екрані.",
-                "## Вкладки, Розвідка моїх перешкод і НАЛАГОДЖЕННЯ ФОРМУЛ",
-                "Вкладки згруповано у два рівні (групи і вкладки групи), які програма малює над сторінками. Розвідка моїх перешкод проєктує місцеве небо на мапу (горизонт = зовнішнє коло, зеніт = центр, радіус пропорційний 90° - кут місця) і може розмивати зони поза межами; на Небесному склепінні ті самі зони вкриті світло-сірими діагональними лініями. Вкладка НАЛАГОДЖЕННЯ ФОРМУЛ крок за кроком повторює весь розрахунок Бюджету EME і Шуму Сонця, з формулами, підставленими значеннями і результатами."
+                "## Вкладки, Розвідка моїх перешкод і Перевірка розрахунків",
+                "Вкладки згруповано у два рівні (групи і вкладки групи), які програма малює над сторінками. Розвідка моїх перешкод проєктує місцеве небо на мапу (горизонт = зовнішнє коло, зеніт = центр, радіус пропорційний 90° - кут місця) і може розмивати зони поза межами; на Небесному склепінні ті самі зони вкриті світло-сірими діагональними лініями. Вкладка Перевірка розрахунків крок за кроком повторює весь розрахунок Бюджету EME і Шуму Сонця, з формулами, підставленими значеннями і результатами."
             };
             elenchi["uk"]["C5"] = new string[] {
                 "• Жан Меєс, Astronomical Algorithms, 2-ге видання: Місяць, Сонце, нутація, паралакс, зоряний час.",
@@ -39476,8 +39816,8 @@ namespace LunaCalc
                 "Vir elke dag van die oortjie Afstand en Dgrd word die kleinste hoekafstand tussen Son en Maan oor die bruikbare ure met die Maan bo die horison bereken en vergelyk met die ontvangsbundelwydte wat uit die wins geskat word, θ ≈ √(41253/G): binne 3 bundelwydtes word die dag rooi gemerk, binne 6 oranje. Die werklike geraastoename word in die oortjie Songeraas geskat.",
                 "## Pool- en aurora-absorpsie",
                 "Die geomagnetiese breedte van elke stasie word bereken met die gesentreerde dipool van IGRF-14 (geomagnetiese noordpool 2025 op 80,8° N, 72,8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). 'n Stasie buite die poolsirkels (|φ| ≥ 66,56°) of met |φm| > 75° is in die poolkap (moontlike PCA); met 60° ≤ |φm| ≤ 75° is dit in die aurorasone. Die waarskuwing verskyn wanneer 'n locator verander word en bly op die hoofskerm.",
-                "## Oortjies, Verkenning van my hindernisse en FORMULE-ONTFOUTING",
-                "Die oortjies is op twee vlakke gegroepeer (groepe en oortjies van die groep), deur die program bo die bladsye geteken. Die Verkenning van my hindernisse projekteer die plaaslike lug op die kaart (horison = buitenste sirkel, senit = middel, radius eweredig aan 90° - elevasie) en kan die sones buite die grense vervaag; in die Lugaansig is dieselfde sones met liggrys skuinslyne bedek. Die oortjie FORMULE-ONTFOUTING herhaal stap vir stap die hele berekening van die EME-begroting en die Songeraas, met die formules, die ingevulde waardes en die uitslae."
+                "## Oortjies, Verkenning van my hindernisse en Kontrole van die berekeninge",
+                "Die oortjies is op twee vlakke gegroepeer (groepe en oortjies van die groep), deur die program bo die bladsye geteken. Die Verkenning van my hindernisse projekteer die plaaslike lug op die kaart (horison = buitenste sirkel, senit = middel, radius eweredig aan 90° - elevasie) en kan die sones buite die grense vervaag; in die Lugaansig is dieselfde sones met liggrys skuinslyne bedek. Die oortjie Kontrole van die berekeninge herhaal stap vir stap die hele berekening van die EME-begroting en die Songeraas, met die formules, die ingevulde waardes en die uitslae."
             };
             elenchi["af"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2de uitgawe: Maan, Son, nutasie, parallaks, sterretyd.",
@@ -39549,8 +39889,8 @@ namespace LunaCalc
                 "দূরত্ব ও Dgrd ট্যাবের প্রতিটি দিনের জন্য, চাঁদ দিগন্তের ওপরে থাকা কার্যকর ঘণ্টাগুলোতে সূর্য ও চাঁদের ন্যূনতম কৌণিক দূরত্ব গণনা করা হয় এবং গেইন থেকে অনুমিত রিসিভিং বিমউইডথের সঙ্গে তুলনা করা হয়, θ ≈ √(41253/G): 3 বিমউইডথের মধ্যে হলে দিনটি লাল রঙে, 6-এর মধ্যে হলে কমলা রঙে চিহ্নিত হয়। নয়েজ আসলে কতটা বাড়ে তা সৌর নয়েজ ট্যাবে অনুমান করা হয়।",
                 "## মেরু ও মেরুজ্যোতি অঞ্চলের শোষণ",
                 "প্রতিটি স্টেশনের ভূচৌম্বক অক্ষাংশ IGRF-14-এর কেন্দ্রীয় ডাইপোল দিয়ে গণনা করা হয় (2025-এর উত্তর ভূচৌম্বক মেরু 80.8° উত্তর, 72.8° পশ্চিমে): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)। মেরুবৃত্তের বাইরের (|φ| ≥ 66.56°) বা |φm| > 75° থাকা কোনো স্টেশন মেরু টুপিতে থাকে (সম্ভাব্য PCA); 60° ≤ |φm| ≤ 75° হলে সেটি মেরুজ্যোতি (অরোরা) অঞ্চলে থাকে। কোনো লোকেটর বদলালে সতর্কবার্তাটি দেখা যায় এবং প্রধান স্ক্রিনে থেকে যায়।",
-                "## ট্যাব, আমার বাধাগুলির অনুসন্ধান ও সূত্র ডিবাগ",
-                "ট্যাবগুলো দুটি স্তরে সাজানো (দল এবং দলের ট্যাব), যা প্রোগ্রাম পৃষ্ঠাগুলোর ওপরে আঁকে। আমার বাধাগুলির অনুসন্ধান স্থানীয় আকাশকে মানচিত্রের ওপর প্রক্ষেপ করে (দিগন্ত = বাইরের বৃত্ত, শীর্ষবিন্দু = কেন্দ্র, ব্যাসার্ধ 90° - এলিভেশনের সমানুপাতিক) এবং সীমার বাইরের অঞ্চলগুলো ঝাপসা করতে পারে; আকাশ-গম্বুজে একই অঞ্চলগুলো হালকা ধূসর তির্যক রেখায় ঢাকা থাকে। সূত্র ডিবাগ ট্যাবটি EME বাজেট ও সৌর নয়েজের পুরো হিসাব ধাপে ধাপে আবার দেখায়, সূত্র, বসানো মান ও ফলাফলসহ।"
+                "## ট্যাব, আমার বাধাগুলির অনুসন্ধান ও গণনা যাচাই",
+                "ট্যাবগুলো দুটি স্তরে সাজানো (দল এবং দলের ট্যাব), যা প্রোগ্রাম পৃষ্ঠাগুলোর ওপরে আঁকে। আমার বাধাগুলির অনুসন্ধান স্থানীয় আকাশকে মানচিত্রের ওপর প্রক্ষেপ করে (দিগন্ত = বাইরের বৃত্ত, শীর্ষবিন্দু = কেন্দ্র, ব্যাসার্ধ 90° - এলিভেশনের সমানুপাতিক) এবং সীমার বাইরের অঞ্চলগুলো ঝাপসা করতে পারে; আকাশ-গম্বুজে একই অঞ্চলগুলো হালকা ধূসর তির্যক রেখায় ঢাকা থাকে। গণনা যাচাই ট্যাবটি EME বাজেট ও সৌর নয়েজের পুরো হিসাব ধাপে ধাপে আবার দেখায়, সূত্র, বসানো মান ও ফলাফলসহ।"
             };
             elenchi["bn"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2য় সংস্করণ: চাঁদ, সূর্য, নিউটেশন, লম্বন, নাক্ষত্র সময়।",
@@ -39622,8 +39962,8 @@ namespace LunaCalc
                 "لكل يوم في تبويب «المسافة وDgrd» تُحسب أصغر مسافة زاوية بين الشمس والقمر خلال الساعات المفيدة والقمر فوق الأفق، وتُقارن بعرض حزمة الاستقبال المقدَّر من الكسب، θ ≈ √(41253/G): ضمن 3 أضعاف عرض الحزمة يُعلَّم اليوم بالأحمر، وضمن 6 أضعاف بالبرتقالي. أما الزيادة الفعلية في الضوضاء فتُقدَّر في تبويب «ضجيج الشمس».",
                 "## الامتصاص القطبي والشفقي",
                 "يُحسب خط العرض المغناطيسي الأرضي لكل محطة بثنائي القطب المتمركز في IGRF-14 (القطب المغناطيسي الأرضي الشمالي لعام 2025 عند 80.8° N، 72.8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). والمحطة الواقعة وراء الدائرتين القطبيتين (|φ| ≥ 66.56°) أو التي يكون فيها |φm| > 75° تقع في القلنسوة القطبية (احتمال PCA)؛ ومع 60° ≤ |φm| ≤ 75° تقع في المنطقة الشفقية. ويظهر التحذير عند تغيير محدد الموقع ويبقى في الشاشة الرئيسية.",
-                "## التبويبات و«استطلاع عوائقي» و«تصحيح الصيغ»",
-                "التبويبات مجمّعة على مستويين (المجموعات وتبويبات كل مجموعة)، يرسمهما البرنامج فوق الصفحات. وتُسقط «استطلاع عوائقي» السماء المحلية على الخريطة (الأفق = الدائرة الخارجية، السمت الرأسي = المركز، ونصف القطر متناسب مع 90° - الارتفاع)، ويمكنها تمويه المناطق الواقعة خارج الحدود؛ وفي «قبة السماء» تُغطّى المناطق نفسها بخطوط قطرية رمادية فاتحة. ويعيد تبويب «تصحيح الصيغ» حساب «ميزانية EME» و«ضجيج الشمس» كاملًا خطوة بخطوة، مع الصيغ والقيم المعوَّضة والنتائج."
+                "## التبويبات و«استطلاع عوائقي» و«التحقق من الحسابات»",
+                "التبويبات مجمّعة على مستويين (المجموعات وتبويبات كل مجموعة)، يرسمهما البرنامج فوق الصفحات. وتُسقط «استطلاع عوائقي» السماء المحلية على الخريطة (الأفق = الدائرة الخارجية، السمت الرأسي = المركز، ونصف القطر متناسب مع 90° - الارتفاع)، ويمكنها تمويه المناطق الواقعة خارج الحدود؛ وفي «قبة السماء» تُغطّى المناطق نفسها بخطوط قطرية رمادية فاتحة. ويعيد تبويب «التحقق من الحسابات» حساب «ميزانية EME» و«ضجيج الشمس» كاملًا خطوة بخطوة، مع الصيغ والقيم المعوَّضة والنتائج."
             };
             elenchi["ar"]["C5"] = new string[] {
                 "• Jean Meeus، Astronomical Algorithms، الطبعة الثانية: القمر، الشمس، الترنّح، اختلاف المنظر، الزمن النجمي.",
@@ -39695,8 +40035,8 @@ namespace LunaCalc
                 "Mesafe ve Dgrd sekmesindeki her gün için, Ay'ın ufkun üzerinde olduğu kullanılabilir saatlerde Güneş ile Ay arasındaki en küçük açısal uzaklık hesaplanır ve kazançtan tahmin edilen alım hüzme genişliğiyle, θ ≈ √(41253/G), karşılaştırılır: 3 hüzme genişliği içindeyse gün kırmızıyla, 6 içindeyse turuncuyla işaretlenir. Gürültü artışının kendisi Güneş gürültüsü sekmesinde tahmin edilir.",
                 "## Kutup ve aurora soğurması",
                 "Her istasyonun jeomanyetik enlemi IGRF-14'ün merkezlenmiş dipolüyle hesaplanır (2025 kuzey jeomanyetik kutbu 80,8° K, 72,8° B'de): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Kutup dairelerinin ötesindeki (|φ| ≥ 66,56°) ya da |φm| > 75° olan bir istasyon kutup başlığındadır (olası PCA); 60° ≤ |φm| ≤ 75° ise aurora bölgesindedir. Uyarı bir lokatör değiştirildiğinde görünür ve ana ekranda kalır.",
-                "## Sekmeler, Engellerimin keşfi ve FORMÜL HATA AYIKLAMA",
-                "Sekmeler, program tarafından sayfaların üstünde çizilen iki düzeyde (gruplar ve grubun sekmeleri) toplanır. Engellerimin keşfi sekmesi yerel gökyüzünü harita üzerine izdüşürür (ufuk = dış çember, başucu = merkez, yarıçap 90° - yükseliş ile orantılı) ve sınır dışındaki bölgeleri bulanıklaştırabilir; Gök kubbesi'nde aynı bölgeler açık gri çapraz çizgilerle örtülür. FORMÜL HATA AYIKLAMA sekmesi, EME bütçesi ve Güneş gürültüsü hesabının tamamını formüller, yerine konan değerler ve sonuçlarla adım adım yineler."
+                "## Sekmeler, Engellerimin keşfi ve Hesapların kontrolü",
+                "Sekmeler, program tarafından sayfaların üstünde çizilen iki düzeyde (gruplar ve grubun sekmeleri) toplanır. Engellerimin keşfi sekmesi yerel gökyüzünü harita üzerine izdüşürür (ufuk = dış çember, başucu = merkez, yarıçap 90° - yükseliş ile orantılı) ve sınır dışındaki bölgeleri bulanıklaştırabilir; Gök kubbesi'nde aynı bölgeler açık gri çapraz çizgilerle örtülür. Hesapların kontrolü sekmesi, EME bütçesi ve Güneş gürültüsü hesabının tamamını formüller, yerine konan değerler ve sonuçlarla adım adım yineler."
             };
             elenchi["tr"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2. baskı: Ay, Güneş, nutasyon, paralaks, yıldız zamanı.",
@@ -43344,7 +43684,7 @@ namespace LunaCalc
                 "@fine",
                 "Per la configurazione migliore, con i valori sostituiti:",
                 "= F_{tot} = 1,1220 + \\frac{1,4454 − 1}{100} + \\frac{1,9953 − 1}{100 · 0,6918} = 1,1220 + 0,0045 + 0,0144 = 1,1409 \\quad ⇒ \\quad NF = 0,57 \\t{ dB}",
-                ">! **In pratica.** Il preamplificatore va montato in antenna, prima del cavo di discesa e subito dopo il relè coassiale (che deve proteggerlo in trasmissione con un sequencer). Il suo guadagno deve essere abbastanza alto da rendere trascurabili il cavo e la radio: come regola, almeno 10 dB più della somma di perdita del cavo e figura di rumore della radio (nell'esempio 1,6 + 16 ≈ 18 dB → con 20 dB la radio pesa ancora 1,7 dB; con il preampli interno acceso pesa solo 0,05 dB). Troppo guadagno però riduce la dinamica della radio: con un buon LNA in antenna conviene spesso tenere spento il preampli interno e scegliere un LNA da 20 – 26 dB. Nel Budget EME queste scelte si fanno nello schema dell'impianto di ricezione, e la linguetta DEBUG FORMULE mostra il calcolo passo per passo.",
+                ">! **In pratica.** Il preamplificatore va montato in antenna, prima del cavo di discesa e subito dopo il relè coassiale (che deve proteggerlo in trasmissione con un sequencer). Il suo guadagno deve essere abbastanza alto da rendere trascurabili il cavo e la radio: come regola, almeno 10 dB più della somma di perdita del cavo e figura di rumore della radio (nell'esempio 1,6 + 16 ≈ 18 dB → con 20 dB la radio pesa ancora 1,7 dB; con il preampli interno acceso pesa solo 0,05 dB). Troppo guadagno però riduce la dinamica della radio: con un buon LNA in antenna conviene spesso tenere spento il preampli interno e scegliere un LNA da 20 – 26 dB. Nel Budget EME queste scelte si fanno nello schema dell'impianto di ricezione, e la linguetta Controllo dei calcoli mostra il calcolo passo per passo.",
                 "##+ Il transverter (facoltativo)",
                 "Con un transverter la radio lavora a media frequenza (di solito 28 MHz per i 144 MHz) e il transverter diventa lo stadio che conta per il rumore: entra nella formula di Friis dopo il cavo di discesa, e la radio che lo segue pesa meno quanto più il transverter guadagna.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{es. } F_{comb} = 1,2589 + \\frac{10 − 1}{50,12} = 1,4385 ⇒ NF = 1,58 \\t{ dB}",
@@ -43416,7 +43756,7 @@ namespace LunaCalc
                 "I cavi con lo stesso tipo, diametro uguale entro ±0,2 mm e attenuazione entro 0,2 dB/100 m in tutte le bande sono accorpati in una riga (≡), con il valore medio; le sigle equivalenti sono indicate con \"anche:\" (per esempio LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Le sigle cinesi 50-3, 50-5, 50-7, 50-9, 50-12 indicano il diametro del dielettrico in millimetri.",
                 "> Si possono aggiungere cavi personalizzati con le loro cinque attenuazioni: vengono salvati in data\\cavi_personali.txt e compaiono anche nelle tendine dello schema dell'impianto del Budget EME. Il fumetto di ogni riga della tabella cita la fonte di quel cavo.",
                 "### I connettori (NJ9R)",
-                "Anche i connettori fanno parte della linea. La regola pratica di NJ9R è di circa 1 dB ogni 8 – 10 connettori, contati tutti dal retro della radio fino all'antenna, compresi adattatori, relè e divisori: nel suo impianto a quattro antenne i 24 connettori valgono più di 2 dB, quanto 40 – 45 m di LMR-400 nuovo in 144 MHz [2]. Nel Budget EME questa perdita va sommata alle perdite accessori TX e alle perdite tra antenna e preamplificatore.",
+                "Anche i connettori fanno parte della linea. La regola pratica di NJ9R è di circa 1 dB ogni 8 – 10 connettori, contati tutti dal retro della radio fino all'antenna, compresi adattatori, relè e divisori: nel suo impianto a quattro antenne i 24 connettori valgono più di 2 dB, quanto 40 – 45 m di LMR-400 nuovo in 144 MHz [2]. Nel Budget EME il riquadro del relè coassiale ha la casella Connettori stimati: ogni connettore vale 0,11 dB, tutti in trasmissione e la metà in ricezione, prima del preamplificatore.",
                 "[1] Le fonti dei singoli cavi: schede di Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, tramite WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogo MIL-C-17F (RG-142, RG-393), R.F. elettronica di Senago (RG-115), le tabelle di DD1US ed EA5IP (H100) e la tabella di SV1BSX per RG-58, RG-213, H-155 e H-2000 (valori da verificare).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
             };
@@ -43889,7 +44229,7 @@ namespace LunaCalc
                 "@fine",
                 "For the best configuration, with the values substituted:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **In practice.** The preamplifier should be mounted at the antenna, before the feed cable and right after the coaxial relay (which must protect it during transmission with a sequencer). Its gain must be high enough to make the cable and the radio negligible: as a rule, at least 10 dB more than the sum of the cable loss and the radio noise figure (in the example 1.6 + 16 ≈ 18 dB → with 20 dB the radio still weighs 1.7 dB; with the internal preamp on it weighs only 0.05 dB). Too much gain, however, reduces the dynamic range of the radio: with a good LNA at the antenna it is often better to keep the internal preamp off and choose a 20 – 26 dB LNA. In the EME budget these choices are made in the diagram of the receiving installation, and the FORMULA DEBUG tab shows the calculation step by step.",
+                ">! **In practice.** The preamplifier should be mounted at the antenna, before the feed cable and right after the coaxial relay (which must protect it during transmission with a sequencer). Its gain must be high enough to make the cable and the radio negligible: as a rule, at least 10 dB more than the sum of the cable loss and the radio noise figure (in the example 1.6 + 16 ≈ 18 dB → with 20 dB the radio still weighs 1.7 dB; with the internal preamp on it weighs only 0.05 dB). Too much gain, however, reduces the dynamic range of the radio: with a good LNA at the antenna it is often better to keep the internal preamp off and choose a 20 – 26 dB LNA. In the EME budget these choices are made in the diagram of the receiving installation, and the Calculation check tab shows the calculation step by step.",
                 "##+ The transverter (optional)",
                 "With a transverter the radio works at an intermediate frequency (usually 28 MHz for 144 MHz) and the transverter becomes the stage that counts for noise: it enters the Friis formula after the feed cable, and the radio that follows it weighs less the more the transverter gains.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -43961,7 +44301,7 @@ namespace LunaCalc
                 "Cables of the same type, with the same diameter within ±0.2 mm and attenuation within 0.2 dB/100 m on all bands are grouped in one row (≡), with the mean value; equivalent names are shown with \"also:\" (for example LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). The Chinese names 50-3, 50-5, 50-7, 50-9, 50-12 give the diameter of the dielectric in millimetres.",
                 "> Custom cables can be added with their five attenuations: they are saved in data\\cavi_personali.txt and also appear in the drop-downs of the station diagram of the EME budget. The tooltip of each table row cites the source of that cable.",
                 "### Connectors (NJ9R)",
-                "Connectors are part of the line too. NJ9R's rule of thumb is about 1 dB for every 8 – 10 connectors, counting all of them from the back of the radio to the antenna, adapters, relays and splitters included: in his four-antenna system the 24 connectors are worth more than 2 dB, as much as 40 – 45 m of new LMR-400 on 144 MHz [2]. In the EME budget this loss must be added to the TX accessory losses and to the losses between antenna and preamplifier.",
+                "Connectors are part of the line too. NJ9R's rule of thumb is about 1 dB for every 8 – 10 connectors, counting all of them from the back of the radio to the antenna, adapters, relays and splitters included: in his four-antenna system the 24 connectors are worth more than 2 dB, as much as 40 – 45 m of new LMR-400 on 144 MHz [2]. In the EME budget the coaxial relay box has the Estimated connectors field: each connector is worth 0.11 dB, all of them in transmission and half of them in reception, before the preamplifier.",
                 "[1] The sources of the individual cables: data sheets by Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F catalogue (RG-142, RG-393), R.F. elettronica of Senago (RG-115), the tables by DD1US and EA5IP (H100) and the table by SV1BSX for RG-58, RG-213, H-155 and H-2000 (values to be verified).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
             };
@@ -44426,7 +44766,7 @@ namespace LunaCalc
                 "@fine",
                 "Für die beste Konfiguration, mit eingesetzten Werten:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **In der Praxis.** Der Vorverstärker sollte an der Antenne montiert werden, vor der Speiseleitung und direkt nach dem Koaxrelais (das ihn beim Senden mit einem Sequenzer schützen muss). Seine Verstärkung muss hoch genug sein, damit Kabel und Funkgerät vernachlässigbar werden: als Faustregel mindestens 10 dB mehr als die Summe aus Kabeldämpfung und Rauschzahl des Funkgeräts (im Beispiel 1,6 + 16 ≈ 18 dB → mit 20 dB fällt das Funkgerät noch mit 1,7 dB ins Gewicht; mit eingeschaltetem internem Vorverstärker nur mit 0,05 dB). Zu viel Verstärkung verringert jedoch den Dynamikbereich des Funkgeräts: Mit einem guten LNA an der Antenne ist es oft besser, den internen Vorverstärker auszuschalten und einen LNA mit 20 – 26 dB zu wählen. Im EME-Budget werden diese Entscheidungen im Schema der Empfangsanlage getroffen, und der Reiter FORMEL-DEBUG zeigt die Berechnung Schritt für Schritt.",
+                ">! **In der Praxis.** Der Vorverstärker sollte an der Antenne montiert werden, vor der Speiseleitung und direkt nach dem Koaxrelais (das ihn beim Senden mit einem Sequenzer schützen muss). Seine Verstärkung muss hoch genug sein, damit Kabel und Funkgerät vernachlässigbar werden: als Faustregel mindestens 10 dB mehr als die Summe aus Kabeldämpfung und Rauschzahl des Funkgeräts (im Beispiel 1,6 + 16 ≈ 18 dB → mit 20 dB fällt das Funkgerät noch mit 1,7 dB ins Gewicht; mit eingeschaltetem internem Vorverstärker nur mit 0,05 dB). Zu viel Verstärkung verringert jedoch den Dynamikbereich des Funkgeräts: Mit einem guten LNA an der Antenne ist es oft besser, den internen Vorverstärker auszuschalten und einen LNA mit 20 – 26 dB zu wählen. Im EME-Budget werden diese Entscheidungen im Schema der Empfangsanlage getroffen, und der Reiter Rechenkontrolle zeigt die Berechnung Schritt für Schritt.",
                 "##+ Der Transverter (optional)",
                 "Mit einem Transverter arbeitet das Funkgerät auf einer Zwischenfrequenz (meist 28 MHz für 144 MHz), und der Transverter wird zur für das Rauschen maßgeblichen Stufe: Er geht nach der Speiseleitung in die Friis-Formel ein, und das nachfolgende Funkgerät fällt umso weniger ins Gewicht, je mehr der Transverter verstärkt.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -44498,7 +44838,7 @@ namespace LunaCalc
                 "Kabel desselben Typs mit gleichem Durchmesser innerhalb ±0,2 mm und einer Dämpfung innerhalb 0,2 dB/100 m auf allen Bändern sind in einer Zeile (≡) mit dem Mittelwert zusammengefasst; gleichwertige Bezeichnungen werden mit „also:“ angezeigt (zum Beispiel LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Die chinesischen Bezeichnungen 50-3, 50-5, 50-7, 50-9, 50-12 geben den Durchmesser des Dielektrikums in Millimetern an.",
                 "> Eigene Kabel können mit ihren fünf Dämpfungswerten hinzugefügt werden: Sie werden in data\\cavi_personali.txt gespeichert und erscheinen auch in den Auswahllisten des Stationsschemas im EME-Budget. Der Tooltip jeder Tabellenzeile nennt die Quelle des betreffenden Kabels.",
                 "### Die Stecker (NJ9R)",
-                "Auch die Stecker gehören zur Leitung. Die Faustregel von NJ9R lautet etwa 1 dB je 8 – 10 Stecker, alle gezählt von der Rückseite des Funkgeräts bis zur Antenne, einschließlich Adapter, Relais und Leistungsteiler: In seiner Anlage mit vier Antennen machen die 24 Stecker mehr als 2 dB aus, so viel wie 40 – 45 m neues LMR-400 auf 144 MHz [2]. Im EME-Budget ist dieser Verlust zu den TX-Zubehörverlusten und zu den Verlusten zwischen Antenne und Vorverstärker hinzuzurechnen.",
+                "Auch die Stecker gehören zur Leitung. Die Faustregel von NJ9R lautet etwa 1 dB je 8 – 10 Stecker, alle gezählt von der Rückseite des Funkgeräts bis zur Antenne, einschließlich Adapter, Relais und Leistungsteiler: In seiner Anlage mit vier Antennen machen die 24 Stecker mehr als 2 dB aus, so viel wie 40 – 45 m neues LMR-400 auf 144 MHz [2]. Im EME-Budget hat der Kasten des Koaxialrelais das Feld Geschätzte Stecker: Jeder Stecker zählt 0,11 dB, beim Senden alle und beim Empfang die Hälfte, vor dem Vorverstärker.",
                 "[1] Die Quellen der einzelnen Kabel: Datenblätter von Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, über WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, Katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica aus Senago (RG-115), die Tabellen von DD1US und EA5IP (H100) und die Tabelle von SV1BSX für RG-58, RG-213, H-155 und H-2000 (Werte zu überprüfen).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, zur Verfügung gestellt von IC8TEM."
             };
@@ -44963,7 +45303,7 @@ namespace LunaCalc
                 "@fine",
                 "Pour la meilleure configuration, avec les valeurs remplacées :",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **En pratique.** Le préampli doit être monté à l'antenne, avant le câble de descente et juste après le relais coaxial (qui doit le protéger pendant l'émission grâce à un séquenceur). Son gain doit être assez élevé pour rendre le câble et le poste négligeables : en règle générale, au moins 10 dB de plus que la somme de l'affaiblissement du câble et du facteur de bruit du poste (dans l'exemple 1,6 + 16 ≈ 18 dB → avec 20 dB le poste pèse encore 1,7 dB ; avec le préampli interne en service il ne pèse que 0,05 dB). Un gain trop élevé réduit toutefois la dynamique du poste : avec un bon LNA à l'antenne il vaut souvent mieux laisser le préampli interne hors service et choisir un LNA de 20 – 26 dB. Dans le bilan EME ces choix se font dans le schéma de l'installation de réception, et l'onglet DÉBOGAGE DES FORMULES montre le calcul pas à pas.",
+                ">! **En pratique.** Le préampli doit être monté à l'antenne, avant le câble de descente et juste après le relais coaxial (qui doit le protéger pendant l'émission grâce à un séquenceur). Son gain doit être assez élevé pour rendre le câble et le poste négligeables : en règle générale, au moins 10 dB de plus que la somme de l'affaiblissement du câble et du facteur de bruit du poste (dans l'exemple 1,6 + 16 ≈ 18 dB → avec 20 dB le poste pèse encore 1,7 dB ; avec le préampli interne en service il ne pèse que 0,05 dB). Un gain trop élevé réduit toutefois la dynamique du poste : avec un bon LNA à l'antenne il vaut souvent mieux laisser le préampli interne hors service et choisir un LNA de 20 – 26 dB. Dans le bilan EME ces choix se font dans le schéma de l'installation de réception, et l'onglet Contrôle des calculs montre le calcul pas à pas.",
                 "##+ Le transverter (facultatif)",
                 "Avec un transverter le poste travaille sur une fréquence intermédiaire (généralement 28 MHz pour 144 MHz) et le transverter devient l'étage qui compte pour le bruit : il entre dans la formule de Friis après le câble de descente, et le poste qui le suit pèse d'autant moins que le transverter a de gain.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -45035,7 +45375,7 @@ namespace LunaCalc
                 "Les câbles du même type, de même diamètre à ±0,2 mm près et d'affaiblissement à 0,2 dB/100 m près sur toutes les bandes sont regroupés sur une seule ligne (≡), avec la valeur moyenne ; les noms équivalents sont indiqués avec « also: » (par exemple LMR-400 = HF400, CNT-400, 50-7 low loss ; LMR-600 = CNT-600). Les noms chinois 50-3, 50-5, 50-7, 50-9, 50-12 donnent le diamètre du diélectrique en millimètres.",
                 "> On peut ajouter des câbles personnels avec leurs cinq affaiblissements : ils sont enregistrés dans data\\cavi_personali.txt et apparaissent aussi dans les listes déroulantes du schéma de la station du bilan EME. L'infobulle de chaque ligne du tableau cite la source de ce câble.",
                 "### Les connecteurs (NJ9R)",
-                "Les connecteurs font eux aussi partie de la ligne. La règle pratique de NJ9R est d'environ 1 dB tous les 8 – 10 connecteurs, en les comptant tous depuis l'arrière du poste jusqu'à l'antenne, adaptateurs, relais et diviseurs compris : dans son installation à quatre antennes, les 24 connecteurs valent plus de 2 dB, autant que 40 – 45 m de LMR-400 neuf sur 144 MHz [2]. Dans le Bilan EME, cette perte s'ajoute aux pertes accessoires TX et aux pertes entre l'antenne et le préamplificateur.",
+                "Les connecteurs font eux aussi partie de la ligne. La règle pratique de NJ9R est d'environ 1 dB tous les 8 – 10 connecteurs, en les comptant tous depuis l'arrière du poste jusqu'à l'antenne, adaptateurs, relais et diviseurs compris : dans son installation à quatre antennes, les 24 connecteurs valent plus de 2 dB, autant que 40 – 45 m de LMR-400 neuf sur 144 MHz [2]. Dans le bilan EME, le cadre du relais coaxial a le champ Connecteurs estimés : chaque connecteur vaut 0,11 dB, tous en émission et la moitié en réception, avant le préamplificateur.",
                 "[1] Les sources des différents câbles : fiches techniques de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogue MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), les tables de DD1US et EA5IP (H100) et la table de SV1BSX pour RG-58, RG-213, H-155 et H-2000 (valeurs à vérifier).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
             };
@@ -45500,7 +45840,7 @@ namespace LunaCalc
                 "@fine",
                 "Para la mejor configuración, sustituyendo los valores:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **En la práctica.** El preamplificador debe montarse en la antena, antes del cable de bajada y justo después del relé coaxial (que debe protegerlo durante la transmisión con un secuenciador). Su ganancia debe ser lo bastante alta para que el cable y la radio sean despreciables: como regla, al menos 10 dB más que la suma de la pérdida del cable y la figura de ruido de la radio (en el ejemplo 1,6 + 16 ≈ 18 dB → con 20 dB la radio pesa aún 1,7 dB; con el preamplificador interno activado pesa solo 0,05 dB). Sin embargo, demasiada ganancia reduce el rango dinámico de la radio: con un buen LNA en la antena a menudo es mejor mantener desactivado el preamplificador interno y elegir un LNA de 20 – 26 dB. En el balance EME estas elecciones se hacen en el esquema de la instalación receptora, y la pestaña DEPURACIÓN DE FÓRMULAS muestra el cálculo paso a paso.",
+                ">! **En la práctica.** El preamplificador debe montarse en la antena, antes del cable de bajada y justo después del relé coaxial (que debe protegerlo durante la transmisión con un secuenciador). Su ganancia debe ser lo bastante alta para que el cable y la radio sean despreciables: como regla, al menos 10 dB más que la suma de la pérdida del cable y la figura de ruido de la radio (en el ejemplo 1,6 + 16 ≈ 18 dB → con 20 dB la radio pesa aún 1,7 dB; con el preamplificador interno activado pesa solo 0,05 dB). Sin embargo, demasiada ganancia reduce el rango dinámico de la radio: con un buen LNA en la antena a menudo es mejor mantener desactivado el preamplificador interno y elegir un LNA de 20 – 26 dB. En el balance EME estas elecciones se hacen en el esquema de la instalación receptora, y la pestaña Control de los cálculos muestra el cálculo paso a paso.",
                 "##+ El transverter (opcional)",
                 "Con un transverter la radio trabaja en una frecuencia intermedia (normalmente 28 MHz para 144 MHz) y el transverter pasa a ser la etapa que cuenta para el ruido: entra en la fórmula de Friis después del cable de bajada, y la radio que le sigue pesa tanto menos cuanto más gana el transverter.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -45572,7 +45912,7 @@ namespace LunaCalc
                 "Los cables del mismo tipo, con el mismo diámetro dentro de ±0,2 mm y una atenuación dentro de 0,2 dB/100 m en todas las bandas se agrupan en una sola fila (≡), con el valor medio; los nombres equivalentes se muestran con \"also:\" (por ejemplo LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Los nombres chinos 50-3, 50-5, 50-7, 50-9, 50-12 indican el diámetro del dieléctrico en milímetros.",
                 "> Se pueden añadir cables personalizados con sus cinco atenuaciones: se guardan en data\\cavi_personali.txt y aparecen también en los desplegables del esquema de la estación del balance EME. La información emergente de cada fila de la tabla cita la fuente de ese cable.",
                 "### Los conectores (NJ9R)",
-                "También los conectores forman parte de la línea. La regla práctica de NJ9R es de aproximadamente 1 dB por cada 8 – 10 conectores, contando todos desde la parte trasera de la radio hasta la antena, incluidos adaptadores, relés y divisores: en su instalación de cuatro antenas los 24 conectores suman más de 2 dB, tanto como 40 – 45 m de LMR-400 nuevo en 144 MHz [2]. En el Balance EME esta pérdida debe sumarse a las pérdidas accesorios TX y a las pérdidas entre la antena y el preamplificador.",
+                "También los conectores forman parte de la línea. La regla práctica de NJ9R es de aproximadamente 1 dB por cada 8 – 10 conectores, contando todos desde la parte trasera de la radio hasta la antena, incluidos adaptadores, relés y divisores: en su instalación de cuatro antenas los 24 conectores suman más de 2 dB, tanto como 40 – 45 m de LMR-400 nuevo en 144 MHz [2]. En el balance EME el recuadro del relé coaxial tiene la casilla Conectores estimados: cada conector vale 0,11 dB, todos en transmisión y la mitad en recepción, antes del preamplificador.",
                 "[1] Las fuentes de cada cable: hojas de datos de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, vía WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), las tablas de DD1US y EA5IP (H100) y la tabla de SV1BSX para RG-58, RG-213, H-155 y H-2000 (valores por verificar).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
             };
@@ -46037,7 +46377,7 @@ namespace LunaCalc
                 "@fine",
                 "Para a melhor configuração, com os valores substituídos:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **Na prática.** O pré-amplificador deve ser montado na antena, antes do cabo de descida e logo a seguir ao relé coaxial (que deve protegê-lo durante a transmissão com um sequenciador). O seu ganho deve ser suficientemente elevado para tornar desprezáveis o cabo e o rádio: como regra, pelo menos 10 dB acima da soma da perda do cabo e da figura de ruído do rádio (no exemplo 1,6 + 16 ≈ 18 dB → com 20 dB o rádio ainda pesa 1,7 dB; com o pré-amplificador interno ligado pesa apenas 0,05 dB). Ganho a mais, porém, reduz a gama dinâmica do rádio: com um bom LNA na antena é muitas vezes preferível manter desligado o pré-amplificador interno e escolher um LNA de 20 – 26 dB. No budget EME estas escolhas fazem-se no esquema da instalação de receção, e o separador DEPURAÇÃO DE FÓRMULAS mostra o cálculo passo a passo.",
+                ">! **Na prática.** O pré-amplificador deve ser montado na antena, antes do cabo de descida e logo a seguir ao relé coaxial (que deve protegê-lo durante a transmissão com um sequenciador). O seu ganho deve ser suficientemente elevado para tornar desprezáveis o cabo e o rádio: como regra, pelo menos 10 dB acima da soma da perda do cabo e da figura de ruído do rádio (no exemplo 1,6 + 16 ≈ 18 dB → com 20 dB o rádio ainda pesa 1,7 dB; com o pré-amplificador interno ligado pesa apenas 0,05 dB). Ganho a mais, porém, reduz a gama dinâmica do rádio: com um bom LNA na antena é muitas vezes preferível manter desligado o pré-amplificador interno e escolher um LNA de 20 – 26 dB. No budget EME estas escolhas fazem-se no esquema da instalação de receção, e o separador Verificação dos cálculos mostra o cálculo passo a passo.",
                 "##+ O transverter (opcional)",
                 "Com um transverter o rádio trabalha numa frequência intermédia (normalmente 28 MHz para 144 MHz) e o transverter passa a ser o andar que conta para o ruído: entra na fórmula de Friis depois do cabo de descida, e o rádio que se lhe segue pesa tanto menos quanto mais o transverter ganha.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -46109,7 +46449,7 @@ namespace LunaCalc
                 "Os cabos do mesmo tipo, com o mesmo diâmetro dentro de ±0,2 mm e atenuação dentro de 0,2 dB/100 m em todas as bandas, são agrupados numa única linha (≡), com o valor médio; os nomes equivalentes são indicados com “also:” (por exemplo LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Os nomes chineses 50-3, 50-5, 50-7, 50-9, 50-12 indicam o diâmetro do dielétrico em milímetros.",
                 "> É possível acrescentar cabos personalizados com as suas cinco atenuações: são guardados em data\\cavi_personali.txt e aparecem também nas listas pendentes do esquema da estação do budget EME. A dica (tooltip) de cada linha da tabela cita a fonte desse cabo.",
                 "### Os conectores (NJ9R)",
-                "Também os conectores fazem parte da linha. A regra prática de NJ9R é de cerca de 1 dB por cada 8 – 10 conectores, contando-os todos desde a traseira do rádio até à antena, incluindo adaptadores, relés e divisores: na sua instalação de quatro antenas, os 24 conectores valem mais de 2 dB, tanto como 40 – 45 m de LMR-400 novo em 144 MHz [2]. No Balanço EME esta perda deve ser somada às perdas acessórios TX e às perdas entre a antena e o pré-amplificador.",
+                "Também os conectores fazem parte da linha. A regra prática de NJ9R é de cerca de 1 dB por cada 8 – 10 conectores, contando-os todos desde a traseira do rádio até à antena, incluindo adaptadores, relés e divisores: na sua instalação de quatro antenas, os 24 conectores valem mais de 2 dB, tanto como 40 – 45 m de LMR-400 novo em 144 MHz [2]. No balanço EME o quadro do relé coaxial tem a caixa Conectores estimados: cada conector vale 0,11 dB, todos na transmissão e metade na receção, antes do pré-amplificador.",
                 "[1] As fontes de cada cabo: folhas de dados da Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), as tabelas de DD1US e EA5IP (H100) e a tabela de SV1BSX para RG-58, RG-213, H-155 e H-2000 (valores a verificar).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
             };
@@ -46574,7 +46914,7 @@ namespace LunaCalc
                 "@fine",
                 "对于最佳配置，代入数值后：",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **实际做法。** 前置放大器应安装在天线端，位于馈线电缆之前、紧接同轴继电器之后（发射时必须用时序器保护它）。其增益必须足够高，使电缆和电台的影响可以忽略：通常应比电缆损耗与电台噪声系数之和至少高 10 dB（例中 1.6 + 16 ≈ 18 dB → 增益为 20 dB 时电台仍占 1.7 dB；若开启内置前置放大器，则只占 0.05 dB）。但增益过高会降低电台的动态范围：天线端有优质 LNA 时，通常最好关闭内置前置放大器，并选用 20 – 26 dB 的 LNA。在 EME 链路预算中，这些选择在接收系统框图中设置，公式调试 选项卡会逐步显示计算过程。",
+                ">! **实际做法。** 前置放大器应安装在天线端，位于馈线电缆之前、紧接同轴继电器之后（发射时必须用时序器保护它）。其增益必须足够高，使电缆和电台的影响可以忽略：通常应比电缆损耗与电台噪声系数之和至少高 10 dB（例中 1.6 + 16 ≈ 18 dB → 增益为 20 dB 时电台仍占 1.7 dB；若开启内置前置放大器，则只占 0.05 dB）。但增益过高会降低电台的动态范围：天线端有优质 LNA 时，通常最好关闭内置前置放大器，并选用 20 – 26 dB 的 LNA。在 EME 链路预算中，这些选择在接收系统框图中设置，计算核查 选项卡会逐步显示计算过程。",
                 "##+ 收发转换器（transverter，可选）",
                 "使用收发转换器时，电台工作在中频（144 MHz 通常为 28 MHz），收发转换器成为决定噪声的那一级：它在 Friis 公式中位于馈线电缆之后，其后的电台的影响随收发转换器增益的增大而减小。",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -46646,7 +46986,7 @@ namespace LunaCalc
                 "同类型、直径相差在 ±0.2 mm 以内且各频段衰减相差在 0.2 dB/100 m 以内的电缆合并为一行（≡），取平均值；等效名称以 \"also:\" 标出（例如 LMR-400 = HF400、CNT-400、50-7 低损耗；LMR-600 = CNT-600）。中国型号 50-3、50-5、50-7、50-9、50-12 表示介质直径（毫米）。",
                 "> 可以输入五个衰减值来添加自定义电缆：它们保存在 data\\cavi_personali.txt 中，也会出现在 EME 链路预算电台框图的下拉列表中。表格每一行的工具提示注明了该电缆的数据来源。",
                 "### 连接器（NJ9R）",
-                "连接器也是传输线的一部分。NJ9R 的经验法则是每 8 – 10 个连接器约 1 dB，从电台背面一直数到天线，包括转接头、继电器和功分器：在他的四天线系统中，24 个连接器的损耗超过 2 dB，相当于 144 MHz 上 40 – 45 m 全新 LMR-400 电缆的损耗 [2]。在“EME 链路预算”中，这部分损耗应加到“TX 附件损耗”以及天线与前置放大器之间的损耗中。",
+                "连接器也是传输线的一部分。NJ9R 的经验法则是每 8 – 10 个连接器约 1 dB，从电台背面一直数到天线，包括转接头、继电器和功分器：在他的四天线系统中，24 个连接器的损耗超过 2 dB，相当于 144 MHz 上 40 – 45 m 全新 LMR-400 电缆的损耗 [2]。在 EME 链路预算中，同轴继电器框内有“估计连接器数”一栏：每个连接器按 0.11 dB 计，发射时全部计入，接收时计一半（前置放大器之前）。",
                 "[1] 各电缆的数据来源：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell、Ecoflex、Aircom Plus）、Messi & Paoloni（Hyperflex、Ultraflex，经 WiMo）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020、XT2400）、QAXIAL（LLF195）、Caledonian Cables 的数据手册，MIL-C-17F 目录（RG-142、RG-393），Senago 的 R.F. elettronica（RG-115），DD1US 和 EA5IP 的表格（H100），以及 SV1BSX 关于 RG-58、RG-213、H-155 和 H-2000 的表格（数值有待核实）。",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
             };
@@ -47111,7 +47451,7 @@ namespace LunaCalc
                 "@fine",
                 "最良の構成について、数値を代入すると：",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **実際には。** プリアンプはアンテナ側、給電ケーブルの前で同軸リレーの直後に取り付けます（送信中はシーケンサーを使って同軸リレーでプリアンプを保護する必要があります）。その利得はケーブルと無線機の影響を無視できるほど大きくなければなりません。目安として、ケーブル損失と無線機の雑音指数の合計より少なくとも10 dB大きくします（例では1.6 + 16 ≈ 18 dB → 20 dBでは無線機の影響はまだ1.7 dB、内蔵プリアンプONならわずか0.05 dB）。ただし利得が大きすぎると無線機のダイナミックレンジが低下します。アンテナ直下に良いLNAがある場合は、内蔵プリアンプをOFFにして20～26 dBのLNAを選ぶ方がよいことが多いです。EMEバジェットでは、これらの選択は受信設備の構成図で行い、数式デバッグタブで計算の各段階を確認できます。",
+                ">! **実際には。** プリアンプはアンテナ側、給電ケーブルの前で同軸リレーの直後に取り付けます（送信中はシーケンサーを使って同軸リレーでプリアンプを保護する必要があります）。その利得はケーブルと無線機の影響を無視できるほど大きくなければなりません。目安として、ケーブル損失と無線機の雑音指数の合計より少なくとも10 dB大きくします（例では1.6 + 16 ≈ 18 dB → 20 dBでは無線機の影響はまだ1.7 dB、内蔵プリアンプONならわずか0.05 dB）。ただし利得が大きすぎると無線機のダイナミックレンジが低下します。アンテナ直下に良いLNAがある場合は、内蔵プリアンプをOFFにして20～26 dBのLNAを選ぶ方がよいことが多いです。EMEバジェットでは、これらの選択は受信設備の構成図で行い、計算のチェックタブで計算の各段階を確認できます。",
                 "##+ トランスバーター（オプション）",
                 "トランスバーターを使うと、無線機は中間周波数（144 MHzでは通常28 MHz）で動作し、雑音に関してはトランスバーターが重要な段になります。トランスバーターはFriisの式で給電ケーブルの後に入り、その後に続く無線機の影響はトランスバーターの利得が大きいほど小さくなります。",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -47183,7 +47523,7 @@ namespace LunaCalc
                 "同じ種類で、直径の差が±0.2 mm以内、全バンドで減衰量の差が0.2 dB/100 m以内のケーブルは1行（≡）にまとめ、平均値を示しています。同等の名称は \"also:\" で示します（例：LMR-400 = HF400, CNT-400, 50-7 low loss；LMR-600 = CNT-600）。中国の名称50-3、50-5、50-7、50-9、50-12は誘電体の直径をミリメートルで表しています。",
                 "> ユーザー定義のケーブルは5つの減衰量を入力して追加できます。data\\cavi_personali.txt に保存され、EMEバジェットの局構成図のドロップダウンにも表示されます。表の各行のツールチップには、そのケーブルの出典が表示されます。",
                 "### コネクター (NJ9R)",
-                "コネクターも伝送路の一部です。NJ9Rの経験則は、コネクター8～10個ごとに約1 dBというもので、無線機の背面からアンテナまで、アダプター、リレー、分配器も含めてすべて数えます。彼の4アンテナの設備では24個のコネクターで2 dBを超え、144 MHzでの新品のLMR-400 40～45 mに相当します [2]。「EME 回線計算」では、この損失を「TX 付属品損失」とアンテナ–プリアンプ間の損失に加えてください。",
+                "コネクターも伝送路の一部です。NJ9Rの経験則は、コネクター8～10個ごとに約1 dBというもので、無線機の背面からアンテナまで、アダプター、リレー、分配器も含めてすべて数えます。彼の4アンテナの設備では24個のコネクターで2 dBを超え、144 MHzでの新品のLMR-400 40～45 mに相当します [2]。EME 回線計算の同軸リレーの枠には「推定コネクター数」の欄があり、コネクター 1 個を 0.11 dB として、送信ではすべて、受信ではプリアンプ前の半分を加えます。",
                 "[1] 各ケーブルの出典：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell, Ecoflex, Aircom Plus）、Messi & Paoloni（Hyperflex, Ultraflex、WiMo経由）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020, XT2400）、QAXIAL（LLF195）、Caledonian Cablesの各データシート、MIL-C-17Fカタログ（RG-142, RG-393）、SenagoのR.F. elettronica（RG-115）、DD1USおよびEA5IPの表（H100）、RG-58、RG-213、H-155、H-2000についてはSV1BSXの表（値は要確認）。",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
             };
@@ -47648,7 +47988,7 @@ namespace LunaCalc
                 "@fine",
                 "सबसे अच्छे कॉन्फ़िगरेशन के लिए, मान रखकर:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **व्यवहार में।** प्रीएम्प्लीफ़ायर एंटेना पर, फ़ीड केबल से पहले और कोएक्सियल रिले के ठीक बाद लगाया जाना चाहिए (जिसे सीक्वेंसर के साथ ट्रांसमिशन के दौरान उसकी रक्षा करनी चाहिए)। उसका गेन इतना अधिक होना चाहिए कि केबल और रेडियो नगण्य हो जाएँ: नियम के तौर पर, केबल लॉस और रेडियो नॉइज़ फ़िगर के योग से कम से कम 10 dB अधिक (उदाहरण में 1.6 + 16 ≈ 18 dB → 20 dB के साथ रेडियो का असर अब भी 1.7 dB है; आंतरिक प्रीएम्प चालू होने पर केवल 0.05 dB)। फिर भी बहुत अधिक गेन रेडियो की डायनैमिक रेंज घटाता है: एंटेना पर अच्छे LNA के साथ अक्सर आंतरिक प्रीएम्प बंद रखना और 20 – 26 dB का LNA चुनना बेहतर होता है। EME बजट में ये चुनाव रिसीविंग इंस्टॉलेशन के आरेख में किए जाते हैं, और सूत्र डिबग टैब गणना चरण-दर-चरण दिखाता है।",
+                ">! **व्यवहार में।** प्रीएम्प्लीफ़ायर एंटेना पर, फ़ीड केबल से पहले और कोएक्सियल रिले के ठीक बाद लगाया जाना चाहिए (जिसे सीक्वेंसर के साथ ट्रांसमिशन के दौरान उसकी रक्षा करनी चाहिए)। उसका गेन इतना अधिक होना चाहिए कि केबल और रेडियो नगण्य हो जाएँ: नियम के तौर पर, केबल लॉस और रेडियो नॉइज़ फ़िगर के योग से कम से कम 10 dB अधिक (उदाहरण में 1.6 + 16 ≈ 18 dB → 20 dB के साथ रेडियो का असर अब भी 1.7 dB है; आंतरिक प्रीएम्प चालू होने पर केवल 0.05 dB)। फिर भी बहुत अधिक गेन रेडियो की डायनैमिक रेंज घटाता है: एंटेना पर अच्छे LNA के साथ अक्सर आंतरिक प्रीएम्प बंद रखना और 20 – 26 dB का LNA चुनना बेहतर होता है। EME बजट में ये चुनाव रिसीविंग इंस्टॉलेशन के आरेख में किए जाते हैं, और गणना की जाँच टैब गणना चरण-दर-चरण दिखाता है।",
                 "##+ ट्रांसवर्टर (वैकल्पिक)",
                 "ट्रांसवर्टर के साथ रेडियो एक इंटरमीडिएट फ़्रीक्वेंसी (144 MHz के लिए आमतौर पर 28 MHz) पर काम करता है और ट्रांसवर्टर नॉइज़ के लिए निर्णायक स्टेज बन जाता है: यह फ़ीड केबल के बाद Friis सूत्र में आता है, और उसके बाद आने वाले रेडियो का असर उतना ही कम होता है जितना अधिक ट्रांसवर्टर का गेन होता है।",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -47720,7 +48060,7 @@ namespace LunaCalc
                 "एक ही प्रकार की केबलें, जिनका व्यास ±0.2 mm के भीतर और सभी बैंडों पर एटेन्यूएशन 0.2 dB/100 m के भीतर समान हो, एक पंक्ति (≡) में औसत मान के साथ समूहित की जाती हैं; समतुल्य नाम \"also:\" के साथ दिखाए जाते हैं (उदाहरण के लिए LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600)। चीनी नाम 50-3, 50-5, 50-7, 50-9, 50-12 डाइइलेक्ट्रिक का व्यास मिलीमीटर में बताते हैं।",
                 "> कस्टम केबलें उनके पाँच एटेन्यूएशन मानों के साथ जोड़ी जा सकती हैं: वे data\\cavi_personali.txt में सहेजी जाती हैं और EME बजट के स्टेशन आरेख की ड्रॉप-डाउन सूचियों में भी दिखाई देती हैं। तालिका की हर पंक्ति का टूलटिप उस केबल का स्रोत बताता है।",
                 "### कनेक्टर (NJ9R)",
-                "कनेक्टर भी लाइन का हिस्सा हैं। NJ9R का व्यावहारिक नियम है हर 8 – 10 कनेक्टर पर लगभग 1 dB, रेडियो के पिछले हिस्से से एंटेना तक सभी गिनकर, एडेप्टर, रिले और पावर डिवाइडर समेत: उनकी चार एंटेना वाली स्थापना में 24 कनेक्टर 2 dB से अधिक के बराबर हैं, यानी 144 MHz पर 40 – 45 m नए LMR-400 जितने [2]। EME बजट में यह नुकसान TX सहायक हानि में और एंटेना तथा प्रीएम्प्लीफ़ायर के बीच के नुकसान में जोड़ना चाहिए।",
+                "कनेक्टर भी लाइन का हिस्सा हैं। NJ9R का व्यावहारिक नियम है हर 8 – 10 कनेक्टर पर लगभग 1 dB, रेडियो के पिछले हिस्से से एंटेना तक सभी गिनकर, एडेप्टर, रिले और पावर डिवाइडर समेत: उनकी चार एंटेना वाली स्थापना में 24 कनेक्टर 2 dB से अधिक के बराबर हैं, यानी 144 MHz पर 40 – 45 m नए LMR-400 जितने [2]। EME बजट में कोएक्सियल रिले के बॉक्स में 'अनुमानित कनेक्टर' फ़ील्ड है: हर कनेक्टर 0.11 dB का है, ट्रांसमिशन में सभी और रिसेप्शन में आधे, प्रीएम्प्लीफ़ायर से पहले।",
                 "[1] अलग-अलग केबलों के स्रोत: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo के माध्यम से), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables की डेटा शीट, MIL-C-17F कैटलॉग (RG-142, RG-393), Senago की R.F. elettronica (RG-115), DD1US और EA5IP की तालिकाएँ (H100) और RG-58, RG-213, H-155 और H-2000 के लिए SV1BSX की तालिका (सत्यापन आवश्यक मान)।",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
             };
@@ -48185,7 +48525,7 @@ namespace LunaCalc
                 "@fine",
                 "최적 구성에 값을 대입하면:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **실제로는.** 프리앰프는 안테나 쪽, 급전 케이블 앞, 동축 릴레이 바로 뒤에 설치해야 합니다(송신 중에는 시퀀서로 동축 릴레이가 프리앰프를 보호해야 합니다). 이득은 케이블과 무선기를 무시할 수 있을 만큼 높아야 합니다. 대체로 케이블 손실과 무선기 잡음 지수의 합보다 최소 10 dB 더 커야 합니다(예에서 1.6 + 16 ≈ 18 dB → 20 dB 이득이면 무선기가 아직 1.7 dB 영향을 주고, 내장 프리앰프를 켜면 0.05 dB에 불과합니다). 그러나 이득이 너무 크면 무선기의 다이내믹 레인지가 줄어듭니다. 안테나측에 좋은 LNA가 있다면 내장 프리앰프를 끄고 20~26 dB의 LNA를 고르는 편이 나은 경우가 많습니다. EME 버짓에서는 이러한 선택을 수신 설비 구성도에서 하며, 수식 디버그 탭에서 계산 과정을 단계별로 볼 수 있습니다.",
+                ">! **실제로는.** 프리앰프는 안테나 쪽, 급전 케이블 앞, 동축 릴레이 바로 뒤에 설치해야 합니다(송신 중에는 시퀀서로 동축 릴레이가 프리앰프를 보호해야 합니다). 이득은 케이블과 무선기를 무시할 수 있을 만큼 높아야 합니다. 대체로 케이블 손실과 무선기 잡음 지수의 합보다 최소 10 dB 더 커야 합니다(예에서 1.6 + 16 ≈ 18 dB → 20 dB 이득이면 무선기가 아직 1.7 dB 영향을 주고, 내장 프리앰프를 켜면 0.05 dB에 불과합니다). 그러나 이득이 너무 크면 무선기의 다이내믹 레인지가 줄어듭니다. 안테나측에 좋은 LNA가 있다면 내장 프리앰프를 끄고 20~26 dB의 LNA를 고르는 편이 나은 경우가 많습니다. EME 버짓에서는 이러한 선택을 수신 설비 구성도에서 하며, 계산 검증 탭에서 계산 과정을 단계별로 볼 수 있습니다.",
                 "##+ 트랜스버터 (선택 사항)",
                 "트랜스버터를 사용하면 무선기는 중간 주파수(144 MHz의 경우 보통 28 MHz)에서 동작하고, 잡음에서 중요한 단은 트랜스버터가 됩니다. 트랜스버터는 Friis 공식에서 급전 케이블 다음에 들어가며, 그 뒤의 무선기는 트랜스버터 이득이 클수록 영향이 작아집니다.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -48257,7 +48597,7 @@ namespace LunaCalc
                 "같은 종류이고 지름이 ±0.2 mm 이내, 모든 밴드에서 감쇠가 0.2 dB/100 m 이내인 케이블은 한 행(≡)으로 묶어 평균값을 표시합니다. 동등한 이름은 \"also:\"로 표시합니다(예: LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). 중국식 이름 50-3, 50-5, 50-7, 50-9, 50-12는 유전체의 지름을 밀리미터로 나타냅니다.",
                 "> 사용자 케이블은 다섯 개의 감쇠값과 함께 추가할 수 있습니다. data\\cavi_personali.txt에 저장되며 EME 버짓 국 구성도의 드롭다운에도 나타납니다. 표의 각 행 툴팁에는 해당 케이블의 출처가 표시됩니다.",
                 "### 커넥터 (NJ9R)",
-                "커넥터도 선로의 일부입니다. NJ9R의 경험칙은 커넥터 8~10개마다 약 1 dB이며, 무선기 뒷면에서 안테나까지 어댑터, 릴레이, 분배기를 포함해 모두 셉니다. 그의 4안테나 설비에서는 커넥터 24개가 2 dB를 넘으며, 이는 144 MHz에서 새 LMR-400 40~45 m에 해당합니다 [2]. EME 링크 버짓에서는 이 손실을 TX 부속 손실과 안테나–프리앰프 사이의 손실에 더해야 합니다.",
+                "커넥터도 선로의 일부입니다. NJ9R의 경험칙은 커넥터 8~10개마다 약 1 dB이며, 무선기 뒷면에서 안테나까지 어댑터, 릴레이, 분배기를 포함해 모두 셉니다. 그의 4안테나 설비에서는 커넥터 24개가 2 dB를 넘으며, 이는 144 MHz에서 새 LMR-400 40~45 m에 해당합니다 [2]. EME 링크 버짓의 동축 릴레이 상자에는 '추정 커넥터 수' 칸이 있습니다. 커넥터 하나를 0.11 dB로 보고, 송신에서는 모두, 수신에서는 프리앰프 앞의 절반을 더합니다.",
                 "[1] 개별 케이블의 출처: Times Microwave(LMR), RFS(CELLFLEX LCF/SCF), CommScope Andrew(HELIAX LDF/FSJ), Siva Cavi(HF 240/287/400), SSB-Electronic(Aircell, Ecoflex, Aircom Plus), Messi & Paoloni(Hyperflex, Ultraflex, WiMo 경유), Symair, SYV50-7(szansy.com), Belden(H1000), Prospecta(RT5020, XT2400), QAXIAL(LLF195), Caledonian Cables의 데이터 시트, MIL-C-17F 카탈로그(RG-142, RG-393), Senago의 R.F. elettronica(RG-115), DD1US와 EA5IP의 표(H100), 그리고 RG-58, RG-213, H-155, H-2000에 대한 SV1BSX의 표(확인이 필요한 값).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
             };
@@ -48722,7 +49062,7 @@ namespace LunaCalc
                 "@fine",
                 "Untuk konfigurasi terbaik, dengan nilai-nilai yang disubstitusikan:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **Dalam praktik.** Praamplifier sebaiknya dipasang di antena, sebelum kabel feed dan tepat setelah relay koaksial (yang harus melindunginya saat memancar dengan sequencer). Penguatannya harus cukup tinggi agar kabel dan radio dapat diabaikan: sebagai aturan, setidaknya 10 dB lebih besar dari jumlah redaman kabel dan angka derau radio (pada contoh 1,6 + 16 ≈ 18 dB → dengan 20 dB radio masih menyumbang 1,7 dB; dengan preamp internal aktif hanya 0,05 dB). Namun penguatan yang terlalu besar mengurangi rentang dinamis radio: dengan LNA yang baik di antena sering kali lebih baik mematikan preamp internal dan memilih LNA 20 – 26 dB. Dalam budget EME pilihan ini dibuat pada diagram instalasi penerima, dan tab DEBUG RUMUS menampilkan perhitungannya langkah demi langkah.",
+                ">! **Dalam praktik.** Praamplifier sebaiknya dipasang di antena, sebelum kabel feed dan tepat setelah relay koaksial (yang harus melindunginya saat memancar dengan sequencer). Penguatannya harus cukup tinggi agar kabel dan radio dapat diabaikan: sebagai aturan, setidaknya 10 dB lebih besar dari jumlah redaman kabel dan angka derau radio (pada contoh 1,6 + 16 ≈ 18 dB → dengan 20 dB radio masih menyumbang 1,7 dB; dengan preamp internal aktif hanya 0,05 dB). Namun penguatan yang terlalu besar mengurangi rentang dinamis radio: dengan LNA yang baik di antena sering kali lebih baik mematikan preamp internal dan memilih LNA 20 – 26 dB. Dalam budget EME pilihan ini dibuat pada diagram instalasi penerima, dan tab Pemeriksaan perhitungan menampilkan perhitungannya langkah demi langkah.",
                 "##+ Transverter (opsional)",
                 "Dengan transverter, radio bekerja pada frekuensi antara (biasanya 28 MHz untuk 144 MHz) dan transverter menjadi tingkat yang menentukan derau: transverter masuk ke rumus Friis setelah kabel feed, dan radio yang mengikutinya semakin kecil pengaruhnya semakin besar penguatan transverter.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -48794,7 +49134,7 @@ namespace LunaCalc
                 "Kabel dengan jenis yang sama, diameter yang sama dalam ±0,2 mm dan redaman dalam 0,2 dB/100 m di semua pita dikelompokkan dalam satu baris (≡), dengan nilai rata-ratanya; nama yang setara ditampilkan dengan \"also:\" (misalnya LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Nama Tiongkok 50-3, 50-5, 50-7, 50-9, 50-12 menyatakan diameter dielektrik dalam milimeter.",
                 "> Kabel kustom dapat ditambahkan dengan lima nilai redamannya: kabel tersebut disimpan di data\\cavi_personali.txt dan juga muncul di daftar drop-down diagram stasiun pada budget EME. Tooltip setiap baris tabel menyebutkan sumber kabel tersebut.",
                 "### Konektor (NJ9R)",
-                "Konektor juga merupakan bagian dari saluran. Aturan praktis NJ9R adalah sekitar 1 dB untuk setiap 8 – 10 konektor, semuanya dihitung dari bagian belakang radio sampai antena, termasuk adaptor, relay, dan pembagi: pada instalasinya yang terdiri atas empat antena, 24 konektor bernilai lebih dari 2 dB, setara dengan 40 – 45 m LMR-400 baru di 144 MHz [2]. Di Anggaran EME, rugi ini harus ditambahkan ke rugi aksesori TX dan ke rugi antara antena dan praamplifier.",
+                "Konektor juga merupakan bagian dari saluran. Aturan praktis NJ9R adalah sekitar 1 dB untuk setiap 8 – 10 konektor, semuanya dihitung dari bagian belakang radio sampai antena, termasuk adaptor, relay, dan pembagi: pada instalasinya yang terdiri atas empat antena, 24 konektor bernilai lebih dari 2 dB, setara dengan 40 – 45 m LMR-400 baru di 144 MHz [2]. Dalam anggaran EME, kotak relai koaksial memiliki isian Perkiraan konektor: setiap konektor bernilai 0,11 dB, semuanya saat memancar dan separuhnya saat menerima, sebelum preamplifier.",
                 "[1] Sumber masing-masing kabel: lembar data dari Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, melalui WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica dari Senago (RG-115), tabel dari DD1US dan EA5IP (H100) serta tabel dari SV1BSX untuk RG-58, RG-213, H-155 dan H-2000 (nilai perlu diverifikasi).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
             };
@@ -49259,7 +49599,7 @@ namespace LunaCalc
                 "@fine",
                 "Для лучшей конфигурации, с подставленными значениями:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **На практике.** Предусилитель следует устанавливать у антенны, перед фидером и сразу после коаксиального реле (которое должно защищать его во время передачи с помощью секвенсора). Его усиление должно быть достаточно большим, чтобы влияние кабеля и радиостанции стало пренебрежимым: как правило, по крайней мере на 10 dB больше суммы затухания кабеля и коэффициента шума радиостанции (в примере 1,6 + 16 ≈ 18 dB → при 20 dB радиостанция ещё добавляет 1,7 dB; с включённым внутренним предусилителем — всего 0,05 dB). Однако слишком большое усиление уменьшает динамический диапазон радиостанции: с хорошим МШУ у антенны часто лучше держать внутренний предусилитель выключенным и выбрать МШУ с усилением 20 – 26 dB. В бюджете EME этот выбор делается на схеме приёмной установки, а вкладка ОТЛАДКА ФОРМУЛ показывает расчёт шаг за шагом.",
+                ">! **На практике.** Предусилитель следует устанавливать у антенны, перед фидером и сразу после коаксиального реле (которое должно защищать его во время передачи с помощью секвенсора). Его усиление должно быть достаточно большим, чтобы влияние кабеля и радиостанции стало пренебрежимым: как правило, по крайней мере на 10 dB больше суммы затухания кабеля и коэффициента шума радиостанции (в примере 1,6 + 16 ≈ 18 dB → при 20 dB радиостанция ещё добавляет 1,7 dB; с включённым внутренним предусилителем — всего 0,05 dB). Однако слишком большое усиление уменьшает динамический диапазон радиостанции: с хорошим МШУ у антенны часто лучше держать внутренний предусилитель выключенным и выбрать МШУ с усилением 20 – 26 dB. В бюджете EME этот выбор делается на схеме приёмной установки, а вкладка Проверка расчётов показывает расчёт шаг за шагом.",
                 "##+ Трансвертер (необязательно)",
                 "С трансвертером радиостанция работает на промежуточной частоте (обычно 28 MHz для 144 MHz), и каскадом, определяющим шум, становится трансвертер: он входит в формулу Фрииса после фидера, а следующая за ним радиостанция влияет тем меньше, чем больше усиление трансвертера.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -49331,7 +49671,7 @@ namespace LunaCalc
                 "Кабели одного типа с одинаковым диаметром в пределах ±0,2 mm и затуханием в пределах 0,2 dB/100 m на всех диапазонах объединены в одну строку (≡) со средним значением; эквивалентные названия показаны с пометкой \"also:\" (например, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Китайские названия 50-3, 50-5, 50-7, 50-9, 50-12 указывают диаметр диэлектрика в миллиметрах.",
                 "> Можно добавлять собственные кабели с их пятью значениями затухания: они сохраняются в data\\cavi_personali.txt и появляются также в выпадающих списках схемы станции бюджета EME. Всплывающая подсказка каждой строки таблицы указывает источник данных для этого кабеля.",
                 "### Разъёмы (NJ9R)",
-                "Разъёмы тоже входят в линию. Практическое правило NJ9R — около 1 dB на каждые 8 – 10 разъёмов, считая все от задней панели трансивера до антенны, включая переходники, реле и делители: в его установке из четырёх антенн 24 разъёма дают больше 2 dB — столько же, сколько 40 – 45 m нового LMR-400 на 144 MHz [2]. В бюджете EME эти потери нужно прибавить к значению «Потери аксессуаров TX» и к потерям между антенной и предусилителем.",
+                "Разъёмы тоже входят в линию. Практическое правило NJ9R — около 1 dB на каждые 8 – 10 разъёмов, считая все от задней панели трансивера до антенны, включая переходники, реле и делители: в его установке из четырёх антенн 24 разъёма дают больше 2 dB — столько же, сколько 40 – 45 m нового LMR-400 на 144 MHz [2]. В бюджете EME в блоке коаксиального реле есть поле «Разъёмов (оценка)»: каждый разъём даёт 0,11 дБ, при передаче учитываются все, при приёме — половина, до предусилителя.",
                 "[1] Источники данных по отдельным кабелям: технические описания Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica из Сенаго (RG-115), таблицы DD1US и EA5IP (H100) и таблица SV1BSX для RG-58, RG-213, H-155 и H-2000 (значения требуют проверки).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
             };
@@ -49796,7 +50136,7 @@ namespace LunaCalc
                 "@fine",
                 "Для найкращої конфігурації, з підставленими значеннями:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **На практиці.** Передпідсилювач слід встановлювати біля антени, перед фідером і одразу після коаксіального реле (яке має захищати його під час передачі за допомогою секвенсора). Його підсилення має бути досить великим, щоб вплив кабелю й радіостанції став нехтовно малим: як правило, щонайменше на 10 dB більше за суму втрат кабелю і коефіцієнта шуму радіостанції (у прикладі 1,6 + 16 ≈ 18 dB → з 20 dB радіостанція ще додає 1,7 dB; з увімкненим внутрішнім передпідсилювачем — лише 0,05 dB). Проте надмірне підсилення зменшує динамічний діапазон радіостанції: з добрим LNA біля антени часто краще тримати внутрішній передпідсилювач вимкненим і вибрати LNA на 20 – 26 dB. У бюджеті EME ці параметри задаються на схемі приймальної установки, а вкладка НАЛАГОДЖЕННЯ ФОРМУЛ показує розрахунок крок за кроком.",
+                ">! **На практиці.** Передпідсилювач слід встановлювати біля антени, перед фідером і одразу після коаксіального реле (яке має захищати його під час передачі за допомогою секвенсора). Його підсилення має бути досить великим, щоб вплив кабелю й радіостанції став нехтовно малим: як правило, щонайменше на 10 dB більше за суму втрат кабелю і коефіцієнта шуму радіостанції (у прикладі 1,6 + 16 ≈ 18 dB → з 20 dB радіостанція ще додає 1,7 dB; з увімкненим внутрішнім передпідсилювачем — лише 0,05 dB). Проте надмірне підсилення зменшує динамічний діапазон радіостанції: з добрим LNA біля антени часто краще тримати внутрішній передпідсилювач вимкненим і вибрати LNA на 20 – 26 dB. У бюджеті EME ці параметри задаються на схемі приймальної установки, а вкладка Перевірка розрахунків показує розрахунок крок за кроком.",
                 "##+ Трансвертер (необов'язково)",
                 "З трансвертером радіостанція працює на проміжній частоті (зазвичай 28 MHz для 144 MHz), і саме трансвертер стає каскадом, що визначає шум: він входить у формулу Фрііса після фідера, а радіостанція після нього впливає тим менше, чим більше підсилення трансвертера.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -49868,7 +50208,7 @@ namespace LunaCalc
                 "Кабелі одного типу з однаковим діаметром у межах ±0,2 mm і загасанням у межах 0,2 dB/100 m на всіх діапазонах згруповано в один рядок (≡) із середнім значенням; еквівалентні назви показано з \"also:\" (наприклад, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Китайські назви 50-3, 50-5, 50-7, 50-9, 50-12 вказують діаметр діелектрика в міліметрах.",
                 "> Власні кабелі можна додати з їхніми п'ятьма значеннями загасання: вони зберігаються в data\\cavi_personali.txt і також з'являються у випадних списках схеми станції в бюджеті EME. Підказка кожного рядка таблиці вказує джерело даних цього кабелю.",
                 "### Роз'єми (NJ9R)",
-                "Роз'єми теж є частиною лінії. Практичне правило NJ9R — близько 1 dB на кожні 8 – 10 роз'ємів, рахуючи всі від задньої панелі трансивера до антени, разом із перехідниками, реле й дільниками: в його установці з чотирьох антен 24 роз'єми дають понад 2 dB — стільки ж, скільки 40 – 45 m нового LMR-400 на 144 MHz [2]. У бюджеті EME ці втрати слід додати до значення «Втрати аксесуарів TX» і до втрат між антеною та передпідсилювачем.",
+                "Роз'єми теж є частиною лінії. Практичне правило NJ9R — близько 1 dB на кожні 8 – 10 роз'ємів, рахуючи всі від задньої панелі трансивера до антени, разом із перехідниками, реле й дільниками: в його установці з чотирьох антен 24 роз'єми дають понад 2 dB — стільки ж, скільки 40 – 45 m нового LMR-400 на 144 MHz [2]. У бюджеті EME в блоці коаксіального реле є поле «Роз’ємів (оцінка)»: кожен роз’єм дає 0,11 дБ, при передаванні враховуються всі, при прийманні — половина, до попереднього підсилювача.",
                 "[1] Джерела даних окремих кабелів: технічні описи Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica із Сенаго (RG-115), таблиці DD1US та EA5IP (H100) і таблиця SV1BSX для RG-58, RG-213, H-155 та H-2000 (значення потребують перевірки).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
             };
@@ -50333,7 +50673,7 @@ namespace LunaCalc
                 "@fine",
                 "Vir die beste konfigurasie, met die waardes ingevul:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **In die praktyk.** Die voorversterker moet by die antenna gemonteer word, voor die voerkabel en direk na die koaksiale relais (wat dit tydens uitsending met 'n sekwenseerder moet beskerm). Sy wins moet hoog genoeg wees om die kabel en die radio weglaatbaar te maak: as reël minstens 10 dB meer as die som van die kabelverlies en die ruissyfer van die radio (in die voorbeeld 1,6 + 16 ≈ 18 dB → met 20 dB weeg die radio nog 1,7 dB; met die interne voorversterker aan weeg dit slegs 0,05 dB). Te veel wins verminder egter die dinamiese bereik van die radio: met 'n goeie LNA by die antenna is dit dikwels beter om die interne voorversterker af te hou en 'n LNA van 20 – 26 dB te kies. In die EME-begroting word hierdie keuses in die diagram van die ontvangsinstallasie gemaak, en die oortjie FORMULE-ONTFOUTING toon die berekening stap vir stap.",
+                ">! **In die praktyk.** Die voorversterker moet by die antenna gemonteer word, voor die voerkabel en direk na die koaksiale relais (wat dit tydens uitsending met 'n sekwenseerder moet beskerm). Sy wins moet hoog genoeg wees om die kabel en die radio weglaatbaar te maak: as reël minstens 10 dB meer as die som van die kabelverlies en die ruissyfer van die radio (in die voorbeeld 1,6 + 16 ≈ 18 dB → met 20 dB weeg die radio nog 1,7 dB; met die interne voorversterker aan weeg dit slegs 0,05 dB). Te veel wins verminder egter die dinamiese bereik van die radio: met 'n goeie LNA by die antenna is dit dikwels beter om die interne voorversterker af te hou en 'n LNA van 20 – 26 dB te kies. In die EME-begroting word hierdie keuses in die diagram van die ontvangsinstallasie gemaak, en die oortjie Kontrole van die berekeninge toon die berekening stap vir stap.",
                 "##+ Die transverter (opsioneel)",
                 "Met 'n transverter werk die radio op 'n intermediêre frekwensie (gewoonlik 28 MHz vir 144 MHz) en die transverter word die trap wat vir ruis tel: dit kom in die Friis-formule na die voerkabel, en die radio wat daarop volg, weeg minder hoe meer die transverter versterk.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -50405,7 +50745,7 @@ namespace LunaCalc
                 "Kabels van dieselfde tipe, met dieselfde deursnee binne ±0,2 mm en verswakking binne 0,2 dB/100 m op alle bande, word in een ry saamgegroepeer (≡), met die gemiddelde waarde; gelykwaardige name word met \"also:\" getoon (byvoorbeeld LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Die Chinese name 50-3, 50-5, 50-7, 50-9, 50-12 gee die deursnee van die diëlektrikum in millimeter.",
                 "> Eie kabels kan met hul vyf verswakkings bygevoeg word: hulle word in data\\cavi_personali.txt gestoor en verskyn ook in die aftreklyste van die stasiediagram van die EME-begroting. Die wenkteks van elke tabelry noem die bron van daardie kabel.",
                 "### Koppelstukke (NJ9R)",
-                "Koppelstukke is ook deel van die lyn. NJ9R se praktiese reël is ongeveer 1 dB vir elke 8 – 10 koppelstukke, almal getel van die agterkant van die radio tot by die antenna, insluitend adapters, relais en verdelers: in sy installasie met vier antennas is die 24 koppelstukke meer as 2 dB werd, soveel as 40 – 45 m nuwe LMR-400 op 144 MHz [2]. In die EME-begroting moet hierdie verlies by die TX-bykomstigheidsverliese en by die verliese tussen antenna en voorversterker getel word.",
+                "Koppelstukke is ook deel van die lyn. NJ9R se praktiese reël is ongeveer 1 dB vir elke 8 – 10 koppelstukke, almal getel van die agterkant van die radio tot by die antenna, insluitend adapters, relais en verdelers: in sy installasie met vier antennas is die 24 koppelstukke meer as 2 dB werd, soveel as 40 – 45 m nuwe LMR-400 op 144 MHz [2]. In die EME-begroting het die koaksiale relê se blok die veld Geskatte verbindings: elke verbinding tel 0,11 dB, almal by uitsending en die helfte by ontvangs, voor die voorversterker.",
                 "[1] Die bronne van die individuele kabels: datablaaie van Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F-katalogus (RG-142, RG-393), R.F. elettronica van Senago (RG-115), die tabelle van DD1US en EA5IP (H100) en die tabel van SV1BSX vir RG-58, RG-213, H-155 en H-2000 (waardes moet nog geverifieer word).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
             };
@@ -50870,7 +51210,7 @@ namespace LunaCalc
                 "@fine",
                 "সেরা কনফিগারেশনের জন্য, মানগুলো বসিয়ে:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **ব্যবহারিক ক্ষেত্রে।** প্রিঅ্যাম্পটি অ্যান্টেনায় লাগানো উচিত, ফিড কেবলের আগে এবং কোঅ্যাক্সিয়াল রিলের ঠিক পরে (যা একটি সিকোয়েন্সারের সাহায্যে ট্রান্সমিশনের সময় একে রক্ষা করবে)। এর গেইন এতটা বেশি হতে হবে যাতে কেবল ও রেডিও নগণ্য হয়ে যায়: নিয়ম হিসেবে, কেবলের লস ও রেডিওর নয়েজ ফিগারের যোগফলের চেয়ে অন্তত 10 dB বেশি (উদাহরণে 1.6 + 16 ≈ 18 dB → 20 dB গেইনে রেডিও তখনও 1.7 dB প্রভাব ফেলে; অভ্যন্তরীণ প্রিঅ্যাম্প চালু থাকলে মাত্র 0.05 dB)। তবে অতিরিক্ত গেইন রেডিওর ডায়নামিক রেঞ্জ কমিয়ে দেয়: অ্যান্টেনায় একটি ভালো LNA থাকলে প্রায়ই অভ্যন্তরীণ প্রিঅ্যাম্প বন্ধ রেখে 20 – 26 dB-এর একটি LNA বেছে নেওয়া ভালো। EME বাজেটে এই পছন্দগুলো রিসিভিং ইনস্টলেশনের ডায়াগ্রামে করা হয়, এবং সূত্র ডিবাগ ট্যাব ধাপে ধাপে হিসাবটি দেখায়।",
+                ">! **ব্যবহারিক ক্ষেত্রে।** প্রিঅ্যাম্পটি অ্যান্টেনায় লাগানো উচিত, ফিড কেবলের আগে এবং কোঅ্যাক্সিয়াল রিলের ঠিক পরে (যা একটি সিকোয়েন্সারের সাহায্যে ট্রান্সমিশনের সময় একে রক্ষা করবে)। এর গেইন এতটা বেশি হতে হবে যাতে কেবল ও রেডিও নগণ্য হয়ে যায়: নিয়ম হিসেবে, কেবলের লস ও রেডিওর নয়েজ ফিগারের যোগফলের চেয়ে অন্তত 10 dB বেশি (উদাহরণে 1.6 + 16 ≈ 18 dB → 20 dB গেইনে রেডিও তখনও 1.7 dB প্রভাব ফেলে; অভ্যন্তরীণ প্রিঅ্যাম্প চালু থাকলে মাত্র 0.05 dB)। তবে অতিরিক্ত গেইন রেডিওর ডায়নামিক রেঞ্জ কমিয়ে দেয়: অ্যান্টেনায় একটি ভালো LNA থাকলে প্রায়ই অভ্যন্তরীণ প্রিঅ্যাম্প বন্ধ রেখে 20 – 26 dB-এর একটি LNA বেছে নেওয়া ভালো। EME বাজেটে এই পছন্দগুলো রিসিভিং ইনস্টলেশনের ডায়াগ্রামে করা হয়, এবং গণনা যাচাই ট্যাব ধাপে ধাপে হিসাবটি দেখায়।",
                 "##+ ট্রান্সভার্টার (ঐচ্ছিক)",
                 "ট্রান্সভার্টার থাকলে রেডিও একটি ইন্টারমিডিয়েট ফ্রিকোয়েন্সিতে কাজ করে (144 MHz-এর জন্য সাধারণত 28 MHz) এবং নয়েজের ক্ষেত্রে ট্রান্সভার্টারই নির্ধারক স্টেজ হয়ে ওঠে: এটি ফিড কেবলের পরে Friis সূত্রে প্রবেশ করে, এবং এর পরের রেডিওটি ট্রান্সভার্টারের গেইন যত বেশি, তত কম প্রভাব ফেলে।",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -50942,7 +51282,7 @@ namespace LunaCalc
                 "একই ধরনের কেবল, যাদের ব্যাস ±0.2 mm-এর মধ্যে এবং সব ব্যান্ডে অ্যাটেনুয়েশন 0.2 dB/100 m-এর মধ্যে, একটি সারিতে (≡) গড় মানসহ একত্র করা হয়েছে; সমতুল্য নামগুলো \"also:\" দিয়ে দেখানো হয় (যেমন LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600)। চীনা নাম 50-3, 50-5, 50-7, 50-9, 50-12 মিলিমিটারে ডাইইলেকট্রিকের ব্যাস নির্দেশ করে।",
                 "> নিজস্ব কেবল তাদের পাঁচটি অ্যাটেনুয়েশনসহ যোগ করা যায়: এগুলো data\\cavi_personali.txt-এ সংরক্ষিত হয় এবং EME বাজেটের স্টেশন ডায়াগ্রামের ড্রপ-ডাউনেও দেখা যায়। টেবিলের প্রতিটি সারির টুলটিপ সেই কেবলের উৎস উল্লেখ করে।",
                 "### সংযোগকারী (NJ9R)",
-                "সংযোগকারীও লাইনের অংশ। NJ9R-এর ব্যবহারিক নিয়ম হলো প্রতি 8 – 10টি সংযোগকারীতে প্রায় 1 dB, রেডিওর পেছন থেকে অ্যান্টেনা পর্যন্ত সবগুলো গুনে, অ্যাডাপ্টার, রিলে ও পাওয়ার ডিভাইডারসহ: তাঁর চার-অ্যান্টেনার স্থাপনায় 24টি সংযোগকারীর লস 2 dB-এর বেশি, যা 144 MHz-এ 40 – 45 m নতুন LMR-400-এর সমান [2]। EME বাজেটে এই লস TX আনুষঙ্গিক ক্ষতি এবং অ্যান্টেনা ও প্রিঅ্যাম্পের মধ্যবর্তী লসের সঙ্গে যোগ করতে হবে।",
+                "সংযোগকারীও লাইনের অংশ। NJ9R-এর ব্যবহারিক নিয়ম হলো প্রতি 8 – 10টি সংযোগকারীতে প্রায় 1 dB, রেডিওর পেছন থেকে অ্যান্টেনা পর্যন্ত সবগুলো গুনে, অ্যাডাপ্টার, রিলে ও পাওয়ার ডিভাইডারসহ: তাঁর চার-অ্যান্টেনার স্থাপনায় 24টি সংযোগকারীর লস 2 dB-এর বেশি, যা 144 MHz-এ 40 – 45 m নতুন LMR-400-এর সমান [2]। EME বাজেটে কোঅ্যাক্সিয়াল রিলের বাক্সে 'আনুমানিক কানেক্টর' ঘর আছে: প্রতিটি কানেক্টর 0.11 dB, ট্রান্সমিশনে সবগুলো এবং রিসেপশনে অর্ধেক, প্রিঅ্যাম্প্লিফায়ারের আগে।",
                 "[1] প্রতিটি কেবলের উৎস: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo মারফত), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables-এর ডেটা শিট, MIL-C-17F ক্যাটালগ (RG-142, RG-393), Senago-র R.F. elettronica (RG-115), DD1US ও EA5IP-এর টেবিল (H100) এবং RG-58, RG-213, H-155 ও H-2000-এর জন্য SV1BSX-এর টেবিল (মান যাচাইসাপেক্ষ)।",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
             };
@@ -51407,7 +51747,7 @@ namespace LunaCalc
                 "@fine",
                 "لأفضل تهيئة، بعد التعويض بالقيم:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **عمليًا.** يجب تركيب المضخم الأولي عند الهوائي، قبل كابل التغذية ومباشرةً بعد المرحّل المحوري (الذي يجب أن يحميه أثناء الإرسال بواسطة مُسلسِل sequencer). ويجب أن يكون كسبه كبيرًا بما يكفي لجعل تأثير الكابل والجهاز مهملًا: كقاعدة، أكثر بـ 10 dB على الأقل من مجموع فقد الكابل ورقم ضوضاء الجهاز (في المثال 1.6 + 16 ≈ 18 dB → مع 20 dB ما زال الجهاز يؤثر بـ 1.7 dB؛ ومع تشغيل المضخم الأولي الداخلي لا يؤثر إلا بـ 0.05 dB). لكن الكسب الزائد يقلل المدى الديناميكي للجهاز: مع LNA جيد عند الهوائي يكون من الأفضل غالبًا إبقاء المضخم الأولي الداخلي متوقفًا واختيار LNA بكسب 20 – 26 dB. في ميزانية EME تُجرى هذه الاختيارات في مخطط منظومة الاستقبال، ويعرض تبويب تصحيح الصيغ الحساب خطوة بخطوة.",
+                ">! **عمليًا.** يجب تركيب المضخم الأولي عند الهوائي، قبل كابل التغذية ومباشرةً بعد المرحّل المحوري (الذي يجب أن يحميه أثناء الإرسال بواسطة مُسلسِل sequencer). ويجب أن يكون كسبه كبيرًا بما يكفي لجعل تأثير الكابل والجهاز مهملًا: كقاعدة، أكثر بـ 10 dB على الأقل من مجموع فقد الكابل ورقم ضوضاء الجهاز (في المثال 1.6 + 16 ≈ 18 dB → مع 20 dB ما زال الجهاز يؤثر بـ 1.7 dB؛ ومع تشغيل المضخم الأولي الداخلي لا يؤثر إلا بـ 0.05 dB). لكن الكسب الزائد يقلل المدى الديناميكي للجهاز: مع LNA جيد عند الهوائي يكون من الأفضل غالبًا إبقاء المضخم الأولي الداخلي متوقفًا واختيار LNA بكسب 20 – 26 dB. في ميزانية EME تُجرى هذه الاختيارات في مخطط منظومة الاستقبال، ويعرض تبويب التحقق من الحسابات الحساب خطوة بخطوة.",
                 "##+ المحوّل الترددي (transverter) (اختياري)",
                 "مع المحوّل الترددي يعمل الجهاز على تردد وسيط (عادةً 28 MHz لنطاق 144 MHz) ويصبح المحوّل الترددي هو المرحلة الحاسمة في الضوضاء: فهو يدخل في معادلة Friis بعد كابل التغذية، ويقل تأثير الجهاز الذي يليه كلما زاد كسب المحوّل الترددي.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -51479,7 +51819,7 @@ namespace LunaCalc
                 "الكابلات من النوع نفسه، ذات القطر نفسه ضمن ±0.2 mm والتوهين ضمن 0.2 dB/100 m على جميع النطاقات، تُجمع في صف واحد (≡) بالقيمة المتوسطة؛ وتُعرض الأسماء المكافئة بعد \"also:\" (مثلًا LMR-400 = HF400، CNT-400، 50-7 low loss؛ LMR-600 = CNT-600). الأسماء الصينية 50-3، 50-5، 50-7، 50-9، 50-12 تعطي قطر العازل بالمليمترات.",
                 "> يمكن إضافة كابلات مخصصة بقيم توهينها الخمس: تُحفظ في data\\cavi_personali.txt وتظهر أيضًا في القوائم المنسدلة لمخطط المحطة في ميزانية EME. يذكر التلميح (tooltip) لكل صف في الجدول مصدر ذلك الكابل.",
                 "### الموصلات (NJ9R)",
-                "الموصلات أيضًا جزء من الخط. القاعدة العملية لدى NJ9R هي نحو 1 dB لكل 8 – 10 موصلات، تُعدّ جميعها من خلف جهاز الراديو حتى الهوائي، بما فيها المهايئات والمرحّلات ومقسّمات القدرة: في منظومته ذات الهوائيات الأربعة تساوي الموصلات الـ 24 أكثر من 2 dB، أي ما يعادل 40 – 45 m من كابل LMR-400 جديد على 144 MHz [2]. وفي ميزانية EME يجب جمع هذا الفقد مع خسائر ملحقات الإرسال ومع الفقد بين الهوائي والمضخم الأولي.",
+                "الموصلات أيضًا جزء من الخط. القاعدة العملية لدى NJ9R هي نحو 1 dB لكل 8 – 10 موصلات، تُعدّ جميعها من خلف جهاز الراديو حتى الهوائي، بما فيها المهايئات والمرحّلات ومقسّمات القدرة: في منظومته ذات الهوائيات الأربعة تساوي الموصلات الـ 24 أكثر من 2 dB، أي ما يعادل 40 – 45 m من كابل LMR-400 جديد على 144 MHz [2]. في ميزانية EME يحتوي إطار المرحّل المحوري على خانة «عدد الموصلات التقديري»: كل موصل يساوي 0.11 dB، تُحتسب كلها في الإرسال ونصفها في الاستقبال قبل المضخم الأولي.",
                 "[1] مصادر الكابلات المفردة: صحائف بيانات Times Microwave (LMR)، RFS (CELLFLEX LCF/SCF)، CommScope Andrew (HELIAX LDF/FSJ)، Siva Cavi (HF 240/287/400)، SSB-Electronic (Aircell، Ecoflex، Aircom Plus)، Messi & Paoloni (Hyperflex، Ultraflex، عبر WiMo)، Symair، SYV50-7 (szansy.com)، Belden (H1000)، Prospecta (RT5020، XT2400)، QAXIAL (LLF195)، Caledonian Cables، كتالوج MIL-C-17F (RG-142، RG-393)، R.F. elettronica في Senago (RG-115)، جداول DD1US وEA5IP (H100) وجدول SV1BSX لكابلات RG-58 وRG-213 وH-155 وH-2000 (قيم تحتاج إلى تحقق).",
                 "[2] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
             };
@@ -51944,7 +52284,7 @@ namespace LunaCalc
                 "@fine",
                 "En iyi yapılandırma için, değerler yerine konduğunda:",
                 "= F_{tot} = 1.1220 + \\frac{1.4454 − 1}{100} + \\frac{1.9953 − 1}{100 · 0.6918} = 1.1220 + 0.0045 + 0.0144 = 1.1409 \\quad ⇒ \\quad NF = 0.57 \\t{ dB}",
-                ">! **Uygulamada.** Ön yükselteç antene, besleme kablosundan önce ve koaksiyel rölenin hemen arkasına monte edilmelidir (röle, bir sıralayıcı (sequencer) ile gönderme sırasında onu korumalıdır). Kazancı, kabloyu ve telsizi ihmal edilebilir kılacak kadar yüksek olmalıdır: kural olarak kablo kaybı ile telsizin gürültü faktörünün toplamından en az 10 dB fazla (örnekte 1,6 + 16 ≈ 18 dB → 20 dB ile telsiz hâlâ 1,7 dB etkiler; dahili ön yükselteç açıkken yalnızca 0,05 dB etkiler). Ancak fazla kazanç telsizin dinamik aralığını azaltır: antende iyi bir LNA varken dahili ön yükselteci kapalı tutmak ve 20 – 26 dB'lik bir LNA seçmek çoğu zaman daha iyidir. EME bütçesinde bu seçimler alıcı tesisatın şemasında yapılır ve FORMÜL HATA AYIKLAMA sekmesi hesabı adım adım gösterir.",
+                ">! **Uygulamada.** Ön yükselteç antene, besleme kablosundan önce ve koaksiyel rölenin hemen arkasına monte edilmelidir (röle, bir sıralayıcı (sequencer) ile gönderme sırasında onu korumalıdır). Kazancı, kabloyu ve telsizi ihmal edilebilir kılacak kadar yüksek olmalıdır: kural olarak kablo kaybı ile telsizin gürültü faktörünün toplamından en az 10 dB fazla (örnekte 1,6 + 16 ≈ 18 dB → 20 dB ile telsiz hâlâ 1,7 dB etkiler; dahili ön yükselteç açıkken yalnızca 0,05 dB etkiler). Ancak fazla kazanç telsizin dinamik aralığını azaltır: antende iyi bir LNA varken dahili ön yükselteci kapalı tutmak ve 20 – 26 dB'lik bir LNA seçmek çoğu zaman daha iyidir. EME bütçesinde bu seçimler alıcı tesisatın şemasında yapılır ve Hesapların kontrolü sekmesi hesabı adım adım gösterir.",
                 "##+ Transverter (isteğe bağlı)",
                 "Bir transverter ile telsiz bir ara frekansta çalışır (144 MHz için genellikle 28 MHz) ve gürültü açısından önemli olan kat transverter olur: Friis formülüne besleme kablosundan sonra girer ve onu izleyen telsiz, transverter ne kadar çok kazanırsa o kadar az etkiler.",
                 "= F_{comb} = F_{XV} + \\frac{F_{radio} − 1}{G_{XV}} \\quad \\t{e.g. } F_{comb} = 1.2589 + \\frac{10 − 1}{50.12} = 1.4385 ⇒ NF = 1.58 \\t{ dB}",
@@ -52016,7 +52356,7 @@ namespace LunaCalc
                 "Aynı tipte, çapı ±0,2 mm ve zayıflaması tüm bantlarda 0,2 dB/100 m içinde olan kablolar, ortalama değerle tek bir satırda (≡) toplanır; eşdeğer adlar \"also:\" ile gösterilir (örneğin LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Çince adlar 50-3, 50-5, 50-7, 50-9, 50-12 dielektriğin milimetre cinsinden çapını verir.",
                 "> Özel kablolar beş zayıflama değeriyle eklenebilir: data\\cavi_personali.txt dosyasına kaydedilir ve EME bütçesinin istasyon şemasındaki açılır listelerde de görünür. Her tablo satırının araç ipucu o kablonun kaynağını belirtir.",
                 "### Konnektörler (NJ9R)",
-                "Konnektörler de hattın bir parçasıdır. NJ9R'nin pratik kuralı, telsizin arkasından antene kadar adaptörler, röleler ve bölücüler dahil hepsi sayıldığında her 8 – 10 konnektör için yaklaşık 1 dB'dir: onun dört antenli tesisatında 24 konnektör 2 dB'den fazlasına, yani 144 MHz'de 40 – 45 m yeni LMR-400 kadarına karşılık gelir [2]. EME bütçesinde bu kayıp, TX aksesuar kayıplarına ve anten ile ön yükseltici arasındaki kayıplara eklenmelidir.",
+                "Konnektörler de hattın bir parçasıdır. NJ9R'nin pratik kuralı, telsizin arkasından antene kadar adaptörler, röleler ve bölücüler dahil hepsi sayıldığında her 8 – 10 konnektör için yaklaşık 1 dB'dir: onun dört antenli tesisatında 24 konnektör 2 dB'den fazlasına, yani 144 MHz'de 40 – 45 m yeni LMR-400 kadarına karşılık gelir [2]. EME bütçesinde koaksiyel röle kutusunda Tahmini konektör alanı vardır: her konektör 0,11 dB sayılır; gönderimde hepsi, alımda ise ön yükselticiden önceki yarısı.",
                 "[1] Tek tek kabloların kaynakları: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo aracılığıyla), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables veri sayfaları, MIL-C-17F kataloğu (RG-142, RG-393), Senago'daki R.F. elettronica (RG-115), DD1US ve EA5IP tabloları (H100) ve RG-58, RG-213, H-155 ve H-2000 için SV1BSX tablosu (doğrulanması gereken değerler).",
                 "[2] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
             };
