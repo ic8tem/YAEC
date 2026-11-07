@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 von Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Rechner für Funkamateure, die EME (Erde–Mond–Erde) von 50 bis 432 MHz betre
 Quellcode und Download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Lade YAEC-1.2.1-Setup.exe von der Seite Releases herunter und führe die Datei aus. Sie installiert YAEC in Dokumente\YAEC, ohne Administratorrechte, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm.
+1. Lade YAEC-1.3-Setup.exe von der Seite Releases herunter und führe die Datei aus. Sie installiert YAEC in Dokumente\YAEC, ohne Administratorrechte, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm.
 2. Wenn die SmartScreen-Warnung erscheint: „Weitere Informationen“ → „Trotzdem ausführen“.
-3. Ohne Installation: entpacke YAEC-1.2.1-windows-portable.zip in einen Ordner, in den du schreiben darfst, und starte YAEC.exe.
+3. Ohne Installation: entpacke YAEC-1.3-windows-portable.zip in einen Ordner, in den du schreiben darfst, und starte YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC läuft mit Mono, der freien .NET-Laufzeitumgebung.
-- Debian, Ubuntu, Mint: lade yaec_1.2.1_all.deb herunter und installiere es mit
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: lade yaec_1.3_all.deb herunter und installiere es mit
+      sudo apt install ./yaec_1.3_all.deb
   (installiert auch Mono). YAEC startet über das Anwendungsmenü oder mit dem Befehl „yaec“.
-- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.2.1-linux.tar.gz und starte ./install.sh.
+- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.3-linux.tar.gz und starte ./install.sh.
 
 INSTALLATION – macOS (experimentell)
 1. Installiere Mono für macOS (https://www.mono-project.com/download/stable/) und XQuartz (https://www.xquartz.org).
-2. Öffne YAEC-1.2.1-macOS.dmg und ziehe YAEC in den Ordner Programme. Beim ersten Mal: Rechtsklick auf YAEC → Öffnen (die App ist nicht von Apple signiert).
+2. Öffne YAEC-1.3-macOS.dmg und ziehe YAEC in den Ordner Programme. Beim ersten Mal: Rechtsklick auf YAEC → Öffnen (die App ist nicht von Apple signiert).
 
 PRÜFUNG DER HERUNTERGELADENEN DATEIEN (SHA-256)
 Jedes Release enthält SHA256SUMS.txt mit dem SHA-256-Hashwert jedes Pakets. Vergleiche ihn mit dem Wert der heruntergeladenen Datei:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Wenn die beiden Werte verschieden sind, installiere die Datei nicht, sondern lade sie erneut herunter.
@@ -39,6 +39,7 @@ Fehler, bessere Daten, Übersetzungen: ccerrotta@gmail.com · ic8tem@gmail.com �
 
 VERSIONSGESCHICHTE
 Die Versionen vor 1.0 heißen Beta.
+- 1.3 - Neun neue Sprachen: Niederländisch, Estnisch, Lettisch, Litauisch, Schwedisch, Norwegisch, Isländisch, Hebräisch und Urdu (insgesamt 26), mit den Handbüchern; Lizenz und LIESMICH in allen Sprachen, Lizenz in der Sprache des Installationsprogramms; Schaltfläche GRAVES; Stecker TX und Stecker RX im EME-Budget (Rat von NJ9R); verschiebbarer Trenner zwischen der linken Spalte und dem Schema des EME-Budgets; Kontrollkästchen Grauer Schleier in Erkundung meiner Hindernisse; FORMEL-DEBUG wird zu Rechenkontrolle und ABOUT & CREDITS wird zu INFO UND NACHWEISE; technische Kapitel des Benutzerhandbuchs auf Bengalisch, Arabisch und Türkisch; Pastell-Schemata korrigiert; das Fenster der CALL3.TXT schließt sich nach der Aktualisierung von selbst; Schaltflächen der Dialogfenster mit mehr Abstand.
 - 1.2.1 - Die Seite KONTAKT ZUM AUTOR UND DANK öffnet sich unter Linux und macOS wieder korrekt; der Verweis für die Transverter zeigt auf § 1.7.1.
 - 1.2 - EME-Budget mit den Anzeigen Meine EIRP, EIRP des DX, Streckendämpfung und S/N in beide Richtungen (mit der Sonne); Formeln des Word-Dokuments in einer einzigen Größe, innerhalb der Ränder; gefüllte Schaltflächen und flache Auswahllisten mit abgerundetem Rand in allen Schemata; acht Pastell-Farbschemata; Wertfelder mit nebeneinanderliegenden Pfeilen; die drei besten Tage nach Datum geordnet; unscharfer Himmelshintergrund; FORMEL-DEBUG übersetzt; Handbuch THEORIE UND TIPPS ZU EME mit den Ratschlägen von Relu NJ9R (GRAVES, Ausrichtung, Stecker, Antennengewinn, JT65B und MAP65, Polarisationsrelais), den neuen Abschnitten zum ersten Empfang und zu den Internet-Chats und den VE7BQH-Tabellen im Vorwort; Dank an NJ9R, Erinnerung an IK1UWL und an die Autoren von Artikeln, Hardware und Software, mit einem Tooltip zu ihren Werken.
 - 1.1 - Position live und +- 24h (früher Verfolgung) auch in Vergangenheit und Zukunft: Tag aus dem Kalender und Uhrzeit durch Ziehen der roten Linie, Frequenz im Feld Echo und Frequenzen; Rufzeichenfeld des DX mit der CALL3.TXT von W7GJ und WSJT-X Improved, zusammengeführt, mit vorgeschlagenem Locator und Kopie in den WSJT-X-Ordner; Entfernung und Dgrd ohne Rangliste, mit überlagerter Deklination, Zeilen in den Farben des Diagramms und wahlweise grünen nutzbaren Stunden; Kontrollkästchen im Stil des Programms; Kabel in den Auswahllisten nach Durchmesser und in der Tabelle nach Name, Hersteller und Typ sortiert, mit übersetzten Quellen; EME-Budget nur mit den 60-s-Modi (JT65, Q65-60A, Q65-60B, Q65-60C) und einem Anlagenschema, das sich den Texten anpasst; BENUTZERHANDBUCH mit allen Bildschirmen; THEORIE UND TIPPS ZU EME mit dem Vorwort des Autors, Nummerierung ab 1 und den Formeln des Sonnenrauschens; HTTPS unter Linux und macOS mit den Zertifikaten des Systems.

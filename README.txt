@@ -1,4 +1,4 @@
-﻿YAEC - Yet Another EME Calc  1.2.1
+﻿YAEC - Yet Another EME Calc  1.3
 by Costantino IC8TEM
 =================================
 
@@ -11,25 +11,25 @@ This README and the licence in every language: folder "lingue"
 All the versions before 1.0 are called beta (beta 1 ... beta 30).
 
 INSTALLATION - WINDOWS
-1. Download YAEC-1.2.1-Setup.exe from the "Releases" page on GitHub and run it.
+1. Download YAEC-1.3-Setup.exe from the "Releases" page on GitHub and run it.
    If SmartScreen shows a warning: "More info" -> "Run anyway".
    It installs into Documents\YAEC (no administrator rights needed), with
    Start menu and desktop shortcuts and the uninstaller.
-2. Portable alternative: YAEC-1.2.1-windows-portable.zip, extract it into a
+2. Portable alternative: YAEC-1.3-windows-portable.zip, extract it into a
    folder where you can write (e.g. Documents\YAEC) and run YAEC.exe.
 3. Developers only: to build it yourself, extract the source zip and
    double-click "compila.bat". You do not need it to use YAEC.
 
 INSTALLATION - LINUX (all distributions, the same program)
 YAEC runs with Mono (the open-source .NET runtime maintained by WineHQ).
-- Debian, Ubuntu, Mint: download yaec_1.2.1_all.deb and install it with
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: download yaec_1.3_all.deb and install it with
+      sudo apt install ./yaec_1.3_all.deb
   (apt installs Mono as well). Start it from the applications menu or with
   the command "yaec".
 - Fedora:   sudo dnf install mono-complete
   Arch:     sudo pacman -S mono
   openSUSE: sudo zypper install mono-complete
-  then extract YAEC-1.2.1-linux.tar.gz and run ./install.sh (installs into
+  then extract YAEC-1.3-linux.tar.gz and run ./install.sh (installs into
   ~/.local, no root needed), or simply ./yaec from the extracted folder.
 - Data: ~/.local/share/YAEC/data
 
@@ -37,15 +37,15 @@ INSTALLATION - macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/ or
    the "Framework Mono" package from WineHQ) and XQuartz (https://www.xquartz.org):
    on macOS the Windows Forms window of Mono is drawn through X11.
-2. Download YAEC-1.2.1-macOS.dmg, open it and drag YAEC into Applications.
+2. Download YAEC-1.3-macOS.dmg, open it and drag YAEC into Applications.
    The first time, right-click YAEC -> Open (the app is not signed by Apple).
 - Data: ~/Library/Application Support/YAEC/data
 
 CHECKING THE DOWNLOADED FILES (SHA-256)
 The release page also has SHA256SUMS.txt with the SHA-256 fingerprint of every
 package. Compare it with the fingerprint of the file you downloaded:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
-  or in the command prompt: certutil -hashfile YAEC-1.2.1-Setup.exe SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+  or in the command prompt: certutil -hashfile YAEC-1.3-Setup.exe SHA256
 - Linux:  sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS:  shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 If the two values differ, do not install the file: download it again from
@@ -69,6 +69,24 @@ SETTINGS
 - Linux: ~/.local/share/YAEC/data   macOS: ~/Library/Application Support/YAEC/data
 - The LoTW password is stored encrypted for the current user (DPAPI on
   Windows, the Mono key store on Linux and macOS).
+
+WHAT'S NEW IN 1.3
+- Nine new languages: Dutch, Estonian, Latvian, Lithuanian, Swedish,
+  Norwegian (bokmal), Icelandic, Hebrew and Urdu - 26 in all, manuals
+  included. Licence and README in every language in the "lingue" folder;
+  the installer shows the licence in the Windows language when it can.
+- EME budget: TX connectors and RX connectors fields (NJ9R's advice, 0.11 dB
+  each); a draggable separator between the left column and the station
+  diagram (double-click: initial width).
+- GRAVES button: the French radar (143.050 MHz, JN27SI) becomes the DX, to
+  test the receiver and the pointing with its Moon echo.
+- Reconnaissance of my obstacles: Grey veil checkbox (off = the map is shown
+  as it is).
+- FORMULA DEBUG is now called Calculation check; ABOUT & CREDITS is
+  translated in every language.
+- Fixes: pastel colour schemes applied correctly; the CALL3.TXT window closes
+  by itself after an update; dialog buttons no longer overlap; technical
+  chapters of the user manual translated into Bengali, Arabic and Turkish.
 
 WHAT'S NEW IN 1.2.1
 - The AUTHOR CONTACTS AND ACKNOWLEDGEMENTS page opens correctly again on

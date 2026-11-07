@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 av Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulator for radioamatører som kjører EME (Jord–Måne–Jord) fra 50 til 4
 Kildekode og nedlasting: https://github.com/ic8tem/YAEC/releases
 
 INSTALLASJON – WINDOWS
-1. Last ned YAEC-1.2.1-Setup.exe fra Releases-siden og kjør den. Den installerer YAEC i Dokumenter\YAEC, uten administratorrettigheter, med snarveier i Start-menyen og på skrivebordet, og med et avinstalleringsprogram.
+1. Last ned YAEC-1.3-Setup.exe fra Releases-siden og kjør den. Den installerer YAEC i Dokumenter\YAEC, uten administratorrettigheter, med snarveier i Start-menyen og på skrivebordet, og med et avinstalleringsprogram.
 2. Hvis SmartScreen-advarselen vises: «Mer informasjon» → «Kjør likevel».
-3. Uten installasjon: pakk ut YAEC-1.2.1-windows-portable.zip i en mappe du kan skrive i, og start YAEC.exe.
+3. Uten installasjon: pakk ut YAEC-1.3-windows-portable.zip i en mappe du kan skrive i, og start YAEC.exe.
 
 INSTALLASJON – LINUX
 YAEC kjører på Mono, den frie .NET-kjøretiden.
-- Debian, Ubuntu, Mint: last ned yaec_1.2.1_all.deb og installer den med
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: last ned yaec_1.3_all.deb og installer den med
+      sudo apt install ./yaec_1.3_all.deb
   (installerer også Mono). YAEC startes fra programmenyen eller med kommandoen «yaec».
-- Andre distribusjoner: installer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pakk ut YAEC-1.2.1-linux.tar.gz og kjør ./install.sh.
+- Andre distribusjoner: installer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pakk ut YAEC-1.3-linux.tar.gz og kjør ./install.sh.
 
 INSTALLASJON – macOS (eksperimentell)
 1. Installer Mono for macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
-2. Åpne YAEC-1.2.1-macOS.dmg og dra YAEC til Programmer. Første gang: høyreklikk på YAEC → Åpne (appen er ikke signert av Apple).
+2. Åpne YAEC-1.3-macOS.dmg og dra YAEC til Programmer. Første gang: høyreklikk på YAEC → Åpne (appen er ikke signert av Apple).
 
 KONTROLL AV NEDLASTEDE FILER (SHA-256)
 Hver release inneholder SHA256SUMS.txt med SHA-256-sjekksummen for hver pakke. Sammenlign den med sjekksummen for den nedlastede filen:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Hvis de to verdiene er forskjellige, skal du ikke installere filen: last den ned på nytt.
@@ -39,6 +39,7 @@ Feil, bedre data, oversettelser: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 VERSJONSHISTORIKK
 Versjoner før 1.0 kalles beta.
+- 1.3 - Ni nye språk: nederlandsk, estisk, latvisk, litauisk, svensk, norsk, islandsk, hebraisk og urdu (totalt 26), med manualene; lisens og README på alle språk, lisens på installasjonsprogrammets språk; knappen GRAVES; TX-kontakter og RX-kontakter i EME-budsjett (råd fra NJ9R); flyttbar skillelinje mellom venstre kolonne og skjemaet i EME-budsjett; avkrysningsboksen Grått slør i Kartlegging av mine hindringer; DEBUG AV FORMLER blir Kontroll av beregningene og ABOUT & CREDITS blir INFORMASJON OG KREDITERING; tekniske kapitler i brukermanualen på bengali, arabisk og tyrkisk; pastellskjemaene rettet; vinduet for CALL3.TXT lukkes av seg selv etter oppdateringen; knappene i dialogboksene har fått mer avstand.
 - 1.2.1 - Siden FORFATTERENS KONTAKTINFO OG TAKK åpnes igjen riktig på Linux og macOS; henvisningen for transverterne viser til § 1.7.1.
 - 1.2 - EME-budsjett med indikatorene Min EIRP, DX-stasjonens EIRP, strekningstap og S/N i begge retninger (med Solen); formlene i Word-dokumentet i én størrelse, innenfor margene; fylte knapper og flate nedtrekksmenyer med avrundet kant i alle skjemaene; åtte pastellfargeskjemaer; verdifelt med pilene ved siden av; de tre beste dagene i datorekkefølge; uskarp himmelbakgrunn; DEBUG AV FORMLER oversatt; manualen TEORI OG RÅD OM EME med rådene fra Relu NJ9R (GRAVES, peiling, kontakter, antenneforsterkning, JT65B og MAP65, polarisasjonsreleer), de nye avsnittene om første mottak og om chat via Internett og tabellene til VE7BQH i forordet; takk til NJ9R, minnet om IK1UWL og forfatterne av artikler, maskinvare og programvare, med verktøytips om verkene deres.
 - 1.1 - Live-posisjon og +- 24t (tidligere Sporing) også i fortid og fremtid: dag fra kalenderen og klokkeslett ved å dra den røde linjen, frekvens i ruten Ekko og frekvenser; felt for DX-stasjonens kallesignal med CALL3.TXT lastet ned fra W7GJ og fra WSJT-X Improved og slått sammen, foreslått lokator og kopiering til WSJT-X-mappen; Avstand og Dgrd uten rangering, med deklinasjonen lagt over, rader farget som grafen og nyttige timer i grønt etter valg; avkrysningsbokser i programmets stil; kabler sortert etter diameter i nedtrekkslistene og etter navn, produsent og type i tabellen, med oversatte kilder; EME-budsjett med bare 60 s-moduser (JT65, Q65-60A, Q65-60B, Q65-60C) og anleggsskjema som tilpasser seg tekstene; BRUKERMANUAL med gjennomgang av alle skjermbildene; TEORI OG RÅD OM EME med forfatterens forord, nummerering fra 1 og formler for solstøy; HTTPS på Linux og macOS med systemets sertifikater.

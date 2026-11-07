@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 autors: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā
 Pirmkods un lejupielāde: https://github.com/ic8tem/YAEC/releases
 
 INSTALĒŠANA – WINDOWS
-1. Lejupielādējiet YAEC-1.2.1-Setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
+1. Lejupielādējiet YAEC-1.3-Setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
 2. Ja parādās SmartScreen brīdinājums: "More info" → "Run anyway".
-3. Bez instalēšanas: atarhivējiet YAEC-1.2.1-windows-portable.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
+3. Bez instalēšanas: atarhivējiet YAEC-1.3-windows-portable.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
 
 INSTALĒŠANA – LINUX
 YAEC darbojas ar Mono — brīvo .NET izpildlaika vidi.
-- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.2.1_all.deb un instalējiet to ar komandu
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.3_all.deb un instalējiet to ar komandu
+      sudo apt install ./yaec_1.3_all.deb
   (tiek instalēts arī Mono). YAEC palaiž no lietotņu izvēlnes vai ar komandu "yaec".
-- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.2.1-linux.tar.gz un palaidiet ./install.sh.
+- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.3-linux.tar.gz un palaidiet ./install.sh.
 
 INSTALĒŠANA – macOS (eksperimentāli)
 1. Instalējiet Mono operētājsistēmai macOS (https://www.mono-project.com/download/stable/) un XQuartz (https://www.xquartz.org).
-2. Atveriet YAEC-1.2.1-macOS.dmg un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
+2. Atveriet YAEC-1.3-macOS.dmg un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
 
 LEJUPIELĀDĒTO FAILU PĀRBAUDE (SHA-256)
 Katrā release ir fails SHA256SUMS.txt ar katras pakotnes SHA-256 jaucējvērtību. Salīdziniet to ar lejupielādētā faila jaucējvērtību:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ja abas vērtības atšķiras, neinstalējiet failu: lejupielādējiet to vēlreiz.
@@ -39,6 +39,7 @@ Kļūdas, labāki dati, tulkojumi: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERSIJU VĒSTURE
 Versijas pirms 1.0 sauc par beta versijām.
+- 1.3 - Deviņas jaunas valodas: nīderlandiešu, igauņu, latviešu, lietuviešu, zviedru, norvēģu, islandiešu, ivrita un urdu (kopā 26), ar rokasgrāmatām; licence un README visās valodās, licence instalētāja valodā; poga GRAVES; „TX savienotāji” un „RX savienotāji” logā „EME budžets” (NJ9R ieteikums); pārvietojams atdalītājs starp kreiso kolonnu un loga „EME budžets” shēmu; izvēles rūtiņa „Pelēks plīvurs” logā „Manu šķēršļu izpēte”; „FORMULU ATKĻŪDOŠANA” tagad ir „Aprēķinu pārbaude” un ABOUT & CREDITS tagad ir „INFORMĀCIJA UN AUTORI”; lietošanas rokasgrāmatas tehniskās nodaļas bengāļu, arābu un turku valodā; pasteļkrāsu shēmas izlabotas; CALL3.TXT logs pēc atjaunināšanas aizveras pats; dialoglodziņu pogām lielākas atstarpes.
 - 1.2.1 - Lapa „AUTORA KONTAKTI UN PATEICĪBAS” atkal pareizi atveras operētājsistēmās Linux un macOS; atsauce par transverteriem norāda uz § 1.7.1.
 - 1.2 - „EME budžets” ar indikatoriem „Mans EIRP”, „DX EIRP”, trases zudumi un S/N abos virzienos (ar Sauli); Word dokumenta formulas viena izmēra, malu robežās; pildītas pogas un plakanas izkrītošās izvēlnes ar noapaļotu apmali visās shēmās; astoņas pasteļkrāsu shēmas; vērtību lodziņi ar blakus novietotām bultiņām; trīs labākās dienas datumu secībā; izplūdis debess fons; „FORMULU ATKĻŪDOŠANA” tulkota; rokasgrāmata „EME TEORIJA UN IETEIKUMI” ar Relu NJ9R ieteikumiem (GRAVES, tēmēšana, savienotāji, antenu pastiprinājums, JT65B un MAP65, polarizācijas releji), jaunām apakšnodaļām par pirmo uztveršanu un interneta tērzēšanu un VE7BQH tabulām priekšvārdā; pateicības NJ9R, IK1UWL piemiņa un rakstu, aparatūras un programmatūras autori ar uznirstošo padomu par viņu darbiem.
 - 1.1 - „Tiešraides pozīcija un +- 24h” (agrāk „Sekošana”) arī pagātnē un nākotnē: diena no kalendāra un laiks, velkot sarkano līniju, frekvence rāmī „Atbalss un frekvences”; DX izsaukuma signāla lodziņš ar CALL3.TXT, lejupielādētu no W7GJ un WSJT-X Improved un apvienotu, piedāvātu lokatoru un kopēšanu WSJT-X mapē; „Attālums un Dgrd” bez vērtējuma, ar pārklātu deklināciju, rindām, iekrāsotām kā grafiks, un izmantojamām stundām zaļā krāsā pēc izvēles; izvēles rūtiņas programmas stilā; kabeļi sakārtoti pēc diametra izkrītošajos sarakstos un pēc nosaukuma, ražotāja un tipa tabulā, ar tulkotiem avotiem; „EME budžets” tikai ar 60 s režīmiem (JT65, Q65-60A, Q65-60B, Q65-60C) un iekārtas shēmu, kas pielāgojas tekstiem; „LIETOŠANAS ROKASGRĀMATA” ar visu ekrānu apskatu; „EME TEORIJA UN IETEIKUMI” ar autora priekšvārdu, numerāciju no 1 un Saules trokšņa formulām; HTTPS operētājsistēmās Linux un macOS ar sistēmas sertifikātiem.

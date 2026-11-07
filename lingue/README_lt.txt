@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 autorius Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ry
 Išeities kodas ir atsisiuntimas: https://github.com/ic8tem/YAEC/releases
 
 ĮDIEGIMAS – WINDOWS
-1. Atsisiųskite YAEC-1.2.1-Setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
+1. Atsisiųskite YAEC-1.3-Setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
 2. Jei pasirodo SmartScreen įspėjimas: "More info" → "Run anyway".
-3. Be įdiegimo: išskleiskite YAEC-1.2.1-windows-portable.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
+3. Be įdiegimo: išskleiskite YAEC-1.3-windows-portable.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
 
 ĮDIEGIMAS – LINUX
 YAEC veikia su Mono – laisvąja .NET vykdymo aplinka.
-- Debian, Ubuntu, Mint: atsisiųskite yaec_1.2.1_all.deb ir įdiekite komanda
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: atsisiųskite yaec_1.3_all.deb ir įdiekite komanda
+      sudo apt install ./yaec_1.3_all.deb
   (kartu įdiegiama ir Mono). YAEC paleidžiama iš programų meniu arba komanda "yaec".
-- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.2.1-linux.tar.gz ir paleiskite ./install.sh.
+- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.3-linux.tar.gz ir paleiskite ./install.sh.
 
 ĮDIEGIMAS – macOS (eksperimentinis)
 1. Įdiekite Mono, skirtą macOS (https://www.mono-project.com/download/stable/), ir XQuartz (https://www.xquartz.org).
-2. Atidarykite YAEC-1.2.1-macOS.dmg ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
+2. Atidarykite YAEC-1.3-macOS.dmg ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
 
 ATSISIŲSTŲ FAILŲ PATIKRINIMAS (SHA-256)
 Kiekviename release yra failas SHA256SUMS.txt su kiekvieno paketo SHA-256 maiša. Palyginkite ją su atsisiųsto failo maiša:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jei abi reikšmės skiriasi, failo nediekite: atsisiųskite jį iš naujo.
@@ -39,6 +39,7 @@ Klaidos, geresni duomenys, vertimai: ccerrotta@gmail.com · ic8tem@gmail.com · 
 
 VERSIJŲ ISTORIJA
 Versijos iki 1.0 vadinamos beta.
+- 1.3 - Devynios naujos kalbos: olandų, estų, latvių, lietuvių, švedų, norvegų, islandų, hebrajų ir urdu (iš viso 26), su vadovais; licencija ir README visomis kalbomis, licencija diegimo programos kalba; mygtukas GRAVES; TX jungtys ir RX jungtys lange EME biudžetas (NJ9R patarimas); perkeliamas skirtukas tarp kairiojo stulpelio ir EME biudžeto schemos; žymimasis langelis Pilkas šydas lange Mano kliūčių žvalgyba; FORMULIŲ DERINIMAS dabar vadinasi Skaičiavimų patikra, o ABOUT & CREDITS – INFORMACIJA IR ŠALTINIAI; naudotojo vadovo techniniai skyriai bengalų, arabų ir turkų kalbomis; pataisytos pastelinės schemos; CALL3.TXT langas po atnaujinimo užsidaro pats; padidinti tarpai tarp dialogo langų mygtukų.
 - 1.2.1 - Puslapis AUTORIAUS KONTAKTAI IR PADĖKOS vėl teisingai atsidaro Linux ir macOS; nuoroda dėl transverterių nurodo § 1.7.1.
 - 1.2 - EME biudžetas su indikatoriais Mano EIRP, DX EIRP, trasos nuostoliai ir S/N abiem kryptimis (su Saule); Word dokumento formulės vieno dydžio, paraštėse; užpildyti mygtukai ir plokšti išskleidžiamieji meniu su suapvalintu kraštu visose schemose; aštuonios pastelinės spalvų schemos; verčių laukeliai su šalia esančiomis rodyklėmis; trys geriausios dienos datos tvarka; išblukintas dangaus fonas; išverstas FORMULIŲ DERINIMAS; vadovas EME TEORIJA IR PATARIMAI su Relu NJ9R patarimais (GRAVES, nukreipimas, jungtys, antenų stiprinimas, JT65B ir MAP65, poliarizacijos relės), naujais skirsniais apie pirmąjį priėmimą ir pokalbius internetu bei VE7BQH lentelėmis pratarmėje; padėkos NJ9R, IK1UWL prisiminimas ir straipsnių, aparatinės bei programinės įrangos autoriai su jų darbų paaiškinimu.
 - 1.1 - Tiesioginė padėtis ir +- 24h (buvęs Sekimas) taip pat praeityje ir ateityje: diena iš kalendoriaus, laikas vilkstant raudoną liniją, dažnis lauke Aidas ir dažniai; DX šaukinio laukelis su CALL3.TXT, atsisiųstu iš W7GJ ir WSJT-X Improved ir sujungtu, siūlomas lokatorius ir kopijavimas į WSJT-X aplanką; Atstumas ir Dgrd be reitingo, su uždėta deklinacija, eilutės nuspalvintos kaip grafikas ir pasirinktinai tinkamos valandos žaliai; žymimieji laukeliai programos stiliumi; kabeliai išskleidžiamuosiuose sąrašuose surikiuoti pagal skersmenį, o lentelėje – pagal pavadinimą, gamintoją ir tipą, su išverstais šaltiniais; EME biudžetas tik su 60 s režimais (JT65, Q65-60A, Q65-60B, Q65-60C) ir prie tekstų prisitaikanti įrangos schema; NAUDOJIMO VADOVAS su visų langų apžvalga; EME TEORIJA IR PATARIMAI su autoriaus pratarme, numeracija nuo 1 ir Saulės triukšmo formulėmis; HTTPS Linux ir macOS su sistemos sertifikatais.

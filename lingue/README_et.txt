@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 autor: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sag
 Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
 
 PAIGALDAMINE – WINDOWS
-1. Laadi Releases-lehelt alla YAEC-1.2.1-Setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
+1. Laadi Releases-lehelt alla YAEC-1.3-Setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
 2. Kui ilmub SmartScreeni hoiatus: "More info" → "Run anyway".
-3. Ilma paigaldamata: paki YAEC-1.2.1-windows-portable.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
+3. Ilma paigaldamata: paki YAEC-1.3-windows-portable.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
 
 PAIGALDAMINE – LINUX
 YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
-- Debian, Ubuntu, Mint: laadi alla yaec_1.2.1_all.deb ja paigalda see käsuga
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: laadi alla yaec_1.3_all.deb ja paigalda see käsuga
+      sudo apt install ./yaec_1.3_all.deb
   (paigaldab ka Mono). YAEC käivitub rakenduste menüüst või käsuga "yaec".
-- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.2.1-linux.tar.gz ja käivita ./install.sh.
+- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.3-linux.tar.gz ja käivita ./install.sh.
 
 PAIGALDAMINE – macOS (eksperimentaalne)
 1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
-2. Ava YAEC-1.2.1-macOS.dmg ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+2. Ava YAEC-1.3-macOS.dmg ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
 
 ALLALAADITUD FAILIDE KONTROLL (SHA-256)
 Iga release sisaldab faili SHA256SUMS.txt iga paketi SHA-256 räsiga. Võrdle seda allalaaditud faili räsiga:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kui kaks väärtust erinevad, ära faili paigalda: laadi see uuesti alla.
@@ -39,6 +39,7 @@ Vead, paremad andmed, tõlked: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 VERSIOONIAJALUGU
 Versioone enne 1.0 nimetatakse beetaks.
+- 1.3 - Üheksa uut keelt: hollandi, eesti, läti, leedu, rootsi, norra, islandi, heebrea ja urdu (kokku 26), koos juhenditega; litsents ja README kõigis keeltes, litsents paigaldusprogrammi keeles; nupp GRAVES; „TX pistikud“ ja „RX pistikud“ aknas „EME eelarve“ (NJ9R-i soovitus); lohistatav eraldaja vasaku veeru ja akna „EME eelarve“ skeemi vahel; märkeruut „Hall loor“ aknas „Minu takistuste kaardistus“; VALEMITE DEBUG on nüüd „Arvutuste kontroll“ ja ABOUT & CREDITS on nüüd TEAVE JA AUTORID; kasutusjuhendi tehnilised peatükid bengali, araabia ja türgi keeles; pastelsed skeemid parandatud; CALL3.TXT aken sulgub pärast uuendamist ise; dialoogiakende nupud on üksteisest kaugemal.
 - 1.2.1 - Leht AUTORI KONTAKTID JA TÄNUSÕNAD avaneb Linuxis ja macOS-is taas korrektselt; transverterite viide osutab § 1.7.1-le.
 - 1.2 - „EME eelarve“ näidikutega Minu EIRP, DX-i EIRP, teekonnakadu ja S/N mõlemas suunas (koos Päikesega); Wordi dokumendi valemid ühes suuruses, veeriste sees; täidetud nupud ja lamedad ümardatud servaga rippmenüüd kõigis skeemides; kaheksa pastelset värviskeemi; väärtuste lahtrid kõrvuti nooltega; kolm parimat päeva kuupäeva järjekorras; hägune taeva taust; VALEMITE DEBUG tõlgitud; juhend EME TEOORIA JA NÕUANDED koos Relu NJ9R nõuannetega (GRAVES, suunamine, pistikud, antennide võimendus, JT65B ja MAP65, polarisatsioonirelee), uute alapeatükkidega esimesest vastuvõtust ja internetivestlustest ning VE7BQH tabelitega eessõnas; tänusõnad NJ9R-ile, mälestus IK1UWL-ist ning artiklite, riist- ja tarkvara autoritele koos nende teoste kohtspikriga.
 - 1.1 - „Asukoht reaalajas ja +- 24h“ (endine „Jälgimine“) ka minevikus ja tulevikus: päev kalendrist ja kellaaeg punast joont lohistades, sagedus paneelil Kaja ja sagedused; DX-i kutsungi lahter koos W7GJ-lt ja WSJT-X Improvedist alla laaditud ja ühendatud failiga CALL3.TXT, pakutud lokaator ja kopeerimine WSJT-X-i kausta; „Kaugus ja Dgrd“ ilma pingereata, peale asetatud deklinatsiooniga, graafikuga sama värvi ridadega ja soovi korral rohelised kasulikud tunnid; programmi stiilis märkeruudud; kaablid rippmenüüdes läbimõõdu järgi ja tabelis nime, tootja ja tüübi järgi sorteeritud, tõlgitud allikatega; „EME eelarve“ ainult 60 s modulatsioonidega (JT65, Q65-60A, Q65-60B, Q65-60C) ja tekstidega kohanduva süsteemi skeemiga; KASUTUSJUHEND kõigi vaadete ülevaatega; EME TEOORIA JA NÕUANDED autori eessõna, nummerdusega alates 1-st ja Päikese müra valemitega; HTTPS Linuxis ja macOS-is süsteemi sertifikaatidega.

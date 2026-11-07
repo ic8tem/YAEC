@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 door Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Rekenprogramma voor radioamateurs die EME (Aarde–Maan–Aarde) werken van 50 t
 Broncode en download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATIE – WINDOWS
-1. Download YAEC-1.2.1-Setup.exe van de pagina Releases en voer het uit. Het installeert YAEC in Documenten\YAEC, zonder beheerdersrechten, met snelkoppelingen in het menu Start en op het bureaublad, en met een verwijderprogramma.
+1. Download YAEC-1.3-Setup.exe van de pagina Releases en voer het uit. Het installeert YAEC in Documenten\YAEC, zonder beheerdersrechten, met snelkoppelingen in het menu Start en op het bureaublad, en met een verwijderprogramma.
 2. Als de SmartScreen-waarschuwing verschijnt: "Meer informatie" → "Toch uitvoeren".
-3. Zonder installatie: pak YAEC-1.2.1-windows-portable.zip uit in een map waarin je kunt schrijven en start YAEC.exe.
+3. Zonder installatie: pak YAEC-1.3-windows-portable.zip uit in een map waarin je kunt schrijven en start YAEC.exe.
 
 INSTALLATIE – LINUX
 YAEC draait op Mono, de vrije .NET-runtime.
-- Debian, Ubuntu, Mint: download yaec_1.2.1_all.deb en installeer het met
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: download yaec_1.3_all.deb en installeer het met
+      sudo apt install ./yaec_1.3_all.deb
   (dit installeert ook Mono). YAEC start vanuit het toepassingenmenu of met het commando "yaec".
-- Andere distributies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.2.1-linux.tar.gz uit en start ./install.sh.
+- Andere distributies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.3-linux.tar.gz uit en start ./install.sh.
 
 INSTALLATIE – macOS (experimenteel)
 1. Installeer Mono voor macOS (https://www.mono-project.com/download/stable/) en XQuartz (https://www.xquartz.org).
-2. Open YAEC-1.2.1-macOS.dmg en sleep YAEC naar Apps. De eerste keer: klik met de rechtermuisknop op YAEC → Open (de app is niet door Apple ondertekend).
+2. Open YAEC-1.3-macOS.dmg en sleep YAEC naar Apps. De eerste keer: klik met de rechtermuisknop op YAEC → Open (de app is niet door Apple ondertekend).
 
 CONTROLE VAN DE GEDOWNLOADE BESTANDEN (SHA-256)
 Elke release bevat SHA256SUMS.txt met de SHA-256-hash van elk pakket. Vergelijk die met de hash van het gedownloade bestand:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Als de twee waarden verschillen, installeer het bestand dan niet: download het opnieuw.
@@ -39,6 +39,7 @@ Fouten, betere gegevens, vertalingen: ccerrotta@gmail.com · ic8tem@gmail.com ·
 
 VERSIEGESCHIEDENIS
 Versies vóór 1.0 heten bèta.
+- 1.3 - Negen nieuwe talen: Nederlands, Estisch, Lets, Litouws, Zweeds, Noors, IJslands, Hebreeuws en Urdu (26 in totaal), met de handleidingen; licentie en LEESMIJ in alle talen, licentie in de taal van het installatieprogramma; knop GRAVES; TX-connectoren en RX-connectoren in het EME-budget (advies van NJ9R); versleepbare scheidingslijn tussen de linkerkolom en het schema van het EME-budget; selectievakje Grijze sluier in Verkenning van mijn obstakels; DEBUG FORMULES wordt Controle van de berekeningen en ABOUT & CREDITS wordt INFORMATIE EN CREDITS; technische hoofdstukken van de gebruikershandleiding in het Bengaals, Arabisch en Turks; pastelschema's gecorrigeerd; het venster van CALL3.TXT sluit vanzelf na de update; knoppen van de dialoogvensters verder uit elkaar.
 - 1.2.1 - De pagina CONTACT MET DE AUTEUR EN DANKWOORD opent weer correct op Linux en macOS; de verwijzing voor de transverters wijst naar § 1.7.1.
 - 1.2 - EME-budget met de indicatoren Mijn EIRP, EIRP van de DX, trajectverlies en S/N in beide richtingen (met de Zon); formules van het Word-document in één grootte, binnen de marges; gevulde knoppen en vlakke keuzelijsten met afgeronde rand in alle schema's; acht pastelkleurenschema's; waardevakken met de pijltjes naast elkaar; de drie beste dagen in volgorde van datum; vervaagde hemelachtergrond; DEBUG FORMULES vertaald; handleiding THEORIE EN TIPS OVER EME met de tips van Relu NJ9R (GRAVES, richten, connectoren, antennewinst, JT65B en MAP65, polarisatierelais), de nieuwe paragrafen over de eerste ontvangst en over chats via internet en de tabellen van VE7BQH in het voorwoord; dankwoord aan NJ9R, de herinnering aan IK1UWL en de auteurs van artikelen, hardware en software, met de tooltip over hun werk.
 - 1.1 - Live positie en +- 24h (voorheen Volgen) ook in het verleden en de toekomst: dag uit de kalender en tijd door de rode lijn te verslepen, frequentie in het kader Echo en frequenties; vak voor de roepnaam van de DX met CALL3.TXT gedownload van W7GJ en van WSJT-X Improved en samengevoegd, voorgestelde locator en kopie naar de map van WSJT-X; Afstand en Dgrd zonder rangorde, met de declinatie eroverheen, rijen gekleurd zoals de grafiek en naar keuze bruikbare uren in groen; selectievakjes in de stijl van het programma; kabels gesorteerd op diameter in de keuzelijsten en op naam, fabrikant en type in de tabel, met vertaalde bronnen; EME-budget met alleen de modes van 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) en installatieschema dat zich aan de teksten aanpast; HANDLEIDING met een overzicht van alle schermen; THEORIE EN TIPS OVER EME met het voorwoord van de auteur, nummering vanaf 1 en formules van de zonneruis; HTTPS op Linux en macOS met de certificaten van het systeem.

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 作者：Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@
 ソースとダウンロード：https://github.com/ic8tem/YAEC/releases
 
 インストール – WINDOWS
-1. Releases ページから YAEC-1.2.1-Setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
+1. Releases ページから YAEC-1.3-Setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
 2. SmartScreen の警告が表示された場合：「詳細情報」→「実行」。
-3. インストールせずに使う場合：YAEC-1.2.1-windows-portable.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
+3. インストールせずに使う場合：YAEC-1.3-windows-portable.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
 
 インストール – LINUX
 YAEC はフリーの .NET ランタイムである Mono で動作します。
-- Debian、Ubuntu、Mint：yaec_1.2.1_all.deb をダウンロードし、次のコマンドでインストールします
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian、Ubuntu、Mint：yaec_1.3_all.deb をダウンロードし、次のコマンドでインストールします
+      sudo apt install ./yaec_1.3_all.deb
   （Mono も同時にインストールされます）。YAEC はアプリケーションメニューから、またはコマンド「yaec」で起動します。
-- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.2.1-linux.tar.gz を展開して ./install.sh を実行します。
+- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.3-linux.tar.gz を展開して ./install.sh を実行します。
 
 インストール – macOS（試験的）
 1. macOS 用 Mono（https://www.mono-project.com/download/stable/）と XQuartz（https://www.xquartz.org）をインストールします。
-2. YAEC-1.2.1-macOS.dmg を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
+2. YAEC-1.3-macOS.dmg を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
 
 ダウンロードしたファイルの確認（SHA-256）
 各 release には、すべてのパッケージの SHA-256 ハッシュを記載した SHA256SUMS.txt が含まれています。ダウンロードしたファイルのハッシュと比較してください：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 2 つの値が異なる場合は、そのファイルをインストールせず、もう一度ダウンロードしてください。
@@ -39,6 +39,7 @@ YAEC は無料です。ライセンス本文はファイル LICENSE_ja.txt と�
 
 バージョン履歴
 1.0 より前のバージョンはベータ版と呼びます。
+- 1.3 - 新しい言語を 9 つ追加：オランダ語、エストニア語、ラトビア語、リトアニア語、スウェーデン語、ノルウェー語、アイスランド語、ヘブライ語、ウルドゥー語（計 26 言語）、マニュアル付き。ライセンスと README を全言語で用意し、ライセンスはインストーラーの言語で表示。GRAVES ボタンを追加。EME 回線計算に「TXコネクター数」と「RXコネクター数」を追加（NJ9R の助言）。左の列と EME 回線計算の図の間にドラッグ可能な区切りを追加。自局障害物の偵察に「グレーのベール」チェックボックスを追加。数式デバッグを計算のチェックに、ABOUT & CREDITS を概要とクレジットに改名。ユーザーマニュアルの技術章をベンガル語、アラビア語、トルコ語で用意。パステル配色を修正。CALL3.TXT のウィンドウが更新後に自動で閉じるように。ダイアログのボタンの間隔を広げた。
 - 1.2.1 - 作者への連絡と謝辞のページが Linux と macOS で再び正しく開くようになりました。トランスバーターの参照先を § 1.7.1 に修正。
 - 1.2 - EME 回線計算に「自局 EIRP」「DX の EIRP」「経路損失」「双方向の S/N（太陽を含む）」の表示を追加。Word 文書の数式を単一サイズにして余白内に収めた。すべての配色でボタンを塗りつぶし型、ドロップダウンを角丸のフラット型に。パステル配色を 8 種類追加。数値ボックスの矢印を横並びに。ベスト 3 日を日付順に。空の背景をぼかした。数式デバッグを翻訳。「EME の理論とアドバイス」マニュアルに Relu NJ9R の助言（GRAVES、指向、コネクター、アンテナ利得、JT65B と MAP65、偏波リレー）、最初の受信とインターネットチャットに関する新しい節、序文に VE7BQH の表を追加。NJ9R への謝辞、IK1UWL の追悼、記事・ハードウェア・ソフトウェアの作者への謝辞と、その作品を示すツールチップを追加。
 - 1.1 - ライブ位置と +- 24h（旧「追尾」）で過去と未来も表示：カレンダーで日を、赤い線のドラッグで時刻を選択し、周波数は「エコーと周波数」枠へ。DX のコールサイン欄を追加し、W7GJ と WSJT-X Improved からダウンロードして統合した CALL3.TXT でロケーターを提案、WSJT-X フォルダーへのコピーも可能。距離と Dgrd は順位列を廃止し、赤緯を重ねて表示、行をグラフと同じ色に、利用可能時間の緑表示は任意に。チェックボックスをプログラムのスタイルに統一。ケーブルはドロップダウンで直径順、表で名前・メーカー・種類順に並べ替え可能、出典も翻訳。EME 回線計算は 60 秒のモード（JT65、Q65-60A、Q65-60B、Q65-60C）のみとし、設備図は文字の長さに合わせて調整。取扱説明書で全画面を紹介。EME の理論とヒントに著者まえがき、1 からの番号、太陽雑音の数式を追加。Linux と macOS ではシステムの証明書で HTTPS。

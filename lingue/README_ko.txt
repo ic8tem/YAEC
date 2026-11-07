@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.2.1
+﻿YAEC – Yet Another EME Calc 1.3
 제작: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@
 소스 및 다운로드: https://github.com/ic8tem/YAEC/releases
 
 설치 – WINDOWS
-1. Releases 페이지에서 YAEC-1.2.1-Setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
+1. Releases 페이지에서 YAEC-1.3-Setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
 2. SmartScreen 경고가 나타나면: "추가 정보" → "실행".
-3. 설치 없이 사용: YAEC-1.2.1-windows-portable.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
+3. 설치 없이 사용: YAEC-1.3-windows-portable.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
 
 설치 – LINUX
 YAEC는 자유 .NET 런타임인 Mono에서 동작합니다.
-- Debian, Ubuntu, Mint: yaec_1.2.1_all.deb를 다운로드하여 다음 명령으로 설치합니다
-      sudo apt install ./yaec_1.2.1_all.deb
+- Debian, Ubuntu, Mint: yaec_1.3_all.deb를 다운로드하여 다음 명령으로 설치합니다
+      sudo apt install ./yaec_1.3_all.deb
   (Mono도 함께 설치됩니다). YAEC는 응용 프로그램 메뉴에서 또는 "yaec" 명령으로 실행합니다.
-- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.2.1-linux.tar.gz의 압축을 푼 뒤 ./install.sh를 실행합니다.
+- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.3-linux.tar.gz의 압축을 푼 뒤 ./install.sh를 실행합니다.
 
 설치 – macOS (실험적)
 1. macOS용 Mono(https://www.mono-project.com/download/stable/)와 XQuartz(https://www.xquartz.org)를 설치합니다.
-2. YAEC-1.2.1-macOS.dmg를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
+2. YAEC-1.3-macOS.dmg를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
 
 다운로드한 파일 확인 (SHA-256)
 각 release에는 모든 패키지의 SHA-256 해시가 담긴 SHA256SUMS.txt가 포함되어 있습니다. 다운로드한 파일의 해시와 비교하십시오:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 두 값이 다르면 파일을 설치하지 말고 다시 다운로드하십시오.
@@ -39,6 +39,7 @@ YAEC는 무료입니다. 라이선스 전문은 LICENSE_ko.txt 파일과 프로�
 
 버전 기록
 1.0 이전 버전은 베타라고 부릅니다.
+- 1.3 - 새 언어 9개: 네덜란드어, 에스토니아어, 라트비아어, 리투아니아어, 스웨덴어, 노르웨이어, 아이슬란드어, 히브리어, 우르두어(총 26개), 매뉴얼 포함; 라이선스와 README를 모든 언어로 제공, 라이선스는 설치 프로그램의 언어로 표시; GRAVES 버튼; EME 링크 버짓에 TX 커넥터 수와 RX 커넥터 수 추가(NJ9R의 조언); 왼쪽 열과 EME 링크 버짓 도식 사이에 끌어서 옮길 수 있는 구분선; 내 장애물 정찰에 회색 베일 확인란; 수식 디버그는 계산 검증으로, ABOUT & CREDITS는 정보 및 크레딧으로 이름 변경; 사용자 매뉴얼의 기술 장을 벵골어, 아랍어, 터키어로 제공; 파스텔 테마 수정; CALL3.TXT 창이 업데이트 후 자동으로 닫힘; 대화 상자 버튼 간격 조정.
 - 1.2.1 - 저자 연락처 및 감사의 말 페이지가 Linux와 macOS에서 다시 올바르게 열립니다. 트랜스버터 참조를 § 1.7.1로 수정.
 - 1.2 - EME 링크 버짓에 내 EIRP, DX의 EIRP, 경로 손실, 양방향 S/N(태양 포함) 표시 추가; Word 문서의 수식을 한 가지 크기로 여백 안에 맞춤; 모든 테마에서 채워진 버튼과 둥근 테두리의 평면 드롭다운 목록; 파스텔 색 테마 8종; 값 상자의 화살표를 나란히 배치; 가장 좋은 3일을 날짜순으로; 하늘 배경 흐림 처리; 수식 디버그 번역; EME 이론과 조언 매뉴얼에 Relu NJ9R의 조언(GRAVES, 지향, 커넥터, 안테나 이득, JT65B와 MAP65, 편파 릴레이), 첫 수신과 인터넷 채팅에 관한 새 절, 서문에 VE7BQH 표 추가; NJ9R에 대한 감사, IK1UWL 추모, 기사·하드웨어·소프트웨어 저자들에 대한 감사와 그들의 작업을 보여 주는 도움말.
 - 1.1 - 실시간 위치 및 +- 24h(이전 추적)에서 과거와 미래도 표시: 달력으로 날짜를, 빨간 선을 끌어 시간을 고르고 주파수는 에코와 주파수 상자로 이동; DX 호출부호 칸 추가, W7GJ와 WSJT-X Improved에서 내려받아 합친 CALL3.TXT로 로케이터를 제안하고 WSJT-X 폴더로 복사 가능; 거리와 Dgrd에서 순위 열을 없애고 적위를 겹쳐 표시, 행을 그래프와 같은 색으로, 사용 가능 시간의 녹색 표시는 선택; 확인란을 프로그램 스타일로 통일; 드롭다운의 케이블은 직경순, 표는 이름·제조사·종류로 정렬 가능하며 출처도 번역; EME 링크 버짓은 60초 모드(JT65, Q65-60A, Q65-60B, Q65-60C)만 남기고 설비도는 글자 길이에 맞춰 조정; 사용 설명서에서 모든 화면을 소개; EME 이론과 조언에 저자 서문, 1부터의 번호, 태양 잡음 공식 추가; Linux와 macOS에서 시스템 인증서로 HTTPS.
