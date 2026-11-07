@@ -258,14 +258,14 @@ jobs:
           i=0
           for T in "Posizione live e +- 24h" "Distanza e Dgrd" "Posizione della Luna" "Budget EME" "Volta celeste" "Luna sul mondo" "Rumore solare" "Radar GRAVES" "Ricognizione dei miei ostacoli" "Controllo dei calcoli" "CAVI COASSIALI"; do
             i=$((i+1))
-            YAEC_LINGUETTA="$T" TZ=UTC faketime -f "@2026-11-25 05:14:00" mono YAEC.exe &
+            YAEC_LINGUETTA="$T" TZ=Europe/Rome faketime -f "@2026-11-25 05:14:00" mono YAEC.exe &
             PID=$!
             sleep 25
-            W=$(xdotool search --name "YAEC" | head -1)
+            W=$(xdotool search --name "YAEC" | tail -1)
             if [ -n "$W" ]; then xdotool windowmove $W 0 0 windowsize $W 1920 1080; fi
             sleep 12
             import -window root "articolo/$(printf %02d $i)-${T// /_}.png" || true
-            kill $PID 2>/dev/null || true; sleep 2
+            kill $PID 2>/dev/null || true; pkill -f YAEC.exe || true; sleep 3
           done
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           H=$(git config --get http.https://github.com/.extraheader)
