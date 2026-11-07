@@ -53429,6 +53429,14 @@ namespace LunaCalc
             // solo per le prove automatiche: YAEC_LINGUETTA=<nome> apre quella linguetta all'avvio
             string lgProva = Environment.GetEnvironmentVariable("YAEC_LINGUETTA");
             if (!string.IsNullOrEmpty(lgProva)) this.Shown += (s, e) => ApriLinguettaPerNome(this, lgProva);
+            // solo per le prove automatiche: YAEC_CALCOLA=1 calcola la tabella della Posizione della Luna dopo l'avvio
+            if (Environment.GetEnvironmentVariable("YAEC_CALCOLA") == "1") this.Shown += (s, e) =>
+            {
+                System.Windows.Forms.Timer tk = new System.Windows.Forms.Timer();
+                tk.Interval = 3000;
+                tk.Tick += (s2, e2) => { tk.Stop(); tk.Dispose(); try { Calcola(); } catch { } };
+                tk.Start();
+            };
             // solo per le prove automatiche: YAEC_CHIUSURA=1 apre la finestra di chiusura dopo 5 secondi
             if (Environment.GetEnvironmentVariable("YAEC_CHIUSURA") == "1") this.Shown += (s, e) =>
             {
