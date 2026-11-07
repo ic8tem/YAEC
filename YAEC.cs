@@ -44249,10 +44249,10 @@ namespace LunaCalc
                     if (S(46) + wtc + S(10) > disp && cut > 0)
                     {
                         string due = tc.Substring(0, cut) + "\n" + tc.Substring(cut + 1);
-                        for (float px = S(13); px >= S(9); px -= 0.5f)
+                        for (float px2 = S(13); px2 >= S(9); px2 -= 0.5f)
                         {
                             if (fcb != fbtn) fcb.Dispose();
-                            fcb = FontPx(Lang.FontUi, px, true);
+                            fcb = FontPx(Lang.FontUi, px2, true);
                             wtc = Math.Max(g.MeasureString(tc.Substring(0, cut), fcb).Width, g.MeasureString(tc.Substring(cut + 1), fcb).Width);
                             if (S(46) + wtc + S(10) <= disp && fcb.GetHeight(g) * 2 <= S(34)) break;
                         }
