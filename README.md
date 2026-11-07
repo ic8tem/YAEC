@@ -56,6 +56,8 @@ All the versions before 1.0 are called **beta**.
 
 ### English
 
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/en-1.jpg"><img src="docs/screenshots/en-1.jpg" alt="Live position and +- 24h"></a><br><sub>Live position and +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/en-2.jpg"><img src="docs/screenshots/en-2.jpg" alt="EME budget"></a><br><sub>EME budget</sub></td><td width="33%" align="center"><a href="docs/screenshots/en-3.jpg"><img src="docs/screenshots/en-3.jpg" alt="Distance and Dgrd"></a><br><sub>Distance and Dgrd</sub></td></tr></table>
+
 YAEC puts in one program everything you need to run an EME (Earth–Moon–Earth) station on 50, 70, 144, 222 and 432 MHz, especially when the station has limits: an antenna without elevation, a rotator with limited travel, obstacles that hide part of the sky. It tells you not only where the Moon is, but whether **your** antenna can really reach it, when, and under which conditions.
 
 **Live**
@@ -85,6 +87,8 @@ YAEC puts in one program everything you need to run an EME (Earth–Moon–Earth
 - Moon positions accurate to about 0.01° (Meeus, ELP-2000/82), all calculations on your computer; data in a single `data` folder.
 
 ### Italiano
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/it-1.jpg"><img src="docs/screenshots/it-1.jpg" alt="Posizione live e +- 24h"></a><br><sub>Posizione live e +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/it-2.jpg"><img src="docs/screenshots/it-2.jpg" alt="Budget EME"></a><br><sub>Budget EME</sub></td><td width="33%" align="center"><a href="docs/screenshots/it-3.jpg"><img src="docs/screenshots/it-3.jpg" alt="Distanza e Dgrd"></a><br><sub>Distanza e Dgrd</sub></td></tr></table>
 
 YAEC raccoglie in un solo programma tutto quello che serve per l'EME (Terra–Luna–Terra) in 50, 70, 144, 222 e 432 MHz, soprattutto quando la stazione ha dei vincoli: un'antenna senza elevazione, un rotore con escursione limitata, ostacoli che nascondono parte del cielo. Non dice solo dove si trova la Luna, ma se la **tua** antenna la raggiunge davvero, quando e in quali condizioni.
 
@@ -116,6 +120,8 @@ YAEC raccoglie in un solo programma tutto quello che serve per l'EME (Terra–Lu
 
 ### Deutsch
 
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/de-1.jpg"><img src="docs/screenshots/de-1.jpg" alt="Position live und +- 24h"></a><br><sub>Position live und +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/de-2.jpg"><img src="docs/screenshots/de-2.jpg" alt="EME-Budget"></a><br><sub>EME-Budget</sub></td><td width="33%" align="center"><a href="docs/screenshots/de-3.jpg"><img src="docs/screenshots/de-3.jpg" alt="Entfernung und Dgrd"></a><br><sub>Entfernung und Dgrd</sub></td></tr></table>
+
 YAEC vereint in einem Programm alles, was man für den EME-Betrieb (Erde–Mond–Erde) auf 50, 70, 144, 222 und 432 MHz braucht – vor allem, wenn die Station Einschränkungen hat: eine Antenne ohne Elevation, ein Rotor mit begrenztem Drehbereich, Hindernisse, die einen Teil des Himmels verdecken. Es zeigt nicht nur, wo der Mond steht, sondern ob **deine** Antenne ihn wirklich erreicht, wann und unter welchen Bedingungen.
 
 **Live**
@@ -146,6 +152,8 @@ YAEC vereint in einem Programm alles, was man für den EME-Betrieb (Erde–Mond�
 
 ### Français
 
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/fr-1.jpg"><img src="docs/screenshots/fr-1.jpg" alt="Position en direct et +- 24h"></a><br><sub>Position en direct et +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/fr-2.jpg"><img src="docs/screenshots/fr-2.jpg" alt="Bilan EME"></a><br><sub>Bilan EME</sub></td><td width="33%" align="center"><a href="docs/screenshots/fr-3.jpg"><img src="docs/screenshots/fr-3.jpg" alt="Distance et Dgrd"></a><br><sub>Distance et Dgrd</sub></td></tr></table>
+
 YAEC réunit dans un seul programme tout ce qu'il faut pour trafiquer en EME (Terre–Lune–Terre) sur 50, 70, 144, 222 et 432 MHz, surtout quand la station a des contraintes : une antenne sans élévation, un rotor à débattement limité, des obstacles qui cachent une partie du ciel. Il ne dit pas seulement où se trouve la Lune, mais si **votre** antenne peut vraiment l'atteindre, quand et dans quelles conditions.
 
 **En direct**
@@ -175,6 +183,8 @@ YAEC réunit dans un seul programme tout ce qu'il faut pour trafiquer en EME (Te
 - Positions de la Lune précises à environ 0,01° (Meeus, ELP-2000/82), tous les calculs sur votre ordinateur ; données dans un seul dossier `data`.
 
 ### Español
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/es-1.jpg"><img src="docs/screenshots/es-1.jpg" alt="Posición en vivo y +- 24h"></a><br><sub>Posición en vivo y +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/es-2.jpg"><img src="docs/screenshots/es-2.jpg" alt="Balance EME"></a><br><sub>Balance EME</sub></td><td width="33%" align="center"><a href="docs/screenshots/es-3.jpg"><img src="docs/screenshots/es-3.jpg" alt="Distancia y Dgrd"></a><br><sub>Distancia y Dgrd</sub></td></tr></table>
 
 YAEC reúne en un solo programa todo lo necesario para operar EME (Tierra–Luna–Tierra) en 50, 70, 144, 222 y 432 MHz, sobre todo cuando la estación tiene limitaciones: una antena sin elevación, un rotor de recorrido limitado, obstáculos que ocultan parte del cielo. No solo dice dónde está la Luna, sino si **tu** antena puede alcanzarla de verdad, cuándo y en qué condiciones.
 
