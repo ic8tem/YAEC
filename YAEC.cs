@@ -48998,18 +48998,38 @@ namespace LunaCalc
                 contenuto.Location = new Point(0, 0);
                 linea.SetBounds(0, sc.Height, w, 1);
                 bt.SetBounds(0, sc.Height + 1, w, hbar);
-                // in ordine da destra: l'ultimo pulsante (Annulla) sta a destra, come prima
-                int x = w - pad;
-                for (int i = pulsanti.Length - 1; i >= 0; i--)
-                {
-                    x -= wb[i];
-                    pulsanti[i].SetBounds(Lang.Rtl ? w - x - wb[i] : x, (hbar - hb) / 2, wb[i], hb);
-                    x -= gap;
-                }
+                bt.Anchor = linea.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+                DisponiPulsanti(pulsanti, wb, w, hbar, hb, pad);
                 f.ClientSize = new Size(w, sc.Height + 1 + hbar);
             };
             disponi();
             f.Load += (s, e) => disponi();   // di nuovo con i caratteri e la scala definitivi
+        }
+
+        // Pulsanti delle finestre: con due pulsanti uno a sinistra e uno a destra; con tre a sinistra, al centro
+        // e a destra; con uno solo a destra. Così non possono mai sovrapporsi. Nelle lingue da destra a sinistra
+        // l'ordine si rispecchia. Gli ancoraggi li tengono ai bordi anche se Windows ridimensiona la finestra.
+        void DisponiPulsanti(Button[] pulsanti, int[] wb, int w, int hbar, int hb, int pad)
+        {
+            int n = pulsanti.Length, y = (hbar - hb) / 2;
+            for (int i = 0; i < n; i++)
+            {
+                int k = Lang.Rtl ? n - 1 - i : i;   // posizione da sinistra
+                int x;
+                AnchorStyles an;
+                if (n == 1) { x = Lang.Rtl ? pad : w - pad - wb[i]; an = Lang.Rtl ? AnchorStyles.Left : AnchorStyles.Right; }
+                else if (k == 0) { x = pad; an = AnchorStyles.Left; }
+                else if (k == n - 1) { x = w - pad - wb[i]; an = AnchorStyles.Right; }
+                else
+                {
+                    // pulsanti intermedi distribuiti in modo uniforme (con tre: esattamente al centro)
+                    float c = pad + (w - 2f * pad) * k / (n - 1f);
+                    x = (int)(c - wb[i] / 2f);
+                    an = AnchorStyles.None;
+                }
+                pulsanti[i].SetBounds(x, y, wb[i], hb);
+                pulsanti[i].Anchor = an | AnchorStyles.Top;
+            }
         }
 
         DialogResult FinestraStile(IWin32Window owner, string titolo, string domanda, string nota, Icon icona, bool siNo)
@@ -49087,15 +49107,8 @@ namespace LunaCalc
                     t.Location = new Point(0, 0); t.Width = w;
                     linea.SetBounds(0, st.Height, w, 1);
                     bt.SetBounds(0, st.Height + 1, w, hbar);
-                    // Sì poi No, allineati a destra (a sinistra, rispecchiati, nelle lingue da destra a sinistra)
-                    int x = w - pad;
-                    for (int i = pulsanti.Length - 1; i >= 0; i--)
-                    {
-                        x -= wb[i];
-                        int xx = Lang.Rtl ? w - x - wb[i] : x;
-                        pulsanti[i].SetBounds(xx, (hbar - hb) / 2, wb[i], hb);
-                        x -= gap;
-                    }
+                    bt.Anchor = linea.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+                    DisponiPulsanti(pulsanti, wb, w, hbar, hb, pad);
                     f.ClientSize = new Size(w, st.Height + 1 + hbar);
                 };
                 disponi();
