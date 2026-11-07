@@ -258,7 +258,7 @@ jobs:
           i=0
           for T in "Posizione live e +- 24h" "Distanza e Dgrd" "Posizione della Luna" "Budget EME" "Volta celeste" "Luna sul mondo" "Rumore solare" "Radar GRAVES" "Ricognizione dei miei ostacoli" "Controllo dei calcoli" "CAVI COASSIALI"; do
             i=$((i+1))
-            YAEC_LINGUETTA="$T" TZ=Europe/Rome faketime -f "@2026-11-25 05:14:00" mono YAEC.exe &
+            YAEC_LINGUETTA="$T" TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
             PID=$!
             sleep 25
             W=$(xdotool search --name "YAEC" | tail -1)
