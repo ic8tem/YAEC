@@ -8,9 +8,12 @@
    il nominativo, o la sua parte più lunga tra le barre (IS0/DL1ABC -> DL1ABC), deve avere
    un messaggio negli ultimi 90 giorni, come Attivi.Cerca di YAEC.
 Uscita: righe "NOMINATIVO,LOCATOR,AAAA-MM-GG" (data dell'ultimo messaggio), ordinate.
-Uso:  call3_attivi.py attivi.gz call3-attivi.txt [CALL3.TXT locale al posto dello scaricamento]
+Con --tutti scrive anche il CALL3.TXT completo fuso, compresso (call3.gz), con solo nominativo e locator
+(niente nomi né indirizzi e-mail): LunaCalc Mobile lo usa perché una stazione non attiva non è esclusa
+dal calcolo, è solo senza il bordo arancione.
+Uso:  call3_attivi.py attivi.gz call3-attivi.txt [--tutti call3.gz] [--locale CALL3.TXT]
 """
-import datetime as dt, gzip, re, sys, urllib.request
+import argparse, datetime as dt, gzip, re, sys, urllib.request
 
 GIORNI = 90
 FONTI = [
@@ -18,6 +21,7 @@ FONTI = [
     ('WSJT-X Improved (SourceForge)', ['https://downloads.sourceforge.net/project/wsjt-x-improved/Additional%20Files/CALL3.TXT',
                                        'https://sourceforge.net/projects/wsjt-x-improved/files/Additional%20Files/CALL3.TXT/download']),
 ]
+CALL = re.compile(r'^[A-Z0-9/]{3,13}$')
 LOC = re.compile(r'^[A-R]{2}(?:[0-9]{2}(?:[A-X]{2}(?:[0-9]{2}(?:[A-X]{2})?)?)?)?$')
 UA = {'User-Agent': 'YAEC / LunaCalc Mobile (https://github.com/ic8tem/YAEC), once a day'}
 
@@ -32,7 +36,7 @@ def righe_valide(testo):
         if len(p) < 2:
             continue
         call, grid = p[0].strip().upper(), p[1].strip().upper()
-        if 3 <= len(call) <= 13 and ' ' not in call and len(grid) >= 4 and LOC.match(grid):
+        if CALL.match(call) and len(grid) >= 4 and LOC.match(grid):
             out.append((call, grid))
     return out
 
@@ -69,19 +73,25 @@ def attivi(path, oggi):
 
 
 def main():
-    ag, out = sys.argv[1], sys.argv[2]
+    ap = argparse.ArgumentParser()
+    ap.add_argument('attivi'); ap.add_argument('uscita')
+    ap.add_argument('--tutti', help='CALL3.TXT completo fuso, compresso (solo nominativo e locator)')
+    ap.add_argument('--locale', help='CALL3.TXT già scaricato, al posto delle due fonti')
+    a = ap.parse_args()
     oggi = dt.datetime.now(dt.timezone.utc).date()
-    if len(sys.argv) > 3:
-        fonti = [righe_valide(open(sys.argv[3], encoding='latin-1').read())]
+    if a.locale:
+        fonti = [righe_valide(open(a.locale, encoding='latin-1').read())]
+        nomi = 'CALL3.TXT locale'
     else:
         fonti = [scarica(urls) for _, urls in FONTI]
+        nomi = ' + '.join(n for (n, _), f in zip(FONTI, fonti) if f)
     if not any(fonti):
         sys.exit('nessuna fonte del CALL3.TXT raggiungibile')
     tab = {}
     for f in fonti:                      # prima W7GJ, poi le stazioni che mancano
         for call, grid in f or []:
             tab.setdefault(call, grid)
-    att = attivi(ag, oggi)
+    att = attivi(a.attivi, oggi)
     righe = []
     for call, grid in tab.items():
         prove = {call, max(call.split('/'), key=len)}
@@ -89,12 +99,16 @@ def main():
         if date:
             righe.append('%s,%s,%s' % (call, grid, max(date).isoformat()))
     righe.sort()
-    nomi = ' + '.join(n for (n, _), f in zip(FONTI, fonti) if f) if len(sys.argv) <= 3 else 'CALL3.TXT locale'
-    with open(out, 'w', encoding='ascii', errors='replace', newline='\n') as f:
+    with open(a.uscita, 'w', encoding='ascii', newline='\n') as f:
         f.write('// CALL3 attivi - %d stazioni - %s UTC - %s filtrato con la chat EME di N0UK (%d giorni)\n' % (len(righe), oggi.isoformat(), nomi, GIORNI))
         for r in righe:
             f.write(r + '\n')
-    print('CALL3:', len(tab), 'nominativi; attivi N0UK:', len(att), '; nel file:', len(righe))
+    if a.tutti:
+        testo = '// CALL3.TXT - %d stations - %s UTC - %s (merged by callsign, W7GJ preferred) - callsign and locator only\n' % (len(tab), oggi.isoformat(), nomi)
+        testo += ''.join('%s,%s\n' % (c, tab[c]) for c in sorted(tab))
+        with open(a.tutti, 'wb') as f:
+            f.write(gzip.compress(testo.encode('ascii'), 9, mtime=0))
+    print('CALL3:', len(tab), 'nominativi; attivi N0UK:', len(att), '; attivi nel file:', len(righe))
 
 
 if __name__ == '__main__':
