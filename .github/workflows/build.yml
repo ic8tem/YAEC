@@ -156,6 +156,42 @@ jobs:
             kill $PID 2>/dev/null || true
           done
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+      - name: Schermate per il README (solo con [schermate] nel messaggio del commit)
+        if: contains(github.event.head_commit.message, '[schermate]')
+        run: |
+          Xvfb :98 -screen 0 1600x1000x24 &
+          export DISPLAY=:98
+          sleep 2
+          mkdir -p readme
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          printf 'locator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=W7GJ\n' > "$F"
+          while IFS='|' read -r L N T; do
+            sed -i '/^lingua=/d' "$F"; echo "lingua=$L" >> "$F"
+            YAEC_LINGUETTA="$T" mono YAEC.exe &
+            PID=$!
+            sleep 35
+            import -window root readme/x.png || true
+            convert readme/x.png -trim +repage -quality 88 "readme/$L-$N.jpg" 2>/dev/null || true
+            echo "README-SHOT-$L-$N-B64:$(base64 -w 0 readme/$L-$N.jpg)"
+            kill $PID 2>/dev/null || true
+            sleep 2
+          done <<'ELENCO'
+          it|1|Posizione live e +- 24h
+          it|2|Budget EME
+          it|3|Distanza e Dgrd
+          en|1|Live position and +- 24h
+          en|2|EME budget
+          en|3|Distance and Dgrd
+          de|1|Position live und +- 24h
+          de|2|EME-Budget
+          de|3|Entfernung und Dgrd
+          fr|1|Position en direct et +- 24h
+          fr|2|Bilan EME
+          fr|3|Distance et Dgrd
+          es|1|Posición en vivo y +- 24h
+          es|2|Balance EME
+          es|3|Distancia y Dgrd
+          ELENCO
       - uses: actions/upload-artifact@v4
         with:
           name: linux-screenshot
