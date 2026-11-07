@@ -39,7 +39,6 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"; LicenseFile: "l
 Name: "portuguese"; MessagesFile: "compiler:Languages\Portuguese.isl"; LicenseFile: "lingue\LICENSE_pt.txt"
 Name: "dutch"; MessagesFile: "compiler:Languages\Dutch.isl"; LicenseFile: "lingue\LICENSE_nl.txt"
 Name: "norwegian"; MessagesFile: "compiler:Languages\Norwegian.isl"; LicenseFile: "lingue\LICENSE_nb.txt"
-Name: "icelandic"; MessagesFile: "compiler:Languages\Icelandic.isl"; LicenseFile: "lingue\LICENSE_is.txt"
 Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"; LicenseFile: "lingue\LICENSE_he.txt"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"; LicenseFile: "lingue\LICENSE_ja.txt"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; LicenseFile: "lingue\LICENSE_ru.txt"
