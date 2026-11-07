@@ -15,8 +15,8 @@ INSTALLATION - WINDOWS
    Start menu and desktop shortcuts and the uninstaller.
 2. Portable alternative: YAEC-1.2.1-windows-portable.zip, extract it into a
    folder where you can write (e.g. Documents\YAEC) and run YAEC.exe.
-3. To build it yourself: extract the source zip and double-click
-   "compila.bat" (it uses the C# compiler that is already part of Windows).
+3. Developers only: to build it yourself, extract the source zip and
+   double-click "compila.bat". You do not need it to use YAEC.
 
 INSTALLATION - LINUX (all distributions, the same program)
 YAEC runs with Mono (the open-source .NET runtime maintained by WineHQ).
@@ -438,10 +438,11 @@ WHAT'S NEW IN beta 14
 All the details are in the INSTRUCTIONS and ABOUT tabs of the program.
 
 -----------------------------------------------------------------------------
-ITALIANO - Estrai lo zip in una cartella e fai doppio clic su compila.bat.
-Il programma parte in inglese: la lingua si sceglie in alto nella linguetta
-"Tracking and general settings" -> "Lingua / Language" (si applica al riavvio).
-Le impostazioni delle versioni LunaCalc precedenti restano valide.
+ITALIANO - Su Windows scarica YAEC-<versione>-Setup.exe dalla pagina Releases di
+GitHub (https://github.com/ic8tem/YAEC/releases) ed eseguilo: installa YAEC in
+Documenti\YAEC senza diritti di amministratore. Per Linux e macOS vedi sopra.
+La lingua si sceglie in alto nella schermata principale.
+Note storiche delle versioni beta:
 Novita' beta 17: nel Tracciamento, in alto a destra, la casella "CALCOLI COMPLESSI",
 la casella "ATTIVA VISIONE DATI COMPLESSI NELLA SCHERMATA PRINCIPALE" e il
 pulsante "SCELTA BANDE".

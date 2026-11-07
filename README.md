@@ -7,9 +7,52 @@ Windows, Linux and macOS (Linux and macOS with Mono).
 
 Posizione della Luna, finestre di puntamento, budget del collegamento EME, rumore del cielo e del Sole per radioamatori, in 17 lingue.
 
-## Features
+## Installation
 
 [English](#english) · [Italiano](#italiano) · [Deutsch](#deutsch) · [Français](#français) · [Español](#español)
+
+Download the files from the **[Releases](../../releases/latest)** page (x.y = version number).
+
+### English
+- **Windows** – download `YAEC-x.y-Setup.exe` and run it. It installs YAEC into *Documents\YAEC* without administrator rights, with Start menu and desktop shortcuts and an uninstaller. If SmartScreen warns you: *More info* → *Run anyway*. No installation wanted? Extract `YAEC-x.y-windows-portable.zip` into a folder where you can write and run `YAEC.exe`.
+- **Linux – Debian, Ubuntu, Mint** – download `yaec_x.y_all.deb` and run `sudo apt install ./yaec_x.y_all.deb` (Mono is installed too); start YAEC from the applications menu or with `yaec`.
+- **Linux – other distributions** – install Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extract `YAEC-x.y-linux.tar.gz` and run `./install.sh`.
+- **macOS (experimental)** – install Mono for macOS and XQuartz, open `YAEC-x.y-macOS.dmg` and drag YAEC into Applications; the first time, right-click → *Open*.
+- Every release has `SHA256SUMS.txt` to check the downloaded files.
+
+### Italiano
+- **Windows** – scarica `YAEC-x.y-Setup.exe` ed eseguilo. Installa YAEC in *Documenti\YAEC* senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione. Se compare l'avviso di SmartScreen: *Ulteriori informazioni* → *Esegui comunque*. Senza installazione: estrai `YAEC-x.y-windows-portable.zip` in una cartella in cui puoi scrivere e avvia `YAEC.exe`.
+- **Linux – Debian, Ubuntu, Mint** – scarica `yaec_x.y_all.deb` e dai `sudo apt install ./yaec_x.y_all.deb` (installa anche Mono); YAEC si avvia dal menu delle applicazioni o con `yaec`.
+- **Linux – altre distribuzioni** – installa Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), estrai `YAEC-x.y-linux.tar.gz` e avvia `./install.sh`.
+- **macOS (sperimentale)** – installa Mono per macOS e XQuartz, apri `YAEC-x.y-macOS.dmg` e trascina YAEC in Applicazioni; la prima volta, clic destro → *Apri*.
+- Ogni release ha il file `SHA256SUMS.txt` per controllare i file scaricati.
+
+### Deutsch
+- **Windows** – `YAEC-x.y-Setup.exe` herunterladen und ausführen. YAEC wird ohne Administratorrechte in *Dokumente\YAEC* installiert, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm. Bei einer SmartScreen-Warnung: *Weitere Informationen* → *Trotzdem ausführen*. Ohne Installation: `YAEC-x.y-windows-portable.zip` in einen beschreibbaren Ordner entpacken und `YAEC.exe` starten.
+- **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_all.deb` herunterladen und `sudo apt install ./yaec_x.y_all.deb` ausführen (Mono wird mitinstalliert); YAEC startet aus dem Anwendungsmenü oder mit `yaec`.
+- **Linux – andere Distributionen** – Mono installieren (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux.tar.gz` entpacken und `./install.sh` ausführen.
+- **macOS (experimentell)** – Mono für macOS und XQuartz installieren, `YAEC-x.y-macOS.dmg` öffnen und YAEC in den Ordner Programme ziehen; beim ersten Mal Rechtsklick → *Öffnen*.
+- Jede Version enthält `SHA256SUMS.txt` zur Prüfung der heruntergeladenen Dateien.
+
+### Français
+- **Windows** – téléchargez `YAEC-x.y-Setup.exe` et lancez-le. Il installe YAEC dans *Documents\YAEC* sans droits d'administrateur, avec les raccourcis dans le menu Démarrer et sur le bureau et un programme de désinstallation. Si SmartScreen affiche un avertissement : *Informations complémentaires* → *Exécuter quand même*. Sans installation : extrayez `YAEC-x.y-windows-portable.zip` dans un dossier où vous pouvez écrire et lancez `YAEC.exe`.
+- **Linux – Debian, Ubuntu, Mint** – téléchargez `yaec_x.y_all.deb` et lancez `sudo apt install ./yaec_x.y_all.deb` (Mono est installé aussi) ; YAEC se lance depuis le menu des applications ou avec `yaec`.
+- **Linux – autres distributions** – installez Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrayez `YAEC-x.y-linux.tar.gz` et lancez `./install.sh`.
+- **macOS (expérimental)** – installez Mono pour macOS et XQuartz, ouvrez `YAEC-x.y-macOS.dmg` et faites glisser YAEC dans Applications ; la première fois, clic droit → *Ouvrir*.
+- Chaque version contient `SHA256SUMS.txt` pour vérifier les fichiers téléchargés.
+
+### Español
+- **Windows** – descarga `YAEC-x.y-Setup.exe` y ejecútalo. Instala YAEC en *Documentos\YAEC* sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio y un desinstalador. Si SmartScreen muestra un aviso: *Más información* → *Ejecutar de todas formas*. Sin instalación: extrae `YAEC-x.y-windows-portable.zip` en una carpeta en la que puedas escribir y ejecuta `YAEC.exe`.
+- **Linux – Debian, Ubuntu, Mint** – descarga `yaec_x.y_all.deb` y ejecuta `sudo apt install ./yaec_x.y_all.deb` (también instala Mono); YAEC se abre desde el menú de aplicaciones o con `yaec`.
+- **Linux – otras distribuciones** – instala Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrae `YAEC-x.y-linux.tar.gz` y ejecuta `./install.sh`.
+- **macOS (experimental)** – instala Mono para macOS y XQuartz, abre `YAEC-x.y-macOS.dmg` y arrastra YAEC a Aplicaciones; la primera vez, clic derecho → *Abrir*.
+- Cada versión incluye `SHA256SUMS.txt` para comprobar los archivos descargados.
+
+All the versions before 1.0 are called **beta**.
+
+## Features
+
+[English](#english-1) · [Italiano](#italiano-1) · [Deutsch](#deutsch-1) · [Français](#français-1) · [Español](#español-1)
 
 ### English
 
@@ -161,23 +204,9 @@ YAEC reúne en un solo programa todo lo necesario para operar EME (Tierra–Luna
 - 17 idiomas; esquemas de colores claro, noche (azul), negro y ocho pastel.
 - Posiciones de la Luna con una precisión de unos 0,01° (Meeus, ELP-2000/82), todos los cálculos en tu ordenador; datos en una sola carpeta `data`.
 
-## Download
+## For developers
 
-Get the latest version from the **[Releases](../../releases)** page:
-
-| System | File |
-|---|---|
-| Windows | `YAEC-x.y-Setup.exe` (installer) or `YAEC-x.y-windows-portable.zip` |
-| Linux – Debian, Ubuntu, Mint | `yaec_x.y_all.deb` → `sudo apt install ./yaec_x.y_all.deb` |
-| Linux – any distribution | `YAEC-x.y-linux.tar.gz` (needs Mono: `mono-complete` / `mono`), then `./install.sh` |
-| macOS (experimental) | `YAEC-x.y-macOS.dmg` (needs Mono for macOS and XQuartz) |
-
-All the versions before 1.0 are called **beta**.
-
-## Build
-
-- Windows: `compila.bat` (uses the C# compiler included in Windows, .NET Framework 4, C# 5).
-- Every push is compiled by GitHub Actions on Windows and started on Linux with Mono; when the `VERSION` file on `main` holds a new version, the workflow publishes its release with the Windows installer (Inno Setup) and the Linux and macOS packages. See `.github/workflows/build.yml`.
+You do not need to compile anything to use YAEC: the installer and the packages above are built automatically. If you want to build it yourself on Windows, `compila.bat` compiles `YAEC.cs` with the C# compiler included in Windows (.NET Framework 4, C# 5). Every push is compiled by GitHub Actions on Windows and started on Linux with Mono; when the `VERSION` file on `main` holds a new version, the workflow publishes the release with the Windows installer (Inno Setup) and the Linux and macOS packages (`.github/workflows/build.yml`).
 
 ## License
 
