@@ -42166,7 +42166,7 @@ namespace LunaCalc
             chkDgSoloUtili.Margin = new Padding(S(10), S(6), S(3), S(3));
             tip.SetToolTip(chkDgSoloUtili, Lang.T("Mostra solo i giorni con una finestra utile secondo i criteri della linguetta Posizione della Luna (limiti dell'antenna e, se attivo, il DX)"));
             chkDgSoloUtili.CheckedChanged += (s, e) => RiempiTabellaDg();
-            bar.Controls.Add(L(Lang.T("Giorni da oggi (fino a 61)"))); bar.Controls.Add(nudDgGiorni); bar.Controls.Add(bUpd); bar.Controls.Add(chkDgAuto);
+            bar.Controls.Add(L(Lang.T("Giorni da oggi (fino a 61)"))); bar.Controls.Add(Tonda(nudDgGiorni)); bar.Controls.Add(bUpd); bar.Controls.Add(chkDgAuto);
             bar.Controls.Add(chkDgSoloUtili);
             chkDgDec = new Spunta();
             chkDgDec.Text = Lang.T("Curva della declinazione");
@@ -42198,9 +42198,9 @@ namespace LunaCalc
             nudSpDg.ValueChanged += (s, e) => { dgSpDg = nudSpDg.Value; AggiornaStileDg(); };
             nudSpKm.ValueChanged += (s, e) => { dgSpKm = nudSpKm.Value; AggiornaStileDg(); };
             Label lcDg = L(Lang.T("Curva Dgrd")); lcDg.Margin = new Padding(S(18), S(6), S(3), S(3));
-            bar.Controls.Add(lcDg); bar.Controls.Add(btnColDg); bar.Controls.Add(nudSpDg);
+            bar.Controls.Add(lcDg); bar.Controls.Add(btnColDg); bar.Controls.Add(Tonda(nudSpDg));
             Label lcKm = L(Lang.T("Curva distanza")); lcKm.Margin = new Padding(S(12), S(6), S(3), S(3));
-            bar.Controls.Add(lcKm); bar.Controls.Add(btnColKm); bar.Controls.Add(nudSpKm);
+            bar.Controls.Add(lcKm); bar.Controls.Add(btnColKm); bar.Controls.Add(Tonda(nudSpKm));
             AggiornaStileDg(false);
             root.Controls.Add(bar, 0, 0);
             root.SetColumnSpan(bar, 2);
@@ -42471,15 +42471,18 @@ namespace LunaCalc
             Rectangle cr = pnlDgTop.ClientRectangle;
             if (cr.Width < 100 || cr.Height < 40) return;
             // i tre giorni migliori in ordine cronologico; la stella dice il loro posto in classifica
-            List<GiornoEme> tre = dgOrd.GetRange(0, Math.Min(3, dgOrd.Count));
+            // in più, un possibile quarto giorno utile (scheda grigia, senza stella)
+            const int NS = 4;
+            List<GiornoEme> tre = dgOrd.GetRange(0, Math.Min(NS, dgOrd.Count));
             tre.Sort((x1, x2) => x1.Giorno.CompareTo(x2.Giorno));
-            float gap = S(14), w = (cr.Width - S(12) - 2 * gap) / 3f, h = cr.Height - S(12);
-            using (Font fd = FontPx(Lang.FontUi, Math.Min(S(22), h * 0.2f), true))
-            using (Font fo = FontPx(FamigliaNumeri, Math.Min(S(30), h * 0.27f), true))
-            using (Font fl = FontPx(Lang.FontUi, Math.Min(S(16), h * 0.15f), true))
-            using (Font fs = FontPx(Lang.FontUi, Math.Min(S(15), h * 0.14f), false))
+            float gap = S(12), w = (cr.Width - S(12) - (NS - 1) * gap) / NS, h = cr.Height - S(12);
+            float kw = Math.Min(1f, w / S(430f));   // schede strette: caratteri un po' più piccoli
+            using (Font fd = FontPx(Lang.FontUi, Math.Min(S(22), h * 0.2f) * Math.Max(0.75f, kw), true))
+            using (Font fo = FontPx(FamigliaNumeri, Math.Min(S(30), h * 0.27f) * Math.Max(0.75f, kw), true))
+            using (Font fl = FontPx(Lang.FontUi, Math.Min(S(16), h * 0.15f) * Math.Max(0.8f, kw), true))
+            using (Font fs = FontPx(Lang.FontUi, Math.Min(S(15), h * 0.14f) * Math.Max(0.8f, kw), false))
             using (Font fr = FontPx(Lang.FontUi, S(20), true))
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < NS; i++)
                 {
                     RectangleF r = new RectangleF(cr.Left + S(4) + i * (w + gap), cr.Top + S(4), w, h);
                     if (i >= tre.Count)
@@ -42490,12 +42493,14 @@ namespace LunaCalc
                         continue;
                     }
                     GiornoEme gg = tre[i];
-                    Scheda(g, r, Tema.OkFg);
-                    float rf = Math.Min(S(30), h * 0.3f);
-                    PointF cm = new PointF(r.Left + S(22) + rf, r.Top + r.Height / 2f);
+                    bool quarto = gg.Rango > 3;
+                    Color cAcc = quarto ? Tema.Muted : Tema.OkFg;
+                    Scheda(g, r, cAcc);
+                    float rf = Math.Min(S(30), h * 0.3f) * Math.Max(0.7f, kw);
+                    PointF cm = new PointF(r.Left + S(18) + rf, r.Top + r.Height / 2f);
                     DisegnaFase(g, cm, rf, double.IsNaN(gg.Illum) ? 0.5 : gg.Illum, gg.Crescente);
                     float x = cm.X + rf + S(18), wt = r.Right - x - S(10);
-                    Testo(g, "★ " + gg.Rango.ToString(ci) + "°", fr, Tema.OkFg, new RectangleF(r.Right - S(80), r.Top + S(6), S(70), S(28)), StringAlignment.Far, StringAlignment.Near);
+                    Testo(g, (quarto ? "" : "★ ") + gg.Rango.ToString(ci) + "°", fr, cAcc, new RectangleF(r.Right - S(80), r.Top + S(6), S(70), S(28)), StringAlignment.Far, StringAlignment.Near);
                     string giorno = gg.Giorno.ToString("dddd dd/MM", itCi);
                     if (giorno.Length > 0) giorno = char.ToUpper(giorno[0]) + giorno.Substring(1);
                     float y = r.Top + h * 0.1f;
@@ -42503,7 +42508,7 @@ namespace LunaCalc
                     y += h * 0.26f;
                     string utc = FmtT(gg.Migliore) + " UTC";
                     SizeF so = g.MeasureString(utc, fo);
-                    Testo(g, utc, fo, Tema.OkFg, new RectangleF(x, y, so.Width + S(4), h * 0.32f), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, utc, fo, cAcc, new RectangleF(x, y, so.Width + S(4), h * 0.32f), StringAlignment.Near, StringAlignment.Center);
                     string loc = "· " + TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(gg.Migliore, DateTimeKind.Utc), TimeZoneInfo.Local).ToString("HH:mm", inv) + " " + Lang.T("ora locale");
                     Testo(g, loc, fl, Tema.Muted, new RectangleF(x + so.Width + S(4), y, Math.Max(10, wt - so.Width), h * 0.32f), StringAlignment.Near, StringAlignment.Center);
                     y += h * 0.32f;
@@ -42947,7 +42952,7 @@ namespace LunaCalc
             {
                 CorniceTonda ct = (CorniceTonda)c;
                 Colora(ct.Dentro);
-                ct.Dentro.FlatStyle = FlatStyle.Flat;
+                if (ct.Dentro is ComboBox) ((ComboBox)ct.Dentro).FlatStyle = FlatStyle.Flat;
                 ct.Invalidate();
                 return;
             }
@@ -48821,6 +48826,55 @@ namespace LunaCalc
                 SaveSettings();
             };
             this.FormClosed += (s, e) => FermaTimer();
+            // tutte le caselle dei numeri con la cornice arrotondata e le frecce ben visibili
+            ArrotondaNumeri(this);
+            this.Shown += (s, e) => ArrotondaNumeri(this);
+        }
+
+        // Mette ogni casella dei numeri dentro la cornice arrotondata (come tendine e impostazioni generali),
+        // nella stessa cella o nella stessa posizione del pannello che la contiene
+        void ArrotondaNumeri(Control radice)
+        {
+            List<NumericUpDown> trovate = new List<NumericUpDown>();
+            Action<Control> cerca = null;
+            cerca = c => { foreach (Control x in c.Controls) { if (x is NumericUpDown) trovate.Add((NumericUpDown)x); else cerca(x); } };
+            cerca(radice);
+            foreach (NumericUpDown n in trovate)
+            {
+                Control p = n.Parent;
+                if (p == null || p is CorniceTonda) continue;
+                TableLayoutPanel tl = p as TableLayoutPanel;
+                FlowLayoutPanel fl = p as FlowLayoutPanel;
+                if (tl == null && fl == null) continue;
+                p.SuspendLayout();
+                Padding m = n.Margin;
+                AnchorStyles an = n.Anchor;
+                if (tl != null)
+                {
+                    TableLayoutPanelCellPosition pos = tl.GetPositionFromControl(n);
+                    int cs = tl.GetColumnSpan(n), rs = tl.GetRowSpan(n);
+                    tl.Controls.Remove(n);
+                    CorniceTonda ct = new CorniceTonda(n);
+                    ct.Margin = new Padding(m.Left, Math.Max(0, m.Top - 2), m.Right, Math.Max(0, m.Bottom - 2));
+                    ct.Anchor = an == AnchorStyles.None ? AnchorStyles.Left : an & ~AnchorStyles.Right;
+                    tl.Controls.Add(ct, pos.Column, pos.Row);
+                    if (cs > 1) tl.SetColumnSpan(ct, cs);
+                    if (rs > 1) tl.SetRowSpan(ct, rs);
+                }
+                else
+                {
+                    int idx = fl.Controls.GetChildIndex(n);
+                    fl.Controls.Remove(n);
+                    CorniceTonda ct = new CorniceTonda(n);
+                    ct.Margin = new Padding(m.Left, Math.Max(0, m.Top - 2), m.Right, Math.Max(0, m.Bottom - 2));
+                    ct.Anchor = AnchorStyles.Left;
+                    fl.Controls.Add(ct);
+                    fl.Controls.SetChildIndex(ct, idx);
+                }
+                n.Margin = new Padding(0);
+                n.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+                p.ResumeLayout();
+            }
         }
 
         bool ricostruzione;
@@ -49052,6 +49106,15 @@ namespace LunaCalc
         }
 
         // ---------- Interfaccia ----------
+
+        // casella (numeri, tendine) dentro la cornice con gli angoli arrotondati, come nelle impostazioni generali
+        Control Tonda(Control c)
+        {
+            CorniceTonda ct = new CorniceTonda(c);
+            ct.Margin = new Padding(S(2), S(1), S(4), S(1));
+            ct.Anchor = AnchorStyles.Left;
+            return ct;
+        }
 
         Label L(string text)
         {
@@ -50742,8 +50805,8 @@ namespace LunaCalc
             if (senzaFrecce) DisegnaFrecce(e.Graphics);
         }
 
-        // Al posto delle frecce di sistema: due "v" sottili affiancate (su e giù), come nelle caselle dei valori
-        // dei programmi moderni. Clic a sinistra = aumenta, a destra = diminuisce; restano rotellina e tasti freccia.
+        // Al posto delle frecce di sistema: due triangolini pieni uno sopra l'altro su un fondo a pulsante.
+        // Clic in alto = aumenta, in basso = diminuisce; restano rotellina e tasti freccia.
         int zonaSu = -1;   // -1 nessuna, 0 su, 1 giù (sotto il mouse)
         Rectangle ZonaFrecce()
         {
@@ -50755,27 +50818,34 @@ namespace LunaCalc
             Rectangle z = ZonaFrecce();
             if (z.Width < 8) return;
             g.SmoothingMode = SmoothingMode.AntiAlias;
-            Color cf = !this.Enabled ? Color.FromArgb(160, 166, 176) : (Tema.Scuro ? Color.FromArgb(200, 206, 216) : Color.FromArgb(75, 85, 99));
-            using (Pen sep = new Pen(Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(214, 218, 226))) g.DrawLine(sep, z.Left, z.Top + 3, z.Left, z.Bottom - 4);
-            float w2 = z.Width / 2f, cy = z.Top + z.Height / 2f, d = Math.Max(2.2f, Math.Min(w2 * 0.28f, z.Height / 6f));
+            Color cf = !this.Enabled ? Color.FromArgb(160, 166, 176) : (Tema.Scuro ? Color.FromArgb(225, 230, 240) : Color.FromArgb(31, 41, 55));
+            // fondo a pulsante e separatore tra su e giù: frecce una sopra l'altra, ben visibili
+            RectangleF zb = new RectangleF(z.Left + 1, z.Top + 1, z.Width - 2, z.Height - 2);
+            using (Brush bz = new SolidBrush(Tema.Scuro ? Color.FromArgb(60, 255, 255, 255) : Color.FromArgb(236, 239, 244))) g.FillRectangle(bz, zb);
+            float my = z.Top + z.Height / 2f;
+            using (Pen sep = new Pen(Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(205, 210, 220)))
+            {
+                g.DrawLine(sep, z.Left, z.Top + 1, z.Left, z.Bottom - 1);
+                g.DrawLine(sep, z.Left + 3, my, z.Right - 3, my);
+            }
+            float hw = Math.Max(3f, Math.Min(z.Width * 0.32f, z.Height * 0.22f)), hh = hw * 0.6f;
             for (int k = 0; k < 2; k++)
             {
-                float cx = z.Left + w2 * k + w2 / 2f;
+                RectangleF zk = new RectangleF(zb.Left, k == 0 ? zb.Top : my, zb.Width, zb.Height / 2f);
                 if (zonaSu == k && this.Enabled)
-                    using (Brush bh = new SolidBrush(Color.FromArgb(40, 31, 111, 209))) g.FillRectangle(bh, z.Left + w2 * k + 1, z.Top + 1, w2 - 1, z.Height - 2);
-                using (Pen pv = new Pen(cf, Math.Max(1.2f, z.Height / 16f)))
-                {
-                    pv.StartCap = LineCap.Round; pv.EndCap = LineCap.Round; pv.LineJoin = LineJoin.Round;
-                    if (k == 0) g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy + d / 2f), new PointF(cx, cy - d / 2f), new PointF(cx + d, cy + d / 2f) });
-                    else g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy - d / 2f), new PointF(cx, cy + d / 2f), new PointF(cx + d, cy - d / 2f) });
-                }
+                    using (Brush bh = new SolidBrush(Color.FromArgb(70, 31, 111, 209))) g.FillRectangle(bh, zk);
+                float cx = zk.Left + zk.Width / 2f, cy = zk.Top + zk.Height / 2f;
+                PointF[] tri = k == 0
+                    ? new PointF[] { new PointF(cx - hw, cy + hh / 2f), new PointF(cx, cy - hh / 2f), new PointF(cx + hw, cy + hh / 2f) }
+                    : new PointF[] { new PointF(cx - hw, cy - hh / 2f), new PointF(cx, cy + hh / 2f), new PointF(cx + hw, cy - hh / 2f) };
+                using (Brush bt = new SolidBrush(cf)) g.FillPolygon(bt, tri);   // triangolino pieno
             }
         }
         int ZonaDi(Point p)
         {
             Rectangle z = ZonaFrecce();
             if (!senzaFrecce || z.Width < 8 || !z.Contains(p)) return -1;
-            return p.X < z.Left + z.Width / 2 ? 0 : 1;
+            return p.Y < z.Top + z.Height / 2 ? 0 : 1;   // metà alta = aumenta, metà bassa = diminuisce
         }
         protected override void OnMouseMove(MouseEventArgs e)
         {
@@ -51235,14 +51305,15 @@ namespace LunaCalc
 
     class CorniceTonda : Panel
     {
-        public readonly ComboBox Dentro;
-        public CorniceTonda(ComboBox cb)
+        public readonly Control Dentro;
+        public CorniceTonda(Control cb)
         {
             this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer
                 | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor, true);
             this.BackColor = Color.Transparent;
             Dentro = cb;
-            cb.FlatStyle = FlatStyle.Flat;
+            if (cb is ComboBox) ((ComboBox)cb).FlatStyle = FlatStyle.Flat;
+            if (cb is UpDownBase) ((UpDownBase)cb).BorderStyle = BorderStyle.None;   // caselle dei numeri: il bordo è la cornice tonda
             Tendina td = cb as Tendina;
             if (td != null) td.Cornice = false;
             this.Controls.Add(cb);
@@ -51257,15 +51328,16 @@ namespace LunaCalc
         void Disponi()
         {
             int b = Bordo;
-            Dentro.Location = new Point(b + 1, b - 1);
-            Size sz = new Size(Dentro.Width + 2 * b + 2, Dentro.Height + 2 * b - 2);
+            bool combo = Dentro is ComboBox;
+            Dentro.Location = combo ? new Point(b + 1, b - 1) : new Point(b + 2, b);
+            Size sz = combo ? new Size(Dentro.Width + 2 * b + 2, Dentro.Height + 2 * b - 2) : new Size(Dentro.Width + 2 * b + 4, Dentro.Height + 2 * b);
             if (this.Size != sz) this.Size = sz;
             // nasconde il bordo squadrato della tendina piatta
-            Dentro.Region = new Region(new Rectangle(1, 1, Math.Max(1, Dentro.Width - 2), Math.Max(1, Dentro.Height - 2)));
+            if (combo) Dentro.Region = new Region(new Rectangle(1, 1, Math.Max(1, Dentro.Width - 2), Math.Max(1, Dentro.Height - 2)));
             Invalidate();
         }
 
-        public override Size GetPreferredSize(Size proposed) { int b = Bordo; return new Size(Dentro.Width + 2 * b + 2, Dentro.Height + 2 * b - 2); }
+        public override Size GetPreferredSize(Size proposed) { int b = Bordo; return Dentro is ComboBox ? new Size(Dentro.Width + 2 * b + 2, Dentro.Height + 2 * b - 2) : new Size(Dentro.Width + 2 * b + 4, Dentro.Height + 2 * b); }
 
         protected override void OnPaint(PaintEventArgs e)
         {
