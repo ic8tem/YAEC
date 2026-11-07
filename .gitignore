@@ -3,3 +3,4 @@ YAEC-*-Setup.exe
 dist/
 data/
 *.zip
+__pycache__/
