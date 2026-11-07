@@ -1,0 +1,75 @@
+﻿YAEC – Yet Another EME Calc 1.2.1
+deur Costantino IC8TEM
+==========================================
+
+Sakrekenaar vir radioamateurs wat EME (Aarde–Maan–Aarde) van 50 tot 432 MHz werk: posisie van die Maan en rigvensters binne die grense van jou eie antenna, beplanning van die dae met die beste Dgrd, EME-skakelbegroting, hemel- en Songeraas, 'n databasis van koaksiale kabels en handleidings oor EME. Vir Windows, Linux en macOS, in 26 tale.
+Bronkode en aflaai: https://github.com/ic8tem/YAEC/releases
+
+INSTALLASIE – WINDOWS
+1. Laai YAEC-1.2.1-Setup.exe van die Releases-bladsy af en voer dit uit. Dit installeer YAEC in Documents\YAEC, sonder administrateurregte, met kortpaaie in die Start-kieslys en op die werkskerm, en 'n deïnstalleerder.
+2. As die SmartScreen-waarskuwing verskyn: "More info" → "Run anyway".
+3. Sonder installasie: pak YAEC-1.2.1-windows-portable.zip uit in 'n gids waarin jy kan skryf en begin YAEC.exe.
+
+INSTALLASIE – LINUX
+YAEC werk met Mono, die vrye .NET-looptydomgewing.
+- Debian, Ubuntu, Mint: laai yaec_1.2.1_all.deb af en installeer dit met
+      sudo apt install ./yaec_1.2.1_all.deb
+  (dit installeer ook Mono). YAEC begin uit die toepassingskieslys of met die opdrag "yaec".
+- Ander distribusies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.2.1-linux.tar.gz uit en voer ./install.sh uit.
+
+INSTALLASIE – macOS (eksperimenteel)
+1. Installeer Mono vir macOS (https://www.mono-project.com/download/stable/) en XQuartz (https://www.xquartz.org).
+2. Maak YAEC-1.2.1-macOS.dmg oop en sleep YAEC na Applications. Die eerste keer: regsklik op YAEC → Open (die toep is nie deur Apple onderteken nie).
+
+KONTROLE VAN DIE AFGELAAIDE LÊERS (SHA-256)
+Elke release bevat SHA256SUMS.txt met die SHA-256-hash van elke pakket. Vergelyk dit met dié van die afgelaaide lêer:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+As die twee waardes verskil, moenie die lêer installeer nie: laai dit weer af.
+
+TAAL EN DATA
+Die taal word bo in die hoofvenster gekies. Al die program se data is in die gids "data": op Windows langs YAEC.exe, op Linux in ~/.local/share/YAEC/data, op macOS in ~/Library/Application Support/YAEC/data.
+
+LISENSIE
+YAEC is gratis; die lisensieteks is in die lêer LICENSE_af.txt en in die LISENSIE-oortjie van die program. In geval van twyfel geld die Italiaanse weergawe (LICENZA.txt).
+
+KONTAK
+Foute, beter data, vertalings: ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
+
+WEERGAWEGESKIEDENIS
+Weergawes voor 1.0 word beta genoem.
+- 1.2.1 - Die bladsy KONTAK MET DIE OUTEUR EN ERKENNINGS maak weer korrek oop op Linux en macOS; die verwysing vir die transverters wys na § 1.7.1.
+- 1.2 - EME-begroting met die aanwysers My EIRP, EIRP van die DX, padverlies en S/N in albei rigtings (met die Son); formules van die Word-dokument in een grootte, binne die kantlyne; gevulde knoppies en plat aftreklyste met geronde rand in alle skemas; agt pastelkleurskemas; waardekassies met die pyltjies langs mekaar; die drie beste dae in datumvolgorde; vaag hemelagtergrond; FORMULE-ONTFOUTING vertaal; handleiding TEORIE EN WENKE OOR EME met die raad van Relu NJ9R (GRAVES, rigting, verbindings, antennewins, JT65B en MAP65, polarisasierelê), die nuwe afdelings oor die eerste ontvangs en oor internetklets, en die VE7BQH-tabelle in die voorwoord; dank aan NJ9R, die herinnering aan IK1UWL en die skrywers van artikels, hardeware en sagteware, met 'n wenk oor hul werk.
+- 1.1 - Regstreekse posisie en +- 24h (voorheen Volg) ook in die verlede en die toekoms: dag uit die kalender en tyd deur die rooi lyn te sleep, frekwensie in die blok Eggo en frekwensies; roepseinblokkie van die DX met CALL3.TXT wat van W7GJ en WSJT-X Improved afgelaai en saamgevoeg word, voorgestelde lokator en kopie na die WSJT-X-gids; Afstand en Dgrd sonder rangorde, met die deklinasie daaroor, rye in die kleure van die grafiek en opsionele groen bruikbare ure; merkblokkies in die styl van die program; kabels in die aftreklyste volgens deursnee en in die tabel volgens naam, vervaardiger en tipe gesorteer, met vertaalde bronne; EME-begroting met net die 60 s-modusse (JT65, Q65-60A, Q65-60B, Q65-60C) en 'n stasieskema wat by die tekste aanpas; GEBRUIKERSHANDLEIDING wat elke skerm bespreek; TEORIE EN WENKE OOR EME met die outeur se voorwoord, nommering vanaf 1 en die formules van sonruis; HTTPS op Linux en macOS met die stelsel se sertifikate.
+- 1.0.1 - Die vrystellingsblad op GitHub bevat nou die lêer SHA256SUMS.txt met die SHA-256-vingerafdrukke van al die pakkette: daarmee kan jy kontroleer dat die afgelaaide lêers die oorspronklikes is (instruksies in die README).
+- 1.0 - Eerste stabiele weergawe, vir Windows, Linux en macOS (Linux en macOS met Mono; die data in ~/.local/share/YAEC/data of in ~/Library/Application Support/YAEC/data); installeerder vir Windows en pakkette vir Linux en macOS op GitHub gebou; die vorige weergawes heet beta. Nuwe oortjie Maan oor die wêreld (elevasie van die Maan oor die landmassas van die hele wêreld, DX-stasie met een klik, stand van jou antenna); handleiding verdeel in UITGEBREIDE GEBRUIKERSHANDLEIDING en TEORIE EN WENKE OOR EME; groepe Hulp en gereedskap en Credits and thanks; oortjie Uitvoer van berekeninge na Excel; geen modusmarge meer nie: S/N in 2500 Hz met die tipiese drempel as verwysing en die grense van JT65 in die handleiding; in die handleiding ook die Q65-tabel vir TX1 – TX6, Faraday-rotasie en die opsomming van SM5BSZ se artikel; kabeltabel sorteerbaar volgens verlies, met nuwe kabels van Messi & Paoloni, SSB (SeaTex vir mariene omgewings, Aircom Premium), Belden en Tasker; blokkies met 'n eenheid sonder oorblywende teks.
+- beta 30 - Kurwe van die Maan se deklinasie onder die Afstand en Dgrd-grafiek, met die noordelike en suidelike maksima en die gebied wat jou halfrond bevoordeel; nuwe handleidingparagraaf oor deklinasie (maandelikse siklus, maksimum elevasie en ure bo die horison, verbindings tussen halfronde, 18,6-jaar-siklus, ruis); I2FAK se Boogskutter-syfers gespesifiseer vir Noord-Italië en bo 5° elevasie.
+- beta 29 - Handleiding volledig in al 17 tale vertaal; formules van afdelings 3.4, 3.5, 3.5.1 en 3.6 in Equation Editor-styl; nuwe afdeling 3.7.3 oor die TX/RX-sekwenseerder (IK1UWL); knoppie "Salva in Word (.docx)" vir die handleiding met inhoudsopgawe, bladsynommers en Word-formules; skeier tussen inhoud en teks op 25 %; waarskuwing wanneer Dpol binne 24 uur 60° oorskry (bron: video-onderhoude met Franco I2FAK).
+- beta 28d - Reggemaak: beta 28c het by die begin gesluit (blokkies met eenhede); onverwagte foute verskyn in 'n boodskap en word in data\errori.txt geskryf; DGRD-blok van die hoofskerm met die minimum en maksimum van die grafiek en die huidige waarde.
+- beta 28c - Beginskerm met 'n balk wat in 6 sekondes vol word; SKRYWER SE KONTAKBESONDERHEDE EN ERKENNINGS met die Maan, die reënboog-hemel en die erkennings; pilknoppies en geronde aftreklyste; EME-begroting soos in die ontwerp (stasiekaarte, aanwysers, getekende tabel, stasieskema wat by die lettergrootte aanpas, eenhede in die blokkies, transverterlys); Maanposisie met kaarte, regstreekse pille, slotte en 'n nuwe Kolomme-venster; songeraas met die Learmonth (BoM)-bron en asse 100 – 20 000 MHz; KOAKSIALE KABELS met pilfilters, getekende tabel en 1 – 20 dB-grafiek.
+- beta 28b - Handleiding: hoofstuk «Die oortjies» verwyder en die hoofstukke en alle verwysings hernommer; formules vir MNR, T(f), Dgrd en die EME-begroting in die styl van die vergelykingsredigeerder; opskrifte, tabelle langs mekaar, stawe, uitgeligte rye, kleure en voorbeeldlokaliseerder soos in die ontwerpe; voorversterker met die toetse van die IC-746PRO (ARRL) en FT-897 (RadCom); transverter met 'n groot grafiek en Kuhne TR 144 H +40 teen 25 dB; erkennings van die ABOUT & CREDITS-oortjie na die hoofstuk «Bronne, data en erkennings» geskuif; kaart van My hindernisverkenning op JJ00AA gesentreer as daar geen lokaliseerder is nie.
+- beta 28a - Sluitvenster met die Ja- en Nee-knoppies altyd sigbaar; dikker geel grenslyn in die Hemelruim; tekste oorvleuel nie meer met vergrote letters nie; agt nuwe kabels (H1000, H100, RT5020, XT2400, LLF195, RG-142, RG-393, RG-115) en kabelwenke in die styl van die program; lisensie met reël- en woordspasiëring soos die ontwerp; oortjie KONTAK MET DIE OUTEUR EN ERKENNINGS; klik buite die sirkel van My hindernisverkenning om 'n nuwe lokaliseerder te kies; taal, lettertipe en lettergrootte verander sonder om die program te herbegin.
+- beta 27 - bande net tot 432 MHz; beginskerm met die logo en die beskerming van die ARI-afdeling Valle del Liri; dankiereël in die sluitvenster; tale Bengaals, Arabies en Turks (17 tale); hoofskerm met vier gekleurde kaarte, NA DIE BEREKENINGE en NA LUGAANSIG, locator tot 14 karakters, lettertipekeuse en donker wenke; Verkenning van my hindernisse met ondeursigtigheid en tint van die grys; uitgeligte dag in Afstand en Dgrd; Kolomme-knoppie in Maanposisie; EME-begroting met die skema van die TX/RX-installasie; Songeraas met bronne, aanwysers en spektrum; FORMULE-ONTFOUTING in Word-styl met stoor as .docx; nuwe oortjies KOAKSIALE KABELS, KONTAK MET DIE OUTEUR en LISENSIE; handleiding binne die program (UITGEBREIDE GEBRUIKERSHANDLEIDING).
+- beta 26 - Nuwe keuse van oortjies op twee vlakke (groepe en oortjies); kleurskema Swart en Nag-skema in bloutinte; kleur en dikte van die twee Dgrd-kurwes verstelbaar en dae met die Son naby die Maan; waarskuwings oor moontlike poolkap- (PCA) en aurora-absorpsie vir albei stasies; blokkie vir die vervaging in die Rigkaart; grys skuinslyne buite die grense in die Lugaansig en byskrifte wat nie meer oorvleuel nie; nuwe oortjie FORMULE-ONTFOUTING; Maan-ikoon; PDF-handleidings in al 14 tale.
+- beta 25 - Afstand en Dgrd-oortjie hernu: die drie beste dae, kalender van die dae met Maanfase, grafiek van Dgrd (nul onder) met die gemiddelde afstand daaroor, nuwemaan en volmaan, kort rangorde; nuwe Rigkaart-oortjie met lugfoto of topografiese kaart, Maan, baan, opkoms en ondergang en antennagrense wat met die muis geskuif word.
+- beta 24 - Lugaansig-byskrifte twee keer so groot; Russies, Oekraïens en Afrikaans; compila.bat skep nie meer die PDF-handleidings nie.
+- beta 23 - Nuwe hoofskerm: UTC-tyd, plaaslike tyd en DX plaaslike tyd, statusband met aftelling, azimutkompas en elevasieboog met die antennagrense, Maanfase met opkoms en ondergang, Dgrd- en S/N-balke, balk van die volgende 24 uur; nagtema in alle oortjies; drie kleurskale in die Lugaansig met omlynde byskrifte.
+- beta 22 - Al die data in die data-subvouer langs die uitvoerbare lêer (geskuif uit AppData en die programvouer), by begin gekontroleer en weer afgelaai; PDF-handleidings met skermkiekies in Italiaans, Engels, Frans, Duits, Spaans en Portugees; blokkies en BANDKEUSE regs bo in die venster, S/N weer regs onder.
+- beta 21 - Hoofskerm: DIEPGAANDE BEREKENINGE-blokkie, PLAASLIKE AZIMUT en ELEVASIE, datum langs die titel, S/N-blokkie onder BANDKEUSE; keuse van die lettertipe vir die hele program. Nuwe bande 70 MHz en 222 MHz.
+- beta 20 - Grondhoogte outomaties van die web geneem (Open Topo Data, Open-Meteo) wanneer die locator 10 karakters het.
+- beta 19 - Titel met die gebruiker se roepsein; geen verstek-locator of -roepsein; instellings in die programvouer; nuwe oortjievolgorde; INSTRUKSIES met al die parameters, MNR en CFOM; eksperimenteel-EXCEL-oortjie; logboekaflaai van LoTW; ABOUT & CREDITS; Hindi, Koreaans en Indonesies.
+- beta 18 - EME-begroting: bandwydte tot 3000 Hz, geraassyfers langs die winste, transverter uit die berekening gelaat met wins 0, antennatemperatuur Tant (VE7BQH-tabelle); algemene instellings in die Volg-oortjie; vaag groeiende Maan in die agtergrond van die hoofskerm.
+- beta 17 - "DIEPGAANDE BEREKENINGE"-blokkie in Volg (kolomme vanaf Dpol, tussenrye van die EME-begroting, Songeraas-oortjie); geskatte S/N op die hoofskerm; "BANDKEUSE"-knoppie met die bande van 50 MHz tot 122 GHz.
+- beta 14 - Nuwe naam YAEC - Yet Another EME Calc; gebruikerskoppelvlak in 8 tale (Engels, Italiaans, Duits, Frans, Spaans, Portugees, Chinees, Japannees) met Engels as begintaal; roepsein in die venstertitel.
+- beta 13 - Regstelling van samestellingsfout CS0051 (toeganklikheid van die Friis-funksie).
+- beta 12 - Die radio se geraassyfer word afgelei uit sy MDS met die bandwydte deur die gebruiker gekies (dieselfde as vir die S/N-berekening).
+- beta 11 - Hoof-Volgskerm herontwerp (my en DX-locator, frekwensie, datum en tye, my en DX-azimut en -elevasie, ander nuttige data); locator en frekwensie outomaties na alle oortjies gekopieer; ontvanger-geraassyfer met die Friis-formule; Afstand en Dgrd tot 61 dae; roepsein in die algemene instellings; ALC-aanbevelings in die instruksies.
+- beta 10 - Volg-oortjie; kHz van 000 tot 999; dag van die week; bandwydte en S/N met die Son in die begroting; BETA ground gain; transverter-radio-koppelkabelverlies; donker tema en lettertipes; een maand Dgrd met nuwemaan; LoTW in groen; INSTRUKSIES-oortjie; beginvenster en uitgangsbevestiging.
+- beta 9 - Lugaansig in azimut/elevasie met plat horison en geraaskleure van blou tot rooi; Afstand en Dgrd-oortjie; ABOUT-oortjie.
+- beta 6 - WWL-kaart en ADIF-oortjie met Maidenhead-rooster.
+- beta 5 - Statuskolomme deur kleur vervang; titel "deur Costantino IC8TEM"; kHz-aftreklys vir die CFOM-frekwensie.
+- beta 4 - DX plaaslike tyd uit posisie afgelei; duur in dae; kolomwenke; Doppler- en CFOM-frekwensies; Lugaansig-oortjie.
+- beta 3 - Geskatte S/N in die begroting; Songeraas-oortjie met SFU-webdata en keuse van die RSTN-stasie.
+- beta 2 - EME-begroting-oortjie: EIRP, padverlies, ontvangde sein en marge bo MDS.
+- beta 1 - Tweede stasie (DX), gemeenskaplike vensters, Dpol, MNR, Tsky en Dgrd soos in WSJT-X.

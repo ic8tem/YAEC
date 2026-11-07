@@ -1,0 +1,75 @@
+﻿YAEC – Yet Another EME Calc 1.2.1
+autorius Costantino IC8TEM
+==========================================
+
+Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ryšiu nuo 50 iki 432 MHz: Mėnulio padėtis ir nukreipimo langai pagal jūsų antenos apribojimus, dienų su geriausiu Dgrd planavimas, EME ryšio linijos energetinis balansas, dangaus ir Saulės triukšmas, bendraašių kabelių duomenų bazė ir EME vadovai. Skirta Windows, Linux ir macOS, 26 kalbomis.
+Išeities kodas ir atsisiuntimas: https://github.com/ic8tem/YAEC/releases
+
+ĮDIEGIMAS – WINDOWS
+1. Atsisiųskite YAEC-1.2.1-Setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
+2. Jei pasirodo SmartScreen įspėjimas: "More info" → "Run anyway".
+3. Be įdiegimo: išskleiskite YAEC-1.2.1-windows-portable.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
+
+ĮDIEGIMAS – LINUX
+YAEC veikia su Mono – laisvąja .NET vykdymo aplinka.
+- Debian, Ubuntu, Mint: atsisiųskite yaec_1.2.1_all.deb ir įdiekite komanda
+      sudo apt install ./yaec_1.2.1_all.deb
+  (kartu įdiegiama ir Mono). YAEC paleidžiama iš programų meniu arba komanda "yaec".
+- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.2.1-linux.tar.gz ir paleiskite ./install.sh.
+
+ĮDIEGIMAS – macOS (eksperimentinis)
+1. Įdiekite Mono, skirtą macOS (https://www.mono-project.com/download/stable/), ir XQuartz (https://www.xquartz.org).
+2. Atidarykite YAEC-1.2.1-macOS.dmg ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
+
+ATSISIŲSTŲ FAILŲ PATIKRINIMAS (SHA-256)
+Kiekviename release yra failas SHA256SUMS.txt su kiekvieno paketo SHA-256 maiša. Palyginkite ją su atsisiųsto failo maiša:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+Jei abi reikšmės skiriasi, failo nediekite: atsisiųskite jį iš naujo.
+
+KALBA IR DUOMENYS
+Kalba pasirenkama pagrindinio lango viršuje. Visi programos duomenys laikomi aplanke "data": Windows sistemoje šalia YAEC.exe, Linux sistemoje ~/.local/share/YAEC/data, macOS sistemoje ~/Library/Application Support/YAEC/data.
+
+LICENCIJA
+YAEC yra nemokama; licencijos tekstas yra faile LICENSE_lt.txt ir programos kortelėje LICENCIJA. Kilus abejonių, galioja itališka versija (LICENZA.txt).
+
+KONTAKTAI
+Klaidos, geresni duomenys, vertimai: ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
+
+VERSIJŲ ISTORIJA
+Versijos iki 1.0 vadinamos beta.
+- 1.2.1 - Puslapis AUTORIAUS KONTAKTAI IR PADĖKOS vėl teisingai atsidaro Linux ir macOS; nuoroda dėl transverterių nurodo § 1.7.1.
+- 1.2 - EME biudžetas su indikatoriais Mano EIRP, DX EIRP, trasos nuostoliai ir S/N abiem kryptimis (su Saule); Word dokumento formulės vieno dydžio, paraštėse; užpildyti mygtukai ir plokšti išskleidžiamieji meniu su suapvalintu kraštu visose schemose; aštuonios pastelinės spalvų schemos; verčių laukeliai su šalia esančiomis rodyklėmis; trys geriausios dienos datos tvarka; išblukintas dangaus fonas; išverstas FORMULIŲ DERINIMAS; vadovas EME TEORIJA IR PATARIMAI su Relu NJ9R patarimais (GRAVES, nukreipimas, jungtys, antenų stiprinimas, JT65B ir MAP65, poliarizacijos relės), naujais skirsniais apie pirmąjį priėmimą ir pokalbius internetu bei VE7BQH lentelėmis pratarmėje; padėkos NJ9R, IK1UWL prisiminimas ir straipsnių, aparatinės bei programinės įrangos autoriai su jų darbų paaiškinimu.
+- 1.1 - Tiesioginė padėtis ir +- 24h (buvęs Sekimas) taip pat praeityje ir ateityje: diena iš kalendoriaus, laikas vilkstant raudoną liniją, dažnis lauke Aidas ir dažniai; DX šaukinio laukelis su CALL3.TXT, atsisiųstu iš W7GJ ir WSJT-X Improved ir sujungtu, siūlomas lokatorius ir kopijavimas į WSJT-X aplanką; Atstumas ir Dgrd be reitingo, su uždėta deklinacija, eilutės nuspalvintos kaip grafikas ir pasirinktinai tinkamos valandos žaliai; žymimieji laukeliai programos stiliumi; kabeliai išskleidžiamuosiuose sąrašuose surikiuoti pagal skersmenį, o lentelėje – pagal pavadinimą, gamintoją ir tipą, su išverstais šaltiniais; EME biudžetas tik su 60 s režimais (JT65, Q65-60A, Q65-60B, Q65-60C) ir prie tekstų prisitaikanti įrangos schema; NAUDOJIMO VADOVAS su visų langų apžvalga; EME TEORIJA IR PATARIMAI su autoriaus pratarme, numeracija nuo 1 ir Saulės triukšmo formulėmis; HTTPS Linux ir macOS su sistemos sertifikatais.
+- 1.0.1 - GitHub leidimo puslapyje yra failas SHA256SUMS.txt su visų paketų SHA-256 kontrolinėmis sumomis: jos skirtos patikrinti, ar atsisiųsti failai tikrai originalūs (instrukcijos README).
+- 1.0 - Pirmoji stabili versija, skirta Windows, Linux ir macOS (Linux ir macOS su Mono; duomenys ~/.local/share/YAEC/data arba ~/Library/Application Support/YAEC/data); Windows diegimo programa ir Linux bei macOS paketai kuriami GitHub; ankstesnės versijos vadinamos beta. Naujas skirtukas Mėnulis virš pasaulio (Mėnulio elevacija virš viso pasaulio sausumos, DX stotis vienu spustelėjimu, jūsų antenos būsena); vadovas padalytas į IŠSAMUS NAUDOJIMO VADOVAS ir EME TEORIJA IR PATARIMAI; grupės Pagalba ir įrankiai bei Credits and thanks; skirtukas Skaičiavimų eksportas į Excel; nebėra atsargos režimui: S/N 2500 Hz juostoje su tipiniu slenksčiu kaip atskaita, o JT65 ribos – vadove; vadove taip pat Q65 lentelė TX1 – TX6, Faradėjaus sukimasis ir SM5BSZ straipsnio santrauka; kabelių lentelę galima rikiuoti pagal nuostolius, nauji Messi & Paoloni, SSB (SeaTex jūrinei aplinkai, Aircom Premium), Belden ir Tasker kabeliai; laukeliai su matavimo vienetais be likusių užrašų.
+- beta 30 - Mėnulio deklinacijos kreivė po Atstumo ir Dgrd grafiku, su maksimumais šiaurėje ir pietuose bei jūsų pusrutuliui palankia zona; naujas vadovo skirsnis apie deklinaciją (mėnesinis ciklas, didžiausia elevacija ir valandos virš horizonto, ryšiai tarp pusrutulių, 18,6 metų ciklas, triukšmas); I2FAK duomenys apie Šaulį patikslinti Šiaurės Italijai ir elevacijai virš 5°.
+- beta 29 - Vadovas visiškai išverstas į visas 17 kalbų; 3.4, 3.5, 3.5.1 ir 3.6 skyrių formulės Equation Editor stiliumi; naujas skirsnis 3.7.3 apie TX/RX sekvenserį (IK1UWL); vadovo mygtukas „Išsaugoti Word (.docx)“ su turiniu, puslapių numeriais ir Word formulėmis; juosta tarp turinio ir teksto ties 25 %; įspėjimas, kai Dpol per 24 valandas viršija 60° (šaltinis: Franco I2FAK vaizdo interviu).
+- beta 28d - Ištaisytas beta 28c užsidarymas paleidžiant (laukeliai su matavimo vienetais); nenumatytos klaidos rodomos pranešime ir įrašomos į data\errori.txt; pagrindinio lango DGRD laukas su grafiko minimumu, maksimumu ir dabartine verte.
+- beta 28c - Pradžios langas su juosta, kuri prisipildo per 6 sekundes; AUTORIAUS KONTAKTAI IR PADĖKOS su Mėnuliu, vaivorykštiniu dangumi ir padėkomis; piliulės formos mygtukai ir suapvalinti išskleidžiamieji sąrašai; EME biudžetas kaip eskize (stočių kortelės, indikatoriai, nubraižyta lentelė, prie šriftų prisitaikanti įrangos schema, matavimo vienetai laukelių viduje, transverterių sąrašas); Mėnulio padėtis su kortelėmis, tiesioginėmis piliulėmis, spynelėmis ir nauju langu Stulpeliai; Saulės triukšmas su Learmonth (BoM) šaltiniu ir 100 – 20 000 MHz ašimis; KOAKSIALINIAI KABELIAI su piliulės formos filtrais, nubraižyta lentele ir 1 – 20 dB grafiku.
+- beta 28b - Vadovas: pašalintas skyrius „Skirtukai“ ir pernumeruoti skyriai bei visos nuorodos; MNR, T(f), Dgrd ir EME biudžeto formulės Equation Editor stiliumi; antraštės, gretimos lentelės, juostos, paryškintos eilutės, spalvos ir pavyzdiniai lokatoriai kaip eskizuose; išankstinis stiprintuvas su IC-746PRO (ARRL) ir FT-897 (RadCom) bandymais; transverteris su didele nomograma ir Kuhne TR 144 H +40 ties 25 dB; padėkos perkeltos iš skirtuko ABOUT & CREDITS į skyrių „Šaltiniai, duomenys ir padėkos“; Mano kliūčių žvalgybos žemėlapis centruojamas ties JJ00AA, kai nėra lokatoriaus.
+- beta 28a - Uždarymo langas su visada matomais mygtukais Taip ir Ne; storesnė geltona ribų linija Dangaus skliaute; nepersidengiantys užrašai su padidintu šriftu; aštuoni nauji kabeliai (H1000, H100, RT5020, XT2400, LLF195, RG-142, RG-393, RG-115) ir kabelių paaiškinimai programos stiliumi; licencija su eilučių intervalu ir tarpais kaip eskize; skirtukas AUTORIAUS KONTAKTAI IR PADĖKOS; spustelėjimas už Mano kliūčių žvalgybos apskritimo naujam lokatoriui pasirinkti; kalba, šriftas ir šrifto dydis keičiami nepaleidžiant programos iš naujo.
+- beta 27 - Diapazonai iki 432 MHz; pradžios langas su Sezione ARI Valle del Liri logotipu ir globa; padėka uždarymo lange; bengalų, arabų ir turkų kalbos (17 kalbų); pagrindinis langas su keturiais spalvotais laukais, EITI Į SKAIČIAVIMUS ir EITI Į DANGAUS SKLIAUTĄ, lokatorius iki 14 simbolių, šrifto tipo pasirinkimas ir tamsūs paaiškinimai; Mano kliūčių žvalgyba su pilkos neskaidrumu ir atspalviu; paryškinta diena skirtuke Atstumas ir Dgrd; mygtukas Stulpeliai Mėnulio padėtyje; EME biudžetas su TX/RX įrangos schema; Saulės triukšmas su šaltiniais, indikatoriais ir spektru; FORMULIŲ DERINIMAS Word stiliumi su išsaugojimu .docx; nauji skirtukai KOAKSIALINIAI KABELIAI, AUTORIAUS KONTAKTAI ir NAUDOJIMO LICENCIJA; vadovas programos viduje (IŠSAMUS NAUDOJIMO VADOVAS).
+- beta 26 - Naujas dviejų lygių skirtukų pasirinkimas (grupės ir skirtukai); Juoda spalvų schema ir mėlynų tonų Naktinė schema; keičiama abiejų Dgrd kreivių spalva ir storis bei dienos, kai Saulė arti Mėnulio; įspėjimai apie galimą poliarinę (PCA) ir pašvaistinę sugertį abiem stotims; išblukinimo laukelis Nukreipimo žemėlapyje; pilkos įstrižos linijos už ribų Dangaus skliaute ir nepersidengiantys užrašai; naujas skirtukas FORMULIŲ DERINIMAS; piktograma su Mėnuliu; PDF vadovai visomis 14 kalbų.
+- beta 25 - Atnaujintas skirtukas Atstumas ir Dgrd: trys geriausios dienos, dienų kalendorius su Mėnulio faze, grafikas su Dgrd (nulis apačioje) ir uždėtu vidutiniu atstumu, jaunatis ir pilnatis, trumpas reitingas; naujas skirtukas Nukreipimo žemėlapis su aerofotografiniu arba topografiniu žemėlapiu, Mėnuliu, keliu, patekėjimu ir nusileidimu bei pele perkeliamomis antenos ribomis.
+- beta 24 - Dangaus skliauto užrašai dvigubai didesni; rusų, ukrainiečių ir afrikanų kalbos; compila.bat nebekuria PDF vadovų.
+- beta 23 - Naujas pagrindinis langas: UTC laikas, vietos laikas ir DX vietos laikas, būsenos juosta su atgaline laiko atskaita, azimuto kompasas ir elevacijos lankas su antenos ribomis, Mėnulio fazė su patekėjimu ir nusileidimu, Dgrd ir S/N juostelės, artimiausių 24 valandų juosta; naktinė tema visuose skirtukuose; trys spalvų skalės Dangaus skliaute su kontūriniais užrašais.
+- beta 22 - Visi duomenys data poaplankyje šalia vykdomojo failo (perkelti iš AppData ir programos aplanko), tikrinami ir iš naujo atsisiunčiami paleidžiant; PDF vadovai su ekrano vaizdais italų, anglų, prancūzų, vokiečių, ispanų ir portugalų kalbomis; laukeliai ir DIAPAZONŲ PASIRINKIMAS lango viršuje dešinėje, S/N vėl apačioje dešinėje.
+- beta 21 - Pagrindinis langas: laukelis IŠSAMŪS SKAIČIAVIMAI, VIETINIS AZIMUTAS ir VIETINĖ ELEVACIJA, data šalia pavadinimo, S/N laukas po DIAPAZONŲ PASIRINKIMAS; šrifto pasirinkimas visai programai. Nauji diapazonai 70 MHz ir 222 MHz.
+- beta 20 - Žemės paviršiaus aukštis automatiškai paimamas iš interneto (Open Topo Data, Open-Meteo), kai lokatorius turi 10 simbolių.
+- beta 19 - Pavadinimas su naudotojo šaukiniu; jokio numatytojo lokatoriaus ar šaukinio; nustatymai programos aplanke; nauja skirtukų tvarka; INSTRUKCIJOS su visais parametrais, MNR ir CFOM; eksperimentinis-EXCEL skirtukas; žurnalo atsisiuntimas iš LoTW; ABOUT & CREDITS; hindi, korėjiečių ir indoneziečių kalbos.
+- beta 18 - EME biudžetas: pralaidumo juosta iki 3000 Hz, triukšmo skaičiai šalia stiprinimų, transverteris neįskaičiuojamas, kai stiprinimas 0, antenos temperatūra Tant (VE7BQH lentelės); bendrieji nustatymai Sekimo skirtuke; išblukintas priešpilnis Mėnulis pagrindinio lango fone.
+- beta 17 - Laukelis „IŠSAMŪS SKAIČIAVIMAI“ Sekimo skirtuke (stulpeliai nuo Dpol, tarpinės EME biudžeto eilutės, skirtukas Saulės triukšmas); įvertintas S/N pagrindiniame lange; mygtukas „DIAPAZONŲ PASIRINKIMAS“ su diapazonais nuo 50 MHz iki 122 GHz.
+- beta 14 - Naujas pavadinimas YAEC - Yet Another EME Calc; sąsaja 8 kalbomis (anglų, italų, vokiečių, prancūzų, ispanų, portugalų, kinų, japonų), anglų kalba – paleidimo kalba; šaukinys lango pavadinime.
+- beta 13 - Ištaisyta kompiliavimo klaida CS0051 (Friis funkcijos prieinamumas).
+- beta 12 - Radijo stoties triukšmo skaičius nustatomas pagal jos MDS su naudotojo pasirinkta pralaidumo juosta (ta pačia kaip S/N skaičiavime).
+- beta 11 - Perdarytas pagrindinis Sekimo langas (mano ir DX lokatoriai, dažnis, data ir laikas, mano ir DX azimutas ir elevacija, kiti naudingi duomenys); lokatoriai ir dažnis automatiškai perkeliami į visus skirtukus; imtuvo triukšmo skaičius pagal Friis formulę; Atstumas ir Dgrd iki 61 dienos; šaukinys bendruosiuose nustatymuose; rekomendacijos dėl ALC instrukcijose.
+- beta 10 - Skirtukas Sekimas; kHz nuo 000 iki 999; savaitės diena; pralaidumo juosta ir S/N su Saule biudžete; ground gain BETA; kabelių transverteris–radijo stotis nuostoliai; tamsi tema ir šriftai; Dgrd per mėnesį su jaunatimi; LoTW žaliai; skirtukas INSTRUKCIJOS; pradžios langas ir uždarymo patvirtinimas.
+- beta 9 - Dangaus skliautas azimuto/elevacijos koordinatėmis su plokščiu horizontu ir triukšmo spalvomis nuo mėlynos iki raudonos; skirtukas Atstumas ir Dgrd; skirtukas ABOUT.
+- beta 6 - Skirtukas WWL ir ADIF žemėlapis su Maidenhead tinkleliu.
+- beta 5 - Būsenos stulpeliai pakeisti spalva; antraštė „parengė Costantino IC8TEM“; kHz išskleidžiamasis sąrašas CFOM dažniui.
+- beta 4 - DX vietos laikas nustatomas pagal padėtį; trukmė dienomis; stulpelių paaiškinimai; Doppler ir CFOM dažniai; skirtukas Dangaus skliautas.
+- beta 3 - Įvertintas S/N biudžete; skirtukas Saulės triukšmas su SFU duomenimis iš interneto ir RSTN stoties pasirinkimu.
+- beta 2 - Skirtukas EME biudžetas: EIRP, trasos nuostoliai, priimamas signalas ir atsarga virš MDS.
+- beta 1 - Antroji stotis (DX), bendri langai, Dpol, MNR, Tsky ir Dgrd kaip WSJT-X.

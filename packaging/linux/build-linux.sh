@@ -12,6 +12,7 @@ install -Dm644 "$ROOT/packaging/linux/yaec.desktop" "$PKG/usr/share/applications
 install -Dm644 "$ROOT/packaging/icons/yaec-256.png" "$PKG/usr/share/icons/hicolor/256x256/apps/yaec.png"
 install -Dm644 "$ROOT/README.txt" "$PKG/usr/share/doc/yaec/README.txt"
 install -Dm644 "$ROOT/LICENZA.txt" "$PKG/usr/share/doc/yaec/copyright"
+mkdir -p "$PKG/usr/share/doc/yaec/lingue" && cp "$ROOT"/lingue/*.txt "$PKG/usr/share/doc/yaec/lingue/"
 mkdir -p "$PKG/DEBIAN"
 cat > "$PKG/DEBIAN/control" <<CTRL
 Package: yaec
@@ -31,6 +32,7 @@ dpkg-deb --root-owner-group --build "$PKG" "$OUT/yaec_${VER}_all.deb"
 T="$(mktemp -d)/YAEC-${VER}-linux"
 mkdir -p "$T"
 cp "$ROOT/YAEC.exe" "$ROOT/README.txt" "$ROOT/LICENZA.txt" "$T/"
+cp -R "$ROOT/lingue" "$T/"
 cp "$ROOT/packaging/linux/yaec" "$ROOT/packaging/linux/install.sh" "$ROOT/packaging/linux/yaec.desktop" "$T/"
 cp "$ROOT/packaging/icons/yaec-256.png" "$T/yaec.png"
 chmod +x "$T/yaec" "$T/install.sh"

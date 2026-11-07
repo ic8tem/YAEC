@@ -3,8 +3,10 @@ by Costantino IC8TEM
 =================================
 
 Moon position, pointing windows, EME link budget, sky and solar noise
-calculator for radio amateurs. Windows, Linux and macOS.
+calculator for radio amateurs. Windows, Linux and macOS, in 26 languages.
 Source code and downloads: https://github.com/ic8tem/YAEC
+This README and the licence in every language: folder "lingue"
+(README_<code>.txt, LICENSE_<code>.txt; e.g. README_it.txt, LICENSE_de.txt).
 
 All the versions before 1.0 are called beta (beta 1 ... beta 30).
 

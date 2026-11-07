@@ -1,0 +1,75 @@
+﻿YAEC – Yet Another EME Calc 1.2.1
+by Costantino IC8TEM
+==========================================
+
+A calculator for radio amateurs working EME (Earth–Moon–Earth) from 50 to 432 MHz: Moon position and pointing windows within the limits of your own antenna, planning of the days with the best Dgrd, EME link budget, sky and Sun noise, a coaxial cable database and EME manuals. For Windows, Linux and macOS, in 26 languages.
+Source and downloads: https://github.com/ic8tem/YAEC/releases
+
+INSTALLATION – WINDOWS
+1. Download YAEC-1.2.1-Setup.exe from the Releases page and run it. It installs YAEC in Documents\YAEC, without administrator rights, with shortcuts in the Start menu and on the desktop, and an uninstaller.
+2. If the SmartScreen warning appears: "More info" → "Run anyway".
+3. Without installing: extract YAEC-1.2.1-windows-portable.zip into a folder you can write to and start YAEC.exe.
+
+INSTALLATION – LINUX
+YAEC runs on Mono, the free .NET runtime.
+- Debian, Ubuntu, Mint: download yaec_1.2.1_all.deb and install it with
+      sudo apt install ./yaec_1.2.1_all.deb
+  (this also installs Mono). Start YAEC from the applications menu or with the command "yaec".
+- Other distributions: install Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extract YAEC-1.2.1-linux.tar.gz and run ./install.sh.
+
+INSTALLATION – macOS (experimental)
+1. Install Mono for macOS (https://www.mono-project.com/download/stable/) and XQuartz (https://www.xquartz.org).
+2. Open YAEC-1.2.1-macOS.dmg and drag YAEC into Applications. The first time: right-click YAEC → Open (the app is not signed by Apple).
+
+CHECKING THE DOWNLOADED FILES (SHA-256)
+Every release contains SHA256SUMS.txt with the SHA-256 hash of each package. Compare it with the hash of the downloaded file:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+If the two values differ, do not install the file: download it again.
+
+LANGUAGE AND DATA
+The language is chosen at the top of the main window. All program data is kept in the "data" folder: on Windows next to YAEC.exe, on Linux in ~/.local/share/YAEC/data, on macOS in ~/Library/Application Support/YAEC/data.
+
+LICENCE
+YAEC is free; the licence text is in the file LICENSE_en.txt and in the LICENCE tab of the program. In case of doubt, the Italian version (LICENZA.txt) prevails.
+
+CONTACT
+Bugs, better data, translations: ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
+
+VERSION HISTORY
+Versions before 1.0 are called beta.
+- 1.2.1 - The AUTHOR CONTACTS AND ACKNOWLEDGEMENTS page opens correctly again on Linux and macOS; the reference for the transverters points to § 1.7.1.
+- 1.2 - EME budget with the indicators My EIRP, DX EIRP, path loss and S/N in both directions (with the Sun); Word document formulas in a single size, within the margins; filled buttons and flat drop-down lists with rounded borders in all schemes; eight pastel colour schemes; value boxes with side-by-side arrows; the three best days in date order; blurred sky background; FORMULA DEBUG translated; THEORY AND TIPS ON EME manual with the advice of Relu NJ9R (GRAVES, pointing, connectors, antenna gain, JT65B and MAP65, polarization relay), the new sections on the first reception and on internet chats, and the VE7BQH tables in the preface; thanks to NJ9R, the memory of IK1UWL and the authors of articles, hardware and software, with a tooltip on their works.
+- 1.1 - Live position and +- 24h (formerly Tracking) also in the past and in the future: day from the calendar and time by dragging the red line, frequency in the Echo and frequencies box; DX callsign box with CALL3.TXT downloaded from W7GJ and WSJT-X Improved and merged, suggested locator and copy into the WSJT-X folder; Distance and Dgrd without the ranking, with the declination overlaid, rows colored like the chart and optional green usable hours; tickboxes in the program's style; cables sorted by diameter in the drop-down lists and by name, manufacturer and type in the table, with translated sources; EME budget with only the 60 s modes (JT65, Q65-60A, Q65-60B, Q65-60C) and a station diagram that adapts to the texts; USER MANUAL reviewing every screen; THEORY AND TIPS ON EME with the author's preface, numbering from 1 and the solar noise formulas; HTTPS on Linux and macOS with the system certificates.
+- 1.0.1 - The GitHub release page now has the file SHA256SUMS.txt with the SHA-256 fingerprints of all the packages: use them to check that the downloaded files are the original ones (instructions in the README).
+- 1.0 - First stable version, for Windows, Linux and macOS (Linux and macOS with Mono; data in ~/.local/share/YAEC/data or in ~/Library/Application Support/YAEC/data); Windows installer and Linux and macOS packages built on GitHub; earlier versions are called beta. New Moon over the world tab (Moon elevation over the land areas of the whole world, DX station with one click, status of your antenna); manual split into IN-DEPTH USER MANUAL and THEORY AND TIPS ON EME; Help and tools and Credits and thanks groups; Export calculations to Excel tab; no more mode margin: S/N in 2500 Hz with the typical threshold as reference and the JT65 limits in the manual; the manual also has the Q65 table for TX1 – TX6, Faraday rotation and the summary of the SM5BSZ article; cable table sortable by loss, with new Messi & Paoloni, SSB (SeaTex for marine environments, Aircom Premium), Belden and Tasker cables; boxes with a unit no longer show leftover text.
+- beta 30 - Curve of the Moon's declination under the Distance and Dgrd chart, with the northern and southern maxima and the area favourable to your hemisphere; new manual paragraph on declination (monthly cycle, maximum elevation and hours above the horizon, links between hemispheres, 18.6-year cycle, noise); I2FAK's Sagittarius figures specified for northern Italy and above 5° of elevation.
+- beta 29 - Manual fully translated into all 17 languages; formulas of sections 3.4, 3.5, 3.5.1 and 3.6 in Equation Editor style; new section 3.7.3 on the TX/RX sequencer (IK1UWL); "Salva in Word (.docx)" button for the manual with table of contents, page numbers and Word formulas; divider between index and text at 25 %; warning when Dpol exceeds 60° within 24 hours (source: video interviews with Franco I2FAK).
+- beta 28d - Fixed the beta 28c closing at start-up (boxes with units); unexpected errors are shown in a message and written to data\errori.txt; DGRD box of the main screen with the chart minimum and maximum and the current value.
+- beta 28c - Start screen with a bar that fills in 6 seconds; AUTHOR CONTACTS AND ACKNOWLEDGEMENTS with the Moon, the rainbow sky and the acknowledgements; pill buttons and rounded drop-downs; EME budget as in the mockup (station cards, indicators, drawn table, station diagram that adapts to the font size, units inside the boxes, transverter list); Moon position with cards, live pills, padlocks and a new Columns window; Solar noise with the Learmonth (BoM) source and 100 – 20 000 MHz axes; COAXIAL CABLES with pill filters, drawn table and 1 – 20 dB chart.
+- beta 28b - Manual: the "Tabs" chapter removed and the chapters and all references renumbered; MNR, T(f), Dgrd and EME budget formulas in Equation Editor style; headings, side-by-side tables, bars, highlighted rows, colours and example locator as in the mockups; preamplifier with the IC-746PRO (ARRL) and FT-897 (RadCom) tests; transverter with a large chart and Kuhne TR 144 H +40 at 25 dB; credits moved from the ABOUT & CREDITS tab to the "Sources, data and credits" chapter; My obstacle survey map centred on JJ00AA when there is no locator.
+- beta 28a - Closing window with the Yes and No buttons always visible; thicker yellow limit line in the Sky view; texts that no longer overlap with enlarged fonts; eight new cables (H1000, H100, RT5020, XT2400, LLF195, RG-142, RG-393, RG-115) and cable tooltips in the program's style; licence with line spacing and word spacing as in the mockup; AUTHOR CONTACTS AND ACKNOWLEDGEMENTS tab; click outside the circle of My obstacle survey to choose a new locator; language, font and font size change without restarting the program.
+- beta 27 - Bands up to 432 MHz; start-up screen with the logo and the patronage of the ARI Valle del Liri Section; thank-you line in the closing window; Bengali, Arabic and Turkish languages (17 languages); main screen with four coloured cards, GO TO CALCULATIONS and GO TO SKY VIEW, locators up to 14 characters, font chooser and dark tooltips; Reconnaissance of my obstacles with grey opacity and tone; highlighted day in Distance and Dgrd; Columns button in Moon position; EME budget with the TX/RX system diagram; Solar noise with sources, indicators and spectrum; FORMULA DEBUG in Word style with .docx saving; new COAXIAL CABLES, AUTHOR CONTACTS and LICENCE tabs; manual inside the program (IN-DEPTH USER MANUAL).
+- beta 26 - New two-level tab selection (groups and tabs); Black colour scheme and Night scheme in blue tones; editable colour and thickness for the two Dgrd curves and days with the Sun near the Moon; warnings of possible polar cap (PCA) and auroral absorption for both stations; checkbox for the blur in the Pointing map; grey diagonal lines outside the limits in the Sky view and labels that no longer overlap; new FORMULA DEBUG tab; Moon icon; PDF manuals in all 14 languages.
+- beta 25 - Distance and Dgrd tab renewed: the three best days, calendar of the days with Moon phase, chart with Dgrd (zero at the bottom) and the mean distance overlaid, new Moon and full Moon, short ranking; new Pointing map tab with aerial photo or topographic map, Moon, path, rise and set and antenna limits to move with the mouse.
+- beta 24 - Sky view labels twice as large; Russian, Ukrainian and Afrikaans languages; compila.bat no longer creates the PDF manuals.
+- beta 23 - New main screen: UTC time, local time and DX local time, status band with countdown, azimuth compass and elevation arc with the antenna limits, Moon phase with rise and set, Dgrd and S/N bars, next-24-hours bar; night theme in all tabs; three colour scales in the Sky view with outlined labels.
+- beta 22 - All the data in the data subfolder next to the executable (moved from AppData and from the program folder), checked and downloaded again at start-up; PDF manuals with screenshots in Italian, English, French, German, Spanish and Portuguese; boxes and BAND SELECTION at the top right of the window, S/N back at the bottom right.
+- beta 21 - Main screen: IN-DEPTH CALCULATIONS box, LOCAL AZIMUTH and ELEVATION, date next to the title, S/N box under BAND SELECTION; choice of the font for the whole program. New 70 MHz and 222 MHz bands.
+- beta 20 - Ground height taken automatically from the web (Open Topo Data, Open-Meteo) when the locator has 10 characters.
+- beta 19 - Title with the user's callsign; no default locator or callsign; settings in the program folder; new tab order; INSTRUCTIONS with all the parameters, MNR and CFOM; experimental-EXCEL tab; log download from LoTW; ABOUT & CREDITS; Hindi, Korean and Indonesian languages.
+- beta 18 - EME budget: bandwidth up to 3000 Hz, noise figures next to the gains, transverter left out of the calculation with gain 0, antenna temperature Tant (VE7BQH tables); general settings in the Tracking tab; blurred waxing Moon in the background of the main screen.
+- beta 17 - "IN-DEPTH CALCULATIONS" box in Tracking (columns from Dpol onwards, intermediate rows of the EME budget, Solar noise tab); estimated S/N on the main screen; "BAND SELECTION" button with the bands from 50 MHz to 122 GHz.
+- beta 14 - New name YAEC - Yet Another EME Calc; user interface in 8 languages (English, Italian, German, French, Spanish, Portuguese, Chinese, Japanese) with English as start-up language; callsign in the window title.
+- beta 13 - Fix of compilation error CS0051 (accessibility of the Friis function).
+- beta 12 - The radio noise figure is derived from its MDS with the bandwidth chosen by the user (the same as for the S/N calculation).
+- beta 11 - Main Tracking screen redesigned (my and DX locator, frequency, date and times, my and DX azimuth and elevation, other useful data); locator and frequency copied automatically to all tabs; receiver noise figure with the Friis formula; Distance and Dgrd up to 61 days; callsign in the general settings; ALC recommendations in the instructions.
+- beta 10 - Tracking tab; kHz from 000 to 999; day of the week; bandwidth and S/N with the Sun in the budget; BETA ground gain; transverter-radio jumper loss; dark theme and fonts; one-month Dgrd with new Moon; LoTW in green; INSTRUCTIONS tab; start-up window and exit confirmation.
+- beta 9 - Sky view in azimuth/elevation with flat horizon and noise colours from blue to red; Distance and Dgrd tab; ABOUT tab.
+- beta 6 - WWL map and ADIF tab with Maidenhead grid.
+- beta 5 - Status columns replaced by colour; title "by Costantino IC8TEM"; kHz drop-down for the CFOM frequency.
+- beta 4 - DX local time derived from position; duration in days; column tooltips; Doppler and CFOM frequencies; Sky view tab.
+- beta 3 - Estimated S/N in the budget; Solar noise tab with SFU web data and choice of the RSTN station.
+- beta 2 - EME budget tab: EIRP, path loss, received signal and margin over MDS.
+- beta 1 - Second station (DX), common windows, Dpol, MNR, Tsky and Dgrd as in WSJT-X.

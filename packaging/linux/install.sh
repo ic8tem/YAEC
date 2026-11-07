@@ -4,6 +4,7 @@ set -e
 DIR="$(cd "$(dirname "$0")" && pwd)"
 mkdir -p "$HOME/.local/lib/yaec" "$HOME/.local/bin" "$HOME/.local/share/applications" "$HOME/.local/share/icons/hicolor/256x256/apps"
 cp "$DIR/YAEC.exe" "$DIR/README.txt" "$DIR/LICENZA.txt" "$HOME/.local/lib/yaec/"
+[ -d "$DIR/lingue" ] && cp -R "$DIR/lingue" "$HOME/.local/lib/yaec/" || true
 cp "$DIR/yaec" "$HOME/.local/lib/yaec/yaec"
 chmod +x "$HOME/.local/lib/yaec/yaec"
 ln -sf "$HOME/.local/lib/yaec/yaec" "$HOME/.local/bin/yaec"

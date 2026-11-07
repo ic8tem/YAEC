@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+YAEC KASUTUSLITSENTS, VERSIOON 1
+© 2026 Costantino IC8TEM
+
+YAEC on vaba programm, mille on kirjutanud raadioamatöör raadioamatööridele. Selle koodi arendamisel on kasutatud ka tehisintellekti assistendi abi ja litsents järgib selle tööviisi: olla tõeliselt kasulik, öelda alati, kuidas asjad on, näidata oma arutluskäiku, mitte kellelegi kahju teha ja tunnustada teiste tööd. Allpool on põhimõtted ja seejärel tegelikud tingimused.
+
+• Kasulik ja tasuta: Programm on tasuta ja võid seda piiranguteta kasutada oma raadioamatööritegevuses, õppimiseks ja õpetamiseks. Selle eesmärk on aidata QSO-dele kaasa, mitte midagi müüa.
+• Läbipaistev: Lähtekood antakse alati koos programmiga; iga valem on nähtav sakil „Arvutuste kontroll“ ja iga andme juures on selle allikas. Ei mingeid musti kaste.
+• Aus: Mõõdetud, tuletatud ja hinnangulised väärtused on eristatud; mida pole kontrollitud, see on sellisena märgitud. Ebakindlat tulemust näidatakse ebakindlana, mitte kindlana.
+• Lugupidav: Austab nende tööd, kes on enne meid mõõtnud, kirjutanud ja avaldanud, kasutajate privaatsust (andmeid ei koguta, reklaami pole) ja raadioamatööriteenistuse reegleid.
+
+TINGIMUSED
+1. Kasutamine. Võid YAEC-i tasuta kasutada, kopeerida ja paigaldada nii paljudesse arvutitesse, kui soovid.
+2. Muudatused. Võid lähtekoodi uurida, parandada ja täiustada isiklikuks kasutamiseks või oma raadioklubi jaoks.
+3. Edasilevitamine. Võid programmi, originaalset või muudetud, edasi levitada ainult koos selle täieliku lähtekoodiga ja sama litsentsi alusel.
+4. Muudatuste avaldamine. Muudetud versioon peab seda selgelt ütlema pealkirjas või versioonimärkustes, märkides, kes seda muutis ja mis on muutunud, et keegi ei peaks sinu tööd autori omaks või vastupidi.
+5. Autorsus. Säilitada tuleb autori nimi (Costantino IC8TEM), juhendi peatükk „Allikad, andmed ja autorid“ ning kõik viited kolmandate osapoolte allikatele: andmed, tabelid, artiklid ja mõõtmised kuuluvad neile, kes need on loonud.
+6. Äriline kasutamine keelatud. YAEC-i ega selle tuletatud versioone ei tohi müüa ega lisada tasulistesse toodetesse ilma autori kirjaliku loata.
+7. Varjatud andmeid pole. Ükski levitatav versioon ei tohi koguda kasutajate andmeid, näidata reklaami ega saata teavet kolmandatele osapooltele seda avalikult ütlemata.
+8. Raadio korrektne kasutamine. Programm aitab planeerida: kasutatavad sagedused, võimsused ja modulatsioonid jäävad operaatori ja tema raadioamatööri loa vastutusele.
+9. Garantii puudub. YAEC antakse „nagu on“. Arvutused on tehtud hoolikalt ja avaldatud allikate põhjal, kuid võivad sisaldada vigu: kontrolli olulisi andmeid enne, kui neile tugined.
+10. Teated. Kui leiad vea või parema andme, kirjuta sellest autorile (sakk AUTORI KONTAKTID JA TÄNUSÕNAD): see parandatakse ja sind nimetatakse allikana.
+
+Lühidalt: kasuta seda vabalt, õpi koodist, täiusta ja jaga seda, kuid alati koos lähtekoodiga, viidatud allikatega, öeldes, mida muutsid, ja ilma sellega kaubeldes. Kui kahtled mõnes tulemuses, on õige vastus kontrollida, mitte usaldada.
+
+Tekst on tõlgitud kõigisse programmi keeltesse; kahtluse korral kehtib itaaliakeelne versioon.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem

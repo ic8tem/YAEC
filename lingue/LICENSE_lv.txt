@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+YAEC LIETOŠANAS LICENCE, 1. VERSIJA
+© 2026 Costantino IC8TEM
+
+YAEC ir bezmaksas programma, ko radioamatieris uzrakstījis radioamatieriem. Tās kods izstrādāts arī ar mākslīgā intelekta asistenta palīdzību, un licence pārņem tā darba principus: būt patiesi noderīgam, vienmēr teikt, kā lietas ir, rādīt savu spriedumu gaitu, nevienam nekaitēt un atzīt citu darbu. Zemāk ir principi un pēc tam paši nosacījumi.
+
+• Noderīga un bezmaksas: Programma ir bezmaksas, un jūs varat to bez ierobežojumiem izmantot savai radioamatieru darbībai, mācībām un mācīšanai. Tā ir paredzēta, lai rastos QSO, nevis lai kaut ko pārdotu.
+• Pārredzama: Pirmkods vienmēr tiek piegādāts kopā ar programmu; katra formula ir redzama cilnē „Aprēķinu pārbaude”, un katram datam norādīts tā avots. Nekādu melno kastu.
+• Godīga: Izmērītās, atvasinātās un novērtētās vērtības ir nošķirtas; tas, kas nav pārbaudīts, tiek norādīts kā tāds. Nedrošs rezultāts tiek norādīts kā nedrošs, nevis pasniegts kā drošs.
+• Cieņpilna: Ciena to darbu, kuri mērījuši, rakstījuši un publicējuši pirms mums, lietotāju privātumu (netiek vākti nekādi dati, nav reklāmas) un radioamatieru dienesta noteikumus.
+
+NOSACĪJUMI
+1. Lietošana. Jūs varat bez maksas lietot, kopēt un instalēt YAEC uz tik daudziem datoriem, cik vēlaties.
+2. Izmaiņas. Jūs varat pētīt pirmkodu, labot un uzlabot to personīgai lietošanai vai sava radio kluba vajadzībām.
+3. Tālākizplatīšana. Jūs varat tālāk izplatīt programmu – oriģinālo vai mainīto – tikai kopā ar tās pilnu pirmkodu un ar šo pašu licenci.
+4. Izmaiņu norādīšana. Mainītai versijai tas skaidri jānorāda virsrakstā vai versijas piezīmēs, minot, kas to mainījis un kas mainīts, lai neviens nesajauktu jūsu darbu ar autora darbu vai otrādi.
+5. Autorības norāde. Jāsaglabā autora vārds (Costantino IC8TEM), rokasgrāmatas nodaļa „Avoti, dati un autori” un visas atsauces uz trešo pušu avotiem: dati, tabulas, raksti un mērījumi pieder tiem, kas tos radījuši.
+6. Bez komerciālas izmantošanas. Nav atļauts pārdot YAEC vai atvasinātas versijas, nedz iekļaut to maksas produktos bez autora rakstiskas atļaujas.
+7. Bez slēptiem datiem. Neviena izplatīta versija nedrīkst vākt lietotāju datus, rādīt reklāmas vai sūtīt informāciju trešajām pusēm, atklāti to nepasakot.
+8. Pareiza radio lietošana. Programma palīdz plānot: izmantotās frekvences, jaudas un režīmi paliek operatora un viņa radioamatiera licences atbildībā.
+9. Bez garantijas. YAEC tiek nodrošināta „kāda tā ir”. Aprēķini veikti rūpīgi un ar norādītiem avotiem, taču tajos var būt kļūdas: pārbaudiet svarīgus datus, pirms uz tiem paļaujaties.
+10. Ziņojumi. Ja atrodat kļūdu vai labākus datus, uzrakstiet autoram (cilne „AUTORA KONTAKTI UN PATEICĪBAS”): tas tiks izlabots, minot jūs kā avotu.
+
+Īsumā: lietojiet to brīvi, mācieties no koda, uzlabojiet un dalieties ar to, bet vienmēr ar pirmkodu, ar citētiem avotiem, norādot, ko esat mainījis, un netirgojoties ar to. Ja šaubāties par rezultātu, pareizā atbilde ir pārbaudīt, nevis uzticēties.
+
+Teksts ir tulkots visās programmas valodās; šaubu gadījumā noteicošā ir itāļu versija.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem

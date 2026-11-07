@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+YAEC LISANSI, SÜRÜM 1
+© 2026 Costantino IC8TEM
+
+YAEC, bir radyo amatörü tarafından radyo amatörleri için yazılmış özgür bir programdır. Kodu bir yapay zekâ asistanının yardımıyla da geliştirildi ve lisans onun çalışma biçimini benimser: gerçekten yararlı olmak, her zaman olanı olduğu gibi söylemek, akıl yürütmeyi göstermek, kimseye zarar vermemek ve başkalarının emeğini tanımak. Aşağıda önce ilkeler, sonra asıl koşullar yer alıyor.
+
+• Yararlı ve ücretsiz: Program ücretsizdir ve amatör telsizcilik, öğrenme ve öğretme için sınırsız kullanılabilir. QSO'ları kolaylaştırmak için yapılmıştır, bir şey satmak için değil.
+• Şeffaf: Kaynak kod her zaman programla birlikte verilir; her formül Hesapların kontrolü sekmesinde görülebilir ve her veri kaynağını belirtir. Kara kutu yok.
+• Dürüst: Ölçülen, çıkarılan ve tahmin edilen değerler ayrılır; doğrulanmamış olan öyle belirtilir. Belirsiz bir sonuç belirsiz diye söylenir, kesinmiş gibi sunulmaz.
+• Saygılı: Bizden önce ölçen, yazan ve yayımlayanların emeğine, kullanıcıların gizliliğine (veri toplama yok, reklam yok) ve amatör hizmetin kurallarına saygı gösterir.
+
+KOŞULLAR
+1. Kullanım. YAEC'i ücretsiz kullanabilir, kopyalayabilir ve istediğin kadar bilgisayara kurabilirsin.
+2. Değişiklikler. Kaynak kodu kendin ya da telsiz kulübün için inceleyebilir, düzeltebilir ve geliştirebilirsin.
+3. Yeniden dağıtım. Programı, özgün ya da değiştirilmiş hâliyle, yalnızca tam kaynak koduyla birlikte ve aynı lisans altında yeniden dağıtabilirsin.
+4. Değişiklikleri belirt. Değiştirilmiş bir sürüm bunu başlıkta ya da sürüm notlarında açıkça belirtmeli, kimin neyi değiştirdiğini yazmalıdır; böylece kimse senin emeğini yazarınkiyle ya da tersini karıştırmaz.
+5. Atıf. Yazarın adı (Costantino IC8TEM), kılavuzun «Kaynaklar, veriler ve teşekkürler» bölümü ve üçüncü taraf kaynaklarına yapılan tüm atıflar korunmalıdır: veriler, tablolar, makaleler ve ölçümler onları üretenlere aittir.
+6. Ticari kullanım yok. Yazarın yazılı izni olmadan YAEC'i veya türetilmiş sürümlerini satmak ya da ücretli ürünlere dahil etmek yasaktır.
+7. Gizli veri yok. Dağıtılan hiçbir sürüm, açıkça söylemeden kullanıcı verisi toplayamaz, reklam gösteremez veya üçüncü taraflara bilgi gönderemez.
+8. Telsizin doğru kullanımı. Program planlamaya yardım eder: kullanılan frekanslar, güçler ve modlar operatörün ve amatör lisansının sorumluluğundadır.
+9. Garanti yok. YAEC olduğu gibi sağlanır. Hesaplar özenle ve belirtilen kaynaklarla yapılmıştır ama hata içerebilir: önemli verilere güvenmeden önce onları doğrulayın.
+10. Bildirimler. Bir hata ya da daha iyi bir veri bulursan yazara yaz (YAZARLA İLETİŞİM VE TEŞEKKÜRLER sekmesi): seni kaynak göstererek düzeltilecektir.
+
+Kısacası: özgürce kullan, koddan öğren, geliştir ve paylaş; ama her zaman kaynak koduyla, kaynakları belirterek, değişiklikleri bildirerek ve satmadan. Bir sonuçtan şüphe edersen doğru yanıt ona güvenmek değil, onu doğrulamaktır.
+
+Metin programın tüm dillerine çevrilmiştir; şüphe hâlinde İtalyanca sürüm geçerlidir.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem

@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+ANVÄNDARLICENS YAEC, VERSION 1
+© 2026 Costantino IC8TEM
+
+YAEC är ett fritt program, skrivet av en radioamatör för radioamatörer. Koden har också utvecklats med hjälp av en AI-assistent, och licensen följer dess sätt att arbeta: att vara verkligt användbar, alltid säga hur det ligger till, visa sitt resonemang, inte skada någon och erkänna andras arbete. Nedan följer principerna och sedan de egentliga villkoren.
+
+• Användbart och gratis: Programmet är gratis och du kan använda det utan begränsningar för din amatörradioverksamhet, för studier och för undervisning. Det är till för att få QSO till stånd, inte för att sälja något.
+• Transparent: Källkoden levereras alltid tillsammans med programmet; varje formel syns i fliken Kontroll av beräkningarna och varje uppgift anger sin källa. Inga svarta lådor.
+• Ärligt: Uppmätta, härledda och uppskattade värden hålls isär; det som inte är verifierat anges som sådant. Ett osäkert resultat anges som osäkert, inte presenterat som säkert.
+• Respektfullt: Det respekterar arbetet hos dem som har mätt, skrivit och publicerat före oss, användarnas integritet (inga data samlas in, ingen reklam) och reglerna för amatörradiotjänsten.
+
+VILLKOR
+1. Användning. Du får använda, kopiera och installera YAEC gratis, på så många datorer du vill.
+2. Ändringar. Du får studera källkoden, rätta den och förbättra den för eget bruk eller för din radioklubb.
+3. Vidaredistribution. Du får distribuera programmet vidare, original eller ändrat, bara tillsammans med dess fullständiga källkod och med samma licens.
+4. Ange ändringarna. En ändrad version måste tydligt säga det i titeln eller i versionsanteckningarna, med uppgift om vem som har ändrat den och vad som har ändrats, så att ingen förväxlar ditt arbete med författarens, eller omvänt.
+5. Erkännande. Författarens namn (Costantino IC8TEM), manualens kapitel ”Källor, data och erkännanden” och alla hänvisningar till tredje parts källor ska behållas: data, tabeller, artiklar och mätningar tillhör dem som har tagit fram dem.
+6. Ingen kommersiell användning. Det är inte tillåtet att sälja YAEC eller härledda versioner, eller att inkludera det i betalprodukter, utan författarens skriftliga tillstånd.
+7. Inga dolda data. Ingen distribuerad version får samla in användardata, visa reklam eller skicka information till tredje part utan att öppet säga det.
+8. Korrekt användning av radion. Programmet hjälper till med planeringen: de frekvenser, effekter och trafiksätt som används förblir operatörens ansvar och omfattas av hans eller hennes amatörradiolicens.
+9. Ingen garanti. YAEC tillhandahålls i befintligt skick. Beräkningarna är gjorda med omsorg och med angivna källor, men kan innehålla fel: kontrollera viktiga data innan du förlitar dig på dem.
+10. Felrapporter. Om du hittar ett fel eller en bättre uppgift, skriv till författaren (fliken FÖRFATTARENS KONTAKTUPPGIFTER OCH TACK): det rättas med dig angiven som källa.
+
+I korthet: använd det fritt, lär dig av koden, förbättra den och dela den, men alltid med källkoden, med källorna angivna, med uppgift om vad du har ändrat och utan att handla med den. Om du tvivlar på ett resultat är det rätta svaret att kontrollera, inte att lita på det.
+
+Texten är översatt till alla programmets språk; vid tveksamhet gäller den italienska versionen.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem

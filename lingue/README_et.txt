@@ -1,0 +1,75 @@
+﻿YAEC – Yet Another EME Calc 1.2.1
+autor: Costantino IC8TEM
+==========================================
+
+Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 kuni 432 MHz: Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 26 keeles.
+Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
+
+PAIGALDAMINE – WINDOWS
+1. Laadi Releases-lehelt alla YAEC-1.2.1-Setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
+2. Kui ilmub SmartScreeni hoiatus: "More info" → "Run anyway".
+3. Ilma paigaldamata: paki YAEC-1.2.1-windows-portable.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
+
+PAIGALDAMINE – LINUX
+YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
+- Debian, Ubuntu, Mint: laadi alla yaec_1.2.1_all.deb ja paigalda see käsuga
+      sudo apt install ./yaec_1.2.1_all.deb
+  (paigaldab ka Mono). YAEC käivitub rakenduste menüüst või käsuga "yaec".
+- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.2.1-linux.tar.gz ja käivita ./install.sh.
+
+PAIGALDAMINE – macOS (eksperimentaalne)
+1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
+2. Ava YAEC-1.2.1-macOS.dmg ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+
+ALLALAADITUD FAILIDE KONTROLL (SHA-256)
+Iga release sisaldab faili SHA256SUMS.txt iga paketi SHA-256 räsiga. Võrdle seda allalaaditud faili räsiga:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+Kui kaks väärtust erinevad, ära faili paigalda: laadi see uuesti alla.
+
+KEEL JA ANDMED
+Keel valitakse peaakna ülaosas. Kõik programmi andmed asuvad kaustas "data": Windowsis YAEC.exe kõrval, Linuxis kaustas ~/.local/share/YAEC/data, macOS-is kaustas ~/Library/Application Support/YAEC/data.
+
+LITSENTS
+YAEC on tasuta; litsentsi tekst on failis LICENSE_et.txt ja programmi vahekaardil LITSENTS. Kahtluse korral kehtib itaaliakeelne versioon (LICENZA.txt).
+
+KONTAKT
+Vead, paremad andmed, tõlked: ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
+
+VERSIOONIAJALUGU
+Versioone enne 1.0 nimetatakse beetaks.
+- 1.2.1 - Leht AUTORI KONTAKTID JA TÄNUSÕNAD avaneb Linuxis ja macOS-is taas korrektselt; transverterite viide osutab § 1.7.1-le.
+- 1.2 - „EME eelarve“ näidikutega Minu EIRP, DX-i EIRP, teekonnakadu ja S/N mõlemas suunas (koos Päikesega); Wordi dokumendi valemid ühes suuruses, veeriste sees; täidetud nupud ja lamedad ümardatud servaga rippmenüüd kõigis skeemides; kaheksa pastelset värviskeemi; väärtuste lahtrid kõrvuti nooltega; kolm parimat päeva kuupäeva järjekorras; hägune taeva taust; VALEMITE DEBUG tõlgitud; juhend EME TEOORIA JA NÕUANDED koos Relu NJ9R nõuannetega (GRAVES, suunamine, pistikud, antennide võimendus, JT65B ja MAP65, polarisatsioonirelee), uute alapeatükkidega esimesest vastuvõtust ja internetivestlustest ning VE7BQH tabelitega eessõnas; tänusõnad NJ9R-ile, mälestus IK1UWL-ist ning artiklite, riist- ja tarkvara autoritele koos nende teoste kohtspikriga.
+- 1.1 - „Asukoht reaalajas ja +- 24h“ (endine „Jälgimine“) ka minevikus ja tulevikus: päev kalendrist ja kellaaeg punast joont lohistades, sagedus paneelil Kaja ja sagedused; DX-i kutsungi lahter koos W7GJ-lt ja WSJT-X Improvedist alla laaditud ja ühendatud failiga CALL3.TXT, pakutud lokaator ja kopeerimine WSJT-X-i kausta; „Kaugus ja Dgrd“ ilma pingereata, peale asetatud deklinatsiooniga, graafikuga sama värvi ridadega ja soovi korral rohelised kasulikud tunnid; programmi stiilis märkeruudud; kaablid rippmenüüdes läbimõõdu järgi ja tabelis nime, tootja ja tüübi järgi sorteeritud, tõlgitud allikatega; „EME eelarve“ ainult 60 s modulatsioonidega (JT65, Q65-60A, Q65-60B, Q65-60C) ja tekstidega kohanduva süsteemi skeemiga; KASUTUSJUHEND kõigi vaadete ülevaatega; EME TEOORIA JA NÕUANDED autori eessõna, nummerdusega alates 1-st ja Päikese müra valemitega; HTTPS Linuxis ja macOS-is süsteemi sertifikaatidega.
+- 1.0.1 - GitHubi väljalaske lehel on fail SHA256SUMS.txt kõigi pakettide SHA-256 sõrmejälgedega: nende abil saab kontrollida, et alla laaditud failid on tõepoolest originaalid (juhised README-s).
+- 1.0 - Esimene stabiilne versioon Windowsile, Linuxile ja macOS-ile (Linux ja macOS Monoga; andmed kaustas ~/.local/share/YAEC/data või ~/Library/Application Support/YAEC/data); Windowsi paigaldaja ning Linuxi ja macOS-i paketid luuakse GitHubis; varasemaid versioone nimetatakse beetadeks. Uus sakk „Kuu maailmakaardil“ (Kuu kõrgus kogu maailma maismaal, DX-jaam ühe klõpsuga, sinu antenni olek); juhend jagatud osadeks PÕHJALIK KASUTUSJUHEND ja EME TEOORIA JA NÕUANDED; rühmad Abi ja tööriistad ning Credits and thanks; sakk „Arvutuste eksport Excelisse“; modulatsiooni varu enam pole: S/N 2500 Hz ribas koos tüüpilise läviga võrdluseks ning JT65 piirid juhendis; juhendis ka Q65 tabel TX1 – TX6 jaoks, Faraday pööre ja SM5BSZ artikli kokkuvõte; kao järgi sorteeritav kaablitabel uute kaablitega Messi & Paoloni, SSB (SeaTex merekeskkonna jaoks, Aircom Premium), Belden ja Tasker; ühikutega lahtrid ilma järelejäänud kirjadeta.
+- beta 30 - Kuu deklinatsiooni kõver „Kaugus ja Dgrd“ graafiku all, põhja- ja lõunapoolsete maksimumide ning sinu poolkerale soodsa alaga; uus juhendi alapeatükk deklinatsioonist (kuutsükkel, maksimaalne kõrgus ja tunnid horisondi kohal, side poolkerade vahel, 18,6-aastane tsükkel, müra); I2FAK andmed Amburi kohta täpsustatud Põhja-Itaalia ja üle 5° kõrguse jaoks.
+- beta 29 - Juhend täielikult tõlgitud kõigisse 17 keelde; peatükkide 3.4, 3.5, 3.5.1 ja 3.6 valemid Equation Editori stiilis; uus alapeatükk 3.7.3 TX/RX järjestajast (IK1UWL); juhendi nupp "Salvesta Wordi (.docx)" koos sisukorra, leheküljenumbrite ja Wordi valemitega; sisukorra ja teksti vaheline riba 25 % juures; hoiatus, kui Dpol ületab 24 tunni jooksul 60° (allikas: Franco I2FAK videointervjuud).
+- beta 28d - Parandatud beta 28c sulgumine käivitamisel (ühikutega lahtrid); ootamatud vead kuvatakse teates ja kirjutatakse faili data\errori.txt; põhivaate DGRD paneel graafiku miinimumi, maksimumi ja praeguse väärtusega.
+- beta 28c - Avaaken 6 sekundiga täituva ribaga; AUTORI KONTAKTID JA TÄNUSÕNAD koos Kuu, vikerkaarevärvilise taeva ja tänusõnadega; tabletikujulised nupud ja ümardatud rippmenüüd; „EME eelarve“ nagu kavandis (jaamade kaardid, näidikud, joonistatud tabel, fontidega kohanduv süsteemi skeem, ühikud lahtrite sees, transverterite loend); „Kuu asukoht“ kaartide, reaalajas tablettide, lukkude ja uue aknaga Veerud; „Päikese müra“ allikaga Learmonth (BoM) ja telgedega 100 – 20 000 MHz; KOAKSIAALKAABLID tabletikujuliste filtrite, joonistatud tabeli ja graafikuga 1 – 20 dB.
+- beta 28b - Juhend: eemaldatud peatükk „Sakid“ ning ümber nummerdatud peatükid ja kõik viited; MNR, T(f), Dgrd ja „EME eelarve“ valemid Equation Editori stiilis; pealkirjad, kõrvuti tabelid, ribad, esiletõstetud read, värvid ja näidislokaatorid nagu kavandites; eelvõimendi koos IC-746PRO (ARRL) ja FT-897 (RadCom) testidega; transverter suure nomogrammi ja Kuhne TR 144 H +40-ga 25 dB juures; autorid teisaldatud sakilt ABOUT & CREDITS peatükki „Allikad, andmed ja autorid“; „Minu takistuste kaardistuse“ kaart tsentreeritud punktile JJ00AA, kui lokaator puudub.
+- beta 28a - Sulgemisaken alati nähtavate nuppudega Jah ja Ei; jämedam kollane piirangujoon „Taevavõlvil“; suurendatud fontidega mittekattuvad kirjad; kaheksa uut kaablit (H1000, H100, RT5020, XT2400, LLF195, RG-142, RG-393, RG-115) ja programmi stiilis kaablite kohtspikrid; litsents reavahe ja vahedega nagu kavandis; sakk AUTORI KONTAKTID JA TÄNUSÕNAD; klõps „Minu takistuste kaardistuse“ ringist väljaspool uue lokaatori valimiseks; keel, font ja fondi suurus muutuvad programmi taaskäivitamata.
+- beta 27 - Sagedusalad kuni 432 MHz; avaaken logo ja Sezione ARI Valle del Liri patronaažiga; tänusõnad sulgemisaknas; bengali, araabia ja türgi keel (17 keelt); põhivaade nelja värvilise paneeliga, MINE ARVUTUSTE JUURDE ja MINE TAEVAVÕLVILE, lokaator kuni 14 märki, fondi tüübi valik ja tumedad kohtspikrid; „Minu takistuste kaardistus“ läbipaistmatuse ja halli tooniga; esiletõstetud päev sakil „Kaugus ja Dgrd“; nupp Veerud sakil „Kuu asukoht“; „EME eelarve“ TX/RX-süsteemi skeemiga; „Päikese müra“ allikate, näidikute ja spektriga; VALEMITE DEBUG Wordi stiilis koos .docx salvestamisega; uued sakid KOAKSIAALKAABLID, AUTORI KONTAKTID ja KASUTUSLITSENTS; juhend programmi sees (PÕHJALIK KASUTUSJUHEND).
+- beta 26 - Uus kahetasandiline sakkide valik (rühmad ja sakid); värviskeem Must ja sinistes toonides skeem Öö; kahe Dgrd kõvera ja Päikese lähedusega päevade värvi ja paksust saab muuta; hoiatused võimaliku polaarkaloti (PCA) ja virmalisneeldumise kohta mõlemale jaamale; hägustuse lahter „Suunamiskaardil“; hallid diagonaaljooned piirangutest väljas „Taevavõlvil“ ja mittekattuvad kirjad; uus sakk VALEMITE DEBUG; Kuuga ikoon; PDF-juhendid kõigis 14 keeles.
+- beta 25 - Uuendatud sakk „Kaugus ja Dgrd“: kolm parimat päeva, päevade kalender Kuu faasiga, graafik Dgrd-ga (null all) ja peale asetatud keskmise kaugusega, noorkuu ja täiskuu, lühike pingerida; uus sakk „Suunamiskaart“ aerofoto- või topograafilise kaardiga, Kuu, teekonna, tõusu ja loojangu ning hiirega nihutatavate antenni piirangutega.
+- beta 24 - „Taevavõlvi“ kirjad kaks korda suuremad; vene, ukraina ja afrikaani keel; compila.bat ei loo enam PDF-juhendeid.
+- beta 23 - Uus põhivaade: UTC aeg, kohalik aeg ja DX-i kohalik aeg, olekuriba pöördloendusega, asimuudi kompass ja kõrguse kaar antenni piirangutega, Kuu faas koos tõusu ja loojanguga, Dgrd ja S/N ribad, järgmise 24 tunni riba; öine teema kõigil sakkidel; kolm värviskaalat „Taevavõlvil“ äärisega kirjadega.
+- beta 22 - Kõik andmed käivitusfaili kõrval olevas alamkaustas data (teisaldatud AppData-st ja programmi kaustast), kontrollitakse ja laaditakse käivitamisel uuesti alla; PDF-juhendid itaalia, inglise, prantsuse, saksa, hispaania ja portugali keeles kuvatõmmistega; lahtrid ja SAGEDUSALADE VALIK akna üleval paremal, S/N taas all paremal.
+- beta 21 - Põhivaade: lahter PÕHJALIKUD ARVUTUSED, KOHALIK ASIMUUT ja KÕRGUS, kuupäev pealkirja kõrval, S/N paneel nupu SAGEDUSALADE VALIK all; fondi valik kogu programmile. Uued sagedusalad 70 MHz ja 222 MHz.
+- beta 20 - Maapinna kõrgus võetakse automaatselt veebist (Open Topo Data, Open-Meteo), kui lokaatoril on 10 märki.
+- beta 19 - Pealkiri kasutaja kutsungiga; vaikimisi lokaatorit ega kutsungit pole; seaded programmi kaustas; sakkide uus järjekord; JUHEND kõigi parameetrite, MNR ja CFOM-iga; sakk eksperimentaalne-EXCEL; logi allalaadimine LoTW-st; ABOUT & CREDITS; hindi, korea ja indoneesia keel.
+- beta 18 - „EME eelarve“: ribalaius kuni 3000 Hz, mürategurid võimenduste kõrval, transverter arvutusest välja jäetud võimendusega 0, antenni temperatuur Tant (VE7BQH tabelid); üldseaded sakil „Jälgimine“; hägune kasvav Kuu põhivaate taustal.
+- beta 17 - Lahter "PÕHJALIKUD ARVUTUSED" vaates „Jälgimine“ (veerud alates Dpol-ist, „EME eelarve“ vaheread, sakk „Päikese müra“); hinnanguline S/N põhivaates; nupp "SAGEDUSALADE VALIK" sagedusaladega 50 MHz kuni 122 GHz.
+- beta 14 - Uus nimi YAEC - Yet Another EME Calc; kasutajaliides 8 keeles (inglise, itaalia, saksa, prantsuse, hispaania, portugali, hiina, jaapani), käivituskeeleks inglise keel; kutsung akna pealkirjas.
+- beta 13 - Kompileerimisvea CS0051 parandus (Friisi funktsiooni ligipääsetavus).
+- beta 12 - Raadio mürategur leitakse tema MDS-i järgi kasutaja valitud ribalaiusega (sama mis S/N-i arvutuses).
+- beta 11 - Uuesti tehtud põhivaade „Jälgimine“ (minu ja DX-i lokaator, sagedus, kuupäev ja kellaajad, minu ja DX-i asimuut ja kõrgus, muud kasulikud andmed); lokaator ja sagedus kopeeritakse automaatselt kõigile sakkidele; vastuvõtja mürategur Friisi valemiga; „Kaugus ja Dgrd“ kuni 61 päeva; kutsung üldseadetes; ALC soovitused juhendis.
+- beta 10 - Sakk „Jälgimine“; kHz vahemikus 000 kuni 999; nädalapäev; ribalaius ja S/N koos Päikesega eelarves; BETA ground gain; transverteri-raadio kaabeljuppide kadu; tume teema ja fondid; Dgrd kuu peale koos noorkuuga; LoTW rohelisena; sakk JUHEND; avaaken ja sulgemise kinnitus.
+- beta 9 - Taevavõlv asimuudi/kõrguse teljestikus lameda horisondiga ja müra värvidega sinisest punaseni; sakk „Kaugus ja Dgrd“; sakk ABOUT.
+- beta 6 - Sakk „WWL ja ADIF kaart“ Maidenheadi ruudustikuga.
+- beta 5 - Olekuveerud asendatud värviga; pealkiri "koostanud Costantino IC8TEM"; CFOM-sageduse kHz rippmenüü.
+- beta 4 - DX-i kohalik aeg asukoha järgi; kestus päevades; veergude kohtspikrid; Doppler ja CFOM-sagedused; sakk „Taevavõlv“.
+- beta 3 - Hinnanguline S/N eelarves; sakk „Päikese müra“ veebist saadud SFU-andmete ja RSTN-jaama valikuga.
+- beta 2 - Sakk „EME eelarve“: EIRP, teekonnakadu, vastuvõetud signaal ja varu MDS-i suhtes.
+- beta 1 - Teine jaam (DX), ühised aknad, Dpol, MNR, Tsky ja Dgrd nagu WSJT-X-is.

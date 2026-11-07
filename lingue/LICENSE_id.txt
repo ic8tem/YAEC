@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+LISENSI YAEC, VERSI 1
+© 2026 Costantino IC8TEM
+
+YAEC adalah program bebas, ditulis oleh seorang radio amatir untuk para radio amatir. Kodenya juga dikembangkan dengan bantuan asisten kecerdasan buatan, dan lisensinya mengambil cara kerjanya: benar-benar berguna, selalu mengatakan apa adanya, menunjukkan penalarannya, tidak merugikan siapa pun dan mengakui karya orang lain. Di bawah ini prinsipnya, lalu ketentuannya.
+
+• Berguna dan gratis: Program ini gratis dan dapat dipakai tanpa batas untuk radio amatir, untuk belajar dan untuk mengajar. Ia dibuat untuk memudahkan QSO, bukan untuk menjual sesuatu.
+• Transparan: Kode sumber selalu disertakan bersama program; setiap rumus terlihat di tab Pemeriksaan perhitungan dan setiap data menyebut sumbernya. Tanpa kotak hitam.
+• Jujur: Nilai terukur, turunan dan perkiraan dibedakan; yang belum diverifikasi dinyatakan demikian. Hasil yang tidak pasti disebut tidak pasti, tidak disajikan sebagai pasti.
+• Menghormati: Menghormati karya mereka yang telah mengukur, menulis dan menerbitkan sebelum kita, privasi penggunanya (tanpa pengumpulan data, tanpa iklan) dan aturan dinas amatir.
+
+KETENTUAN
+1. Penggunaan. Kamu boleh memakai YAEC secara gratis, menyalinnya dan memasangnya di sebanyak mungkin komputer.
+2. Perubahan. Kamu boleh mempelajari, memperbaiki dan menyempurnakan kode sumbernya, untuk dirimu atau untuk klub radiomu.
+3. Distribusi ulang. Kamu boleh mendistribusikan ulang program ini, asli atau diubah, hanya bersama kode sumber lengkapnya dan di bawah lisensi yang sama ini.
+4. Nyatakan perubahan. Versi yang diubah harus menyatakannya dengan jelas di judul atau catatan versi, menyebutkan siapa yang mengubah dan apa yang berubah, agar tidak ada yang mengira karyamu karya penulis atau sebaliknya.
+5. Atribusi. Nama penulis (Costantino IC8TEM), bab «Sumber, data dan kredit» dalam manual dan semua kutipan sumber pihak ketiga harus dipertahankan: data, tabel, artikel dan pengukuran adalah milik pembuatnya.
+6. Tanpa penggunaan komersial. Tidak diizinkan menjual YAEC atau versi turunannya, atau memasukkannya ke produk berbayar, tanpa izin tertulis dari penulis.
+7. Tanpa data tersembunyi. Tidak ada versi yang didistribusikan boleh mengumpulkan data pengguna, menampilkan iklan atau mengirim informasi ke pihak ketiga tanpa menyatakannya secara terbuka.
+8. Penggunaan radio yang benar. Program ini membantu perencanaan: frekuensi, daya dan mode yang dipakai tetap menjadi tanggung jawab operator dan lisensi amatirnya.
+9. Tanpa jaminan. YAEC diberikan apa adanya. Perhitungan dilakukan dengan cermat dan dengan sumber yang disebutkan, tetapi bisa mengandung kesalahan: periksa data penting sebelum mengandalkannya.
+10. Laporan. Jika kamu menemukan kesalahan atau data yang lebih baik, tulis ke penulis (tab KONTAK PENULIS DAN UCAPAN TERIMA KASIH): akan diperbaiki dengan menyebutmu sebagai sumber.
+
+Singkatnya: pakailah dengan bebas, belajar dari kodenya, sempurnakan dan bagikan, tetapi selalu dengan kode sumber, dengan sumber yang disebutkan, dengan perubahan yang dinyatakan dan tanpa menjualnya. Jika ragu pada suatu hasil, jawaban yang benar adalah memeriksanya, bukan memercayainya.
+
+Teks ini diterjemahkan ke semua bahasa program; jika ragu, versi bahasa Italia yang berlaku.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem

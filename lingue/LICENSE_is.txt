@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+NOTKUNARLEYFI YAEC, ÚTGÁFA 1
+© 2026 Costantino IC8TEM
+
+YAEC er frjáls hugbúnaður, skrifaður af radíóamatör fyrir radíóamatöra. Kóði hans var einnig þróaður með aðstoð gervigreindaraðstoðarmanns, og leyfið tekur mið af vinnulagi hans: að vera raunverulega gagnlegur, segja alltaf hlutina eins og þeir eru, sýna eigin rökhugsun, skaða engan og viðurkenna vinnu annarra. Hér fyrir neðan eru meginreglurnar og síðan skilmálarnir sjálfir.
+
+• Gagnlegt og ókeypis: Forritið er ókeypis og þú mátt nota það án takmarkana fyrir radíóamatörstarf þitt, til náms og kennslu. Það er til að koma á QSO, ekki til að selja eitthvað.
+• Gagnsætt: Frumkóðinn fylgir alltaf forritinu; hver formúla er sýnileg í flipanum Yfirferð útreikninga og hver gagnaliður tilgreinir heimild sína. Engir svartir kassar.
+• Heiðarlegt: Mæld gildi, afleidd gildi og áætluð gildi eru aðgreind; það sem ekki er staðfest er tilgreint sem slíkt. Óviss niðurstaða er sýnd sem óviss, ekki sett fram sem viss.
+• Tillitssamt: Það virðir vinnu þeirra sem mældu, skrifuðu og birtu á undan okkur, friðhelgi notenda sinna (engum gögnum safnað, engar auglýsingar) og reglur radíóamatöraþjónustunnar.
+
+SKILMÁLAR
+1. Notkun. Þú mátt nota, afrita og setja upp YAEC endurgjaldslaust, á eins margar tölvur og þú vilt.
+2. Breytingar. Þú mátt rannsaka frumkóðann, leiðrétta hann og bæta til eigin nota eða fyrir radíóklúbbinn þinn.
+3. Endurdreifing. Þú mátt endurdreifa forritinu, upprunalegu eða breyttu, aðeins ásamt fullum frumkóða þess og með þessu sama leyfi.
+4. Breytingar tilgreindar. Breytt útgáfa verður að segja það skýrt í titlinum eða í útgáfuskýringum, og tilgreina hver breytti henni og hverju var breytt, svo enginn ruglist á vinnu þinni og vinnu höfundarins, eða öfugt.
+5. Tilvísun. Halda skal nafni höfundarins (Costantino IC8TEM), kaflanum „Heimildir, gögn og viðurkenningar“ í handbókinni og öllum tilvísunum í heimildir þriðju aðila: gögn, töflur, greinar og mælingar tilheyra þeim sem bjuggu þær til.
+6. Engin viðskiptanotkun. Óheimilt er að selja YAEC eða afleiddar útgáfur, eða setja það í vörur sem greitt er fyrir, án skriflegs leyfis höfundarins.
+7. Engin falin gögn. Engin dreifð útgáfa má safna gögnum notenda, birta auglýsingar eða senda upplýsingar til þriðju aðila án þess að segja það opinskátt.
+8. Rétt notkun fjarskiptabúnaðar. Forritið hjálpar við áætlanagerð: tíðnir, afl og hættir sem notaðir eru eru áfram á ábyrgð notandans og radíóamatörleyfis hans.
+9. Engin ábyrgð. YAEC er látið í té eins og það er. Útreikningarnir eru gerðir af kostgæfni og með tilgreindum heimildum, en þeir geta innihaldið villur: staðfestu mikilvæg gögn áður en þú treystir á þau.
+10. Ábendingar. Ef þú finnur villu eða betri gögn skaltu skrifa höfundinum (flipinn SAMBAND VIÐ HÖFUND OG ÞAKKIR): það verður leiðrétt og þín getið sem heimildar.
+
+Í stuttu máli: notaðu það frjálst, lærðu af kóðanum, bættu hann og deildu honum, en alltaf með frumkóðanum, með heimildum tilgreindum, segðu hverju þú breyttir og án þess að selja það. Ef þú efast um niðurstöðu er rétta svarið að athuga, ekki að treysta.
+
+Textinn er þýddur á öll tungumál forritsins; leiki vafi á gildir ítalska útgáfan.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem

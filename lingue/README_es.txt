@@ -1,0 +1,75 @@
+﻿YAEC – Yet Another EME Calc 1.2.1
+por Costantino IC8TEM
+==========================================
+
+Calculadora para radioaficionados que trabajan en EME (Tierra–Luna–Tierra) de 50 a 432 MHz: posición de la Luna y ventanas de apuntamiento según los límites de su propia antena, planificación de los días con la mejor Dgrd, balance del enlace EME, ruido del cielo y del Sol, base de datos de cables coaxiales y manuales sobre EME. Para Windows, Linux y macOS, en 26 idiomas.
+Código fuente y descarga: https://github.com/ic8tem/YAEC/releases
+
+INSTALACIÓN – WINDOWS
+1. Descargue YAEC-1.2.1-Setup.exe desde la página Releases y ejecútelo. Instala YAEC en Documentos\YAEC, sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio, y con el programa de desinstalación.
+2. Si aparece el aviso de SmartScreen: "Más información" → "Ejecutar de todas formas".
+3. Sin instalación: extraiga YAEC-1.2.1-windows-portable.zip en una carpeta en la que pueda escribir y ejecute YAEC.exe.
+
+INSTALACIÓN – LINUX
+YAEC funciona con Mono, el entorno de ejecución .NET libre.
+- Debian, Ubuntu, Mint: descargue yaec_1.2.1_all.deb e instálelo con
+      sudo apt install ./yaec_1.2.1_all.deb
+  (instala también Mono). YAEC se inicia desde el menú de aplicaciones o con el comando "yaec".
+- Otras distribuciones: instale Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraiga YAEC-1.2.1-linux.tar.gz y ejecute ./install.sh.
+
+INSTALACIÓN – macOS (experimental)
+1. Instale Mono para macOS (https://www.mono-project.com/download/stable/) y XQuartz (https://www.xquartz.org).
+2. Abra YAEC-1.2.1-macOS.dmg y arrastre YAEC a Aplicaciones. La primera vez: clic derecho en YAEC → Abrir (la app no está firmada por Apple).
+
+COMPROBACIÓN DE LOS ARCHIVOS DESCARGADOS (SHA-256)
+Cada release contiene SHA256SUMS.txt con la huella SHA-256 de cada paquete. Compárela con la del archivo descargado:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+Si los dos valores son distintos, no instale el archivo: descárguelo de nuevo.
+
+IDIOMA Y DATOS
+El idioma se elige en la parte superior de la ventana principal. Todos los datos del programa están en la carpeta "data": en Windows junto a YAEC.exe, en Linux en ~/.local/share/YAEC/data, en macOS en ~/Library/Application Support/YAEC/data.
+
+LICENCIA
+YAEC es gratuito; el texto de la licencia está en el archivo LICENSE_es.txt y en la pestaña LICENCIA del programa. En caso de duda, prevalece la versión italiana (LICENZA.txt).
+
+CONTACTO
+Errores, datos mejores, traducciones: ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
+
+HISTORIAL DE VERSIONES
+Las versiones anteriores a la 1.0 se llaman beta.
+- 1.2.1 - La página CONTACTOS DEL AUTOR Y AGRADECIMIENTOS vuelve a abrirse correctamente en Linux y macOS; la referencia para los transverters indica el § 1.7.1.
+- 1.2 - Balance EME con los indicadores Mi PIRE, PIRE del DX, pérdida de trayecto y S/R en los dos sentidos (con el Sol); fórmulas del documento Word de un solo tamaño, dentro de los márgenes; botones rellenos y listas desplegables planas con borde redondeado en todos los esquemas; ocho esquemas de colores pastel; casillas de valores con las flechas una al lado de la otra; los tres mejores días en orden de fecha; fondo del cielo desenfocado; DEPURACIÓN DE FÓRMULAS traducido; manual TEORÍA Y CONSEJOS SOBRE EME con los consejos de Relu NJ9R (GRAVES, apuntamiento, conectores, ganancia de las antenas, JT65B y MAP65, relé de polarización), los nuevos apartados sobre la primera recepción y sobre los chats de Internet y las tablas de VE7BQH en el prefacio; agradecimientos a NJ9R, el recuerdo de IK1UWL y los autores de artículos, hardware y software, con un globo de ayuda sobre sus obras.
+- 1.1 - Posición en vivo y +- 24h (antes Seguimiento) también en el pasado y en el futuro: día desde el calendario y hora arrastrando la línea roja, frecuencia en el recuadro Eco y frecuencias; casilla del indicativo del DX con CALL3.TXT descargado de W7GJ y de WSJT-X Improved y fusionado, locator propuesto y copia en la carpeta de WSJT-X; Distancia y Dgrd sin clasificación, con la declinación superpuesta, filas coloreadas como el gráfico y horas útiles en verde a elección; casillas de verificación con el estilo del programa; cables ordenados por diámetro en las listas y por nombre, fabricante y tipo en la tabla, con fuentes traducidas; Balance EME solo con los modos de 60 s (JT65, Q65-60A, Q65-60B, Q65-60C) y esquema de la instalación que se adapta a los textos; MANUAL DE USO con el repaso de todas las pantallas; TEORÍA Y CONSEJOS SOBRE EME con el prefacio del autor, numeración desde 1 y fórmulas del ruido solar; HTTPS en Linux y macOS con los certificados del sistema.
+- 1.0.1 - En la página de la versión en GitHub está el archivo SHA256SUMS.txt con las huellas SHA-256 de todos los paquetes: sirven para comprobar que los archivos descargados son los originales (instrucciones en el README).
+- 1.0 - Primera versión estable, para Windows, Linux y macOS (Linux y macOS con Mono; los datos en ~/.local/share/YAEC/data o en ~/Library/Application Support/YAEC/data); instalador para Windows y paquetes para Linux y macOS creados en GitHub; las versiones anteriores se llaman beta. Nueva pestaña Luna sobre el mundo (elevación de la Luna sobre las tierras emergidas de todo el mundo, estación DX con un clic, estado de tu antena); manual dividido en MANUAL DE USO DETALLADO y TEORÍA Y CONSEJOS SOBRE EME; grupos Ayuda y herramientas y Credits and thanks; pestaña Exportar los cálculos a Excel; ya no hay margen sobre el modo: S/N en 2500 Hz con el umbral típico como referencia y los límites del JT65 en el manual; en el manual también la tabla del Q65 para TX1 – TX6, la rotación de Faraday y la síntesis del artículo de SM5BSZ; tabla de cables ordenable por pérdida, con nuevos cables Messi & Paoloni, SSB (SeaTex para entornos marinos, Aircom Premium), Belden y Tasker; casillas con la unidad sin textos residuales.
+- beta 30 - Curva de la declinación de la Luna bajo el gráfico de Distancia y Dgrd, con los máximos al norte y al sur y la zona favorable a tu hemisferio; nuevo apartado del manual sobre la declinación (ciclo mensual, elevación máxima y horas sobre el horizonte, enlaces entre hemisferios, ciclo de 18,6 años, ruido); datos de I2FAK sobre Sagitario precisados para el norte de Italia y por encima de 5° de elevación.
+- beta 29 - Manual traducido por completo a las 17 lenguas; fórmulas de las secciones 3.4, 3.5, 3.5.1 y 3.6 al estilo del editor de ecuaciones; nueva sección 3.7.3 sobre el secuenciador TX/RX (IK1UWL); botón "Salva in Word (.docx)" del manual con índice, números de página y fórmulas de Word; separador entre índice y texto al 25 %; aviso cuando Dpol supera 60° en 24 horas (fuente: videoentrevistas a Franco I2FAK).
+- beta 28d - Corregido el cierre de la beta 28c al iniciar (casillas con unidad); los errores imprevistos se muestran en un mensaje y se escriben en data\errori.txt; recuadro DGRD de la pantalla principal con el mínimo y el máximo del gráfico y el valor actual.
+- beta 28c - Pantalla de inicio con una barra que se llena en 6 segundos; CONTACTOS DEL AUTOR Y AGRADECIMIENTOS con la Luna, el cielo arcoíris y los agradecimientos; botones de píldora y listas redondeadas; Budget EME como en el boceto (fichas de las estaciones, indicadores, tabla dibujada, esquema que se adapta al tamaño de letra, unidades dentro de las casillas, lista de transverters); posición de la Luna con fichas, píldoras en directo, candados y nueva ventana Columnas; ruido solar con la fuente Learmonth (BoM) y ejes 100 – 20 000 MHz; CABLES COAXIALES con filtros de píldora, tabla dibujada y gráfico 1 – 20 dB.
+- beta 28b - Manual: eliminado el capítulo «Las pestañas» y renumerados los capítulos y todas las referencias; fórmulas de MNR, T(f), Dgrd y del Balance EME con estilo de editor de ecuaciones; títulos, tablas lado a lado, barras, filas resaltadas, colores y locator de ejemplo como en los bocetos; preamplificador con las pruebas del IC-746PRO (ARRL) y del FT-897 (RadCom); transverter con un ábaco grande y Kuhne TR 144 H +40 a 25 dB; créditos trasladados de la pestaña ABOUT & CREDITS al capítulo «Fuentes, datos y créditos»; mapa del Reconocimiento de mis obstáculos centrado en JJ00AA cuando falta el locator.
+- beta 28a - Ventana de cierre con los botones Sí y No siempre visibles; línea amarilla de los límites más gruesa en la Bóveda celeste; textos que ya no se superponen con letras ampliadas; ocho cables nuevos (H1000, H100, RT5020, XT2400, LLF195, RG-142, RG-393, RG-115) y globos de los cables con el estilo del programa; licencia con interlineado y espaciado como el boceto; pestaña CONTACTOS DEL AUTOR Y AGRADECIMIENTOS; clic fuera del círculo del Reconocimiento de mis obstáculos para elegir un nuevo locator; idioma, tipo y tamaño de letra cambian sin reiniciar el programa.
+- beta 27 - bandas solo hasta 432 MHz; pantalla de inicio con el logo y el patrocinio de la sección ARI Valle del Liri; línea de agradecimiento en la ventana de cierre; idiomas bengalí, árabe y turco (17 idiomas); pantalla principal con cuatro tarjetas de color, IR A LOS CÁLCULOS e IR A LA BÓVEDA CELESTE, locator hasta 14 caracteres, elección del tipo de letra y ayudas emergentes oscuras; Reconocimiento de mis obstáculos con opacidad y tono del gris; día resaltado en Distancia y Dgrd; botón Columnas en Posición de la Luna; Balance EME con el esquema de la instalación TX/RX; Ruido solar con fuentes, indicadores y espectro; DEPURACIÓN DE FÓRMULAS en estilo Word con guardado .docx; nuevas pestañas CABLES COAXIALES, CONTACTOS DEL AUTOR y LICENCIA; manual dentro del programa (MANUAL DE USO DETALLADO).
+- beta 26 - Nueva selección de pestañas en dos niveles (grupos y pestañas); esquema de colores Negro y esquema Noche en tonos de azul; color y grosor modificables para las dos curvas de la Dgrd y días con el Sol cerca de la Luna; avisos de posible absorción polar (PCA) y auroral para ambas estaciones; casilla para el difuminado en el Mapa de apuntamiento; rayas diagonales grises fuera de los límites en la Bóveda celeste y textos que ya no se superponen; nueva pestaña DEPURACIÓN DE FÓRMULAS; icono de la Luna; manuales PDF en los 14 idiomas.
+- beta 25 - Pestaña Distancia y Dgrd renovada: los tres mejores días, calendario de los días con fase lunar, gráfico del Dgrd (cero abajo) con la distancia media superpuesta, luna nueva y luna llena, clasificación corta; nueva pestaña Mapa de apuntamiento con fotografía aérea o mapa topográfico, Luna, trayectoria, salida y puesta y límites de la antena que se mueven con el ratón.
+- beta 24 - Textos de la Bóveda celeste el doble de grandes; idiomas ruso, ucraniano y afrikáans; compila.bat ya no crea los manuales PDF.
+- beta 23 - Nueva pantalla principal: hora UTC, hora local y hora local del DX, franja de estado con cuenta atrás, brújula de acimut y arco de elevación con los límites de la antena, fase de la Luna con salida y puesta, barras de Dgrd y S/R, barra de las próximas 24 horas; tema noche en todas las pestañas; tres escalas de colores en la Bóveda celeste con textos con borde.
+- beta 22 - Todos los datos en la subcarpeta data junto al ejecutable (trasladados desde AppData y desde la carpeta del programa), controlados y descargados de nuevo al arrancar; manuales PDF con capturas en italiano, inglés, francés, alemán, español y portugués; casillas y ELECCIÓN DE BANDAS arriba a la derecha de la ventana, S/R de nuevo abajo a la derecha.
+- beta 21 - Pantalla principal: casilla CÁLCULOS DETALLADOS, ACIMUT y ELEVACIÓN LOCAL, fecha junto al título, recuadro S/R bajo ELECCIÓN DE BANDAS; elección del tipo de letra para todo el programa. Nuevas bandas de 70 MHz y 222 MHz.
+- beta 20 - Altitud del terreno tomada automáticamente de la web (Open Topo Data, Open-Meteo) cuando el locator tiene 10 caracteres.
+- beta 19 - Título con el indicativo del usuario; ningún locator ni indicativo predeterminado; ajustes en la carpeta del programa; nuevo orden de las pestañas; INSTRUCCIONES con todos los parámetros, MNR y CFOM; pestaña experimental-EXCEL; descarga del log desde LoTW; ABOUT & CREDITS; idiomas hindi, coreano e indonesio.
+- beta 18 - Balance EME: ancho de banda hasta 3000 Hz, figuras de ruido junto a las ganancias, transverter excluido del cálculo con ganancia 0, temperatura de antena Tant (tablas VE7BQH); ajustes generales en la pestaña Seguimiento; Luna creciente desenfocada de fondo en la pantalla principal.
+- beta 17 - Casilla "CÁLCULOS DETALLADOS" en el Seguimiento (columnas desde Dpol, filas intermedias del Balance EME, pestaña Ruido solar); S/R estimada en la pantalla principal; botón "ELECCIÓN DE BANDAS" con las bandas de 50 MHz a 122 GHz.
+- beta 14 - Nuevo nombre YAEC - Yet Another EME Calc; interfaz en 8 idiomas (inglés, italiano, alemán, francés, español, portugués, chino, japonés) con el inglés como idioma de inicio; indicativo en el título de la ventana.
+- beta 13 - Corrección del error de compilación CS0051 (accesibilidad de la función de Friis).
+- beta 12 - La figura de ruido de la radio se obtiene de su MDS con el ancho de banda elegido por el usuario (el mismo del cálculo de la S/R).
+- beta 11 - Pantalla principal Seguimiento rehecha (mi locator y el del DX, frecuencia, fecha y horas, mi azimut y elevación y los del DX, otros datos útiles); locator y frecuencia copiados automáticamente en todas las pestañas; figura de ruido del receptor con la fórmula de Friis; Distancia y Dgrd hasta 61 días; indicativo en los ajustes generales; recomendaciones sobre el ALC en las instrucciones.
+- beta 10 - Pestaña Seguimiento; kHz de 000 a 999; día de la semana; ancho de banda y S/R con el Sol en el balance; ground gain BETA; pérdida de los latiguillos transverter-radio; tema oscuro y fuentes; Dgrd de un mes con luna nueva; LoTW en verde; pestaña INSTRUCCIONES; ventana de inicio y confirmación de cierre.
+- beta 9 - Bóveda celeste en azimut/elevación con horizonte plano y colores del ruido del azul al rojo; pestaña Distancia y Dgrd; pestaña ABOUT.
+- beta 6 - Pestaña Mapa WWL y ADIF con cuadrícula Maidenhead.
+- beta 5 - Columnas de estado sustituidas por el color; título "por Costantino IC8TEM"; lista kHz para la frecuencia CFOM.
+- beta 4 - Hora local del DX obtenida de la posición; duración en días; ayudas emergentes en las columnas; Doppler y frecuencias CFOM; pestaña Bóveda celeste.
+- beta 3 - S/R estimada en el balance; pestaña Ruido solar con datos SFU de la web y elección de la estación RSTN.
+- beta 2 - Pestaña Balance EME: PIRE, pérdida de trayecto, señal recibida y margen sobre el MDS.
+- beta 1 - Segunda estación (DX), ventanas comunes, Dpol, MNR, Tsky y Dgrd como en WSJT-X.

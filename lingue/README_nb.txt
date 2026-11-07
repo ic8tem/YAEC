@@ -1,0 +1,75 @@
+﻿YAEC – Yet Another EME Calc 1.2.1
+av Costantino IC8TEM
+==========================================
+
+Kalkulator for radioamatører som kjører EME (Jord–Måne–Jord) fra 50 til 432 MHz: månens posisjon og retningsvinduer innenfor grensene til din egen antenne, planlegging av dagene med best Dgrd, linkbudsjett for EME, himmel- og solstøy, database over koaksialkabler og håndbøker om EME. For Windows, Linux og macOS, på 26 språk.
+Kildekode og nedlasting: https://github.com/ic8tem/YAEC/releases
+
+INSTALLASJON – WINDOWS
+1. Last ned YAEC-1.2.1-Setup.exe fra Releases-siden og kjør den. Den installerer YAEC i Dokumenter\YAEC, uten administratorrettigheter, med snarveier i Start-menyen og på skrivebordet, og med et avinstalleringsprogram.
+2. Hvis SmartScreen-advarselen vises: «Mer informasjon» → «Kjør likevel».
+3. Uten installasjon: pakk ut YAEC-1.2.1-windows-portable.zip i en mappe du kan skrive i, og start YAEC.exe.
+
+INSTALLASJON – LINUX
+YAEC kjører på Mono, den frie .NET-kjøretiden.
+- Debian, Ubuntu, Mint: last ned yaec_1.2.1_all.deb og installer den med
+      sudo apt install ./yaec_1.2.1_all.deb
+  (installerer også Mono). YAEC startes fra programmenyen eller med kommandoen «yaec».
+- Andre distribusjoner: installer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pakk ut YAEC-1.2.1-linux.tar.gz og kjør ./install.sh.
+
+INSTALLASJON – macOS (eksperimentell)
+1. Installer Mono for macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
+2. Åpne YAEC-1.2.1-macOS.dmg og dra YAEC til Programmer. Første gang: høyreklikk på YAEC → Åpne (appen er ikke signert av Apple).
+
+KONTROLL AV NEDLASTEDE FILER (SHA-256)
+Hver release inneholder SHA256SUMS.txt med SHA-256-sjekksummen for hver pakke. Sammenlign den med sjekksummen for den nedlastede filen:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+Hvis de to verdiene er forskjellige, skal du ikke installere filen: last den ned på nytt.
+
+SPRÅK OG DATA
+Språket velges øverst i hovedvinduet. Alle programmets data ligger i mappen «data»: i Windows ved siden av YAEC.exe, i Linux i ~/.local/share/YAEC/data, i macOS i ~/Library/Application Support/YAEC/data.
+
+LISENS
+YAEC er gratis; lisensteksten står i filen LICENSE_nb.txt og i fanen LISENS i programmet. Ved tvil gjelder den italienske versjonen (LICENZA.txt).
+
+KONTAKT
+Feil, bedre data, oversettelser: ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
+
+VERSJONSHISTORIKK
+Versjoner før 1.0 kalles beta.
+- 1.2.1 - Siden FORFATTERENS KONTAKTINFO OG TAKK åpnes igjen riktig på Linux og macOS; henvisningen for transverterne viser til § 1.7.1.
+- 1.2 - EME-budsjett med indikatorene Min EIRP, DX-stasjonens EIRP, strekningstap og S/N i begge retninger (med Solen); formlene i Word-dokumentet i én størrelse, innenfor margene; fylte knapper og flate nedtrekksmenyer med avrundet kant i alle skjemaene; åtte pastellfargeskjemaer; verdifelt med pilene ved siden av; de tre beste dagene i datorekkefølge; uskarp himmelbakgrunn; DEBUG AV FORMLER oversatt; manualen TEORI OG RÅD OM EME med rådene fra Relu NJ9R (GRAVES, peiling, kontakter, antenneforsterkning, JT65B og MAP65, polarisasjonsreleer), de nye avsnittene om første mottak og om chat via Internett og tabellene til VE7BQH i forordet; takk til NJ9R, minnet om IK1UWL og forfatterne av artikler, maskinvare og programvare, med verktøytips om verkene deres.
+- 1.1 - Live-posisjon og +- 24t (tidligere Sporing) også i fortid og fremtid: dag fra kalenderen og klokkeslett ved å dra den røde linjen, frekvens i ruten Ekko og frekvenser; felt for DX-stasjonens kallesignal med CALL3.TXT lastet ned fra W7GJ og fra WSJT-X Improved og slått sammen, foreslått lokator og kopiering til WSJT-X-mappen; Avstand og Dgrd uten rangering, med deklinasjonen lagt over, rader farget som grafen og nyttige timer i grønt etter valg; avkrysningsbokser i programmets stil; kabler sortert etter diameter i nedtrekkslistene og etter navn, produsent og type i tabellen, med oversatte kilder; EME-budsjett med bare 60 s-moduser (JT65, Q65-60A, Q65-60B, Q65-60C) og anleggsskjema som tilpasser seg tekstene; BRUKERMANUAL med gjennomgang av alle skjermbildene; TEORI OG RÅD OM EME med forfatterens forord, nummerering fra 1 og formler for solstøy; HTTPS på Linux og macOS med systemets sertifikater.
+- 1.0.1 - På release-siden på GitHub finnes filen SHA256SUMS.txt med SHA-256-sjekksummene for alle pakkene: de brukes til å kontrollere at de nedlastede filene virkelig er de originale (instruksjoner i README).
+- 1.0 - Første stabile versjon, for Windows, Linux og macOS (Linux og macOS med Mono; dataene i ~/.local/share/YAEC/data eller i ~/Library/Application Support/YAEC/data); installasjonsprogram for Windows og pakker for Linux og macOS laget på GitHub; de tidligere versjonene kalles beta. Ny fane Månen over verden (Månens elevasjon over landområdene i hele verden, DX-stasjon med ett klikk, status for antennen din); manualen delt i UTFYLLENDE BRUKERMANUAL og TEORI OG RÅD OM EME; gruppene Hjelp og verktøy og Credits and thanks; fanen Eksport av beregningene til Excel; ikke lenger margin for modusen: S/N i 2500 Hz med typisk terskel som referanse og grensene for JT65 i manualen; i manualen også Q65-tabellen for TX1 – TX6, Faraday-rotasjonen og sammendraget av artikkelen til SM5BSZ; kabeltabellen kan sorteres etter tap, med nye kabler fra Messi & Paoloni, SSB (SeaTex for maritime miljøer, Aircom Premium), Belden og Tasker; felt med enhet uten gjenværende tekst.
+- beta 30 - Kurve for Månens deklinasjon under grafen i Avstand og Dgrd, med maksimumene mot nord og sør og sonen som er gunstig for din halvkule; nytt avsnitt i manualen om deklinasjonen (månedlig syklus, maksimal elevasjon og timer over horisonten, forbindelser mellom halvkuler, syklusen på 18,6 år, støy); data fra I2FAK om Skytten presisert for Nord-Italia og over 5° elevasjon.
+- beta 29 - Manualen oversatt i sin helhet til alle de 17 språkene; formlene i kapittel 3.4, 3.5, 3.5.1 og 3.6 i Equation Editor-stil; nytt avsnitt 3.7.3 om TX/RX-sekvenseren (IK1UWL); knappen «Lagre i Word (.docx)» i manualen med innholdsfortegnelse, sidenumre og Word-formler; linjen mellom innhold og tekst på 25 %; varsel når Dpol overstiger 60° i løpet av 24 timer (kilde: videointervjuer med Franco I2FAK).
+- beta 28d - Rettet lukking ved oppstart i beta 28c (felt med enhet); uventede feil vises i en melding og skrives i data\errori.txt; ruten DGRD på hovedskjermen med minimum og maksimum fra grafen og verdien nå.
+- beta 28c - Oppstartsskjerm med en linje som fylles på 6 sekunder; FORFATTERENS KONTAKTINFO OG TAKK med Månen, regnbuehimmelen og takkene; pilleformede knapper og avrundede nedtrekkslister; EME-budsjett som i skissen (stasjonskort, indikatorer, tegnet tabell, anleggsskjema som tilpasser seg skriften, enheter inne i feltene, liste over transvertere); Månens posisjon med kort, direkte-piller, hengelåser og nytt vindu Kolonner; Solstøy med kilden Learmonth (BoM) og akser 100 – 20 000 MHz; KOAKSIALKABLER med pillefiltre, tegnet tabell og graf 1 – 20 dB.
+- beta 28b - Manual: kapitlet «Fanene» fjernet og kapitlene og alle henvisningene nummerert på nytt; formlene for MNR, T(f), Dgrd og EME-budsjett i Equation Editor-stil; titler, tabeller side om side, stolper, fremhevede rader, farger og eksempellokatorer som i skissene; forforsterker med testene av IC-746PRO (ARRL) og FT-897 (RadCom); transverter med stort nomogram og Kuhne TR 144 H +40 på 25 dB; krediteringen flyttet fra fanen ABOUT & CREDITS til kapitlet «Kilder, data og kreditering»; kartet i Kartlegging av mine hindringer sentrert på JJ00AA når lokatoren mangler.
+- beta 28a - Lukkevindu med knappene Ja og Nei alltid synlige; tykkere gul grenselinje i Himmelhvelvingen; tekster som ikke overlapper med forstørret skrift; åtte nye kabler (H1000, H100, RT5020, XT2400, LLF195, RG-142, RG-393, RG-115) og verktøytips for kablene i programmets stil; lisens med linjeavstand og mellomrom som i skissen; fanen FORFATTERENS KONTAKTINFO OG TAKK; klikk utenfor sirkelen i Kartlegging av mine hindringer for å velge en ny lokator; språk, skrifttype og skriftstørrelse endres uten å starte programmet på nytt.
+- beta 27 - Bånd opptil 432 MHz; oppstartsskjerm med logoen og støtten fra Sezione ARI Valle del Liri; takk i lukkevinduet; språkene bengali, arabisk og tyrkisk (17 språk); hovedskjerm med fire fargede ruter, GÅ TIL BEREGNINGENE og GÅ TIL HIMMELHVELVINGEN, lokator opptil 14 tegn, valg av skrifttype og mørke verktøytips; Kartlegging av mine hindringer med opasitet og gråtone; fremhevet dag i Avstand og Dgrd; knappen Kolonner i Månens posisjon; EME-budsjett med skjema over TX/RX-anlegget; Solstøy med kilder, indikatorer og spektrum; DEBUG AV FORMLER i Word-stil med lagring som .docx; nye faner KOAKSIALKABLER, FORFATTERENS KONTAKTINFO og BRUKSLISENS; manual inne i programmet (UTFYLLENDE BRUKERMANUAL).
+- beta 26 - Nytt fanevalg i to nivåer (grupper og faner); fargeskjemaet Svart og skjemaet Natt i blåtoner; farge og tykkelse kan endres for de to kurvene i Dgrd og dager med Solen nær Månen; varsler om mulig polar absorpsjon (PCA) og nordlysabsorpsjon for de to stasjonene; boks for nedtoning i Peilekart; grå diagonale striper utenfor grensene i Himmelhvelvingen og tekster som ikke overlapper; ny fane DEBUG AV FORMLER; ikon med Månen; PDF-manualer på alle 14 språkene.
+- beta 25 - Fanen Avstand og Dgrd fornyet: de tre beste dagene, dagskalender med månefase, graf med Dgrd (null nederst) og gjennomsnittsavstanden lagt over, nymåne og fullmåne, kort rangering; ny fane Peilekart med flyfoto- eller topografisk kart, Månen, bane, opp- og nedgang og antennegrenser som kan flyttes med musen.
+- beta 24 - Tekstene i Himmelhvelvingen dobbelt så store; språkene russisk, ukrainsk og afrikaans; compila.bat lager ikke lenger PDF-manualene.
+- beta 23 - Ny hovedskjerm: UTC-tid, lokal tid og DX-stasjonens lokale tid, statusstripe med nedtelling, asimutkompass og elevasjonsbue med antennegrensene, månefase med opp- og nedgang, stolper for Dgrd og S/N, linje for de neste 24 timene; natt-tema i alle fanene; tre fargeskalaer i Himmelhvelvingen med kantede tekster.
+- beta 22 - Alle data i undermappen data ved siden av programfilen (flyttet fra AppData og fra programmappen), kontrollert og lastet ned på nytt ved oppstart; PDF-manualer med skjermbilder på italiensk, engelsk, fransk, tysk, spansk og portugisisk; bokser og VALG AV BÅND øverst til høyre i vinduet, S/N igjen nederst til høyre.
+- beta 21 - Hovedskjerm: boksen AVANSERTE BEREGNINGER, LOKAL ASIMUT og LOKAL ELEVASJON, dato ved siden av tittelen, S/N-rute under VALG AV BÅND; valg av skrift for hele programmet. Nye bånd 70 MHz og 222 MHz.
+- beta 20 - Terrenghøyde hentet automatisk fra nettet (Open Topo Data, Open-Meteo) når lokatoren har 10 tegn.
+- beta 19 - Tittel med brukerens kallesignal; ingen forhåndsinnstilt lokator eller kallesignal; innstillinger i programmappen; ny rekkefølge på fanene; BRUKSANVISNING med alle parametere, MNR og CFOM; fanen eksperimentell-EXCEL; nedlasting av loggen fra LoTW; ABOUT & CREDITS; språkene hindi, koreansk og indonesisk.
+- beta 18 - EME-budsjett: båndbredde opptil 3000 Hz, støytall ved siden av forsterkningene, transverter utelatt fra beregningen med forsterkning 0, antennetemperatur Tant (VE7BQH-tabeller); generelle innstillinger i fanen Sporing; uskarp voksende måne i bakgrunnen på hovedskjermen.
+- beta 17 - Boksen «AVANSERTE BEREGNINGER» i Sporing (kolonner fra Dpol og utover, mellomliggende rader i EME-budsjett, fanen Solstøy); estimert S/N på hovedskjermen; knappen «VALG AV BÅND» med båndene fra 50 MHz til 122 GHz.
+- beta 14 - Nytt navn YAEC - Yet Another EME Calc; grensesnitt på 8 språk (engelsk, italiensk, tysk, fransk, spansk, portugisisk, kinesisk, japansk) med engelsk som oppstartsspråk; kallesignal i vindustittelen.
+- beta 13 - Retting av kompileringsfeilen CS0051 (tilgjengeligheten til Friis-funksjonen).
+- beta 12 - Radioens støytall utledes fra MDS med båndbredden brukeren har valgt (den samme som i S/N-beregningen).
+- beta 11 - Hovedskjermen Sporing laget på nytt (min og DX-stasjonens lokator, frekvens, dato og klokkeslett, min og DX-stasjonens asimut og elevasjon, andre nyttige data); lokator og frekvens kopieres automatisk til alle faner; mottakerens støytall med Friis-formelen; Avstand og Dgrd opptil 61 dager; kallesignal i de generelle innstillingene; anbefalinger om ALC i bruksanvisningen.
+- beta 10 - Fanen Sporing; kHz fra 000 til 999; ukedag; båndbredde og S/N med Solen i budsjettet; ground gain BETA; kabeltap transverter–radio; mørkt tema og skrifter; Dgrd over en måned med nymåne; LoTW i grønt; fanen BRUKSANVISNING; oppstartsvindu og bekreftelse ved lukking.
+- beta 9 - Himmelhvelvingen i asimut/elevasjon med flat horisont og støyfarger fra blått til rødt; fanen Avstand og Dgrd; fanen ABOUT.
+- beta 6 - Fanen WWL-kart og ADIF med Maidenhead-rutenett.
+- beta 5 - Statuskolonner erstattet av farge; tittelen «av Costantino IC8TEM»; nedtrekksliste for kHz i CFOM-frekvensen.
+- beta 4 - DX-stasjonens lokale tid utledet fra posisjonen; varighet i dager; verktøytips på kolonnene; Doppler og CFOM-frekvenser; fanen Himmelhvelvingen.
+- beta 3 - Estimert S/N i budsjettet; fanen Solstøy med SFU-data fra nettet og valg av RSTN-stasjon.
+- beta 2 - Fanen EME-budsjett: EIRP, strekningstap, mottatt signal og margin over MDS.
+- beta 1 - Andre stasjon (DX), felles vinduer, Dpol, MNR, Tsky og Dgrd som i WSJT-X.

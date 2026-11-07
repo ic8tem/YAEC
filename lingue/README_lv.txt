@@ -1,0 +1,75 @@
+﻿YAEC – Yet Another EME Calc 1.2.1
+autors: Costantino IC8TEM
+==========================================
+
+Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā no 50 līdz 432 MHz: Mēness pozīcija un tēmēšanas logi atbilstoši jūsu antenas ierobežojumiem, dienu ar labāko Dgrd plānošana, EME sakaru līnijas enerģētiskā bilance, debess un Saules troksnis, koaksiālo kabeļu datubāze un rokasgrāmatas par EME. Operētājsistēmām Windows, Linux un macOS, 26 valodās.
+Pirmkods un lejupielāde: https://github.com/ic8tem/YAEC/releases
+
+INSTALĒŠANA – WINDOWS
+1. Lejupielādējiet YAEC-1.2.1-Setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
+2. Ja parādās SmartScreen brīdinājums: "More info" → "Run anyway".
+3. Bez instalēšanas: atarhivējiet YAEC-1.2.1-windows-portable.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
+
+INSTALĒŠANA – LINUX
+YAEC darbojas ar Mono — brīvo .NET izpildlaika vidi.
+- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.2.1_all.deb un instalējiet to ar komandu
+      sudo apt install ./yaec_1.2.1_all.deb
+  (tiek instalēts arī Mono). YAEC palaiž no lietotņu izvēlnes vai ar komandu "yaec".
+- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.2.1-linux.tar.gz un palaidiet ./install.sh.
+
+INSTALĒŠANA – macOS (eksperimentāli)
+1. Instalējiet Mono operētājsistēmai macOS (https://www.mono-project.com/download/stable/) un XQuartz (https://www.xquartz.org).
+2. Atveriet YAEC-1.2.1-macOS.dmg un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
+
+LEJUPIELĀDĒTO FAILU PĀRBAUDE (SHA-256)
+Katrā release ir fails SHA256SUMS.txt ar katras pakotnes SHA-256 jaucējvērtību. Salīdziniet to ar lejupielādētā faila jaucējvērtību:
+- Windows (PowerShell): Get-FileHash .\YAEC-1.2.1-Setup.exe -Algorithm SHA256
+- Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
+- macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
+Ja abas vērtības atšķiras, neinstalējiet failu: lejupielādējiet to vēlreiz.
+
+VALODA UN DATI
+Valodu izvēlas galvenā loga augšdaļā. Visi programmas dati atrodas mapē "data": Windows sistēmā blakus YAEC.exe, Linux sistēmā ~/.local/share/YAEC/data, macOS sistēmā ~/Library/Application Support/YAEC/data.
+
+LICENCE
+YAEC ir bezmaksas; licences teksts ir failā LICENSE_lv.txt un programmas cilnē LICENCE. Šaubu gadījumā noteicošā ir itāļu valodas versija (LICENZA.txt).
+
+KONTAKTI
+Kļūdas, labāki dati, tulkojumi: ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
+
+VERSIJU VĒSTURE
+Versijas pirms 1.0 sauc par beta versijām.
+- 1.2.1 - Lapa „AUTORA KONTAKTI UN PATEICĪBAS” atkal pareizi atveras operētājsistēmās Linux un macOS; atsauce par transverteriem norāda uz § 1.7.1.
+- 1.2 - „EME budžets” ar indikatoriem „Mans EIRP”, „DX EIRP”, trases zudumi un S/N abos virzienos (ar Sauli); Word dokumenta formulas viena izmēra, malu robežās; pildītas pogas un plakanas izkrītošās izvēlnes ar noapaļotu apmali visās shēmās; astoņas pasteļkrāsu shēmas; vērtību lodziņi ar blakus novietotām bultiņām; trīs labākās dienas datumu secībā; izplūdis debess fons; „FORMULU ATKĻŪDOŠANA” tulkota; rokasgrāmata „EME TEORIJA UN IETEIKUMI” ar Relu NJ9R ieteikumiem (GRAVES, tēmēšana, savienotāji, antenu pastiprinājums, JT65B un MAP65, polarizācijas releji), jaunām apakšnodaļām par pirmo uztveršanu un interneta tērzēšanu un VE7BQH tabulām priekšvārdā; pateicības NJ9R, IK1UWL piemiņa un rakstu, aparatūras un programmatūras autori ar uznirstošo padomu par viņu darbiem.
+- 1.1 - „Tiešraides pozīcija un +- 24h” (agrāk „Sekošana”) arī pagātnē un nākotnē: diena no kalendāra un laiks, velkot sarkano līniju, frekvence rāmī „Atbalss un frekvences”; DX izsaukuma signāla lodziņš ar CALL3.TXT, lejupielādētu no W7GJ un WSJT-X Improved un apvienotu, piedāvātu lokatoru un kopēšanu WSJT-X mapē; „Attālums un Dgrd” bez vērtējuma, ar pārklātu deklināciju, rindām, iekrāsotām kā grafiks, un izmantojamām stundām zaļā krāsā pēc izvēles; izvēles rūtiņas programmas stilā; kabeļi sakārtoti pēc diametra izkrītošajos sarakstos un pēc nosaukuma, ražotāja un tipa tabulā, ar tulkotiem avotiem; „EME budžets” tikai ar 60 s režīmiem (JT65, Q65-60A, Q65-60B, Q65-60C) un iekārtas shēmu, kas pielāgojas tekstiem; „LIETOŠANAS ROKASGRĀMATA” ar visu ekrānu apskatu; „EME TEORIJA UN IETEIKUMI” ar autora priekšvārdu, numerāciju no 1 un Saules trokšņa formulām; HTTPS operētājsistēmās Linux un macOS ar sistēmas sertifikātiem.
+- 1.0.1 - GitHub laidiena lapā ir fails SHA256SUMS.txt ar visu pakotņu SHA-256 nospiedumiem: tie ļauj pārbaudīt, vai lejupielādētie faili tiešām ir oriģinālie (instrukcijas README).
+- 1.0 - Pirmā stabilā versija operētājsistēmām Windows, Linux un macOS (Linux un macOS ar Mono; dati mapē ~/.local/share/YAEC/data vai ~/Library/Application Support/YAEC/data); Windows instalētājs un Linux un macOS pakotnes, veidotas GitHub; iepriekšējās versijas sauc par beta. Jauna cilne „Mēness pār pasauli” (Mēness elevācija virs visas pasaules sauszemes, DX stacija ar vienu klikšķi, jūsu antenas stāvoklis); rokasgrāmata sadalīta „PADZIĻINĀTA LIETOŠANAS ROKASGRĀMATA” un „EME TEORIJA UN IETEIKUMI”; grupas „Palīdzība un rīki” un „Credits and thanks”; cilne „Aprēķinu eksports uz Excel”; vairs nav rezerves režīmam: S/N 2500 Hz joslā ar tipisko slieksni kā atsauci un JT65 robežas rokasgrāmatā; rokasgrāmatā arī Q65 tabula TX1 – TX6, Faradeja rotācija un SM5BSZ raksta kopsavilkums; kabeļu tabula kārtojama pēc zudumiem, ar jauniem Messi & Paoloni, SSB (SeaTex jūras videi, Aircom Premium), Belden un Tasker kabeļiem; lodziņi ar mērvienību bez paliekošiem uzrakstiem.
+- beta 30 - Mēness deklinācijas līkne zem „Attālums un Dgrd” grafika ar maksimumiem ziemeļos un dienvidos un jūsu puslodei labvēlīgo zonu; jauna rokasgrāmatas apakšnodaļa par deklināciju (mēneša cikls, maksimālā elevācija un stundas virs horizonta, sakari starp puslodēm, 18,6 gadu cikls, troksnis); I2FAK dati par Strēlnieku precizēti Ziemeļitālijai un virs 5° elevācijas.
+- beta 29 - Rokasgrāmata pilnībā tulkota visās 17 valodās; 3.4., 3.5., 3.5.1. un 3.6. nodaļas formulas Equation Editor stilā; jauna 3.7.3. apakšnodaļa par TX/RX sekvenceri (IK1UWL); rokasgrāmatas poga „Saglabāt Word formātā (.docx)” ar satura rādītāju, lappušu numuriem un Word formulām; josla starp saturu un tekstu 25 %; brīdinājums, kad Dpol 24 stundās pārsniedz 60° (avots: Franco I2FAK videointervijas).
+- beta 28d - Labota beta 28c aizvēršanās startējot (lodziņi ar mērvienību); neparedzētas kļūdas parādītas ziņojumā un ierakstītas data\errori.txt; galvenā ekrāna DGRD rāmis ar grafika minimumu un maksimumu un pašreizējo vērtību.
+- beta 28c - Sākuma ekrāns ar joslu, kas piepildās 6 sekundēs; „AUTORA KONTAKTI UN PATEICĪBAS” ar Mēnesi, varavīksnes debesīm un pateicībām; tablešu formas pogas un noapaļoti izkrītošie saraksti; „EME budžets” kā maketā (staciju kartītes, indikatori, zīmēta tabula, iekārtas shēma, kas pielāgojas fontiem, mērvienības lodziņos, transverteru saraksts); „Mēness pozīcija” ar kartītēm, tiešraides tabletēm, slēdzenēm un jaunu logu „Kolonnas”; „Saules troksnis” ar avotu Learmonth (BoM) un asīm 100 – 20 000 MHz; „KOAKSIĀLIE KABEĻI” ar tablešu filtriem, zīmētu tabulu un grafiku 1 – 20 dB.
+- beta 28b - Rokasgrāmata: izņemta nodaļa „Cilnes” un pārnumurētas nodaļas un visas atsauces; MNR, T(f), Dgrd un „EME budžets” formulas Equation Editor stilā; virsraksti, blakus novietotas tabulas, joslas, izceltas rindas, krāsas un parauga lokatori kā maketos; priekšpastiprinātājs ar IC-746PRO (ARRL) un FT-897 (RadCom) testiem; transverters ar lielu nomogrammu un Kuhne TR 144 H +40 ar 25 dB; autori pārcelti no cilnes „PAR UN AUTORI” uz nodaļu „Avoti, dati un autori”; „Manu šķēršļu izpēte” karte centrēta uz JJ00AA, ja nav lokatora.
+- beta 28a - Aizvēršanas logs ar vienmēr redzamām pogām „Jā” un „Nē”; biezāka dzeltenā robežu līnija cilnē „Debess velve”; uzraksti, kas nepārklājas ar palielinātiem fontiem; astoņi jauni kabeļi (H1000, H100, RT5020, XT2400, LLF195, RG-142, RG-393, RG-115) un kabeļu uznirstošie padomi programmas stilā; licence ar rindstarpu un atstarpēm kā maketā; cilne „AUTORA KONTAKTI UN PATEICĪBAS”; klikšķis ārpus „Manu šķēršļu izpēte” apļa, lai izvēlētos jaunu lokatoru; valoda, fonts un fontu izmērs mainās bez programmas restartēšanas.
+- beta 27 - Diapazoni līdz 432 MHz; sākuma ekrāns ar Sezione ARI Valle del Liri logotipu un atbalstu; pateicība aizvēršanas logā; bengāļu, arābu un turku valoda (17 valodas); galvenais ekrāns ar četriem krāsainiem rāmjiem, „UZ APRĒĶINIEM” un „UZ DEBESS VELVI”, lokators līdz 14 rakstzīmēm, fonta veida izvēle un tumši uznirstošie padomi; „Manu šķēršļu izpēte” ar necaurredzamību un pelēkā toni; izcelta diena cilnē „Attālums un Dgrd”; poga „Kolonnas” cilnē „Mēness pozīcija”; „EME budžets” ar TX/RX iekārtas shēmu; „Saules troksnis” ar avotiem, indikatoriem un spektru; „FORMULU ATKĻŪDOŠANA” Word stilā ar .docx saglabāšanu; jaunas cilnes „KOAKSIĀLIE KABEĻI”, „AUTORA KONTAKTI” un „LIETOŠANAS LICENCE”; rokasgrāmata programmas iekšienē („PADZIĻINĀTA LIETOŠANAS ROKASGRĀMATA”).
+- beta 26 - Jauna ciļņu izvēle divos līmeņos (grupas un cilnes); krāsu shēma „Melna” un shēma „Nakts” zilos toņos; maināma krāsa un biezums abām līknēm cilnē „Attālums un Dgrd” un dienas ar Sauli tuvu Mēnesim; brīdinājumi par iespējamu polāro (PCA) un polārblāzmu absorbciju abām stacijām; lodziņš izplūdināšanai cilnē „Tēmēšanas karte”; pelēkas diagonālas svītras ārpus robežām cilnē „Debess velve” un uzraksti, kas nepārklājas; jauna cilne „FORMULU ATKĻŪDOŠANA”; ikona ar Mēnesi; PDF rokasgrāmatas visās 14 valodās.
+- beta 25 - Atjaunota cilne „Attālums un Dgrd”: trīs labākās dienas, dienu kalendārs ar Mēness fāzēm, grafiks ar Dgrd (nulle apakšā) un pārklātu vidējo attālumu, jauns mēness un pilnmēness, īss vērtējums; jauna cilne „Tēmēšanas karte” ar aerofoto vai topogrāfisko karti, Mēnesi, ceļu, lēktu un rietu un antenas robežām, kuras var pārvietot ar peli.
+- beta 24 - „Debess velve” uzraksti divreiz lielāki; krievu, ukraiņu un afrikandu valoda; compila.bat vairs neveido PDF rokasgrāmatas.
+- beta 23 - Jauns galvenais ekrāns: UTC laiks, vietējais laiks un DX vietējais laiks, stāvokļa josla ar laika atskaiti, azimuta kompass un elevācijas loks ar antenas robežām, Mēness fāze ar lēktu un rietu, Dgrd un S/N josliņas, nākamo 24 stundu josla; nakts tēma visās cilnēs; trīs krāsu skalas cilnē „Debess velve” ar apmalotiem uzrakstiem.
+- beta 22 - Visi dati apakšmapē data blakus izpildāmajam failam (pārvietoti no AppData un programmas mapes), pārbaudīti un atkārtoti lejupielādēti startējot; PDF rokasgrāmatas ar ekrānuzņēmumiem itāļu, angļu, franču, vācu, spāņu un portugāļu valodā; lodziņi un „DIAPAZONU IZVĒLE” loga augšējā labajā stūrī, S/N atkal apakšējā labajā stūrī.
+- beta 21 - Galvenais ekrāns: lodziņš „PADZIĻINĀTI APRĒĶINI”, VIETĒJAIS AZIMUTS un VIETĒJĀ ELEVĀCIJA, datums blakus virsrakstam, S/N rāmis zem „DIAPAZONU IZVĒLE”; fonta izvēle visai programmai. Jauni diapazoni 70 MHz un 222 MHz.
+- beta 20 - Zemes augstums automātiski iegūts no tīmekļa (Open Topo Data, Open-Meteo), ja lokatoram ir 10 rakstzīmes.
+- beta 19 - Virsraksts ar lietotāja izsaukuma signālu; nav noklusējuma lokatora vai izsaukuma signāla; iestatījumi programmas mapē; jauna ciļņu secība; INSTRUKCIJAS ar visiem parametriem, MNR un CFOM; eksperimentālā cilne EXCEL; žurnāla lejupielāde no LoTW; PAR UN AUTORI; hindi, korejiešu un indonēziešu valoda.
+- beta 18 - „EME budžets”: joslas platums līdz 3000 Hz, trokšņa koeficienti blakus pastiprinājumiem, transverters izslēgts no aprēķina, ja pastiprinājums ir 0, antenas temperatūra Tant (VE7BQH tabulas); vispārīgie iestatījumi cilnē „Sekošana”; izplūdis augošs Mēness galvenā ekrāna fonā.
+- beta 17 - Lodziņš „PADZIĻINĀTI APRĒĶINI” cilnē „Sekošana” (kolonnas no Dpol tālāk, „EME budžets” starprindas, cilne „Saules troksnis”); novērtētais S/N galvenajā ekrānā; poga „DIAPAZONU IZVĒLE” ar diapazoniem no 50 MHz līdz 122 GHz.
+- beta 14 - Jauns nosaukums YAEC - Yet Another EME Calc; saskarne 8 valodās (angļu, itāļu, vācu, franču, spāņu, portugāļu, ķīniešu, japāņu) ar angļu valodu kā sākuma valodu; izsaukuma signāls loga virsrakstā.
+- beta 13 - Labota kompilācijas kļūda CS0051 (Frīsa funkcijas pieejamība).
+- beta 12 - Raidītāja-uztvērēja trokšņa koeficients tiek iegūts no tā MDS ar lietotāja izvēlēto joslas platumu (to pašu, ko S/N aprēķinā).
+- beta 11 - Pārveidots galvenais ekrāns „Sekošana” (mans un DX lokators, frekvence, datums un laiks, mans un DX azimuts un elevācija, citi noderīgi dati); lokators un frekvence automātiski pārkopēti visās cilnēs; uztvērēja trokšņa koeficients pēc Frīsa formulas; „Attālums un Dgrd” līdz 61 dienai; izsaukuma signāls vispārīgajos iestatījumos; ieteikumi par ALC instrukcijās.
+- beta 10 - Cilne „Sekošana”; kHz no 000 līdz 999; nedēļas diena; joslas platums un S/N ar Sauli budžetā; ground gain BETA; transvertera–raidītāja-uztvērēja kabeļu zudumi; tumšā tēma un fonti; Dgrd mēneša garumā ar jaunu mēnesi; LoTW zaļā krāsā; cilne „INSTRUKCIJAS”; sākuma logs un aizvēršanas apstiprinājums.
+- beta 9 - Debess velve azimutā/elevācijā ar plakanu horizontu un trokšņa krāsām no zila līdz sarkanam; cilne „Attālums un Dgrd”; cilne „PAR”.
+- beta 6 - Cilne „WWL un ADIF karte” ar Maidenhead režģi.
+- beta 5 - Stāvokļa kolonnas aizstātas ar krāsu; virsraksts „sagatavojis Costantino IC8TEM”; kHz izkrītošais saraksts CFOM frekvencei.
+- beta 4 - DX vietējais laiks, iegūts no atrašanās vietas; ilgums dienās; kolonnu uznirstošie padomi; Doplera nobīde un CFOM frekvences; cilne „Debess velve”.
+- beta 3 - Novērtētais S/N budžetā; cilne „Saules troksnis” ar SFU datiem no tīmekļa un RSTN stacijas izvēli.
+- beta 2 - Cilne „EME budžets”: EIRP, trases zudumi, uztvertais signāls un rezerve virs MDS.
+- beta 1 - Otrā stacija (DX), kopīgie logi, Dpol, MNR, Tsky un Dgrd kā WSJT-X.

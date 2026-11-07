@@ -40,8 +40,8 @@ jobs:
           $v = "${{ steps.ver.outputs.version }}"
           New-Item -ItemType Directory -Force dist | Out-Null
           Move-Item "YAEC-$v-Setup.exe" dist/
-          Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt -DestinationPath "dist/YAEC-$v-windows-portable.zip"
-          Compress-Archive -Path YAEC.cs, compila.bat, YAEC.manifest, YAEC.ico, README.txt, YAEC.iss, LICENZA.txt -DestinationPath "dist/YAEC-$v-source.zip"
+          Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-windows-portable.zip"
+          Compress-Archive -Path YAEC.cs, compila.bat, YAEC.manifest, YAEC.ico, README.txt, YAEC.iss, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-source.zip"
           Copy-Item YAEC.exe dist/
       - uses: actions/upload-artifact@v4
         with:
@@ -153,6 +153,17 @@ jobs:
             sleep 30
             import -window root shot/x.png || true
             convert shot/x.png -resize 1200x shot/x.jpg 2>/dev/null && echo "SCREENSHOT-${T// /_}-B64:$(base64 -w 0 shot/x.jpg)" || true
+            kill $PID 2>/dev/null || true
+          done
+          # lingue nuove e schema pastello rosa: schermata principale in ebraico, urdu e olandese
+          sed -i '/^tema=/d' "$HOME/.local/share/YAEC/data/impostazioni.txt"; echo "tema=pastello-rosa" >> "$HOME/.local/share/YAEC/data/impostazioni.txt"
+          for LG in he ur nl; do
+            sed -i '/^lingua=/d' "$HOME/.local/share/YAEC/data/impostazioni.txt"; echo "lingua=$LG" >> "$HOME/.local/share/YAEC/data/impostazioni.txt"
+            mono YAEC.exe &
+            PID=$!
+            sleep 30
+            import -window root shot/l.png || true
+            convert shot/l.png -resize 1200x shot/l.jpg 2>/dev/null && echo "SCREENSHOT-LANG-$LG-B64:$(base64 -w 0 shot/l.jpg)" || true
             kill $PID 2>/dev/null || true
           done
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
