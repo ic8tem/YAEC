@@ -1,0 +1,39 @@
+name: Stazioni EME attive (chat N0UK)
+
+# Una volta al giorno legge la chat EME di N0UK e aggiorna attivi.gz nel ramo "attivi":
+# solo nominativo e data dell'ultimo messaggio, tolti dopo 90 giorni (tools/n0uk_attivi.py).
+# YAEC scarica il file e borda in arancione la casella del nominativo del DX se la stazione è attiva.
+on:
+  schedule:
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tools/n0uk_attivi.py', '.github/workflows/attivi.yml']
+
+permissions:
+  contents: write
+
+concurrency: attivi
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Aggiorna l'elenco delle stazioni attive
+        run: |
+          set -e
+          mkdir -p /tmp/d
+          if git fetch -q origin attivi 2>/dev/null; then git show origin/attivi:attivi.gz > /tmp/d/attivi.gz || rm -f /tmp/d/attivi.gz; fi
+          python3 tools/n0uk_attivi.py /tmp/d/attivi.gz
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q --orphan tmp-attivi
+          git rm -rqf --cached . > /dev/null
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp /tmp/d/attivi.gz attivi.gz
+          printf 'Data file used by YAEC (updated daily by .github/workflows/attivi.yml on main).\n' > README.md
+          git add attivi.gz README.md
+          git commit -qm "Active stations $(date -u +%F)"
+          git push -qf origin tmp-attivi:attivi
