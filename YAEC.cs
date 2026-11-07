@@ -44183,8 +44183,12 @@ namespace LunaCalc
                 float xm = bd.Left + fr * bd.Width;
                 using (GraphicsPath p = Arrotondato(new RectangleF(xm - S(2), bd.Top - S(4), S(4), bd.Height + S(8)), S(2)))
                 using (Brush b = new SolidBrush(Tema.Scuro ? Color.White : Color.FromArgb(29, 36, 51))) g.FillPath(b, p);
-                Testo(g, "min " + FmtDg(dmin), fpic, Tema.Muted, new RectangleF(bd.Left, bd.Bottom + S(3), bd.Width / 2f, S(16)), StringAlignment.Near, StringAlignment.Near);
-                Testo(g, "max " + FmtDg(dmax), fpic, Tema.Muted, new RectangleF(bd.Left + bd.Width / 2f, bd.Bottom + S(3), bd.Width / 2f, S(16)), StringAlignment.Far, StringAlignment.Near);
+                // min e max sotto la barra solo se non finiscono dietro il pulsante VAI A VOLTA CELESTE
+                if (bd.Bottom + S(19) <= rg.Bottom - S(48))
+                {
+                    Testo(g, "min " + FmtDg(dmin), fpic, Tema.Muted, new RectangleF(bd.Left, bd.Bottom + S(3), bd.Width / 2f, S(16)), StringAlignment.Near, StringAlignment.Near);
+                    Testo(g, "max " + FmtDg(dmax), fpic, Tema.Muted, new RectangleF(bd.Left + bd.Width / 2f, bd.Bottom + S(3), bd.Width / 2f, S(16)), StringAlignment.Far, StringAlignment.Near);
+                }
                 float wb = Math.Min(wi, g.MeasureString(Lang.T("VAI A VOLTA CELESTE") + " ➜", fbtn).Width + S(32));
                 PulsanteTrk(g, new RectangleF(rg.Right - S(14) - wb, rg.Bottom - S(48), wb, S(34)), Lang.T("VAI A VOLTA CELESTE") + " ➜", ColCielo, fbtn, () => { tabs.SelectedTab = tpSky; });
                 // --- S/N stimato
@@ -44212,7 +44216,10 @@ namespace LunaCalc
                 {
                     string m = trk.SnOn ? trk.SnMsg : Lang.T("Spunta \"ATTIVA VISIONE DATI COMPLESSI NELLA SCHERMATA PRINCIPALE\" per vedere l'S/N stimato adesso.");
                     SizeF sz = g.MeasureString(m, fs, (int)wi);
-                    Testo(g, m, fs, Tema.Muted, new RectangleF(x, y, wi, sz.Height + S(4)), StringAlignment.Near, StringAlignment.Near);
+                    // la frase non passa mai sotto la casella CALCOLI APPROFONDITI: se lo spazio non basta si accorcia
+                    float hm = Math.Min(sz.Height + S(4), rn.Bottom - S(52) - y);
+                    if (hm >= fs.GetHeight(g))
+                        Testo(g, m, fs, Tema.Muted, new RectangleF(x, y, wi, hm), StringAlignment.Near, StringAlignment.Near);
                     y += sz.Height + S(8);
                 }
                 float yMax = rn.Bottom - S(56);
