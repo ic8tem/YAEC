@@ -36470,7 +36470,7 @@ namespace LunaCalc
 
         // Caratteri proposti nell'elenco «Tipo di carattere» (i nomi con "|" sono alternative dello stesso carattere)
         static readonly string[] ConsigliatiWindows = { "Segoe UI", "Bahnschrift", "Calibri", "Arial", "Tahoma", "Verdana", "Trebuchet MS", "Corbel", "Candara", "Microsoft Sans Serif" };
-        static readonly string[] ConsigliatiLinux = { "Noto Sans", "DejaVu Sans", "Liberation Sans", "Ubuntu", "Cantarell", "Open Sans", "Roboto", "Fira Sans", "Source Sans 3|Source Sans Pro", "FreeSans" };
+        static readonly string[] ConsigliatiLinux = { "Noto Sans", "Carlito", "Liberation Sans", "Ubuntu", "Cantarell", "Open Sans", "Roboto", "Fira Sans", "Source Sans 3|Source Sans Pro", "FreeSans" };
         static readonly string[] ConsigliatiMac = { "Helvetica Neue", "Lucida Grande", "Avenir Next", "Helvetica", "Arial", "Verdana", "Geneva", "Tahoma", "Trebuchet MS", "Gill Sans" };
 
         public static string[] CaratteriConsigliati()
@@ -44242,6 +44242,21 @@ namespace LunaCalc
                         if (fcb != fbtn) fcb.Dispose();
                         fcb = FontPx(Lang.FontUi, px, true);
                         wtc = g.MeasureString(tc, fcb).Width;
+                    }
+                    // finestra stretta: piuttosto che tagliare la scritta, la si divide su due righe
+                    int sp = tc.Length / 2, spa = tc.LastIndexOf(' ', sp), spb = tc.IndexOf(' ', sp);
+                    int cut = spa < 0 ? spb : (spb < 0 ? spa : (sp - spa <= spb - sp ? spa : spb));
+                    if (S(46) + wtc + S(10) > disp && cut > 0)
+                    {
+                        string due = tc.Substring(0, cut) + "\n" + tc.Substring(cut + 1);
+                        for (float px = S(13); px >= S(9); px -= 0.5f)
+                        {
+                            if (fcb != fbtn) fcb.Dispose();
+                            fcb = FontPx(Lang.FontUi, px, true);
+                            wtc = Math.Max(g.MeasureString(tc.Substring(0, cut), fcb).Width, g.MeasureString(tc.Substring(cut + 1), fcb).Width);
+                            if (S(46) + wtc + S(10) <= disp && fcb.GetHeight(g) * 2 <= S(34)) break;
+                        }
+                        tc = due;
                     }
                 }
                 float wc = conLink ? S(46) + wtc + S(12) + wtl + S(10) : Math.Min(disp, S(46) + wtc + S(10));
