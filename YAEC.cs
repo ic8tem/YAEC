@@ -44249,7 +44249,7 @@ namespace LunaCalc
                     if (S(46) + wtc + S(10) > disp && cut > 0)
                     {
                         string due = tc.Substring(0, cut) + "\n" + tc.Substring(cut + 1);
-                        for (float px2 = S(13); px2 >= S(9); px2 -= 0.5f)
+                        for (float px2 = S(13); px2 >= S(8); px2 -= 0.5f)
                         {
                             if (fcb != fbtn) fcb.Dispose();
                             fcb = FontPx(Lang.FontUi, px2, true);
@@ -44273,7 +44273,15 @@ namespace LunaCalc
                     using (Pen pn = new Pen(on ? ColCalcoli : Tema.Muted, S(2))) g.DrawPath(pn, p);
                 }
                 if (on) Testo(g, "✓", fbtn, Color.White, box, StringAlignment.Center, StringAlignment.Center);
-                Testo(g, tc, fcb, on ? ColCalcoli : Tema.Fore, new RectangleF(box.Right + S(8), rcb.Top, wtc + S(4), rcb.Height), StringAlignment.Near, StringAlignment.Center);
+                int nl = tc.IndexOf('\n');
+                if (nl < 0) Testo(g, tc, fcb, on ? ColCalcoli : Tema.Fore, new RectangleF(box.Right + S(8), rcb.Top, wtc + S(4), rcb.Height), StringAlignment.Near, StringAlignment.Center);
+                else
+                {
+                    // due righe disegnate una per una: nessuna delle due può sparire
+                    float hr = rcb.Height / 2f;
+                    Testo(g, tc.Substring(0, nl), fcb, on ? ColCalcoli : Tema.Fore, new RectangleF(box.Right + S(8), rcb.Top + S(2), Math.Max(wtc + S(4), rcb.Right - box.Right - S(10)), hr - S(1)), StringAlignment.Near, StringAlignment.Far);
+                    Testo(g, tc.Substring(nl + 1), fcb, on ? ColCalcoli : Tema.Fore, new RectangleF(box.Right + S(8), rcb.Top + hr - S(1), Math.Max(wtc + S(4), rcb.Right - box.Right - S(10)), hr - S(1)), StringAlignment.Near, StringAlignment.Near);
+                }
                 if (conLink) Testo(g, tl, fh, Tema.Muted, new RectangleF(rcb.Left, rcb.Top, rcb.Width - S(10), rcb.Height), StringAlignment.Far, StringAlignment.Center);
                 if (fcb != fbtn) fcb.Dispose();
                 trkZone.Add(new KeyValuePair<RectangleF, Action>(rcb, () => { chkComplessi.Checked = !chkComplessi.Checked; }));
@@ -45608,8 +45616,16 @@ namespace LunaCalc
                 l.Anchor = AnchorStyles.Left;
                 l.Margin = new Padding(S(10), S(6), S(3), S(3));
                 c.Margin = new Padding(S(2), S(3), S(4), S(3));
-                gb.Controls.Add(l);
-                gb.Controls.Add(c);
+                // etichetta e casella vanno a capo insieme, mai separate
+                FlowLayoutPanel coppia = new FlowLayoutPanel();
+                coppia.AutoSize = true;
+                coppia.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                coppia.WrapContents = false;
+                coppia.Margin = new Padding(0);
+                coppia.Padding = new Padding(0);
+                coppia.Controls.Add(l);
+                coppia.Controls.Add(c);
+                gb.Controls.Add(coppia);
             };
             Coppia(Lang.T("Nominativo"), txtCall);
             Coppia(Lang.T("Lingua"), cmbLingua);
