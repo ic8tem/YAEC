@@ -1,0 +1,36 @@
+name: Pubblica il wiki
+
+# Copia le pagine della cartella wiki/ nel wiki di GitHub (repository YAEC.wiki).
+# Requisito una tantum: wiki attivo e prima pagina creata a mano dal sito.
+on:
+  push:
+    branches: [main]
+    paths: ['wiki/**', '.github/workflows/wiki.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: wiki
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copia le pagine nel wiki
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git clone -q "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" /tmp/w || {
+            echo "::error::Il wiki non esiste ancora: crea la prima pagina dal sito (scheda Wiki → Create the first page), poi rilancia."; exit 1; }
+          find /tmp/w -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -r wiki/. /tmp/w/
+          cd /tmp/w
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Wiki già aggiornato"; exit 0; fi
+          git commit -qm "Wiki from main@${GITHUB_SHA::7}"
+          git push -q origin HEAD
