@@ -2993,6 +2993,7 @@ namespace LunaCalc
             "Stazione attiva negli ultimi 90 giorni (chat EME di N0UK), ultimo messaggio il {0}",
             "Caratteri consigliati per YAEC",
             "Riquadri viola tratteggiati = zona che la tua antenna può puntare.",
+            "Clicca un giorno nel grafico per evidenziarlo anche nella striscia dei giorni in alto; clicca di nuovo per toglierlo.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4331,6 +4332,7 @@ namespace LunaCalc
             "Station active in the last 90 days (N0UK EME chat), last message on {0}",
             "Fonts recommended for YAEC",
             "Dashed purple boxes = area your antenna can point at.",
+            "Click a day in the chart to highlight it in the strip of days at the top too; click again to remove it.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5669,6 +5671,7 @@ namespace LunaCalc
             "Station in den letzten 90 Tagen aktiv (EME-Chat von N0UK), letzte Nachricht am {0}",
             "Für YAEC empfohlene Schriftarten",
             "Violett gestrichelte Rahmen = Bereich, den deine Antenne anpeilen kann.",
+            "Klicke auf einen Tag im Diagramm, um ihn auch in der Tagesleiste oben hervorzuheben; erneut klicken entfernt ihn.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -7007,6 +7010,7 @@ namespace LunaCalc
             "Station active au cours des 90 derniers jours (chat EME de N0UK), dernier message le {0}",
             "Polices recommandées pour YAEC",
             "Cadres violets en pointillés = zone que ton antenne peut viser.",
+            "Clique sur un jour dans le graphique pour le mettre aussi en évidence dans la bande des jours en haut ; clique à nouveau pour l'enlever.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -8345,6 +8349,7 @@ namespace LunaCalc
             "Estación activa en los últimos 90 días (chat EME de N0UK), último mensaje el {0}",
             "Fuentes recomendadas para YAEC",
             "Recuadros morados discontinuos = zona a la que tu antena puede apuntar.",
+            "Haz clic en un día del gráfico para resaltarlo también en la franja de días de arriba; vuelve a hacer clic para quitarlo.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9683,6 +9688,7 @@ namespace LunaCalc
             "Estação ativa nos últimos 90 dias (chat EME de N0UK), última mensagem em {0}",
             "Tipos de letra recomendados para o YAEC",
             "Retângulos roxos tracejados = zona para onde a tua antena pode apontar.",
+            "Clica num dia do gráfico para o destacar também na faixa dos dias em cima; clica de novo para o retirar.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -11021,6 +11027,7 @@ namespace LunaCalc
             "最近 90 天内活跃的电台（N0UK 的 EME 聊天室），最后一条消息：{0}",
             "推荐用于 YAEC 的字体",
             "紫色虚线框 = 你的天线可以指向的区域。",
+            "在图中单击某一天，可同时在上方的日期条中突出显示；再次单击即可取消。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -12359,6 +12366,7 @@ namespace LunaCalc
             "過去 90 日間にアクティブな局（N0UK の EME チャット）、最後のメッセージ：{0}",
             "YAEC におすすめのフォント",
             "紫の破線の枠 = アンテナを向けられる範囲。",
+            "グラフ上の日をクリックすると、上の日付の帯でも強調表示されます。もう一度クリックすると解除されます。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13697,6 +13705,7 @@ namespace LunaCalc
             "पिछले 90 दिनों में सक्रिय स्टेशन (N0UK का EME चैट), अंतिम संदेश {0} को",
             "YAEC के लिए अनुशंसित फ़ॉन्ट",
             "बैंगनी डैश वाले बॉक्स = वह क्षेत्र जिसकी ओर तुम्हारा एंटीना इशारा कर सकता है।",
+            "ग्राफ़ में किसी दिन पर क्लिक करो ताकि वह ऊपर दिनों की पट्टी में भी हाइलाइट हो जाए; हटाने के लिए फिर से क्लिक करो।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -15035,6 +15044,7 @@ namespace LunaCalc
             "최근 90일 동안 활동한 국 (N0UK EME 채팅), 마지막 메시지 {0}",
             "YAEC 권장 글꼴",
             "보라색 점선 상자 = 안테나가 향할 수 있는 영역.",
+            "그래프에서 날짜를 클릭하면 위쪽 날짜 띠에서도 강조됩니다. 다시 클릭하면 해제됩니다.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -16373,6 +16383,7 @@ namespace LunaCalc
             "Stasiun aktif dalam 90 hari terakhir (obrolan EME N0UK), pesan terakhir pada {0}",
             "Fon yang disarankan untuk YAEC",
             "Kotak ungu putus-putus = area yang dapat dituju antenamu.",
+            "Klik satu hari di grafik untuk menyorotnya juga di deretan hari di atas; klik lagi untuk menghapusnya.",
         };
 
         public static readonly string[] RU = {
@@ -17712,6 +17723,7 @@ namespace LunaCalc
             "Станция активна за последние 90 дней (EME-чат N0UK), последнее сообщение {0}",
             "Шрифты, рекомендуемые для YAEC",
             "Фиолетовые пунктирные рамки = область, на которую может быть наведена твоя антенна.",
+            "Щёлкни по дню на графике, чтобы выделить его и в полосе дней вверху; щёлкни ещё раз, чтобы снять выделение.",
         };
 
         public static readonly string[] UK = {
@@ -19051,6 +19063,7 @@ namespace LunaCalc
             "Станція активна протягом останніх 90 днів (EME-чат N0UK), останнє повідомлення {0}",
             "Шрифти, рекомендовані для YAEC",
             "Фіолетові пунктирні рамки = область, на яку може бути наведена твоя антена.",
+            "Клацни на день на графіку, щоб виділити його й у смузі днів угорі; клацни ще раз, щоб зняти виділення.",
         };
 
         public static readonly string[] AF = {
@@ -20390,6 +20403,7 @@ namespace LunaCalc
             "Stasie aktief in die afgelope 90 dae (N0UK se EME-klets), laaste boodskap op {0}",
             "Lettertipes aanbeveel vir YAEC",
             "Pers stippelraampies = gebied waarna jou antenna kan wys.",
+            "Klik op 'n dag in die grafiek om dit ook in die strook dae bo uit te lig; klik weer om dit te verwyder.",
         };
 
         public static readonly string[] BN = {
@@ -21728,6 +21742,7 @@ namespace LunaCalc
             "গত 90 দিনে সক্রিয় স্টেশন (N0UK-এর EME চ্যাট), শেষ বার্তা {0}",
             "YAEC-এর জন্য প্রস্তাবিত ফন্ট",
             "বেগুনি ড্যাশ দেওয়া বাক্স = যে এলাকায় তোমার অ্যান্টেনা তাক করতে পারে।",
+            "গ্রাফে কোনো দিনে ক্লিক করো, তাহলে উপরের দিনের সারিতেও সেটি হাইলাইট হবে; সরাতে আবার ক্লিক করো।",
         };
 
         public static readonly string[] AR = {
@@ -23066,6 +23081,7 @@ namespace LunaCalc
             "محطة نشطة خلال آخر 90 يومًا (دردشة EME لدى N0UK)، آخر رسالة في {0}",
             "الخطوط الموصى بها لـ YAEC",
             "المربعات البنفسجية المتقطعة = المنطقة التي يمكن لهوائيك التوجّه إليها.",
+            "انقر على يوم في الرسم البياني لتمييزه أيضًا في شريط الأيام في الأعلى؛ انقر مرة أخرى لإزالته.",
         };
 
         public static readonly string[] TR = {
@@ -24404,6 +24420,7 @@ namespace LunaCalc
             "Son 90 günde etkin istasyon (N0UK EME sohbeti), son mesaj {0}",
             "YAEC için önerilen yazı tipleri",
             "Mor kesikli kutular = anteninin yönelebildiği bölge.",
+            "Grafikte bir güne tıklayarak onu üstteki gün şeridinde de vurgula; kaldırmak için yeniden tıkla.",
         };
 
         public static readonly string[] NL = {
@@ -25742,6 +25759,7 @@ namespace LunaCalc
             "Station actief in de afgelopen 90 dagen (EME-chat van N0UK), laatste bericht op {0}",
             "Aanbevolen lettertypen voor YAEC",
             "Paarse gestippelde kaders = gebied waarop je antenne kan richten.",
+            "Klik op een dag in de grafiek om hem ook in de dagenstrook bovenaan te markeren; klik nogmaals om de markering te verwijderen.",
         };
 
         public static readonly string[] ET = {
@@ -27080,6 +27098,7 @@ namespace LunaCalc
             "Jaam on olnud aktiivne viimase 90 päeva jooksul (N0UK EME-vestlus), viimane sõnum {0}",
             "YAEC-i jaoks soovitatud kirjatüübid",
             "Lillad katkendjoontega raamid = ala, kuhu su antenn saab suunata.",
+            "Klõpsa graafikul päeval, et see esile tõsta ka ülal päevade ribal; eemaldamiseks klõpsa uuesti.",
         };
 
         public static readonly string[] LV = {
@@ -28418,6 +28437,7 @@ namespace LunaCalc
             "Stacija aktīva pēdējo 90 dienu laikā (N0UK EME tērzēšana), pēdējā ziņa {0}",
             "YAEC ieteicamie fonti",
             "Violeti raustīti rāmji = zona, uz kuru tava antena var notēmēt.",
+            "Noklikšķini uz dienas grafikā, lai to izceltu arī dienu joslā augšā; noklikšķini vēlreiz, lai noņemtu.",
         };
 
         public static readonly string[] LT = {
@@ -29756,6 +29776,7 @@ namespace LunaCalc
             "Stotis aktyvi per pastarąsias 90 dienų (N0UK EME pokalbiai), paskutinė žinutė {0}",
             "YAEC rekomenduojami šriftai",
             "Violetiniai brūkšniuoti rėmeliai = sritis, į kurią gali nukreipti savo anteną.",
+            "Spustelėk dieną grafike, kad ji būtų paryškinta ir dienų juostoje viršuje; spustelėk dar kartą, kad paryškinimą pašalintum.",
         };
 
         public static readonly string[] SV = {
@@ -31094,6 +31115,7 @@ namespace LunaCalc
             "Station aktiv de senaste 90 dagarna (N0UK:s EME-chatt), senaste meddelandet {0}",
             "Rekommenderade typsnitt för YAEC",
             "Lila streckade rutor = område som din antenn kan riktas mot.",
+            "Klicka på en dag i diagrammet för att markera den även i dagsremsan överst; klicka igen för att ta bort markeringen.",
         };
 
         public static readonly string[] NB = {
@@ -32432,6 +32454,7 @@ namespace LunaCalc
             "Stasjon aktiv de siste 90 dagene (N0UKs EME-chat), siste melding {0}",
             "Anbefalte skrifttyper for YAEC",
             "Lilla stiplede rammer = område antennen din kan peke mot.",
+            "Klikk på en dag i diagrammet for å markere den også i dagsstripen øverst; klikk igjen for å fjerne markeringen.",
         };
 
         public static readonly string[] IS = {
@@ -33770,6 +33793,7 @@ namespace LunaCalc
             "Stöð virk síðustu 90 daga (EME-spjall N0UK), síðustu skilaboð {0}",
             "Leturgerðir sem mælt er með fyrir YAEC",
             "Fjólubláir strikaðir rammar = svæði sem loftnetið þitt getur beinst að.",
+            "Smelltu á dag í línuritinu til að auðkenna hann líka í dagaröðinni efst; smelltu aftur til að fjarlægja hann.",
         };
 
         public static readonly string[] HE = {
@@ -35108,6 +35132,7 @@ namespace LunaCalc
             "תחנה פעילה ב־90 הימים האחרונים (צ'אט ה־EME של N0UK), הודעה אחרונה ב־{0}",
             "גופנים מומלצים ל־YAEC",
             "מסגרות סגולות מקווקוות = האזור שהאנטנה שלך יכולה לכוון אליו.",
+            "לחץ על יום בגרף כדי להדגיש אותו גם ברצועת הימים למעלה; לחץ שוב כדי להסיר.",
         };
 
         public static readonly string[] UR = {
@@ -36446,6 +36471,7 @@ namespace LunaCalc
             "گزشتہ 90 دنوں میں فعال اسٹیشن (N0UK کی EME چیٹ)، آخری پیغام {0} کو",
             "YAEC کے لیے تجویز کردہ فونٹس",
             "جامنی ڈیش والے خانے = وہ علاقہ جس کی طرف تمہارا اینٹینا رخ کر سکتا ہے۔",
+            "گراف میں کسی دن پر کلک کرو تاکہ وہ اوپر دنوں کی پٹی میں بھی نمایاں ہو جائے؛ ہٹانے کے لیے دوبارہ کلک کرو۔",
         };
     }
 
@@ -42216,6 +42242,20 @@ namespace LunaCalc
             dgChart.Dock = DockStyle.Fill;
             dgChart.Margin = new Padding(S(4), S(2), S(8), S(4));
             dgChart.Paint += DgChart_Paint;
+            // clic nel grafico: si evidenzia lo stesso giorno anche nella striscia dei giorni (e viceversa)
+            dgChart.Cursor = Cursors.Hand;
+            tip.SetToolTip(dgChart, Lang.T("Clicca un giorno nel grafico per evidenziarlo anche nella striscia dei giorni in alto; clicca di nuovo per toglierlo."));
+            dgChart.MouseClick += (s, e) =>
+            {
+                if (e.Button != MouseButtons.Left || dgArea.Width < 10 || dgT1 <= dgT0) return;
+                if (e.X < dgArea.Left || e.X > dgArea.Right || e.Y < dgArea.Top || e.Y > dgArea.Bottom) return;
+                DateTime t = new DateTime((long)(dgT0 + (e.X - dgArea.Left) / dgArea.Width * (dgT1 - dgT0)), DateTimeKind.Utc);
+                DateTime giorno = t.Date;
+                if (giorno < dgStart.Date || giorno >= dgEnd) return;
+                dgEvid = dgEvid == giorno ? DateTime.MinValue : giorno;
+                pnlDgCal.Invalidate();
+                dgChart.Invalidate();
+            };
             root.Controls.Add(dgChart, 0, 4);
 
             lvDg = new DBListView();
@@ -42563,6 +42603,7 @@ namespace LunaCalc
         }
 
         DateTime dgEvid = DateTime.MinValue;    // giorno evidenziato con un clic nella striscia dei giorni
+        RectangleF dgArea; double dgT0, dgT1;   // area del grafico e intervallo di tempo (tick) dell'ultimo disegno
         RectangleF titoloKm;
 
         // Scritta della luna nuova / piena: a destra del disco, oppure a sinistra se coprirebbe il titolo della scala dei km
@@ -42595,6 +42636,7 @@ namespace LunaCalc
             kmin = Math.Floor(kmin / 5000) * 5000; kmax = Math.Ceiling(kmax / 5000) * 5000;
             if (kmax - kmin < 10000) kmax = kmin + 10000;
             Func<DateTime, float> X = tq => a.Left + (float)((tq.Ticks - t0) / (t1 - t0) * a.Width);
+            dgArea = a; dgT0 = t0; dgT1 = t1;   // per il clic nel grafico
             // asse Dgrd invertito: 0 dB in basso, -15 dB in alto
             Func<double, float> Yd = vd => a.Top + (float)((Math.Max(DgMin, Math.Min(0, vd)) - DgMin) / (0 - DgMin) * a.Height);
             Func<double, float> Yk = vk => a.Top + (float)((kmax - vk) / (kmax - kmin) * a.Height);
