@@ -32549,7 +32549,7 @@ namespace LunaCalc
                 new string[] { Lang.T("Percorso della Luna nelle prossime 24 ore"), Lang.T("Disegna il cammino della Luna con l'ora UTC.") },
                 new string[] { Lang.T("Limiti della mia antenna"), Lang.T("Disegna in giallo i limiti di azimut e di elevazione impostati e copre con righe diagonali grigio chiaro le zone del cielo fuori da quei limiti, dove la tua antenna non arriva.") },
                 new string[] { Lang.T("Colori del fondo"), Lang.T("Tre scale di colori per il rumore del cielo: arcobaleno, dal nero al bianco, dal giallo al rosso. Le scritte hanno un bordo scuro per restare leggibili su ogni colore.") },
-                new string[] { Lang.T("Mappa di puntamento") },
+                new string[] { Lang.T("Ricognizione dei miei ostacoli") },
                 new string[] { Lang.T("Mappa"), Lang.T("Fondo aerofotografico (Esri World Imagery) o topografico (OpenTopoMap, OpenStreetMap); con + e − o con la rotella del mouse si cambia lo zoom.") },
                 new string[] { Lang.T("Maniglie gialle"), Lang.T("Trascinale con il mouse per cambiare il settore di azimut e l'elevazione minima e massima della tua antenna: i valori sono gli stessi della linguetta Posizione della Luna.") },
                 new string[] { Lang.T("Posizione della Luna") },
@@ -38466,7 +38466,7 @@ namespace LunaCalc
 
     static class TestiManuale
     {
-        public static readonly string[] Lingue = { "it", "en", "de", "fr", "es", "pt", "zh", "ja", "hi", "ko", "id", "ru", "uk", "af" };
+        public static readonly string[] Lingue = { "it", "en", "de", "fr", "es", "pt", "zh", "ja", "hi", "ko", "id", "ru", "uk", "af", "bn", "ar", "tr" };
         static readonly Dictionary<string, Dictionary<string, string>> testi = new Dictionary<string, Dictionary<string, string>>();
         static readonly Dictionary<string, Dictionary<string, string[]>> elenchi = new Dictionary<string, Dictionary<string, string[]>>();
 
@@ -38527,8 +38527,8 @@ namespace LunaCalc
                 "Per ogni giorno della linguetta Distanza e Dgrd si calcola la distanza angolare minima tra Sole e Luna nelle ore utili con la Luna sopra l'orizzonte e la si confronta con la larghezza del fascio di ricezione stimata dal guadagno, θ ≈ √(41253/G): entro 3 larghezze del fascio il giorno è segnato in rosso, entro 6 in arancione. L'aumento del rumore vero e proprio è stimato nella linguetta Rumore solare.",
                 "## Assorbimento polare e aurorale",
                 "La latitudine geomagnetica di ogni stazione è calcolata con il dipolo centrato dell'IGRF-14 (polo nord geomagnetico 2025 a 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Una stazione oltre i circoli polari (|φ| ≥ 66,56°) o con |φm| > 75° è nella calotta polare (possibile PCA); con 60° ≤ |φm| ≤ 75° è nella zona aurorale. L'avviso compare quando si cambia un locator e resta nella schermata principale.",
-                "## Linguette, Mappa di puntamento e DEBUG FORMULE",
-                "Le linguette sono raccolte su due livelli (gruppi e linguette del gruppo), disegnati dal programma sopra le pagine. La Mappa di puntamento proietta il cielo locale sulla mappa (orizzonte = cerchio esterno, zenit = centro, raggio proporzionale a 90° - elevazione) e può sfocare le zone fuori dai limiti; nella Volta celeste le stesse zone sono coperte da righe diagonali grigio chiaro. La linguetta DEBUG FORMULE ripete passo per passo tutto il calcolo del Budget EME e del Rumore solare, con le formule, i valori sostituiti e i risultati."
+                "## Linguette, Ricognizione dei miei ostacoli e DEBUG FORMULE",
+                "Le linguette sono raccolte su due livelli (gruppi e linguette del gruppo), disegnati dal programma sopra le pagine. La Ricognizione dei miei ostacoli proietta il cielo locale sulla mappa (orizzonte = cerchio esterno, zenit = centro, raggio proporzionale a 90° - elevazione) e può sfocare le zone fuori dai limiti; nella Volta celeste le stesse zone sono coperte da righe diagonali grigio chiaro. La linguetta DEBUG FORMULE ripete passo per passo tutto il calcolo del Budget EME e del Rumore solare, con le formule, i valori sostituiti e i risultati."
             };
             elenchi["it"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2ª edizione: Luna, Sole, nutazione, parallasse, tempo siderale.",
@@ -38542,7 +38542,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (offset Icarus): Sole vicino alla Luna.",
                 "• H. H. Sauer e D. C. Wilkinson, Space Weather 6 (2008), e NOAA SWPC D-RAP: assorbimento della calotta polare e aurorale.",
                 "• Poli geomagnetici IGRF-14, World Data Center for Geomagnetism di Kyoto: latitudine geomagnetica.",
-                "• Esri World Imagery: immagini aeree della Mappa di puntamento.",
+                "• Esri World Imagery: immagini aeree della Ricognizione dei miei ostacoli.",
                 "Le posizioni astronomiche sono precise a circa 0,01°; Tsky, Dgrd, ground gain, rumore solare e flussi delle radiosorgenti sono stime basate su modelli: servono per confrontare situazioni e scegliere i momenti migliori."
             };
             testi["en"] = new Dictionary<string, string> {
@@ -38600,8 +38600,8 @@ namespace LunaCalc
                 "For each day of the Distance and Dgrd tab, the minimum angular separation between Sun and Moon is computed over the useful hours with the Moon above the horizon and compared with the receiving beamwidth estimated from the gain, θ ≈ √(41253/G): within 3 beamwidths the day is marked in red, within 6 in orange. The noise increase itself is estimated in the Solar noise tab.",
                 "## Polar and auroral absorption",
                 "The geomagnetic latitude of each station is computed with the centred dipole of IGRF-14 (2025 north geomagnetic pole at 80.8° N, 72.8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). A station beyond the polar circles (|φ| ≥ 66.56°) or with |φm| > 75° is in the polar cap (possible PCA); with 60° ≤ |φm| ≤ 75° it is in the auroral zone. The warning appears when a locator is changed and stays on the main screen.",
-                "## Tabs, Pointing map and FORMULA DEBUG",
-                "The tabs are grouped on two levels (groups and tabs of the group), drawn by the program above the pages. The Pointing map projects the local sky onto the map (horizon = outer circle, zenith = centre, radius proportional to 90° - elevation) and can blur the zones outside the limits; in the Sky view the same zones are covered with light grey diagonal lines. The FORMULA DEBUG tab repeats the whole Budget EME and Solar noise calculation step by step, with the formulas, the substituted values and the results."
+                "## Tabs, Reconnaissance of my obstacles and FORMULA DEBUG",
+                "The tabs are grouped on two levels (groups and tabs of the group), drawn by the program above the pages. The Reconnaissance of my obstacles projects the local sky onto the map (horizon = outer circle, zenith = centre, radius proportional to 90° - elevation) and can blur the zones outside the limits; in the Sky view the same zones are covered with light grey diagonal lines. The FORMULA DEBUG tab repeats the whole Budget EME and Solar noise calculation step by step, with the formulas, the substituted values and the results."
             };
             elenchi["en"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2nd edition: Moon, Sun, nutation, parallax, sidereal time.",
@@ -38615,7 +38615,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (Icarus offset): Sun near the Moon.",
                 "• H. H. Sauer and D. C. Wilkinson, Space Weather 6 (2008), and NOAA SWPC D-RAP: polar cap and auroral absorption.",
                 "• IGRF-14 geomagnetic poles, World Data Center for Geomagnetism, Kyoto: geomagnetic latitude.",
-                "• Esri World Imagery: aerial images of the Pointing map.",
+                "• Esri World Imagery: aerial images of the Reconnaissance of my obstacles.",
                 "Astronomical positions are accurate to about 0.01°; Tsky, Dgrd, ground gain, solar noise and radio source fluxes are model-based estimates: they are meant to compare situations and choose the best moments."
             };
             testi["de"] = new Dictionary<string, string> {
@@ -38673,8 +38673,8 @@ namespace LunaCalc
                 "Für jeden Tag der Registerkarte Entfernung und Dgrd wird der kleinste Winkelabstand zwischen Sonne und Mond in den nutzbaren Stunden mit dem Mond über dem Horizont berechnet und mit der aus dem Gewinn geschätzten Empfangskeulenbreite θ ≈ √(41253/G) verglichen: innerhalb von 3 Keulenbreiten wird der Tag rot markiert, innerhalb von 6 orange. Die eigentliche Rauschzunahme wird in der Registerkarte Sonnenrauschen geschätzt.",
                 "## Polar- und Polarlichtabsorption",
                 "Die geomagnetische Breite jeder Station wird mit dem zentrierten Dipol von IGRF-14 berechnet (geomagnetischer Nordpol 2025 bei 80,8° N, 72,8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Eine Station jenseits der Polarkreise (|φ| ≥ 66,56°) oder mit |φm| > 75° liegt in der Polkappe (mögliche PCA); mit 60° ≤ |φm| ≤ 75° liegt sie in der Polarlichtzone. Die Warnung erscheint beim Ändern eines Locators und bleibt im Hauptbildschirm stehen.",
-                "## Registerkarten, Ausrichtungskarte und FORMEL-DEBUG",
-                "Die Registerkarten sind auf zwei Ebenen gruppiert (Gruppen und Registerkarten der Gruppe), vom Programm über den Seiten gezeichnet. Die Ausrichtungskarte projiziert den lokalen Himmel auf die Karte (Horizont = äußerer Kreis, Zenit = Mitte, Radius proportional zu 90° - Elevation) und kann die Zonen außerhalb der Grenzen weichzeichnen; in der Himmelsansicht sind dieselben Zonen mit hellgrauen Diagonalstreifen bedeckt. Die Registerkarte FORMEL-DEBUG wiederholt Schritt für Schritt die ganze Berechnung von EME-Budget und Sonnenrauschen, mit den Formeln, den eingesetzten Werten und den Ergebnissen."
+                "## Registerkarten, Erkundung meiner Hindernisse und FORMEL-DEBUG",
+                "Die Registerkarten sind auf zwei Ebenen gruppiert (Gruppen und Registerkarten der Gruppe), vom Programm über den Seiten gezeichnet. Die Erkundung meiner Hindernisse projiziert den lokalen Himmel auf die Karte (Horizont = äußerer Kreis, Zenit = Mitte, Radius proportional zu 90° - Elevation) und kann die Zonen außerhalb der Grenzen weichzeichnen; in der Himmelsansicht sind dieselben Zonen mit hellgrauen Diagonalstreifen bedeckt. Die Registerkarte FORMEL-DEBUG wiederholt Schritt für Schritt die ganze Berechnung von EME-Budget und Sonnenrauschen, mit den Formeln, den eingesetzten Werten und den Ergebnissen."
             };
             elenchi["de"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2. Auflage: Mond, Sonne, Nutation, Parallaxe, Sternzeit.",
@@ -38688,7 +38688,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (Icarus-Versatz): Sonne nahe am Mond.",
                 "• H. H. Sauer und D. C. Wilkinson, Space Weather 6 (2008), sowie NOAA SWPC D-RAP: Polkappen- und Polarlichtabsorption.",
                 "• Geomagnetische Pole IGRF-14, World Data Center for Geomagnetism, Kyoto: geomagnetische Breite.",
-                "• Esri World Imagery: Luftbilder der Ausrichtungskarte.",
+                "• Esri World Imagery: Luftbilder der Erkundung meiner Hindernisse.",
                 "Die astronomischen Positionen sind auf etwa 0,01° genau; Tsky, Dgrd, Bodengewinn, Sonnenrauschen und Flüsse der Radioquellen sind modellbasierte Schätzungen: sie dienen dazu, Situationen zu vergleichen und die besten Zeitpunkte zu wählen."
             };
             testi["fr"] = new Dictionary<string, string> {
@@ -38746,8 +38746,8 @@ namespace LunaCalc
                 "Pour chaque jour de l'onglet Distance et Dgrd, la distance angulaire minimale entre le Soleil et la Lune est calculée sur les heures utiles avec la Lune au-dessus de l'horizon et comparée à la largeur du faisceau de réception estimée à partir du gain, θ ≈ √(41253/G) : à moins de 3 largeurs de faisceau le jour est marqué en rouge, à moins de 6 en orange. L'augmentation du bruit elle-même est estimée dans l'onglet Bruit solaire.",
                 "## Absorption polaire et aurorale",
                 "La latitude géomagnétique de chaque station est calculée avec le dipôle centré de l'IGRF-14 (pôle nord géomagnétique 2025 à 80,8° N, 72,8° O) : sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Une station au-delà des cercles polaires (|φ| ≥ 66,56°) ou avec |φm| > 75° est dans la calotte polaire (PCA possible) ; avec 60° ≤ |φm| ≤ 75° elle est dans la zone aurorale. L'avertissement apparaît quand on change un locator et reste sur l'écran principal.",
-                "## Onglets, Carte de pointage et DÉBOGAGE DES FORMULES",
-                "Les onglets sont regroupés sur deux niveaux (groupes et onglets du groupe), dessinés par le programme au-dessus des pages. La Carte de pointage projette le ciel local sur la carte (horizon = cercle extérieur, zénith = centre, rayon proportionnel à 90° - élévation) et peut estomper les zones hors limites ; dans la Voûte céleste, les mêmes zones sont couvertes de hachures diagonales gris clair. L'onglet DÉBOGAGE DES FORMULES refait pas à pas tout le calcul du Bilan EME et du Bruit solaire, avec les formules, les valeurs substituées et les résultats."
+                "## Onglets, Reconnaissance de mes obstacles et DÉBOGAGE DES FORMULES",
+                "Les onglets sont regroupés sur deux niveaux (groupes et onglets du groupe), dessinés par le programme au-dessus des pages. La Reconnaissance de mes obstacles projette le ciel local sur la carte (horizon = cercle extérieur, zénith = centre, rayon proportionnel à 90° - élévation) et peut estomper les zones hors limites ; dans la Voûte céleste, les mêmes zones sont couvertes de hachures diagonales gris clair. L'onglet DÉBOGAGE DES FORMULES refait pas à pas tout le calcul du Bilan EME et du Bruit solaire, avec les formules, les valeurs substituées et les résultats."
             };
             elenchi["fr"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2e édition : Lune, Soleil, nutation, parallaxe, temps sidéral.",
@@ -38761,7 +38761,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (décalage Icarus) : Soleil proche de la Lune.",
                 "• H. H. Sauer et D. C. Wilkinson, Space Weather 6 (2008), et NOAA SWPC D-RAP : absorption de la calotte polaire et aurorale.",
                 "• Pôles géomagnétiques IGRF-14, World Data Center for Geomagnetism de Kyoto : latitude géomagnétique.",
-                "• Esri World Imagery : images aériennes de la Carte de pointage.",
+                "• Esri World Imagery : images aériennes de la Reconnaissance de mes obstacles.",
                 "Les positions astronomiques sont précises à environ 0,01° ; Tsky, Dgrd, gain de sol, bruit solaire et flux des radiosources sont des estimations fondées sur des modèles : elles servent à comparer les situations et à choisir les meilleurs moments."
             };
             testi["es"] = new Dictionary<string, string> {
@@ -38819,8 +38819,8 @@ namespace LunaCalc
                 "Para cada día de la pestaña Distancia y Dgrd se calcula la distancia angular mínima entre el Sol y la Luna en las horas útiles con la Luna sobre el horizonte y se compara con la anchura del haz de recepción estimada a partir de la ganancia, θ ≈ √(41253/G): dentro de 3 anchuras de haz el día se marca en rojo, dentro de 6 en naranja. El aumento del ruido en sí se estima en la pestaña Ruido solar.",
                 "## Absorción polar y auroral",
                 "La latitud geomagnética de cada estación se calcula con el dipolo centrado del IGRF-14 (polo norte geomagnético 2025 en 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Una estación más allá de los círculos polares (|φ| ≥ 66,56°) o con |φm| > 75° está en el casquete polar (posible PCA); con 60° ≤ |φm| ≤ 75° está en la zona auroral. El aviso aparece al cambiar un locator y queda en la pantalla principal.",
-                "## Pestañas, Mapa de apuntamiento y DEPURACIÓN DE FÓRMULAS",
-                "Las pestañas se agrupan en dos niveles (grupos y pestañas del grupo), dibujados por el programa encima de las páginas. El Mapa de apuntamiento proyecta el cielo local sobre el mapa (horizonte = círculo exterior, cenit = centro, radio proporcional a 90° - elevación) y puede difuminar las zonas fuera de los límites; en la Bóveda celeste las mismas zonas se cubren con rayas diagonales gris claro. La pestaña DEPURACIÓN DE FÓRMULAS repite paso a paso todo el cálculo del Balance EME y del Ruido solar, con las fórmulas, los valores sustituidos y los resultados."
+                "## Pestañas, Reconocimiento de mis obstáculos y DEPURACIÓN DE FÓRMULAS",
+                "Las pestañas se agrupan en dos niveles (grupos y pestañas del grupo), dibujados por el programa encima de las páginas. El Reconocimiento de mis obstáculos proyecta el cielo local sobre el mapa (horizonte = círculo exterior, cenit = centro, radio proporcional a 90° - elevación) y puede difuminar las zonas fuera de los límites; en la Bóveda celeste las mismas zonas se cubren con rayas diagonales gris claro. La pestaña DEPURACIÓN DE FÓRMULAS repite paso a paso todo el cálculo del Balance EME y del Ruido solar, con las fórmulas, los valores sustituidos y los resultados."
             };
             elenchi["es"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2.ª edición: Luna, Sol, nutación, paralaje, tiempo sidéreo.",
@@ -38834,7 +38834,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (desplazamiento Icarus): Sol cerca de la Luna.",
                 "• H. H. Sauer y D. C. Wilkinson, Space Weather 6 (2008), y NOAA SWPC D-RAP: absorción del casquete polar y auroral.",
                 "• Polos geomagnéticos IGRF-14, World Data Center for Geomagnetism de Kioto: latitud geomagnética.",
-                "• Esri World Imagery: imágenes aéreas del Mapa de apuntamiento.",
+                "• Esri World Imagery: imágenes aéreas del Reconocimiento de mis obstáculos.",
                 "Las posiciones astronómicas tienen una precisión de unos 0,01°; Tsky, Dgrd, ganancia de suelo, ruido solar y flujos de las radiofuentes son estimaciones basadas en modelos: sirven para comparar situaciones y elegir los mejores momentos."
             };
             testi["pt"] = new Dictionary<string, string> {
@@ -38892,8 +38892,8 @@ namespace LunaCalc
                 "Para cada dia do separador Distância e Dgrd calcula-se a distância angular mínima entre o Sol e a Lua nas horas úteis com a Lua acima do horizonte e compara-se com a largura do feixe de receção estimada a partir do ganho, θ ≈ √(41253/G): dentro de 3 larguras de feixe o dia é marcado a vermelho, dentro de 6 a laranja. O aumento do ruído propriamente dito é estimado no separador Ruído solar.",
                 "## Absorção polar e auroral",
                 "A latitude geomagnética de cada estação é calculada com o dipolo centrado do IGRF-14 (polo norte geomagnético 2025 a 80,8° N, 72,8° O): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Uma estação além dos círculos polares (|φ| ≥ 66,56°) ou com |φm| > 75° está na calote polar (possível PCA); com 60° ≤ |φm| ≤ 75° está na zona auroral. O aviso aparece quando se muda um locator e fica no ecrã principal.",
-                "## Separadores, Mapa de apontamento e DEPURAÇÃO DE FÓRMULAS",
-                "Os separadores estão agrupados em dois níveis (grupos e separadores do grupo), desenhados pelo programa por cima das páginas. O Mapa de apontamento projeta o céu local no mapa (horizonte = círculo exterior, zénite = centro, raio proporcional a 90° - elevação) e pode desfocar as zonas fora dos limites; na Abóbada celeste as mesmas zonas ficam cobertas por riscas diagonais cinzento-claras. O separador DEPURAÇÃO DE FÓRMULAS repete passo a passo todo o cálculo do Balanço EME e do Ruído solar, com as fórmulas, os valores substituídos e os resultados."
+                "## Separadores, Reconhecimento dos meus obstáculos e DEPURAÇÃO DE FÓRMULAS",
+                "Os separadores estão agrupados em dois níveis (grupos e separadores do grupo), desenhados pelo programa por cima das páginas. O Reconhecimento dos meus obstáculos projeta o céu local no mapa (horizonte = círculo exterior, zénite = centro, raio proporcional a 90° - elevação) e pode desfocar as zonas fora dos limites; na Abóbada celeste as mesmas zonas ficam cobertas por riscas diagonais cinzento-claras. O separador DEPURAÇÃO DE FÓRMULAS repete passo a passo todo o cálculo do Balanço EME e do Ruído solar, com as fórmulas, os valores substituídos e os resultados."
             };
             elenchi["pt"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2.ª edição: Lua, Sol, nutação, paralaxe, tempo sideral.",
@@ -38907,7 +38907,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (desvio Icarus): Sol perto da Lua.",
                 "• H. H. Sauer e D. C. Wilkinson, Space Weather 6 (2008), e NOAA SWPC D-RAP: absorção da calote polar e auroral.",
                 "• Polos geomagnéticos IGRF-14, World Data Center for Geomagnetism de Quioto: latitude geomagnética.",
-                "• Esri World Imagery: imagens aéreas do Mapa de apontamento.",
+                "• Esri World Imagery: imagens aéreas do Reconhecimento dos meus obstáculos.",
                 "As posições astronómicas têm uma precisão de cerca de 0,01°; Tsky, Dgrd, ganho de solo, ruído solar e fluxos das radiofontes são estimativas baseadas em modelos: servem para comparar situações e escolher os melhores momentos."
             };
             testi["zh"] = new Dictionary<string, string> {
@@ -38965,8 +38965,8 @@ namespace LunaCalc
                 "在距离与 Dgrd 选项卡中，对每一天在月球位于地平线以上的有用时段内计算太阳与月球的最小角距，并与由增益估算的接收波束宽度 θ ≈ √(41253/G) 比较：在 3 个波束宽度以内该日标为红色，6 个以内标为橙色。噪声的实际增加在太阳噪声选项卡中估算。",
                 "## 极盖吸收与极光吸收",
                 "每个台站的地磁纬度用 IGRF-14 中心偶极子计算（2025 年地磁北极位于 80.8° N、72.8° W）：sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)。位于极圈以外（|φ| ≥ 66.56°）或 |φm| > 75° 的台站处于极盖区（可能出现 PCA）；60° ≤ |φm| ≤ 75° 时处于极光带。更改网格定位时会出现警告，并保留在主界面上。",
-                "## 选项卡、指向地图与 公式调试",
-                "选项卡分为两级（组以及组内选项卡），由程序绘制在页面上方。指向地图将本地天空投影到地图上（地平线 = 外圆，天顶 = 圆心，半径与 90° - 仰角成正比），并可模糊超出限制的区域；在天穹中，相同区域以浅灰色斜线覆盖。公式调试 选项卡逐步重复 EME 链路预算和太阳噪声的全部计算，给出公式、代入的数值和结果。"
+                "## 选项卡、我的障碍物勘察与 公式调试",
+                "选项卡分为两级（组以及组内选项卡），由程序绘制在页面上方。我的障碍物勘察将本地天空投影到地图上（地平线 = 外圆，天顶 = 圆心，半径与 90° - 仰角成正比），并可模糊超出限制的区域；在天穹中，相同区域以浅灰色斜线覆盖。公式调试 选项卡逐步重复 EME 链路预算和太阳噪声的全部计算，给出公式、代入的数值和结果。"
             };
             elenchi["zh"]["C5"] = new string[] {
                 "• Jean Meeus，《Astronomical Algorithms》第 2 版：月球、太阳、章动、视差、恒星时。",
@@ -38980,7 +38980,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT，New Moon EME operation（Icarus 偏移）：太阳靠近月球。",
                 "• H. H. Sauer 与 D. C. Wilkinson，Space Weather 6（2008），以及 NOAA SWPC D-RAP：极盖吸收与极光吸收。",
                 "• IGRF-14 地磁极，京都地磁世界数据中心（World Data Center for Geomagnetism, Kyoto）：地磁纬度。",
-                "• Esri World Imagery：指向地图的航拍影像。",
+                "• Esri World Imagery：我的障碍物勘察的航拍影像。",
                 "天文位置精度约为 0.01°；Tsky、Dgrd、地面增益、太阳噪声和射电源流量是基于模型的估算：用于比较不同情况并选择最佳时机。"
             };
             testi["ja"] = new Dictionary<string, string> {
@@ -39038,8 +39038,8 @@ namespace LunaCalc
                 "距離と Dgrd タブでは、各日について月が地平線上にある有効時間内の太陽と月の最小離角を計算し、利得から推定した受信ビーム幅 θ ≈ √(41253/G) と比較します。ビーム幅の 3 倍以内なら赤、6 倍以内ならオレンジで表示します。実際の雑音の増加は太陽雑音タブで推定します。",
                 "## 極冠吸収とオーロラ吸収",
                 "各局の地磁気緯度は IGRF-14 の中心双極子（2025 年の地磁気北極は 80.8° N、72.8° W）で計算します：sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)。極圏の外側（|φ| ≥ 66.56°）または |φm| > 75° の局は極冠域（PCA の可能性）、60° ≤ |φm| ≤ 75° の局はオーロラ帯にあります。警告はロケーターを変更したときに表示され、メイン画面に残ります。",
-                "## タブ、指向マップと 数式デバッグ",
-                "タブは 2 段（グループとグループ内のタブ）にまとめられ、プログラムがページの上に描きます。指向マップは局所の空を地図上に投影し（地平線 = 外側の円、天頂 = 中心、半径は 90° - 仰角に比例）、制限外の領域をぼかすことができます。天球では同じ領域が薄い灰色の斜線で覆われます。数式デバッグ タブは、EME 回線計算と太陽雑音の計算全体を、式、代入した値、結果とともに順を追って示します。"
+                "## タブ、自局障害物の偵察と 数式デバッグ",
+                "タブは 2 段（グループとグループ内のタブ）にまとめられ、プログラムがページの上に描きます。自局障害物の偵察は局所の空を地図上に投影し（地平線 = 外側の円、天頂 = 中心、半径は 90° - 仰角に比例）、制限外の領域をぼかすことができます。天球では同じ領域が薄い灰色の斜線で覆われます。数式デバッグ タブは、EME 回線計算と太陽雑音の計算全体を、式、代入した値、結果とともに順を追って示します。"
             };
             elenchi["ja"]["C5"] = new string[] {
                 "• Jean Meeus、Astronomical Algorithms 第 2 版：月、太陽、章動、視差、恒星時。",
@@ -39053,7 +39053,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT、New Moon EME operation（Icarus オフセット）：月の近くの太陽。",
                 "• H. H. Sauer、D. C. Wilkinson、Space Weather 6（2008）および NOAA SWPC D-RAP：極冠吸収とオーロラ吸収。",
                 "• IGRF-14 地磁気極、京都大学 地磁気世界資料解析センター（World Data Center for Geomagnetism, Kyoto）：地磁気緯度。",
-                "• Esri World Imagery：指向マップの航空写真。",
+                "• Esri World Imagery：自局障害物の偵察の航空写真。",
                 "天体の位置の精度は約 0.01° です。Tsky、Dgrd、グラウンドゲイン、太陽雑音、電波源のフラックスはモデルに基づく推定値で、状況を比較して最適なタイミングを選ぶためのものです。"
             };
             testi["hi"] = new Dictionary<string, string> {
@@ -39111,8 +39111,8 @@ namespace LunaCalc
                 "दूरी और Dgrd टैब के हर दिन के लिए, क्षितिज के ऊपर चंद्रमा वाले उपयोगी घंटों में सूर्य और चंद्रमा के बीच न्यूनतम कोणीय दूरी गणना की जाती है और गेन से अनुमानित प्राप्ति बीम-चौड़ाई θ ≈ √(41253/G) से तुलना की जाती है: 3 बीम-चौड़ाइयों के भीतर दिन लाल रंग से, 6 के भीतर नारंगी से चिह्नित होता है। शोर में वास्तविक वृद्धि का अनुमान सौर शोर टैब में होता है।",
                 "## ध्रुवीय और ध्रुवीय-ज्योति अवशोषण",
                 "हर स्टेशन का भूचुंबकीय अक्षांश IGRF-14 के केंद्रित द्विध्रुव (2025 का भूचुंबकीय उत्तरी ध्रुव 80.8° N, 72.8° W) से गणना किया जाता है: sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)। ध्रुवीय वृत्तों के पार (|φ| ≥ 66.56°) या |φm| > 75° वाला स्टेशन ध्रुवीय टोपी में है (संभावित PCA); 60° ≤ |φm| ≤ 75° होने पर वह ध्रुवीय-ज्योति क्षेत्र में है। लोकेटर बदलने पर चेतावनी दिखती है और मुख्य स्क्रीन पर बनी रहती है।",
-                "## टैब, लक्ष्य मानचित्र और सूत्र डिबग",
-                "टैब दो स्तरों (समूह और समूह के टैब) में व्यवस्थित हैं, जिन्हें प्रोग्राम पृष्ठों के ऊपर बनाता है। लक्ष्य मानचित्र स्थानीय आकाश को मानचित्र पर प्रक्षेपित करता है (क्षितिज = बाहरी वृत्त, शिरोबिंदु = केंद्र, त्रिज्या 90° - उन्नयन के अनुपात में) और सीमाओं से बाहर के क्षेत्रों को धुंधला कर सकता है; आकाश दृश्य में वही क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके होते हैं। सूत्र डिबग टैब EME बजट और सौर शोर की पूरी गणना को चरण-दर-चरण, सूत्रों, रखे गए मानों और परिणामों के साथ दोहराता है।"
+                "## टैब, मेरी बाधाओं की टोह और सूत्र डिबग",
+                "टैब दो स्तरों (समूह और समूह के टैब) में व्यवस्थित हैं, जिन्हें प्रोग्राम पृष्ठों के ऊपर बनाता है। मेरी बाधाओं की टोह स्थानीय आकाश को मानचित्र पर प्रक्षेपित करता है (क्षितिज = बाहरी वृत्त, शिरोबिंदु = केंद्र, त्रिज्या 90° - उन्नयन के अनुपात में) और सीमाओं से बाहर के क्षेत्रों को धुंधला कर सकता है; आकाश दृश्य में वही क्षेत्र हल्की धूसर तिरछी रेखाओं से ढके होते हैं। सूत्र डिबग टैब EME बजट और सौर शोर की पूरी गणना को चरण-दर-चरण, सूत्रों, रखे गए मानों और परिणामों के साथ दोहराता है।"
             };
             elenchi["hi"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, दूसरा संस्करण: चंद्रमा, सूर्य, न्यूटेशन, लंबन, नाक्षत्र समय।",
@@ -39126,7 +39126,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (Icarus ऑफ़सेट): चंद्रमा के पास सूर्य।",
                 "• H. H. Sauer और D. C. Wilkinson, Space Weather 6 (2008), और NOAA SWPC D-RAP: ध्रुवीय टोपी और ध्रुवीय-ज्योति अवशोषण।",
                 "• IGRF-14 भूचुंबकीय ध्रुव, World Data Center for Geomagnetism, Kyoto: भूचुंबकीय अक्षांश।",
-                "• Esri World Imagery: लक्ष्य मानचित्र की हवाई छवियाँ।",
+                "• Esri World Imagery: मेरी बाधाओं की टोह की हवाई छवियाँ।",
                 "खगोलीय स्थितियाँ लगभग 0.01° तक सटीक हैं; Tsky, Dgrd, ग्राउंड गेन, सौर शोर और रेडियो स्रोतों के फ़्लक्स मॉडल पर आधारित अनुमान हैं: ये स्थितियों की तुलना करने और सबसे अच्छे समय चुनने के लिए हैं।"
             };
             testi["ko"] = new Dictionary<string, string> {
@@ -39184,8 +39184,8 @@ namespace LunaCalc
                 "거리와 Dgrd 탭에서는 날마다 달이 지평선 위에 있는 유효 시간 동안 태양과 달 사이의 최소 각거리를 계산하고, 이득에서 추정한 수신 빔폭 θ ≈ √(41253/G)와 비교합니다. 빔폭 3배 이내이면 빨강, 6배 이내이면 주황으로 표시합니다. 실제 잡음 증가는 태양 잡음 탭에서 추정합니다.",
                 "## 극관 흡수와 오로라 흡수",
                 "각 국의 지자기 위도는 IGRF-14 중심 쌍극자(2025년 지자기 북극 80.8° N, 72.8° W)로 계산합니다: sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). 극권 너머(|φ| ≥ 66.56°)이거나 |φm| > 75°인 국은 극관 지역(PCA 가능), 60° ≤ |φm| ≤ 75°이면 오로라대에 있습니다. 경고는 로케이터를 바꿀 때 나타나고 주 화면에 남습니다.",
-                "## 탭, 지향 지도와 수식 디버그",
-                "탭은 두 단계(그룹과 그룹 안의 탭)로 묶여 있으며 프로그램이 페이지 위에 그립니다. 지향 지도는 국소 하늘을 지도 위에 투영하고(지평선 = 바깥 원, 천정 = 중심, 반지름은 90° - 앙각에 비례) 제한 밖 영역을 흐리게 할 수 있습니다. 하늘 보기에서는 같은 영역이 연회색 대각선으로 덮입니다. 수식 디버그 탭은 EME 링크 버짓과 태양 잡음의 전체 계산을 공식, 대입한 값, 결과와 함께 단계별로 보여 줍니다."
+                "## 탭, 내 장애물 정찰와 수식 디버그",
+                "탭은 두 단계(그룹과 그룹 안의 탭)로 묶여 있으며 프로그램이 페이지 위에 그립니다. 내 장애물 정찰는 국소 하늘을 지도 위에 투영하고(지평선 = 바깥 원, 천정 = 중심, 반지름은 90° - 앙각에 비례) 제한 밖 영역을 흐리게 할 수 있습니다. 하늘 보기에서는 같은 영역이 연회색 대각선으로 덮입니다. 수식 디버그 탭은 EME 링크 버짓과 태양 잡음의 전체 계산을 공식, 대입한 값, 결과와 함께 단계별로 보여 줍니다."
             };
             elenchi["ko"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms 제2판: 달, 태양, 장동, 시차, 항성시.",
@@ -39199,7 +39199,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation(Icarus 오프셋): 달 가까이의 태양.",
                 "• H. H. Sauer, D. C. Wilkinson, Space Weather 6(2008) 및 NOAA SWPC D-RAP: 극관 흡수와 오로라 흡수.",
                 "• IGRF-14 지자기극, 교토 지자기 세계자료센터(World Data Center for Geomagnetism, Kyoto): 지자기 위도.",
-                "• Esri World Imagery: 지향 지도의 항공 사진.",
+                "• Esri World Imagery: 내 장애물 정찰의 항공 사진.",
                 "천체 위치의 정확도는 약 0.01°입니다. Tsky, Dgrd, 지면 이득, 태양 잡음, 전파원 플럭스는 모델에 근거한 추정값으로, 상황을 비교하고 가장 좋은 때를 고르는 데 쓰입니다."
             };
             testi["id"] = new Dictionary<string, string> {
@@ -39257,8 +39257,8 @@ namespace LunaCalc
                 "Untuk setiap hari di tab Jarak dan Dgrd, jarak sudut minimum antara Matahari dan Bulan dihitung pada jam-jam berguna dengan Bulan di atas cakrawala dan dibandingkan dengan lebar berkas penerimaan yang diperkirakan dari gain, θ ≈ √(41253/G): dalam 3 lebar berkas hari itu ditandai merah, dalam 6 oranye. Kenaikan derau itu sendiri diperkirakan di tab Derau matahari.",
                 "## Penyerapan kutub dan aurora",
                 "Lintang geomagnetik setiap stasiun dihitung dengan dipol terpusat IGRF-14 (kutub utara geomagnetik 2025 di 80,8° LU, 72,8° BB): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Stasiun di luar lingkaran kutub (|φ| ≥ 66,56°) atau dengan |φm| > 75° berada di tudung kutub (kemungkinan PCA); dengan 60° ≤ |φm| ≤ 75° berada di zona aurora. Peringatan muncul ketika lokator diubah dan tetap tampil di layar utama.",
-                "## Tab, Peta pengarahan dan DEBUG RUMUS",
-                "Tab dikelompokkan dalam dua tingkat (kelompok dan tab dalam kelompok), digambar oleh program di atas halaman. Peta pengarahan memproyeksikan langit lokal ke peta (cakrawala = lingkaran luar, zenit = pusat, jari-jari sebanding dengan 90° - elevasi) dan dapat mengaburkan zona di luar batas; di Kubah langit zona yang sama ditutupi garis diagonal abu-abu muda. Tab DEBUG RUMUS mengulang langkah demi langkah seluruh perhitungan Anggaran EME dan Derau matahari, dengan rumus, nilai yang dimasukkan dan hasilnya."
+                "## Tab, Pengintaian rintangan saya dan DEBUG RUMUS",
+                "Tab dikelompokkan dalam dua tingkat (kelompok dan tab dalam kelompok), digambar oleh program di atas halaman. Pengintaian rintangan saya memproyeksikan langit lokal ke peta (cakrawala = lingkaran luar, zenit = pusat, jari-jari sebanding dengan 90° - elevasi) dan dapat mengaburkan zona di luar batas; di Kubah langit zona yang sama ditutupi garis diagonal abu-abu muda. Tab DEBUG RUMUS mengulang langkah demi langkah seluruh perhitungan Anggaran EME dan Derau matahari, dengan rumus, nilai yang dimasukkan dan hasilnya."
             };
             elenchi["id"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, edisi ke-2: Bulan, Matahari, nutasi, paralaks, waktu sideris.",
@@ -39272,7 +39272,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (offset Icarus): Matahari dekat Bulan.",
                 "• H. H. Sauer dan D. C. Wilkinson, Space Weather 6 (2008), serta NOAA SWPC D-RAP: penyerapan tudung kutub dan aurora.",
                 "• Kutub geomagnetik IGRF-14, World Data Center for Geomagnetism, Kyoto: lintang geomagnetik.",
-                "• Esri World Imagery: citra udara Peta pengarahan.",
+                "• Esri World Imagery: citra udara Pengintaian rintangan saya.",
                 "Posisi astronomis teliti hingga sekitar 0,01°; Tsky, Dgrd, ground gain, derau matahari dan fluks sumber radio adalah perkiraan berbasis model: gunanya untuk membandingkan keadaan dan memilih saat terbaik."
             };
             testi["ru"] = new Dictionary<string, string> {
@@ -39330,8 +39330,8 @@ namespace LunaCalc
                 "Для каждого дня вкладки «Расстояние и Dgrd» вычисляется минимальное угловое расстояние между Солнцем и Луной в полезные часы с Луной над горизонтом и сравнивается с шириной приёмного луча, оценённой по усилению, θ ≈ √(41253/G): в пределах 3 ширин луча день отмечается красным, в пределах 6 — оранжевым. Само увеличение шума оценивается на вкладке «Шум Солнца».",
                 "## Полярное и авроральное поглощение",
                 "Геомагнитная широта каждой станции вычисляется по центральному диполю IGRF-14 (северный геомагнитный полюс 2025 г. на 80,8° с. ш., 72,8° з. д.): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Станция за полярным кругом (|φ| ≥ 66,56°) или с |φm| > 75° находится в полярной шапке (возможен PCA); при 60° ≤ |φm| ≤ 75° — в авроральной зоне. Предупреждение появляется при смене локатора и остаётся на главном экране.",
-                "## Вкладки, Карта наведения и ОТЛАДКА ФОРМУЛ",
-                "Вкладки сгруппированы в два уровня (группы и вкладки группы), которые программа рисует над страницами. Карта наведения проецирует местное небо на карту (горизонт = внешний круг, зенит = центр, радиус пропорционален 90° - угол места) и может размывать зоны вне ограничений; на Небесном своде те же зоны покрыты светло-серыми диагональными линиями. Вкладка ОТЛАДКА ФОРМУЛ шаг за шагом повторяет весь расчёт Бюджета EME и Шума Солнца, с формулами, подставленными значениями и результатами."
+                "## Вкладки, Разведка моих препятствий и ОТЛАДКА ФОРМУЛ",
+                "Вкладки сгруппированы в два уровня (группы и вкладки группы), которые программа рисует над страницами. Разведка моих препятствий проецирует местное небо на карту (горизонт = внешний круг, зенит = центр, радиус пропорционален 90° - угол места) и может размывать зоны вне ограничений; на Небесном своде те же зоны покрыты светло-серыми диагональными линиями. Вкладка ОТЛАДКА ФОРМУЛ шаг за шагом повторяет весь расчёт Бюджета EME и Шума Солнца, с формулами, подставленными значениями и результатами."
             };
             elenchi["ru"]["C5"] = new string[] {
                 "• Жан Меёс, Astronomical Algorithms, 2-е издание: Луна, Солнце, нутация, параллакс, звёздное время.",
@@ -39345,7 +39345,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (смещение Icarus): Солнце рядом с Луной.",
                 "• H. H. Sauer и D. C. Wilkinson, Space Weather 6 (2008), и NOAA SWPC D-RAP: поглощение в полярной шапке и авроральное поглощение.",
                 "• Геомагнитные полюса IGRF-14, World Data Center for Geomagnetism, Киото: геомагнитная широта.",
-                "• Esri World Imagery: аэроснимки Карты наведения.",
+                "• Esri World Imagery: аэроснимки для вкладки «Разведка моих препятствий».",
                 "Астрономические положения точны примерно до 0,01°; Tsky, Dgrd, усиление за счёт земли, шум Солнца и потоки радиоисточников — оценки на основе моделей: они служат для сравнения ситуаций и выбора лучших моментов."
             };
             testi["uk"] = new Dictionary<string, string> {
@@ -39403,8 +39403,8 @@ namespace LunaCalc
                 "Для кожного дня вкладки «Відстань і Dgrd» обчислюється мінімальна кутова відстань між Сонцем і Місяцем у корисні години з Місяцем над горизонтом і порівнюється з шириною приймального променя, оціненою за підсиленням, θ ≈ √(41253/G): у межах 3 ширин променя день позначається червоним, у межах 6 — помаранчевим. Саме зростання шуму оцінюється на вкладці «Шум Сонця».",
                 "## Полярне та авроральне поглинання",
                 "Геомагнітна широта кожної станції обчислюється за центральним диполем IGRF-14 (північний геомагнітний полюс 2025 р. на 80,8° пн. ш., 72,8° зх. д.): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Станція за полярним колом (|φ| ≥ 66,56°) або з |φm| > 75° перебуває в полярній шапці (можливий PCA); за 60° ≤ |φm| ≤ 75° — в авроральній зоні. Попередження з'являється під час зміни локатора і залишається на головному екрані.",
-                "## Вкладки, Мапа наведення і НАЛАГОДЖЕННЯ ФОРМУЛ",
-                "Вкладки згруповано у два рівні (групи і вкладки групи), які програма малює над сторінками. Мапа наведення проєктує місцеве небо на мапу (горизонт = зовнішнє коло, зеніт = центр, радіус пропорційний 90° - кут місця) і може розмивати зони поза межами; на Небесному склепінні ті самі зони вкриті світло-сірими діагональними лініями. Вкладка НАЛАГОДЖЕННЯ ФОРМУЛ крок за кроком повторює весь розрахунок Бюджету EME і Шуму Сонця, з формулами, підставленими значеннями і результатами."
+                "## Вкладки, Розвідка моїх перешкод і НАЛАГОДЖЕННЯ ФОРМУЛ",
+                "Вкладки згруповано у два рівні (групи і вкладки групи), які програма малює над сторінками. Розвідка моїх перешкод проєктує місцеве небо на мапу (горизонт = зовнішнє коло, зеніт = центр, радіус пропорційний 90° - кут місця) і може розмивати зони поза межами; на Небесному склепінні ті самі зони вкриті світло-сірими діагональними лініями. Вкладка НАЛАГОДЖЕННЯ ФОРМУЛ крок за кроком повторює весь розрахунок Бюджету EME і Шуму Сонця, з формулами, підставленими значеннями і результатами."
             };
             elenchi["uk"]["C5"] = new string[] {
                 "• Жан Меєс, Astronomical Algorithms, 2-ге видання: Місяць, Сонце, нутація, паралакс, зоряний час.",
@@ -39418,7 +39418,7 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (зміщення Icarus): Сонце поруч із Місяцем.",
                 "• H. H. Sauer і D. C. Wilkinson, Space Weather 6 (2008), та NOAA SWPC D-RAP: поглинання в полярній шапці та авроральне поглинання.",
                 "• Геомагнітні полюси IGRF-14, World Data Center for Geomagnetism, Кіото: геомагнітна широта.",
-                "• Esri World Imagery: аерознімки Мапи наведення.",
+                "• Esri World Imagery: аерознімки для вкладки «Розвідка моїх перешкод».",
                 "Астрономічні положення точні приблизно до 0,01°; Tsky, Dgrd, підсилення за рахунок землі, шум Сонця і потоки радіоджерел — оцінки на основі моделей: вони слугують для порівняння ситуацій і вибору найкращих моментів."
             };
             testi["af"] = new Dictionary<string, string> {
@@ -39476,8 +39476,8 @@ namespace LunaCalc
                 "Vir elke dag van die oortjie Afstand en Dgrd word die kleinste hoekafstand tussen Son en Maan oor die bruikbare ure met die Maan bo die horison bereken en vergelyk met die ontvangsbundelwydte wat uit die wins geskat word, θ ≈ √(41253/G): binne 3 bundelwydtes word die dag rooi gemerk, binne 6 oranje. Die werklike geraastoename word in die oortjie Songeraas geskat.",
                 "## Pool- en aurora-absorpsie",
                 "Die geomagnetiese breedte van elke stasie word bereken met die gesentreerde dipool van IGRF-14 (geomagnetiese noordpool 2025 op 80,8° N, 72,8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). 'n Stasie buite die poolsirkels (|φ| ≥ 66,56°) of met |φm| > 75° is in die poolkap (moontlike PCA); met 60° ≤ |φm| ≤ 75° is dit in die aurorasone. Die waarskuwing verskyn wanneer 'n locator verander word en bly op die hoofskerm.",
-                "## Oortjies, Rigkaart en FORMULE-ONTFOUTING",
-                "Die oortjies is op twee vlakke gegroepeer (groepe en oortjies van die groep), deur die program bo die bladsye geteken. Die Rigkaart projekteer die plaaslike lug op die kaart (horison = buitenste sirkel, senit = middel, radius eweredig aan 90° - elevasie) en kan die sones buite die grense vervaag; in die Lugaansig is dieselfde sones met liggrys skuinslyne bedek. Die oortjie FORMULE-ONTFOUTING herhaal stap vir stap die hele berekening van die EME-begroting en die Songeraas, met die formules, die ingevulde waardes en die uitslae."
+                "## Oortjies, Verkenning van my hindernisse en FORMULE-ONTFOUTING",
+                "Die oortjies is op twee vlakke gegroepeer (groepe en oortjies van die groep), deur die program bo die bladsye geteken. Die Verkenning van my hindernisse projekteer die plaaslike lug op die kaart (horison = buitenste sirkel, senit = middel, radius eweredig aan 90° - elevasie) en kan die sones buite die grense vervaag; in die Lugaansig is dieselfde sones met liggrys skuinslyne bedek. Die oortjie FORMULE-ONTFOUTING herhaal stap vir stap die hele berekening van die EME-begroting en die Songeraas, met die formules, die ingevulde waardes en die uitslae."
             };
             elenchi["af"]["C5"] = new string[] {
                 "• Jean Meeus, Astronomical Algorithms, 2de uitgawe: Maan, Son, nutasie, parallaks, sterretyd.",
@@ -39491,8 +39491,227 @@ namespace LunaCalc
                 "• Bob Atkins KA1GT, New Moon EME operation (Icarus-verskuiwing): Son naby die Maan.",
                 "• H. H. Sauer en D. C. Wilkinson, Space Weather 6 (2008), en NOAA SWPC D-RAP: poolkap- en aurora-absorpsie.",
                 "• Geomagnetiese pole IGRF-14, World Data Center for Geomagnetism, Kyoto: geomagnetiese breedte.",
-                "• Esri World Imagery: lugfoto's van die Rigkaart.",
+                "• Esri World Imagery: lugfoto's van die Verkenning van my hindernisse.",
                 "Astronomiese posisies is akkuraat tot ongeveer 0,01°; Tsky, Dgrd, grondwins, songeraas en die vloed van radiobronne is modelgebaseerde skattings: hulle is bedoel om situasies te vergelyk en die beste oomblikke te kies."
+            };
+            testi["bn"] = new Dictionary<string, string> {
+                { "TITOLO", "প্রযুক্তিগত ও ব্যবহার নির্দেশিকা" },
+                { "SOTTO", "প্রোগ্রাম কীভাবে কাজ করে তার প্রযুক্তিগত বিবরণ, স্ক্রিনশটসহ" },
+                { "INDICE", "সূচিপত্র" },
+                { "PAGINA", "পৃষ্ঠা" },
+                { "FIGURA", "চিত্র" },
+                { "CAP1", "ইনস্টলেশন, ফাইল ও data ফোল্ডার" },
+                { "CAP2", "প্রোগ্রামের স্ক্রিনগুলো" },
+                { "CAP3", "ব্যবহারের নির্দেশিকা" },
+                { "CAP4", "প্রযুক্তিগত কার্যপ্রণালী" },
+                { "CAP5", "উৎস, তথ্য ও কৃতজ্ঞতা" },
+                { "GENERATO", "{0} তারিখে YAEC দ্বারা তৈরি ম্যানুয়াল: স্ক্রিনশটগুলো এই কম্পিউটারে চলমান প্রোগ্রামের।" }
+            };
+            elenchi["bn"] = new Dictionary<string, string[]>();
+            elenchi["bn"]["C1"] = new string[] {
+                "YAEC (Yet Another EME Calc) হলো Windows, Linux ও macOS-এর জন্য EME (পৃথিবী-চাঁদ-পৃথিবী) অ্যামেচার রেডিও যোগাযোগের একটি ক্যালকুলেটর। এটি C#-এ লেখা একটিমাত্র প্রোগ্রাম (Windows Forms, .NET Framework 4; Linux ও macOS-এ Mono দিয়ে চলে)। সব সংস্করণ GitHub থেকে ডাউনলোড করা যায় (github.com/ic8tem/YAEC): Windows-এর জন্য ইনস্টলার বা পোর্টেবল সংস্করণ, Linux-এর জন্য .deb প্যাকেজ বা .tar.gz আর্কাইভ, macOS-এর জন্য .dmg ইমেজ; প্রতিটি সংস্করণের সঙ্গে সোর্স কোড এবং ডাউনলোড করা ফাইল যাচাইয়ের জন্য ফিঙ্গারপ্রিন্টসহ SHA256SUMS.txt ফাইলও থাকে।",
+                "## data ফোল্ডার",
+                "প্রোগ্রামের সব তথ্য data সাবফোল্ডারে থাকে: Windows-এ YAEC.exe-এর পাশে (ইনস্টলার প্রোগ্রামটিকে Documents\\YAEC-এ রাখে), Linux-এ ~/.local/share/YAEC/data-তে, macOS-এ ~/Library/Application Support/YAEC/data-তে। প্রোগ্রাম অন্য কোথাও কিছু লেখে না; তাই Windows-এ পুরো প্রোগ্রাম ফোল্ডারটি একটি USB স্টিকে বা অন্য কম্পিউটারে কপি করা যায়।",
+                "• impostazioni.txt: সব সেটিং (লোকেটর, কলসাইন, অ্যান্টেনার সীমা, প্রতিটি ব্যান্ডের বাজেট প্যারামিটার, ভাষা, থিম, ফন্ট), সাধারণ টেক্সট হিসেবে।",
+                "• solar-radio-flux.json: RSTN নেটওয়ার্কের মাপা সৌর ফ্লাক্স, NOAA SWPC থেকে ডাউনলোড করা।",
+                "• lotw.adi: ARRL Logbook of the World থেকে ডাউনলোড করা লগ (কেবল LoTW থেকে ডাউনলোড ব্যবহার করলে)।",
+                "• CALL3.TXT: EME স্টেশনগুলোর কলসাইন ও তাদের লোকেটরের তালিকা, W7GJ ও WSJT-X Improved থেকে ডাউনলোড করে একটি ফাইলে একত্র করা (7 দিনের বেশি পুরোনো হলে নিজে থেকেই হালনাগাদ হয়)।",
+                "• tiles: আগেই ডাউনলোড করা মানচিত্রের টাইল, যাতে সেগুলো আবার ডাউনলোড করতে না হয়।",
+                "## চালু হওয়া ও ফাইল যাচাই",
+                "চালু হওয়ার সময়, শুরুর উইন্ডোর সবুজ দণ্ডটি ছোট হতে থাকার মধ্যে (5 সেকেন্ড), YAEC data ফোল্ডারটি পরীক্ষা করে: না থাকলে তৈরি করে, সেখানে লেখা যায় কিনা যাচাই করে এবং ফাইলগুলো পরীক্ষা করে। সৌর ফ্লাক্স না থাকলে, অবৈধ হলে বা 12 ঘণ্টার বেশি পুরোনো হলে NOAA থেকে আবার ডাউনলোড করা হয়; LoTW লগ না থাকলে এবং ব্যবহারকারীর নাম ও পাসওয়ার্ড সংরক্ষিত থাকলে আবার ডাউনলোড করা হয়। ফলাফল সবুজ দণ্ডের ওপরে দেখা যায়। কোনো ডাউনলোড ব্যর্থ হলে প্রোগ্রাম সংরক্ষিত তথ্য নিয়েই চলতে থাকে।",
+                "CALL3.TXT না থাকলে বা 7 দিনের বেশি পুরোনো হলে W7GJ ও WSJT-X Improved থেকে আবার ডাউনলোড করা হয়; দুটি উৎসের কোনোটিই সাড়া না দিলে সংরক্ষিত ফাইলটি ব্যবহার করা হয়।",
+                "beta 22 প্রথমবার চালানোর সময় আগের সংস্করণগুলোর তথ্য data ফোল্ডারে সরিয়ে আনা হয়: AppData\\Roaming\\LunaCalc-এ থাকা তথ্য (beta 18 পর্যন্ত) এবং এক্সিকিউটেবলের পাশে থাকা তথ্য (beta 19 থেকে beta 21)। পুরোনো ফোল্ডারগুলো খালি থেকে গেলে মুছে ফেলা হয়।",
+                "LoTW-এর পাসওয়ার্ড ব্যবহারকারীর Windows ডেটা সুরক্ষা (DPAPI) দিয়ে এনক্রিপ্ট করে সংরক্ষণ করা হয়: অন্য কম্পিউটারে, বা অন্য Windows ব্যবহারকারীর ক্ষেত্রে, এটি আবার লিখতে হয়।",
+                "## ম্যানুয়াল",
+                "YAEC.exe /manuale <ভাষা> (it, en, de, fr, es, pt, zh, ja, hi, ko, id, ru, uk, af) কমান্ডটি প্রোগ্রাম খোলে, প্রতিটি ট্যাবের স্ক্রিনশট নেয় এবং manuali\\YAEC_manuale_<ভাষা>.pdf লেখে; compila.bat এটি সব 14টি ভাষার জন্য চালায়। লাতিন বর্ণমালার ভাষার ম্যানুয়ালগুলো YAEC সরাসরি লেখে; রুশ, ইউক্রেনীয়, চীনা, জাপানি, হিন্দি ও কোরীয় ভাষার ম্যানুয়ালগুলো Windows-এর \"Microsoft Print to PDF\" প্রিন্টার দিয়ে ছাপা হয়, যা সঠিক ফন্ট যুক্ত করে দেয় (সেই প্রিন্টার না থাকলে পৃষ্ঠাগুলো PDF-এ ছবি হিসেবে যায়)। সেটিংস পরিবর্তন করা হয় না। লোকেটর ও ফ্রিকোয়েন্সি সেট করা না থাকলে স্ক্রিনশটের জন্য উদাহরণ মান ব্যবহার করা হয়। কোনো ত্রুটি হলে তা data\\manuale_errore.txt-এ লেখা হয়।"
+            };
+            elenchi["bn"]["C4"] = new string[] {
+                "## চাঁদের অবস্থান",
+                "চাঁদের ভূকেন্দ্রিক অবস্থান গণনা করা হয় J. Meeus-এর সংক্ষিপ্ত রূপে ELP-2000/82 তত্ত্ব দিয়ে (Astronomical Algorithms, অধ্যায় 47): পর্যায়বৃত্ত শ্রেণি থেকে দ্রাঘিমা, অক্ষাংশ ও দূরত্ব, ডায়নামিক্যাল টাইমের সংশোধনসহ (Delta T)। এরপর আসে নিউটেশন ও ক্রান্তিবৃত্তের তির্যকতা, বিষুবীয় স্থানাঙ্কে রূপান্তর, আপাত নাক্ষত্র সময় এবং টোপোসেন্ট্রিক লম্বন সংশোধন (অধ্যায় 40), পৃথিবীর উপবৃত্তাকার গোলক ও স্টেশনের উচ্চতা ধরে। নির্ভুলতা প্রায় 0.01°।",
+                "মেইডেনহেড লোকেটরকে (4, 6, 8 বা 10 অক্ষর) তার বর্গের কেন্দ্রে রূপান্তর করা হয়। অ্যাজিমাথ উত্তর থেকে পূর্ব দিকে গোনা হয়। বায়ুমণ্ডলীয় প্রতিসরণ, চালু থাকলে, Sæmundsson-এর সূত্র R = 1.02 / tan(h + 10.3/(h + 5.11)) আর্কমিনিট দিয়ে গণনা করা হয়; অন্যথায় এলিভেশন জ্যামিতিক, প্রচলিত EME প্রোগ্রামগুলোর মতো।",
+                "## পয়েন্টযোগ্যতা ও উইন্ডো",
+                "প্রতিটি মুহূর্তকে আপনার স্টেশনের এবং, চালু থাকলে, DX-এর অ্যান্টেনার সীমার (ঘড়ির কাঁটার দিকে অ্যাজিমাথ সেক্টর ও এলিভেশনের পরিসর) সঙ্গে তুলনা করা হয়: সবুজ = পয়েন্ট করা যায়, কমলা = সীমার বাইরে, ধূসর = দিগন্তের নিচে। কার্যকর ও সাধারণ উইন্ডোগুলো হলো পয়েন্ট করা যায় এমন মুহূর্তগুলোর পরপর ব্যবধান।",
+                "## ডপলার ও CFOM",
+                "স্টেশন ও চাঁদের মধ্যে একমুখী ডপলার হলো -f·(dR/dt)/c, যেখানে রেডিয়াল বেগ dR/dt টোপোসেন্ট্রিক দূরত্ব থেকে ±30 s-এর পার্থক্য নিয়ে গণনা করা হয়। নিজের ইকোর সরণ দ্বিগুণ; দুটি স্টেশনের মধ্যে সরণ হলো দুটির যোগফল। CFOM-এ f0 - ডপলারে ট্রান্সমিট এবং f0 + ডপলারে রিসিভ করা হয়।",
+                "## পোলারাইজেশন, Dpol ও MNR",
+                "স্থানীয় পোলারাইজেশন কোণ WSJT-X-এর মতোই অক্ষাংশ এবং চাঁদের অ্যাজিমাথ ও এলিভেশন থেকে গণনা করা হয়; Dpol হলো দুই স্টেশনের কোণের পার্থক্য, -90° থেকে +90°-এর মধ্যে। রৈখিক পোলারাইজেশন লস হলো -20·log|cos Dpol| (সর্বোচ্চ 30 dB) এবং সর্বোচ্চ নন-রেসিপ্রোসিটি MNR = -20·log|cos 2·Dpol| (সর্বোচ্চ 25 dB)। ফ্যারাডে রোটেশন পূর্বাভাস করা যায় না এবং অন্তর্ভুক্ত নয়।",
+                "## আকাশের নয়েজ ও Dgrd",
+                "144 MHz-এ চাঁদের পেছনের আকাশের তাপমাত্রা (Tsky) নেওয়া হয় ক্রান্তিবৃত্ত বরাবর 2° ধাপের একটি টেবিল থেকে (WSJT-X) এবং, আকাশ-গম্বুজে, Global Sky Model থেকে নির্ণীত 2°-এর একটি সম্পূর্ণ-আকাশ মানচিত্র থেকে; অন্য ফ্রিকোয়েন্সিগুলো স্পেকট্রাল সূচক 2.6 দিয়ে স্কেল করা হয়: T(f) = (T144 - 2.7)·(144/f)^2.6 + 2.7 K। Dgrd, WSJT-X-এর মতো, দূরত্বের প্রভাব, -40·log(d / 356 903 km), এবং নয়েজের প্রভাব, -10·log((Tsky + 80 K) / (Tskymin + 80 K)), যোগ করে, যেখানে Tskymin = 13·(408/f)^2.6 K।",
+                "## EME বাজেট",
+                "পাথ লস রাডার সমীকরণ মেনে চলে: L = 10·log((4·pi)^3·d1²·d2² / (sigma·lambda²)), যেখানে sigma = 0.065·pi·R² (চাঁদের প্রতিফলন ক্ষমতা 0.065, চাঁদের ব্যাসার্ধ 1737.4 km) এবং d1, d2 হলো নির্বাচিত মুহূর্তে দুই স্টেশনের টোপোসেন্ট্রিক দূরত্ব: তাই পেরিজি ও অ্যাপোজির পার্থক্য (প্রায় 2.3 dB) এতে অন্তর্ভুক্ত। EIRP হলো P থেকে কেবল ও আনুষঙ্গিক ক্ষতি বাদ দিয়ে, G + 10·log N এবং গ্রাউন্ড গেইন (যদি থাকে) যোগ করে।",
+                "রিসিভিং চেইনের (লস, প্রিঅ্যাম্প্লিফায়ার, কেবল, ট্রান্সভার্টার, প্যাচ কেবল, রেডিও) নয়েজ ফিগার Friis সূত্র দিয়ে গণনা করা হয়; রেডিওর নয়েজ ফিগার নির্ণয় করা হয় তার MDS থেকে: NF = MDS + 174 - 10·log B। সিস্টেম টেম্পারেচার হলো Tsys = Tant + (Tsky - রেফারেন্স Tsky, ধনাত্মক হলে) + Tsun + রিসিভারের Te, যেখানে Tant হলো VE7BQH টেবিল থেকে নেওয়া অ্যান্টেনা টেম্পারেচার (অ্যান্টেনা 30°-এ হেলানো) এবং রেফারেন্স হলো 144 MHz-এ 200 K, সূচক 2.6 দিয়ে স্কেল করা। নয়েজ হলো k·Tsys·B এবং S/N হলো অ্যান্টেনায় সিগন্যাল থেকে নির্বাচিত ব্যান্ডউইডথের নয়েজ বাদ দিয়ে।",
+                "\"BETA- উচ্চতা-নিয়ন্ত্রণহীন অ্যান্টেনা\" চালু থাকলে h উচ্চতায় অনুভূমিক পোলারাইজড অ্যান্টেনার গ্রাউন্ড গেইন হলো 20·log|2·sin(2·pi·h·sin(el)/lambda)| (সর্বোচ্চ +6 dB), চাঁদের এলিভেশনে গণনা করা।",
+                "## সৌর নয়েজ",
+                "RSTN নেটওয়ার্কের মাপা সৌর ফ্লাক্স (245, 410, 610, 1415, 2695, 4995, 8800 ও 15400 MHz) কাজের ফ্রিকোয়েন্সিতে লগারিদমিক স্কেলে ইন্টারপোলেট করা হয়, অথবা 245 MHz-এর নিচে ও 15400 MHz-এর ওপরে পাওয়ার ল দিয়ে এক্সট্রাপোলেট করা হয়। সূর্যকে একটি অপোলারাইজড বিন্দু উৎস হিসেবে ধরা হয়: T = S·Ae/(2k), যেখানে কার্যকর ক্ষেত্রফল Ae গেইন থেকে নির্ণয় করা হয় এবং অ্যান্টেনার প্যাটার্ন দিয়ে কমানো হয় (গেইন থেকে অনুমিত প্রস্থের গাউসীয় লোব, তারপর নির্ধারিত স্তরে সাইড লোব)। সূর্যের অবস্থান Meeus, অধ্যায় 25 দিয়ে গণনা করা হয়।",
+                "## আকাশ-গম্বুজ, মানচিত্র ও উচ্চতা",
+                "আকাশ-গম্বুজ স্থানীয় আকাশ আঁকে Tsky-এর রং, অ্যান্টেনার সীমা, DX-এর দিগন্ত, সূর্য, চাঁদ ও প্রধান রেডিও উৎসগুলোসহ। মানচিত্রটি মার্কেটর প্রক্ষেপণ এবং OpenStreetMap, OpenTopoMap বা CARTO-র টাইল ব্যবহার করে, যা data\\tiles-এ সংরক্ষিত হয়; কাজ করা বর্গগুলো ADIF ফাইল থেকে পড়া হয়, যা LoTW থেকেও ডাউনলোড করা যায়। 10-অক্ষরের লোকেটর থাকলে ভূমির উচ্চতা পড়া হয় Open Topo Data থেকে (ইউরোপে EU-DEM 25 m, অন্যত্র SRTM 30 m) অথবা, বিকল্প হিসেবে, Open-Meteo থেকে (Copernicus DEM GLO-90)। স্থানীয় সময়ের জন্য অবস্থান অনুযায়ী বেছে নেওয়া Windows-এর টাইম জোন ব্যবহার করা হয়।",
+                "## চাঁদের কাছে সূর্য",
+                "দূরত্ব ও Dgrd ট্যাবের প্রতিটি দিনের জন্য, চাঁদ দিগন্তের ওপরে থাকা কার্যকর ঘণ্টাগুলোতে সূর্য ও চাঁদের ন্যূনতম কৌণিক দূরত্ব গণনা করা হয় এবং গেইন থেকে অনুমিত রিসিভিং বিমউইডথের সঙ্গে তুলনা করা হয়, θ ≈ √(41253/G): 3 বিমউইডথের মধ্যে হলে দিনটি লাল রঙে, 6-এর মধ্যে হলে কমলা রঙে চিহ্নিত হয়। নয়েজ আসলে কতটা বাড়ে তা সৌর নয়েজ ট্যাবে অনুমান করা হয়।",
+                "## মেরু ও মেরুজ্যোতি অঞ্চলের শোষণ",
+                "প্রতিটি স্টেশনের ভূচৌম্বক অক্ষাংশ IGRF-14-এর কেন্দ্রীয় ডাইপোল দিয়ে গণনা করা হয় (2025-এর উত্তর ভূচৌম্বক মেরু 80.8° উত্তর, 72.8° পশ্চিমে): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp)। মেরুবৃত্তের বাইরের (|φ| ≥ 66.56°) বা |φm| > 75° থাকা কোনো স্টেশন মেরু টুপিতে থাকে (সম্ভাব্য PCA); 60° ≤ |φm| ≤ 75° হলে সেটি মেরুজ্যোতি (অরোরা) অঞ্চলে থাকে। কোনো লোকেটর বদলালে সতর্কবার্তাটি দেখা যায় এবং প্রধান স্ক্রিনে থেকে যায়।",
+                "## ট্যাব, আমার বাধাগুলির অনুসন্ধান ও সূত্র ডিবাগ",
+                "ট্যাবগুলো দুটি স্তরে সাজানো (দল এবং দলের ট্যাব), যা প্রোগ্রাম পৃষ্ঠাগুলোর ওপরে আঁকে। আমার বাধাগুলির অনুসন্ধান স্থানীয় আকাশকে মানচিত্রের ওপর প্রক্ষেপ করে (দিগন্ত = বাইরের বৃত্ত, শীর্ষবিন্দু = কেন্দ্র, ব্যাসার্ধ 90° - এলিভেশনের সমানুপাতিক) এবং সীমার বাইরের অঞ্চলগুলো ঝাপসা করতে পারে; আকাশ-গম্বুজে একই অঞ্চলগুলো হালকা ধূসর তির্যক রেখায় ঢাকা থাকে। সূত্র ডিবাগ ট্যাবটি EME বাজেট ও সৌর নয়েজের পুরো হিসাব ধাপে ধাপে আবার দেখায়, সূত্র, বসানো মান ও ফলাফলসহ।"
+            };
+            elenchi["bn"]["C5"] = new string[] {
+                "• Jean Meeus, Astronomical Algorithms, 2য় সংস্করণ: চাঁদ, সূর্য, নিউটেশন, লম্বন, নাক্ষত্র সময়।",
+                "• WSJT-X (K1JT ও সহযোগীরা), lib/astro.f90: Tsky, Dgrd, পোলারাইজেশন, MNR।",
+                "• আকাশের নয়েজের মানচিত্রের জন্য Global Sky Model (A. de Oliveira-Costa et al., 2008)।",
+                "• গেইন, G/T ও অ্যান্টেনা টেম্পারেচারের জন্য VE7BQH টেবিল (Lionel Edwards)।",
+                "• NOAA Space Weather Prediction Center, RSTN নেটওয়ার্ক: সৌর ফ্লাক্স।",
+                "• OpenStreetMap contributors (ODbL), OpenTopoMap (CC-BY-SA), CARTO basemaps: মানচিত্র।",
+                "• Open Topo Data (EU-DEM, SRTM) ও Open-Meteo (Copernicus DEM GLO-90): ভূমির উচ্চতা।",
+                "• ARRL Logbook of the World (LoTW): কনফার্মেশনের লগ।",
+                "• Bob Atkins KA1GT, New Moon EME operation (Icarus অফসেট): চাঁদের কাছে সূর্য।",
+                "• H. H. Sauer ও D. C. Wilkinson, Space Weather 6 (2008), এবং NOAA SWPC D-RAP: মেরু টুপি ও মেরুজ্যোতি অঞ্চলের শোষণ।",
+                "• IGRF-14 ভূচৌম্বক মেরু, World Data Center for Geomagnetism, Kyoto: ভূচৌম্বক অক্ষাংশ।",
+                "• Esri World Imagery: আমার বাধাগুলির অনুসন্ধানের আকাশচিত্র।",
+                "জ্যোতির্বৈজ্ঞানিক অবস্থানগুলো প্রায় 0.01° পর্যন্ত নির্ভুল; Tsky, Dgrd, গ্রাউন্ড গেইন, সৌর নয়েজ ও রেডিও উৎসগুলোর ফ্লাক্স মডেলভিত্তিক অনুমান: এগুলোর উদ্দেশ্য পরিস্থিতির তুলনা করা এবং সেরা মুহূর্তগুলো বেছে নেওয়া।"
+            };
+            testi["ar"] = new Dictionary<string, string> {
+                { "TITOLO", "الدليل التقني ودليل الاستخدام" },
+                { "SOTTO", "تقرير تقني عن طريقة عمل البرنامج، مع لقطات الشاشة" },
+                { "INDICE", "المحتويات" },
+                { "PAGINA", "الصفحة" },
+                { "FIGURA", "الشكل" },
+                { "CAP1", "التثبيت والملفات ومجلد data" },
+                { "CAP2", "شاشات البرنامج" },
+                { "CAP3", "دليل الاستخدام" },
+                { "CAP4", "طريقة العمل التقنية" },
+                { "CAP5", "المصادر والبيانات والشكر" },
+                { "GENERATO", "دليل أنشأه YAEC بتاريخ {0}: لقطات الشاشة مأخوذة من البرنامج وهو يعمل على هذا الحاسوب." }
+            };
+            elenchi["ar"] = new Dictionary<string, string[]>();
+            elenchi["ar"]["C1"] = new string[] {
+                "YAEC (Yet Another EME Calc) حاسبة لحركة هواة الراديو عبر EME (أرض-قمر-أرض) تعمل على Windows وLinux وmacOS. وهو برنامج واحد مكتوب بلغة C# (Windows Forms، .NET Framework 4؛ ويعمل على Linux وmacOS باستخدام Mono). تُنزَّل جميع الإصدارات من GitHub (github.com/ic8tem/YAEC): لنظام Windows المثبّت أو النسخة المحمولة، ولنظام Linux الحزمة .deb أو الأرشيف .tar.gz، ولنظام macOS صورة .dmg؛ ويرافق كلَّ إصدار أيضًا الشيفرةُ المصدرية والملف SHA256SUMS.txt الذي يتضمن البصمات اللازمة للتحقق من الملفات المنزَّلة.",
+                "## مجلد data",
+                "توجد جميع بيانات البرنامج في المجلد الفرعي data: على Windows بجوار YAEC.exe (يضع المثبّت البرنامج في Documents\\YAEC)، وعلى Linux في ~/.local/share/YAEC/data، وعلى macOS في ~/Library/Application Support/YAEC/data. لا يكتب البرنامج أي شيء في مكان آخر؛ لذا يمكن على Windows نسخ مجلد البرنامج كاملًا إلى ذاكرة USB أو إلى حاسوب آخر.",
+                "• impostazioni.txt: جميع الإعدادات (محددات الموقع، إشارة النداء، حدود الهوائي، معاملات الميزانية لكل نطاق، اللغة، السمة، الخطوط)، بنص عادي.",
+                "• solar-radio-flux.json: التدفقات الشمسية التي تقيسها شبكة RSTN، منزَّلة من NOAA SWPC.",
+                "• lotw.adi: السجل المنزَّل من ARRL Logbook of the World (فقط إذا كنت تستخدم التنزيل من LoTW).",
+                "• CALL3.TXT: قائمة إشارات نداء محطات EME مع محددات مواقعها، منزَّلة من W7GJ ومن WSJT-X Improved ومدموجة في ملف واحد (يُحدَّث تلقائيًا عندما يزيد عمره على 7 أيام).",
+                "• tiles: بلاطات الخريطة التي نُزِّلت من قبل، كي لا يلزم تنزيلها مرة أخرى.",
+                "## بدء التشغيل وفحص الملفات",
+                "عند بدء التشغيل، وبينما يتقلّص الشريط الأخضر في نافذة الافتتاح (5 ثوانٍ)، يفحص YAEC مجلد data: ينشئه إن لم يكن موجودًا، ويتحقق من إمكان الكتابة فيه، ويفحص الملفات. يُنزَّل التدفق الشمسي من جديد من NOAA إذا كان مفقودًا أو غير صالح أو تجاوز عمره 12 ساعة؛ ويُنزَّل سجل LoTW من جديد إذا كان مفقودًا وكان اسم المستخدم وكلمة المرور محفوظين. وتظهر النتيجة فوق الشريط الأخضر. وإذا فشل أحد التنزيلات، يتابع البرنامج العمل بالبيانات المحفوظة.",
+                "يُنزَّل CALL3.TXT من جديد من W7GJ ومن WSJT-X Improved إذا كان مفقودًا أو تجاوز عمره 7 أيام؛ وإذا لم يستجب أيٌّ من المصدرين يُستخدم الملف المحفوظ.",
+                "عند أول تشغيل للإصدار beta 22 تُنقل بيانات الإصدارات السابقة إلى مجلد data: تلك الموجودة في AppData\\Roaming\\LunaCalc (حتى beta 18) وتلك الموجودة بجوار الملف التنفيذي (من beta 19 إلى beta 21). وتُحذف المجلدات القديمة إذا بقيت فارغة.",
+                "تُحفظ كلمة مرور LoTW مشفّرة بآلية حماية البيانات في Windows (DPAPI) الخاصة بالمستخدم: على حاسوب آخر، أو مع مستخدم Windows آخر، يجب إدخالها من جديد.",
+                "## الأدلة",
+                "الأمر YAEC.exe /manuale <اللغة> (it, en, de, fr, es, pt, zh, ja, hi, ko, id, ru, uk, af) يفتح البرنامج، ويلتقط صورة لكل تبويب، ويكتب manuali\\YAEC_manuale_<اللغة>.pdf؛ ويشغّله compila.bat للغات الـ 14 كلها. الأدلة باللغات ذات الأبجدية اللاتينية يكتبها YAEC مباشرة؛ أما الأدلة بالروسية والأوكرانية والصينية واليابانية والهندية والكورية فتُطبع بطابعة Windows \"Microsoft Print to PDF\"، التي تضمّن الخطوط المناسبة (وإذا لم تكن هذه الطابعة موجودة، توضع الصفحات في ملف PDF على هيئة صور). لا تُعدَّل الإعدادات. وإذا لم يكن محدد الموقع والتردد مضبوطين، تُستخدم قيم مثالية للقطات الشاشة. وتُكتب الأخطاء، إن وُجدت، في data\\manuale_errore.txt."
+            };
+            elenchi["ar"]["C4"] = new string[] {
+                "## موقع القمر",
+                "يُحسب الموقع المركزي الأرضي للقمر بنظرية ELP-2000/82 في صيغتها المختصرة التي وضعها J. Meeus (Astronomical Algorithms، الفصل 47): خط الطول وخط العرض والمسافة من المتسلسلات الدورية، مع تصحيح الزمن الديناميكي (Delta T). ثم يأتي الترنّح وميل دائرة البروج، والتحويل إلى الإحداثيات الاستوائية، والزمن النجمي الظاهري، وتصحيح اختلاف المنظر الطوبوسنتري (الفصل 40)، مع الإهليلجي الأرضي وارتفاع المحطة. وتبلغ الدقة نحو 0.01°.",
+                "يُحوَّل محدد الموقع Maidenhead (4 أو 6 أو 8 أو 10 محارف) إلى مركز مربعه. ويُقاس السمت من الشمال باتجاه الشرق. أما الانكسار الجوي، عند تفعيله، فيُحسب بمعادلة Sæmundsson R = 1.02 / tan(h + 10.3/(h + 5.11)) دقيقة قوسية؛ وإلا فالارتفاع هندسي، كما في برامج EME المعتادة.",
+                "## إمكانية التوجيه والنوافذ",
+                "تُقارَن كل لحظة بحدود الهوائي (قطاع السمت باتجاه عقارب الساعة ونطاق الارتفاع) لمحطتك، ولمحطة DX عند تفعيلها: الأخضر = يمكن التوجيه، البرتقالي = خارج الحدود، الرمادي = تحت الأفق. والنوافذ المفيدة والمشتركة هي الفترات المتتالية من اللحظات التي يمكن فيها التوجيه.",
+                "## دوبلر وCFOM",
+                "يساوي دوبلر الاتجاه الواحد بين المحطة والقمر -f·(dR/dt)/c، حيث تُحسب السرعة الشعاعية dR/dt بالفرق على مدى ±30 s من المسافة الطوبوسنترية. لصدى محطتك ضعف الإزاحة؛ وبين محطتين تكون الإزاحة مجموع الإزاحتين. وفي CFOM يُرسَل على f0 - Doppler ويُستقبَل على f0 + Doppler.",
+                "## الاستقطاب وDpol وMNR",
+                "تُحسب زاوية الاستقطاب المحلية كما في WSJT-X من خط العرض ومن سمت القمر وارتفاعه؛ وDpol هو الفرق بين زاويتي المحطتين، بين -90° و+90°. ويساوي فقد الاستقطاب الخطي -20·log|cos Dpol| (30 dB كحد أقصى)، وأقصى عدم تبادلية MNR = -20·log|cos 2·Dpol| (25 dB كحد أقصى). ودوران فاراداي غير قابل للتنبؤ وغير مُدرج.",
+                "## ضوضاء السماء وDgrd",
+                "تؤخذ حرارة السماء خلف القمر (Tsky) عند 144 MHz على امتداد دائرة البروج من جدول بخطوات 2° (WSJT-X)، وفي «قبة السماء» من خريطة للسماء كلها بدقة 2° مشتقة من Global Sky Model؛ وتُقاس الترددات الأخرى بالأس الطيفي 2.6: T(f) = (T144 - 2.7)·(144/f)^2.6 + 2.7 K. ويجمع Dgrd، كما في WSJT-X، تأثير المسافة، -40·log(d / 356 903 km)، وتأثير الضوضاء، -10·log((Tsky + 80 K) / (Tskymin + 80 K))، مع Tskymin = 13·(408/f)^2.6 K.",
+                "## ميزانية EME",
+                "يتبع فقد المسار معادلة الرادار: L = 10·log((4·pi)^3·d1²·d2² / (sigma·lambda²))، مع sigma = 0.065·pi·R² (الانعكاسية القمرية 0.065، نصف قطر القمر 1737.4 km)، وd1 وd2 المسافتان الطوبوسنتريتان للمحطتين في اللحظة المختارة: لذا فإن التغير بين الحضيض والأوج (نحو 2.3 dB) مُدرج بالفعل. وEIRP يساوي P مطروحًا منه خسائر الكابل والملحقات، مضافًا إليه G + 10·log N وكسب الأرض إن وُجد.",
+                "يُحسب رقم الضوضاء لسلسلة الاستقبال (الخسائر، المضخم الأولي، الكابل، المحوّل الترددي، كابلات التوصيل، الجهاز) بمعادلة Friis؛ ويُشتق رقم الضوضاء للجهاز من قيمة MDS الخاصة به: NF = MDS + 174 - 10·log B. وحرارة النظام هي Tsys = Tant + (Tsky - Tsky المرجعية، إذا كان الفرق موجبًا) + Tsun + Te للمستقبل، حيث Tant هي درجة حرارة الهوائي من جداول VE7BQH (الهوائي مائل بزاوية 30°)، والمرجع هو 200 K عند 144 MHz مقيسًا بالأس 2.6. والضوضاء هي k·Tsys·B، وS/N هي الإشارة عند الهوائي مطروحًا منها الضوضاء في عرض النطاق المختار.",
+                "مع \"BETA- هوائي بلا تحكم في الارتفاع\" يساوي كسب الأرض لهوائي أفقي الاستقطاب على ارتفاع h القيمة 20·log|2·sin(2·pi·h·sin(el)/lambda)| (+6 dB كحد أقصى)، محسوبًا عند ارتفاع القمر.",
+                "## ضجيج الشمس",
+                "تُستكمل التدفقات الشمسية التي تقيسها شبكة RSTN (245 و410 و610 و1415 و2695 و4995 و8800 و15400 MHz) داخليًا بمقياس لوغاريتمي عند تردد العمل، أو تُستقرأ بقانون أُسّي تحت 245 MHz وفوق 15400 MHz. وتُعامَل الشمس مصدرًا نقطيًا غير مستقطب: T = S·Ae/(2k)، حيث تُشتق المساحة الفعالة Ae من الكسب وتُخفَّض بمخطط إشعاع الهوائي (فص غاوسي يُقدَّر عرضه من الكسب، ثم فصوص جانبية عند المستوى المضبوط). ويُحسب موقع الشمس وفق Meeus، الفصل 25.",
+                "## قبة السماء والخريطة والارتفاع",
+                "ترسم «قبة السماء» السماء المحلية بألوان Tsky، وحدود الهوائي، وأفق محطة DX، والشمس، والقمر، وأهم المصادر الراديوية. وتستخدم الخريطة إسقاط ميركاتور وبلاطات OpenStreetMap أو OpenTopoMap أو CARTO، المحفوظة في data\\tiles؛ وتُقرأ المربعات التي جرى العمل معها من ملف ADIF، المنزَّل من LoTW أيضًا. ومع محدد موقع من 10 محارف يُقرأ ارتفاع الأرض من Open Topo Data (EU-DEM 25 m في أوروبا، وSRTM 30 m في غيرها) أو، بديلًا، من Open-Meteo (Copernicus DEM GLO-90). ويستخدم التوقيت المحلي المناطق الزمنية في Windows المختارة بحسب الموقع.",
+                "## الشمس قرب القمر",
+                "لكل يوم في تبويب «المسافة وDgrd» تُحسب أصغر مسافة زاوية بين الشمس والقمر خلال الساعات المفيدة والقمر فوق الأفق، وتُقارن بعرض حزمة الاستقبال المقدَّر من الكسب، θ ≈ √(41253/G): ضمن 3 أضعاف عرض الحزمة يُعلَّم اليوم بالأحمر، وضمن 6 أضعاف بالبرتقالي. أما الزيادة الفعلية في الضوضاء فتُقدَّر في تبويب «ضجيج الشمس».",
+                "## الامتصاص القطبي والشفقي",
+                "يُحسب خط العرض المغناطيسي الأرضي لكل محطة بثنائي القطب المتمركز في IGRF-14 (القطب المغناطيسي الأرضي الشمالي لعام 2025 عند 80.8° N، 72.8° W): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). والمحطة الواقعة وراء الدائرتين القطبيتين (|φ| ≥ 66.56°) أو التي يكون فيها |φm| > 75° تقع في القلنسوة القطبية (احتمال PCA)؛ ومع 60° ≤ |φm| ≤ 75° تقع في المنطقة الشفقية. ويظهر التحذير عند تغيير محدد الموقع ويبقى في الشاشة الرئيسية.",
+                "## التبويبات و«استطلاع عوائقي» و«تصحيح الصيغ»",
+                "التبويبات مجمّعة على مستويين (المجموعات وتبويبات كل مجموعة)، يرسمهما البرنامج فوق الصفحات. وتُسقط «استطلاع عوائقي» السماء المحلية على الخريطة (الأفق = الدائرة الخارجية، السمت الرأسي = المركز، ونصف القطر متناسب مع 90° - الارتفاع)، ويمكنها تمويه المناطق الواقعة خارج الحدود؛ وفي «قبة السماء» تُغطّى المناطق نفسها بخطوط قطرية رمادية فاتحة. ويعيد تبويب «تصحيح الصيغ» حساب «ميزانية EME» و«ضجيج الشمس» كاملًا خطوة بخطوة، مع الصيغ والقيم المعوَّضة والنتائج."
+            };
+            elenchi["ar"]["C5"] = new string[] {
+                "• Jean Meeus، Astronomical Algorithms، الطبعة الثانية: القمر، الشمس، الترنّح، اختلاف المنظر، الزمن النجمي.",
+                "• WSJT-X (K1JT ومعاونوه)، lib/astro.f90: Tsky، Dgrd، الاستقطاب، MNR.",
+                "• Global Sky Model (A. de Oliveira-Costa et al., 2008) لخريطة ضوضاء السماء.",
+                "• جداول VE7BQH (Lionel Edwards) للكسب وG/T ودرجة حرارة الهوائي.",
+                "• NOAA Space Weather Prediction Center، شبكة RSTN: التدفقات الشمسية.",
+                "• OpenStreetMap contributors (ODbL)، OpenTopoMap (CC-BY-SA)، CARTO basemaps: الخرائط.",
+                "• Open Topo Data (EU-DEM، SRTM) وOpen-Meteo (Copernicus DEM GLO-90): ارتفاع الأرض.",
+                "• ARRL Logbook of the World (LoTW): سجل التأكيدات.",
+                "• Bob Atkins KA1GT، New Moon EME operation (إزاحة Icarus): الشمس قرب القمر.",
+                "• H. H. Sauer وD. C. Wilkinson، Space Weather 6 (2008)، وNOAA SWPC D-RAP: امتصاص القلنسوة القطبية والامتصاص الشفقي.",
+                "• الأقطاب المغناطيسية الأرضية IGRF-14، World Data Center for Geomagnetism في كيوتو: خط العرض المغناطيسي الأرضي.",
+                "• Esri World Imagery: الصور الجوية لـ «استطلاع عوائقي».",
+                "تبلغ دقة المواقع الفلكية نحو 0.01°؛ أما Tsky وDgrd وكسب الأرض وضجيج الشمس وتدفقات المصادر الراديوية فهي تقديرات مبنية على نماذج: الغرض منها مقارنة الحالات واختيار أفضل الأوقات."
+            };
+            testi["tr"] = new Dictionary<string, string> {
+                { "TITOLO", "Teknik ve kullanım kılavuzu" },
+                { "SOTTO", "Programın işleyişine ilişkin, ekran görüntüleriyle teknik rapor" },
+                { "INDICE", "İçindekiler" },
+                { "PAGINA", "Sayfa" },
+                { "FIGURA", "Şekil" },
+                { "CAP1", "Kurulum, dosyalar ve data klasörü" },
+                { "CAP2", "Programın ekranları" },
+                { "CAP3", "Kullanım rehberi" },
+                { "CAP4", "Teknik işleyiş" },
+                { "CAP5", "Kaynaklar, veriler ve teşekkürler" },
+                { "GENERATO", "Bu kılavuz YAEC tarafından {0} tarihinde oluşturuldu: ekran görüntüleri, programın bu bilgisayarda çalışan hâline aittir." }
+            };
+            elenchi["tr"] = new Dictionary<string, string[]>();
+            elenchi["tr"]["C1"] = new string[] {
+                "YAEC (Yet Another EME Calc), Windows, Linux ve macOS için EME (Dünya-Ay-Dünya) radyo amatörü trafiğine yönelik bir hesaplayıcıdır. C# ile yazılmış tek bir programdır (Windows Forms, .NET Framework 4; Linux ve macOS'ta Mono ile çalışır). Tüm sürümler GitHub'dan (github.com/ic8tem/YAEC) indirilir: Windows için kurulum programı ya da taşınabilir sürüm, Linux için .deb paketi ya da .tar.gz arşivi, macOS için .dmg görüntüsü; her sürümde ayrıca kaynak kodu ve indirilen dosyaları denetlemek için parmak izlerini içeren SHA256SUMS.txt dosyası bulunur.",
+                "## data klasörü",
+                "Programın tüm verileri data alt klasöründedir: Windows'ta YAEC.exe'nin yanında (kurulum programı programı Documents\\YAEC içine yerleştirir), Linux'ta ~/.local/share/YAEC/data içinde, macOS'ta ~/Library/Application Support/YAEC/data içinde. Program başka hiçbir yere bir şey yazmaz; bu nedenle Windows'ta programın klasörünün tamamı bir USB belleğe ya da başka bir bilgisayara kopyalanabilir.",
+                "• impostazioni.txt: tüm ayarlar (lokatörler, çağrı işareti, anten sınırları, her bant için bütçe parametreleri, dil, tema, yazı tipleri), düz metin olarak.",
+                "• solar-radio-flux.json: RSTN ağının ölçtüğü, NOAA SWPC'den indirilen güneş akıları.",
+                "• lotw.adi: ARRL Logbook of the World'den indirilen kayıt (yalnızca LoTW'den indirmeyi kullanıyorsanız).",
+                "• CALL3.TXT: EME istasyonlarının çağrı işaretleri ve lokatörlerinin listesi; W7GJ'den ve WSJT-X Improved'dan indirilip tek bir dosyada birleştirilir (7 günden eskiyse kendiliğinden güncellenir).",
+                "• tiles: daha önce indirilmiş harita karoları; yeniden indirilmeleri gerekmesin diye saklanır.",
+                "## Başlangıç ve dosya denetimi",
+                "Başlangıçta, açılış penceresinin yeşil çubuğu kısalırken (5 saniye) YAEC data klasörünü denetler: yoksa oluşturur, içine yazabildiğini doğrular ve dosyaları kontrol eder. Güneş akısı yoksa, geçerli değilse ya da 12 saatten eskiyse NOAA'dan yeniden indirilir; LoTW kaydı ise yoksa ve kullanıcı adı ile parola kayıtlıysa yeniden indirilir. Sonuç yeşil çubuğun üstünde görünür. Bir indirme başarısız olursa program kayıtlı verilerle devam eder.",
+                "CALL3.TXT yoksa ya da 7 günden eskiyse W7GJ'den ve WSJT-X Improved'dan yeniden indirilir; iki kaynaktan hiçbiri yanıt vermezse kayıtlı dosya kullanılır.",
+                "beta 22 ilk kez çalıştırıldığında önceki sürümlerin verileri data klasörüne taşınır: AppData\\Roaming\\LunaCalc içindekiler (beta 18'e kadar) ve çalıştırılabilir dosyanın yanındakiler (beta 19'dan beta 21'e kadar). Eski klasörler boş kalırsa silinir.",
+                "LoTW parolası, kullanıcının Windows veri koruması (DPAPI) ile şifrelenerek saklanır: başka bir bilgisayarda ya da başka bir Windows kullanıcısıyla yeniden girilmesi gerekir.",
+                "## Kılavuzlar",
+                "YAEC.exe /manuale <dil> komutu (it, en, de, fr, es, pt, zh, ja, hi, ko, id, ru, uk, af) programı açar, her sekmenin ekran görüntüsünü alır ve manuali\\YAEC_manuale_<dil>.pdf dosyasını yazar; compila.bat bunu 14 dilin tümü için çalıştırır. Latin alfabeli dillerdeki kılavuzlar doğrudan YAEC tarafından yazılır; Rusça, Ukraynaca, Çince, Japonca, Hintçe ve Korece olanlar ise doğru yazı tiplerini gömen Windows \"Microsoft Print to PDF\" yazıcısıyla basılır (bu yazıcı yoksa sayfalar PDF'e görüntü olarak girer). Ayarlar değiştirilmez. Lokatörler ve frekans ayarlanmamışsa ekran görüntüleri için örnek değerler kullanılır. Olası hatalar data\\manuale_errore.txt dosyasına yazılır."
+            };
+            elenchi["tr"]["C4"] = new string[] {
+                "## Ay konumu",
+                "Ay'ın yer merkezli konumu, J. Meeus'un kısaltılmış biçimiyle ELP-2000/82 kuramına göre hesaplanır (Astronomical Algorithms, böl. 47): boylam, enlem ve uzaklık periyodik serilerden, dinamik zaman düzeltmesiyle (Delta T) elde edilir. Ardından nutasyon ve ekliptiğin eğikliği, ekvatoral koordinatlara geçiş, görünür yıldız zamanı ve Dünya elipsoidi ile istasyon yüksekliğini kullanan topo-merkezli paralaks düzeltmesi (böl. 40) gelir. Doğruluk yaklaşık 0,01°'dir.",
+                "Maidenhead lokatörü (4, 6, 8 ya da 10 karakter) kendi karesinin merkezine dönüştürülür. Azimut Kuzey'den Doğu'ya doğru sayılır. Atmosferik kırılma, etkinleştirildiğinde, Sæmundsson formülüyle hesaplanır: R = 1,02 / tan(h + 10,3/(h + 5,11)) yay dakikası; aksi hâlde yükseliş, alışılmış EME programlarında olduğu gibi geometriktir.",
+                "## Yönlendirilebilirlik ve pencereler",
+                "Her an, kendi istasyonunuzun ve etkinse DX'in anten sınırlarıyla (saat yönünde azimut sektörü ve yükseliş aralığı) karşılaştırılır: yeşil = yönlendirilebilir, turuncu = sınır dışı, gri = ufkun altında. Kullanılabilir pencereler ve ortak pencereler, yönlendirilebilir anların ardışık aralıklarıdır.",
+                "## Doppler ve CFOM",
+                "İstasyon ile Ay arasındaki tek yönlü Doppler -f·(dR/dt)/c değerindedir; burada dR/dt radyal hızı, topo-merkezli uzaklıktan ±30 s üzerinden fark alınarak hesaplanır. Kendi yankınızda kayma iki katıdır; iki istasyon arasında kayma, ikisinin toplamıdır. CFOM'da f0 - Doppler üzerinde gönderilir ve f0 + Doppler üzerinde alınır.",
+                "## Polarizasyon, Dpol ve MNR",
+                "Yerel polarizasyon açısı, WSJT-X'teki gibi enlemden ve Ay'ın azimut ve yükselişinden hesaplanır; Dpol iki istasyonun açıları arasındaki farktır ve -90° ile +90° arasındadır. Doğrusal polarizasyon kaybı -20·log|cos Dpol| (en fazla 30 dB), en büyük karşılıklı olmama ise MNR = -20·log|cos 2·Dpol| (en fazla 25 dB) değerindedir. Faraday dönmesi önceden tahmin edilemez ve hesaba katılmaz.",
+                "## Gökyüzü gürültüsü ve Dgrd",
+                "144 MHz'de Ay'ın arkasındaki gökyüzü sıcaklığı (Tsky), ekliptik boyunca 2°'lik adımlarla bir tablodan (WSJT-X) ve Gök kubbesi sekmesinde Global Sky Model'den türetilmiş 2°'lik bir tüm gökyüzü haritasından alınır; diğer frekanslarda 2,6 spektral indeksiyle ölçeklenir: T(f) = (T144 - 2,7)·(144/f)^2,6 + 2,7 K. Dgrd, WSJT-X'teki gibi, uzaklığın etkisi -40·log(d / 356 903 km) ile gürültünün etkisi -10·log((Tsky + 80 K) / (Tskymin + 80 K)) toplamıdır; burada Tskymin = 13·(408/f)^2,6 K.",
+                "## EME bütçesi",
+                "Yol kaybı radar denklemini izler: L = 10·log((4·pi)^3·d1²·d2² / (sigma·lambda²)); burada sigma = 0,065·pi·R² (Ay yansıtıcılığı 0,065, Ay yarıçapı 1737,4 km), d1 ve d2 ise seçilen anda iki istasyonun topo-merkezli uzaklıklarıdır: böylece yerberi ile yeröte arasındaki değişim (yaklaşık 2,3 dB) hesaba katılmış olur. EIRP, P'den kablo ve aksesuar kayıplarının çıkarılıp G + 10·log N ve varsa zemin kazancının eklenmesiyle bulunur.",
+                "Alıcı zincirin (kayıplar, ön yükselteç, kablo, transverter, ara kablolar, telsiz) gürültü faktörü Friis formülüyle hesaplanır; telsizinki ise MDS değerinden türetilir: NF = MDS + 174 - 10·log B. Sistem sıcaklığı Tsys = Tant + (Tsky - referans Tsky, pozitifse) + Tsun + alıcının Te değeridir; burada Tant, VE7BQH tablolarındaki anten sıcaklığıdır (anten 30° eğik) ve referans, 144 MHz'de 200 K olup 2,6 indeksiyle ölçeklenir. Gürültü k·Tsys·B'dir; S/N ise antendeki sinyalden seçilen geçiş bandındaki gürültünün çıkarılmasıyla bulunur.",
+                "\"BETA- yükseklik ayarı olmayan anten\" seçiliyken, h yüksekliğindeki yatay polarizasyonlu bir antenin zemin kazancı 20·log|2·sin(2·pi·h·sin(el)/lambda)| (en fazla +6 dB) değerindedir ve Ay'ın yükselişinde hesaplanır.",
+                "## Güneş gürültüsü",
+                "RSTN ağının ölçtüğü güneş akıları (245, 410, 610, 1415, 2695, 4995, 8800 ve 15400 MHz) çalışma frekansına logaritmik ölçekte ara değerlenir ya da 245 MHz'in altında ve 15400 MHz'in üstünde bir kuvvet yasasıyla dış değerlenir. Güneş, polarize olmayan noktasal bir kaynak olarak ele alınır: T = S·Ae/(2k); burada etkin alan Ae kazançtan türetilir ve anten ışıma diyagramıyla zayıflatılır (genişliği kazançtan tahmin edilen Gauss lobu, ardından ayarlanan seviyedeki yan loblar). Güneş'in konumu Meeus, böl. 25 ile hesaplanır.",
+                "## Gök kubbesi, harita ve yükseklik",
+                "Gök kubbesi, yerel gökyüzünü Tsky renkleriyle, anten sınırlarını, DX'in ufkunu, Güneş'i, Ay'ı ve başlıca radyo kaynaklarını çizer. Harita Mercator izdüşümünü ve data\\tiles içine kaydedilen OpenStreetMap, OpenTopoMap ya da CARTO karolarını kullanır; çalışılmış kareler, LoTW'den indirilmiş olanı da dahil, ADIF dosyasından okunur. 10 karakterlik bir lokatörle arazi yüksekliği Open Topo Data'dan (Avrupa'da EU-DEM 25 m, başka yerlerde SRTM 30 m) ya da alternatif olarak Open-Meteo'dan (Copernicus DEM GLO-90) okunur. Yerel saat, konuma göre seçilen Windows saat dilimlerini kullanır.",
+                "## Ay'a yakın Güneş",
+                "Mesafe ve Dgrd sekmesindeki her gün için, Ay'ın ufkun üzerinde olduğu kullanılabilir saatlerde Güneş ile Ay arasındaki en küçük açısal uzaklık hesaplanır ve kazançtan tahmin edilen alım hüzme genişliğiyle, θ ≈ √(41253/G), karşılaştırılır: 3 hüzme genişliği içindeyse gün kırmızıyla, 6 içindeyse turuncuyla işaretlenir. Gürültü artışının kendisi Güneş gürültüsü sekmesinde tahmin edilir.",
+                "## Kutup ve aurora soğurması",
+                "Her istasyonun jeomanyetik enlemi IGRF-14'ün merkezlenmiş dipolüyle hesaplanır (2025 kuzey jeomanyetik kutbu 80,8° K, 72,8° B'de): sin φm = sin φ·sin φp + cos φ·cos φp·cos(λ - λp). Kutup dairelerinin ötesindeki (|φ| ≥ 66,56°) ya da |φm| > 75° olan bir istasyon kutup başlığındadır (olası PCA); 60° ≤ |φm| ≤ 75° ise aurora bölgesindedir. Uyarı bir lokatör değiştirildiğinde görünür ve ana ekranda kalır.",
+                "## Sekmeler, Engellerimin keşfi ve FORMÜL HATA AYIKLAMA",
+                "Sekmeler, program tarafından sayfaların üstünde çizilen iki düzeyde (gruplar ve grubun sekmeleri) toplanır. Engellerimin keşfi sekmesi yerel gökyüzünü harita üzerine izdüşürür (ufuk = dış çember, başucu = merkez, yarıçap 90° - yükseliş ile orantılı) ve sınır dışındaki bölgeleri bulanıklaştırabilir; Gök kubbesi'nde aynı bölgeler açık gri çapraz çizgilerle örtülür. FORMÜL HATA AYIKLAMA sekmesi, EME bütçesi ve Güneş gürültüsü hesabının tamamını formüller, yerine konan değerler ve sonuçlarla adım adım yineler."
+            };
+            elenchi["tr"]["C5"] = new string[] {
+                "• Jean Meeus, Astronomical Algorithms, 2. baskı: Ay, Güneş, nutasyon, paralaks, yıldız zamanı.",
+                "• WSJT-X (K1JT ve çalışma arkadaşları), lib/astro.f90: Tsky, Dgrd, polarizasyon, MNR.",
+                "• Gökyüzü gürültüsü haritası için Global Sky Model (A. de Oliveira-Costa ve ark., 2008).",
+                "• Kazanç, G/T ve anten sıcaklığı için VE7BQH tabloları (Lionel Edwards).",
+                "• NOAA Space Weather Prediction Center, RSTN ağı: güneş akıları.",
+                "• OpenStreetMap contributors (ODbL), OpenTopoMap (CC-BY-SA), CARTO basemaps: haritalar.",
+                "• Open Topo Data (EU-DEM, SRTM) ve Open-Meteo (Copernicus DEM GLO-90): arazi yüksekliği.",
+                "• ARRL Logbook of the World (LoTW): onay kaydı.",
+                "• Bob Atkins KA1GT, New Moon EME operation (Icarus ofseti): Ay'a yakın Güneş.",
+                "• H. H. Sauer ve D. C. Wilkinson, Space Weather 6 (2008) ve NOAA SWPC D-RAP: kutup başlığı ve aurora soğurması.",
+                "• IGRF-14 jeomanyetik kutupları, World Data Center for Geomagnetism, Kyoto: jeomanyetik enlem.",
+                "• Esri World Imagery: Engellerimin keşfi sekmesindeki hava görüntüleri.",
+                "Astronomik konumların doğruluğu yaklaşık 0,01°'dir; Tsky, Dgrd, zemin kazancı, güneş gürültüsü ve radyo kaynaklarının akıları modellere dayalı tahminlerdir: durumları karşılaştırmaya ve en iyi anları seçmeye yararlar."
             };
         }
 
@@ -50979,7 +51198,7 @@ namespace LunaCalc
             };
             d["bn"]["S44"] = new string[] {
                 "## আকাশের নয়েজ ও Dgrd",
-                "144 MHz-এ চাঁদের পেছনের আকাশের তাপমাত্রা (§T_{sky}§) নেওয়া হয় ক্রান্তিবৃত্ত বরাবর 2° ধাপের একটি টেবিল থেকে (WSJT-X) এবং, Sky ভিউতে, Global Sky Model থেকে নির্ণীত 2°-এর একটি সম্পূর্ণ-আকাশ মানচিত্র থেকে; অন্য ফ্রিকোয়েন্সিগুলো স্পেকট্রাল সূচক 2.6 দিয়ে স্কেল করা হয়:",
+                "144 MHz-এ চাঁদের পেছনের আকাশের তাপমাত্রা (§T_{sky}§) নেওয়া হয় ক্রান্তিবৃত্ত বরাবর 2° ধাপের একটি টেবিল থেকে (WSJT-X) এবং, আকাশ-গম্বুজে, Global Sky Model থেকে নির্ণীত 2°-এর একটি সম্পূর্ণ-আকাশ মানচিত্র থেকে; অন্য ফ্রিকোয়েন্সিগুলো স্পেকট্রাল সূচক 2.6 দিয়ে স্কেল করা হয়:",
                 "= T(f) = \\p{T_{144} − 2.7} · \\p{\\frac{144}{f}}^{2.6} + 2.7 \\t{ K}",
                 "Dgrd, WSJT-X-এর মতো, চাঁদের দূরত্ব d-এর প্রভাব এবং আকাশের নয়েজের প্রভাব যোগ করে:",
                 "= Dgrd = −40 · log_{10} \\frac{d}{\\t{356 903 km}} − 10 · log_{10} \\frac{T_{sky} + 80 \\t{ K}}{T_{sky,min} + 80 \\t{ K}}",
@@ -50997,7 +51216,7 @@ namespace LunaCalc
                 "• **ধনু, গ্যালাক্সির কেন্দ্র**: আকাশের সবচেয়ে উষ্ণ অঞ্চল; 144 MHz-এ চাঁদের পেছনের আকাশের তাপমাত্রা কয়েক হাজার K পর্যন্ত পৌঁছায়, যেখানে ঠান্ডা অঞ্চলে প্রায় 200 K, এবং সেই অঞ্চল সূর্যের চেয়েও বেশি নয়েজপূর্ণ [1]। এখানে চাঁদ তার সর্বনিম্ন বিষুবলম্বেও থাকে, সর্বোচ্চ বিষুবলম্বের বছরগুলোতে প্রায় −30°: উত্তর ইতালি (প্রায় 45° উত্তর) থেকে এটি মাত্র 15 – 16° এলিভেশন পর্যন্ত ওঠে এবং প্রায় 6 ঘণ্টা 5°-এর ওপরে থাকে (দিগন্তের ওপরে প্রায় 7 ঘণ্টা), অথচ +30°-এ এটি প্রায় 75°-এ পৌঁছায় এবং প্রায় 15 – 16 ঘণ্টা 5°-এর ওপরে থাকে [1]। এটি মাসের সবচেয়ে খারাপ সময়।",
                 "• **বৃষ ও মিথুন, বিপরীত দিকে (অ্যান্টিসেন্টার)**: সেখানে ছায়াপথ অনেক কম উষ্ণ, কিন্তু বৃষে, ক্রান্তিবৃত্তের একেবারে কাছে, রয়েছে **ক্র্যাব নীহারিকা** (Taurus A), আকাশের সবচেয়ে শক্তিশালী রেডিও উৎসগুলোর একটি: চাঁদ যখন এর সামনে বা পাশ দিয়ে যায়, নয়েজ বেড়ে যায়।",
                 "• ফ্রিকোয়েন্সি কমার সঙ্গে আকাশের নয়েজ বাড়ে: 50 MHz-এ এর প্রভাব 144 MHz-এর চেয়ে অনেক বেশি, 432 MHz-এ অনেক কম (প্রোগ্রাম এটিকে স্পেকট্রাল সূচক 2.6 দিয়ে স্কেল করে)।",
-                "> প্রোগ্রামে: Sky ভিউ আকাশকে নীল (ঠান্ডা) থেকে লাল (উষ্ণ) পর্যন্ত রং করে এবং চাঁদ কোথায় আছে দেখায়; “চাঁদের অবস্থান” ট্যাবের Tsky কলাম এবং “দূরত্ব ও Dgrd”-এর ক্যালেন্ডার জানায় কখন চাঁদ উষ্ণ অঞ্চলগুলোর সামনে থাকে।",
+                "> প্রোগ্রামে: আকাশ-গম্বুজ আকাশকে নীল (ঠান্ডা) থেকে লাল (উষ্ণ) পর্যন্ত রং করে এবং চাঁদ কোথায় আছে দেখায়; “চাঁদের অবস্থান” ট্যাবের Tsky কলাম এবং “দূরত্ব ও Dgrd”-এর ক্যালেন্ডার জানায় কখন চাঁদ উষ্ণ অঞ্চলগুলোর সামনে থাকে।",
                 "### চাঁদের বিষুবলম্ব",
                 "**বিষুবলম্ব** (§δ§) হলো আকাশে চাঁদের “অক্ষাংশ”: খগোলীয় বিষুবরেখা থেকে এটি কত ডিগ্রি উত্তরে (+) বা দক্ষিণে (−) আছে। প্রোগ্রাম তারিখ ও সময় থেকে এটি গণনা করে এবং সব হিসাবে ব্যবহার করে (এলিভেশন, উইন্ডো, Tsky, Dpol, ডপলার): এটি দিতে হয় না। তবে এটি জানা থাকলে দিন বেছে নিতে সুবিধা হয়।",
                 "• **মাসিক চক্র**: প্রায় 27.3 দিনে বিষুবলম্ব উত্তরের সর্বোচ্চ থেকে দক্ষিণের সর্বোচ্চে যায় এবং ফিরে আসে। চাঁদ যখন আপনার নিজের গোলার্ধের দিকে থাকে (উত্তরে ধনাত্মক, দক্ষিণে ঋণাত্মক), তখন এটি আরও উঁচুতে ওঠে এবং দিগন্তের ওপরে বেশি ঘণ্টা থাকে; বিপরীত দিকে এটি নিচু থাকে এবং মাত্র কয়েক ঘণ্টা ওপরে থাকে [1]।",
@@ -51516,7 +51735,7 @@ namespace LunaCalc
             };
             d["ar"]["S44"] = new string[] {
                 "## ضوضاء السماء وDgrd",
-                "تؤخذ درجة حرارة السماء خلف القمر (§T_{sky}§) عند 144 MHz على امتداد دائرة البروج من جدول بخطوات 2° (WSJT-X)، وفي عرض Sky من خريطة للسماء كلها بدقة 2° مشتقة من Global Sky Model؛ وتُقاس الترددات الأخرى بالأس الطيفي 2.6:",
+                "تؤخذ درجة حرارة السماء خلف القمر (§T_{sky}§) عند 144 MHz على امتداد دائرة البروج من جدول بخطوات 2° (WSJT-X)، وفي «قبة السماء» من خريطة للسماء كلها بدقة 2° مشتقة من Global Sky Model؛ وتُقاس الترددات الأخرى بالأس الطيفي 2.6:",
                 "= T(f) = \\p{T_{144} − 2.7} · \\p{\\frac{144}{f}}^{2.6} + 2.7 \\t{ K}",
                 "يضيف Dgrd، كما في WSJT-X، تأثير مسافة القمر d وتأثير ضوضاء السماء:",
                 "= Dgrd = −40 · log_{10} \\frac{d}{\\t{356 903 km}} − 10 · log_{10} \\frac{T_{sky} + 80 \\t{ K}}{T_{sky,min} + 80 \\t{ K}}",
@@ -51534,7 +51753,7 @@ namespace LunaCalc
                 "• **القوس، مركز المجرة**: أشد مناطق السماء حرارة؛ عند 144 MHz تبلغ درجة حرارة السماء خلف القمر بضعة آلاف K، مقابل نحو 200 K في المناطق الباردة، وتلك المنطقة أكثر ضوضاءً من الشمس [1]. وهنا يكون القمر أيضًا في أدنى ميل له، نحو −30° في سنوات الميل الأقصى: من شمال إيطاليا (نحو 45° شمالًا) لا يرتفع إلا إلى 15 – 16° ويبقى فوق 5° نحو 6 ساعات (نحو 7 ساعات فوق الأفق)، بينما عند +30° يبلغ نحو 75° ويبقى فوق 5° نحو 15 – 16 ساعة [1]. إنها أسوأ فترة في الشهر.",
                 "• **الثور والجوزاء، في الجهة المقابلة (المركز المضاد)**: درب التبانة هناك أقل حرارة بكثير، لكن في الثور، قريبًا جدًا من دائرة البروج، يقع **سديم السرطان** (Taurus A)، وهو من أقوى المصادر الراديوية في السماء: عندما يمر القمر أمامه أو بجانبه تزداد الضوضاء.",
                 "• تزداد ضوضاء السماء كلما انخفض التردد: عند 50 MHz يكون أثرها أكبر بكثير منه عند 144 MHz، وعند 432 MHz أقل بكثير (يقيسها البرنامج بالأس الطيفي 2.6).",
-                "> في البرنامج: يلوّن عرض Sky السماء من الأزرق (بارد) إلى الأحمر (حار) ويبيّن موقع القمر؛ ويبيّن عمود Tsky في تبويب “موقع القمر” وتقويم “المسافة وDgrd” متى يكون القمر أمام المناطق الحارة.",
+                "> في البرنامج: تلوّن «قبة السماء» السماءَ من الأزرق (بارد) إلى الأحمر (حار) ويبيّن موقع القمر؛ ويبيّن عمود Tsky في تبويب “موقع القمر” وتقويم “المسافة وDgrd” متى يكون القمر أمام المناطق الحارة.",
                 "### ميل القمر",
                 "**الميل** (§δ§) هو “خط عرض” القمر في السماء: كم درجة يبعد شمال (+) أو جنوب (−) خط الاستواء السماوي. يحسبه البرنامج من التاريخ والوقت ويستخدمه في جميع الحسابات (الارتفاع، النوافذ، Tsky، Dpol، دوبلر): لا حاجة إلى إدخاله. لكن معرفته تساعد على اختيار الأيام.",
                 "• **الدورة الشهرية**: في نحو 27.3 يومًا ينتقل الميل من أقصاه شمالًا إلى أقصاه جنوبًا ثم يعود. حين يكون القمر في جهة نصف الكرة الذي تقع فيه محطتك (موجبًا في الشمال، سالبًا في الجنوب) يرتفع أعلى ويبقى فوق الأفق ساعات أكثر؛ وفي الجهة المقابلة يبقى منخفضًا ولساعات قليلة فقط [1].",
