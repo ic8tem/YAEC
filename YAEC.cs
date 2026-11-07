@@ -47576,8 +47576,10 @@ namespace LunaCalc
                     aut.Add(ga[0] + "|" + ga[1] + "|" + (ga.Length > 4 ? ga[4] : "0") + "|" + FumettoGrazie(ga[0], ga[1], ga[2], ga[3]));
                 grazie.Add(aut.ToArray());
 
-                float colLab = Math.Min(S(330), wtot * 0.34f);
-                float xc0 = x + S(22) + colLab + S(22), xcMax = x + wtot - S(22);
+                // il riquadro dei ringraziamenti si allarga a tutta la finestra (le pastiglie vanno a capo più tardi)
+                float wg = Math.Max(wtot, Math.Min(S(1700), cr.Width - 2 * x - S(10)));
+                float colLab = Math.Min(S(330), wg * 0.34f);
+                float xc0 = x + S(22) + colLab + S(22), xcMax = x + wg - S(22);
                 // altezza di ogni riga: etichetta a capo nella colonna, pastiglie che vanno a capo nello spazio a destra
                 float[] hRiga = new float[grazie.Count];
                 for (int i = 0; i < grazie.Count; i++)
@@ -47596,7 +47598,7 @@ namespace LunaCalc
                 }
                 float ht = S(70);
                 foreach (float hr in hRiga) ht += hr;
-                RectangleF thx = new RectangleF(x, y, wtot, ht);
+                RectangleF thx = new RectangleF(x, y, wg, ht);
                 Scheda(g, thx, Color.Empty);
                 RectangleF ich = new RectangleF(thx.Left + S(22), thx.Top + S(16), S(30), S(30));
                 IconaQuadra(g, ich, Color.FromArgb(214, 48, 49), "♥", fb);
@@ -47637,7 +47639,7 @@ namespace LunaCalc
                 SizeF s1 = g.MeasureString(Lang.T("Il programma ha il patrocinio della"), fd), s3 = g.MeasureString("Sezione ARI \"Valle del Liri\"", fl);
                 float wp = Math.Max(s1.Width, s3.Width) + S(150), hp = S(112);
                 RectangleF pat = new RectangleF(cr.Width - wp - S(36), cr.Height - hp - S(30), wp, hp);
-                if (pat.Left < x + wtot + S(20) && pat.Top < y + S(20)) pat.Y = y + S(20);
+                if (pat.Left < x + wg + S(20) && pat.Top < y + S(20)) pat.Y = y + S(20);
                 Scheda(g, pat, Color.Empty);
                 if (logoAri != null) g.DrawImage(logoAri, pat.Left + S(14), pat.Top + S(10), S(92), S(92));
                 float xp = pat.Left + S(122);
