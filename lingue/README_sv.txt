@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.4
+﻿YAEC – Yet Another EME Calc 1.5
 av Costantino IC8TEM
 ==========================================
 
-Kalkylator för radioamatörer som kör EME (Jord–Måne–Jord) från 50 till 432 MHz: månens position och riktfönster inom gränserna för den egna antennen, planering av dagarna med bäst Dgrd, länkbudget för EME, himmels- och solbrus, databas över koaxialkablar och handböcker om EME. För Windows, Linux och macOS, på 26 språk.
+Kalkylator för radioamatörer som kör EME (Jord–Måne–Jord) från 50 till 432 MHz: månens position och riktfönster inom gränserna för den egna antennen, planering av dagarna med bäst Dgrd, länkbudget för EME, himmels- och solbrus, databas över koaxialkablar och handböcker om EME. För Windows, Linux och macOS, på 28 språk.
 Källkod och nedladdning: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Ladda ner YAEC-1.4-Setup.exe från sidan Releases och kör den. Den installerar YAEC i Dokument\YAEC, utan administratörsrättigheter, med genvägar i Start-menyn och på skrivbordet samt ett avinstallationsprogram.
+1. Ladda ner YAEC-1.5-Setup.exe från sidan Releases och kör den. Den installerar YAEC i Dokument\YAEC, utan administratörsrättigheter, med genvägar i Start-menyn och på skrivbordet samt ett avinstallationsprogram.
 2. Om SmartScreen-varningen visas: ”Mer information” → ”Kör ändå”.
-3. Utan installation: packa upp YAEC-1.4-windows-portable.zip i en mapp där du har skrivrätt och starta YAEC.exe.
+3. Utan installation: packa upp YAEC-1.5-windows-portable.zip i en mapp där du har skrivrätt och starta YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC körs med Mono, den fria .NET-körmiljön.
-- Debian, Ubuntu, Mint: ladda ner yaec_1.4_all.deb och installera den med
-      sudo apt install ./yaec_1.4_all.deb
+- Debian, Ubuntu, Mint: ladda ner yaec_1.5_all.deb och installera den med
+      sudo apt install ./yaec_1.5_all.deb
   (installerar även Mono). YAEC startas från programmenyn eller med kommandot ”yaec”.
-- Andra distributioner: installera Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), packa upp YAEC-1.4-linux.tar.gz och kör ./install.sh.
+- Andra distributioner: installera Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), packa upp YAEC-1.5-linux.tar.gz och kör ./install.sh.
 
 INSTALLATION – macOS (experimentell)
 1. Installera Mono för macOS (https://www.mono-project.com/download/stable/) och XQuartz (https://www.xquartz.org).
-2. Öppna YAEC-1.4-macOS.dmg och dra YAEC till Appar. Första gången: högerklicka på YAEC → Öppna (appen är inte signerad av Apple).
+2. Öppna YAEC-1.5-macOS.dmg och dra YAEC till Appar. Första gången: högerklicka på YAEC → Öppna (appen är inte signerad av Apple).
 
 KONTROLL AV NEDLADDADE FILER (SHA-256)
 Varje release innehåller SHA256SUMS.txt med SHA-256-kontrollsumman för varje paket. Jämför den med kontrollsumman för den nedladdade filen:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Om de två värdena skiljer sig åt ska du inte installera filen: ladda ner den igen.
@@ -39,6 +39,7 @@ Fel, bättre data, översättningar: ccerrotta@gmail.com · ic8tem@gmail.com · 
 
 VERSIONSHISTORIK
 Versioner före 1.0 kallas beta.
+- 1.5 - Ny flik Radar GRAVES i gruppen Förbindelse: Månen i radarloben med sektor och steg, gemensamt fönster med dig, ekots doppler och fördröjning, lobens nästa passage över Månen, himlen sedd från GRAVES, rekonstruktion av dygnets 24 UTC-timmar med detaljer för de kommande 10 sekunderna, tips för att höra ekot och källor; listan över aktiva stationer även i JSON och text för LunaCalc Mobile; två nya språk, danska och tagalog (28 totalt), med handböckerna.
 - 1.4 - Aktiva stationer: rutan för DX-anropssignalen får en orange ram om stationen har skrivit i N0UK:s EME-chatt de senaste 90 dagarna, med datum för det senaste meddelandet i verktygstipset; Typsnitt med 10 rekommenderade typsnitt för Windows, Linux och macOS, testade flik för flik; paket för 32-bitars Windows och för Raspberry Pi (arm64); Himlavalvet med lila streckade rutor kring området du kan rikta mot; Avstånd och Dgrd med den fjärde användbara dagen och valt datum även med ett klick i diagrammet; sifferrutor med rundad ram och pilarna ovanför varandra; dialogknappar vid kanterna (vänster, mitten, höger); tackrutan i full bredd; i smala fönster hamnar CALCOLI APPROFONDITI på två rader och ingen text hamnar under knapparna.
 - 1.3 - Nio nya språk: nederländska, estniska, lettiska, litauiska, svenska, norska, isländska, hebreiska och urdu (26 totalt), med manualerna; licens och README på alla språk, licens på installationsprogrammets språk; knappen GRAVES; TX-kontakter och RX-kontakter i EME-budget (råd från NJ9R); flyttbar avdelare mellan den vänstra kolumnen och schemat i EME-budget; kryssrutan Grå slöja i Rekognosering av mina hinder; FORMEL-DEBUG blir Kontroll av beräkningarna och ABOUT & CREDITS blir INFORMATION OCH ERKÄNNANDEN; tekniska kapitel i användarmanualen på bengali, arabiska och turkiska; pastellscheman rättade; fönstret för CALL3.TXT stängs automatiskt efter uppdateringen; knapparna i dialogrutorna har fått mer avstånd.
 - 1.2.1 - Sidan FÖRFATTARENS KONTAKTUPPGIFTER OCH TACK öppnas åter korrekt på Linux och macOS; hänvisningen för transvertrarna anger § 1.7.1.

@@ -5,7 +5,7 @@
 ; per questo l'installazione va nella cartella dell'utente, dove si può scrivere.
 
 #ifndef MyAppVersion
-  #define MyAppVersion "1.4"
+  #define MyAppVersion "1.5"
 #endif
 ; versione a 32 bit: ISCC /DExeDir=x86 /DSuffisso=-32bit YAEC.iss
 #ifndef ExeDir
@@ -46,6 +46,7 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"; LicenseFile: "l
 Name: "portuguese"; MessagesFile: "compiler:Languages\Portuguese.isl"; LicenseFile: "lingue\LICENSE_pt.txt"
 Name: "dutch"; MessagesFile: "compiler:Languages\Dutch.isl"; LicenseFile: "lingue\LICENSE_nl.txt"
 Name: "norwegian"; MessagesFile: "compiler:Languages\Norwegian.isl"; LicenseFile: "lingue\LICENSE_nb.txt"
+Name: "danish"; MessagesFile: "compiler:Languages\Danish.isl"; LicenseFile: "lingue\LICENSE_da.txt"
 Name: "hebrew"; MessagesFile: "compiler:Languages\Hebrew.isl"; LicenseFile: "lingue\LICENSE_he.txt"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"; LicenseFile: "lingue\LICENSE_ja.txt"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; LicenseFile: "lingue\LICENSE_ru.txt"

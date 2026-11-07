@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.4
+﻿YAEC – Yet Another EME Calc 1.5
 作者：Costantino IC8TEM
 ==========================================
 
-面向在 50 至 432 MHz 进行 EME（地–月–地）通信的业余无线电爱好者的计算器：根据自己天线的限制计算月球位置和指向时间窗口，规划 Dgrd 最佳的日期，EME 链路预算，天空噪声和太阳噪声，同轴电缆数据库以及 EME 手册。适用于 Windows、Linux 和 macOS，提供 26 种语言。
+面向在 50 至 432 MHz 进行 EME（地–月–地）通信的业余无线电爱好者的计算器：根据自己天线的限制计算月球位置和指向时间窗口，规划 Dgrd 最佳的日期，EME 链路预算，天空噪声和太阳噪声，同轴电缆数据库以及 EME 手册。适用于 Windows、Linux 和 macOS，提供 28 种语言。
 源代码和下载：https://github.com/ic8tem/YAEC/releases
 
 安装 – WINDOWS
-1. 从 Releases 页面下载 YAEC-1.4-Setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
+1. 从 Releases 页面下载 YAEC-1.5-Setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
 2. 如果出现 SmartScreen 警告：“更多信息” → “仍要运行”。
-3. 免安装：将 YAEC-1.4-windows-portable.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
+3. 免安装：将 YAEC-1.5-windows-portable.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
 
 安装 – LINUX
 YAEC 在 Mono（自由的 .NET 运行时）上运行。
-- Debian、Ubuntu、Mint：下载 yaec_1.4_all.deb，并用以下命令安装
-      sudo apt install ./yaec_1.4_all.deb
+- Debian、Ubuntu、Mint：下载 yaec_1.5_all.deb，并用以下命令安装
+      sudo apt install ./yaec_1.5_all.deb
   （同时会安装 Mono）。可从应用程序菜单或用命令“yaec”启动 YAEC。
-- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.4-linux.tar.gz 并运行 ./install.sh。
+- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.5-linux.tar.gz 并运行 ./install.sh。
 
 安装 – macOS（实验性）
 1. 安装 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
-2. 打开 YAEC-1.4-macOS.dmg，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
+2. 打开 YAEC-1.5-macOS.dmg，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
 
 校验下载的文件（SHA-256）
 每个 release 都包含 SHA256SUMS.txt，其中列出每个软件包的 SHA-256 校验值。请将其与下载文件的校验值进行比较：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 如果两个值不同，请不要安装该文件，而应重新下载。
@@ -39,6 +39,7 @@ YAEC 是免费的；许可证文本见文件 LICENSE_zh.txt 以及程序中的�
 
 版本历史
 1.0 之前的版本称为 beta 版。
+- 1.5 - “连接”组新增“GRAVES 雷达”标签页：月球是否在雷达波束内（扇区与波位）、与你的共同窗口、回波的多普勒和延迟、波束下一次扫过月球的时间、从 GRAVES 看到的天空、24 小时 UTC 重建及未来 10 秒的细节、收听回波的建议和资料来源；活跃电台列表另提供 JSON 和文本格式，供 LunaCalc Mobile 使用；新增两种语言：丹麦语和他加禄语（共 28 种），含手册。
 - 1.4 - 活跃电台：如果该电台在过去 90 天内在 N0UK 的 EME 聊天室发过言，DX 呼号框会显示橙色边框，提示中显示最后一条消息的日期；“字体类型”提供适用于 Windows、Linux 和 macOS 的 10 种推荐字体，已逐个标签页测试；提供 32 位 Windows 和 Raspberry Pi（arm64）安装包；天空视图用紫色虚线框标出可指向的区域；“距离与 Dgrd”增加第四个可用日，也可在图中单击选择日期；数字输入框采用圆角边框，箭头上下排列；对话框按钮位于两侧（左、中、右）；致谢框占满整个宽度；窗口较窄时 CALCOLI APPROFONDITI 分两行显示，文字不再被按钮遮挡。
 - 1.3 - 新增九种语言：荷兰语、爱沙尼亚语、拉脱维亚语、立陶宛语、瑞典语、挪威语、冰岛语、希伯来语和乌尔都语（共 26 种），并附手册；许可协议和 README 提供所有语言版本，许可协议以安装程序的语言显示；新增 GRAVES 按钮；EME 链路预算中新增 TX 连接器和 RX 连接器（NJ9R 的建议）；左栏与 EME 链路预算示意图之间新增可拖动的分隔条；我的障碍物勘察中新增灰色遮罩复选框；公式调试更名为计算核查，ABOUT & CREDITS 更名为关于与鸣谢；用户手册的技术章节新增孟加拉语、阿拉伯语和土耳其语版本；修正粉彩配色方案；CALL3.TXT 窗口在更新后自动关闭；对话框按钮间距加大。
 - 1.2.1 - 作者联系方式与致谢页面在 Linux 和 macOS 上恢复正常打开；变频器的参考章节改为 § 1.7.1。

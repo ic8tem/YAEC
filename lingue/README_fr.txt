@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.4
+﻿YAEC – Yet Another EME Calc 1.5
 par Costantino IC8TEM
 ==========================================
 
-Calculateur pour les radioamateurs qui pratiquent l'EME (Terre–Lune–Terre) de 50 à 432 MHz : position de la Lune et fenêtres de pointage selon les limites de votre antenne, planification des jours ayant la meilleure Dgrd, bilan de liaison EME, bruit du ciel et du Soleil, base de données des câbles coaxiaux et manuels sur l'EME. Pour Windows, Linux et macOS, en 26 langues.
+Calculateur pour les radioamateurs qui pratiquent l'EME (Terre–Lune–Terre) de 50 à 432 MHz : position de la Lune et fenêtres de pointage selon les limites de votre antenne, planification des jours ayant la meilleure Dgrd, bilan de liaison EME, bruit du ciel et du Soleil, base de données des câbles coaxiaux et manuels sur l'EME. Pour Windows, Linux et macOS, en 28 langues.
 Sources et téléchargement : https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Téléchargez YAEC-1.4-Setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
+1. Téléchargez YAEC-1.5-Setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
 2. Si l'avertissement SmartScreen apparaît : « Informations complémentaires » → « Exécuter quand même ».
-3. Sans installation : extrayez YAEC-1.4-windows-portable.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
+3. Sans installation : extrayez YAEC-1.5-windows-portable.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC fonctionne avec Mono, l'environnement d'exécution .NET libre.
-- Debian, Ubuntu, Mint : téléchargez yaec_1.4_all.deb et installez-le avec
-      sudo apt install ./yaec_1.4_all.deb
+- Debian, Ubuntu, Mint : téléchargez yaec_1.5_all.deb et installez-le avec
+      sudo apt install ./yaec_1.5_all.deb
   (cela installe aussi Mono). YAEC se lance depuis le menu des applications ou avec la commande « yaec ».
-- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.4-linux.tar.gz et lancez ./install.sh.
+- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.5-linux.tar.gz et lancez ./install.sh.
 
 INSTALLATION – macOS (expérimental)
 1. Installez Mono pour macOS (https://www.mono-project.com/download/stable/) et XQuartz (https://www.xquartz.org).
-2. Ouvrez YAEC-1.4-macOS.dmg et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
+2. Ouvrez YAEC-1.5-macOS.dmg et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
 
 VÉRIFICATION DES FICHIERS TÉLÉCHARGÉS (SHA-256)
 Chaque release contient SHA256SUMS.txt avec l'empreinte SHA-256 de chaque paquet. Comparez-la avec celle du fichier téléchargé :
-- Windows (PowerShell) : Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
+- Windows (PowerShell) : Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
 - Linux : sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS : shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Si les deux valeurs sont différentes, n'installez pas le fichier : téléchargez-le de nouveau.
@@ -39,6 +39,7 @@ Erreurs, meilleures données, traductions : ccerrotta@gmail.com · ic8tem@gmail.
 
 HISTORIQUE DES VERSIONS
 Les versions antérieures à la 1.0 sont appelées bêta.
+- 1.5 - Nouvel onglet Radar GRAVES dans le groupe Liaison : Lune dans le faisceau du radar avec secteur et pas, fenêtre commune avec toi, Doppler et retard de l'écho, prochain passage du faisceau sur la Lune, ciel vu de GRAVES, reconstitution des 24 heures UTC avec le détail des 10 prochaines secondes, conseils pour entendre l'écho et sources ; liste des stations actives aussi en JSON et en texte pour LunaCalc Mobile ; deux nouvelles langues, le danois et le tagalog (28 en tout), avec les manuels.
 - 1.4 - Stations actives : la case de l'indicatif du DX reçoit une bordure orange si la station a écrit dans le chat EME de N0UK au cours des 90 derniers jours, avec la date du dernier message dans l'infobulle ; Type de police avec 10 polices recommandées pour Windows, Linux et macOS, testées onglet par onglet ; paquets pour Windows 32 bits et pour Raspberry Pi (arm64) ; Voûte céleste avec des cadres violets en pointillés autour de la zone pointable ; Distance et Dgrd avec le quatrième jour utile et le jour choisi aussi d'un clic dans le graphique ; cases numériques avec un cadre arrondi et les flèches l'une au-dessus de l'autre ; boutons des fenêtres aux bords (à gauche, au centre, à droite) ; cadre des remerciements sur toute la largeur ; dans les fenêtres étroites, CALCOLI APPROFONDITI passe sur deux lignes et aucun texte ne finit sous les boutons.
 - 1.3 - Neuf nouvelles langues : néerlandais, estonien, letton, lituanien, suédois, norvégien, islandais, hébreu et ourdou (26 au total), avec les manuels ; licence et LISEZMOI dans toutes les langues, licence dans la langue du programme d'installation ; bouton GRAVES ; Connecteurs TX et Connecteurs RX dans le Bilan EME (conseil de NJ9R) ; séparateur déplaçable entre la colonne de gauche et le schéma du Bilan EME ; case Voile gris dans Reconnaissance de mes obstacles ; DÉBOGAGE DES FORMULES devient Contrôle des calculs et ABOUT & CREDITS devient À PROPOS ET CRÉDITS ; chapitres techniques du manuel d'utilisation en bengali, arabe et turc ; thèmes pastel corrigés ; la fenêtre du CALL3.TXT se ferme d'elle-même après la mise à jour ; boutons des boîtes de dialogue espacés.
 - 1.2.1 - La page CONTACTS DE L'AUTEUR ET REMERCIEMENTS s'ouvre de nouveau correctement sous Linux et macOS ; le renvoi pour les transverters indique le § 1.7.1.

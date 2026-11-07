@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.4
+﻿YAEC – Yet Another EME Calc 1.5
 autor: Costantino IC8TEM
 ==========================================
 
-Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 kuni 432 MHz: Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 26 keeles.
+Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 kuni 432 MHz: Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 28 keeles.
 Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
 
 PAIGALDAMINE – WINDOWS
-1. Laadi Releases-lehelt alla YAEC-1.4-Setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
+1. Laadi Releases-lehelt alla YAEC-1.5-Setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
 2. Kui ilmub SmartScreeni hoiatus: "More info" → "Run anyway".
-3. Ilma paigaldamata: paki YAEC-1.4-windows-portable.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
+3. Ilma paigaldamata: paki YAEC-1.5-windows-portable.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
 
 PAIGALDAMINE – LINUX
 YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
-- Debian, Ubuntu, Mint: laadi alla yaec_1.4_all.deb ja paigalda see käsuga
-      sudo apt install ./yaec_1.4_all.deb
+- Debian, Ubuntu, Mint: laadi alla yaec_1.5_all.deb ja paigalda see käsuga
+      sudo apt install ./yaec_1.5_all.deb
   (paigaldab ka Mono). YAEC käivitub rakenduste menüüst või käsuga "yaec".
-- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.4-linux.tar.gz ja käivita ./install.sh.
+- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.5-linux.tar.gz ja käivita ./install.sh.
 
 PAIGALDAMINE – macOS (eksperimentaalne)
 1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
-2. Ava YAEC-1.4-macOS.dmg ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+2. Ava YAEC-1.5-macOS.dmg ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
 
 ALLALAADITUD FAILIDE KONTROLL (SHA-256)
 Iga release sisaldab faili SHA256SUMS.txt iga paketi SHA-256 räsiga. Võrdle seda allalaaditud faili räsiga:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kui kaks väärtust erinevad, ära faili paigalda: laadi see uuesti alla.
@@ -39,6 +39,7 @@ Vead, paremad andmed, tõlked: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 VERSIOONIAJALUGU
 Versioone enne 1.0 nimetatakse beetaks.
+- 1.5 - Uus vahekaart Radar GRAVES rühmas Ühendus: Kuu radari kiires koos sektori ja sammuga, ühine aken sinuga, kaja Doppler ja viivitus, kiire järgmine üleminek Kuult, taevas GRAVES-i vaates, 24 UTC tunni rekonstruktsioon järgmise 10 sekundi üksikasjadega, nõuanded kaja kuulmiseks ja allikad; aktiivsete jaamade loend ka JSON- ja tekstivormingus LunaCalc Mobile'i jaoks; kaks uut keelt, taani ja tagalogi (kokku 28), koos juhenditega.
 - 1.4 - Aktiivsed jaamad: DX-i kutsungi lahter saab oranži ääre, kui jaam on viimase 90 päeva jooksul N0UK EME-vestlusesse kirjutanud, ja vihjes on viimase sõnumi kuupäev; Kirjatüüp 10 soovitatud kirjatüübiga Windowsi, Linuxi ja macOS-i jaoks, kontrollitud vahekaart vahekaardi haaval; paketid 32-bitisele Windowsile ja Raspberry Pi-le (arm64); Taevavõlvil lillad katkendjoontega raamid ala ümber, kuhu saab suunata; Kaugus ja Dgrd neljanda kasuliku päevaga ning päeva valik ka klõpsuga graafikul; numbrilahtrid ümardatud raamiga ja nooled üksteise kohal; dialoogiakende nupud servades (vasakul, keskel, paremal); tänuavalduste kast kogu laiuses; kitsastes akendes läheb CALCOLI APPROFONDITI kahele reale ja ükski tekst ei jää nuppude alla.
 - 1.3 - Üheksa uut keelt: hollandi, eesti, läti, leedu, rootsi, norra, islandi, heebrea ja urdu (kokku 26), koos juhenditega; litsents ja README kõigis keeltes, litsents paigaldusprogrammi keeles; nupp GRAVES; „TX pistikud“ ja „RX pistikud“ aknas „EME eelarve“ (NJ9R-i soovitus); lohistatav eraldaja vasaku veeru ja akna „EME eelarve“ skeemi vahel; märkeruut „Hall loor“ aknas „Minu takistuste kaardistus“; VALEMITE DEBUG on nüüd „Arvutuste kontroll“ ja ABOUT & CREDITS on nüüd TEAVE JA AUTORID; kasutusjuhendi tehnilised peatükid bengali, araabia ja türgi keeles; pastelsed skeemid parandatud; CALL3.TXT aken sulgub pärast uuendamist ise; dialoogiakende nupud on üksteisest kaugemal.
 - 1.2.1 - Leht AUTORI KONTAKTID JA TÄNUSÕNAD avaneb Linuxis ja macOS-is taas korrektselt; transverterite viide osutab § 1.7.1-le.

@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.4
+﻿YAEC – Yet Another EME Calc 1.5
 por Costantino IC8TEM
 ==========================================
 
-Calculadora para radioaficionados que trabajan en EME (Tierra–Luna–Tierra) de 50 a 432 MHz: posición de la Luna y ventanas de apuntamiento según los límites de su propia antena, planificación de los días con la mejor Dgrd, balance del enlace EME, ruido del cielo y del Sol, base de datos de cables coaxiales y manuales sobre EME. Para Windows, Linux y macOS, en 26 idiomas.
+Calculadora para radioaficionados que trabajan en EME (Tierra–Luna–Tierra) de 50 a 432 MHz: posición de la Luna y ventanas de apuntamiento según los límites de su propia antena, planificación de los días con la mejor Dgrd, balance del enlace EME, ruido del cielo y del Sol, base de datos de cables coaxiales y manuales sobre EME. Para Windows, Linux y macOS, en 28 idiomas.
 Código fuente y descarga: https://github.com/ic8tem/YAEC/releases
 
 INSTALACIÓN – WINDOWS
-1. Descargue YAEC-1.4-Setup.exe desde la página Releases y ejecútelo. Instala YAEC en Documentos\YAEC, sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio, y con el programa de desinstalación.
+1. Descargue YAEC-1.5-Setup.exe desde la página Releases y ejecútelo. Instala YAEC en Documentos\YAEC, sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio, y con el programa de desinstalación.
 2. Si aparece el aviso de SmartScreen: "Más información" → "Ejecutar de todas formas".
-3. Sin instalación: extraiga YAEC-1.4-windows-portable.zip en una carpeta en la que pueda escribir y ejecute YAEC.exe.
+3. Sin instalación: extraiga YAEC-1.5-windows-portable.zip en una carpeta en la que pueda escribir y ejecute YAEC.exe.
 
 INSTALACIÓN – LINUX
 YAEC funciona con Mono, el entorno de ejecución .NET libre.
-- Debian, Ubuntu, Mint: descargue yaec_1.4_all.deb e instálelo con
-      sudo apt install ./yaec_1.4_all.deb
+- Debian, Ubuntu, Mint: descargue yaec_1.5_all.deb e instálelo con
+      sudo apt install ./yaec_1.5_all.deb
   (instala también Mono). YAEC se inicia desde el menú de aplicaciones o con el comando "yaec".
-- Otras distribuciones: instale Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraiga YAEC-1.4-linux.tar.gz y ejecute ./install.sh.
+- Otras distribuciones: instale Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraiga YAEC-1.5-linux.tar.gz y ejecute ./install.sh.
 
 INSTALACIÓN – macOS (experimental)
 1. Instale Mono para macOS (https://www.mono-project.com/download/stable/) y XQuartz (https://www.xquartz.org).
-2. Abra YAEC-1.4-macOS.dmg y arrastre YAEC a Aplicaciones. La primera vez: clic derecho en YAEC → Abrir (la app no está firmada por Apple).
+2. Abra YAEC-1.5-macOS.dmg y arrastre YAEC a Aplicaciones. La primera vez: clic derecho en YAEC → Abrir (la app no está firmada por Apple).
 
 COMPROBACIÓN DE LOS ARCHIVOS DESCARGADOS (SHA-256)
 Cada release contiene SHA256SUMS.txt con la huella SHA-256 de cada paquete. Compárela con la del archivo descargado:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Si los dos valores son distintos, no instale el archivo: descárguelo de nuevo.
@@ -39,6 +39,7 @@ Errores, datos mejores, traducciones: ccerrotta@gmail.com · ic8tem@gmail.com ·
 
 HISTORIAL DE VERSIONES
 Las versiones anteriores a la 1.0 se llaman beta.
+- 1.5 - Nueva pestaña Radar GRAVES en el grupo Enlace: Luna en el haz del radar con sector y paso, ventana común contigo, Doppler y retardo del eco, próximo paso del haz por la Luna, cielo visto desde GRAVES, reconstrucción de las 24 horas UTC con el detalle de los próximos 10 segundos, consejos para oír el eco y fuentes; lista de estaciones activas también en JSON y en texto para LunaCalc Mobile; dos idiomas nuevos, danés y tagalo (28 en total), con los manuales.
 - 1.4 - Estaciones activas: la casilla del indicativo del DX tiene borde naranja si la estación ha escrito en el chat EME de N0UK en los últimos 90 días, con la fecha del último mensaje en la ayuda emergente; Tipo de letra con 10 fuentes recomendadas para Windows, Linux y macOS, probadas pestaña por pestaña; paquetes para Windows de 32 bits y para Raspberry Pi (arm64); Bóveda celeste con recuadros morados discontinuos alrededor de la zona apuntable; Distancia y Dgrd con el cuarto día útil y el día elegido también con un clic en el gráfico; casillas numéricas con marco redondeado y las flechas una encima de otra; botones de las ventanas en los bordes (izquierda, centro, derecha); recuadro de agradecimientos a todo el ancho; en ventanas estrechas CALCOLI APPROFONDITI pasa a dos líneas y ningún texto queda bajo los botones.
 - 1.3 - Nueve idiomas nuevos: neerlandés, estonio, letón, lituano, sueco, noruego, islandés, hebreo y urdu (26 en total), con los manuales; licencia y LÉAME en todos los idiomas, licencia en el idioma del instalador; botón GRAVES; Conectores TX y Conectores RX en el Balance EME (consejo de NJ9R); separador arrastrable entre la columna izquierda y el esquema del Balance EME; casilla Velo gris en Reconocimiento de mis obstáculos; DEPURACIÓN DE FÓRMULAS pasa a ser Control de los cálculos y ABOUT & CREDITS pasa a ser ACERCA DE Y CRÉDITOS; capítulos técnicos del manual de uso en bengalí, árabe y turco; esquemas pastel corregidos; la ventana del CALL3.TXT se cierra sola después de la actualización; botones de los cuadros de diálogo espaciados.
 - 1.2.1 - La página CONTACTOS DEL AUTOR Y AGRADECIMIENTOS vuelve a abrirse correctamente en Linux y macOS; la referencia para los transverters indica el § 1.7.1.

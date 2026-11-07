@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.4
+﻿YAEC – Yet Another EME Calc 1.5
 autors: Costantino IC8TEM
 ==========================================
 
-Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā no 50 līdz 432 MHz: Mēness pozīcija un tēmēšanas logi atbilstoši jūsu antenas ierobežojumiem, dienu ar labāko Dgrd plānošana, EME sakaru līnijas enerģētiskā bilance, debess un Saules troksnis, koaksiālo kabeļu datubāze un rokasgrāmatas par EME. Operētājsistēmām Windows, Linux un macOS, 26 valodās.
+Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā no 50 līdz 432 MHz: Mēness pozīcija un tēmēšanas logi atbilstoši jūsu antenas ierobežojumiem, dienu ar labāko Dgrd plānošana, EME sakaru līnijas enerģētiskā bilance, debess un Saules troksnis, koaksiālo kabeļu datubāze un rokasgrāmatas par EME. Operētājsistēmām Windows, Linux un macOS, 28 valodās.
 Pirmkods un lejupielāde: https://github.com/ic8tem/YAEC/releases
 
 INSTALĒŠANA – WINDOWS
-1. Lejupielādējiet YAEC-1.4-Setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
+1. Lejupielādējiet YAEC-1.5-Setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
 2. Ja parādās SmartScreen brīdinājums: "More info" → "Run anyway".
-3. Bez instalēšanas: atarhivējiet YAEC-1.4-windows-portable.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
+3. Bez instalēšanas: atarhivējiet YAEC-1.5-windows-portable.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
 
 INSTALĒŠANA – LINUX
 YAEC darbojas ar Mono — brīvo .NET izpildlaika vidi.
-- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.4_all.deb un instalējiet to ar komandu
-      sudo apt install ./yaec_1.4_all.deb
+- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.5_all.deb un instalējiet to ar komandu
+      sudo apt install ./yaec_1.5_all.deb
   (tiek instalēts arī Mono). YAEC palaiž no lietotņu izvēlnes vai ar komandu "yaec".
-- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.4-linux.tar.gz un palaidiet ./install.sh.
+- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.5-linux.tar.gz un palaidiet ./install.sh.
 
 INSTALĒŠANA – macOS (eksperimentāli)
 1. Instalējiet Mono operētājsistēmai macOS (https://www.mono-project.com/download/stable/) un XQuartz (https://www.xquartz.org).
-2. Atveriet YAEC-1.4-macOS.dmg un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
+2. Atveriet YAEC-1.5-macOS.dmg un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
 
 LEJUPIELĀDĒTO FAILU PĀRBAUDE (SHA-256)
 Katrā release ir fails SHA256SUMS.txt ar katras pakotnes SHA-256 jaucējvērtību. Salīdziniet to ar lejupielādētā faila jaucējvērtību:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ja abas vērtības atšķiras, neinstalējiet failu: lejupielādējiet to vēlreiz.
@@ -39,6 +39,7 @@ Kļūdas, labāki dati, tulkojumi: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERSIJU VĒSTURE
 Versijas pirms 1.0 sauc par beta versijām.
+- 1.5 - Jauna cilne Radar GRAVES grupā Sakari: Mēness radara starā ar sektoru un soli, kopīgais logs ar tevi, atbalss Doplera nobīde un aizture, nākamā stara pāreja pār Mēnesi, debesis no GRAVES skatpunkta, 24 UTC stundu rekonstrukcija ar nākamo 10 sekunžu detaļām, padomi atbalss uztveršanai un avoti; aktīvo staciju saraksts arī JSON un teksta formātā lietotnei LunaCalc Mobile; divas jaunas valodas, dāņu un tagalu (kopā 28), ar rokasgrāmatām.
 - 1.4 - Aktīvās stacijas: DX izsaukuma lodziņš saņem oranžu apmali, ja stacija pēdējo 90 dienu laikā ir rakstījusi N0UK EME tērzēšanā, un uznirstošajā padomā ir pēdējās ziņas datums; Fonta veids ar 10 ieteicamiem fontiem Windows, Linux un macOS, pārbaudītiem katrā cilnē; pakotnes 32 bitu Windows un Raspberry Pi (arm64); Debess velvē violeti raustīti rāmji ap zonu, uz kuru var notēmēt; Attālums un Dgrd ar ceturto noderīgo dienu un dienas izvēli arī ar klikšķi grafikā; skaitļu lodziņi ar noapaļotu rāmi un bultiņām vienu virs otras; logu pogas malās (pa kreisi, centrā, pa labi); pateicību lodziņš visā platumā; šauros logos CALCOLI APPROFONDITI ir divās rindās un neviens teksts nenonāk zem pogām.
 - 1.3 - Deviņas jaunas valodas: nīderlandiešu, igauņu, latviešu, lietuviešu, zviedru, norvēģu, islandiešu, ivrita un urdu (kopā 26), ar rokasgrāmatām; licence un README visās valodās, licence instalētāja valodā; poga GRAVES; „TX savienotāji” un „RX savienotāji” logā „EME budžets” (NJ9R ieteikums); pārvietojams atdalītājs starp kreiso kolonnu un loga „EME budžets” shēmu; izvēles rūtiņa „Pelēks plīvurs” logā „Manu šķēršļu izpēte”; „FORMULU ATKĻŪDOŠANA” tagad ir „Aprēķinu pārbaude” un ABOUT & CREDITS tagad ir „INFORMĀCIJA UN AUTORI”; lietošanas rokasgrāmatas tehniskās nodaļas bengāļu, arābu un turku valodā; pasteļkrāsu shēmas izlabotas; CALL3.TXT logs pēc atjaunināšanas aizveras pats; dialoglodziņu pogām lielākas atstarpes.
 - 1.2.1 - Lapa „AUTORA KONTAKTI UN PATEICĪBAS” atkal pareizi atveras operētājsistēmās Linux un macOS; atsauce par transverteriem norāda uz § 1.7.1.
