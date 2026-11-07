@@ -252,6 +252,35 @@ jobs:
           name: linux
           path: dist/
 
+  raspberry:
+    # Raspberry Pi OS (64 bit) è Debian per ARM: si installa lo stesso pacchetto .deb e si prova l'avvio su ARM64
+    needs: linux
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: linux
+          path: dist
+      - name: Installazione del .deb su ARM64 e prova di avvio
+        run: |
+          uname -m
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ./dist/*.deb xvfb imagemagick fonts-dejavu-core > /dev/null
+          mkdir -p "$HOME/.local/share/YAEC/data"
+          printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=IC8TEM\n' > "$HOME/.local/share/YAEC/data/impostazioni.txt"
+          Xvfb :99 -screen 0 1600x1000x24 &
+          export DISPLAY=:99
+          sleep 2
+          L=$(command -v yaec || ls /usr/bin/yaec* /usr/games/yaec* 2>/dev/null | head -1)
+          echo "avvio: $L"
+          $L &
+          PID=$!
+          sleep 90
+          import -window root r.png || true
+          convert r.png -resize 1200x r.jpg 2>/dev/null && echo "SCREENSHOT-ARM64-B64:$(base64 -w 0 r.jpg)" || true
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+          if kill -0 $PID 2>/dev/null; then echo "YAEC in esecuzione su ARM64 dopo 90 s: avvio riuscito"; kill $PID; else echo "YAEC si e' chiuso su ARM64"; exit 1; fi
+
   macos:
     needs: windows
     runs-on: macos-latest
