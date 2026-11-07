@@ -3,13 +3,15 @@ name: Stazioni EME attive (chat N0UK)
 # Una volta al giorno legge la chat EME di N0UK e aggiorna attivi.gz nel ramo "attivi":
 # solo nominativo e data dell'ultimo messaggio, tolti dopo 90 giorni (tools/n0uk_attivi.py).
 # YAEC scarica il file e borda in arancione la casella del nominativo del DX se la stazione è attiva.
+# Nello stesso ramo c'è anche call3-attivi.txt (CALL3.TXT di W7GJ + WSJT-X Improved ridotto alle stazioni attive,
+# tools/call3_attivi.py): lo usa LunaCalc Mobile per l'elenco dei corrispondenti.
 on:
   schedule:
     - cron: '23 6 * * *'
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['tools/n0uk_attivi.py', '.github/workflows/attivi.yml']
+    paths: ['tools/n0uk_attivi.py', 'tools/call3_attivi.py', '.github/workflows/attivi.yml']
 
 permissions:
   contents: write
@@ -25,14 +27,20 @@ jobs:
         run: |
           set -e
           mkdir -p /tmp/d
-          if git fetch -q origin attivi 2>/dev/null; then git show origin/attivi:attivi.gz > /tmp/d/attivi.gz || rm -f /tmp/d/attivi.gz; fi
+          if git fetch -q origin attivi 2>/dev/null; then
+            git show origin/attivi:attivi.gz > /tmp/d/attivi.gz || rm -f /tmp/d/attivi.gz
+            git show origin/attivi:call3-attivi.txt > /tmp/d/call3-attivi.txt || rm -f /tmp/d/call3-attivi.txt
+          fi
           python3 tools/n0uk_attivi.py /tmp/d/attivi.gz
+          # CALL3.TXT ridotto alle stazioni attive; se W7GJ e SourceForge non rispondono resta il file del giorno prima
+          python3 tools/call3_attivi.py /tmp/d/attivi.gz /tmp/d/call3-attivi.new && mv /tmp/d/call3-attivi.new /tmp/d/call3-attivi.txt || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -q --orphan tmp-attivi
           git rm -rqf --cached . > /dev/null
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp /tmp/d/attivi.gz attivi.gz
+          if [ -f /tmp/d/call3-attivi.txt ]; then cp /tmp/d/call3-attivi.txt call3-attivi.txt; fi
           # stessa lista anche in JSON e in testo semplice (per LunaCalc Mobile e per altri programmi):
           # raw.githubusercontent.com risponde con Access-Control-Allow-Origin: *, quindi una pagina web la può leggere
           python3 - <<'PY'
@@ -44,7 +52,8 @@ jobs:
           json.dump(d, open('attivi.json', 'w'), separators=(',', ':'), sort_keys=True)
           open('attivi.txt', 'w').write(''.join('%s %s\n' % (c, g) for c, g in righe))
           PY
-          printf 'Active EME stations (N0UK chat, last 90 days), updated daily by .github/workflows/attivi.yml on main.\nattivi.gz (YAEC), attivi.json and attivi.txt (LunaCalc Mobile, other programs): callsign and date of the last message.\n' > README.md
+          printf 'Active EME stations (N0UK chat, last 90 days), updated daily by .github/workflows/attivi.yml on main.\nattivi.gz (YAEC), attivi.json and attivi.txt (LunaCalc Mobile, other programs): callsign and date of the last message.\ncall3-attivi.txt (LunaCalc Mobile): CALL3.TXT of W7GJ + WSJT-X Improved reduced to the active stations (CALL,LOCATOR,date).\n' > README.md
           git add attivi.gz attivi.json attivi.txt README.md
+          if [ -f call3-attivi.txt ]; then git add call3-attivi.txt; fi
           git commit -qm "Active stations $(date -u +%F)"
           git push -qf origin tmp-attivi:attivi
