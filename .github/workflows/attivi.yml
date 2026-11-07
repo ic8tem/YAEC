@@ -33,7 +33,18 @@ jobs:
           git rm -rqf --cached . > /dev/null
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp /tmp/d/attivi.gz attivi.gz
-          printf 'Data file used by YAEC (updated daily by .github/workflows/attivi.yml on main).\n' > README.md
-          git add attivi.gz README.md
+          # stessa lista anche in JSON e in testo semplice (per LunaCalc Mobile e per altri programmi):
+          # raw.githubusercontent.com risponde con Access-Control-Allow-Origin: *, quindi una pagina web la può leggere
+          python3 - <<'PY'
+          import gzip, json, datetime
+          righe = [r.split() for r in gzip.open('attivi.gz', 'rt').read().split('\n') if r.strip()]
+          d = {'fonte': 'N0UK JT65 EME chat (www.chris.org)', 'giorni': 90,
+               'aggiornato': datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ'),
+               'stazioni': {c: g for c, g in righe}}
+          json.dump(d, open('attivi.json', 'w'), separators=(',', ':'), sort_keys=True)
+          open('attivi.txt', 'w').write(''.join('%s %s\n' % (c, g) for c, g in righe))
+          PY
+          printf 'Active EME stations (N0UK chat, last 90 days), updated daily by .github/workflows/attivi.yml on main.\nattivi.gz (YAEC), attivi.json and attivi.txt (LunaCalc Mobile, other programs): callsign and date of the last message.\n' > README.md
+          git add attivi.gz attivi.json attivi.txt README.md
           git commit -qm "Active stations $(date -u +%F)"
           git push -qf origin tmp-attivi:attivi
