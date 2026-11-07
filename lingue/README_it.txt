@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.3
+﻿YAEC – Yet Another EME Calc 1.4
 a cura di Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Calcolatore per radioamatori che lavorano in EME (Terra–Luna–Terra) da 50 a 
 Sorgente e download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLAZIONE – WINDOWS
-1. Scarica YAEC-1.3-Setup.exe dalla pagina Releases ed eseguilo. Installa YAEC in Documenti\YAEC, senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione.
+1. Scarica YAEC-1.4-Setup.exe dalla pagina Releases ed eseguilo. Installa YAEC in Documenti\YAEC, senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione.
 2. Se compare l'avviso di SmartScreen: "Ulteriori informazioni" → "Esegui comunque".
-3. Senza installazione: estrai YAEC-1.3-windows-portable.zip in una cartella in cui puoi scrivere e avvia YAEC.exe.
+3. Senza installazione: estrai YAEC-1.4-windows-portable.zip in una cartella in cui puoi scrivere e avvia YAEC.exe.
 
 INSTALLAZIONE – LINUX
 YAEC funziona con Mono, il runtime .NET libero.
-- Debian, Ubuntu, Mint: scarica yaec_1.3_all.deb e installalo con
-      sudo apt install ./yaec_1.3_all.deb
+- Debian, Ubuntu, Mint: scarica yaec_1.4_all.deb e installalo con
+      sudo apt install ./yaec_1.4_all.deb
   (installa anche Mono). YAEC si avvia dal menu delle applicazioni o con il comando "yaec".
-- Altre distribuzioni: installa Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), estrai YAEC-1.3-linux.tar.gz e avvia ./install.sh.
+- Altre distribuzioni: installa Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), estrai YAEC-1.4-linux.tar.gz e avvia ./install.sh.
 
 INSTALLAZIONE – macOS (sperimentale)
 1. Installa Mono per macOS (https://www.mono-project.com/download/stable/) e XQuartz (https://www.xquartz.org).
-2. Apri YAEC-1.3-macOS.dmg e trascina YAEC in Applicazioni. La prima volta: clic destro su YAEC → Apri (l'app non è firmata da Apple).
+2. Apri YAEC-1.4-macOS.dmg e trascina YAEC in Applicazioni. La prima volta: clic destro su YAEC → Apri (l'app non è firmata da Apple).
 
 CONTROLLO DEI FILE SCARICATI (SHA-256)
 Ogni release contiene SHA256SUMS.txt con l'impronta SHA-256 di ogni pacchetto. Confrontala con quella del file scaricato:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Se i due valori sono diversi non installare il file: scaricalo di nuovo.
@@ -39,6 +39,7 @@ Errori, dati migliori, traduzioni: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 STORIA DELLE VERSIONI
 Le versioni precedenti alla 1.0 si chiamano beta.
+- 1.4 - Stazioni attive: la casella del nominativo del DX ha il bordo arancione se la stazione ha scritto nella chat EME di N0UK negli ultimi 90 giorni, con la data dell'ultimo messaggio nel fumetto; Tipo di carattere con 10 caratteri consigliati per Windows, Linux e macOS, provati linguetta per linguetta; pacchetti per Windows a 32 bit e per Raspberry Pi (arm64); Volta celeste con i riquadri viola tratteggiati della zona puntabile; Distanza e Dgrd con il quarto giorno utile e il giorno scelto anche con un clic nel grafico; caselle dei numeri con la cornice arrotondata e le frecce una sopra l'altra; pulsanti delle finestre ai bordi (a sinistra, al centro, a destra); riquadro dei ringraziamenti a tutta larghezza; nelle finestre strette CALCOLI APPROFONDITI va su due righe e nessuna scritta finisce sotto i pulsanti.
 - 1.3 - Nove lingue nuove: olandese, estone, lettone, lituano, svedese, norvegese, islandese, ebraico e urdu (26 in tutto), con i manuali; licenza e LEGGIMI in tutte le lingue, licenza nella lingua dell'installatore; pulsante GRAVES; Connettori in TX e Connettori in RX nel Budget EME (consiglio di NJ9R); separatore trascinabile tra la colonna sinistra e lo schema del Budget EME; casella del velo grigio nella Ricognizione dei miei ostacoli; DEBUG FORMULE diventa Controllo dei calcoli e ABOUT & CREDITS diventa INFORMAZIONI E CREDITI; capitoli tecnici del manuale d'uso in bengalese, arabo e turco; schemi pastello corretti; la finestra del CALL3.TXT si chiude da sola dopo l'aggiornamento; pulsanti delle finestre di dialogo distanziati.
 - 1.2.1 - La pagina CONTATTI DELL'AUTORE E RINGRAZIAMENTI si apre di nuovo correttamente su Linux e macOS; il rimando per i transverter indica il § 1.7.1.
 - 1.2 - Budget EME con gli indicatori EIRP mia, EIRP del DX, perdita di tratta e S/N nei due sensi (con il Sole); formule del documento Word di una sola grandezza, dentro i margini; pulsanti pieni e menu a tendina piatti con bordo arrotondato in tutti gli schemi; otto schemi di colori pastello; caselle dei valori con le frecce affiancate; i tre giorni migliori in ordine di data; sfondo del cielo sfocato; DEBUG FORMULE tradotto; manuale TEORIA E CONSIGLI SULL'EME con i consigli di Relu NJ9R (GRAVES, puntamento, connettori, guadagno delle antenne, JT65B e MAP65, relè di polarizzazione), i nuovi paragrafi sulla prima ricezione e sulle chat via Internet e le tabelle di VE7BQH nella prefazione; ringraziamenti a NJ9R, il ricordo di IK1UWL e gli autori di articoli, hardware e software, con il fumetto delle loro opere.

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.3
+﻿YAEC – Yet Another EME Calc 1.4
 hazırlayan: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ hazırlayan: Costantino IC8TEM
 Kaynak kod ve indirme: https://github.com/ic8tem/YAEC/releases
 
 KURULUM – WINDOWS
-1. YAEC-1.3-Setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
+1. YAEC-1.4-Setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
 2. SmartScreen uyarısı çıkarsa: "Ek bilgi" → "Yine de çalıştır".
-3. Kurulum olmadan: YAEC-1.3-windows-portable.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
+3. Kurulum olmadan: YAEC-1.4-windows-portable.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
 
 KURULUM – LINUX
 YAEC, özgür .NET çalışma ortamı olan Mono ile çalışır.
-- Debian, Ubuntu, Mint: yaec_1.3_all.deb dosyasını indirin ve şu komutla kurun
-      sudo apt install ./yaec_1.3_all.deb
+- Debian, Ubuntu, Mint: yaec_1.4_all.deb dosyasını indirin ve şu komutla kurun
+      sudo apt install ./yaec_1.4_all.deb
   (Mono da kurulur). YAEC uygulamalar menüsünden veya "yaec" komutuyla başlatılır.
-- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.3-linux.tar.gz dosyasını çıkarın ve ./install.sh'yi çalıştırın.
+- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.4-linux.tar.gz dosyasını çıkarın ve ./install.sh'yi çalıştırın.
 
 KURULUM – macOS (deneysel)
 1. macOS için Mono (https://www.mono-project.com/download/stable/) ve XQuartz (https://www.xquartz.org) kurun.
-2. YAEC-1.3-macOS.dmg dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
+2. YAEC-1.4-macOS.dmg dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
 
 İNDİRİLEN DOSYALARIN DOĞRULANMASI (SHA-256)
 Her release, her paketin SHA-256 özetini içeren SHA256SUMS.txt dosyasını barındırır. Bunu indirdiğiniz dosyanın özetiyle karşılaştırın:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 İki değer farklıysa dosyayı kurmayın: yeniden indirin.
@@ -39,6 +39,7 @@ Hatalar, daha iyi veriler, çeviriler: ccerrotta@gmail.com · ic8tem@gmail.com �
 
 SÜRÜM GEÇMİŞİ
 1.0'dan önceki sürümlere beta denir.
+- 1.4 - Etkin istasyonlar: istasyon son 90 günde N0UK EME sohbetine yazdıysa DX çağrı işareti kutusu turuncu çerçeve alır, ipucunda son mesajın tarihi görünür; Yazı tipi türünde Windows, Linux ve macOS için sekme sekme denenmiş 10 önerilen yazı tipi; 32 bit Windows ve Raspberry Pi (arm64) için paketler; Gökyüzü görünümünde yönelinebilen bölgenin çevresinde mor kesikli kutular; Mesafe ve Dgrd'de dördüncü kullanışlı gün ve grafikte tıklayarak da gün seçimi; sayı kutuları yuvarlatılmış çerçeveli, oklar üst üste; pencere düğmeleri kenarlarda (sol, orta, sağ); teşekkür kutusu tam genişlikte; dar pencerelerde CALCOLI APPROFONDITI iki satıra geçer ve hiçbir yazı düğmelerin altında kalmaz.
 - 1.3 - Dokuz yeni dil: Felemenkçe, Estonca, Letonca, Litvanca, İsveççe, Norveççe, İzlandaca, İbranice ve Urduca (toplam 26), kılavuzlarıyla birlikte; lisans ve README tüm dillerde, lisans yükleyicinin dilinde; GRAVES düğmesi; EME bütçesinde TX konektörleri ve RX konektörleri (NJ9R'nin önerisi); sol sütun ile EME bütçesi şeması arasında sürüklenebilir ayırıcı; Engellerimin keşfi penceresinde Gri örtü onay kutusu; FORMÜL HATA AYIKLAMA artık Hesapların kontrolü, ABOUT & CREDITS artık HAKKINDA VE KAYNAKLAR; kullanım kılavuzunun teknik bölümleri Bengalce, Arapça ve Türkçe; pastel şemalar düzeltildi; CALL3.TXT penceresi güncellemeden sonra kendiliğinden kapanıyor; iletişim kutusu düğmeleri arasındaki boşluk artırıldı.
 - 1.2.1 - YAZARLA İLETİŞİM VE TEŞEKKÜRLER sayfası Linux ve macOS'ta yeniden doğru açılıyor; transverterler için yapılan atıf artık § 1.7.1'i gösteriyor.
 - 1.2 - EME bütçesinde Benim EIRP, DX'in EIRP'si, yol kaybı ve iki yönde S/N (Güneş dahil) göstergeleri; Word belgesindeki formüller tek boyutta, kenar boşlukları içinde; tüm şemalarda dolu düğmeler ve yuvarlak kenarlı düz açılır listeler; sekiz pastel renk şeması; yan yana oklu değer kutuları; en iyi üç gün tarih sırasına göre; bulanık gökyüzü arka planı; FORMÜL HATA AYIKLAMA çevrildi; EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzuna Relu NJ9R'nin önerileri (GRAVES, yönlendirme, konektörler, anten kazancı, JT65B ve MAP65, polarizasyon rölesi), ilk alım ve internet sohbetleri üzerine yeni bölümler ve önsözde VE7BQH tabloları; NJ9R'ye teşekkür, IK1UWL'nin anısı ve makale, donanım ve yazılım yazarlarına teşekkür, eserleri hakkında ipucu balonuyla.

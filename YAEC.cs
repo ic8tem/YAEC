@@ -2994,6 +2994,7 @@ namespace LunaCalc
             "Caratteri consigliati per YAEC",
             "Riquadri viola tratteggiati = zona che la tua antenna può puntare.",
             "Clicca un giorno nel grafico per evidenziarlo anche nella striscia dei giorni in alto; clicca di nuovo per toglierlo.",
+            "1.4 - Stazioni attive: la casella del nominativo del DX ha il bordo arancione se la stazione ha scritto nella chat EME di N0UK negli ultimi 90 giorni, con la data dell'ultimo messaggio nel fumetto; Tipo di carattere con 10 caratteri consigliati per Windows, Linux e macOS, provati linguetta per linguetta; pacchetti per Windows a 32 bit e per Raspberry Pi (arm64); Volta celeste con i riquadri viola tratteggiati della zona puntabile; Distanza e Dgrd con il quarto giorno utile e il giorno scelto anche con un clic nel grafico; caselle dei numeri con la cornice arrotondata e le frecce una sopra l'altra; pulsanti delle finestre ai bordi (a sinistra, al centro, a destra); riquadro dei ringraziamenti a tutta larghezza; nelle finestre strette CALCOLI APPROFONDITI va su due righe e nessuna scritta finisce sotto i pulsanti.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4333,6 +4334,7 @@ namespace LunaCalc
             "Fonts recommended for YAEC",
             "Dashed purple boxes = area your antenna can point at.",
             "Click a day in the chart to highlight it in the strip of days at the top too; click again to remove it.",
+            "1.4 - Active stations: the DX callsign box gets an orange border if the station has written in the N0UK EME chat in the last 90 days, with the date of the last message in the tooltip; Font type with 10 recommended fonts for Windows, Linux and macOS, tested tab by tab; packages for 32-bit Windows and for Raspberry Pi (arm64); Sky view with dashed purple boxes around the area you can point at; Distance and Dgrd with the fourth useful day and the chosen day also selectable with a click in the chart; number boxes with a rounded frame and the arrows one above the other; dialog buttons at the edges (left, centre, right); acknowledgements box at full width; in narrow windows CALCOLI APPROFONDITI goes on two lines and no text ends up under the buttons.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5672,6 +5674,7 @@ namespace LunaCalc
             "Für YAEC empfohlene Schriftarten",
             "Violett gestrichelte Rahmen = Bereich, den deine Antenne anpeilen kann.",
             "Klicke auf einen Tag im Diagramm, um ihn auch in der Tagesleiste oben hervorzuheben; erneut klicken entfernt ihn.",
+            "1.4 - Aktive Stationen: Das Rufzeichenfeld des DX erhält einen orangen Rahmen, wenn die Station in den letzten 90 Tagen im EME-Chat von N0UK geschrieben hat, mit dem Datum der letzten Nachricht im Tooltip; Schriftart mit 10 empfohlenen Schriften für Windows, Linux und macOS, Reiter für Reiter geprüft; Pakete für 32-Bit-Windows und für Raspberry Pi (arm64); Himmelsansicht mit violett gestrichelten Rahmen um den anpeilbaren Bereich; Entfernung und Dgrd mit dem vierten nutzbaren Tag und dem gewählten Tag auch per Klick im Diagramm; Zahlenfelder mit abgerundetem Rahmen und übereinanderliegenden Pfeilen; Schaltflächen der Dialoge an den Rändern (links, Mitte, rechts); Danksagungsfeld in voller Breite; in schmalen Fenstern steht CALCOLI APPROFONDITI auf zwei Zeilen und kein Text liegt unter den Schaltflächen.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -7011,6 +7014,7 @@ namespace LunaCalc
             "Polices recommandées pour YAEC",
             "Cadres violets en pointillés = zone que ton antenne peut viser.",
             "Clique sur un jour dans le graphique pour le mettre aussi en évidence dans la bande des jours en haut ; clique à nouveau pour l'enlever.",
+            "1.4 - Stations actives : la case de l'indicatif du DX reçoit une bordure orange si la station a écrit dans le chat EME de N0UK au cours des 90 derniers jours, avec la date du dernier message dans l'infobulle ; Type de police avec 10 polices recommandées pour Windows, Linux et macOS, testées onglet par onglet ; paquets pour Windows 32 bits et pour Raspberry Pi (arm64) ; Voûte céleste avec des cadres violets en pointillés autour de la zone pointable ; Distance et Dgrd avec le quatrième jour utile et le jour choisi aussi d'un clic dans le graphique ; cases numériques avec un cadre arrondi et les flèches l'une au-dessus de l'autre ; boutons des fenêtres aux bords (à gauche, au centre, à droite) ; cadre des remerciements sur toute la largeur ; dans les fenêtres étroites, CALCOLI APPROFONDITI passe sur deux lignes et aucun texte ne finit sous les boutons.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -8350,6 +8354,7 @@ namespace LunaCalc
             "Fuentes recomendadas para YAEC",
             "Recuadros morados discontinuos = zona a la que tu antena puede apuntar.",
             "Haz clic en un día del gráfico para resaltarlo también en la franja de días de arriba; vuelve a hacer clic para quitarlo.",
+            "1.4 - Estaciones activas: la casilla del indicativo del DX tiene borde naranja si la estación ha escrito en el chat EME de N0UK en los últimos 90 días, con la fecha del último mensaje en la ayuda emergente; Tipo de letra con 10 fuentes recomendadas para Windows, Linux y macOS, probadas pestaña por pestaña; paquetes para Windows de 32 bits y para Raspberry Pi (arm64); Bóveda celeste con recuadros morados discontinuos alrededor de la zona apuntable; Distancia y Dgrd con el cuarto día útil y el día elegido también con un clic en el gráfico; casillas numéricas con marco redondeado y las flechas una encima de otra; botones de las ventanas en los bordes (izquierda, centro, derecha); recuadro de agradecimientos a todo el ancho; en ventanas estrechas CALCOLI APPROFONDITI pasa a dos líneas y ningún texto queda bajo los botones.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9689,6 +9694,7 @@ namespace LunaCalc
             "Tipos de letra recomendados para o YAEC",
             "Retângulos roxos tracejados = zona para onde a tua antena pode apontar.",
             "Clica num dia do gráfico para o destacar também na faixa dos dias em cima; clica de novo para o retirar.",
+            "1.4 - Estações ativas: a caixa do indicativo do DX tem contorno laranja se a estação escreveu no chat EME de N0UK nos últimos 90 dias, com a data da última mensagem na dica; Tipo de letra com 10 tipos recomendados para Windows, Linux e macOS, testados separador a separador; pacotes para Windows de 32 bits e para Raspberry Pi (arm64); Abóbada celeste com retângulos roxos tracejados à volta da zona apontável; Distância e Dgrd com o quarto dia útil e o dia escolhido também com um clique no gráfico; caixas numéricas com moldura arredondada e as setas uma sobre a outra; botões das janelas nas margens (esquerda, centro, direita); quadro dos agradecimentos em toda a largura; nas janelas estreitas CALCOLI APPROFONDITI passa para duas linhas e nenhum texto fica por baixo dos botões.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -11028,6 +11034,7 @@ namespace LunaCalc
             "推荐用于 YAEC 的字体",
             "紫色虚线框 = 你的天线可以指向的区域。",
             "在图中单击某一天，可同时在上方的日期条中突出显示；再次单击即可取消。",
+            "1.4 - 活跃电台：如果该电台在过去 90 天内在 N0UK 的 EME 聊天室发过言，DX 呼号框会显示橙色边框，提示中显示最后一条消息的日期；“字体类型”提供适用于 Windows、Linux 和 macOS 的 10 种推荐字体，已逐个标签页测试；提供 32 位 Windows 和 Raspberry Pi（arm64）安装包；天空视图用紫色虚线框标出可指向的区域；“距离与 Dgrd”增加第四个可用日，也可在图中单击选择日期；数字输入框采用圆角边框，箭头上下排列；对话框按钮位于两侧（左、中、右）；致谢框占满整个宽度；窗口较窄时 CALCOLI APPROFONDITI 分两行显示，文字不再被按钮遮挡。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -12367,6 +12374,7 @@ namespace LunaCalc
             "YAEC におすすめのフォント",
             "紫の破線の枠 = アンテナを向けられる範囲。",
             "グラフ上の日をクリックすると、上の日付の帯でも強調表示されます。もう一度クリックすると解除されます。",
+            "1.4 - アクティブ局：過去 90 日以内に N0UK の EME チャットに書き込んだ局は、DX コールサイン欄がオレンジの枠で表示され、ツールチップに最後のメッセージの日付が出ます。「フォントの種類」は Windows、Linux、macOS 向けの推奨フォント 10 種類に絞り、タブごとに確認済み。32 ビット Windows 用と Raspberry Pi（arm64）用のパッケージ。天空図で向けられる範囲を紫の破線枠で表示。「距離と Dgrd」に 4 番目の有効日を追加し、グラフをクリックしても日を選択可能。数値欄は角の丸い枠で、矢印を上下に配置。ダイアログのボタンは端に配置（左・中央・右）。謝辞欄を全幅に拡大。狭いウィンドウでは CALCOLI APPROFONDITI を 2 行で表示し、文字がボタンの下に隠れません。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13706,6 +13714,7 @@ namespace LunaCalc
             "YAEC के लिए अनुशंसित फ़ॉन्ट",
             "बैंगनी डैश वाले बॉक्स = वह क्षेत्र जिसकी ओर तुम्हारा एंटीना इशारा कर सकता है।",
             "ग्राफ़ में किसी दिन पर क्लिक करो ताकि वह ऊपर दिनों की पट्टी में भी हाइलाइट हो जाए; हटाने के लिए फिर से क्लिक करो।",
+            "1.4 - सक्रिय स्टेशन: यदि स्टेशन ने पिछले 90 दिनों में N0UK के EME चैट में लिखा है, तो DX कॉलसाइन बॉक्स की सीमा नारंगी हो जाती है, और टूलटिप में अंतिम संदेश की तारीख दिखती है; फ़ॉन्ट का प्रकार में Windows, Linux और macOS के लिए 10 अनुशंसित फ़ॉन्ट, हर टैब पर जाँचे गए; 32-बिट Windows और Raspberry Pi (arm64) के लिए पैकेज; आकाश दृश्य में इंगित करने योग्य क्षेत्र के चारों ओर बैंगनी डैश वाले बॉक्स; दूरी और Dgrd में चौथा उपयोगी दिन, और ग्राफ़ में क्लिक करके भी दिन चुनना; संख्या बॉक्स गोल किनारों वाले फ़्रेम में और तीर एक के ऊपर एक; संवाद-बटन किनारों पर (बाएँ, बीच में, दाएँ); धन्यवाद बॉक्स पूरी चौड़ाई में; संकरी विंडो में CALCOLI APPROFONDITI दो पंक्तियों में आता है और कोई पाठ बटनों के नीचे नहीं जाता।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -15045,6 +15054,7 @@ namespace LunaCalc
             "YAEC 권장 글꼴",
             "보라색 점선 상자 = 안테나가 향할 수 있는 영역.",
             "그래프에서 날짜를 클릭하면 위쪽 날짜 띠에서도 강조됩니다. 다시 클릭하면 해제됩니다.",
+            "1.4 - 활동 국: 최근 90일 동안 N0UK EME 채팅에 글을 쓴 국이면 DX 호출부호 칸에 주황색 테두리가 표시되고, 툴팁에 마지막 메시지 날짜가 나옵니다. 글꼴 종류에서 Windows, Linux, macOS용 권장 글꼴 10개를 탭별로 확인해 제공합니다. 32비트 Windows와 Raspberry Pi(arm64)용 패키지. 하늘 보기에서 향할 수 있는 영역을 보라색 점선 상자로 표시. 거리와 Dgrd에 네 번째 유효일을 추가하고 그래프를 클릭해도 날짜 선택 가능. 숫자 입력 칸은 둥근 테두리에 화살표를 위아래로 배치. 대화 상자 버튼은 가장자리에 배치(왼쪽, 가운데, 오른쪽). 감사 상자를 전체 너비로 확장. 좁은 창에서는 CALCOLI APPROFONDITI가 두 줄로 표시되고 글자가 버튼 아래로 가려지지 않습니다.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -16384,6 +16394,7 @@ namespace LunaCalc
             "Fon yang disarankan untuk YAEC",
             "Kotak ungu putus-putus = area yang dapat dituju antenamu.",
             "Klik satu hari di grafik untuk menyorotnya juga di deretan hari di atas; klik lagi untuk menghapusnya.",
+            "1.4 - Stasiun aktif: kotak tanda panggil DX diberi bingkai oranye jika stasiun menulis di obrolan EME N0UK dalam 90 hari terakhir, dengan tanggal pesan terakhir di keterangan; Jenis fon dengan 10 fon yang disarankan untuk Windows, Linux, dan macOS, diuji per tab; paket untuk Windows 32-bit dan Raspberry Pi (arm64); Kubah langit dengan kotak ungu putus-putus di sekitar area yang dapat dituju; Jarak dan Dgrd dengan hari berguna keempat dan hari terpilih juga dengan satu klik di grafik; kotak angka dengan bingkai membulat dan panah yang bertumpuk; tombol jendela di tepi (kiri, tengah, kanan); kotak ucapan terima kasih selebar jendela; di jendela sempit CALCOLI APPROFONDITI dibuat dua baris dan tidak ada teks yang tertutup tombol.",
         };
 
         public static readonly string[] RU = {
@@ -17724,6 +17735,7 @@ namespace LunaCalc
             "Шрифты, рекомендуемые для YAEC",
             "Фиолетовые пунктирные рамки = область, на которую может быть наведена твоя антенна.",
             "Щёлкни по дню на графике, чтобы выделить его и в полосе дней вверху; щёлкни ещё раз, чтобы снять выделение.",
+            "1.4 - Активные станции: поле позывного DX получает оранжевую рамку, если станция писала в EME-чате N0UK за последние 90 дней, а во всплывающей подсказке — дата последнего сообщения; «Тип шрифта» с 10 рекомендуемыми шрифтами для Windows, Linux и macOS, проверенными на каждой вкладке; пакеты для 32-битной Windows и для Raspberry Pi (arm64); «Небесный свод» с фиолетовыми пунктирными рамками вокруг области, куда можно навести антенну; «Расстояние и Dgrd» с четвёртым полезным днём и выбором дня также щелчком по графику; числовые поля в скруглённой рамке со стрелками друг над другом; кнопки диалогов по краям (слева, по центру, справа); блок благодарностей во всю ширину; в узких окнах CALCOLI APPROFONDITI переносится на две строки и никакой текст не уходит под кнопки.",
         };
 
         public static readonly string[] UK = {
@@ -19064,6 +19076,7 @@ namespace LunaCalc
             "Шрифти, рекомендовані для YAEC",
             "Фіолетові пунктирні рамки = область, на яку може бути наведена твоя антена.",
             "Клацни на день на графіку, щоб виділити його й у смузі днів угорі; клацни ще раз, щоб зняти виділення.",
+            "1.4 - Активні станції: поле позивного DX отримує помаранчеву рамку, якщо станція писала в EME-чаті N0UK за останні 90 днів, а у підказці — дата останнього повідомлення; «Тип шрифту» з 10 рекомендованими шрифтами для Windows, Linux і macOS, перевіреними на кожній вкладці; пакети для 32-бітної Windows і для Raspberry Pi (arm64); «Небесне склепіння» з фіолетовими пунктирними рамками навколо області, куди можна навести антену; «Відстань і Dgrd» з четвертим корисним днем і вибором дня також клацанням на графіку; числові поля в заокругленій рамці зі стрілками одна над одною; кнопки діалогів по краях (ліворуч, по центру, праворуч); блок подяк на всю ширину; у вузьких вікнах CALCOLI APPROFONDITI переноситься на два рядки й жоден текст не потрапляє під кнопки.",
         };
 
         public static readonly string[] AF = {
@@ -20404,6 +20417,7 @@ namespace LunaCalc
             "Lettertipes aanbeveel vir YAEC",
             "Pers stippelraampies = gebied waarna jou antenna kan wys.",
             "Klik op 'n dag in die grafiek om dit ook in die strook dae bo uit te lig; klik weer om dit te verwyder.",
+            "1.4 - Aktiewe stasies: die DX-roepnaamblokkie kry 'n oranje rand as die stasie in die afgelope 90 dae in N0UK se EME-klets geskryf het, met die datum van die laaste boodskap in die wenk; Lettertipe met 10 aanbevole lettertipes vir Windows, Linux en macOS, oortjie vir oortjie getoets; pakkette vir 32-bis-Windows en vir Raspberry Pi (arm64); Hemelkoepel met pers stippelraampies om die gebied waarna gerig kan word; Afstand en Dgrd met die vierde bruikbare dag en die gekose dag ook met 'n klik in die grafiek; getalblokkies met 'n afgeronde raam en die pyltjies bo-op mekaar; dialoogknoppies by die kante (links, middel, regs); bedankingsraam oor die volle breedte; in smal vensters gaan CALCOLI APPROFONDITI op twee reëls en geen teks beland onder die knoppies nie.",
         };
 
         public static readonly string[] BN = {
@@ -21743,6 +21757,7 @@ namespace LunaCalc
             "YAEC-এর জন্য প্রস্তাবিত ফন্ট",
             "বেগুনি ড্যাশ দেওয়া বাক্স = যে এলাকায় তোমার অ্যান্টেনা তাক করতে পারে।",
             "গ্রাফে কোনো দিনে ক্লিক করো, তাহলে উপরের দিনের সারিতেও সেটি হাইলাইট হবে; সরাতে আবার ক্লিক করো।",
+            "1.4 - সক্রিয় স্টেশন: গত 90 দিনে স্টেশনটি N0UK-এর EME চ্যাটে লিখে থাকলে DX কলসাইন বাক্সে কমলা সীমানা দেখা যায়, আর টুলটিপে শেষ বার্তার তারিখ থাকে; ফন্টের ধরনে Windows, Linux ও macOS-এর জন্য 10টি প্রস্তাবিত ফন্ট, প্রতিটি ট্যাবে পরীক্ষিত; 32-বিট Windows ও Raspberry Pi (arm64)-এর জন্য প্যাকেজ; আকাশ দৃশ্যে তাক করার যোগ্য এলাকার চারপাশে বেগুনি ড্যাশ দেওয়া বাক্স; দূরত্ব ও Dgrd-এ চতুর্থ উপযোগী দিন, আর গ্রাফে ক্লিক করেও দিন বাছাই; সংখ্যার বাক্সে গোল কোণের ফ্রেম আর তীর একটার ওপর আরেকটা; ডায়ালগের বোতাম কিনারায় (বাঁয়ে, মাঝে, ডানে); ধন্যবাদের বাক্স পূর্ণ প্রস্থে; সরু উইন্ডোতে CALCOLI APPROFONDITI দুই লাইনে যায় আর কোনো লেখা বোতামের নিচে পড়ে না।",
         };
 
         public static readonly string[] AR = {
@@ -23082,6 +23097,7 @@ namespace LunaCalc
             "الخطوط الموصى بها لـ YAEC",
             "المربعات البنفسجية المتقطعة = المنطقة التي يمكن لهوائيك التوجّه إليها.",
             "انقر على يوم في الرسم البياني لتمييزه أيضًا في شريط الأيام في الأعلى؛ انقر مرة أخرى لإزالته.",
+            "1.4 - المحطات النشطة: يحصل مربع نداء DX على إطار برتقالي إذا كتبت المحطة في دردشة EME لدى N0UK خلال آخر 90 يومًا، مع تاريخ آخر رسالة في التلميح؛ نوع الخط مع 10 خطوط موصى بها لـ Windows وLinux وmacOS، مُختبرة تبويبًا تبويبًا؛ حزم لـ Windows بنظام 32 بت ولـ Raspberry Pi (arm64)؛ قبة السماء مع مربعات بنفسجية متقطعة حول المنطقة القابلة للتوجيه؛ المسافة وDgrd مع اليوم المفيد الرابع واختيار اليوم أيضًا بنقرة في الرسم البياني؛ مربعات الأرقام بإطار مستدير والأسهم واحدًا فوق الآخر؛ أزرار النوافذ عند الحواف (يسار، وسط، يمين)؛ مربع الشكر بعرض كامل؛ في النوافذ الضيقة يُكتب CALCOLI APPROFONDITI على سطرين ولا يقع أي نص تحت الأزرار.",
         };
 
         public static readonly string[] TR = {
@@ -24421,6 +24437,7 @@ namespace LunaCalc
             "YAEC için önerilen yazı tipleri",
             "Mor kesikli kutular = anteninin yönelebildiği bölge.",
             "Grafikte bir güne tıklayarak onu üstteki gün şeridinde de vurgula; kaldırmak için yeniden tıkla.",
+            "1.4 - Etkin istasyonlar: istasyon son 90 günde N0UK EME sohbetine yazdıysa DX çağrı işareti kutusu turuncu çerçeve alır, ipucunda son mesajın tarihi görünür; Yazı tipi türünde Windows, Linux ve macOS için sekme sekme denenmiş 10 önerilen yazı tipi; 32 bit Windows ve Raspberry Pi (arm64) için paketler; Gökyüzü görünümünde yönelinebilen bölgenin çevresinde mor kesikli kutular; Mesafe ve Dgrd'de dördüncü kullanışlı gün ve grafikte tıklayarak da gün seçimi; sayı kutuları yuvarlatılmış çerçeveli, oklar üst üste; pencere düğmeleri kenarlarda (sol, orta, sağ); teşekkür kutusu tam genişlikte; dar pencerelerde CALCOLI APPROFONDITI iki satıra geçer ve hiçbir yazı düğmelerin altında kalmaz.",
         };
 
         public static readonly string[] NL = {
@@ -25760,6 +25777,7 @@ namespace LunaCalc
             "Aanbevolen lettertypen voor YAEC",
             "Paarse gestippelde kaders = gebied waarop je antenne kan richten.",
             "Klik op een dag in de grafiek om hem ook in de dagenstrook bovenaan te markeren; klik nogmaals om de markering te verwijderen.",
+            "1.4 - Actieve stations: het vak met de roepnaam van de DX krijgt een oranje rand als het station de afgelopen 90 dagen in de EME-chat van N0UK heeft geschreven, met de datum van het laatste bericht in de tooltip; Lettertype met 10 aanbevolen lettertypen voor Windows, Linux en macOS, tabblad voor tabblad getest; pakketten voor 32-bits Windows en voor Raspberry Pi (arm64); Hemelkoepel met paarse gestippelde kaders rond het gebied waarop je kunt richten; Afstand en Dgrd met de vierde bruikbare dag en de gekozen dag ook met een klik in de grafiek; getalvakken met een afgeronde rand en de pijlen boven elkaar; knoppen van de vensters aan de randen (links, midden, rechts); dankwoordvak over de volle breedte; in smalle vensters staat CALCOLI APPROFONDITI op twee regels en komt geen tekst onder de knoppen.",
         };
 
         public static readonly string[] ET = {
@@ -27099,6 +27117,7 @@ namespace LunaCalc
             "YAEC-i jaoks soovitatud kirjatüübid",
             "Lillad katkendjoontega raamid = ala, kuhu su antenn saab suunata.",
             "Klõpsa graafikul päeval, et see esile tõsta ka ülal päevade ribal; eemaldamiseks klõpsa uuesti.",
+            "1.4 - Aktiivsed jaamad: DX-i kutsungi lahter saab oranži ääre, kui jaam on viimase 90 päeva jooksul N0UK EME-vestlusesse kirjutanud, ja vihjes on viimase sõnumi kuupäev; Kirjatüüp 10 soovitatud kirjatüübiga Windowsi, Linuxi ja macOS-i jaoks, kontrollitud vahekaart vahekaardi haaval; paketid 32-bitisele Windowsile ja Raspberry Pi-le (arm64); Taevavõlvil lillad katkendjoontega raamid ala ümber, kuhu saab suunata; Kaugus ja Dgrd neljanda kasuliku päevaga ning päeva valik ka klõpsuga graafikul; numbrilahtrid ümardatud raamiga ja nooled üksteise kohal; dialoogiakende nupud servades (vasakul, keskel, paremal); tänuavalduste kast kogu laiuses; kitsastes akendes läheb CALCOLI APPROFONDITI kahele reale ja ükski tekst ei jää nuppude alla.",
         };
 
         public static readonly string[] LV = {
@@ -28438,6 +28457,7 @@ namespace LunaCalc
             "YAEC ieteicamie fonti",
             "Violeti raustīti rāmji = zona, uz kuru tava antena var notēmēt.",
             "Noklikšķini uz dienas grafikā, lai to izceltu arī dienu joslā augšā; noklikšķini vēlreiz, lai noņemtu.",
+            "1.4 - Aktīvās stacijas: DX izsaukuma lodziņš saņem oranžu apmali, ja stacija pēdējo 90 dienu laikā ir rakstījusi N0UK EME tērzēšanā, un uznirstošajā padomā ir pēdējās ziņas datums; Fonta veids ar 10 ieteicamiem fontiem Windows, Linux un macOS, pārbaudītiem katrā cilnē; pakotnes 32 bitu Windows un Raspberry Pi (arm64); Debess velvē violeti raustīti rāmji ap zonu, uz kuru var notēmēt; Attālums un Dgrd ar ceturto noderīgo dienu un dienas izvēli arī ar klikšķi grafikā; skaitļu lodziņi ar noapaļotu rāmi un bultiņām vienu virs otras; logu pogas malās (pa kreisi, centrā, pa labi); pateicību lodziņš visā platumā; šauros logos CALCOLI APPROFONDITI ir divās rindās un neviens teksts nenonāk zem pogām.",
         };
 
         public static readonly string[] LT = {
@@ -29777,6 +29797,7 @@ namespace LunaCalc
             "YAEC rekomenduojami šriftai",
             "Violetiniai brūkšniuoti rėmeliai = sritis, į kurią gali nukreipti savo anteną.",
             "Spustelėk dieną grafike, kad ji būtų paryškinta ir dienų juostoje viršuje; spustelėk dar kartą, kad paryškinimą pašalintum.",
+            "1.4 - Aktyvios stotys: DX šaukinio langelis gauna oranžinį rėmelį, jei stotis per pastarąsias 90 dienų rašė N0UK EME pokalbiuose, o patarime rodoma paskutinės žinutės data; Šrifto tipas su 10 rekomenduojamų šriftų Windows, Linux ir macOS, patikrintų kiekviename skirtuke; paketai 32 bitų Windows ir Raspberry Pi (arm64); Dangaus skliaute violetiniai brūkšniuoti rėmeliai aplink sritį, į kurią galima nukreipti; Atstumas ir Dgrd su ketvirta naudinga diena ir dienos pasirinkimu taip pat spustelėjus grafike; skaičių langeliai su suapvalintu rėmeliu ir rodyklėmis viena virš kitos; langų mygtukai kraštuose (kairėje, centre, dešinėje); padėkų langelis per visą plotį; siauruose languose CALCOLI APPROFONDITI rašomas dviem eilutėmis ir joks tekstas nepatenka po mygtukais.",
         };
 
         public static readonly string[] SV = {
@@ -31116,6 +31137,7 @@ namespace LunaCalc
             "Rekommenderade typsnitt för YAEC",
             "Lila streckade rutor = område som din antenn kan riktas mot.",
             "Klicka på en dag i diagrammet för att markera den även i dagsremsan överst; klicka igen för att ta bort markeringen.",
+            "1.4 - Aktiva stationer: rutan för DX-anropssignalen får en orange ram om stationen har skrivit i N0UK:s EME-chatt de senaste 90 dagarna, med datum för det senaste meddelandet i verktygstipset; Typsnitt med 10 rekommenderade typsnitt för Windows, Linux och macOS, testade flik för flik; paket för 32-bitars Windows och för Raspberry Pi (arm64); Himlavalvet med lila streckade rutor kring området du kan rikta mot; Avstånd och Dgrd med den fjärde användbara dagen och valt datum även med ett klick i diagrammet; sifferrutor med rundad ram och pilarna ovanför varandra; dialogknappar vid kanterna (vänster, mitten, höger); tackrutan i full bredd; i smala fönster hamnar CALCOLI APPROFONDITI på två rader och ingen text hamnar under knapparna.",
         };
 
         public static readonly string[] NB = {
@@ -32455,6 +32477,7 @@ namespace LunaCalc
             "Anbefalte skrifttyper for YAEC",
             "Lilla stiplede rammer = område antennen din kan peke mot.",
             "Klikk på en dag i diagrammet for å markere den også i dagsstripen øverst; klikk igjen for å fjerne markeringen.",
+            "1.4 - Aktive stasjoner: feltet for DX-kallesignalet får en oransje ramme hvis stasjonen har skrevet i N0UKs EME-chat de siste 90 dagene, med datoen for siste melding i verktøytipset; Skrifttype med 10 anbefalte skrifttyper for Windows, Linux og macOS, testet fane for fane; pakker for 32-biters Windows og for Raspberry Pi (arm64); Himmelhvelvingen med lilla stiplede rammer rundt området du kan peke mot; Avstand og Dgrd med den fjerde nyttige dagen og valgt dag også med et klikk i diagrammet; tallfelt med avrundet ramme og pilene over hverandre; knappene i dialogvinduene ved kantene (venstre, midten, høyre); takkefeltet i full bredde; i smale vinduer går CALCOLI APPROFONDITI over to linjer og ingen tekst havner under knappene.",
         };
 
         public static readonly string[] IS = {
@@ -33794,6 +33817,7 @@ namespace LunaCalc
             "Leturgerðir sem mælt er með fyrir YAEC",
             "Fjólubláir strikaðir rammar = svæði sem loftnetið þitt getur beinst að.",
             "Smelltu á dag í línuritinu til að auðkenna hann líka í dagaröðinni efst; smelltu aftur til að fjarlægja hann.",
+            "1.4 - Virkar stöðvar: reitur kallmerkis DX fær appelsínugulan ramma ef stöðin hefur skrifað í EME-spjall N0UK síðustu 90 daga, með dagsetningu síðustu skilaboða í ábendingunni; Leturgerð með 10 ráðlögðum leturgerðum fyrir Windows, Linux og macOS, prófuðum flipa fyrir flipa; pakkar fyrir 32 bita Windows og fyrir Raspberry Pi (arm64); Himinhvolfið með fjólubláum strikuðum römmum um svæðið sem hægt er að beina að; Fjarlægð og Dgrd með fjórða nothæfa deginum og vali dags líka með smelli í línuritinu; talnareitir með ávölum ramma og örvarnar hvor yfir annarri; hnappar glugga við jaðrana (vinstri, miðja, hægri); þakkarreitur í fullri breidd; í mjóum gluggum fer CALCOLI APPROFONDITI á tvær línur og enginn texti lendir undir hnöppunum.",
         };
 
         public static readonly string[] HE = {
@@ -35133,6 +35157,7 @@ namespace LunaCalc
             "גופנים מומלצים ל־YAEC",
             "מסגרות סגולות מקווקוות = האזור שהאנטנה שלך יכולה לכוון אליו.",
             "לחץ על יום בגרף כדי להדגיש אותו גם ברצועת הימים למעלה; לחץ שוב כדי להסיר.",
+            "1.4 - תחנות פעילות: תיבת אות הקריאה של ה־DX מקבלת מסגרת כתומה אם התחנה כתבה בצ'אט ה־EME של N0UK ב־90 הימים האחרונים, ותאריך ההודעה האחרונה מופיע בחלונית העזרה; סוג הגופן עם 10 גופנים מומלצים ל־Windows, Linux ו־macOS, שנבדקו לשונית אחר לשונית; חבילות ל־Windows בגרסת 32 סיביות ול־Raspberry Pi (arm64); כיפת השמיים עם מסגרות סגולות מקווקוות סביב האזור שאפשר לכוון אליו; מרחק ו־Dgrd עם היום השימושי הרביעי ובחירת היום גם בלחיצה בגרף; תיבות מספרים עם מסגרת מעוגלת והחצים זה מעל זה; לחצני החלונות בקצוות (שמאל, מרכז, ימין); תיבת התודות ברוחב מלא; בחלונות צרים CALCOLI APPROFONDITI עובר לשתי שורות ואף טקסט לא נשאר מתחת ללחצנים.",
         };
 
         public static readonly string[] UR = {
@@ -36472,6 +36497,7 @@ namespace LunaCalc
             "YAEC کے لیے تجویز کردہ فونٹس",
             "جامنی ڈیش والے خانے = وہ علاقہ جس کی طرف تمہارا اینٹینا رخ کر سکتا ہے۔",
             "گراف میں کسی دن پر کلک کرو تاکہ وہ اوپر دنوں کی پٹی میں بھی نمایاں ہو جائے؛ ہٹانے کے لیے دوبارہ کلک کرو۔",
+            "1.4 - فعال اسٹیشن: اگر اسٹیشن نے گزشتہ 90 دنوں میں N0UK کی EME چیٹ میں لکھا ہو تو DX کال سائن کے خانے کا کنارہ نارنجی ہو جاتا ہے، اور ٹول ٹپ میں آخری پیغام کی تاریخ دکھائی دیتی ہے؛ فونٹ کی قسم میں Windows، Linux اور macOS کے لیے 10 تجویز کردہ فونٹ، ہر ٹیب پر جانچے گئے؛ 32 بٹ Windows اور Raspberry Pi (arm64) کے لیے پیکج؛ آسمانی گنبد میں رخ کیے جانے کے قابل علاقے کے گرد جامنی ڈیش والے خانے؛ فاصلہ اور Dgrd میں چوتھا مفید دن، اور گراف میں کلک کر کے بھی دن کا انتخاب؛ اعداد کے خانے گول فریم کے ساتھ اور تیر ایک دوسرے کے اوپر؛ ونڈو کے بٹن کناروں پر (بائیں، درمیان، دائیں)؛ شکریے کا خانہ پوری چوڑائی میں؛ تنگ ونڈو میں CALCOLI APPROFONDITI دو سطروں میں آتا ہے اور کوئی متن بٹنوں کے نیچے نہیں جاتا۔",
         };
     }
 
@@ -42875,7 +42901,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.3";
+        public const string Versione = "1.4";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -45971,6 +45997,7 @@ namespace LunaCalc
             Lang.T("1.2 - Budget EME con gli indicatori EIRP mia, EIRP del DX, perdita di tratta e S/N nei due sensi (con il Sole); formule del documento Word di una sola grandezza, dentro i margini; pulsanti pieni e menu a tendina piatti con bordo arrotondato in tutti gli schemi; otto schemi di colori pastello; caselle dei valori con le frecce affiancate; i tre giorni migliori in ordine di data; sfondo del cielo sfocato; DEBUG FORMULE tradotto; manuale TEORIA E CONSIGLI SULL'EME con i consigli di Relu NJ9R (GRAVES, puntamento, connettori, guadagno delle antenne, JT65B e MAP65, relè di polarizzazione), i nuovi paragrafi sulla prima ricezione e sulle chat via Internet e le tabelle di VE7BQH nella prefazione; ringraziamenti a NJ9R, il ricordo di IK1UWL e gli autori di articoli, hardware e software, con il fumetto delle loro opere."),
             Lang.T("1.2.1 - La pagina CONTATTI DELL'AUTORE E RINGRAZIAMENTI si apre di nuovo correttamente su Linux e macOS; il rimando per i transverter indica il § 1.7.1."),
             Lang.T("1.3 - Nove lingue nuove: olandese, estone, lettone, lituano, svedese, norvegese, islandese, ebraico e urdu (26 in tutto), con i manuali; licenza e LEGGIMI in tutte le lingue, licenza nella lingua dell'installatore; pulsante GRAVES; Connettori in TX e Connettori in RX nel Budget EME (consiglio di NJ9R); separatore trascinabile tra la colonna sinistra e lo schema del Budget EME; casella del velo grigio nella Ricognizione dei miei ostacoli; DEBUG FORMULE diventa Controllo dei calcoli e ABOUT & CREDITS diventa INFORMAZIONI E CREDITI; capitoli tecnici del manuale d'uso in bengalese, arabo e turco; schemi pastello corretti; la finestra del CALL3.TXT si chiude da sola dopo l'aggiornamento; pulsanti delle finestre di dialogo distanziati."),
+            Lang.T("1.4 - Stazioni attive: la casella del nominativo del DX ha il bordo arancione se la stazione ha scritto nella chat EME di N0UK negli ultimi 90 giorni, con la data dell'ultimo messaggio nel fumetto; Tipo di carattere con 10 caratteri consigliati per Windows, Linux e macOS, provati linguetta per linguetta; pacchetti per Windows a 32 bit e per Raspberry Pi (arm64); Volta celeste con i riquadri viola tratteggiati della zona puntabile; Distanza e Dgrd con il quarto giorno utile e il giorno scelto anche con un clic nel grafico; caselle dei numeri con la cornice arrotondata e le frecce una sopra l'altra; pulsanti delle finestre ai bordi (a sinistra, al centro, a destra); riquadro dei ringraziamenti a tutta larghezza; nelle finestre strette CALCOLI APPROFONDITI va su due righe e nessuna scritta finisce sotto i pulsanti."),
         };
 
                     _AboutVersioniLg = Lang.Idx;
@@ -50808,6 +50835,23 @@ namespace LunaCalc
         {
             get { return senzaFrecce; }
             set { senzaFrecce = value; if (this.Controls.Count > 0) this.Controls[0].Visible = !value; this.Invalidate(); }
+        }
+
+        // Mono (Linux e macOS): nascoste le frecce di sistema, la casella del testo prende tutta la larghezza e non resta
+        // spazio per le nostre frecce. Qui si accorcia una volta, con una guardia contro i ricalcoli a catena.
+        bool inLayout;
+        protected override void OnLayout(LayoutEventArgs e)
+        {
+            base.OnLayout(e);
+            if (!senzaFrecce || inLayout || Piattaforma.Windows || this.Controls.Count < 2) return;
+            int wz = Math.Max(16, SystemInformation.VerticalScrollBarWidth);
+            Control ed = this.Controls[1];
+            int wv = Math.Max(10, this.ClientSize.Width - wz - ed.Left);
+            if (ed.Width > wv)
+            {
+                inLayout = true;
+                try { ed.Width = wv; } finally { inLayout = false; }
+            }
         }
 
         // UpDownBase è "Opaque": senza le frecce lo spazio dove stavano non viene ridipinto e restano pezzi di

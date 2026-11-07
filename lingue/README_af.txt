@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.3
+﻿YAEC – Yet Another EME Calc 1.4
 deur Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Sakrekenaar vir radioamateurs wat EME (Aarde–Maan–Aarde) van 50 tot 432 MHz 
 Bronkode en aflaai: https://github.com/ic8tem/YAEC/releases
 
 INSTALLASIE – WINDOWS
-1. Laai YAEC-1.3-Setup.exe van die Releases-bladsy af en voer dit uit. Dit installeer YAEC in Documents\YAEC, sonder administrateurregte, met kortpaaie in die Start-kieslys en op die werkskerm, en 'n deïnstalleerder.
+1. Laai YAEC-1.4-Setup.exe van die Releases-bladsy af en voer dit uit. Dit installeer YAEC in Documents\YAEC, sonder administrateurregte, met kortpaaie in die Start-kieslys en op die werkskerm, en 'n deïnstalleerder.
 2. As die SmartScreen-waarskuwing verskyn: "More info" → "Run anyway".
-3. Sonder installasie: pak YAEC-1.3-windows-portable.zip uit in 'n gids waarin jy kan skryf en begin YAEC.exe.
+3. Sonder installasie: pak YAEC-1.4-windows-portable.zip uit in 'n gids waarin jy kan skryf en begin YAEC.exe.
 
 INSTALLASIE – LINUX
 YAEC werk met Mono, die vrye .NET-looptydomgewing.
-- Debian, Ubuntu, Mint: laai yaec_1.3_all.deb af en installeer dit met
-      sudo apt install ./yaec_1.3_all.deb
+- Debian, Ubuntu, Mint: laai yaec_1.4_all.deb af en installeer dit met
+      sudo apt install ./yaec_1.4_all.deb
   (dit installeer ook Mono). YAEC begin uit die toepassingskieslys of met die opdrag "yaec".
-- Ander distribusies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.3-linux.tar.gz uit en voer ./install.sh uit.
+- Ander distribusies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.4-linux.tar.gz uit en voer ./install.sh uit.
 
 INSTALLASIE – macOS (eksperimenteel)
 1. Installeer Mono vir macOS (https://www.mono-project.com/download/stable/) en XQuartz (https://www.xquartz.org).
-2. Maak YAEC-1.3-macOS.dmg oop en sleep YAEC na Applications. Die eerste keer: regsklik op YAEC → Open (die toep is nie deur Apple onderteken nie).
+2. Maak YAEC-1.4-macOS.dmg oop en sleep YAEC na Applications. Die eerste keer: regsklik op YAEC → Open (die toep is nie deur Apple onderteken nie).
 
 KONTROLE VAN DIE AFGELAAIDE LÊERS (SHA-256)
 Elke release bevat SHA256SUMS.txt met die SHA-256-hash van elke pakket. Vergelyk dit met dié van die afgelaaide lêer:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 As die twee waardes verskil, moenie die lêer installeer nie: laai dit weer af.
@@ -39,6 +39,7 @@ Foute, beter data, vertalings: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 WEERGAWEGESKIEDENIS
 Weergawes voor 1.0 word beta genoem.
+- 1.4 - Aktiewe stasies: die DX-roepnaamblokkie kry 'n oranje rand as die stasie in die afgelope 90 dae in N0UK se EME-klets geskryf het, met die datum van die laaste boodskap in die wenk; Lettertipe met 10 aanbevole lettertipes vir Windows, Linux en macOS, oortjie vir oortjie getoets; pakkette vir 32-bis-Windows en vir Raspberry Pi (arm64); Hemelkoepel met pers stippelraampies om die gebied waarna gerig kan word; Afstand en Dgrd met die vierde bruikbare dag en die gekose dag ook met 'n klik in die grafiek; getalblokkies met 'n afgeronde raam en die pyltjies bo-op mekaar; dialoogknoppies by die kante (links, middel, regs); bedankingsraam oor die volle breedte; in smal vensters gaan CALCOLI APPROFONDITI op twee reëls en geen teks beland onder die knoppies nie.
 - 1.3 - Nege nuwe tale: Nederlands, Estnies, Letties, Litaus, Sweeds, Noors, Yslands, Hebreeus en Oerdoe (26 altesaam), met die handleidings; lisensie en README in alle tale, lisensie in die taal van die installeerder; GRAVES-knoppie; TX-verbindings en RX-verbindings in die EME-begroting (raad van NJ9R); versleepbare skeier tussen die linkerkolom en die skema van die EME-begroting; merkblokkie Grys sluier in Verkenning van my hindernisse; FORMULE-ONTFOUTING word Kontrole van die berekeninge en ABOUT & CREDITS word OOR DIE PROGRAM EN BRONNE; tegniese hoofstukke van die gebruikershandleiding in Bengaals, Arabies en Turks; pastelskemas reggestel; die CALL3.TXT-venster maak vanself toe ná die bywerking; knoppies van die dialoogvensters verder uitmekaar.
 - 1.2.1 - Die bladsy KONTAK MET DIE OUTEUR EN ERKENNINGS maak weer korrek oop op Linux en macOS; die verwysing vir die transverters wys na § 1.7.1.
 - 1.2 - EME-begroting met die aanwysers My EIRP, EIRP van die DX, padverlies en S/N in albei rigtings (met die Son); formules van die Word-dokument in een grootte, binne die kantlyne; gevulde knoppies en plat aftreklyste met geronde rand in alle skemas; agt pastelkleurskemas; waardekassies met die pyltjies langs mekaar; die drie beste dae in datumvolgorde; vaag hemelagtergrond; FORMULE-ONTFOUTING vertaal; handleiding TEORIE EN WENKE OOR EME met die raad van Relu NJ9R (GRAVES, rigting, verbindings, antennewins, JT65B en MAP65, polarisasierelê), die nuwe afdelings oor die eerste ontvangs en oor internetklets, en die VE7BQH-tabelle in die voorwoord; dank aan NJ9R, die herinnering aan IK1UWL en die skrywers van artikels, hardeware en sagteware, met 'n wenk oor hul werk.

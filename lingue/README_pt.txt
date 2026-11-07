@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.3
+﻿YAEC – Yet Another EME Calc 1.4
 por Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Calculadora para radioamadores que trabalham em EME (Terra–Lua–Terra) de 50 
 Código-fonte e transferência: https://github.com/ic8tem/YAEC/releases
 
 INSTALAÇÃO – WINDOWS
-1. Transfira YAEC-1.3-Setup.exe da página Releases e execute-o. Instala o YAEC em Documentos\YAEC, sem direitos de administrador, com atalhos no menu Iniciar e no ambiente de trabalho, e o programa de desinstalação.
+1. Transfira YAEC-1.4-Setup.exe da página Releases e execute-o. Instala o YAEC em Documentos\YAEC, sem direitos de administrador, com atalhos no menu Iniciar e no ambiente de trabalho, e o programa de desinstalação.
 2. Se aparecer o aviso do SmartScreen: "Mais informações" → "Executar mesmo assim".
-3. Sem instalação: extraia YAEC-1.3-windows-portable.zip para uma pasta onde possa escrever e inicie YAEC.exe.
+3. Sem instalação: extraia YAEC-1.4-windows-portable.zip para uma pasta onde possa escrever e inicie YAEC.exe.
 
 INSTALAÇÃO – LINUX
 O YAEC funciona com o Mono, o ambiente de execução .NET livre.
-- Debian, Ubuntu, Mint: transfira yaec_1.3_all.deb e instale-o com
-      sudo apt install ./yaec_1.3_all.deb
+- Debian, Ubuntu, Mint: transfira yaec_1.4_all.deb e instale-o com
+      sudo apt install ./yaec_1.4_all.deb
   (instala também o Mono). O YAEC inicia-se a partir do menu de aplicações ou com o comando "yaec".
-- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.3-linux.tar.gz e execute ./install.sh.
+- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.4-linux.tar.gz e execute ./install.sh.
 
 INSTALAÇÃO – macOS (experimental)
 1. Instale o Mono para macOS (https://www.mono-project.com/download/stable/) e o XQuartz (https://www.xquartz.org).
-2. Abra YAEC-1.3-macOS.dmg e arraste o YAEC para Aplicações. Na primeira vez: clique com o botão direito em YAEC → Abrir (a app não está assinada pela Apple).
+2. Abra YAEC-1.4-macOS.dmg e arraste o YAEC para Aplicações. Na primeira vez: clique com o botão direito em YAEC → Abrir (a app não está assinada pela Apple).
 
 VERIFICAÇÃO DOS FICHEIROS TRANSFERIDOS (SHA-256)
 Cada release contém SHA256SUMS.txt com a impressão digital SHA-256 de cada pacote. Compare-a com a do ficheiro transferido:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Se os dois valores forem diferentes, não instale o ficheiro: transfira-o novamente.
@@ -39,6 +39,7 @@ Erros, dados melhores, traduções: ccerrotta@gmail.com · ic8tem@gmail.com · w
 
 HISTÓRICO DE VERSÕES
 As versões anteriores à 1.0 chamam-se beta.
+- 1.4 - Estações ativas: a caixa do indicativo do DX tem contorno laranja se a estação escreveu no chat EME de N0UK nos últimos 90 dias, com a data da última mensagem na dica; Tipo de letra com 10 tipos recomendados para Windows, Linux e macOS, testados separador a separador; pacotes para Windows de 32 bits e para Raspberry Pi (arm64); Abóbada celeste com retângulos roxos tracejados à volta da zona apontável; Distância e Dgrd com o quarto dia útil e o dia escolhido também com um clique no gráfico; caixas numéricas com moldura arredondada e as setas uma sobre a outra; botões das janelas nas margens (esquerda, centro, direita); quadro dos agradecimentos em toda a largura; nas janelas estreitas CALCOLI APPROFONDITI passa para duas linhas e nenhum texto fica por baixo dos botões.
 - 1.3 - Nove novas línguas: neerlandês, estónio, letão, lituano, sueco, norueguês, islandês, hebraico e urdu (26 no total), com os manuais; licença e LEIA-ME em todas as línguas, licença na língua do instalador; botão GRAVES; Conectores TX e Conectores RX no Balanço EME (conselho de NJ9R); separador arrastável entre a coluna esquerda e o esquema do Balanço EME; caixa Véu cinzento no Reconhecimento dos meus obstáculos; DEPURAÇÃO DE FÓRMULAS passa a Verificação dos cálculos e ABOUT & CREDITS passa a SOBRE E CRÉDITOS; capítulos técnicos do manual de utilização em bengali, árabe e turco; esquemas pastel corrigidos; a janela do CALL3.TXT fecha-se sozinha após a atualização; botões das caixas de diálogo espaçados.
 - 1.2.1 - A página CONTACTOS DO AUTOR E AGRADECIMENTOS volta a abrir corretamente em Linux e macOS; a referência para os transverters indica o § 1.7.1.
 - 1.2 - Balanço EME com os indicadores A minha EIRP, EIRP do DX, perda de percurso e S/R nos dois sentidos (com o Sol); fórmulas do documento Word num só tamanho, dentro das margens; botões preenchidos e listas pendentes planas com rebordo arredondado em todos os esquemas; oito esquemas de cores pastel; caixas de valores com as setas lado a lado; os três melhores dias por ordem de data; fundo do céu desfocado; DEPURAÇÃO DE FÓRMULAS traduzido; manual TEORIA E CONSELHOS SOBRE EME com os conselhos de Relu NJ9R (GRAVES, apontamento, conectores, ganho das antenas, JT65B e MAP65, relé de polarização), as novas secções sobre a primeira receção e sobre os chats na Internet e as tabelas de VE7BQH no prefácio; agradecimentos a NJ9R, a memória de IK1UWL e os autores de artigos, hardware e software, com um balão de ajuda sobre as suas obras.

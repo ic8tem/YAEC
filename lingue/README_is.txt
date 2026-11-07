@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.3
+﻿YAEC – Yet Another EME Calc 1.4
 höfundur: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Reiknivél fyrir radíóamatöra sem stunda EME (Jörð–Tungl–Jörð) á 50 
 Frumkóði og niðurhal: https://github.com/ic8tem/YAEC/releases
 
 UPPSETNING – WINDOWS
-1. Sæktu YAEC-1.3-Setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
+1. Sæktu YAEC-1.4-Setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
 2. Ef SmartScreen-viðvörunin birtist: "More info" → "Run anyway".
-3. Án uppsetningar: afþjappaðu YAEC-1.3-windows-portable.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
+3. Án uppsetningar: afþjappaðu YAEC-1.4-windows-portable.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
 
 UPPSETNING – LINUX
 YAEC keyrir á Mono, frjálsa .NET-keyrsluumhverfinu.
-- Debian, Ubuntu, Mint: sæktu yaec_1.3_all.deb og settu hana upp með
-      sudo apt install ./yaec_1.3_all.deb
+- Debian, Ubuntu, Mint: sæktu yaec_1.4_all.deb og settu hana upp með
+      sudo apt install ./yaec_1.4_all.deb
   (setur einnig upp Mono). YAEC er ræst úr forritavalmyndinni eða með skipuninni "yaec".
-- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.3-linux.tar.gz og keyrðu ./install.sh.
+- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.4-linux.tar.gz og keyrðu ./install.sh.
 
 UPPSETNING – macOS (á tilraunastigi)
 1. Settu upp Mono fyrir macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
-2. Opnaðu YAEC-1.3-macOS.dmg og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
+2. Opnaðu YAEC-1.4-macOS.dmg og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
 
 ATHUGUN Á NIÐURHLÖÐNUM SKRÁM (SHA-256)
 Hver release inniheldur SHA256SUMS.txt með SHA-256-tætigildi hvers pakka. Berðu það saman við gildi niðurhlöðnu skrárinnar:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ef gildin tvö eru ólík skaltu ekki setja skrána upp: sæktu hana aftur.
@@ -39,6 +39,7 @@ Villur, betri gögn, þýðingar: ccerrotta@gmail.com · ic8tem@gmail.com · www
 
 ÚTGÁFUSAGA
 Útgáfur á undan 1.0 kallast beta.
+- 1.4 - Virkar stöðvar: reitur kallmerkis DX fær appelsínugulan ramma ef stöðin hefur skrifað í EME-spjall N0UK síðustu 90 daga, með dagsetningu síðustu skilaboða í ábendingunni; Leturgerð með 10 ráðlögðum leturgerðum fyrir Windows, Linux og macOS, prófuðum flipa fyrir flipa; pakkar fyrir 32 bita Windows og fyrir Raspberry Pi (arm64); Himinhvolfið með fjólubláum strikuðum römmum um svæðið sem hægt er að beina að; Fjarlægð og Dgrd með fjórða nothæfa deginum og vali dags líka með smelli í línuritinu; talnareitir með ávölum ramma og örvarnar hvor yfir annarri; hnappar glugga við jaðrana (vinstri, miðja, hægri); þakkarreitur í fullri breidd; í mjóum gluggum fer CALCOLI APPROFONDITI á tvær línur og enginn texti lendir undir hnöppunum.
 - 1.3 - Níu ný tungumál: hollenska, eistneska, lettneska, litháíska, sænska, norska, íslenska, hebreska og úrdú (26 alls), með handbókunum; leyfi og README á öllum tungumálum, leyfi á tungumáli uppsetningarforritsins; GRAVES-hnappur; TX-tengi og RX-tengi í glugganum EME-aflreikningur (ráð frá NJ9R); færanleg skil milli vinstri dálksins og skýringarmyndarinnar í EME-aflreikningur; gátreiturinn Grá hula í Könnun á hindrunum mínum; DEBUG FORMÚLA verður Yfirferð útreikninga og ABOUT & CREDITS verður UPPLÝSINGAR OG HEIMILDIR; tæknikaflar notendahandbókarinnar á bengölsku, arabísku og tyrknesku; pastellitasamsetningar lagfærðar; glugginn fyrir CALL3.TXT lokast sjálfkrafa eftir uppfærsluna; meira bil á milli hnappa í samskiptagluggum.
 - 1.2.1 - Síðan SAMBAND VIÐ HÖFUND OG ÞAKKIR opnast aftur rétt á Linux og macOS; tilvísunin um transvertera bendir á § 1.7.1.
 - 1.2 - EME-aflreikningur með vísunum Mitt EIRP, EIRP DX, leiðartap og S/N í báðar áttir (með sól); formúlur Word-skjalsins í einni stærð, innan spássíanna; fylltir hnappar og flatir fellilistar með ávölum brúnum í öllum litasamsetningum; átta pastellitasamsetningar; gildisreitir með örvum hlið við hlið; þrír bestu dagarnir í dagsetningaröð; óskýr himinbakgrunnur; DEBUG FORMÚLA þýtt; handbókin KENNING OG RÁÐ UM EME með ráðum Relu NJ9R (GRAVES, miðun, tengi, mögnun loftneta, JT65B og MAP65, skautunarliðar), nýju köflunum um fyrstu móttöku og spjall á netinu og töflum VE7BQH í formálanum; þakkir til NJ9R, minning um IK1UWL og höfunda greina, vélbúnaðar og hugbúnaðar, með skýringarblöðru um verk þeirra.

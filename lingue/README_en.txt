@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.3
+﻿YAEC – Yet Another EME Calc 1.4
 by Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ A calculator for radio amateurs working EME (Earth–Moon–Earth) from 50 to 43
 Source and downloads: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Download YAEC-1.3-Setup.exe from the Releases page and run it. It installs YAEC in Documents\YAEC, without administrator rights, with shortcuts in the Start menu and on the desktop, and an uninstaller.
+1. Download YAEC-1.4-Setup.exe from the Releases page and run it. It installs YAEC in Documents\YAEC, without administrator rights, with shortcuts in the Start menu and on the desktop, and an uninstaller.
 2. If the SmartScreen warning appears: "More info" → "Run anyway".
-3. Without installing: extract YAEC-1.3-windows-portable.zip into a folder you can write to and start YAEC.exe.
+3. Without installing: extract YAEC-1.4-windows-portable.zip into a folder you can write to and start YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC runs on Mono, the free .NET runtime.
-- Debian, Ubuntu, Mint: download yaec_1.3_all.deb and install it with
-      sudo apt install ./yaec_1.3_all.deb
+- Debian, Ubuntu, Mint: download yaec_1.4_all.deb and install it with
+      sudo apt install ./yaec_1.4_all.deb
   (this also installs Mono). Start YAEC from the applications menu or with the command "yaec".
-- Other distributions: install Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extract YAEC-1.3-linux.tar.gz and run ./install.sh.
+- Other distributions: install Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extract YAEC-1.4-linux.tar.gz and run ./install.sh.
 
 INSTALLATION – macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/) and XQuartz (https://www.xquartz.org).
-2. Open YAEC-1.3-macOS.dmg and drag YAEC into Applications. The first time: right-click YAEC → Open (the app is not signed by Apple).
+2. Open YAEC-1.4-macOS.dmg and drag YAEC into Applications. The first time: right-click YAEC → Open (the app is not signed by Apple).
 
 CHECKING THE DOWNLOADED FILES (SHA-256)
 Every release contains SHA256SUMS.txt with the SHA-256 hash of each package. Compare it with the hash of the downloaded file:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 If the two values differ, do not install the file: download it again.
@@ -39,6 +39,7 @@ Bugs, better data, translations: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 VERSION HISTORY
 Versions before 1.0 are called beta.
+- 1.4 - Active stations: the DX callsign box gets an orange border if the station has written in the N0UK EME chat in the last 90 days, with the date of the last message in the tooltip; Font type with 10 recommended fonts for Windows, Linux and macOS, tested tab by tab; packages for 32-bit Windows and for Raspberry Pi (arm64); Sky view with dashed purple boxes around the area you can point at; Distance and Dgrd with the fourth useful day and the chosen day also selectable with a click in the chart; number boxes with a rounded frame and the arrows one above the other; dialog buttons at the edges (left, centre, right); acknowledgements box at full width; in narrow windows CALCOLI APPROFONDITI goes on two lines and no text ends up under the buttons.
 - 1.3 - Nine new languages: Dutch, Estonian, Latvian, Lithuanian, Swedish, Norwegian, Icelandic, Hebrew and Urdu (26 in all), with the manuals; licence and README in all languages, licence in the installer's language; GRAVES button; TX connectors and RX connectors in the EME budget (advice from NJ9R); draggable splitter between the left column and the EME budget diagram; Grey veil checkbox in Reconnaissance of my obstacles; FORMULA DEBUG becomes Calculation check and ABOUT & CREDITS is now translated in every language; technical chapters of the user manual in Bengali, Arabic and Turkish; pastel schemes fixed; the CALL3.TXT window closes by itself after the update; dialog box buttons spaced out.
 - 1.2.1 - The AUTHOR CONTACTS AND ACKNOWLEDGEMENTS page opens correctly again on Linux and macOS; the reference for the transverters points to § 1.7.1.
 - 1.2 - EME budget with the indicators My EIRP, DX EIRP, path loss and S/N in both directions (with the Sun); Word document formulas in a single size, within the margins; filled buttons and flat drop-down lists with rounded borders in all schemes; eight pastel colour schemes; value boxes with side-by-side arrows; the three best days in date order; blurred sky background; FORMULA DEBUG translated; THEORY AND TIPS ON EME manual with the advice of Relu NJ9R (GRAVES, pointing, connectors, antenna gain, JT65B and MAP65, polarization relay), the new sections on the first reception and on internet chats, and the VE7BQH tables in the preface; thanks to NJ9R, the memory of IK1UWL and the authors of articles, hardware and software, with a tooltip on their works.

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.3
+﻿YAEC – Yet Another EME Calc 1.4
 oleh Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 
 Kode sumber dan unduhan: https://github.com/ic8tem/YAEC/releases
 
 INSTALASI – WINDOWS
-1. Unduh YAEC-1.3-Setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
+1. Unduh YAEC-1.4-Setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
 2. Jika muncul peringatan SmartScreen: "Info selengkapnya" → "Tetap jalankan".
-3. Tanpa instalasi: ekstrak YAEC-1.3-windows-portable.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
+3. Tanpa instalasi: ekstrak YAEC-1.4-windows-portable.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
 
 INSTALASI – LINUX
 YAEC berjalan dengan Mono, runtime .NET yang bebas.
-- Debian, Ubuntu, Mint: unduh yaec_1.3_all.deb dan pasang dengan
-      sudo apt install ./yaec_1.3_all.deb
+- Debian, Ubuntu, Mint: unduh yaec_1.4_all.deb dan pasang dengan
+      sudo apt install ./yaec_1.4_all.deb
   (Mono juga ikut terpasang). YAEC dijalankan dari menu aplikasi atau dengan perintah "yaec".
-- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.3-linux.tar.gz lalu jalankan ./install.sh.
+- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.4-linux.tar.gz lalu jalankan ./install.sh.
 
 INSTALASI – macOS (eksperimental)
 1. Pasang Mono untuk macOS (https://www.mono-project.com/download/stable/) dan XQuartz (https://www.xquartz.org).
-2. Buka YAEC-1.3-macOS.dmg dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
+2. Buka YAEC-1.4-macOS.dmg dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
 
 MEMERIKSA FILE YANG DIUNDUH (SHA-256)
 Setiap release berisi SHA256SUMS.txt dengan hash SHA-256 setiap paket. Bandingkan dengan hash file yang Anda unduh:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.3-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.4-Setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jika kedua nilai berbeda, jangan pasang file tersebut: unduh ulang.
@@ -39,6 +39,7 @@ Kesalahan, data yang lebih baik, terjemahan: ccerrotta@gmail.com · ic8tem@gmail
 
 RIWAYAT VERSI
 Versi sebelum 1.0 disebut beta.
+- 1.4 - Stasiun aktif: kotak tanda panggil DX diberi bingkai oranye jika stasiun menulis di obrolan EME N0UK dalam 90 hari terakhir, dengan tanggal pesan terakhir di keterangan; Jenis fon dengan 10 fon yang disarankan untuk Windows, Linux, dan macOS, diuji per tab; paket untuk Windows 32-bit dan Raspberry Pi (arm64); Kubah langit dengan kotak ungu putus-putus di sekitar area yang dapat dituju; Jarak dan Dgrd dengan hari berguna keempat dan hari terpilih juga dengan satu klik di grafik; kotak angka dengan bingkai membulat dan panah yang bertumpuk; tombol jendela di tepi (kiri, tengah, kanan); kotak ucapan terima kasih selebar jendela; di jendela sempit CALCOLI APPROFONDITI dibuat dua baris dan tidak ada teks yang tertutup tombol.
 - 1.3 - Sembilan bahasa baru: Belanda, Estonia, Latvia, Lituania, Swedia, Norwegia, Islandia, Ibrani dan Urdu (total 26), beserta manualnya; lisensi dan README dalam semua bahasa, lisensi dalam bahasa penginstal; tombol GRAVES; Konektor TX dan Konektor RX di Anggaran EME (saran dari NJ9R); pemisah yang dapat diseret antara kolom kiri dan skema Anggaran EME; kotak centang Selubung abu-abu di Pengintaian rintangan saya; DEBUG RUMUS menjadi Pemeriksaan perhitungan dan ABOUT & CREDITS menjadi TENTANG DAN KREDIT; bab teknis manual pengguna dalam bahasa Bengali, Arab dan Turki; skema pastel diperbaiki; jendela CALL3.TXT tertutup sendiri setelah pembaruan; tombol kotak dialog diberi jarak.
 - 1.2.1 - Halaman KONTAK PENULIS DAN UCAPAN TERIMA KASIH kembali terbuka dengan benar di Linux dan macOS; rujukan untuk transverter kini menunjuk § 1.7.1.
 - 1.2 - Anggaran EME dengan indikator EIRP saya, EIRP DX, rugi lintasan dan S/N dua arah (dengan Matahari); rumus dokumen Word dalam satu ukuran, di dalam margin; tombol penuh dan daftar tarik-turun datar bertepi bulat di semua skema; delapan skema warna pastel; kotak nilai dengan panah berdampingan; tiga hari terbaik menurut urutan tanggal; latar langit yang diburamkan; DEBUG RUMUS diterjemahkan; manual TEORI DAN TIPS EME dengan saran Relu NJ9R (GRAVES, pengarahan, konektor, penguatan antena, JT65B dan MAP65, relay polarisasi), bagian baru tentang penerimaan pertama dan chat internet, serta tabel VE7BQH di kata pengantar; ucapan terima kasih kepada NJ9R, kenangan untuk IK1UWL dan para penulis artikel, perangkat keras dan perangkat lunak, dengan tooltip tentang karya mereka.
