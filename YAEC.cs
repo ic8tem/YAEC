@@ -38860,6 +38860,466 @@ namespace LunaCalc
         int FonteSfu { get { return cmbSfuFonte == null ? 0 : Math.Max(0, cmbSfuFonte.SelectedIndex); } }
         string CacheSfu { get { return Path.Combine(Path.GetDirectoryName(settingsPath), SfuFontiCache[FonteSfu]); } }
 
+        // ---------- Linguetta Radar GRAVES (bozzetto approvato) ----------
+        // Il radar francese GRAVES (143,050 MHz CW, Broye-lès-Pesmes, JN27SI) illumina il cielo a sud con quattro
+        // schiere a fasi: settori D, C, B, A di 45° ciascuno tra 90° e 270° di azimut, ognuno diviso in 6 passi di 7,5°
+        // illuminati uno dopo l'altro, nello stesso istante in tutti e quattro i settori (PE1ITR, Bolidozor).
+        const double GrLat = 47.348, GrLon = 5.515, GrH = 200, GrMHz = 143.050;
+        const double GrElMin = 15, GrElMax = 40;   // elevazione (vista da GRAVES) con cui le eco lunari si ricevono bene
+        static readonly string[] GrSettori = { "D", "C", "B", "A" };   // da 90° a 270°
+        static readonly Color[] GrColSett = { Color.FromArgb(216, 205, 245), Color.FromArgb(198, 218, 245), Color.FromArgb(167, 139, 250), Color.FromArgb(248, 215, 180) };
+        TabPage tpGraves;
+        PannelloDisegno pnlGr;
+        Panel pnlGrScroll;
+        ComboBox cmbGrSeq;
+        Spunta chkGrSuono;
+        System.Windows.Forms.Timer tmrGr;
+        bool grFinPrec;
+        DateTime grGiorno = DateTime.MinValue; string grChiave = "";
+        bool[] grInFascio = new bool[720], grSopra = new bool[720], grMio = new bool[720];   // passi di 2 minuti nelle 24 ore UTC
+        int[] grSett = new int[720];
+
+        double GrPasso { get { return cmbGrSeq != null && cmbGrSeq.SelectedIndex == 1 ? 3.2 : 0.8; } }
+        double GrCiclo { get { return GrPasso * 6; } }
+
+        // settore (0..3 = D, C, B, A) e passo (0..5) che contengono un azimut; -1 se fuori dai 90°-270°
+        static int GrSettore(double az, out int passo)
+        {
+            passo = -1;
+            if (az < 90 || az >= 270) return -1;
+            int s = (int)((az - 90) / 45.0);
+            passo = Math.Min(5, (int)((az - 90 - 45 * s) / 7.5));
+            return s;
+        }
+
+        static bool GrNelFascio(MoonPos g) { return g.Az >= 90 && g.Az < 270 && g.ElGeo >= GrElMin && g.ElGeo <= GrElMax; }
+
+        void BuildGravesTab(TabPage tp)
+        {
+            TableLayoutPanel root = new TableLayoutPanel();
+            root.Dock = DockStyle.Fill;
+            root.ColumnCount = 1; root.RowCount = 2;
+            root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            root.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
+            root.Padding = new Padding(S(4));
+
+            FlowLayoutPanel bar = new FlowLayoutPanel();
+            bar.AutoSize = true; bar.AutoSizeMode = AutoSizeMode.GrowAndShrink; bar.Dock = DockStyle.Fill; bar.WrapContents = true;
+            Label lt = L(Lang.T("Radar GRAVES"));
+            lt.Font = new Font(Lang.FontUi, 10F * fontFactor, FontStyle.Bold);
+            Label li = L(string.Format(Lang.Cultura, "· {0:0.000} MHz CW · JN27SI (Broye-lès-Pesmes, {1:0.000}° N {2:0.000}° E)", GrMHz, GrLat, GrLon));
+            Pillola bNow = new Pillola(Lang.T("Adesso").ToUpper(Lang.Cultura), StilePillola.Pieno, ColPillola, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            bNow.Margin = new Padding(S(10), S(2), S(3), S(2));
+            bNow.Click += (s, e) => { grChiave = ""; pnlGr.Invalidate(); };
+            Pillola bDx = new Pillola(Lang.T("METTI GRAVES COME DX"), StilePillola.Pieno, Color.FromArgb(124, 58, 237), new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            bDx.Margin = new Padding(S(6), S(2), S(3), S(2));
+            bDx.Click += (s, e) => ImpostaGraves();
+            tip.SetToolTip(bDx, Lang.T("Radar GRAVES come stazione DX"));
+            cmbGrSeq = new Tendina();
+            cmbGrSeq.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbGrSeq.Items.Add(string.Format(Lang.Cultura, Lang.T("{0} s per passo · ciclo {1} s"), 0.8.ToString("0.0", Lang.Cultura), 4.8.ToString("0.0", Lang.Cultura)) + " (PE1ITR 2021)");
+            cmbGrSeq.Items.Add(string.Format(Lang.Cultura, Lang.T("{0} s per passo · ciclo {1} s"), 3.2.ToString("0.0", Lang.Cultura), 19.2.ToString("0.0", Lang.Cultura)) + " (PE1ITR 2007)");
+            cmbGrSeq.SelectedIndex = 0;
+            cmbGrSeq.Width = S(290);
+            cmbGrSeq.SelectedIndexChanged += (s, e) => { pnlGr.Invalidate(); if (!caricamento) SaveSettings(); };
+            chkGrSuono = new Spunta();
+            chkGrSuono.Text = Lang.T("Avviso sonoro all'apertura della finestra");
+            chkGrSuono.AutoSize = true;
+            chkGrSuono.Margin = new Padding(S(12), S(3), S(3), S(3));
+            chkGrSuono.CheckedChanged += (s, e) => { if (!caricamento) SaveSettings(); };
+            tip.SetToolTip(chkGrSuono, Lang.T("Un suono quando si apre la finestra comune con GRAVES (Luna nel fascio del radar e dentro i limiti della tua antenna)."));
+            bar.Controls.Add(lt); bar.Controls.Add(li); bar.Controls.Add(bNow); bar.Controls.Add(bDx);
+            bar.Controls.Add(L(Lang.T("Sequenza del fascio:"))); bar.Controls.Add(cmbGrSeq); bar.Controls.Add(chkGrSuono);
+            root.Controls.Add(bar, 0, 0);
+
+            pnlGrScroll = new Panel();
+            pnlGrScroll.Dock = DockStyle.Fill;
+            pnlGrScroll.AutoScroll = true;
+            pnlGr = new PannelloDisegno();
+            pnlGr.Location = new Point(0, 0);
+            pnlGr.Paint += DisegnaGraves;
+            pnlGrScroll.Controls.Add(pnlGr);
+            Action dim = () =>
+            {
+                int w = Math.Max(S(900), pnlGrScroll.ClientSize.Width);
+                int h = Math.Max(S(1060), pnlGrScroll.ClientSize.Height);
+                if (h > pnlGrScroll.ClientSize.Height) w = Math.Max(S(900), pnlGrScroll.ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
+                if (pnlGr.Size != new Size(w, h)) pnlGr.Size = new Size(w, h);
+            };
+            pnlGrScroll.Resize += (s, e) => dim();
+            dim();
+            root.Controls.Add(pnlGrScroll, 0, 1);
+            tp.Controls.Add(root);
+
+            // il fascio cambia passo ogni 0,8 s: la pagina si ridisegna 5 volte al secondo, solo quando è visibile
+            tmrGr = new System.Windows.Forms.Timer();
+            tmrGr.Interval = 200;
+            tmrGr.Tick += (s, e) =>
+            {
+                if (tabs == null || tabs.SelectedTab != tpGraves || !this.Visible) { GrControllaSuono(); return; }
+                pnlGr.Invalidate();
+            };
+            tmrGr.Start();
+        }
+
+        // tabella delle 24 ore UTC del giorno (passi di 2 minuti): ricalcolata quando cambiano giorno, locator o limiti
+        void GrPrepara(DateTime giorno)
+        {
+            string k = giorno.ToString("yyyyMMdd", inv) + "|" + me.Lat.ToString("F4", inv) + "|" + me.Lon.ToString("F4", inv) + "|"
+                + me.Az1.Value + "|" + me.Az2.Value + "|" + me.El1.Value + "|" + me.El2.Value + "|" + DateTime.UtcNow.ToString("yyyyMMddHH", inv);
+            if (k == grChiave) return;
+            grChiave = k; grGiorno = giorno;
+            for (int i = 0; i < 720; i++)
+            {
+                DateTime t = giorno.AddMinutes(2 * i);
+                MoonPos g = Moon.Compute(t, GrLat, GrLon, GrH, false);
+                int ps;
+                grSopra[i] = g.ElGeo > 0;
+                grInFascio[i] = GrNelFascio(g);
+                grSett[i] = grInFascio[i] ? GrSettore(g.Az, out ps) : -1;
+                bool ok = false;
+                if (me.Ok) { MoonPos p = Moon.Compute(t, me.Lat, me.Lon, (double)me.H.Value, false); me.Valuta(p, out ok); }
+                grMio[i] = ok;
+            }
+        }
+
+        // finestra comune (Luna nel fascio e dentro i limiti della mia antenna) attorno all'istante t, a passi di 1 minuto
+        bool GrComune(DateTime t)
+        {
+            if (!me.Ok) return false;
+            MoonPos g = Moon.Compute(t, GrLat, GrLon, GrH, false);
+            if (!GrNelFascio(g)) return false;
+            bool ok; me.Valuta(Moon.Compute(t, me.Lat, me.Lon, (double)me.H.Value, false), out ok);
+            return ok;
+        }
+
+        void GrControllaSuono()
+        {
+            bool ora = me != null && me.Ok && GrComune(DateTime.UtcNow);
+            if (ora && !grFinPrec && chkGrSuono != null && chkGrSuono.Checked) { try { System.Media.SystemSounds.Exclamation.Play(); } catch { } }
+            grFinPrec = ora;
+        }
+
+        void DisegnaGraves(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            PreparaGrafica(g);
+            CultureInfo ci = Lang.Cultura;
+            Rectangle cr = pnlGr.ClientRectangle;
+            using (Brush bf = new SolidBrush(Tema.Back)) g.FillRectangle(bf, cr);
+            if (cr.Width < 200) return;
+            DateTime now = DateTime.UtcNow;
+            GrControllaSuono();
+            GrPrepara(now.Date);
+            MoonPos mg = Moon.Compute(now, GrLat, GrLon, GrH, false);
+            int passo; int sett = GrSettore(mg.Az, out passo);
+            bool fascio = GrNelFascio(mg);
+            bool comune = GrComune(now);
+            Color viola = Color.FromArgb(124, 58, 237), blu = Color.FromArgb(31, 111, 209);
+            Color titCol = Tema.Scuro ? Color.FromArgb(196, 181, 253) : Color.FromArgb(91, 33, 182);
+
+            float x0 = S(8), y = S(6), wTot = cr.Width - S(16);
+            using (Font fh = FontPx(Lang.FontUi, S(12), false))
+            using (Font fv = FontPx(Lang.FontUi, S(28), true))
+            using (Font fs = FontPx(Lang.FontUi, S(13), false))
+            using (Font fsb = FontPx(Lang.FontUi, S(13), true))
+            using (Font ft = FontPx(Lang.FontUi, S(14), true))
+            using (Font fp = FontPx(Lang.FontUi, S(12), false))
+            using (Font fpb = FontPx(Lang.FontUi, S(12), true))
+            {
+                // --- quattro schede
+                float gap = S(14), wc = (wTot - 3 * gap) / 4f, hc = S(104);
+                string[] tit = new string[4], val = new string[4], sot = new string[4];
+                Color[] col = new Color[4];
+                tit[0] = Lang.T("LUNA NEL FASCIO DI GRAVES");
+                val[0] = fascio ? string.Format(ci, Lang.T("SÌ · settore {0}"), GrSettori[sett]) : Lang.T("NO");
+                sot[0] = string.Format(ci, fascio ? Lang.T("Luna da GRAVES: Az {0}° · El {1}° (passo {2} di 6)") : Lang.T("Luna da GRAVES: Az {0}° · El {1}° (fuori dal fascio)"),
+                    mg.Az.ToString("F1", ci), mg.ElGeo.ToString("F1", ci), passo + 1);
+                col[0] = fascio ? Tema.OkFg : Tema.Muted;
+                // finestra comune: quando chiude o quando si apre (cerca minuto per minuto nelle prossime 24 ore)
+                tit[1] = Lang.T("FINESTRA COMUNE CON TE");
+                DateTime tf = now; int lim = 24 * 60;
+                if (comune)
+                {
+                    int m = 1; while (m < lim && GrComune(now.AddMinutes(m))) m++;
+                    tf = now.AddMinutes(m);
+                    TimeSpan rest = tf - now;
+                    val[1] = Lang.T("aperta") + " · " + string.Format(ci, Lang.T("{0} h {1} min"), (int)rest.TotalHours, rest.Minutes.ToString("00", ci));
+                    sot[1] = string.Format(ci, Lang.T("chiude alle {0} UTC"), tf.ToString("HH:mm", inv));
+                    col[1] = blu;
+                }
+                else
+                {
+                    int m = 1; while (m < lim && !GrComune(now.AddMinutes(m))) m++;
+                    val[1] = Lang.T("chiusa");
+                    sot[1] = m < lim ? string.Format(ci, Lang.T("si apre alle {0} UTC"), now.AddMinutes(m).ToString("HH:mm", inv)) : Lang.T("nessuna finestra nelle prossime 24 ore");
+                    col[1] = Tema.Muted;
+                }
+                if (!me.Ok) sot[1] = Lang.T("Imposta un locator valido nella prima linguetta.");
+                // Doppler bistatico GRAVES -> Luna -> me e ritardo dell'eco
+                tit[2] = string.Format(ci, Lang.T("DOPPLER DELL'ECO SU {0}"), GrMHz.ToString("0.000", ci));
+                double dop = 0, rit = 0;
+                if (me.Ok)
+                {
+                    double h = (double)me.H.Value;
+                    double r1 = Moon.Compute(now.AddSeconds(-30), GrLat, GrLon, GrH, false).DistTopo + Moon.Compute(now.AddSeconds(-30), me.Lat, me.Lon, h, false).DistTopo;
+                    double r2 = Moon.Compute(now.AddSeconds(30), GrLat, GrLon, GrH, false).DistTopo + Moon.Compute(now.AddSeconds(30), me.Lat, me.Lon, h, false).DistTopo;
+                    dop = -GrMHz * 1e6 * ((r2 - r1) / 60.0) / 299792.458;
+                    rit = (mg.DistTopo + Moon.Compute(now, me.Lat, me.Lon, h, false).DistTopo) / 299792.458;
+                    val[2] = (dop >= 0 ? "+" : "−") + Math.Abs(dop).ToString("F0", ci) + " Hz";
+                    double fr = GrMHz + dop / 1e6;
+                    string frs = fr.ToString("0.000000", ci);
+                    frs = frs.Substring(0, frs.Length - 3) + " " + frs.Substring(frs.Length - 3);
+                    sot[2] = string.Format(ci, Lang.T("ascolta a {0} MHz · ritardo dell'eco ≈ {1} s"), frs, rit.ToString("0.00", ci));
+                }
+                else { val[2] = "—"; sot[2] = Lang.T("Imposta un locator valido nella prima linguetta."); }
+                col[2] = Color.FromArgb(217, 119, 6);
+                // prossimo passaggio del fascio sulla Luna (sequenza legata all'ora UTC)
+                tit[3] = Lang.T("PROSSIMO PASSAGGIO DEL FASCIO SULLA LUNA");
+                double ciclo = GrCiclo, pp = GrPasso;
+                double sec = now.TimeOfDay.TotalSeconds, fase = sec % ciclo;
+                double prox = 0;
+                if (fascio)
+                {
+                    double ini = passo * pp;
+                    prox = (fase >= ini && fase < ini + pp) ? 0 : ((ini - fase) % ciclo + ciclo) % ciclo;
+                    val[3] = prox <= 0 ? Lang.T("adesso") : string.Format(ci, Lang.T("tra {0} s"), prox.ToString("0.0", ci));
+                    List<string> arr = new List<string>();
+                    double t0 = sec + prox + (prox <= 0 ? ini - fase : 0) + rit;
+                    for (int k = 0; k < 3; k++) { double ts = (t0 + k * ciclo) % 60.0; arr.Add(":" + ts.ToString("00.0", ci)); }
+                    sot[3] = string.Format(ci, Lang.T("ogni {0} s · l'eco arriva {1} s dopo: a {2}"), ciclo.ToString("0.0", ci), rit.ToString("0.0", ci), string.Join(" · ", arr.ToArray()) + " …");
+                    col[3] = viola;
+                }
+                else { val[3] = "—"; sot[3] = Lang.T("La Luna non è nel fascio di GRAVES in questo momento."); col[3] = Tema.Muted; }
+                for (int i = 0; i < 4; i++)
+                {
+                    RectangleF r = new RectangleF(x0 + i * (wc + gap), y, wc, hc);
+                    Scheda(g, r, col[i] == Tema.Muted ? Tema.Linea : col[i]);
+                    Testo(g, Spaziato(tit[i]), fh, Tema.Muted, new RectangleF(r.Left + S(20), r.Top + S(10), r.Width - S(26), S(18)), StringAlignment.Near, StringAlignment.Near);
+                    Testo(g, val[i], fv, col[i], new RectangleF(r.Left + S(18), r.Top + S(28), r.Width - S(24), S(40)), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, sot[i], fs, Tema.Fore, new RectangleF(r.Left + S(20), r.Top + S(70), r.Width - S(26), S(24)), StringAlignment.Near, StringAlignment.Center);
+                }
+                y += hc + S(16);
+
+                // --- il cielo visto da GRAVES (sinistra) e ricostruzione cronologica (destra)
+                float hMid = S(600), wL = Math.Max(S(360), wTot * 0.28f), wR = wTot - wL - gap;
+                RectangleF cl = new RectangleF(x0, y, wL, hMid), crr = new RectangleF(x0 + wL + gap, y, wR, hMid);
+                Scheda(g, cl, Color.Empty); Scheda(g, crr, Color.Empty);
+                Testo(g, Spaziato(Lang.T("IL CIELO VISTO DA GRAVES")), ft, titCol, new RectangleF(cl.Left + S(18), cl.Top + S(14), cl.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                float rad = Math.Min(cl.Width - S(90), S(360)) / 2f;
+                PointF c = new PointF(cl.Left + cl.Width / 2f, cl.Top + S(70) + rad);
+                Func<double, double, PointF> P = (az, el) =>
+                {
+                    double rr = rad * (90 - Math.Max(0, el)) / 90.0, a = az * Math.PI / 180;
+                    return new PointF(c.X + (float)(rr * Math.Sin(a)), c.Y - (float)(rr * Math.Cos(a)));
+                };
+                using (Brush bc = new SolidBrush(Tema.Scuro ? Color.FromArgb(40, 255, 255, 255) : Color.FromArgb(241, 244, 250))) g.FillEllipse(bc, c.X - rad, c.Y - rad, 2 * rad, 2 * rad);
+                // i quattro settori (spicchi da 45°) tra 90° e 270°
+                for (int s = 0; s < 4; s++)
+                    using (Brush bs = new SolidBrush(Color.FromArgb(Tema.Scuro ? 120 : 255, GrColSett[s])))
+                        g.FillPie(bs, c.X - rad, c.Y - rad, 2 * rad, 2 * rad, (float)(90 + 45 * s - 90), 45f);
+                // il passo illuminato adesso nel settore della Luna (o in tutti i settori, che si muovono insieme)
+                {
+                    int pAdesso = (int)(fase / pp) % 6;
+                    for (int s = 0; s < 4; s++)
+                    {
+                        bool qui = fascio && s == sett;
+                        using (Brush bp = new SolidBrush(qui ? Color.FromArgb(240, 250, 204, 21) : Color.FromArgb(70, 250, 204, 21)))
+                            g.FillPie(bp, c.X - rad, c.Y - rad, 2 * rad, 2 * rad, (float)(90 + 45 * s + 7.5 * pAdesso - 90), 7.5f);
+                    }
+                }
+                using (Pen pr = new Pen(Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(200, 206, 218)))
+                {
+                    for (int el = 0; el < 90; el += 30) { float rr = rad * (90 - el) / 90f; g.DrawEllipse(pr, c.X - rr, c.Y - rr, 2 * rr, 2 * rr); }
+                    g.DrawLine(pr, c.X - rad, c.Y, c.X + rad, c.Y); g.DrawLine(pr, c.X, c.Y - rad, c.X, c.Y + rad);
+                }
+                for (int s = 0; s < 4; s++)
+                {
+                    PointF pl = P(90 + 45 * s + 22.5, 30);
+                    Testo(g, GrSettori[s], ft, s == 2 ? Color.White : titCol, new RectangleF(pl.X - S(15), pl.Y - S(12), S(30), S(24)), StringAlignment.Center, StringAlignment.Center);
+                }
+                string[] card = { "N", "E", "S", Lang.T("O") };
+                for (int k = 0; k < 4; k++)
+                {
+                    PointF pc = P(90 * k, -12);
+                    double a = 90 * k * Math.PI / 180;
+                    pc = new PointF(c.X + (float)((rad + S(14)) * Math.Sin(a)), c.Y - (float)((rad + S(14)) * Math.Cos(a)));
+                    Testo(g, card[k], fsb, Tema.Fore, new RectangleF(pc.X - S(15), pc.Y - S(11), S(30), S(22)), StringAlignment.Center, StringAlignment.Center);
+                }
+                // percorso della Luna nelle prossime 12 ore (sopra l'orizzonte di GRAVES)
+                using (Pen pt = new Pen(Tema.Fore, S(1.4f)))
+                {
+                    pt.DashStyle = DashStyle.Dash;
+                    PointF? prev = null;
+                    for (int m = 0; m <= 720; m += 10)
+                    {
+                        MoonPos q = Moon.Compute(now.AddMinutes(m), GrLat, GrLon, GrH, false);
+                        if (q.ElGeo < 0) { prev = null; continue; }
+                        PointF pq = P(q.Az, q.ElGeo);
+                        if (prev != null) g.DrawLine(pt, prev.Value, pq);
+                        prev = pq;
+                    }
+                }
+                Testo(g, Lang.T("percorso della Luna nelle prossime 12 h"), fp, Tema.Muted, new RectangleF(c.X - rad, c.Y - rad - S(4), 2 * rad, S(18)), StringAlignment.Center, StringAlignment.Near);
+                if (mg.ElGeo >= 0)
+                {
+                    PointF pm = P(mg.Az, mg.ElGeo);
+                    using (Brush bm = new SolidBrush(Color.FromArgb(29, 36, 51))) g.FillEllipse(bm, pm.X - S(9), pm.Y - S(9), S(18), S(18));
+                    using (Pen pw = new Pen(Color.White, S(2))) g.DrawEllipse(pw, pm.X - S(9), pm.Y - S(9), S(18), S(18));
+                    TestoBordato(g, Lang.T("Luna").ToUpper(ci), fsb, Color.White, pm.X + S(10), pm.Y - S(26));
+                }
+                string spieg = Lang.T("Quattro schiere a fasi coprono il cielo a sud, da 90° a 270° di azimut, in quattro settori di 45° (D, C, B, A); ogni settore è diviso in 6 passi da 7,5°, illuminati uno dopo l'altro, nello stesso momento in tutti e quattro i settori. Il fascio è largo circa 25° in elevazione: le eco lunari si ricevono bene con la Luna tra 15° e 40° di elevazione vista da GRAVES.");
+                Testo(g, spieg, fs, Tema.Fore, new RectangleF(cl.Left + S(18), c.Y + rad + S(26), cl.Width - S(36), cl.Bottom - (c.Y + rad + S(26)) - S(10)), StringAlignment.Near, StringAlignment.Near);
+
+                // ricostruzione cronologica delle 24 ore UTC
+                Testo(g, Spaziato(string.Format(ci, Lang.T("RICOSTRUZIONE CRONOLOGICA DELLE TRASMISSIONI · {0} UTC"), now.ToString("dd/MM", inv))), ft, titCol,
+                    new RectangleF(crr.Left + S(18), crr.Top + S(14), crr.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                float lx = crr.Left + S(18), wl = Math.Min(S(170), crr.Width * 0.18f), bx = lx + wl, bw = crr.Right - S(18) - bx, rh = S(26), ry = crr.Top + S(48);
+                Func<double, float> Xh = hh => bx + (float)(hh / 24.0 * bw);
+                string[] righe = { Lang.T("Luna da GRAVES"), string.Format(ci, Lang.T("Luna da {0}"), me.Ok ? me.Loc.Text.Trim().ToUpper(inv).Substring(0, Math.Min(6, me.Loc.Text.Trim().Length)) : "—"), Lang.T("Settore illuminato"), Lang.T("Finestra comune") };
+                Color fondoBarra = Tema.Scuro ? Color.FromArgb(50, 255, 255, 255) : Color.FromArgb(236, 239, 244);
+                for (int rr = 0; rr < 4; rr++)
+                {
+                    float yy = ry + rr * S(46);
+                    Testo(g, righe[rr], rr == 3 ? fsb : fs, Tema.Fore, new RectangleF(lx, yy, wl - S(6), rh), StringAlignment.Near, StringAlignment.Center);
+                    using (Brush bb = new SolidBrush(fondoBarra)) g.FillRectangle(bb, bx, yy + S(3), bw, rh - S(6));
+                    int i0 = 0;
+                    while (i0 < 720)
+                    {
+                        int i1 = i0;
+                        Func<int, int> chiave = i =>
+                        {
+                            if (rr == 0) return grInFascio[i] ? 2 : (grSopra[i] ? 1 : 0);
+                            if (rr == 1) return grMio[i] ? 1 : 0;
+                            if (rr == 2) return grSett[i] + 1;
+                            return grInFascio[i] && grMio[i] ? 1 : 0;
+                        };
+                        int kv = chiave(i0);
+                        while (i1 < 720 && chiave(i1) == kv) i1++;
+                        if (kv > 0)
+                        {
+                            Color cb = rr == 0 ? (kv == 2 ? Color.FromArgb(167, 139, 250) : Color.FromArgb(170, 200, 245)) : rr == 1 ? Color.FromArgb(120, 200, 150)
+                                : rr == 2 ? GrColSett[kv - 1] : Color.FromArgb(22, 163, 74);
+                            RectangleF rb = new RectangleF(Xh(i0 / 30.0), yy + S(3), Xh(i1 / 30.0) - Xh(i0 / 30.0), rh - S(6));
+                            using (Brush bk = new SolidBrush(cb)) g.FillRectangle(bk, rb);
+                            if (rr == 2 && rb.Width > S(14)) Testo(g, GrSettori[kv - 1], fsb, Color.FromArgb(29, 36, 51), rb, StringAlignment.Center, StringAlignment.Center);
+                            if (rr == 3)
+                            {
+                                DateTime a = now.Date.AddMinutes(2 * i0), b = now.Date.AddMinutes(2 * i1);
+                                TimeSpan d = b - a;
+                                string tw = a.ToString("HH:mm", inv) + " → " + b.ToString("HH:mm", inv) + " UTC · " + string.Format(ci, Lang.T("{0} h {1} min"), (int)d.TotalHours, d.Minutes.ToString("00", ci));
+                                if (g.MeasureString(tw, fpb).Width < rb.Width - S(8)) Testo(g, tw, fpb, Color.White, new RectangleF(rb.Left + S(6), rb.Top, rb.Width - S(8), rb.Height), StringAlignment.Near, StringAlignment.Center);
+                            }
+                        }
+                        i0 = i1;
+                    }
+                }
+                float yAx = ry + 4 * S(46) - S(10);
+                for (int hh = 0; hh <= 24; hh += 3)
+                    Testo(g, hh.ToString("00", inv), fp, Tema.Muted, new RectangleF(Xh(hh) - S(15), yAx, S(30), S(18)), StringAlignment.Center, StringAlignment.Near);
+                float xn = Xh(now.TimeOfDay.TotalHours);
+                using (Pen pn = new Pen(Color.FromArgb(220, 38, 38), S(2))) g.DrawLine(pn, xn, ry - S(4), xn, ry + 3 * S(46) + rh);
+                using (Brush br = new SolidBrush(Color.FromArgb(220, 38, 38))) g.DrawString(Lang.T("adesso") + " " + now.ToString("HH:mm", inv), fpb, br, xn + S(3), ry - S(6));
+
+                // dettaglio dei prossimi 10 secondi
+                float yd = yAx + S(34);
+                if (fascio)
+                {
+                    string sl = GrSettori[sett];
+                    Testo(g, string.Format(ci, Lang.T("Dettaglio dei prossimi 10 s: passi del fascio nel settore {0} ({1} s ciascuno) e arrivo dell'eco"), sl, pp.ToString("0.0", ci)),
+                        fsb, Tema.Fore, new RectangleF(bx, yd, bw, S(20)), StringAlignment.Near, StringAlignment.Near);
+                    float yb = yd + S(26), hb = S(26);
+                    double t0 = sec, t1 = sec + 10;
+                    Func<double, float> Xs = ts => bx + (float)((ts - t0) / 10.0 * bw);
+                    double ini = Math.Floor(t0 / pp) * pp;
+                    for (double ts = ini; ts < t1; ts += pp)
+                    {
+                        int pk = (int)Math.Round((ts % ciclo) / pp) % 6;
+                        float xa = Math.Max(bx, Xs(ts)), xb = Math.Min(bx + bw, Xs(ts + pp));
+                        if (xb - xa < 2) continue;
+                        bool luna = pk == passo;
+                        RectangleF rb = new RectangleF(xa + 1, yb, xb - xa - 2, hb);
+                        using (Brush bk = new SolidBrush(luna ? Color.FromArgb(250, 204, 21) : (Tema.Scuro ? Color.FromArgb(60, 167, 139, 250) : Color.FromArgb(237, 233, 254)))) g.FillRectangle(bk, rb);
+                        string tb = sl + pk.ToString(inv) + (luna && rb.Width > S(70) ? " · " + Lang.T("Luna") : "");
+                        Testo(g, tb, luna ? fpb : fp, luna ? Color.FromArgb(29, 36, 51) : Tema.Fore, rb, StringAlignment.Center, StringAlignment.Center);
+                        if (luna)
+                        {
+                            double te = ts + rit;
+                            float xe0 = Math.Max(bx, Xs(te)), xe1 = Math.Min(bx + bw, Xs(te + pp));
+                            if (xe1 > xe0 + 2)
+                            {
+                                using (Brush bg = new SolidBrush(Color.FromArgb(22, 163, 74))) g.FillRectangle(bg, xe0, yb + hb + S(8), xe1 - xe0, S(16));
+                                Testo(g, string.Format(ci, Lang.T("eco attesa (+{0} s)"), rit.ToString("0.0", ci)), fpb, Color.FromArgb(22, 163, 74),
+                                    new RectangleF(xe1 + S(4), yb + hb + S(6), S(200), S(20)), StringAlignment.Near, StringAlignment.Center);
+                            }
+                        }
+                    }
+                    for (int k = 0; k <= 5; k++)
+                    {
+                        double ts = t0 + k * 2;
+                        Testo(g, ":" + (ts % 60).ToString("00.0", ci), fp, Tema.Muted, new RectangleF(Xs(ts) - S(30), yb + hb + S(30), S(60), S(18)), k == 0 ? StringAlignment.Near : StringAlignment.Center, StringAlignment.Near);
+                    }
+                    yd = yb + hb + S(58);
+                }
+                else
+                {
+                    Testo(g, Lang.T("La Luna non è nel fascio di GRAVES in questo momento: il dettaglio dei passi compare quando entra in un settore."), fs, Tema.Muted,
+                        new RectangleF(bx, yd, bw, S(40)), StringAlignment.Near, StringAlignment.Near);
+                    yd += S(50);
+                }
+                // nota sulla sequenza e pastiglia «orologio del PC sincronizzato»
+                string nota = Lang.T("La sequenza è legata all'ora UTC (PE1ITR): dal 2021 i passi durano 0,8 s e il ciclo di un settore 4,8 s; nel 2007 erano 3,2 s e 19,2 s. La stazione di comando a volte sposta la sequenza di qualche passo: il dettaglio è una previsione da confermare con l'ascolto.");
+                RectangleF rn = new RectangleF(lx, yd, crr.Width - S(36), Math.Max(S(40), crr.Bottom - yd - S(40)));
+                Testo(g, nota, fs, Tema.Fore, rn, StringAlignment.Near, StringAlignment.Near);
+                string oro = Lang.T("orologio del PC sincronizzato");
+                SizeF so = g.MeasureString(oro, fpb);
+                SizeF sn = g.MeasureString(nota, fs, (int)rn.Width);
+                RectangleF ro = new RectangleF(lx, Math.Min(crr.Bottom - S(32), yd + sn.Height + S(6)), so.Width + S(16), S(22));
+                using (GraphicsPath po = Arrotondato(ro, S(8)))
+                using (Brush bo = new SolidBrush(Color.FromArgb(254, 243, 199))) g.FillPath(bo, po);
+                Testo(g, oro, fpb, Color.FromArgb(146, 64, 14), ro, StringAlignment.Center, StringAlignment.Center);
+                y += hMid + S(16);
+
+                // --- come ascoltare l'eco (sinistra) e fonti (destra)
+                float hBot = Math.Max(S(250), cr.Height - y - S(10)), wA = (wTot - gap) / 2f;
+                RectangleF ca = new RectangleF(x0, y, wA, hBot), cf = new RectangleF(x0 + wA + gap, y, wA, hBot);
+                Scheda(g, ca, Color.Empty); Scheda(g, cf, Color.Empty);
+                Testo(g, Spaziato(Lang.T("COME ASCOLTARE L'ECO (NJ9R, PE1ITR)")), ft, titCol, new RectangleF(ca.Left + S(18), ca.Top + S(14), ca.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                string[][] passi = {
+                    new string[] { Lang.T("Ricevitore"), Lang.T("SSB su 143,050 MHz (o 143,049 5), banda audio ≥ 2,4 kHz, AGC spento, noise blanker attivo, niente filtri, notch o DSP") },
+                    new string[] { Lang.T("Antenna"), Lang.T("Sulla Luna vista da te; con antenna fissa bastano 0° – 15° di elevazione al sorgere o al tramonto") },
+                    new string[] { Lang.T("Waterfall"), Lang.T("L'eco è una linea tratteggiata a circa 1240 Hz (± Doppler); gli aerei sono righe vicino al segnale diretto") },
+                    new string[] { Lang.T("Prova"), Lang.T("Muovi il rotore a piccoli passi fino al massimo e confronta con la posizione calcolata (§ 1.11)") } };
+                float c1 = ca.Left + S(18), c2 = c1 + Math.Min(S(110), ca.Width * 0.2f), wcol = ca.Right - S(18) - c2, ya = ca.Top + S(48);
+                Testo(g, Lang.T("Passo"), fp, Tema.Muted, new RectangleF(c1, ya, c2 - c1, S(20)), StringAlignment.Near, StringAlignment.Near);
+                Testo(g, Lang.T("Che cosa fare"), fp, Tema.Muted, new RectangleF(c2, ya, wcol, S(20)), StringAlignment.Near, StringAlignment.Near);
+                ya += S(24);
+                using (Pen pl = new Pen(Tema.Linea))
+                    foreach (string[] ps in passi)
+                    {
+                        g.DrawLine(pl, c1, ya, ca.Right - S(18), ya);
+                        float hr = Math.Max(S(26), g.MeasureString(ps[1], fs, (int)wcol).Height + S(8));
+                        Testo(g, ps[0], fs, Tema.Fore, new RectangleF(c1, ya + S(4), c2 - c1 - S(6), hr), StringAlignment.Near, StringAlignment.Near);
+                        Testo(g, ps[1], fs, Tema.Fore, new RectangleF(c2, ya + S(4), wcol, hr), StringAlignment.Near, StringAlignment.Near);
+                        ya += hr;
+                    }
+                Testo(g, Spaziato(Lang.T("Fonti").ToUpper(ci)), ft, titCol, new RectangleF(cf.Left + S(18), cf.Top + S(14), cf.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                string[] fonti = {
+                    "[1] Rob Hardenberg PE1ITR, “The 143.050MHz Graves Radar a VHF Beacon” (DUBUS 4/2007) " + Lang.T("e") + " “Graves Radar Update April 2021” – pe1itr.com/graves",
+                    "[2] Bolidozor wiki, “Graves” – " + Lang.T("schiere, settori e tempi del fascio"),
+                    "[3] Wikipedia, “GRAVES (system)” – " + Lang.T("trasmettitore a Broye-lès-Pesmes (47,348° N 5,515° E), ricevitore a Revest-du-Bion, in servizio dal 2005"),
+                    "[4] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, rev. 1.1 (2025)",
+                    "[5] Grupo Bandas Altas DX, “Desafío EME GRAVES” – " + Lang.T("ricezione dell'eco con stazioni piccole") };
+                float yf = cf.Top + S(48);
+                foreach (string fo in fonti)
+                {
+                    float hf = g.MeasureString(fo, fs, (int)(cf.Width - S(36))).Height + S(6);
+                    Testo(g, fo, fs, Tema.Fore, new RectangleF(cf.Left + S(18), yf, cf.Width - S(36), hf), StringAlignment.Near, StringAlignment.Near);
+                    yf += hf;
+                }
+            }
+        }
+
         void BuildSolarTab(TabPage tp)
         {
             sfuStations = StazioniNote();
@@ -40382,7 +40842,7 @@ namespace LunaCalc
             };
             add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpSky });
             add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpPos, tpMondo });
-            add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpSolar, tpExcel, tpDebug });
+            add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpGraves, tpSolar, tpExcel, tpDebug });
             add(Lang.T("Log"), "▦", new TabPage[] { tpMap });
             add(Lang.T("Aiuto e tools"), "?", new TabPage[] { tpIstr, tpEme, tpCavi });
             add("Credits and thanks", "★", new TabPage[] { tpAbout, tpContatti, tpLicenza });   // nome non tradotto (scelta dell'autore)
@@ -48816,7 +49276,7 @@ namespace LunaCalc
             string giro = Environment.GetEnvironmentVariable("YAEC_GIRO");
             if (!string.IsNullOrEmpty(giro)) this.Shown += (s, e) =>
             {
-                TabPage[] tutte = { tpTrack, tpPos, tpBudget, tpSolar, tpSky, tpPunt, tpDgrd, tpMondo, tpMap, tpExcel, tpDebug, tpIstr, tpEme, tpCavi, tpContatti, tpLicenza, tpAbout };
+                TabPage[] tutte = { tpTrack, tpPos, tpBudget, tpGraves, tpSolar, tpSky, tpPunt, tpDgrd, tpMondo, tpMap, tpExcel, tpDebug, tpIstr, tpEme, tpCavi, tpContatti, tpLicenza, tpAbout };
                 int n = -1;
                 System.Windows.Forms.Timer tg = new System.Windows.Forms.Timer();
                 tg.Interval = 3000;
@@ -49510,6 +49970,8 @@ namespace LunaCalc
             BuildBudgetTab(tpBudget);
             tpSolar = new TabPage(Lang.T("Rumore solare"));
             BuildSolarTab(tpSolar);
+            tpGraves = new TabPage(Lang.T("Radar GRAVES"));
+            BuildGravesTab(tpGraves);
             tpSky = new TabPage(Lang.T("Volta celeste"));
             BuildSkyTab(tpSky);
             tpPunt = new TabPage(Lang.T("Ricognizione dei miei ostacoli"));
@@ -49533,7 +49995,7 @@ namespace LunaCalc
             BuildExcelTab(tpExcel);
             tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
-            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
+            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
             BuildMondoTab(tpMondo);   // dopo che tabs esiste: segue il cambio di linguetta
             BuildManualeTab(tpIstr, false);   // dopo le altre linguette: il manuale ne mostra le schermate
@@ -50554,6 +51016,8 @@ namespace LunaCalc
                 lines.Add("grigio_opacita=" + grigioOpacita.ToString(inv));
                 lines.Add("grigio_velo=" + (grigioVelo ? "1" : "0"));
                 lines.Add("budget_schema=" + budgetSchemaLarg.ToString(inv));
+                if (cmbGrSeq != null) lines.Add("graves_seq=" + cmbGrSeq.SelectedIndex.ToString(inv));
+                if (chkGrSuono != null) lines.Add("graves_suono=" + (chkGrSuono.Checked ? "1" : "0"));
                 List<string> cs_ = new List<string>();
                 for (int i = ColFisse; i < colScelte.Length; i++) if (colScelte[i]) cs_.Add(i.ToString(inv));
                 lines.Add("colonne=" + (cs_.Count == 0 ? "-" : string.Join(",", cs_.ToArray())));
@@ -50721,6 +51185,8 @@ namespace LunaCalc
                                 break;
                             }
                         case "grigio_opacita": { int gv; if (int.TryParse(v, NumberStyles.Integer, inv, out gv)) ImpostaGrigi(gv, grigioTono); break; }
+                        case "graves_seq": if (cmbGrSeq != null && (v == "0" || v == "1")) cmbGrSeq.SelectedIndex = v == "1" ? 1 : 0; break;
+                        case "graves_suono": if (chkGrSuono != null) chkGrSuono.Checked = v == "1"; break;
                         case "budget_schema": { int bw2; if (int.TryParse(v, NumberStyles.Integer, inv, out bw2)) { budgetSchemaLarg = Math.Max(300, Math.Min(1500, bw2)); if (budgetRoot != null) budgetRoot.ColumnStyles[2].Width = S(budgetSchemaLarg); } break; }
                         case "grigio_velo": grigioVelo = v != "0"; if (chkVelo != null) chkVelo.Checked = grigioVelo; break;
                         case "grigio_tono": { int gv; if (int.TryParse(v, NumberStyles.Integer, inv, out gv)) ImpostaGrigi(grigioOpacita, gv); break; }
