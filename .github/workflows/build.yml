@@ -242,7 +242,7 @@ jobs:
       - name: Schermate per gli articoli (solo con [articolo] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[articolo]')
         run: |
-          sudo apt-get install -y -qq xdotool fonts-noto-core > /dev/null 2>&1 || true
+          sudo apt-get install -y -qq xdotool fonts-noto-core faketime > /dev/null 2>&1 || true
           fc-cache -f > /dev/null
           Xvfb :95 -screen 0 1920x1080x24 &
           export DISPLAY=:95
@@ -258,7 +258,7 @@ jobs:
           i=0
           for T in "Posizione live e +- 24h" "Distanza e Dgrd" "Posizione della Luna" "Budget EME" "Volta celeste" "Luna sul mondo" "Rumore solare" "Radar GRAVES" "Ricognizione dei miei ostacoli" "Controllo dei calcoli" "CAVI COASSIALI"; do
             i=$((i+1))
-            YAEC_LINGUETTA="$T" mono YAEC.exe &
+            YAEC_LINGUETTA="$T" TZ=UTC faketime -f "@2026-11-25 05:14:00" mono YAEC.exe &
             PID=$!
             sleep 25
             W=$(xdotool search --name "YAEC" | head -1)
