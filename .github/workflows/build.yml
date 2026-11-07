@@ -26,7 +26,10 @@ jobs:
           echo "version=$V" >> "$GITHUB_OUTPUT"
       - name: Compila YAEC.exe (csc di .NET Framework 4, C# 5)
         shell: cmd
-        run: build.cmd
+        run: |
+          call build.cmd || exit /b 1
+          mkdir x86
+          call build.cmd x86 x86\YAEC.exe || exit /b 1
       - name: Installatore (Inno Setup)
         shell: pwsh
         run: |
@@ -34,12 +37,19 @@ jobs:
           if (-not (Test-Path $iscc)) { choco install innosetup -y --no-progress | Out-Null }
           & $iscc "/DMyAppVersion=${{ steps.ver.outputs.version }}" YAEC.iss
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & $iscc "/DMyAppVersion=${{ steps.ver.outputs.version }}" "/DExeDir=x86" "/DSuffisso=-32bit" YAEC.iss
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Pacchetto portatile e sorgenti
         shell: pwsh
         run: |
           $v = "${{ steps.ver.outputs.version }}"
           New-Item -ItemType Directory -Force dist | Out-Null
           Move-Item "YAEC-$v-Setup.exe" dist/
+          Move-Item "YAEC-$v-Setup-32bit.exe" dist/
+          New-Item -ItemType Directory -Force p32 | Out-Null
+          Copy-Item x86/YAEC.exe, YAEC.ico, README.txt, LICENZA.txt -Destination p32/
+          Copy-Item -Recurse lingue p32/
+          Compress-Archive -Path p32/* -DestinationPath "dist/YAEC-$v-windows-32bit-portable.zip"
           Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-windows-portable.zip"
           Compress-Archive -Path YAEC.cs, compila.bat, YAEC.manifest, YAEC.ico, README.txt, YAEC.iss, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-source.zip"
           Copy-Item YAEC.exe dist/
@@ -265,7 +275,7 @@ jobs:
         run: |
           uname -m
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ./dist/*.deb xvfb imagemagick fonts-dejavu-core > /dev/null
+          sudo apt-get install -y -qq ./dist/yaec_*_arm64.deb xvfb imagemagick fonts-dejavu-core > /dev/null
           mkdir -p "$HOME/.local/share/YAEC/data"
           printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=IC8TEM\n' > "$HOME/.local/share/YAEC/data/impostazioni.txt"
           Xvfb :99 -screen 0 1600x1000x24 &
@@ -327,8 +337,9 @@ jobs:
           cat > notes.md <<NOTES
           YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
 
-          - **Windows**: YAEC-${V}-Setup.exe (installatore) oppure YAEC-${V}-windows-portable.zip.
+          - **Windows**: YAEC-${V}-Setup.exe (installatore) oppure YAEC-${V}-windows-portable.zip; per Windows a 32 bit: YAEC-${V}-Setup-32bit.exe oppure YAEC-${V}-windows-32bit-portable.zip.
           - **Linux**: yaec_${V}_all.deb (Debian, Ubuntu, Mint: sudo apt install ./yaec_${V}_all.deb) oppure YAEC-${V}-linux.tar.gz (tutte le distribuzioni, con Mono).
+          - **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb (sudo apt install ./yaec_${V}_arm64.deb).
           - **macOS** (sperimentale): YAEC-${V}-macOS.dmg; servono Mono e XQuartz.
 
           Impronte SHA-256 di tutti i file in SHA256SUMS.txt (come verificarle: README.txt).

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Crea yaec_<versione>_all.deb e YAEC-<versione>-linux.tar.gz da YAEC.exe (lo stesso eseguibile di Windows)
+# Crea yaec_<versione>_all.deb, yaec_<versione>_arm64.deb (Raspberry Pi) e YAEC-<versione>-linux.tar.gz da YAEC.exe (lo stesso eseguibile di Windows)
 set -euo pipefail
 VER="$1"; OUT="${2:-dist}"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -28,6 +28,11 @@ Description: YAEC - Yet Another EME Calc
  calculator for radio amateurs (Windows Forms program run with Mono).
 CTRL
 dpkg-deb --root-owner-group --build "$PKG" "$OUT/yaec_${VER}_all.deb"
+# --- .deb per Raspberry Pi OS a 64 bit (stesso contenuto, architettura arm64) ---
+PKGA="$(mktemp -d)/yaec_${VER}_arm64"
+cp -a "$PKG/." "$PKGA/"
+sed -i 's/^Architecture: all$/Architecture: arm64/' "$PKGA/DEBIAN/control"
+dpkg-deb --root-owner-group --build "$PKGA" "$OUT/yaec_${VER}_arm64.deb"
 # --- .tar.gz (tutte le distribuzioni) ---
 T="$(mktemp -d)/YAEC-${VER}-linux"
 mkdir -p "$T"

@@ -7,6 +7,13 @@
 #ifndef MyAppVersion
   #define MyAppVersion "1.3"
 #endif
+; versione a 32 bit: ISCC /DExeDir=x86 /DSuffisso=-32bit YAEC.iss
+#ifndef ExeDir
+  #define ExeDir "."
+#endif
+#ifndef Suffisso
+  #define Suffisso ""
+#endif
 
 [Setup]
 AppId={{8B762778-8818-488A-9AAD-441548593608}
@@ -20,7 +27,7 @@ DefaultDirName={userdocs}\YAEC
 DefaultGroupName=YAEC
 PrivilegesRequired=lowest
 OutputDir=.
-OutputBaseFilename=YAEC-{#MyAppVersion}-Setup
+OutputBaseFilename=YAEC-{#MyAppVersion}-Setup{#Suffisso}
 SetupIconFile=YAEC.ico
 UninstallDisplayIcon={app}\YAEC.exe
 Compression=lzma2
@@ -52,7 +59,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "{app}\data"; Flags: uninsneveruninstall
 
 [Files]
-Source: "YAEC.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#ExeDir}\YAEC.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "YAEC.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "README.txt"; DestDir: "{app}"; Flags: ignoreversion isreadme
 Source: "LICENZA.txt"; DestDir: "{app}"; Flags: ignoreversion
