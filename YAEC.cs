@@ -2990,6 +2990,8 @@ namespace LunaCalc
             "Numero stimato di connettori in ricezione prima del preamplificatore, tra l'antenna e l'ingresso del preampli (adattatori, relè, divisori): dopo il preampli la loro perdita pesa poco. Consiglio di NJ9R: 0,11 dB ciascuno.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB prima del preampli",
             "1.3 - Nove lingue nuove: olandese, estone, lettone, lituano, svedese, norvegese, islandese, ebraico e urdu (26 in tutto), con i manuali; licenza e LEGGIMI in tutte le lingue, licenza nella lingua dell'installatore; pulsante GRAVES; Connettori in TX e Connettori in RX nel Budget EME (consiglio di NJ9R); separatore trascinabile tra la colonna sinistra e lo schema del Budget EME; casella del velo grigio nella Ricognizione dei miei ostacoli; DEBUG FORMULE diventa Controllo dei calcoli e ABOUT & CREDITS diventa INFORMAZIONI E CREDITI; capitoli tecnici del manuale d'uso in bengalese, arabo e turco; schemi pastello corretti; la finestra del CALL3.TXT si chiude da sola dopo l'aggiornamento; pulsanti delle finestre di dialogo distanziati.",
+            "Stazione attiva negli ultimi 90 giorni (chat EME di N0UK), ultimo messaggio il {0}",
+            "Caratteri consigliati per YAEC",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4325,6 +4327,8 @@ namespace LunaCalc
             "Estimated number of connectors on the receive side before the preamp, between the antenna and the preamp input (adapters, relays, splitters): after the preamp their loss matters little. NJ9R's advice: 0.11 dB each.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB before the preamp",
             "1.3 - Nine new languages: Dutch, Estonian, Latvian, Lithuanian, Swedish, Norwegian, Icelandic, Hebrew and Urdu (26 in all), with the manuals; licence and README in all languages, licence in the installer's language; GRAVES button; TX connectors and RX connectors in the EME budget (advice from NJ9R); draggable splitter between the left column and the EME budget diagram; Grey veil checkbox in Reconnaissance of my obstacles; FORMULA DEBUG becomes Calculation check and ABOUT & CREDITS is now translated in every language; technical chapters of the user manual in Bengali, Arabic and Turkish; pastel schemes fixed; the CALL3.TXT window closes by itself after the update; dialog box buttons spaced out.",
+            "Station active in the last 90 days (N0UK EME chat), last message on {0}",
+            "Fonts recommended for YAEC",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -5660,6 +5664,8 @@ namespace LunaCalc
             "Geschätzte Anzahl der Stecker im Empfangsweg vor dem Vorverstärker, zwischen Antenne und Vorverstärkereingang (Adapter, Relais, Leistungsteiler): Nach dem Vorverstärker fällt ihr Verlust kaum ins Gewicht. Tipp von NJ9R: 0,11 dB pro Stecker.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB vor dem Vorverstärker",
             "1.3 - Neun neue Sprachen: Niederländisch, Estnisch, Lettisch, Litauisch, Schwedisch, Norwegisch, Isländisch, Hebräisch und Urdu (insgesamt 26), mit den Handbüchern; Lizenz und LIESMICH in allen Sprachen, Lizenz in der Sprache des Installationsprogramms; Schaltfläche GRAVES; Stecker TX und Stecker RX im EME-Budget (Rat von NJ9R); verschiebbarer Trenner zwischen der linken Spalte und dem Schema des EME-Budgets; Kontrollkästchen Grauer Schleier in Erkundung meiner Hindernisse; FORMEL-DEBUG wird zu Rechenkontrolle und ABOUT & CREDITS wird zu INFO UND NACHWEISE; technische Kapitel des Benutzerhandbuchs auf Bengalisch, Arabisch und Türkisch; Pastell-Schemata korrigiert; das Fenster der CALL3.TXT schließt sich nach der Aktualisierung von selbst; Schaltflächen der Dialogfenster mit mehr Abstand.",
+            "Station in den letzten 90 Tagen aktiv (EME-Chat von N0UK), letzte Nachricht am {0}",
+            "Für YAEC empfohlene Schriftarten",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -6995,6 +7001,8 @@ namespace LunaCalc
             "Nombre estimé de connecteurs en réception avant le préampli, entre l'antenne et l'entrée du préampli (adaptateurs, relais, diviseurs) : après le préampli, leur perte pèse peu. Conseil de NJ9R : 0,11 dB chacun.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB avant le préampli",
             "1.3 - Neuf nouvelles langues : néerlandais, estonien, letton, lituanien, suédois, norvégien, islandais, hébreu et ourdou (26 au total), avec les manuels ; licence et LISEZMOI dans toutes les langues, licence dans la langue du programme d'installation ; bouton GRAVES ; Connecteurs TX et Connecteurs RX dans le Bilan EME (conseil de NJ9R) ; séparateur déplaçable entre la colonne de gauche et le schéma du Bilan EME ; case Voile gris dans Reconnaissance de mes obstacles ; DÉBOGAGE DES FORMULES devient Contrôle des calculs et ABOUT & CREDITS devient À PROPOS ET CRÉDITS ; chapitres techniques du manuel d'utilisation en bengali, arabe et turc ; thèmes pastel corrigés ; la fenêtre du CALL3.TXT se ferme d'elle-même après la mise à jour ; boutons des boîtes de dialogue espacés.",
+            "Station active au cours des 90 derniers jours (chat EME de N0UK), dernier message le {0}",
+            "Polices recommandées pour YAEC",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -8330,6 +8338,8 @@ namespace LunaCalc
             "Número estimado de conectores en recepción antes del previo, entre la antena y la entrada del previo (adaptadores, relés, divisores): después del previo su pérdida pesa poco. Consejo de NJ9R: 0,11 dB cada uno.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB antes del previo",
             "1.3 - Nueve idiomas nuevos: neerlandés, estonio, letón, lituano, sueco, noruego, islandés, hebreo y urdu (26 en total), con los manuales; licencia y LÉAME en todos los idiomas, licencia en el idioma del instalador; botón GRAVES; Conectores TX y Conectores RX en el Balance EME (consejo de NJ9R); separador arrastrable entre la columna izquierda y el esquema del Balance EME; casilla Velo gris en Reconocimiento de mis obstáculos; DEPURACIÓN DE FÓRMULAS pasa a ser Control de los cálculos y ABOUT & CREDITS pasa a ser ACERCA DE Y CRÉDITOS; capítulos técnicos del manual de uso en bengalí, árabe y turco; esquemas pastel corregidos; la ventana del CALL3.TXT se cierra sola después de la actualización; botones de los cuadros de diálogo espaciados.",
+            "Estación activa en los últimos 90 días (chat EME de N0UK), último mensaje el {0}",
+            "Fuentes recomendadas para YAEC",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -9665,6 +9675,8 @@ namespace LunaCalc
             "Número estimado de conectores na receção antes do pré-amplificador, entre a antena e a entrada do pré-amplificador (adaptadores, relés, divisores): depois do pré-amplificador a sua perda pesa pouco. Conselho de NJ9R: 0,11 dB cada um.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB antes do pré-amplificador",
             "1.3 - Nove novas línguas: neerlandês, estónio, letão, lituano, sueco, norueguês, islandês, hebraico e urdu (26 no total), com os manuais; licença e LEIA-ME em todas as línguas, licença na língua do instalador; botão GRAVES; Conectores TX e Conectores RX no Balanço EME (conselho de NJ9R); separador arrastável entre a coluna esquerda e o esquema do Balanço EME; caixa Véu cinzento no Reconhecimento dos meus obstáculos; DEPURAÇÃO DE FÓRMULAS passa a Verificação dos cálculos e ABOUT & CREDITS passa a SOBRE E CRÉDITOS; capítulos técnicos do manual de utilização em bengali, árabe e turco; esquemas pastel corrigidos; a janela do CALL3.TXT fecha-se sozinha após a atualização; botões das caixas de diálogo espaçados.",
+            "Estação ativa nos últimos 90 dias (chat EME de N0UK), última mensagem em {0}",
+            "Tipos de letra recomendados para o YAEC",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -11000,6 +11012,8 @@ namespace LunaCalc
             "接收端前置放大器之前（天线与前置放大器输入之间）估计的连接器数量（转接头、继电器、功分器）：前置放大器之后的连接器损耗影响很小。NJ9R 的建议：每个 0.11 dB。",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB（前置放大器之前）",
             "1.3 - 新增九种语言：荷兰语、爱沙尼亚语、拉脱维亚语、立陶宛语、瑞典语、挪威语、冰岛语、希伯来语和乌尔都语（共 26 种），并附手册；许可协议和 README 提供所有语言版本，许可协议以安装程序的语言显示；新增 GRAVES 按钮；EME 链路预算中新增 TX 连接器和 RX 连接器（NJ9R 的建议）；左栏与 EME 链路预算示意图之间新增可拖动的分隔条；我的障碍物勘察中新增灰色遮罩复选框；公式调试更名为计算核查，ABOUT & CREDITS 更名为关于与鸣谢；用户手册的技术章节新增孟加拉语、阿拉伯语和土耳其语版本；修正粉彩配色方案；CALL3.TXT 窗口在更新后自动关闭；对话框按钮间距加大。",
+            "最近 90 天内活跃的电台（N0UK 的 EME 聊天室），最后一条消息：{0}",
+            "推荐用于 YAEC 的字体",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -12335,6 +12349,8 @@ namespace LunaCalc
             "受信側のプリアンプ前、アンテナとプリアンプ入力の間にある推定コネクター数（アダプター、リレー、分配器）。プリアンプ後のコネクターの損失はほとんど影響しません。NJ9R のアドバイス：1 個あたり 0.11 dB。",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB（プリアンプ前）",
             "1.3 - 新しい言語を 9 つ追加：オランダ語、エストニア語、ラトビア語、リトアニア語、スウェーデン語、ノルウェー語、アイスランド語、ヘブライ語、ウルドゥー語（計 26 言語）、マニュアル付き。ライセンスと README を全言語で用意し、ライセンスはインストーラーの言語で表示。GRAVES ボタンを追加。EME 回線計算に「TXコネクター数」と「RXコネクター数」を追加（NJ9R の助言）。左の列と EME 回線計算の図の間にドラッグ可能な区切りを追加。自局障害物の偵察に「グレーのベール」チェックボックスを追加。数式デバッグを計算のチェックに、ABOUT & CREDITS を概要とクレジットに改名。ユーザーマニュアルの技術章をベンガル語、アラビア語、トルコ語で用意。パステル配色を修正。CALL3.TXT のウィンドウが更新後に自動で閉じるように。ダイアログのボタンの間隔を広げた。",
+            "過去 90 日間にアクティブな局（N0UK の EME チャット）、最後のメッセージ：{0}",
+            "YAEC におすすめのフォント",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -13670,6 +13686,8 @@ namespace LunaCalc
             "रिसेप्शन में प्रीएम्प से पहले, एंटेना और प्रीएम्प इनपुट के बीच, कनेक्टरों की अनुमानित संख्या (एडेप्टर, रिले, डिवाइडर): प्रीएम्प के बाद उनके लॉस का असर कम होता है। NJ9R की सलाह: प्रत्येक 0.11 dB।",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB प्रीएम्प से पहले",
             "1.3 - नौ नई भाषाएँ: डच, एस्टोनियाई, लातवियाई, लिथुआनियाई, स्वीडिश, नॉर्वेजियाई, आइसलैंडिक, हिब्रू और उर्दू (कुल 26), मैनुअल सहित; लाइसेंस और README सभी भाषाओं में, लाइसेंस इंस्टॉलर की भाषा में; GRAVES बटन; EME बजट में TX कनेक्टर और RX कनेक्टर (NJ9R की सलाह); बाएँ स्तंभ और EME बजट के आरेख के बीच खींचने योग्य विभाजक; मेरी बाधाओं की टोह में धूसर परत चेकबॉक्स; सूत्र डिबग अब गणना की जाँच है और ABOUT & CREDITS अब परिचय और श्रेय है; उपयोगकर्ता मैनुअल के तकनीकी अध्याय बांग्ला, अरबी और तुर्की में; पेस्टल योजनाएँ ठीक की गईं; CALL3.TXT की विंडो अपडेट के बाद अपने-आप बंद हो जाती है; डायलॉग बॉक्स के बटनों के बीच अधिक दूरी।",
+            "पिछले 90 दिनों में सक्रिय स्टेशन (N0UK का EME चैट), अंतिम संदेश {0} को",
+            "YAEC के लिए अनुशंसित फ़ॉन्ट",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -15005,6 +15023,8 @@ namespace LunaCalc
             "수신 측 프리앰프 앞, 안테나와 프리앰프 입력 사이의 추정 커넥터 수(어댑터, 릴레이, 분배기). 프리앰프 뒤의 커넥터 손실은 거의 영향이 없습니다. NJ9R의 조언: 개당 0.11 dB.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB (프리앰프 앞)",
             "1.3 - 새 언어 9개: 네덜란드어, 에스토니아어, 라트비아어, 리투아니아어, 스웨덴어, 노르웨이어, 아이슬란드어, 히브리어, 우르두어(총 26개), 매뉴얼 포함; 라이선스와 README를 모든 언어로 제공, 라이선스는 설치 프로그램의 언어로 표시; GRAVES 버튼; EME 링크 버짓에 TX 커넥터 수와 RX 커넥터 수 추가(NJ9R의 조언); 왼쪽 열과 EME 링크 버짓 도식 사이에 끌어서 옮길 수 있는 구분선; 내 장애물 정찰에 회색 베일 확인란; 수식 디버그는 계산 검증으로, ABOUT & CREDITS는 정보 및 크레딧으로 이름 변경; 사용자 매뉴얼의 기술 장을 벵골어, 아랍어, 터키어로 제공; 파스텔 테마 수정; CALL3.TXT 창이 업데이트 후 자동으로 닫힘; 대화 상자 버튼 간격 조정.",
+            "최근 90일 동안 활동한 국 (N0UK EME 채팅), 마지막 메시지 {0}",
+            "YAEC 권장 글꼴",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -16340,6 +16360,8 @@ namespace LunaCalc
             "Perkiraan jumlah konektor di sisi terima sebelum preamp, antara antena dan masukan preamp (adaptor, relay, pembagi): setelah preamp, rugi-ruginya hampir tidak berpengaruh. Saran NJ9R: 0,11 dB per konektor.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB sebelum preamp",
             "1.3 - Sembilan bahasa baru: Belanda, Estonia, Latvia, Lituania, Swedia, Norwegia, Islandia, Ibrani dan Urdu (total 26), beserta manualnya; lisensi dan README dalam semua bahasa, lisensi dalam bahasa penginstal; tombol GRAVES; Konektor TX dan Konektor RX di Anggaran EME (saran dari NJ9R); pemisah yang dapat diseret antara kolom kiri dan skema Anggaran EME; kotak centang Selubung abu-abu di Pengintaian rintangan saya; DEBUG RUMUS menjadi Pemeriksaan perhitungan dan ABOUT & CREDITS menjadi TENTANG DAN KREDIT; bab teknis manual pengguna dalam bahasa Bengali, Arab dan Turki; skema pastel diperbaiki; jendela CALL3.TXT tertutup sendiri setelah pembaruan; tombol kotak dialog diberi jarak.",
+            "Stasiun aktif dalam 90 hari terakhir (obrolan EME N0UK), pesan terakhir pada {0}",
+            "Fon yang disarankan untuk YAEC",
         };
 
         public static readonly string[] RU = {
@@ -17676,6 +17698,8 @@ namespace LunaCalc
             "Оценочное число разъёмов на приёме до предусилителя, между антенной и входом предусилителя (переходники, реле, делители): после предусилителя их потери почти не сказываются. Совет NJ9R: 0,11 дБ на разъём.",
             "TX {0} × {1:F2} дБ = {2:F2} дБ · RX {3} × {1:F2} дБ = {4:F2} дБ до предусилителя",
             "1.3 - Девять новых языков: нидерландский, эстонский, латышский, литовский, шведский, норвежский, исландский, иврит и урду (всего 26), с руководствами; лицензия и README на всех языках, лицензия на языке установщика; кнопка GRAVES; «Разъёмов TX» и «Разъёмов RX» в окне «Бюджет EME» (совет NJ9R); перетаскиваемый разделитель между левой колонкой и схемой бюджета EME; флажок «Серая вуаль» в окне «Разведка моих препятствий»; ОТЛАДКА ФОРМУЛ теперь называется «Проверка расчётов», а ABOUT & CREDITS — О ПРОГРАММЕ И ИСТОЧНИКИ; технические главы руководства пользователя на бенгальском, арабском и турецком; исправлены пастельные схемы; окно CALL3.TXT закрывается само после обновления; увеличены промежутки между кнопками диалоговых окон.",
+            "Станция активна за последние 90 дней (EME-чат N0UK), последнее сообщение {0}",
+            "Шрифты, рекомендуемые для YAEC",
         };
 
         public static readonly string[] UK = {
@@ -19012,6 +19036,8 @@ namespace LunaCalc
             "Оцінна кількість роз’ємів на прийманні до попереднього підсилювача, між антеною та входом підсилювача (перехідники, реле, дільники): після попереднього підсилювача їхні втрати майже не впливають. Порада NJ9R: 0,11 дБ на роз’єм.",
             "TX {0} × {1:F2} дБ = {2:F2} дБ · RX {3} × {1:F2} дБ = {4:F2} дБ до попереднього підсилювача",
             "1.3 - Дев’ять нових мов: нідерландська, естонська, латиська, литовська, шведська, норвезька, ісландська, іврит і урду (усього 26), з посібниками; ліцензія та README всіма мовами, ліцензія мовою інсталятора; кнопка GRAVES; «Роз’ємів TX» і «Роз’ємів RX» у вікні «Бюджет EME» (порада NJ9R); перетягуваний роздільник між лівою колонкою та схемою бюджету EME; прапорець «Сіра вуаль» у вікні «Розвідка моїх перешкод»; НАЛАГОДЖЕННЯ ФОРМУЛ тепер називається «Перевірка розрахунків», а ABOUT & CREDITS — ПРО ПРОГРАМУ ТА ДЖЕРЕЛА; технічні розділи посібника користувача бенгальською, арабською та турецькою; виправлено пастельні схеми; вікно CALL3.TXT закривається саме після оновлення; збільшено проміжки між кнопками діалогових вікон.",
+            "Станція активна протягом останніх 90 днів (EME-чат N0UK), останнє повідомлення {0}",
+            "Шрифти, рекомендовані для YAEC",
         };
 
         public static readonly string[] AF = {
@@ -20348,6 +20374,8 @@ namespace LunaCalc
             "Geskatte aantal verbindings aan die ontvangkant voor die voorversterker, tussen die antenna en die voorversterker se ingang (adapters, relais, verdelers): ná die voorversterker tel hul verlies min. NJ9R se raad: 0,11 dB elk.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB voor die voorversterker",
             "1.3 - Nege nuwe tale: Nederlands, Estnies, Letties, Litaus, Sweeds, Noors, Yslands, Hebreeus en Oerdoe (26 altesaam), met die handleidings; lisensie en README in alle tale, lisensie in die taal van die installeerder; GRAVES-knoppie; TX-verbindings en RX-verbindings in die EME-begroting (raad van NJ9R); versleepbare skeier tussen die linkerkolom en die skema van die EME-begroting; merkblokkie Grys sluier in Verkenning van my hindernisse; FORMULE-ONTFOUTING word Kontrole van die berekeninge en ABOUT & CREDITS word OOR DIE PROGRAM EN BRONNE; tegniese hoofstukke van die gebruikershandleiding in Bengaals, Arabies en Turks; pastelskemas reggestel; die CALL3.TXT-venster maak vanself toe ná die bywerking; knoppies van die dialoogvensters verder uitmekaar.",
+            "Stasie aktief in die afgelope 90 dae (N0UK se EME-klets), laaste boodskap op {0}",
+            "Lettertipes aanbeveel vir YAEC",
         };
 
         public static readonly string[] BN = {
@@ -21683,6 +21711,8 @@ namespace LunaCalc
             "রিসেপশনে প্রিঅ্যাম্পের আগে, অ্যান্টেনা ও প্রিঅ্যাম্পের ইনপুটের মাঝে, কানেক্টরের আনুমানিক সংখ্যা (অ্যাডাপ্টার, রিলে, ডিভাইডার): প্রিঅ্যাম্পের পরে এদের লসের প্রভাব সামান্য। NJ9R-এর পরামর্শ: প্রতিটি 0.11 dB।",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB প্রিঅ্যাম্পের আগে",
             "1.3 - নয়টি নতুন ভাষা: ডাচ, এস্তোনীয়, লাটভীয়, লিথুয়ানীয়, সুইডিশ, নরওয়েজীয়, আইসল্যান্ডীয়, হিব্রু ও উর্দু (মোট 26টি), ম্যানুয়ালসহ; লাইসেন্স ও README সব ভাষায়, লাইসেন্স ইনস্টলারের ভাষায়; GRAVES বোতাম; EME বাজেটে TX কানেক্টর ও RX কানেক্টর (NJ9R-এর পরামর্শ); বাঁ দিকের কলাম ও EME বাজেটের নকশার মধ্যে টেনে সরানো যায় এমন বিভাজক; আমার বাধাগুলির অনুসন্ধান-এ ধূসর আবরণ চেকবক্স; সূত্র ডিবাগ এখন গণনা যাচাই এবং ABOUT & CREDITS এখন পরিচিতি ও কৃতিত্ব; ব্যবহারকারী ম্যানুয়ালের প্রযুক্তিগত অধ্যায় বাংলা, আরবি ও তুর্কি ভাষায়; প্যাস্টেল স্কিম সংশোধিত; হালনাগাদের পর CALL3.TXT-এর উইন্ডো নিজে থেকেই বন্ধ হয়; ডায়ালগ বক্সের বোতামগুলির মধ্যে ফাঁক বাড়ানো হয়েছে।",
+            "গত 90 দিনে সক্রিয় স্টেশন (N0UK-এর EME চ্যাট), শেষ বার্তা {0}",
+            "YAEC-এর জন্য প্রস্তাবিত ফন্ট",
         };
 
         public static readonly string[] AR = {
@@ -23018,6 +23048,8 @@ namespace LunaCalc
             "العدد التقديري للموصلات في الاستقبال قبل المضخم الأولي، بين الهوائي ودخل المضخم الأولي (مهايئات، مرحّلات، مقسّمات): بعد المضخم الأولي يكون أثر فقدها ضئيلًا. نصيحة NJ9R: 0.11 dB لكل موصل.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB قبل المضخم الأولي",
             "1.3 - تسع لغات جديدة: الهولندية والإستونية واللاتفية والليتوانية والسويدية والنرويجية والآيسلندية والعبرية والأردية (26 لغة في المجموع)، مع الأدلة؛ الترخيص وملف README بجميع اللغات، والترخيص بلغة برنامج التثبيت؛ زر GRAVES؛ موصلات TX وموصلات RX في ميزانية EME (نصيحة من NJ9R)؛ فاصل قابل للسحب بين العمود الأيسر ومخطط ميزانية EME؛ خانة اختيار الغشاء الرمادي في استطلاع عوائقي؛ تصحيح الصيغ أصبح التحقق من الحسابات، وABOUT & CREDITS أصبح حول البرنامج والمصادر؛ الفصول التقنية من دليل الاستخدام بالبنغالية والعربية والتركية؛ تصحيح مخططات ألوان الباستيل؛ نافذة CALL3.TXT تُغلق تلقائيًا بعد التحديث؛ تباعد أزرار نوافذ الحوار.",
+            "محطة نشطة خلال آخر 90 يومًا (دردشة EME لدى N0UK)، آخر رسالة في {0}",
+            "الخطوط الموصى بها لـ YAEC",
         };
 
         public static readonly string[] TR = {
@@ -24353,6 +24385,8 @@ namespace LunaCalc
             "Alımda ön yükselticiden önce, anten ile ön yükseltici girişi arasındaki tahmini konektör sayısı (adaptörler, röleler, bölücüler): ön yükselticiden sonra kayıplarının etkisi azdır. NJ9R'nin tavsiyesi: konektör başına 0,11 dB.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB ön yükselticiden önce",
             "1.3 - Dokuz yeni dil: Felemenkçe, Estonca, Letonca, Litvanca, İsveççe, Norveççe, İzlandaca, İbranice ve Urduca (toplam 26), kılavuzlarıyla birlikte; lisans ve README tüm dillerde, lisans yükleyicinin dilinde; GRAVES düğmesi; EME bütçesinde TX konektörleri ve RX konektörleri (NJ9R'nin önerisi); sol sütun ile EME bütçesi şeması arasında sürüklenebilir ayırıcı; Engellerimin keşfi penceresinde Gri örtü onay kutusu; FORMÜL HATA AYIKLAMA artık Hesapların kontrolü, ABOUT & CREDITS artık HAKKINDA VE KAYNAKLAR; kullanım kılavuzunun teknik bölümleri Bengalce, Arapça ve Türkçe; pastel şemalar düzeltildi; CALL3.TXT penceresi güncellemeden sonra kendiliğinden kapanıyor; iletişim kutusu düğmeleri arasındaki boşluk artırıldı.",
+            "Son 90 günde etkin istasyon (N0UK EME sohbeti), son mesaj {0}",
+            "YAEC için önerilen yazı tipleri",
         };
 
         public static readonly string[] NL = {
@@ -25688,6 +25722,8 @@ namespace LunaCalc
             "Geschat aantal connectoren aan de ontvangstkant vóór de voorversterker, tussen de antenne en de ingang van de preamp (verloopstukken, relais, delers): na de preamp telt hun verlies nauwelijks. Advies van NJ9R: 0,11 dB per stuk.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB vóór de preamp",
             "1.3 - Negen nieuwe talen: Nederlands, Estisch, Lets, Litouws, Zweeds, Noors, IJslands, Hebreeuws en Urdu (26 in totaal), met de handleidingen; licentie en LEESMIJ in alle talen, licentie in de taal van het installatieprogramma; knop GRAVES; TX-connectoren en RX-connectoren in het EME-budget (advies van NJ9R); versleepbare scheidingslijn tussen de linkerkolom en het schema van het EME-budget; selectievakje Grijze sluier in Verkenning van mijn obstakels; DEBUG FORMULES wordt Controle van de berekeningen en ABOUT & CREDITS wordt INFORMATIE EN CREDITS; technische hoofdstukken van de gebruikershandleiding in het Bengaals, Arabisch en Turks; pastelschema's gecorrigeerd; het venster van CALL3.TXT sluit vanzelf na de update; knoppen van de dialoogvensters verder uit elkaar.",
+            "Station actief in de afgelopen 90 dagen (EME-chat van N0UK), laatste bericht op {0}",
+            "Aanbevolen lettertypen voor YAEC",
         };
 
         public static readonly string[] ET = {
@@ -27023,6 +27059,8 @@ namespace LunaCalc
             "Hinnanguline pistikute arv vastuvõtuteel enne eelvõimendit, antenni ja eelvõimendi sisendi vahel (adapterid, releed, jagurid): pärast eelvõimendit on nende kadu väheoluline. NJ9R nõuanne: 0,11 dB pistiku kohta.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB enne eelvõimendit",
             "1.3 - Üheksa uut keelt: hollandi, eesti, läti, leedu, rootsi, norra, islandi, heebrea ja urdu (kokku 26), koos juhenditega; litsents ja README kõigis keeltes, litsents paigaldusprogrammi keeles; nupp GRAVES; „TX pistikud“ ja „RX pistikud“ aknas „EME eelarve“ (NJ9R-i soovitus); lohistatav eraldaja vasaku veeru ja akna „EME eelarve“ skeemi vahel; märkeruut „Hall loor“ aknas „Minu takistuste kaardistus“; VALEMITE DEBUG on nüüd „Arvutuste kontroll“ ja ABOUT & CREDITS on nüüd TEAVE JA AUTORID; kasutusjuhendi tehnilised peatükid bengali, araabia ja türgi keeles; pastelsed skeemid parandatud; CALL3.TXT aken sulgub pärast uuendamist ise; dialoogiakende nupud on üksteisest kaugemal.",
+            "Jaam on olnud aktiivne viimase 90 päeva jooksul (N0UK EME-vestlus), viimane sõnum {0}",
+            "YAEC-i jaoks soovitatud kirjatüübid",
         };
 
         public static readonly string[] LV = {
@@ -28358,6 +28396,8 @@ namespace LunaCalc
             "Novērtētais savienotāju skaits uztveršanas pusē pirms priekšpastiprinātāja, starp antenu un priekšpastiprinātāja ieeju (adapteri, releji, dalītāji): aiz priekšpastiprinātāja to zudumi maz ietekmē rezultātu. NJ9R padoms: 0,11 dB katram.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB pirms priekšpastiprinātāja",
             "1.3 - Deviņas jaunas valodas: nīderlandiešu, igauņu, latviešu, lietuviešu, zviedru, norvēģu, islandiešu, ivrita un urdu (kopā 26), ar rokasgrāmatām; licence un README visās valodās, licence instalētāja valodā; poga GRAVES; „TX savienotāji” un „RX savienotāji” logā „EME budžets” (NJ9R ieteikums); pārvietojams atdalītājs starp kreiso kolonnu un loga „EME budžets” shēmu; izvēles rūtiņa „Pelēks plīvurs” logā „Manu šķēršļu izpēte”; „FORMULU ATKĻŪDOŠANA” tagad ir „Aprēķinu pārbaude” un ABOUT & CREDITS tagad ir „INFORMĀCIJA UN AUTORI”; lietošanas rokasgrāmatas tehniskās nodaļas bengāļu, arābu un turku valodā; pasteļkrāsu shēmas izlabotas; CALL3.TXT logs pēc atjaunināšanas aizveras pats; dialoglodziņu pogām lielākas atstarpes.",
+            "Stacija aktīva pēdējo 90 dienu laikā (N0UK EME tērzēšana), pēdējā ziņa {0}",
+            "YAEC ieteicamie fonti",
         };
 
         public static readonly string[] LT = {
@@ -29693,6 +29733,8 @@ namespace LunaCalc
             "Įvertintas jungčių skaičius priėmimo pusėje prieš išankstinį stiprintuvą, tarp antenos ir stiprintuvo įėjimo (adapteriai, relės, dalikliai): už išankstinio stiprintuvo jų nuostoliai mažai reikšmingi. NJ9R patarimas: 0,11 dB kiekvienai.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB prieš išankstinį stiprintuvą",
             "1.3 - Devynios naujos kalbos: olandų, estų, latvių, lietuvių, švedų, norvegų, islandų, hebrajų ir urdu (iš viso 26), su vadovais; licencija ir README visomis kalbomis, licencija diegimo programos kalba; mygtukas GRAVES; TX jungtys ir RX jungtys lange EME biudžetas (NJ9R patarimas); perkeliamas skirtukas tarp kairiojo stulpelio ir EME biudžeto schemos; žymimasis langelis Pilkas šydas lange Mano kliūčių žvalgyba; FORMULIŲ DERINIMAS dabar vadinasi Skaičiavimų patikra, o ABOUT & CREDITS – INFORMACIJA IR ŠALTINIAI; naudotojo vadovo techniniai skyriai bengalų, arabų ir turkų kalbomis; pataisytos pastelinės schemos; CALL3.TXT langas po atnaujinimo užsidaro pats; padidinti tarpai tarp dialogo langų mygtukų.",
+            "Stotis aktyvi per pastarąsias 90 dienų (N0UK EME pokalbiai), paskutinė žinutė {0}",
+            "YAEC rekomenduojami šriftai",
         };
 
         public static readonly string[] SV = {
@@ -31028,6 +31070,8 @@ namespace LunaCalc
             "Uppskattat antal kontakter på mottagarsidan före förförstärkaren, mellan antennen och förförstärkarens ingång (adaptrar, reläer, delare): efter förförstärkaren betyder deras förlust lite. NJ9R:s råd: 0,11 dB per kontakt.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB före förförstärkaren",
             "1.3 - Nio nya språk: nederländska, estniska, lettiska, litauiska, svenska, norska, isländska, hebreiska och urdu (26 totalt), med manualerna; licens och README på alla språk, licens på installationsprogrammets språk; knappen GRAVES; TX-kontakter och RX-kontakter i EME-budget (råd från NJ9R); flyttbar avdelare mellan den vänstra kolumnen och schemat i EME-budget; kryssrutan Grå slöja i Rekognosering av mina hinder; FORMEL-DEBUG blir Kontroll av beräkningarna och ABOUT & CREDITS blir INFORMATION OCH ERKÄNNANDEN; tekniska kapitel i användarmanualen på bengali, arabiska och turkiska; pastellscheman rättade; fönstret för CALL3.TXT stängs automatiskt efter uppdateringen; knapparna i dialogrutorna har fått mer avstånd.",
+            "Station aktiv de senaste 90 dagarna (N0UK:s EME-chatt), senaste meddelandet {0}",
+            "Rekommenderade typsnitt för YAEC",
         };
 
         public static readonly string[] NB = {
@@ -32363,6 +32407,8 @@ namespace LunaCalc
             "Estimert antall kontakter på mottakssiden før forforsterkeren, mellom antennen og forforsterkerens inngang (adaptere, releer, delere): etter forforsterkeren betyr tapet deres lite. Råd fra NJ9R: 0,11 dB per kontakt.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB før forforsterkeren",
             "1.3 - Ni nye språk: nederlandsk, estisk, latvisk, litauisk, svensk, norsk, islandsk, hebraisk og urdu (totalt 26), med manualene; lisens og README på alle språk, lisens på installasjonsprogrammets språk; knappen GRAVES; TX-kontakter og RX-kontakter i EME-budsjett (råd fra NJ9R); flyttbar skillelinje mellom venstre kolonne og skjemaet i EME-budsjett; avkrysningsboksen Grått slør i Kartlegging av mine hindringer; DEBUG AV FORMLER blir Kontroll av beregningene og ABOUT & CREDITS blir INFORMASJON OG KREDITERING; tekniske kapitler i brukermanualen på bengali, arabisk og tyrkisk; pastellskjemaene rettet; vinduet for CALL3.TXT lukkes av seg selv etter oppdateringen; knappene i dialogboksene har fått mer avstand.",
+            "Stasjon aktiv de siste 90 dagene (N0UKs EME-chat), siste melding {0}",
+            "Anbefalte skrifttyper for YAEC",
         };
 
         public static readonly string[] IS = {
@@ -33698,6 +33744,8 @@ namespace LunaCalc
             "Áætlaður fjöldi tengja í móttöku á undan formagnaranum, milli loftnetsins og inngangs formagnarans (millistykki, liðar, aflskiptar): á eftir formagnaranum skiptir tap þeirra litlu. Ráð NJ9R: 0,11 dB hvert.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB á undan formagnara",
             "1.3 - Níu ný tungumál: hollenska, eistneska, lettneska, litháíska, sænska, norska, íslenska, hebreska og úrdú (26 alls), með handbókunum; leyfi og README á öllum tungumálum, leyfi á tungumáli uppsetningarforritsins; GRAVES-hnappur; TX-tengi og RX-tengi í glugganum EME-aflreikningur (ráð frá NJ9R); færanleg skil milli vinstri dálksins og skýringarmyndarinnar í EME-aflreikningur; gátreiturinn Grá hula í Könnun á hindrunum mínum; DEBUG FORMÚLA verður Yfirferð útreikninga og ABOUT & CREDITS verður UPPLÝSINGAR OG HEIMILDIR; tæknikaflar notendahandbókarinnar á bengölsku, arabísku og tyrknesku; pastellitasamsetningar lagfærðar; glugginn fyrir CALL3.TXT lokast sjálfkrafa eftir uppfærsluna; meira bil á milli hnappa í samskiptagluggum.",
+            "Stöð virk síðustu 90 daga (EME-spjall N0UK), síðustu skilaboð {0}",
+            "Leturgerðir sem mælt er með fyrir YAEC",
         };
 
         public static readonly string[] HE = {
@@ -35033,6 +35081,8 @@ namespace LunaCalc
             "מספר משוער של מחברים בקליטה לפני קדם-המגבר, בין האנטנה לכניסת קדם-המגבר (מתאמים, ממסרים, מחלקים): אחרי קדם-המגבר להפסד שלהם השפעה קטנה. עצת NJ9R: 0.11 dB לכל מחבר.",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB לפני קדם-המגבר",
             "1.3 - תשע שפות חדשות: הולנדית, אסטונית, לטבית, ליטאית, שוודית, נורווגית, איסלנדית, עברית ואורדו (26 בסך הכול), עם המדריכים; רישיון ו-README בכל השפות, רישיון בשפת תוכנית ההתקנה; לחצן GRAVES; מחברי TX ומחברי RX בחלון תקציב EME (עצה של NJ9R); מפריד שניתן לגרור בין העמודה השמאלית לתרשים של תקציב EME; תיבת הסימון מסך אפור בחלון סקר המכשולים שלי; DEBUG נוסחאות נקרא כעת בדיקת החישובים, ו-ABOUT & CREDITS נקרא כעת מידע וקרדיטים; הפרקים הטכניים של מדריך המשתמש בבנגלית, בערבית ובטורקית; ערכות הפסטל תוקנו; חלון ה-CALL3.TXT נסגר מעצמו לאחר העדכון; הוגדל המרווח בין הלחצנים בתיבות הדו-שיח.",
+            "תחנה פעילה ב־90 הימים האחרונים (צ'אט ה־EME של N0UK), הודעה אחרונה ב־{0}",
+            "גופנים מומלצים ל־YAEC",
         };
 
         public static readonly string[] UR = {
@@ -36368,6 +36418,8 @@ namespace LunaCalc
             "ریسیپشن میں پری ایمپ سے پہلے، اینٹینا اور پری ایمپ کے ان پٹ کے درمیان، کنیکٹرز کی تخمینی تعداد (اڈاپٹرز، ریلے، ڈیوائیڈرز): پری ایمپ کے بعد ان کے نقصان کا اثر کم ہوتا ہے۔ NJ9R کا مشورہ: ہر ایک 0.11 dB۔",
             "TX {0} × {1:F2} dB = {2:F2} dB · RX {3} × {1:F2} dB = {4:F2} dB پری ایمپ سے پہلے",
             "1.3 - نو نئی زبانیں: ڈچ، اسٹونین، لیٹوین، لتھوینین، سویڈش، نارویجین، آئس لینڈک، عبرانی اور اردو (کل 26)، مینوئلز کے ساتھ؛ لائسنس اور README تمام زبانوں میں، لائسنس انسٹالر کی زبان میں؛ GRAVES بٹن؛ EME بجٹ میں TX کنیکٹرز اور RX کنیکٹرز (NJ9R کا مشورہ)؛ بائیں کالم اور EME بجٹ کے خاکے کے درمیان کھینچا جا سکنے والا جداکار؛ میری رکاوٹوں کا جائزہ میں سرمئی پردہ چیک باکس؛ فارمولا DEBUG اب حسابات کی جانچ ہے اور ABOUT & CREDITS اب معلومات اور کریڈٹس ہے؛ صارف مینوئل کے تکنیکی ابواب بنگالی، عربی اور ترکی میں؛ پیسٹل اسکیمیں درست کی گئیں؛ CALL3.TXT کی ونڈو اپ ڈیٹ کے بعد خود بند ہو جاتی ہے؛ ڈائیلاگ باکسز کے بٹنوں کے درمیان فاصلہ بڑھایا گیا۔",
+            "گزشتہ 90 دنوں میں فعال اسٹیشن (N0UK کی EME چیٹ)، آخری پیغام {0} کو",
+            "YAEC کے لیے تجویز کردہ فونٹس",
         };
     }
 
@@ -36416,11 +36468,46 @@ namespace LunaCalc
             new string[] { "uk", "Segoe UI", "Arial", "Tahoma", "Calibri", "Cambria", "Times New Roman", "Verdana", "Consolas", "Courier New", "Georgia", "Trebuchet MS", "Microsoft Sans Serif", "Candara", "Constantia", "Corbel", "Bahnschrift" }
         };
 
+        // Caratteri proposti nell'elenco «Tipo di carattere» (i nomi con "|" sono alternative dello stesso carattere)
+        static readonly string[] ConsigliatiWindows = { "Segoe UI", "Bahnschrift", "Calibri", "Arial", "Tahoma", "Verdana", "Trebuchet MS", "Corbel", "Candara", "Microsoft Sans Serif" };
+        static readonly string[] ConsigliatiLinux = { "Noto Sans", "DejaVu Sans", "Liberation Sans", "Ubuntu", "Cantarell", "Open Sans", "Roboto", "Fira Sans", "Source Sans 3|Source Sans Pro", "FreeSans" };
+        static readonly string[] ConsigliatiMac = { "Helvetica Neue", "Lucida Grande", "Avenir Next", "Helvetica", "Arial", "Verdana", "Geneva", "Tahoma", "Trebuchet MS", "Gill Sans" };
+
+        public static string[] CaratteriConsigliati()
+        {
+            string cod = Codici[Idx];
+            foreach (string[] r in CaratteriScrittura)
+                if (r[0] == cod)
+                {
+                    List<string> l = new List<string>();
+                    for (int i = 1; i < r.Length; i++) l.Add(r[i]);
+                    // russo e ucraino: prima i caratteri consigliati del sistema che hanno il cirillico
+                    if (cod == "ru" || cod == "uk")
+                    {
+                        string[] sis = Piattaforma.Windows ? ConsigliatiWindows : (Piattaforma.Mac ? ConsigliatiMac : ConsigliatiLinux);
+                        List<string> o = new List<string>();
+                        foreach (string n in sis) if (CarattereAdatto(n.Split('|')[0])) o.Add(n);
+                        foreach (string n in l) if (!o.Contains(n)) o.Add(n);
+                        return o.ToArray();
+                    }
+                    return l.ToArray();
+                }
+            return Piattaforma.Windows ? ConsigliatiWindows : (Piattaforma.Mac ? ConsigliatiMac : ConsigliatiLinux);
+        }
+
         public static bool CarattereAdatto(string nome)
         {
             string cod = Codici[Idx];
             foreach (string[] r in CaratteriScrittura)
-                if (r[0] == cod) return Array.IndexOf(r, nome, 1) >= 1;
+                if (r[0] == cod)
+                {
+                    if (Array.IndexOf(r, nome, 1) >= 1) return true;
+                    // russo e ucraino: anche i consigliati di Linux e macOS che hanno il cirillico
+                    if ((cod == "ru" || cod == "uk") && !Piattaforma.Windows && nome != "Gill Sans" && nome != "Avenir Next" && nome != "Cantarell")
+                        foreach (string n in (Piattaforma.Mac ? ConsigliatiMac : ConsigliatiLinux))
+                            if (Array.IndexOf(n.Split('|'), nome) >= 0) return true;
+                    return false;
+                }
             return true;
         }
 
@@ -43214,7 +43301,7 @@ namespace LunaCalc
             cardDx.Paint += (s, e) =>
             {
                 DisegnaScheda(e.Graphics, cardDx, Lang.T("Stazione DX — nominativo e locator WWL"), null, Color.Empty, subDx, subDxCol, "", txtTrkDx, Tema.Linea, 1f, subDxTag);
-                DisegnaCornice(e.Graphics, txtTrkDxCall, Tema.Linea, 1f);
+                DisegnaCornice(e.Graphics, txtTrkDxCall, dxAttivo ? ColAttivo : Tema.Linea, dxAttivo ? 3f : 1f);
             };
             txtTrkLoc.TextChanged += (s, e) =>
             {
@@ -45425,7 +45512,7 @@ namespace LunaCalc
             cmbFontNome.MaxDropDownItems = 25;
             cmbFontNome.DropDownWidth = S(260);
             string consigliato = Lang.FontAuto;
-            cmbFontNome.Items.Add(new VoceFont(Lang.T("Caratteri installati su questo computer"), 0, false));
+            cmbFontNome.Items.Add(new VoceFont(Lang.T("Caratteri consigliati per YAEC"), 0, false));
             cmbFontNome.Items.Add(new VoceFont(Lang.T("Predefinito del sistema"), 1, false));
             List<string> installati = new List<string>();
             try
@@ -45435,13 +45522,22 @@ namespace LunaCalc
                         if (ff.IsStyleAvailable(FontStyle.Regular) && ff.IsStyleAvailable(FontStyle.Bold)) installati.Add(ff.Name);
             }
             catch { }
+            // solo una selezione ragionata (al massimo 10): caratteri senza grazie, leggibili a 9 pt, con grassetto vero,
+            // cifre della stessa larghezza e i simboli usati (° ± √ ² µ → ⇄ ≈), larghi quanto Segoe UI così nessuna linguetta
+            // taglia etichette o pulsanti; per le scritture non latine, i caratteri che contengono quella scrittura
             List<string> prima = new List<string>();
-            foreach (string n in new string[] { consigliato, "Segoe UI", "Bahnschrift", "Calibri", "Arial", "Tahoma", "Verdana", "Consolas" })
-                if (installati.Contains(n) && !prima.Contains(n)) prima.Add(n);
-            foreach (string n in prima) cmbFontNome.Items.Add(new VoceFont(n, 2, n == consigliato));
-            foreach (string n in installati) if (!prima.Contains(n)) cmbFontNome.Items.Add(new VoceFont(n, 2, false));
-            cmbFontNome.Items.Add(new VoceFont(Lang.T("ogni nome è scritto nel suo carattere"), 3, false));
             string fsalvato = LeggiImpostazione("font_nome");
+            foreach (string n0 in Lang.CaratteriConsigliati())
+            {
+                string trovato = null;
+                foreach (string n in n0.Split('|')) if (trovato == null && installati.Contains(n)) trovato = n;
+                if (trovato != null && !prima.Contains(trovato) && prima.Count < 10) prima.Add(trovato);
+            }
+            if (installati.Contains(consigliato) && !prima.Contains(consigliato)) { prima.Insert(0, consigliato); if (prima.Count > 10) prima.RemoveAt(10); }
+            // un carattere scelto in passato e non più in elenco resta visibile, così la scelta non si perde
+            if (!string.IsNullOrEmpty(fsalvato) && installati.Contains(fsalvato) && !prima.Contains(fsalvato) && Lang.CarattereAdatto(fsalvato)) prima.Add(fsalvato);
+            foreach (string n in prima) cmbFontNome.Items.Add(new VoceFont(n, 2, n == consigliato));
+            cmbFontNome.Items.Add(new VoceFont(Lang.T("ogni nome è scritto nel suo carattere"), 3, false));
             int fi = 1;
             for (int i = 0; i < cmbFontNome.Items.Count; i++)
             {
@@ -48555,6 +48651,33 @@ namespace LunaCalc
             // solo per le prove automatiche: YAEC_LINGUETTA=<nome> apre quella linguetta all'avvio
             string lgProva = Environment.GetEnvironmentVariable("YAEC_LINGUETTA");
             if (!string.IsNullOrEmpty(lgProva)) this.Shown += (s, e) => ApriLinguettaPerNome(this, lgProva);
+            // solo per le prove automatiche: YAEC_GIRO=<cartella> apre una linguetta alla volta; per ognuna scrive
+            // <n>.txt con il nome e aspetta che la prova crei ok<n> (dopo la schermata), poi passa alla successiva
+            string giro = Environment.GetEnvironmentVariable("YAEC_GIRO");
+            if (!string.IsNullOrEmpty(giro)) this.Shown += (s, e) =>
+            {
+                TabPage[] tutte = { tpTrack, tpPos, tpBudget, tpSolar, tpSky, tpPunt, tpDgrd, tpMondo, tpMap, tpExcel, tpDebug, tpIstr, tpEme, tpCavi, tpContatti, tpLicenza, tpAbout };
+                int n = -1;
+                System.Windows.Forms.Timer tg = new System.Windows.Forms.Timer();
+                tg.Interval = 3000;
+                tg.Tick += (s2, e2) =>
+                {
+                    try
+                    {
+                        if (n >= 0 && !File.Exists(Path.Combine(giro, "ok" + n))) return;
+                        do n++; while (n < tutte.Length && tutte[n] == null);
+                        if (n >= tutte.Length) { tg.Stop(); File.WriteAllText(Path.Combine(giro, "fine"), "ok"); return; }
+                        ApriLinguettaPerNome(this, tutte[n].Text.Trim());
+                        tg.Stop();
+                        System.Windows.Forms.Timer t2 = new System.Windows.Forms.Timer();
+                        t2.Interval = 4000;
+                        t2.Tick += (s3, e3) => { t2.Stop(); t2.Dispose(); File.WriteAllText(Path.Combine(giro, n + ".txt"), tutte[n].Text.Trim()); tg.Start(); };
+                        t2.Start();
+                    }
+                    catch { tg.Stop(); }
+                };
+                tg.Start();
+            };
 
             this.Load += (s, e) =>
             {
@@ -48974,6 +49097,16 @@ namespace LunaCalc
             btnGraves.Click += (s, e) => ImpostaGraves();
             g2.Controls.Add(btnGraves, 2, 0);
             AgganciaNominativo(txtDxCall);
+            // stazione attiva (chat N0UK): bordo arancione 3 volte più spesso intorno alla casella del nominativo
+            g2.Paint += (s, e) =>
+            {
+                if (!dxAttivo || !txtDxCall.Visible) return;
+                Rectangle rc = txtDxCall.Bounds;
+                rc.Inflate(S(2), S(2));
+                using (Pen pn = new Pen(ColAttivo, 3f)) { pn.Alignment = PenAlignment.Inset; e.Graphics.DrawRectangle(pn, rc); }
+            };
+            txtDxCall.Margin = new Padding(S(4), S(4), S(4), S(4));
+            AvviaAttivi();
             gbDx = SchedaCampi(Lang.T("Seconda stazione (DX)"), Color.FromArgb(217, 119, 6), g2, chkDx);
             top.Controls.Add(gbDx, 1, 0);
 
@@ -49345,6 +49478,54 @@ namespace LunaCalc
         }
 
         // Casella del nominativo del DX: le due caselle (schermata principale e Posizione della Luna) restano uguali
+        // Stazione attiva negli ultimi 90 giorni secondo la chat EME di N0UK (elenco in data/attivi.gz)
+        bool dxAttivo;
+        static readonly Color ColAttivo = Color.FromArgb(234, 88, 12);
+        System.Windows.Forms.Timer tmrAttivi;
+
+        void AggiornaAttivo()
+        {
+            if (txtDxCall == null) return;
+            DateTime ultimo;
+            bool att = Attivi.Cerca(txtDxCall.Text, out ultimo);
+            string corpo = Lang.T("Se il nominativo è nel CALL3.TXT il locator si riempie da solo. Se il locator l'hai scritto tu e il CALL3.TXT ne indica un altro, premi Invio sul nominativo per usare quello del CALL3.TXT.");
+            if (att)
+            {
+                string pat = System.Text.RegularExpressions.Regex.Replace(Lang.Cultura.DateTimeFormat.ShortDatePattern, "[^dM]*y+[^dM]*", "").Trim();
+                if (pat.Length == 0 || pat.IndexOf('d') < 0 || pat.IndexOf('M') < 0) pat = "dd/MM";
+                string riga = string.Format(Lang.Cultura, Lang.T("Stazione attiva negli ultimi 90 giorni (chat EME di N0UK), ultimo messaggio il {0}"), ultimo.ToString(pat, Lang.Cultura));
+                corpo = riga + "\n\n" + corpo;
+            }
+            string testo = Lang.T("Nominativo del DX") + "\u0001" + corpo;
+            foreach (TextBox tb in new TextBox[] { txtDxCall, txtTrkDxCall })
+                if (tb != null && tip.GetToolTip(tb) != testo) tip.SetToolTip(tb, testo);
+            if (att == dxAttivo) return;
+            dxAttivo = att;
+            if (txtDxCall.Parent != null) txtDxCall.Parent.Invalidate();
+            if (cardDx != null) cardDx.Invalidate();
+        }
+
+        // L'elenco si aggiorna in sottofondo: all'avvio e poi ogni volta che ha più di 20 ore
+        void AvviaAttivi()
+        {
+            if (tmrAttivi != null) return;
+            tmrAttivi = new System.Windows.Forms.Timer();
+            tmrAttivi.Interval = 15000;
+            tmrAttivi.Tick += (s, e) =>
+            {
+                tmrAttivi.Interval = 30 * 60 * 1000;
+                AggiornaAttivo();
+                if (!Attivi.DaAggiornare) return;
+                System.Threading.ThreadPool.QueueUserWorkItem(_ =>
+                {
+                    if (!Attivi.Aggiorna()) return;
+                    try { if (IsHandleCreated && !IsDisposed) BeginInvoke(new Action(AggiornaAttivo)); } catch { }
+                });
+            };
+            tmrAttivi.Start();
+            Disposed += (s, e) => tmrAttivi.Dispose();
+        }
+
         void AgganciaNominativo(TextBox tb)
         {
             tb.TextChanged += (s, e) =>
@@ -49354,7 +49535,9 @@ namespace LunaCalc
                 if (txtDxCall != null && tb != txtDxCall) txtDxCall.Text = tb.Text;
                 if (txtTrkDxCall != null && tb != txtTrkDxCall) txtTrkDxCall.Text = tb.Text;
                 syncCall = false;
-                if (txtDxCall == null || caricamento) return;
+                if (txtDxCall == null) return;
+                AggiornaAttivo();
+                if (caricamento) return;
                 LocatorDaNominativo(false);
                 UpdateLocators();
                 if (cardDx != null) { AggiornaTracciamento(false); cardDx.Invalidate(); }
@@ -53214,7 +53397,109 @@ namespace LunaCalc
             else if ((DateTime.UtcNow - File.GetLastWriteTimeUtc(Call3.Percorso)).TotalDays >= Call3.GiorniValidita)
                 stato(Lang.T("CALL3.TXT più vecchio di 7 giorni: scaricamento da W7GJ e WSJT-X Improved…"));
             stato(Call3.Aggiorna(false));
+            Attivi.Aggiorna();   // stazioni attive (chat N0UK): in silenzio
             stato(Lang.T("Cartella data pronta"));
+        }
+    }
+
+    // Stazioni EME attive: nominativi che hanno scritto (o sono stati decodificati) nella chat EME di N0UK
+    // negli ultimi 90 giorni. L'elenco è preparato una volta al giorno su GitHub (tools/n0uk_attivi.py,
+    // ramo "attivi") e contiene solo nominativo e data dell'ultimo messaggio; il programma lo scarica
+    // in data/attivi.gz e lo usa solo per bordare in arancione la casella del nominativo del DX.
+    static class Attivi
+    {
+        public const string Url = "https://raw.githubusercontent.com/ic8tem/YAEC/attivi/attivi.gz";
+        public const int Giorni = 90;
+        static readonly object blocco = new object();
+        static Dictionary<string, DateTime> elenco;
+        static DateTime letto = DateTime.MinValue;
+        static volatile bool inCorso;
+
+        public static string Percorso { get { return Dati.Percorso("attivi.gz"); } }
+
+        static Dictionary<string, DateTime> Leggi(byte[] gz)
+        {
+            Dictionary<string, DateTime> d = new Dictionary<string, DateTime>(StringComparer.OrdinalIgnoreCase);
+            string t;
+            using (MemoryStream ms = new MemoryStream(gz))
+            using (System.IO.Compression.GZipStream z = new System.IO.Compression.GZipStream(ms, System.IO.Compression.CompressionMode.Decompress))
+            using (StreamReader sr = new StreamReader(z, Encoding.ASCII))
+                t = sr.ReadToEnd();
+            DateTime limite = DateTime.UtcNow.Date.AddDays(-Giorni);
+            foreach (string r0 in t.Split('\n'))
+            {
+                string[] p = r0.Trim().Split(' ');
+                DateTime dt;
+                if (p.Length != 2 || p[0].Length < 3 || p[0].Length > 13) continue;
+                if (!DateTime.TryParseExact(p[1], "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out dt)) continue;
+                if (dt < limite) continue;
+                DateTime pr;
+                if (!d.TryGetValue(p[0], out pr) || dt > pr) d[p[0]] = dt;
+            }
+            return d;
+        }
+
+        // Scarica l'elenco se manca o ha più di 20 ore (in silenzio: in caso di errore resta quello salvato)
+        public static bool Aggiorna()
+        {
+            if (inCorso) return false;
+            inCorso = true;
+            try
+            {
+                string p = Percorso;
+                if (File.Exists(p) && (DateTime.UtcNow - File.GetLastWriteTimeUtc(p)).TotalHours < 20) return false;
+                byte[] b = Dati.Scarica(Url, 20000);
+                Leggi(b);   // controllo: deve essere un elenco leggibile
+                Dati.ScriviAtomico(p, b);
+                lock (blocco) letto = DateTime.MinValue;
+                return true;
+            }
+            catch { return false; }
+            finally { inCorso = false; }
+        }
+
+        public static bool DaAggiornare
+        {
+            get { try { return !File.Exists(Percorso) || (DateTime.UtcNow - File.GetLastWriteTimeUtc(Percorso)).TotalHours >= 20; } catch { return false; } }
+        }
+
+        static void Carica()
+        {
+            try
+            {
+                string p = Percorso;
+                if (!File.Exists(p)) { elenco = null; return; }
+                DateTime m = File.GetLastWriteTimeUtc(p);
+                if (elenco != null && m == letto) return;
+                elenco = Leggi(File.ReadAllBytes(p));
+                letto = m;
+            }
+            catch { elenco = null; }
+        }
+
+        // Data dell'ultimo messaggio del nominativo (anche scritto con prefisso o suffisso: IS0/DL1ABC, DL1ABC/P)
+        public static bool Cerca(string call, out DateTime ultimo)
+        {
+            ultimo = DateTime.MinValue;
+            if (string.IsNullOrEmpty(call)) return false;
+            call = call.Trim().ToUpperInvariant();
+            if (call.Length < 3) return false;
+            lock (blocco)
+            {
+                Carica();
+                if (elenco == null) return false;
+                DateTime limite = DateTime.UtcNow.Date.AddDays(-Giorni);
+                List<string> prove = new List<string> { call };
+                string lungo = "";
+                foreach (string parte in call.Split('/')) if (parte.Length > lungo.Length) lungo = parte;
+                if (lungo != call) prove.Add(lungo);
+                foreach (string c in prove)
+                {
+                    DateTime d;
+                    if (elenco.TryGetValue(c, out d) && d >= limite && d > ultimo) ultimo = d;
+                }
+                return ultimo != DateTime.MinValue;
+            }
         }
     }
 

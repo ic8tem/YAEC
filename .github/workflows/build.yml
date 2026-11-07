@@ -167,6 +167,40 @@ jobs:
             kill $PID 2>/dev/null || true
           done
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+      - name: Prova dei caratteri consigliati, linguetta per linguetta (solo con [caratteri] nel messaggio del commit)
+        if: contains(github.event.head_commit.message, '[caratteri]')
+        run: |
+          for P in fonts-noto-core fonts-dejavu-core fonts-liberation fonts-ubuntu fonts-cantarell fonts-open-sans fonts-roboto fonts-firacode fonts-fira-sans fonts-adobe-sourcesans3 fonts-freefont-ttf; do sudo apt-get install -y -qq $P > /dev/null 2>&1 && echo "installato $P" || echo "non disponibile $P"; done
+          fc-cache -f > /dev/null
+          Xvfb :97 -screen 0 1600x1000x24 &
+          export DISPLAY=:97
+          sleep 2
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          printf 'lingua=it\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=W7GJ\n' > "$F"
+          mkdir -p caratteri
+          for FN in "Noto Sans" "DejaVu Sans" "Liberation Sans" "Ubuntu" "Cantarell" "Open Sans" "Roboto" "Fira Sans" "Source Sans 3" "FreeSans"; do
+            if ! fc-list : family | tr ',' '\n' | grep -qx "$FN"; then echo "CARATTERE-ASSENTE: $FN"; continue; fi
+            sed -i '/^font_nome=/d' "$F"; echo "font_nome=$FN" >> "$F"
+            G=$(mktemp -d); D="caratteri/${FN// /_}"; mkdir -p "$D"
+            YAEC_GIRO="$G" mono YAEC.exe &
+            PID=$!
+            for i in $(seq 0 16); do
+              k=0; while [ ! -f "$G/$i.txt" ] && [ ! -f "$G/fine" ] && [ $k -lt 120 ]; do sleep 1; k=$((k+1)); done
+              [ -f "$G/$i.txt" ] || break
+              import -window root "$D/$(printf %02d $i).png" || true
+              touch "$G/ok$i"
+            done
+            kill $PID 2>/dev/null || true; sleep 2
+            echo "CARATTERE-PROVATO: $FN $(ls $D | wc -l) linguette"
+          done
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+      - name: Carica le schermate dei caratteri
+        if: contains(github.event.head_commit.message, '[caratteri]')
+        uses: actions/upload-artifact@v4
+        with:
+          name: prova-caratteri
+          path: caratteri
+          retention-days: 7
       - name: Schermate per il README (solo con [schermate] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[schermate]')
         run: |
