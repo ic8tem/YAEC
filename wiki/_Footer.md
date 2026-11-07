@@ -1,0 +1,1 @@
+**YAEC – Yet Another EME Calc** · © 2026 Costantino IC8TEM · free software under the [YAEC Licence, version 1](Licence) (no commercial use without permission; source always included) · <https://github.com/ic8tem/YAEC>
