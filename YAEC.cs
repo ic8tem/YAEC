@@ -48665,7 +48665,7 @@ namespace LunaCalc
                     try
                     {
                         if (n >= 0 && !File.Exists(Path.Combine(giro, "ok" + n))) return;
-                        do n++; while (n < tutte.Length && tutte[n] == null);
+                        do n++; while (n < tutte.Length && (tutte[n] == null || PaginaSpenta(tutte[n])));
                         if (n >= tutte.Length) { tg.Stop(); File.WriteAllText(Path.Combine(giro, "fine"), "ok"); return; }
                         ApriLinguettaPerNome(this, tutte[n].Text.Trim());
                         tg.Stop();
