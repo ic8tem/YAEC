@@ -1,0 +1,26 @@
+name: Profilo dell'orizzonte (prova SRTM1)
+
+on:
+  workflow_dispatch:
+    inputs:
+      lat: { description: 'Latitudine', default: '40.55616' }
+      lon: { description: 'Longitudine', default: '14.23420' }
+      quota: { description: 'Quota antenna (m s.l.m.)', default: '62' }
+
+permissions:
+  contents: write
+
+jobs:
+  calcola:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Calcola il profilo dell'orizzonte
+        run: |
+          pip install -q numpy
+          mkdir -p /tmp/o
+          python3 tools/orizzonte.py "${{ inputs.lat }}" "${{ inputs.lon }}" "${{ inputs.quota }}" /tmp/hgt /tmp/o/orizzonte.json 0.5
+          ls -la /tmp/hgt | head -50
+          H=$(git config --get http.https://github.com/.extraheader); U=$(git remote get-url origin)
+          cd /tmp/o && git init -q && git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "Horizon profile" && git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:orizzonte
