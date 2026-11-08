@@ -41470,7 +41470,7 @@ namespace LunaCalc
             Lang.T("Perdita dovuta al solo Dpol con antenne lineari entrambe orizzontali: -20·log|cos Dpol|.\nNON comprende la rotazione di Faraday, che non è prevedibile\ne può peggiorare o migliorare la situazione."),
             Lang.T("MNR - massima non reciprocità (come in WSJT-X).\nCon rotazione di Faraday sfavorevole un senso del collegamento\npuò risultare peggiore dell'altro fino a questo valore: -20·log|cos 2·Dpol|."),
             Lang.T("Tsky - temperatura del cielo dietro la Luna alla frequenza scelta (kelvin).\nTabella WSJT-X a 144 MHz lungo l'eclittica, scalata con indice spettrale 2,6.\nValori alti = Luna davanti alla Via Lattea (centro galattico, Sagittario): più rumore."),
-            Lang.T("Dgrd - degradazione rispetto alle condizioni ideali (formula WSJT-X).\nSomma l'effetto della distanza della Luna (40·log d, riferito al perigeo)\ne del rumore di cielo (Tsky + 80 K di ricevitore, rispetto al cielo freddo).\n0 dB = ideale; valori più negativi = peggio. Non include la polarizzazione."),
+            Lang.T("Dgrd - degradazione rispetto alle condizioni ideali (formula WSJT-X).\nSomma l'effetto della distanza della Luna (40·log d, riferito al perigeo)\ne del rumore di cielo (Tsky + 80 K di ricevitore, rispetto al cielo freddo).\n0 dB = ideale; valori più negativi = peggio. Non include la polarizzazione.") + "\n" + Lang.T("Il modello del rumore (ricevitore e cielo) si sceglie nella linguetta DGRD per frequenza."),
             Lang.T("Dgrd del DX, calcolata come la tua ma dalla sua posizione."),
             Lang.T("Doppler di sola andata tra te e la Luna (Hz) alla frequenza di lavoro.\nPositivo quando la Luna si avvicina (in salita), negativo quando si allontana."),
             Lang.T("Spostamento Doppler della tua eco (andata e ritorno) = 2 × Doppler io.\nCon sintonia fissa senti la tua eco spostata di questo valore."),
@@ -43023,6 +43023,508 @@ namespace LunaCalc
 
         int FonteSfu { get { return cmbSfuFonte == null ? 0 : Math.Max(0, cmbSfuFonte.SelectedIndex); } }
         string CacheSfu { get { return Path.Combine(Path.GetDirectoryName(settingsPath), SfuFontiCache[FonteSfu]); } }
+
+        // ---------- Linguetta "DGRD per frequenza" (bozzetto approvato) ----------
+        // Il Dgrd alla frequenza di lavoro, con il rumore vero della stazione (Tant e Te dal Budget EME della banda)
+        // e con il cielo mediato sul fascio dell'antenna (mappa del cielo a 144 MHz, fascio gaussiano ricavato dal guadagno).
+        // Le scelte valgono per tutto il programma: Calcola1 usa DgrdScelto, quindi anche Distanza e Dgrd e Posizione della Luna.
+        int dgfRx = 1, dgfCielo = 1;   // ricevitore: 0 = 80 K fissi come WSJT-X, 1 = la mia stazione; cielo: 0 = centro della Luna, 1 = mediato sul fascio
+        static readonly Dictionary<long, double> dgfCache = new Dictionary<long, double>();
+        static readonly object dgfLock = new object();
+        static readonly double[] DgfFreqEme = { 50.200, 70.200, 144.120, 222.100, 432.065 };   // frequenze EME tipiche per la tabella delle bande
+
+        // larghezza a metà potenza (gradi) di un fascio con guadagno gDbi: HPBW ≈ √(32000 / G)
+        static double DgfFascio(double gDbi) { return Math.Sqrt(32000.0 / Math.Pow(10.0, gDbi / 10.0)); }
+
+        // temperatura del cielo a 144 MHz mediata su un fascio gaussiano largo hp gradi centrato in (ra, dec)
+        static double DgfTsky144Fascio(double ra, double dec, double hp)
+        {
+            int ira = (int)Math.Round(((ra % 360 + 360) % 360) * 2), idec = (int)Math.Round(dec * 2), ihp = (int)Math.Round(hp * 2);
+            long k = ((long)ira * 1000 + (idec + 200)) * 1000 + ihp;
+            lock (dgfLock) { double v; if (dgfCache.TryGetValue(k, out v)) return v; }
+            double ra0 = ira / 2.0, dec0 = idec / 2.0, h = Math.Max(1.0, ihp / 2.0);
+            double sig = h / 2.3548, passo = h / 6.0, somma = 0, peso = 0;
+            for (int i = -9; i <= 9; i++)
+                for (int j = -9; j <= 9; j++)
+                {
+                    double x = i * passo, y = j * passo;
+                    double w = Math.Exp(-(x * x + y * y) / (2 * sig * sig));
+                    double d = dec0 + y;
+                    if (d > 90) d = 180 - d;
+                    if (d < -90) d = -180 - d;
+                    double cd = Math.Max(0.05, Math.Cos(d * Math.PI / 180.0));
+                    somma += w * CieloGsm.Tsky(ra0 + x / cd, d, 144.0);
+                    peso += w;
+                }
+            double t = somma / peso;
+            lock (dgfLock) { if (dgfCache.Count > 200000) dgfCache.Clear(); dgfCache[k] = t; }
+            return t;
+        }
+
+        static int BandaVicina(double f)
+        {
+            int best = Bande[0];
+            foreach (int b in Bande) if (Math.Abs(b - f) < Math.Abs(best - f)) best = b;
+            return best;
+        }
+
+        BudgetParams BpBanda(Dictionary<int, BudgetParams> d, double f)
+        {
+            BudgetParams b;
+            if (d.TryGetValue(BandaVicina(f), out b)) return b;
+            return BudgetParams.Default(BandaVicina(f));
+        }
+
+        // temperatura equivalente della catena di ricezione (K), come nel Budget EME (Friis, banda di 2500 Hz)
+        static double TeStazione(BudgetParams b)
+        {
+            double nr;
+            double nf = NfFriis(b, 2500, out nr);
+            return 290.0 * (Math.Pow(10.0, nf / 10.0) - 1.0);
+        }
+
+        class DgfDett { public double Dgrd, Dist, Tsky, Tref, Tsys, Tsys0, Te, Tant, Hp, DbDist, DbCielo; }
+
+        // Dgrd con le scelte rx (0/1) e cielo (0/1): rx = 0 e cielo = 0 è esattamente il calcolo di sempre (Moon.Dgrd)
+        DgfDett DgrdDett(MoonPos p, double f, BudgetParams b, int rx, int cielo)
+        {
+            DgfDett d = new DgfDett();
+            double g = b.GAnt + 10.0 * Math.Log10(Math.Max(1, b.NAnt));
+            d.Hp = DgfFascio(g);
+            d.Tsky = cielo == 1 ? (DgfTsky144Fascio(p.Ra, p.Dec, d.Hp) - 2.7) * Math.Pow(144.0 / f, 2.6) + 2.7 : Moon.Tsky(p.Lambda, f);
+            d.Dist = p.DistTopo;
+            d.DbDist = -40.0 * Math.Log10(p.DistTopo / 356903.0);
+            if (rx == 0)
+            {
+                d.Tref = 13.0 * Math.Pow(408.0 / f, 2.6);
+                d.Tsys = d.Tsky + 80.0; d.Tsys0 = d.Tref + 80.0;
+            }
+            else
+            {
+                d.Tref = TskyRif(f);
+                d.Te = TeStazione(b); d.Tant = b.Tant;
+                d.Tsys = b.Tant + Math.Max(0.0, d.Tsky - d.Tref) + d.Te;
+                d.Tsys0 = b.Tant + d.Te;
+            }
+            d.DbCielo = -10.0 * Math.Log10(d.Tsys / d.Tsys0);
+            d.Dgrd = d.DbCielo + d.DbDist;
+            return d;
+        }
+
+        // Dgrd usato da tutto il programma, secondo le scelte della linguetta DGRD per frequenza
+        double DgrdScelto(MoonPos p, double f, bool dxSt, out double tsky)
+        {
+            if (dgfRx == 0 && dgfCielo == 0) { tsky = Moon.Tsky(p.Lambda, f); return Moon.Dgrd(p.Lambda, p.DistTopo, f); }
+            DgfDett d = DgrdDett(p, f, BpBanda(dxSt ? bpDx : bpMe, f), dgfRx, dgfCielo);
+            tsky = d.Tsky;
+            return d.Dgrd;
+        }
+
+        TabPage tpDgFreq;
+        PannelloDisegno pnlDgf;
+        Panel pnlDgfScroll;
+        NumericUpDown nudDgfGiorni;
+        Label lblDgfDal, lblDgfMhz, lblDgfKhz;
+        Tondino rbDgfRx0, rbDgfRx1, rbDgfC0, rbDgfC1;
+        List<DateTime> dgfT = new List<DateTime>();
+        List<double> dgfOld = new List<double>(), dgfNew = new List<double>();
+        List<MoonPos> dgfP = new List<MoonPos>();
+        List<DateTime> dgfPerigeo = new List<DateTime>();
+        DateTime dgfSel = DateTime.MinValue, dgfStart, dgfEnd;
+        double dgfF = 144;
+        string dgfChiave = "";
+        RectangleF dgfArea;
+        bool dgfCarica;
+
+        Label BoxDgf(string t)
+        {
+            Label l = L(t);
+            l.BorderStyle = BorderStyle.FixedSingle;
+            l.BackColor = Tema.Field; l.ForeColor = Tema.FieldFore;
+            l.Padding = new Padding(S(4), S(1), S(4), S(1));
+            return l;
+        }
+
+        void BuildDgFreqTab(TabPage tp)
+        {
+            TableLayoutPanel root = new TableLayoutPanel();
+            root.Dock = DockStyle.Fill;
+            root.ColumnCount = 1; root.RowCount = 3;
+            root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            root.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
+            root.Padding = new Padding(S(4));
+
+            FlowLayoutPanel bar = new FlowLayoutPanel();
+            bar.AutoSize = true; bar.AutoSizeMode = AutoSizeMode.GrowAndShrink; bar.Dock = DockStyle.Fill; bar.WrapContents = true;
+            nudDgfGiorni = Nud(7, 61, 30, 0, 60);
+            tip.SetToolTip(nudDgfGiorni, Lang.T("Numero di giorni da oggi da mostrare nel grafico (da 7 a 61)."));
+            nudDgfGiorni.ValueChanged += (s, e) => { if (!caricamento) { SaveSettings(); RecalcDgf(true); } };
+            lblDgfDal = BoxDgf("");
+            Pillola bCalc = new Pillola("▶ " + Lang.T("CALCOLA"), StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            bCalc.Margin = new Padding(S(10), S(2), S(3), S(2));
+            bCalc.Click += (s, e) => RecalcDgf(true);
+            bar.Controls.Add(L(Lang.T("Giorni"))); bar.Controls.Add(Tonda(nudDgfGiorni));
+            bar.Controls.Add(L(Lang.T("dal"))); bar.Controls.Add(lblDgfDal); bar.Controls.Add(bCalc);
+            root.Controls.Add(bar, 0, 0);
+
+            FlowLayoutPanel bar2 = new FlowLayoutPanel();
+            bar2.AutoSize = true; bar2.AutoSizeMode = AutoSizeMode.GrowAndShrink; bar2.Dock = DockStyle.Fill; bar2.WrapContents = true;
+            Label lt = L(Lang.T("Dgrd calcolato su"));
+            lt.Font = new Font(Lang.FontUi, 10F * fontFactor, FontStyle.Bold);
+            bar2.Controls.Add(lt);
+            FlowLayoutPanel fq = Coppia();
+            lblDgfMhz = BoxDgf("144"); lblDgfKhz = BoxDgf("000");
+            Label lnota = L(Lang.T("= frequenza di lavoro della schermata principale"));
+            lnota.ForeColor = Tema.Muted;
+            fq.Controls.Add(L(Lang.T("Frequenza"))); fq.Controls.Add(lblDgfMhz); fq.Controls.Add(L("MHz")); fq.Controls.Add(lblDgfKhz); fq.Controls.Add(L("kHz")); fq.Controls.Add(lnota);
+            bar2.Controls.Add(fq);
+            FlowLayoutPanel grx = Coppia();
+            grx.Margin = new Padding(S(14), 0, 0, 0);
+            rbDgfRx0 = new Tondino(); rbDgfRx0.Text = Lang.T("80 K fissi, come WSJT-X");
+            rbDgfRx1 = new Tondino(); rbDgfRx1.Text = Lang.T("la mia stazione dal Budget EME");
+            tip.SetToolTip(rbDgfRx0, Lang.T("Ricevitore da 80 K uguale per tutti, come nella Dgrd di WSJT-X: i valori si possono confrontare con quelli di WSJT-X."));
+            tip.SetToolTip(rbDgfRx1, Lang.T("Tant e Te della tua stazione, presi dal Budget EME della banda: il rumore del cielo pesa quanto pesa davvero sul tuo impianto."));
+            grx.Controls.Add(L(Lang.T("Rumore del ricevitore:"))); grx.Controls.Add(rbDgfRx0); grx.Controls.Add(rbDgfRx1);
+            bar2.Controls.Add(grx);
+            FlowLayoutPanel gc = Coppia();
+            gc.Margin = new Padding(S(14), 0, 0, 0);
+            rbDgfC0 = new Tondino(); rbDgfC0.Text = Lang.T("solo il centro della Luna");
+            rbDgfC1 = new Tondino(); rbDgfC1.Text = string.Format(Lang.Cultura, Lang.T("mediato sul fascio dell'antenna ({0}°)"), "25");
+            tip.SetToolTip(rbDgfC0, Lang.T("Il rumore del cielo nel solo punto in cui si trova la Luna (tabella lungo l'eclittica, come WSJT-X)."));
+            tip.SetToolTip(rbDgfC1, Lang.T("Il rumore del cielo mediato su tutto il fascio dell'antenna, con la larghezza ricavata dal guadagno impostato nel Budget EME."));
+            gc.Controls.Add(L(Lang.T("Cielo:"))); gc.Controls.Add(rbDgfC0); gc.Controls.Add(rbDgfC1);
+            bar2.Controls.Add(gc);
+            EventHandler cambia = (s, e) =>
+            {
+                Tondino t = s as Tondino;
+                if (dgfCarica || t == null || !t.Checked) return;
+                dgfRx = rbDgfRx1.Checked ? 1 : 0; dgfCielo = rbDgfC1.Checked ? 1 : 0;
+                if (!caricamento) { SaveSettings(); RecalcDgf(true); if (dgChart != null) RecalcDgrd(); }
+            };
+            foreach (Tondino t in new Tondino[] { rbDgfRx0, rbDgfRx1, rbDgfC0, rbDgfC1 }) t.CheckedChanged += cambia;
+            DgfMostraScelte();
+            root.Controls.Add(bar2, 0, 1);
+
+            pnlDgfScroll = new Panel();
+            pnlDgfScroll.Dock = DockStyle.Fill;
+            pnlDgfScroll.AutoScroll = true;
+            pnlDgf = new PannelloDisegno();
+            pnlDgf.Location = new Point(0, 0);
+            pnlDgf.Paint += DisegnaDgf;
+            pnlDgf.Cursor = Cursors.Hand;
+            tip.SetToolTip(pnlDgf, Lang.T("Clicca un giorno nel grafico per vedere come si forma il suo Dgrd e i valori sulle altre bande."));
+            pnlDgf.MouseClick += (s, e) =>
+            {
+                if (e.Button != MouseButtons.Left || dgfArea.Width < 10 || dgfT.Count < 2) return;
+                if (!dgfArea.Contains(e.Location)) return;
+                double fr = (e.X - dgfArea.Left) / dgfArea.Width;
+                DateTime t = new DateTime(dgfStart.Ticks + (long)(fr * (dgfEnd - dgfStart).Ticks), DateTimeKind.Utc);
+                dgfSel = t.Date;
+                pnlDgf.Invalidate();
+            };
+            pnlDgfScroll.Controls.Add(pnlDgf);
+            Action dim = () =>
+            {
+                int w = Math.Max(S(1100), pnlDgfScroll.ClientSize.Width);
+                int h = Math.Max(S(820), pnlDgfScroll.ClientSize.Height);
+                if (h > pnlDgfScroll.ClientSize.Height) w = Math.Max(S(1100), pnlDgfScroll.ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
+                if (pnlDgf.Size != new Size(w, h)) pnlDgf.Size = new Size(w, h);
+            };
+            pnlDgfScroll.Resize += (s, e) => dim();
+            dim();
+            root.Controls.Add(pnlDgfScroll, 0, 2);
+            tp.Controls.Add(root);
+        }
+
+        FlowLayoutPanel Coppia()
+        {
+            FlowLayoutPanel c = new FlowLayoutPanel();
+            c.AutoSize = true; c.AutoSizeMode = AutoSizeMode.GrowAndShrink; c.WrapContents = false; c.Margin = new Padding(0);
+            return c;
+        }
+
+        void DgfMostraScelte()
+        {
+            if (rbDgfRx0 == null) return;
+            dgfCarica = true;
+            rbDgfRx0.Checked = dgfRx == 0; rbDgfRx1.Checked = dgfRx == 1;
+            rbDgfC0.Checked = dgfCielo == 0; rbDgfC1.Checked = dgfCielo == 1;
+            dgfCarica = false;
+        }
+
+        // ricalcola la serie (ogni 30 minuti) solo se cambiano giorno, frequenza, locator, scelte o impianto
+        void RecalcDgf(bool forza)
+        {
+            if (pnlDgf == null) return;
+            double f;
+            if (!ReadFreq(out f)) f = 144;
+            string mhz = cmbFreq.Text.Trim(), khz = cmbKhz == null ? "000" : cmbKhz.Text.Trim();
+            lblDgfMhz.Text = mhz.Length > 0 ? mhz : "144"; lblDgfKhz.Text = khz.Length > 0 ? khz : "000";
+            BudgetParams bp = BpBanda(bpMe, f);
+            rbDgfC1.Text = string.Format(Lang.Cultura, Lang.T("mediato sul fascio dell'antenna ({0}°)"), Math.Round(DgfFascio(bp.GAnt + 10.0 * Math.Log10(Math.Max(1, bp.NAnt)))).ToString("0", Lang.Cultura));
+            DateTime now = DateTime.UtcNow;
+            DateTime st = new DateTime(now.Year, now.Month, now.Day, 0, 0, 0, DateTimeKind.Utc);
+            lblDgfDal.Text = st.ToString("dd/MM/yyyy", inv);
+            int ng = (int)nudDgfGiorni.Value;
+            string k = st.ToString("yyyyMMdd", inv) + "|" + ng + "|" + f.ToString("F3", inv) + "|" + me.Lat.ToString("F4", inv) + "|" + me.Lon.ToString("F4", inv)
+                + "|" + dgfRx + dgfCielo + "|" + bp.Tant.ToString(inv) + "|" + TeStazione(bp).ToString("F1", inv) + "|" + bp.GAnt.ToString(inv) + "|" + bp.NAnt;
+            if (!forza && k == dgfChiave) return;
+            dgfChiave = k;
+            dgfT.Clear(); dgfOld.Clear(); dgfNew.Clear(); dgfP.Clear(); dgfPerigeo.Clear();
+            dgfF = f; dgfStart = st; dgfEnd = st.AddDays(ng);
+            if (dgfSel < dgfStart || dgfSel >= dgfEnd) dgfSel = dgfStart;
+            if (me.Ok)
+            {
+                int band = BandaVicina(f);
+                for (DateTime t = dgfStart; t <= dgfEnd; t = t.AddMinutes(30))
+                {
+                    MoonPos p = Moon.Compute(t, me.Lat, me.Lon, (double)me.H.Value, false);
+                    dgfT.Add(t); dgfP.Add(p);
+                    dgfOld.Add(Moon.Dgrd(p.Lambda, p.DistTopo, band));
+                    dgfNew.Add(DgrdDett(p, f, bp, dgfRx, dgfCielo).Dgrd);
+                }
+                // perigeo: minimo della distanza geocentrica
+                for (int i = 1; i + 1 < dgfP.Count; i++)
+                    if (dgfP[i].Dist < dgfP[i - 1].Dist && dgfP[i].Dist <= dgfP[i + 1].Dist) dgfPerigeo.Add(dgfT[i]);
+            }
+            pnlDgf.Invalidate();
+        }
+
+        // momento del giorno con il Dgrd migliore (Luna sopra l'orizzonte; se non c'è, il migliore del giorno)
+        int DgfMomento(DateTime giorno)
+        {
+            int best = -1, bestSu = -1;
+            for (int i = 0; i < dgfT.Count; i++)
+            {
+                if (dgfT[i].Date != giorno) continue;
+                if (best < 0 || dgfNew[i] > dgfNew[best]) best = i;
+                if (dgfP[i].El > 0 && (bestSu < 0 || dgfNew[i] > dgfNew[bestSu])) bestSu = i;
+            }
+            return bestSu >= 0 ? bestSu : best;
+        }
+
+        static string Db1(double v, CultureInfo c) { return (v < 0 ? "−" : "") + Math.Abs(v).ToString("F1", c); }
+
+        void DisegnaDgf(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            PreparaGrafica(g);
+            CultureInfo ci = Lang.Cultura;
+            Rectangle cr = pnlDgf.ClientRectangle;
+            using (Brush bf = new SolidBrush(Tema.Back)) g.FillRectangle(bf, cr);
+            if (cr.Width < 300) return;
+            Color viola = Color.FromArgb(124, 58, 237), grigio = Color.FromArgb(148, 163, 184), azzurro = Color.FromArgb(56, 189, 248);
+            Color titCol = Tema.Scuro ? Color.FromArgb(196, 181, 253) : Color.FromArgb(91, 33, 182);
+            Color violaT = Tema.Scuro ? Color.FromArgb(196, 181, 253) : Color.FromArgb(109, 40, 217);
+            float pad = S(8), gap = S(14);
+            float wDx = Math.Max(S(420), (cr.Width - 2 * pad - gap) * 0.34f);
+            RectangleF cl = new RectangleF(pad, S(6), cr.Width - 2 * pad - gap - wDx, cr.Height - S(14));
+            float xr = cl.Right + gap;
+            using (Font ft = FontPx(Lang.FontUi, S(13), true))
+            using (Font fs = FontPx(Lang.FontUi, S(12.5f), false))
+            using (Font fsb = FontPx(Lang.FontUi, S(12.5f), true))
+            using (Font fp = FontPx(Lang.FontUi, S(11.5f), false))
+            using (Font fpb = FontPx(Lang.FontUi, S(11.5f), true))
+            using (Font fbig = FontPx(Lang.FontUi, S(14), true))
+            using (Font fmono = FontPx("Consolas", S(12), false))
+            using (Brush bTxt = new SolidBrush(Tema.Fore))
+            using (Brush bMut = new SolidBrush(Tema.Muted))
+            {
+                // ----- scheda del grafico
+                Scheda(g, cl, Color.Empty);
+                DateTime fine = dgfEnd.AddDays(-1);
+                string tit = string.Format(ci, Lang.T("DGRD DI {0} A {1} MHz · DAL {2} AL {3} · 0 dB IN BASSO"),
+                    me.Loc.Text.Trim().ToUpperInvariant(), dgfF.ToString("0.000", ci), dgfStart.ToString("dd/MM", inv), fine.ToString("dd/MM/yyyy", inv));
+                Testo(g, Spaziato(tit), ft, titCol, new RectangleF(cl.Left + S(16), cl.Top + S(12), cl.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                if (!me.Ok || dgfT.Count < 2)
+                {
+                    Testo(g, Lang.T("Imposta un locator valido nella prima linguetta."), fs, Tema.Muted, new RectangleF(cl.Left + S(16), cl.Top + S(50), cl.Width - S(30), S(40)), StringAlignment.Near, StringAlignment.Near);
+                }
+                else
+                {
+                    float yLeg = cl.Bottom - S(118);
+                    RectangleF a = new RectangleF(cl.Left + S(62), cl.Top + S(44), cl.Width - S(80), yLeg - cl.Top - S(44) - S(30));
+                    dgfArea = a;
+                    double mn = 0;
+                    for (int i = 0; i < dgfT.Count; i++) mn = Math.Min(mn, Math.Min(dgfOld[i], dgfNew[i]));
+                    double ymin = Math.Min(-6, 2 * Math.Floor(mn / 2.0 - 0.01));
+                    long t0 = dgfStart.Ticks, t1 = dgfEnd.Ticks;
+                    Func<DateTime, float> X = t => a.Left + (float)((t.Ticks - t0) / (double)(t1 - t0)) * a.Width;
+                    Func<double, float> Y = v => a.Bottom - (float)(v / ymin) * a.Height;
+                    using (Brush bg = new SolidBrush(Tema.Scuro ? Tema.Field : Color.FromArgb(251, 252, 254))) g.FillRectangle(bg, a);
+                    using (Pen pg = new Pen(Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(227, 232, 240), 1f))
+                    {
+                        for (double vv = 0; vv >= ymin - 0.01; vv -= 2)
+                        {
+                            g.DrawLine(pg, a.Left, Y(vv), a.Right, Y(vv));
+                            Testo(g, (vv == 0 ? "0" : "−" + (-vv).ToString("0", ci)) + " dB", fp, Tema.Muted, new RectangleF(a.Left - S(60), Y(vv) - S(8), S(55), S(16)), StringAlignment.Far, StringAlignment.Center);
+                        }
+                        int nd = (int)Math.Round((dgfEnd - dgfStart).TotalDays);
+                        int passo = Math.Max(1, (int)Math.Ceiling(nd / 15.0));
+                        for (int d = 0; d < nd; d++)
+                        {
+                            DateTime gd = dgfStart.AddDays(d);
+                            if (d % passo == 0)
+                            {
+                                g.DrawLine(pg, X(gd), a.Top, X(gd), a.Bottom);
+                                Testo(g, gd.ToString("dd/MM", inv), fp, Tema.Muted, new RectangleF(X(gd.AddHours(12)) - S(30), a.Bottom + S(3), S(60), S(16)), StringAlignment.Center, StringAlignment.Near);
+                            }
+                        }
+                    }
+                    using (Pen pb = new Pen(Tema.Linea, 1f)) g.DrawRectangle(pb, a.X, a.Y, a.Width, a.Height);
+                    // giorno scelto
+                    if (dgfSel >= dgfStart && dgfSel < dgfEnd)
+                    {
+                        float xs = X(dgfSel), xe = X(dgfSel.AddDays(1));
+                        using (Brush bs = new SolidBrush(Color.FromArgb(48, azzurro))) g.FillRectangle(bs, xs, a.Top, xe - xs, a.Height);
+                        bool per = false;
+                        foreach (DateTime tp_ in dgfPerigeo) if (tp_.Date == dgfSel) per = true;
+                        string ls = dgfSel.ToString("dd/MM", inv) + (per ? " · " + Lang.T("perigeo") : "");
+                        using (Brush bz = new SolidBrush(Color.FromArgb(3, 105, 161)))
+                        {
+                            SizeF sz = g.MeasureString(ls, fpb);
+                            g.DrawString(ls, fpb, bz, Math.Min(a.Right - sz.Width, Math.Max(a.Left, (xs + xe) / 2 - sz.Width / 2)), a.Top + S(3));
+                        }
+                    }
+                    // curve
+                    PointF[] po = new PointF[dgfT.Count], pn = new PointF[dgfT.Count];
+                    for (int i = 0; i < dgfT.Count; i++) { po[i] = new PointF(X(dgfT[i]), Y(dgfOld[i])); pn[i] = new PointF(X(dgfT[i]), Y(dgfNew[i])); }
+                    using (Pen p1 = new Pen(grigio, S(2))) { p1.DashPattern = new float[] { 3f, 2f }; g.DrawLines(p1, po); }
+                    using (Pen p2 = new Pen(viola, S(2.6f))) { p2.LineJoin = LineJoin.Round; g.DrawLines(p2, pn); }
+                    // il punto peggiore del calcolo attuale, con i due valori
+                    int iw = 0;
+                    for (int i = 1; i < dgfT.Count; i++) if (dgfOld[i] < dgfOld[iw]) iw = i;
+                    {
+                        float xw = X(dgfT[iw]);
+                        bool sinistra = xw > a.Right - S(220);
+                        StringAlignment al = sinistra ? StringAlignment.Far : StringAlignment.Near;
+                        float xt = sinistra ? xw - S(250) : xw + S(45);
+                        RectangleF rt = new RectangleF(xt, Y(dgfOld[iw]) - S(26), S(205), S(18));
+                        BudgetParams bpw = BpBanda(bpMe, dgfF);
+                        DgfDett dw = DgrdDett(dgfP[iw], dgfF, bpw, dgfRx, dgfCielo);
+                        if (dw.Tsky > 2 * dw.Tref) Testo(g, Lang.T("Luna sulla Via Lattea"), fp, Tema.Muted, rt, al, StringAlignment.Near);
+                        Testo(g, Lang.T("attuale") + " " + Db1(dgfOld[iw], ci) + " dB", fpb, Tema.Muted, new RectangleF(xt, rt.Bottom, S(205), S(18)), al, StringAlignment.Near);
+                        Testo(g, Lang.T("nuovo") + " " + Db1(dgfNew[iw], ci) + " dB", fpb, violaT, new RectangleF(xt, Math.Max(rt.Bottom + S(18), Y(dgfNew[iw]) - S(9)), S(205), S(18)), al, StringAlignment.Near);
+                    }
+                    // legenda
+                    BudgetParams bp = BpBanda(bpMe, dgfF);
+                    DgfDett dl = DgrdDett(dgfP[0], dgfF, bp, dgfRx, dgfCielo);
+                    string pRx = dgfRx == 1 ? string.Format(ci, Lang.T("Tant {0} K + Te {1} K"), bp.Tant.ToString("0", ci), dl.Te.ToString("0", ci)) : Lang.T("ricevitore 80 K");
+                    string pCi = dgfCielo == 1 ? string.Format(ci, Lang.T("fascio {0}°"), dl.Hp.ToString("0", ci)) : Lang.T("cielo al centro della Luna");
+                    string[] lg = {
+                        string.Format(ci, Lang.T("calcolo attuale (banda {0}, ricevitore 80 K, cielo al centro della Luna)"), BandaVicina(dgfF)),
+                        string.Format(ci, Lang.T("nuovo calcolo ({0} MHz, {1}, {2})"), dgfF.ToString("0.000", ci), pRx, pCi),
+                        Lang.T("giorno scelto") };
+                    float xl = cl.Left + S(16), yl = yLeg;
+                    for (int i = 0; i < 3; i++)
+                    {
+                        SizeF sz = g.MeasureString(lg[i], fs);
+                        if (xl + S(34) + sz.Width > cl.Right - S(10)) { xl = cl.Left + S(16); yl += S(20); }
+                        if (i == 0) using (Pen p1 = new Pen(grigio, S(3))) { p1.DashPattern = new float[] { 2f, 1.3f }; g.DrawLine(p1, xl, yl + S(9), xl + S(26), yl + S(9)); }
+                        else if (i == 1) using (Pen p2 = new Pen(viola, S(3))) g.DrawLine(p2, xl, yl + S(9), xl + S(26), yl + S(9));
+                        else using (Brush bs = new SolidBrush(Color.FromArgb(110, azzurro))) g.FillRectangle(bs, xl, yl + S(4), S(26), S(10));
+                        g.DrawString(lg[i], fs, bTxt, xl + S(32), yl);
+                        xl += S(32) + sz.Width + S(22);
+                    }
+                    Testo(g, Lang.T("La distanza pesa uguale su tutte le bande; cambia il peso del rumore del cielo. Dove la Luna passa sulla Via Lattea il nuovo calcolo dà un Dgrd meno severo, perché il fascio largo dell'antenna «vede» una media della zona calda e non solo il suo punto più caldo. I giorni migliori (★) di Distanza e Dgrd si calcolano con il nuovo Dgrd."),
+                        fp, Tema.Muted, new RectangleF(cl.Left + S(16), yl + S(28), cl.Width - S(32), cl.Bottom - yl - S(32)), StringAlignment.Near, StringAlignment.Near);
+                }
+
+                // ----- colonna destra: tre schede
+                float y = S(6), wr = wDx;
+                int im = dgfT.Count > 0 ? DgfMomento(dgfSel) : -1;
+                // 1) come si forma il Dgrd
+                float h1 = S(262);
+                RectangleF r1 = new RectangleF(xr, y, wr, h1);
+                Scheda(g, r1, Color.Empty);
+                if (im >= 0)
+                {
+                    BudgetParams bp = BpBanda(bpMe, dgfF);
+                    DgfDett d = DgrdDett(dgfP[im], dgfF, bp, dgfRx, dgfCielo);
+                    string t1 = string.Format(ci, Lang.T("COME SI FORMA IL DGRD · {0} UTC · {1} MHz"), dgfT[im].ToString("dd/MM HH:mm", inv), dgfF.ToString("0.000", ci));
+                    Testo(g, Spaziato(t1), ft, titCol, new RectangleF(r1.Left + S(16), r1.Top + S(12), r1.Width - S(28), S(36)), StringAlignment.Near, StringAlignment.Near);
+                    float yy = r1.Top + S(50);
+                    string cielo = dgfCielo == 1 ? string.Format(ci, Lang.T("Cielo dietro la Luna (fascio {0}°)"), d.Hp.ToString("0", ci)) : Lang.T("Cielo dietro la Luna (centro)");
+                    string tsys = dgfRx == 1
+                        ? string.Format(ci, Lang.T("Tsys: Tant {0} + cielo +{1} + Te {2}"), d.Tant.ToString("0", ci), Math.Max(0, d.Tsky - d.Tref).ToString("0", ci), d.Te.ToString("0", ci))
+                        : string.Format(ci, Lang.T("Tsys: 80 K + cielo {0} K"), d.Tsky.ToString("0", ci));
+                    string[,] rr = {
+                        { Lang.T("Distanza della Luna"), d.Dist.ToString("N0", ci) + " km → " + Db1(d.DbDist, ci) + " dB" },
+                        { cielo, string.Format(ci, Lang.T("{0} K, freddo {1} K → {2} K"), d.Tsky.ToString("0", ci), d.Tref.ToString("0", ci), (d.Tsky - d.Tref >= 0 ? "+" : "−") + Math.Abs(d.Tsky - d.Tref).ToString("0", ci)) },
+                        { tsys, string.Format(ci, Lang.T("{0} K contro {1} K → {2} dB"), d.Tsys.ToString("0", ci), d.Tsys0.ToString("0", ci), Db1(d.DbCielo, ci)) } };
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Testo(g, rr[i, 0], fs, Tema.Fore, new RectangleF(r1.Left + S(16), yy, r1.Width * 0.5f, S(20)), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, rr[i, 1], fsb, Tema.Fore, new RectangleF(r1.Left + r1.Width * 0.42f, yy, r1.Width * 0.58f - S(16), S(20)), StringAlignment.Far, StringAlignment.Center);
+                        yy += S(22);
+                        using (Pen pl = new Pen(Tema.Linea, 1f)) g.DrawLine(pl, r1.Left + S(16), yy - S(1), r1.Right - S(16), yy - S(1));
+                    }
+                    Testo(g, "Dgrd", fbig, Tema.Fore, new RectangleF(r1.Left + S(16), yy, S(150), S(24)), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, Db1(d.Dgrd, ci) + " dB", fbig, violaT, new RectangleF(r1.Right - S(170), yy, S(154), S(24)), StringAlignment.Far, StringAlignment.Center);
+                    yy += S(32);
+                    RectangleF rf = new RectangleF(r1.Left + S(16), yy, r1.Width - S(32), S(52));
+                    using (GraphicsPath gp = Arrotondato(rf, S(8)))
+                    using (Brush bfm = new SolidBrush(Tema.Scuro ? Color.FromArgb(46, 38, 78) : Color.FromArgb(245, 243, 255))) g.FillPath(bfm, gp);
+                    g.DrawString("Dgrd = −40·log(d / 356.903 km) − 10·log(Tsys / Tsys " + Lang.T("freddo") + ")", fmono, bTxt, rf.Left + S(8), rf.Top + S(7));
+                    string f2 = "Tcielo(f) = Tcielo(144)·(144 / f)";
+                    g.DrawString(f2, fmono, bTxt, rf.Left + S(8), rf.Top + S(28));
+                    SizeF s2 = g.MeasureString(f2, fmono);
+                    using (Font fsup = FontPx("Consolas", S(9), false)) g.DrawString("2,6", fsup, bTxt, rf.Left + S(8) + s2.Width - S(3), rf.Top + S(24));
+                }
+                y += h1 + gap;
+                // 2) stesso momento sulle altre bande
+                List<int> bnd = new List<int>();
+                foreach (int b in Bande) if (bandeAttive.Contains(b)) bnd.Add(b);
+                float h2 = S(112) + bnd.Count * S(22);
+                RectangleF r2 = new RectangleF(xr, y, wr, h2);
+                Scheda(g, r2, Color.Empty);
+                Testo(g, Spaziato(Lang.T("STESSO MOMENTO SULLE ALTRE BANDE (dB)")), ft, titCol, new RectangleF(r2.Left + S(16), r2.Top + S(12), r2.Width - S(28), S(22)), StringAlignment.Near, StringAlignment.Near);
+                if (im >= 0)
+                {
+                    int iw = 0;
+                    for (int i = 1; i < dgfT.Count; i++) if (dgfOld[i] < dgfOld[iw]) iw = i;
+                    DgfDett dw0 = DgrdDett(dgfP[iw], dgfF, BpBanda(bpMe, dgfF), dgfRx, dgfCielo);
+                    string hA = dgfT[im].ToString("dd/MM HH:mm", inv), hB = dgfT[iw].ToString("dd/MM HH:mm", inv) + " " + (dw0.Tsky > 2 * dw0.Tref ? Lang.T("Via Lattea") : Lang.T("peggiore"));
+                    float[] cx = { r2.Left + S(16), r2.Left + wr * 0.24f, r2.Left + wr * 0.42f, r2.Left + wr * 0.57f, r2.Left + wr * 0.78f, r2.Right - S(16) };
+                    float yh = r2.Top + S(40);
+                    Testo(g, "MHz", fpb, Tema.Muted, new RectangleF(cx[0], yh, S(80), S(32)), StringAlignment.Near, StringAlignment.Far);
+                    Testo(g, "Tant", fpb, Tema.Muted, new RectangleF(cx[1] - S(10), yh, S(70), S(32)), StringAlignment.Far, StringAlignment.Far);
+                    Testo(g, hA + "\n" + Lang.T("attuale · nuovo"), fpb, Tema.Muted, new RectangleF(cx[2], yh, cx[4] - cx[2] - S(14), S(32)), StringAlignment.Center, StringAlignment.Far);
+                    Testo(g, hB + "\n" + Lang.T("attuale · nuovo"), fpb, Tema.Muted, new RectangleF(cx[4] - S(14), yh, cx[5] - cx[4] + S(14), S(32)), StringAlignment.Center, StringAlignment.Far);
+                    float yy = yh + S(36);
+                    int bandSel = BandaVicina(dgfF);
+                    foreach (int b in bnd)
+                    {
+                        double fb = b == bandSel ? dgfF : DgfFreqEme[Array.IndexOf(Bande, b)];
+                        BudgetParams bpb = BpBanda(bpMe, b);
+                        MoonPos pa = dgfP[im], pw = dgfP[iw];
+                        double oa = Moon.Dgrd(pa.Lambda, pa.DistTopo, b), na = DgrdDett(pa, fb, bpb, dgfRx, dgfCielo).Dgrd;
+                        double ow = Moon.Dgrd(pw.Lambda, pw.DistTopo, b), nw = DgrdDett(pw, fb, bpb, dgfRx, dgfCielo).Dgrd;
+                        if (b == bandSel) using (Brush bs = new SolidBrush(Tema.Scuro ? Color.FromArgb(60, 124, 58, 237) : Color.FromArgb(237, 233, 254))) g.FillRectangle(bs, r2.Left + S(10), yy, r2.Width - S(20), S(21));
+                        Testo(g, fb.ToString("0.000", ci), fs, Tema.Fore, new RectangleF(cx[0], yy, S(90), S(21)), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, bpb.Tant.ToString("0", ci) + " K", fs, Tema.Fore, new RectangleF(cx[1] - S(10), yy, S(70), S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, Db1(oa, ci), fs, Tema.Fore, new RectangleF(cx[2], yy, cx[3] - cx[2], S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, Db1(na, ci), fsb, Tema.Fore, new RectangleF(cx[3], yy, cx[4] - cx[3] - S(14), S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, Db1(ow, ci), fs, Tema.Fore, new RectangleF(cx[4], yy, (cx[5] - cx[4]) * 0.45f, S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, Db1(nw, ci), fsb, Tema.Fore, new RectangleF(cx[4] + (cx[5] - cx[4]) * 0.45f, yy, (cx[5] - cx[4]) * 0.55f, S(21)), StringAlignment.Far, StringAlignment.Center);
+                        yy += S(22);
+                        using (Pen pl = new Pen(Tema.Linea, 1f)) g.DrawLine(pl, r2.Left + S(16), yy - S(1), r2.Right - S(16), yy - S(1));
+                    }
+                    Testo(g, Lang.T("Tant e Te presi dal Budget EME di ogni banda."), fp, Tema.Muted, new RectangleF(r2.Left + S(16), yy + S(4), r2.Width - S(32), S(32)), StringAlignment.Near, StringAlignment.Near);
+                }
+                y += h2 + gap;
+                // 3) perché cambia con la frequenza
+                RectangleF r3 = new RectangleF(xr, y, wr, Math.Max(S(170), cl.Bottom - y));
+                Scheda(g, r3, Color.Empty);
+                Testo(g, Spaziato(Lang.T("PERCHÉ CAMBIA CON LA FREQUENZA")), ft, titCol, new RectangleF(r3.Left + S(16), r3.Top + S(12), r3.Width - S(28), S(22)), StringAlignment.Near, StringAlignment.Near);
+                string pt = "• " + Lang.T("Il rumore del cielo scende con la frequenza (indice 2,6): a 50 MHz è migliaia di kelvin, a 432 MHz poche decine.") + "\n"
+                    + "• " + Lang.T("Quanto pesa dipende dal rumore proprio della stazione: con Tant e Te veri, non con 80 K uguali per tutti.") + "\n"
+                    + "• " + Lang.T("Il fascio dell'antenna allarga o stringe la zona di cielo che entra nel calcolo.") + "\n"
+                    + "• " + Lang.T("Il DX ha il suo Dgrd, calcolato con la sua stazione.");
+                Testo(g, pt, fs, Tema.Fore, new RectangleF(r3.Left + S(16), r3.Top + S(40), r3.Width - S(32), r3.Height - S(48)), StringAlignment.Near, StringAlignment.Near);
+            }
+        }
 
         // ---------- Linguetta Radar GRAVES (bozzetto approvato) ----------
         // Il radar francese GRAVES (143,050 MHz CW, Broye-lès-Pesmes, JN27SI) illumina il cielo a sud con quattro
@@ -45005,7 +45507,7 @@ namespace LunaCalc
                 gruppiNav.Add(g);
             };
             add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpSky });
-            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpPos, tpMondo });
+            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpPos, tpMondo });
             add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpGraves, tpSolar, tpExcel, tpDebug });
             add(Lang.T("Log"), "▦", new TabPage[] { tpMap });
             add(Lang.T("Aiuto e tools"), "?", new TabPage[] { tpIstr, tpEme, tpCavi });
@@ -45042,6 +45544,7 @@ namespace LunaCalc
                 GruppoNav g = GruppoDi(tabs.SelectedTab);
                 if (g != null) g.Ultima = tabs.SelectedTab;
                 if (pnlNav != null) pnlNav.Invalidate();
+                if (tabs.SelectedTab == tpDgFreq) RecalcDgf(false);
             };
         }
 
@@ -50953,8 +51456,8 @@ namespace LunaCalc
                 foreach (string[] x in DescrizioniLinguette()) desc[x[0]] = x[1];
                 string[][] gruppi = {
                     new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Volta celeste") },
-                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
-                    new string[] { Lang.T("Collegamento"), Lang.T("Budget EME"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
+                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
+                    new string[] { Lang.T("Collegamento"), Lang.T("Budget EME"), Lang.T("Radar GRAVES"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
                     new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
                     new string[] { Lang.T("Aiuto e tools"), Lang.T("MANUALE D'USO"), Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("CAVI COASSIALI") },
                     new string[] { "Credits and thanks", Lang.T("INFORMAZIONI E CREDITI"), Lang.T("CONTATTI DELL'AUTORE E RINGRAZIAMENTI"), Lang.T("LICENZA D'USO") } };
@@ -52571,6 +53074,7 @@ namespace LunaCalc
             return new string[][] {
                 new string[] { Lang.T("Posizione live e +- 24h"), Lang.T("La schermata principale, aggiornata ogni secondo. In alto le impostazioni generali (nominativo, lingua, colori, caratteri e tipo di carattere), il pulsante SCELTA BANDE e la casella dei dati complessi; sotto, i locator tuo e del DX (da 4 a 14 caratteri, con la precisione della posizione), la frequenza e gli orologi UTC, locale e del DX. La fascia di stato (verde = puntabile, arancione = fuori dai limiti, grigio = sotto l'orizzonte, blu = finestra comune) ha il conto alla rovescia; seguono la bussola e l'arco dell'elevazione con i limiti dell'antenna in giallo e quattro riquadri: Luna (fase, sorgere e tramonto), Eco e frequenze (Doppler, ritardo dell'eco e frequenze CFOM), Cielo e geometria (Tsky, distanza, declinazione, angolo orario, Dgrd e il pulsante VAI A VOLTA CELESTE) e S/N stimato (in 2500 Hz con la soglia tipica del modo come riferimento, dati del DX, la casella CALCOLI APPROFONDITI e il pulsante VAI AI CALCOLI). In basso le prossime 24 ore.") + " " + Lang.T("Accanto al locator del DX c'è la casella del nominativo: se il nominativo è nel CALL3.TXT il locator si riempie da solo, e il pulsante CALL3 aggiorna l'elenco o lo copia nella cartella di WSJT-X. Trascinando la linea rossa delle 24 ore o scegliendo il giorno nel calendario la schermata mostra un istante passato o futuro; ▶ Adesso torna alla diretta. La frequenza si sceglie nel riquadro Eco e frequenze.") },
                 new string[] { Lang.T("Distanza e Dgrd"), Lang.T("Grafico da 7 a 61 giorni della Dgrd (0 dB in basso, -15 dB in alto) e della distanza media giornaliera della Luna, con perigeo, apogeo, luna nuova e i tre giorni migliori (★). La classifica tiene conto solo delle ore in cui la Luna è davvero puntabile con i tuoi limiti.") + " " + Lang.T("Il simbolo ☀ segna i giorni in cui la Luna è vicina al Sole (rosso: entro 3 larghezze del fascio, arancione: entro 6): il rumore solare può peggiorare la ricezione. Colore e spessore delle due curve si cambiano nella barra sopra il grafico.") + " " + Lang.T("La tabella a destra elenca i giorni con gli stessi colori delle fasce del grafico (verde i tre giorni migliori, rosso e arancione il Sole vicino alla Luna). La curva blu della declinazione si sovrappone al grafico, con la sua scala dentro il bordo sinistro; la casella \"Ore utili in verde sulla Dgrd\" colora le ore con la Luna dentro i limiti dell'antenna.") },
+                new string[] { Lang.T("DGRD per frequenza"), Lang.T("Il Dgrd alla tua frequenza di lavoro, confrontato con il calcolo di sempre (ricevitore da 80 K, cielo nel solo punto della Luna): puoi usare il rumore vero della tua stazione (Tant e Te dal Budget EME della banda) e il cielo mediato sul fascio dell'antenna. A destra come si forma il Dgrd del giorno scelto e lo stesso momento sulle altre bande. Le scelte valgono in tutto il programma, anche per i giorni migliori di Distanza e Dgrd.") },
                 new string[] { Lang.T("Volta celeste"), Lang.T("Il cielo visto dal tuo QTH, con l'orizzonte piatto e i colori del rumore del cielo (dal blu al rosso) alla frequenza scelta, i limiti della tua antenna, l'orizzonte del DX, le radiosorgenti, il Sole e il percorso della Luna nelle prossime 24 ore.") + " " + Lang.T("Le zone fuori dai limiti della tua antenna sono coperte da righe diagonali grigio chiaro.") },
                 new string[] { Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Mappa aerofotografica o topografica centrata sulla tua stazione, con sopra la volta celeste in pianta (orizzonte = cerchio esterno, zenit = centro): posizione attuale della Luna, percorso nelle prossime 24 ore con sorgere e tramonto, limiti dell'antenna in giallo e zone fuori dai limiti sfocate in grigio chiaro. Le maniglie gialle si trascinano con il mouse per regolare i limiti direttamente sulla mappa; la rotella cambia lo zoom.") + " " + Lang.T("La casella \"Sfuma le zone fuori dai limiti\" accende o spegne la sfocatura.") + " " + Lang.T("In alto a destra due cursori regolano l'opacità e il tono del grigio delle zone fuori dai limiti (il tono vale anche per la Volta celeste).") },
                 new string[] { Lang.T("Luna sul mondo"), Lang.T("Mappa del mondo con le terre colorate secondo l'elevazione della Luna vista da ogni località, nello stesso momento della Posizione della Luna; passando il mouse si leggono elevazione, azimut e distanza, con un clic il punto diventa la stazione DX.") },
@@ -54152,6 +54656,8 @@ namespace LunaCalc
             BuildPuntTab(tpPunt);
             tpDgrd = new TabPage(Lang.T("Distanza e Dgrd"));
             BuildDgrdTab(tpDgrd);
+            tpDgFreq = new TabPage(Lang.T("DGRD per frequenza"));
+            BuildDgFreqTab(tpDgFreq);
             tpMondo = new TabPage(Lang.T("Luna sul mondo"));
             tpMap = new TabPage(Lang.T("Mappa WWL e ADIF"));
             BuildMapTab(tpMap);
@@ -54169,7 +54675,7 @@ namespace LunaCalc
             BuildExcelTab(tpExcel);
             tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
-            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
+            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
             BuildMondoTab(tpMondo);   // dopo che tabs esiste: segue il cambio di linguetta
             BuildManualeTab(tpIstr, false);   // dopo le altre linguette: il manuale ne mostra le schermate
@@ -54587,8 +55093,9 @@ namespace LunaCalc
             r.Utc = utc;
             r.P = Moon.Compute(utc, me.Lat, me.Lon, (double)me.H.Value, refr);
             r.StatoMe = me.Valuta(r.P, out r.OkMe);
-            r.Tsky = Moon.Tsky(r.P.Lambda, freq);
-            r.DgrdMe = Moon.Dgrd(r.P.Lambda, r.P.DistTopo, freq);
+            double tsMe;
+            r.DgrdMe = DgrdScelto(r.P, freq, false, out tsMe);   // modello scelto nella linguetta DGRD per frequenza
+            r.Tsky = tsMe;
             r.Ok = r.OkMe;
             r.DopMe = Doppler1(utc, me, freq);
             if (useDx)
@@ -54596,7 +55103,8 @@ namespace LunaCalc
                 r.DopDx = Doppler1(utc, dx, freq);
                 r.Q = Moon.Compute(utc, dx.Lat, dx.Lon, (double)dx.H.Value, refr);
                 r.StatoDx = dx.Valuta(r.Q, out r.OkDx);
-                r.DgrdDx = Moon.Dgrd(r.Q.Lambda, r.Q.DistTopo, freq);
+                double tsDx;
+                r.DgrdDx = DgrdScelto(r.Q, freq, true, out tsDx);
                 double p1 = Moon.PolAngle(me.Lat, r.P.Az, r.P.ElGeo);
                 double p2 = Moon.PolAngle(dx.Lat, r.Q.Az, r.Q.ElGeo);
                 r.Dpol = Moon.PolOffset(p1, p2);
@@ -55192,6 +55700,9 @@ namespace LunaCalc
                 lines.Add("budget_schema=" + budgetSchemaLarg.ToString(inv));
                 if (cmbGrSeq != null) lines.Add("graves_seq=" + cmbGrSeq.SelectedIndex.ToString(inv));
                 if (chkGrSuono != null) lines.Add("graves_suono=" + (chkGrSuono.Checked ? "1" : "0"));
+                lines.Add("dgf_rx=" + dgfRx.ToString(inv));
+                lines.Add("dgf_cielo=" + dgfCielo.ToString(inv));
+                if (nudDgfGiorni != null) lines.Add("dgf_giorni=" + nudDgfGiorni.Value.ToString(inv));
                 List<string> cs_ = new List<string>();
                 for (int i = ColFisse; i < colScelte.Length; i++) if (colScelte[i]) cs_.Add(i.ToString(inv));
                 lines.Add("colonne=" + (cs_.Count == 0 ? "-" : string.Join(",", cs_.ToArray())));
@@ -55361,6 +55872,9 @@ namespace LunaCalc
                         case "grigio_opacita": { int gv; if (int.TryParse(v, NumberStyles.Integer, inv, out gv)) ImpostaGrigi(gv, grigioTono); break; }
                         case "graves_seq": if (cmbGrSeq != null && (v == "0" || v == "1")) cmbGrSeq.SelectedIndex = v == "1" ? 1 : 0; break;
                         case "graves_suono": if (chkGrSuono != null) chkGrSuono.Checked = v == "1"; break;
+                        case "dgf_rx": dgfRx = v == "0" ? 0 : 1; DgfMostraScelte(); break;
+                        case "dgf_cielo": dgfCielo = v == "0" ? 0 : 1; DgfMostraScelte(); break;
+                        case "dgf_giorni": { int gg; if (nudDgfGiorni != null && int.TryParse(v, NumberStyles.Integer, inv, out gg)) nudDgfGiorni.Value = Math.Max(7, Math.Min(61, gg)); break; }
                         case "budget_schema": { int bw2; if (int.TryParse(v, NumberStyles.Integer, inv, out bw2)) { budgetSchemaLarg = Math.Max(300, Math.Min(1500, bw2)); if (budgetRoot != null) budgetRoot.ColumnStyles[2].Width = S(budgetSchemaLarg); } break; }
                         case "grigio_velo": grigioVelo = v != "0"; if (chkVelo != null) chkVelo.Checked = grigioVelo; break;
                         case "grigio_tono": { int gv; if (int.TryParse(v, NumberStyles.Integer, inv, out gv)) ImpostaGrigi(grigioOpacita, gv); break; }
@@ -55719,6 +56233,48 @@ namespace LunaCalc
             TextRenderer.DrawText(g, this.Text, this.Font, Rect(new RectangleF(xt, r.Y, Math.Max(1, r.Right - xt - h * 0.3f), r.Height)), ct, tfs);
             if (this.Focused && this.ShowFocusCues)
                 using (Pen pf = new Pen(Color.FromArgb(120, col), 1f)) { pf.DashStyle = DashStyle.Dot; g.DrawRectangle(pf, Rect(new RectangleF(xt - 2, r.Y + 3, Math.Max(1, r.Right - xt - h * 0.2f), r.Height - 6))); }
+        }
+    }
+
+    // Scelta tonda (radio) disegnata come Spunta: cerchio colorato pieno quando è scelta
+    class Tondino : RadioButton
+    {
+        bool sopra;
+        public Tondino()
+        {
+            this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer
+                | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
+            this.Cursor = Cursors.Hand;
+            this.AutoSize = true;
+        }
+        public override Size GetPreferredSize(Size proposed)
+        {
+            int h = this.Font.Height;
+            Size t = TextRenderer.MeasureText(this.Text ?? "", this.Font, Size.Empty, TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
+            return new Size(t.Width + (int)(h * 1.7f), (int)(h * 1.75f));
+        }
+        protected override void OnMouseEnter(EventArgs e) { sopra = true; Invalidate(); base.OnMouseEnter(e); }
+        protected override void OnMouseLeave(EventArgs e) { sopra = false; Invalidate(); base.OnMouseLeave(e); }
+        protected override void OnCheckedChanged(EventArgs e) { Invalidate(); base.OnCheckedChanged(e); }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            using (Brush bf = new SolidBrush(this.Parent != null ? this.Parent.BackColor : Tema.Back)) g.FillRectangle(bf, this.ClientRectangle);
+            int h = this.Font.Height;
+            float q = h * 0.85f, bw = Math.Max(1.4f, h / 8f);
+            RectangleF c = new RectangleF(h * 0.2f, (this.Height - q) / 2f, q, q);
+            Color verde = Color.FromArgb(22, 163, 74), grigio = Tema.Scuro ? Color.FromArgb(150, 158, 170) : Color.FromArgb(71, 85, 105);
+            using (Brush bc = new SolidBrush(Tema.Scuro ? Tema.Field : Color.White)) g.FillEllipse(bc, c);
+            using (Pen pc = new Pen(this.Checked ? verde : (sopra ? Color.FromArgb(31, 111, 209) : grigio), bw)) g.DrawEllipse(pc, c);
+            if (this.Checked)
+            {
+                float d = q * 0.45f;
+                using (Brush bv = new SolidBrush(verde)) g.FillEllipse(bv, c.X + (q - d) / 2f, c.Y + (q - d) / 2f, d, d);
+            }
+            TextRenderer.DrawText(g, this.Text, this.Font, new Rectangle((int)(c.Right + h * 0.35f), 0, this.Width - (int)(c.Right + h * 0.35f), this.Height),
+                this.Enabled ? Tema.Fore : Tema.Muted, TextFormatFlags.VerticalCenter | TextFormatFlags.Left | TextFormatFlags.SingleLine | TextFormatFlags.NoPadding);
         }
     }
 
