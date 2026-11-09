@@ -44524,7 +44524,7 @@ namespace LunaCalc
         PannelloDisegno pnlDgf;
         Panel pnlDgfScroll;
         NumericUpDown nudDgfGiorni;
-        Label lblDgfDal, lblDgfMhz, lblDgfKhz;
+        TextBox lblDgfDal, lblDgfMhz, lblDgfKhz;
         Tondino rbDgfRx0, rbDgfRx1, rbDgfC0, rbDgfC1;
         List<DateTime> dgfT = new List<DateTime>();
         List<double> dgfOld = new List<double>(), dgfNew = new List<double>();
@@ -44536,13 +44536,16 @@ namespace LunaCalc
         RectangleF dgfArea;
         bool dgfCarica;
 
-        Label BoxDgf(string t)
+        // casella di sola lettura con l'aspetto dei campi (testo a destra)
+        TextBox BoxDgf(string t, int w)
         {
-            Label l = L(t);
-            l.BorderStyle = BorderStyle.FixedSingle;
-            l.BackColor = Tema.Field; l.ForeColor = Tema.FieldFore;
-            l.Padding = new Padding(S(4), S(1), S(4), S(1));
-            return l;
+            TextBox b = new TextBox();
+            b.ReadOnly = true; b.TabStop = false;
+            b.Text = t; b.Width = S(w);
+            b.TextAlign = HorizontalAlignment.Right;
+            b.BackColor = Tema.Field; b.ForeColor = Tema.FieldFore;
+            b.Margin = new Padding(S(3), S(3), S(3), S(3));
+            return b;
         }
 
         void BuildDgFreqTab(TabPage tp)
@@ -44560,12 +44563,12 @@ namespace LunaCalc
             nudDgfGiorni = Nud(7, 61, 30, 0, 60);
             tip.SetToolTip(nudDgfGiorni, Lang.T("Numero di giorni da oggi da mostrare nel grafico (da 7 a 61)."));
             nudDgfGiorni.ValueChanged += (s, e) => { if (!caricamento) { SaveSettings(); RecalcDgf(true); } };
-            lblDgfDal = BoxDgf("");
+            lblDgfDal = BoxDgf("", 90);
             Pillola bCalc = new Pillola("▶ " + Lang.T("CALCOLA"), StilePillola.Pieno, Color.FromArgb(31, 111, 209), new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
             bCalc.Margin = new Padding(S(10), S(2), S(3), S(2));
             bCalc.Click += (s, e) => RecalcDgf(true);
             bar.Controls.Add(L(Lang.T("Giorni"))); bar.Controls.Add(Tonda(nudDgfGiorni));
-            bar.Controls.Add(L(Lang.T("dal"))); bar.Controls.Add(lblDgfDal); bar.Controls.Add(bCalc);
+            bar.Controls.Add(L(Lang.T("dal"))); bar.Controls.Add(Tonda(lblDgfDal)); bar.Controls.Add(bCalc);
             root.Controls.Add(bar, 0, 0);
 
             FlowLayoutPanel bar2 = new FlowLayoutPanel();
@@ -44574,10 +44577,10 @@ namespace LunaCalc
             lt.Font = new Font(Lang.FontUi, 10F * fontFactor, FontStyle.Bold);
             bar2.Controls.Add(lt);
             FlowLayoutPanel fq = Coppia();
-            lblDgfMhz = BoxDgf("144"); lblDgfKhz = BoxDgf("000");
+            lblDgfMhz = BoxDgf("144", 50); lblDgfKhz = BoxDgf("000", 45);
             Label lnota = L(Lang.T("= frequenza di lavoro della schermata principale"));
             lnota.ForeColor = Tema.Muted;
-            fq.Controls.Add(L(Lang.T("Frequenza"))); fq.Controls.Add(lblDgfMhz); fq.Controls.Add(L("MHz")); fq.Controls.Add(lblDgfKhz); fq.Controls.Add(L("kHz")); fq.Controls.Add(lnota);
+            fq.Controls.Add(L(Lang.T("Frequenza"))); fq.Controls.Add(Tonda(lblDgfMhz)); fq.Controls.Add(L("MHz")); fq.Controls.Add(Tonda(lblDgfKhz)); fq.Controls.Add(L("kHz")); fq.Controls.Add(lnota);
             bar2.Controls.Add(fq);
             FlowLayoutPanel grx = Coppia();
             grx.Margin = new Padding(S(14), 0, 0, 0);
@@ -44835,7 +44838,7 @@ namespace LunaCalc
                 float y = S(6), wr = wDx;
                 int im = dgfT.Count > 0 ? DgfMomento(dgfSel) : -1;
                 // 1) come si forma il Dgrd
-                float h1 = S(262);
+                float h1 = S(300);
                 RectangleF r1 = new RectangleF(xr, y, wr, h1);
                 Scheda(g, r1, Color.Empty);
                 if (im >= 0)
@@ -44843,8 +44846,11 @@ namespace LunaCalc
                     BudgetParams bp = BpBanda(bpMe, dgfF);
                     DgfDett d = DgrdDett(dgfP[im], dgfF, bp, dgfRx, dgfCielo);
                     string t1 = string.Format(ci, Lang.T("COME SI FORMA IL DGRD · {0} UTC · {1} MHz"), dgfT[im].ToString("dd/MM HH:mm", inv), dgfF.ToString("0.000", ci));
-                    Testo(g, Spaziato(t1), ft, titCol, new RectangleF(r1.Left + S(16), r1.Top + S(12), r1.Width - S(28), S(36)), StringAlignment.Near, StringAlignment.Near);
-                    float yy = r1.Top + S(50);
+                    int ps = t1.IndexOf(" · ");
+                    string t1a = ps > 0 ? t1.Substring(0, ps) : t1, t1b = ps > 0 ? t1.Substring(ps + 3) : "";
+                    Testo(g, Spaziato(t1a), ft, titCol, new RectangleF(r1.Left + S(16), r1.Top + S(12), r1.Width - S(28), S(20)), StringAlignment.Near, StringAlignment.Near);
+                    Testo(g, t1b, fp, Tema.Muted, new RectangleF(r1.Left + S(16), r1.Top + S(32), r1.Width - S(28), S(18)), StringAlignment.Near, StringAlignment.Near);
+                    float yy = r1.Top + S(54);
                     string cielo = dgfCielo == 1 ? string.Format(ci, Lang.T("Cielo dietro la Luna (fascio {0}°)"), d.Hp.ToString("0", ci)) : Lang.T("Cielo dietro la Luna (centro)");
                     string tsys = dgfRx == 1
                         ? string.Format(ci, Lang.T("Tsys: Tant {0} + cielo +{1} + Te {2}"), d.Tant.ToString("0", ci), Math.Max(0, d.Tsky - d.Tref).ToString("0", ci), d.Te.ToString("0", ci))
@@ -44855,22 +44861,31 @@ namespace LunaCalc
                         { tsys, string.Format(ci, Lang.T("{0} K contro {1} K → {2} dB"), d.Tsys.ToString("0", ci), d.Tsys0.ToString("0", ci), Db1(d.DbCielo, ci)) } };
                     for (int i = 0; i < 3; i++)
                     {
-                        Testo(g, rr[i, 0], fs, Tema.Fore, new RectangleF(r1.Left + S(16), yy, r1.Width * 0.5f, S(20)), StringAlignment.Near, StringAlignment.Center);
-                        Testo(g, rr[i, 1], fsb, Tema.Fore, new RectangleF(r1.Left + r1.Width * 0.42f, yy, r1.Width * 0.58f - S(16), S(20)), StringAlignment.Far, StringAlignment.Center);
+                        // etichetta e valore sulla stessa riga se ci stanno, altrimenti il valore va sotto, a destra
+                        float wl = g.MeasureString(rr[i, 0], fs).Width, wv = g.MeasureString(rr[i, 1], fsb).Width;
+                        bool una = wl + wv + S(12) <= r1.Width - S(32);
+                        Testo(g, rr[i, 0], fs, Tema.Fore, new RectangleF(r1.Left + S(16), yy, r1.Width - S(32), S(20)), StringAlignment.Near, StringAlignment.Center);
+                        if (!una) yy += S(19);
+                        Testo(g, rr[i, 1], fsb, Tema.Fore, new RectangleF(r1.Left + S(16), yy, r1.Width - S(32), S(20)), StringAlignment.Far, StringAlignment.Center);
                         yy += S(22);
                         using (Pen pl = new Pen(Tema.Linea, 1f)) g.DrawLine(pl, r1.Left + S(16), yy - S(1), r1.Right - S(16), yy - S(1));
                     }
                     Testo(g, "Dgrd", fbig, Tema.Fore, new RectangleF(r1.Left + S(16), yy, S(150), S(24)), StringAlignment.Near, StringAlignment.Center);
                     Testo(g, Db1(d.Dgrd, ci) + " dB", fbig, violaT, new RectangleF(r1.Right - S(170), yy, S(154), S(24)), StringAlignment.Far, StringAlignment.Center);
                     yy += S(32);
-                    RectangleF rf = new RectangleF(r1.Left + S(16), yy, r1.Width - S(32), S(52));
+                    RectangleF rf = new RectangleF(r1.Left + S(16), yy, r1.Width - S(32), Math.Max(S(52), r1.Bottom - yy - S(10)));
                     using (GraphicsPath gp = Arrotondato(rf, S(8)))
                     using (Brush bfm = new SolidBrush(Tema.Scuro ? Color.FromArgb(46, 38, 78) : Color.FromArgb(245, 243, 255))) g.FillPath(bfm, gp);
-                    g.DrawString("Dgrd = −40·log(d / 356.903 km) − 10·log(Tsys / Tsys " + Lang.T("freddo") + ")", fmono, bTxt, rf.Left + S(8), rf.Top + S(7));
+                    // formule: si va a capo se la scheda è stretta
+                    string f1 = "Dgrd = −40·log(d / 356.903 km) − 10·log(Tsys / Tsys " + Lang.T("freddo") + ")";
+                    RectangleF rf1 = new RectangleF(rf.Left + S(8), rf.Top + S(6), rf.Width - S(16), rf.Height - S(30));
+                    g.DrawString(f1, fmono, bTxt, rf1);
+                    float hf1 = g.MeasureString(f1, fmono, (int)rf1.Width).Height;
                     string f2 = "Tcielo(f) = Tcielo(144)·(144 / f)";
-                    g.DrawString(f2, fmono, bTxt, rf.Left + S(8), rf.Top + S(28));
+                    float yf2 = rf1.Top + hf1 + S(4);
+                    g.DrawString(f2, fmono, bTxt, rf.Left + S(8), yf2);
                     SizeF s2 = g.MeasureString(f2, fmono);
-                    using (Font fsup = FontPx("Consolas", S(9), false)) g.DrawString("2,6", fsup, bTxt, rf.Left + S(8) + s2.Width - S(3), rf.Top + S(24));
+                    using (Font fsup = FontPx("Consolas", S(9), false)) g.DrawString(2.6.ToString("0.0", ci), fsup, bTxt, rf.Left + S(8) + s2.Width - S(3), yf2 - S(4));
                 }
                 y += h1 + gap;
                 // 2) stesso momento sulle altre bande
@@ -44886,12 +44901,14 @@ namespace LunaCalc
                     for (int i = 1; i < dgfT.Count; i++) if (dgfOld[i] < dgfOld[iw]) iw = i;
                     DgfDett dw0 = DgrdDett(dgfP[iw], dgfF, BpBanda(bpMe, dgfF), dgfRx, dgfCielo);
                     string hA = dgfT[im].ToString("dd/MM HH:mm", inv), hB = dgfT[iw].ToString("dd/MM HH:mm", inv) + " " + (dw0.Tsky > 2 * dw0.Tref ? Lang.T("Via Lattea") : Lang.T("peggiore"));
-                    float[] cx = { r2.Left + S(16), r2.Left + wr * 0.24f, r2.Left + wr * 0.42f, r2.Left + wr * 0.57f, r2.Left + wr * 0.78f, r2.Right - S(16) };
+                    // colonne: MHz | Tant | momento A attuale, nuovo | momento B attuale, nuovo
+                    float x0c = r2.Left + S(16), wc = wr - S(32);
+                    float[] cx = { x0c, x0c + wc * 0.20f, x0c + wc * 0.36f, x0c + wc * 0.52f, x0c + wc * 0.68f, x0c + wc * 0.84f, x0c + wc };
                     float yh = r2.Top + S(40);
                     Testo(g, "MHz", fpb, Tema.Muted, new RectangleF(cx[0], yh, S(80), S(32)), StringAlignment.Near, StringAlignment.Far);
-                    Testo(g, "Tant", fpb, Tema.Muted, new RectangleF(cx[1] - S(10), yh, S(70), S(32)), StringAlignment.Far, StringAlignment.Far);
-                    Testo(g, hA + "\n" + Lang.T("attuale · nuovo"), fpb, Tema.Muted, new RectangleF(cx[2], yh, cx[4] - cx[2] - S(14), S(32)), StringAlignment.Center, StringAlignment.Far);
-                    Testo(g, hB + "\n" + Lang.T("attuale · nuovo"), fpb, Tema.Muted, new RectangleF(cx[4] - S(14), yh, cx[5] - cx[4] + S(14), S(32)), StringAlignment.Center, StringAlignment.Far);
+                    Testo(g, "Tant", fpb, Tema.Muted, new RectangleF(cx[1], yh, cx[2] - cx[1], S(32)), StringAlignment.Far, StringAlignment.Far);
+                    Testo(g, hA + "\n" + Lang.T("attuale · nuovo"), fpb, Tema.Muted, new RectangleF(cx[2], yh, cx[4] - cx[2], S(32)), StringAlignment.Far, StringAlignment.Far);
+                    Testo(g, hB + "\n" + Lang.T("attuale · nuovo"), fpb, Tema.Muted, new RectangleF(cx[4], yh, cx[6] - cx[4], S(32)), StringAlignment.Far, StringAlignment.Far);
                     float yy = yh + S(36);
                     int bandSel = BandaVicina(dgfF);
                     foreach (int b in bnd)
@@ -44902,12 +44919,12 @@ namespace LunaCalc
                         double oa = Moon.Dgrd(pa.Lambda, pa.DistTopo, b), na = DgrdDett(pa, fb, bpb, dgfRx, dgfCielo).Dgrd;
                         double ow = Moon.Dgrd(pw.Lambda, pw.DistTopo, b), nw = DgrdDett(pw, fb, bpb, dgfRx, dgfCielo).Dgrd;
                         if (b == bandSel) using (Brush bs = new SolidBrush(Tema.Scuro ? Color.FromArgb(60, 124, 58, 237) : Color.FromArgb(237, 233, 254))) g.FillRectangle(bs, r2.Left + S(10), yy, r2.Width - S(20), S(21));
-                        Testo(g, fb.ToString("0.000", ci), fs, Tema.Fore, new RectangleF(cx[0], yy, S(90), S(21)), StringAlignment.Near, StringAlignment.Center);
-                        Testo(g, bpb.Tant.ToString("0", ci) + " K", fs, Tema.Fore, new RectangleF(cx[1] - S(10), yy, S(70), S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, fb.ToString("0.000", ci), fs, Tema.Fore, new RectangleF(cx[0], yy, cx[1] - cx[0], S(21)), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, bpb.Tant.ToString("0", ci) + " K", fs, Tema.Fore, new RectangleF(cx[1], yy, cx[2] - cx[1], S(21)), StringAlignment.Far, StringAlignment.Center);
                         Testo(g, Db1(oa, ci), fs, Tema.Fore, new RectangleF(cx[2], yy, cx[3] - cx[2], S(21)), StringAlignment.Far, StringAlignment.Center);
-                        Testo(g, Db1(na, ci), fsb, Tema.Fore, new RectangleF(cx[3], yy, cx[4] - cx[3] - S(14), S(21)), StringAlignment.Far, StringAlignment.Center);
-                        Testo(g, Db1(ow, ci), fs, Tema.Fore, new RectangleF(cx[4], yy, (cx[5] - cx[4]) * 0.45f, S(21)), StringAlignment.Far, StringAlignment.Center);
-                        Testo(g, Db1(nw, ci), fsb, Tema.Fore, new RectangleF(cx[4] + (cx[5] - cx[4]) * 0.45f, yy, (cx[5] - cx[4]) * 0.55f, S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, Db1(na, ci), fsb, Tema.Fore, new RectangleF(cx[3], yy, cx[4] - cx[3], S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, Db1(ow, ci), fs, Tema.Fore, new RectangleF(cx[4], yy, cx[5] - cx[4], S(21)), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, Db1(nw, ci), fsb, Tema.Fore, new RectangleF(cx[5], yy, cx[6] - cx[5], S(21)), StringAlignment.Far, StringAlignment.Center);
                         yy += S(22);
                         using (Pen pl = new Pen(Tema.Linea, 1f)) g.DrawLine(pl, r2.Left + S(16), yy - S(1), r2.Right - S(16), yy - S(1));
                     }
