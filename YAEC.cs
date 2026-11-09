@@ -47441,24 +47441,24 @@ namespace LunaCalc
         int grigioOpacita = 59, grigioTono = 9;     // percentuali; tono 0 = bianco, 100 = nero
         bool grigioVelo = true;                     // casella del velo grigio: spenta = nessun velo né scurimento sulla mappa
         Spunta chkVelo;
-        TrackBar tbOpacita, tbTonoPunt, tbTonoSky;
+        Cursore tbOpacita, tbTonoPunt, tbTonoSky;
         Label lblOpacita, lblTonoPunt;
         TableLayoutPanel pnlGrigi;
         bool syncTono;
         int GrigioRgb { get { return (int)Math.Round(255 - grigioTono * 2.55); } }
 
-        TrackBar SliderGrigio(bool punt)
+        Cursore SliderGrigio(bool punt)
         {
-            TrackBar t = new TrackBar();
+            Cursore t = new Cursore();
             t.Minimum = 0; t.Maximum = 100; t.TickFrequency = 10; t.SmallChange = 5; t.LargeChange = 10;
-            t.AutoSize = false; t.Height = S(30); t.Width = S(150);
+            t.Height = S(30); t.Width = S(150);
             t.Value = grigioTono;
             t.ValueChanged += (s, e) =>
             {
                 if (syncTono) return;
                 syncTono = true;
                 grigioTono = t.Value;
-                foreach (TrackBar x in new TrackBar[] { tbTonoPunt, tbTonoSky }) if (x != null && x != t) x.Value = grigioTono;
+                foreach (Cursore x in new Cursore[] { tbTonoPunt, tbTonoSky }) if (x != null && x != t) x.Value = grigioTono;
                 if (lblTonoPunt != null) lblTonoPunt.Text = grigioTono + " %";
                 syncTono = false;
                 if (pnlPunt != null) pnlPunt.Invalidate();
@@ -47482,7 +47482,7 @@ namespace LunaCalc
             grigioTono = Math.Max(0, Math.Min(100, tono));
             if (tbOpacita != null) tbOpacita.Value = grigioOpacita;
             syncTono = true;
-            foreach (TrackBar x in new TrackBar[] { tbTonoPunt, tbTonoSky }) if (x != null) x.Value = grigioTono;
+            foreach (Cursore x in new Cursore[] { tbTonoPunt, tbTonoSky }) if (x != null) x.Value = grigioTono;
             syncTono = false;
             if (lblOpacita != null) lblOpacita.Text = grigioOpacita + " %";
             if (lblTonoPunt != null) lblTonoPunt.Text = grigioTono + " %";
@@ -47571,9 +47571,9 @@ namespace LunaCalc
             pnlGrigi.BackColor = Color.FromArgb(245, 247, 250);
             pnlGrigi.Padding = new Padding(S(8), S(4), S(8), S(4));
             pnlGrigi.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            tbOpacita = new TrackBar();
+            tbOpacita = new Cursore();
             tbOpacita.Minimum = 0; tbOpacita.Maximum = 100; tbOpacita.TickFrequency = 10; tbOpacita.SmallChange = 5; tbOpacita.LargeChange = 10;
-            tbOpacita.Width = S(150); tbOpacita.AutoSize = false; tbOpacita.Height = S(30);
+            tbOpacita.Width = S(150); tbOpacita.Height = S(30);
             tbOpacita.Value = grigioOpacita;
             tbOpacita.ValueChanged += (s, e) => { grigioOpacita = tbOpacita.Value; lblOpacita.Text = grigioOpacita + " %"; pnlPunt.Invalidate(); if (!caricamento) SaveSettings(); };
             tip.SetToolTip(tbOpacita, Lang.T("Opacità del velo grigio sulle zone fuori dai limiti dell'antenna (0 % = trasparente, 100 % = coprente). Si usa con la casella \"Sfuma le zone fuori dai limiti\"."));
@@ -53250,6 +53250,7 @@ namespace LunaCalc
             {
                 Pillola pf = new Pillola(filtri[i], i == 0 ? StilePillola.Pieno : StilePillola.Bordo, i == 0 ? Color.FromArgb(31, 111, 209) : Color.FromArgb(75, 85, 99), new Font(Lang.FontUi, 9F * fontFactor));
                 pf.Margin = new Padding(S(3), S(4), S(3), S(3));
+                pf.Maiuscolo = false;   // pastiglie dei filtri: testo normale
                 pf.Tag = i;
                 pf.Click += (s, e) => ScegliFiltroCavi((int)((Pillola)s).Tag);
                 if (i == 4) pf.Visible = CaviDb.Elenco.Exists(x => x.Personale);
@@ -55421,8 +55422,21 @@ namespace LunaCalc
         {
             List<NumericUpDown> trovate = new List<NumericUpDown>();
             Action<Control> cerca = null;
-            cerca = c => { foreach (Control x in c.Controls) { if (x is NumericUpDown) trovate.Add((NumericUpDown)x); else cerca(x); } };
+            List<Control> altri = new List<Control>();
+            cerca = c =>
+            {
+                foreach (Control x in c.Controls)
+                {
+                    if (x is NumericUpDown) trovate.Add((NumericUpDown)x);
+                    else if (x is CorniceTonda || x is DataGridView) continue;
+                    else if (x is ComboBox || x is DateTimePicker || (x is TextBox && !((TextBox)x).Multiline && ((TextBox)x).BorderStyle != BorderStyle.None))
+                    { if (x.Dock == DockStyle.None) altri.Add(x); }
+                    else cerca(x);
+                }
+            };
             cerca(radice);
+            // nuovo stile: tendine, date e caselle di testo con la stessa cornice tonda delle caselle dei numeri
+            foreach (Control a in altri) InCornice(a);
             foreach (NumericUpDown n in trovate)
             {
                 Control p = n.Parent;
@@ -55459,6 +55473,44 @@ namespace LunaCalc
                 n.Anchor = AnchorStyles.Top | AnchorStyles.Left;
                 p.ResumeLayout();
             }
+        }
+
+        void InCornice(Control n)
+        {
+            Control p = n.Parent;
+            if (p == null || p is CorniceTonda) return;
+            TableLayoutPanel tl = p as TableLayoutPanel;
+            FlowLayoutPanel fl = p as FlowLayoutPanel;
+            if (tl == null && fl == null) { CorniceDietro.Applica(n); return; }   // comandi in posizione fissa: cornice dietro
+            p.SuspendLayout();
+            Padding m = n.Margin;
+            AnchorStyles an = n.Anchor;
+            CorniceTonda ct;
+            if (tl != null)
+            {
+                TableLayoutPanelCellPosition pos = tl.GetPositionFromControl(n);
+                int cs = tl.GetColumnSpan(n), rs = tl.GetRowSpan(n);
+                tl.Controls.Remove(n);
+                ct = new CorniceTonda(n);
+                ct.Margin = new Padding(m.Left, Math.Max(0, m.Top - 2), m.Right, Math.Max(0, m.Bottom - 2));
+                ct.Anchor = an == AnchorStyles.None ? AnchorStyles.Left : an & ~AnchorStyles.Right;
+                tl.Controls.Add(ct, pos.Column, pos.Row);
+                if (cs > 1) tl.SetColumnSpan(ct, cs);
+                if (rs > 1) tl.SetRowSpan(ct, rs);
+            }
+            else
+            {
+                int idx = fl.Controls.GetChildIndex(n);
+                fl.Controls.Remove(n);
+                ct = new CorniceTonda(n);
+                ct.Margin = new Padding(m.Left, Math.Max(0, m.Top - 2), m.Right, Math.Max(0, m.Bottom - 2));
+                ct.Anchor = AnchorStyles.Left;
+                fl.Controls.Add(ct);
+                fl.Controls.SetChildIndex(ct, idx);
+            }
+            n.Margin = new Padding(0);
+            n.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            p.ResumeLayout();
         }
 
         bool ricostruzione;
@@ -57760,7 +57812,9 @@ namespace LunaCalc
         public StilePillola Stile;
         public Color Colore;
         public string Nota = "";      // testo piccolo grigio dopo la scritta (es. "⇄ Budget")
+        public bool Maiuscolo = true; // nuovo stile: i pulsanti (Pieno, Bordo) si scrivono in maiuscolo; false per le pastiglie dei filtri
         bool sopra, giu, spunta;
+        string Scritta { get { string t = this.Text ?? ""; return Maiuscolo && Stile != StilePillola.Casella ? t.ToUpper(Lang.Cultura) : t; } }
         public event EventHandler CheckedChanged;
 
         public Pillola(string testo, StilePillola stile, Color colore, Font f)
@@ -57789,7 +57843,7 @@ namespace LunaCalc
         public override Size GetPreferredSize(Size proposed)
         {
             int h = this.Font.Height;
-            Size t = TextRenderer.MeasureText(this.Text ?? "", this.Font, Size.Empty, TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
+            Size t = TextRenderer.MeasureText(Scritta, this.Font, Size.Empty, TextFormatFlags.NoPadding | TextFormatFlags.SingleLine);
             int w = t.Width + (int)(h * 1.5f);
             if (Stile == StilePillola.Casella)
             {
@@ -57858,14 +57912,14 @@ namespace LunaCalc
                     using (Brush om = new SolidBrush(Color.FromArgb(40, 0, 0, 0)))
                     using (GraphicsPath po = MainForm.Arrotondato(new RectangleF(r.X, r.Y + bw, r.Width, r.Height), rag)) g.FillPath(om, po);
                     using (Brush b = new SolidBrush(c)) g.FillPath(b, p);
-                    TextRenderer.DrawText(g, this.Text, this.Font, Rect(r), Color.White, Centro);
+                    TextRenderer.DrawText(g, Scritta, this.Font, Rect(r), Color.White, Centro);
                 }
                 else if (Stile == StilePillola.Bordo)
                 {
                     Color c = on ? Colore : grigio;
                     using (Brush b = new SolidBrush(sopra && on ? Mescola(carta, Colore, 0.08f) : carta)) g.FillPath(b, p);
                     using (Pen pn = new Pen(Mescola(c, carta, 0.25f), bw)) g.DrawPath(pn, p);
-                    TextRenderer.DrawText(g, this.Text, this.Font, Rect(r), Tema.Scuro ? Mescola(c, Color.White, 0.5f) : c, Centro);
+                    TextRenderer.DrawText(g, Scritta, this.Font, Rect(r), Tema.Scuro ? Mescola(c, Color.White, 0.5f) : c, Centro);
                 }
                 else
                 {
@@ -57978,6 +58032,7 @@ namespace LunaCalc
     class CorniceTonda : Panel
     {
         public readonly Control Dentro;
+        FrecciaCornice freccia;
         public CorniceTonda(Control cb)
         {
             this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer
@@ -57986,9 +58041,19 @@ namespace LunaCalc
             Dentro = cb;
             if (cb is ComboBox) ((ComboBox)cb).FlatStyle = FlatStyle.Flat;
             if (cb is UpDownBase) ((UpDownBase)cb).BorderStyle = BorderStyle.None;   // caselle dei numeri: il bordo è la cornice tonda
+            if (cb is TextBox) ((TextBox)cb).BorderStyle = BorderStyle.None;         // caselle di testo: idem
             Tendina td = cb as Tendina;
             if (td != null) td.Cornice = false;
             this.Controls.Add(cb);
+            // nuovo stile: la freccia delle tendine e l'icona del calendario sono disegnate da YAEC, uguali su tutti i sistemi
+            ComboBox cmb = cb as ComboBox;
+            DateTimePicker dtp = cb as DateTimePicker;
+            if ((cmb != null && cmb.DropDownStyle == ComboBoxStyle.DropDownList) || (dtp != null && !dtp.ShowUpDown))
+            {
+                freccia = new FrecciaCornice(cb);
+                this.Controls.Add(freccia);
+                freccia.BringToFront();
+            }
             this.AutoSize = false;
             Disponi();
             cb.SizeChanged += (s, e) => Disponi();
@@ -58000,16 +58065,23 @@ namespace LunaCalc
         void Disponi()
         {
             int b = Bordo;
-            bool combo = Dentro is ComboBox;
+            bool combo = Dentro is ComboBox || Dentro is DateTimePicker;
             Dentro.Location = combo ? new Point(b + 1, b - 1) : new Point(b + 2, b);
             Size sz = combo ? new Size(Dentro.Width + 2 * b + 2, Dentro.Height + 2 * b - 2) : new Size(Dentro.Width + 2 * b + 4, Dentro.Height + 2 * b);
             if (this.Size != sz) this.Size = sz;
             // nasconde il bordo squadrato della tendina piatta
             if (combo) Dentro.Region = new Region(new Rectangle(1, 1, Math.Max(1, Dentro.Width - 2), Math.Max(1, Dentro.Height - 2)));
+            if (freccia != null)
+            {
+                int wf = Math.Max(S16(), SystemInformation.VerticalScrollBarWidth) + 2;
+                freccia.Bounds = new Rectangle(Dentro.Right - wf - 1, Dentro.Top + 1, wf, Math.Max(4, Dentro.Height - 2));
+            }
             Invalidate();
         }
 
-        public override Size GetPreferredSize(Size proposed) { int b = Bordo; return Dentro is ComboBox ? new Size(Dentro.Width + 2 * b + 2, Dentro.Height + 2 * b - 2) : new Size(Dentro.Width + 2 * b + 4, Dentro.Height + 2 * b); }
+        int S16() { return Math.Max(14, Dentro.Font.Height); }
+
+        public override Size GetPreferredSize(Size proposed) { int b = Bordo; return (Dentro is ComboBox || Dentro is DateTimePicker) ? new Size(Dentro.Width + 2 * b + 2, Dentro.Height + 2 * b - 2) : new Size(Dentro.Width + 2 * b + 4, Dentro.Height + 2 * b); }
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -58019,8 +58091,223 @@ namespace LunaCalc
             using (GraphicsPath p = MainForm.Arrotondato(r, Math.Min(r.Height / 2f, Dentro.Font.Height * 0.45f)))
             {
                 using (Brush b = new SolidBrush(Dentro.BackColor)) g.FillPath(b, p);
-                using (Pen pn = new Pen(Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(201, 206, 216), 1.3f)) g.DrawPath(pn, p);
+                bool attivo = Dentro.Focused || (freccia != null && freccia.Sopra);
+                using (Pen pn = new Pen(attivo ? Color.FromArgb(31, 111, 209) : (Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(195, 203, 217)), 1.3f)) g.DrawPath(pn, p);
             }
+        }
+    }
+
+    // Cornice tonda per i comandi in posizione fissa (schede disegnate, schema del Budget): sta dietro il comando,
+    // ne segue posizione, grandezza e visibilità; il bordo squadrato del comando viene nascosto.
+    class CorniceDietro : Control
+    {
+        readonly Control dentro;
+        FrecciaCornice freccia;
+        CorniceDietro(Control c)
+        {
+            this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer
+                | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
+            this.TabStop = false;
+            dentro = c;
+        }
+        int Bordo { get { return Math.Max(2, dentro.Font.Height / 6); } }
+        public static void Applica(Control c)
+        {
+            Control p = c.Parent;
+            if (p == null) return;
+            if (c is TextBox) ((TextBox)c).BorderStyle = BorderStyle.FixedSingle;
+            if (c is ComboBox) ((ComboBox)c).FlatStyle = FlatStyle.Flat;
+            Tendina td = c as Tendina;
+            if (td != null) td.Cornice = false;
+            CorniceDietro cd = new CorniceDietro(c);
+            p.Controls.Add(cd);
+            cd.SendToBack();
+            ComboBox cmb = c as ComboBox;
+            DateTimePicker dtp = c as DateTimePicker;
+            if ((cmb != null && cmb.DropDownStyle == ComboBoxStyle.DropDownList) || (dtp != null && !dtp.ShowUpDown))
+            {
+                cd.freccia = new FrecciaCornice(c);
+                p.Controls.Add(cd.freccia);
+                cd.freccia.BringToFront();
+            }
+            EventHandler segui = (s, e) => cd.Segui();
+            c.LocationChanged += segui; c.SizeChanged += segui; c.VisibleChanged += segui; c.EnabledChanged += segui;
+            c.GotFocus += (s, e) => cd.Invalidate(); c.LostFocus += (s, e) => cd.Invalidate();
+            cd.Segui();
+        }
+        void Segui()
+        {
+            int b = Bordo;
+            Rectangle r = dentro.Bounds;
+            r.Inflate(b + 1, b);
+            if (this.Bounds != r) this.Bounds = r;
+            this.Visible = dentro.Visible;
+            // il bordo squadrato del comando resta fuori dalla sua regione
+            if (!(dentro is TextBox)) dentro.Region = new Region(new Rectangle(1, 1, Math.Max(1, dentro.Width - 2), Math.Max(1, dentro.Height - 2)));
+            else dentro.Region = new Region(new Rectangle(1, 1, Math.Max(1, dentro.Width - 2), Math.Max(1, dentro.Height - 2)));
+            if (freccia != null)
+            {
+                int wf = Math.Max(14, dentro.Font.Height) + 2;
+                freccia.Bounds = new Rectangle(dentro.Right - wf - 1, dentro.Top + 1, wf, Math.Max(4, dentro.Height - 2));
+                freccia.Visible = dentro.Visible;
+                freccia.BringToFront();
+            }
+            Invalidate();
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            RectangleF r = new RectangleF(1, 1, this.Width - 3, this.Height - 3);
+            Color campo = dentro.Enabled ? dentro.BackColor : (Tema.Scuro ? Tema.Section : Color.FromArgb(243, 244, 246));
+            bool attivo = dentro.Focused || (freccia != null && freccia.Sopra);
+            using (GraphicsPath p = MainForm.Arrotondato(r, Math.Min(r.Height / 2f, dentro.Font.Height * 0.45f)))
+            {
+                using (Brush b = new SolidBrush(campo)) g.FillPath(b, p);
+                using (Pen pn = new Pen(attivo ? Color.FromArgb(31, 111, 209) : (Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(195, 203, 217)), 1.3f)) g.DrawPath(pn, p);
+            }
+        }
+    }
+
+    // Freccia "v" delle tendine e icona del calendario delle date, disegnate sopra il pulsante di sistema:
+    // il clic apre la tendina (o il calendario) come il pulsante originale.
+    class FrecciaCornice : Control
+    {
+        readonly Control dentro;
+        public bool Sopra;
+        public FrecciaCornice(Control c)
+        {
+            this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw, true);
+            dentro = c;
+            this.Cursor = Cursors.Hand;
+            this.TabStop = false;
+            c.EnabledChanged += (s, e) => Invalidate();
+            c.BackColorChanged += (s, e) => Invalidate();
+        }
+        protected override void OnMouseEnter(EventArgs e) { Sopra = true; Invalidate(); if (this.Parent != null) this.Parent.Invalidate(); base.OnMouseEnter(e); }
+        protected override void OnMouseLeave(EventArgs e) { Sopra = false; Invalidate(); if (this.Parent != null) this.Parent.Invalidate(); base.OnMouseLeave(e); }
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            if (e.Button != MouseButtons.Left || !dentro.Enabled) return;
+            dentro.Focus();
+            ComboBox cb = dentro as ComboBox;
+            if (cb != null) { cb.DroppedDown = !cb.DroppedDown; return; }
+            try { SendKeys.Send("%{DOWN}"); } catch { }   // Alt+Giù apre il calendario della data
+        }
+        protected override void OnMouseWheel(MouseEventArgs e)
+        {
+            base.OnMouseWheel(e);
+            ComboBox cb = dentro as ComboBox;
+            if (cb == null || !cb.Enabled || cb.Items.Count == 0) return;
+            int i = cb.SelectedIndex + (e.Delta > 0 ? -1 : 1);
+            if (i >= 0 && i < cb.Items.Count) cb.SelectedIndex = i;
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            Color campo = dentro.Enabled ? dentro.BackColor : (Tema.Scuro ? Tema.Section : Color.FromArgb(243, 244, 246));
+            using (Brush b = new SolidBrush(campo)) g.FillRectangle(b, this.ClientRectangle);
+            Color cf = !dentro.Enabled ? Color.FromArgb(160, 166, 176) : (Sopra ? Color.FromArgb(31, 111, 209) : (Tema.Scuro ? Color.FromArgb(200, 206, 216) : Color.FromArgb(71, 85, 105)));
+            float cx = this.Width / 2f, cy = this.Height / 2f, h = this.Height;
+            if (dentro is DateTimePicker)
+            {
+                // calendario: cornice con la fascia in alto e due anelli
+                float w = Math.Min(this.Width - 4, h * 0.62f), hh = w * 0.9f;
+                RectangleF r = new RectangleF(cx - w / 2, cy - hh / 2 + 1, w, hh);
+                using (Pen p = new Pen(cf, Math.Max(1.2f, h / 18f)))
+                using (Brush bb = new SolidBrush(cf))
+                {
+                    using (GraphicsPath gp = MainForm.Arrotondato(r, w * 0.15f)) g.DrawPath(p, gp);
+                    g.FillRectangle(bb, r.X, r.Y, r.Width, hh * 0.28f);
+                    g.DrawLine(p, r.X + w * 0.28f, r.Y - hh * 0.14f, r.X + w * 0.28f, r.Y + hh * 0.1f);
+                    g.DrawLine(p, r.Right - w * 0.28f, r.Y - hh * 0.14f, r.Right - w * 0.28f, r.Y + hh * 0.1f);
+                    float q = w * 0.14f;
+                    for (int i = 0; i < 3; i++) for (int j = 0; j < 2; j++)
+                        g.FillRectangle(bb, r.X + w * (0.18f + 0.26f * i), r.Y + hh * (0.45f + 0.25f * j), q, q);
+                }
+                return;
+            }
+            float d = Math.Max(3f, h / 6.5f);
+            using (Pen pv = new Pen(cf, Math.Max(1.5f, h / 13f)))
+            {
+                pv.StartCap = LineCap.Round; pv.EndCap = LineCap.Round; pv.LineJoin = LineJoin.Round;
+                g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy - d / 2f), new PointF(cx, cy + d / 2f), new PointF(cx + d, cy - d / 2f) });
+            }
+        }
+    }
+
+    // Cursore del nuovo stile: binario sottile, parte scelta in blu e pomello tondo (al posto della TrackBar di sistema)
+    class Cursore : Control
+    {
+        int min = 0, max = 100, val = 0;
+        public int TickFrequency = 10, SmallChange = 1, LargeChange = 10;
+        public event EventHandler ValueChanged;
+        bool trascina, sopra;
+        public Cursore()
+        {
+            this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer
+                | ControlStyles.ResizeRedraw | ControlStyles.SupportsTransparentBackColor | ControlStyles.Selectable, true);
+            this.BackColor = Color.Transparent;
+            this.Cursor = Cursors.Hand;
+            this.TabStop = true;
+        }
+        public int Minimum { get { return min; } set { min = value; if (max < min) max = min; Value = val; Invalidate(); } }
+        public int Maximum { get { return max; } set { max = value; if (min > max) min = max; Value = val; Invalidate(); } }
+        public int Value
+        {
+            get { return val; }
+            set
+            {
+                int v = Math.Max(min, Math.Min(max, value));
+                if (v == val) return;
+                val = v; Invalidate();
+                if (ValueChanged != null) ValueChanged(this, EventArgs.Empty);
+            }
+        }
+        float Raggio { get { return Math.Max(6f, Math.Min(this.Height / 2f - 2, this.Font.Height * 0.55f)); } }
+        float X0 { get { return Raggio + 2; } }
+        float X1 { get { return this.Width - Raggio - 2; } }
+        void DaMouse(int x) { if (X1 <= X0) return; Value = (int)Math.Round(min + (x - X0) / (X1 - X0) * (max - min)); }
+        protected override void OnMouseDown(MouseEventArgs e) { base.OnMouseDown(e); if (e.Button != MouseButtons.Left || !this.Enabled) return; this.Focus(); trascina = true; this.Capture = true; DaMouse(e.X); }
+        protected override void OnMouseMove(MouseEventArgs e) { base.OnMouseMove(e); if (trascina) DaMouse(e.X); }
+        protected override void OnMouseUp(MouseEventArgs e) { base.OnMouseUp(e); trascina = false; this.Capture = false; }
+        protected override void OnMouseEnter(EventArgs e) { sopra = true; Invalidate(); base.OnMouseEnter(e); }
+        protected override void OnMouseLeave(EventArgs e) { sopra = false; Invalidate(); base.OnMouseLeave(e); }
+        protected override void OnMouseWheel(MouseEventArgs e) { base.OnMouseWheel(e); if (this.Enabled) Value += e.Delta > 0 ? SmallChange : -SmallChange; }
+        protected override bool IsInputKey(Keys k) { return k == Keys.Left || k == Keys.Right || k == Keys.Up || k == Keys.Down || base.IsInputKey(k); }
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            base.OnKeyDown(e);
+            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.Down) Value -= SmallChange;
+            else if (e.KeyCode == Keys.Right || e.KeyCode == Keys.Up) Value += SmallChange;
+            else if (e.KeyCode == Keys.PageDown) Value -= LargeChange;
+            else if (e.KeyCode == Keys.PageUp) Value += LargeChange;
+            else if (e.KeyCode == Keys.Home) Value = min;
+            else if (e.KeyCode == Keys.End) Value = max;
+        }
+        protected override void OnEnabledChanged(EventArgs e) { base.OnEnabledChanged(e); Invalidate(); }
+        protected override void OnGotFocus(EventArgs e) { base.OnGotFocus(e); Invalidate(); }
+        protected override void OnLostFocus(EventArgs e) { base.OnLostFocus(e); Invalidate(); }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+            float cy = this.Height / 2f, t = Math.Max(3f, this.Font.Height / 5f);
+            float x = max > min ? X0 + (float)(val - min) / (max - min) * (X1 - X0) : X0;
+            Color blu = this.Enabled ? Color.FromArgb(31, 111, 209) : Color.FromArgb(160, 166, 176);
+            Color binario = Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(203, 213, 225);
+            using (GraphicsPath p = MainForm.Arrotondato(new RectangleF(X0, cy - t / 2, X1 - X0, t), t / 2))
+            using (Brush b = new SolidBrush(binario)) g.FillPath(b, p);
+            if (x > X0)
+                using (GraphicsPath p = MainForm.Arrotondato(new RectangleF(X0, cy - t / 2, x - X0, t), t / 2))
+                using (Brush b = new SolidBrush(blu)) g.FillPath(b, p);
+            float r = Raggio;
+            using (Brush bo = new SolidBrush(Color.FromArgb(40, 0, 0, 0))) g.FillEllipse(bo, x - r, cy - r + 1.5f, 2 * r, 2 * r);
+            using (Brush bk = new SolidBrush(Tema.Scuro ? Tema.Field : Color.White)) g.FillEllipse(bk, x - r, cy - r, 2 * r, 2 * r);
+            using (Pen pk = new Pen(blu, (sopra || trascina || this.Focused) ? 2.6f : 2f)) g.DrawEllipse(pk, x - r + 1, cy - r + 1, 2 * r - 2, 2 * r - 2);
         }
     }
 
