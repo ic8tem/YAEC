@@ -42317,6 +42317,10 @@ namespace LunaCalc
         public Control Card;          // scheda della stazione (v28c)
         public string Sotto = "";     // locator e posizione della Luna nel titolo della scheda
         public Label GTot, NfFriis, Info1, Info2;
+        // dischi (linguetta Budget EME dischi) e catena completa: stadi del preampli, uscita del transverter, pilotaggio del PA
+        public NumericUpDown DiscoD, DiscoEff, DiscoFD, TvPtx, PaPin, LenTv;
+        public ComboBox DiscoMont, PreStadi, CavoTv;
+        public bool Disco;
         // controlli dello schema dell'impianto (visibili solo per la stazione scelta)
         public List<Control> Schema = new List<Control>();
     }
@@ -42328,6 +42332,12 @@ namespace LunaCalc
         // schema dell'impianto (v27): cavi scelti dal database, lunghezze, relè, transverter, modo
         public double CavoAnt = -1, LenAnt = 3, Rele = 0.3, CavoPa = -1, LenPa = 30, CavoDis = -1, LenDis = 30, TvOn = 0, TvGainSet = 25, Modo = 0, SnReq = -25, TvMod = -1;
         public double LossAnt, LossPa, LossDis;   // perdite dei cavi calcolate alla frequenza della banda
+        // antenna a disco (Budget EME dischi): diametro (m), efficienza (%), f/D, montatura (0 Az-El, 1 polare); con Disco = 1
+        // il guadagno è quello del disco (PE1RKI: G = 10·log[η·(π·D/λ)²]) e il numero di antenne vale 1
+        public double Disco = 0, DiscoD = 3.0, DiscoEff = 60, DiscoFD = 0.40, DiscoMont = 0;
+        // catena completa: stadi del preamplificatore (1 o 2), uscita TX del transverter (W), pilotaggio richiesto dal PA (W),
+        // cavo tra transverter e PA
+        public double PreStadi = 1, TvPtx = 10, PaPin = 10, CavoTv = -1, LenTv = 2, LossTv;
         // connettori stimati (consiglio pratico di NJ9R: circa 1 dB ogni 8 – 10 connettori, 0,11 dB ciascuno):
         // in trasmissione quelli tra PA e antenna, in ricezione quelli tra antenna e preamplificatore, contati a parte
         public const double DbConnettore = 0.11;
@@ -42336,7 +42346,37 @@ namespace LunaCalc
         public static double Freq = 144;   // frequenza della banda corrente, per le perdite dei cavi
 
         public static readonly string[] Keys = { "p", "cavotx", "acctx", "gant", "nant", "preloss", "pregain", "postloss", "tvgain", "mds", "nf", "groundon", "groundh", "tvcavo", "tvnf", "tant",
-            "cavoant", "lenant", "rele", "cavopa", "lenpa", "cavodis", "lendis", "tvon", "tvgainset", "modo", "snreq", "tvmod", "conntx", "connrx" };
+            "cavoant", "lenant", "rele", "cavopa", "lenpa", "cavodis", "lendis", "tvon", "tvgainset", "modo", "snreq", "tvmod", "conntx", "connrx",
+            "disco", "discod", "discoeff", "discofd", "discomont", "prestadi", "tvptx", "papin", "cavotv", "lentv" };
+
+        // Guadagno del disco (PE1RKI, "Dish calcs."): G = 10·log[η·(π·D/λ)²] in dBi; dBd = dBi − 2,15
+        public static double GuadagnoDisco(double dM, double effPct, double fMHz)
+        {
+            double lam = 299.792458 / Math.Max(1, fMHz);
+            return 10.0 * Math.Log10(Math.Max(1e-6, effPct / 100.0) * Math.Pow(Math.PI * Math.Max(0.05, dM) / lam, 2));
+        }
+        // apertura a −3 dB del disco: regola pratica 70·λ/D (gradi)
+        public static double AperturaDisco(double dM, double fMHz) { return 70.0 * (299.792458 / Math.Max(1, fMHz)) / Math.Max(0.05, dM); }
+
+        // valori iniziali di una stazione a disco (432, 902, 1296 MHz): disco da 3 m al 60 %, preampli a due stadi al fuoco,
+        // transverter da 10 W che pilota un PA da 500 W
+        public static BudgetParams DefaultDisco(int band)
+        {
+            BudgetParams b = Default(band);
+            b.Disco = 1; b.DiscoD = 3.0; b.DiscoEff = 60; b.DiscoFD = 0.40; b.DiscoMont = 0;
+            b.NAnt = 1; b.P = 500; b.Nf = 0.35; b.PreGain = 30; b.PreStadi = 2;
+            b.Tant = band == 432 ? 60 : (band == 902 ? 45 : 40);
+            b.Rele = 0.2; b.LenAnt = 1;
+            b.CavoPa = CaviDb.Indice("Ecoflex 15"); b.LenPa = 3;
+            b.CavoDis = CaviDb.Indice("Ecoflex 15"); b.LenDis = 25;
+            b.TvOn = 1; b.TvGainSet = 20; b.TvNf = 1.0; b.TvMod = -1; b.TvPtx = 10; b.PaPin = 10;
+            b.CavoTv = CaviDb.Indice("RG-213/U"); b.LenTv = 2;
+            double fs = Freq;
+            Freq = band;
+            b.Calcola();
+            Freq = fs;
+            return b;
+        }
 
         // Transverter della tabella del manuale (§ 3.7.2) con figura di rumore e guadagno dichiarati dai costruttori;
         // l'ultima voce della tendina è "personalizzato" (TvMod = -1)
@@ -42362,7 +42402,7 @@ namespace LunaCalc
         {
             switch (band)
             {
-                case 50: return 3500; case 70: return 1500; case 144: return 250; case 222: return 120; case 432: return 50;
+                case 50: return 3500; case 70: return 1500; case 144: return 250; case 222: return 120; case 432: return 50; case 902: return 45; case 1296: return 40;
                 default: return 150;
             }
         }
@@ -42379,6 +42419,8 @@ namespace LunaCalc
             else if (band == 70) { b.P = 400; b.CavoTx = 1.0; b.GAnt = 14.0; b.NAnt = 2; b.Nf = 0.8; }
             else if (band == 222) { b.P = 1000; b.CavoTx = 1.5; b.GAnt = 18.5; b.NAnt = 4; b.Nf = 0.4; }
             else if (band == 432) { b.P = 500; b.CavoTx = 2.0; b.GAnt = 21.0; b.NAnt = 4; b.Nf = 0.4; b.CavoAnt = CaviDb.Indice("LDF4-50A (Heliax 1/2\")"); b.CavoPa = b.CavoAnt; b.CavoDis = b.CavoAnt; }
+            else if (band == 902) { b.P = 500; b.CavoTx = 2.0; b.GAnt = 20.0; b.NAnt = 4; b.Nf = 0.35; b.CavoAnt = CaviDb.Indice("LDF4-50A (Heliax 1/2\")"); b.CavoPa = b.CavoAnt; b.CavoDis = b.CavoAnt; b.LenAnt = 2; }
+            else if (band == 1296) { b.P = 500; b.CavoTx = 2.0; b.GAnt = 21.0; b.NAnt = 4; b.Nf = 0.3; b.CavoAnt = CaviDb.Indice("LDF4-50A (Heliax 1/2\")"); b.CavoPa = b.CavoAnt; b.CavoDis = b.CavoAnt; b.LenAnt = 2; }
             else { b.P = 1000; b.CavoTx = 1.5; b.GAnt = 17.0; b.NAnt = 4; b.Nf = 0.5; }
             double fs = Freq;
             Freq = band;
@@ -42400,6 +42442,8 @@ namespace LunaCalc
             LossAnt = PerditaCavo(CavoAnt, LenAnt);
             LossPa = PerditaCavo(CavoPa, LenPa);
             LossDis = PerditaCavo(CavoDis, LenDis);
+            LossTv = PerditaCavo(CavoTv, LenTv);
+            if (Disco > 0.5) { GAnt = GuadagnoDisco(DiscoD, DiscoEff, Freq); NAnt = 1; }
             LossConn = Math.Max(0, ConnTx) * DbConnettore;
             LossConnRx = Math.Max(0, ConnRx) * DbConnettore;
             CavoTx = LossPa;
@@ -42442,6 +42486,12 @@ namespace LunaCalc
             b.TvMod = u.TvMod.SelectedIndex >= 0 && u.TvMod.SelectedIndex < TvNome.Length ? u.TvMod.SelectedIndex : -1;
             b.Modo = ModoDaVoce(u.Modo.SelectedIndex);   // -1 = personalizzato
             b.SnReq = (double)u.SnReq.Value;
+            b.Disco = u.Disco ? 1 : 0;
+            b.DiscoD = (double)u.DiscoD.Value; b.DiscoEff = (double)u.DiscoEff.Value; b.DiscoFD = (double)u.DiscoFD.Value;
+            b.DiscoMont = Math.Max(0, u.DiscoMont.SelectedIndex);
+            b.PreStadi = u.PreStadi.SelectedIndex == 1 ? 2 : 1;
+            b.TvPtx = (double)u.TvPtx.Value; b.PaPin = (double)u.PaPin.Value;
+            b.CavoTv = MainForm.IndiceCavo(u.CavoTv); b.LenTv = (double)u.LenTv.Value;
             b.Calcola();
             return b;
         }
@@ -42484,6 +42534,12 @@ namespace LunaCalc
             if (mi >= 0 && mi < ModiNome.Length && VoceDaModo(mi) < 0) mi = 0;   // modo tolto dalla tendina (non a 60 s): JT65
             if (mi >= 0 && mi < ModiNome.Length) { SetC(u.Modo, VoceDaModo(mi)); Set(u.SnReq, ModiSn[mi]); }
             else { Set(u.SnReq, SnReq); if (u.Modo.Items.Count > 0) u.Modo.SelectedIndex = u.Modo.Items.Count - 1; }
+            Set(u.DiscoD, DiscoD); Set(u.DiscoEff, DiscoEff); Set(u.DiscoFD, DiscoFD);
+            SetC(u.DiscoMont, DiscoMont);
+            SetC(u.PreStadi, PreStadi > 1.5 ? 1 : 0);
+            Set(u.TvPtx, TvPtx); Set(u.PaPin, PaPin);
+            MainForm.ScegliCavo(u.CavoTv, (int)Math.Round(CavoTv)); Set(u.LenTv, LenTv);
+            u.TvPtx.Enabled = u.TvOn.Checked; u.CavoTv.Enabled = u.TvOn.Checked; u.LenTv.Enabled = u.TvOn.Checked;
             Calcola();
             Set(u.CavoTx, CavoTx); Set(u.AccTx, AccTx); Set(u.PreLoss, PreLoss); Set(u.PostLoss, PostLoss);
         }
@@ -42499,6 +42555,8 @@ namespace LunaCalc
                 case "cavoant": return CavoAnt; case "lenant": return LenAnt; case "rele": return Rele; case "cavopa": return CavoPa; case "lenpa": return LenPa;
                 case "cavodis": return CavoDis; case "lendis": return LenDis; case "tvon": return TvOn; case "tvgainset": return TvGainSet; case "modo": return Modo; case "snreq": return SnReq;
                 case "tvmod": return TvMod; case "conntx": return ConnTx; case "connrx": return ConnRx;
+                case "disco": return Disco; case "discod": return DiscoD; case "discoeff": return DiscoEff; case "discofd": return DiscoFD; case "discomont": return DiscoMont;
+                case "prestadi": return PreStadi; case "tvptx": return TvPtx; case "papin": return PaPin; case "cavotv": return CavoTv; case "lentv": return LenTv;
                 default: return Mds;
             }
         }
@@ -42524,6 +42582,8 @@ namespace LunaCalc
                 case "tvmod": TvMod = v; break;
                 case "conn": case "conntx": ConnTx = Math.Max(0, Math.Round(v)); break;   // "conn": versione di prova con una sola casella
                 case "connrx": ConnRx = Math.Max(0, Math.Round(v)); break;
+                case "disco": Disco = v; break; case "discod": DiscoD = v; break; case "discoeff": DiscoEff = v; break; case "discofd": DiscoFD = v; break; case "discomont": DiscoMont = v; break;
+                case "prestadi": PreStadi = v; break; case "tvptx": TvPtx = v; break; case "papin": PaPin = v; break; case "cavotv": CavoTv = v; break; case "lentv": LenTv = v; break;
             }
         }
     }
@@ -42904,8 +42964,8 @@ namespace LunaCalc
         ListView lvB;
         Label lblBNote;
         // tutte le bande gestite (i parametri del budget sono memorizzati per ciascuna) e quelle scelte dall'utente
-        static readonly int[] Bande = { 50, 70, 144, 222, 432 };   // dalla v27 solo fino a 432 MHz
-        static readonly int[] BandePredefinite = { 50, 70, 144, 222, 432 };
+        static readonly int[] Bande = { 50, 70, 144, 222, 432, 902, 1296 };   // dalla v27 fino a 432 MHz; dalla v1.6 anche 902 e 1296 MHz
+        static readonly int[] BandePredefinite = { 50, 70, 144, 222, 432, 902, 1296 };
         List<int> bandeAttive = new List<int>(BandePredefinite);
         bool ricostruzioneBande;
         static string NomeBanda(int f)
@@ -42974,7 +43034,21 @@ namespace LunaCalc
             b.TvCavo = NudBU(0m, 30m, 0.1m, 1, "dB", null);
             b.TvNf = NudBU(0m, 20m, 0.1m, 1, "dB", null);
             b.Tant = NudBU(0m, 20000m, 5m, 0, "K", null);
-            b.CavoAnt = ComboCavi(); b.CavoPa = ComboCavi(); b.CavoDis = ComboCavi();
+            b.CavoAnt = ComboCavi(); b.CavoPa = ComboCavi(); b.CavoDis = ComboCavi(); b.CavoTv = ComboCavi();
+            // disco
+            b.DiscoD = NudBU(0.3m, 100m, 0.1m, 2, "m", null);
+            b.DiscoEff = NudBU(20m, 90m, 1m, 0, "%", null);
+            b.DiscoFD = NudBU(0.20m, 1.50m, 0.01m, 2, "", null);
+            b.DiscoMont = new Tendina(); b.DiscoMont.DropDownStyle = ComboBoxStyle.DropDownList;
+            b.DiscoMont.Items.AddRange(new object[] { "Az-El", Lang.T("Polare (equatoriale)") });
+            b.DiscoMont.SelectedIndex = 0;
+            // catena completa
+            b.PreStadi = new Tendina(); ((Tendina)b.PreStadi).SuCarta = true; b.PreStadi.DropDownStyle = ComboBoxStyle.DropDownList;
+            b.PreStadi.Items.AddRange(new object[] { Lang.T("singolo stadio"), Lang.T("doppio stadio") });
+            b.PreStadi.SelectedIndex = 0;
+            b.TvPtx = NudBU(0.1m, 1000m, 0.5m, 1, "W", "0.#");
+            b.PaPin = NudBU(0.1m, 1000m, 0.5m, 1, "W", "0.#");
+            b.LenTv = NudBU(0m, 100m, 0.5m, 1, "m", "0.#");
             b.Modo = new Tendina(); ((Tendina)b.Modo).SuCarta = true;
             b.Modo.DropDownStyle = ComboBoxStyle.DropDownList;
             foreach (int i in BudgetParams.ModiOrdine)
@@ -42999,6 +43073,7 @@ namespace LunaCalc
             b.TvOn.CheckedChanged += (s, e) =>
             {
                 bb.TvGain.Enabled = bb.TvOn.Checked; bb.TvNf.Enabled = bb.TvOn.Checked; bb.TvMod.Enabled = bb.TvOn.Checked;
+                bb.TvPtx.Enabled = bb.TvOn.Checked; bb.CavoTv.Enabled = bb.TvOn.Checked; bb.LenTv.Enabled = bb.TvOn.Checked;
                 if (pnlImp != null) pnlImp.Invalidate();
                 if (!loadingB) RecalcBudget();
             };
@@ -43027,8 +43102,18 @@ namespace LunaCalc
             };
             b.TvGain.ValueChanged += tvMano;
             b.TvNf.ValueChanged += tvMano;
-            foreach (ComboBox c in new ComboBox[] { b.CavoAnt, b.CavoPa, b.CavoDis })
+            foreach (ComboBox c in new ComboBox[] { b.CavoAnt, b.CavoPa, b.CavoDis, b.CavoTv, b.DiscoMont })
                 c.SelectedIndexChanged += (s, e) => { if (!loadingB) RecalcBudget(); };
+            foreach (NumericUpDown n in new NumericUpDown[] { b.DiscoD, b.DiscoEff, b.DiscoFD, b.TvPtx, b.PaPin, b.LenTv })
+                n.ValueChanged += (s, e) => { if (!loadingB) { RecalcBudget(); if (bb.Card != null) bb.Card.Invalidate(); } };
+            b.PreStadi.SelectedIndexChanged += (s, e) =>
+            {
+                if (loadingB) return;
+                // doppio stadio: guadagno tipico 30 dB; singolo: 20 dB (si può sempre cambiare a mano)
+                if (bb.PreStadi.SelectedIndex == 1 && bb.PreGain.Value <= 20m) bb.PreGain.Value = 30m;
+                else if (bb.PreStadi.SelectedIndex == 0 && bb.PreGain.Value > 25m) bb.PreGain.Value = 20m;
+                RecalcBudget();
+            };
             bool modoInterno = false;
             b.Modo.SelectedIndexChanged += (s, e) =>
             {
@@ -43048,6 +43133,15 @@ namespace LunaCalc
             };
 
             tip.SetToolTip(b.P, Lang.T("Potenza di uscita dell'amplificatore in watt."));
+            tip.SetToolTip(b.DiscoD, Lang.T("Diametro del disco in metri."));
+            tip.SetToolTip(b.DiscoEff, Lang.T("Efficienza d'apertura del disco con il suo illuminatore: 60 % è il valore medio, 60–80 % l'intervallo tipico (PE1RKI)."));
+            tip.SetToolTip(b.DiscoFD, Lang.T("Rapporto tra distanza focale e diametro: serve a scegliere l'illuminatore; il fuoco è a f/D × D dal vertice."));
+            tip.SetToolTip(b.DiscoMont, Lang.T("Montatura del disco: azimut-elevazione oppure polare (equatoriale). Per ora è solo un'annotazione e non entra nel calcolo."));
+            tip.SetToolTip(b.PreStadi, Lang.T("Preamplificatore a uno o due stadi: con due stadi il guadagno totale arriva a circa 30 dB e il rumore di cavo e transverter diventa trascurabile."));
+            tip.SetToolTip(b.TvPtx, Lang.T("Potenza di uscita del transverter in trasmissione (W): pilota l'amplificatore."));
+            tip.SetToolTip(b.PaPin, Lang.T("Potenza di pilotaggio che serve all'amplificatore per dare la potenza di uscita impostata (W)."));
+            tip.SetToolTip(b.CavoTv, Lang.T("Cavo tra l'uscita TX del transverter e l'ingresso dell'amplificatore."));
+            tip.SetToolTip(b.LenTv, Lang.T("Lunghezza del cavo tra transverter e amplificatore."));
             tip.SetToolTip(b.GAnt, Lang.T("Guadagno di una singola antenna in dBi (dBd + 2,15)."));
             tip.SetToolTip(b.NAnt, Lang.T("Numero di antenne in schiera: il guadagno totale è G + 10·log10(N) (accoppiamento ideale)."));
             tip.SetToolTip(b.Nf, Lang.T("Cifra di rumore del preamplificatore in dB: serve per stimare il rumore di sistema e l'S/N."));
@@ -43085,13 +43179,15 @@ namespace LunaCalc
             };
             tip.SetToolTip(b.Ground, Lang.T("Antenna fissa sull'orizzonte (senza rotore di elevazione): aggiunge al guadagno il\n\"ground gain\" dovuto alla riflessione sul terreno, calcolato all'elevazione della Luna.\nModello: terreno piano e riflettente, polarizzazione orizzontale (massimo +6 dB)."));
             tip.SetToolTip(b.GroundH, Lang.T("Altezza del centro elettrico dell'antenna sopra il terreno (m).\nDetermina gli angoli dei lobi: il primo lobo è a asin(λ/4h). Con 0 si applica +6 dB fisso."));
-            b.Schema.AddRange(new Control[] { b.Tant, b.CavoAnt, b.LenAnt, b.Rele, b.ConnTx, b.ConnRx, b.P, b.CavoPa, b.LenPa, b.PreGain, b.Nf, b.CavoDis, b.LenDis, b.TvOn, b.TvMod, b.TvGain, b.TvNf, b.TvCavo, b.Mds, b.Modo, b.SnReq });
+            b.Schema.AddRange(new Control[] { b.Tant, b.CavoAnt, b.LenAnt, b.Rele, b.ConnTx, b.ConnRx, b.P, b.PaPin, b.CavoPa, b.LenPa, b.PreStadi, b.PreGain, b.Nf, b.CavoDis, b.LenDis, b.TvOn, b.TvMod, b.TvGain, b.TvNf, b.TvPtx, b.CavoTv, b.LenTv, b.TvCavo, b.Mds, b.Modo, b.SnReq });
 
             PannelloDisegno card = new PannelloDisegno();
             card.Dock = DockStyle.Fill;
             card.Margin = new Padding(S(4), S(4), S(6), S(4));
             card.Tag = "carta";
             card.Controls.Add(b.GAnt); card.Controls.Add(b.NAnt); card.Controls.Add(b.Ground); card.Controls.Add(b.GroundH);
+            card.Controls.Add(b.DiscoD); card.Controls.Add(b.DiscoEff); card.Controls.Add(b.DiscoFD); card.Controls.Add(b.DiscoMont);
+            foreach (Control x in new Control[] { b.DiscoD, b.DiscoEff, b.DiscoFD, b.DiscoMont }) x.Visible = false;
             b.Card = card;
             card.Layout += (s, e) => DisponiStazione(bb);
             card.Paint += (s, e) => DisegnaStazione(e.Graphics, bb, title, colore);
@@ -43099,7 +43195,7 @@ namespace LunaCalc
         }
 
         float StazRiga(BudgetUi u) { return Math.Max(S(28), u.GAnt.Height + S(4)); }
-        int StazAltezza(BudgetUi u) { return (int)(S(36) + 3 * StazRiga(u) + S(78)); }
+        int StazAltezza(BudgetUi u) { return u.Disco ? (int)(S(36) + 4 * StazRiga(u) + S(118)) : (int)(S(36) + 3 * StazRiga(u) + S(78)); }
 
         void DisponiStazione(BudgetUi u)
         {
@@ -43107,6 +43203,20 @@ namespace LunaCalc
             if (c == null) return;
             int pad = S(16), fw = S(86);
             float rh = StazRiga(u), y0 = S(36);
+            foreach (Control x in new Control[] { u.GAnt, u.NAnt, u.Ground }) x.Visible = !u.Disco;
+            foreach (Control x in new Control[] { u.DiscoD, u.DiscoEff, u.DiscoFD, u.DiscoMont }) x.Visible = u.Disco;
+            if (u.Disco)
+            {
+                Control[] d = { u.DiscoD, u.DiscoEff, u.DiscoFD, u.DiscoMont };
+                for (int k = 0; k < 4; k++)
+                {
+                    int w = k == 3 ? S(120) : fw;
+                    d[k].Width = w;
+                    d[k].Location = new Point(c.Width - pad - w, (int)(y0 + k * rh + (rh - d[k].Height) / 2));
+                }
+                u.GroundH.Visible = false;
+                return;
+            }
             NumericUpDown[] n = { u.GAnt, u.NAnt };
             for (int k = 0; k < 2; k++)
             {
@@ -43144,13 +43254,47 @@ namespace LunaCalc
                 float wt = g.MeasureString(tt, ft).Width;
                 Testo(g, tt, ft, col, new RectangleF(r.Left + pad, r.Top + S(10), wt + S(6), S(22)), StringAlignment.Near, StringAlignment.Center);
                 Testo(g, u.Sotto, fs, Tema.Muted, new RectangleF(r.Left + pad + wt + S(12), r.Top + S(10), Math.Max(1, r.Width - 2 * pad - wt - S(12)), S(22)), StringAlignment.Far, StringAlignment.Center);
-                string[] et = { Lang.T("Guadagno singola antenna"), Lang.T("Numero di antenne"), Lang.T("BETA- antenna senza elevazione") };
-                for (int k = 0; k < 3; k++)
+                int nr = u.Disco ? 4 : 3;
+                if (u.Disco)
                 {
-                    float wl = r.Width - 2 * pad - S(96) - (k == 2 && u.GroundH.Visible ? u.GroundH.Width + S(10) : 0);
-                    Testo(g, et[k], fl, Tema.Fore, new RectangleF(r.Left + pad, y0 + k * rh, Math.Max(1, wl), rh), StringAlignment.Near, StringAlignment.Center);
+                    // disco: diametro, efficienza, f/D (con il fuoco), montatura; accanto alle caselle le note grigie
+                    string[] ed = { Lang.T("Diametro del disco"), Lang.T("Efficienza (illuminatore + disco)"), Lang.T("Rapporto f/D"), Lang.T("Montatura") };
+                    double dd = (double)u.DiscoD.Value, fd = (double)u.DiscoFD.Value;
+                    string[] nd = { "", Lang.T("tipica 60–80 %"), string.Format(ci, Lang.T("→ fuoco {0:F2} m dal vertice"), fd * dd), "" };
+                    for (int k = 0; k < 4; k++)
+                    {
+                        Control cc = k == 0 ? (Control)u.DiscoD : (k == 1 ? (Control)u.DiscoEff : (k == 2 ? (Control)u.DiscoFD : (Control)u.DiscoMont));
+                        float wn = nd[k].Length > 0 ? g.MeasureString(nd[k], fs).Width + S(6) : 0;
+                        float xc = cc.Left - S(8);
+                        float wl = Math.Max(1, xc - wn - r.Left - pad);
+                        Testo(g, ed[k], fl, Tema.Fore, new RectangleF(r.Left + pad, y0 + k * rh, wl, rh), StringAlignment.Near, StringAlignment.Center);
+                        if (wn > 0) Testo(g, nd[k], fs, Tema.Muted, new RectangleF(xc - wn, y0 + k * rh, wn, rh), StringAlignment.Far, StringAlignment.Center);
+                    }
                 }
-                float yi = y0 + 3 * rh + S(2);
+                else
+                {
+                    string[] et = { Lang.T("Guadagno singola antenna"), Lang.T("Numero di antenne"), Lang.T("BETA- antenna senza elevazione") };
+                    for (int k = 0; k < 3; k++)
+                    {
+                        float wl = r.Width - 2 * pad - S(96) - (k == 2 && u.GroundH.Visible ? u.GroundH.Width + S(10) : 0);
+                        Testo(g, et[k], fl, Tema.Fore, new RectangleF(r.Left + pad, y0 + k * rh, Math.Max(1, wl), rh), StringAlignment.Near, StringAlignment.Center);
+                    }
+                }
+                float yi = y0 + nr * rh + S(2);
+                if (u.Disco)
+                {
+                    // riquadro viola con la formula del guadagno, poi la riga grigia con potenza e perdite
+                    string[] fr = (u.Info2.Text ?? "").Split('\n');
+                    float hf = S(10) + fr.Length * S(21);
+                    RectangleF rf = new RectangleF(r.Left + pad, yi + S(2), r.Width - 2 * pad, hf);
+                    using (GraphicsPath gp = Arrotondato(rf, S(8)))
+                    using (Brush bf = new SolidBrush(Tema.Scuro ? Color.FromArgb(46, 38, 78) : Color.FromArgb(245, 243, 255))) g.FillPath(bf, gp);
+                    using (Font fb = FontPx(Lang.FontUi, S(13), true))
+                        for (int k = 0; k < fr.Length; k++)
+                            Testo(g, fr[k], k == fr.Length - 1 ? fb : fi, k == fr.Length - 1 ? col : Tema.Fore, new RectangleF(rf.Left + S(10), rf.Top + S(5) + k * S(21), rf.Width - S(20), S(21)), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, u.Info1.Text ?? "", fs, Tema.Muted, new RectangleF(r.Left + pad, rf.Bottom + S(4), r.Width - 2 * pad, S(20)), StringAlignment.Near, StringAlignment.Center);
+                    return;
+                }
                 string i1 = u.Info1.Text ?? "", d1 = "";
                 int ip = i1.LastIndexOf(" (");
                 if (ip > 0 && i1.EndsWith(")")) { d1 = i1.Substring(ip + 1); i1 = i1.Substring(0, ip); }
@@ -43242,6 +43386,7 @@ namespace LunaCalc
         void BuildBudgetTab(TabPage tp)
         {
             foreach (int f in Bande) { bpMe[f] = BudgetParams.Default(f); bpDx[f] = BudgetParams.Default(f); }
+            foreach (int f in BandeDischi) { bpMeAlt[f] = BudgetParams.DefaultDisco(f); bpDxAlt[f] = BudgetParams.DefaultDisco(f); }
 
             TableLayoutPanel root = new TableLayoutPanel();
             root.Dock = DockStyle.Fill;
@@ -43332,6 +43477,7 @@ namespace LunaCalc
             st.Controls.Add(BuildBudgetStation(Lang.T("La mia stazione"), Color.FromArgb(31, 111, 209), out bMe), 0, 0);
             st.Controls.Add(BuildBudgetStation(Lang.T("Stazione DX"), Color.FromArgb(217, 119, 6), out bDx), 1, 0);
             sx.RowStyles.Add(new RowStyle(SizeType.Absolute, Math.Max(S(196), StazAltezza(bMe))));
+            budgetSx = sx;
             sx.RowStyles.Add(new RowStyle(SizeType.Absolute, S(170)));
             sx.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));
             sx.Margin = new Padding(0);
@@ -43435,6 +43581,8 @@ namespace LunaCalc
 
         // ---- schema dell'impianto: riquadri calcolati dai testi (si adattano a caratteri dal 90 al 150 %)
         RectangleF RAnt, RCavoAnt, RRele, RReleBox, RTx, RLna, RPre, RDis, RTv, RCavetti, RRadio;
+        string impTv = "";
+        bool impTvScarso;
         float impRh, impXl;
         TableLayoutPanel budgetRoot;
         int budgetSchemaLarg = 560;   // larghezza dello schema dell'impianto nel Budget EME (unità logiche, separatore trascinabile)
@@ -43467,13 +43615,13 @@ namespace LunaCalc
                 Func<string, float> Tw = t => g.MeasureString(t, ft).Width;
                 // larghezza dei riquadri di destra: etichetta + casella, titolo
                 float wR = Math.Max(Lw(Lang.T("Tipo")) + fc, Lw(Lang.T("Lunghezza")) + fn);
-                foreach (string t in new string[] { Lang.T("Perdita di inserzione"), Lang.T("Connettori in TX"), Lang.T("Connettori in RX"), Lang.T("Guadagno"), Lang.T("Figura di rumore"), Lang.T("Cavetti fino alla radio") })
+                foreach (string t in new string[] { Lang.T("Perdita di inserzione"), Lang.T("Connettori in TX"), Lang.T("Connettori in RX"), Lang.T("Guadagno"), Lang.T("Figura di rumore"), Lang.T("Cavetti fino alla radio"), Lang.T("Stadi") })
                     wR = Math.Max(wR, Lw(t) + fn);
                 wR += 2 * pad + S(14);
                 foreach (string t in new string[] { Lang.T("CAVO ANTENNA – RELÈ") + "  " + Lang.T("TX e RX"), Lang.T("RELÈ COASSIALE TX / RX"), Lang.T("PREAMPLIFICATORE"), Lang.T("CAVO DI DISCESA") })
                     wR = Math.Max(wR, Tw(t) + 2 * pad);
                 wR = Math.Min(Math.Max(wR, W * 0.38f), W * 0.62f);
-                float wTx = Math.Max(Lw(Lang.T("Potenza in uscita")) + fn, Math.Max(Lw(Lang.T("Cavo PA – relè")) + fc, Lw(Lang.T("Lunghezza")) + fn)) + 2 * pad + S(14);
+                float wTx = Math.Max(Math.Max(Lw(Lang.T("Potenza in uscita")), Lw(Lang.T("Pilotaggio richiesto"))) + fn, Math.Max(Lw(Lang.T("Cavo PA – relè")) + fc, Lw(Lang.T("Lunghezza")) + fn)) + 2 * pad + S(14);
                 wTx = Math.Max(wTx, Tw(Lang.T("TRASMETTITORE · PA")) + 2 * pad);
                 float spazio = W - S(16) - wR - S(80);   // tra il riquadro TX e quelli di destra passa la linea con il relè
                 if (wTx > spazio) wTx = Math.Max(S(150), spazio);
@@ -43490,15 +43638,15 @@ namespace LunaCalc
                 };
                 impPila[0] = Serve(new string[] { Lang.T("Tipo"), Lang.T("Lunghezza") }, new int[] { fc, fn }) > wR;
                 impPila[1] = Serve(new string[] { Lang.T("Perdita di inserzione"), Lang.T("Connettori in TX"), Lang.T("Connettori in RX") }, new int[] { fn, fn, fn }) > wR;
-                impPila[2] = Serve(new string[] { Lang.T("Potenza in uscita"), Lang.T("Cavo PA – relè"), Lang.T("Lunghezza") }, new int[] { fn, fc, fn }) > wTx;
-                impPila[3] = Serve(new string[] { Lang.T("Guadagno"), Lang.T("Figura di rumore") }, new int[] { fn, fn }) > wR;
+                impPila[2] = Serve(new string[] { Lang.T("Potenza in uscita"), Lang.T("Pilotaggio richiesto"), Lang.T("Cavo PA – relè"), Lang.T("Lunghezza") }, new int[] { fn, fn, fc, fn }) > wTx;
+                impPila[3] = Serve(new string[] { Lang.T("Stadi"), Lang.T("Guadagno"), Lang.T("Figura di rumore") }, new int[] { fc, fn, fn }) > wR;
                 impPila[4] = Serve(new string[] { Lang.T("Tipo"), Lang.T("Lunghezza") }, new int[] { fc, fn }) > wR;
                 float hCa = S(26) + Linee(0, 2) * rh + Fh(impCavoAnt, wR) + S(6);
                 float hRe = S(26) + Linee(1, 3) * rh + Fh(impConn, wR) + S(6);
-                float hTx = S(26) + Linee(2, 3) * rh + Fh(impTx, wTx) + S(6);
-                float hPre = S(26) + Linee(3, 2) * rh + Fh(impPre, wR) + S(6);
+                float hTx = S(26) + Linee(2, 4) * rh + Fh(impTx, wTx) + S(6);
+                float hPre = S(26) + Linee(3, 3) * rh + Fh(impPre, wR) + S(6);
                 float hDis = S(26) + Linee(4, 2) * rh + Fh(impDis, wR) + S(6);
-                float hTv = S(32) + 2 * rh + S(6);
+                float hTv = S(32) + 4 * rh + Fh(impTv, W - S(16)) + S(6);
                 float hCav = rh + S(14);
                 impRadioUna = 2 * pad + Lw(Lang.T("MDS della radio")) + fn + S(24) + Lw(Lang.T("Modo · S/N richiesto")) + fm + S(10) <= W - S(16);
                 impRadioRighe = (impRadioUna ? 1 : 2) + (ModoPersonalizzato(u) ? 1 : 0);
@@ -43531,14 +43679,18 @@ namespace LunaCalc
                     Campo(v.Tant, RAnt.Right - fn, RAnt.Top + S(18), fn, rh);
                     Riga2(v.CavoAnt, RCavoAnt, 0, fc, 0); Riga2(v.LenAnt, RCavoAnt, 1, fn, 0);
                     Riga2(v.Rele, RReleBox, 0, fn, 1); Riga2(v.ConnTx, RReleBox, 1, fn, 1); Riga2(v.ConnRx, RReleBox, 2, fn, 1);
-                    Riga2(v.P, RTx, 0, fn, 2); Riga2(v.CavoPa, RTx, 1, fc, 2); Riga2(v.LenPa, RTx, 2, fn, 2);
-                    Riga2(v.PreGain, RPre, 0, fn, 3); Riga2(v.Nf, RPre, 1, fn, 3);
+                    Riga2(v.P, RTx, 0, fn, 2); Riga2(v.PaPin, RTx, 1, fn, 2); Riga2(v.CavoPa, RTx, 2, fc, 2); Riga2(v.LenPa, RTx, 3, fn, 2);
+                    Riga2(v.PreStadi, RPre, 0, fc, 3); Riga2(v.PreGain, RPre, 1, fn, 3); Riga2(v.Nf, RPre, 2, fn, 3);
                     Riga2(v.CavoDis, RDis, 0, fc, 4); Riga2(v.LenDis, RDis, 1, fn, 4);
                     v.TvOn.Location = new Point((int)(RTv.Left + pad), (int)(RTv.Top + S(6)));
                     float xm = RTv.Left + pad + Lw(Lang.T("Modello")) + S(12);
                     Campo(v.TvMod, xm, RTv.Top + S(30), (int)Math.Min(S(330), RTv.Right - pad - xm), rh);
                     Campo(v.TvGain, RTv.Left + pad + Lw(Lang.T("Guadagno")) + S(12), RTv.Top + S(30) + rh, fn, rh);
                     Campo(v.TvNf, RTv.Right - pad - fn, RTv.Top + S(30) + rh, fn, rh);
+                    // trasmissione: uscita del transverter e cavo verso il PA
+                    Campo(v.TvPtx, RTv.Left + pad + Lw(Lang.T("Uscita TX")) + S(12), RTv.Top + S(30) + 2 * rh, fn, rh);
+                    Campo(v.LenTv, RTv.Right - pad - fn, RTv.Top + S(30) + 2 * rh, fn, rh);
+                    Campo(v.CavoTv, RTv.Right - pad - fc, RTv.Top + S(30) + 3 * rh, fc, rh);
                     Campo(v.TvCavo, RCavetti.Right - pad - fn, RCavetti.Top + (RCavetti.Height - rh) / 2f, fn, rh);
                     float yr = RRadio.Top + S(26);
                     Campo(v.Mds, RRadio.Left + pad + Lw(Lang.T("MDS della radio")) + S(12), yr, fn, rh);
@@ -43637,6 +43789,24 @@ namespace LunaCalc
                 // antenna: schiera di yagi, Tant a destra con il cielo dietro la Luna
                 Testo(g, impAnt, ft, cAnt, new RectangleF(RAnt.Left + S(2), RAnt.Top - S(4), RAnt.Width * 0.62f, S(22)), StringAlignment.Near, StringAlignment.Near);
                 float ya = RAnt.Top + S(44), xa = RAnt.Left + S(10);
+                if (budgetDisco && bMe != null && bMe.Disco)
+                {
+                    // disco visto di lato, con l'illuminatore nel fuoco
+                    float hd = S(62), xv = xa + S(70);
+                    using (GraphicsPath pd = new GraphicsPath())
+                    {
+                        pd.AddBezier(xv - S(30), ya - hd / 2, xv + S(6), ya - hd / 4, xv + S(6), ya + hd / 4, xv - S(30), ya + hd / 2);
+                        using (Brush bd = new SolidBrush(Tema.Scuro ? Color.FromArgb(60, 70, 90) : Color.FromArgb(226, 232, 240))) g.FillPath(bd, pd);
+                        using (Pen pa = new Pen(cAnt, S(4))) g.DrawPath(pa, pd);
+                    }
+                    using (Pen ps = new Pen(Color.FromArgb(100, 116, 139), S(2)))
+                    {
+                        g.DrawLine(ps, xv - S(30), ya - hd / 2, xv + S(60), ya);
+                        g.DrawLine(ps, xv - S(30), ya + hd / 2, xv + S(60), ya);
+                    }
+                    using (Brush bfe = new SolidBrush(cTx)) g.FillRectangle(bfe, xv + S(58), ya - S(7), S(16), S(14));
+                }
+                else
                 using (Pen pa = new Pen(cAnt, S(3)))
                 {
                     g.DrawLine(pa, xa, ya, xa + S(200), ya);
@@ -43698,11 +43868,12 @@ namespace LunaCalc
                 Etichetta(g, Lang.T("Perdita di inserzione"), RReleBox, 0, fl, 1, S(84)); Etichetta(g, Lang.T("Connettori in TX"), RReleBox, 1, fl, 1, S(84)); Etichetta(g, Lang.T("Connettori in RX"), RReleBox, 2, fl, 1, S(84));
                 Piede(g, impConn, fr, cLinea, RReleBox, Linee(1, 3));
                 Riquadro(g, RTx, cTx, Lang.T("TRASMETTITORE · PA"), ft);
-                Etichetta(g, Lang.T("Potenza in uscita"), RTx, 0, fl, 2, S(84)); Etichetta(g, Lang.T("Cavo PA – relè"), RTx, 1, fl, 2, S(156)); Etichetta(g, Lang.T("Lunghezza"), RTx, 2, fl, 2, S(84));
-                Piede(g, impTx, fr, cTx, RTx, Linee(2, 3));
+                Etichetta(g, Lang.T("Potenza in uscita"), RTx, 0, fl, 2, S(84)); Etichetta(g, Lang.T("Pilotaggio richiesto"), RTx, 1, fl, 2, S(84));
+                Etichetta(g, Lang.T("Cavo PA – relè"), RTx, 2, fl, 2, S(156)); Etichetta(g, Lang.T("Lunghezza"), RTx, 3, fl, 2, S(84));
+                Piede(g, impTx, fr, cTx, RTx, Linee(2, 4));
                 Riquadro(g, RPre, cAnt, Lang.T("PREAMPLIFICATORE"), ft);
-                Etichetta(g, Lang.T("Guadagno"), RPre, 0, fl, 3, S(84)); Etichetta(g, Lang.T("Figura di rumore"), RPre, 1, fl, 3, S(84));
-                Piede(g, impPre, fr, cAnt, RPre, Linee(3, 2));
+                Etichetta(g, Lang.T("Stadi"), RPre, 0, fl, 3, S(156)); Etichetta(g, Lang.T("Guadagno"), RPre, 1, fl, 3, S(84)); Etichetta(g, Lang.T("Figura di rumore"), RPre, 2, fl, 3, S(84));
+                Piede(g, impPre, fr, cAnt, RPre, Linee(3, 3));
                 Riquadro(g, RDis, cLinea, Lang.T("CAVO DI DISCESA"), ft);
                 Etichetta(g, Lang.T("Tipo"), RDis, 0, fl, 4, S(156)); Etichetta(g, Lang.T("Lunghezza"), RDis, 1, fl, 4, S(84));
                 Piede(g, impDis, fr, cAnt, RDis, Linee(4, 2));
@@ -43720,6 +43891,13 @@ namespace LunaCalc
                     Testo(g, Lang.T("Guadagno"), fl, ctv, new RectangleF(RTv.Left + S(10), RTv.Top + S(30) + rh, S(200), rh), StringAlignment.Near, StringAlignment.Center);
                     float wnf = g.MeasureString(Lang.T("Figura di rumore"), fl).Width + S(4);
                     Testo(g, Lang.T("Figura di rumore"), fl, ctv, new RectangleF(u.TvNf.Left - S(10) - wnf, RTv.Top + S(30) + rh, wnf, rh), StringAlignment.Far, StringAlignment.Center);
+                    Testo(g, Lang.T("Uscita TX"), fl, ctv, new RectangleF(RTv.Left + S(10), RTv.Top + S(30) + 2 * rh, S(200), rh), StringAlignment.Near, StringAlignment.Center);
+                    float wlt = g.MeasureString(Lang.T("Lunghezza"), fl).Width + S(4);
+                    Testo(g, Lang.T("Lunghezza"), fl, ctv, new RectangleF(u.LenTv.Left - S(10) - wlt, RTv.Top + S(30) + 2 * rh, wlt, rh), StringAlignment.Far, StringAlignment.Center);
+                    float wct = g.MeasureString(Lang.T("Cavo al PA"), fl).Width + S(4);
+                    Testo(g, Lang.T("Cavo al PA"), fl, ctv, new RectangleF(u.CavoTv.Left - S(10) - wct, RTv.Top + S(30) + 3 * rh, wct, rh), StringAlignment.Far, StringAlignment.Center);
+                    if (!string.IsNullOrEmpty(impTv))
+                        g.DrawString(impTv, fr, new SolidBrush(impTvScarso ? Color.FromArgb(220, 38, 38) : cRx), new RectangleF(RTv.Left + S(10), RTv.Top + S(30) + 4 * rh, RTv.Width - S(20), Math.Max(1, RTv.Bottom - (RTv.Top + S(30) + 4 * rh))));
                 }
                 Riquadro(g, RCavetti, cLinea, null, ft);
                 Testo(g, Lang.T("Cavetti fino alla radio"), fl, Tema.Fore, new RectangleF(RCavetti.Left + S(10), RCavetti.Top, RCavetti.Width - S(110), RCavetti.Height), StringAlignment.Near, StringAlignment.Center);
@@ -43868,7 +44046,18 @@ namespace LunaCalc
             string nomeAnt = p.CavoAnt >= 0 && p.CavoAnt < CaviDb.Elenco.Count ? CaviDb.Elenco[(int)p.CavoAnt].Nome : "";
             string nomeDis = p.CavoDis >= 0 && p.CavoDis < CaviDb.Elenco.Count ? CaviDb.Elenco[(int)p.CavoDis].Nome : "";
             double gt = p.GAnt + 10.0 * Math.Log10(p.NAnt);
-            impAnt = Lang.T("ANTENNA") + " · " + p.NAnt + " × " + p.GAnt.ToString("F1", c) + " dBi = " + gt.ToString("F1", c) + " dBi";
+            impAnt = p.Disco > 0.5
+                ? Lang.T("ANTENNA") + " · " + string.Format(c, Lang.T("disco {0:F2} m"), p.DiscoD) + " · " + p.GAnt.ToString("F1", c) + " dBi"
+                : Lang.T("ANTENNA") + " · " + p.NAnt + " × " + p.GAnt.ToString("F1", c) + " dBi = " + gt.ToString("F1", c) + " dBi";
+            // pilotaggio del PA dal transverter
+            impTv = ""; impTvScarso = false;
+            if (p.TvOn > 0.5)
+            {
+                double alPa = p.TvPtx * Math.Pow(10.0, -p.LossTv / 10.0);
+                impTvScarso = alPa < p.PaPin * 0.98;
+                impTv = string.Format(c, Lang.T("TX: {0} → cavo {1:F2} dB → al PA {2}"), FmtW(p.TvPtx, c), p.LossTv, FmtW(alPa, c))
+                    + " · " + (impTvScarso ? string.Format(c, Lang.T("pilotaggio insufficiente (servono {0})"), FmtW(p.PaPin, c)) : Lang.T("pilotaggio sufficiente"));
+            }
             impCavoAnt = (nomeAnt.Length > 0 ? (p.LossAnt / Math.Max(0.001, p.LenAnt) * 100).ToString("F1", c) + " dB/100 m · " : "") + string.Format(c, "{0} MHz → {1:F2} dB", f, p.LossAnt);
             double txTot = p.CavoTx + p.AccTx;
             if (p.LossConn > 0 || p.LossConnRx > 0)
@@ -43902,6 +44091,14 @@ namespace LunaCalc
                 BudgetParams q = kv.Value;
                 double tx = q.CavoTx + q.AccTx;
                 kv.Key.Info1.Text = string.Format(c, Lang.T("Potenza {0} · perdite TX {1:F1} dB (dallo schema)"), FmtW(q.P, c), tx);
+                if (q.Disco > 0.5)
+                {
+                    double lam = 299.792458 / Math.Max(1, BudgetParams.Freq), x = Math.PI * q.DiscoD / lam;
+                    kv.Key.Info2.Text = Lang.T("Guadagno = 10·log[η·(π·D/λ)²] (PE1RKI)") + "\n"
+                        + string.Format(c, "λ = {0:F2} cm · π·D/λ = {1:F1} → (π·D/λ)² = {2:F0}", lam * 100, x, x * x) + "\n"
+                        + string.Format(c, Lang.T("{0:F1} dBi ({1:F1} dBd) · apertura a −3 dB ≈ 70·λ/D = {2:F1}°"), q.GAnt, q.GAnt - 2.15, BudgetParams.AperturaDisco(q.DiscoD, BudgetParams.Freq));
+                }
+                else
                 kv.Key.Info2.Text = string.Format(c, Lang.T("Guadagno totale {0} × {1:F1} dBi = {2:F1} dBi · trasmissione e ricezione: schema a destra →"), q.NAnt, q.GAnt, q.GAnt + 10.0 * Math.Log10(q.NAnt));
             }
             // indicatori
@@ -43953,6 +44150,66 @@ namespace LunaCalc
         }
 
 
+        // ---- Budget EME yagi / Budget EME dischi: la stessa interfaccia passa da una linguetta all'altra.
+        // bpMe/bpDx tengono l'impianto attivo di ogni banda (quello dell'ultima linguetta usata per la banda),
+        // bpMeAlt/bpDxAlt l'altro tipo di antenna, così i valori delle yagi e dei dischi restano separati.
+        static readonly int[] BandeDischi = { 432, 902, 1296 };
+        TabPage tpBudgetD;
+        bool budgetDisco;
+        TableLayoutPanel budgetSx;
+        Dictionary<int, BudgetParams> bpMeAlt = new Dictionary<int, BudgetParams>();
+        Dictionary<int, BudgetParams> bpDxAlt = new Dictionary<int, BudgetParams>();
+
+        void AllineaTipo(int f)
+        {
+            bool vuole = budgetDisco && Array.IndexOf(BandeDischi, f) >= 0;
+            Dictionary<int, BudgetParams>[] att = { bpMe, bpDx }, alt = { bpMeAlt, bpDxAlt };
+            for (int i = 0; i < 2; i++)
+            {
+                BudgetParams cur;
+                if (!att[i].TryGetValue(f, out cur)) continue;
+                if ((cur.Disco > 0.5) == vuole) continue;
+                BudgetParams a;
+                if (!alt[i].TryGetValue(f, out a) || (a.Disco > 0.5) != vuole) a = vuole ? BudgetParams.DefaultDisco(f) : BudgetParams.Default(f);
+                alt[i][f] = cur;
+                att[i][f] = a;
+            }
+        }
+
+        void ImpostaModoBudget(bool disco)
+        {
+            if (budgetRoot == null || tpBudgetD == null) return;
+            TabPage dest = disco ? tpBudgetD : tpBudget;
+            if (budgetRoot.Parent != dest)
+            {
+                if (budgetRoot.Parent != null) budgetRoot.Parent.Controls.Remove(budgetRoot);
+                dest.Controls.Add(budgetRoot);
+            }
+            if (budgetDisco == disco && bMe.Disco == (disco && Array.IndexOf(BandeDischi, curBand) >= 0)) return;
+            SalvaBanda(curBand);
+            budgetDisco = disco;
+            if (disco && Array.IndexOf(BandeDischi, curBand) < 0)
+            {
+                // i dischi si calcolano a 432, 902 e 1296 MHz: si passa alla prima di queste bande tra quelle scelte
+                foreach (int f in BandeDischi)
+                    if (bandeAttive.Contains(f)) { cmbBand.SelectedIndex = bandeAttive.IndexOf(f); break; }
+            }
+            CaricaBanda(curBand);
+            if (!caricamento) SaveSettings();
+        }
+
+        void ApplicaModoUi()
+        {
+            bool d = budgetDisco && Array.IndexOf(BandeDischi, curBand) >= 0;
+            foreach (BudgetUi u in new BudgetUi[] { bMe, bDx })
+            {
+                if (u == null) continue;
+                u.Disco = d;
+                if (u.Card != null) { DisponiStazione(u); u.Card.Invalidate(); }
+            }
+            if (budgetSx != null && bMe != null) budgetSx.RowStyles[0].Height = Math.Max(S(196), StazAltezza(bMe));
+        }
+
         void SalvaBanda(int f)
         {
             BudgetParams.Freq = f;
@@ -43963,6 +44220,7 @@ namespace LunaCalc
         void CaricaBanda(int f)
         {
             BudgetParams.Freq = f;
+            AllineaTipo(f);
             loadingB = true;
             try
             {
@@ -43971,6 +44229,7 @@ namespace LunaCalc
             }
             finally { loadingB = false; }
             curBand = f;
+            ApplicaModoUi();
             SyncTab3();
             MostraSchema();
             RecalcBudget();
@@ -43981,6 +44240,12 @@ namespace LunaCalc
             if (bandeAttive.Count == 0) return;
             int nf = bandeAttive[Math.Max(0, Math.Min(bandeAttive.Count - 1, cmbBand.SelectedIndex))];
             if (nf == curBand) return;
+            if (tabs != null && tabs.SelectedTab == tpBudgetD && Array.IndexOf(BandeDischi, nf) < 0 && Array.IndexOf(BandeDischi, curBand) >= 0)
+            {
+                // nella linguetta dei dischi solo 432, 902 e 1296 MHz
+                cmbBand.SelectedIndex = bandeAttive.IndexOf(curBand);
+                return;
+            }
             SalvaBanda(curBand);
             CaricaBanda(nf);
             BandaVersoFreq();
@@ -44383,7 +44648,7 @@ namespace LunaCalc
         {
             switch (f)
             {
-                case 50: return 3; case 70: return 4; case 144: return 8; case 222: return 14; case 432: return 25; case 1296: return 55; case 2320: return 75;
+                case 50: return 3; case 70: return 4; case 144: return 8; case 222: return 14; case 432: return 25; case 902: return 42; case 1296: return 55; case 2320: return 75;
                 case 5760: return 130; case 10368: return 270; case 24048: return 900; case 47088: return 3500;
                 case 76032: return 9000; default: return 20000;
             }
@@ -44431,7 +44696,7 @@ namespace LunaCalc
         int dgfRx = 1, dgfCielo = 1;   // ricevitore: 0 = 80 K fissi come WSJT-X, 1 = la mia stazione; cielo: 0 = centro della Luna, 1 = mediato sul fascio
         static readonly Dictionary<long, double> dgfCache = new Dictionary<long, double>();
         static readonly object dgfLock = new object();
-        static readonly double[] DgfFreqEme = { 50.200, 70.200, 144.120, 222.100, 432.065 };   // frequenze EME tipiche per la tabella delle bande
+        static readonly double[] DgfFreqEme = { 50.200, 70.200, 144.120, 222.100, 432.065, 902.100, 1296.065 };   // frequenze EME tipiche per la tabella delle bande
 
         // larghezza a metà potenza (gradi) di un fascio con guadagno gDbi: HPBW ≈ √(32000 / G)
         static double DgfFascio(double gDbi) { return Math.Sqrt(32000.0 / Math.Pow(10.0, gDbi / 10.0)); }
@@ -45715,14 +45980,14 @@ namespace LunaCalc
                 g.DrawString(Lang.T("flusso (SFU)"), ft, bt, card.Left + S(6), a.Top - S(20));
             }
             double fw = curBand;
-            // 432 MHz, la banda più alta del programma: linea tratteggiata viola chiaro
+            // 1296 MHz, la banda più alta del programma: linea tratteggiata viola chiaro
             using (Pen p4 = new Pen(Color.FromArgb(150, 120, 210), S(1.2f)))
             using (Font f4 = FontPx(Lang.FontUi, S(10), false))
             using (Brush b4 = new SolidBrush(Color.FromArgb(130, 100, 200)))
             {
                 p4.DashStyle = DashStyle.Dash;
-                g.DrawLine(p4, X(432), a.Top, X(432), a.Bottom);
-                if (Math.Abs(fw - 432) > 1) g.DrawString("432", f4, b4, X(432) + S(2), a.Top + S(2));
+                g.DrawLine(p4, X(1296), a.Top, X(1296), a.Bottom);
+                if (Math.Abs(fw - 1296) > 1) g.DrawString("1296", f4, b4, X(1296) + S(2), a.Top + S(2));
             }
             using (Pen pw = new Pen(Color.FromArgb(91, 63, 168), S(2)))
                 g.DrawLine(pw, X(fw), a.Top, X(fw), a.Bottom);
@@ -46925,7 +47190,7 @@ namespace LunaCalc
             };
             add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpSky });
             add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpPos, tpMondo });
-            add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpGraves, tpSolar, tpExcel, tpDebug });
+            add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpBudgetD, tpGraves, tpSolar, tpExcel, tpDebug });
             add(Lang.T("Log"), "▦", new TabPage[] { tpMap });
             add(Lang.T("Aiuto e tools"), "?", new TabPage[] { tpIstr, tpEme, tpCavi });
             add("Credits and thanks", "★", new TabPage[] { tpAbout, tpContatti, tpLicenza });   // nome non tradotto (scelta dell'autore)
@@ -52874,7 +53139,7 @@ namespace LunaCalc
                 string[][] gruppi = {
                     new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Volta celeste") },
                     new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
-                    new string[] { Lang.T("Collegamento"), Lang.T("Budget EME"), Lang.T("Radar GRAVES"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
+                    new string[] { Lang.T("Collegamento"), Lang.T("Budget EME yagi"), Lang.T("Budget EME dischi"), Lang.T("Radar GRAVES"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
                     new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
                     new string[] { Lang.T("Aiuto e tools"), Lang.T("MANUALE D'USO"), Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("CAVI COASSIALI") },
                     new string[] { "Credits and thanks", Lang.T("INFORMAZIONI E CREDITI"), Lang.T("CONTATTI DELL'AUTORE E RINGRAZIAMENTI"), Lang.T("LICENZA D'USO") } };
@@ -53308,7 +53573,7 @@ namespace LunaCalc
             {
                 if (e.Button != MouseButtons.Left) return;
                 float[] cxh = ColonneCavi(pnlCavi != null ? pnlCavi.Width : pnlCaviTesta.Width);
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < 4 + CaviDb.Fb.Length; i++)
                 {
                     if (e.X < cxh[i] || e.X >= cxh[i + 1]) continue;
                     if (i == 3) { cmbCaviOrd.SelectedIndex = 0; return; }
@@ -53507,12 +53772,13 @@ namespace LunaCalc
         float[] ColonneCavi(float w)
         {
             float x0 = S(8), wt = w - S(16);
-            float[] p = { 0.31f, 0.20f, 0.11f, 0.06f };
-            float[] c = new float[10];
+            float[] p = { 0.27f, 0.17f, 0.10f, 0.05f };
+            int nb = CaviDb.Fb.Length;
+            float[] c = new float[5 + nb];
             c[0] = x0;
             for (int i = 0; i < 4; i++) c[i + 1] = c[i] + wt * p[i];
-            float wb = (x0 + wt - c[4]) / 5f;
-            for (int i = 0; i < 5; i++) c[5 + i] = c[4] + wb * (i + 1);
+            float wb = (x0 + wt - c[4]) / nb;
+            for (int i = 0; i < nb; i++) c[5 + i] = c[4] + wb * (i + 1);
             return c;
         }
 
@@ -53577,7 +53843,7 @@ namespace LunaCalc
             int sel = cmbCaviBanda == null ? -1 : cmbCaviBanda.SelectedIndex;
             using (Font fh = FontPx(Lang.FontUi, S(11), true))
             {
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < 4 + CaviDb.Fb.Length; i++)
                 {
                     RectangleF r = new RectangleF(cx[i], 0, cx[i + 1] - cx[i], cr.Height);
                     bool banda = i >= 4 && i - 4 == sel;
@@ -53619,7 +53885,7 @@ namespace LunaCalc
                     bool sp = caviSpuntati.Contains(c);
                     if (sp) using (Brush bs = new SolidBrush(Tema.Scuro ? Tema.Section : Color.FromArgb(244, 248, 255))) g.FillRectangle(bs, rr.Left, rr.Top, cx[4] - rr.Left, rr.Height);
                     // celle delle bande colorate e colonna della banda evidenziata
-                    for (int k = 0; k < 5; k++)
+                    for (int k = 0; k < CaviDb.Fb.Length; k++)
                     {
                         RectangleF cc = new RectangleF(cx[4 + k] + 1, rr.Top, cx[5 + k] - cx[4 + k] - 2, rr.Height);
                         using (Brush bc = new SolidBrush(ColoreAttenuazione(c.Db[k]))) g.FillRectangle(bc, cc);
@@ -53712,10 +53978,10 @@ namespace LunaCalc
                 if (caviSpuntati.Contains(c))
                 {
                     nSel++;
-                    for (int i = 0; i < 5; i++) { vmin = Math.Min(vmin, c.Db[i]); vmax = Math.Max(vmax, c.Db[i]); }
+                    for (int i = 0; i < CaviDb.Fb.Length; i++) { vmin = Math.Min(vmin, c.Db[i]); vmax = Math.Max(vmax, c.Db[i]); }
                 }
             if (vmin < 1) vmin = 0.5;
-            if (vmax > 20) vmax = 50;
+            if (vmax > 50) vmax = 100; else if (vmax > 20) vmax = 50;
             using (Font fh = FontPx(Lang.FontUi, S(13), true))
             using (Font fn = FontPx(Lang.FontUi, S(11.5f), false))
             {
@@ -53724,7 +53990,7 @@ namespace LunaCalc
             }
             RectangleF a = new RectangleF(card.Left + S(62), card.Top + S(44), card.Width - S(84), card.Height - S(86));
             if (a.Width < 50 || a.Height < 40) return;
-            double l0 = Math.Log10(40), l1 = Math.Log10(500), y0 = Math.Log10(vmin), y1 = Math.Log10(vmax);
+            double l0 = Math.Log10(40), l1 = Math.Log10(1500), y0 = Math.Log10(vmin), y1 = Math.Log10(vmax);
             Func<double, float> X = f => a.Left + (float)((Math.Log10(f) - l0) / (l1 - l0) * a.Width);
             Func<double, float> Y = v => a.Bottom - (float)((Math.Log10(Math.Max(vmin, Math.Min(vmax, v))) - y0) / (y1 - y0) * a.Height);
             using (Font ft = FontPx(Lang.FontUi, S(11), false))
@@ -53735,7 +54001,7 @@ namespace LunaCalc
                 sc.Alignment = StringAlignment.Center;
                 using (Brush bb = new SolidBrush(Tema.Field)) g.FillRectangle(bb, a);
                 foreach (double f in CaviDb.Fb) { g.DrawLine(pg, X(f), a.Top, X(f), a.Bottom); g.DrawString(f.ToString(inv), ft, bt, X(f), a.Bottom + S(4), sc); }
-                foreach (double v in new double[] { 0.5, 1, 2, 5, 10, 20, 50 })
+                foreach (double v in new double[] { 0.5, 1, 2, 5, 10, 20, 50, 100 })
                 {
                     if (v < vmin - 1e-9 || v > vmax + 1e-9) continue;
                     g.DrawLine(pg, a.Left, Y(v), a.Right, Y(v));
@@ -53753,8 +54019,8 @@ namespace LunaCalc
             {
                 if (!caviSpuntati.Contains(c)) continue;
                 Color col = ColoreCavo(c);
-                PointF[] pts = new PointF[5];
-                for (int i = 0; i < 5; i++) pts[i] = new PointF(X(CaviDb.Fb[i]), Y(c.Db[i]));
+                PointF[] pts = new PointF[CaviDb.Fb.Length];
+                for (int i = 0; i < pts.Length; i++) pts[i] = new PointF(X(CaviDb.Fb[i]), Y(c.Db[i]));
                 using (Pen p = new Pen(col, S(2)))
                 {
                     g.DrawLines(p, pts);
@@ -53851,10 +54117,10 @@ namespace LunaCalc
                 TableLayoutPanel t = new TableLayoutPanel(); t.AutoSize = true; t.ColumnCount = 2; t.Padding = new Padding(S(12));
                 TextBox nome = new TextBox(); nome.Width = S(220);
                 NumericUpDown d = Nud(1, 100, 10, 1, 80);
-                NumericUpDown[] v = new NumericUpDown[5];
+                NumericUpDown[] v = new NumericUpDown[CaviDb.Fb.Length];
                 t.Controls.Add(L(Lang.T("Nome")), 0, 0); t.Controls.Add(nome, 1, 0);
                 t.Controls.Add(L(Lang.T("Diametro (mm)")), 0, 1); t.Controls.Add(d, 1, 1);
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < v.Length; i++)
                 {
                     v[i] = Nud(0, 200, 5, 2, 80);
                     t.Controls.Add(L(string.Format(inv, "{0} MHz (dB/100 m)", CaviDb.Fb[i])), 0, 2 + i); t.Controls.Add(v[i], 1, 2 + i);
@@ -53869,7 +54135,7 @@ namespace LunaCalc
                 c.Costruttori = new string[] { Lang.T("personalizzato") };
                 c.Tipo = "personale"; c.Anche = ""; c.Fonti = new string[] { Lang.T("inserito dall'utente") };
                 c.Personale = true; c.Diam = (double)d.Value;
-                for (int i = 0; i < 5; i++) { c.Db[i] = (double)v[i].Value; c.Segno[i] = 'm'; }
+                for (int i = 0; i < v.Length; i++) { c.Db[i] = (double)v[i].Value; c.Segno[i] = 'm'; }
                 CaviDb.Elenco.Add(c);
                 CaviDb.SalvaPersonali();
                 RicaricaTendineCavi();
@@ -54497,7 +54763,8 @@ namespace LunaCalc
                 new string[] { Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Mappa aerofotografica o topografica centrata sulla tua stazione, con sopra la volta celeste in pianta (orizzonte = cerchio esterno, zenit = centro): posizione attuale della Luna, percorso nelle prossime 24 ore con sorgere e tramonto, limiti dell'antenna in giallo e zone fuori dai limiti sfocate in grigio chiaro. Le maniglie gialle si trascinano con il mouse per regolare i limiti direttamente sulla mappa; la rotella cambia lo zoom.") + " " + Lang.T("La casella \"Sfuma le zone fuori dai limiti\" accende o spegne la sfocatura.") + " " + Lang.T("In alto a destra due cursori regolano l'opacità e il tono del grigio delle zone fuori dai limiti (il tono vale anche per la Volta celeste).") },
                 new string[] { Lang.T("Luna sul mondo"), Lang.T("Mappa del mondo con le terre colorate secondo l'elevazione della Luna vista da ogni località, nello stesso momento della Posizione della Luna; passando il mouse si leggono elevazione, azimut e distanza, con un clic il punto diventa la stazione DX.") },
                 new string[] { Lang.T("Posizione della Luna"), Lang.T("Tabella per il periodo scelto (in giorni, con l'intervallo in minuti) con il colore della puntabilità; passando il mouse sull'intestazione di una colonna compare la sua spiegazione. Esportazione CSV per Excel.") },
-                new string[] { Lang.T("Budget EME"), Lang.T("Bilancio del collegamento per ogni banda scelta (da 50 a 432 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP mia e del DX, perdita di tratta, S/N io → DX e DX → io nella banda passante scelta e con il Sole, riportato anche a 2500 Hz) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.") },
+                new string[] { Lang.T("Budget EME yagi"), Lang.T("Bilancio del collegamento per ogni banda scelta (da 50 a 1296 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP mia e del DX, perdita di tratta, S/N io → DX e DX → io nella banda passante scelta e con il Sole, riportato anche a 2500 Hz) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.") },
+                new string[] { Lang.T("Budget EME dischi"), Lang.T("Lo stesso bilancio del Budget EME yagi per le stazioni con antenna a disco, a 432, 902 e 1296 MHz, con valori memorizzati a parte. Nella scheda di ogni stazione si scrivono diametro, efficienza (60 % in media, 60–80 % tipica) e rapporto f/D; il guadagno si calcola con la formula di PE1RKI, G = 10·log[η·(π·D/λ)²], con i dBd (dBi − 2,15) e l'apertura a −3 dB (70·λ/D). Lo schema mostra il disco con l'illuminatore e la catena completa: preamplificatore a uno o due stadi (fino a circa 30 dB), cavo di discesa, transverter con la sua uscita in trasmissione e il cavo verso l'amplificatore, con il controllo del pilotaggio richiesto dal PA.") },
                 new string[] { Lang.T("Radar GRAVES"), Lang.T("Il radar francese GRAVES (143,050 MHz) come banco di prova: quando la Luna è nel suo fascio e nei limiti della tua antenna, il Doppler e il ritardo dell'eco, il prossimo passaggio del fascio sulla Luna, il cielo visto da GRAVES con i quattro settori, la ricostruzione delle 24 ore UTC e i consigli per ascoltare l'eco.") },
                 new string[] { Lang.T("Rumore solare"), Lang.T("Scarica dal web i flussi solari misurati dalla rete RSTN e stima quanto il Sole aumenta il rumore del ricevitore, in base alla distanza angolare tra Sole e Luna e al diagramma dell'antenna. Utile vicino alla luna nuova.") + " " + Lang.T("In alto quattro indicatori, a sinistra la fonte dei dati (NOAA RSTN consigliata, oppure F10.7 di NOAA o di Penticton, oppure un indirizzo personalizzato) con le stazioni, a destra lo spettro del flusso solare con l'estrapolazione alla frequenza di lavoro.") },
                 new string[] { Lang.T("Mappa WWL e ADIF"), Lang.T("Mappa del mondo con il reticolo Maidenhead; caricando il file ADIF del log si colorano i quadrati lavorati (arancione), confermati via LoTW (verde) o solo con QSL (blu), anche per banda e solo EME.") + " " + Lang.T("Con \"Scarica da LoTW…\" il log viene scaricato direttamente da LoTW (nome utente e password vengono chiesti e memorizzati nelle impostazioni).") },
@@ -55320,8 +55587,8 @@ namespace LunaCalc
             // colore delle caselle di spunta: quello dominante di ogni linguetta
             {
                 Color verde = Color.FromArgb(23, 128, 61), blu = Color.FromArgb(31, 111, 209), viola = Color.FromArgb(91, 63, 168), aranc = Color.FromArgb(217, 119, 6);
-                Control[] pg = { tpTrack, tpPos, tpBudget, tpSolar, tpSky, tpDgrd, tpMap, tpPunt };
-                Color[] cl = { verde, blu, viola, aranc, blu, verde, blu, blu };
+                Control[] pg = { tpTrack, tpPos, tpBudget, tpSolar, tpSky, tpDgrd, tpMap, tpPunt, tpBudgetD };
+                Color[] cl = { verde, blu, viola, aranc, blu, verde, blu, blu, viola };
                 for (int i = 0; i < pg.Length; i++) if (pg[i] != null) Spunta.ColoriLinguette[pg[i]] = cl[i];
                 Spunta sdx = chkDx as Spunta;
                 if (sdx != null) sdx.Colore = Color.FromArgb(217, 119, 6);
@@ -55372,7 +55639,7 @@ namespace LunaCalc
             string giro = Environment.GetEnvironmentVariable("YAEC_GIRO");
             if (!string.IsNullOrEmpty(giro)) this.Shown += (s, e) =>
             {
-                TabPage[] tutte = { tpTrack, tpPos, tpBudget, tpGraves, tpSolar, tpSky, tpPunt, tpDgrd, tpMondo, tpMap, tpExcel, tpDebug, tpIstr, tpEme, tpCavi, tpContatti, tpLicenza, tpAbout };
+                TabPage[] tutte = { tpTrack, tpPos, tpBudget, tpBudgetD, tpGraves, tpSolar, tpSky, tpPunt, tpDgrd, tpMondo, tpMap, tpExcel, tpDebug, tpIstr, tpEme, tpCavi, tpContatti, tpLicenza, tpAbout };
                 int n = -1;
                 System.Windows.Forms.Timer tg = new System.Windows.Forms.Timer();
                 tg.Interval = 3000;
@@ -56113,8 +56380,9 @@ namespace LunaCalc
             BuildTrackTab(tpTrack);
             tpPos = new TabPage(Lang.T("Posizione della Luna"));
             tpPos.Controls.Add(root);
-            tpBudget = new TabPage(Lang.T("Budget EME"));
+            tpBudget = new TabPage(Lang.T("Budget EME yagi"));
             BuildBudgetTab(tpBudget);
+            tpBudgetD = new TabPage(Lang.T("Budget EME dischi"));   // la stessa interfaccia, con l'antenna a disco
             tpSolar = new TabPage(Lang.T("Rumore solare"));
             BuildSolarTab(tpSolar);
             tpGraves = new TabPage(Lang.T("Radar GRAVES"));
@@ -56144,7 +56412,7 @@ namespace LunaCalc
             BuildExcelTab(tpExcel);
             tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
-            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
+            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
             BuildMondoTab(tpMondo);   // dopo che tabs esiste: segue il cambio di linguetta
             BuildManualeTab(tpIstr, false);   // dopo le altre linguette: il manuale ne mostra le schermate
@@ -56180,7 +56448,9 @@ namespace LunaCalc
                 if (sel == tpDgrd) RecalcDgrd();
                 if (sel == tpMap) map.Invalidate();
                 if (sel == tpPunt) pnlPunt.Invalidate();
-                if (sel == tpBudget || sel == tpSolar) RecalcBudget();
+                if (sel == tpBudget) ImpostaModoBudget(false);
+                if (sel == tpBudgetD) ImpostaModoBudget(true);
+                if (sel == tpBudget || sel == tpBudgetD || sel == tpSolar) RecalcBudget();
                 if (sel == tpExcel) RiempiExcel();
                 if (sel == tpDebug) RiempiDebug();
             };
@@ -57218,6 +57488,8 @@ namespace LunaCalc
                     {
                         lines.Add("b" + f.ToString(inv) + "_me_" + k + "=" + bpMe[f].Get(k).ToString("R", inv));
                         lines.Add("b" + f.ToString(inv) + "_dx_" + k + "=" + bpDx[f].Get(k).ToString("R", inv));
+                        if (bpMeAlt.ContainsKey(f)) lines.Add("b" + f.ToString(inv) + "_mea_" + k + "=" + bpMeAlt[f].Get(k).ToString("R", inv));
+                        if (bpDxAlt.ContainsKey(f)) lines.Add("b" + f.ToString(inv) + "_dxa_" + k + "=" + bpDxAlt[f].Get(k).ToString("R", inv));
                     }
                 File.WriteAllLines(settingsPath, lines.ToArray(), Encoding.UTF8);
             }
@@ -57266,6 +57538,12 @@ namespace LunaCalc
             }
             if (parts[1] == "me") bpMe[f].Put(parts[2], d);
             else if (parts[1] == "dx") bpDx[f].Put(parts[2], d);
+            else if (parts[1] == "mea" || parts[1] == "dxa")
+            {
+                Dictionary<int, BudgetParams> da = parts[1] == "mea" ? bpMeAlt : bpDxAlt;
+                if (!da.ContainsKey(f)) da[f] = BudgetParams.Default(f);
+                da[f].Put(parts[2], d);
+            }
         }
 
         void LoadSettings()
@@ -63761,7 +64039,7 @@ namespace LunaCalc
     class Cavo
     {
         public string[] Nomi; public string[] Costruttori; public string Tipo; public double Diam; public string Anche; public string[] Fonti;
-        public double[] Db = new double[5]; public char[] Segno = new char[5];
+        public double[] Db = new double[7]; public char[] Segno = new char[7];   // 50, 70, 144, 222, 432, 902, 1296 MHz
         public bool Personale;
         public bool Marino;     // cavo per ambienti marini: nel nome mostrato compare "(ambienti marini)"
         public string Nome { get { return Nomi[0]; } }
@@ -63793,16 +64071,35 @@ namespace LunaCalc
 
     static class CaviDb
     {
-        public static readonly double[] Fb = { 50, 70, 144, 222, 432 };
+        public static readonly double[] Fb = { 50, 70, 144, 222, 432, 902, 1296 };
         public static readonly List<Cavo> Elenco = new List<Cavo>();
 
         static void A(string[] nomi, string[] cost, string tipo, double d, string anche, string[] fonti, double v50, char s50, double v70, char s70, double v144, char s144, double v222, char s222, double v432, char s432)
         {
             Cavo c = new Cavo();
             c.Nomi = nomi; c.Costruttori = cost; c.Tipo = tipo; c.Diam = d; c.Anche = anche; c.Fonti = fonti;
-            c.Db = new double[] { v50, v70, v144, v222, v432 };
-            c.Segno = new char[] { s50, s70, s144, s222, s432 };
+            c.Db = new double[] { v50, v70, v144, v222, v432, 0, 0 };
+            c.Segno = new char[] { s50, s70, s144, s222, s432, 'e', 'e' };
+            Estrapola(c, 5);
             Elenco.Add(c);
+        }
+
+        // Valori sopra 432 MHz mancanti: legge di potenza dai due valori più alti già noti (segno 'e', estrapolato)
+        public static void Estrapola(Cavo c, int noti)
+        {
+            if (noti < 2) return;
+            double a = c.Db[noti - 2], b = c.Db[noti - 1];
+            double k = a > 0 && b > 0 ? Math.Log(b / a) / Math.Log(Fb[noti - 1] / Fb[noti - 2]) : 0.5;
+            k = Math.Max(0.4, Math.Min(0.8, k));
+            for (int i = noti; i < Fb.Length; i++) { c.Db[i] = Math.Round(b * Math.Pow(Fb[i] / Fb[noti - 1], k), 1); c.Segno[i] = 'e'; }
+        }
+
+        // Valori a 902 e 1296 MHz dalle schede dei costruttori (m = dalla scheda, i = interpolato tra due frequenze della scheda)
+        static void U(string nome, double v902, char s902, double v1296, char s1296)
+        {
+            Cavo c = Elenco.Find(x => x.Nome == nome);
+            if (c == null) return;
+            c.Db[5] = v902; c.Segno[5] = s902; c.Db[6] = v1296; c.Segno[6] = s1296;
         }
 
         static CaviDb()
@@ -63901,7 +64198,7 @@ namespace LunaCalc
 
         public static string PercorsoPersonali { get { return Dati.Percorso("cavi_personali.txt"); } }
 
-        // Cavi aggiunti dall'utente: una riga "nome;diametro;db50;db70;db144;db222;db432"
+        // Cavi aggiunti dall'utente: una riga "nome;diametro;db50;db70;db144;db222;db432;db902;db1296"
         public static void CaricaPersonali()
         {
             Elenco.RemoveAll(c => c.Personale);
@@ -63920,11 +64217,13 @@ namespace LunaCalc
                     c.Fonti = new string[] { Lang.T("inserito dall'utente") };
                     c.Personale = true;
                     double.TryParse(p[1], NumberStyles.Float, CultureInfo.InvariantCulture, out c.Diam);
-                    for (int i = 0; i < 5; i++)
+                    int noti = Math.Min(Fb.Length, p.Length - 2);   // file vecchi: 5 valori, poi 902 e 1296 MHz stimati
+                    for (int i = 0; i < noti; i++)
                     {
                         double.TryParse(p[2 + i], NumberStyles.Float, CultureInfo.InvariantCulture, out c.Db[i]);
                         c.Segno[i] = 'm';
                     }
+                    Estrapola(c, noti);
                     Elenco.Add(c);
                 }
             }
