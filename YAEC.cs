@@ -44689,20 +44689,22 @@ namespace LunaCalc
                 float ya = RAnt.Top + S(44), xa = RAnt.Left + S(10);
                 if (budgetDisco && bMe != null && bMe.Disco)
                 {
-                    // disco visto di lato, con l'illuminatore nel fuoco
-                    float hd = S(62), xv = xa + S(70);
+                    // disco a primo fuoco visto di lato: concavità verso destra, illuminatore nel fuoco davanti al disco
+                    float hd = S(64), xb = xa + S(40), xr = xb + S(18);   // xb vertice, xr bordo del disco
+                    float xfu = xb + hd * 0.40f;                           // fuoco a f/D × D dal vertice (f/D 0,40)
                     using (GraphicsPath pd = new GraphicsPath())
                     {
-                        pd.AddBezier(xv - S(30), ya - hd / 2, xv + S(6), ya - hd / 4, xv + S(6), ya + hd / 4, xv - S(30), ya + hd / 2);
+                        pd.AddBezier(xr, ya - hd / 2, xb - S(6), ya - hd / 4, xb - S(6), ya + hd / 4, xr, ya + hd / 2);
                         using (Brush bd = new SolidBrush(Tema.Scuro ? Color.FromArgb(60, 70, 90) : Color.FromArgb(226, 232, 240))) g.FillPath(bd, pd);
                         using (Pen pa = new Pen(cAnt, S(4))) g.DrawPath(pa, pd);
                     }
                     using (Pen ps = new Pen(Color.FromArgb(100, 116, 139), S(2)))
                     {
-                        g.DrawLine(ps, xv - S(30), ya - hd / 2, xv + S(60), ya);
-                        g.DrawLine(ps, xv - S(30), ya + hd / 2, xv + S(60), ya);
+                        g.DrawLine(ps, xr, ya - hd / 2, xfu, ya);
+                        g.DrawLine(ps, xr, ya + hd / 2, xfu, ya);
                     }
-                    using (Brush bfe = new SolidBrush(cTx)) g.FillRectangle(bfe, xv + S(58), ya - S(7), S(16), S(14));
+                    using (Pen pm = new Pen(Color.FromArgb(51, 65, 85), S(4))) g.DrawLine(pm, xb - S(30), ya, xb - S(4), ya);   // supporto dietro il vertice
+                    using (Brush bfe = new SolidBrush(cTx)) g.FillRectangle(bfe, xfu - S(2), ya - S(7), S(14), S(14));
                 }
                 else
                 using (Pen pa = new Pen(cAnt, S(3)))
@@ -44712,7 +44714,7 @@ namespace LunaCalc
                 }
                 Testo(g, "Tant", fl, Tema.Fore, new RectangleF(RAnt.Right - S(84) - S(60), RAnt.Top + S(18), S(56), rh), StringAlignment.Far, StringAlignment.Center);
                 Testo(g, impTsky, fp, Tema.Muted, new RectangleF(RAnt.Left + RAnt.Width * 0.45f, RAnt.Top + S(20) + rh, RAnt.Width * 0.55f, S(20)), StringAlignment.Far, StringAlignment.Near);
-                float xf = xa + S(30);   // punto di alimentazione della schiera
+                float xf = budgetDisco && bMe != null && bMe.Disco ? xa + S(40) + S(64) * 0.40f + S(5) : xa + S(30);   // punto di alimentazione: schiera o illuminatore del disco
                 using (Pen pl = new Pen(cLinea, S(4)))
                 {
                     g.DrawLine(pl, xf, ya, xf, RAnt.Bottom);
