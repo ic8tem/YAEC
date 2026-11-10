@@ -44828,6 +44828,13 @@ namespace LunaCalc
             Label lb = L(Lang.T("Banda")); bar.Controls.Add(lb); bar.Controls.Add(cmbBand);
             bar.Controls.Add(L(Lang.T("Istante (UTC)"))); bar.Controls.Add(dtpB); bar.Controls.Add(bNow); bar.Controls.Add(bRow);
             bar.Controls.Add(chkPol);
+            chkEco = new Spunta();
+            chkEco.Text = Lang.T("calcolo dell'eco");
+            chkEco.AutoSize = true;
+            chkEco.Margin = new Padding(S(12), S(6), S(3), S(3));
+            chkEco.CheckedChanged += (s, e) => { budgetEco = chkEco.Checked; RecalcBudget(); DimensionaTabB(); SaveSettings(); };
+            tip.SetToolTip(chkEco, Lang.T("Io trasmetto e ricevo il mio eco: la colonna del DX scompare e il bilancio usa la mia stazione in trasmissione e in ricezione, con la distanza della Luna dalla mia stazione all'andata e al ritorno."));
+            bar.Controls.Add(chkEco);
             cmbBw = new Tendina();
             cmbBw.DropDownStyle = ComboBoxStyle.DropDownList;
             for (int hz = 50; hz <= 3000; hz += 50) cmbBw.Items.Add(hz.ToString(inv));
@@ -45321,7 +45328,10 @@ namespace LunaCalc
             g.Clear(Tema.Back);
             Rectangle cr = pnlKpi.ClientRectangle;
             // prima riga: collegamento, EIRP mia, EIRP del DX; seconda: perdita di tratta e S/N nei due sensi (con il Sole, se calcolato)
-            string[] tit = { Lang.T("COLLEGAMENTO POSSIBILE"), Lang.T("EIRP mia").ToUpper(Lang.Cultura), Lang.T("EIRP del DX").ToUpper(Lang.Cultura),
+            string[] tit = budgetEco && tabs != null && (tabs.SelectedTab == tpBudget || tabs.SelectedTab == tpBudgetD)
+                ? new string[] { Lang.T("ECO POSSIBILE"), Lang.T("EIRP mia").ToUpper(Lang.Cultura), Lang.T("RITARDO DELL'ECO"),
+                    Lang.T("PERDITA DI TRATTA EME"), Lang.T("S/N del mio eco").ToUpper(Lang.Cultura), Lang.T("MARGINE SULLA SOGLIA") }
+                : new string[] { Lang.T("COLLEGAMENTO POSSIBILE"), Lang.T("EIRP mia").ToUpper(Lang.Cultura), Lang.T("EIRP del DX").ToUpper(Lang.Cultura),
                 Lang.T("PERDITA DI TRATTA EME"), Lang.T("S/N io → DX").ToUpper(Lang.Cultura), Lang.T("S/N DX → io").ToUpper(Lang.Cultura) };
             float gap = S(10), w = (cr.Width - 4 * gap) / 3f, h = (cr.Height - 3 * gap) / 2f;
             using (Font fh = FontPx(Lang.FontUi, S(11), false))
@@ -45390,7 +45400,8 @@ namespace LunaCalc
                 g.Clip = old;
             }
             float x = card.Left + S(16), w = card.Width - S(32);
-            float[] cx = { x, x + w * 0.46f, x + w * 0.73f, x + w };
+            float[] cx = budgetEco ? new float[] { x, x + w * 0.52f, x + w, x + w } : new float[] { x, x + w * 0.46f, x + w * 0.73f, x + w };
+            int nCol = budgetEco ? 2 : 3;   // con il calcolo dell'eco la colonna del DX scompare
             Color riga = Tema.Scuro ? Color.FromArgb(60, 68, 80) : Color.FromArgb(232, 236, 242);
             Color fascia = Tema.Scuro ? Tema.Section : Color.FromArgb(232, 238, 248);
             using (Font fh = FontPx(Lang.FontUi, S(11), true))
@@ -45400,8 +45411,8 @@ namespace LunaCalc
             using (Pen pl = new Pen(riga))
             {
                 float y = card.Top + S(14);
-                for (int k = 0; k < 3; k++)
-                    Testo(g, lvB.Columns[k].Text.ToUpper(Lang.Cultura), fh, Tema.Muted, new RectangleF(cx[k], y, cx[k + 1] - cx[k] - S(6), S(26)), StringAlignment.Near, StringAlignment.Center);
+                for (int k = 0; k < nCol; k++)
+                    Testo(g, (budgetEco && k == 1 ? Lang.T("Io trasmetto e ricevo il mio eco") : lvB.Columns[k].Text).ToUpper(Lang.Cultura), fh, Tema.Muted, new RectangleF(cx[k], y, cx[k + 1] - cx[k] - S(6), S(26)), StringAlignment.Near, StringAlignment.Center);
                 y += S(28);
                 using (Pen ph = new Pen(Tema.Scuro ? Tema.Linea : Color.FromArgb(200, 208, 220), S(1.5f))) g.DrawLine(ph, x - S(4), y, x + w + S(4), y);
                 float rh = TabBRiga;
@@ -45419,7 +45430,7 @@ namespace LunaCalc
                     {
                         Font f = it.Font != null && it.Font.Bold ? fb : fr;
                         Testo(g, it.Text, f, Tema.Fore, new RectangleF(cx[0], y, cx[1] - cx[0] - S(8), rh), StringAlignment.Near, StringAlignment.Center);
-                        for (int k = 1; k < 3 && k < it.SubItems.Count; k++)
+                        for (int k = 1; k < nCol && k < it.SubItems.Count; k++)
                         {
                             Color cv = it.SubItems[k].ForeColor;
                             if (cv == Tema.FieldFore || cv.IsEmpty) cv = Tema.Fore;
@@ -45525,7 +45536,7 @@ namespace LunaCalc
             }
             // titolo delle schede delle stazioni: locator e posizione della Luna
             bMe.Sotto = (me != null && me.Ok ? me.Loc.Text.Trim() : "") + (valido && r != null ? string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.P.Az, r.P.El) : "");
-            bDx.Sotto = (dx != null && dx.Ok && chkDx.Checked ? dx.Loc.Text.Trim() : "") + (valido && r != null ? string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.Q.Az, r.Q.El) : "");
+            bDx.Sotto = (dx != null && dx.Ok && chkDx.Checked ? dx.Loc.Text.Trim() : "") + (valido && r != null && r.Q != null ? string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.Q.Az, r.Q.El) : "");
             foreach (BudgetUi bu in new BudgetUi[] { bMe, bDx }) if (bu.Card != null) bu.Card.Invalidate();
             if (pnlKpi != null) pnlKpi.Invalidate();
             PosizionaSchema();   // i testi in fondo ai riquadri possono cambiare il numero di righe
@@ -45864,6 +45875,127 @@ namespace LunaCalc
             return 2500;
         }
 
+        // calcolo dell'eco della propria stazione (Budget EME yagi e dischi): io trasmetto e ricevo il mio eco
+        Spunta chkEco;
+        bool budgetEco;
+
+        void FillEco(ListView target, BudgetParams pm, BudgetParams pd)
+        {
+            target.BeginUpdate();
+            try
+            {
+                target.Items.Clear();
+                bufB.Clear();
+                if (!me.Ok)
+                {
+                    AggiornaSchemaEKpi(pm, pd, null, null, null, 0, 0, LeggiBw(), false);
+                    RigaB(Lang.T("Imposta un locator valido per la tua stazione nella linguetta \"Posizione della Luna\"."), "", "");
+                    return;
+                }
+                double freq = curBand, bw = LeggiBw();
+                DateTime t = DateTime.SpecifyKind(dtpB.Value, DateTimeKind.Utc);
+                Riga r = Calcola1(t, false, freq, chkRefr.Checked);
+                double d = r.P.DistTopo;
+                double path = Moon.PathLoss(freq, d, d);
+                double tsky = Moon.Tsky(r.P.Lambda, freq);
+                double gg = pm.GroundOn > 0.5 ? GroundGain(pm.GroundH, r.P.El, freq) : 0.0;
+                Tratta e = CalcTratta(pm, pm, path, 0, tsky, 0, bw, gg, gg, 0, freq);
+                Tratta e2 = null;
+                SolarInfo so = null;
+                if (lvS != null)
+                {
+                    so = CalcSolar(t, r.P, me, pm, freq, true);
+                    if (so.Valid) e2 = CalcTratta(pm, pm, path, 0, tsky, so.Tsun, bw, gg, gg, 0, freq);
+                }
+                double ritardo = 2.0 * d / 299792.458, dop = 2.0 * r.DopMe;
+                CultureInfo c = ci;
+                // schede e schema come nel bilancio normale, con la stessa stazione nei due sensi
+                AggiornaSchemaEKpi(pm, pd, r, e, e, path, 0, bw, true);
+                kpiV[0] = r.OkMe ? Lang.T("SÌ") : Lang.T("NO");
+                kpiS[0] = r.OkMe ? Lang.T("Luna puntabile dalla mia stazione") : Lang.T("la Luna non è puntabile dalla mia stazione");
+                kpiC[0] = r.OkMe ? Tema.OkFg : Tema.BadFg;
+                kpiV[2] = ritardo.ToString("F2", c) + " s";
+                kpiS[2] = string.Format(c, Lang.T("Doppler dell'eco {0} Hz"), (dop >= 0 ? "+" : "−") + Math.Abs(dop).ToString("N0", c));
+                kpiC[2] = Color.FromArgb(217, 119, 6);
+                kpiS[3] = Lang.T("eco della mia stazione: niente perdita di polarizzazione spaziale");
+                Tratta es = e2 ?? e;
+                double sn25 = Sn2500(es.SNb, bw), marg = sn25 - pm.SnReq;
+                kpiV[4] = Segno(es.SNb, c) + " dB";
+                kpiS[4] = string.Format(c, e2 != null ? Lang.T("in {0:0} Hz con il Sole · {1} dB in 2500 Hz") : Lang.T("in {0:0} Hz · {1} dB in 2500 Hz"), bw, Segno(sn25, c));
+                kpiV[5] = Segno(marg, c) + " dB";
+                kpiS[5] = string.Format(c, Lang.T("sulla soglia di {0} ({1} dB in 2500 Hz)"), pm.NomeModo, pm.SnReq.ToString("0.#", c));
+                kpiC[5] = marg >= 0 ? Tema.OkFg : Tema.BadFg;
+                bMe.Sotto = me.Loc.Text.Trim() + string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.P.Az, r.P.El);
+                if (pnlKpi != null) pnlKpi.Invalidate();
+
+                SezioneB(Lang.T("TRASMISSIONE  (") + curBand.ToString(inv) + " MHz)");
+                RigaB(Lang.T("Potenza in uscita"), FmtW(pm.P, c) + "   (" + Dbw(e.PdBW) + ")", "");
+                bool conConn = pm.LossConn > 0;
+                RigaB(conConn ? Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna + connettori)") : Lang.T("Perdite TX (cavo PA–relè + relè + cavo antenna)"),
+                    string.Format(c, "{0:F2} + {1:F2} + {2:F2}", pm.LossPa, pm.Rele, pm.LossAnt) + (conConn ? string.Format(c, " + {0:F2}", pm.LossConn) : "") + " = " + Db(e.LossTx), "");
+                RigaB(Lang.T("Potenza all'antenna"), FmtW(e.PantW, c) + "   (" + Dbw(e.PdBW - e.LossTx) + ")", "");
+                RigaB(Lang.T("Guadagno antenna TX (in spazio libero)"), GainTxt(pm, e.Gtx - gg), "");
+                if (pm.GroundOn > 0.5)
+                {
+                    RigaB(Lang.T("BETA - ground gain antenna TX senza elevazione"), GroundTxt(pm, gg, r.P.El, freq), "");
+                    RigaB(Lang.T("Guadagno antenna TX totale"), e.Gtx.ToString("F1", c) + " dBi", "");
+                }
+                RigaB("EIRP", FmtW(Math.Pow(10.0, e.EirpDbW / 10.0), c) + "   (" + Dbw(e.EirpDbW) + ")", "", Tema.Field, true, Tema.Accent, Tema.Accent);
+
+                SezioneB(Lang.T("PERCORSO TERRA - LUNA - TERRA   (") + FmtDT(t) + " UTC)");
+                RigaB(Lang.T("Posizione Luna dalla mia stazione"), string.Format(c, "Az {0:F1}°  El {1:F1}°  ({2})", r.P.Az, r.P.El, r.StatoMe), "");
+                RigaB(Lang.T("Distanza Luna: andata / ritorno"), d.ToString("N0", c) + " km / " + d.ToString("N0", c) + " km", "");
+                RigaB(Lang.T("Ritardo dell'eco"), ritardo.ToString("F3", c) + " s", "");
+                RigaB(Lang.T("Doppler dell'eco"), (dop >= 0 ? "+" : "−") + Math.Abs(dop).ToString("N0", c) + " Hz", "");
+                RigaB(Lang.T("Perdita di tratta EME"), Db(path), "", Tema.Field, true, Tema.FieldFore, Tema.FieldFore);
+                RigaB(Lang.T("Perdita di polarizzazione spaziale"), Lang.T("0,0 dB: stessa antenna in trasmissione e ricezione"), "");
+                string fin = r.OkMe ? Lang.T("SÌ, Luna puntabile dalla mia stazione") : Lang.T("NO: la Luna non è puntabile dalla mia stazione");
+                Color cf = r.OkMe ? Tema.OkFg : Tema.BadFg;
+                RigaB(Lang.T("Eco possibile in questo istante"), fin, "", Tema.Field, true, cf, cf);
+
+                SezioneB(Lang.T("RICEZIONE"));
+                RigaB(Lang.T("Guadagno antenna RX (in spazio libero)"), GainTxt(pm, e.Grx - gg), "");
+                if (pm.GroundOn > 0.5)
+                {
+                    RigaB(Lang.T("BETA - ground gain antenna RX senza elevazione"), GroundTxt(pm, gg, r.P.El, freq), "");
+                    RigaB(Lang.T("Guadagno antenna RX totale"), e.Grx.ToString("F1", c) + " dBi", "");
+                }
+                RigaB(Lang.T("Segnale ai morsetti dell'antenna RX"), Dbm(e.Sant), "");
+                RigaB(Lang.T("Dopo le perdite ante preampli"), Dbm(e.S1), "");
+                RigaB(Lang.T("Dopo il preampli"), Dbm(e.S2), "");
+                RigaB(Lang.T("Dopo le perdite post preampli"), Dbm(e.S3), "");
+                RigaB(Lang.T("Dopo il transverter"), Dbm(e.S4), "");
+                RigaB(Lang.T("Perdita cavetti transverter-radio"), Db(pm.TvCavo), "");
+                RigaB(Lang.T("All'ingresso della radio (dopo i cavetti)"), Dbm(e.S5), "", Tema.Field, true, Tema.FieldFore, Tema.FieldFore);
+                RigaB(Lang.T("MDS della radio"), Dbm(e.Mds), "");
+                RigaB(Lang.T("MDS riportato ai morsetti dell'antenna"), Dbm(e.MdsAnt), "");
+                RigaB(Lang.T("Margine sopra il MDS"), (e.Margin >= 0 ? "+" : "") + Db(e.Margin), "", Tema.MarginBg, true, e.Margin >= 0 ? Tema.OkFg : Tema.BadFg, Tema.Fore);
+
+                string bwTxt = bw.ToString("0", c) + " Hz";
+                SezioneB(Lang.T("RUMORE E RAPPORTO S/N STIMATO  (banda passante ") + bwTxt + ")");
+                RigaB(Lang.T("Temperatura del cielo dietro la Luna (Tsky)"), K(e.Tsky), "");
+                RigaB(Lang.T("Temperatura d'antenna Tant (tabelle VE7BQH, 30° di elevazione)"), K(e.Tant), "");
+                RigaB(Lang.T("Eccesso del cielo dietro la Luna rispetto al riferimento"), K(e.TskyEcc), "");
+                RigaB(Lang.T("Rumore del preampli (NF ") + pm.Nf.ToString("F2", c) + " dB)", K(e.Tr), "");
+                RigaB(Lang.T("NF della radio stimata dal MDS (banda ") + bwTxt + ")", Db(e.NfRadio), "");
+                RigaB(Lang.T("Figura di rumore del ricevitore (Friis, HP/Agilent AN 57-1)"), e.NfTot.ToString("F2", c) + " dB  (Te " + K(e.Tloss) + ")", "", Tema.Field, true, Tema.Accent, Tema.Accent);
+                RigaB(Lang.T("Temperatura di sistema Tsys (senza il Sole)"), K(e.Tsys), "");
+                RigaB(Lang.T("Rumore in ") + bwTxt, Dbm(e.Nb), "");
+                RigaB(Lang.T("S/N stimato in ") + bwTxt + Lang.T(" (senza il Sole)"), Segno(e.SNb, c) + " dB", "", Tema.Field, true, e.SNb >= 0 ? Tema.OkFg : Tema.Fore, Tema.Fore);
+                RigaB(string.Format(c, Lang.T("S/N in 2500 Hz (soglia tipica {0} / {1})"), pm.NomeModo, pm.SnReq.ToString("0.#", c) + " dB"), Segno(Sn2500(e.SNb, bw), c) + " dB", "");
+                if (e2 != null)
+                {
+                    RigaB(Lang.T("Tsys con il Sole (dalla linguetta Rumore solare)"), K(e2.Tsys), "");
+                    RigaB(Lang.T("S/N in ") + bwTxt + Lang.T(" con il Sole (dalla linguetta Rumore solare)"), Segno(e2.SNb, c) + " dB", "");
+                }
+            }
+            finally
+            {
+                FlushB(!complessi);
+                target.EndUpdate();
+            }
+        }
+
         void FillBudget(ListView target, bool solar)
         {
             lvCur = target;
@@ -45879,6 +46011,7 @@ namespace LunaCalc
                 kv.Key.PreLoss.Value = (decimal)Math.Min(60.0, kv.Value.PreLoss); kv.Key.PostLoss.Value = (decimal)Math.Min(60.0, kv.Value.PostLoss);
                 loadingB = lb;
             }
+            if (target == lvB && budgetEco) { FillEco(target, pm, pd); return; }
             if (target == lvB && (!me.Ok || !chkDx.Checked || !dx.Ok)) AggiornaSchemaEKpi(pm, pd, null, null, null, 0, 0, LeggiBw(), false);
 
             target.BeginUpdate();
@@ -48762,6 +48895,22 @@ namespace LunaCalc
             bar.Controls.Add(L(Lang.T("Direzione"))); bar.Controls.Add(cmbDbgDir);
             bar.Controls.Add(L(Lang.T("Zoom"))); bar.Controls.Add(cmbDbgZoom);
             bar.Controls.Add(sp); bar.Controls.Add(bc); bar.Controls.Add(bw);
+            // quale bilancio controllare: yagi o dischi
+            cmbDbgBudget = new Tendina();
+            cmbDbgBudget.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDbgBudget.Items.Add(Lang.T("Budget EME yagi"));
+            cmbDbgBudget.Items.Add(Lang.T("Budget EME dischi"));
+            cmbDbgBudget.SelectedIndex = budgetDisco ? 1 : 0;
+            cmbDbgBudget.Width = S(190);
+            cmbDbgBudget.SelectedIndexChanged += (s, e) =>
+            {
+                if (dbgSync) return;
+                ImpostaModoBudget(cmbDbgBudget.SelectedIndex == 1);
+                RiempiDebug();
+            };
+            tip.SetToolTip(cmbDbgBudget, Lang.T("Sceglie il bilancio da controllare: quello della linguetta Budget EME yagi o quello della linguetta Budget EME dischi (i dischi a 432, 902 e 1296 MHz)."));
+            Label sp2 = new Label(); sp2.AutoSize = true; sp2.Width = S(30);
+            bar.Controls.Add(sp2); bar.Controls.Add(L(Lang.T("Bilancio"))); bar.Controls.Add(cmbDbgBudget);
             tip.SetToolTip(bar, Lang.T("Tutti i parametri e le formule del Budget EME e del Rumore solare, con i valori sostituiti e i risultati, per l'istante e la banda scelti nel Budget EME. Si aggiorna a ogni ricalcolo."));
             root.Controls.Add(bar, 0, 0);
             docDebug = new DocView();
@@ -48804,9 +48953,17 @@ namespace LunaCalc
         }
         void DNota(string t) { dbg.Add(DocBlocco.P(DocTipo.Didascalia, t)); }
 
+        ComboBox cmbDbgBudget;
+        bool dbgSync;
+
         void RiempiDebug()
         {
             if (docDebug == null || tabs == null || tabs.SelectedTab != tpDebug) return;
+            if (cmbDbgBudget != null && cmbDbgBudget.SelectedIndex != (budgetDisco ? 1 : 0))
+            {
+                dbgSync = true;
+                try { cmbDbgBudget.SelectedIndex = budgetDisco ? 1 : 0; } finally { dbgSync = false; }
+            }
             dbg = new List<DocBlocco>();
             dbgSez = 0;
             dbg.Add(DocBlocco.P(DocTipo.Titolo, Lang.T("Controllo dei calcoli – Budget EME e Rumore solare")));
@@ -58898,6 +59055,7 @@ namespace LunaCalc
                 lines.Add("banda=" + curBand.ToString(inv));
                 lines.Add("polbudget=" + (chkPol.Checked ? "1" : "0"));
                 lines.Add("bw=" + cmbBw.Text);
+                if (chkEco != null) lines.Add("b_eco=" + (chkEco.Checked ? "1" : "0"));
                 lines.Add("tema=" + Tema.Chiave);
                 lines.Add("lingua=" + Lang.Codici[cmbLingua.SelectedIndex]);
                 lines.Add("font_nome=" + (cmbFontNome != null && cmbFontNome.SelectedItem is VoceFont && ((VoceFont)cmbFontNome.SelectedItem).Tipo == 2 ? ((VoceFont)cmbFontNome.SelectedItem).Nome : ""));
@@ -59120,6 +59278,7 @@ namespace LunaCalc
                             }
                         case "dgrd_giorni": SetNud(nudDgGiorni, v); break;
                         case "bw": if (cmbBw.Items.Contains(v)) cmbBw.SelectedItem = v; break;
+                        case "b_eco": if (chkEco != null) chkEco.Checked = v == "1"; break;
                         case "sfu_url": if (v.Length > 0) txtSfuUrl.Text = v; break;
                         case "sfu_auto": chkSfuAuto.Checked = v == "1"; break;
                         case "sfu_fonte": { int fv; if (int.TryParse(v, NumberStyles.Integer, inv, out fv) && fv >= 0 && fv <= 3) cmbSfuFonte.SelectedIndex = fv == 3 ? SfuPersonale : fv; break; }
