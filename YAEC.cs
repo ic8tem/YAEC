@@ -44032,16 +44032,16 @@ namespace LunaCalc
         static readonly int[] BandePredefinite = { 50, 70, 144, 222, 432, 902, 1296 };
         List<int> bandeAttive = new List<int>(BandePredefinite);
 
-        // Banda 23 cm: oltre a 1296 MHz si possono scegliere 1297 e 1298 MHz (piano di banda IARU Regione 1);
-        // tutti e tre appartengono alla banda dei 1296 MHz (budget, cavi, cielo)
-        static readonly int[] Mhz23cm = { 1296, 1297, 1298 };
+        // Banda 23 cm: oltre a 1296 MHz si può scegliere 1298 MHz (1297 MHz è il segmento FM/DV del piano IARU Regione 1);
+        // entrambi appartengono alla banda dei 1296 MHz (budget, cavi, cielo)
+        static readonly int[] Mhz23cm = { 1296, 1298 };
         static int BandaDiMhz(double mhz)
         {
             int m = (int)Math.Floor(mhz);
             return m >= 1296 && m <= 1298 ? 1296 : m;
         }
 
-        // MHz delle tendine della frequenza: le bande scelte, con 1297 e 1298 dopo 1296
+        // MHz delle tendine della frequenza: le bande scelte, con 1298 dopo 1296
         void RiempiMhz(ComboBox c)
         {
             c.Items.Clear();
