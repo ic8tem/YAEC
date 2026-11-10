@@ -44054,6 +44054,7 @@ namespace LunaCalc
         bool ricostruzioneBande;
         static string NomeBanda(int f)
         {
+            if (f == 1296) return "23 cm";   // banda dei 23 cm: nelle tendine dei MHz si sceglie 1296 o 1298 MHz
             return f >= 47000 ? (f / 1000).ToString(inv) + " GHz (" + f.ToString(inv) + " MHz)" : f.ToString(inv) + " MHz";
         }
         int curBand = 144;
@@ -51454,7 +51455,7 @@ namespace LunaCalc
             double mhz;
             string t = "";
             if (double.TryParse(cmbTrkMhz.Text.Trim().Replace(',', '.'), NumberStyles.Float, inv, out mhz) && bandeAttive.Contains(BandaDiMhz(mhz)))
-                t = string.Format(ci, Lang.T("banda {0} MHz"), BandaDiMhz(mhz));
+                t = BandaDiMhz(mhz) == 1296 ? "23 cm" : string.Format(ci, Lang.T("banda {0} MHz"), BandaDiMhz(mhz));
             if (t != subFreq) { subFreq = t; cardFreq.Invalidate(); }
         }
 
@@ -53462,7 +53463,7 @@ namespace LunaCalc
                 foreach (int b in Bande)
                 {
                     CheckBox c = new Spunta();
-                    c.Text = b >= 47000 ? (b / 1000).ToString(inv) + " GHz" : b.ToString(inv) + " MHz";
+                    c.Text = b == 1296 ? "23 cm (1296 – 1298 MHz)" : (b >= 47000 ? (b / 1000).ToString(inv) + " GHz" : b.ToString(inv) + " MHz");
                     c.AutoSize = true;
                     c.Checked = bandeAttive.Contains(b);
                     c.Tag = b;
