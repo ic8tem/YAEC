@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+YAEC FELHASZNÁLÁSI LICENC, 1. VÁLTOZAT
+© 2026 Costantino IC8TEM
+
+A YAEC szabad szoftver, amelyet egy rádióamatőr írt rádióamatőröknek. A kódja egy mesterségesintelligencia-asszisztens segítségével is készült, és a licenc az ő munkamódját követi: legyen valóban hasznos, mindig mondja meg, hogyan állnak a dolgok, mutassa meg a gondolatmenetét, ne ártson senkinek, és ismerje el mások munkáját. Alább először az alapelvek, majd a tényleges feltételek következnek.
+
+• Hasznos és ingyenes: A program ingyenes, és korlátozás nélkül használhatod rádióamatőr tevékenységedhez, tanuláshoz és oktatáshoz. Arra szolgál, hogy QSO-k szülessenek, nem arra, hogy eladjon valamit.
+• Átlátható: A forráskódot mindig a programmal együtt adjuk; minden képlet látható a Számítások ellenőrzése fülön, és minden adat megadja a forrását. Nincsenek fekete dobozok.
+• Becsületes: A mért, a származtatott és a becsült értékek elkülönülnek; ami nincs ellenőrizve, azt annak is nyilvánítja. A bizonytalan eredményt bizonytalannak mutatja, nem állítja be biztosnak.
+• Tisztelettudó: Tiszteli azok munkáját, akik előttünk mértek, írtak és publikáltak, a felhasználói magánszféráját (nem gyűjt adatokat, nincs reklám) és az amatőrrádió-szolgálat szabályait.
+
+FELTÉTELEK
+1. Használat. A YAEC-et ingyenesen használhatod, másolhatod és telepítheted, akárhány számítógépre.
+2. Módosítások. Tanulmányozhatod a forráskódot, javíthatod és fejlesztheted saját használatra vagy a rádióklubod számára.
+3. Továbbterjesztés. A programot, eredeti vagy módosított formában, csak a teljes forráskódjával együtt és ugyanezzel a licenccel terjesztheted tovább.
+4. A módosítások feltüntetése. A módosított változatnak ezt egyértelműen jeleznie kell a címben vagy a kiadási megjegyzésekben, megadva, ki módosította és mi változott, hogy senki ne tévessze össze a te munkádat a szerzőével, vagy fordítva.
+5. Forrásmegjelölés. Meg kell őrizni a szerző nevét (Costantino IC8TEM), a kézikönyv «Források, adatok és köszönetnyilvánítás» fejezetét és a harmadik felek forrásainak összes hivatkozását: az adatok, táblázatok, cikkek és mérések azokat illetik, akik előállították őket.
+6. Nincs kereskedelmi felhasználás. A YAEC vagy származékos változatai eladása, illetve fizetős termékekbe való beépítése a szerző írásos engedélye nélkül nem megengedett.
+7. Nincsenek rejtett adatok. Egyetlen terjesztett változat sem gyűjthet felhasználói adatokat, nem jeleníthet meg reklámot, és nem küldhet információt harmadik feleknek anélkül, hogy ezt nyíltan közölné.
+8. A rádió helyes használata. A program a tervezésben segít: a használt frekvenciák, teljesítmények és üzemmódok az operátor és rádióamatőr engedélye felelősségi körébe tartoznak.
+9. Nincs garancia. A YAEC-et "ahogy van" alapon adjuk. A számítások gondosan és megadott forrásokkal készülnek, de tartalmazhatnak hibákat: a fontos adatokat ellenőrizd, mielőtt rájuk hagyatkoznál.
+10. Hibajelentések. Ha hibát vagy jobb adatot találsz, írd meg a szerzőnek (A SZERZŐ ELÉRHETŐSÉGEI ÉS KÖSZÖNETNYILVÁNÍTÁS fül): javítva lesz, és téged forrásként megnevezünk.
+
+Röviden: használd szabadon, tanulj a kódból, fejleszd és oszd meg, de mindig a forráskóddal, a források megjelölésével, megmondva, mit változtattál, és kereskedelem nélkül. Ha kételkedsz egy eredményben, a helyes válasz az ellenőrzés, nem a vak bizalom.
+
+A szöveg a program minden nyelvére le van fordítva; kétség esetén az olasz változat az irányadó.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
