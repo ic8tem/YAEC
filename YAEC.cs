@@ -3170,6 +3170,11 @@ namespace LunaCalc
             "Eco possibile in questo istante",
             "Sceglie il bilancio da controllare: quello della linguetta Budget EME yagi o quello della linguetta Budget EME dischi (i dischi a 432, 902 e 1296 MHz).",
             "Bilancio",
+            "+ {0:F1} dB polarizzazione circolare (KA1GT)",
+            "non inclusa (polarizzazione circolare)",
+            "Perdita di polarizzazione (circolare)",
+            "{0:F1} dB: polarizzazione circolare, perdita tipica degli illuminatori reali (KA1GT)",
+            "isolamento tra le porte dell'illuminatore di circa 10 dB (KA1GT)",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4685,6 +4690,11 @@ namespace LunaCalc
             "Echo possible at this instant",
             "Chooses the budget to check: the one in the EME budget Yagi tab or the one in the EME budget dishes tab (dishes at 432, 902 and 1296 MHz).",
             "Budget",
+            "+ {0:F1} dB circular polarization (KA1GT)",
+            "not included (circular polarization)",
+            "Polarization loss (circular)",
+            "{0:F1} dB: circular polarization, typical loss of real feeds (KA1GT)",
+            "isolation between the feed ports about 10 dB (KA1GT)",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6200,6 +6210,11 @@ namespace LunaCalc
             "Echo in diesem Moment möglich",
             "Wählt das zu prüfende Budget: das des Reiters EME-Budget Yagi oder das des Reiters EME-Budget Spiegel (die Spiegel auf 432, 902 und 1296 MHz).",
             "Budget",
+            "+ {0:F1} dB zirkulare Polarisation (KA1GT)",
+            "nicht enthalten (zirkulare Polarisation)",
+            "Polarisationsverlust (zirkular)",
+            "{0:F1} dB: zirkulare Polarisation, typischer Verlust realer Erreger (KA1GT)",
+            "Entkopplung zwischen den Anschlüssen des Erregers etwa 10 dB (KA1GT)",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -7715,6 +7730,11 @@ namespace LunaCalc
             "Écho possible à cet instant",
             "Choisit le bilan à contrôler : celui de l'onglet Bilan EME Yagi ou celui de l'onglet Bilan EME paraboles (les paraboles à 432, 902 et 1296 MHz).",
             "Bilan",
+            "+ {0:F1} dB de polarisation circulaire (KA1GT)",
+            "non incluse (polarisation circulaire)",
+            "Perte de polarisation (circulaire)",
+            "{0:F1} dB : polarisation circulaire, perte typique des sources réelles (KA1GT)",
+            "isolation entre les ports de la source d'environ 10 dB (KA1GT)",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -9230,6 +9250,11 @@ namespace LunaCalc
             "Eco posible en este instante",
             "Elige el balance que se va a controlar: el de la pestaña Balance EME Yagi o el de la pestaña Balance EME parábolas (las parábolas en 432, 902 y 1296 MHz).",
             "Balance",
+            "+ {0:F1} dB de polarización circular (KA1GT)",
+            "no incluida (polarización circular)",
+            "Pérdida de polarización (circular)",
+            "{0:F1} dB: polarización circular, pérdida típica de los iluminadores reales (KA1GT)",
+            "aislamiento entre los puertos del iluminador de unos 10 dB (KA1GT)",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -10745,6 +10770,11 @@ namespace LunaCalc
             "Eco possível neste instante",
             "Escolhe o balanço a verificar: o do separador Balanço EME Yagi ou o do separador Balanço EME parabólicas (as parabólicas em 432, 902 e 1296 MHz).",
             "Balanço",
+            "+ {0:F1} dB de polarização circular (KA1GT)",
+            "não incluída (polarização circular)",
+            "Perda de polarização (circular)",
+            "{0:F1} dB: polarização circular, perda típica dos iluminadores reais (KA1GT)",
+            "isolamento entre as portas do iluminador de cerca de 10 dB (KA1GT)",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -12260,6 +12290,11 @@ namespace LunaCalc
             "此刻可否收到回波",
             "选择要核查的链路预算：“EME 链路预算 八木”标签页的预算，或“EME 链路预算 抛物面”标签页的预算（抛物面为 432、902 和 1296 MHz）。",
             "链路预算",
+            "+ {0:F1} dB 圆极化 (KA1GT)",
+            "未计入 (圆极化)",
+            "极化损耗 (圆极化)",
+            "{0:F1} dB：圆极化，实际馈源的典型损耗 (KA1GT)",
+            "馈源端口间隔离度约 10 dB (KA1GT)",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -13775,6 +13810,11 @@ namespace LunaCalc
             "この時点でエコー受信可能か",
             "確認する回線計算を選びます：「EME 回線計算 八木」タブのもの、または「EME 回線計算 パラボラ」タブのもの（パラボラは 432、902、1296 MHz）。",
             "回線計算",
+            "+ 円偏波 {0:F1} dB (KA1GT)",
+            "含まない (円偏波)",
+            "偏波損失 (円偏波)",
+            "{0:F1} dB：円偏波、実際の一次放射器の典型的な損失 (KA1GT)",
+            "一次放射器のポート間アイソレーション 約10 dB (KA1GT)",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -15290,6 +15330,11 @@ namespace LunaCalc
             "इस क्षण इको संभव",
             "जाँचने के लिए बजट चुनता है: EME बजट यागी टैब वाला या EME बजट डिश टैब वाला (डिश 432, 902 और 1296 MHz पर)।",
             "बजट",
+            "+ {0:F1} dB वृत्तीय ध्रुवीकरण (KA1GT)",
+            "शामिल नहीं (वृत्तीय ध्रुवीकरण)",
+            "ध्रुवीकरण हानि (वृत्तीय)",
+            "{0:F1} dB: वृत्तीय ध्रुवीकरण, वास्तविक फ़ीड की सामान्य हानि (KA1GT)",
+            "फ़ीड के पोर्ट के बीच आइसोलेशन लगभग 10 dB (KA1GT)",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -16805,6 +16850,11 @@ namespace LunaCalc
             "이 시점의 에코 가능 여부",
             "검증할 버짓을 선택합니다: EME 링크 버짓 야기 탭의 버짓 또는 EME 링크 버짓 파라볼라 탭의 버짓 (파라볼라는 432, 902, 1296 MHz).",
             "링크 버짓",
+            "+ 원형 편파 {0:F1} dB (KA1GT)",
+            "포함하지 않음 (원형 편파)",
+            "편파 손실 (원형)",
+            "{0:F1} dB: 원형 편파, 실제 피드의 전형적인 손실 (KA1GT)",
+            "피드 포트 간 아이솔레이션 약 10 dB (KA1GT)",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -18320,6 +18370,11 @@ namespace LunaCalc
             "Gema mungkin pada saat ini",
             "Memilih anggaran yang akan diperiksa: anggaran di tab Anggaran EME yagi atau di tab Anggaran EME parabola (parabola pada 432, 902, dan 1296 MHz).",
             "Anggaran",
+            "+ {0:F1} dB polarisasi sirkular (KA1GT)",
+            "tidak disertakan (polarisasi sirkular)",
+            "Rugi polarisasi (sirkular)",
+            "{0:F1} dB: polarisasi sirkular, rugi khas feed nyata (KA1GT)",
+            "isolasi antar port feed sekitar 10 dB (KA1GT)",
         };
 
         public static readonly string[] RU = {
@@ -19836,6 +19891,11 @@ namespace LunaCalc
             "Эхо возможно в этот момент",
             "Выбирает проверяемый бюджет: со вкладки Бюджет EME яги или со вкладки Бюджет EME параболы (параболы на 432, 902 и 1296 MHz).",
             "Бюджет",
+            "+ {0:F1} дБ круговой поляризации (KA1GT)",
+            "не учитывается (круговая поляризация)",
+            "Поляризационные потери (круговая)",
+            "{0:F1} дБ: круговая поляризация, типичные потери реальных облучателей (KA1GT)",
+            "развязка между портами облучателя около 10 дБ (KA1GT)",
         };
 
         public static readonly string[] UK = {
@@ -21352,6 +21412,11 @@ namespace LunaCalc
             "Відлуння можливе в цей момент",
             "Вибирає бюджет для перевірки: з вкладки Бюджет EME яги або з вкладки Бюджет EME параболи (параболи на 432, 902 і 1296 MHz).",
             "Бюджет",
+            "+ {0:F1} дБ колової поляризації (KA1GT)",
+            "не враховано (колова поляризація)",
+            "Поляризаційні втрати (колова)",
+            "{0:F1} дБ: колова поляризація, типові втрати реальних опромінювачів (KA1GT)",
+            "розв'язка між портами опромінювача близько 10 дБ (KA1GT)",
         };
 
         public static readonly string[] AF = {
@@ -22868,6 +22933,11 @@ namespace LunaCalc
             "Eggo moontlik op hierdie oomblik",
             "Kies die begroting om na te gaan: dié van die EME-begroting yagi-oortjie of dié van die EME-begroting skottels-oortjie (die skottels op 432, 902 en 1296 MHz).",
             "Begroting",
+            "+ {0:F1} dB sirkulêre polarisasie (KA1GT)",
+            "nie ingesluit nie (sirkulêre polarisasie)",
+            "Polarisasieverlies (sirkulêr)",
+            "{0:F1} dB: sirkulêre polarisasie, tipiese verlies van werklike voerelemente (KA1GT)",
+            "isolasie tussen die poorte van die voerelement ongeveer 10 dB (KA1GT)",
         };
 
         public static readonly string[] BN = {
@@ -24383,6 +24453,11 @@ namespace LunaCalc
             "এই মুহূর্তে প্রতিধ্বনি সম্ভব",
             "যাচাই করার বাজেট বাছাই করে: EME বাজেট ইয়াগি ট্যাবেরটি অথবা EME বাজেট ডিশ ট্যাবেরটি (ডিশ 432, 902 ও 1296 MHz-এ)।",
             "বাজেট",
+            "+ {0:F1} dB বৃত্তাকার পোলারাইজেশন (KA1GT)",
+            "ধরা হয়নি (বৃত্তাকার পোলারাইজেশন)",
+            "পোলারাইজেশন ক্ষতি (বৃত্তাকার)",
+            "{0:F1} dB: বৃত্তাকার পোলারাইজেশন, বাস্তব ফিডের সাধারণ ক্ষতি (KA1GT)",
+            "ফিডের পোর্টগুলোর মধ্যে আইসোলেশন প্রায় 10 dB (KA1GT)",
         };
 
         public static readonly string[] AR = {
@@ -25898,6 +25973,11 @@ namespace LunaCalc
             "الصدى ممكن في هذه اللحظة",
             "يختار الميزانية المراد التحقق منها: ميزانية تبويب ميزانية EME ياغي أو ميزانية تبويب ميزانية EME الأطباق (الأطباق على 432 و902 و1296 MHz).",
             "الميزانية",
+            "+ {0:F1} dB استقطاب دائري (KA1GT)",
+            "غير محسوب (استقطاب دائري)",
+            "خسارة الاستقطاب (دائري)",
+            "{0:F1} dB: استقطاب دائري، الخسارة النموذجية للمغذّيات الحقيقية (KA1GT)",
+            "عزل بين منافذ المغذّي بنحو 10 dB (KA1GT)",
         };
 
         public static readonly string[] TR = {
@@ -27413,6 +27493,11 @@ namespace LunaCalc
             "Bu anda yankı mümkün",
             "Kontrol edilecek bütçeyi seçer: EME bütçesi yagi sekmesindeki ya da EME bütçesi çanaklar sekmesindeki bütçe (çanaklar 432, 902 ve 1296 MHz'de).",
             "Bütçe",
+            "+ {0:F1} dB dairesel polarizasyon (KA1GT)",
+            "dahil değil (dairesel polarizasyon)",
+            "Polarizasyon kaybı (dairesel)",
+            "{0:F1} dB: dairesel polarizasyon, gerçek besleyicilerin tipik kaybı (KA1GT)",
+            "besleyici portları arasındaki izolasyon yaklaşık 10 dB (KA1GT)",
         };
 
         public static readonly string[] NL = {
@@ -28928,6 +29013,11 @@ namespace LunaCalc
             "Echo mogelijk op dit moment",
             "Kiest het budget dat gecontroleerd wordt: dat van het tabblad EME-budget yagi of dat van het tabblad EME-budget schotels (de schotels op 432, 902 en 1296 MHz).",
             "Budget",
+            "+ {0:F1} dB circulaire polarisatie (KA1GT)",
+            "niet inbegrepen (circulaire polarisatie)",
+            "Polarisatieverlies (circulair)",
+            "{0:F1} dB: circulaire polarisatie, typisch verlies van echte feeds (KA1GT)",
+            "isolatie tussen de poorten van de feed ongeveer 10 dB (KA1GT)",
         };
 
         public static readonly string[] ET = {
@@ -30443,6 +30533,11 @@ namespace LunaCalc
             "Kaja võimalik sel hetkel",
             "Valib kontrollitava eelarve: saki EME eelarve yagi oma või saki EME eelarve paraboolid oma (paraboolid sagedustel 432, 902 ja 1296 MHz).",
             "Eelarve",
+            "+ {0:F1} dB ringpolarisatsioon (KA1GT)",
+            "pole arvestatud (ringpolarisatsioon)",
+            "Polarisatsioonikadu (ringpolarisatsioon)",
+            "{0:F1} dB: ringpolarisatsioon, tegelike kiiritajate tüüpiline kadu (KA1GT)",
+            "kiiritaja portide vaheline isolatsioon umbes 10 dB (KA1GT)",
         };
 
         public static readonly string[] LV = {
@@ -31958,6 +32053,11 @@ namespace LunaCalc
             "Atbalss iespējama šajā brīdī",
             "Izvēlas pārbaudāmo budžetu: cilnes EME budžets yagi budžetu vai cilnes EME budžets šķīvji budžetu (šķīvji 432, 902 un 1296 MHz).",
             "Budžets",
+            "+ {0:F1} dB cirkulārā polarizācija (KA1GT)",
+            "nav ietverta (cirkulārā polarizācija)",
+            "Polarizācijas zudumi (cirkulārā)",
+            "{0:F1} dB: cirkulārā polarizācija, reālu apstarotāju tipiskie zudumi (KA1GT)",
+            "izolācija starp apstarotāja portiem aptuveni 10 dB (KA1GT)",
         };
 
         public static readonly string[] LT = {
@@ -33473,6 +33573,11 @@ namespace LunaCalc
             "Aidas galimas šiuo momentu",
             "Pasirenka tikrinamą biudžetą: skirtuko EME biudžetas yagi arba skirtuko EME biudžetas lėkštės (lėkštės 432, 902 ir 1296 MHz).",
             "Biudžetas",
+            "+ {0:F1} dB apskritiminė poliarizacija (KA1GT)",
+            "neįskaičiuota (apskritiminė poliarizacija)",
+            "Poliarizacijos nuostoliai (apskritiminė)",
+            "{0:F1} dB: apskritiminė poliarizacija, tipiniai realių apšvitintuvų nuostoliai (KA1GT)",
+            "izoliacija tarp apšvitintuvo prievadų apie 10 dB (KA1GT)",
         };
 
         public static readonly string[] SV = {
@@ -34988,6 +35093,11 @@ namespace LunaCalc
             "Eko möjligt vid denna tidpunkt",
             "Väljer budgeten som ska kontrolleras: den i fliken EME-budget yagi eller den i fliken EME-budget parabol (paraboler på 432, 902 och 1296 MHz).",
             "Budget",
+            "+ {0:F1} dB cirkulär polarisation (KA1GT)",
+            "ej inkluderad (cirkulär polarisation)",
+            "Polarisationsförlust (cirkulär)",
+            "{0:F1} dB: cirkulär polarisation, typisk förlust för verkliga matare (KA1GT)",
+            "isolation mellan matarens portar cirka 10 dB (KA1GT)",
         };
 
         public static readonly string[] NB = {
@@ -36503,6 +36613,11 @@ namespace LunaCalc
             "Ekko mulig på dette tidspunktet",
             "Velger budsjettet som skal kontrolleres: det i fanen EME-budsjett yagi eller det i fanen EME-budsjett parabol (parabolene på 432, 902 og 1296 MHz).",
             "Budsjett",
+            "+ {0:F1} dB sirkulær polarisasjon (KA1GT)",
+            "ikke inkludert (sirkulær polarisasjon)",
+            "Polarisasjonstap (sirkulær)",
+            "{0:F1} dB: sirkulær polarisasjon, typisk tap for reelle mateelementer (KA1GT)",
+            "isolasjon mellom portene på mateelementet ca. 10 dB (KA1GT)",
         };
 
         public static readonly string[] IS = {
@@ -38018,6 +38133,11 @@ namespace LunaCalc
             "Bergmál mögulegt á þessum tímapunkti",
             "Velur aflreikninginn sem á að yfirfara: þann í flipanum EME-aflreikningur yagi eða þann í flipanum EME-aflreikningur diskar (diskarnir á 432, 902 og 1296 MHz).",
             "Aflreikningur",
+            "+ {0:F1} dB hringskautun (KA1GT)",
+            "ekki meðtalin (hringskautun)",
+            "Skautunartap (hringskautun)",
+            "{0:F1} dB: hringskautun, dæmigert tap raunverulegra fæða (KA1GT)",
+            "einangrun milli tengja fæðisins um 10 dB (KA1GT)",
         };
 
         public static readonly string[] HE = {
@@ -39533,6 +39653,11 @@ namespace LunaCalc
             "הד אפשרי ברגע זה",
             "בוחר את התקציב לבדיקה: זה של הלשונית תקציב EME yagi או זה של הלשונית תקציב EME צלחות (הצלחות ב-432, 902 ו-1296 MHz).",
             "תקציב",
+            "+ {0:F1} dB קיטוב מעגלי (KA1GT)",
+            "לא כלול (קיטוב מעגלי)",
+            "הפסד קיטוב (מעגלי)",
+            "{0:F1} dB: קיטוב מעגלי, הפסד טיפוסי של מזינים אמיתיים (KA1GT)",
+            "בידוד בין שערי המזין של כ-10 dB (KA1GT)",
         };
 
         public static readonly string[] UR = {
@@ -41048,6 +41173,11 @@ namespace LunaCalc
             "اس لمحے ایکو ممکن ہے",
             "جانچنے کے لیے بجٹ منتخب کرتا ہے: EME بجٹ yagi ٹیب والا یا EME بجٹ ڈش ٹیب والا (ڈشیں 432، 902 اور 1296 MHz پر)۔",
             "بجٹ",
+            "+ {0:F1} dB دائروی پولرائزیشن (KA1GT)",
+            "شامل نہیں (دائروی پولرائزیشن)",
+            "پولرائزیشن نقصان (دائروی)",
+            "{0:F1} dB: دائروی پولرائزیشن، حقیقی فیڈز کا عام نقصان (KA1GT)",
+            "فیڈ کے پورٹس کے درمیان آئسولیشن تقریباً 10 dB (KA1GT)",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -42562,6 +42692,11 @@ namespace LunaCalc
             "Ekko muligt på dette tidspunkt",
             "Vælger det budget, der skal kontrolleres: det i fanen EME-budget yagi eller det i fanen EME-budget parabol (paraboler på 432, 902 og 1296 MHz).",
             "Budget",
+            "+ {0:F1} dB cirkulær polarisation (KA1GT)",
+            "ikke medregnet (cirkulær polarisation)",
+            "Polarisationstab (cirkulær)",
+            "{0:F1} dB: cirkulær polarisation, typisk tab for virkelige fødeelementer (KA1GT)",
+            "isolation mellem fødeelementets porte ca. 10 dB (KA1GT)",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -44076,6 +44211,11 @@ namespace LunaCalc
             "Posible ang echo sa sandaling ito",
             "Pinipili ang budget na susuriin: ang nasa tab na EME budget yagi o ang nasa tab na EME budget dish (ang mga dish sa 432, 902 at 1296 MHz).",
             "Budget",
+            "+ {0:F1} dB circular polarization (KA1GT)",
+            "hindi kasama (circular polarization)",
+            "Pagkawala sa polarization (circular)",
+            "{0:F1} dB: circular polarization, karaniwang loss ng mga totoong feed (KA1GT)",
+            "isolation sa pagitan ng mga port ng feed na mga 10 dB (KA1GT)",
         };
     }
 
@@ -46172,7 +46312,8 @@ namespace LunaCalc
                 kpiS[2] = string.Format(c, Lang.T("{0} all'antenna (perdite TX {1:F1} dB) · {2:F1} dBi"), FmtW(b.PantW, c), b.LossTx, b.Gtx);
                 kpiC[2] = Color.FromArgb(217, 119, 6);
                 kpiV[3] = path.ToString("F1", c) + " dB";
-                kpiS[3] = chkPol.Checked ? string.Format(c, Lang.T("+ {0:F1} dB polarizzazione (Dpol {1:F0}°)"), pol, r.Dpol) : string.Format(c, Lang.T("polarizzazione non inclusa (Dpol {0:F0}°)"), r.Dpol);
+                kpiS[3] = PolCircolare ? (chkPol.Checked ? string.Format(c, Lang.T("+ {0:F1} dB polarizzazione circolare (KA1GT)"), pol) : Lang.T("non inclusa (polarizzazione circolare)"))
+                    : chkPol.Checked ? string.Format(c, Lang.T("+ {0:F1} dB polarizzazione (Dpol {1:F0}°)"), pol, r.Dpol) : string.Format(c, Lang.T("polarizzazione non inclusa (Dpol {0:F0}°)"), r.Dpol);
                 kpiC[3] = Color.FromArgb(107, 114, 128);
                 KpiSn(a, b, bw, false);
                 kpiC[4] = Color.FromArgb(15, 139, 141);
@@ -46206,6 +46347,11 @@ namespace LunaCalc
         // bpMe/bpDx tengono l'impianto attivo di ogni banda (quello dell'ultima linguetta usata per la banda),
         // bpMeAlt/bpDxAlt l'altro tipo di antenna, così i valori delle yagi e dei dischi restano separati.
         static readonly int[] BandeDischi = { 432, 902, 1296 };
+        // in 23 cm con i dischi si usa la polarizzazione circolare: niente perdita spaziale, ma una perdita tipica
+        // degli illuminatori reali (isolamento tra le porte di circa 10 dB → 0,4 dB, misure di Bob Atkins KA1GT)
+        const double PerditaCircolare = 0.4;
+        bool PolCircolare { get { return budgetDisco && curBand >= 1296 && bMe != null && bMe.Disco; } }
+        double PolScelta(Riga r) { return !chkPol.Checked ? 0.0 : (PolCircolare ? PerditaCircolare : r.PolLoss); }
         TabPage tpBudgetD;
         bool budgetDisco;
         TableLayoutPanel budgetSx;
@@ -46543,13 +46689,14 @@ namespace LunaCalc
                 double path = Moon.PathLoss(freq, d, d);
                 double tsky = Moon.Tsky(r.P.Lambda, freq);
                 double gg = pm.GroundOn > 0.5 ? GroundGain(pm.GroundH, r.P.El, freq) : 0.0;
-                Tratta e = CalcTratta(pm, pm, path, 0, tsky, 0, bw, gg, gg, 0, freq);
+                double polE = chkPol.Checked && PolCircolare ? PerditaCircolare : 0.0;
+                Tratta e = CalcTratta(pm, pm, path, polE, tsky, 0, bw, gg, gg, 0, freq);
                 Tratta e2 = null;
                 SolarInfo so = null;
                 if (lvS != null)
                 {
                     so = CalcSolar(t, r.P, me, pm, freq, true);
-                    if (so.Valid) e2 = CalcTratta(pm, pm, path, 0, tsky, so.Tsun, bw, gg, gg, 0, freq);
+                    if (so.Valid) e2 = CalcTratta(pm, pm, path, polE, tsky, so.Tsun, bw, gg, gg, 0, freq);
                 }
                 double ritardo = 2.0 * d / 299792.458, dop = 2.0 * r.DopMe;
                 CultureInfo c = ci;
@@ -46592,7 +46739,10 @@ namespace LunaCalc
                 RigaB(Lang.T("Ritardo dell'eco"), ritardo.ToString("F3", c) + " s", "");
                 RigaB(Lang.T("Doppler dell'eco"), (dop >= 0 ? "+" : "−") + Math.Abs(dop).ToString("N0", c) + " Hz", "");
                 RigaB(Lang.T("Perdita di tratta EME"), Db(path), "", Tema.Field, true, Tema.FieldFore, Tema.FieldFore);
-                RigaB(Lang.T("Perdita di polarizzazione spaziale"), Lang.T("0,0 dB: stessa antenna in trasmissione e ricezione"), "");
+                if (PolCircolare && chkPol.Checked)
+                    RigaB(Lang.T("Perdita di polarizzazione (circolare)"), string.Format(ci, Lang.T("{0:F1} dB: polarizzazione circolare, perdita tipica degli illuminatori reali (KA1GT)"), PerditaCircolare), "");
+                else
+                    RigaB(Lang.T("Perdita di polarizzazione spaziale"), Lang.T("0,0 dB: stessa antenna in trasmissione e ricezione"), "");
                 string fin = r.OkMe ? Lang.T("SÌ, Luna puntabile dalla mia stazione") : Lang.T("NO: la Luna non è puntabile dalla mia stazione");
                 Color cf = r.OkMe ? Tema.OkFg : Tema.BadFg;
                 RigaB(Lang.T("Eco possibile in questo istante"), fin, "", Tema.Field, true, cf, cf);
@@ -46675,7 +46825,7 @@ namespace LunaCalc
                 DateTime t = DateTime.SpecifyKind(dtpB.Value, DateTimeKind.Utc);
                 Riga r = Calcola1(t, true, freq, chkRefr.Checked);
                 double path = Moon.PathLoss(freq, r.P.DistTopo, r.Q.DistTopo);
-                double pol = chkPol.Checked ? r.PolLoss : 0.0;
+                double pol = PolScelta(r);
                 double tskyDx = Moon.Tsky(r.Q.Lambda, freq);   // cielo visto dal DX
                 double tskyMe = Moon.Tsky(r.P.Lambda, freq);   // cielo visto da me
                 double ggMe = pm.GroundOn > 0.5 ? GroundGain(pm.GroundH, r.P.El, freq) : 0.0;
@@ -46727,7 +46877,13 @@ namespace LunaCalc
                 string polTxt = chkPol.Checked
                     ? string.Format(ci, "{0:F1} dB  (Dpol {1:F0}°)", r.PolLoss, r.Dpol)
                     : string.Format(ci, Lang.T("non inclusa  (Dpol {0:F0}° → {1:F1} dB)"), r.Dpol, r.PolLoss);
-                RigaB(Lang.T("Perdita di polarizzazione spaziale"), polTxt, polTxt);
+                if (PolCircolare)
+                {
+                    polTxt = chkPol.Checked ? string.Format(ci, Lang.T("{0:F1} dB: polarizzazione circolare, perdita tipica degli illuminatori reali (KA1GT)"), PerditaCircolare)
+                        : Lang.T("non inclusa (polarizzazione circolare)");
+                    RigaB(Lang.T("Perdita di polarizzazione (circolare)"), polTxt, polTxt);
+                }
+                else RigaB(Lang.T("Perdita di polarizzazione spaziale"), polTxt, polTxt);
                 string fin = r.Ok ? Lang.T("SÌ, finestra comune") : Lang.T("NO: la Luna non è puntabile da entrambe");
                 Color cf = r.Ok ? Tema.OkFg : Tema.BadFg;
                 RigaB(Lang.T("Collegamento possibile in questo istante"), fin, fin, Tema.Field, true, cf, cf);
@@ -49623,7 +49779,7 @@ namespace LunaCalc
             DateTime t = DateTime.SpecifyKind(dtpB.Value, DateTimeKind.Utc);
             Riga r = Calcola1(t, true, freq, chkRefr.Checked);
             double path = Moon.PathLoss(freq, r.P.DistTopo, r.Q.DistTopo);
-            double pol = chkPol.Checked ? r.PolLoss : 0.0;
+            double pol = PolScelta(r);
             double tskyDx = Moon.Tsky(r.Q.Lambda, freq), tskyMe = Moon.Tsky(r.P.Lambda, freq);
             double ggMe = pm.GroundOn > 0.5 ? GroundGain(pm.GroundH, r.P.El, freq) : 0.0;
             double ggDx = pd.GroundOn > 0.5 ? GroundGain(pd.GroundH, r.Q.El, freq) : 0.0;
@@ -49667,6 +49823,10 @@ namespace LunaCalc
             DPasso(Lang.T("Perdita di tratta EME"), "L_{EME} = 10 · log_{10} \\frac{\\p{4π}^3 d_1^2 d_2^2}{σ λ^2}",
                 "10 · log_{10} \\frac{\\p{4π}^3 · \\p{" + Sci(r.P.DistTopo * 1000, 5) + "}^2 · \\p{" + Sci(r.Q.DistTopo * 1000, 5) + "}^2}{" + Sci(sigma, 3) + " · " + Fd(lambda, "0.0000") + "^2}",
                 Fd(path, "0.00") + " dB");
+            if (PolCircolare)
+                DPasso(Lang.T("Perdita di polarizzazione (circolare)"), "L_{pol} ≈ " + Fd(PerditaCircolare, "0.0") + " dB", Lang.T("isolamento tra le porte dell'illuminatore di circa 10 dB (KA1GT)"),
+                    Fd(PerditaCircolare, "0.00") + " dB");
+            else
             DPasso(Lang.T("Perdita di polarizzazione spaziale"), "L_{pol} = −20 · log_{10} \\a{cos D_{pol}}", "−20 · log_{10} \\a{cos " + Fd(r.Dpol, "0.0") + "°}",
                 Fd(r.PolLoss, "0.00") + " dB");
             if (!chkPol.Checked) DNota(Lang.T("non inclusa") + " → 0 dB");
@@ -53803,7 +53963,7 @@ namespace LunaCalc
             double bw = LeggiBw();
             Riga r = Calcola1(now, true, freq, chkRefr.Checked);
             double path = Moon.PathLoss(freq, r.P.DistTopo, r.Q.DistTopo);
-            double pol = chkPol.Checked ? r.PolLoss : 0.0;
+            double pol = PolScelta(r);
             double tskyDx = Moon.Tsky(r.Q.Lambda, freq), tskyMe = Moon.Tsky(r.P.Lambda, freq);
             double ggMe = pm.GroundOn > 0.5 ? GroundGain(pm.GroundH, r.P.El, freq) : 0.0;
             double ggDx = pd.GroundOn > 0.5 ? GroundGain(pd.GroundH, r.Q.El, freq) : 0.0;
@@ -67142,7 +67302,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotazione per un passaggio nella ionosfera, valore diurno tipico; 144 MHz da [3], le altre bande ricavate da YAEC con la formula qui sopra (≈ = ricavato). Dai 1296 MHz in su si può considerare nulla [3].",
+                "~ Rotazione per un passaggio nella ionosfera, valore diurno tipico; 144 MHz da [3], le altre bande ricavate da YAEC con la formula qui sopra (≈ = ricavato). Dai 1296 MHz in su, con la ionosfera di tutti i giorni, la rotazione è di pochi gradi e si può considerare nulla [3]; con una ionosfera molto carica di elettroni la raccomandazione ITU-R P.531 dà però 108° a 1 GHz per un passaggio a 30° di elevazione, cioè circa 64° a 1296 MHz [4]. In 23 cm conta poco perché si usa di solito la polarizzazione circolare, che la rotazione di Faraday non modifica.",
                 "• **Non si annulla al ritorno.** Il verso della rotazione non dipende dalla direzione in cui viaggia l'onda: dopo il secondo passaggio nella ionosfera il segnale è ruotato ancora, nello stesso verso [3]. Ogni stazione aggiunge la rotazione della ionosfera sopra di sé.",
                 "• **Cambia nel tempo.** La quantità di elettroni varia tra giorno e notte, all'alba e al tramonto e con l'attività solare: con il Sole molto attivo la rotazione è forte e può variare rapidamente, e durante le aurore la polarizzazione può cambiare in pochi millisecondi [3]. Per questo non si può prevedere da un calcolo.",
                 "• **Si somma allo spostamento spaziale.** Lo spostamento spaziale (§D_{pol}§) ha segno opposto nei due sensi del collegamento, mentre la rotazione di Faraday ha lo stesso verso: in un senso le due rotazioni si sommano, nell'altro si sottraggono. Così può capitare che tu senta il DX e lui non senta te, o il contrario [1]. La perdita segue la stessa legge della §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, con Δ lo sfasamento totale: a 90° il segnale sparisce.",
@@ -67152,18 +67312,22 @@ namespace LunaCalc
                 "L'articolo «Selecting Polarisation for EME» di Leif Åsbrink SM5BSZ (25 aprile 1997) è pubblico e si legge sul suo sito: https://sm5bsz.com/polarity/emepol.htm. L'autore di questo programma ritiene utile offrirne qui uno spunto di sintesi, scritto con parole proprie; per le spiegazioni complete si rimanda alla lettura integrale dell'articolo [3].",
                 "• **Quattro effetti.** Lungo il percorso Terra – Luna – Terra la polarizzazione cambia per lo spostamento spaziale, per la riflessione sulla Luna, per la rotazione di Faraday e per l'assorbimento nella ionosfera [3].",
                 "• **Spostamento spaziale.** Viste dalla Luna, due antenne lontane sulla Terra curva non sono parallele. Riguarda solo la polarizzazione lineare, si calcola con facilità e non dipende dalla frequenza [3]: è la §D_{pol}§ di YAEC.",
-                "• **Riflessione sulla Luna.** Alle frequenze basse, come 144 MHz, la Luna si comporta come una sfera liscia: la polarizzazione lineare resta tale, quella circolare inverte il senso, e circa l'1 % dell'energia finisce nella polarizzazione «sbagliata». A 10 GHz la superficie è ruvida e il segnale torna depolarizzato [3].",
+                "• **Riflessione sulla Luna.** Alle frequenze basse, come 144 MHz, la Luna si comporta come una sfera liscia: la polarizzazione lineare resta tale, quella circolare inverte il senso, e circa l'1 % dell'energia finisce nella polarizzazione «sbagliata». A 10 GHz la superficie è ruvida e il segnale torna depolarizzato [3]. Le misure radar di Hagfors a 23 cm confermano che vicino al centro del disco lunare domina ancora la riflessione quasi speculare, mentre verso i bordi l'eco viene da singoli oggetti sparsi sulla superficie e risulta in parte depolarizzato [5].",
                 "• **Rotazione di Faraday.** È descritta nel sottoparagrafo precedente: cala con il quadrato della frequenza, si somma all'andata e al ritorno e non si può prevedere [3].",
                 "• **Assorbimento ionosferico.** Cala anch'esso con il quadrato della frequenza: a 144 MHz, di giorno e a 10° di elevazione, è di circa 0,1 dB. Conta solo con un'attività solare molto alta; durante le aurore forti la polarizzazione può cambiare più in fretta di quanto un ricevitore a banda stretta riesca a seguire [3].",
                 "• **Da 50 a 432 MHz.** Quasi tutti usano yagi a polarizzazione lineare: l'autore consiglia un impianto con la polarizzazione lineare commutabile, meglio elettronicamente; una rotazione meccanica va bene se il quarto di giro richiede uno o pochi secondi [3]. In ricezione si sceglie la polarizzazione con il segnale più forte (un ricevitore a due canali è più rapido con i segnali deboli); quando si chiama CQ conviene alternare orizzontale e verticale, invece della circolare che perde sempre 3 dB [3].",
+                "• **In 23 cm (1296 MHz).** Con i dischi si usa di solito la polarizzazione circolare: si trasmette in un senso e si riceve nell'altro, perché la Luna inverte il senso, e la rotazione di Faraday e la polarizzazione spaziale non contano. La perdita viene dagli illuminatori, che non sono mai perfettamente circolari: Bob Atkins KA1GT l'ha misurata dall'isolamento tra le due porte del polarizzatore, circa 1 dB con 6 dB di isolamento, circa 0,4 dB con 10 dB (il caso tipico) e circa 0,1 dB con 16 dB [6]. YAEC usa 0,4 dB nella linguetta Budget EME dischi a 1296 MHz quando la casella della perdita di polarizzazione è attiva.",
                 "• **Da 10 GHz in su.** La Luna depolarizza il segnale, la polarizzazione di trasmissione non conta più e serve un ricevitore a due canali su due alimentatori ortogonali [3]. Sono frequenze fuori dalle bande di YAEC.",
                 "• **Quale polarizzazione trasmettere.** Se ricevi una stazione, puoi ricavare con quale polarizzazione trasmetterle perché il tuo segnale le arrivi nel modo giusto [3]. Con gli angoli in gradi (0° orizzontale, 90° verticale), P è la polarizzazione di trasmissione dell'altra stazione, R quella con cui la ricevi, S lo spostamento spaziale, F la rotazione di Faraday e T la tua polarizzazione di trasmissione migliore:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Eliminando F dalle prime due relazioni si ottiene §T = 2 · P + 2 · S − R§; per un'antenna lineare §2 · P§ vale 0° o 180°, che è la stessa polarizzazione, e resta §T = 2 · S − R§ [3]. Senza rotazione di Faraday (§F§ = 0, dai 1296 MHz in su) la polarizzazione migliore per trasmettere è la stessa con cui si riceve meglio, §T = R§. L'articolo segnala che la regola coincide con quella di KL7WE e cita il programma SKYMOON di W5UN per il calcolo di S [3].",
+                "~ Eliminando F dalle prime due relazioni si ottiene §T = 2 · P + 2 · S − R§; per un'antenna lineare §2 · P§ vale 0° o 180°, che è la stessa polarizzazione, e resta §T = 2 · S − R§ [3]. Senza rotazione di Faraday (§F§ ≈ 0, dai 1296 MHz in su con la ionosfera di tutti i giorni) la polarizzazione migliore per trasmettere è la stessa con cui si riceve meglio, §T = R§. L'articolo segnala che la regola coincide con quella di KL7WE e cita il programma SKYMOON di W5UN per il calcolo di S [3].",
                 "> In YAEC lo spostamento spaziale S è la §D_{pol}§ calcolata nella Posizione della Luna e nel Posizione live e +- 24h; la rotazione di Faraday F non si può calcolare. Per gli esempi, i casi particolari e le figure, leggi l'articolo completo di SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentazione, luglio 2015, fornita da IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 aprile 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 aprile 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Raccomandazione P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabella 1 (rotazione di Faraday proporzionale a 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["it"]["S44"] = new string[] {
                 "## Rumore del cielo e Dgrd",
@@ -67709,7 +67873,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ Rotation for one pass through the ionosphere, typical daytime value; 144 MHz from [3], the other bands derived by YAEC with the formula above (≈ = derived). From 1296 MHz upwards it can be taken as zero [3].",
+                "~ Rotation for one pass through the ionosphere, typical daytime value; 144 MHz from [3], the other bands derived by YAEC with the formula above (≈ = derived). From 1296 MHz upwards, with the everyday ionosphere, the rotation is only a few degrees and can be taken as zero [3]; with an ionosphere very heavily loaded with electrons, however, Recommendation ITU-R P.531 gives 108° at 1 GHz for one pass at 30° elevation, i.e. about 64° at 1296 MHz [4]. On 23 cm this matters little because circular polarisation is usually used, which Faraday rotation does not change.",
                 "• **It does not cancel on the way back.** The sense of rotation does not depend on the direction in which the wave travels: after the second pass through the ionosphere the signal is rotated again, in the same sense [3]. Each station adds the rotation of the ionosphere above it.",
                 "• **It changes with time.** The number of electrons varies between day and night, at sunrise and sunset and with solar activity: with a very active Sun the rotation is strong and may vary rapidly, and during auroras the polarisation can change within a few milliseconds [3]. This is why it cannot be predicted by a calculation.",
                 "• **It adds to the spatial offset.** The spatial offset (§D_{pol}§) has opposite sign in the two directions of the link, while Faraday rotation keeps the same sense: in one direction the two rotations add, in the other they subtract. So it can happen that you hear the DX and he does not hear you, or the other way round [1]. The loss follows the same law as §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, with Δ the total offset: at 90° the signal disappears.",
@@ -67719,18 +67883,22 @@ namespace LunaCalc
                 "The article «Selecting Polarisation for EME» by Leif Åsbrink SM5BSZ (25 April 1997) is public and can be read on his website: https://sm5bsz.com/polarity/emepol.htm. The author of this program considers it useful to offer here a summary of it, written in his own words, as a starting point; for the full explanations please read the complete article [3].",
                 "• **Four effects.** Along the Earth – Moon – Earth path the polarisation changes because of the spatial offset, the reflection on the Moon, Faraday rotation and absorption in the ionosphere [3].",
                 "• **Spatial offset.** Seen from the Moon, two distant antennas on the curved Earth are not parallel. It only concerns linear polarisation, is easy to calculate and does not depend on frequency [3]: it is YAEC's §D_{pol}§.",
-                "• **Reflection on the Moon.** At low frequencies, such as 144 MHz, the Moon behaves like a smooth sphere: linear polarisation stays linear, circular polarisation reverses its sense, and about 1 % of the energy ends up in the «wrong» polarisation. At 10 GHz the surface is rough and the signal comes back depolarised [3].",
+                "• **Reflection on the Moon.** At low frequencies, such as 144 MHz, the Moon behaves like a smooth sphere: linear polarisation stays linear, circular polarisation reverses its sense, and about 1 % of the energy ends up in the «wrong» polarisation. At 10 GHz the surface is rough and the signal comes back depolarised [3]. Hagfors's radar measurements at 23 cm confirm that near the centre of the lunar disc quasi-specular reflection still dominates, while towards the limbs the echo comes from individual objects scattered over the surface and is partly depolarised [5].",
                 "• **Faraday rotation.** It is described in the previous subsection: it falls with the square of the frequency, adds on the way out and on the way back, and cannot be predicted [3].",
                 "• **Ionospheric absorption.** It also falls with the square of the frequency: at 144 MHz, by day and at 10° elevation, it is about 0.1 dB. It only matters with very high solar activity; during strong auroras the polarisation can change faster than a narrow-band receiver can follow [3].",
                 "• **From 50 to 432 MHz.** Almost everyone uses linearly polarised yagis: the author recommends a system with switchable linear polarisation, preferably electronic; a mechanical rotation is fine if the quarter turn takes one or a few seconds [3]. On reception you choose the polarisation with the strongest signal (a two-channel receiver is quicker with weak signals); when calling CQ it is better to alternate horizontal and vertical than to use circular, which always loses 3 dB [3].",
+                "• **On 23 cm (1296 MHz).** With dishes, circular polarisation is normally used: you transmit in one sense and receive in the other, because the Moon reverses the sense, and Faraday rotation and the spatial offset do not matter. The loss comes from the feeds, which are never perfectly circular: Bob Atkins KA1GT measured it from the isolation between the two ports of the polariser, about 1 dB with 6 dB of isolation, about 0.4 dB with 10 dB (the typical case) and about 0.1 dB with 16 dB [6]. YAEC uses 0.4 dB in the EME budget dishes tab at 1296 MHz when the polarisation loss checkbox is ticked.",
                 "• **From 10 GHz upwards.** The Moon depolarises the signal, the transmitting polarisation no longer matters, and a two-channel receiver on two orthogonal feeds is needed [3]. These frequencies are outside the YAEC bands.",
                 "• **Which polarisation to transmit.** If you receive a station, you can work out which polarisation to transmit so that your signal reaches it correctly [3]. With angles in degrees (0° horizontal, 90° vertical), P is the other station's transmitting polarisation, R the one you receive it with, S the spatial offset, F the Faraday rotation and T your best transmitting polarisation:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Eliminating F from the first two relations gives §T = 2 · P + 2 · S − R§; for a linear antenna §2 · P§ is 0° or 180°, which is the same polarisation, leaving §T = 2 · S − R§ [3]. Without Faraday rotation (§F§ = 0, from 1296 MHz upwards) the best polarisation for transmitting is the same one you receive best with, §T = R§. The article notes that the rule matches KL7WE's and cites W5UN's SKYMOON program for calculating S [3].",
+                "~ Eliminating F from the first two relations gives §T = 2 · P + 2 · S − R§; for a linear antenna §2 · P§ is 0° or 180°, which is the same polarisation, leaving §T = 2 · S − R§ [3]. Without Faraday rotation (§F§ ≈ 0, from 1296 MHz upwards with the everyday ionosphere) the best polarisation for transmitting is the same one you receive best with, §T = R§. The article notes that the rule matches KL7WE's and cites W5UN's SKYMOON program for calculating S [3].",
                 "> In YAEC the spatial offset S is the §D_{pol}§ computed in Moon position and in Live position and +- 24h; Faraday rotation F cannot be calculated. For the examples, special cases and figures, read the full SM5BSZ article [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentation, July 2015, supplied by IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 April 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 April 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Recommendation P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, table 1 (Faraday rotation proportional to 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["en"]["S44"] = new string[] {
                 "## Sky noise and Dgrd",
@@ -68268,7 +68436,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Drehung bei einem Durchgang durch die Ionosphäre, typischer Tageswert; 144 MHz aus [3], die übrigen Bänder von YAEC mit der obigen Formel abgeleitet (≈ = abgeleitet). Ab 1296 MHz kann sie als null angesehen werden [3].",
+                "~ Drehung bei einem Durchgang durch die Ionosphäre, typischer Tageswert; 144 MHz aus [3], die übrigen Bänder von YAEC mit der obigen Formel abgeleitet (≈ = abgeleitet). Ab 1296 MHz beträgt die Drehung bei der alltäglichen Ionosphäre nur wenige Grad und kann als null angesehen werden [3]; bei einer sehr stark mit Elektronen angereicherten Ionosphäre gibt die Empfehlung ITU-R P.531 jedoch 108° bei 1 GHz für einen Durchgang bei 30° Elevation an, also etwa 64° bei 1296 MHz [4]. Auf 23 cm spielt das kaum eine Rolle, da man meist zirkulare Polarisation verwendet, die von der Faraday-Drehung nicht verändert wird.",
                 "• **Sie hebt sich auf dem Rückweg nicht auf.** Der Drehsinn hängt nicht von der Richtung ab, in der sich die Welle ausbreitet: Nach dem zweiten Durchgang durch die Ionosphäre ist das Signal erneut gedreht, im gleichen Sinn [3]. Jede Station fügt die Drehung der Ionosphäre über ihr hinzu.",
                 "• **Sie ändert sich mit der Zeit.** Die Elektronenmenge schwankt zwischen Tag und Nacht, bei Sonnenaufgang und Sonnenuntergang und mit der Sonnenaktivität: Bei sehr aktiver Sonne ist die Drehung stark und kann sich schnell ändern, und bei Polarlichtern kann sich die Polarisation innerhalb weniger Millisekunden ändern [3]. Deshalb lässt sie sich nicht durch eine Rechnung vorhersagen.",
                 "• **Sie addiert sich zum räumlichen Polarisationsversatz.** Der räumliche Polarisationsversatz (§D_{pol}§) hat in den beiden Richtungen der Verbindung entgegengesetztes Vorzeichen, während die Faraday-Drehung den gleichen Sinn behält: In der einen Richtung addieren sich die beiden Drehungen, in der anderen subtrahieren sie sich. So kann es vorkommen, dass Sie den DX hören und er Sie nicht, oder umgekehrt [1]. Der Verlust folgt demselben Gesetz wie bei §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, mit Δ als gesamtem Versatz: Bei 90° verschwindet das Signal.",
@@ -68278,18 +68446,22 @@ namespace LunaCalc
                 "Der Artikel „Selecting Polarisation for EME“ von Leif Åsbrink SM5BSZ (25. April 1997) ist öffentlich und auf seiner Website zu lesen: https://sm5bsz.com/polarity/emepol.htm. Der Autor dieses Programms hält es für nützlich, hier eine Zusammenfassung davon als Anregung anzubieten, in eigenen Worten geschrieben; für die vollständigen Erklärungen sei auf die Lektüre des ganzen Artikels verwiesen [3].",
                 "• **Vier Effekte.** Auf dem Weg Erde – Mond – Erde ändert sich die Polarisation durch den räumlichen Polarisationsversatz, die Reflexion am Mond, die Faraday-Drehung und die Absorption in der Ionosphäre [3].",
                 "• **Räumlicher Polarisationsversatz.** Vom Mond aus gesehen sind zwei weit entfernte Antennen auf der gekrümmten Erde nicht parallel. Er betrifft nur die lineare Polarisation, lässt sich leicht berechnen und hängt nicht von der Frequenz ab [3]: Er ist §D_{pol}§ in YAEC.",
-                "• **Reflexion am Mond.** Bei niedrigen Frequenzen wie 144 MHz verhält sich der Mond wie eine glatte Kugel: Lineare Polarisation bleibt linear, zirkulare kehrt ihren Drehsinn um, und etwa 1 % der Energie landet in der „falschen“ Polarisation. Bei 10 GHz ist die Oberfläche rau, und das Signal kommt depolarisiert zurück [3].",
+                "• **Reflexion am Mond.** Bei niedrigen Frequenzen wie 144 MHz verhält sich der Mond wie eine glatte Kugel: Lineare Polarisation bleibt linear, zirkulare kehrt ihren Drehsinn um, und etwa 1 % der Energie landet in der „falschen“ Polarisation. Bei 10 GHz ist die Oberfläche rau, und das Signal kommt depolarisiert zurück [3]. Die Radarmessungen von Hagfors bei 23 cm bestätigen, dass nahe der Mitte der Mondscheibe noch die nahezu spiegelnde Reflexion überwiegt, während das Echo zum Rand hin von einzelnen, über die Oberfläche verstreuten Objekten stammt und teilweise depolarisiert ist [5].",
                 "• **Faraday-Drehung.** Sie ist im vorigen Unterabschnitt beschrieben: Sie nimmt mit dem Quadrat der Frequenz ab, addiert sich auf dem Hin- und Rückweg und lässt sich nicht vorhersagen [3].",
                 "• **Ionosphärische Absorption.** Auch sie nimmt mit dem Quadrat der Frequenz ab: Bei 144 MHz beträgt sie tagsüber und bei 10° Elevation etwa 0,1 dB. Sie spielt nur bei sehr hoher Sonnenaktivität eine Rolle; bei starken Polarlichtern kann sich die Polarisation schneller ändern, als ein schmalbandiger Empfänger folgen kann [3].",
                 "• **Von 50 bis 432 MHz.** Fast alle verwenden linear polarisierte Yagis: Der Autor empfiehlt eine Anlage mit umschaltbarer linearer Polarisation, am besten elektronisch; eine mechanische Drehung ist in Ordnung, wenn die Vierteldrehung eine oder wenige Sekunden dauert [3]. Beim Empfang wählt man die Polarisation mit dem stärksten Signal (ein Zweikanalempfänger ist bei schwachen Signalen schneller); beim CQ-Rufen wechselt man besser zwischen horizontal und vertikal, statt zirkulare Polarisation zu verwenden, die immer 3 dB kostet [3].",
+                "• **Auf 23 cm (1296 MHz).** Mit Spiegeln verwendet man meist zirkulare Polarisation: Man sendet mit einem Drehsinn und empfängt mit dem anderen, weil der Mond den Drehsinn umkehrt, und Faraday-Drehung und räumlicher Polarisationsversatz spielen keine Rolle. Der Verlust stammt von den Erregern, die nie perfekt zirkular sind: Bob Atkins KA1GT hat ihn aus der Entkopplung zwischen den beiden Anschlüssen des Polarisators gemessen, etwa 1 dB bei 6 dB Entkopplung, etwa 0,4 dB bei 10 dB (der typische Fall) und etwa 0,1 dB bei 16 dB [6]. YAEC setzt im Reiter EME-Budget Spiegel bei 1296 MHz 0,4 dB an, wenn das Kästchen Polarisationsverlust aktiviert ist.",
                 "• **Ab 10 GHz.** Der Mond depolarisiert das Signal, die Sendepolarisation spielt keine Rolle mehr, und man braucht einen Zweikanalempfänger an zwei orthogonalen Erregern [3]. Diese Frequenzen liegen außerhalb der Bänder von YAEC.",
                 "• **Mit welcher Polarisation senden.** Wenn Sie eine Station empfangen, können Sie ermitteln, mit welcher Polarisation Sie ihr senden müssen, damit Ihr Signal richtig bei ihr ankommt [3]. Mit Winkeln in Grad (0° horizontal, 90° vertikal) ist P die Sendepolarisation der anderen Station, R die, mit der Sie sie empfangen, S der räumliche Polarisationsversatz, F die Faraday-Drehung und T Ihre beste Sendepolarisation:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Eliminiert man F aus den ersten beiden Beziehungen, erhält man §T = 2 · P + 2 · S − R§; für eine lineare Antenne ist §2 · P§ gleich 0° oder 180°, also dieselbe Polarisation, und es bleibt §T = 2 · S − R§ [3]. Ohne Faraday-Drehung (§F§ = 0, ab 1296 MHz) ist die beste Sendepolarisation dieselbe, mit der man am besten empfängt, §T = R§. Der Artikel weist darauf hin, dass die Regel mit der von KL7WE übereinstimmt, und nennt das Programm SKYMOON von W5UN zur Berechnung von S [3].",
+                "~ Eliminiert man F aus den ersten beiden Beziehungen, erhält man §T = 2 · P + 2 · S − R§; für eine lineare Antenne ist §2 · P§ gleich 0° oder 180°, also dieselbe Polarisation, und es bleibt §T = 2 · S − R§ [3]. Ohne Faraday-Drehung (§F§ ≈ 0, ab 1296 MHz bei der alltäglichen Ionosphäre) ist die beste Sendepolarisation dieselbe, mit der man am besten empfängt, §T = R§. Der Artikel weist darauf hin, dass die Regel mit der von KL7WE übereinstimmt, und nennt das Programm SKYMOON von W5UN zur Berechnung von S [3].",
                 "> In YAEC ist der räumliche Polarisationsversatz S der in den Reitern Mondposition und Position live und +- 24h berechnete Wert §D_{pol}§; die Faraday-Drehung F lässt sich nicht berechnen. Für die Beispiele, die Sonderfälle und die Abbildungen lesen Sie den vollständigen Artikel von SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, Präsentation, Juli 2015, zur Verfügung gestellt von IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. April 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. April 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Empfehlung P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, Tabelle 1 (Faraday-Drehung proportional zu 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["de"]["S44"] = new string[] {
                 "## Himmelsrauschen und Dgrd",
@@ -68827,7 +68999,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotation pour un passage dans l'ionosphère, valeur diurne typique ; 144 MHz d'après [3], les autres bandes dérivées par YAEC avec la formule ci-dessus (≈ = dérivé). À partir de 1296 MHz, on peut la considérer comme nulle [3].",
+                "~ Rotation pour un passage dans l'ionosphère, valeur diurne typique ; 144 MHz d'après [3], les autres bandes dérivées par YAEC avec la formule ci-dessus (≈ = dérivé). À partir de 1296 MHz, avec l'ionosphère de tous les jours, la rotation n'est que de quelques degrés et on peut la considérer comme nulle [3] ; avec une ionosphère très chargée en électrons, la recommandation ITU-R P.531 donne toutefois 108° à 1 GHz pour un passage à 30° d'élévation, soit environ 64° à 1296 MHz [4]. En 23 cm, cela compte peu car on utilise généralement la polarisation circulaire, que la rotation de Faraday ne modifie pas.",
                 "• **Elle ne s'annule pas au retour.** Le sens de rotation ne dépend pas de la direction dans laquelle se propage l'onde : après le second passage dans l'ionosphère, le signal est de nouveau tourné, dans le même sens [3]. Chaque station ajoute la rotation de l'ionosphère située au-dessus d'elle.",
                 "• **Elle varie dans le temps.** La quantité d'électrons varie entre le jour et la nuit, au lever et au coucher du soleil et avec l'activité solaire : avec un Soleil très actif, la rotation est forte et peut varier rapidement, et pendant les aurores la polarisation peut changer en quelques millisecondes [3]. C'est pourquoi on ne peut pas la prévoir par un calcul.",
                 "• **Elle s'ajoute au décalage spatial.** Le décalage spatial de polarisation (§D_{pol}§) a un signe opposé dans les deux sens de la liaison, tandis que la rotation de Faraday garde le même sens : dans un sens les deux rotations s'additionnent, dans l'autre elles se soustraient. Il peut ainsi arriver que vous entendiez le DX et qu'il ne vous entende pas, ou l'inverse [1]. La perte suit la même loi que §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, avec Δ le décalage total : à 90° le signal disparaît.",
@@ -68837,18 +69009,22 @@ namespace LunaCalc
                 "L'article « Selecting Polarisation for EME » de Leif Åsbrink SM5BSZ (25 avril 1997) est public et se lit sur son site : https://sm5bsz.com/polarity/emepol.htm. L'auteur de ce programme juge utile d'en offrir ici un résumé, comme point de départ, rédigé avec ses propres mots ; pour les explications complètes, on se reportera à la lecture intégrale de l'article [3].",
                 "• **Quatre effets.** Le long du trajet Terre – Lune – Terre, la polarisation change à cause du décalage spatial, de la réflexion sur la Lune, de la rotation de Faraday et de l'absorption dans l'ionosphère [3].",
                 "• **Décalage spatial.** Vues depuis la Lune, deux antennes éloignées sur la Terre courbe ne sont pas parallèles. Il ne concerne que la polarisation linéaire, se calcule facilement et ne dépend pas de la fréquence [3] : c'est le §D_{pol}§ de YAEC.",
-                "• **Réflexion sur la Lune.** Aux basses fréquences, comme 144 MHz, la Lune se comporte comme une sphère lisse : la polarisation linéaire reste linéaire, la circulaire inverse son sens, et environ 1 % de l'énergie se retrouve dans la « mauvaise » polarisation. À 10 GHz, la surface est rugueuse et le signal revient dépolarisé [3].",
+                "• **Réflexion sur la Lune.** Aux basses fréquences, comme 144 MHz, la Lune se comporte comme une sphère lisse : la polarisation linéaire reste linéaire, la circulaire inverse son sens, et environ 1 % de l'énergie se retrouve dans la « mauvaise » polarisation. À 10 GHz, la surface est rugueuse et le signal revient dépolarisé [3]. Les mesures radar de Hagfors à 23 cm confirment que, près du centre du disque lunaire, la réflexion quasi spéculaire domine encore, tandis que vers les bords l'écho provient d'objets isolés dispersés sur la surface et se trouve en partie dépolarisé [5].",
                 "• **Rotation de Faraday.** Elle est décrite dans la sous-section précédente : elle diminue avec le carré de la fréquence, s'ajoute à l'aller et au retour et ne peut pas être prévue [3].",
                 "• **Absorption ionosphérique.** Elle diminue elle aussi avec le carré de la fréquence : à 144 MHz, de jour et à 10° d'élévation, elle est d'environ 0,1 dB. Elle ne compte qu'avec une activité solaire très forte ; lors de fortes aurores, la polarisation peut changer plus vite qu'un récepteur à bande étroite ne peut la suivre [3].",
                 "• **De 50 à 432 MHz.** Presque tout le monde utilise des yagis à polarisation linéaire : l'auteur conseille une installation à polarisation linéaire commutable, de préférence électroniquement ; une rotation mécanique convient si le quart de tour prend une ou quelques secondes [3]. En réception, on choisit la polarisation qui donne le signal le plus fort (un récepteur à deux canaux est plus rapide avec les signaux faibles) ; quand on lance CQ, il vaut mieux alterner horizontale et verticale plutôt qu'utiliser la circulaire, qui perd toujours 3 dB [3].",
+                "• **En 23 cm (1296 MHz).** Avec les paraboles, on utilise généralement la polarisation circulaire : on émet dans un sens et on reçoit dans l'autre, car la Lune inverse le sens, et la rotation de Faraday et le décalage spatial ne comptent pas. La perte vient des sources, qui ne sont jamais parfaitement circulaires : Bob Atkins KA1GT l'a mesurée à partir de l'isolation entre les deux ports du polariseur, environ 1 dB avec 6 dB d'isolation, environ 0,4 dB avec 10 dB (le cas typique) et environ 0,1 dB avec 16 dB [6]. YAEC utilise 0,4 dB dans l'onglet Bilan EME paraboles à 1296 MHz lorsque la case de la perte de polarisation est cochée.",
                 "• **À partir de 10 GHz.** La Lune dépolarise le signal, la polarisation d'émission n'a plus d'importance et il faut un récepteur à deux canaux sur deux sources orthogonales [3]. Ces fréquences sont en dehors des bandes de YAEC.",
                 "• **Quelle polarisation émettre.** Si vous recevez une station, vous pouvez déterminer avec quelle polarisation lui émettre pour que votre signal lui parvienne correctement [3]. Avec les angles en degrés (0° horizontale, 90° verticale), P est la polarisation d'émission de l'autre station, R celle avec laquelle vous la recevez, S le décalage spatial, F la rotation de Faraday et T votre meilleure polarisation d'émission :",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ En éliminant F des deux premières relations, on obtient §T = 2 · P + 2 · S − R§ ; pour une antenne linéaire, §2 · P§ vaut 0° ou 180°, ce qui est la même polarisation, et il reste §T = 2 · S − R§ [3]. Sans rotation de Faraday (§F§ = 0, à partir de 1296 MHz), la meilleure polarisation pour émettre est celle avec laquelle on reçoit le mieux, §T = R§. L'article signale que la règle coïncide avec celle de KL7WE et cite le programme SKYMOON de W5UN pour le calcul de S [3].",
+                "~ En éliminant F des deux premières relations, on obtient §T = 2 · P + 2 · S − R§ ; pour une antenne linéaire, §2 · P§ vaut 0° ou 180°, ce qui est la même polarisation, et il reste §T = 2 · S − R§ [3]. Sans rotation de Faraday (§F§ ≈ 0, à partir de 1296 MHz avec l'ionosphère de tous les jours), la meilleure polarisation pour émettre est celle avec laquelle on reçoit le mieux, §T = R§. L'article signale que la règle coïncide avec celle de KL7WE et cite le programme SKYMOON de W5UN pour le calcul de S [3].",
                 "> Dans YAEC, le décalage spatial S est le §D_{pol}§ calculé dans les onglets Position de la Lune et Position en direct et +- 24h ; la rotation de Faraday F ne peut pas être calculée. Pour les exemples, les cas particuliers et les figures, lisez l'article complet de SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, présentation, juillet 2015, fournie par IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 avril 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 avril 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Recommandation P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tableau 1 (rotation de Faraday proportionnelle à 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["fr"]["S44"] = new string[] {
                 "## Bruit du ciel et Dgrd",
@@ -69386,7 +69562,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotación por un paso a través de la ionosfera, valor diurno típico; 144 MHz según [3], las demás bandas derivadas por YAEC con la fórmula anterior (≈ = derivado). A partir de 1296 MHz se puede considerar nula [3].",
+                "~ Rotación por un paso a través de la ionosfera, valor diurno típico; 144 MHz según [3], las demás bandas derivadas por YAEC con la fórmula anterior (≈ = derivado). A partir de 1296 MHz, con la ionosfera de todos los días, la rotación es de pocos grados y se puede considerar nula [3]; con una ionosfera muy cargada de electrones, sin embargo, la recomendación ITU-R P.531 da 108° a 1 GHz para un paso a 30° de elevación, es decir, unos 64° a 1296 MHz [4]. En 23 cm importa poco porque se suele usar la polarización circular, que la rotación de Faraday no modifica.",
                 "• **No se anula a la vuelta.** El sentido de la rotación no depende de la dirección en que viaja la onda: tras el segundo paso por la ionosfera la señal queda girada otra vez, en el mismo sentido [3]. Cada estación añade la rotación de la ionosfera que tiene encima.",
                 "• **Cambia con el tiempo.** La cantidad de electrones varía entre el día y la noche, al amanecer y al atardecer y con la actividad solar: con el Sol muy activo la rotación es fuerte y puede variar rápidamente, y durante las auroras la polarización puede cambiar en pocos milisegundos [3]. Por eso no se puede predecir mediante un cálculo.",
                 "• **Se suma al desplazamiento espacial.** El desplazamiento espacial de la polarización (§D_{pol}§) tiene signo opuesto en los dos sentidos del enlace, mientras que la rotación de Faraday mantiene el mismo sentido: en un sentido las dos rotaciones se suman, en el otro se restan. Así puede ocurrir que tú oigas al DX y él no te oiga, o al revés [1]. La pérdida sigue la misma ley que la §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, con Δ el desplazamiento total: a 90° la señal desaparece.",
@@ -69396,18 +69572,22 @@ namespace LunaCalc
                 "El artículo “Selecting Polarisation for EME” de Leif Åsbrink SM5BSZ (25 de abril de 1997) es público y se puede leer en su sitio web: https://sm5bsz.com/polarity/emepol.htm. El autor de este programa considera útil ofrecer aquí un resumen, como punto de partida, escrito con sus propias palabras; para las explicaciones completas se remite a la lectura íntegra del artículo [3].",
                 "• **Cuatro efectos.** A lo largo del trayecto Tierra – Luna – Tierra la polarización cambia por el desplazamiento espacial, la reflexión en la Luna, la rotación de Faraday y la absorción en la ionosfera [3].",
                 "• **Desplazamiento espacial.** Vistas desde la Luna, dos antenas lejanas sobre la Tierra curva no son paralelas. Solo afecta a la polarización lineal, se calcula con facilidad y no depende de la frecuencia [3]: es la §D_{pol}§ de YAEC.",
-                "• **Reflexión en la Luna.** En las frecuencias bajas, como 144 MHz, la Luna se comporta como una esfera lisa: la polarización lineal sigue siendo lineal, la circular invierte su sentido, y cerca del 1 % de la energía acaba en la polarización “equivocada”. En 10 GHz la superficie es rugosa y la señal vuelve despolarizada [3].",
+                "• **Reflexión en la Luna.** En las frecuencias bajas, como 144 MHz, la Luna se comporta como una esfera lisa: la polarización lineal sigue siendo lineal, la circular invierte su sentido, y cerca del 1 % de la energía acaba en la polarización “equivocada”. En 10 GHz la superficie es rugosa y la señal vuelve despolarizada [3]. Las medidas de radar de Hagfors en 23 cm confirman que cerca del centro del disco lunar sigue dominando la reflexión casi especular, mientras que hacia los bordes el eco procede de objetos aislados dispersos por la superficie y resulta en parte despolarizado [5].",
                 "• **Rotación de Faraday.** Se describe en el subapartado anterior: disminuye con el cuadrado de la frecuencia, se suma a la ida y a la vuelta y no se puede prever [3].",
                 "• **Absorción ionosférica.** También disminuye con el cuadrado de la frecuencia: en 144 MHz, de día y a 10° de elevación, es de unos 0,1 dB. Solo cuenta con una actividad solar muy alta; durante las auroras fuertes la polarización puede cambiar más deprisa de lo que un receptor de banda estrecha consigue seguir [3].",
                 "• **De 50 a 432 MHz.** Casi todos usan yagis con polarización lineal: el autor aconseja una instalación con la polarización lineal conmutable, mejor electrónicamente; una rotación mecánica sirve si el cuarto de vuelta requiere uno o pocos segundos [3]. En recepción se elige la polarización con la señal más fuerte (un receptor de dos canales es más rápido con señales débiles); cuando se llama CQ conviene alternar horizontal y vertical, en lugar de usar la circular, que pierde siempre 3 dB [3].",
+                "• **En 23 cm (1296 MHz).** Con las parábolas se suele usar la polarización circular: se transmite en un sentido y se recibe en el otro, porque la Luna invierte el sentido, y la rotación de Faraday y el desplazamiento espacial no cuentan. La pérdida viene de los iluminadores, que nunca son perfectamente circulares: Bob Atkins KA1GT la midió a partir del aislamiento entre los dos puertos del polarizador, alrededor de 1 dB con 6 dB de aislamiento, alrededor de 0,4 dB con 10 dB (el caso típico) y alrededor de 0,1 dB con 16 dB [6]. YAEC usa 0,4 dB en la pestaña Balance EME parábolas a 1296 MHz cuando la casilla de la pérdida de polarización está activada.",
                 "• **De 10 GHz en adelante.** La Luna despolariza la señal, la polarización de transmisión ya no importa y hace falta un receptor de dos canales sobre dos alimentadores ortogonales [3]. Son frecuencias fuera de las bandas de YAEC.",
                 "• **Qué polarización transmitir.** Si recibes una estación, puedes deducir con qué polarización transmitirle para que tu señal le llegue de la forma correcta [3]. Con los ángulos en grados (0° horizontal, 90° vertical), P es la polarización de transmisión de la otra estación, R aquella con la que la recibes, S el desplazamiento espacial, F la rotación de Faraday y T tu mejor polarización de transmisión:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Eliminando F de las dos primeras relaciones se obtiene §T = 2 · P + 2 · S − R§; para una antena lineal §2 · P§ vale 0° o 180°, que es la misma polarización, y queda §T = 2 · S − R§ [3]. Sin rotación de Faraday (§F§ = 0, desde 1296 MHz en adelante) la mejor polarización para transmitir es la misma con la que se recibe mejor, §T = R§. El artículo señala que la regla coincide con la de KL7WE y cita el programa SKYMOON de W5UN para el cálculo de S [3].",
+                "~ Eliminando F de las dos primeras relaciones se obtiene §T = 2 · P + 2 · S − R§; para una antena lineal §2 · P§ vale 0° o 180°, que es la misma polarización, y queda §T = 2 · S − R§ [3]. Sin rotación de Faraday (§F§ ≈ 0, desde 1296 MHz en adelante con la ionosfera de todos los días) la mejor polarización para transmitir es la misma con la que se recibe mejor, §T = R§. El artículo señala que la regla coincide con la de KL7WE y cita el programa SKYMOON de W5UN para el cálculo de S [3].",
                 "> En YAEC el desplazamiento espacial S es la §D_{pol}§ calculada en las pestañas Posición de la Luna y Posición en vivo y +- 24h; la rotación de Faraday F no se puede calcular. Para los ejemplos, los casos particulares y las figuras, lee el artículo completo de SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentación, julio de 2015, facilitada por IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 de abril de 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 de abril de 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Recomendación P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabla 1 (rotación de Faraday proporcional a 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["es"]["S44"] = new string[] {
                 "## Ruido del cielo y Dgrd",
@@ -69945,7 +70125,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotação por uma passagem na ionosfera, valor diurno típico; 144 MHz segundo [3], as outras bandas derivadas pelo YAEC com a fórmula acima (≈ = derivado). A partir de 1296 MHz pode considerar-se nula [3].",
+                "~ Rotação por uma passagem na ionosfera, valor diurno típico; 144 MHz segundo [3], as outras bandas derivadas pelo YAEC com a fórmula acima (≈ = derivado). A partir de 1296 MHz, com a ionosfera de todos os dias, a rotação é de poucos graus e pode considerar-se nula [3]; com uma ionosfera muito carregada de eletrões, porém, a recomendação ITU-R P.531 dá 108° a 1 GHz para uma passagem a 30° de elevação, ou seja, cerca de 64° a 1296 MHz [4]. Em 23 cm conta pouco porque normalmente se usa a polarização circular, que a rotação de Faraday não altera.",
                 "• **Não se anula no regresso.** O sentido da rotação não depende da direção em que a onda viaja: depois da segunda passagem na ionosfera o sinal fica novamente rodado, no mesmo sentido [3]. Cada estação acrescenta a rotação da ionosfera que tem por cima.",
                 "• **Muda com o tempo.** A quantidade de eletrões varia entre o dia e a noite, ao nascer e ao pôr do sol e com a atividade solar: com o Sol muito ativo a rotação é forte e pode variar rapidamente, e durante as auroras a polarização pode mudar em poucos milissegundos [3]. Por isso não pode ser prevista por um cálculo.",
                 "• **Soma-se ao desvio espacial.** O desvio espacial da polarização (§D_{pol}§) tem sinal oposto nos dois sentidos da ligação, enquanto a rotação de Faraday mantém o mesmo sentido: num sentido as duas rotações somam-se, no outro subtraem-se. Assim pode acontecer que você ouça o DX e ele não o ouça a si, ou o contrário [1]. A perda segue a mesma lei da §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, com Δ o desvio total: a 90° o sinal desaparece.",
@@ -69955,18 +70135,22 @@ namespace LunaCalc
                 "O artigo “Selecting Polarisation for EME” de Leif Åsbrink SM5BSZ (25 de abril de 1997) é público e pode ser lido no seu sítio web: https://sm5bsz.com/polarity/emepol.htm. O autor deste programa considera útil oferecer aqui um resumo, como ponto de partida, escrito com as suas próprias palavras; para as explicações completas, remete-se para a leitura integral do artigo [3].",
                 "• **Quatro efeitos.** Ao longo do percurso Terra – Lua – Terra a polarização muda devido ao desvio espacial, à reflexão na Lua, à rotação de Faraday e à absorção na ionosfera [3].",
                 "• **Desvio espacial.** Vistas da Lua, duas antenas distantes sobre a Terra curva não são paralelas. Diz respeito apenas à polarização linear, calcula-se facilmente e não depende da frequência [3]: é a §D_{pol}§ do YAEC.",
-                "• **Reflexão na Lua.** Nas frequências baixas, como 144 MHz, a Lua comporta-se como uma esfera lisa: a polarização linear continua linear, a circular inverte o sentido, e cerca de 1 % da energia acaba na polarização “errada”. A 10 GHz a superfície é rugosa e o sinal volta despolarizado [3].",
+                "• **Reflexão na Lua.** Nas frequências baixas, como 144 MHz, a Lua comporta-se como uma esfera lisa: a polarização linear continua linear, a circular inverte o sentido, e cerca de 1 % da energia acaba na polarização “errada”. A 10 GHz a superfície é rugosa e o sinal volta despolarizado [3]. As medições de radar de Hagfors em 23 cm confirmam que, perto do centro do disco lunar, ainda domina a reflexão quase especular, enquanto para os bordos o eco vem de objetos isolados espalhados pela superfície e fica em parte despolarizado [5].",
                 "• **Rotação de Faraday.** É descrita na subsecção anterior: diminui com o quadrado da frequência, soma-se na ida e na volta e não pode ser prevista [3].",
                 "• **Absorção ionosférica.** Também diminui com o quadrado da frequência: a 144 MHz, de dia e a 10° de elevação, é de cerca de 0,1 dB. Só conta com uma atividade solar muito alta; durante auroras fortes a polarização pode mudar mais depressa do que um recetor de banda estreita consegue acompanhar [3].",
                 "• **De 50 a 432 MHz.** Quase todos usam yagis com polarização linear: o autor recomenda uma instalação com a polarização linear comutável, de preferência eletronicamente; uma rotação mecânica serve se o quarto de volta demorar um ou poucos segundos [3]. Na receção escolhe-se a polarização com o sinal mais forte (um recetor de dois canais é mais rápido com sinais fracos); quando se chama CQ convém alternar horizontal e vertical, em vez de usar a circular, que perde sempre 3 dB [3].",
+                "• **Em 23 cm (1296 MHz).** Com as parabólicas usa-se normalmente a polarização circular: transmite-se num sentido e recebe-se no outro, porque a Lua inverte o sentido, e a rotação de Faraday e o desvio espacial não contam. A perda vem dos iluminadores, que nunca são perfeitamente circulares: Bob Atkins KA1GT mediu-a a partir do isolamento entre as duas portas do polarizador, cerca de 1 dB com 6 dB de isolamento, cerca de 0,4 dB com 10 dB (o caso típico) e cerca de 0,1 dB com 16 dB [6]. O YAEC usa 0,4 dB no separador Balanço EME parabólicas a 1296 MHz quando a caixa de verificação da perda de polarização está ativa.",
                 "• **De 10 GHz para cima.** A Lua despolariza o sinal, a polarização de transmissão deixa de contar e é preciso um recetor de dois canais em dois alimentadores ortogonais [3]. São frequências fora das bandas do YAEC.",
                 "• **Que polarização transmitir.** Se recebe uma estação, pode deduzir com que polarização lhe deve transmitir para que o seu sinal lhe chegue corretamente [3]. Com os ângulos em graus (0° horizontal, 90° vertical), P é a polarização de transmissão da outra estação, R aquela com que a recebe, S o desvio espacial, F a rotação de Faraday e T a sua melhor polarização de transmissão:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Eliminando F das duas primeiras relações obtém-se §T = 2 · P + 2 · S − R§; para uma antena linear §2 · P§ vale 0° ou 180°, que é a mesma polarização, e fica §T = 2 · S − R§ [3]. Sem rotação de Faraday (§F§ = 0, a partir de 1296 MHz) a melhor polarização para transmitir é a mesma com que se recebe melhor, §T = R§. O artigo assinala que a regra coincide com a de KL7WE e cita o programa SKYMOON de W5UN para o cálculo de S [3].",
+                "~ Eliminando F das duas primeiras relações obtém-se §T = 2 · P + 2 · S − R§; para uma antena linear §2 · P§ vale 0° ou 180°, que é a mesma polarização, e fica §T = 2 · S − R§ [3]. Sem rotação de Faraday (§F§ ≈ 0, a partir de 1296 MHz com a ionosfera de todos os dias) a melhor polarização para transmitir é a mesma com que se recebe melhor, §T = R§. O artigo assinala que a regra coincide com a de KL7WE e cita o programa SKYMOON de W5UN para o cálculo de S [3].",
                 "> No YAEC o desvio espacial S é a §D_{pol}§ calculada nos separadores Posição da Lua e Posição em direto e +- 24h; a rotação de Faraday F não pode ser calculada. Para os exemplos, os casos particulares e as figuras, leia o artigo completo de SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, apresentação, julho de 2015, fornecida por IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 de abril de 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 de abril de 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Recomendação P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabela 1 (rotação de Faraday proporcional a 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["pt"]["S44"] = new string[] {
                 "## Ruído do céu e Dgrd",
@@ -70504,7 +70688,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ 单次穿过电离层的旋转量，白天典型值；144 MHz 取自 [3]，其他波段由 YAEC 用上述公式推算（≈ = 推算值）。1296 MHz 及以上可视为零 [3]。",
+                "~ 单次穿过电离层的旋转量，白天典型值；144 MHz 取自 [3]，其他波段由 YAEC 用上述公式推算（≈ = 推算值）。1296 MHz 及以上，在日常电离层条件下旋转只有几度，可视为零 [3]；但在电子含量很高的电离层条件下，ITU-R P.531 建议书给出仰角 30° 单次穿过时 1 GHz 的旋转为 108°，即 1296 MHz 约 64° [4]。在 23 cm 这影响不大，因为通常使用圆极化，而法拉第旋转不会改变圆极化。",
                 "• **返回时不会抵消。** 旋转方向与波的传播方向无关：第二次穿过电离层后，信号会沿同一方向再次旋转 [3]。每个电台都会叠加其上空电离层造成的旋转。",
                 "• **随时间变化。** 电子数量随昼夜、日出日落以及太阳活动而变化：太阳非常活跃时旋转很强，且可能迅速变化；极光期间，极化可能在几毫秒内改变 [3]。因此无法通过计算来预测。",
                 "• **与空间极化偏移叠加。** 空间极化偏移（§D_{pol}§）在通联的两个方向上符号相反，而法拉第旋转的方向不变：在一个方向上两种旋转相加，在另一个方向上相减。因此可能出现你听得到 DX、而对方听不到你的情况，或者相反 [1]。损耗遵循与 §D_{pol}§ 相同的规律，§L = −20 · log_{10} \\a{cos Δ}§，其中 Δ 为总偏移：在 90° 时信号消失。",
@@ -70514,18 +70698,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ 的文章 “Selecting Polarisation for EME”（1997 年 4 月 25 日）是公开的，可在其网站上阅读：https://sm5bsz.com/polarity/emepol.htm. 本程序的作者认为，在此用自己的话给出一份摘要，作为起点，是有益的；完整的解释请阅读文章全文 [3]。",
                 "• **四种效应。** 在地球 – 月球 – 地球的路径上，极化会因空间极化偏移、月球反射、法拉第旋转和电离层吸收而改变 [3]。",
                 "• **空间极化偏移。** 从月球上看，弯曲地球上相距遥远的两副天线并不平行。它只涉及线极化，容易计算，且与频率无关 [3]：它就是 YAEC 的 §D_{pol}§。",
-                "• **月球反射。** 在较低频率（如 144 MHz）下，月球的表现如同一个光滑球体：线极化仍为线极化，圆极化的旋向反转，约 1 % 的能量落入“错误”的极化。在 10 GHz 时月面粗糙，信号返回时已去极化 [3]。",
+                "• **月球反射。** 在较低频率（如 144 MHz）下，月球的表现如同一个光滑球体：线极化仍为线极化，圆极化的旋向反转，约 1 % 的能量落入“错误”的极化。在 10 GHz 时月面粗糙，信号返回时已去极化 [3]。Hagfors 在 23 cm 的雷达测量证实：在月面圆盘中心附近，准镜面反射仍占主导；而越靠近边缘，回波越多来自散布在月面上的单个物体，并部分去极化 [5]。",
                 "• **法拉第旋转。** 见上一小节：它随频率的平方而减小，在去程和回程中叠加，且无法预测 [3]。",
                 "• **电离层吸收。** 它同样随频率的平方而减小：在 144 MHz、白天、仰角 10° 时约为 0.1 dB。只有在太阳活动非常强烈时才有影响；在强极光期间，极化的变化可能快于窄带接收机所能跟踪的速度 [3]。",
                 "• **50 至 432 MHz。** 几乎所有人都使用线极化八木天线：作者建议采用可切换线极化的系统，最好是电子切换；如果转动四分之一圈只需一秒或几秒，机械旋转也可以 [3]。接收时选择信号最强的极化（对弱信号而言，双通道接收机更快）；呼叫 CQ 时，最好交替使用水平和垂直极化，而不是使用总要损失 3 dB 的圆极化 [3]。",
+                "• **23 cm（1296 MHz）。** 使用抛物面天线时通常采用圆极化：以一种旋向发射、以另一种旋向接收，因为月球会反转旋向，而法拉第旋转和空间极化偏移都不起作用。损耗来自馈源，馈源从来不是完美的圆极化：Bob Atkins KA1GT 根据极化器两个端口之间的隔离度测量了这一损耗，隔离度 6 dB 时约 1 dB，10 dB 时约 0.4 dB（典型情况），16 dB 时约 0.1 dB [6]。勾选极化损耗复选框时，YAEC 在“EME 链路预算 抛物面”标签页中于 1296 MHz 使用 0.4 dB。",
                 "• **10 GHz 及以上。** 月球使信号去极化，发射极化不再重要，需要在两个正交馈源上使用双通道接收机 [3]。这些频率不在 YAEC 的频段之内。",
                 "• **该用哪种极化发射。** 如果你能收到某个台站，就可以推算出应以哪种极化向其发射，使你的信号以正确的方式到达对方 [3]。角度以度为单位（0° 为水平，90° 为垂直），P 为对方台站的发射极化，R 为你接收它时的极化，S 为空间极化偏移，F 为法拉第旋转，T 为你的最佳发射极化：",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ 从前两个关系式中消去 F，得到 §T = 2 · P + 2 · S − R§；对于线极化天线，§2 · P§ 为 0° 或 180°，即同一极化，于是剩下 §T = 2 · S − R§ [3]。没有法拉第旋转时（§F§ = 0，1296 MHz 及以上），最佳发射极化与接收效果最好的极化相同，§T = R§。文章指出，这一规则与 KL7WE 的规则一致，并提到可用 W5UN 的 SKYMOON 程序计算 S [3]。",
+                "~ 从前两个关系式中消去 F，得到 §T = 2 · P + 2 · S − R§；对于线极化天线，§2 · P§ 为 0° 或 180°，即同一极化，于是剩下 §T = 2 · S − R§ [3]。没有法拉第旋转时（§F§ ≈ 0，1296 MHz 及以上、日常电离层条件下），最佳发射极化与接收效果最好的极化相同，§T = R§。文章指出，这一规则与 KL7WE 的规则一致，并提到可用 W5UN 的 SKYMOON 程序计算 S [3]。",
                 "> 在 YAEC 中，空间极化偏移 S 就是在“月球位置”和 实时位置与 +- 24h 选项卡中计算的 §D_{pol}§；法拉第旋转 F 无法计算。有关示例、特殊情况和图示，请阅读 SM5BSZ 的完整文章 [3]。",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”，演示文稿，2015 年 7 月，由 IC8TEM 提供。",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”，1997 年 4 月 25 日 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”，1997 年 4 月 25 日 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R，P.531-5 建议书，“Ionospheric propagation data and prediction methods required for the design of satellite services and systems”，1999 年，表 1（法拉第旋转与 1/f² 成正比） – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["zh"]["S44"] = new string[] {
                 "## 天空噪声与 Dgrd",
@@ -71063,7 +71251,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ 電離層を1回通過したときの回転量で、昼間の典型的な値です。144 MHzは [3] より、他のバンドは上の式からYAECが算出しました（≈ = 算出値）。1296 MHz以上ではゼロとみなせます [3]。",
+                "~ 電離層を1回通過したときの回転量で、昼間の典型的な値です。144 MHzは [3] より、他のバンドは上の式からYAECが算出しました（≈ = 算出値）。1296 MHz以上では、ふだんの電離層であれば回転は数度にすぎず、ゼロとみなせます [3]。ただし、電子が非常に多い電離層では、勧告ITU-R P.531は仰角30°で1回通過したときの1 GHzでの回転を108°としており、1296 MHzでは約64°になります [4]。23 cmでは通常、円偏波が使われ、ファラデー回転は円偏波を変えないため、影響はほとんどありません。",
                 "• **帰り道で打ち消されません。** 回転の向きは電波の進む方向に関係しません。電離層を2回目に通過した後、信号は同じ向きにさらに回転します [3]。各局はそれぞれの上空の電離層による回転を加えます。",
                 "• **時間とともに変化します。** 電子の量は昼と夜、日の出と日の入り、太陽活動によって変わります。太陽活動が非常に活発なときは回転が大きく、急速に変化することがあり、オーロラの際には偏波が数ミリ秒で変わることもあります [3]。このため計算で予測することはできません。",
                 "• **空間的な偏波のずれに加わります。** 空間的な偏波のずれ（§D_{pol}§）は交信の2つの方向で符号が逆になりますが、ファラデー回転は同じ向きのままです。一方の方向では2つの回転が足し合わされ、もう一方では差し引かれます。そのため、こちらにはDX局が聞こえるのに相手にはこちらが聞こえない、またはその逆ということが起こります [1]。損失は §D_{pol}§ と同じ法則 §L = −20 · log_{10} \\a{cos Δ}§ に従い、Δは合計のずれです。90°では信号が消えます。",
@@ -71073,18 +71261,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZの記事「Selecting Polarisation for EME」（1997年4月25日）は公開されており、著者のサイトで読めます：https://sm5bsz.com/polarity/emepol.htm. 本プログラムの作者は、その要約を出発点として、自分の言葉でここに示すことが有益だと考えています。詳しい説明については記事の全文をお読みください [3]。",
                 "• **4つの効果。** 地球 – 月 – 地球の経路で、偏波は空間的な偏波のずれ、月での反射、ファラデー回転、電離層での吸収によって変化します [3]。",
                 "• **空間的な偏波のずれ。** 月から見ると、丸い地球上の離れた2本のアンテナは平行ではありません。直線偏波だけにかかわり、計算は簡単で、周波数には依存しません [3]。これがYAECの §D_{pol}§ です。",
-                "• **月での反射。** 144 MHzのような低い周波数では、月はなめらかな球のようにふるまいます。直線偏波は直線偏波のまま、円偏波は回転の向きが逆になり、エネルギーの約1 %が「誤った」偏波に入ります。10 GHzでは表面が粗く、信号は偏波が崩れた状態で戻ってきます [3]。",
+                "• **月での反射。** 144 MHzのような低い周波数では、月はなめらかな球のようにふるまいます。直線偏波は直線偏波のまま、円偏波は回転の向きが逆になり、エネルギーの約1 %が「誤った」偏波に入ります。10 GHzでは表面が粗く、信号は偏波が崩れた状態で戻ってきます [3]。Hagforsによる23 cmでのレーダー測定は、月面の円盤の中心付近では依然として準鏡面反射が支配的であり、縁に近づくにつれてエコーは表面に散らばった個々の物体から来るようになり、一部偏波が崩れることを裏付けています [5]。",
                 "• **ファラデー回転。** 前の小節で説明したとおり、周波数の2乗に反比例して小さくなり、往路と復路で加わり、予測できません [3]。",
                 "• **電離層での吸収。** これも周波数の2乗に反比例して小さくなります。144 MHz、昼間、仰角10°で約0.1 dBです。太陽活動が非常に高いときにだけ問題になります。強いオーロラのときは、狭帯域の受信機が追従できないほど速く偏波が変わることがあります [3]。",
                 "• **50～432 MHz。** ほとんどの局は直線偏波の八木を使っています。著者は直線偏波を切り替えられる設備、できれば電子的に切り替えるものを勧めています。4分の1回転が1秒から数秒で済むなら、機械的な回転でもかまいません [3]。受信では信号がいちばん強い偏波を選びます（弱い信号では2チャンネル受信機のほうが速く選べます）。CQを出すときは、常に3 dBを失う円偏波を使うより、水平と垂直を交互に使うほうがよいです [3]。",
+                "• **23 cm（1296 MHz）。** ディッシュでは通常、円偏波を使います。月が回転の向きを逆にするので、一方の向きで送信し、もう一方の向きで受信します。ファラデー回転と空間的な偏波のずれは関係ありません。損失は一次放射器から生じ、一次放射器が完全な円偏波になることはありません。Bob Atkins KA1GTは偏波器の2つのポート間のアイソレーションからこの損失を測定しました。アイソレーション6 dBで約1 dB、10 dBで約0.4 dB（典型的な場合）、16 dBで約0.1 dBです [6]。偏波損失のチェックボックスがオンのとき、YAECは「EME 回線計算 パラボラ」タブの1296 MHzで0.4 dBを使います。",
                 "• **10 GHz以上。** 月が信号の偏波を崩すので送信偏波は関係なくなり、直交する2つのフィードにつないだ2チャンネル受信機が必要です [3]。これらの周波数はYAECのバンドの範囲外です。",
                 "• **どの偏波で送信するか。** ある局を受信できれば、自分の信号が相手に正しく届くようにするには、どの偏波で送信すればよいかを求められます [3]。角度を度で表し（0°が水平、90°が垂直）、Pは相手局の送信偏波、Rはその局を受信する偏波、Sは空間的な偏波のずれ、Fはファラデー回転、Tは自局の最良の送信偏波です：",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ 最初の2つの関係式からFを消去すると §T = 2 · P + 2 · S − R§ となります。直線偏波のアンテナでは §2 · P§ は0°または180°で、これは同じ偏波なので、§T = 2 · S − R§ が残ります [3]。ファラデー回転がない場合（§F§ = 0、1296 MHz以上）、送信に最良の偏波は受信がいちばん良い偏波と同じで、§T = R§ です。記事は、この規則がKL7WEの規則と一致すると述べ、Sの計算にW5UNのSKYMOONプログラムを挙げています [3]。",
+                "~ 最初の2つの関係式からFを消去すると §T = 2 · P + 2 · S − R§ となります。直線偏波のアンテナでは §2 · P§ は0°または180°で、これは同じ偏波なので、§T = 2 · S − R§ が残ります [3]。ファラデー回転がない場合（§F§ ≈ 0、ふだんの電離層での1296 MHz以上）、送信に最良の偏波は受信がいちばん良い偏波と同じで、§T = R§ です。記事は、この規則がKL7WEの規則と一致すると述べ、Sの計算にW5UNのSKYMOONプログラムを挙げています [3]。",
                 "> YAECでは、空間的な偏波のずれSは「月の位置」タブとライブ位置と +- 24hタブで計算される §D_{pol}§ です。ファラデー回転Fは計算できません。例、特殊なケース、図については、SM5BSZの記事の全文をお読みください [3]。",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, プレゼンテーション, 2015年7月, IC8TEM提供。",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997年4月25日 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997年4月25日 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, 勧告 P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999年, 表1（ファラデー回転は1/f²に比例） – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["ja"]["S44"] = new string[] {
                 "## 空雑音とDgrd",
@@ -71622,7 +71814,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ आयनमंडल से एक बार गुज़रने पर घूर्णन, दिन का सामान्य मान; 144 MHz [3] से, अन्य बैंड YAEC द्वारा ऊपर के सूत्र से निकाले गए (≈ = व्युत्पन्न)। 1296 MHz और उससे ऊपर इसे शून्य माना जा सकता है [3]।",
+                "~ आयनमंडल से एक बार गुज़रने पर घूर्णन, दिन का सामान्य मान; 144 MHz [3] से, अन्य बैंड YAEC द्वारा ऊपर के सूत्र से निकाले गए (≈ = व्युत्पन्न)। 1296 MHz और उससे ऊपर, रोज़ के आयनमंडल में घूर्णन केवल कुछ डिग्री होता है और इसे शून्य माना जा सकता है [3]; लेकिन इलेक्ट्रॉनों से बहुत भरे आयनमंडल में ITU-R P.531 सिफ़ारिश 30° उन्नयन कोण पर एक बार गुज़रने के लिए 1 GHz पर 108° देती है, यानी 1296 MHz पर लगभग 64° [4]। 23 cm में इसका ज़्यादा महत्व नहीं है, क्योंकि आमतौर पर वृत्तीय ध्रुवीकरण इस्तेमाल होता है, जिसे Faraday rotation नहीं बदलता।",
                 "• **लौटते समय यह रद्द नहीं होता।** घूर्णन की दिशा इस पर निर्भर नहीं करती कि तरंग किस दिशा में चल रही है: आयनमंडल से दूसरी बार गुज़रने के बाद सिग्नल फिर से उसी दिशा में घूम जाता है [3]। हर स्टेशन अपने ऊपर के आयनमंडल का घूर्णन जोड़ता है।",
                 "• **यह समय के साथ बदलता है।** इलेक्ट्रॉनों की मात्रा दिन और रात के बीच, सूर्योदय और सूर्यास्त पर और सौर गतिविधि के साथ बदलती है: बहुत सक्रिय सूर्य के समय घूर्णन प्रबल होता है और तेज़ी से बदल सकता है, और ध्रुवीय ज्योति (ऑरोरा) के दौरान ध्रुवीकरण कुछ मिलीसेकंड में बदल सकता है [3]। इसीलिए गणना से इसका पूर्वानुमान नहीं लगाया जा सकता।",
                 "• **यह स्थानिक ध्रुवीकरण ऑफ़सेट में जुड़ता है।** स्थानिक ध्रुवीकरण ऑफ़सेट (§D_{pol}§) का चिह्न संपर्क की दोनों दिशाओं में विपरीत होता है, जबकि Faraday rotation की दिशा वही रहती है: एक दिशा में दोनों घूर्णन जुड़ते हैं, दूसरी में घटते हैं। इसलिए ऐसा हो सकता है कि आप DX को सुनें और वह आपको न सुने, या इसका उल्टा [1]। नुकसान §D_{pol}§ वाले ही नियम का पालन करता है, §L = −20 · log_{10} \\a{cos Δ}§, जहाँ Δ कुल ऑफ़सेट है: 90° पर सिग्नल गायब हो जाता है।",
@@ -71632,18 +71824,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ का लेख “Selecting Polarisation for EME” (25 अप्रैल 1997) सार्वजनिक है और उनकी वेबसाइट पर पढ़ा जा सकता है: https://sm5bsz.com/polarity/emepol.htm. इस प्रोग्राम के लेखक इसे उपयोगी मानते हैं कि यहाँ उसका एक सारांश, एक शुरुआती बिंदु के रूप में, अपने शब्दों में लिखकर दिया जाए; पूरी व्याख्या के लिए पूरा लेख पढ़ें [3]।",
                 "• **चार प्रभाव।** पृथ्वी – चंद्रमा – पृथ्वी पथ पर ध्रुवीकरण स्थानिक ध्रुवीकरण ऑफ़सेट, चंद्रमा पर परावर्तन, Faraday rotation और आयनमंडल में अवशोषण के कारण बदलता है [3]।",
                 "• **स्थानिक ध्रुवीकरण ऑफ़सेट।** चंद्रमा से देखने पर, घुमावदार पृथ्वी पर दूर स्थित दो एंटेना समानांतर नहीं होते। यह केवल रैखिक ध्रुवीकरण से संबंधित है, इसकी गणना आसान है और यह आवृत्ति पर निर्भर नहीं करता [3]: यही YAEC का §D_{pol}§ है।",
-                "• **चंद्रमा पर परावर्तन।** कम आवृत्तियों पर, जैसे 144 MHz, चंद्रमा एक चिकने गोले जैसा व्यवहार करता है: रैखिक ध्रुवीकरण रैखिक ही रहता है, वृत्तीय ध्रुवीकरण की दिशा उलट जाती है, और लगभग 1 % ऊर्जा “गलत” ध्रुवीकरण में चली जाती है। 10 GHz पर सतह खुरदरी होती है और सिग्नल विध्रुवित होकर लौटता है [3]।",
+                "• **चंद्रमा पर परावर्तन।** कम आवृत्तियों पर, जैसे 144 MHz, चंद्रमा एक चिकने गोले जैसा व्यवहार करता है: रैखिक ध्रुवीकरण रैखिक ही रहता है, वृत्तीय ध्रुवीकरण की दिशा उलट जाती है, और लगभग 1 % ऊर्जा “गलत” ध्रुवीकरण में चली जाती है। 10 GHz पर सतह खुरदरी होती है और सिग्नल विध्रुवित होकर लौटता है [3]। 23 cm पर Hagfors के रडार मापन पुष्टि करते हैं कि चंद्र डिस्क के केंद्र के पास अब भी लगभग दर्पण-जैसा (quasi-specular) परावर्तन प्रमुख रहता है, जबकि किनारों की ओर प्रतिध्वनि सतह पर बिखरी अलग-अलग वस्तुओं से आती है और आंशिक रूप से विध्रुवित होती है [5]।",
                 "• **Faraday rotation।** इसका वर्णन पिछले उपखंड में है: यह आवृत्ति के वर्ग के साथ घटता है, जाते और लौटते समय जुड़ता है और इसका पूर्वानुमान नहीं किया जा सकता [3]।",
                 "• **आयनमंडलीय अवशोषण।** यह भी आवृत्ति के वर्ग के साथ घटता है: 144 MHz पर, दिन में और 10° एलिवेशन पर, यह लगभग 0.1 dB होता है। यह केवल बहुत अधिक सौर गतिविधि में मायने रखता है; तेज़ ध्रुवीय ज्योति (aurora) के दौरान ध्रुवीकरण इतनी तेज़ी से बदल सकता है कि संकीर्ण बैंड वाला रिसीवर उसका अनुसरण न कर सके [3]।",
                 "• **50 से 432 MHz तक।** लगभग सभी रैखिक ध्रुवीकरण वाली यागी उपयोग करते हैं: लेखक स्विच करने योग्य रैखिक ध्रुवीकरण वाली व्यवस्था की सलाह देते हैं, बेहतर हो तो इलेक्ट्रॉनिक; यांत्रिक घुमाव भी ठीक है यदि चौथाई चक्कर में एक या कुछ सेकंड लगें [3]। रिसीव करते समय सबसे मज़बूत सिग्नल वाला ध्रुवीकरण चुना जाता है (कमज़ोर सिग्नलों के साथ दो-चैनल रिसीवर तेज़ होता है); CQ करते समय वृत्तीय ध्रुवीकरण, जिसमें हमेशा 3 dB का नुकसान होता है, के बजाय क्षैतिज और ऊर्ध्वाधर को बारी-बारी से उपयोग करना बेहतर है [3]।",
+                "• **23 cm (1296 MHz) पर।** डिश के साथ आमतौर पर वृत्तीय ध्रुवीकरण उपयोग किया जाता है: एक दिशा में ट्रांसमिट और दूसरी दिशा में रिसीव किया जाता है, क्योंकि चंद्रमा दिशा उलट देता है, और Faraday rotation तथा स्थानिक ध्रुवीकरण ऑफ़सेट का कोई असर नहीं होता। हानि फ़ीड से आती है, जो कभी पूरी तरह वृत्तीय नहीं होते: Bob Atkins KA1GT ने इसे पोलराइज़र के दोनों पोर्ट के बीच के आइसोलेशन से मापा, 6 dB आइसोलेशन पर लगभग 1 dB, 10 dB पर लगभग 0.4 dB (सामान्य स्थिति) और 16 dB पर लगभग 0.1 dB [6]। जब ध्रुवीकरण हानि का चेकबॉक्स सक्रिय होता है, तो YAEC EME बजट डिश टैब में 1296 MHz पर 0.4 dB उपयोग करता है।",
                 "• **10 GHz और उससे ऊपर।** चंद्रमा सिग्नल को विध्रुवित कर देता है, ट्रांसमिट ध्रुवीकरण का महत्व नहीं रहता, और दो लंबकोणीय फ़ीड पर दो-चैनल रिसीवर की ज़रूरत होती है [3]। ये आवृत्तियाँ YAEC के बैंडों से बाहर हैं।",
                 "• **किस ध्रुवीकरण से ट्रांसमिट करें।** यदि आप किसी स्टेशन को रिसीव करते हैं, तो आप निकाल सकते हैं कि किस ध्रुवीकरण से उसे ट्रांसमिट करें ताकि आपका सिग्नल उस तक सही ढंग से पहुँचे [3]। कोण डिग्री में (0° क्षैतिज, 90° ऊर्ध्वाधर) लेने पर, P दूसरे स्टेशन का ट्रांसमिट ध्रुवीकरण है, R वह जिससे आप उसे रिसीव करते हैं, S स्थानिक ध्रुवीकरण ऑफ़सेट, F Faraday rotation और T आपका सबसे अच्छा ट्रांसमिट ध्रुवीकरण:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ पहले दो संबंधों से F हटाने पर §T = 2 · P + 2 · S − R§ मिलता है; रैखिक एंटेना के लिए §2 · P§ 0° या 180° होता है, जो एक ही ध्रुवीकरण है, और §T = 2 · S − R§ बचता है [3]। Faraday rotation के बिना (§F§ = 0, 1296 MHz और उससे ऊपर) ट्रांसमिट के लिए सबसे अच्छा ध्रुवीकरण वही है जिससे सबसे अच्छा रिसीव होता है, §T = R§। लेख बताता है कि यह नियम KL7WE के नियम से मेल खाता है और S की गणना के लिए W5UN के SKYMOON प्रोग्राम का उल्लेख करता है [3]।",
+                "~ पहले दो संबंधों से F हटाने पर §T = 2 · P + 2 · S − R§ मिलता है; रैखिक एंटेना के लिए §2 · P§ 0° या 180° होता है, जो एक ही ध्रुवीकरण है, और §T = 2 · S − R§ बचता है [3]। Faraday rotation के बिना (§F§ ≈ 0, रोज़ के आयनमंडल में 1296 MHz और उससे ऊपर) ट्रांसमिट के लिए सबसे अच्छा ध्रुवीकरण वही है जिससे सबसे अच्छा रिसीव होता है, §T = R§। लेख बताता है कि यह नियम KL7WE के नियम से मेल खाता है और S की गणना के लिए W5UN के SKYMOON प्रोग्राम का उल्लेख करता है [3]।",
                 "> YAEC में स्थानिक ध्रुवीकरण ऑफ़सेट S वही §D_{pol}§ है जिसकी गणना “चंद्रमा की स्थिति” टैब और लाइव स्थिति और +- 24h टैब में होती है; Faraday rotation F की गणना नहीं की जा सकती। उदाहरणों, विशेष मामलों और चित्रों के लिए SM5BSZ का पूरा लेख पढ़ें [3]।",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, प्रस्तुति, जुलाई 2015, IC8TEM द्वारा उपलब्ध कराई गई।",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 अप्रैल 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 अप्रैल 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, सिफ़ारिश P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, तालिका 1 (Faraday rotation 1/f² के समानुपाती) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["hi"]["S44"] = new string[] {
                 "## आकाशीय नॉइज़ और Dgrd",
@@ -72181,7 +72377,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ 전리층을 한 번 통과할 때의 회전량이며 낮 시간 대표값입니다. 144 MHz는 [3]에서, 나머지 밴드는 위 식으로 YAEC가 산출했습니다(≈ = 산출값). 1296 MHz 이상에서는 0으로 볼 수 있습니다 [3].",
+                "~ 전리층을 한 번 통과할 때의 회전량이며 낮 시간 대표값입니다. 144 MHz는 [3]에서, 나머지 밴드는 위 식으로 YAEC가 산출했습니다(≈ = 산출값). 1296 MHz 이상에서는 평소의 전리층이라면 회전이 몇 도에 불과해 0으로 볼 수 있습니다 [3]. 그러나 전자가 매우 많은 전리층에서는 ITU-R P.531 권고가 앙각 30°로 한 번 통과할 때 1 GHz에서 108°를 제시하며, 이는 1296 MHz에서 약 64°에 해당합니다 [4]. 23 cm에서는 보통 원형 편파를 사용하고 패러데이 회전은 원형 편파를 바꾸지 않으므로 큰 영향이 없습니다.",
                 "• **돌아오는 길에 상쇄되지 않습니다.** 회전 방향은 전파가 진행하는 방향과 관계가 없습니다. 전리층을 두 번째로 지난 뒤 신호는 같은 방향으로 다시 회전합니다 [3]. 각 국은 자기 위 전리층에 의한 회전을 더합니다.",
                 "• **시간에 따라 변합니다.** 전자의 양은 낮과 밤, 일출과 일몰 무렵, 태양 활동에 따라 달라집니다. 태양 활동이 매우 활발할 때는 회전이 크고 빠르게 변할 수 있으며, 오로라가 있을 때는 편파가 몇 밀리초 만에 바뀔 수 있습니다 [3]. 그래서 계산으로는 예측할 수 없습니다.",
                 "• **공간적 편파 어긋남에 더해집니다.** 공간적 편파 어긋남(§D_{pol}§)은 교신의 두 방향에서 부호가 반대이지만 패러데이 회전은 같은 방향을 유지합니다. 한쪽 방향에서는 두 회전이 더해지고 다른 쪽에서는 빼집니다. 그래서 내게는 DX가 들리는데 상대는 나를 듣지 못하거나, 그 반대의 일이 생길 수 있습니다 [1]. 손실은 §D_{pol}§과 같은 법칙 §L = −20 · log_{10} \\a{cos Δ}§을 따르며, Δ는 전체 어긋남입니다. 90°에서는 신호가 사라집니다.",
@@ -72191,18 +72387,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ의 기사 “Selecting Polarisation for EME”(1997년 4월 25일)는 공개되어 있으며 그의 웹사이트에서 읽을 수 있습니다: https://sm5bsz.com/polarity/emepol.htm. 이 프로그램의 작성자는 그 요약을 출발점으로 삼아 자신의 말로 여기에 제시하는 것이 유용하다고 생각합니다. 자세한 설명은 기사 전문을 읽어 보시기 바랍니다 [3].",
                 "• **네 가지 효과.** 지구 – 달 – 지구 경로에서 편파는 공간적 편파 어긋남, 달에서의 반사, 패러데이 회전, 전리층 흡수 때문에 바뀝니다 [3].",
                 "• **공간적 편파 어긋남.** 달에서 보면, 둥근 지구 위에서 멀리 떨어진 두 안테나는 평행하지 않습니다. 선형 편파에만 해당하고, 계산이 쉬우며, 주파수와 관계가 없습니다 [3]. 이것이 YAEC의 §D_{pol}§입니다.",
-                "• **달에서의 반사.** 144 MHz처럼 낮은 주파수에서 달은 매끈한 구처럼 작용합니다. 선형 편파는 선형 편파로 남고, 원형 편파는 회전 방향이 바뀌며, 에너지의 약 1 %가 “잘못된” 편파로 갑니다. 10 GHz에서는 표면이 거칠어 신호가 편파를 잃은 채 돌아옵니다 [3].",
+                "• **달에서의 반사.** 144 MHz처럼 낮은 주파수에서 달은 매끈한 구처럼 작용합니다. 선형 편파는 선형 편파로 남고, 원형 편파는 회전 방향이 바뀌며, 에너지의 약 1 %가 “잘못된” 편파로 갑니다. 10 GHz에서는 표면이 거칠어 신호가 편파를 잃은 채 돌아옵니다 [3]. Hagfors의 23 cm 레이더 측정은 달 원반의 중심 근처에서는 여전히 준경면 반사가 우세하고, 가장자리로 갈수록 에코가 표면에 흩어진 개별 물체에서 오며 일부 편파를 잃는다는 것을 확인해 줍니다 [5].",
                 "• **패러데이 회전.** 앞 소절에서 설명했듯이 주파수의 제곱에 반비례하여 줄어들고, 가는 길과 오는 길에 더해지며, 예측할 수 없습니다 [3].",
                 "• **전리층 흡수.** 이것도 주파수의 제곱에 반비례하여 줄어듭니다. 144 MHz, 낮, 앙각 10°에서 약 0.1 dB입니다. 태양 활동이 매우 높을 때만 문제가 됩니다. 강한 오로라 때에는 협대역 수신기가 따라갈 수 없을 만큼 빠르게 편파가 바뀔 수 있습니다 [3].",
                 "• **50~432 MHz.** 거의 모두가 선형 편파 야기를 사용합니다. 기사의 저자는 선형 편파를 전환할 수 있는 설비, 가급적 전자식 전환을 권합니다. 4분의 1 바퀴를 도는 데 1초에서 몇 초면 된다면 기계적 회전도 괜찮습니다 [3]. 수신할 때는 신호가 가장 강한 편파를 고릅니다(약한 신호에서는 2채널 수신기가 더 빠릅니다). CQ를 낼 때는 항상 3 dB를 잃는 원형 편파보다 수평과 수직을 번갈아 쓰는 편이 낫습니다 [3].",
+                "• **23 cm (1296 MHz).** 접시 안테나에서는 보통 원형 편파를 사용합니다. 달이 회전 방향을 바꾸므로 한쪽 방향으로 송신하고 다른 쪽 방향으로 수신하며, 패러데이 회전과 공간적 편파 어긋남은 상관이 없습니다. 손실은 피드에서 생기는데, 피드는 결코 완벽한 원형 편파가 아닙니다. Bob Atkins KA1GT는 편파기의 두 포트 사이 아이솔레이션으로부터 이 손실을 측정했습니다. 아이솔레이션 6 dB에서 약 1 dB, 10 dB에서 약 0.4 dB(전형적인 경우), 16 dB에서 약 0.1 dB입니다 [6]. 편파 손실 체크박스가 켜져 있으면 YAEC는 EME 링크 버짓 파라볼라 탭에서 1296 MHz일 때 0.4 dB를 사용합니다.",
                 "• **10 GHz 이상.** 달이 신호의 편파를 흐트러뜨리므로 송신 편파는 더 이상 중요하지 않으며, 직교하는 두 피드에 연결한 2채널 수신기가 필요합니다 [3]. 이 주파수들은 YAEC의 밴드 밖에 있습니다.",
                 "• **어떤 편파로 송신할까.** 어떤 국을 수신할 수 있다면, 내 신호가 그 국에 올바르게 도달하려면 어떤 편파로 송신해야 하는지 알아낼 수 있습니다 [3]. 각도를 도 단위로 나타내면(0° 수평, 90° 수직), P는 상대 국의 송신 편파, R은 내가 그 국을 수신하는 편파, S는 공간적 편파 어긋남, F는 패러데이 회전, T는 나의 최적 송신 편파입니다:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ 처음 두 관계식에서 F를 소거하면 §T = 2 · P + 2 · S − R§가 됩니다. 선형 안테나에서는 §2 · P§가 0° 또는 180°이고, 이는 같은 편파이므로 §T = 2 · S − R§가 남습니다 [3]. 패러데이 회전이 없으면(§F§ = 0, 1296 MHz 이상) 송신에 가장 좋은 편파는 가장 잘 수신되는 편파와 같아 §T = R§입니다. 기사는 이 규칙이 KL7WE의 규칙과 일치한다고 밝히고, S를 계산하는 데 W5UN의 SKYMOON 프로그램을 언급합니다 [3].",
+                "~ 처음 두 관계식에서 F를 소거하면 §T = 2 · P + 2 · S − R§가 됩니다. 선형 안테나에서는 §2 · P§가 0° 또는 180°이고, 이는 같은 편파이므로 §T = 2 · S − R§가 남습니다 [3]. 패러데이 회전이 없으면(§F§ ≈ 0, 평소의 전리층에서 1296 MHz 이상) 송신에 가장 좋은 편파는 가장 잘 수신되는 편파와 같아 §T = R§입니다. 기사는 이 규칙이 KL7WE의 규칙과 일치한다고 밝히고, S를 계산하는 데 W5UN의 SKYMOON 프로그램을 언급합니다 [3].",
                 "> YAEC에서 공간적 편파 어긋남 S는 “달의 위치” 탭과 실시간 위치 및 +- 24h 탭에서 계산되는 §D_{pol}§입니다. 패러데이 회전 F는 계산할 수 없습니다. 예시, 특수한 경우, 그림은 SM5BSZ의 기사 전문을 읽어 보시기 바랍니다 [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, 발표 자료, 2015년 7월, IC8TEM 제공.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997년 4월 25일 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997년 4월 25일 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, 권고 P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, 표 1 (패러데이 회전은 1/f²에 비례) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["ko"]["S44"] = new string[] {
                 "## 하늘 잡음과 Dgrd",
@@ -72740,7 +72940,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotasi untuk satu kali lintasan melalui ionosfer, nilai siang hari yang khas; 144 MHz dari [3], band lainnya diturunkan oleh YAEC dengan rumus di atas (≈ = diturunkan). Mulai 1296 MHz ke atas dapat dianggap nol [3].",
+                "~ Rotasi untuk satu kali lintasan melalui ionosfer, nilai siang hari yang khas; 144 MHz dari [3], band lainnya diturunkan oleh YAEC dengan rumus di atas (≈ = diturunkan). Mulai 1296 MHz ke atas, dengan ionosfer sehari-hari, rotasinya hanya beberapa derajat dan dapat dianggap nol [3]; namun dengan ionosfer yang sangat sarat elektron, rekomendasi ITU-R P.531 memberikan 108° pada 1 GHz untuk satu lintasan pada elevasi 30°, yaitu sekitar 64° pada 1296 MHz [4]. Di 23 cm hal ini tidak banyak berpengaruh karena biasanya digunakan polarisasi sirkular, yang tidak diubah oleh rotasi Faraday.",
                 "• **Tidak hilang saat kembali.** Arah rotasi tidak bergantung pada arah rambat gelombang: setelah lintasan kedua melalui ionosfer, sinyal berputar lagi, dalam arah yang sama [3]. Setiap stasiun menambahkan rotasi ionosfer di atasnya.",
                 "• **Berubah seiring waktu.** Jumlah elektron berubah antara siang dan malam, saat matahari terbit dan terbenam, serta dengan aktivitas Matahari: saat Matahari sangat aktif rotasinya kuat dan dapat berubah dengan cepat, dan selama aurora polarisasi dapat berubah dalam beberapa milidetik [3]. Karena itu rotasi ini tidak dapat diprediksi dengan perhitungan.",
                 "• **Menambah pergeseran spasial.** Pergeseran spasial polarisasi (§D_{pol}§) bertanda berlawanan pada kedua arah hubungan, sedangkan rotasi Faraday tetap searah: pada satu arah kedua rotasi saling menjumlah, pada arah lainnya saling mengurangi. Jadi bisa terjadi Anda mendengar DX tetapi ia tidak mendengar Anda, atau sebaliknya [1]. Kerugiannya mengikuti hukum yang sama dengan §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, dengan Δ pergeseran total: pada 90° sinyal hilang.",
@@ -72750,18 +72950,22 @@ namespace LunaCalc
                 "Artikel “Selecting Polarisation for EME” karya Leif Åsbrink SM5BSZ (25 April 1997) bersifat publik dan dapat dibaca di situs webnya: https://sm5bsz.com/polarity/emepol.htm. Penulis program ini menganggap berguna untuk menyajikan di sini ringkasannya, sebagai titik awal, yang ditulis dengan kata-katanya sendiri; untuk penjelasan lengkap, silakan baca artikel tersebut secara utuh [3].",
                 "• **Empat efek.** Sepanjang lintasan Bumi – Bulan – Bumi, polarisasi berubah karena pergeseran spasial, pantulan pada Bulan, rotasi Faraday, dan penyerapan di ionosfer [3].",
                 "• **Pergeseran spasial.** Dilihat dari Bulan, dua antena yang berjauhan di Bumi yang melengkung tidak sejajar. Ini hanya menyangkut polarisasi linear, mudah dihitung, dan tidak bergantung pada frekuensi [3]: inilah §D_{pol}§ pada YAEC.",
-                "• **Pantulan pada Bulan.** Pada frekuensi rendah, seperti 144 MHz, Bulan berperilaku seperti bola yang licin: polarisasi linear tetap linear, polarisasi sirkular membalik arahnya, dan sekitar 1 % energi berakhir pada polarisasi yang “salah”. Pada 10 GHz permukaannya kasar dan sinyal kembali dalam keadaan terdepolarisasi [3].",
+                "• **Pantulan pada Bulan.** Pada frekuensi rendah, seperti 144 MHz, Bulan berperilaku seperti bola yang licin: polarisasi linear tetap linear, polarisasi sirkular membalik arahnya, dan sekitar 1 % energi berakhir pada polarisasi yang “salah”. Pada 10 GHz permukaannya kasar dan sinyal kembali dalam keadaan terdepolarisasi [3]. Pengukuran radar Hagfors pada 23 cm menegaskan bahwa di dekat pusat piringan Bulan pantulan kuasi-spekular masih dominan, sedangkan ke arah tepinya gema berasal dari objek-objek tunggal yang tersebar di permukaan dan sebagian terdepolarisasi [5].",
                 "• **Rotasi Faraday.** Dijelaskan pada subbagian sebelumnya: berkurang dengan kuadrat frekuensi, bertambah saat pergi dan saat kembali, dan tidak dapat diprediksi [3].",
                 "• **Penyerapan ionosfer.** Ini juga berkurang dengan kuadrat frekuensi: pada 144 MHz, siang hari dan elevasi 10°, besarnya sekitar 0,1 dB. Ini hanya berarti saat aktivitas Matahari sangat tinggi; selama aurora kuat, polarisasi dapat berubah lebih cepat daripada yang dapat diikuti oleh penerima pita sempit [3].",
                 "• **Dari 50 hingga 432 MHz.** Hampir semua orang memakai yagi berpolarisasi linear: penulis artikel menyarankan sistem dengan polarisasi linear yang dapat dialihkan, sebaiknya secara elektronik; rotasi mekanis boleh saja jika seperempat putaran hanya memerlukan satu atau beberapa detik [3]. Saat menerima, pilih polarisasi dengan sinyal terkuat (penerima dua kanal lebih cepat untuk sinyal lemah); saat memanggil CQ, lebih baik bergantian antara horizontal dan vertikal daripada memakai polarisasi sirkular, yang selalu kehilangan 3 dB [3].",
+                "• **Di 23 cm (1296 MHz).** Dengan antena parabola biasanya digunakan polarisasi sirkular: memancar dengan satu arah putar dan menerima dengan arah yang lain, karena Bulan membalik arahnya, dan rotasi Faraday serta pergeseran spasial tidak berpengaruh. Rugi berasal dari feed, yang tidak pernah sirkular sempurna: Bob Atkins KA1GT mengukurnya dari isolasi antara dua port polarizer, sekitar 1 dB dengan isolasi 6 dB, sekitar 0,4 dB dengan 10 dB (kasus umum) dan sekitar 0,1 dB dengan 16 dB [6]. YAEC memakai 0,4 dB di tab Anggaran EME parabola pada 1296 MHz bila kotak centang rugi polarisasi aktif.",
                 "• **Dari 10 GHz ke atas.** Bulan mendepolarisasi sinyal, polarisasi pancar tidak lagi berpengaruh, dan diperlukan penerima dua kanal pada dua feed ortogonal [3]. Frekuensi ini berada di luar band YAEC.",
                 "• **Polarisasi mana untuk memancar.** Jika Anda menerima suatu stasiun, Anda dapat menentukan polarisasi pancar yang membuat sinyal Anda sampai kepadanya dengan benar [3]. Dengan sudut dalam derajat (0° horizontal, 90° vertikal), P adalah polarisasi pancar stasiun lain, R polarisasi yang Anda gunakan untuk menerimanya, S pergeseran spasial, F rotasi Faraday, dan T polarisasi pancar terbaik Anda:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Dengan mengeliminasi F dari dua relasi pertama diperoleh §T = 2 · P + 2 · S − R§; untuk antena linear §2 · P§ bernilai 0° atau 180°, yang merupakan polarisasi yang sama, sehingga tersisa §T = 2 · S − R§ [3]. Tanpa rotasi Faraday (§F§ = 0, dari 1296 MHz ke atas) polarisasi terbaik untuk memancar sama dengan polarisasi yang memberikan penerimaan terbaik, §T = R§. Artikel tersebut mencatat bahwa aturan ini sama dengan aturan KL7WE dan menyebut program SKYMOON karya W5UN untuk menghitung S [3].",
+                "~ Dengan mengeliminasi F dari dua relasi pertama diperoleh §T = 2 · P + 2 · S − R§; untuk antena linear §2 · P§ bernilai 0° atau 180°, yang merupakan polarisasi yang sama, sehingga tersisa §T = 2 · S − R§ [3]. Tanpa rotasi Faraday (§F§ ≈ 0, dari 1296 MHz ke atas dengan ionosfer sehari-hari) polarisasi terbaik untuk memancar sama dengan polarisasi yang memberikan penerimaan terbaik, §T = R§. Artikel tersebut mencatat bahwa aturan ini sama dengan aturan KL7WE dan menyebut program SKYMOON karya W5UN untuk menghitung S [3].",
                 "> Dalam YAEC, pergeseran spasial S adalah §D_{pol}§ yang dihitung pada tab Posisi Bulan dan tab Posisi langsung dan +- 24h; rotasi Faraday F tidak dapat dihitung. Untuk contoh, kasus khusus, dan gambar, bacalah artikel lengkap SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasi, Juli 2015, disediakan oleh IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 April 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 April 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Rekomendasi P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabel 1 (rotasi Faraday sebanding dengan 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["id"]["S44"] = new string[] {
                 "## Derau langit dan Dgrd",
@@ -73299,7 +73503,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Вращение за один проход через ионосферу, типичное дневное значение; 144 MHz по [3], остальные диапазоны получены YAEC по формуле выше (≈ = расчётное значение). Начиная с 1296 MHz его можно считать нулевым [3].",
+                "~ Вращение за один проход через ионосферу, типичное дневное значение; 144 MHz по [3], остальные диапазоны получены YAEC по формуле выше (≈ = расчётное значение). Начиная с 1296 MHz, при обычной ионосфере вращение составляет лишь несколько градусов и его можно считать нулевым [3]; однако при ионосфере, очень сильно насыщенной электронами, рекомендация ITU-R P.531 даёт 108° на 1 GHz для одного прохода при угле места 30°, то есть около 64° на 1296 MHz [4]. На 23 cm это мало важно, поскольку обычно используется круговая поляризация, которую фарадеевское вращение не изменяет.",
                 "• **На обратном пути оно не компенсируется.** Направление вращения не зависит от направления распространения волны: после второго прохода через ионосферу сигнал снова повёрнут, в ту же сторону [3]. Каждая станция добавляет вращение ионосферы над собой.",
                 "• **Оно меняется со временем.** Количество электронов меняется днём и ночью, на восходе и закате и в зависимости от солнечной активности: при очень активном Солнце вращение сильное и может быстро меняться, а во время полярных сияний поляризация может измениться за несколько миллисекунд [3]. Поэтому его нельзя предсказать расчётом.",
                 "• **Оно складывается с пространственным смещением.** Пространственное смещение поляризации (§D_{pol}§) имеет противоположный знак в двух направлениях связи, а фарадеевское вращение сохраняет одно и то же направление: в одну сторону два поворота складываются, в другую вычитаются. Поэтому может случиться, что вы слышите DX, а он вас не слышит, или наоборот [1]. Потери подчиняются тому же закону, что и для §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, где Δ — полное смещение: при 90° сигнал исчезает.",
@@ -73309,18 +73513,22 @@ namespace LunaCalc
                 "Статья «Selecting Polarisation for EME», автор Leif Åsbrink SM5BSZ (25 апреля 1997), общедоступна, её можно прочитать на сайте автора: https://sm5bsz.com/polarity/emepol.htm. Автор этой программы считает полезным предложить здесь её краткое изложение, как отправную точку, написанное своими словами; за полными объяснениями следует обратиться к статье целиком [3].",
                 "• **Четыре эффекта.** На пути Земля – Луна – Земля поляризация меняется из-за пространственного смещения, отражения от Луны, фарадеевского вращения и поглощения в ионосфере [3].",
                 "• **Пространственное смещение.** Если смотреть с Луны, две удалённые антенны на искривлённой Земле не параллельны. Оно касается только линейной поляризации, легко рассчитывается и не зависит от частоты [3]: это и есть §D_{pol}§ в YAEC.",
-                "• **Отражение от Луны.** На низких частотах, например 144 MHz, Луна ведёт себя как гладкая сфера: линейная поляризация остаётся линейной, круговая меняет направление вращения, и около 1 % энергии попадает в «неправильную» поляризацию. На 10 GHz поверхность шероховата, и сигнал возвращается деполяризованным [3].",
+                "• **Отражение от Луны.** На низких частотах, например 144 MHz, Луна ведёт себя как гладкая сфера: линейная поляризация остаётся линейной, круговая меняет направление вращения, и около 1 % энергии попадает в «неправильную» поляризацию. На 10 GHz поверхность шероховата, и сигнал возвращается деполяризованным [3]. Радарные измерения Hagfors на 23 cm подтверждают, что вблизи центра лунного диска по-прежнему преобладает квазизеркальное отражение, тогда как ближе к краям эхо приходит от отдельных объектов, рассеянных по поверхности, и оказывается частично деполяризованным [5].",
                 "• **Фарадеевское вращение.** Оно описано в предыдущем подразделе: убывает пропорционально квадрату частоты, складывается на пути туда и обратно и не поддаётся предсказанию [3].",
                 "• **Ионосферное поглощение.** Оно тоже убывает пропорционально квадрату частоты: на 144 MHz днём и при угле места 10° оно составляет около 0,1 dB. Оно имеет значение только при очень высокой солнечной активности; во время сильных полярных сияний поляризация может меняться быстрее, чем способен отслеживать узкополосный приёмник [3].",
                 "• **От 50 до 432 MHz.** Почти все используют Яги с линейной поляризацией: автор рекомендует систему с переключаемой линейной поляризацией, лучше электронной; механический поворот годится, если четверть оборота занимает одну или несколько секунд [3]. При приёме выбирают поляризацию с самым сильным сигналом (двухканальный приёмник быстрее справляется со слабыми сигналами); при вызове CQ лучше чередовать горизонтальную и вертикальную, чем использовать круговую, которая всегда теряет 3 dB [3].",
+                "• **На 23 cm (1296 MHz).** С параболами обычно используют круговую поляризацию: передают с одним направлением вращения и принимают с другим, потому что Луна меняет направление вращения, а фарадеевское вращение и пространственное смещение не играют роли. Потери создают облучатели, которые никогда не бывают идеально круговыми: Bob Atkins KA1GT измерил их по развязке между двумя портами поляризатора — около 1 dB при развязке 6 dB, около 0,4 dB при 10 dB (типичный случай) и около 0,1 dB при 16 dB [6]. YAEC использует 0,4 dB на вкладке «Бюджет EME параболы» на 1296 MHz, когда включён флажок поляризационных потерь.",
                 "• **От 10 GHz и выше.** Луна деполяризует сигнал, поляризация передачи больше не имеет значения, и нужен двухканальный приёмник на двух ортогональных облучателях [3]. Эти частоты лежат вне диапазонов YAEC.",
                 "• **С какой поляризацией передавать.** Если вы принимаете станцию, можно определить, с какой поляризацией ей передавать, чтобы ваш сигнал дошёл до неё правильно [3]. При углах в градусах (0° — горизонталь, 90° — вертикаль) P — поляризация передачи другой станции, R — та, на которой вы её принимаете, S — пространственное смещение, F — фарадеевское вращение, T — ваша лучшая поляризация передачи:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Исключив F из первых двух соотношений, получаем §T = 2 · P + 2 · S − R§; для линейной антенны §2 · P§ равно 0° или 180°, то есть это та же поляризация, и остаётся §T = 2 · S − R§ [3]. Без фарадеевского вращения (§F§ = 0, от 1296 MHz и выше) лучшая поляризация для передачи совпадает с той, на которой сигнал принимается лучше всего, §T = R§. В статье отмечается, что правило совпадает с правилом KL7WE, и упоминается программа SKYMOON от W5UN для расчёта S [3].",
+                "~ Исключив F из первых двух соотношений, получаем §T = 2 · P + 2 · S − R§; для линейной антенны §2 · P§ равно 0° или 180°, то есть это та же поляризация, и остаётся §T = 2 · S − R§ [3]. Без фарадеевского вращения (§F§ ≈ 0, от 1296 MHz и выше при обычной ионосфере) лучшая поляризация для передачи совпадает с той, на которой сигнал принимается лучше всего, §T = R§. В статье отмечается, что правило совпадает с правилом KL7WE, и упоминается программа SKYMOON от W5UN для расчёта S [3].",
                 "> В YAEC пространственное смещение S — это величина §D_{pol}§, рассчитываемая на вкладках «Положение Луны» и Положение онлайн и +- 24h; фарадеевское вращение F рассчитать нельзя. Примеры, частные случаи и рисунки — в полной статье SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентация, июль 2015, предоставлена IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 апреля 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 апреля 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Рекомендация P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, таблица 1 (фарадеевское вращение пропорционально 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["ru"]["S44"] = new string[] {
                 "## Шум неба и Dgrd",
@@ -73858,7 +74066,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Обертання за один прохід крізь іоносферу, типове денне значення; 144 MHz за [3], інші діапазони отримано YAEC за формулою вище (≈ = розрахункове значення). Починаючи з 1296 MHz його можна вважати нульовим [3].",
+                "~ Обертання за один прохід крізь іоносферу, типове денне значення; 144 MHz за [3], інші діапазони отримано YAEC за формулою вище (≈ = розрахункове значення). Починаючи з 1296 MHz, за звичайної іоносфери обертання становить лише кілька градусів і його можна вважати нульовим [3]; проте за іоносфери, дуже насиченої електронами, рекомендація ITU-R P.531 дає 108° на 1 GHz для одного проходу при куті місця 30°, тобто близько 64° на 1296 MHz [4]. На 23 cm це мало важить, бо зазвичай використовують колову поляризацію, яку фарадеївське обертання не змінює.",
                 "• **На зворотному шляху воно не компенсується.** Напрямок обертання не залежить від напрямку, в якому рухається хвиля: після другого проходу крізь іоносферу сигнал знову повернутий, у той самий бік [3]. Кожна станція додає обертання іоносфери над собою.",
                 "• **Воно змінюється з часом.** Кількість електронів змінюється вдень і вночі, на світанку й на заході сонця та залежно від сонячної активності: за дуже активного Сонця обертання сильне й може швидко змінюватися, а під час полярних сяйв поляризація може змінитися за кілька мілісекунд [3]. Тому його неможливо передбачити розрахунком.",
                 "• **Воно додається до просторового зміщення.** Просторове зміщення поляризації (§D_{pol}§) має протилежний знак у двох напрямках зв'язку, а фарадеївське обертання зберігає той самий напрямок: в один бік два повороти додаються, в інший — віднімаються. Тому може статися, що ви чуєте DX, а він вас не чує, або навпаки [1]. Втрати підпорядковуються тому самому закону, що й для §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, де Δ — повне зміщення: при 90° сигнал зникає.",
@@ -73868,18 +74076,22 @@ namespace LunaCalc
                 "Стаття «Selecting Polarisation for EME», автор Leif Åsbrink SM5BSZ (25 квітня 1997), загальнодоступна, її можна прочитати на сайті автора: https://sm5bsz.com/polarity/emepol.htm. Автор цієї програми вважає корисним запропонувати тут її стислий виклад, як відправну точку, написаний власними словами; за повними поясненнями слід звернутися до статті повністю [3].",
                 "• **Чотири ефекти.** На шляху Земля – Місяць – Земля поляризація змінюється через просторове зміщення, відбиття від Місяця, фарадеївське обертання та поглинання в іоносфері [3].",
                 "• **Просторове зміщення.** Якщо дивитися з Місяця, дві віддалені антени на викривленій Землі не паралельні. Воно стосується лише лінійної поляризації, легко обчислюється і не залежить від частоти [3]: це і є §D_{pol}§ у YAEC.",
-                "• **Відбиття від Місяця.** На низьких частотах, наприклад 144 MHz, Місяць поводиться як гладка сфера: лінійна поляризація залишається лінійною, колова змінює напрямок обертання, і близько 1 % енергії потрапляє в «неправильну» поляризацію. На 10 GHz поверхня шорстка, і сигнал повертається деполяризованим [3].",
+                "• **Відбиття від Місяця.** На низьких частотах, наприклад 144 MHz, Місяць поводиться як гладка сфера: лінійна поляризація залишається лінійною, колова змінює напрямок обертання, і близько 1 % енергії потрапляє в «неправильну» поляризацію. На 10 GHz поверхня шорстка, і сигнал повертається деполяризованим [3]. Радарні вимірювання Hagfors на 23 cm підтверджують, що поблизу центру місячного диска й надалі переважає квазідзеркальне відбиття, тоді як ближче до країв відлуння надходить від окремих об'єктів, розкиданих по поверхні, і виявляється частково деполяризованим [5].",
                 "• **Фарадеївське обертання.** Його описано в попередньому підрозділі: воно зменшується пропорційно квадрату частоти, додається на шляху туди й назад і не піддається передбаченню [3].",
                 "• **Іоносферне поглинання.** Воно теж зменшується пропорційно квадрату частоти: на 144 MHz удень і при куті місця 10° воно становить близько 0,1 dB. Воно має значення лише за дуже високої сонячної активності; під час сильних полярних сяйв поляризація може змінюватися швидше, ніж здатен відстежувати вузькосмуговий приймач [3].",
                 "• **Від 50 до 432 MHz.** Майже всі використовують яги з лінійною поляризацією: автор радить систему з перемикною лінійною поляризацією, краще електронною; механічний поворот підходить, якщо чверть оберту займає одну або кілька секунд [3]. Під час приймання вибирають поляризацію з найсильнішим сигналом (двоканальний приймач швидший зі слабкими сигналами); коли даєте CQ, краще чергувати горизонтальну й вертикальну, ніж використовувати колову, яка завжди втрачає 3 dB [3].",
+                "• **На 23 cm (1296 MHz).** З параболами зазвичай використовують колову поляризацію: передають з одним напрямком обертання і приймають з іншим, бо Місяць змінює напрямок обертання, а фарадеївське обертання і просторове зміщення не мають значення. Втрати створюють опромінювачі, які ніколи не бувають ідеально коловими: Bob Atkins KA1GT виміряв їх за розв'язкою між двома портами поляризатора — близько 1 dB при розв'язці 6 dB, близько 0,4 dB при 10 dB (типовий випадок) і близько 0,1 dB при 16 dB [6]. YAEC використовує 0,4 dB на вкладці «Бюджет EME параболи» на 1296 MHz, коли увімкнено прапорець поляризаційних втрат.",
                 "• **Від 10 GHz і вище.** Місяць деполяризує сигнал, поляризація передавання більше не має значення, і потрібен двоканальний приймач на двох ортогональних опромінювачах [3]. Ці частоти лежать поза діапазонами YAEC.",
                 "• **З якою поляризацією передавати.** Якщо ви приймаєте станцію, можна визначити, з якою поляризацією їй передавати, щоб ваш сигнал дійшов до неї правильно [3]. З кутами в градусах (0° — горизонталь, 90° — вертикаль) P — поляризація передавання іншої станції, R — та, на якій ви її приймаєте, S — просторове зміщення, F — фарадеївське обертання, T — ваша найкраща поляризація передавання:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Виключивши F з перших двох співвідношень, отримуємо §T = 2 · P + 2 · S − R§; для лінійної антени §2 · P§ дорівнює 0° або 180°, тобто це та сама поляризація, і залишається §T = 2 · S − R§ [3]. Без фарадеївського обертання (§F§ = 0, від 1296 MHz і вище) найкраща поляризація для передавання збігається з тією, на якій сигнал приймається найкраще, §T = R§. У статті зазначено, що правило збігається з правилом KL7WE, і згадано програму SKYMOON від W5UN для обчислення S [3].",
+                "~ Виключивши F з перших двох співвідношень, отримуємо §T = 2 · P + 2 · S − R§; для лінійної антени §2 · P§ дорівнює 0° або 180°, тобто це та сама поляризація, і залишається §T = 2 · S − R§ [3]. Без фарадеївського обертання (§F§ ≈ 0, від 1296 MHz і вище за звичайної іоносфери) найкраща поляризація для передавання збігається з тією, на якій сигнал приймається найкраще, §T = R§. У статті зазначено, що правило збігається з правилом KL7WE, і згадано програму SKYMOON від W5UN для обчислення S [3].",
                 "> У YAEC просторове зміщення S — це величина §D_{pol}§, що обчислюється на вкладках «Положення Місяця» і Положення наживо і +- 24h; фарадеївське обертання F обчислити неможливо. Приклади, окремі випадки й рисунки — у повній статті SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентація, липень 2015, надано IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 квітня 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 квітня 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Рекомендація P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, таблиця 1 (фарадеївське обертання пропорційне 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["uk"]["S44"] = new string[] {
                 "## Шум неба і Dgrd",
@@ -74417,7 +74629,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotasie vir een deurgang deur die ionosfeer, tipiese dagwaarde; 144 MHz uit [3], die ander bande deur YAEC met die formule hierbo afgelei (≈ = afgelei). Vanaf 1296 MHz kan dit as nul beskou word [3].",
+                "~ Rotasie vir een deurgang deur die ionosfeer, tipiese dagwaarde; 144 MHz uit [3], die ander bande deur YAEC met die formule hierbo afgelei (≈ = afgelei). Vanaf 1296 MHz is die rotasie met die alledaagse ionosfeer net 'n paar grade en kan dit as nul beskou word [3]; met 'n ionosfeer wat baie swaar met elektrone gelaai is, gee aanbeveling ITU-R P.531 egter 108° by 1 GHz vir een deurgang by 30° elevasie, d.w.s. ongeveer 64° by 1296 MHz [4]. Op 23 cm maak dit min saak, omdat sirkulêre polarisasie gewoonlik gebruik word, wat Faraday-rotasie nie verander nie.",
                 "• **Dit kanselleer nie op die terugweg nie.** Die draairigting hang nie af van die rigting waarin die golf beweeg nie: ná die tweede deurgang deur die ionosfeer is die sein weer gedraai, in dieselfde rigting [3]. Elke stasie voeg die rotasie van die ionosfeer bo hom by.",
                 "• **Dit verander met die tyd.** Die hoeveelheid elektrone wissel tussen dag en nag, met sonop en sononder en met sonaktiwiteit: met 'n baie aktiewe Son is die rotasie sterk en kan dit vinnig wissel, en tydens aurora's kan die polarisasie binne 'n paar millisekondes verander [3]. Daarom kan dit nie met 'n berekening voorspel word nie.",
                 "• **Dit tel by die ruimtelike verskuiwing.** Die ruimtelike polarisasieverskuiwing (§D_{pol}§) het teenoorgestelde tekens in die twee rigtings van die verbinding, terwyl Faraday-rotasie dieselfde draairigting behou: in die een rigting tel die twee rotasies bymekaar, in die ander trek hulle van mekaar af. So kan dit gebeur dat jy die DX hoor en hy jou nie hoor nie, of andersom [1]. Die verlies volg dieselfde wet as §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, met Δ die totale verskuiwing: by 90° verdwyn die sein.",
@@ -74427,18 +74639,22 @@ namespace LunaCalc
                 "Die artikel “Selecting Polarisation for EME” deur Leif Åsbrink SM5BSZ (25 April 1997) is openbaar en kan op sy webwerf gelees word: https://sm5bsz.com/polarity/emepol.htm. Die skrywer van hierdie program ag dit nuttig om hier 'n opsomming daarvan aan te bied, as 'n vertrekpunt, in sy eie woorde geskryf; vir die volledige verduidelikings word die leser na die volledige artikel verwys [3].",
                 "• **Vier effekte.** Langs die pad Aarde – Maan – Aarde verander die polarisasie weens die ruimtelike verskuiwing, die weerkaatsing op die Maan, Faraday-rotasie en absorpsie in die ionosfeer [3].",
                 "• **Ruimtelike verskuiwing.** Van die Maan af gesien, is twee ver uitmekaar geleë antennas op die geboë Aarde nie parallel nie. Dit raak net lineêre polarisasie, is maklik om te bereken en hang nie van die frekwensie af nie [3]: dit is YAEC se §D_{pol}§.",
-                "• **Weerkaatsing op die Maan.** By lae frekwensies, soos 144 MHz, gedra die Maan hom soos 'n gladde sfeer: lineêre polarisasie bly lineêr, sirkulêre polarisasie keer sy draairigting om, en ongeveer 1 % van die energie beland in die “verkeerde” polarisasie. By 10 GHz is die oppervlak grof en kom die sein gedepolariseer terug [3].",
+                "• **Weerkaatsing op die Maan.** By lae frekwensies, soos 144 MHz, gedra die Maan hom soos 'n gladde sfeer: lineêre polarisasie bly lineêr, sirkulêre polarisasie keer sy draairigting om, en ongeveer 1 % van die energie beland in die “verkeerde” polarisasie. By 10 GHz is die oppervlak grof en kom die sein gedepolariseer terug [3]. Hagfors se radarmetings op 23 cm bevestig dat die byna spieëlende weerkaatsing naby die middel van die maanskyf steeds oorheers, terwyl die eggo na die rande toe van enkele voorwerpe kom wat oor die oppervlak versprei is, en gedeeltelik gedepolariseer is [5].",
                 "• **Faraday-rotasie.** Dit word in die vorige onderafdeling beskryf: dit neem af met die kwadraat van die frekwensie, tel heen en terug bymekaar en kan nie voorspel word nie [3].",
                 "• **Ionosferiese absorpsie.** Dit neem ook af met die kwadraat van die frekwensie: op 144 MHz, bedags en by 10° elevasie, is dit ongeveer 0,1 dB. Dit maak net saak by baie hoë sonaktiwiteit; tydens sterk aurora kan die polarisasie vinniger verander as wat 'n smalband-ontvanger kan volg [3].",
                 "• **Van 50 tot 432 MHz.** Byna almal gebruik lineêr gepolariseerde yagi's: die skrywer beveel 'n stelsel met omskakelbare lineêre polarisasie aan, verkieslik elektronies; 'n meganiese draai is goed as die kwartdraai een of 'n paar sekondes neem [3]. By ontvangs kies jy die polarisasie met die sterkste sein ('n tweekanaal-ontvanger is vinniger met swak seine); wanneer jy CQ roep, is dit beter om tussen horisontaal en vertikaal af te wissel as om sirkulêre polarisasie te gebruik, wat altyd 3 dB verloor [3].",
+                "• **Op 23 cm (1296 MHz).** Met skottels word gewoonlik sirkulêre polarisasie gebruik: 'n mens saai in een draairigting uit en ontvang in die ander, omdat die Maan die draairigting omkeer, en Faraday-rotasie en die ruimtelike verskuiwing speel geen rol nie. Die verlies kom van die voerelemente, wat nooit volmaak sirkulêr is nie: Bob Atkins KA1GT het dit gemeet uit die isolasie tussen die twee poorte van die polariseerder, ongeveer 1 dB met 6 dB isolasie, ongeveer 0,4 dB met 10 dB (die tipiese geval) en ongeveer 0,1 dB met 16 dB [6]. YAEC gebruik 0,4 dB in die oortjie EME-begroting skottels by 1296 MHz wanneer die merkblokkie vir polarisasieverlies aktief is.",
                 "• **Van 10 GHz en hoër.** Die Maan depolariseer die sein, die uitsaaipolarisasie maak nie meer saak nie, en 'n tweekanaal-ontvanger op twee ortogonale voere is nodig [3]. Hierdie frekwensies lê buite die bande van YAEC.",
                 "• **Watter polarisasie om uit te saai.** As jy 'n stasie ontvang, kan jy uitwerk met watter polarisasie jy na hom moet uitsaai sodat jou sein hom korrek bereik [3]. Met hoeke in grade (0° horisontaal, 90° vertikaal) is P die uitsaaipolarisasie van die ander stasie, R dié waarmee jy hom ontvang, S die ruimtelike verskuiwing, F die Faraday-rotasie en T jou beste uitsaaipolarisasie:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ As F uit die eerste twee verwantskappe geëlimineer word, kry ons §T = 2 · P + 2 · S − R§; vir 'n lineêre antenna is §2 · P§ 0° of 180°, wat dieselfde polarisasie is, sodat §T = 2 · S − R§ oorbly [3]. Sonder Faraday-rotasie (§F§ = 0, vanaf 1296 MHz) is die beste polarisasie om mee uit te saai dieselfde as dié waarmee jy die beste ontvang, §T = R§. Die artikel merk op dat die reël ooreenstem met dié van KL7WE en noem W5UN se SKYMOON-program om S te bereken [3].",
+                "~ As F uit die eerste twee verwantskappe geëlimineer word, kry ons §T = 2 · P + 2 · S − R§; vir 'n lineêre antenna is §2 · P§ 0° of 180°, wat dieselfde polarisasie is, sodat §T = 2 · S − R§ oorbly [3]. Sonder Faraday-rotasie (§F§ ≈ 0, vanaf 1296 MHz met die alledaagse ionosfeer) is die beste polarisasie om mee uit te saai dieselfde as dié waarmee jy die beste ontvang, §T = R§. Die artikel merk op dat die reël ooreenstem met dié van KL7WE en noem W5UN se SKYMOON-program om S te bereken [3].",
                 "> In YAEC is die ruimtelike verskuiwing S die §D_{pol}§ wat in die oortjie Maanposisie en die Regstreekse posisie en +- 24h-oortjie bereken word; Faraday-rotasie F kan nie bereken word nie. Vir die voorbeelde, spesiale gevalle en figure, lees die volledige artikel van SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, aanbieding, Julie 2015, verskaf deur IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 April 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 April 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Aanbeveling P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabel 1 (Faraday-rotasie eweredig aan 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["af"]["S44"] = new string[] {
                 "## Hemelruis en Dgrd",
@@ -74976,7 +75192,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ আয়নমণ্ডলের মধ্য দিয়ে একবার যাওয়ার রোটেশন, দিনের সাধারণ মান; 144 MHz [3] থেকে, অন্য ব্যান্ডগুলো ওপরের সূত্র দিয়ে YAEC নির্ণয় করেছে (≈ = নির্ণীত)। 1296 MHz ও তার ওপরে একে শূন্য ধরা যায় [3]।",
+                "~ আয়নমণ্ডলের মধ্য দিয়ে একবার যাওয়ার রোটেশন, দিনের সাধারণ মান; 144 MHz [3] থেকে, অন্য ব্যান্ডগুলো ওপরের সূত্র দিয়ে YAEC নির্ণয় করেছে (≈ = নির্ণীত)। 1296 MHz ও তার ওপরে, প্রতিদিনের আয়নমণ্ডলে রোটেশন মাত্র কয়েক ডিগ্রি এবং একে শূন্য ধরা যায় [3]; তবে ইলেকট্রনে খুব ভরা আয়নমণ্ডলে ITU-R P.531 সুপারিশ 30° উন্নতিকোণে একবার যাওয়ার জন্য 1 GHz-এ 108° দেয়, অর্থাৎ 1296 MHz-এ প্রায় 64° [4]। 23 cm-এ এর গুরুত্ব কম, কারণ সাধারণত বৃত্তাকার পোলারাইজেশন ব্যবহার করা হয়, যা ফ্যারাডে রোটেশন বদলায় না।",
                 "• **ফেরার পথে এটি বাতিল হয় না।** রোটেশনের দিক তরঙ্গ কোন দিকে চলছে তার ওপর নির্ভর করে না: আয়নমণ্ডলের মধ্য দিয়ে দ্বিতীয়বার যাওয়ার পর সংকেত আবার একই দিকে ঘোরে [3]। প্রতিটি স্টেশন তার ওপরের আয়নমণ্ডলের রোটেশন যোগ করে।",
                 "• **এটি সময়ের সঙ্গে বদলায়।** ইলেকট্রনের পরিমাণ দিন ও রাতের মধ্যে, সূর্যোদয় ও সূর্যাস্তে এবং সৌর সক্রিয়তার সঙ্গে বদলায়: সূর্য খুব সক্রিয় থাকলে রোটেশন প্রবল হয় এবং দ্রুত বদলাতে পারে, আর মেরুজ্যোতির (অরোরা) সময় পোলারাইজেশন কয়েক মিলিসেকেন্ডে বদলে যেতে পারে [3]। এই কারণেই গণনা দিয়ে এর পূর্বাভাস করা যায় না।",
                 "• **এটি স্থানিক অফসেটের সঙ্গে যোগ হয়।** স্থানিক পোলারাইজেশন অফসেটের (§D_{pol}§) চিহ্ন যোগাযোগের দুই দিকে বিপরীত, অথচ ফ্যারাডে রোটেশনের দিক একই থাকে: এক দিকে দুই রোটেশন যোগ হয়, অন্য দিকে বিয়োগ হয়। তাই এমন হতে পারে যে আপনি DX-কে শুনছেন কিন্তু সে আপনাকে শুনছে না, বা উল্টোটা [1]। লস §D_{pol}§-এর মতো একই নিয়ম মেনে চলে, §L = −20 · log_{10} \\a{cos Δ}§, যেখানে Δ মোট অফসেট: 90°-এ সংকেত অদৃশ্য হয়ে যায়।",
@@ -74986,18 +75202,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ-এর প্রবন্ধ “Selecting Polarisation for EME” (25 এপ্রিল 1997) উন্মুক্ত এবং তাঁর ওয়েবসাইটে পড়া যায়: https://sm5bsz.com/polarity/emepol.htm. এই প্রোগ্রামের লেখক এখানে নিজের ভাষায় লেখা এর একটি সারসংক্ষেপ, একটি সূচনাবিন্দু হিসেবে, দেওয়া উপযোগী মনে করেন; পূর্ণ ব্যাখ্যার জন্য সম্পূর্ণ প্রবন্ধটি পড়ুন [3]।",
                 "• **চারটি প্রভাব।** পৃথিবী – চাঁদ – পৃথিবী পথে পোলারাইজেশন বদলায় স্থানিক অফসেট, চাঁদে প্রতিফলন, ফ্যারাডে রোটেশন এবং আয়নমণ্ডলে শোষণের কারণে [3]।",
                 "• **স্থানিক অফসেট।** চাঁদ থেকে দেখলে বাঁকা পৃথিবীর ওপর দূরের দুটি অ্যান্টেনা সমান্তরাল নয়। এটি কেবল রৈখিক পোলারাইজেশনের ক্ষেত্রে প্রযোজ্য, সহজে গণনা করা যায় এবং ফ্রিকোয়েন্সির ওপর নির্ভর করে না [3]: এটিই YAEC-এর §D_{pol}§।",
-                "• **চাঁদে প্রতিফলন।** কম ফ্রিকোয়েন্সিতে, যেমন 144 MHz-এ, চাঁদ একটি মসৃণ গোলকের মতো আচরণ করে: রৈখিক পোলারাইজেশন রৈখিকই থাকে, বৃত্তাকার পোলারাইজেশনের দিক উল্টে যায়, এবং প্রায় 1 % শক্তি “ভুল” পোলারাইজেশনে চলে যায়। 10 GHz-এ পৃষ্ঠ অমসৃণ এবং সংকেত ডিপোলারাইজড হয়ে ফেরে [3]।",
+                "• **চাঁদে প্রতিফলন।** কম ফ্রিকোয়েন্সিতে, যেমন 144 MHz-এ, চাঁদ একটি মসৃণ গোলকের মতো আচরণ করে: রৈখিক পোলারাইজেশন রৈখিকই থাকে, বৃত্তাকার পোলারাইজেশনের দিক উল্টে যায়, এবং প্রায় 1 % শক্তি “ভুল” পোলারাইজেশনে চলে যায়। 10 GHz-এ পৃষ্ঠ অমসৃণ এবং সংকেত ডিপোলারাইজড হয়ে ফেরে [3]। 23 cm-এ Hagfors-এর রাডার পরিমাপ নিশ্চিত করে যে চাঁদের চাকতির কেন্দ্রের কাছে এখনও প্রায়-দর্পণ (quasi-specular) প্রতিফলনই প্রধান, আর প্রান্তের দিকে প্রতিধ্বনি আসে পৃষ্ঠে ছড়িয়ে থাকা আলাদা আলাদা বস্তু থেকে এবং আংশিকভাবে ডিপোলারাইজড হয় [5]।",
                 "• **ফ্যারাডে রোটেশন।** এটি আগের উপঅনুচ্ছেদে বর্ণিত: এটি ফ্রিকোয়েন্সির বর্গের সঙ্গে কমে, যাওয়া ও ফেরার পথে যোগ হয় এবং আগে থেকে অনুমান করা যায় না [3]।",
                 "• **আয়নমণ্ডলীয় শোষণ।** এটিও ফ্রিকোয়েন্সির বর্গের সঙ্গে কমে: 144 MHz-এ, দিনের বেলা ও 10° এলিভেশনে, এটি প্রায় 0.1 dB। এটি কেবল খুব বেশি সৌর সক্রিয়তায় গুরুত্বপূর্ণ; শক্তিশালী মেরুজ্যোতির সময় পোলারাইজেশন এত দ্রুত বদলাতে পারে যে একটি সরু-ব্যান্ডের রিসিভার তা অনুসরণ করতে পারে না [3]।",
                 "• **50 থেকে 432 MHz।** প্রায় সবাই রৈখিক পোলারাইজেশনের ইয়াগি ব্যবহার করেন: লেখক সুইচযোগ্য রৈখিক পোলারাইজেশনের ব্যবস্থার পরামর্শ দেন, সম্ভব হলে ইলেকট্রনিক; চতুর্থাংশ পাক ঘুরতে যদি এক বা কয়েক সেকেন্ড লাগে, তবে যান্ত্রিকভাবে ঘোরানোও চলে [3]। রিসিভ করার সময় সবচেয়ে শক্তিশালী সংকেতের পোলারাইজেশন বেছে নেওয়া হয় (দুর্বল সংকেতে দুই-চ্যানেল রিসিভার দ্রুততর); CQ দেওয়ার সময় বৃত্তাকার পোলারাইজেশন, যাতে সবসময় 3 dB লস হয়, ব্যবহারের চেয়ে অনুভূমিক ও উল্লম্ব পালা করে ব্যবহার করা ভালো [3]।",
+                "• **23 cm-এ (1296 MHz)।** ডিশে সাধারণত বৃত্তাকার পোলারাইজেশন ব্যবহার করা হয়: এক দিকে ট্রান্সমিট আর অন্য দিকে রিসিভ করা হয়, কারণ চাঁদ দিক উল্টে দেয়, এবং ফ্যারাডে রোটেশন ও স্থানিক অফসেটের কোনো প্রভাব থাকে না। ক্ষতি আসে ফিড থেকে, যা কখনোই নিখুঁতভাবে বৃত্তাকার নয়: Bob Atkins KA1GT পোলারাইজারের দুই পোর্টের মধ্যকার আইসোলেশন থেকে এটি মেপেছেন, 6 dB আইসোলেশনে প্রায় 1 dB, 10 dB-এ প্রায় 0.4 dB (সাধারণ ক্ষেত্র) এবং 16 dB-এ প্রায় 0.1 dB [6]। পোলারাইজেশন ক্ষতির চেকবক্স চালু থাকলে YAEC “EME বাজেট ডিশ” ট্যাবে 1296 MHz-এ 0.4 dB ব্যবহার করে।",
                 "• **10 GHz ও তার ঊর্ধ্বে।** চাঁদ সংকেতকে ডিপোলারাইজ করে, ট্রান্সমিট পোলারাইজেশনের আর গুরুত্ব থাকে না, এবং দুটি লম্ব ফিডে একটি দুই-চ্যানেল রিসিভার দরকার হয় [3]। এই ফ্রিকোয়েন্সিগুলো YAEC-এর ব্যান্ডের বাইরে।",
                 "• **কোন পোলারাইজেশনে ট্রান্সমিট করবেন।** কোনো স্টেশনকে রিসিভ করলে আপনি বের করতে পারেন কোন পোলারাইজেশনে তাকে ট্রান্সমিট করলে আপনার সংকেত তার কাছে সঠিকভাবে পৌঁছাবে [3]। কোণ ডিগ্রিতে নিলে (0° অনুভূমিক, 90° উল্লম্ব), P অপর স্টেশনের ট্রান্সমিট পোলারাইজেশন, R যে পোলারাইজেশনে আপনি তাকে রিসিভ করেন, S স্থানিক অফসেট, F ফ্যারাডে রোটেশন এবং T আপনার সেরা ট্রান্সমিট পোলারাইজেশন:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ প্রথম দুটি সম্পর্ক থেকে F বাদ দিলে পাওয়া যায় §T = 2 · P + 2 · S − R§; রৈখিক অ্যান্টেনার ক্ষেত্রে §2 · P§ হয় 0° বা 180°, যা একই পোলারাইজেশন, ফলে থাকে §T = 2 · S − R§ [3]। ফ্যারাডে রোটেশন না থাকলে (§F§ = 0, 1296 MHz ও তার ঊর্ধ্বে) ট্রান্সমিটের জন্য সেরা পোলারাইজেশন সেটিই, যেটিতে সবচেয়ে ভালো রিসিভ হয়, §T = R§। প্রবন্ধটি উল্লেখ করে যে নিয়মটি KL7WE-এর নিয়মের সঙ্গে মেলে এবং S গণনার জন্য W5UN-এর SKYMOON প্রোগ্রামের কথা বলে [3]।",
+                "~ প্রথম দুটি সম্পর্ক থেকে F বাদ দিলে পাওয়া যায় §T = 2 · P + 2 · S − R§; রৈখিক অ্যান্টেনার ক্ষেত্রে §2 · P§ হয় 0° বা 180°, যা একই পোলারাইজেশন, ফলে থাকে §T = 2 · S − R§ [3]। ফ্যারাডে রোটেশন না থাকলে (§F§ ≈ 0, প্রতিদিনের আয়নমণ্ডলে 1296 MHz ও তার ঊর্ধ্বে) ট্রান্সমিটের জন্য সেরা পোলারাইজেশন সেটিই, যেটিতে সবচেয়ে ভালো রিসিভ হয়, §T = R§। প্রবন্ধটি উল্লেখ করে যে নিয়মটি KL7WE-এর নিয়মের সঙ্গে মেলে এবং S গণনার জন্য W5UN-এর SKYMOON প্রোগ্রামের কথা বলে [3]।",
                 "> YAEC-এ স্থানিক অফসেট S হলো “চাঁদের অবস্থান” ট্যাব ও লাইভ অবস্থান ও +- 24h ট্যাবে গণনা করা §D_{pol}§; ফ্যারাডে রোটেশন F গণনা করা যায় না। উদাহরণ, বিশেষ ক্ষেত্র ও চিত্রের জন্য SM5BSZ-এর সম্পূর্ণ প্রবন্ধটি পড়ুন [3]।",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, উপস্থাপনা, জুলাই 2015, IC8TEM প্রদত্ত।",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 এপ্রিল 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 এপ্রিল 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, সুপারিশ P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, সারণি 1 (ফ্যারাডে রোটেশন 1/f²-এর সমানুপাতিক) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["bn"]["S44"] = new string[] {
                 "## আকাশের নয়েজ ও Dgrd",
@@ -75535,7 +75755,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ الدوران لعبور واحد للأيونوسفير، قيمة نهارية نموذجية؛ 144 MHz من [3]، والنطاقات الأخرى استنتجها YAEC بالصيغة أعلاه (≈ = مستنتَج). ومن 1296 MHz فما فوق يمكن اعتباره صفرًا [3].",
+                "~ الدوران لعبور واحد للأيونوسفير، قيمة نهارية نموذجية؛ 144 MHz من [3]، والنطاقات الأخرى استنتجها YAEC بالصيغة أعلاه (≈ = مستنتَج). ومن 1296 MHz فما فوق، مع الأيونوسفير المعتاد، لا يتجاوز الدوران بضع درجات ويمكن اعتباره صفرًا [3]؛ لكن مع أيونوسفير مشحون جدًا بالإلكترونات تعطي توصية ITU-R P.531 قيمة 108° عند 1 GHz لعبور واحد عند زاوية ارتفاع 30°، أي نحو 64° عند 1296 MHz [4]. وفي نطاق 23 cm لا يهم ذلك كثيرًا لأن الاستقطاب الدائري هو المستخدم عادةً، ودوران فاراداي لا يغيّره.",
                 "• **لا يُلغى في طريق العودة.** لا يعتمد اتجاه الدوران على الاتجاه الذي تسير فيه الموجة: بعد العبور الثاني للأيونوسفير تدور الإشارة مرة أخرى في الاتجاه نفسه [3]. وتضيف كل محطة دوران الأيونوسفير الذي فوقها.",
                 "• **يتغير مع الزمن.** تتغير كمية الإلكترونات بين النهار والليل، وعند الشروق والغروب، ومع النشاط الشمسي: فمع شمس شديدة النشاط يكون الدوران قويًا وقد يتغير بسرعة، وأثناء الشفق القطبي قد يتغير الاستقطاب خلال بضعة أجزاء من الألف من الثانية [3]. لهذا لا يمكن التنبؤ به بالحساب.",
                 "• **يُضاف إلى الإزاحة المكانية.** للإزاحة المكانية للاستقطاب (§D_{pol}§) إشارة معاكسة في اتجاهَي الاتصال، بينما يحافظ دوران فاراداي على الاتجاه نفسه: ففي أحد الاتجاهين يُجمع الدورانان، وفي الآخر يُطرحان. لذلك قد يحدث أن تسمع محطة DX ولا تسمعك هي، أو العكس [1]. ويتبع الفقد القانون نفسه الذي يتبعه §D_{pol}§، §L = −20 · log_{10} \\a{cos Δ}§، حيث Δ الإزاحة الكلية: عند 90° تختفي الإشارة.",
@@ -75545,18 +75765,22 @@ namespace LunaCalc
                 "مقالة “Selecting Polarisation for EME” لـ Leif Åsbrink SM5BSZ (25 أبريل 1997) متاحة للعموم ويمكن قراءتها على موقعه: https://sm5bsz.com/polarity/emepol.htm. ويرى مؤلف هذا البرنامج أن من المفيد أن يقدّم هنا ملخصًا لها، كنقطة انطلاق، مكتوبًا بكلماته الخاصة؛ وللاطلاع على الشروح الكاملة يُرجى قراءة المقالة كاملة [3].",
                 "• **أربعة تأثيرات.** على طول المسار أرض – قمر – أرض يتغير الاستقطاب بسبب الإزاحة المكانية، والانعكاس على القمر، ودوران فاراداي، والامتصاص في الأيونوسفير [3].",
                 "• **الإزاحة المكانية.** إذا نُظر من القمر، فإن هوائيين متباعدين على الأرض المنحنية ليسا متوازيين. وهي لا تخص إلا الاستقطاب الخطي، ويسهل حسابها، ولا تعتمد على التردد [3]: إنها §D_{pol}§ في YAEC.",
-                "• **الانعكاس على القمر.** عند الترددات المنخفضة، مثل 144 MHz، يتصرف القمر ككرة ملساء: يبقى الاستقطاب الخطي خطيًا، وينعكس اتجاه الاستقطاب الدائري، وينتهي نحو 1 % من الطاقة في الاستقطاب “الخاطئ”. وعند 10 GHz يكون السطح خشنًا وتعود الإشارة فاقدة لاستقطابها [3].",
+                "• **الانعكاس على القمر.** عند الترددات المنخفضة، مثل 144 MHz، يتصرف القمر ككرة ملساء: يبقى الاستقطاب الخطي خطيًا، وينعكس اتجاه الاستقطاب الدائري، وينتهي نحو 1 % من الطاقة في الاستقطاب “الخاطئ”. وعند 10 GHz يكون السطح خشنًا وتعود الإشارة فاقدة لاستقطابها [3]. وتؤكد قياسات Hagfors الرادارية عند 23 cm أن الانعكاس شبه المرآوي لا يزال هو الغالب قرب مركز قرص القمر، بينما يأتي الصدى نحو الحواف من أجسام منفردة متناثرة على السطح ويكون فاقدًا لاستقطابه جزئيًا [5].",
                 "• **دوران فاراداي.** وُصف في القسم الفرعي السابق: يتناقص مع مربع التردد، ويتراكم في الذهاب والإياب، ولا يمكن التنبؤ به [3].",
                 "• **الامتصاص الأيونوسفيري.** يتناقص هو أيضًا مع مربع التردد: عند 144 MHz، نهارًا وبزاوية ارتفاع 10°، يبلغ نحو 0.1 dB. ولا يهم إلا مع نشاط شمسي مرتفع جدًا؛ وفي أثناء الشفق القطبي القوي قد يتغير الاستقطاب أسرع مما يستطيع مستقبل ضيق النطاق أن يتتبعه [3].",
                 "• **من 50 إلى 432 MHz.** يستخدم الجميع تقريبًا هوائيات ياغي ذات استقطاب خطي: ويوصي الكاتب بنظام ذي استقطاب خطي قابل للتبديل، ويُفضَّل أن يكون إلكترونيًا؛ أما التدوير الميكانيكي فمقبول إذا استغرق ربع الدورة ثانية واحدة أو بضع ثوانٍ [3]. وفي الاستقبال يُختار الاستقطاب الذي يعطي أقوى إشارة (والمستقبل ثنائي القناة أسرع مع الإشارات الضعيفة)؛ وعند نداء CQ من الأفضل التناوب بين الأفقي والرأسي بدلًا من الاستقطاب الدائري الذي يخسر دائمًا 3 dB [3].",
+                "• **في 23 cm (1296 MHz).** مع الأطباق يُستخدم عادةً الاستقطاب الدائري: يُرسَل باتجاه دوران ويُستقبَل بالاتجاه الآخر، لأن القمر يعكس الاتجاه، ولا يكون لدوران فاراداي ولا للإزاحة المكانية أي أثر. تأتي الخسارة من المغذّيات، التي لا تكون أبدًا دائرية تمامًا: قاسها Bob Atkins KA1GT من العزل بين منفذَي المُستقطِب، نحو 1 dB مع عزل 6 dB، ونحو 0.4 dB مع 10 dB (الحالة النموذجية)، ونحو 0.1 dB مع 16 dB [6]. يستخدم YAEC قيمة 0.4 dB في تبويب «ميزانية EME الأطباق» عند 1296 MHz عندما يكون مربع اختيار خسارة الاستقطاب مفعّلًا.",
                 "• **من 10 GHz فما فوق.** يُفقد القمر الإشارة استقطابها، فلا يعود لاستقطاب الإرسال أهمية، ويلزم مستقبل ثنائي القناة على مغذّيين متعامدين [3]. وهذه الترددات خارج نطاقات YAEC.",
                 "• **بأي استقطاب ترسل.** إذا كنت تستقبل محطة، فيمكنك أن تستنتج الاستقطاب الذي ترسل به إليها لكي تصلها إشارتك على النحو الصحيح [3]. بالزوايا مقيسة بالدرجات (0° أفقي، 90° رأسي)، P هو استقطاب الإرسال لدى المحطة الأخرى، وR الاستقطاب الذي تستقبلها به، وS الإزاحة المكانية، وF دوران فاراداي، وT أفضل استقطاب إرسال لديك:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ بحذف F من العلاقتين الأوليين نحصل على §T = 2 · P + 2 · S − R§؛ وفي الهوائي الخطي تكون قيمة §2 · P§ هي 0° أو 180°، وهو الاستقطاب نفسه، فيبقى §T = 2 · S − R§ [3]. ومن دون دوران فاراداي (§F§ = 0، من 1296 MHz فما فوق) يكون أفضل استقطاب للإرسال هو نفسه الذي يكون به الاستقبال أفضل، §T = R§. وتشير المقالة إلى أن القاعدة تطابق قاعدة KL7WE، وتذكر برنامج SKYMOON من W5UN لحساب S [3].",
+                "~ بحذف F من العلاقتين الأوليين نحصل على §T = 2 · P + 2 · S − R§؛ وفي الهوائي الخطي تكون قيمة §2 · P§ هي 0° أو 180°، وهو الاستقطاب نفسه، فيبقى §T = 2 · S − R§ [3]. ومن دون دوران فاراداي (§F§ ≈ 0، من 1296 MHz فما فوق مع الأيونوسفير المعتاد) يكون أفضل استقطاب للإرسال هو نفسه الذي يكون به الاستقبال أفضل، §T = R§. وتشير المقالة إلى أن القاعدة تطابق قاعدة KL7WE، وتذكر برنامج SKYMOON من W5UN لحساب S [3].",
                 "> في YAEC تكون الإزاحة المكانية S هي §D_{pol}§ المحسوبة في تبويب “موقع القمر” وتبويب الموقع المباشر و +- 24h؛ أما دوران فاراداي F فلا يمكن حسابه. وللأمثلة والحالات الخاصة والأشكال، اقرأ مقالة SM5BSZ كاملة [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG، “Beginner's Guide to Small-station EME”، عرض تقديمي، يوليو 2015، قدّمه IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ، “Selecting Polarisation for EME”، 25 أبريل 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ، “Selecting Polarisation for EME”، 25 أبريل 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R، التوصية P.531-5، “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”، 1999، الجدول 1 (دوران فاراداي متناسب مع 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”، Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["ar"]["S44"] = new string[] {
                 "## ضوضاء السماء وDgrd",
@@ -76094,7 +76318,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ İyonosferden bir geçiş için dönme, tipik gündüz değeri; 144 MHz [3]'ten, diğer bantlar YAEC tarafından yukarıdaki formülle türetilmiştir (≈ = türetilmiş). 1296 MHz ve üzerinde sıfır kabul edilebilir [3].",
+                "~ İyonosferden bir geçiş için dönme, tipik gündüz değeri; 144 MHz [3]'ten, diğer bantlar YAEC tarafından yukarıdaki formülle türetilmiştir (≈ = türetilmiş). 1296 MHz ve üzerinde, günlük iyonosferde dönme yalnızca birkaç derecedir ve sıfır kabul edilebilir [3]; ancak elektronlarla çok yüklü bir iyonosferde ITU-R P.531 tavsiyesi, 30° yükselişte bir geçiş için 1 GHz'te 108° verir, yani 1296 MHz'te yaklaşık 64° [4]. 23 cm'de bunun pek önemi yoktur, çünkü genellikle Faraday dönmesinin değiştirmediği dairesel polarizasyon kullanılır.",
                 "• **Dönüş yolunda sıfırlanmaz.** Dönme yönü dalganın hangi yönde ilerlediğine bağlı değildir: iyonosferden ikinci geçişten sonra sinyal aynı yönde yeniden döner [3]. Her istasyon, üzerindeki iyonosferin dönmesini ekler.",
                 "• **Zamanla değişir.** Elektron miktarı gece ile gündüz arasında, gün doğumu ve gün batımında ve Güneş etkinliğiyle değişir: Güneş çok etkinken dönme güçlüdür ve hızla değişebilir, auroralar sırasında ise polarizasyon birkaç milisaniye içinde değişebilir [3]. Bu yüzden bir hesapla önceden tahmin edilemez.",
                 "• **Uzaysal kaymaya eklenir.** Uzaysal polarizasyon kayması (§D_{pol}§) bağlantının iki yönünde zıt işaretlidir, Faraday dönmesi ise aynı yönü korur: bir yönde iki dönme toplanır, diğerinde çıkarılır. Böylece sizin DX'i duyup onun sizi duymaması ya da tersi olabilir [1]. Kayıp, §D_{pol}§ ile aynı yasayı izler, §L = −20 · log_{10} \\a{cos Δ}§; burada Δ toplam kaymadır: 90°'de sinyal kaybolur.",
@@ -76104,18 +76328,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ'nin “Selecting Polarisation for EME” makalesi (25 Nisan 1997) herkese açıktır ve yazarın web sitesinde okunabilir: https://sm5bsz.com/polarity/emepol.htm. Bu programın yazarı, makalenin bir özetini, bir başlangıç noktası olarak, kendi sözcükleriyle burada sunmayı yararlı bulmaktadır; ayrıntılı açıklamalar için makalenin tamamını okuyun [3].",
                 "• **Dört etki.** Dünya – Ay – Dünya yolu boyunca polarizasyon; uzaysal kayma, Ay'daki yansıma, Faraday dönmesi ve iyonosferdeki soğurma nedeniyle değişir [3].",
                 "• **Uzaysal kayma.** Ay'dan bakıldığında, eğri Dünya üzerinde birbirinden uzak iki anten paralel değildir. Yalnızca doğrusal polarizasyonu ilgilendirir, kolayca hesaplanır ve frekansa bağlı değildir [3]: YAEC'nin §D_{pol}§ değeridir.",
-                "• **Ay'daki yansıma.** 144 MHz gibi düşük frekanslarda Ay pürüzsüz bir küre gibi davranır: doğrusal polarizasyon doğrusal kalır, dairesel polarizasyonun yönü tersine döner ve enerjinin yaklaşık %1'i “yanlış” polarizasyona gider. 10 GHz'de yüzey pürüzlüdür ve sinyal depolarize olarak geri döner [3].",
+                "• **Ay'daki yansıma.** 144 MHz gibi düşük frekanslarda Ay pürüzsüz bir küre gibi davranır: doğrusal polarizasyon doğrusal kalır, dairesel polarizasyonun yönü tersine döner ve enerjinin yaklaşık %1'i “yanlış” polarizasyona gider. 10 GHz'de yüzey pürüzlüdür ve sinyal depolarize olarak geri döner [3]. Hagfors'un 23 cm'deki radar ölçümleri, Ay diskinin merkezine yakın yerlerde hâlâ yarı aynasal yansımanın baskın olduğunu, kenarlara doğru ise yankının yüzeye dağılmış tek tek nesnelerden geldiğini ve kısmen depolarize olduğunu doğrular [5].",
                 "• **Faraday dönmesi.** Önceki alt bölümde anlatılmıştır: frekansın karesiyle azalır, gidişte ve dönüşte toplanır ve öngörülemez [3].",
                 "• **İyonosferik soğurma.** O da frekansın karesiyle azalır: 144 MHz'de, gündüz ve 10° yükselişte yaklaşık 0,1 dB'dir. Yalnızca çok yüksek güneş etkinliğinde önem taşır; güçlü kutup ışıkları sırasında polarizasyon, dar bantlı bir alıcının izleyebileceğinden daha hızlı değişebilir [3].",
                 "• **50 ile 432 MHz arası.** Neredeyse herkes doğrusal polarizasyonlu yagi kullanır: yazar, doğrusal polarizasyonu değiştirilebilen bir sistem önerir, tercihen elektronik; çeyrek tur bir ya da birkaç saniye sürüyorsa mekanik döndürme de uygundur [3]. Alırken en güçlü sinyali veren polarizasyon seçilir (zayıf sinyallerde iki kanallı bir alıcı daha hızlıdır); CQ çağrısı yaparken, her zaman 3 dB kaybettiren dairesel polarizasyon yerine yatay ve dikeyi dönüşümlü kullanmak daha iyidir [3].",
+                "• **23 cm'de (1296 MHz).** Çanaklarla genellikle dairesel polarizasyon kullanılır: bir yönde gönderilir, diğer yönde alınır, çünkü Ay yönü tersine çevirir; Faraday dönmesi ve uzaysal kayma önemli değildir. Kayıp, hiçbir zaman tam dairesel olmayan besleyicilerden gelir: Bob Atkins KA1GT bunu polarizörün iki portu arasındaki izolasyondan ölçmüştür; 6 dB izolasyonda yaklaşık 1 dB, 10 dB'de yaklaşık 0,4 dB (tipik durum) ve 16 dB'de yaklaşık 0,1 dB [6]. Polarizasyon kaybı onay kutusu etkinken YAEC, EME bütçesi çanaklar sekmesinde 1296 MHz'de 0,4 dB kullanır.",
                 "• **10 GHz ve üzeri.** Ay sinyali depolarize eder, gönderme polarizasyonu artık önemli değildir ve iki dik besleyici üzerinde iki kanallı bir alıcı gerekir [3]. Bu frekanslar YAEC bantlarının dışındadır.",
                 "• **Hangi polarizasyonla göndermeli.** Bir istasyonu alıyorsanız, sinyalinizin ona doğru biçimde ulaşması için hangi polarizasyonla göndermeniz gerektiğini bulabilirsiniz [3]. Açılar derece cinsinden (0° yatay, 90° dikey) olmak üzere P diğer istasyonun gönderme polarizasyonu, R onu aldığınız polarizasyon, S uzaysal kayma, F Faraday dönmesi ve T sizin en iyi gönderme polarizasyonunuzdur:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ İlk iki bağıntıdan F yok edilirse §T = 2 · P + 2 · S − R§ elde edilir; doğrusal bir anten için §2 · P§ 0° ya da 180°'dir, bu da aynı polarizasyondur, geriye §T = 2 · S − R§ kalır [3]. Faraday dönmesi olmadığında (§F§ = 0, 1296 MHz ve üzeri) göndermek için en iyi polarizasyon, en iyi aldığınız polarizasyonla aynıdır, §T = R§. Makale, bu kuralın KL7WE'nin kuralıyla örtüştüğünü belirtir ve S'nin hesaplanması için W5UN'un SKYMOON programını anar [3].",
+                "~ İlk iki bağıntıdan F yok edilirse §T = 2 · P + 2 · S − R§ elde edilir; doğrusal bir anten için §2 · P§ 0° ya da 180°'dir, bu da aynı polarizasyondur, geriye §T = 2 · S − R§ kalır [3]. Faraday dönmesi olmadığında (§F§ ≈ 0, günlük iyonosferde 1296 MHz ve üzeri) göndermek için en iyi polarizasyon, en iyi aldığınız polarizasyonla aynıdır, §T = R§. Makale, bu kuralın KL7WE'nin kuralıyla örtüştüğünü belirtir ve S'nin hesaplanması için W5UN'un SKYMOON programını anar [3].",
                 "> YAEC'de uzaysal kayma S, Ay konumu ve Canlı konum ve +- 24h sekmelerinde hesaplanan §D_{pol}§ değeridir; Faraday dönmesi F hesaplanamaz. Örnekler, özel durumlar ve şekiller için SM5BSZ'nin makalesinin tamamını okuyun [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, sunum, Temmuz 2015, IC8TEM tarafından sağlanmıştır.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 Nisan 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 Nisan 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Tavsiye P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tablo 1 (Faraday dönmesi 1/f² ile orantılı) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["tr"]["S44"] = new string[] {
                 "## Gökyüzü gürültüsü ve Dgrd",
@@ -76653,7 +76881,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotatie voor één doorgang door de ionosfeer, typische dagwaarde; 144 MHz uit [3], de andere banden door YAEC afgeleid met de formule hierboven (≈ = afgeleid). Vanaf 1296 MHz kun je haar als nul beschouwen [3].",
+                "~ Rotatie voor één doorgang door de ionosfeer, typische dagwaarde; 144 MHz uit [3], de andere banden door YAEC afgeleid met de formule hierboven (≈ = afgeleid). Vanaf 1296 MHz is de rotatie bij de alledaagse ionosfeer maar een paar graden en kun je haar als nul beschouwen [3]; bij een ionosfeer die zeer sterk met elektronen geladen is, geeft aanbeveling ITU-R P.531 echter 108° op 1 GHz voor één doorgang bij 30° elevatie, dus ongeveer 64° op 1296 MHz [4]. Op 23 cm maakt dat weinig uit, omdat men meestal circulaire polarisatie gebruikt, die door Faraday-rotatie niet verandert.",
                 "• **Heft zich op de terugweg niet op.** De draairichting hangt niet af van de richting waarin de golf reist: na de tweede doorgang door de ionosfeer is het signaal opnieuw gedraaid, in dezelfde richting [3]. Elk station voegt de rotatie van de ionosfeer boven zich toe.",
                 "• **Verandert in de tijd.** De hoeveelheid elektronen varieert tussen dag en nacht, bij zonsopkomst en zonsondergang en met de zonneactiviteit: bij een zeer actieve Zon is de rotatie sterk en kan ze snel veranderen, en tijdens aurora kan de polarisatie in enkele milliseconden veranderen [3]. Daarom is ze niet met een berekening te voorspellen.",
                 "• **Telt op bij de ruimtelijke verschuiving.** De ruimtelijke verschuiving (§D_{pol}§) heeft in de twee richtingen van de verbinding een tegengesteld teken, terwijl de Faraday-rotatie dezelfde richting heeft: in de ene richting tellen de twee rotaties op, in de andere trekken ze van elkaar af. Zo kan het gebeuren dat jij de DX hoort en hij jou niet, of omgekeerd [1]. Het verlies volgt dezelfde wet als de §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, met Δ de totale hoekafwijking: bij 90° verdwijnt het signaal.",
@@ -76663,18 +76891,22 @@ namespace LunaCalc
                 "Het artikel „Selecting Polarisation for EME” van Leif Åsbrink SM5BSZ (25 april 1997) is openbaar en te lezen op zijn site: https://sm5bsz.com/polarity/emepol.htm. De auteur van dit programma vindt het nuttig hier een beknopte samenvatting te geven, in eigen woorden; voor de volledige uitleg wordt verwezen naar het integrale artikel [3].",
                 "• **Vier effecten.** Langs het traject Aarde – Maan – Aarde verandert de polarisatie door de ruimtelijke verschuiving, door de reflectie op de Maan, door de Faraday-rotatie en door de absorptie in de ionosfeer [3].",
                 "• **Ruimtelijke verschuiving.** Gezien vanaf de Maan zijn twee ver uit elkaar liggende antennes op de gekromde Aarde niet evenwijdig. Dit betreft alleen lineaire polarisatie, is gemakkelijk te berekenen en hangt niet af van de frequentie [3]: het is de §D_{pol}§ van YAEC.",
-                "• **Reflectie op de Maan.** Op lage frequenties, zoals 144 MHz, gedraagt de Maan zich als een gladde bol: lineaire polarisatie blijft lineair, circulaire polarisatie keert haar draairichting om, en circa 1 % van de energie belandt in de „verkeerde” polarisatie. Op 10 GHz is het oppervlak ruw en komt het signaal gedepolariseerd terug [3].",
+                "• **Reflectie op de Maan.** Op lage frequenties, zoals 144 MHz, gedraagt de Maan zich als een gladde bol: lineaire polarisatie blijft lineair, circulaire polarisatie keert haar draairichting om, en circa 1 % van de energie belandt in de „verkeerde” polarisatie. Op 10 GHz is het oppervlak ruw en komt het signaal gedepolariseerd terug [3]. De radarmetingen van Hagfors op 23 cm bevestigen dat dicht bij het midden van de maanschijf nog steeds de bijna spiegelende reflectie overheerst, terwijl de echo naar de randen toe van afzonderlijke objecten komt die over het oppervlak verspreid liggen, en gedeeltelijk gedepolariseerd is [5].",
                 "• **Faraday-rotatie.** Die is beschreven in de vorige subparagraaf: ze neemt af met het kwadraat van de frequentie, telt op heen en terug en is niet te voorspellen [3].",
                 "• **Ionosferische absorptie.** Ook die neemt af met het kwadraat van de frequentie: op 144 MHz, overdag en bij 10° elevatie, is ze circa 0,1 dB. Ze telt alleen bij een zeer hoge zonneactiviteit; tijdens sterke aurora kan de polarisatie sneller veranderen dan een smalbandige ontvanger kan volgen [3].",
                 "• **Van 50 tot 432 MHz.** Bijna iedereen gebruikt lineair gepolariseerde yagi's: de auteur raadt een installatie aan met omschakelbare lineaire polarisatie, liefst elektronisch; een mechanische rotatie is goed als de kwartslag één of enkele seconden duurt [3]. Bij ontvangst kies je de polarisatie met het sterkste signaal (een tweekanaalsontvanger is sneller met zwakke signalen); als je CQ roept, kun je beter horizontaal en verticaal afwisselen in plaats van circulair, dat altijd 3 dB verliest [3].",
+                "• **Op 23 cm (1296 MHz).** Met schotels gebruikt men meestal circulaire polarisatie: je zendt met de ene draairichting en ontvangt met de andere, omdat de Maan de draairichting omkeert, en Faraday-rotatie en de ruimtelijke verschuiving spelen geen rol. Het verlies komt van de feeds, die nooit perfect circulair zijn: Bob Atkins KA1GT heeft het gemeten uit de isolatie tussen de twee poorten van de polarisator, ongeveer 1 dB bij 6 dB isolatie, ongeveer 0,4 dB bij 10 dB (het typische geval) en ongeveer 0,1 dB bij 16 dB [6]. YAEC gebruikt 0,4 dB in het tabblad EME-budget schotels op 1296 MHz wanneer het selectievakje voor polarisatieverlies aan staat.",
                 "• **Vanaf 10 GHz.** De Maan depolariseert het signaal, de zendpolarisatie doet er niet meer toe en er is een tweekanaalsontvanger op twee orthogonale feeds nodig [3]. Dat zijn frequenties buiten de banden van YAEC.",
                 "• **Met welke polarisatie zenden.** Als je een station ontvangt, kun je afleiden met welke polarisatie je naar dat station moet zenden opdat je signaal er op de juiste manier aankomt [3]. Met de hoeken in graden (0° horizontaal, 90° verticaal) is P de zendpolarisatie van het andere station, R die waarmee jij het ontvangt, S de ruimtelijke verschuiving, F de Faraday-rotatie en T jouw beste zendpolarisatie:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Door F uit de eerste twee betrekkingen te elimineren krijg je §T = 2 · P + 2 · S − R§; voor een lineaire antenne is §2 · P§ gelijk aan 0° of 180°, wat dezelfde polarisatie is, en blijft §T = 2 · S − R§ over [3]. Zonder Faraday-rotatie (§F§ = 0, vanaf 1296 MHz) is de beste zendpolarisatie dezelfde als die waarmee je het best ontvangt, §T = R§. Het artikel merkt op dat de regel overeenkomt met die van KL7WE en noemt het programma SKYMOON van W5UN voor de berekening van S [3].",
+                "~ Door F uit de eerste twee betrekkingen te elimineren krijg je §T = 2 · P + 2 · S − R§; voor een lineaire antenne is §2 · P§ gelijk aan 0° of 180°, wat dezelfde polarisatie is, en blijft §T = 2 · S − R§ over [3]. Zonder Faraday-rotatie (§F§ ≈ 0, vanaf 1296 MHz bij de alledaagse ionosfeer) is de beste zendpolarisatie dezelfde als die waarmee je het best ontvangt, §T = R§. Het artikel merkt op dat de regel overeenkomt met die van KL7WE en noemt het programma SKYMOON van W5UN voor de berekening van S [3].",
                 "> In YAEC is de ruimtelijke verschuiving S de §D_{pol}§ die wordt berekend in Maanpositie en in Live positie en +- 24h; de Faraday-rotatie F is niet te berekenen. Lees voor de voorbeelden, de bijzondere gevallen en de figuren het volledige artikel van SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentatie, juli 2015, aangeleverd door IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 april 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 april 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Aanbeveling P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabel 1 (Faraday-rotatie evenredig met 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["nl"]["S44"] = new string[] {
                 "## Hemelruis en Dgrd",
@@ -77220,7 +77452,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Pööre ühe ionosfääri läbimise kohta, tüüpiline päevane väärtus; 144 MHz allikast [3], teised sagedusalad leidnud YAEC ülaltoodud valemiga (≈ = tuletatud). Alates 1296 MHz-st võib seda pidada nulliks [3].",
+                "~ Pööre ühe ionosfääri läbimise kohta, tüüpiline päevane väärtus; 144 MHz allikast [3], teised sagedusalad leidnud YAEC ülaltoodud valemiga (≈ = tuletatud). Alates 1296 MHz-st on pööre tavalise ionosfääri korral vaid mõni kraad ja seda võib pidada nulliks [3]; väga suure elektronisisaldusega ionosfääri korral annab soovitus ITU-R P.531 aga ühe läbimise kohta 30° kõrgusnurga juures 1 GHz-l 108°, st 1296 MHz-l umbes 64° [4]. 23 cm alas on sellel vähe tähtsust, sest tavaliselt kasutatakse ringpolarisatsiooni, mida Faraday pööre ei muuda.",
                 "• **Tagasiteel see ei kustu.** Pöörde suund ei sõltu laine liikumissuunast: pärast teist ionosfääri läbimist on signaal veelgi pööratud, samas suunas [3]. Iga jaam lisab enda kohal oleva ionosfääri pöörde.",
                 "• **Muutub ajas.** Elektronide hulk varieerub päeva ja öö vahel, koidikul ja loojangul ning päikese aktiivsusega: väga aktiivse Päikese korral on pööre tugev ja võib kiiresti muutuda ning virmaliste ajal võib polarisatsioon muutuda mõne millisekundi jooksul [3]. Seepärast ei saa seda arvutusega ennustada.",
                 "• **Liitub ruumilise nihkega.** Ruumilisel nihkel (§D_{pol}§) on side kahes suunas vastupidine märk, Faraday pöördel aga sama suund: ühes suunas pöörded liituvad, teises lahutuvad. Nii võib juhtuda, et sina kuuled DX-i, aga tema sind ei kuule, või vastupidi [1]. Kadu järgib sama seadust kui §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, kus Δ on kogu faasinihe: 90° juures signaal kaob.",
@@ -77230,18 +77462,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ artikkel „Selecting Polarisation for EME“ (25. aprill 1997) on avalik ja loetav tema saidil: https://sm5bsz.com/polarity/emepol.htm. Selle programmi autor peab kasulikuks pakkuda siin sellest lühikokkuvõtet, kirjutatud oma sõnadega; täielike selgituste saamiseks soovitame lugeda kogu artiklit [3].",
                 "• **Neli efekti.** Teekonnal Maa – Kuu – Maa muutub polarisatsioon ruumilise nihke, Kuult peegeldumise, Faraday pöörde ja ionosfääris neeldumise tõttu [3].",
                 "• **Ruumiline nihe.** Kuult vaadatuna ei ole kaks kõveral Maal kaugel asuvat antenni paralleelsed. See puudutab ainult lineaarset polarisatsiooni, on kergesti arvutatav ega sõltu sagedusest [3]: see on YAEC-i §D_{pol}§.",
-                "• **Peegeldumine Kuult.** Madalatel sagedustel, nagu 144 MHz, käitub Kuu sileda sfäärina: lineaarne polarisatsioon jääb lineaarseks, ringpolarisatsioon muudab suunda ja umbes 1 % energiast satub „valesse“ polarisatsiooni. 10 GHz juures on pind kare ja signaal naaseb depolariseerituna [3].",
+                "• **Peegeldumine Kuult.** Madalatel sagedustel, nagu 144 MHz, käitub Kuu sileda sfäärina: lineaarne polarisatsioon jääb lineaarseks, ringpolarisatsioon muudab suunda ja umbes 1 % energiast satub „valesse“ polarisatsiooni. 10 GHz juures on pind kare ja signaal naaseb depolariseerituna [3]. Hagforsi radarimõõtmised 23 cm juures kinnitavad, et Kuu ketta keskme lähedal domineerib endiselt peaaegu peegeldav (kvaasispekulaarne) peegeldus, servade poole aga tuleb kaja üksikutelt pinnale hajutatud objektidelt ja on osaliselt depolariseeritud [5].",
                 "• **Faraday pööre.** Seda on kirjeldatud eelmises alajaotises: väheneb sageduse ruuduga, liitub edasi- ja tagasiteel ning seda ei saa ennustada [3].",
                 "• **Ionosfääriline neeldumine.** See väheneb samuti sageduse ruuduga: 144 MHz juures, päeval ja 10° kõrgusel, on see umbes 0,1 dB. See loeb ainult väga suure päikese aktiivsuse korral; tugevate virmaliste ajal võib polarisatsioon muutuda kiiremini, kui kitsaribaline vastuvõtja suudab jälgida [3].",
                 "• **50 kuni 432 MHz.** Peaaegu kõik kasutavad lineaarse polarisatsiooniga yagisid: autor soovitab ümberlülitatava lineaarse polarisatsiooniga süsteemi, pigem elektroonilist; mehaaniline pööramine sobib, kui veerandpööre võtab ühe või mõne sekundi [3]. Vastuvõtul valitakse kõige tugevama signaaliga polarisatsioon (kahekanaliline vastuvõtja on nõrkade signaalidega kiirem); CQ kutsumisel tasub vaheldumisi kasutada horisontaalset ja vertikaalset, mitte ringpolarisatsiooni, mis kaotab alati 3 dB [3].",
+                "• **23 cm (1296 MHz).** Paraboolidega kasutatakse tavaliselt ringpolarisatsiooni: saadetakse ühe pöörlemissuunaga ja võetakse vastu teisega, sest Kuu pöörab suuna ümber, ning Faraday pööre ja ruumiline nihe ei loe. Kadu tuleb kiiritajatest, mis ei ole kunagi täiesti ringpolariseeritud: Bob Atkins KA1GT mõõtis selle polarisaatori kahe pordi vahelise isolatsiooni järgi, umbes 1 dB 6 dB isolatsiooni korral, umbes 0,4 dB 10 dB korral (tüüpiline juht) ja umbes 0,1 dB 16 dB korral [6]. YAEC kasutab sakis „EME eelarve paraboolid“ 1296 MHz juures 0,4 dB, kui polarisatsioonikao märkeruut on sisse lülitatud.",
                 "• **Alates 10 GHz-st.** Kuu depolariseerib signaali, saatepolarisatsioon ei loe enam ja vaja on kahekanalilist vastuvõtjat kahe ortogonaalse kiiritajaga [3]. Need sagedused jäävad väljapoole YAEC-i sagedusalasid.",
                 "• **Millise polarisatsiooniga saata.** Kui võtad jaama vastu, saad leida, millise polarisatsiooniga talle saata, et sinu signaal jõuaks temani õigesti [3]. Nurkadega kraadides (0° horisontaalne, 90° vertikaalne) on P teise jaama saatepolarisatsioon, R see, millega sina teda vastu võtad, S ruumiline nihe, F Faraday pööre ja T sinu parim saatepolarisatsioon:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Kõrvaldades F kahest esimesest seosest, saadakse §T = 2 · P + 2 · S − R§; lineaarse antenni korral on §2 · P§ 0° või 180°, mis on sama polarisatsioon, ja alles jääb §T = 2 · S − R§ [3]. Ilma Faraday pöördeta (§F§ = 0, alates 1296 MHz-st) on parim saatepolarisatsioon sama, millega vastuvõtt on parim, §T = R§. Artikkel märgib, et reegel ühtib KL7WE omaga, ja viitab S-i arvutamiseks W5UN programmile SKYMOON [3].",
+                "~ Kõrvaldades F kahest esimesest seosest, saadakse §T = 2 · P + 2 · S − R§; lineaarse antenni korral on §2 · P§ 0° või 180°, mis on sama polarisatsioon, ja alles jääb §T = 2 · S − R§ [3]. Ilma Faraday pöördeta (§F§ ≈ 0, alates 1296 MHz-st tavalise ionosfääri korral) on parim saatepolarisatsioon sama, millega vastuvõtt on parim, §T = R§. Artikkel märgib, et reegel ühtib KL7WE omaga, ja viitab S-i arvutamiseks W5UN programmile SKYMOON [3].",
                 "> YAEC-is on ruumiline nihe S sakkidel „Kuu asukoht“ ja „Asukoht reaalajas ja +- 24h“ arvutatud §D_{pol}§; Faraday pööret F ei saa arvutada. Näidete, erijuhtude ja jooniste jaoks loe SM5BSZ täielikku artiklit [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, ettekanne, juuli 2015, andnud IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. aprill 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. aprill 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, soovitus P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabel 1 (Faraday pööre on võrdeline 1/f²-ga) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["et"]["S44"] = new string[] {
                 "## Taevamüra ja Dgrd",
@@ -77787,7 +78023,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotācija vienā jonosfēras šķērsojumā, tipiska dienas vērtība; 144 MHz no [3], pārējos diapazonus YAEC ieguvusi ar augstāk doto formulu (≈ = iegūts). No 1296 MHz uz augšu to var uzskatīt par nulli [3].",
+                "~ Rotācija vienā jonosfēras šķērsojumā, tipiska dienas vērtība; 144 MHz no [3], pārējos diapazonus YAEC ieguvusi ar augstāk doto formulu (≈ = iegūts). No 1296 MHz uz augšu ikdienas jonosfērā rotācija ir tikai daži grādi, un to var uzskatīt par nulli [3]; tomēr jonosfērā, kas ļoti piesātināta ar elektroniem, ieteikums ITU-R P.531 dod 108° pie 1 GHz vienam šķērsojumam 30° elevācijā, t. i., aptuveni 64° pie 1296 MHz [4]. 23 cm diapazonā tam ir maza nozīme, jo parasti izmanto apļveida polarizāciju, ko Faradeja rotācija nemaina.",
                 "• **Atpakaļceļā tā neatceļas.** Rotācijas virziens nav atkarīgs no viļņa kustības virziena: pēc otrā jonosfēras šķērsojuma signāls ir pagriezts vēl vairāk, tajā pašā virzienā [3]. Katra stacija pievieno jonosfēras rotāciju virs sevis.",
                 "• **Tā mainās laikā.** Elektronu daudzums mainās starp dienu un nakti, rītausmā un saulrietā un līdz ar Saules aktivitāti: ar ļoti aktīvu Sauli rotācija ir spēcīga un var strauji mainīties, un polārblāzmu laikā polarizācija var mainīties dažās milisekundēs [3]. Tāpēc to nevar paredzēt ar aprēķinu.",
                 "• **Tā summējas ar telpisko nobīdi.** Telpiskajai nobīdei (§D_{pol}§) abos sakara virzienos ir pretēja zīme, bet Faradeja rotācijai – tas pats virziens: vienā virzienā abas rotācijas summējas, otrā – atņemas. Tā var gadīties, ka jūs dzirdat DX, bet viņš nedzird jūs, vai otrādi [1]. Zudumi atbilst tam pašam likumam kā §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, kur Δ ir kopējā nobīde: pie 90° signāls pazūd.",
@@ -77797,18 +78033,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ raksts «Selecting Polarisation for EME» (1997. gada 25. aprīlis) ir publisks un lasāms viņa vietnē: https://sm5bsz.com/polarity/emepol.htm. Šīs programmas autors uzskata par noderīgu piedāvāt šeit īsu kopsavilkumu, rakstītu saviem vārdiem; pilniem skaidrojumiem iesakām izlasīt visu rakstu [3].",
                 "• **Četri efekti.** Trasē Zeme – Mēness – Zeme polarizācija mainās telpiskās nobīdes, atstarošanās no Mēness, Faradeja rotācijas un jonosfēras absorbcijas dēļ [3].",
                 "• **Telpiskā nobīde.** Skatoties no Mēness, divas tālas antenas uz izliektās Zemes nav paralēlas. Tā attiecas tikai uz lineāro polarizāciju, ir viegli aprēķināma un nav atkarīga no frekvences [3]: tas ir YAEC §D_{pol}§.",
-                "• **Atstarošanās no Mēness.** Zemās frekvencēs, piemēram, 144 MHz, Mēness uzvedas kā gluda sfēra: lineārā polarizācija paliek lineāra, cirkulārajai mainās griešanās virziens, un aptuveni 1 % enerģijas nonāk „nepareizajā” polarizācijā. Pie 10 GHz virsma ir raupja, un signāls atgriežas depolarizēts [3].",
+                "• **Atstarošanās no Mēness.** Zemās frekvencēs, piemēram, 144 MHz, Mēness uzvedas kā gluda sfēra: lineārā polarizācija paliek lineāra, cirkulārajai mainās griešanās virziens, un aptuveni 1 % enerģijas nonāk „nepareizajā” polarizācijā. Pie 10 GHz virsma ir raupja, un signāls atgriežas depolarizēts [3]. Hagfors veiktie radara mērījumi 23 cm diapazonā apstiprina, ka Mēness diska centra tuvumā joprojām dominē gandrīz spoguļveida atstarošanās, bet tuvāk malām atbalss nāk no atsevišķiem pa virsmu izkaisītiem objektiem un ir daļēji depolarizēta [5].",
                 "• **Faradeja rotācija.** Tā aprakstīta iepriekšējā apakšsadaļā: samazinās proporcionāli frekvences kvadrātam, summējas turp un atpakaļ ceļā un nav paredzama [3].",
                 "• **Jonosfēras absorbcija.** Arī tā samazinās proporcionāli frekvences kvadrātam: pie 144 MHz dienā un 10° elevācijā tā ir aptuveni 0,1 dB. Tā ir svarīga tikai ļoti augstas Saules aktivitātes laikā; spēcīgu polārblāzmu laikā polarizācija var mainīties ātrāk, nekā šaurjoslas uztvērējs spēj sekot [3].",
                 "• **No 50 līdz 432 MHz.** Gandrīz visi izmanto lineāras polarizācijas Yagi antenas: autors iesaka iekārtu ar pārslēdzamu lineāro polarizāciju, labāk elektroniski; mehāniska pagriešana der, ja ceturtdaļapgrieziens prasa vienu vai dažas sekundes [3]. Uztveršanā izvēlas polarizāciju ar spēcīgāko signālu (divkanālu uztvērējs ar vājiem signāliem ir ātrāks); saucot CQ, ieteicams mainīt horizontālo un vertikālo, nevis izmantot cirkulāro, kas vienmēr zaudē 3 dB [3].",
+                "• **23 cm diapazonā (1296 MHz).** Ar šķīvjiem parasti izmanto cirkulāro polarizāciju: raida vienā griešanās virzienā un uztver otrā, jo Mēness maina griešanās virzienu, un Faradeja rotācijai un telpiskajai nobīdei nav nozīmes. Zudumus rada apstarotāji, kas nekad nav pilnīgi cirkulāri: Bob Atkins KA1GT tos izmērīja pēc izolācijas starp polarizatora diviem portiem — aptuveni 1 dB pie 6 dB izolācijas, aptuveni 0,4 dB pie 10 dB (tipiskais gadījums) un aptuveni 0,1 dB pie 16 dB [6]. YAEC cilnē „EME budžets šķīvji” pie 1296 MHz izmanto 0,4 dB, ja ir atzīmēta polarizācijas zudumu izvēles rūtiņa.",
                 "• **No 10 GHz uz augšu.** Mēness depolarizē signālu, raidīšanas polarizācijai vairs nav nozīmes, un vajadzīgs divkanālu uztvērējs ar diviem ortogonāliem apstarotājiem [3]. Šīs frekvences ir ārpus YAEC diapazoniem.",
                 "• **Kādu polarizāciju raidīt.** Ja jūs uztverat staciju, varat noteikt, ar kādu polarizāciju tai raidīt, lai jūsu signāls tai pienāktu pareizi [3]. Ar leņķiem grādos (0° horizontāli, 90° vertikāli) P ir otras stacijas raidīšanas polarizācija, R – tā, ar kuru jūs to uztverat, S – telpiskā nobīde, F – Faradeja rotācija un T – jūsu labākā raidīšanas polarizācija:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Izslēdzot F no pirmajām divām sakarībām, iegūst §T = 2 · P + 2 · S − R§; lineārai antenai §2 · P§ ir 0° vai 180°, kas ir tā pati polarizācija, un paliek §T = 2 · S − R§ [3]. Bez Faradeja rotācijas (§F§ = 0, no 1296 MHz uz augšu) labākā raidīšanas polarizācija ir tā pati, ar kuru vislabāk uztver, §T = R§. Raksts norāda, ka likums sakrīt ar KL7WE likumu, un min W5UN programmu SKYMOON S aprēķinam [3].",
+                "~ Izslēdzot F no pirmajām divām sakarībām, iegūst §T = 2 · P + 2 · S − R§; lineārai antenai §2 · P§ ir 0° vai 180°, kas ir tā pati polarizācija, un paliek §T = 2 · S − R§ [3]. Bez Faradeja rotācijas (§F§ ≈ 0, no 1296 MHz uz augšu ikdienas jonosfērā) labākā raidīšanas polarizācija ir tā pati, ar kuru vislabāk uztver, §T = R§. Raksts norāda, ka likums sakrīt ar KL7WE likumu, un min W5UN programmu SKYMOON S aprēķinam [3].",
                 "> YAEC telpiskā nobīde S ir §D_{pol}§, kas aprēķināta cilnēs „Mēness pozīcija” un „Tiešraides pozīcija un +- 24h”; Faradeja rotāciju F aprēķināt nevar. Piemēriem, īpašiem gadījumiem un attēliem lasiet pilno SM5BSZ rakstu [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, prezentācija, 2015. gada jūlijs, nodrošināja IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997. gada 25. aprīlis – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997. gada 25. aprīlis – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Ieteikums P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, 1. tabula (Faradeja rotācija proporcionāla 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["lv"]["S44"] = new string[] {
                 "## Debess troksnis un Dgrd",
@@ -78354,7 +78594,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Sukimasis vienam praėjimui per jonosferą, tipinė dienos vertė; 144 MHz – iš [3], kitus diapazonus YAEC apskaičiavo pagal aukščiau pateiktą formulę (≈ = išvestinė). Nuo 1296 MHz ir aukščiau jį galima laikyti nuliniu [3].",
+                "~ Sukimasis vienam praėjimui per jonosferą, tipinė dienos vertė; 144 MHz – iš [3], kitus diapazonus YAEC apskaičiavo pagal aukščiau pateiktą formulę (≈ = išvestinė). Nuo 1296 MHz ir aukščiau, esant įprastai jonosferai, sukimasis siekia tik kelis laipsnius ir jį galima laikyti nuliniu [3]; tačiau esant labai elektronais prisotintai jonosferai, rekomendacija ITU-R P.531 pateikia 108° ties 1 GHz vienam praėjimui esant 30° pakilimo kampui, t. y. apie 64° ties 1296 MHz [4]. 23 cm diapazone tai mažai svarbu, nes paprastai naudojama apskritiminė poliarizacija, kurios Faradėjaus sukimasis nekeičia.",
                 "• **Grįžtant nepanaikinamas.** Sukimosi kryptis nepriklauso nuo bangos sklidimo krypties: po antrojo praėjimo per jonosferą signalas pasisuka dar kartą ta pačia kryptimi [3]. Kiekviena stotis prideda virš jos esančios jonosferos sukimąsi.",
                 "• **Kinta laike.** Elektronų kiekis kinta tarp dienos ir nakties, auštant ir temstant bei priklausomai nuo Saulės aktyvumo: esant labai aktyviai Saulei sukimasis stiprus ir gali sparčiai kisti, o pašvaisčių metu poliarizacija gali pasikeisti per kelias milisekundes [3]. Todėl jo neįmanoma numatyti skaičiavimu.",
                 "• **Sumuojasi su erdviniu poslinkiu.** Erdvinis poslinkis (§D_{pol}§) abiem ryšio kryptimis turi priešingą ženklą, o Faradėjaus sukimasis – tą pačią kryptį: viena kryptimi abu sukimaisi sumuojasi, kita – atimami. Todėl gali atsitikti, kad jūs girdite DX, o jis jūsų negirdi, arba atvirkščiai [1]. Nuostoliai kinta pagal tą patį dėsnį kaip §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, kur Δ – bendras kampų skirtumas: ties 90° signalas išnyksta.",
@@ -78364,18 +78604,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ straipsnis „Selecting Polarisation for EME“ (1997 m. balandžio 25 d.) yra viešas ir skaitomas jo svetainėje: https://sm5bsz.com/polarity/emepol.htm. Šios programos autorius mano esant naudinga čia pateikti trumpą santrauką savais žodžiais; išsamių paaiškinimų ieškokite perskaitę visą straipsnį [3].",
                 "• **Keturi reiškiniai.** Trasoje Žemė – Mėnulis – Žemė poliarizacija keičiasi dėl erdvinio poslinkio, atspindžio nuo Mėnulio, Faradėjaus sukimosi ir sugerties jonosferoje [3].",
                 "• **Erdvinis poslinkis.** Žiūrint iš Mėnulio, dvi toli viena nuo kitos esančios antenos ant išlenktos Žemės nėra lygiagrečios. Tai liečia tik tiesinę poliarizaciją, lengvai apskaičiuojama ir nepriklauso nuo dažnio [3]: tai YAEC §D_{pol}§.",
-                "• **Atspindys nuo Mėnulio.** Žemais dažniais, pavyzdžiui, 144 MHz, Mėnulis elgiasi kaip lygi sfera: tiesinė poliarizacija tokia ir lieka, apskritiminės kryptis apsiverčia, o apie 1 % energijos patenka į „netinkamą“ poliarizaciją. Ties 10 GHz paviršius šiurkštus, ir signalas grįžta depoliarizuotas [3].",
+                "• **Atspindys nuo Mėnulio.** Žemais dažniais, pavyzdžiui, 144 MHz, Mėnulis elgiasi kaip lygi sfera: tiesinė poliarizacija tokia ir lieka, apskritiminės kryptis apsiverčia, o apie 1 % energijos patenka į „netinkamą“ poliarizaciją. Ties 10 GHz paviršius šiurkštus, ir signalas grįžta depoliarizuotas [3]. Hagfors radaro matavimai 23 cm diapazone patvirtina, kad prie Mėnulio disko centro vis dar vyrauja beveik veidrodinis atspindys, o link kraštų aidas ateina nuo pavienių po paviršių išsibarsčiusių objektų ir yra iš dalies depoliarizuotas [5].",
                 "• **Faradėjaus sukimasis.** Aprašytas ankstesniame poskyryje: mažėja proporcingai dažnio kvadratui, sumuojasi pirmyn ir atgal ir yra nenuspėjamas [3].",
                 "• **Jonosferinė sugertis.** Ji taip pat mažėja proporcingai dažnio kvadratui: ties 144 MHz dieną esant 10° elevacijai ji siekia apie 0,1 dB. Ji svarbi tik esant labai dideliam Saulės aktyvumui; stiprių pašvaisčių metu poliarizacija gali keistis greičiau, nei siaurajuostis imtuvas spėja sekti [3].",
                 "• **Nuo 50 iki 432 MHz.** Beveik visi naudoja tiesinės poliarizacijos Yagi antenas: autorius rekomenduoja įrangą su perjungiama tiesine poliarizacija, geriau elektroniniu būdu; mechaninis sukimas tinka, jei ketvirtis apsisukimo trunka vieną ar kelias sekundes [3]. Priimant pasirenkama poliarizacija su stipriausiu signalu (dviejų kanalų imtuvas silpniems signalams greitesnis); kviečiant CQ verta kaitalioti horizontalią ir vertikalią poliarizaciją, o ne naudoti apskritiminę, kuri visada praranda 3 dB [3].",
+                "• **23 cm diapazone (1296 MHz).** Su lėkštėmis paprastai naudojama apskritiminė poliarizacija: siunčiama viena sukimosi kryptimi, o priimama kita, nes Mėnulis apverčia kryptį, ir Faradėjaus sukimasis bei erdvinis poslinkis neturi reikšmės. Nuostoliai atsiranda dėl apšvitintuvų, kurie niekada nebūna visiškai apskritiminiai: Bob Atkins KA1GT juos išmatavo pagal izoliaciją tarp dviejų poliarizatoriaus prievadų – apie 1 dB esant 6 dB izoliacijai, apie 0,4 dB esant 10 dB (tipinis atvejis) ir apie 0,1 dB esant 16 dB [6]. Kai pažymėtas poliarizacijos nuostolių žymimasis langelis, YAEC skirtuke EME biudžetas lėkštės ties 1296 MHz naudoja 0,4 dB.",
                 "• **Nuo 10 GHz ir aukščiau.** Mėnulis signalą depoliarizuoja, siuntimo poliarizacija nebesvarbi, ir reikia dviejų kanalų imtuvo su dviem ortogonaliais apšvitintuvais [3]. Šie dažniai yra už YAEC diapazonų ribų.",
                 "• **Kokia poliarizacija siųsti.** Jei priimate stotį, galite nustatyti, kokia poliarizacija jai siųsti, kad jūsų signalas ją pasiektų tinkamai [3]. Kampus nurodant laipsniais (0° horizontali, 90° vertikali), P yra kitos stoties siuntimo poliarizacija, R – ta, kuria ją priimate, S – erdvinis poslinkis, F – Faradėjaus sukimasis, o T – jūsų geriausia siuntimo poliarizacija:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Pašalinus F iš pirmųjų dviejų sąryšių, gaunama §T = 2 · P + 2 · S − R§; tiesinei antenai §2 · P§ lygu 0° arba 180°, o tai ta pati poliarizacija, ir lieka §T = 2 · S − R§ [3]. Be Faradėjaus sukimosi (§F§ = 0, nuo 1296 MHz ir aukščiau) geriausia siuntimo poliarizacija yra ta pati, kuria geriausiai priimama, §T = R§. Straipsnyje pažymima, kad taisyklė sutampa su KL7WE taisykle, ir minima W5UN programa SKYMOON S apskaičiuoti [3].",
+                "~ Pašalinus F iš pirmųjų dviejų sąryšių, gaunama §T = 2 · P + 2 · S − R§; tiesinei antenai §2 · P§ lygu 0° arba 180°, o tai ta pati poliarizacija, ir lieka §T = 2 · S − R§ [3]. Be Faradėjaus sukimosi (§F§ ≈ 0, nuo 1296 MHz ir aukščiau esant įprastai jonosferai) geriausia siuntimo poliarizacija yra ta pati, kuria geriausiai priimama, §T = R§. Straipsnyje pažymima, kad taisyklė sutampa su KL7WE taisykle, ir minima W5UN programa SKYMOON S apskaičiuoti [3].",
                 "> YAEC erdvinis poslinkis S yra §D_{pol}§, apskaičiuojamas Mėnulio padėtyje ir Tiesioginėje padėtyje ir +- 24h; Faradėjaus sukimosi F apskaičiuoti neįmanoma. Pavyzdžių, ypatingų atvejų ir paveikslų ieškokite visame SM5BSZ straipsnyje [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, pristatymas, 2015 m. liepa, pateikė IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997 m. balandžio 25 d. – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 1997 m. balandžio 25 d. – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Rekomendacija P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, 1 lentelė (Faradėjaus sukimasis proporcingas 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["lt"]["S44"] = new string[] {
                 "## Dangaus triukšmas ir Dgrd",
@@ -78921,7 +79165,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Vridning för en passage genom jonosfären, typiskt dagvärde; 144 MHz från [3], de andra banden härledda av YAEC med formeln ovan (≈ = härlett). Från 1296 MHz och uppåt kan den betraktas som noll [3].",
+                "~ Vridning för en passage genom jonosfären, typiskt dagvärde; 144 MHz från [3], de andra banden härledda av YAEC med formeln ovan (≈ = härlett). Från 1296 MHz och uppåt är vridningen med den vardagliga jonosfären bara några grader och kan betraktas som noll [3]; med en jonosfär som är mycket kraftigt laddad med elektroner ger dock rekommendationen ITU-R P.531 108° vid 1 GHz för en passage vid 30° elevation, alltså cirka 64° vid 1296 MHz [4]. På 23 cm spelar det liten roll eftersom man oftast använder cirkulär polarisation, som Faradayrotationen inte ändrar.",
                 "• **Tar inte ut sig på tillbakavägen.** Vridningens riktning beror inte på i vilken riktning vågen färdas: efter den andra passagen genom jonosfären är signalen vriden ytterligare, i samma riktning [3]. Varje station lägger till vridningen i jonosfären ovanför sig.",
                 "• **Ändras över tiden.** Mängden elektroner varierar mellan dag och natt, i gryning och skymning och med solaktiviteten: med mycket aktiv Sol är vridningen kraftig och kan variera snabbt, och under norrsken kan polarisationen ändras på några millisekunder [3]. Därför kan den inte förutsägas genom beräkning.",
                 "• **Adderas till den rumsliga förskjutningen.** Den rumsliga förskjutningen (§D_{pol}§) har motsatt tecken i förbindelsens två riktningar, medan Faradayrotationen har samma riktning: i den ena riktningen adderas de två vridningarna, i den andra subtraheras de. Därför kan det hända att du hör DX-stationen men den inte hör dig, eller tvärtom [1]. Förlusten följer samma lag som §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, med Δ den totala vinkelskillnaden: vid 90° försvinner signalen.",
@@ -78931,18 +79175,22 @@ namespace LunaCalc
                 "Artikeln «Selecting Polarisation for EME» av Leif Åsbrink SM5BSZ (25 april 1997) är offentlig och kan läsas på hans webbplats: https://sm5bsz.com/polarity/emepol.htm. Författaren till detta program anser det nyttigt att här ge en kort sammanfattning, skriven med egna ord; för de fullständiga förklaringarna hänvisas till att läsa hela artikeln [3].",
                 "• **Fyra effekter.** Längs vägen Jord – Måne – Jord ändras polarisationen genom den rumsliga förskjutningen, reflexionen mot Månen, Faradayrotationen och absorptionen i jonosfären [3].",
                 "• **Rumslig förskjutning.** Sett från Månen är två avlägsna antenner på den krökta Jorden inte parallella. Den gäller bara linjär polarisation, är lätt att beräkna och beror inte på frekvensen [3]: det är YAEC:s §D_{pol}§.",
-                "• **Reflexion mot Månen.** På låga frekvenser, som 144 MHz, beter sig Månen som en slät sfär: linjär polarisation förblir linjär, cirkulär byter rotationsriktning, och cirka 1 % av energin hamnar i ”fel” polarisation. På 10 GHz är ytan skrovlig och signalen kommer tillbaka depolariserad [3].",
+                "• **Reflexion mot Månen.** På låga frekvenser, som 144 MHz, beter sig Månen som en slät sfär: linjär polarisation förblir linjär, cirkulär byter rotationsriktning, och cirka 1 % av energin hamnar i ”fel” polarisation. På 10 GHz är ytan skrovlig och signalen kommer tillbaka depolariserad [3]. Hagfors radarmätningar på 23 cm bekräftar att den nästan speglande reflexionen fortfarande dominerar nära mitten av månskivan, medan ekot mot kanterna kommer från enskilda objekt utspridda över ytan och delvis är depolariserat [5].",
                 "• **Faradayrotation.** Den beskrivs i föregående underavsnitt: den avtar med kvadraten på frekvensen, adderas på vägen dit och tillbaka och kan inte förutsägas [3].",
                 "• **Jonosfärisk absorption.** Även den avtar med kvadraten på frekvensen: på 144 MHz, dagtid och vid 10° elevation, är den cirka 0,1 dB. Den har betydelse bara vid mycket hög solaktivitet; under kraftiga norrsken kan polarisationen ändras snabbare än en smalbandig mottagare hinner följa [3].",
                 "• **Från 50 till 432 MHz.** Nästan alla använder linjärt polariserade yagiantenner: författaren rekommenderar en anläggning med omkopplingsbar linjär polarisation, helst elektroniskt; en mekanisk vridning går bra om kvartsvarvet tar en eller några få sekunder [3]. Vid mottagning väljer man polarisationen med den starkaste signalen (en mottagare med två kanaler är snabbare med svaga signaler); när man ropar CQ lönar det sig att växla mellan horisontell och vertikal, i stället för cirkulär som alltid förlorar 3 dB [3].",
+                "• **På 23 cm (1296 MHz).** Med paraboler används oftast cirkulär polarisation: man sänder med en rotationsriktning och tar emot med den andra, eftersom Månen byter rotationsriktning, och Faradayrotation och den rumsliga förskjutningen spelar ingen roll. Förlusten kommer från matarna, som aldrig är perfekt cirkulära: Bob Atkins KA1GT mätte den utifrån isolationen mellan polarisatorns två portar, cirka 1 dB med 6 dB isolation, cirka 0,4 dB med 10 dB (det typiska fallet) och cirka 0,1 dB med 16 dB [6]. YAEC använder 0,4 dB i fliken EME-budget parabol på 1296 MHz när kryssrutan för polarisationsförlust är markerad.",
                 "• **Från 10 GHz och uppåt.** Månen depolariserar signalen, sändningspolarisationen spelar inte längre någon roll och det behövs en mottagare med två kanaler på två ortogonala matare [3]. Det är frekvenser utanför YAEC:s band.",
                 "• **Vilken polarisation man ska sända med.** Om du tar emot en station kan du räkna fram med vilken polarisation du ska sända till den för att din signal ska komma fram på rätt sätt [3]. Med vinklarna i grader (0° horisontell, 90° vertikal) är P den andra stationens sändningspolarisation, R den med vilken du tar emot den, S den rumsliga förskjutningen, F Faradayrotationen och T din bästa sändningspolarisation:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Genom att eliminera F ur de två första sambanden får man §T = 2 · P + 2 · S − R§; för en linjär antenn är §2 · P§ lika med 0° eller 180°, vilket är samma polarisation, och kvar blir §T = 2 · S − R§ [3]. Utan Faradayrotation (§F§ = 0, från 1296 MHz och uppåt) är den bästa polarisationen för sändning densamma som den med vilken man tar emot bäst, §T = R§. Artikeln påpekar att regeln sammanfaller med KL7WE:s och nämner W5UN:s program SKYMOON för beräkning av S [3].",
+                "~ Genom att eliminera F ur de två första sambanden får man §T = 2 · P + 2 · S − R§; för en linjär antenn är §2 · P§ lika med 0° eller 180°, vilket är samma polarisation, och kvar blir §T = 2 · S − R§ [3]. Utan Faradayrotation (§F§ ≈ 0, från 1296 MHz och uppåt med den vardagliga jonosfären) är den bästa polarisationen för sändning densamma som den med vilken man tar emot bäst, §T = R§. Artikeln påpekar att regeln sammanfaller med KL7WE:s och nämner W5UN:s program SKYMOON för beräkning av S [3].",
                 "> I YAEC är den rumsliga förskjutningen S den §D_{pol}§ som beräknas i Månens position och i Live-position och +- 24h; Faradayrotationen F kan inte beräknas. För exemplen, specialfallen och figurerna, läs SM5BSZ:s fullständiga artikel [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentation, juli 2015, tillhandahållen av IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 april 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 april 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Rekommendation P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabell 1 (Faradayrotation proportionell mot 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["sv"]["S44"] = new string[] {
                 "## Himmelsbrus och Dgrd",
@@ -79488,7 +79736,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotasjon for én passasje gjennom ionosfæren, typisk dagverdi; 144 MHz fra [3], de andre båndene utledet av YAEC med formelen ovenfor (≈ = utledet). Fra 1296 MHz og oppover kan den regnes som null [3].",
+                "~ Rotasjon for én passasje gjennom ionosfæren, typisk dagverdi; 144 MHz fra [3], de andre båndene utledet av YAEC med formelen ovenfor (≈ = utledet). Fra 1296 MHz og oppover er rotasjonen med den vanlige ionosfæren bare noen få grader og kan regnes som null [3]; med en ionosfære som er svært sterkt ladet med elektroner, gir imidlertid anbefalingen ITU-R P.531 108° ved 1 GHz for én passasje ved 30° elevasjon, altså omtrent 64° ved 1296 MHz [4]. På 23 cm betyr det lite, fordi man vanligvis bruker sirkulær polarisasjon, som Faraday-rotasjonen ikke endrer.",
                 "• **Den oppheves ikke på tilbakeveien.** Rotasjonsretningen avhenger ikke av hvilken vei bølgen går: etter den andre passasjen gjennom ionosfæren er signalet dreid enda mer, i samme retning [3]. Hver stasjon legger til rotasjonen i ionosfæren over seg.",
                 "• **Den endrer seg over tid.** Elektronmengden varierer mellom dag og natt, ved soloppgang og solnedgang og med solaktiviteten: med svært aktiv sol er rotasjonen kraftig og kan endre seg raskt, og under nordlys kan polarisasjonen endre seg på noen få millisekunder [3]. Derfor kan den ikke forutsies ved beregning.",
                 "• **Den legges til den romlige forskyvningen.** Den romlige forskyvningen (§D_{pol}§) har motsatt fortegn i de to retningene av forbindelsen, mens Faraday-rotasjonen har samme retning: i den ene retningen adderes de to rotasjonene, i den andre subtraheres de. Dermed kan det skje at du hører DX og han ikke hører deg, eller omvendt [1]. Tapet følger samme lov som §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, der Δ er den totale vinkelforskjellen: ved 90° forsvinner signalet.",
@@ -79498,18 +79746,22 @@ namespace LunaCalc
                 "Artikkelen «Selecting Polarisation for EME» av Leif Åsbrink SM5BSZ (25. april 1997) er offentlig og kan leses på nettstedet hans: https://sm5bsz.com/polarity/emepol.htm. Forfatteren av dette programmet mener det er nyttig å gi et kort sammendrag her, skrevet med egne ord; for de fullstendige forklaringene henvises det til å lese hele artikkelen [3].",
                 "• **Fire effekter.** Langs strekningen Jord – Måne – Jord endres polarisasjonen av den romlige forskyvningen, refleksjonen fra Månen, Faraday-rotasjonen og absorpsjonen i ionosfæren [3].",
                 "• **Romlig forskyvning.** Sett fra Månen er to antenner langt fra hverandre på den krumme Jorden ikke parallelle. Den gjelder bare lineær polarisasjon, er lett å beregne og avhenger ikke av frekvensen [3]: det er §D_{pol}§ i YAEC.",
-                "• **Refleksjon fra Månen.** På lave frekvenser, som 144 MHz, oppfører Månen seg som en glatt kule: lineær polarisasjon forblir lineær, sirkulær snur rotasjonsretning, og ca. 1 % av energien havner i den «gale» polarisasjonen. På 10 GHz er overflaten ru, og signalet kommer tilbake depolarisert [3].",
+                "• **Refleksjon fra Månen.** På lave frekvenser, som 144 MHz, oppfører Månen seg som en glatt kule: lineær polarisasjon forblir lineær, sirkulær snur rotasjonsretning, og ca. 1 % av energien havner i den «gale» polarisasjonen. På 10 GHz er overflaten ru, og signalet kommer tilbake depolarisert [3]. Hagfors' radarmålinger på 23 cm bekrefter at den nesten speilende refleksjonen fortsatt dominerer nær midten av måneskiven, mens ekkoet mot kantene kommer fra enkeltobjekter spredt over overflaten og er delvis depolarisert [5].",
                 "• **Faraday-rotasjon.** Den er beskrevet i forrige underavsnitt: den avtar med kvadratet av frekvensen, adderes på vei ut og tilbake og kan ikke forutsies [3].",
                 "• **Ionosfærisk absorpsjon.** Også den avtar med kvadratet av frekvensen: på 144 MHz, om dagen og ved 10° elevasjon, er den ca. 0,1 dB. Den betyr bare noe ved svært høy solaktivitet; under kraftig nordlys kan polarisasjonen endre seg raskere enn en smalbåndsmottaker klarer å følge [3].",
                 "• **Fra 50 til 432 MHz.** Nesten alle bruker lineært polariserte yagier: forfatteren anbefaler et anlegg med omkoblbar lineær polarisasjon, helst elektronisk; mekanisk dreiing går bra hvis kvart omdreining tar ett eller noen få sekunder [3]. Ved mottak velger man polarisasjonen med sterkest signal (en tokanals mottaker er raskere med svake signaler); når man kaller CQ, lønner det seg å veksle mellom horisontal og vertikal, i stedet for sirkulær, som alltid taper 3 dB [3].",
+                "• **På 23 cm (1296 MHz).** Med parabol brukes vanligvis sirkulær polarisasjon: man sender med én rotasjonsretning og mottar med den andre, fordi Månen snur rotasjonsretningen, og Faraday-rotasjon og den romlige forskyvningen spiller ingen rolle. Tapet kommer fra mateelementene, som aldri er perfekt sirkulære: Bob Atkins KA1GT målte det ut fra isolasjonen mellom de to portene på polarisatoren, ca. 1 dB med 6 dB isolasjon, ca. 0,4 dB med 10 dB (det typiske tilfellet) og ca. 0,1 dB med 16 dB [6]. YAEC bruker 0,4 dB i fanen EME-budsjett parabol på 1296 MHz når avkrysningsboksen for polarisasjonstap er avkrysset.",
                 "• **Fra 10 GHz og oppover.** Månen depolariserer signalet, sendepolarisasjonen betyr ikke lenger noe, og det trengs en tokanals mottaker på to ortogonale matere [3]. Disse frekvensene ligger utenfor YAEC-båndene.",
                 "• **Hvilken polarisasjon du skal sende med.** Hvis du mottar en stasjon, kan du utlede hvilken polarisasjon du skal sende til den med, slik at signalet ditt kommer fram på riktig måte [3]. Med vinklene i grader (0° horisontal, 90° vertikal) er P den andre stasjonens sendepolarisasjon, R den du mottar den med, S den romlige forskyvningen, F Faraday-rotasjonen og T din beste sendepolarisasjon:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Ved å eliminere F fra de to første sammenhengene får man §T = 2 · P + 2 · S − R§; for en lineær antenne er §2 · P§ lik 0° eller 180°, som er samme polarisasjon, og det gjenstår §T = 2 · S − R§ [3]. Uten Faraday-rotasjon (§F§ = 0, fra 1296 MHz og oppover) er den beste polarisasjonen for sending den samme som man mottar best med, §T = R§. Artikkelen påpeker at regelen er den samme som hos KL7WE, og nevner programmet SKYMOON av W5UN for beregning av S [3].",
+                "~ Ved å eliminere F fra de to første sammenhengene får man §T = 2 · P + 2 · S − R§; for en lineær antenne er §2 · P§ lik 0° eller 180°, som er samme polarisasjon, og det gjenstår §T = 2 · S − R§ [3]. Uten Faraday-rotasjon (§F§ ≈ 0, fra 1296 MHz og oppover med den vanlige ionosfæren) er den beste polarisasjonen for sending den samme som man mottar best med, §T = R§. Artikkelen påpeker at regelen er den samme som hos KL7WE, og nevner programmet SKYMOON av W5UN for beregning av S [3].",
                 "> I YAEC er den romlige forskyvningen S lik §D_{pol}§ beregnet i Månens posisjon og i Live-posisjon og +- 24t; Faraday-rotasjonen F kan ikke beregnes. For eksemplene, spesialtilfellene og figurene, les hele artikkelen til SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasjon, juli 2015, levert av IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. april 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. april 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Anbefaling P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabell 1 (Faraday-rotasjon proporsjonal med 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["nb"]["S44"] = new string[] {
                 "## Himmelstøy og Dgrd",
@@ -80055,7 +80307,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Snúningur fyrir eina ferð gegnum jónhvolfið, dæmigert gildi að degi til; 144 MHz úr [3], önnur bönd reiknuð af YAEC með formúlunni hér að ofan (≈ = afleitt). Frá 1296 MHz og upp úr má líta á hann sem núll [3].",
+                "~ Snúningur fyrir eina ferð gegnum jónhvolfið, dæmigert gildi að degi til; 144 MHz úr [3], önnur bönd reiknuð af YAEC með formúlunni hér að ofan (≈ = afleitt). Frá 1296 MHz og upp úr er snúningurinn í venjulegu jónhvolfi aðeins nokkrar gráður og má líta á hann sem núll [3]; í jónhvolfi sem er mjög hlaðið rafeindum gefa tilmæli ITU-R P.531 þó 108° við 1 GHz fyrir eina ferð við 30° hæðarhorn, þ.e. um 64° við 1296 MHz [4]. Á 23 cm skiptir þetta litlu því að yfirleitt er notuð hringskautun, sem Faraday-snúningur breytir ekki.",
                 "• **Hann eyðist ekki á bakaleiðinni.** Snúningsstefnan ræðst ekki af stefnunni sem bylgjan ferðast í: eftir seinni ferðina gegnum jónhvolfið hefur merkið snúist enn meira, í sömu stefnu [3]. Hver stöð bætir við snúningi jónhvolfsins fyrir ofan sig.",
                 "• **Hann breytist með tímanum.** Rafeindamagnið er breytilegt milli dags og nætur, við dögun og sólsetur og með sólvirkni: þegar sólin er mjög virk er snúningurinn mikill og getur breyst hratt, og í norðurljósum getur skautunin breyst á fáeinum millisekúndum [3]. Þess vegna er ekki hægt að spá fyrir um hann með útreikningi.",
                 "• **Hann leggst við rúmfræðilegu hliðrunina.** Rúmfræðilega hliðrunin (§D_{pol}§) hefur gagnstætt formerki í áttunum tveimur, en Faraday-snúningur hefur sömu stefnu: í aðra áttina leggjast snúningarnir saman, í hina dragast þeir hvor frá öðrum. Þannig getur gerst að þú heyrir í DX en hann ekki í þér, eða öfugt [1]. Tapið fylgir sama lögmáli og §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, þar sem Δ er heildarhliðrunin: við 90° hverfur merkið.",
@@ -80065,18 +80317,22 @@ namespace LunaCalc
                 "Greinin „Selecting Polarisation for EME“ eftir Leif Åsbrink SM5BSZ (25. apríl 1997) er opinber og hana má lesa á vef hans: https://sm5bsz.com/polarity/emepol.htm. Höfundur þessa forrits telur gagnlegt að bjóða hér upp á stutta samantekt, með eigin orðum; fyrir fullar skýringar er vísað til lestrar greinarinnar í heild [3].",
                 "• **Fjögur áhrif.** Á leiðinni jörð – tungl – jörð breytist skautunin vegna rúmfræðilegrar hliðrunar, endurkasts frá tunglinu, Faraday-snúnings og deyfingar í jónhvolfinu [3].",
                 "• **Rúmfræðileg hliðrun.** Séð frá tunglinu eru tvö fjarlæg loftnet á kúptri jörð ekki samsíða. Hún á aðeins við línulega skautun, er auðreiknuð og óháð tíðni [3]: það er §D_{pol}§ í YAEC.",
-                "• **Endurkast frá tunglinu.** Á lágum tíðnum, eins og 144 MHz, hegðar tunglið sér eins og slétt kúla: línuleg skautun helst línuleg, hringskautun snýr við stefnu, og um 1 % orkunnar lendir í „rangri“ skautun. Á 10 GHz er yfirborðið hrjúft og merkið kemur til baka afskautað [3].",
+                "• **Endurkast frá tunglinu.** Á lágum tíðnum, eins og 144 MHz, hegðar tunglið sér eins og slétt kúla: línuleg skautun helst línuleg, hringskautun snýr við stefnu, og um 1 % orkunnar lendir í „rangri“ skautun. Á 10 GHz er yfirborðið hrjúft og merkið kemur til baka afskautað [3]. Ratsjármælingar Hagfors á 23 cm staðfesta að nálægt miðju tunglskífunnar er nærri speglandi endurkast enn ríkjandi, en nær jöðrunum kemur bergmálið frá stökum hlutum á víð og dreif um yfirborðið og er að hluta afskautað [5].",
                 "• **Faraday-snúningur.** Honum er lýst í undirkaflanum hér á undan: hann minnkar með öðru veldi tíðninnar, leggst saman á leið út og til baka og er ekki hægt að spá fyrir um hann [3].",
                 "• **Deyfing í jónhvolfinu.** Hún minnkar líka með öðru veldi tíðninnar: á 144 MHz, að degi til og við 10° hæðarhorn, er hún um 0,1 dB. Hún skiptir aðeins máli við mjög mikla sólvirkni; í öflugum norðurljósum getur skautunin breyst hraðar en þröngbandsviðtæki nær að fylgja [3].",
                 "• **Frá 50 til 432 MHz.** Nær allir nota línulega skautuð Yagi-loftnet: höfundurinn ráðleggur búnað með skiptanlegri línulegri skautun, helst rafrænt; vélrænn snúningur er í lagi ef fjórðungshringurinn tekur eina eða fáeinar sekúndur [3]. Við móttöku er valin skautunin með sterkasta merkinu (tveggja rása viðtæki er fljótara með veik merki); þegar kallað er CQ er betra að skiptast á láréttri og lóðréttri skautun, frekar en hringskautun sem tapar alltaf 3 dB [3].",
+                "• **Á 23 cm (1296 MHz).** Með diskum er venjulega notuð hringskautun: sent er með einni snúningsstefnu og tekið á móti með hinni, því tunglið snýr stefnunni við, og Faraday-snúningur og rúmfræðileg hliðrun skipta engu máli. Tapið kemur frá fæðunum, sem eru aldrei fullkomlega hringskautaðir: Bob Atkins KA1GT mældi það út frá einangruninni milli tveggja tengja skautarans, um 1 dB með 6 dB einangrun, um 0,4 dB með 10 dB (dæmigert tilvik) og um 0,1 dB með 16 dB [6]. YAEC notar 0,4 dB í flipanum EME-aflreikningur diskar á 1296 MHz þegar gátreitur skautunartaps er virkur.",
                 "• **Frá 10 GHz og upp úr.** Tunglið afskautar merkið, sendiskautunin skiptir ekki lengur máli og þörf er á tveggja rása viðtæki á tveimur hornréttum fæðingum [3]. Þessar tíðnir eru utan banda YAEC.",
                 "• **Hvaða skautun á að senda.** Ef þú tekur á móti stöð geturðu fundið út hvaða skautun þú átt að senda henni svo merkið þitt berist henni rétt [3]. Með horn í gráðum (0° lárétt, 90° lóðrétt) er P sendiskautun hinnar stöðvarinnar, R skautunin sem þú tekur á móti henni með, S rúmfræðilega hliðrunin, F Faraday-snúningurinn og T besta sendiskautun þín:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Með því að eyða F úr fyrstu tveimur jöfnunum fæst §T = 2 · P + 2 · S − R§; fyrir línulegt loftnet er §2 · P§ jafnt 0° eða 180°, sem er sama skautun, og eftir stendur §T = 2 · S − R§ [3]. Án Faraday-snúnings (§F§ = 0, frá 1296 MHz og upp úr) er besta sendiskautunin sú sama og best er tekið á móti með, §T = R§. Greinin bendir á að reglan fari saman við reglu KL7WE og nefnir forritið SKYMOON eftir W5UN til að reikna S [3].",
+                "~ Með því að eyða F úr fyrstu tveimur jöfnunum fæst §T = 2 · P + 2 · S − R§; fyrir línulegt loftnet er §2 · P§ jafnt 0° eða 180°, sem er sama skautun, og eftir stendur §T = 2 · S − R§ [3]. Án Faraday-snúnings (§F§ ≈ 0, frá 1296 MHz og upp úr í venjulegu jónhvolfi) er besta sendiskautunin sú sama og best er tekið á móti með, §T = R§. Greinin bendir á að reglan fari saman við reglu KL7WE og nefnir forritið SKYMOON eftir W5UN til að reikna S [3].",
                 "> Í YAEC er rúmfræðilega hliðrunin S §D_{pol}§ sem reiknuð er í Stöðu tunglsins og í Stöðu í beinni og +- 24 klst.; Faraday-snúninginn F er ekki hægt að reikna. Fyrir dæmi, sértilvik og myndir skaltu lesa alla grein SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, kynning, júlí 2015, útveguð af IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. apríl 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. apríl 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Tilmæli P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tafla 1 (Faraday-snúningur í hlutfalli við 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["is"]["S44"] = new string[] {
                 "## Himinsuð og Dgrd",
@@ -80622,7 +80878,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ סיבוב למעבר אחד ביונוספרה, ערך יומי אופייני; 144 MHz מ-[3], שאר התחומים נגזרו על ידי YAEC לפי הנוסחה שלמעלה (≈ = נגזר). מ-1296 MHz ומעלה אפשר להתייחס אליו כאפס [3].",
+                "~ סיבוב למעבר אחד ביונוספרה, ערך יומי אופייני; 144 MHz מ-[3], שאר התחומים נגזרו על ידי YAEC לפי הנוסחה שלמעלה (≈ = נגזר). מ-1296 MHz ומעלה, ביונוספרה של יום-יום, הסיבוב הוא כמה מעלות בלבד ואפשר להתייחס אליו כאפס [3]; אולם ביונוספרה עמוסה מאוד באלקטרונים, המלצה ITU-R P.531 נותנת 108° ב-1 GHz למעבר אחד בזווית הגבהה של 30°, כלומר כ-64° ב-1296 MHz [4]. ב-23 cm יש לכך חשיבות מועטה, כי בדרך כלל משתמשים בקיטוב מעגלי, שסיבוב פאראדיי אינו משנה.",
                 "• **אינו מתבטל בחזרה.** כיוון הסיבוב אינו תלוי בכיוון שבו נע הגל: אחרי המעבר השני ביונוספרה האות מסובב שוב, באותו כיוון [3]. כל תחנה מוסיפה את הסיבוב של היונוספרה שמעליה.",
                 "• **משתנה בזמן.** כמות האלקטרונים משתנה בין יום ללילה, בזריחה ובשקיעה ועם הפעילות הסולרית: כשהשמש פעילה מאוד הסיבוב חזק ויכול להשתנות במהירות, ובזמן זוהר קוטבי הקיטוב יכול להשתנות תוך אלפיות שנייה ספורות [3]. לכן אי אפשר לחזות אותו בחישוב.",
                 "• **מתווסף להסטה המרחבית.** להסטה המרחבית (§D_{pol}§) יש סימן הפוך בשני כיווני הקשר, ואילו לסיבוב פאראדיי יש אותו כיוון: בכיוון אחד שני הסיבובים מתחברים, בשני הם מתחסרים. כך ייתכן שאתה תשמע את ה-DX והוא לא ישמע אותך, או להפך [1]. ההפסד מציית לאותו חוק של §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, כאשר Δ הוא הסטת הזווית הכוללת: ב-90° האות נעלם.",
@@ -80632,18 +80888,22 @@ namespace LunaCalc
                 "המאמר “Selecting Polarisation for EME” של Leif Åsbrink SM5BSZ (25 באפריל 1997) פומבי וניתן לקריאה באתר שלו: https://sm5bsz.com/polarity/emepol.htm. מחבר תוכנה זו סבור שכדאי להציע כאן נקודת מבט מתומצתת עליו, במילים שלו; להסברים המלאים יש לקרוא את המאמר כולו [3].",
                 "• **ארבע השפעות.** לאורך המסלול ארץ – ירח – ארץ הקיטוב משתנה בגלל ההסטה המרחבית, ההחזרה מהירח, סיבוב פאראדיי והבליעה ביונוספרה [3].",
                 "• **הסטה מרחבית.** במבט מהירח, שתי אנטנות רחוקות על כדור הארץ המעוגל אינן מקבילות. היא נוגעת רק לקיטוב קווי, מחושבת בקלות ואינה תלויה בתדר [3]: זהו ה-§D_{pol}§ של YAEC.",
-                "• **החזרה מהירח.** בתדרים נמוכים, כמו 144 MHz, הירח מתנהג ככדור חלק: קיטוב קווי נשאר קווי, קיטוב מעגלי הופך את כיוונו, וכ-1 % מהאנרגיה עובר לקיטוב \"השגוי\". ב-10 GHz פני השטח מחוספסים והאות חוזר ללא קיטוב מוגדר [3].",
+                "• **החזרה מהירח.** בתדרים נמוכים, כמו 144 MHz, הירח מתנהג ככדור חלק: קיטוב קווי נשאר קווי, קיטוב מעגלי הופך את כיוונו, וכ-1 % מהאנרגיה עובר לקיטוב \"השגוי\". ב-10 GHz פני השטח מחוספסים והאות חוזר ללא קיטוב מוגדר [3]. מדידות הרדאר של Hagfors ב-23 cm מאשרות שקרוב למרכז דסקת הירח עדיין שולטת החזרה כמעט ספקולרית (דמוית מראה), ואילו לכיוון השוליים ההד מגיע מעצמים בודדים הפזורים על פני השטח ואיבד חלקית את קיטובו [5].",
                 "• **סיבוב פאראדיי.** מתואר בתת-הסעיף הקודם: יורד עם ריבוע התדר, מצטבר בהלוך ובחזור ואינו ניתן לחיזוי [3].",
                 "• **בליעה יונוספרית.** גם היא יורדת עם ריבוע התדר: ב-144 MHz, ביום וב-10° הגבהה, היא כ-0.1 dB. היא חשובה רק בפעילות סולרית גבוהה מאוד; בזמן זוהר קוטבי חזק הקיטוב יכול להשתנות מהר יותר ממה שמקלט צר-סרט מסוגל לעקוב [3].",
                 "• **מ-50 עד 432 MHz.** כמעט כולם משתמשים ב-Yagi בקיטוב קווי: המחבר ממליץ על מערך עם קיטוב קווי ניתן למיתוג, עדיף אלקטרונית; סיבוב מכני מתאים אם רבע הסיבוב נמשך שנייה אחת או שניות ספורות [3]. בקליטה בוחרים את הקיטוב עם האות החזק ביותר (מקלט דו-ערוצי מהיר יותר עם אותות חלשים); כשקוראים CQ כדאי להחליף בין אופקי לאנכי, במקום מעגלי שמפסיד תמיד 3 dB [3].",
+                "• **ב-23 cm (1296 MHz).** עם צלחות משתמשים בדרך כלל בקיטוב מעגלי: משדרים בכיוון סיבוב אחד וקולטים בכיוון השני, כי הירח הופך את הכיוון, וסיבוב פאראדיי וההסטה המרחבית אינם משפיעים. ההפסד נובע מהמזינים, שלעולם אינם מעגליים באופן מושלם: Bob Atkins KA1GT מדד אותו לפי הבידוד בין שני השערים של המקטב, כ-1 dB עם בידוד של 6 dB, כ-0.4 dB עם 10 dB (המקרה הטיפוסי) וכ-0.1 dB עם 16 dB [6]. YAEC משתמש ב-0.4 dB בלשונית תקציב EME צלחות ב-1296 MHz כאשר תיבת הסימון של הפסד הקיטוב מסומנת.",
                 "• **מ-10 GHz ומעלה.** הירח מבטל את קיטוב האות, קיטוב השידור כבר אינו חשוב ונדרש מקלט דו-ערוצי על שני מזינים אורתוגונליים [3]. אלה תדרים מחוץ לתחומים של YAEC.",
                 "• **באיזה קיטוב לשדר.** אם אתה קולט תחנה, אתה יכול לגזור באיזה קיטוב לשדר אליה כדי שהאות שלך יגיע אליה בצורה הנכונה [3]. עם הזוויות במעלות (0° אופקי, 90° אנכי), P הוא קיטוב השידור של התחנה השנייה, R הקיטוב שבו אתה קולט אותה, S ההסטה המרחבית, F סיבוב פאראדיי ו-T קיטוב השידור הטוב ביותר שלך:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ בסילוק F משני הקשרים הראשונים מתקבל §T = 2 · P + 2 · S − R§; עבור אנטנה קווית §2 · P§ שווה 0° או 180°, שזה אותו קיטוב, ונשאר §T = 2 · S − R§ [3]. ללא סיבוב פאראדיי (§F§ = 0, מ-1296 MHz ומעלה) הקיטוב הטוב ביותר לשידור הוא אותו קיטוב שבו הקליטה הטובה ביותר, §T = R§. המאמר מציין שהכלל זהה לזה של KL7WE ומזכיר את התוכנה SKYMOON של W5UN לחישוב S [3].",
+                "~ בסילוק F משני הקשרים הראשונים מתקבל §T = 2 · P + 2 · S − R§; עבור אנטנה קווית §2 · P§ שווה 0° או 180°, שזה אותו קיטוב, ונשאר §T = 2 · S − R§ [3]. ללא סיבוב פאראדיי (§F§ ≈ 0, מ-1296 MHz ומעלה ביונוספרה של יום-יום) הקיטוב הטוב ביותר לשידור הוא אותו קיטוב שבו הקליטה הטובה ביותר, §T = R§. המאמר מציין שהכלל זהה לזה של KL7WE ומזכיר את התוכנה SKYMOON של W5UN לחישוב S [3].",
                 "> ב-YAEC ההסטה המרחבית S היא ה-§D_{pol}§ המחושב במיקום הירח ובמיקום חי ו-+- 24h; את סיבוב פאראדיי F אי אפשר לחשב. לדוגמאות, למקרים המיוחדים ולאיורים, קרא את המאמר המלא של SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, מצגת, יולי 2015, סופקה על ידי IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 באפריל 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 באפריל 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, המלצה P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, טבלה 1 (סיבוב פאראדיי פרופורציונלי ל-1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["he"]["S44"] = new string[] {
                 "## רעש השמיים ו-Dgrd",
@@ -81189,7 +81449,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ آئنو اسفیئر سے ایک گزر کے لیے گردش، عام دن کی قدر؛ 144 MHz [3] سے، دوسرے بینڈز YAEC نے اوپر والے فارمولے سے حاصل کیے (≈ = اخذ کردہ)۔ 1296 MHz اور اس سے اوپر اسے صفر سمجھا جا سکتا ہے [3]۔",
+                "~ آئنو اسفیئر سے ایک گزر کے لیے گردش، عام دن کی قدر؛ 144 MHz [3] سے، دوسرے بینڈز YAEC نے اوپر والے فارمولے سے حاصل کیے (≈ = اخذ کردہ)۔ 1296 MHz اور اس سے اوپر، روزمرہ کے آئنو اسفیئر میں گردش صرف چند ڈگری ہوتی ہے اور اسے صفر سمجھا جا سکتا ہے [3]؛ لیکن الیکٹرانوں سے بہت زیادہ بھرے آئنو اسفیئر میں ITU-R P.531 سفارش 30° بلندی کے زاویے پر ایک گزر کے لیے 1 GHz پر 108° دیتی ہے، یعنی 1296 MHz پر تقریباً 64° [4]۔ 23 cm میں اس کی زیادہ اہمیت نہیں کیونکہ عموماً دائروی پولرائزیشن استعمال ہوتی ہے، جسے فیراڈے گردش تبدیل نہیں کرتی۔",
                 "• **واپسی پر ختم نہیں ہوتی۔** گردش کی سمت لہر کے سفر کی سمت پر منحصر نہیں: آئنو اسفیئر سے دوسرے گزر کے بعد سگنل مزید گھوم جاتا ہے، اسی سمت میں [3]۔ ہر اسٹیشن اپنے اوپر والے آئنو اسفیئر کی گردش شامل کرتا ہے۔",
                 "• **وقت کے ساتھ بدلتی ہے۔** الیکٹرانوں کی مقدار دن اور رات کے درمیان، صبح اور شام کے وقت اور شمسی سرگرمی کے ساتھ بدلتی ہے: سورج بہت سرگرم ہو تو گردش زیادہ ہوتی ہے اور تیزی سے بدل سکتی ہے، اور auroras کے دوران پولرائزیشن چند ملی سیکنڈ میں بدل سکتی ہے [3]۔ اسی لیے کسی حساب سے اس کی پیش گوئی نہیں کی جا سکتی۔",
                 "• **مکانی انحراف میں جمع ہو جاتی ہے۔** مکانی انحراف (§D_{pol}§) کی علامت رابطے کی دونوں سمتوں میں مخالف ہوتی ہے، جبکہ فیراڈے گردش کی سمت ایک جیسی ہوتی ہے: ایک سمت میں دونوں گردشیں جمع ہو جاتی ہیں، دوسری میں تفریق۔ اس طرح ایسا ہو سکتا ہے کہ آپ DX کو سنیں اور وہ آپ کو نہ سنے، یا اس کے برعکس [1]۔ نقصان §D_{pol}§ والے قانون ہی کی پیروی کرتا ہے، §L = −20 · log_{10} \\a{cos Δ}§، جہاں Δ کل فیز فرق ہے: 90° پر سگنل غائب ہو جاتا ہے۔",
@@ -81199,18 +81459,22 @@ namespace LunaCalc
                 "Leif Åsbrink SM5BSZ کا مضمون “Selecting Polarisation for EME” (25 اپریل 1997) عوامی ہے اور ان کی ویب سائٹ پر پڑھا جا سکتا ہے: https://sm5bsz.com/polarity/emepol.htm۔ اس پروگرام کا مصنف یہاں اپنے الفاظ میں لکھا ہوا اس کا ایک مختصر خلاصہ پیش کرنا مفید سمجھتا ہے؛ مکمل وضاحتوں کے لیے مضمون کا مکمل مطالعہ کریں [3]۔",
                 "• **چار اثرات۔** زمین – چاند – زمین راستے پر پولرائزیشن مکانی انحراف، چاند پر انعکاس، فیراڈے گردش اور آئنو اسفیئر میں انجذاب کی وجہ سے بدلتی ہے [3]۔",
                 "• **مکانی انحراف۔** چاند سے دیکھنے پر، خمیدہ زمین پر دو دور دراز اینٹینا متوازی نہیں ہوتے۔ یہ صرف خطی پولرائزیشن سے متعلق ہے، آسانی سے حساب کیا جاتا ہے اور فریکوئنسی پر منحصر نہیں [3]: یہ YAEC کا §D_{pol}§ ہے۔",
-                "• **چاند پر انعکاس۔** نچلی فریکوئنسیوں پر، جیسے 144 MHz، چاند ایک ہموار کرے کی طرح برتاؤ کرتا ہے: خطی پولرائزیشن خطی ہی رہتی ہے، دائروی کی سمت الٹ جاتی ہے، اور تقریباً 1 % توانائی “غلط” پولرائزیشن میں چلی جاتی ہے۔ 10 GHz پر سطح کھردری ہوتی ہے اور سگنل غیر پولرائزڈ ہو کر واپس آتا ہے [3]۔",
+                "• **چاند پر انعکاس۔** نچلی فریکوئنسیوں پر، جیسے 144 MHz، چاند ایک ہموار کرے کی طرح برتاؤ کرتا ہے: خطی پولرائزیشن خطی ہی رہتی ہے، دائروی کی سمت الٹ جاتی ہے، اور تقریباً 1 % توانائی “غلط” پولرائزیشن میں چلی جاتی ہے۔ 10 GHz پر سطح کھردری ہوتی ہے اور سگنل غیر پولرائزڈ ہو کر واپس آتا ہے [3]۔ 23 cm پر Hagfors کی ریڈار پیمائشیں تصدیق کرتی ہیں کہ چاند کی ٹکیہ کے مرکز کے قریب اب بھی تقریباً آئینہ نما انعکاس غالب رہتا ہے، جبکہ کناروں کی طرف بازگشت سطح پر بکھری ہوئی الگ الگ اشیاء سے آتی ہے اور جزوی طور پر غیر پولرائزڈ ہوتی ہے [5]۔",
                 "• **فیراڈے گردش۔** اسے پچھلے ذیلی پیراگراف میں بیان کیا گیا ہے: یہ فریکوئنسی کے مربع کے ساتھ کم ہوتی ہے، جاتے اور واپس آتے ہوئے جمع ہوتی ہے اور اس کی پیش گوئی نہیں کی جا سکتی [3]۔",
                 "• **آئنو اسفیرک انجذاب۔** یہ بھی فریکوئنسی کے مربع کے ساتھ کم ہوتا ہے: 144 MHz پر، دن کے وقت اور 10° بلندی پر، یہ تقریباً 0.1 dB ہے۔ یہ صرف بہت زیادہ شمسی سرگرمی میں اہم ہے؛ شدید auroras کے دوران پولرائزیشن اس سے زیادہ تیزی سے بدل سکتی ہے جتنا ایک تنگ بینڈ ریسیور پیچھا کر سکے [3]۔",
                 "• **50 سے 432 MHz تک۔** تقریباً سب خطی پولرائزیشن والے Yagi استعمال کرتے ہیں: مصنف قابلِ سوئچ خطی پولرائزیشن والا نظام تجویز کرتے ہیں، بہتر ہے الیکٹرانک طور پر؛ میکانیکی گردش ٹھیک ہے اگر چوتھائی چکر میں ایک یا چند سیکنڈ لگیں [3]۔ ریسیپشن میں سب سے طاقتور سگنل والی پولرائزیشن منتخب کی جاتی ہے (کمزور سگنلز کے ساتھ دو چینل والا ریسیور زیادہ تیز ہے)؛ CQ کال کرتے وقت دائروی کے بجائے، جو ہمیشہ 3 dB کھوتی ہے، افقی اور عمودی کو باری باری بدلنا بہتر ہے [3]۔",
+                "• **23 cm (1296 MHz) پر۔** ڈش کے ساتھ عام طور پر دائروی پولرائزیشن استعمال ہوتی ہے: ایک سمت میں ٹرانسمٹ اور دوسری سمت میں ریسیو کیا جاتا ہے، کیونکہ چاند سمت الٹ دیتا ہے، اور فیراڈے گردش اور مکانی انحراف کا کوئی اثر نہیں ہوتا۔ نقصان فیڈز سے آتا ہے، جو کبھی بھی مکمل طور پر دائروی نہیں ہوتیں: Bob Atkins KA1GT نے اسے پولرائزر کے دونوں پورٹس کے درمیان آئسولیشن سے ناپا، 6 dB آئسولیشن پر تقریباً 1 dB، 10 dB پر تقریباً 0.4 dB (عام صورت) اور 16 dB پر تقریباً 0.1 dB [6]۔ جب پولرائزیشن نقصان کا چیک باکس فعال ہو تو YAEC ٹیب EME بجٹ ڈش میں 1296 MHz پر 0.4 dB استعمال کرتا ہے۔",
                 "• **10 GHz اور اس سے اوپر۔** چاند سگنل کو غیر پولرائزڈ کر دیتا ہے، ٹرانسمیشن کی پولرائزیشن کی اہمیت نہیں رہتی اور دو عمودی فیڈز پر دو چینل والا ریسیور درکار ہوتا ہے [3]۔ یہ فریکوئنسیاں YAEC کے بینڈز سے باہر ہیں۔",
                 "• **کون سی پولرائزیشن ٹرانسمٹ کریں۔** اگر آپ کوئی اسٹیشن ریسیو کر رہے ہیں تو آپ معلوم کر سکتے ہیں کہ اسے کس پولرائزیشن سے ٹرانسمٹ کریں تاکہ آپ کا سگنل اس تک درست طریقے سے پہنچے [3]۔ ڈگری میں زاویوں کے ساتھ (0° افقی، 90° عمودی)، P دوسرے اسٹیشن کی ٹرانسمیشن پولرائزیشن ہے، R وہ جس سے آپ اسے ریسیو کرتے ہیں، S مکانی انحراف، F فیراڈے گردش اور T آپ کی بہترین ٹرانسمیشن پولرائزیشن:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ پہلے دو تعلقات سے F ختم کرنے پر §T = 2 · P + 2 · S − R§ حاصل ہوتا ہے؛ خطی اینٹینا کے لیے §2 · P§، 0° یا 180° ہے، جو ایک ہی پولرائزیشن ہے، اور §T = 2 · S − R§ باقی رہتا ہے [3]۔ فیراڈے گردش کے بغیر (§F§ = 0، 1296 MHz اور اس سے اوپر) ٹرانسمٹ کرنے کے لیے بہترین پولرائزیشن وہی ہے جس سے بہترین ریسیو ہوتا ہے، §T = R§۔ مضمون بتاتا ہے کہ یہ اصول KL7WE والے سے مطابقت رکھتا ہے اور S کے حساب کے لیے W5UN کے پروگرام SKYMOON کا حوالہ دیتا ہے [3]۔",
+                "~ پہلے دو تعلقات سے F ختم کرنے پر §T = 2 · P + 2 · S − R§ حاصل ہوتا ہے؛ خطی اینٹینا کے لیے §2 · P§، 0° یا 180° ہے، جو ایک ہی پولرائزیشن ہے، اور §T = 2 · S − R§ باقی رہتا ہے [3]۔ فیراڈے گردش کے بغیر (§F§ ≈ 0، روزمرہ کے آئنو اسفیئر میں 1296 MHz اور اس سے اوپر) ٹرانسمٹ کرنے کے لیے بہترین پولرائزیشن وہی ہے جس سے بہترین ریسیو ہوتا ہے، §T = R§۔ مضمون بتاتا ہے کہ یہ اصول KL7WE والے سے مطابقت رکھتا ہے اور S کے حساب کے لیے W5UN کے پروگرام SKYMOON کا حوالہ دیتا ہے [3]۔",
                 "> YAEC میں مکانی انحراف S وہ §D_{pol}§ ہے جس کا حساب چاند کا مقام اور لائیو مقام اور +- 24h میں کیا جاتا ہے؛ فیراڈے گردش F کا حساب نہیں کیا جا سکتا۔ مثالوں، خاص صورتوں اور اشکال کے لیے SM5BSZ کا مکمل مضمون پڑھیں [3]۔",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”، پریزنٹیشن، جولائی 2015، IC8TEM کی فراہم کردہ۔",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”، 25 اپریل 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”، 25 اپریل 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R، سفارش P.531-5، “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”، 1999، جدول 1 (فیراڈے گردش 1/f² کے متناسب) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”، Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["ur"]["S44"] = new string[] {
                 "## آسمانی شور اور Dgrd",
@@ -81756,7 +82020,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4,6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2,2° | >≈ 9°",
-                "~ Rotation for én passage gennem ionosfæren, typisk dagværdi; 144 MHz fra [3], de øvrige bånd udledt af YAEC med formlen ovenfor (≈ = udledt). Fra 1296 MHz og opefter kan den regnes for nul [3].",
+                "~ Rotation for én passage gennem ionosfæren, typisk dagværdi; 144 MHz fra [3], de øvrige bånd udledt af YAEC med formlen ovenfor (≈ = udledt). Fra 1296 MHz og opefter er rotationen med den almindelige ionosfære kun få grader og kan regnes for nul [3]; med en ionosfære, der er meget kraftigt ladet med elektroner, giver anbefalingen ITU-R P.531 dog 108° ved 1 GHz for én passage ved 30° elevation, altså ca. 64° ved 1296 MHz [4]. På 23 cm betyder det kun lidt, fordi man normalt bruger cirkulær polarisation, som Faraday-rotationen ikke ændrer.",
                 "• **Den ophæves ikke på vejen tilbage.** Rotationens retning afhænger ikke af den retning, bølgen bevæger sig i: efter den anden passage gennem ionosfæren er signalet drejet yderligere i samme retning [3]. Hver station lægger rotationen fra ionosfæren over sig selv til.",
                 "• **Den ændrer sig med tiden.** Mængden af elektroner varierer mellem dag og nat, ved solopgang og solnedgang og med solaktiviteten: med meget aktiv Sol er rotationen kraftig og kan variere hurtigt, og under nordlys kan polarisationen ændre sig på få millisekunder [3]. Derfor kan den ikke forudsiges ved beregning.",
                 "• **Den lægges til den rumlige forskydning.** Den rumlige forskydning (§D_{pol}§) har modsat fortegn i forbindelsens to retninger, mens Faraday-rotationen har samme retning: i den ene retning lægges de to drejninger sammen, i den anden trækkes de fra hinanden. Derfor kan det ske, at du hører DX'en, og den ikke hører dig, eller omvendt [1]. Tabet følger samme lov som for §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, hvor Δ er den samlede vinkelforskel: ved 90° forsvinder signalet.",
@@ -81766,18 +82030,22 @@ namespace LunaCalc
                 "Artiklen »Selecting Polarisation for EME« af Leif Åsbrink SM5BSZ (25. april 1997) er offentlig og kan læses på hans websted: https://sm5bsz.com/polarity/emepol.htm. Forfatteren til dette program finder det nyttigt her at give et kort resumé med egne ord; for de fulde forklaringer henvises til at læse hele artiklen [3].",
                 "• **Fire virkninger.** Langs strækningen Jord – Måne – Jord ændres polarisationen af den rumlige forskydning, refleksionen på Månen, Faraday-rotationen og absorptionen i ionosfæren [3].",
                 "• **Rumlig forskydning.** Set fra Månen er to fjerntliggende antenner på den krumme Jord ikke parallelle. Det gælder kun lineær polarisation, er let at beregne og afhænger ikke af frekvensen [3]: det er YAEC's §D_{pol}§.",
-                "• **Refleksion på Månen.** Ved lave frekvenser som 144 MHz opfører Månen sig som en glat kugle: lineær polarisation forbliver lineær, cirkulær skifter omløbsretning, og ca. 1 % af energien havner i den »forkerte« polarisation. Ved 10 GHz er overfladen ru, og signalet vender tilbage depolariseret [3].",
+                "• **Refleksion på Månen.** Ved lave frekvenser som 144 MHz opfører Månen sig som en glat kugle: lineær polarisation forbliver lineær, cirkulær skifter omløbsretning, og ca. 1 % af energien havner i den »forkerte« polarisation. Ved 10 GHz er overfladen ru, og signalet vender tilbage depolariseret [3]. Hagfors' radarmålinger på 23 cm bekræfter, at den næsten spejlende refleksion stadig dominerer nær midten af måneskiven, mens ekkoet ud mod kanterne kommer fra enkelte objekter spredt over overfladen og er delvis depolariseret [5].",
                 "• **Faraday-rotation.** Den er beskrevet i det foregående underafsnit: den aftager med kvadratet på frekvensen, lægges sammen på vej ud og på vej tilbage og kan ikke forudsiges [3].",
                 "• **Ionosfærisk absorption.** Den aftager også med kvadratet på frekvensen: ved 144 MHz, om dagen og ved 10° elevation, er den ca. 0,1 dB. Den betyder kun noget ved meget høj solaktivitet; under kraftigt nordlys kan polarisationen ændre sig hurtigere, end en smalbåndet modtager kan følge med [3].",
                 "• **Fra 50 til 432 MHz.** Næsten alle bruger lineært polariserede yagier: forfatteren anbefaler et anlæg med omskiftelig lineær polarisation, helst elektronisk; en mekanisk drejning er fin, hvis en kvart omgang tager et eller få sekunder [3]. Ved modtagning vælger man polarisationen med det kraftigste signal (en tokanalsmodtager er hurtigere med svage signaler); når man kalder CQ, er det bedre at skifte mellem vandret og lodret end at bruge cirkulær, der altid taber 3 dB [3].",
+                "• **På 23 cm (1296 MHz).** Med parabol bruger man som regel cirkulær polarisation: man sender med én omløbsretning og modtager med den anden, fordi Månen vender omløbsretningen, og Faraday-rotation og den rumlige forskydning har ingen betydning. Tabet kommer fra fødeelementerne, som aldrig er helt cirkulære: Bob Atkins KA1GT målte det ud fra isolationen mellem polarisatorens to porte, ca. 1 dB med 6 dB isolation, ca. 0,4 dB med 10 dB (det typiske tilfælde) og ca. 0,1 dB med 16 dB [6]. YAEC bruger 0,4 dB i fanen EME-budget parabol ved 1296 MHz, når afkrydsningsfeltet for polarisationstab er markeret.",
                 "• **Fra 10 GHz og opefter.** Månen depolariserer signalet, sendepolarisationen betyder ikke længere noget, og der kræves en tokanalsmodtager på to ortogonale fødeelementer [3]. Det er frekvenser uden for YAEC's bånd.",
                 "• **Hvilken polarisation man skal sende med.** Hvis du modtager en station, kan du udlede, hvilken polarisation du skal sende til den med, for at dit signal når frem på den rigtige måde [3]. Med vinklerne i grader (0° vandret, 90° lodret) er P den anden stations sendepolarisation, R den, du modtager den med, S den rumlige forskydning, F Faraday-rotationen og T din bedste sendepolarisation:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Ved at eliminere F fra de to første sammenhænge får man §T = 2 · P + 2 · S − R§; for en lineær antenne er §2 · P§ 0° eller 180°, hvilket er samme polarisation, og tilbage bliver §T = 2 · S − R§ [3]. Uden Faraday-rotation (§F§ = 0, fra 1296 MHz og opefter) er den bedste sendepolarisation den samme som den, man modtager bedst med, §T = R§. Artiklen bemærker, at reglen stemmer overens med KL7WE's og nævner W5UN's program SKYMOON til beregning af S [3].",
+                "~ Ved at eliminere F fra de to første sammenhænge får man §T = 2 · P + 2 · S − R§; for en lineær antenne er §2 · P§ 0° eller 180°, hvilket er samme polarisation, og tilbage bliver §T = 2 · S − R§ [3]. Uden Faraday-rotation (§F§ ≈ 0, fra 1296 MHz og opefter med den almindelige ionosfære) er den bedste sendepolarisation den samme som den, man modtager bedst med, §T = R§. Artiklen bemærker, at reglen stemmer overens med KL7WE's og nævner W5UN's program SKYMOON til beregning af S [3].",
                 "> I YAEC er den rumlige forskydning S den §D_{pol}§, der beregnes i Månens position og i Live-position og +- 24 t; Faraday-rotationen F kan ikke beregnes. For eksempler, særtilfælde og figurer kan du læse SM5BSZ's fulde artikel [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, præsentation, juli 2015, stillet til rådighed af IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. april 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25. april 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Anbefaling P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, tabel 1 (Faraday-rotation proportional med 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["da"]["S44"] = new string[] {
                 "## Himmelstøj og Dgrd",
@@ -82323,7 +82591,7 @@ namespace LunaCalc
                 "| 432 MHz | >≈ 20° | >≈ 80°",
                 "| 902 MHz | >≈ 4.6° | >≈ 18°",
                 "| 1296 MHz | >≈ 2.2° | >≈ 9°",
-                "~ Pag-ikot sa isang pagdaan sa ionosphere, karaniwang halaga sa araw; ang 144 MHz ay mula sa [3], ang ibang band ay hinango ng YAEC gamit ang formula sa itaas (≈ = hinango). Mula 1296 MHz pataas, maituturing itong zero [3].",
+                "~ Pag-ikot sa isang pagdaan sa ionosphere, karaniwang halaga sa araw; ang 144 MHz ay mula sa [3], ang ibang band ay hinango ng YAEC gamit ang formula sa itaas (≈ = hinango). Mula 1296 MHz pataas, sa pang-araw-araw na ionosphere, ilang degree lamang ang pag-ikot at maituturing itong zero [3]; ngunit sa ionosphere na napakarami ng electron, ang rekomendasyong ITU-R P.531 ay nagbibigay ng 108° sa 1 GHz para sa isang pagdaan sa 30° na elevation, ibig sabihin ay mga 64° sa 1296 MHz [4]. Sa 23 cm, kaunti lamang ang epekto nito dahil karaniwang ginagamit ang circular polarization, na hindi binabago ng Faraday rotation.",
                 "• **Hindi ito nawawala sa pagbalik.** Hindi nakadepende ang direksyon ng pag-ikot sa direksyon ng paglalakbay ng alon: pagkatapos ng pangalawang pagdaan sa ionosphere, muling umiikot ang signal, sa parehong direksyon [3]. Idinaragdag ng bawat istasyon ang pag-ikot ng ionosphere sa itaas nito.",
                 "• **Nagbabago ito sa paglipas ng oras.** Nagbabago ang dami ng electron sa pagitan ng araw at gabi, sa pagsikat at paglubog ng araw at ayon sa solar activity: kapag napakaaktibo ng Araw, malakas ang pag-ikot at maaaring mabilis itong magbago, at sa panahon ng aurora ay maaaring magbago ang polarization sa loob ng ilang millisecond [3]. Kaya hindi ito mahuhulaan ng isang kalkulasyon.",
                 "• **Nadaragdag ito sa spatial offset.** Ang spatial offset (§D_{pol}§) ay magkasalungat ang sign sa dalawang direksyon ng link, samantalang pareho ang direksyon ng Faraday rotation: sa isang direksyon, nagdaragdag ang dalawang pag-ikot; sa kabila, nagbabawasan. Kaya maaaring mangyari na naririnig mo ang DX pero hindi ka niya naririnig, o kabaliktaran [1]. Sinusunod ng pagkawala ang parehong batas ng §D_{pol}§, §L = −20 · log_{10} \\a{cos Δ}§, kung saan ang Δ ay ang kabuuang offset: sa 90°, nawawala ang signal.",
@@ -82333,18 +82601,22 @@ namespace LunaCalc
                 "Ang artikulong “Selecting Polarisation for EME” ni Leif Åsbrink SM5BSZ (25 Abril 1997) ay pampubliko at mababasa sa kanyang website: https://sm5bsz.com/polarity/emepol.htm. Itinuturing ng may-akda ng programang ito na kapaki-pakinabang na magbigay rito ng isang panimulang buod nito, na isinulat sa sarili niyang mga salita; para sa buong paliwanag, basahin ang kumpletong artikulo [3].",
                 "• **Apat na epekto.** Sa kahabaan ng landas Daigdig – Buwan – Daigdig, nagbabago ang polarization dahil sa spatial offset, sa reflection sa Buwan, sa Faraday rotation at sa absorption sa ionosphere [3].",
                 "• **Spatial offset.** Kapag tiningnan mula sa Buwan, ang dalawang malayong antena sa kurbadong Daigdig ay hindi magkaagapay. Tungkol lamang ito sa linear polarization, madali itong kuwentahin at hindi ito nakadepende sa frequency [3]: ito ang §D_{pol}§ ng YAEC.",
-                "• **Reflection sa Buwan.** Sa mabababang frequency, gaya ng 144 MHz, kumikilos ang Buwan na parang makinis na globo: nananatiling linear ang linear polarization, bumabaliktad ang direksyon ng circular, at mga 1 % ng enerhiya ang napupunta sa “maling” polarization. Sa 10 GHz, magaspang ang ibabaw at bumabalik ang signal na depolarized [3].",
+                "• **Reflection sa Buwan.** Sa mabababang frequency, gaya ng 144 MHz, kumikilos ang Buwan na parang makinis na globo: nananatiling linear ang linear polarization, bumabaliktad ang direksyon ng circular, at mga 1 % ng enerhiya ang napupunta sa “maling” polarization. Sa 10 GHz, magaspang ang ibabaw at bumabalik ang signal na depolarized [3]. Kinukumpirma ng mga radar measurement ni Hagfors sa 23 cm na malapit sa gitna ng lunar disk ay nangingibabaw pa rin ang halos specular na reflection, samantalang patungo sa mga gilid ay nagmumula ang echo sa mga hiwa-hiwalay na bagay na nakakalat sa ibabaw at bahagyang depolarized [5].",
                 "• **Faraday rotation.** Inilarawan ito sa naunang subseksyon: bumababa ito ayon sa square ng frequency, nadaragdag sa pagpunta at pagbalik at hindi mahuhulaan [3].",
                 "• **Ionospheric absorption.** Bumababa rin ito ayon sa square ng frequency: sa 144 MHz, sa araw at sa 10° na elevation, ito ay mga 0.1 dB. Mahalaga lamang ito kapag napakataas ng solar activity; sa malalakas na aurora, maaaring magbago ang polarization nang mas mabilis kaysa sa kayang sundan ng isang narrow-band na receiver [3].",
                 "• **Mula 50 hanggang 432 MHz.** Halos lahat ay gumagamit ng mga Yagi na linear ang polarization: inirerekomenda ng may-akda ang sistemang may naililipat na linear polarization, mas mabuti kung electronic; puwede ang mekanikal na pag-ikot kung isa o ilang segundo lamang ang kailangan para sa isang-kapat na ikot [3]. Sa pagtanggap, pinipili ang polarization na may pinakamalakas na signal (mas mabilis ang receiver na may dalawang channel sa mahihinang signal); kapag tumatawag ng CQ, mas mainam na magpalitan ng pahalang at patayo kaysa gumamit ng circular, na laging nawawalan ng 3 dB [3].",
+                "• **Sa 23 cm (1296 MHz).** Sa mga dish, karaniwang circular polarization ang ginagamit: nagta-transmit sa isang direksyon at tumatanggap sa kabila, dahil binabaliktad ng Buwan ang direksyon, at walang epekto ang Faraday rotation at ang spatial offset. Ang loss ay nagmumula sa mga feed, na hindi kailanman perpektong circular: sinukat ito ni Bob Atkins KA1GT mula sa isolation sa pagitan ng dalawang port ng polarizer, mga 1 dB sa 6 dB na isolation, mga 0.4 dB sa 10 dB (ang karaniwang kaso) at mga 0.1 dB sa 16 dB [6]. Gumagamit ang YAEC ng 0.4 dB sa tab na EME budget dish sa 1296 MHz kapag naka-check ang checkbox ng polarization loss.",
                 "• **Mula 10 GHz pataas.** Dine-depolarize ng Buwan ang signal, hindi na mahalaga ang polarization sa pag-transmit, at kailangan ng receiver na may dalawang channel sa dalawang orthogonal na feed [3]. Nasa labas ng mga band ng YAEC ang mga frequency na ito.",
                 "• **Aling polarization ang ita-transmit.** Kung nakakatanggap ka ng isang istasyon, makukuwenta mo kung aling polarization ang ita-transmit para dumating nang tama sa kanya ang signal mo [3]. Kapag nasa degree ang mga anggulo (0° pahalang, 90° patayo), ang P ay ang polarization sa pag-transmit ng kabilang istasyon, ang R ay ang polarization kung saan mo siya natatanggap, ang S ay ang spatial offset, ang F ay ang Faraday rotation at ang T ay ang pinakamahusay mong polarization sa pag-transmit:",
                 "= R = P + S + F \\quad P = T − S + F \\quad T = 2 · S − R",
-                "~ Kapag inalis ang F sa unang dalawang ugnayan, makukuha ang §T = 2 · P + 2 · S − R§; para sa linear na antena, ang §2 · P§ ay 0° o 180°, na parehong polarization, kaya natitira ang §T = 2 · S − R§ [3]. Kapag walang Faraday rotation (§F§ = 0, mula 1296 MHz pataas), ang pinakamahusay na polarization sa pag-transmit ay ang parehong polarization kung saan pinakamahusay kang tumatanggap, §T = R§. Binabanggit ng artikulo na tugma ang tuntunin sa tuntunin ni KL7WE at binabanggit ang programang SKYMOON ni W5UN para sa pagkuwenta ng S [3].",
+                "~ Kapag inalis ang F sa unang dalawang ugnayan, makukuha ang §T = 2 · P + 2 · S − R§; para sa linear na antena, ang §2 · P§ ay 0° o 180°, na parehong polarization, kaya natitira ang §T = 2 · S − R§ [3]. Kapag walang Faraday rotation (§F§ ≈ 0, mula 1296 MHz pataas sa pang-araw-araw na ionosphere), ang pinakamahusay na polarization sa pag-transmit ay ang parehong polarization kung saan pinakamahusay kang tumatanggap, §T = R§. Binabanggit ng artikulo na tugma ang tuntunin sa tuntunin ni KL7WE at binabanggit ang programang SKYMOON ni W5UN para sa pagkuwenta ng S [3].",
                 "> Sa YAEC, ang spatial offset na S ay ang §D_{pol}§ na kinuwenta sa Posisyon ng Buwan at sa Live na posisyon at +- 24h; hindi makukuwenta ang Faraday rotation na F. Para sa mga halimbawa, mga espesyal na kaso at mga larawan, basahin ang kumpletong artikulo ni SM5BSZ [3].",
                 "[1] Franco I2FAK – YouTube: “Radioamatori – To the moon and back con I2FAK Franco – Prima parte” – https://www.youtube.com/watch?v=aNsnSweIvPY ; “Radioamatori – L'intervista a Franco I2FAK – Seconda parte” – https://www.youtube.com/watch?v=GPVNLiUiD_s",
                 "[2] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasyon, Hulyo 2015, ibinigay ni IC8TEM.",
-                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 Abril 1997 – https://sm5bsz.com/polarity/emepol.htm"
+                "[3] Leif Åsbrink SM5BSZ, “Selecting Polarisation for EME”, 25 Abril 1997 – https://sm5bsz.com/polarity/emepol.htm",
+                "[4] ITU-R, Rekomendasyon P.531-5, “Ionospheric propagation data and prediction methods required for the design of satellite services and systems”, 1999, talahanayan 1 (Faraday rotation na proporsyonal sa 1/f²) – https://www.itu.int/rec/R-REC-P.531",
+                "[5] Tor Hagfors, “A study of the depolarization of lunar radar echoes”, Radio Science 2(5), 1967, pp. 445 – 465.",
+                "[6] Bob Atkins KA1GT, “Measuring circular polarization losses in EME” – https://bobatkins.com/radio/EME_circular_polarization_loss.html"
             };
             d["tl"]["S44"] = new string[] {
                 "## Ingay ng langit at Dgrd",
