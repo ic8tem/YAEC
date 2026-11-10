@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 opracował Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulator dla krótkofalowców pracujących przez EME (Ziemia–Księżyc–Zie
 Kod źródłowy i pliki do pobrania: https://github.com/ic8tem/YAEC/releases
 
 INSTALACJA – WINDOWS
-1. Pobierz YAEC-1.6-win-x64-setup.exe ze strony Releases i uruchom go. Instaluje YAEC w Dokumenty\YAEC, bez uprawnień administratora, ze skrótami w menu Start i na pulpicie oraz z programem odinstalowującym.
+1. Pobierz YAEC-1.7-win-x64-setup.exe ze strony Releases i uruchom go. Instaluje YAEC w Dokumenty\YAEC, bez uprawnień administratora, ze skrótami w menu Start i na pulpicie oraz z programem odinstalowującym.
 2. Jeśli pojawi się ostrzeżenie SmartScreen: „Więcej informacji” → „Uruchom mimo to”.
-3. Bez instalacji: rozpakuj YAEC-1.6-win-x64-portatile.zip do folderu, w którym możesz zapisywać, i uruchom YAEC.exe.
+3. Bez instalacji: rozpakuj YAEC-1.7-win-x64-portatile.zip do folderu, w którym możesz zapisywać, i uruchom YAEC.exe.
 
 INSTALACJA – LINUX
 YAEC działa z Mono, wolnym środowiskiem uruchomieniowym .NET.
-- Debian, Ubuntu, Mint: pobierz yaec_1.6_amd64.deb i zainstaluj go poleceniem
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: pobierz yaec_1.7_amd64.deb i zainstaluj go poleceniem
+      sudo apt install ./yaec_1.7_amd64.deb
   (instaluje również Mono). YAEC uruchamia się z menu aplikacji lub poleceniem "yaec".
-- Inne dystrybucje: zainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozpakuj YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) i uruchom ./install.sh.
+- Inne dystrybucje: zainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozpakuj YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) i uruchom ./install.sh.
 
 INSTALACJA – macOS (eksperymentalna)
 1. Zainstaluj Mono dla macOS (https://www.mono-project.com/download/stable/) i XQuartz (https://www.xquartz.org).
-2. Otwórz YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) i przeciągnij YAEC do folderu Aplikacje. Za pierwszym razem: kliknij prawym przyciskiem YAEC → Otwórz (aplikacja nie jest podpisana przez Apple).
+2. Otwórz YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) i przeciągnij YAEC do folderu Aplikacje. Za pierwszym razem: kliknij prawym przyciskiem YAEC → Otwórz (aplikacja nie jest podpisana przez Apple).
 
 SPRAWDZANIE POBRANYCH PLIKÓW (SHA-256)
 Każde wydanie zawiera plik SHA256SUMS.txt z sumą SHA-256 każdego pakietu. Porównaj ją z sumą pobranego pliku:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jeśli obie wartości się różnią, nie instaluj pliku: pobierz go ponownie.
@@ -39,6 +39,7 @@ Błędy, lepsze dane, tłumaczenia: ccerrotta@gmail.com · ic8tem@gmail.com · w
 
 HISTORIA WERSJI
 Wersje wcześniejsze niż 1.0 nazywają się beta.
+- 1.7 - Osiem nowych języków: portugalski brazylijski, tajski, chiński tradycyjny, polski, czeski, rumuński, grecki i węgierski (łącznie 36), z podręcznikami i plikami README; w zakładkach Bilans EME Yagi i Bilans EME czasze obliczenie echa własnej stacji (Nadaję i odbieram własne echo); czasza z ogniskiem pierwotnym lub offsetowa (W2IMU); na 1296 MHz z czaszami strata polaryzacji kołowej rzeczywistych oświetlaczy (KA1GT); w zakładce Kontrola obliczeń wybór między Bilansem EME Yagi a Bilansem EME czasze; wzory w zakładce DGRD według częstotliwości zapisane jak w edytorze równań; podręcznik: skręcenie Faradaya na 1296 MHz według ITU-R P.531, depolaryzacja na 23 cm (Hagfors) i polaryzacja kołowa na 23 cm.
 - 1.6 - Pasma 902 MHz i 23 cm (1296 i 1298 MHz) w całym programie, ze wszystkimi pasmami na liście rozwijanej MHz; zakładka Bilans EME staje się zakładką Bilans EME Yagi i jest nowa zakładka Bilans EME czasze (czasza z ogniskiem pierwotnym, zysk według wzoru PE1RKI, przedwzmacniacz także dwustopniowy, transwerter i wysterowanie PA); nowa zakładka DGRD według częstotliwości, z rzeczywistym szumem stacji i niebem uśrednionym po wiązce, używana w całym programie; kable koncentryczne obliczane wzorem α = k1·√f + k2·f z danych kart katalogowych, także na 902 i 1296 MHz; nowy styl elementów sterujących we wszystkich zakładkach; w zakładce Pozycja na żywo i +- 24h dymek przy czerwonym kursorze i czerwone linie DX dla godziny kursora; podręcznik poprawiony po porównaniu źródeł (tłumienie trasy pasmo po paśmie, progi Q65-60B i Q65-60C, ground gain według pomiarów IK1UWL, złącza, Dgrd innych programów, czasze powyżej 432 MHz); pakiety dla każdej architektury (Windows x64 i x86, Linux x64, arm64 i arm, macOS Apple Silicon i Intel); podziękowania dla Roberta HA5OLA. Pasma powyżej 432 MHz są w trakcie uzupełniania.
 - 1.5 - Nowa zakładka Radar GRAVES w grupie Łączność: Księżyc w wiązce radaru z sektorem i krokiem, wspólne okno z tobą, Doppler i opóźnienie echa, następne przejście wiązki przez Księżyc, niebo widziane z GRAVES, odtworzenie 24 godzin UTC ze szczegółami najbliższych 10 sekund, porady dotyczące słuchania echa i źródła; lista aktywnych stacji także w JSON i w postaci tekstowej dla LunaCalc Mobile; dwa nowe języki, duński i tagalski (łącznie 28), z podręcznikami.
 - 1.4 - Aktywne stacje: pole znaku wywoławczego DX ma pomarańczową ramkę, jeśli stacja pisała na czacie EME N0UK w ciągu ostatnich 90 dni, z datą ostatniej wiadomości w dymku; Krój czcionki z 10 zalecanymi czcionkami dla Windows, Linux i macOS, sprawdzonymi zakładka po zakładce; pakiety dla 32-bitowego Windows i dla Raspberry Pi (arm64); Sklepienie niebieskie z fioletowymi przerywanymi ramkami strefy osiągalnej; Odległość i Dgrd z czwartym użytecznym dniem i dniem wybieranym także kliknięciem na wykresie; pola liczbowe z zaokrągloną ramką i strzałkami jedna nad drugą; przyciski okien przy krawędziach (po lewej, pośrodku, po prawej); ramka podziękowań na całą szerokość; w wąskich oknach OBLICZENIA SZCZEGÓŁOWE przechodzą do dwóch wierszy i żaden napis nie trafia pod przyciski.

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 autorius Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ry
 Išeities kodas ir atsisiuntimas: https://github.com/ic8tem/YAEC/releases
 
 ĮDIEGIMAS – WINDOWS
-1. Atsisiųskite YAEC-1.6-win-x64-setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
+1. Atsisiųskite YAEC-1.7-win-x64-setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
 2. Jei pasirodo SmartScreen įspėjimas: "More info" → "Run anyway".
-3. Be įdiegimo: išskleiskite YAEC-1.6-win-x64-portatile.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
+3. Be įdiegimo: išskleiskite YAEC-1.7-win-x64-portatile.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
 
 ĮDIEGIMAS – LINUX
 YAEC veikia su Mono – laisvąja .NET vykdymo aplinka.
-- Debian, Ubuntu, Mint: atsisiųskite yaec_1.6_amd64.deb ir įdiekite komanda
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: atsisiųskite yaec_1.7_amd64.deb ir įdiekite komanda
+      sudo apt install ./yaec_1.7_amd64.deb
   (kartu įdiegiama ir Mono). YAEC paleidžiama iš programų meniu arba komanda "yaec".
-- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) ir paleiskite ./install.sh.
+- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) ir paleiskite ./install.sh.
 
 ĮDIEGIMAS – macOS (eksperimentinis)
 1. Įdiekite Mono, skirtą macOS (https://www.mono-project.com/download/stable/), ir XQuartz (https://www.xquartz.org).
-2. Atidarykite YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
+2. Atidarykite YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
 
 ATSISIŲSTŲ FAILŲ PATIKRINIMAS (SHA-256)
 Kiekviename release yra failas SHA256SUMS.txt su kiekvieno paketo SHA-256 maiša. Palyginkite ją su atsisiųsto failo maiša:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jei abi reikšmės skiriasi, failo nediekite: atsisiųskite jį iš naujo.
@@ -39,6 +39,7 @@ Klaidos, geresni duomenys, vertimai: ccerrotta@gmail.com · ic8tem@gmail.com · 
 
 VERSIJŲ ISTORIJA
 Versijos iki 1.0 vadinamos beta.
+- 1.7 - Aštuonios naujos kalbos: Brazilijos portugalų, tajų, tradicinė kinų, lenkų, čekų, rumunų, graikų ir vengrų (iš viso 36), su vadovais ir README; skirtukuose EME biudžetas yagi ir EME biudžetas lėkštės savo stoties aido skaičiavimas (Aš siunčiu ir priimu savo aidą); pirminio židinio arba ofsetinė lėkštė (W2IMU); ties 1296 MHz su lėkštėmis realių apšvitintuvų apskritiminės poliarizacijos nuostoliai (KA1GT); skirtuke Skaičiavimų patikra pasirinkimas tarp EME biudžetas yagi ir EME biudžetas lėkštės; skirtuko DGRD pagal dažnį formulės užrašytos kaip formulių redaktoriuje; vadovas: Faradėjaus sukimas ties 1296 MHz pagal ITU-R P.531, depoliarizacija 23 cm diapazone (Hagfors) ir apskritiminė poliarizacija 23 cm diapazone.
 - 1.6 - 902 MHz ir 23 cm (1296 ir 1298 MHz) diapazonai visoje programoje, visi diapazonai MHz išskleidžiamajame sąraše; skirtukas EME biudžetas tampa EME biudžetas yagi, ir atsirado naujas skirtukas EME biudžetas lėkštės (pirminio židinio parabolinė antena, stiprinimas pagal PE1RKI formulę, išankstinis stiprintuvas ir dviejų pakopų, transverteris ir PA žadinimas); naujas skirtukas DGRD pagal dažnį su tikruoju stoties triukšmu ir per spindulį suvidurkintu dangumi, naudojamas visoje programoje; koaksialiniai kabeliai skaičiuojami pagal formulę α = k1·√f + k2·f iš techninių aprašų duomenų, taip pat ties 902 ir 1296 MHz; naujas valdiklių stilius visuose skirtukuose; skirtuke Tiesioginė padėtis ir +- 24h patarimas prie raudonojo žymeklio ir DX raudonos linijos žymeklio laiku; vadovas peržiūrėtas palyginus šaltinius (trasos nuostoliai kiekvienam diapazonui, Q65-60B ir Q65-60C slenksčiai, ground gain pagal IK1UWL matavimus, jungtys, kitų programų Dgrd, parabolinės antenos virš 432 MHz); paketai visoms architektūroms (Windows x64 ir x86, Linux x64, arm64 ir arm, macOS Apple Silicon ir Intel); padėkos Robert HA5OLA. Diapazonai virš 432 MHz dar baigiami.
 - 1.5 - Naujas skirtukas GRAVES radaras grupėje Ryšys: Mėnulis radaro spindulyje su sektoriumi ir žingsniu, bendras langas su tavimi, aido Doplerio poslinkis ir vėlinimas, kitas spindulio perėjimas per Mėnulį, dangus iš GRAVES, 24 UTC valandų rekonstrukcija su kitų 10 sekundžių detalėmis, patarimai, kaip išgirsti aidą, ir šaltiniai; aktyvių stočių sąrašas taip pat JSON ir teksto formatu LunaCalc Mobile; dvi naujos kalbos, danų ir tagalų (iš viso 28), su vadovais.
 - 1.4 - Aktyvios stotys: DX šaukinio langelis gauna oranžinį rėmelį, jei stotis per pastarąsias 90 dienų rašė N0UK EME pokalbiuose, o patarime rodoma paskutinės žinutės data; Šrifto tipas su 10 rekomenduojamų šriftų Windows, Linux ir macOS, patikrintų kiekviename skirtuke; paketai 32 bitų Windows ir Raspberry Pi (arm64); Dangaus skliaute violetiniai brūkšniuoti rėmeliai aplink sritį, į kurią galima nukreipti; Atstumas ir Dgrd su ketvirta naudinga diena ir dienos pasirinkimu taip pat spustelėjus grafike; skaičių langeliai su suapvalintu rėmeliu ir rodyklėmis viena virš kitos; langų mygtukai kraštuose (kairėje, centre, dešinėje); padėkų langelis per visą plotį; siauruose languose IŠSAMŪS SKAIČIAVIMAI rašomas dviem eilutėmis ir joks tekstas nepatenka po mygtukais.

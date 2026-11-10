@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 készítette: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Számítóprogram EME-ben (Föld–Hold–Föld) dolgozó rádióamatőröknek 5
 Forráskód és letöltés: https://github.com/ic8tem/YAEC/releases
 
 TELEPÍTÉS – WINDOWS
-1. Töltsd le a YAEC-1.6-win-x64-setup.exe fájlt a Releases oldalról, és futtasd. A YAEC-et a Dokumentumok\YAEC mappába telepíti, rendszergazdai jogok nélkül, parancsikonokkal a Start menüben és az asztalon, valamint eltávolító programmal.
+1. Töltsd le a YAEC-1.7-win-x64-setup.exe fájlt a Releases oldalról, és futtasd. A YAEC-et a Dokumentumok\YAEC mappába telepíti, rendszergazdai jogok nélkül, parancsikonokkal a Start menüben és az asztalon, valamint eltávolító programmal.
 2. Ha megjelenik a SmartScreen figyelmeztetése: „További információ” → „Futtatás mindenképp”.
-3. Telepítés nélkül: csomagold ki a YAEC-1.6-win-x64-portatile.zip fájlt egy olyan mappába, amelybe írni tudsz, és indítsd el a YAEC.exe-t.
+3. Telepítés nélkül: csomagold ki a YAEC-1.7-win-x64-portatile.zip fájlt egy olyan mappába, amelybe írni tudsz, és indítsd el a YAEC.exe-t.
 
 TELEPÍTÉS – LINUX
 A YAEC a Monóval, a szabad .NET-futtatókörnyezettel működik.
-- Debian, Ubuntu, Mint: töltsd le a yaec_1.6_amd64.deb fájlt, és telepítsd ezzel:
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: töltsd le a yaec_1.7_amd64.deb fájlt, és telepítsd ezzel:
+      sudo apt install ./yaec_1.7_amd64.deb
   (a Monót is telepíti). A YAEC az alkalmazásmenüből vagy a „yaec” paranccsal indítható.
-- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.6-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz), és futtasd a ./install.sh-t.
+- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.7-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz), és futtasd a ./install.sh-t.
 
 TELEPÍTÉS – macOS (kísérleti)
 1. Telepítsd a macOS-es Monót (https://www.mono-project.com/download/stable/) és az XQuartzot (https://www.xquartz.org).
-2. Nyisd meg a YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
+2. Nyisd meg a YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
 
 A LETÖLTÖTT FÁJLOK ELLENŐRZÉSE (SHA-256)
 Minden kiadás tartalmazza az SHA256SUMS.txt fájlt, benne minden csomag SHA-256 ujjlenyomatával. Vesd össze a letöltött fájléval:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ha a két érték eltér, ne telepítsd a fájlt: töltsd le újra.
@@ -39,6 +39,7 @@ Hibák, jobb adatok, fordítások: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERZIÓTÖRTÉNET
 Az 1.0 előtti verziók neve beta.
+- 1.7 - Nyolc új nyelv: brazíliai portugál, thai, hagyományos kínai, lengyel, cseh, román, görög és magyar (összesen 36), kézikönyvekkel és OLVASSEL fájlokkal; a Yagi EME-mérlegben és a Parabola EME-mérlegben a saját állomás visszhangjának számítása (Én adok, és veszem a saját visszhangomat); primer fókuszú vagy offset parabola (W2IMU); 1296 MHz-en parabolákkal a valós megvilágítók cirkuláris polarizációjának vesztesége (KA1GT); a Számítások ellenőrzése fülön választás a Yagi EME-mérleg és a Parabola EME-mérleg között; a DGRD frekvenciánként képletei egyenletszerkesztőhöz hasonlóan írva; kézikönyv: Faraday-forgatás 1296 MHz-en az ITU-R P.531 szerint, depolarizáció a 23 cm-es sávban (Hagfors) és cirkuláris polarizáció a 23 cm-es sávban.
 - 1.6 - 902 MHz-es és 23 cm-es (1296 és 1298 MHz) sávok az egész programban, minden sávval a MHz legördülő listájában; az EME-mérleg fülből Yagi EME-mérleg lesz, és megjelenik az új Parabola EME-mérleg fül (primer fókuszú parabola, nyereség PE1RKI képletével, akár kétfokozatú előerősítő, transzverter és a PA vezérlése); új DGRD frekvenciánként fül az állomás valós zajával és a nyalábra átlagolt éggel, amelyet az egész program használ; koaxiális kábelek az adatlapok adataiból az α = k1·√f + k2·f képlettel számítva, 902 és 1296 MHz-en is; a kezelőelemek új stílusa minden fülön; az Élő helyzet és +- 24h fülön buboréksúgó a piros kurzoron és a DX piros vonalai a kurzor időpontjában; a források összevetése után átdolgozott kézikönyv (útvonalveszteség sávonként, a Q65-60B és a Q65-60C küszöbei, ground gain IK1UWL mérései szerint, csatlakozók, más programok Dgrd-je, parabolák 432 MHz felett); csomagok minden architektúrára (Windows x64 és x86, Linux x64, arm64 és arm, macOS Apple Silicon és Intel); köszönet Robert HA5OLA-nak. A 432 MHz feletti sávok még fejlesztés alatt állnak.
 - 1.5 - Új GRAVES radar fül az Összeköttetés csoportban: a Hold a radar nyalábjában szektorral és lépéssel, közös ablak veled, a visszhang Dopplere és késleltetése, a nyaláb következő áthaladása a Holdon, az ég a GRAVES-ről nézve, a 24 UTC-óra rekonstrukciója a következő 10 másodperc részleteivel, tanácsok a visszhang hallgatásához és források; az aktív állomások listája JSON-ban és szövegként is a LunaCalc Mobile számára; két új nyelv, a dán és a tagalog (összesen 28), kézikönyvekkel.
 - 1.4 - Aktív állomások: a DX hívójelének mezője narancssárga keretet kap, ha az állomás az elmúlt 90 napban írt N0UK EME-chatjén, az utolsó üzenet dátumával a buboréksúgóban; Betűtípus 10 ajánlott betűtípussal Windowsra, Linuxra és macOS-re, fülről fülre kipróbálva; csomagok 32 bites Windowsra és Raspberry Pi-re (arm64); Égbolt az irányítható terület lila szaggatott kereteivel; Távolság és Dgrd a negyedik hasznos nappal, és a nap a grafikonon egy kattintással is kiválasztható; számmezők lekerekített kerettel és egymás fölötti nyilakkal; ablakgombok a széleken (balra, középen, jobbra); teljes szélességű köszönetnyilvánítási doboz; keskeny ablakokban a RÉSZLETES SZÁMÍTÁSOK két sorba kerül, és egyetlen felirat sem csúszik a gombok alá.

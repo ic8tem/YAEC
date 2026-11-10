@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 作者：Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@
 源代码和下载：https://github.com/ic8tem/YAEC/releases
 
 安装 – WINDOWS
-1. 从 Releases 页面下载 YAEC-1.6-win-x64-setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
+1. 从 Releases 页面下载 YAEC-1.7-win-x64-setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
 2. 如果出现 SmartScreen 警告：“更多信息” → “仍要运行”。
-3. 免安装：将 YAEC-1.6-win-x64-portatile.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
+3. 免安装：将 YAEC-1.7-win-x64-portatile.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
 
 安装 – LINUX
 YAEC 在 Mono（自由的 .NET 运行时）上运行。
-- Debian、Ubuntu、Mint：下载 yaec_1.6_amd64.deb，并用以下命令安装
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian、Ubuntu、Mint：下载 yaec_1.7_amd64.deb，并用以下命令安装
+      sudo apt install ./yaec_1.7_amd64.deb
   （同时会安装 Mono）。可从应用程序菜单或用命令“yaec”启动 YAEC。
-- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) 并运行 ./install.sh。
+- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) 并运行 ./install.sh。
 
 安装 – macOS（实验性）
 1. 安装 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
-2. 打开 YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel)，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
+2. 打开 YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel)，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
 
 校验下载的文件（SHA-256）
 每个 release 都包含 SHA256SUMS.txt，其中列出每个软件包的 SHA-256 校验值。请将其与下载文件的校验值进行比较：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 如果两个值不同，请不要安装该文件，而应重新下载。
@@ -39,6 +39,7 @@ YAEC 是免费的；许可证文本见文件 LICENSE_zh.txt 以及程序中的�
 
 版本历史
 1.0 之前的版本称为 beta 版。
+- 1.7 - 新增八种语言：巴西葡萄牙语、泰语、繁体中文、波兰语、捷克语、罗马尼亚语、希腊语和匈牙利语（共 36 种），含手册和 README；“EME 链路预算 八木”和“EME 链路预算 抛物面”中新增本台回波计算（“我发射并接收自己的回波”）；主焦点或偏馈抛物面（W2IMU）；1296 MHz 使用抛物面时计入实际馈源的圆极化损耗（KA1GT）；“计算核查”中可在“EME 链路预算 八木”和“EME 链路预算 抛物面”之间选择；“按频率 DGRD”的公式以公式编辑器的样式书写；手册：依据 ITU-R P.531 的 1296 MHz 法拉第旋转、23 cm 的去极化（Hagfors）以及 23 cm 的圆极化。
 - 1.6 - 整个程序新增 902 MHz 和 23 cm（1296 和 1298 MHz）频段，MHz 下拉列表中包含所有频段；“EME 链路预算”标签页更名为“EME 链路预算 八木”，并新增“EME 链路预算 抛物面”标签页（主焦点抛物面天线，用 PE1RKI 公式计算增益，前置放大器也可为两级，变频器和 PA 激励）；新增“按频率 DGRD”标签页，使用电台的真实噪声和在波束内平均的天空，并在整个程序中使用；同轴电缆根据规格书数据用公式 α = k1·√f + k2·f 计算，也包括 902 和 1296 MHz；所有标签页采用新的控件样式；“实时位置与 +- 24h”中红色光标上显示提示，并显示光标时刻 DX 的红线；对照各资料来源修订手册（逐频段路径损耗、Q65-60B 和 Q65-60C 的门限、依据 IK1UWL 实测的地面增益、连接器、其他程序的 Dgrd、432 MHz 以上的抛物面天线）；提供各种架构的安装包（Windows x64 和 x86，Linux x64、arm64 和 arm，macOS Apple Silicon 和 Intel）；感谢 Robert HA5OLA。432 MHz 以上的频段仍在完善中。
 - 1.5 - “通联”组新增“GRAVES 雷达”标签页：月球是否在雷达波束内（扇区与波位）、与你的共同窗口、回波的多普勒和延迟、波束下一次扫过月球的时间、从 GRAVES 看到的天空、24 小时 UTC 重建及未来 10 秒的细节、收听回波的建议和资料来源；活跃电台列表另提供 JSON 和文本格式，供 LunaCalc Mobile 使用；新增两种语言：丹麦语和他加禄语（共 28 种），含手册。
 - 1.4 - 活跃电台：如果该电台在过去 90 天内在 N0UK 的 EME 聊天室发过言，DX 呼号框会显示橙色边框，提示中显示最后一条消息的日期；“字体类型”提供适用于 Windows、Linux 和 macOS 的 10 种推荐字体，已逐个标签页测试；提供 32 位 Windows 和 Raspberry Pi（arm64）安装包；天空视图用紫色虚线框标出可指向的区域；“距离与 Dgrd”增加第四个可用日，也可在图中单击选择日期；数字输入框采用圆角边框，箭头上下排列；对话框按钮位于两侧（左、中、右）；致谢框占满整个宽度；窗口较窄时“深入计算”分两行显示，文字不再被按钮遮挡。

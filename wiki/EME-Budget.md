@@ -12,6 +12,12 @@
 - **Left:** the two station cards (**My station**, **DX station**), the six indicators and the table of all the steps, in three bands: TRANSMISSION, PATH, RECEPTION.
 - **Right:** the **TRANSMIT AND RECEIVE SYSTEM** diagram of the chosen station. Drag its edge to widen or narrow it; double-click to go back to the initial width.
 
+## Echo calculation (since 1.7)
+
+With the **echo calculation** box ticked (EME budget Yagi and EME budget dishes) you transmit and receive your own echo: the DX column disappears and the table header becomes *I transmit and receive my own echo*. The budget uses your station both ways, with your Moon distance out and back and no spatial polarization loss (same antenna). Extra rows give the **echo delay** and the **echo Doppler**; the indicators become Echo possible, My EIRP, Echo delay, EME path loss, S/N of my echo and Margin above the threshold of the chosen mode. It works even without a DX locator.
+
+In **Calculation check** a **Budget** drop-down chooses whether to check the EME budget Yagi or the EME budget dishes.
+
 ## The six indicators (KPIs)
 
 | Indicator | Meaning |

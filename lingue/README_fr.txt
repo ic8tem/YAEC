@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 par Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Calculateur pour les radioamateurs qui pratiquent l'EME (Terre–Lune–Terre) d
 Sources et téléchargement : https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Téléchargez YAEC-1.6-win-x64-setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
+1. Téléchargez YAEC-1.7-win-x64-setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
 2. Si l'avertissement SmartScreen apparaît : « Informations complémentaires » → « Exécuter quand même ».
-3. Sans installation : extrayez YAEC-1.6-win-x64-portatile.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
+3. Sans installation : extrayez YAEC-1.7-win-x64-portatile.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC fonctionne avec Mono, l'environnement d'exécution .NET libre.
-- Debian, Ubuntu, Mint : téléchargez yaec_1.6_amd64.deb et installez-le avec
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint : téléchargez yaec_1.7_amd64.deb et installez-le avec
+      sudo apt install ./yaec_1.7_amd64.deb
   (cela installe aussi Mono). YAEC se lance depuis le menu des applications ou avec la commande « yaec ».
-- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) et lancez ./install.sh.
+- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) et lancez ./install.sh.
 
 INSTALLATION – macOS (expérimental)
 1. Installez Mono pour macOS (https://www.mono-project.com/download/stable/) et XQuartz (https://www.xquartz.org).
-2. Ouvrez YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
+2. Ouvrez YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
 
 VÉRIFICATION DES FICHIERS TÉLÉCHARGÉS (SHA-256)
 Chaque release contient SHA256SUMS.txt avec l'empreinte SHA-256 de chaque paquet. Comparez-la avec celle du fichier téléchargé :
-- Windows (PowerShell) : Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell) : Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux : sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS : shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Si les deux valeurs sont différentes, n'installez pas le fichier : téléchargez-le de nouveau.
@@ -39,6 +39,7 @@ Erreurs, meilleures données, traductions : ccerrotta@gmail.com · ic8tem@gmail.
 
 HISTORIQUE DES VERSIONS
 Les versions antérieures à la 1.0 sont appelées bêta.
+- 1.7 - Huit nouvelles langues : le portugais brésilien, le thaï, le chinois traditionnel, le polonais, le tchèque, le roumain, le grec et le hongrois (36 en tout), avec les manuels et les LISEZMOI ; dans Bilan EME Yagi et dans Bilan EME paraboles, le calcul de l'écho de sa propre station (J'émets et je reçois mon propre écho) ; parabole à foyer primaire ou offset (W2IMU) ; à 1296 MHz avec les paraboles, la perte due à la polarisation circulaire des sources réelles (KA1GT) ; dans Contrôle des calculs, le choix entre Bilan EME Yagi et Bilan EME paraboles ; formules de DGRD par fréquence écrites comme dans un éditeur d'équations ; manuel : rotation de Faraday à 1296 MHz selon ITU-R P.531, dépolarisation sur 23 cm (Hagfors) et polarisation circulaire sur 23 cm.
 - 1.6 - Bandes 902 MHz et 23 cm (1296 et 1298 MHz) dans tout le programme, avec toutes les bandes dans la liste déroulante des MHz ; l'onglet Bilan EME devient Bilan EME Yagi et il y a le nouvel onglet Bilan EME paraboles (parabole à foyer primaire, gain avec la formule de PE1RKI, préamplificateur aussi à deux étages, transverter et excitation du PA) ; nouvel onglet DGRD par fréquence, avec le bruit réel de la station et le ciel moyenné sur le lobe, utilisé dans tout le programme ; câbles coaxiaux calculés avec la formule α = k1·√f + k2·f à partir des données des fiches techniques, aussi à 902 et 1296 MHz ; nouveau style des commandes dans tous les onglets ; dans Position en direct et +- 24h, l'infobulle sur le curseur rouge et les lignes rouges du DX à l'heure du curseur ; manuel revu après la comparaison des sources (affaiblissement de trajet bande par bande, seuils du Q65-60B et du Q65-60C, gain de sol selon les mesures d'IK1UWL, connecteurs, Dgrd des autres programmes, paraboles au-dessus de 432 MHz) ; paquets pour chaque architecture (Windows x64 et x86, Linux x64, arm64 et arm, macOS Apple Silicon et Intel) ; remerciements à Robert HA5OLA. Les bandes au-dessus de 432 MHz sont en cours d'achèvement.
 - 1.5 - Nouvel onglet Radar GRAVES dans le groupe Liaison : Lune dans le faisceau du radar avec secteur et pas, fenêtre commune avec toi, Doppler et retard de l'écho, prochain passage du faisceau sur la Lune, ciel vu de GRAVES, reconstitution des 24 heures UTC avec le détail des 10 prochaines secondes, conseils pour entendre l'écho et sources ; liste des stations actives aussi en JSON et en texte pour LunaCalc Mobile ; deux nouvelles langues, le danois et le tagalog (28 en tout), avec les manuels.
 - 1.4 - Stations actives : la case de l'indicatif du DX reçoit une bordure orange si la station a écrit dans le chat EME de N0UK au cours des 90 derniers jours, avec la date du dernier message dans l'infobulle ; Type de police avec 10 polices recommandées pour Windows, Linux et macOS, testées onglet par onglet ; paquets pour Windows 32 bits et pour Raspberry Pi (arm64) ; Voûte céleste avec des cadres violets en pointillés autour de la zone pointable ; Distance et Dgrd avec le quatrième jour utile et le jour choisi aussi d'un clic dans le graphique ; cases numériques avec un cadre arrondi et les flèches l'une au-dessus de l'autre ; boutons des fenêtres aux bords (à gauche, au centre, à droite) ; cadre des remerciements sur toute la largeur ; dans les fenêtres étroites, CALCULS APPROFONDIS passe sur deux lignes et aucun texte ne finit sous les boutons.

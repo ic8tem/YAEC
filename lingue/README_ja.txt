@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 作者：Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@
 ソースとダウンロード：https://github.com/ic8tem/YAEC/releases
 
 インストール – WINDOWS
-1. Releases ページから YAEC-1.6-win-x64-setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
+1. Releases ページから YAEC-1.7-win-x64-setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
 2. SmartScreen の警告が表示された場合：「詳細情報」→「実行」。
-3. インストールせずに使う場合：YAEC-1.6-win-x64-portatile.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
+3. インストールせずに使う場合：YAEC-1.7-win-x64-portatile.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
 
 インストール – LINUX
 YAEC はフリーの .NET ランタイムである Mono で動作します。
-- Debian、Ubuntu、Mint：yaec_1.6_amd64.deb をダウンロードし、次のコマンドでインストールします
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian、Ubuntu、Mint：yaec_1.7_amd64.deb をダウンロードし、次のコマンドでインストールします
+      sudo apt install ./yaec_1.7_amd64.deb
   （Mono も同時にインストールされます）。YAEC はアプリケーションメニューから、またはコマンド「yaec」で起動します。
-- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) を展開して ./install.sh を実行します。
+- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) を展開して ./install.sh を実行します。
 
 インストール – macOS（試験的）
 1. macOS 用 Mono（https://www.mono-project.com/download/stable/）と XQuartz（https://www.xquartz.org）をインストールします。
-2. YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
+2. YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
 
 ダウンロードしたファイルの確認（SHA-256）
 各 release には、すべてのパッケージの SHA-256 ハッシュを記載した SHA256SUMS.txt が含まれています。ダウンロードしたファイルのハッシュと比較してください：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 2 つの値が異なる場合は、そのファイルをインストールせず、もう一度ダウンロードしてください。
@@ -39,6 +39,7 @@ YAEC は無料です。ライセンス本文はファイル LICENSE_ja.txt と�
 
 バージョン履歴
 1.0 より前のバージョンはベータ版と呼びます。
+- 1.7 - 新しい言語を 8 つ追加：ブラジルポルトガル語、タイ語、繁体字中国語、ポーランド語、チェコ語、ルーマニア語、ギリシャ語、ハンガリー語（計 36 言語）、マニュアルと README 付き。「EME 回線計算 八木」と「EME 回線計算 パラボラ」に自局エコーの計算を追加（「自局送信 → 自局エコー受信」）。プライムフォーカスまたはオフセットのディッシュ（W2IMU）。1296 MHz のディッシュでは実際のフィードの円偏波による損失を考慮（KA1GT）。「計算のチェック」で「EME 回線計算 八木」と「EME 回線計算 パラボラ」を選択可能に。「周波数別 DGRD」の数式を数式エディターのような表記に。マニュアル：ITU-R P.531 による 1296 MHz のファラデー回転、23 cm での偏波解消（Hagfors）、23 cm での円偏波。
 - 1.6 - 902 MHz と 23 cm（1296 と 1298 MHz）のバンドをプログラム全体に追加し、MHz のドロップダウンリストに全バンドを表示。「EME 回線計算」タブは「EME 回線計算 八木」になり、新しいタブ「EME 回線計算 パラボラ」を追加（プライムフォーカスのディッシュ、PE1RKI の式による利得、2 段構成も可能なプリアンプ、トランスバーターと PA のドライブ）。新しいタブ「周波数別 DGRD」を追加し、局の実際の雑音とビーム全体で平均した空を使って、プログラム全体で利用。同軸ケーブルはデータシートの値から式 α = k1·√f + k2·f で計算し、902 と 1296 MHz にも対応。すべてのタブの操作部品を新しいスタイルに。「ライブ位置と +- 24h」で赤いカーソルにツールチップを表示し、カーソル時刻の DX の赤い線を表示。資料の比較に基づいてマニュアルを改訂（バンドごとの伝搬損失、Q65-60B と Q65-60C のしきい値、IK1UWL の測定による大地反射利得、コネクター、他のプログラムの Dgrd、432 MHz より上のディッシュ）。すべてのアーキテクチャ向けのパッケージ（Windows x64 と x86、Linux x64、arm64、arm、macOS Apple Silicon と Intel）。Robert HA5OLA に感謝。432 MHz より上のバンドは完成に向けて作業中です。
 - 1.5 - 「交信」グループに新しいタブ「GRAVES レーダー」：月がレーダーのビーム内にあるか（セクターとステップ）、あなたとの共通ウィンドウ、エコーのドップラーと遅延、次にビームが月を通過する時刻、GRAVES から見た空、次の 10 秒の詳細付き UTC 24 時間の再構成、エコーを聞くためのヒントと出典。アクティブ局の一覧を LunaCalc Mobile 用に JSON とテキストでも提供。新しい言語としてデンマーク語とタガログ語を追加（合計 28 言語、マニュアル付き）。
 - 1.4 - アクティブ局：過去 90 日以内に N0UK の EME チャットに書き込んだ局は、DX コールサイン欄がオレンジの枠で表示され、ツールチップに最後のメッセージの日付が出ます。「フォントの種類」は Windows、Linux、macOS 向けの推奨フォント 10 種類に絞り、タブごとに確認済み。32 ビット Windows 用と Raspberry Pi（arm64）用のパッケージ。天空図で向けられる範囲を紫の破線枠で表示。「距離と Dgrd」に 4 番目の有効日を追加し、グラフをクリックしても日を選択可能。数値欄は角の丸い枠で、矢印を上下に配置。ダイアログのボタンは端に配置（左・中央・右）。謝辞欄を全幅に拡大。狭いウィンドウでは「詳細な計算」を 2 行で表示し、文字がボタンの下に隠れません。

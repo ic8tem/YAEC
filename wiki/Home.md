@@ -4,7 +4,7 @@
 
 **YAEC** is a free program for radio amateurs who work **EME (Earth–Moon–Earth)** on **50, 70, 144, 222, 432 and 902 MHz and on the 23 cm band** (1296 MHz). It computes the Moon position, the pointing windows, the EME link budget, sky noise and solar noise, all on your own computer, in **36 languages**, on **Windows, Linux and macOS** (Linux and macOS with Mono).
 
-> This wiki describes YAEC **1.6**.
+> This wiki describes YAEC **1.7** (36 languages).
 
 > **Bands above 432 MHz.** For the bands above 432 MHz (902 MHz and 23 cm) the program is still being completed, but it already computes the **DGRD correctly at every frequency** (tab [DGRD by frequency](DGRD-by-Frequency)). Further advice for those who are new to the frequencies above 900 MHz will follow.
 

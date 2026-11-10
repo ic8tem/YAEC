@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 제작: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@
 소스 및 다운로드: https://github.com/ic8tem/YAEC/releases
 
 설치 – WINDOWS
-1. Releases 페이지에서 YAEC-1.6-win-x64-setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
+1. Releases 페이지에서 YAEC-1.7-win-x64-setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
 2. SmartScreen 경고가 나타나면: "추가 정보" → "실행".
-3. 설치 없이 사용: YAEC-1.6-win-x64-portatile.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
+3. 설치 없이 사용: YAEC-1.7-win-x64-portatile.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
 
 설치 – LINUX
 YAEC는 자유 .NET 런타임인 Mono에서 동작합니다.
-- Debian, Ubuntu, Mint: yaec_1.6_amd64.deb를 다운로드하여 다음 명령으로 설치합니다
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: yaec_1.7_amd64.deb를 다운로드하여 다음 명령으로 설치합니다
+      sudo apt install ./yaec_1.7_amd64.deb
   (Mono도 함께 설치됩니다). YAEC는 응용 프로그램 메뉴에서 또는 "yaec" 명령으로 실행합니다.
-- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
+- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
 
 설치 – macOS (실험적)
 1. macOS용 Mono(https://www.mono-project.com/download/stable/)와 XQuartz(https://www.xquartz.org)를 설치합니다.
-2. YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel)를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
+2. YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel)를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
 
 다운로드한 파일 확인 (SHA-256)
 각 release에는 모든 패키지의 SHA-256 해시가 담긴 SHA256SUMS.txt가 포함되어 있습니다. 다운로드한 파일의 해시와 비교하십시오:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 두 값이 다르면 파일을 설치하지 말고 다시 다운로드하십시오.
@@ -39,6 +39,7 @@ YAEC는 무료입니다. 라이선스 전문은 LICENSE_ko.txt 파일과 프로�
 
 버전 기록
 1.0 이전 버전은 베타라고 부릅니다.
+- 1.7 - 새 언어 8개: 브라질 포르투갈어, 태국어, 번체 중국어, 폴란드어, 체코어, 루마니아어, 그리스어, 헝가리어(총 36개), 매뉴얼과 README 포함; EME 링크 버짓 야기와 EME 링크 버짓 파라볼라에 자기 국의 에코 계산 추가(내가 송신하고 내 에코를 수신); 1차 초점 또는 오프셋 접시 안테나(W2IMU); 1296 MHz 접시 안테나에서 실제 피드의 원형 편파 손실 반영(KA1GT); 계산 검증에서 EME 링크 버짓 야기와 EME 링크 버짓 파라볼라 중 선택; 주파수별 DGRD의 공식을 수식 편집기처럼 표기; 매뉴얼: ITU-R P.531에 따른 1296 MHz의 패러데이 회전, 23 cm의 편파 소실(Hagfors), 23 cm의 원형 편파.
 - 1.6 - 프로그램 전체에 902 MHz와 23 cm(1296 및 1298 MHz) 밴드 추가, MHz 드롭다운 목록에 모든 밴드 표시. EME 링크 버짓 탭은 EME 링크 버짓 야기로 바뀌고 새 탭 EME 링크 버짓 파라볼라 추가(1차 초점 접시 안테나, PE1RKI 공식에 의한 이득, 2단 구성도 가능한 프리앰프, 트랜스버터와 PA 구동). 새 탭 주파수별 DGRD 추가: 국의 실제 잡음과 빔 전체에 걸쳐 평균한 하늘을 사용하며 프로그램 전체에서 활용. 동축 케이블은 데이터시트 값으로부터 공식 α = k1·√f + k2·f로 계산하며 902 및 1296 MHz에도 적용. 모든 탭의 컨트롤에 새 스타일 적용. 실시간 위치 및 +- 24h에서 빨간 커서에 툴팁 표시, 커서 시각의 DX 빨간 선 표시. 자료 비교 후 매뉴얼 개정(밴드별 경로 손실, Q65-60B와 Q65-60C의 임계값, IK1UWL 측정에 따른 지면 이득, 커넥터, 다른 프로그램의 Dgrd, 432 MHz 이상의 접시 안테나). 모든 아키텍처용 패키지(Windows x64 및 x86, Linux x64, arm64 및 arm, macOS Apple Silicon 및 Intel). Robert HA5OLA에게 감사. 432 MHz 이상의 밴드는 아직 완성 중입니다.
 - 1.5 - 교신 그룹에 새 탭 GRAVES 레이더: 레이더 빔 안의 달(섹터와 단계), 당신과의 공통 창, 에코의 도플러와 지연, 빔이 다음에 달을 지나가는 시각, GRAVES에서 본 하늘, 다음 10초의 세부 정보를 포함한 UTC 24시간 재구성, 에코를 듣는 요령과 출처. 활동 국 목록을 LunaCalc Mobile용 JSON과 텍스트로도 제공. 새 언어 두 개, 덴마크어와 타갈로그어 추가(총 28개, 설명서 포함).
 - 1.4 - 활동 국: 최근 90일 동안 N0UK EME 채팅에 글을 쓴 국이면 DX 호출부호 칸에 주황색 테두리가 표시되고, 툴팁에 마지막 메시지 날짜가 나옵니다. 글꼴 종류에서 Windows, Linux, macOS용 권장 글꼴 10개를 탭별로 확인해 제공합니다. 32비트 Windows와 Raspberry Pi(arm64)용 패키지. 하늘 보기에서 향할 수 있는 영역을 보라색 점선 상자로 표시. 거리와 Dgrd에 네 번째 유효일을 추가하고 그래프를 클릭해도 날짜 선택 가능. 숫자 입력 칸은 둥근 테두리에 화살표를 위아래로 배치. 대화 상자 버튼은 가장자리에 배치(왼쪽, 가운데, 오른쪽). 감사 상자를 전체 너비로 확장. 좁은 창에서는 '심화 계산'이 두 줄로 표시되고 글자가 버튼 아래로 가려지지 않습니다.

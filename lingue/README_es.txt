@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 por Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Calculadora para radioaficionados que trabajan en EME (Tierra–Luna–Tierra) d
 Código fuente y descarga: https://github.com/ic8tem/YAEC/releases
 
 INSTALACIÓN – WINDOWS
-1. Descargue YAEC-1.6-win-x64-setup.exe desde la página Releases y ejecútelo. Instala YAEC en Documentos\YAEC, sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio, y con el programa de desinstalación.
+1. Descargue YAEC-1.7-win-x64-setup.exe desde la página Releases y ejecútelo. Instala YAEC en Documentos\YAEC, sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio, y con el programa de desinstalación.
 2. Si aparece el aviso de SmartScreen: "Más información" → "Ejecutar de todas formas".
-3. Sin instalación: extraiga YAEC-1.6-win-x64-portatile.zip en una carpeta en la que pueda escribir y ejecute YAEC.exe.
+3. Sin instalación: extraiga YAEC-1.7-win-x64-portatile.zip en una carpeta en la que pueda escribir y ejecute YAEC.exe.
 
 INSTALACIÓN – LINUX
 YAEC funciona con Mono, el entorno de ejecución .NET libre.
-- Debian, Ubuntu, Mint: descargue yaec_1.6_amd64.deb e instálelo con
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: descargue yaec_1.7_amd64.deb e instálelo con
+      sudo apt install ./yaec_1.7_amd64.deb
   (instala también Mono). YAEC se inicia desde el menú de aplicaciones o con el comando "yaec".
-- Otras distribuciones: instale Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraiga YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) y ejecute ./install.sh.
+- Otras distribuciones: instale Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraiga YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) y ejecute ./install.sh.
 
 INSTALACIÓN – macOS (experimental)
 1. Instale Mono para macOS (https://www.mono-project.com/download/stable/) y XQuartz (https://www.xquartz.org).
-2. Abra YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) y arrastre YAEC a Aplicaciones. La primera vez: clic derecho en YAEC → Abrir (la app no está firmada por Apple).
+2. Abra YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) y arrastre YAEC a Aplicaciones. La primera vez: clic derecho en YAEC → Abrir (la app no está firmada por Apple).
 
 COMPROBACIÓN DE LOS ARCHIVOS DESCARGADOS (SHA-256)
 Cada release contiene SHA256SUMS.txt con la huella SHA-256 de cada paquete. Compárela con la del archivo descargado:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Si los dos valores son distintos, no instale el archivo: descárguelo de nuevo.
@@ -39,6 +39,7 @@ Errores, datos mejores, traducciones: ccerrotta@gmail.com · ic8tem@gmail.com ·
 
 HISTORIAL DE VERSIONES
 Las versiones anteriores a la 1.0 se llaman beta.
+- 1.7 - Ocho idiomas nuevos: portugués brasileño, tailandés, chino tradicional, polaco, checo, rumano, griego y húngaro (36 en total), con los manuales y los LÉAME; en Balance EME Yagi y en Balance EME parábolas, el cálculo del eco de la propia estación (Yo transmito y recibo mi propio eco); parábola de foco primario u offset (W2IMU); a 1296 MHz con las parábolas, la pérdida por la polarización circular de los iluminadores reales (KA1GT); en Control de los cálculos, la elección entre Balance EME Yagi y Balance EME parábolas; fórmulas de DGRD por frecuencia escritas como en un editor de ecuaciones; manual: rotación de Faraday a 1296 MHz según ITU-R P.531, despolarización en 23 cm (Hagfors) y polarización circular en 23 cm.
 - 1.6 - Bandas de 902 MHz y 23 cm (1296 y 1298 MHz) en todo el programa, con todas las bandas en la lista desplegable de los MHz; la pestaña Balance EME pasa a ser Balance EME Yagi y está la nueva pestaña Balance EME parábolas (parábola de foco primario, ganancia con la fórmula de PE1RKI, previo también de dos etapas, transverter y excitación del PA); nueva pestaña DGRD por frecuencia, con el ruido real de la estación y el cielo promediado sobre el haz, usada en todo el programa; cables coaxiales calculados con la fórmula α = k1·√f + k2·f a partir de los datos de las hojas de datos, también a 902 y 1296 MHz; nuevo estilo de los controles en todas las pestañas; en Posición en vivo y +- 24h, la ayuda emergente sobre el cursor rojo y las líneas rojas del DX a la hora del cursor; manual revisado tras comparar las fuentes (pérdida de trayecto banda por banda, umbrales del Q65-60B y del Q65-60C, ganancia del suelo según las medidas de IK1UWL, conectores, Dgrd de otros programas, parábolas por encima de 432 MHz); paquetes para cada arquitectura (Windows x64 y x86, Linux x64, arm64 y arm, macOS Apple Silicon e Intel); agradecimientos a Robert HA5OLA. Las bandas por encima de 432 MHz se están completando.
 - 1.5 - Nueva pestaña Radar GRAVES en el grupo Enlace: Luna en el haz del radar con sector y paso, ventana común contigo, Doppler y retardo del eco, próximo paso del haz por la Luna, cielo visto desde GRAVES, reconstrucción de las 24 horas UTC con el detalle de los próximos 10 segundos, consejos para oír el eco y fuentes; lista de estaciones activas también en JSON y en texto para LunaCalc Mobile; dos idiomas nuevos, danés y tagalo (28 en total), con los manuales.
 - 1.4 - Estaciones activas: la casilla del indicativo del DX tiene borde naranja si la estación ha escrito en el chat EME de N0UK en los últimos 90 días, con la fecha del último mensaje en la ayuda emergente; Tipo de letra con 10 fuentes recomendadas para Windows, Linux y macOS, probadas pestaña por pestaña; paquetes para Windows de 32 bits y para Raspberry Pi (arm64); Bóveda celeste con recuadros morados discontinuos alrededor de la zona apuntable; Distancia y Dgrd con el cuarto día útil y el día elegido también con un clic en el gráfico; casillas numéricas con marco redondeado y las flechas una encima de otra; botones de las ventanas en los bordes (izquierda, centro, derecha); recuadro de agradecimientos a todo el ancho; en ventanas estrechas CÁLCULOS DETALLADOS pasa a dos líneas y ningún texto queda bajo los botones.

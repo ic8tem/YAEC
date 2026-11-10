@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 av Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulator for radioamatører som kjører EME (Jord–Måne–Jord) fra 50 MHz t
 Kildekode og nedlasting: https://github.com/ic8tem/YAEC/releases
 
 INSTALLASJON – WINDOWS
-1. Last ned YAEC-1.6-win-x64-setup.exe fra Releases-siden og kjør den. Den installerer YAEC i Dokumenter\YAEC, uten administratorrettigheter, med snarveier i Start-menyen og på skrivebordet, og med et avinstalleringsprogram.
+1. Last ned YAEC-1.7-win-x64-setup.exe fra Releases-siden og kjør den. Den installerer YAEC i Dokumenter\YAEC, uten administratorrettigheter, med snarveier i Start-menyen og på skrivebordet, og med et avinstalleringsprogram.
 2. Hvis SmartScreen-advarselen vises: «Mer informasjon» → «Kjør likevel».
-3. Uten installasjon: pakk ut YAEC-1.6-win-x64-portatile.zip i en mappe du kan skrive i, og start YAEC.exe.
+3. Uten installasjon: pakk ut YAEC-1.7-win-x64-portatile.zip i en mappe du kan skrive i, og start YAEC.exe.
 
 INSTALLASJON – LINUX
 YAEC kjører på Mono, den frie .NET-kjøretiden.
-- Debian, Ubuntu, Mint: last ned yaec_1.6_amd64.deb og installer den med
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: last ned yaec_1.7_amd64.deb og installer den med
+      sudo apt install ./yaec_1.7_amd64.deb
   (installerer også Mono). YAEC startes fra programmenyen eller med kommandoen «yaec».
-- Andre distribusjoner: installer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pakk ut YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) og kjør ./install.sh.
+- Andre distribusjoner: installer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pakk ut YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) og kjør ./install.sh.
 
 INSTALLASJON – macOS (eksperimentell)
 1. Installer Mono for macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
-2. Åpne YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) og dra YAEC til Programmer. Første gang: høyreklikk på YAEC → Åpne (appen er ikke signert av Apple).
+2. Åpne YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) og dra YAEC til Programmer. Første gang: høyreklikk på YAEC → Åpne (appen er ikke signert av Apple).
 
 KONTROLL AV NEDLASTEDE FILER (SHA-256)
 Hver release inneholder SHA256SUMS.txt med SHA-256-sjekksummen for hver pakke. Sammenlign den med sjekksummen for den nedlastede filen:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Hvis de to verdiene er forskjellige, skal du ikke installere filen: last den ned på nytt.
@@ -39,6 +39,7 @@ Feil, bedre data, oversettelser: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 VERSJONSHISTORIKK
 Versjoner før 1.0 kalles beta.
+- 1.7 - Åtte nye språk: brasiliansk portugisisk, thai, tradisjonell kinesisk, polsk, tsjekkisk, rumensk, gresk og ungarsk (totalt 36), med manualene og README-filene; i EME-budsjett yagi og EME-budsjett parabol ekkoberegningen for egen stasjon (Jeg sender og mottar mitt eget ekko); primærfokus- eller offsetparabol (W2IMU); på 1296 MHz med paraboler tapet fra den sirkulære polarisasjonen til reelle mateelementer (KA1GT); i Kontroll av beregningene valget mellom EME-budsjett yagi og EME-budsjett parabol; formlene i DGRD per frekvens skrevet som i en formelredigerer; manual: Faraday-rotasjon på 1296 MHz etter ITU-R P.531, depolarisasjon på 23 cm (Hagfors) og sirkulær polarisasjon på 23 cm.
 - 1.6 - Båndene 902 MHz og 23 cm (1296 og 1298 MHz) i hele programmet, med alle bånd i MHz-nedtrekkslisten; fanen EME-budsjett blir EME-budsjett yagi, og det er en ny fane EME-budsjett parabol (primærfokusparabol, forsterkning med formelen til PE1RKI, forforsterker også i to trinn, transverter og utstyring av PA); ny fane DGRD per frekvens, med stasjonens reelle støy og himmelen midlet over strålen, brukt i hele programmet; koaksialkabler beregnet med formelen α = k1·√f + k2·f ut fra dataene i databladene, også på 902 og 1296 MHz; ny stil på kontrollene i alle faner; i Live-posisjon og +- 24t verktøytips ved den røde markøren og DX-stasjonens røde linjer ved markørens tidspunkt; manualen revidert etter sammenligning av kildene (strekningstap bånd for bånd, tersklene for Q65-60B og Q65-60C, ground gain etter målingene til IK1UWL, kontakter, Dgrd i andre programmer, paraboler over 432 MHz); pakker for alle arkitekturer (Windows x64 og x86, Linux x64, arm64 og arm, macOS Apple Silicon og Intel); takk til Robert HA5OLA. Båndene over 432 MHz er under ferdigstilling.
 - 1.5 - Ny fane GRAVES-radar i gruppen Forbindelse: Månen i radarstrålen med sektor og trinn, felles vindu med deg, ekkoets doppler og forsinkelse, strålens neste passering over Månen, himmelen sett fra GRAVES, rekonstruksjon av de 24 UTC-timene med detaljer for de neste 10 sekundene, tips for å høre ekkoet og kilder; listen over aktive stasjoner også i JSON og tekst for LunaCalc Mobile; to nye språk, dansk og tagalog (28 i alt), med håndbøkene.
 - 1.4 - Aktive stasjoner: feltet for DX-kallesignalet får en oransje ramme hvis stasjonen har skrevet i N0UKs EME-chat de siste 90 dagene, med datoen for siste melding i verktøytipset; Skrifttype med 10 anbefalte skrifttyper for Windows, Linux og macOS, testet fane for fane; pakker for 32-biters Windows og for Raspberry Pi (arm64); Himmelhvelvingen med lilla stiplede rammer rundt området du kan peke mot; Avstand og Dgrd med den fjerde nyttige dagen og valgt dag også med et klikk i diagrammet; tallfelt med avrundet ramme og pilene over hverandre; knappene i dialogvinduene ved kantene (venstre, midten, høyre); takkefeltet i full bredde; i smale vinduer går AVANSERTE BEREGNINGER over to linjer og ingen tekst havner under knappene.

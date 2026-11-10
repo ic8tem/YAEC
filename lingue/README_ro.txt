@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 de Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Calculator pentru radioamatorii care lucrează în EME (Pământ–Lună–Păm�
 Cod sursă și descărcări: https://github.com/ic8tem/YAEC/releases
 
 INSTALARE – WINDOWS
-1. Descarcă YAEC-1.6-win-x64-setup.exe din pagina Releases și rulează-l. Instalează YAEC în Documente\YAEC, fără drepturi de administrator, cu scurtături în meniul Start și pe desktop și cu programul de dezinstalare.
+1. Descarcă YAEC-1.7-win-x64-setup.exe din pagina Releases și rulează-l. Instalează YAEC în Documente\YAEC, fără drepturi de administrator, cu scurtături în meniul Start și pe desktop și cu programul de dezinstalare.
 2. Dacă apare avertismentul SmartScreen: "Mai multe informații" → "Rulați oricum".
-3. Fără instalare: extrage YAEC-1.6-win-x64-portatile.zip într-un dosar în care poți scrie și pornește YAEC.exe.
+3. Fără instalare: extrage YAEC-1.7-win-x64-portatile.zip într-un dosar în care poți scrie și pornește YAEC.exe.
 
 INSTALARE – LINUX
 YAEC funcționează cu Mono, mediul de rulare .NET liber.
-- Debian, Ubuntu, Mint: descarcă yaec_1.6_amd64.deb și instalează-l cu
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: descarcă yaec_1.7_amd64.deb și instalează-l cu
+      sudo apt install ./yaec_1.7_amd64.deb
   (instalează și Mono). YAEC se pornește din meniul de aplicații sau cu comanda "yaec".
-- Alte distribuții: instalează Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extrage YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) și rulează ./install.sh.
+- Alte distribuții: instalează Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extrage YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) și rulează ./install.sh.
 
 INSTALARE – macOS (experimental)
 1. Instalează Mono pentru macOS (https://www.mono-project.com/download/stable/) și XQuartz (https://www.xquartz.org).
-2. Deschide YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) și trage YAEC în Aplicații. Prima dată: clic dreapta pe YAEC → Deschide (aplicația nu este semnată de Apple).
+2. Deschide YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) și trage YAEC în Aplicații. Prima dată: clic dreapta pe YAEC → Deschide (aplicația nu este semnată de Apple).
 
 VERIFICAREA FIȘIERELOR DESCĂRCATE (SHA-256)
 Fiecare release conține SHA256SUMS.txt cu amprenta SHA-256 a fiecărui pachet. Compar-o cu cea a fișierului descărcat:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Dacă cele două valori sunt diferite, nu instala fișierul: descarcă-l din nou.
@@ -39,6 +39,7 @@ Erori, date mai bune, traduceri: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 ISTORICUL VERSIUNILOR
 Versiunile anterioare lui 1.0 se numesc beta.
+- 1.7 - Opt limbi noi: portugheza braziliană, thailandeza, chineza tradițională, poloneza, ceha, româna, greaca și maghiara (36 în total), cu manualele și fișierele CITEȘTE-MĂ; în Buget EME yagi și în Buget EME parabole, calculul ecoului propriei stații (Eu emit și îmi recepționez ecoul); parabolă cu focar primar sau offset (W2IMU); la 1296 MHz cu parabolele, pierderea prin polarizarea circulară a iluminatoarelor reale (KA1GT); în Verificarea calculelor, alegerea între Buget EME yagi și Buget EME parabole; formulele din DGRD după frecvență scrise ca într-un editor de ecuații; manual: rotația Faraday la 1296 MHz conform ITU-R P.531, depolarizarea în 23 cm (Hagfors) și polarizarea circulară în 23 cm.
 - 1.6 - Benzile 902 MHz și 23 cm (1296 și 1298 MHz) în tot programul, cu toate benzile în lista derulantă a MHz; fila Buget EME devine Buget EME yagi și există noua filă Buget EME parabole (parabolă cu focar primar, câștig cu formula lui PE1RKI, preamplificator și cu două etaje, transverter și excitația PA-ului); filă nouă DGRD după frecvență, cu zgomotul real al stației și cerul mediat pe fascicul, folosită în tot programul; cabluri coaxiale calculate cu formula α = k1·√f + k2·f din datele fișelor tehnice, inclusiv la 902 și 1296 MHz; stil nou al comenzilor în toate filele; în Poziție live și +- 24h, balonul de informații pe cursorul roșu și liniile roșii ale DX-ului la ora cursorului; manual revizuit după compararea surselor (pierderea pe traseu bandă cu bandă, pragurile Q65-60B și Q65-60C, ground gain după măsurătorile lui IK1UWL, conectori, Dgrd din alte programe, parabole peste 432 MHz); pachete pentru fiecare arhitectură (Windows x64 și x86, Linux x64, arm64 și arm, macOS Apple Silicon și Intel); mulțumiri lui Robert HA5OLA. Benzile de peste 432 MHz sunt în curs de finalizare.
 - 1.5 - Filă nouă Radar GRAVES în grupul Legătură: Luna în fasciculul radarului cu sector și pas, fereastra comună cu tine, Doppler-ul și întârzierea ecoului, următoarea trecere a fasciculului peste Lună, cerul văzut de la GRAVES, reconstituirea celor 24 de ore UTC cu detaliul următoarelor 10 secunde, sfaturi pentru ascultarea ecoului și surse; lista stațiilor active și în JSON și în text pentru LunaCalc Mobile; două limbi noi, daneză și tagalog (28 în total), cu manualele.
 - 1.4 - Stații active: căsuța indicativului DX-ului are marginea portocalie dacă stația a scris în chat-ul EME al lui N0UK în ultimele 90 de zile, cu data ultimului mesaj în balonul de informații; Tip de font cu 10 fonturi recomandate pentru Windows, Linux și macOS, încercate filă cu filă; pachete pentru Windows pe 32 de biți și pentru Raspberry Pi (arm64); Bolta cerească cu cadrele violet punctate ale zonei orientabile; Distanță și Dgrd cu a patra zi utilă și ziua aleasă și printr-un clic în grafic; căsuțele numerice cu chenar rotunjit și săgețile una deasupra celeilalte; butoanele ferestrelor la margini (stânga, centru, dreapta); cadrul mulțumirilor pe toată lățimea; în ferestrele înguste CALCULE APROFUNDATE trece pe două rânduri și niciun text nu ajunge sub butoane.

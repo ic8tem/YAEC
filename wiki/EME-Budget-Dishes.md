@@ -23,6 +23,12 @@ In the beamwidth formula (degrees) the factor 70 is a choice within the 65 – 7
 
 The BETA ground gain (antenna without elevation) is a Yagi option and is not offered for dishes.
 
+## Prime focus or offset (since 1.7)
+
+The **Dish type** drop-down chooses a prime-focus dish (feed in front of the centre) or an **offset** dish (feed outside the aperture). For an offset dish enter the **projected aperture**, i.e. the minor axis, as the diameter: it has no feed and strut blockage, which costs at least 0.5 dB on a prime-focus dish, while illumination efficiency and spillover are the same (W2IMU, Crawford Hill VHF Club Technical Report #18, 1980). For this reason the default efficiency becomes 65 % (60 % for prime focus). The station diagram draws the offset reflector with the feed below it.
+
+At 1296 MHz with dishes (circular polarization) the polarization loss box uses **0.4 dB**, the typical loss of real feeds with about 10 dB of port isolation measured by Bob Atkins KA1GT, instead of the spatial polarization loss.
+
 ## Station diagram
 
 The rest of the station is described as in the Yagi tab (antenna temperature, antenna – relay cable, coaxial relay and connectors, transmitter, preamplifier, downlead cable, transverter, cables to the radio, radio MDS and mode), with the complete chain that both tabs have since 1.6:

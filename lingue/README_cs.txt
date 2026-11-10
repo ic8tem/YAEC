@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 připravil Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulátor pro radioamatéry pracující přes EME (Země–Měsíc–Země) od
 Zdrojový kód a stažení: https://github.com/ic8tem/YAEC/releases
 
 INSTALACE – WINDOWS
-1. Stáhni YAEC-1.6-win-x64-setup.exe ze stránky Releases a spusť ho. Nainstaluje YAEC do složky Dokumenty (Documents\YAEC), bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem.
+1. Stáhni YAEC-1.7-win-x64-setup.exe ze stránky Releases a spusť ho. Nainstaluje YAEC do složky Dokumenty (Documents\YAEC), bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem.
 2. Pokud se objeví upozornění SmartScreen: "Další informace" → "Přesto spustit".
-3. Bez instalace: rozbal YAEC-1.6-win-x64-portatile.zip do složky, do které můžeš zapisovat, a spusť YAEC.exe.
+3. Bez instalace: rozbal YAEC-1.7-win-x64-portatile.zip do složky, do které můžeš zapisovat, a spusť YAEC.exe.
 
 INSTALACE – LINUX
 YAEC běží pod Mono, svobodným běhovým prostředím .NET.
-- Debian, Ubuntu, Mint: stáhni yaec_1.6_amd64.deb a nainstaluj ho příkazem
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: stáhni yaec_1.7_amd64.deb a nainstaluj ho příkazem
+      sudo apt install ./yaec_1.7_amd64.deb
   (nainstaluje i Mono). YAEC se spouští z nabídky aplikací nebo příkazem "yaec".
-- Jiné distribuce: nainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbal YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) a spusť ./install.sh.
+- Jiné distribuce: nainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbal YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) a spusť ./install.sh.
 
 INSTALACE – macOS (experimentální)
 1. Nainstaluj Mono pro macOS (https://www.mono-project.com/download/stable/) a XQuartz (https://www.xquartz.org).
-2. Otevři YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) a přetáhni YAEC do složky Aplikace. Poprvé: pravý klik na YAEC → Otevřít (aplikace není podepsána společností Apple).
+2. Otevři YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) a přetáhni YAEC do složky Aplikace. Poprvé: pravý klik na YAEC → Otevřít (aplikace není podepsána společností Apple).
 
 KONTROLA STAŽENÝCH SOUBORŮ (SHA-256)
 Každé vydání obsahuje SHA256SUMS.txt s otiskem SHA-256 každého balíčku. Porovnej ho s otiskem staženého souboru:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Pokud se obě hodnoty liší, soubor neinstaluj: stáhni ho znovu.
@@ -39,6 +39,7 @@ Chyby, lepší data, překlady: ccerrotta@gmail.com · ic8tem@gmail.com · www.q
 
 HISTORIE VERZÍ
 Verze před 1.0 se nazývají beta.
+- 1.7 - Osm nových jazyků: brazilská portugalština, thajština, tradiční čínština, polština, čeština, rumunština, řečtina a maďarština (celkem 36), s příručkami a soubory README; v záložkách Bilance EME yagi a Bilance EME paraboly výpočet echa vlastní stanice (Vysílám a přijímám své echo); parabola s primárním ohniskem nebo offsetová (W2IMU); na 1296 MHz s parabolami ztráta kruhové polarizace skutečných ozařovačů (KA1GT); v záložce Kontrola výpočtů volba mezi Bilancí EME yagi a Bilancí EME paraboly; vzorce v záložce DGRD podle kmitočtu zapsané jako v editoru rovnic; příručka: Faradayova rotace na 1296 MHz podle ITU-R P.531, depolarizace v pásmu 23 cm (Hagfors) a kruhová polarizace v pásmu 23 cm.
 - 1.6 - Pásma 902 MHz a 23 cm (1296 a 1298 MHz) v celém programu, se všemi pásmy v rozbalovacím seznamu MHz; záložka Bilance EME se mění na Bilance EME yagi a přibyla nová záložka Bilance EME paraboly (parabola s primárním ohniskem, zisk podle vzorce PE1RKI, předzesilovač i dvoustupňový, transvertor a buzení PA); nová záložka DGRD podle kmitočtu, se skutečným šumem stanice a oblohou průměrovanou přes svazek, používaná v celém programu; koaxiální kabely počítané vzorcem α = k1·√f + k2·f z údajů v katalogových listech, i na 902 a 1296 MHz; nový styl ovládacích prvků ve všech záložkách; v záložce Poloha živě a +- 24h bublinová nápověda u červeného kurzoru a červené čáry DX v čase kurzoru; příručka přepracovaná po porovnání zdrojů (útlum trasy pásmo po pásmu, prahy Q65-60B a Q65-60C, ground gain podle měření IK1UWL, konektory, Dgrd jiných programů, paraboly nad 432 MHz); balíčky pro každou architekturu (Windows x64 a x86, Linux x64, arm64 a arm, macOS Apple Silicon a Intel); poděkování Robertovi HA5OLA. Pásma nad 432 MHz se dokončují.
 - 1.5 - Nová záložka Radar GRAVES ve skupině Spojení: Měsíc ve svazku radaru se sektorem a krokem, společné okno s tebou, Doppler a zpoždění echa, příští přechod svazku přes Měsíc, obloha z pohledu GRAVES, rekonstrukce 24 hodin UTC s podrobnostmi příštích 10 sekund, rady pro poslech echa a zdroje; seznam aktivních stanic i ve formátu JSON a v textu pro LunaCalc Mobile; dva nové jazyky, dánština a tagalog (celkem 28), s příručkami.
 - 1.4 - Aktivní stanice: pole se značkou DX má oranžový okraj, pokud stanice psala v chatu EME N0UK za posledních 90 dní, s datem poslední zprávy v bublinové nápovědě; Typ písma s 10 doporučenými písmy pro Windows, Linux a macOS, vyzkoušenými záložku po záložce; balíčky pro 32bitová Windows a pro Raspberry Pi (arm64); Nebeská klenba s fialovými čárkovanými rámečky zamiřitelné oblasti; Vzdálenost a Dgrd se čtvrtým užitečným dnem a s volbou dne i kliknutím do grafu; číselná pole se zaobleným rámečkem a šipkami nad sebou; tlačítka oken u okrajů (vlevo, uprostřed, vpravo); rámeček poděkování přes celou šířku; v úzkých oknech jdou PODROBNÉ VÝPOČTY na dva řádky a žádný nápis neskončí pod tlačítky.

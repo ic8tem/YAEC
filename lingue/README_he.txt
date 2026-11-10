@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.6
+﻿YAEC – Yet Another EME Calc 1.7
 מאת Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@
 קוד מקור והורדה: https://github.com/ic8tem/YAEC/releases
 
 התקנה – WINDOWS
-1. הורד את YAEC-1.6-win-x64-setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
+1. הורד את YAEC-1.7-win-x64-setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
 2. אם מופיעה אזהרת SmartScreen: "More info" ← "Run anyway".
-3. ללא התקנה: חלץ את YAEC-1.6-win-x64-portatile.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
+3. ללא התקנה: חלץ את YAEC-1.7-win-x64-portatile.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
 
 התקנה – LINUX
 YAEC פועל על Mono, סביבת הריצה החופשית של .NET.
-- Debian, Ubuntu, Mint: הורד את yaec_1.6_amd64.deb והתקן אותו באמצעות
-      sudo apt install ./yaec_1.6_amd64.deb
+- Debian, Ubuntu, Mint: הורד את yaec_1.7_amd64.deb והתקן אותו באמצעות
+      sudo apt install ./yaec_1.7_amd64.deb
   (מתקין גם את Mono). YAEC מופעל מתפריט היישומים או בפקודה "yaec".
-- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) והפעל את ./install.sh.
+- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) והפעל את ./install.sh.
 
 התקנה – macOS (ניסיוני)
 1. התקן את Mono עבור macOS (https://www.mono-project.com/download/stable/) ואת XQuartz (https://www.xquartz.org).
-2. פתח את YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
+2. פתח את YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
 
 בדיקת הקבצים שהורדו (SHA-256)
 כל release כולל את SHA256SUMS.txt עם טביעת ה-SHA-256 של כל חבילה. השווה אותה לטביעה של הקובץ שהורדת:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 אם שני הערכים שונים, אל תתקין את הקובץ: הורד אותו מחדש.
@@ -39,6 +39,7 @@ YAEC חינמי; נוסח הרישיון נמצא בקובץ LICENSE_he.txt וב
 
 היסטוריית גרסאות
 הגרסאות שלפני 1.0 נקראות בטא.
+- 1.7 - שמונה שפות חדשות: פורטוגזית ברזילאית, תאית, סינית מסורתית, פולנית, צ'כית, רומנית, יוונית והונגרית (36 בסך הכול), עם המדריכים וקובצי ה-README; ב־«תקציב EME yagi» וב־«תקציב EME צלחות» חישוב ההד של התחנה עצמה («אני משדר וקולט את ההד שלי»); צלחת במוקד ראשי או offset ‏(W2IMU); ב־1296 MHz עם צלחות, הפסד הקיטוב המעגלי של מזינים אמיתיים (KA1GT); ב־«בדיקת החישובים» הבחירה בין «תקציב EME yagi» ל־«תקציב EME צלחות»; הנוסחאות של «DGRD לפי תדר» כתובות כמו בעורך משוואות; מדריך: סיבוב פאראדיי ב־1296 MHz לפי ITU-R P.531, דה־קיטוב ב־23 cm ‏(Hagfors) וקיטוב מעגלי ב־23 cm.
 - 1.6 - התחומים 902 MHz ו־23 cm (1296 ו־1298 MHz) בכל התוכנה, עם כל התחומים ברשימה הנפתחת של ה־MHz; הלשונית «תקציב EME» הופכת ל־«תקציב EME yagi» ויש לשונית חדשה «תקציב EME צלחות» (צלחת במוקד ראשי, הגבר לפי הנוסחה של PE1RKI, קדם־מגבר גם בשתי דרגות, טרנסוורטר ורמת ההנעה של ה־PA); לשונית חדשה «DGRD לפי תדר», עם הרעש האמיתי של התחנה והשמיים הממוצעים על פני האלומה, שמשמשת בכל התוכנה; כבלים קואקסיאליים המחושבים בנוסחה α = k1·√f + k2·f מנתוני דפי הנתונים, גם ב־902 וב־1296 MHz; סגנון חדש לפקדים בכל הלשוניות; ב־«מיקום חי ו-+- 24h» חלונית עזרה על הסמן האדום והקווים האדומים של ה־DX בשעת הסמן; המדריך עודכן לאחר השוואת המקורות (הפסד המסלול תחום אחר תחום, הספים של Q65-60B ו־Q65-60C, ground gain לפי המדידות של IK1UWL, מחברים, ה־Dgrd של תוכנות אחרות, צלחות מעל 432 MHz); חבילות לכל ארכיטקטורה (Windows x64 ו־x86, Linux x64, arm64 ו־arm, macOS Apple Silicon ו־Intel); תודה ל־Robert HA5OLA. התחומים מעל 432 MHz נמצאים בשלבי השלמה.
 - 1.5 - לשונית חדשה «מכ״ם GRAVES» בקבוצת הקשר: הירח בקרן המכ"ם עם המגזר והצעד, החלון המשותף איתך, הדופלר וההשהיה של ההד, המעבר הבא של הקרן על הירח, השמיים כפי שהם נראים מ־GRAVES, שחזור 24 שעות ה־UTC עם פירוט 10 השניות הבאות, עצות לשמיעת ההד ומקורות; רשימת התחנות הפעילות גם ב־JSON ובטקסט עבור LunaCalc Mobile; שתי שפות חדשות, דנית וטגלוג (28 בסך הכול), עם המדריכים.
 - 1.4 - תחנות פעילות: תיבת אות הקריאה של ה־DX מקבלת מסגרת כתומה אם התחנה כתבה בצ'אט ה־EME של N0UK ב־90 הימים האחרונים, ותאריך ההודעה האחרונה מופיע בחלונית העזרה; סוג הגופן עם 10 גופנים מומלצים ל־Windows, Linux ו־macOS, שנבדקו לשונית אחר לשונית; חבילות ל־Windows בגרסת 32 סיביות ול־Raspberry Pi (arm64); כיפת השמיים עם מסגרות סגולות מקווקוות סביב האזור שאפשר לכוון אליו; מרחק ו־Dgrd עם היום השימושי הרביעי ובחירת היום גם בלחיצה בגרף; תיבות מספרים עם מסגרת מעוגלת והחצים זה מעל זה; לחצני החלונות בקצוות (שמאל, מרכז, ימין); תיבת התודות ברוחב מלא; בחלונות צרים חישובים מעמיקים עובר לשתי שורות ואף טקסט לא נשאר מתחת ללחצנים.
