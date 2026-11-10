@@ -2,7 +2,7 @@
 por Costantino IC8TEM
 ==========================================
 
-Calculadora para radioamadores que trabalham em EME (Terra–Lua–Terra) de 50 MHz aos 23 cm (1296 MHz): posição da Lua e janelas de apontamento segundo os limites da própria antena, planeamento dos dias com a melhor Dgrd, balanço da ligação EME com yagis ou parabólicas, ruído do céu e do Sol, base de dados de cabos coaxiais e manuais sobre EME. Para Windows, Linux e macOS, em 28 línguas. As bandas acima de 432 MHz estão em fase de conclusão, mas a DGRD já é calculada corretamente em cada frequência.
+Calculadora para radioamadores que trabalham em EME (Terra–Lua–Terra) de 50 MHz aos 23 cm (1296 MHz): posição da Lua e janelas de apontamento segundo os limites da própria antena, planeamento dos dias com a melhor Dgrd, balanço da ligação EME com yagis ou parabólicas, ruído do céu e do Sol, base de dados de cabos coaxiais e manuais sobre EME. Para Windows, Linux e macOS, em 36 línguas. As bandas acima de 432 MHz estão em fase de conclusão, mas a DGRD já é calculada corretamente em cada frequência.
 Código-fonte e transferência: https://github.com/ic8tem/YAEC/releases
 
 INSTALAÇÃO – WINDOWS

@@ -2,7 +2,7 @@
 hazırlayan: Costantino IC8TEM
 ==========================================
 
-50 MHz'den 23 cm'ye (1296 MHz) kadar EME (Dünya–Ay–Dünya) çalışan radyo amatörleri için hesaplayıcı: kendi antenizin sınırlarına göre Ay'ın konumu ve yönlendirme pencereleri, en iyi Dgrd'li günlerin planlanması, yagi veya çanaklarla EME bağlantı bütçesi, gökyüzü ve Güneş gürültüsü, koaksiyel kablo veritabanı ve EME kılavuzları. Windows, Linux ve macOS için, 28 dilde. 432 MHz'in üzerindeki bantlar tamamlanma aşamasındadır, ancak DGRD her frekansta zaten doğru hesaplanır.
+50 MHz'den 23 cm'ye (1296 MHz) kadar EME (Dünya–Ay–Dünya) çalışan radyo amatörleri için hesaplayıcı: kendi antenizin sınırlarına göre Ay'ın konumu ve yönlendirme pencereleri, en iyi Dgrd'li günlerin planlanması, yagi veya çanaklarla EME bağlantı bütçesi, gökyüzü ve Güneş gürültüsü, koaksiyel kablo veritabanı ve EME kılavuzları. Windows, Linux ve macOS için, 36 dilde. 432 MHz'in üzerindeki bantlar tamamlanma aşamasındadır, ancak DGRD her frekansta zaten doğru hesaplanır.
 Kaynak kod ve indirme: https://github.com/ic8tem/YAEC/releases
 
 KURULUM – WINDOWS

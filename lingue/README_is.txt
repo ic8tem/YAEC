@@ -2,7 +2,7 @@
 höfundur: Costantino IC8TEM
 ==========================================
 
-Reiknivél fyrir radíóamatöra sem stunda EME (Jörð–Tungl–Jörð) frá 50 MHz upp í 23 cm (1296 MHz): staða tunglsins og miðunargluggar innan marka eigin loftnets, skipulagning daganna með besta Dgrd, aflbókhald EME-sambands með Yagi-loftnetum eða diskum, himin- og sólarsuð, gagnagrunnur yfir kóaxkapla og handbækur um EME. Fyrir Windows, Linux og macOS, á 28 tungumálum. Verið er að ljúka böndunum yfir 432 MHz, en DGRD er þegar reiknað rétt á hvaða tíðni sem er.
+Reiknivél fyrir radíóamatöra sem stunda EME (Jörð–Tungl–Jörð) frá 50 MHz upp í 23 cm (1296 MHz): staða tunglsins og miðunargluggar innan marka eigin loftnets, skipulagning daganna með besta Dgrd, aflbókhald EME-sambands með Yagi-loftnetum eða diskum, himin- og sólarsuð, gagnagrunnur yfir kóaxkapla og handbækur um EME. Fyrir Windows, Linux og macOS, á 36 tungumálum. Verið er að ljúka böndunum yfir 432 MHz, en DGRD er þegar reiknað rétt á hvaða tíðni sem er.
 Frumkóði og niðurhal: https://github.com/ic8tem/YAEC/releases
 
 UPPSETNING – WINDOWS

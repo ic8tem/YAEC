@@ -2,7 +2,7 @@
 
 *by Costantino IC8TEM*
 
-**YAEC** is a free program for radio amateurs who work **EME (Earth–Moon–Earth)** on **50, 70, 144, 222, 432 and 902 MHz and on the 23 cm band** (1296 MHz). It computes the Moon position, the pointing windows, the EME link budget, sky noise and solar noise, all on your own computer, in **28 languages**, on **Windows, Linux and macOS** (Linux and macOS with Mono).
+**YAEC** is a free program for radio amateurs who work **EME (Earth–Moon–Earth)** on **50, 70, 144, 222, 432 and 902 MHz and on the 23 cm band** (1296 MHz). It computes the Moon position, the pointing windows, the EME link budget, sky noise and solar noise, all on your own computer, in **36 languages**, on **Windows, Linux and macOS** (Linux and macOS with Mono).
 
 > This wiki describes YAEC **1.6**.
 
@@ -53,7 +53,7 @@ In short:
 - **USER MANUAL** and **THEORY AND TIPS ON EME** – full manuals inside the program, in every language, exportable to Word.
 - **COAXIAL CABLES** – database of 50 Ω cables with sourced attenuation figures and a loss calculator, from 50 to 1296 MHz, with the formula α = k1·√f + k2·f.
 - [Warnings](Warnings) for polar-cap and auroral absorption, strong polarization offset and the Sun near the Moon.
-- Light, Night (blue), Black and eight pastel colour schemes; 10 recommended fonts for each system; 28 languages; rounded drop-downs, dates and text boxes, buttons in capitals.
+- Light, Night (blue), Black and eight pastel colour schemes; 10 recommended fonts for each system; 36 languages; rounded drop-downs, dates and text boxes, buttons in capitals.
 - Moon positions accurate to about 0.01° (Meeus, ELP-2000/82); all data in a single `data` folder.
 
 ## Free software

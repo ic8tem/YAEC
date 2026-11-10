@@ -2,7 +2,7 @@
 av Costantino IC8TEM
 ==========================================
 
-Kalkylator för radioamatörer som kör EME (Jord–Måne–Jord) från 50 MHz till 23 cm (1296 MHz): månens position och riktfönster inom gränserna för den egna antennen, planering av dagarna med bäst Dgrd, länkbudget för EME med yagi eller parabol, himmels- och solbrus, databas över koaxialkablar och handböcker om EME. För Windows, Linux och macOS, på 28 språk. Banden över 432 MHz håller på att färdigställas, men DGRD beräknas redan korrekt på alla frekvenser.
+Kalkylator för radioamatörer som kör EME (Jord–Måne–Jord) från 50 MHz till 23 cm (1296 MHz): månens position och riktfönster inom gränserna för den egna antennen, planering av dagarna med bäst Dgrd, länkbudget för EME med yagi eller parabol, himmels- och solbrus, databas över koaxialkablar och handböcker om EME. För Windows, Linux och macOS, på 36 språk. Banden över 432 MHz håller på att färdigställas, men DGRD beräknas redan korrekt på alla frekvenser.
 Källkod och nedladdning: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS

@@ -2,7 +2,7 @@
 ved Costantino IC8TEM
 ==========================================
 
-Beregner til radioamatører, der kører EME (Jord–Måne–Jord) fra 50 MHz til 23 cm (1296 MHz): Månens position og retningsvinduer inden for din egen antennes grænser, planlægning af dagene med den bedste Dgrd, EME-forbindelsesbudget med yagi eller parabol, støj fra himlen og Solen, database over koaksialkabler og manualer om EME. Til Windows, Linux og macOS, på 28 sprog. Båndene over 432 MHz er ved at blive færdiggjort, men DGRD beregnes allerede korrekt på alle frekvenser.
+Beregner til radioamatører, der kører EME (Jord–Måne–Jord) fra 50 MHz til 23 cm (1296 MHz): Månens position og retningsvinduer inden for din egen antennes grænser, planlægning af dagene med den bedste Dgrd, EME-forbindelsesbudget med yagi eller parabol, støj fra himlen og Solen, database over koaksialkabler og manualer om EME. Til Windows, Linux og macOS, på 36 sprog. Båndene over 432 MHz er ved at blive færdiggjort, men DGRD beregnes allerede korrekt på alle frekvenser.
 Kildekode og download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS

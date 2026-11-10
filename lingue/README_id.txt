@@ -2,7 +2,7 @@
 oleh Costantino IC8TEM
 ==========================================
 
-Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 MHz hingga 23 cm (1296 MHz): posisi Bulan dan jendela pengarahan sesuai batas antena Anda sendiri, perencanaan hari dengan Dgrd terbaik, anggaran link EME dengan yagi atau antena parabola, derau langit dan Matahari, basis data kabel koaksial, serta manual tentang EME. Untuk Windows, Linux, dan macOS, dalam 28 bahasa. Pita di atas 432 MHz masih dalam tahap penyelesaian, tetapi DGRD sudah dihitung dengan benar di setiap frekuensi.
+Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 MHz hingga 23 cm (1296 MHz): posisi Bulan dan jendela pengarahan sesuai batas antena Anda sendiri, perencanaan hari dengan Dgrd terbaik, anggaran link EME dengan yagi atau antena parabola, derau langit dan Matahari, basis data kabel koaksial, serta manual tentang EME. Untuk Windows, Linux, dan macOS, dalam 36 bahasa. Pita di atas 432 MHz masih dalam tahap penyelesaian, tetapi DGRD sudah dihitung dengan benar di setiap frekuensi.
 Kode sumber dan unduhan: https://github.com/ic8tem/YAEC/releases
 
 INSTALASI – WINDOWS

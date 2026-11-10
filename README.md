@@ -2,14 +2,14 @@
 
 *a cura di Costantino IC8TEM*
 
-Moon position, pointing windows, EME link budget, sky and solar noise calculator for radio amateurs, in 28 languages.
+Moon position, pointing windows, EME link budget, sky and solar noise calculator for radio amateurs, in 36 languages.
 Windows, Linux and macOS (Linux and macOS with Mono).
 
-Posizione della Luna, finestre di puntamento, budget del collegamento EME, rumore del cielo e del Sole per radioamatori, in 28 lingue.
+Posizione della Luna, finestre di puntamento, budget del collegamento EME, rumore del cielo e del Sole per radioamatori, in 36 lingue.
 
 ## Languages
 
-YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence and the README are available in **28 languages**; the language is chosen at the top of the main screen. Licence and README in every language are in the [`lingue`](lingue) folder.
+YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence and the README are available in **36 languages**; the language is chosen at the top of the main screen. Licence and README in every language are in the [`lingue`](lingue) folder.
 
 | | | | |
 |---|---|---|---|
@@ -20,6 +20,8 @@ YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence an
 | Afrikaans `af` | العربية `ar` | עברית `he` | اردو `ur` |
 | हिन्दी `hi` | বাংলা `bn` | 中文 (简体) `zh` | 日本語 `ja` |
 | 한국어 `ko` | Bahasa Indonesia `id` | Dansk `da` | Tagalog `tl` |
+| Português (Brasil) `pt-BR` | ไทย `th` | 中文 (繁體) `zh-TW` | Polski `pl` |
+| Čeština `cs` | Română `ro` | Ελληνικά `el` | Magyar `hu` |
 
 ## Installation
 
@@ -110,7 +112,7 @@ YAEC puts in one program everything you need to run an EME (Earth–Moon–Earth
 **Also**
 - CALL3.TXT downloaded from W7GJ and WSJT-X Improved, merged, refreshed every 7 days and copied into WSJT-X on request.
 - Warnings for polar-cap and auroral absorption (PCA) when a station is beyond the polar circles or in the auroral zone.
-- 28 languages; light, night (blue), black and eight pastel colour schemes.
+- 36 languages; light, night (blue), black and eight pastel colour schemes.
 - Moon positions accurate to about 0.01° (Meeus, ELP-2000/82), all calculations on your computer; data in a single `data` folder.
 
 ### Italiano
@@ -145,7 +147,7 @@ YAEC raccoglie in un solo programma tutto quello che serve per l'EME (Terra–Lu
 **Inoltre**
 - CALL3.TXT scaricato da W7GJ e da WSJT-X Improved, unito, aggiornato ogni 7 giorni e copiato in WSJT-X a richiesta.
 - Avvisi di assorbimento della calotta polare e aurorale (PCA) quando una stazione è oltre i circoli polari o nella zona aurorale.
-- 28 lingue; schemi di colori chiaro, notte (blu), nero e otto pastello.
+- 36 lingue; schemi di colori chiaro, notte (blu), nero e otto pastello.
 - Posizioni della Luna precise a circa 0,01° (Meeus, ELP-2000/82), tutti i calcoli sul tuo computer; dati in un'unica cartella `data`.
 
 ### Deutsch
@@ -180,7 +182,7 @@ YAEC vereint in einem Programm alles, was man für den EME-Betrieb (Erde–Mond�
 **Außerdem**
 - CALL3.TXT von W7GJ und WSJT-X Improved geladen, zusammengeführt, alle 7 Tage erneuert und auf Wunsch nach WSJT-X kopiert.
 - Warnungen vor Polkappen- und Polarlichtabsorption (PCA), wenn eine Station jenseits der Polarkreise oder in der Polarlichtzone liegt.
-- 28 Sprachen; Farbschemata hell, Nacht (blau), schwarz und acht Pastelltöne.
+- 36 Sprachen; Farbschemata hell, Nacht (blau), schwarz und acht Pastelltöne.
 - Mondpositionen auf etwa 0,01° genau (Meeus, ELP-2000/82), alle Berechnungen auf deinem Computer; Daten in einem einzigen Ordner `data`.
 
 ### Français
@@ -215,7 +217,7 @@ YAEC réunit dans un seul programme tout ce qu'il faut pour trafiquer en EME (Te
 **Et aussi**
 - CALL3.TXT téléchargé chez W7GJ et WSJT-X Improved, fusionné, renouvelé tous les 7 jours et copié dans WSJT-X sur demande.
 - Alertes d'absorption de la calotte polaire et aurorale (PCA) quand une station est au-delà des cercles polaires ou dans la zone aurorale.
-- 28 langues ; thèmes de couleurs clair, nuit (bleu), noir et huit pastels.
+- 36 langues ; thèmes de couleurs clair, nuit (bleu), noir et huit pastels.
 - Positions de la Lune précises à environ 0,01° (Meeus, ELP-2000/82), tous les calculs sur votre ordinateur ; données dans un seul dossier `data`.
 
 ### Español
@@ -250,7 +252,7 @@ YAEC reúne en un solo programa todo lo necesario para operar EME (Tierra–Luna
 **Además**
 - CALL3.TXT descargado de W7GJ y de WSJT-X Improved, fusionado, renovado cada 7 días y copiado en WSJT-X a petición.
 - Avisos de absorción del casquete polar y auroral (PCA) cuando una estación está más allá de los círculos polares o en la zona auroral.
-- 28 idiomas; esquemas de colores claro, noche (azul), negro y ocho pastel.
+- 36 idiomas; esquemas de colores claro, noche (azul), negro y ocho pastel.
 - Posiciones de la Luna con una precisión de unos 0,01° (Meeus, ELP-2000/82), todos los cálculos en tu ordenador; datos en una sola carpeta `data`.
 
 ## For developers

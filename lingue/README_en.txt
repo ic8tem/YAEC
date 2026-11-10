@@ -2,7 +2,7 @@
 by Costantino IC8TEM
 ==========================================
 
-A calculator for radio amateurs working EME (Earth–Moon–Earth) from 50 MHz to 23 cm (1296 MHz): Moon position and pointing windows within the limits of your own antenna, planning of the days with the best Dgrd, EME link budget with yagis or dishes, sky and Sun noise, a coaxial cable database and EME manuals. For Windows, Linux and macOS, in 28 languages. The bands above 432 MHz are still being completed, but DGRD is already calculated correctly at every frequency.
+A calculator for radio amateurs working EME (Earth–Moon–Earth) from 50 MHz to 23 cm (1296 MHz): Moon position and pointing windows within the limits of your own antenna, planning of the days with the best Dgrd, EME link budget with yagis or dishes, sky and Sun noise, a coaxial cable database and EME manuals. For Windows, Linux and macOS, in 36 languages. The bands above 432 MHz are still being completed, but DGRD is already calculated correctly at every frequency.
 Source and downloads: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS

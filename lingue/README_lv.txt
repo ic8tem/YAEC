@@ -2,7 +2,7 @@
 autors: Costantino IC8TEM
 ==========================================
 
-Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā no 50 MHz līdz 23 cm (1296 MHz): Mēness pozīcija un tēmēšanas logi atbilstoši jūsu antenas ierobežojumiem, dienu ar labāko Dgrd plānošana, EME sakaru līnijas enerģētiskā bilance ar Yagi vai paraboliskajām antenām, debess un Saules troksnis, koaksiālo kabeļu datubāze un rokasgrāmatas par EME. Operētājsistēmām Windows, Linux un macOS, 28 valodās. Diapazoni virs 432 MHz vēl tiek pabeigti, taču DGRD jau tiek aprēķināts pareizi jebkurā frekvencē.
+Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā no 50 MHz līdz 23 cm (1296 MHz): Mēness pozīcija un tēmēšanas logi atbilstoši jūsu antenas ierobežojumiem, dienu ar labāko Dgrd plānošana, EME sakaru līnijas enerģētiskā bilance ar Yagi vai paraboliskajām antenām, debess un Saules troksnis, koaksiālo kabeļu datubāze un rokasgrāmatas par EME. Operētājsistēmām Windows, Linux un macOS, 36 valodās. Diapazoni virs 432 MHz vēl tiek pabeigti, taču DGRD jau tiek aprēķināts pareizi jebkurā frekvencē.
 Pirmkods un lejupielāde: https://github.com/ic8tem/YAEC/releases
 
 INSTALĒŠANA – WINDOWS

@@ -2,7 +2,7 @@
 deur Costantino IC8TEM
 ==========================================
 
-Sakrekenaar vir radioamateurs wat EME (Aarde–Maan–Aarde) van 50 MHz tot 23 cm (1296 MHz) werk: posisie van die Maan en rigvensters binne die grense van jou eie antenna, beplanning van die dae met die beste Dgrd, EME-skakelbegroting met yagi's of skottels, hemel- en Songeraas, 'n databasis van koaksiale kabels en handleidings oor EME. Vir Windows, Linux en macOS, in 28 tale. Die bande bo 432 MHz word nog voltooi, maar die DGRD word reeds by elke frekwensie korrek bereken.
+Sakrekenaar vir radioamateurs wat EME (Aarde–Maan–Aarde) van 50 MHz tot 23 cm (1296 MHz) werk: posisie van die Maan en rigvensters binne die grense van jou eie antenna, beplanning van die dae met die beste Dgrd, EME-skakelbegroting met yagi's of skottels, hemel- en Songeraas, 'n databasis van koaksiale kabels en handleidings oor EME. Vir Windows, Linux en macOS, in 36 tale. Die bande bo 432 MHz word nog voltooi, maar die DGRD word reeds by elke frekwensie korrek bereken.
 Bronkode en aflaai: https://github.com/ic8tem/YAEC/releases
 
 INSTALLASIE – WINDOWS

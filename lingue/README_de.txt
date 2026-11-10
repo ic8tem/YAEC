@@ -2,7 +2,7 @@
 von Costantino IC8TEM
 ==========================================
 
-Rechner für Funkamateure, die EME (Erde–Mond–Erde) von 50 MHz bis 23 cm (1296 MHz) betreiben: Mondposition und Zeitfenster für die Ausrichtung innerhalb der Grenzen der eigenen Antenne, Planung der Tage mit der besten Dgrd, EME-Streckenbudget mit Yagis oder Parabolspiegeln, Himmels- und Sonnenrauschen, Datenbank der Koaxialkabel und Handbücher zu EME. Für Windows, Linux und macOS, in 28 Sprachen. Die Bänder oberhalb 432 MHz werden noch vervollständigt, aber die DGRD wird bereits bei jeder Frequenz korrekt berechnet.
+Rechner für Funkamateure, die EME (Erde–Mond–Erde) von 50 MHz bis 23 cm (1296 MHz) betreiben: Mondposition und Zeitfenster für die Ausrichtung innerhalb der Grenzen der eigenen Antenne, Planung der Tage mit der besten Dgrd, EME-Streckenbudget mit Yagis oder Parabolspiegeln, Himmels- und Sonnenrauschen, Datenbank der Koaxialkabel und Handbücher zu EME. Für Windows, Linux und macOS, in 36 Sprachen. Die Bänder oberhalb 432 MHz werden noch vervollständigt, aber die DGRD wird bereits bei jeder Frequenz korrekt berechnet.
 Quellcode und Download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS

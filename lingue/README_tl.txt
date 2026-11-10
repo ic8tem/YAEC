@@ -2,7 +2,7 @@
 inihanda ni Costantino IC8TEM
 ==========================================
 
-Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigdig) mula 50 MHz hanggang 23 cm (1296 MHz): posisyon ng Buwan at mga window ng pagtutok ayon sa mga limitasyon ng sarili mong antena, pagpaplano ng mga araw na may pinakamahusay na Dgrd, EME link budget gamit ang yagi o dish, ingay ng langit at ng Araw, database ng mga coaxial na kable at mga manwal tungkol sa EME. Para sa Windows, Linux at macOS, sa 28 wika. Kasalukuyang kinukumpleto ang mga band sa itaas ng 432 MHz, pero tama na ang pagkuwenta ng DGRD sa bawat frequency.
+Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigdig) mula 50 MHz hanggang 23 cm (1296 MHz): posisyon ng Buwan at mga window ng pagtutok ayon sa mga limitasyon ng sarili mong antena, pagpaplano ng mga araw na may pinakamahusay na Dgrd, EME link budget gamit ang yagi o dish, ingay ng langit at ng Araw, database ng mga coaxial na kable at mga manwal tungkol sa EME. Para sa Windows, Linux at macOS, sa 36 wika. Kasalukuyang kinukumpleto ang mga band sa itaas ng 432 MHz, pero tama na ang pagkuwenta ng DGRD sa bawat frequency.
 Source at download: https://github.com/ic8tem/YAEC/releases
 
 PAG-INSTALL – WINDOWS

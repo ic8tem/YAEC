@@ -2,7 +2,7 @@
 autorius Costantino IC8TEM
 ==========================================
 
-Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ryšiu nuo 50 MHz iki 23 cm (1296 MHz): Mėnulio padėtis ir nukreipimo langai pagal jūsų antenos apribojimus, dienų su geriausiu Dgrd planavimas, EME ryšio linijos energetinis balansas su Yagi arba parabolinėmis antenomis, dangaus ir Saulės triukšmas, bendraašių kabelių duomenų bazė ir EME vadovai. Skirta Windows, Linux ir macOS, 28 kalbomis. Diapazonai virš 432 MHz dar baigiami, tačiau DGRD jau teisingai apskaičiuojamas bet kuriuo dažniu.
+Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ryšiu nuo 50 MHz iki 23 cm (1296 MHz): Mėnulio padėtis ir nukreipimo langai pagal jūsų antenos apribojimus, dienų su geriausiu Dgrd planavimas, EME ryšio linijos energetinis balansas su Yagi arba parabolinėmis antenomis, dangaus ir Saulės triukšmas, bendraašių kabelių duomenų bazė ir EME vadovai. Skirta Windows, Linux ir macOS, 36 kalbomis. Diapazonai virš 432 MHz dar baigiami, tačiau DGRD jau teisingai apskaičiuojamas bet kuriuo dažniu.
 Išeities kodas ir atsisiuntimas: https://github.com/ic8tem/YAEC/releases
 
 ĮDIEGIMAS – WINDOWS

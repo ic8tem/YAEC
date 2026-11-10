@@ -2,7 +2,7 @@
 autor: Costantino IC8TEM
 ==========================================
 
-Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 MHz kuni 23 cm (1296 MHz): Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss yagide või paraboolantennidega, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 28 keeles. Sagedusalad üle 432 MHz on veel valmimisel, kuid DGRD arvutatakse juba igal sagedusel õigesti.
+Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 MHz kuni 23 cm (1296 MHz): Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss yagide või paraboolantennidega, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 36 keeles. Sagedusalad üle 432 MHz on veel valmimisel, kuid DGRD arvutatakse juba igal sagedusel õigesti.
 Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
 
 PAIGALDAMINE – WINDOWS
