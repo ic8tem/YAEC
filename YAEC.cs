@@ -45536,7 +45536,7 @@ namespace LunaCalc
             }
             // titolo delle schede delle stazioni: locator e posizione della Luna
             bMe.Sotto = (me != null && me.Ok ? me.Loc.Text.Trim() : "") + (valido && r != null ? string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.P.Az, r.P.El) : "");
-            bDx.Sotto = (dx != null && dx.Ok && chkDx.Checked ? dx.Loc.Text.Trim() : "") + (valido && r != null && r.Q != null ? string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.Q.Az, r.Q.El) : "");
+            bDx.Sotto = (dx != null && dx.Ok && chkDx.Checked ? dx.Loc.Text.Trim() : "") + (valido && r != null && r.StatoDx != null ? string.Format(c, " · " + Lang.T("Luna") + " Az {0:F1}° El {1:F1}°", r.Q.Az, r.Q.El) : "");
             foreach (BudgetUi bu in new BudgetUi[] { bMe, bDx }) if (bu.Card != null) bu.Card.Invalidate();
             if (pnlKpi != null) pnlKpi.Invalidate();
             PosizionaSchema();   // i testi in fondo ai riquadri possono cambiare il numero di righe
