@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.5
+﻿YAEC – Yet Another EME Calc 1.6
 von Costantino IC8TEM
 ==========================================
 
-Rechner für Funkamateure, die EME (Erde–Mond–Erde) von 50 bis 432 MHz betreiben: Mondposition und Zeitfenster für die Ausrichtung innerhalb der Grenzen der eigenen Antenne, Planung der Tage mit der besten Dgrd, EME-Streckenbudget, Himmels- und Sonnenrauschen, Datenbank der Koaxialkabel und Handbücher zu EME. Für Windows, Linux und macOS, in 28 Sprachen.
+Rechner für Funkamateure, die EME (Erde–Mond–Erde) von 50 MHz bis 23 cm (1296 MHz) betreiben: Mondposition und Zeitfenster für die Ausrichtung innerhalb der Grenzen der eigenen Antenne, Planung der Tage mit der besten Dgrd, EME-Streckenbudget mit Yagis oder Parabolspiegeln, Himmels- und Sonnenrauschen, Datenbank der Koaxialkabel und Handbücher zu EME. Für Windows, Linux und macOS, in 28 Sprachen. Die Bänder oberhalb 432 MHz werden noch vervollständigt, aber die DGRD wird bereits bei jeder Frequenz korrekt berechnet.
 Quellcode und Download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Lade YAEC-1.5-win-x64-setup.exe von der Seite Releases herunter und führe die Datei aus. Sie installiert YAEC in Dokumente\YAEC, ohne Administratorrechte, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm.
+1. Lade YAEC-1.6-win-x64-setup.exe von der Seite Releases herunter und führe die Datei aus. Sie installiert YAEC in Dokumente\YAEC, ohne Administratorrechte, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm.
 2. Wenn die SmartScreen-Warnung erscheint: „Weitere Informationen“ → „Trotzdem ausführen“.
-3. Ohne Installation: entpacke YAEC-1.5-win-x64-portatile.zip in einen Ordner, in den du schreiben darfst, und starte YAEC.exe.
+3. Ohne Installation: entpacke YAEC-1.6-win-x64-portatile.zip in einen Ordner, in den du schreiben darfst, und starte YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC läuft mit Mono, der freien .NET-Laufzeitumgebung.
-- Debian, Ubuntu, Mint: lade yaec_1.5_amd64.deb herunter und installiere es mit
-      sudo apt install ./yaec_1.5_amd64.deb
+- Debian, Ubuntu, Mint: lade yaec_1.6_amd64.deb herunter und installiere es mit
+      sudo apt install ./yaec_1.6_amd64.deb
   (installiert auch Mono). YAEC startet über das Anwendungsmenü oder mit dem Befehl „yaec“.
-- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) und starte ./install.sh.
+- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) und starte ./install.sh.
 
 INSTALLATION – macOS (experimentell)
 1. Installiere Mono für macOS (https://www.mono-project.com/download/stable/) und XQuartz (https://www.xquartz.org).
-2. Öffne YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) und ziehe YAEC in den Ordner Programme. Beim ersten Mal: Rechtsklick auf YAEC → Öffnen (die App ist nicht von Apple signiert).
+2. Öffne YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) und ziehe YAEC in den Ordner Programme. Beim ersten Mal: Rechtsklick auf YAEC → Öffnen (die App ist nicht von Apple signiert).
 
 PRÜFUNG DER HERUNTERGELADENEN DATEIEN (SHA-256)
 Jedes Release enthält SHA256SUMS.txt mit dem SHA-256-Hashwert jedes Pakets. Vergleiche ihn mit dem Wert der heruntergeladenen Datei:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Wenn die beiden Werte verschieden sind, installiere die Datei nicht, sondern lade sie erneut herunter.
@@ -39,8 +39,9 @@ Fehler, bessere Daten, Übersetzungen: ccerrotta@gmail.com · ic8tem@gmail.com �
 
 VERSIONSGESCHICHTE
 Die Versionen vor 1.0 heißen Beta.
-- 1.5 - Neuer Reiter Radar GRAVES in der Gruppe Verbindung: Mond im Radarstrahl mit Sektor und Schritt, gemeinsames Fenster mit dir, Doppler und Verzögerung des Echos, nächster Strahldurchgang über den Mond, Himmel von GRAVES aus gesehen, Rekonstruktion der 24 UTC-Stunden mit dem Detail der nächsten 10 Sekunden, Tipps zum Hören des Echos und Quellen; Liste der aktiven Stationen auch als JSON und Text für LunaCalc Mobile; zwei neue Sprachen, Dänisch und Tagalog (28 insgesamt), mit den Handbüchern.
-- 1.4 - Aktive Stationen: Das Rufzeichenfeld des DX erhält einen orangen Rahmen, wenn die Station in den letzten 90 Tagen im EME-Chat von N0UK geschrieben hat, mit dem Datum der letzten Nachricht im Tooltip; Schriftart mit 10 empfohlenen Schriften für Windows, Linux und macOS, Reiter für Reiter geprüft; Pakete für 32-Bit-Windows und für Raspberry Pi (arm64); Himmelsansicht mit violett gestrichelten Rahmen um den anpeilbaren Bereich; Entfernung und Dgrd mit dem vierten nutzbaren Tag und dem gewählten Tag auch per Klick im Diagramm; Zahlenfelder mit abgerundetem Rahmen und übereinanderliegenden Pfeilen; Schaltflächen der Dialoge an den Rändern (links, Mitte, rechts); Danksagungsfeld in voller Breite; in schmalen Fenstern steht CALCOLI APPROFONDITI auf zwei Zeilen und kein Text liegt unter den Schaltflächen.
+- 1.6 - Bänder 902 MHz und 23 cm (1296 und 1298 MHz) im ganzen Programm, mit allen Bändern in der MHz-Auswahlliste; der Reiter EME-Budget wird zu EME-Budget Yagi, und es gibt den neuen Reiter EME-Budget Spiegel (Primärfokusspiegel, Gewinn mit der Formel von PE1RKI, Vorverstärker auch zweistufig, Transverter und Ansteuerung der PA); neuer Reiter DGRD nach Frequenz, mit dem tatsächlichen Rauschen der Station und dem über die Keule gemittelten Himmel, im ganzen Programm verwendet; Koaxialkabel mit der Formel α = k1·√f + k2·f aus den Datenblattwerten berechnet, auch bei 902 und 1296 MHz; neuer Stil der Bedienelemente in allen Reitern; in Position live und +- 24h der Tooltip am roten Cursor und die roten Linien des DX zur Uhrzeit des Cursors; Handbuch nach dem Vergleich der Quellen überarbeitet (Streckendämpfung Band für Band, Schwellen von Q65-60B und Q65-60C, Bodengewinn nach den Messungen von IK1UWL, Stecker, Dgrd anderer Programme, Parabolspiegel oberhalb 432 MHz); Pakete für jede Architektur (Windows x64 und x86, Linux x64, arm64 und arm, macOS Apple Silicon und Intel); Dank an Robert HA5OLA. Die Bänder oberhalb 432 MHz werden noch vervollständigt.
+- 1.5 - Neuer Reiter GRAVES-Radar in der Gruppe Verbindung: Mond im Radarstrahl mit Sektor und Schritt, gemeinsames Fenster mit dir, Doppler und Verzögerung des Echos, nächster Strahldurchgang über den Mond, Himmel von GRAVES aus gesehen, Rekonstruktion der 24 UTC-Stunden mit dem Detail der nächsten 10 Sekunden, Tipps zum Hören des Echos und Quellen; Liste der aktiven Stationen auch als JSON und Text für LunaCalc Mobile; zwei neue Sprachen, Dänisch und Tagalog (28 insgesamt), mit den Handbüchern.
+- 1.4 - Aktive Stationen: Das Rufzeichenfeld des DX erhält einen orangen Rahmen, wenn die Station in den letzten 90 Tagen im EME-Chat von N0UK geschrieben hat, mit dem Datum der letzten Nachricht im Tooltip; Schriftart mit 10 empfohlenen Schriften für Windows, Linux und macOS, Reiter für Reiter geprüft; Pakete für 32-Bit-Windows und für Raspberry Pi (arm64); Himmelsansicht mit violett gestrichelten Rahmen um den anpeilbaren Bereich; Entfernung und Dgrd mit dem vierten nutzbaren Tag und dem gewählten Tag auch per Klick im Diagramm; Zahlenfelder mit abgerundetem Rahmen und übereinanderliegenden Pfeilen; Schaltflächen der Dialoge an den Rändern (links, Mitte, rechts); Danksagungsfeld in voller Breite; in schmalen Fenstern steht VERTIEFTE BERECHNUNGEN auf zwei Zeilen und kein Text liegt unter den Schaltflächen.
 - 1.3 - Neun neue Sprachen: Niederländisch, Estnisch, Lettisch, Litauisch, Schwedisch, Norwegisch, Isländisch, Hebräisch und Urdu (insgesamt 26), mit den Handbüchern; Lizenz und LIESMICH in allen Sprachen, Lizenz in der Sprache des Installationsprogramms; Schaltfläche GRAVES; Stecker TX und Stecker RX im EME-Budget (Rat von NJ9R); verschiebbarer Trenner zwischen der linken Spalte und dem Schema des EME-Budgets; Kontrollkästchen Grauer Schleier in Erkundung meiner Hindernisse; FORMEL-DEBUG wird zu Rechenkontrolle und ABOUT & CREDITS wird zu INFO UND NACHWEISE; technische Kapitel des Benutzerhandbuchs auf Bengalisch, Arabisch und Türkisch; Pastell-Schemata korrigiert; das Fenster der CALL3.TXT schließt sich nach der Aktualisierung von selbst; Schaltflächen der Dialogfenster mit mehr Abstand.
 - 1.2.1 - Die Seite KONTAKT ZUM AUTOR UND DANK öffnet sich unter Linux und macOS wieder korrekt; der Verweis für die Transverter zeigt auf § 1.7.1.
 - 1.2 - EME-Budget mit den Anzeigen Meine EIRP, EIRP des DX, Streckendämpfung und S/N in beide Richtungen (mit der Sonne); Formeln des Word-Dokuments in einer einzigen Größe, innerhalb der Ränder; gefüllte Schaltflächen und flache Auswahllisten mit abgerundetem Rand in allen Schemata; acht Pastell-Farbschemata; Wertfelder mit nebeneinanderliegenden Pfeilen; die drei besten Tage nach Datum geordnet; unscharfer Himmelshintergrund; FORMEL-DEBUG übersetzt; Handbuch THEORIE UND TIPPS ZU EME mit den Ratschlägen von Relu NJ9R (GRAVES, Ausrichtung, Stecker, Antennengewinn, JT65B und MAP65, Polarisationsrelais), den neuen Abschnitten zum ersten Empfang und zu den Internet-Chats und den VE7BQH-Tabellen im Vorwort; Dank an NJ9R, Erinnerung an IK1UWL und an die Autoren von Artikeln, Hardware und Software, mit einem Tooltip zu ihren Werken.

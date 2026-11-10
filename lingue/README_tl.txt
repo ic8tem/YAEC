@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.5
+﻿YAEC – Yet Another EME Calc 1.6
 inihanda ni Costantino IC8TEM
 ==========================================
 
-Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigdig) mula 50 hanggang 432 MHz: posisyon ng Buwan at mga window ng pagtutok ayon sa mga limitasyon ng sarili mong antena, pagpaplano ng mga araw na may pinakamahusay na Dgrd, EME link budget, ingay ng langit at ng Araw, database ng mga coaxial na kable at mga manwal tungkol sa EME. Para sa Windows, Linux at macOS, sa 28 wika.
+Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigdig) mula 50 MHz hanggang 23 cm (1296 MHz): posisyon ng Buwan at mga window ng pagtutok ayon sa mga limitasyon ng sarili mong antena, pagpaplano ng mga araw na may pinakamahusay na Dgrd, EME link budget gamit ang yagi o dish, ingay ng langit at ng Araw, database ng mga coaxial na kable at mga manwal tungkol sa EME. Para sa Windows, Linux at macOS, sa 28 wika. Kasalukuyang kinukumpleto ang mga band sa itaas ng 432 MHz, pero tama na ang pagkuwenta ng DGRD sa bawat frequency.
 Source at download: https://github.com/ic8tem/YAEC/releases
 
 PAG-INSTALL – WINDOWS
-1. I-download ang YAEC-1.5-win-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
+1. I-download ang YAEC-1.6-win-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
 2. Kung lumabas ang babala ng SmartScreen: "More info" → "Run anyway".
-3. Nang walang pag-install: i-extract ang YAEC-1.5-win-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
+3. Nang walang pag-install: i-extract ang YAEC-1.6-win-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
 
 PAG-INSTALL – LINUX
 Tumatakbo ang YAEC sa Mono, ang libreng .NET runtime.
-- Debian, Ubuntu, Mint: i-download ang yaec_1.5_amd64.deb at i-install ito gamit ang
-      sudo apt install ./yaec_1.5_amd64.deb
+- Debian, Ubuntu, Mint: i-download ang yaec_1.6_amd64.deb at i-install ito gamit ang
+      sudo apt install ./yaec_1.6_amd64.deb
   (ini-install din nito ang Mono). Pinapatakbo ang YAEC mula sa menu ng mga application o gamit ang command na "yaec".
-- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) at patakbuhin ang ./install.sh.
+- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) at patakbuhin ang ./install.sh.
 
 PAG-INSTALL – macOS (eksperimental)
 1. I-install ang Mono para sa macOS (https://www.mono-project.com/download/stable/) at ang XQuartz (https://www.xquartz.org).
-2. Buksan ang YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
+2. Buksan ang YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
 
 PAGSURI NG MGA NA-DOWNLOAD NA FILE (SHA-256)
 Bawat release ay may SHA256SUMS.txt na naglalaman ng SHA-256 hash ng bawat package. Ihambing ito sa hash ng na-download na file:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kung magkaiba ang dalawang halaga, huwag i-install ang file: i-download itong muli.
@@ -39,7 +39,8 @@ Mga mali, mas mahusay na datos, mga salin: ccerrotta@gmail.com · ic8tem@gmail.c
 
 KASAYSAYAN NG MGA BERSYON
 Beta ang tawag sa mga bersyon bago ang 1.0.
-- 1.5 - Bagong tab na Radar GRAVES sa grupong Koneksyon: ang Buwan sa sinag ng radar kasama ang sektor at hakbang, ang karaniwang bintana ninyo, ang Doppler at pagkaantala ng echo, ang susunod na pagdaan ng sinag sa Buwan, ang langit na nakikita mula sa GRAVES, ang muling pagbuo ng 24 na oras UTC kasama ang detalye ng susunod na 10 segundo, mga payo para marinig ang echo at mga pinagmulan; ang listahan ng mga aktibong istasyon ay nasa JSON at teksto rin para sa LunaCalc Mobile; dalawang bagong wika, Danish at Tagalog (28 lahat), kasama ang mga manwal.
+- 1.6 - Mga band na 902 MHz at 23 cm (1296 at 1298 MHz) sa buong programa, kasama ang lahat ng band sa dropdown ng MHz; ang tab na EME budget ay naging EME budget yagi at may bagong tab na EME budget dish (prime-focus na dish, gain gamit ang formula ni PE1RKI, preamplifier na puwede ring dalawang stage, transverter at drive ng PA); bagong tab na DGRD ayon sa frequency, gamit ang tunay na ingay ng istasyon at ang langit na in-average sa beam, na ginagamit sa buong programa; mga coaxial na kable na kinukuwenta gamit ang formula na α = k1·√f + k2·f mula sa data ng mga data sheet, pati sa 902 at 1296 MHz; bagong istilo ng mga kontrol sa lahat ng tab; sa Live na posisyon at +- 24h, tooltip sa pulang cursor at mga pulang linya ng DX sa oras ng cursor; nirebisa ang manwal matapos paghambingin ang mga source (path loss bawat band, mga threshold ng Q65-60B at Q65-60C, ground gain ayon sa mga sukat ni IK1UWL, mga connector, Dgrd ng ibang programa, mga dish sa itaas ng 432 MHz); mga package para sa bawat architecture (Windows x64 at x86, Linux x64, arm64 at arm, macOS Apple Silicon at Intel); pasasalamat kay Robert HA5OLA. Kasalukuyang kinukumpleto ang mga band sa itaas ng 432 MHz.
+- 1.5 - Bagong tab na GRAVES radar sa grupong Link: ang Buwan sa sinag ng radar kasama ang sektor at hakbang, ang karaniwang bintana ninyo, ang Doppler at pagkaantala ng echo, ang susunod na pagdaan ng sinag sa Buwan, ang langit na nakikita mula sa GRAVES, ang muling pagbuo ng 24 na oras UTC kasama ang detalye ng susunod na 10 segundo, mga payo para marinig ang echo at mga pinagmulan; ang listahan ng mga aktibong istasyon ay nasa JSON at teksto rin para sa LunaCalc Mobile; dalawang bagong wika, Danish at Tagalog (28 lahat), kasama ang mga manwal.
 - 1.4 - Mga aktibong istasyon: nagkakaroon ng kahel na gilid ang kahon ng call sign ng DX kung sumulat ang istasyon sa EME chat ni N0UK sa nakalipas na 90 araw, kasama ang petsa ng huling mensahe sa tooltip; Uri ng font na may 10 inirerekomendang font para sa Windows, Linux at macOS, sinubukan tab bawat tab; mga package para sa 32-bit na Windows at para sa Raspberry Pi (arm64); Tanaw ng langit na may mga lilang kahon na putul-putol ang guhit sa lugar na matututukan; Layo at Dgrd na may ikaapat na magagamit na araw at napipili rin ang araw sa isang click sa graph; mga kahon ng numero na may bilugang frame at mga arrow na magkapatong; mga button ng mga window sa mga gilid (kaliwa, gitna, kanan); kahon ng pasasalamat sa buong lapad; sa makikitid na window, nahahati sa dalawang linya ang MASUSING KALKULASYON at walang tekstong napupunta sa ilalim ng mga button.
 - 1.3 - Siyam na bagong wika: Dutch, Estonian, Latvian, Lithuanian, Swedish, Norwegian, Icelandic, Hebreo at Urdu (26 lahat-lahat), kasama ang mga manwal; lisensya at README sa lahat ng wika, lisensya sa wika ng installer; button na GRAVES; Mga connector sa TX at Mga connector sa RX sa EME budget (payo ni NJ9R); nadra-drag na separator sa pagitan ng kaliwang column at ng diagram ng EME budget; kahon ng abong tabing sa Pagsusuri ng mga harang ko; ang FORMULA DEBUG ay naging Pagsuri ng mga kalkulasyon at ang ABOUT & CREDITS ay naging IMPORMASYON AT MGA KREDITO; mga teknikal na kabanata ng manwal ng paggamit sa Bengali, Arabe at Turko; inayos ang mga pastel na tema; kusang nagsasara ang window ng CALL3.TXT pagkatapos ng pag-update; may pagitan na ang mga button ng mga dialog box.
 - 1.2.1 - Muling nagbubukas nang tama ang pahinang MGA CONTACT NG MAY-AKDA AT PASASALAMAT sa Linux at macOS; tumuturo sa § 1.7.1 ang sanggunian para sa mga transverter.

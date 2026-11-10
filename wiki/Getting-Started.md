@@ -52,8 +52,8 @@ You can also drag the limits with the mouse (yellow handles) in [Reconnaissance 
 
 ## 5. Frequency and bands
 
-- The **frequency** is chosen in the **Echo and frequencies (CFOM)** card of the main screen: the MHz (from the list or typed) plus the kHz from 000 to 999, e.g. 144 and 180 = 144.180 MHz. It is the CFOM frequency used for Doppler, Tsky and Dgrd, and it is copied to every tab.
-- **BAND SELECTION** chooses the bands used in the calculations and lists: 50, 70, 144, 222 and 432 MHz (next version: also 902 and 1296 MHz). If the MHz match one of the selected bands, the EME budget switches to that band automatically (and vice versa).
+- The **frequency** is chosen in the **Echo and frequencies (CFOM)** card of the main screen: the MHz (from the list or typed) plus the kHz from 000 to 999, e.g. 144 and 180 = 144.180 MHz. It is the CFOM frequency used for Doppler, Tsky and Dgrd, and it is copied to every tab. The MHz list always contains all the bands (70, 222 and 902 MHz included); for the 23 cm band choose **1296** or **1298** MHz (both belong to the 23 cm band).
+- **BAND SELECTION** chooses the bands used in the calculations and lists: 50, 70, 144, 222, 432, 902 MHz and **23 cm** (in the band lists the 1296 MHz band is shown as *23 cm*). If the MHz match one of the selected bands, the EME budget switches to that band automatically (and vice versa). Band lists saved by an older version get the new bands added automatically.
 
 ## 6. IN-DEPTH CALCULATIONS
 
@@ -61,12 +61,12 @@ The **IN-DEPTH CALCULATIONS** box (in the estimated S/N card of the main screen 
 
 ## 7. Describe your station
 
-Open the [EME budget](EME-Budget) (next version: *EME budget Yagi*) and fill in the station diagram for each band: antenna gain and number, antenna temperature from the VE7BQH tables, cables, relay, preamplifier, transmitter power, radio MDS and mode. Each band keeps its own parameters. With a dish on 432, 902 or 1296 MHz, use the [EME budget dishes](EME-Budget-Dishes) tab (next version).
+Open the [EME budget Yagi](EME-Budget) (called *EME budget* up to 1.5) and fill in the station diagram for each band: antenna gain and number, antenna temperature from the VE7BQH tables, cables, relay, preamplifier, transmitter power, radio MDS and mode. Each band keeps its own parameters. With a dish on 432 MHz, 902 MHz or 23 cm, use the [EME budget dishes](EME-Budget-Dishes) tab.
 
 ## 8. Find the good moments
 
 - **Now:** look at the status band of [Live position and +- 24h](Live-Position) (green = pointable, blue = common window with the DX).
-- **Next days:** [Distance and Dgrd](Distance-and-Dgrd) shows the three best days; [DGRD by frequency](DGRD-by-Frequency) (next version) shows the Dgrd at your frequency with your station's noise.
+- **Next days:** [Distance and Dgrd](Distance-and-Dgrd) shows the three best days; [DGRD by frequency](DGRD-by-Frequency) shows the Dgrd at your frequency with your station's noise.
 - **Exact windows:** [Moon position](Moon-Position) → **Compute table**.
 
 ## Advice for constrained stations
@@ -76,4 +76,4 @@ Open the [EME budget](EME-Budget) (next version: *EME budget Yagi*) and fill in 
 - **For a QSO with a DX** the *common* windows count, and the Dgrd of the more disadvantaged station.
 - **Near new Moon** check [Solar noise](Solar-Noise): with the Sun close to the Moon the noise can rise by many dB.
 
-> **Next version: new look of the controls.** Drop-down lists and dates have a rounded frame with a "v" arrow and a calendar icon drawn by YAEC, text boxes have rounded frames, buttons are written in capitals (e.g. **COMPUTE TABLE**) and the sliders have a thin track with a round knob. The names in this wiki are the same, only the capitals differ.
+> **The look of the controls (since 1.6).** Drop-down lists and dates have a rounded frame with a "v" arrow and a calendar icon drawn by YAEC, text boxes have rounded frames, buttons are written in capitals (e.g. **COMPUTE TABLE**) and the sliders have a thin track with a round knob. The names in this wiki are the same, only the capitals differ.

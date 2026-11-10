@@ -11,11 +11,11 @@ The general settings are in the white bar at the top of [Live position and +- 24
 | **Colours** | Light, Night (blue tones, for use at night), Black (black background, suited to the dark and to OLED screens), and eight pastel schemes. |
 | **Font size** | Size of all the program fonts, in %. |
 | **Font** | *System default* (the font suited to the chosen language) or one of the *Fonts recommended for YAEC*: at most 10 fonts installed on your computer, chosen from a list tested tab by tab for Windows, Linux and macOS (for non-Latin scripts, fonts that contain that script). Each name in the list is written in its own font, and the font suited to the language is marked *recommended*. |
-| **BAND SELECTION** | Bands used in the calculations and lists: 50, 70, 144, 222, 432 MHz (next version: also 902 and 1296 MHz). |
+| **BAND SELECTION** | Bands used in the calculations and lists: 50, 70, 144, 222, 432, 902 MHz and **23 cm** (the 1296 MHz band is shown as *23 cm* in the band lists). Band lists saved by an older version get the new bands added automatically. The MHz list of the working frequency always contains all the bands (70, 222 and 902 MHz included); for 23 cm it offers **1296** and **1298** MHz, both in the 23 cm band. |
 | **SHOW COMPLEX DATA ON THE MAIN SCREEN** | Shows the S/N estimated now at the bottom right of the main screen. |
 | **IN-DEPTH CALCULATIONS** | Shows the advanced columns and rows and enables Solar noise, Export calculations to Excel and Calculation check. |
 
-The DGRD by frequency tab (next version) holds two more choices that apply to the whole program: the receiver noise and the sky used for the Dgrd – see [DGRD by frequency](DGRD-by-Frequency).
+The DGRD by frequency tab holds two more choices that apply to the whole program: the receiver noise and the sky used for the Dgrd – see [DGRD by frequency](DGRD-by-Frequency).
 
 ### Colour schemes
 

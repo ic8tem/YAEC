@@ -44,7 +44,7 @@ $$Dgrd = -40\log_{10}\frac{d}{356\,903\ \text{km}} - 10\log_{10}\frac{T_{sky}+80
 - Typical values are −1 to −2 dB. With the Moon on the galactic centre I2FAK saw −11 dB.
 - For a small station every dB counts: a day at −1 dB and one at −5 dB can make the difference between a QSO and no decode.
 
-> **Next version.** The noise model of the Dgrd (receiver and sky) is chosen in the new [DGRD by frequency](DGRD-by-Frequency) tab, and the choice applies throughout the program, including the best days (★) of this tab. By default the Dgrd uses your station's real noise (Tant and Te from the EME budget) and the sky averaged over the antenna beam; choose *fixed 80 K, like WSJT-X* and *Moon center only* there to get the WSJT-X formula above.
+> **Since 1.6.** The noise model of the Dgrd (receiver and sky) is chosen in the [DGRD by frequency](DGRD-by-Frequency) tab, and the choice applies throughout the program, including the best days (★) of this tab. By default the Dgrd uses your station's real noise (Tant and Te from the EME budget) and the sky averaged over the antenna beam; choose *fixed 80 K, like WSJT-X* and *Moon center only* there to get the WSJT-X formula above.
 
 ## The Moon's declination
 

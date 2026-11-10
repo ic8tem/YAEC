@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.5
+﻿YAEC – Yet Another EME Calc 1.6
 autor: Costantino IC8TEM
 ==========================================
 
-Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 kuni 432 MHz: Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 28 keeles.
+Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 MHz kuni 23 cm (1296 MHz): Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss yagide või paraboolantennidega, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 28 keeles. Sagedusalad üle 432 MHz on veel valmimisel, kuid DGRD arvutatakse juba igal sagedusel õigesti.
 Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
 
 PAIGALDAMINE – WINDOWS
-1. Laadi Releases-lehelt alla YAEC-1.5-win-x64-setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
+1. Laadi Releases-lehelt alla YAEC-1.6-win-x64-setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
 2. Kui ilmub SmartScreeni hoiatus: "More info" → "Run anyway".
-3. Ilma paigaldamata: paki YAEC-1.5-win-x64-portatile.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
+3. Ilma paigaldamata: paki YAEC-1.6-win-x64-portatile.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
 
 PAIGALDAMINE – LINUX
 YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
-- Debian, Ubuntu, Mint: laadi alla yaec_1.5_amd64.deb ja paigalda see käsuga
-      sudo apt install ./yaec_1.5_amd64.deb
+- Debian, Ubuntu, Mint: laadi alla yaec_1.6_amd64.deb ja paigalda see käsuga
+      sudo apt install ./yaec_1.6_amd64.deb
   (paigaldab ka Mono). YAEC käivitub rakenduste menüüst või käsuga "yaec".
-- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) ja käivita ./install.sh.
+- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) ja käivita ./install.sh.
 
 PAIGALDAMINE – macOS (eksperimentaalne)
 1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
-2. Ava YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+2. Ava YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
 
 ALLALAADITUD FAILIDE KONTROLL (SHA-256)
 Iga release sisaldab faili SHA256SUMS.txt iga paketi SHA-256 räsiga. Võrdle seda allalaaditud faili räsiga:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kui kaks väärtust erinevad, ära faili paigalda: laadi see uuesti alla.
@@ -39,8 +39,9 @@ Vead, paremad andmed, tõlked: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 VERSIOONIAJALUGU
 Versioone enne 1.0 nimetatakse beetaks.
-- 1.5 - Uus vahekaart Radar GRAVES rühmas Ühendus: Kuu radari kiires koos sektori ja sammuga, ühine aken sinuga, kaja Doppler ja viivitus, kiire järgmine üleminek Kuult, taevas GRAVES-i vaates, 24 UTC tunni rekonstruktsioon järgmise 10 sekundi üksikasjadega, nõuanded kaja kuulmiseks ja allikad; aktiivsete jaamade loend ka JSON- ja tekstivormingus LunaCalc Mobile'i jaoks; kaks uut keelt, taani ja tagalogi (kokku 28), koos juhenditega.
-- 1.4 - Aktiivsed jaamad: DX-i kutsungi lahter saab oranži ääre, kui jaam on viimase 90 päeva jooksul N0UK EME-vestlusesse kirjutanud, ja vihjes on viimase sõnumi kuupäev; Kirjatüüp 10 soovitatud kirjatüübiga Windowsi, Linuxi ja macOS-i jaoks, kontrollitud vahekaart vahekaardi haaval; paketid 32-bitisele Windowsile ja Raspberry Pi-le (arm64); Taevavõlvil lillad katkendjoontega raamid ala ümber, kuhu saab suunata; Kaugus ja Dgrd neljanda kasuliku päevaga ning päeva valik ka klõpsuga graafikul; numbrilahtrid ümardatud raamiga ja nooled üksteise kohal; dialoogiakende nupud servades (vasakul, keskel, paremal); tänuavalduste kast kogu laiuses; kitsastes akendes läheb CALCOLI APPROFONDITI kahele reale ja ükski tekst ei jää nuppude alla.
+- 1.6 - Sagedusalad 902 MHz ja 23 cm (1296 ja 1298 MHz) kogu programmis, kõik sagedusalad MHz-i ripploendis; sakk „EME eelarve“ muutub sakiks „EME eelarve yagi“ ja lisandus uus sakk „EME eelarve paraboolid“ (primaarfookusega parabool, võimendus PE1RKI valemiga, eelvõimendi ka kaheastmelisena, transverter ja PA juhtimine); uus sakk „DGRD sageduse järgi“ jaama tegeliku müraga ja keilu ulatuses keskmistatud taevaga, mida kasutatakse kogu programmis; koaksiaalkaablid arvutatakse valemiga α = k1·√f + k2·f andmelehtede andmetest, ka 902 ja 1296 MHz juures; juhtelementide uus stiil kõigil sakkidel; sakis „Asukoht reaalajas ja +- 24h“ vihjemull punase kursori juures ja DX-i punased jooned kursori kellaajal; juhend üle vaadatud pärast allikate võrdlemist (teekonnakadu sagedusalade kaupa, Q65-60B ja Q65-60C lävendid, ground gain IK1UWL mõõtmiste järgi, pistikud, teiste programmide Dgrd, paraboolid üle 432 MHz); paketid igale arhitektuurile (Windows x64 ja x86, Linux x64, arm64 ja arm, macOS Apple Silicon ja Intel); tänu Robert HA5OLA-le. Sagedusalad üle 432 MHz on veel valmimisel.
+- 1.5 - Uus vahekaart „GRAVES-radar“ rühmas Side: Kuu radari kiires koos sektori ja sammuga, ühine aken sinuga, kaja Doppler ja viivitus, kiire järgmine üleminek Kuult, taevas GRAVES-i vaates, 24 UTC tunni rekonstruktsioon järgmise 10 sekundi üksikasjadega, nõuanded kaja kuulmiseks ja allikad; aktiivsete jaamade loend ka JSON- ja tekstivormingus LunaCalc Mobile'i jaoks; kaks uut keelt, taani ja tagalogi (kokku 28), koos juhenditega.
+- 1.4 - Aktiivsed jaamad: DX-i kutsungi lahter saab oranži ääre, kui jaam on viimase 90 päeva jooksul N0UK EME-vestlusesse kirjutanud, ja vihjes on viimase sõnumi kuupäev; Kirjatüüp 10 soovitatud kirjatüübiga Windowsi, Linuxi ja macOS-i jaoks, kontrollitud vahekaart vahekaardi haaval; paketid 32-bitisele Windowsile ja Raspberry Pi-le (arm64); Taevavõlvil lillad katkendjoontega raamid ala ümber, kuhu saab suunata; Kaugus ja Dgrd neljanda kasuliku päevaga ning päeva valik ka klõpsuga graafikul; numbrilahtrid ümardatud raamiga ja nooled üksteise kohal; dialoogiakende nupud servades (vasakul, keskel, paremal); tänuavalduste kast kogu laiuses; kitsastes akendes läheb „PÕHJALIKUD ARVUTUSED“ kahele reale ja ükski tekst ei jää nuppude alla.
 - 1.3 - Üheksa uut keelt: hollandi, eesti, läti, leedu, rootsi, norra, islandi, heebrea ja urdu (kokku 26), koos juhenditega; litsents ja README kõigis keeltes, litsents paigaldusprogrammi keeles; nupp GRAVES; „TX pistikud“ ja „RX pistikud“ aknas „EME eelarve“ (NJ9R-i soovitus); lohistatav eraldaja vasaku veeru ja akna „EME eelarve“ skeemi vahel; märkeruut „Hall loor“ aknas „Minu takistuste kaardistus“; VALEMITE DEBUG on nüüd „Arvutuste kontroll“ ja ABOUT & CREDITS on nüüd TEAVE JA AUTORID; kasutusjuhendi tehnilised peatükid bengali, araabia ja türgi keeles; pastelsed skeemid parandatud; CALL3.TXT aken sulgub pärast uuendamist ise; dialoogiakende nupud on üksteisest kaugemal.
 - 1.2.1 - Leht AUTORI KONTAKTID JA TÄNUSÕNAD avaneb Linuxis ja macOS-is taas korrektselt; transverterite viide osutab § 1.7.1-le.
 - 1.2 - „EME eelarve“ näidikutega Minu EIRP, DX-i EIRP, teekonnakadu ja S/N mõlemas suunas (koos Päikesega); Wordi dokumendi valemid ühes suuruses, veeriste sees; täidetud nupud ja lamedad ümardatud servaga rippmenüüd kõigis skeemides; kaheksa pastelset värviskeemi; väärtuste lahtrid kõrvuti nooltega; kolm parimat päeva kuupäeva järjekorras; hägune taeva taust; VALEMITE DEBUG tõlgitud; juhend EME TEOORIA JA NÕUANDED koos Relu NJ9R nõuannetega (GRAVES, suunamine, pistikud, antennide võimendus, JT65B ja MAP65, polarisatsioonirelee), uute alapeatükkidega esimesest vastuvõtust ja internetivestlustest ning VE7BQH tabelitega eessõnas; tänusõnad NJ9R-ile, mälestus IK1UWL-ist ning artiklite, riist- ja tarkvara autoritele koos nende teoste kohtspikriga.

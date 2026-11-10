@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.5
+﻿YAEC – Yet Another EME Calc 1.6
 autorius Costantino IC8TEM
 ==========================================
 
-Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ryšiu nuo 50 iki 432 MHz: Mėnulio padėtis ir nukreipimo langai pagal jūsų antenos apribojimus, dienų su geriausiu Dgrd planavimas, EME ryšio linijos energetinis balansas, dangaus ir Saulės triukšmas, bendraašių kabelių duomenų bazė ir EME vadovai. Skirta Windows, Linux ir macOS, 28 kalbomis.
+Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ryšiu nuo 50 MHz iki 23 cm (1296 MHz): Mėnulio padėtis ir nukreipimo langai pagal jūsų antenos apribojimus, dienų su geriausiu Dgrd planavimas, EME ryšio linijos energetinis balansas su Yagi arba parabolinėmis antenomis, dangaus ir Saulės triukšmas, bendraašių kabelių duomenų bazė ir EME vadovai. Skirta Windows, Linux ir macOS, 28 kalbomis. Diapazonai virš 432 MHz dar baigiami, tačiau DGRD jau teisingai apskaičiuojamas bet kuriuo dažniu.
 Išeities kodas ir atsisiuntimas: https://github.com/ic8tem/YAEC/releases
 
 ĮDIEGIMAS – WINDOWS
-1. Atsisiųskite YAEC-1.5-win-x64-setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
+1. Atsisiųskite YAEC-1.6-win-x64-setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
 2. Jei pasirodo SmartScreen įspėjimas: "More info" → "Run anyway".
-3. Be įdiegimo: išskleiskite YAEC-1.5-win-x64-portatile.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
+3. Be įdiegimo: išskleiskite YAEC-1.6-win-x64-portatile.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
 
 ĮDIEGIMAS – LINUX
 YAEC veikia su Mono – laisvąja .NET vykdymo aplinka.
-- Debian, Ubuntu, Mint: atsisiųskite yaec_1.5_amd64.deb ir įdiekite komanda
-      sudo apt install ./yaec_1.5_amd64.deb
+- Debian, Ubuntu, Mint: atsisiųskite yaec_1.6_amd64.deb ir įdiekite komanda
+      sudo apt install ./yaec_1.6_amd64.deb
   (kartu įdiegiama ir Mono). YAEC paleidžiama iš programų meniu arba komanda "yaec".
-- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) ir paleiskite ./install.sh.
+- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) ir paleiskite ./install.sh.
 
 ĮDIEGIMAS – macOS (eksperimentinis)
 1. Įdiekite Mono, skirtą macOS (https://www.mono-project.com/download/stable/), ir XQuartz (https://www.xquartz.org).
-2. Atidarykite YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
+2. Atidarykite YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
 
 ATSISIŲSTŲ FAILŲ PATIKRINIMAS (SHA-256)
 Kiekviename release yra failas SHA256SUMS.txt su kiekvieno paketo SHA-256 maiša. Palyginkite ją su atsisiųsto failo maiša:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jei abi reikšmės skiriasi, failo nediekite: atsisiųskite jį iš naujo.
@@ -39,8 +39,9 @@ Klaidos, geresni duomenys, vertimai: ccerrotta@gmail.com · ic8tem@gmail.com · 
 
 VERSIJŲ ISTORIJA
 Versijos iki 1.0 vadinamos beta.
-- 1.5 - Naujas skirtukas Radar GRAVES grupėje Ryšys: Mėnulis radaro spindulyje su sektoriumi ir žingsniu, bendras langas su tavimi, aido Doplerio poslinkis ir vėlinimas, kitas spindulio perėjimas per Mėnulį, dangus iš GRAVES, 24 UTC valandų rekonstrukcija su kitų 10 sekundžių detalėmis, patarimai, kaip išgirsti aidą, ir šaltiniai; aktyvių stočių sąrašas taip pat JSON ir teksto formatu LunaCalc Mobile; dvi naujos kalbos, danų ir tagalų (iš viso 28), su vadovais.
-- 1.4 - Aktyvios stotys: DX šaukinio langelis gauna oranžinį rėmelį, jei stotis per pastarąsias 90 dienų rašė N0UK EME pokalbiuose, o patarime rodoma paskutinės žinutės data; Šrifto tipas su 10 rekomenduojamų šriftų Windows, Linux ir macOS, patikrintų kiekviename skirtuke; paketai 32 bitų Windows ir Raspberry Pi (arm64); Dangaus skliaute violetiniai brūkšniuoti rėmeliai aplink sritį, į kurią galima nukreipti; Atstumas ir Dgrd su ketvirta naudinga diena ir dienos pasirinkimu taip pat spustelėjus grafike; skaičių langeliai su suapvalintu rėmeliu ir rodyklėmis viena virš kitos; langų mygtukai kraštuose (kairėje, centre, dešinėje); padėkų langelis per visą plotį; siauruose languose CALCOLI APPROFONDITI rašomas dviem eilutėmis ir joks tekstas nepatenka po mygtukais.
+- 1.6 - 902 MHz ir 23 cm (1296 ir 1298 MHz) diapazonai visoje programoje, visi diapazonai MHz išskleidžiamajame sąraše; skirtukas EME biudžetas tampa EME biudžetas yagi, ir atsirado naujas skirtukas EME biudžetas lėkštės (pirminio židinio parabolinė antena, stiprinimas pagal PE1RKI formulę, išankstinis stiprintuvas ir dviejų pakopų, transverteris ir PA žadinimas); naujas skirtukas DGRD pagal dažnį su tikruoju stoties triukšmu ir per spindulį suvidurkintu dangumi, naudojamas visoje programoje; koaksialiniai kabeliai skaičiuojami pagal formulę α = k1·√f + k2·f iš techninių aprašų duomenų, taip pat ties 902 ir 1296 MHz; naujas valdiklių stilius visuose skirtukuose; skirtuke Tiesioginė padėtis ir +- 24h patarimas prie raudonojo žymeklio ir DX raudonos linijos žymeklio laiku; vadovas peržiūrėtas palyginus šaltinius (trasos nuostoliai kiekvienam diapazonui, Q65-60B ir Q65-60C slenksčiai, ground gain pagal IK1UWL matavimus, jungtys, kitų programų Dgrd, parabolinės antenos virš 432 MHz); paketai visoms architektūroms (Windows x64 ir x86, Linux x64, arm64 ir arm, macOS Apple Silicon ir Intel); padėkos Robert HA5OLA. Diapazonai virš 432 MHz dar baigiami.
+- 1.5 - Naujas skirtukas GRAVES radaras grupėje Ryšys: Mėnulis radaro spindulyje su sektoriumi ir žingsniu, bendras langas su tavimi, aido Doplerio poslinkis ir vėlinimas, kitas spindulio perėjimas per Mėnulį, dangus iš GRAVES, 24 UTC valandų rekonstrukcija su kitų 10 sekundžių detalėmis, patarimai, kaip išgirsti aidą, ir šaltiniai; aktyvių stočių sąrašas taip pat JSON ir teksto formatu LunaCalc Mobile; dvi naujos kalbos, danų ir tagalų (iš viso 28), su vadovais.
+- 1.4 - Aktyvios stotys: DX šaukinio langelis gauna oranžinį rėmelį, jei stotis per pastarąsias 90 dienų rašė N0UK EME pokalbiuose, o patarime rodoma paskutinės žinutės data; Šrifto tipas su 10 rekomenduojamų šriftų Windows, Linux ir macOS, patikrintų kiekviename skirtuke; paketai 32 bitų Windows ir Raspberry Pi (arm64); Dangaus skliaute violetiniai brūkšniuoti rėmeliai aplink sritį, į kurią galima nukreipti; Atstumas ir Dgrd su ketvirta naudinga diena ir dienos pasirinkimu taip pat spustelėjus grafike; skaičių langeliai su suapvalintu rėmeliu ir rodyklėmis viena virš kitos; langų mygtukai kraštuose (kairėje, centre, dešinėje); padėkų langelis per visą plotį; siauruose languose IŠSAMŪS SKAIČIAVIMAI rašomas dviem eilutėmis ir joks tekstas nepatenka po mygtukais.
 - 1.3 - Devynios naujos kalbos: olandų, estų, latvių, lietuvių, švedų, norvegų, islandų, hebrajų ir urdu (iš viso 26), su vadovais; licencija ir README visomis kalbomis, licencija diegimo programos kalba; mygtukas GRAVES; TX jungtys ir RX jungtys lange EME biudžetas (NJ9R patarimas); perkeliamas skirtukas tarp kairiojo stulpelio ir EME biudžeto schemos; žymimasis langelis Pilkas šydas lange Mano kliūčių žvalgyba; FORMULIŲ DERINIMAS dabar vadinasi Skaičiavimų patikra, o ABOUT & CREDITS – INFORMACIJA IR ŠALTINIAI; naudotojo vadovo techniniai skyriai bengalų, arabų ir turkų kalbomis; pataisytos pastelinės schemos; CALL3.TXT langas po atnaujinimo užsidaro pats; padidinti tarpai tarp dialogo langų mygtukų.
 - 1.2.1 - Puslapis AUTORIAUS KONTAKTAI IR PADĖKOS vėl teisingai atsidaro Linux ir macOS; nuoroda dėl transverterių nurodo § 1.7.1.
 - 1.2 - EME biudžetas su indikatoriais Mano EIRP, DX EIRP, trasos nuostoliai ir S/N abiem kryptimis (su Saule); Word dokumento formulės vieno dydžio, paraštėse; užpildyti mygtukai ir plokšti išskleidžiamieji meniu su suapvalintu kraštu visose schemose; aštuonios pastelinės spalvų schemos; verčių laukeliai su šalia esančiomis rodyklėmis; trys geriausios dienos datos tvarka; išblukintas dangaus fonas; išverstas FORMULIŲ DERINIMAS; vadovas EME TEORIJA IR PATARIMAI su Relu NJ9R patarimais (GRAVES, nukreipimas, jungtys, antenų stiprinimas, JT65B ir MAP65, poliarizacijos relės), naujais skirsniais apie pirmąjį priėmimą ir pokalbius internetu bei VE7BQH lentelėmis pratarmėje; padėkos NJ9R, IK1UWL prisiminimas ir straipsnių, aparatinės bei programinės įrangos autoriai su jų darbų paaiškinimu.

@@ -11,7 +11,7 @@ All the packages are on the **[Releases](https://github.com/ic8tem/YAEC/releases
 | Other Linux distributions | `YAEC-x.y-linux-x64-portatile.tar.gz` (PC), `YAEC-x.y-linux-arm64-portatile.tar.gz` (ARM 64-bit), `YAEC-x.y-linux-arm-portatile.tar.gz` (ARM 32-bit) | Mono |
 | macOS (experimental) | `YAEC-x.y-osx-arm64.dmg` or `YAEC-x.y-osx-arm64-app.zip` (Apple Silicon), `YAEC-x.y-osx-x64.dmg` or `YAEC-x.y-osx-x64-app.zip` (Intel) | Mono for macOS and XQuartz |
 
-> **File names (next version).** These names apply from the next release. Releases up to 1.5 use the old names (the 32-bit Windows and Raspberry Pi packages exist since 1.4): `YAEC-x.y-Setup.exe` and `YAEC-x.y-windows-portable.zip` (Windows), `YAEC-x.y-Setup-32bit.exe` and `YAEC-x.y-windows-32bit-portable.zip` (Windows 32-bit), `yaec_x.y_all.deb` (Debian, Ubuntu, Mint), `yaec_x.y_arm64.deb` (Raspberry Pi), `YAEC-x.y-linux.tar.gz` (other Linux) and `YAEC-x.y-macOS.dmg` (macOS).
+> **File names.** These names apply from 1.6. Releases up to 1.5 use the old names (the 32-bit Windows and Raspberry Pi packages exist since 1.4): `YAEC-x.y-Setup.exe` and `YAEC-x.y-windows-portable.zip` (Windows), `YAEC-x.y-Setup-32bit.exe` and `YAEC-x.y-windows-32bit-portable.zip` (Windows 32-bit), `yaec_x.y_all.deb` (Debian, Ubuntu, Mint), `yaec_x.y_arm64.deb` (Raspberry Pi), `YAEC-x.y-linux.tar.gz` (other Linux) and `YAEC-x.y-macOS.dmg` (macOS).
 
 ## Windows
 

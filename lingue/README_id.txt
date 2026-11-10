@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.5
+﻿YAEC – Yet Another EME Calc 1.6
 oleh Costantino IC8TEM
 ==========================================
 
-Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 hingga 432 MHz: posisi Bulan dan jendela pengarahan sesuai batas antena Anda sendiri, perencanaan hari dengan Dgrd terbaik, anggaran link EME, derau langit dan Matahari, basis data kabel koaksial, serta manual tentang EME. Untuk Windows, Linux, dan macOS, dalam 28 bahasa.
+Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 MHz hingga 23 cm (1296 MHz): posisi Bulan dan jendela pengarahan sesuai batas antena Anda sendiri, perencanaan hari dengan Dgrd terbaik, anggaran link EME dengan yagi atau antena parabola, derau langit dan Matahari, basis data kabel koaksial, serta manual tentang EME. Untuk Windows, Linux, dan macOS, dalam 28 bahasa. Pita di atas 432 MHz masih dalam tahap penyelesaian, tetapi DGRD sudah dihitung dengan benar di setiap frekuensi.
 Kode sumber dan unduhan: https://github.com/ic8tem/YAEC/releases
 
 INSTALASI – WINDOWS
-1. Unduh YAEC-1.5-win-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
+1. Unduh YAEC-1.6-win-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
 2. Jika muncul peringatan SmartScreen: "Info selengkapnya" → "Tetap jalankan".
-3. Tanpa instalasi: ekstrak YAEC-1.5-win-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
+3. Tanpa instalasi: ekstrak YAEC-1.6-win-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
 
 INSTALASI – LINUX
 YAEC berjalan dengan Mono, runtime .NET yang bebas.
-- Debian, Ubuntu, Mint: unduh yaec_1.5_amd64.deb dan pasang dengan
-      sudo apt install ./yaec_1.5_amd64.deb
+- Debian, Ubuntu, Mint: unduh yaec_1.6_amd64.deb dan pasang dengan
+      sudo apt install ./yaec_1.6_amd64.deb
   (Mono juga ikut terpasang). YAEC dijalankan dari menu aplikasi atau dengan perintah "yaec".
-- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) lalu jalankan ./install.sh.
+- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) lalu jalankan ./install.sh.
 
 INSTALASI – macOS (eksperimental)
 1. Pasang Mono untuk macOS (https://www.mono-project.com/download/stable/) dan XQuartz (https://www.xquartz.org).
-2. Buka YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
+2. Buka YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
 
 MEMERIKSA FILE YANG DIUNDUH (SHA-256)
 Setiap release berisi SHA256SUMS.txt dengan hash SHA-256 setiap paket. Bandingkan dengan hash file yang Anda unduh:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jika kedua nilai berbeda, jangan pasang file tersebut: unduh ulang.
@@ -39,8 +39,9 @@ Kesalahan, data yang lebih baik, terjemahan: ccerrotta@gmail.com · ic8tem@gmail
 
 RIWAYAT VERSI
 Versi sebelum 1.0 disebut beta.
+- 1.6 - Pita 902 MHz dan 23 cm (1296 dan 1298 MHz) di seluruh program, dengan semua pita di menu tarik-turun MHz; tab Anggaran EME menjadi Anggaran EME yagi dan ada tab baru Anggaran EME parabola (parabola prime focus, penguatan dengan rumus PE1RKI, preamplifier juga dua tingkat, transverter dan pengendalian PA); tab baru DGRD per frekuensi, dengan derau nyata stasiun dan langit yang dirata-ratakan pada berkas, dipakai di seluruh program; kabel koaksial dihitung dengan rumus α = k1·√f + k2·f dari data lembar data, juga di 902 dan 1296 MHz; gaya kontrol baru di semua tab; di Posisi langsung dan +- 24h, balon keterangan pada kursor merah dan garis merah DX pada jam kursor; manual direvisi setelah membandingkan sumber (rugi lintasan per pita, ambang Q65-60B dan Q65-60C, penguatan tanah menurut pengukuran IK1UWL, konektor, Dgrd program lain, antena parabola di atas 432 MHz); paket untuk setiap arsitektur (Windows x64 dan x86, Linux x64, arm64 dan arm, macOS Apple Silicon dan Intel); terima kasih kepada Robert HA5OLA. Pita di atas 432 MHz masih dalam tahap penyelesaian.
 - 1.5 - Tab baru Radar GRAVES di grup Hubungan: Bulan di dalam berkas radar dengan sektor dan langkah, jendela bersama denganmu, Doppler dan tunda gema, lintasan berkas berikutnya pada Bulan, langit dilihat dari GRAVES, rekonstruksi 24 jam UTC dengan rincian 10 detik berikutnya, tips mendengar gema dan sumber; daftar stasiun aktif juga dalam JSON dan teks untuk LunaCalc Mobile; dua bahasa baru, Denmark dan Tagalog (total 28), dengan manualnya.
-- 1.4 - Stasiun aktif: kotak tanda panggil DX diberi bingkai oranye jika stasiun menulis di obrolan EME N0UK dalam 90 hari terakhir, dengan tanggal pesan terakhir di keterangan; Jenis fon dengan 10 fon yang disarankan untuk Windows, Linux, dan macOS, diuji per tab; paket untuk Windows 32-bit dan Raspberry Pi (arm64); Kubah langit dengan kotak ungu putus-putus di sekitar area yang dapat dituju; Jarak dan Dgrd dengan hari berguna keempat dan hari terpilih juga dengan satu klik di grafik; kotak angka dengan bingkai membulat dan panah yang bertumpuk; tombol jendela di tepi (kiri, tengah, kanan); kotak ucapan terima kasih selebar jendela; di jendela sempit CALCOLI APPROFONDITI dibuat dua baris dan tidak ada teks yang tertutup tombol.
+- 1.4 - Stasiun aktif: kotak tanda panggil DX diberi bingkai oranye jika stasiun menulis di obrolan EME N0UK dalam 90 hari terakhir, dengan tanggal pesan terakhir di keterangan; Jenis fon dengan 10 fon yang disarankan untuk Windows, Linux, dan macOS, diuji per tab; paket untuk Windows 32-bit dan Raspberry Pi (arm64); Kubah langit dengan kotak ungu putus-putus di sekitar area yang dapat dituju; Jarak dan Dgrd dengan hari berguna keempat dan hari terpilih juga dengan satu klik di grafik; kotak angka dengan bingkai membulat dan panah yang bertumpuk; tombol jendela di tepi (kiri, tengah, kanan); kotak ucapan terima kasih selebar jendela; di jendela sempit PERHITUNGAN MENDALAM dibuat dua baris dan tidak ada teks yang tertutup tombol.
 - 1.3 - Sembilan bahasa baru: Belanda, Estonia, Latvia, Lituania, Swedia, Norwegia, Islandia, Ibrani dan Urdu (total 26), beserta manualnya; lisensi dan README dalam semua bahasa, lisensi dalam bahasa penginstal; tombol GRAVES; Konektor TX dan Konektor RX di Anggaran EME (saran dari NJ9R); pemisah yang dapat diseret antara kolom kiri dan skema Anggaran EME; kotak centang Selubung abu-abu di Pengintaian rintangan saya; DEBUG RUMUS menjadi Pemeriksaan perhitungan dan ABOUT & CREDITS menjadi TENTANG DAN KREDIT; bab teknis manual pengguna dalam bahasa Bengali, Arab dan Turki; skema pastel diperbaiki; jendela CALL3.TXT tertutup sendiri setelah pembaruan; tombol kotak dialog diberi jarak.
 - 1.2.1 - Halaman KONTAK PENULIS DAN UCAPAN TERIMA KASIH kembali terbuka dengan benar di Linux dan macOS; rujukan untuk transverter kini menunjuk § 1.7.1.
 - 1.2 - Anggaran EME dengan indikator EIRP saya, EIRP DX, rugi lintasan dan S/N dua arah (dengan Matahari); rumus dokumen Word dalam satu ukuran, di dalam margin; tombol penuh dan daftar tarik-turun datar bertepi bulat di semua skema; delapan skema warna pastel; kotak nilai dengan panah berdampingan; tiga hari terbaik menurut urutan tanggal; latar langit yang diburamkan; DEBUG RUMUS diterjemahkan; manual TEORI DAN TIPS EME dengan saran Relu NJ9R (GRAVES, pengarahan, konektor, penguatan antena, JT65B dan MAP65, relay polarisasi), bagian baru tentang penerimaan pertama dan chat internet, serta tabel VE7BQH di kata pengantar; ucapan terima kasih kepada NJ9R, kenangan untuk IK1UWL dan para penulis artikel, perangkat keras dan perangkat lunak, dengan tooltip tentang karya mereka.

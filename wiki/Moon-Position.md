@@ -22,7 +22,7 @@ Tick **Compare with the second station** (or **COMPARE** in the DX card) to comp
 | **Start (UTC)** | Date and time at which the table starts. |
 | **Duration (days)** | Length of the period; fractions allowed (0.5 = 12 hours). |
 | **Interval (min)** | Step between rows. Window start and end have this resolution. |
-| **Frequency (MHz + kHz)** | Working (CFOM) frequency, used for Tsky, Dgrd, Doppler and CFOM. The MHz list follows BAND SELECTION (next version: up to 1296 MHz). |
+| **Frequency (MHz + kHz)** | Working (CFOM) frequency, used for Tsky, Dgrd, Doppler and CFOM. The MHz list always contains all the bands (50, 70, 144, 222, 432, 902 MHz and, for the 23 cm band, 1296 or 1298 MHz). |
 | **Correct for atmospheric refraction** | Adds refraction (near the horizon the Moon appears higher). Unticked = geometric topocentric elevation, as in the most common EME programs. |
 | **Show only pointable rows** | Hides rows with the Moon outside the limits (common ones, if the DX is active). |
 
@@ -30,7 +30,7 @@ Press **Compute table**. Green rows are the useful ones; the **Useful windows** 
 
 ## Columns
 
-Date to MNR are always visible. The **Columns** button opens a window with switches for the additional columns, grouped as *Noise and degradation*, *Doppler and frequencies* and *Moon geometry* (e.g. Tsky, Dgrd of both stations, Doppler, echo, Doppler DX → me, TX/RX CFOM, declination, hour angle, distance, DX distance, Sun–Moon (°), Moon illuminated (%)). Columns marked [DX] appear only with the second station active. The choice is saved and also applies to **Export CSV**. Additional columns are shown with the **IN-DEPTH CALCULATIONS** box. Hover over a column header for its explanation. Next version: the Dgrd columns use the noise model chosen in [DGRD by frequency](DGRD-by-Frequency).
+Date to MNR are always visible. The **Columns** button opens a window with switches for the additional columns, grouped as *Noise and degradation*, *Doppler and frequencies* and *Moon geometry* (e.g. Tsky, Dgrd of both stations, Doppler, echo, Doppler DX → me, TX/RX CFOM, declination, hour angle, distance, DX distance, Sun–Moon (°), Moon illuminated (%)). Columns marked [DX] appear only with the second station active. The choice is saved and also applies to **Export CSV**. Additional columns are shown with the **IN-DEPTH CALCULATIONS** box. Hover over a column header for its explanation. The Dgrd columns use the noise model chosen in [DGRD by frequency](DGRD-by-Frequency).
 
 At the top, live "pills" show the current time, the Moon from you and from the DX, Dgrd, Dpol and CFOM.
 

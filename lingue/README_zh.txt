@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.5
+﻿YAEC – Yet Another EME Calc 1.6
 作者：Costantino IC8TEM
 ==========================================
 
-面向在 50 至 432 MHz 进行 EME（地–月–地）通信的业余无线电爱好者的计算器：根据自己天线的限制计算月球位置和指向时间窗口，规划 Dgrd 最佳的日期，EME 链路预算，天空噪声和太阳噪声，同轴电缆数据库以及 EME 手册。适用于 Windows、Linux 和 macOS，提供 28 种语言。
+面向在 50 MHz 至 23 cm（1296 MHz）进行 EME（地–月–地）通信的业余无线电爱好者的计算器：根据自己天线的限制计算月球位置和指向时间窗口，规划 Dgrd 最佳的日期，使用八木天线或抛物面天线的 EME 链路预算，天空噪声和太阳噪声，同轴电缆数据库以及 EME 手册。适用于 Windows、Linux 和 macOS，提供 28 种语言。432 MHz 以上的频段仍在完善中，但 DGRD 在每个频率上都已正确计算。
 源代码和下载：https://github.com/ic8tem/YAEC/releases
 
 安装 – WINDOWS
-1. 从 Releases 页面下载 YAEC-1.5-win-x64-setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
+1. 从 Releases 页面下载 YAEC-1.6-win-x64-setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
 2. 如果出现 SmartScreen 警告：“更多信息” → “仍要运行”。
-3. 免安装：将 YAEC-1.5-win-x64-portatile.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
+3. 免安装：将 YAEC-1.6-win-x64-portatile.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
 
 安装 – LINUX
 YAEC 在 Mono（自由的 .NET 运行时）上运行。
-- Debian、Ubuntu、Mint：下载 yaec_1.5_amd64.deb，并用以下命令安装
-      sudo apt install ./yaec_1.5_amd64.deb
+- Debian、Ubuntu、Mint：下载 yaec_1.6_amd64.deb，并用以下命令安装
+      sudo apt install ./yaec_1.6_amd64.deb
   （同时会安装 Mono）。可从应用程序菜单或用命令“yaec”启动 YAEC。
-- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) 并运行 ./install.sh。
+- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) 并运行 ./install.sh。
 
 安装 – macOS（实验性）
 1. 安装 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
-2. 打开 YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel)，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
+2. 打开 YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel)，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
 
 校验下载的文件（SHA-256）
 每个 release 都包含 SHA256SUMS.txt，其中列出每个软件包的 SHA-256 校验值。请将其与下载文件的校验值进行比较：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 如果两个值不同，请不要安装该文件，而应重新下载。
@@ -39,8 +39,9 @@ YAEC 是免费的；许可证文本见文件 LICENSE_zh.txt 以及程序中的�
 
 版本历史
 1.0 之前的版本称为 beta 版。
-- 1.5 - “连接”组新增“GRAVES 雷达”标签页：月球是否在雷达波束内（扇区与波位）、与你的共同窗口、回波的多普勒和延迟、波束下一次扫过月球的时间、从 GRAVES 看到的天空、24 小时 UTC 重建及未来 10 秒的细节、收听回波的建议和资料来源；活跃电台列表另提供 JSON 和文本格式，供 LunaCalc Mobile 使用；新增两种语言：丹麦语和他加禄语（共 28 种），含手册。
-- 1.4 - 活跃电台：如果该电台在过去 90 天内在 N0UK 的 EME 聊天室发过言，DX 呼号框会显示橙色边框，提示中显示最后一条消息的日期；“字体类型”提供适用于 Windows、Linux 和 macOS 的 10 种推荐字体，已逐个标签页测试；提供 32 位 Windows 和 Raspberry Pi（arm64）安装包；天空视图用紫色虚线框标出可指向的区域；“距离与 Dgrd”增加第四个可用日，也可在图中单击选择日期；数字输入框采用圆角边框，箭头上下排列；对话框按钮位于两侧（左、中、右）；致谢框占满整个宽度；窗口较窄时 CALCOLI APPROFONDITI 分两行显示，文字不再被按钮遮挡。
+- 1.6 - 整个程序新增 902 MHz 和 23 cm（1296 和 1298 MHz）频段，MHz 下拉列表中包含所有频段；“EME 链路预算”标签页更名为“EME 链路预算 八木”，并新增“EME 链路预算 抛物面”标签页（主焦点抛物面天线，用 PE1RKI 公式计算增益，前置放大器也可为两级，变频器和 PA 激励）；新增“按频率 DGRD”标签页，使用电台的真实噪声和在波束内平均的天空，并在整个程序中使用；同轴电缆根据规格书数据用公式 α = k1·√f + k2·f 计算，也包括 902 和 1296 MHz；所有标签页采用新的控件样式；“实时位置与 +- 24h”中红色光标上显示提示，并显示光标时刻 DX 的红线；对照各资料来源修订手册（逐频段路径损耗、Q65-60B 和 Q65-60C 的门限、依据 IK1UWL 实测的地面增益、连接器、其他程序的 Dgrd、432 MHz 以上的抛物面天线）；提供各种架构的安装包（Windows x64 和 x86，Linux x64、arm64 和 arm，macOS Apple Silicon 和 Intel）；感谢 Robert HA5OLA。432 MHz 以上的频段仍在完善中。
+- 1.5 - “通联”组新增“GRAVES 雷达”标签页：月球是否在雷达波束内（扇区与波位）、与你的共同窗口、回波的多普勒和延迟、波束下一次扫过月球的时间、从 GRAVES 看到的天空、24 小时 UTC 重建及未来 10 秒的细节、收听回波的建议和资料来源；活跃电台列表另提供 JSON 和文本格式，供 LunaCalc Mobile 使用；新增两种语言：丹麦语和他加禄语（共 28 种），含手册。
+- 1.4 - 活跃电台：如果该电台在过去 90 天内在 N0UK 的 EME 聊天室发过言，DX 呼号框会显示橙色边框，提示中显示最后一条消息的日期；“字体类型”提供适用于 Windows、Linux 和 macOS 的 10 种推荐字体，已逐个标签页测试；提供 32 位 Windows 和 Raspberry Pi（arm64）安装包；天空视图用紫色虚线框标出可指向的区域；“距离与 Dgrd”增加第四个可用日，也可在图中单击选择日期；数字输入框采用圆角边框，箭头上下排列；对话框按钮位于两侧（左、中、右）；致谢框占满整个宽度；窗口较窄时“深入计算”分两行显示，文字不再被按钮遮挡。
 - 1.3 - 新增九种语言：荷兰语、爱沙尼亚语、拉脱维亚语、立陶宛语、瑞典语、挪威语、冰岛语、希伯来语和乌尔都语（共 26 种），并附手册；许可协议和 README 提供所有语言版本，许可协议以安装程序的语言显示；新增 GRAVES 按钮；EME 链路预算中新增 TX 连接器和 RX 连接器（NJ9R 的建议）；左栏与 EME 链路预算示意图之间新增可拖动的分隔条；我的障碍物勘察中新增灰色遮罩复选框；公式调试更名为计算核查，ABOUT & CREDITS 更名为关于与鸣谢；用户手册的技术章节新增孟加拉语、阿拉伯语和土耳其语版本；修正粉彩配色方案；CALL3.TXT 窗口在更新后自动关闭；对话框按钮间距加大。
 - 1.2.1 - 作者联系方式与致谢页面在 Linux 和 macOS 上恢复正常打开；变频器的参考章节改为 § 1.7.1。
 - 1.2 - EME 链路预算新增指标：我的 EIRP、DX 的 EIRP、路径损耗以及双向 S/N（含太阳）；Word 文档中的公式统一为一种大小并保持在页边距内；所有配色方案中的按钮改为填充样式，下拉列表改为扁平圆角样式；八种粉彩配色方案；数值框的上下箭头并排显示；三个最佳日期按日期排序；天空背景模糊；公式调试已翻译；《EME 理论与建议》手册加入 Relu NJ9R 的建议（GRAVES、指向、连接器、天线增益、JT65B 与 MAP65、极化继电器）、关于首次接收和网络聊天室的新章节，并在序言中加入 VE7BQH 天线表；致谢 NJ9R，缅怀 IK1UWL，感谢文章、硬件和软件的作者，并以提示框介绍他们的作品。

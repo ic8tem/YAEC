@@ -12,13 +12,13 @@
 
 **Planning**
 - [Distance and Dgrd](Distance-and-Dgrd)
-- [DGRD by frequency](DGRD-by-Frequency) (next version)
+- [DGRD by frequency](DGRD-by-Frequency)
 - [Moon position](Moon-Position)
 - [Moon over the world](Moon-over-the-World)
 
 **Link**
 - [EME budget Yagi](EME-Budget)
-- [EME budget dishes](EME-Budget-Dishes) (next version)
+- [EME budget dishes](EME-Budget-Dishes)
 - [GRAVES radar](GRAVES-Radar)
 - [Solar noise](Solar-Noise)
 - [Export calculations to Excel and Calculation check](Excel-Export-and-Calculation-Check)

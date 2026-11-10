@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.5
+﻿YAEC – Yet Another EME Calc 1.6
 a cura di Costantino IC8TEM
 ==========================================
 
-Calcolatore per radioamatori che lavorano in EME (Terra–Luna–Terra) da 50 a 432 MHz: posizione della Luna e finestre di puntamento secondo i limiti della propria antenna, pianificazione dei giorni con la Dgrd migliore, budget del collegamento EME, rumore del cielo e del Sole, database dei cavi coassiali e manuali sull'EME. Per Windows, Linux e macOS, in 28 lingue.
+Calcolatore per radioamatori che lavorano in EME (Terra–Luna–Terra) da 50 MHz ai 23 cm (1296 MHz): posizione della Luna e finestre di puntamento secondo i limiti della propria antenna, pianificazione dei giorni con la Dgrd migliore, budget del collegamento EME con yagi o dischi, rumore del cielo e del Sole, database dei cavi coassiali e manuali sull'EME. Per Windows, Linux e macOS, in 28 lingue. Le bande sopra i 432 MHz sono in fase di completamento, ma la DGRD è già calcolata correttamente a ogni frequenza.
 Sorgente e download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLAZIONE – WINDOWS
-1. Scarica YAEC-1.5-win-x64-setup.exe dalla pagina Releases ed eseguilo. Installa YAEC in Documenti\YAEC, senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione.
+1. Scarica YAEC-1.6-win-x64-setup.exe dalla pagina Releases ed eseguilo. Installa YAEC in Documenti\YAEC, senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione.
 2. Se compare l'avviso di SmartScreen: "Ulteriori informazioni" → "Esegui comunque".
-3. Senza installazione: estrai YAEC-1.5-win-x64-portatile.zip in una cartella in cui puoi scrivere e avvia YAEC.exe.
+3. Senza installazione: estrai YAEC-1.6-win-x64-portatile.zip in una cartella in cui puoi scrivere e avvia YAEC.exe.
 
 INSTALLAZIONE – LINUX
 YAEC funziona con Mono, il runtime .NET libero.
-- Debian, Ubuntu, Mint: scarica yaec_1.5_amd64.deb e installalo con
-      sudo apt install ./yaec_1.5_amd64.deb
+- Debian, Ubuntu, Mint: scarica yaec_1.6_amd64.deb e installalo con
+      sudo apt install ./yaec_1.6_amd64.deb
   (installa anche Mono). YAEC si avvia dal menu delle applicazioni o con il comando "yaec".
-- Altre distribuzioni: installa Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), estrai YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) e avvia ./install.sh.
+- Altre distribuzioni: installa Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), estrai YAEC-1.6-linux-x64-portatile.tar.gz (ARM: YAEC-1.6-linux-arm64-portatile.tar.gz, YAEC-1.6-linux-arm-portatile.tar.gz) e avvia ./install.sh.
 
 INSTALLAZIONE – macOS (sperimentale)
 1. Installa Mono per macOS (https://www.mono-project.com/download/stable/) e XQuartz (https://www.xquartz.org).
-2. Apri YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) e trascina YAEC in Applicazioni. La prima volta: clic destro su YAEC → Apri (l'app non è firmata da Apple).
+2. Apri YAEC-1.6-osx-arm64.dmg (Apple Silicon) / YAEC-1.6-osx-x64.dmg (Intel) e trascina YAEC in Applicazioni. La prima volta: clic destro su YAEC → Apri (l'app non è firmata da Apple).
 
 CONTROLLO DEI FILE SCARICATI (SHA-256)
 Ogni release contiene SHA256SUMS.txt con l'impronta SHA-256 di ogni pacchetto. Confrontala con quella del file scaricato:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.6-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Se i due valori sono diversi non installare il file: scaricalo di nuovo.
@@ -39,6 +39,7 @@ Errori, dati migliori, traduzioni: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 STORIA DELLE VERSIONI
 Le versioni precedenti alla 1.0 si chiamano beta.
+- 1.6 - Bande 902 MHz e 23 cm (1296 e 1298 MHz) in tutto il programma, con tutte le bande nella tendina dei MHz; la linguetta Budget EME diventa Budget EME yagi e c'è la nuova linguetta Budget EME dischi (disco a primo fuoco, guadagno con la formula di PE1RKI, preamplificatore anche a due stadi, transverter e pilotaggio del PA); nuova linguetta DGRD per frequenza, con il rumore vero della stazione e il cielo mediato sul fascio, usata in tutto il programma; cavi coassiali calcolati con la formula α = k1·√f + k2·f dai dati delle schede, anche a 902 e 1296 MHz; nuovo stile dei comandi in tutte le linguette; nella Posizione live e +- 24h il fumetto sul cursore rosso e le linee rosse del DX all'ora del cursore; manuale rivisto dopo il confronto delle fonti (perdita di tratta banda per banda, soglie del Q65-60B e del Q65-60C, ground gain secondo le misure di IK1UWL, connettori, Dgrd degli altri programmi, dischi sopra i 432 MHz); pacchetti per ogni architettura (Windows x64 e x86, Linux x64, arm64 e arm, macOS Apple Silicon e Intel); ringraziamenti a Robert HA5OLA. Le bande sopra i 432 MHz sono in fase di completamento.
 - 1.5 - Nuova linguetta Radar GRAVES nel gruppo Collegamento: Luna nel fascio del radar con settore e passo, finestra comune con te, Doppler e ritardo dell'eco, prossimo passaggio del fascio sulla Luna, cielo visto da GRAVES, ricostruzione delle 24 ore UTC con il dettaglio dei prossimi 10 secondi, consigli per ascoltare l'eco e fonti; elenco delle stazioni attive anche in JSON e in testo per LunaCalc Mobile; due lingue nuove, danese e tagalog (28 in tutto), con i manuali.
 - 1.4 - Stazioni attive: la casella del nominativo del DX ha il bordo arancione se la stazione ha scritto nella chat EME di N0UK negli ultimi 90 giorni, con la data dell'ultimo messaggio nel fumetto; Tipo di carattere con 10 caratteri consigliati per Windows, Linux e macOS, provati linguetta per linguetta; pacchetti per Windows a 32 bit e per Raspberry Pi (arm64); Volta celeste con i riquadri viola tratteggiati della zona puntabile; Distanza e Dgrd con il quarto giorno utile e il giorno scelto anche con un clic nel grafico; caselle dei numeri con la cornice arrotondata e le frecce una sopra l'altra; pulsanti delle finestre ai bordi (a sinistra, al centro, a destra); riquadro dei ringraziamenti a tutta larghezza; nelle finestre strette CALCOLI APPROFONDITI va su due righe e nessuna scritta finisce sotto i pulsanti.
 - 1.3 - Nove lingue nuove: olandese, estone, lettone, lituano, svedese, norvegese, islandese, ebraico e urdu (26 in tutto), con i manuali; licenza e LEGGIMI in tutte le lingue, licenza nella lingua dell'installatore; pulsante GRAVES; Connettori in TX e Connettori in RX nel Budget EME (consiglio di NJ9R); separatore trascinabile tra la colonna sinistra e lo schema del Budget EME; casella del velo grigio nella Ricognizione dei miei ostacoli; DEBUG FORMULE diventa Controllo dei calcoli e ABOUT & CREDITS diventa INFORMAZIONI E CREDITI; capitoli tecnici del manuale d'uso in bengalese, arabo e turco; schemi pastello corretti; la finestra del CALL3.TXT si chiude da sola dopo l'aggiornamento; pulsanti delle finestre di dialogo distanziati.

@@ -1,6 +1,6 @@
 # DGRD by frequency
 
-*Group: Planning. (next version – not in 1.5)*
+*Group: Planning. (since 1.6)*
 
 **Dgrd at your working frequency**, compared with the usual calculation (80 K receiver, sky only at the Moon's position, as in WSJT-X). Here you can use your station's **real noise** (Tant and Te from the band's [EME budget](EME-Budget)) and the **sky averaged over the antenna beam**. On the right, how the Dgrd of the selected day builds up and the same moment on the other bands. **The choices apply throughout the program**, including the best days in [Distance and Dgrd](Distance-and-Dgrd).
 

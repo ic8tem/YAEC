@@ -6,7 +6,7 @@ The **Credits and thanks** group of the program has three tabs: **ABOUT & CREDIT
 
 - **IZ0JNY Ivan** – for the patronage of the **ARI "Valle del Liri" Section (03-04)**; YAEC is published under the patronage of the Section and uses its logo.
 - **Beta testers:** IZ7NLJ Fabio, I2NOY Maurizio, IK4GNG Gilberto.
-- **HA5OLA** – for the development news on the frequencies above 432 MHz (next version).
+- **Robert HA5OLA** – for the development news on the frequencies above 432 MHz.
 - **Relu NJ9R** – for the encouragement not to give up, and for *"2M EME the easy way"*, whose advice is in the theory manual.
 - **Giorgio IK1UWL**, Italian EME pioneer – a thought and a memory.
 - **All the authors of articles and of hardware or software products** commonly found in the stations of EME operators all over the world. In the program each callsign has a tooltip with the works and where they are cited in the manual.
@@ -41,9 +41,9 @@ The program source code was written with the assistance of **Claude (Anthropic)*
 | Polarization | Leif Åsbrink SM5BSZ, *Selecting Polarisation for EME*; Franco I2FAK interviews; Paul Bock K4MSG |
 | Operating practice | Relu Jianu NJ9R; Lance Collister W7GJ; Giorgio Marchi IK1UWL, *EME – Guida operativa* |
 | Pointing (higher bands) | OE2IGL and DF3GJ, *EME Link Budget & Analysis Tool (1-300 GHz)* |
-| Dish gain (next version) | PE1RKI formula, G = 10·log[η·(π·D/λ)²], efficiency 60 % on average, 60–80 % typical; beamwidth ≈ 70·λ/D |
+| Dish gain | PE1RKI formula, G = 10·log[η·(π·D/λ)²], efficiency 60 % on average, 60–80 % typical; beamwidth ≈ 70·λ/D (70 chosen within IZ0JNY's 65–75 range) |
 | GRAVES radar | Rob Hardenberg PE1ITR, *The 143.050 MHz Graves Radar, a VHF Beacon* (DUBUS 4/2007) and *Graves Radar Update April 2021*; Bolidozor wiki, *Graves*; Wikipedia, *GRAVES (system)*; Relu Jianu NJ9R; Grupo Bandas Altas DX, *Desafío EME GRAVES* |
-| Coaxial cables | Manufacturers' data sheets and tables listed in [COAXIAL CABLES](Coaxial-Cables); next version: values brought to the bands with α = k1·√f + k2·f |
+| Coaxial cables | Manufacturers' data sheets and tables listed in [COAXIAL CABLES](Coaxial-Cables); values brought to the bands with α = k1·√f + k2·f |
 | CALL3.TXT | W7GJ and WSJT-X Improved |
 | Active stations | N0UK EME chat (stations that wrote there in the last 90 days) |
 | Moon image | `moon_1024.jpg` from the three.js library |
