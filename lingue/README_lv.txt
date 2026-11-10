@@ -6,24 +6,24 @@ Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā
 Pirmkods un lejupielāde: https://github.com/ic8tem/YAEC/releases
 
 INSTALĒŠANA – WINDOWS
-1. Lejupielādējiet YAEC-1.5-Setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
+1. Lejupielādējiet YAEC-1.5-win-x64-setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
 2. Ja parādās SmartScreen brīdinājums: "More info" → "Run anyway".
-3. Bez instalēšanas: atarhivējiet YAEC-1.5-windows-portable.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
+3. Bez instalēšanas: atarhivējiet YAEC-1.5-win-x64-portatile.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
 
 INSTALĒŠANA – LINUX
 YAEC darbojas ar Mono — brīvo .NET izpildlaika vidi.
-- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.5_all.deb un instalējiet to ar komandu
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.5_amd64.deb un instalējiet to ar komandu
+      sudo apt install ./yaec_1.5_amd64.deb
   (tiek instalēts arī Mono). YAEC palaiž no lietotņu izvēlnes vai ar komandu "yaec".
-- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.5-linux.tar.gz un palaidiet ./install.sh.
+- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) un palaidiet ./install.sh.
 
 INSTALĒŠANA – macOS (eksperimentāli)
 1. Instalējiet Mono operētājsistēmai macOS (https://www.mono-project.com/download/stable/) un XQuartz (https://www.xquartz.org).
-2. Atveriet YAEC-1.5-macOS.dmg un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
+2. Atveriet YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
 
 LEJUPIELĀDĒTO FAILU PĀRBAUDE (SHA-256)
 Katrā release ir fails SHA256SUMS.txt ar katras pakotnes SHA-256 jaucējvērtību. Salīdziniet to ar lejupielādētā faila jaucējvērtību:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ja abas vērtības atšķiras, neinstalējiet failu: lejupielādējiet to vēlreiz.

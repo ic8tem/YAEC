@@ -6,24 +6,24 @@
 সোর্স কোড ও ডাউনলোড: https://github.com/ic8tem/YAEC/releases
 
 ইনস্টলেশন – WINDOWS
-1. Releases পেজ থেকে YAEC-1.5-Setup.exe ডাউনলোড করে চালান। এটি অ্যাডমিনিস্ট্রেটর অধিকার ছাড়াই YAEC-কে Documents\YAEC-এ ইনস্টল করে, Start মেনু ও ডেস্কটপে শর্টকাট এবং আনইনস্টলার সহ।
+1. Releases পেজ থেকে YAEC-1.5-win-x64-setup.exe ডাউনলোড করে চালান। এটি অ্যাডমিনিস্ট্রেটর অধিকার ছাড়াই YAEC-কে Documents\YAEC-এ ইনস্টল করে, Start মেনু ও ডেস্কটপে শর্টকাট এবং আনইনস্টলার সহ।
 2. SmartScreen সতর্কবার্তা দেখা দিলে: "More info" → "Run anyway"।
-3. ইনস্টল ছাড়া: YAEC-1.5-windows-portable.zip এমন একটি ফোল্ডারে এক্সট্র্যাক্ট করুন যেখানে আপনি লিখতে পারেন, তারপর YAEC.exe চালান।
+3. ইনস্টল ছাড়া: YAEC-1.5-win-x64-portatile.zip এমন একটি ফোল্ডারে এক্সট্র্যাক্ট করুন যেখানে আপনি লিখতে পারেন, তারপর YAEC.exe চালান।
 
 ইনস্টলেশন – LINUX
 YAEC চলে Mono-তে, যা একটি মুক্ত .NET রানটাইম।
-- Debian, Ubuntu, Mint: yaec_1.5_all.deb ডাউনলোড করে এই কমান্ড দিয়ে ইনস্টল করুন
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: yaec_1.5_amd64.deb ডাউনলোড করে এই কমান্ড দিয়ে ইনস্টল করুন
+      sudo apt install ./yaec_1.5_amd64.deb
   (এতে Mono-ও ইনস্টল হয়)। YAEC অ্যাপ্লিকেশন মেনু থেকে বা "yaec" কমান্ড দিয়ে চালু হয়।
-- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.5-linux.tar.gz এক্সট্র্যাক্ট করে ./install.sh চালান।
+- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) এক্সট্র্যাক্ট করে ./install.sh চালান।
 
 ইনস্টলেশন – macOS (পরীক্ষামূলক)
 1. macOS-এর জন্য Mono (https://www.mono-project.com/download/stable/) এবং XQuartz (https://www.xquartz.org) ইনস্টল করুন।
-2. YAEC-1.5-macOS.dmg খুলে YAEC-কে Applications-এ টেনে আনুন। প্রথমবার: YAEC-এ রাইট-ক্লিক → Open (অ্যাপটি Apple দ্বারা স্বাক্ষরিত নয়)।
+2. YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) খুলে YAEC-কে Applications-এ টেনে আনুন। প্রথমবার: YAEC-এ রাইট-ক্লিক → Open (অ্যাপটি Apple দ্বারা স্বাক্ষরিত নয়)।
 
 ডাউনলোড করা ফাইল যাচাই (SHA-256)
 প্রতিটি release-এ SHA256SUMS.txt থাকে, যাতে প্রতিটি প্যাকেজের SHA-256 হ্যাশ দেওয়া আছে। ডাউনলোড করা ফাইলের হ্যাশের সঙ্গে এটি মিলিয়ে দেখুন:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 দুটি মান আলাদা হলে ফাইলটি ইনস্টল করবেন না: আবার ডাউনলোড করুন।

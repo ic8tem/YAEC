@@ -6,24 +6,24 @@
 ソースとダウンロード：https://github.com/ic8tem/YAEC/releases
 
 インストール – WINDOWS
-1. Releases ページから YAEC-1.5-Setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
+1. Releases ページから YAEC-1.5-win-x64-setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
 2. SmartScreen の警告が表示された場合：「詳細情報」→「実行」。
-3. インストールせずに使う場合：YAEC-1.5-windows-portable.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
+3. インストールせずに使う場合：YAEC-1.5-win-x64-portatile.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
 
 インストール – LINUX
 YAEC はフリーの .NET ランタイムである Mono で動作します。
-- Debian、Ubuntu、Mint：yaec_1.5_all.deb をダウンロードし、次のコマンドでインストールします
-      sudo apt install ./yaec_1.5_all.deb
+- Debian、Ubuntu、Mint：yaec_1.5_amd64.deb をダウンロードし、次のコマンドでインストールします
+      sudo apt install ./yaec_1.5_amd64.deb
   （Mono も同時にインストールされます）。YAEC はアプリケーションメニューから、またはコマンド「yaec」で起動します。
-- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.5-linux.tar.gz を展開して ./install.sh を実行します。
+- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) を展開して ./install.sh を実行します。
 
 インストール – macOS（試験的）
 1. macOS 用 Mono（https://www.mono-project.com/download/stable/）と XQuartz（https://www.xquartz.org）をインストールします。
-2. YAEC-1.5-macOS.dmg を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
+2. YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
 
 ダウンロードしたファイルの確認（SHA-256）
 各 release には、すべてのパッケージの SHA-256 ハッシュを記載した SHA256SUMS.txt が含まれています。ダウンロードしたファイルのハッシュと比較してください：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 2 つの値が異なる場合は、そのファイルをインストールせず、もう一度ダウンロードしてください。

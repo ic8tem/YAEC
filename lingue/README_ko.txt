@@ -6,24 +6,24 @@
 소스 및 다운로드: https://github.com/ic8tem/YAEC/releases
 
 설치 – WINDOWS
-1. Releases 페이지에서 YAEC-1.5-Setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
+1. Releases 페이지에서 YAEC-1.5-win-x64-setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
 2. SmartScreen 경고가 나타나면: "추가 정보" → "실행".
-3. 설치 없이 사용: YAEC-1.5-windows-portable.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
+3. 설치 없이 사용: YAEC-1.5-win-x64-portatile.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
 
 설치 – LINUX
 YAEC는 자유 .NET 런타임인 Mono에서 동작합니다.
-- Debian, Ubuntu, Mint: yaec_1.5_all.deb를 다운로드하여 다음 명령으로 설치합니다
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: yaec_1.5_amd64.deb를 다운로드하여 다음 명령으로 설치합니다
+      sudo apt install ./yaec_1.5_amd64.deb
   (Mono도 함께 설치됩니다). YAEC는 응용 프로그램 메뉴에서 또는 "yaec" 명령으로 실행합니다.
-- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.5-linux.tar.gz의 압축을 푼 뒤 ./install.sh를 실행합니다.
+- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
 
 설치 – macOS (실험적)
 1. macOS용 Mono(https://www.mono-project.com/download/stable/)와 XQuartz(https://www.xquartz.org)를 설치합니다.
-2. YAEC-1.5-macOS.dmg를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
+2. YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel)를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
 
 다운로드한 파일 확인 (SHA-256)
 각 release에는 모든 패키지의 SHA-256 해시가 담긴 SHA256SUMS.txt가 포함되어 있습니다. 다운로드한 파일의 해시와 비교하십시오:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 두 값이 다르면 파일을 설치하지 말고 다시 다운로드하십시오.

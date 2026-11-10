@@ -3130,6 +3130,12 @@ namespace LunaCalc
             "Budget EME yagi",
             "Budget EME dischi",
             "Lo stesso bilancio del Budget EME yagi per le stazioni con antenna a disco, a 432, 902 e 1296 MHz, con valori memorizzati a parte. Nella scheda di ogni stazione si scrivono diametro, efficienza (60 % in media, 60–80 % tipica) e rapporto f/D; il guadagno si calcola con la formula di PE1RKI, G = 10·log[η·(π·D/λ)²], con i dBd (dBi − 2,15) e l'apertura a −3 dB (70·λ/D). Lo schema mostra il disco con l'illuminatore e la catena completa: preamplificatore a uno o due stadi (fino a circa 30 dB), cavo di discesa, transverter con la sua uscita in trasmissione e il cavo verso l'amplificatore, con il controllo del pilotaggio richiesto dal PA.",
+            "Prova a spostarmi verso sinistra o destra",
+            "Schede di Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (tramite WiMo), Symair, SYV50-7 e la tabella di SV1BSX; valori riportati alle bande con la formula α = k1·√f + k2·f.",
+            "≈ = calcolato con la formula α = k1·√f + k2·f (conduttori + dielettrico) dentro le frequenze della scheda.",
+            "e = calcolato con la stessa formula fuori dalle frequenze della scheda: da usare con cautela.",
+            "per le notizie di sviluppo",
+            "sulle frequenze sopra i 432 MHz",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -4605,6 +4611,12 @@ namespace LunaCalc
             "EME budget Yagi",
             "EME budget dishes",
             "The same calculation as the EME budget Yagi, for stations with a dish antenna, at 432, 902 and 1296 MHz, with values stored separately. In each station's tab you enter diameter, efficiency (60% on average, 60–80% typical) and f/D ratio; the gain is calculated with the PE1RKI formula, G = 10·log[η·(π·D/λ)²], with dBd (dBi − 2.15) and the −3 dB beamwidth (70·λ/D). The diagram shows the dish with its feed and the complete chain: single- or two-stage preamplifier (up to about 30 dB), feed line, transverter with its transmit output and the cable to the amplifier, with a check of the drive power required by the PA.",
+            "Try moving me left or right",
+            "Data sheets by Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (via WiMo), Symair, SYV50-7 and the table by SV1BSX; values brought to the bands with the formula α = k1·√f + k2·f.",
+            "≈ = computed with the formula α = k1·√f + k2·f (conductors + dielectric) within the frequencies of the data sheet.",
+            "e = computed with the same formula outside the frequencies of the data sheet: to be used with caution.",
+            "for the development news",
+            "on the frequencies above 432 MHz",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6080,6 +6092,12 @@ namespace LunaCalc
             "EME-Budget Yagi",
             "EME-Budget Spiegel",
             "Dieselbe Bilanz wie im EME-Budget Yagi, für Stationen mit Parabolspiegel, auf 432, 902 und 1296 MHz, mit separat gespeicherten Werten. In der Karte jeder Station trägst du Durchmesser, Wirkungsgrad (60 % im Mittel, 60–80 % typisch) und f/D-Verhältnis ein; die Verstärkung wird mit der Formel von PE1RKI berechnet, G = 10·log[η·(π·D/λ)²], mit dBd (dBi − 2,15) und dem Öffnungswinkel bei −3 dB (70·λ/D). Das Schema zeigt den Spiegel mit dem Erreger und die komplette Kette: ein- oder zweistufiger Vorverstärker (bis etwa 30 dB), Zuleitungskabel, Transverter mit seinem Sendeausgang und dem Kabel zur Endstufe, mit Prüfung der von der PA benötigten Steuerleistung.",
+            "Versuch mal, mich nach links oder rechts zu verschieben",
+            "Datenblätter von Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (über WiMo), Symair, SYV50-7 und die Tabelle von SV1BSX; Werte mit der Formel α = k1·√f + k2·f auf die Bänder umgerechnet.",
+            "≈ = mit der Formel α = k1·√f + k2·f (Leiter + Dielektrikum) innerhalb der Frequenzen des Datenblatts berechnet.",
+            "e = mit derselben Formel außerhalb der Frequenzen des Datenblatts berechnet: mit Vorsicht zu verwenden.",
+            "für die Neuigkeiten zur Entwicklung",
+            "zu den Frequenzen oberhalb von 432 MHz",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -7555,6 +7573,12 @@ namespace LunaCalc
             "Bilan EME Yagi",
             "Bilan EME paraboles",
             "Le même bilan que le Bilan EME Yagi pour les stations à antenne parabolique, sur 432, 902 et 1296 MHz, avec des valeurs mémorisées à part. Dans la fiche de chaque station, on saisit le diamètre, le rendement (60 % en moyenne, 60–80 % typique) et le rapport f/D ; le gain est calculé avec la formule de PE1RKI, G = 10·log[η·(π·D/λ)²], avec les dBd (dBi − 2,15) et l'ouverture à −3 dB (70·λ/D). Le schéma montre la parabole avec sa source et la chaîne complète : préampli à un ou deux étages (jusqu'à environ 30 dB), câble de descente, transverter avec sa sortie émission et le câble vers l'amplificateur, avec le contrôle de l'excitation requise par le PA.",
+            "Essayez de me déplacer vers la gauche ou vers la droite",
+            "Fiches techniques de Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (via WiMo), Symair, SYV50-7 et tableau de SV1BSX ; valeurs ramenées aux bandes avec la formule α = k1·√f + k2·f.",
+            "≈ = calculé avec la formule α = k1·√f + k2·f (conducteurs + diélectrique) à l'intérieur des fréquences de la fiche technique.",
+            "e = calculé avec la même formule en dehors des fréquences de la fiche technique : à utiliser avec prudence.",
+            "pour les nouvelles du développement",
+            "sur les fréquences au-dessus de 432 MHz",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -9030,6 +9054,12 @@ namespace LunaCalc
             "Balance EME Yagi",
             "Balance EME parábolas",
             "El mismo balance que el Balance EME Yagi para estaciones con antena parabólica, en 432, 902 y 1296 MHz, con valores guardados aparte. En la ficha de cada estación se introducen diámetro, eficiencia (60 % de media, 60–80 % típica) y relación f/D; la ganancia se calcula con la fórmula de PE1RKI, G = 10·log[η·(π·D/λ)²], con los dBd (dBi − 2,15) y la apertura a −3 dB (70·λ/D). El esquema muestra la parábola con el iluminador y la cadena completa: previo de una o dos etapas (hasta unos 30 dB), cable de bajada, transverter con su salida de transmisión y el cable hacia el amplificador, con la comprobación de la excitación que requiere el PA.",
+            "Prueba a moverme hacia la izquierda o la derecha",
+            "Hojas de datos de Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (a través de WiMo), Symair, SYV50-7 y la tabla de SV1BSX; valores llevados a las bandas con la fórmula α = k1·√f + k2·f.",
+            "≈ = calculado con la fórmula α = k1·√f + k2·f (conductores + dieléctrico) dentro de las frecuencias de la hoja de datos.",
+            "e = calculado con la misma fórmula fuera de las frecuencias de la hoja de datos: usar con cautela.",
+            "por las noticias del desarrollo",
+            "sobre las frecuencias por encima de 432 MHz",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -10505,6 +10535,12 @@ namespace LunaCalc
             "Balanço EME Yagi",
             "Balanço EME parabólicas",
             "O mesmo balanço do Balanço EME Yagi para estações com antena parabólica, em 432, 902 e 1296 MHz, com valores guardados à parte. Na ficha de cada estação indicas o diâmetro, a eficiência (60 % em média, 60–80 % típica) e a relação f/D; o ganho é calculado com a fórmula de PE1RKI, G = 10·log[η·(π·D/λ)²], com os dBd (dBi − 2,15) e a abertura a −3 dB (70·λ/D). O esquema mostra a parabólica com o iluminador e a cadeia completa: pré-amplificador de um ou dois andares (até cerca de 30 dB), cabo de descida, transverter com a sua saída de emissão e o cabo para o amplificador, com a verificação da excitação exigida pelo PA.",
+            "Experimenta mover-me para a esquerda ou para a direita",
+            "Folhas de dados da Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (através da WiMo), Symair, SYV50-7 e a tabela de SV1BSX; valores levados às bandas com a fórmula α = k1·√f + k2·f.",
+            "≈ = calculado com a fórmula α = k1·√f + k2·f (condutores + dielétrico) dentro das frequências da folha de dados.",
+            "e = calculado com a mesma fórmula fora das frequências da folha de dados: a usar com cautela.",
+            "pelas notícias sobre o desenvolvimento",
+            "sobre as frequências acima de 432 MHz",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -11980,6 +12016,12 @@ namespace LunaCalc
             "EME 链路预算 八木",
             "EME 链路预算 抛物面",
             "与 EME 链路预算 八木相同的计算，适用于使用抛物面天线的电台，频段为 432、902 和 1296 MHz，数值单独保存。在每个电台的选项卡中输入直径、效率（平均 60%，典型 60–80%）和 f/D 比；增益按 PE1RKI 公式计算，G = 10·log[η·(π·D/λ)²]，并给出 dBd（dBi − 2.15）和 −3 dB 波束宽度（70·λ/D）。示意图显示带馈源的抛物面天线及完整链路：单级或双级前置放大器（最高约 30 dB）、馈线、变频器及其发射输出、至功率放大器的电缆，并检查 PA 所需的激励功率。",
+            "试着把我向左或向右拖动",
+            "数据来源：Times Microwave、RFS、CommScope Andrew、Siva Cavi、SSB-Electronic、Messi & Paoloni（经由 WiMo）、Symair、SYV50-7 的数据手册以及 SV1BSX 的表格；数值用公式 α = k1·√f + k2·f 换算到各频段。",
+            "≈ = 在数据手册频率范围内用公式 α = k1·√f + k2·f（导体 + 介质）计算。",
+            "e = 在数据手册频率范围之外用同一公式计算：应谨慎使用。",
+            "提供开发动态",
+            "涉及 432 MHz 以上频率",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -13455,6 +13497,12 @@ namespace LunaCalc
             "EME 回線計算 八木",
             "EME 回線計算 パラボラ",
             "EME 回線計算 八木と同じ計算を、パラボラアンテナの局向けに 432、902、1296 MHz で行います。値は別々に保存されます。各局のタブで直径、効率（平均 60%、標準 60–80%）、f/D 比を入力します。利得は PE1RKI の式 G = 10·log[η·(π·D/λ)²] で計算し、dBd（dBi − 2.15）と −3 dB ビーム幅（70·λ/D）も表示します。図には一次放射器付きのパラボラと全系統が示されます：1段または2段のプリアンプ（最大約 30 dB）、給電ケーブル、送信出力を持つトランスバーター、アンプへのケーブル、そして PA が必要とするドライブ電力のチェック。",
+            "左右に動かしてみてください",
+            "Times Microwave、RFS、CommScope Andrew、Siva Cavi、SSB-Electronic、Messi & Paoloni（WiMo経由）、Symair、SYV50-7のデータシートとSV1BSXの表。値は式 α = k1·√f + k2·f で各バンドに換算。",
+            "≈ = データシートの周波数範囲内で式 α = k1·√f + k2·f（導体 + 誘電体）により計算。",
+            "e = 同じ式でデータシートの周波数範囲外で計算：注意して使用してください。",
+            "開発ニュースの提供",
+            "432 MHz以上の周波数について",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -14930,6 +14978,12 @@ namespace LunaCalc
             "EME बजट यागी",
             "EME बजट डिश",
             "EME बजट यागी जैसी ही गणना, डिश एंटीना वाले स्टेशनों के लिए, 432, 902 और 1296 MHz पर, अलग से सहेजे गए मानों के साथ। हर स्टेशन के टैब में व्यास, दक्षता (औसत 60%, सामान्य 60–80%) और f/D अनुपात भरें; गेन PE1RKI के सूत्र G = 10·log[η·(π·D/λ)²] से निकाला जाता है, साथ में dBd (dBi − 2.15) और −3 dB बीमविड्थ (70·λ/D)। आरेख में फ़ीड सहित डिश और पूरी श्रृंखला दिखती है: एक या दो स्टेज वाला प्रीएम्प (लगभग 30 dB तक), डाउन-लीड केबल, ट्रांसमिट आउटपुट सहित ट्रांसवर्टर और एम्पलीफ़ायर तक की केबल, तथा PA के लिए आवश्यक ड्राइव शक्ति की जाँच।",
+            "मुझे बाएँ या दाएँ खिसकाकर देखें",
+            "Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (WiMo के माध्यम से), Symair, SYV50-7 की डेटा शीट और SV1BSX की तालिका; मान सूत्र α = k1·√f + k2·f से बैंडों पर लाए गए।",
+            "≈ = डेटा शीट की फ़्रीक्वेंसियों के भीतर सूत्र α = k1·√f + k2·f (कंडक्टर + डाइइलेक्ट्रिक) से गणना किया गया।",
+            "e = उसी सूत्र से डेटा शीट की फ़्रीक्वेंसियों के बाहर गणना किया गया: सावधानी से इस्तेमाल करें।",
+            "विकास संबंधी समाचारों के लिए",
+            "432 MHz से ऊपर की फ़्रीक्वेंसियों पर",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -16405,6 +16459,12 @@ namespace LunaCalc
             "EME 링크 버짓 야기",
             "EME 링크 버짓 파라볼라",
             "EME 링크 버짓 야기와 같은 계산을 파라볼라 안테나 국을 위해 432, 902, 1296 MHz에서 수행하며, 값은 별도로 저장됩니다. 각 국의 탭에서 직경, 효율(평균 60%, 일반 60–80%), f/D 비를 입력합니다. 이득은 PE1RKI 공식 G = 10·log[η·(π·D/λ)²]로 계산하며, dBd(dBi − 2.15)와 −3 dB 빔폭(70·λ/D)도 표시합니다. 다이어그램은 피드가 달린 파라볼라와 전체 체인을 보여 줍니다: 1단 또는 2단 프리앰프(최대 약 30 dB), 급전 케이블, 송신 출력을 갖춘 트랜스버터와 증폭기까지의 케이블, 그리고 PA에 필요한 구동 전력 점검.",
+            "저를 왼쪽이나 오른쪽으로 옮겨 보세요",
+            "Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni(WiMo 경유), Symair, SYV50-7의 데이터 시트와 SV1BSX의 표. 값은 공식 α = k1·√f + k2·f로 밴드에 맞춤.",
+            "≈ = 데이터 시트 주파수 범위 안에서 공식 α = k1·√f + k2·f(도체 + 유전체)로 계산.",
+            "e = 같은 공식으로 데이터 시트 주파수 범위 밖에서 계산: 주의해서 사용.",
+            "개발 소식 제공",
+            "432 MHz 이상 주파수 관련",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -17880,6 +17940,12 @@ namespace LunaCalc
             "Anggaran EME yagi",
             "Anggaran EME parabola",
             "Perhitungan yang sama dengan Anggaran EME yagi untuk stasiun dengan antena parabola, pada 432, 902 dan 1296 MHz, dengan nilai yang disimpan terpisah. Di kartu setiap stasiun kamu mengisi diameter, efisiensi (rata-rata 60 %, tipikal 60–80 %) dan rasio f/D; penguatan dihitung dengan rumus PE1RKI, G = 10·log[η·(π·D/λ)²], beserta dBd (dBi − 2,15) dan lebar berkas −3 dB (70·λ/D). Diagram menampilkan parabola dengan feed-nya dan rantai lengkap: preamp satu atau dua tingkat (hingga sekitar 30 dB), kabel turun, transverter dengan keluaran pancarnya dan kabel ke penguat, beserta pemeriksaan daya drive yang dibutuhkan PA.",
+            "Coba geser saya ke kiri atau ke kanan",
+            "Lembar data Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (lewat WiMo), Symair, SYV50-7 dan tabel SV1BSX; nilai dibawa ke pita-pita dengan rumus α = k1·√f + k2·f.",
+            "≈ = dihitung dengan rumus α = k1·√f + k2·f (konduktor + dielektrik) di dalam rentang frekuensi lembar data.",
+            "e = dihitung dengan rumus yang sama di luar rentang frekuensi lembar data: gunakan dengan hati-hati.",
+            "atas berita pengembangan",
+            "pada frekuensi di atas 432 MHz",
         };
 
         public static readonly string[] RU = {
@@ -19356,6 +19422,12 @@ namespace LunaCalc
             "Бюджет EME яги",
             "Бюджет EME параболы",
             "Тот же расчёт, что и в «Бюджет EME яги», для станций с параболической антенной на 432, 902 и 1296 МГц, со значениями, сохраняемыми отдельно. В карточке каждой станции указываются диаметр, эффективность (в среднем 60 %, типично 60–80 %) и отношение f/D; усиление вычисляется по формуле PE1RKI, G = 10·log[η·(π·D/λ)²], вместе с дБд (дБи − 2,15) и шириной ДН по −3 дБ (70·λ/D). Схема показывает параболу с облучателем и всю цепочку: предусилитель с одним или двумя каскадами (примерно до 30 дБ), кабель снижения, трансвертер с его выходом на передачу и кабель к усилителю, с проверкой мощности раскачки, требуемой PA.",
+            "Попробуйте сдвинуть меня влево или вправо",
+            "Технические описания Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (через WiMo), Symair, SYV50-7 и таблица SV1BSX; значения пересчитаны на диапазоны по формуле α = k1·√f + k2·f.",
+            "≈ = рассчитано по формуле α = k1·√f + k2·f (проводники + диэлектрик) в пределах частот описания.",
+            "e = рассчитано по той же формуле за пределами частот описания: использовать с осторожностью.",
+            "за новости о разработках",
+            "на частотах выше 432 MHz",
         };
 
         public static readonly string[] UK = {
@@ -20832,6 +20904,12 @@ namespace LunaCalc
             "Бюджет EME яги",
             "Бюджет EME параболи",
             "Той самий розрахунок, що й у «Бюджет EME яги», для станцій з параболічною антеною на 432, 902 і 1296 МГц, зі значеннями, що зберігаються окремо. У картці кожної станції вказуються діаметр, ефективність (у середньому 60 %, типово 60–80 %) і відношення f/D; підсилення обчислюється за формулою PE1RKI, G = 10·log[η·(π·D/λ)²], разом із дБд (дБі − 2,15) і шириною ДС за −3 дБ (70·λ/D). Схема показує параболу з опромінювачем і весь ланцюг: попередній підсилювач з одним або двома каскадами (приблизно до 30 дБ), кабель зниження, трансвертер з його виходом на передачу та кабель до підсилювача, з перевіркою потужності збудження, потрібної PA.",
+            "Спробуйте посунути мене ліворуч або праворуч",
+            "Технічні описи Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (через WiMo), Symair, SYV50-7 і таблиця SV1BSX; значення перераховано на діапазони за формулою α = k1·√f + k2·f.",
+            "≈ = обчислено за формулою α = k1·√f + k2·f (провідники + діелектрик) у межах частот опису.",
+            "e = обчислено за тією самою формулою поза частотами опису: використовуйте обережно.",
+            "за новини про розробки",
+            "на частотах понад 432 MHz",
         };
 
         public static readonly string[] AF = {
@@ -22308,6 +22386,12 @@ namespace LunaCalc
             "EME-begroting yagi",
             "EME-begroting skottels",
             "Dieselfde berekening as die EME-begroting yagi vir stasies met 'n skottelantenna, op 432, 902 en 1296 MHz, met waardes wat apart gestoor word. Op elke stasie se kaart vul jy die deursnee, doeltreffendheid (gemiddeld 60 %, tipies 60–80 %) en f/D-verhouding in; die versterking word met die formule van PE1RKI bereken, G = 10·log[η·(π·D/λ)²], saam met die dBd (dBi − 2,15) en die bundelwydte by −3 dB (70·λ/D). Die diagram wys die skottel met sy voerelement en die volledige ketting: voorversterker met een of twee trappe (tot sowat 30 dB), afloopkabel, transverter met sy TX-uitset en die kabel na die versterker, met 'n kontrole van die dryfkrag wat die PA vereis.",
+            "Probeer my na links of regs skuif",
+            "Datablaaie van Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (via WiMo), Symair, SYV50-7 en die tabel van SV1BSX; waardes met die formule α = k1·√f + k2·f na die bande omgereken.",
+            "≈ = bereken met die formule α = k1·√f + k2·f (geleiers + diëlektrikum) binne die frekwensies van die datablad.",
+            "e = bereken met dieselfde formule buite die frekwensies van die datablad: gebruik versigtig.",
+            "vir die ontwikkelingsnuus",
+            "op die frekwensies bo 432 MHz",
         };
 
         public static readonly string[] BN = {
@@ -23783,6 +23867,12 @@ namespace LunaCalc
             "EME বাজেট ইয়াগি",
             "EME বাজেট ডিশ",
             "ডিশ অ্যান্টেনাযুক্ত স্টেশনের জন্য EME বাজেট ইয়াগির মতোই হিসাব, 432, 902 ও 1296 MHz-এ, আলাদাভাবে সংরক্ষিত মান সহ। প্রতিটি স্টেশনের কার্ডে ব্যাস, দক্ষতা (গড়ে 60 %, সাধারণত 60–80 %) ও f/D অনুপাত লেখা হয়; গেইন হিসাব হয় PE1RKI-এর সূত্রে, G = 10·log[η·(π·D/λ)²], সঙ্গে dBd (dBi − 2.15) ও −3 dB বিমপ্রস্থ (70·λ/D)। চিত্রে ফিডসহ ডিশ এবং পুরো চেইন দেখানো হয়: এক বা দুই স্টেজের প্রিঅ্যাম্প (প্রায় 30 dB পর্যন্ত), ডাউনলিড কেবল, ট্রান্সমিট আউটপুটসহ ট্রান্সভার্টার ও অ্যামপ্লিফায়ার পর্যন্ত কেবল, এবং PA-র প্রয়োজনীয় ড্রাইভ শক্তির যাচাই।",
+            "আমাকে বাঁয়ে বা ডানে সরিয়ে দেখুন",
+            "Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (WiMo-র মাধ্যমে), Symair, SYV50-7-এর ডেটাশিট ও SV1BSX-এর টেবিল; মানগুলি α = k1·√f + k2·f সূত্রে ব্যান্ডে আনা হয়েছে।",
+            "≈ = ডেটাশিটের কম্পাঙ্কের ভেতরে α = k1·√f + k2·f সূত্রে (কন্ডাক্টর + ডাইইলেকট্রিক) গণনা করা।",
+            "e = ডেটাশিটের কম্পাঙ্কের বাইরে একই সূত্রে গণনা করা: সাবধানে ব্যবহার করুন।",
+            "উন্নয়নের খবরের জন্য",
+            "432 MHz-এর উপরের কম্পাঙ্কে",
         };
 
         public static readonly string[] AR = {
@@ -25258,6 +25348,12 @@ namespace LunaCalc
             "ميزانية EME ياغي",
             "ميزانية EME الأطباق",
             "الحساب نفسه الموجود في ميزانية EME ياغي، للمحطات ذات الهوائي الطبقي، على 432 و902 و1296 MHz، مع قيم محفوظة على حدة. في بطاقة كل محطة تكتب القطر والكفاءة (60 % في المتوسط، و60–80 % عادةً) والنسبة f/D؛ ويُحسب الكسب بمعادلة PE1RKI، G = 10·log[η·(π·D/λ)²]، مع dBd (dBi − 2.15) وعرض الحزمة عند −3 dB (70·λ/D). يعرض المخطط الطبق مع المغذّي والسلسلة كاملة: مضخم أولي بمرحلة أو مرحلتين (حتى نحو 30 dB)، وكابل النزول، والمحوّل الترددي مع خرج الإرسال والكابل إلى المضخم، مع التحقق من قدرة القيادة التي يتطلبها PA.",
+            "جرّب تحريكي إلى اليسار أو اليمين",
+            "نشرات بيانات Times Microwave وRFS وCommScope Andrew وSiva Cavi وSSB-Electronic وMessi & Paoloni (عبر WiMo) وSymair وSYV50-7 وجدول SV1BSX؛ القيم منقولة إلى النطاقات بالمعادلة α = k1·√f + k2·f.",
+            "≈ = محسوب بالمعادلة α = k1·√f + k2·f (الموصلات + العازل) ضمن ترددات النشرة.",
+            "e = محسوب بالمعادلة نفسها خارج ترددات النشرة: استخدمه بحذر.",
+            "لأخبار التطوير",
+            "على الترددات فوق 432 MHz",
         };
 
         public static readonly string[] TR = {
@@ -26733,6 +26829,12 @@ namespace LunaCalc
             "EME bütçesi yagi",
             "EME bütçesi çanaklar",
             "Çanak antenli istasyonlar için EME bütçesi yagi ile aynı hesap; 432, 902 ve 1296 MHz'te, ayrı saklanan değerlerle. Her istasyonun kartına çapı, verimi (ortalama %60, tipik %60–80) ve f/D oranını yazarsın; kazanç PE1RKI formülüyle hesaplanır, G = 10·log[η·(π·D/λ)²], ayrıca dBd (dBi − 2,15) ve −3 dB hüzme genişliği (70·λ/D) verilir. Şema, besleyicisiyle birlikte çanağı ve tüm zinciri gösterir: tek veya çift kademeli ön yükseltici (yaklaşık 30 dB'e kadar), iniş kablosu, gönderme çıkışıyla transverter ve yükselticiye giden kablo; ayrıca PA'nın gerektirdiği sürme gücü kontrol edilir.",
+            "Beni sola veya sağa kaydırmayı dene",
+            "Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (WiMo aracılığıyla), Symair, SYV50-7 veri sayfaları ve SV1BSX tablosu; değerler α = k1·√f + k2·f formülüyle bantlara taşındı.",
+            "≈ = veri sayfasının frekansları içinde α = k1·√f + k2·f formülüyle (iletkenler + dielektrik) hesaplandı.",
+            "e = aynı formülle veri sayfasının frekansları dışında hesaplandı: dikkatli kullanın.",
+            "geliştirme haberleri için",
+            "432 MHz üzerindeki frekanslarda",
         };
 
         public static readonly string[] NL = {
@@ -28208,6 +28310,12 @@ namespace LunaCalc
             "EME-budget yagi",
             "EME-budget schotels",
             "Dezelfde berekening als in EME-budget yagi, voor stations met een schotelantenne, op 432, 902 en 1296 MHz, met apart opgeslagen waarden. Op de kaart van elk station vul je diameter, rendement (gemiddeld 60 %, typisch 60–80 %) en f/D-verhouding in; de winst wordt berekend met de formule van PE1RKI, G = 10·log[η·(π·D/λ)²], met de dBd (dBi − 2,15) en de bundelbreedte bij −3 dB (70·λ/D). Het schema toont de schotel met zijn feed en de volledige keten: voorversterker met één of twee trappen (tot ongeveer 30 dB), mastkabel, transverter met zijn zenduitgang en de kabel naar de versterker, met een controle van het stuurvermogen dat de PA nodig heeft.",
+            "Probeer me naar links of rechts te schuiven",
+            "Datasheets van Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (via WiMo), Symair, SYV50-7 en de tabel van SV1BSX; waarden met de formule α = k1·√f + k2·f omgerekend naar de banden.",
+            "≈ = berekend met de formule α = k1·√f + k2·f (geleiders + diëlektricum) binnen de frequenties van de datasheet.",
+            "e = berekend met dezelfde formule buiten de frequenties van de datasheet: met voorzichtigheid gebruiken.",
+            "voor het ontwikkelingsnieuws",
+            "op de frequenties boven 432 MHz",
         };
 
         public static readonly string[] ET = {
@@ -29683,6 +29791,12 @@ namespace LunaCalc
             "EME eelarve yagi",
             "EME eelarve paraboolid",
             "Sama arvutus mis EME eelarve yagi puhul, paraboolantenniga jaamadele sagedustel 432, 902 ja 1296 MHz, eraldi salvestatud väärtustega. Iga jaama kaardile kirjutad läbimõõdu, kasuteguri (keskmiselt 60 %, tüüpiliselt 60–80 %) ja suhte f/D; võimendus arvutatakse PE1RKI valemiga G = 10·log[η·(π·D/λ)²], koos dBd-ga (dBi − 2,15) ja kiire laiusega −3 dB juures (70·λ/D). Skeem näitab parabooli koos kiiritajaga ja kogu ahelat: ühe- või kaheastmeline eelvõimendi (kuni umbes 30 dB), allaviiv kaabel, transverter oma saateväljundiga ja kaabel võimendini ning kontrollib PA vajatavat ergutusvõimsust.",
+            "Proovi mind vasakule või paremale nihutada",
+            "Times Microwave'i, RFS-i, CommScope Andrew', Siva Cavi, SSB-Electronicu, Messi & Paoloni (WiMo kaudu), Symairi, SYV50-7 andmelehed ja SV1BSX tabel; väärtused taandatud sagedusaladele valemiga α = k1·√f + k2·f.",
+            "≈ = arvutatud valemiga α = k1·√f + k2·f (juhid + dielektrik) andmelehe sageduste piires.",
+            "e = arvutatud sama valemiga väljaspool andmelehe sagedusi: kasutada ettevaatlikult.",
+            "arendusuudiste eest",
+            "432 MHz-st kõrgematel sagedustel",
         };
 
         public static readonly string[] LV = {
@@ -31158,6 +31272,12 @@ namespace LunaCalc
             "EME budžets yagi",
             "EME budžets šķīvji",
             "Tāds pats aprēķins kā EME budžets yagi, bet stacijām ar šķīvja antenu 432, 902 un 1296 MHz joslās, ar atsevišķi saglabātām vērtībām. Katras stacijas kartītē ievadi diametru, efektivitāti (vidēji 60 %, tipiski 60–80 %) un attiecību f/D; pastiprinājumu aprēķina pēc PE1RKI formulas G = 10·log[η·(π·D/λ)²], kopā ar dBd (dBi − 2,15) un kūļa platumu −3 dB līmenī (70·λ/D). Shēmā redzams šķīvis ar apstarotāju un visa ķēde: viena vai divu pakāpju priekšpastiprinātājs (līdz aptuveni 30 dB), nolaišanas kabelis, transverters ar savu raidīšanas izeju un kabeli līdz pastiprinātājam, kā arī PA nepieciešamās ierosmes pārbaude.",
+            "Pamēģini pabīdīt mani pa kreisi vai pa labi",
+            "Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (ar WiMo starpniecību), Symair, SYV50-7 datu lapas un SV1BSX tabula; vērtības pārrēķinātas uz diapazoniem ar formulu α = k1·√f + k2·f.",
+            "≈ = aprēķināts ar formulu α = k1·√f + k2·f (vadītāji + dielektriķis) datu lapas frekvenču robežās.",
+            "e = aprēķināts ar to pašu formulu ārpus datu lapas frekvencēm: lietot piesardzīgi.",
+            "par izstrādes jaunumiem",
+            "par frekvencēm virs 432 MHz",
         };
 
         public static readonly string[] LT = {
@@ -32633,6 +32753,12 @@ namespace LunaCalc
             "EME biudžetas yagi",
             "EME biudžetas lėkštės",
             "Tas pats skaičiavimas kaip EME biudžetas yagi, tik stotims su lėkštės antena 432, 902 ir 1296 MHz dažniuose, su atskirai saugomomis vertėmis. Kiekvienos stoties kortelėje įvesk skersmenį, efektyvumą (vidutiniškai 60 %, tipiškai 60–80 %) ir santykį f/D; stiprinimas apskaičiuojamas pagal PE1RKI formulę G = 10·log[η·(π·D/λ)²], kartu pateikiant dBd (dBi − 2,15) ir spindulio plotį ties −3 dB (70·λ/D). Schemoje rodoma lėkštė su apšvitintuvu ir visa grandinė: vienos arba dviejų pakopų išankstinis stiprintuvas (iki maždaug 30 dB), nuleidimo kabelis, transverteris su savo siuntimo išėjimu ir kabeliu į stiprintuvą, taip pat PA reikiamo žadinimo patikra.",
+            "Pabandyk pastumti mane į kairę arba į dešinę",
+            "Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (per WiMo), Symair, SYV50-7 techniniai aprašai ir SV1BSX lentelė; vertės perskaičiuotos diapazonams pagal formulę α = k1·√f + k2·f.",
+            "≈ = apskaičiuota pagal formulę α = k1·√f + k2·f (laidininkai + dielektrikas) techninio aprašo dažnių ribose.",
+            "e = apskaičiuota pagal tą pačią formulę už techninio aprašo dažnių ribų: naudoti atsargiai.",
+            "už kūrimo naujienas",
+            "apie dažnius virš 432 MHz",
         };
 
         public static readonly string[] SV = {
@@ -34108,6 +34234,12 @@ namespace LunaCalc
             "EME-budget yagi",
             "EME-budget parabol",
             "Samma beräkning som EME-budget yagi, men för stationer med parabolantenn på 432, 902 och 1296 MHz, med separat sparade värden. I varje stations kort anger du diameter, verkningsgrad (60 % i genomsnitt, 60–80 % typiskt) och förhållandet f/D; förstärkningen beräknas med PE1RKI:s formel G = 10·log[η·(π·D/λ)²], med dBd (dBi − 2,15) och lobbredden vid −3 dB (70·λ/D). Schemat visar parabolen med mataren och hela kedjan: förförstärkare med ett eller två steg (upp till cirka 30 dB), nedledningskabel, transverter med sin sändningsutgång och kabeln till slutsteget, samt kontroll av den styreffekt som PA kräver.",
+            "Försök flytta mig åt vänster eller höger",
+            "Datablad från Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (via WiMo), Symair, SYV50-7 och SV1BSX:s tabell; värdena omräknade till banden med formeln α = k1·√f + k2·f.",
+            "≈ = beräknat med formeln α = k1·√f + k2·f (ledare + dielektrikum) inom databladets frekvenser.",
+            "e = beräknat med samma formel utanför databladets frekvenser: använd med försiktighet.",
+            "för utvecklingsnyheterna",
+            "om frekvenserna över 432 MHz",
         };
 
         public static readonly string[] NB = {
@@ -35583,6 +35715,12 @@ namespace LunaCalc
             "EME-budsjett yagi",
             "EME-budsjett parabol",
             "Samme beregning som EME-budsjett yagi, men for stasjoner med parabolantenne på 432, 902 og 1296 MHz, med verdier lagret separat. I kortet for hver stasjon oppgir du diameter, virkningsgrad (60 % i snitt, 60–80 % typisk) og forholdet f/D; forsterkningen beregnes med PE1RKIs formel G = 10·log[η·(π·D/λ)²], med dBd (dBi − 2,15) og strålebredden ved −3 dB (70·λ/D). Skjemaet viser parabolen med mateelementet og hele kjeden: forforsterker med ett eller to trinn (opptil ca. 30 dB), nedføringskabel, transverter med sin sendeutgang og kabelen til forsterkeren, samt kontroll av styreeffekten PA krever.",
+            "Prøv å flytte meg mot venstre eller høyre",
+            "Datablad fra Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (via WiMo), Symair, SYV50-7 og tabellen til SV1BSX; verdiene omregnet til båndene med formelen α = k1·√f + k2·f.",
+            "≈ = beregnet med formelen α = k1·√f + k2·f (ledere + dielektrikum) innenfor databladets frekvenser.",
+            "e = beregnet med samme formel utenfor databladets frekvenser: brukes med forsiktighet.",
+            "for utviklingsnyhetene",
+            "om frekvensene over 432 MHz",
         };
 
         public static readonly string[] IS = {
@@ -37058,6 +37196,12 @@ namespace LunaCalc
             "EME-aflreikningur yagi",
             "EME-aflreikningur diskar",
             "Sami útreikningur og EME-aflreikningur yagi, en fyrir stöðvar með diskloftnet á 432, 902 og 1296 MHz, með gildi vistuð sér. Á spjaldi hverrar stöðvar slærðu inn þvermál, nýtni (60 % að meðaltali, 60–80 % dæmigert) og hlutfallið f/D; mögnunin er reiknuð með formúlu PE1RKI, G = 10·log[η·(π·D/λ)²], ásamt dBd (dBi − 2,15) og geislabreidd við −3 dB (70·λ/D). Skýringarmyndin sýnir diskinn með fæðinum og alla keðjuna: formagnara með einu eða tveimur þrepum (allt að um 30 dB), niðurleiðslukapal, transverter með sendiútgangi sínum og kapalinn að magnaranum, ásamt athugun á stýriaflinu sem PA þarfnast.",
+            "Prófaðu að færa mig til vinstri eða hægri",
+            "Gagnablöð frá Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (í gegnum WiMo), Symair, SYV50-7 og tafla SV1BSX; gildin færð yfir á böndin með formúlunni α = k1·√f + k2·f.",
+            "≈ = reiknað með formúlunni α = k1·√f + k2·f (leiðarar + einangrari) innan tíðna gagnablaðsins.",
+            "e = reiknað með sömu formúlu utan tíðna gagnablaðsins: notist með varúð.",
+            "fyrir þróunarfréttirnar",
+            "um tíðnirnar yfir 432 MHz",
         };
 
         public static readonly string[] HE = {
@@ -38533,6 +38677,12 @@ namespace LunaCalc
             "תקציב EME yagi",
             "תקציב EME צלחות",
             "אותו חישוב כמו תקציב EME yagi, אך לתחנות עם אנטנת צלחת ב-432, 902 ו-1296 MHz, עם ערכים שנשמרים בנפרד. בכרטיס של כל תחנה מזינים קוטר, נצילות (60 % בממוצע, 60–80 % באופן אופייני) ויחס f/D; ההגבר מחושב לפי הנוסחה של PE1RKI, G = 10·log[η·(π·D/λ)²], יחד עם dBd (dBi − 2.15) ורוחב האלומה ב-−3 dB (70·λ/D). התרשים מציג את הצלחת עם המזין ואת השרשרת המלאה: קדם-מגבר בדרגה אחת או בשתיים (עד כ-30 dB), כבל הירידה, הטרנסוורטר עם מוצא השידור שלו והכבל אל המגבר, וכן בדיקת הספק ההנעה הנדרש ל-PA.",
+            "נסו להזיז אותי שמאלה או ימינה",
+            "דפי נתונים של Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (דרך WiMo), Symair, SYV50-7 והטבלה של SV1BSX; הערכים הוחזרו לתחומים לפי הנוסחה α = k1·√f + k2·f.",
+            "≈ = חושב בנוסחה α = k1·√f + k2·f (מוליכים + דיאלקטרי) בתוך תדרי דף הנתונים.",
+            "e = חושב באותה נוסחה מחוץ לתדרי דף הנתונים: יש להשתמש בזהירות.",
+            "על חדשות הפיתוח",
+            "על התדרים שמעל 432 MHz",
         };
 
         public static readonly string[] UR = {
@@ -40008,6 +40158,12 @@ namespace LunaCalc
             "EME بجٹ yagi",
             "EME بجٹ ڈش",
             "EME بجٹ yagi والا ہی حساب، مگر 432، 902 اور 1296 MHz پر ڈش اینٹینا والے اسٹیشنوں کے لیے، جن کی قدریں الگ محفوظ کی جاتی ہیں۔ ہر اسٹیشن کے کارڈ میں قطر، ایفیشینسی (اوسطاً 60 %، عام طور پر 60–80 %) اور تناسب f/D درج کریں؛ گین PE1RKI کے فارمولے G = 10·log[η·(π·D/λ)²] سے نکالا جاتا ہے، ساتھ dBd (dBi − 2.15) اور −3 dB پر بیم وِڈتھ (70·λ/D)۔ خاکے میں فیڈ سمیت ڈش اور پوری چین دکھائی جاتی ہے: ایک یا دو اسٹیج والا پری ایمپلیفائر (تقریباً 30 dB تک)، نیچے آنے والی کیبل، ٹرانسورٹر اپنے ٹرانسمٹ آؤٹ پٹ کے ساتھ اور ایمپلیفائر تک جانے والی کیبل، اور PA کے لیے درکار ڈرائیو کی جانچ۔",
+            "مجھے بائیں یا دائیں سرکا کر دیکھیں",
+            "Times Microwave، RFS، CommScope Andrew، Siva Cavi، SSB-Electronic، Messi & Paoloni (WiMo کے ذریعے)، Symair، SYV50-7 کی ڈیٹا شیٹس اور SV1BSX کا جدول؛ قدریں فارمولے α = k1·√f + k2·f سے بینڈز پر منتقل کی گئی ہیں۔",
+            "≈ = ڈیٹا شیٹ کی فریکوئنسیوں کے اندر فارمولے α = k1·√f + k2·f (موصل + ڈائی الیکٹرک) سے حساب کیا گیا۔",
+            "e = ڈیٹا شیٹ کی فریکوئنسیوں سے باہر اسی فارمولے سے حساب کیا گیا: احتیاط سے استعمال کریں۔",
+            "ترقیاتی خبروں کے لیے",
+            "432 MHz سے اوپر کی فریکوئنسیوں پر",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -41482,6 +41638,12 @@ namespace LunaCalc
             "EME-budget yagi",
             "EME-budget parabol",
             "Samme beregning som EME-budget yagi, men for stationer med parabolantenne på 432, 902 og 1296 MHz, med værdier gemt for sig. I hver stations kort angiver du diameter, virkningsgrad (60 % i gennemsnit, 60–80 % typisk) og forholdet f/D; forstærkningen beregnes med PE1RKI's formel G = 10·log[η·(π·D/λ)²], med dBd (dBi − 2,15) og strålebredden ved −3 dB (70·λ/D). Diagrammet viser parablen med fødeelementet og hele kæden: forforstærker med ét eller to trin (op til ca. 30 dB), nedføringskabel, transverter med sin sendeudgang og kablet til forstærkeren, samt kontrol af den styreeffekt, som PA kræver.",
+            "Prøv at flytte mig til venstre eller højre",
+            "Datablade fra Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (via WiMo), Symair, SYV50-7 og SV1BSX's tabel; værdierne omregnet til båndene med formlen α = k1·√f + k2·f.",
+            "≈ = beregnet med formlen α = k1·√f + k2·f (ledere + dielektrikum) inden for databladets frekvenser.",
+            "e = beregnet med samme formel uden for databladets frekvenser: bruges med forsigtighed.",
+            "for udviklingsnyhederne",
+            "om frekvenserne over 432 MHz",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -42956,6 +43118,12 @@ namespace LunaCalc
             "EME budget yagi",
             "EME budget dish",
             "Kaparehong kalkulasyon ng EME budget yagi, pero para sa mga istasyong may dish antenna sa 432, 902 at 1296 MHz, na may hiwalay na naka-save na mga halaga. Sa card ng bawat istasyon, ilagay ang diameter, efficiency (60 % sa karaniwan, 60–80 % tipikal) at ratio f/D; kinakalkula ang gain gamit ang formula ni PE1RKI, G = 10·log[η·(π·D/λ)²], kasama ang dBd (dBi − 2.15) at ang beamwidth sa −3 dB (70·λ/D). Ipinapakita ng diagram ang dish kasama ang feed at ang buong chain: preamplifier na may isa o dalawang stage (hanggang mga 30 dB), down-lead na kable, transverter kasama ang TX output nito at ang kable papunta sa amplifier, pati ang pagsuri sa drive power na kailangan ng PA.",
+            "Subukan mo akong ilipat pakaliwa o pakanan",
+            "Mga data sheet ng Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (sa pamamagitan ng WiMo), Symair, SYV50-7 at ang talaan ni SV1BSX; inilipat ang mga halaga sa mga band gamit ang formula na α = k1·√f + k2·f.",
+            "≈ = kinuwenta gamit ang formula na α = k1·√f + k2·f (conductor + dielectric) sa loob ng mga frequency ng data sheet.",
+            "e = kinuwenta gamit ang parehong formula sa labas ng mga frequency ng data sheet: gamitin nang may pag-iingat.",
+            "para sa mga balita tungkol sa development",
+            "tungkol sa mga frequency na lampas sa 432 MHz",
         };
     }
 
@@ -50957,6 +51125,7 @@ namespace LunaCalc
         string dxCallPrec = "";                   // nominativo precedente: se il locator era il suo, si sostituisce
         bool trkTrascina, trkSyncGiorno;
         RectangleF trkStrRett;               // zona della striscia delle 24 ore (per trascinare la linea)
+        bool trkFumettoVisto;                // il fumetto "Prova a spostarmi…" non si mostra più dopo il primo trascinamento
         float trkStrBx, trkStrBw;
         Label lblTrkPunto;
         TableLayoutPanel barImp;
@@ -51206,7 +51375,13 @@ namespace LunaCalc
                 trkTrascina = true;
                 TrkOraDaX(e.X);
             };
-            pnlTrk.MouseUp += (s, e) => { if (trkTrascina) { trkTrascina = false; AggiornaTracciamento(true); } };
+            pnlTrk.MouseUp += (s, e) =>
+            {
+                if (!trkTrascina) return;
+                trkTrascina = false;
+                if (!trkFumettoVisto) { trkFumettoVisto = true; SaveSettings(); }
+                AggiornaTracciamento(true);
+            };
             bool tipTrk = false;
             pnlTrk.MouseMove += (s, e) =>
             {
@@ -52223,6 +52398,28 @@ namespace LunaCalc
                     float we = g.MeasureString(et, fa).Width + S(8);
                     float xe = xa + S(4) + we > r.Right - S(6) ? xa - S(4) - we : xa + S(4);
                     Testo(g, et, fa, rosso, new RectangleF(xe, ya + S(21), we, S(16)), xe < xa ? StringAlignment.Far : StringAlignment.Near, StringAlignment.Near);
+                    // fumetto che invita a trascinare la linea rossa (sparisce dopo il primo spostamento)
+                    if (!trkFumettoVisto)
+                    {
+                        string fu = Lang.T("Prova a spostarmi verso sinistra o destra");
+                        float wf = g.MeasureString(fu, fa).Width + S(18), hf = S(24);
+                        bool sx = xa + S(16) + wf > r.Right - S(8);
+                        float xf = sx ? xa - S(16) - wf : xa + S(16);
+                        RectangleF rf = new RectangleF(xf, yb1 - S(14) - hf / 2f + S(5), wf, hf);
+                        using (GraphicsPath gp = Arrotondato(rf, S(8)))
+                        {
+                            using (Brush bb = new SolidBrush(Tema.Scuro ? Tema.Carta : Color.White)) g.FillPath(bb, gp);
+                            using (Pen pr = new Pen(rosso, S(2))) g.DrawPath(pr, gp);
+                        }
+                        // punta del fumetto verso la maniglia
+                        float yc = rf.Top + hf / 2f;
+                        PointF[] pun = sx
+                            ? new PointF[] { new PointF(rf.Right - 1, yc - S(5)), new PointF(xa - S(6), yb1 - S(8)), new PointF(rf.Right - 1, yc + S(5)) }
+                            : new PointF[] { new PointF(rf.Left + 1, yc - S(5)), new PointF(xa + S(6), yb1 - S(8)), new PointF(rf.Left + 1, yc + S(5)) };
+                        using (Brush bb = new SolidBrush(Tema.Scuro ? Tema.Carta : Color.White)) g.FillPolygon(bb, pun);
+                        using (Pen pr = new Pen(rosso, S(2))) { g.DrawLine(pr, pun[0], pun[1]); g.DrawLine(pr, pun[1], pun[2]); }
+                        Testo(g, fu, fa, rosso, rf, StringAlignment.Center, StringAlignment.Center);
+                    }
                 }
             }
         }
@@ -53642,7 +53839,7 @@ namespace LunaCalc
                 Lang.T("Leif Åsbrink SM5BSZ, \"Selecting Polarisation for EME\" (1997) e \"EME Path Modulation\" (2000)."),
                 "https://sm5bsz.com/polarity/emepol.htm" },
             new string[] { Lang.T("Cavi coassiali (linguetta CAVI COASSIALI)"),
-                Lang.T("Schede di Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (tramite WiMo), Symair, SYV50-7 e la tabella di SV1BSX; valori riportati alle bande con la legge di potenza.") },
+                Lang.T("Schede di Times Microwave, RFS, CommScope Andrew, Siva Cavi, SSB-Electronic, Messi & Paoloni (tramite WiMo), Symair, SYV50-7 e la tabella di SV1BSX; valori riportati alle bande con la formula α = k1·√f + k2·f.") },
             new string[] { Lang.T("Flusso solare F10.7"),
                 Lang.T("NOAA SWPC (f107_cm_flux.json) e Natural Resources Canada, osservatorio DRAO di Penticton (fluxtable.txt)."),
                 "https://www.spaceweather.gc.ca/solar_flux_data/daily_flux_values/fluxtable.txt" },
@@ -54981,8 +55178,8 @@ namespace LunaCalc
             Scheda(g, card, Color.Empty);
             string[] righe = {
                 Lang.T("Numero pieno = valore della scheda del costruttore a quella frequenza (entro il 2,5 %)."),
-                Lang.T("≈ = interpolato tra due frequenze della scheda con la legge di potenza (retta sul grafico log-log)."),
-                Lang.T("e = estrapolato oltre l'ultima frequenza della scheda: da usare con cautela."),
+                Lang.T("≈ = calcolato con la formula α = k1·√f + k2·f (conduttori + dielettrico) dentro le frequenze della scheda."),
+                Lang.T("e = calcolato con la stessa formula fuori dalle frequenze della scheda: da usare con cautela."),
                 Lang.T("≡ = cavi accorpati in una riga: stesso tipo, diametro uguale (±0,2 mm) e attenuazione entro 0,2 dB/100 m in tutte le bande; il valore è la media."),
                 Lang.T("anche: = altre sigle commerciali equivalenti (per esempio LMR-400 = HF400, CNT-400)."),
                 Lang.T("Le sigle cinesi (50-3, 50-5, 50-7, 50-9, 50-12…) indicano il diametro del dielettrico in mm: 50-7 ≈ classe RG-213/LMR-400, 50-9 ≈ 1/2\" superflessibile, 50-12 ≈ 1/2\" corrugato."),
@@ -55304,6 +55501,7 @@ namespace LunaCalc
                 List<string[]> grazie = new List<string[]>();
                 grazie.Add(new string[] { Lang.T("per il patrocinio della"), "Sezione ARI \"Valle del Liri\"", "IZ0JNY|Ivan" });
                 grazie.Add(new string[] { Lang.T("per il controllo in regime di"), Lang.T("beta-tester"), "IZ7NLJ|Fabio", "I2NOY|Maurizio", "IK4GNG|Gilberto" });
+                grazie.Add(new string[] { Lang.T("per le notizie di sviluppo"), Lang.T("sulle frequenze sopra i 432 MHz"), "HA5OLA|" });
                 grazie.Add(new string[] { Lang.T("per l'incitamento a non mollare"), Lang.T("nell'ambiente dell'EME"),
                     "NJ9R|Relu|0|" + FumettoGrazie("NJ9R", "Relu", "“2M EME the easy way… the secret sauce to success”", "PREF, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13, 1.14") });
                 grazie.Add(new string[] { Lang.T("un pensiero e un ricordo a"), Lang.T("Giorgio IK1UWL, pioniere italiano dell'EME"),
@@ -58340,6 +58538,7 @@ namespace LunaCalc
                 if (cmbGrSeq != null) lines.Add("graves_seq=" + cmbGrSeq.SelectedIndex.ToString(inv));
                 if (chkGrSuono != null) lines.Add("graves_suono=" + (chkGrSuono.Checked ? "1" : "0"));
                 lines.Add("dgf_rx=" + dgfRx.ToString(inv));
+                lines.Add("trk_fumetto=" + (trkFumettoVisto ? "1" : "0"));
                 lines.Add("dgf_cielo=" + dgfCielo.ToString(inv));
                 if (nudDgfGiorni != null) lines.Add("dgf_giorni=" + nudDgfGiorni.Value.ToString(inv));
                 List<string> cs_ = new List<string>();
@@ -58520,6 +58719,7 @@ namespace LunaCalc
                         case "graves_seq": if (cmbGrSeq != null && (v == "0" || v == "1")) cmbGrSeq.SelectedIndex = v == "1" ? 1 : 0; break;
                         case "graves_suono": if (chkGrSuono != null) chkGrSuono.Checked = v == "1"; break;
                         case "dgf_rx": dgfRx = v == "0" ? 0 : 1; DgfMostraScelte(); break;
+                        case "trk_fumetto": trkFumettoVisto = v == "1"; break;
                         case "dgf_cielo": dgfCielo = v == "0" ? 0 : 1; DgfMostraScelte(); break;
                         case "dgf_giorni": { int gg; if (nudDgfGiorni != null && int.TryParse(v, NumberStyles.Integer, inv, out gg)) nudDgfGiorni.Value = Math.Max(7, Math.Min(61, gg)); break; }
                         case "budget_schema": { int bw2; if (int.TryParse(v, NumberStyles.Integer, inv, out bw2)) { budgetSchemaLarg = Math.Max(300, Math.Min(1500, bw2)); if (budgetRoot != null) budgetRoot.ColumnStyles[2].Width = S(budgetSchemaLarg); } break; }
@@ -64938,11 +65138,12 @@ namespace LunaCalc
     }
 
     // ---------- Database dei cavi coassiali 50 ohm (attenuazione in dB/100 m a 20 °C) ----------
-    // Valori a 50, 70, 144, 222 e 432 MHz già calcolati: m = dalla scheda, i = interpolato (legge di potenza), e = estrapolato.
+    // Valori a 50…1296 MHz: m = dalla scheda; i/e = calcolati con la formula α = k1·√f + k2·f (i dentro le frequenze della scheda, e fuori).
     // Cavi accorpati (≡): stesso tipo, diametro entro ±0,2 mm e attenuazione entro 0,2 dB/100 m in tutte le bande (valore medio).
     class Cavo
     {
         public string[] Nomi; public string[] Costruttori; public string Tipo; public double Diam; public string Anche; public string[] Fonti;
+        public double K1, K2;   // α(f) = K1·√f + K2·f  (dB/100 m, f in MHz)
         public double[] Db = new double[7]; public char[] Segno = new char[7];   // 50, 70, 144, 222, 432, 902, 1296 MHz
         public bool Personale;
         public bool Marino;     // cavo per ambienti marini: nel nome mostrato compare "(ambienti marini)"
@@ -64958,9 +65159,10 @@ namespace LunaCalc
         public string CostruttoriVisti(string sep) { return string.Join(sep, Array.ConvertAll(Costruttori, CostruttoreVisto)); }
         public string Etichetta { get { return NomeVisto + (Nomi.Length > 1 ? " ≡ " + string.Join(", ", Nomi, 1, Nomi.Length - 1) : "") + " · " + Diam.ToString("0.0", CultureInfo.CurrentCulture) + " mm"; } }
 
-        // dB/100 m alla frequenza f (MHz): legge di potenza tra le due bande più vicine
+        // dB/100 m alla frequenza f (MHz): formula α = K1·√f + K2·f; senza formula, legge di potenza tra le due bande più vicine
         public double A100(double f)
         {
+            if (K1 > 0 || K2 > 0) return K1 * Math.Sqrt(f) + K2 * f;
             double[] fb = CaviDb.Fb;
             int k = 0;
             while (k < fb.Length - 2 && f > fb[k + 1]) k++;
@@ -64996,6 +65198,44 @@ namespace LunaCalc
             double k = a > 0 && b > 0 ? Math.Log(b / a) / Math.Log(Fb[noti - 1] / Fb[noti - 2]) : 0.5;
             k = Math.Max(0.4, Math.Min(0.8, k));
             for (int i = noti; i < Fb.Length; i++) { c.Db[i] = Math.Round(b * Math.Pow(Fb[i] / Fb[noti - 1], k), 1); c.Segno[i] = 'e'; }
+        }
+
+        // Formula fisica dell'attenuazione del coassiale: α(f) = k1·√f (perdite nei conduttori, effetto pelle) + k2·f (perdite nel dielettrico).
+        // k1 e k2 (non negativi) si ricavano con i minimi quadrati pesati (errore relativo) dai valori della scheda (segno 'm');
+        // i valori non presi dalla scheda si ricalcolano con la formula: 'i' dentro l'intervallo misurato, 'e' fuori.
+        public static void Formula(Cavo c)
+        {
+            List<int> idx = new List<int>();
+            for (int i = 0; i < Fb.Length; i++) if (c.Segno[i] == 'm' && c.Db[i] > 0) idx.Add(i);
+            if (idx.Count < 2) { idx.Clear(); for (int i = 0; i < Fb.Length; i++) if (c.Segno[i] != 'e' && c.Db[i] > 0) idx.Add(i); }
+            if (idx.Count < 2) return;
+            double saa = 0, sab = 0, sbb = 0, say = 0, sby = 0;
+            foreach (int i in idx)
+            {
+                double w = 1.0 / (c.Db[i] * c.Db[i]), a = Math.Sqrt(Fb[i]), b = Fb[i], y = c.Db[i];
+                saa += w * a * a; sab += w * a * b; sbb += w * b * b; say += w * a * y; sby += w * b * y;
+            }
+            double det = saa * sbb - sab * sab, k1 = 0, k2 = 0;
+            if (Math.Abs(det) > 1e-12) { k1 = (say * sbb - sby * sab) / det; k2 = (saa * sby - sab * say) / det; }
+            if (k1 < 0 || k2 < 0 || Math.Abs(det) <= 1e-12)
+            {
+                double a1 = say / saa, b2 = sby / sbb, r1 = 0, r2 = 0;
+                foreach (int i in idx)
+                {
+                    double y = c.Db[i];
+                    r1 += Math.Pow((a1 * Math.Sqrt(Fb[i]) - y) / y, 2);
+                    r2 += Math.Pow((b2 * Fb[i] - y) / y, 2);
+                }
+                if (r1 <= r2) { k1 = a1; k2 = 0; } else { k1 = 0; k2 = b2; }
+            }
+            c.K1 = k1; c.K2 = k2;
+            int lo = idx[0], hi = idx[idx.Count - 1];
+            for (int i = 0; i < Fb.Length; i++)
+            {
+                if (c.Segno[i] == 'm' && c.Db[i] > 0) continue;
+                c.Db[i] = Math.Round(k1 * Math.Sqrt(Fb[i]) + k2 * Fb[i], 1);
+                c.Segno[i] = i > lo && i < hi ? 'i' : 'e';
+            }
         }
 
         // Valori a 902 e 1296 MHz dalle schede dei costruttori (m = dalla scheda, i = interpolato tra due frequenze della scheda)
@@ -65113,6 +65353,7 @@ namespace LunaCalc
             U("C529 RF400T (Tasker)", 12.3, 'i', 14.8, 'i');   // Tasker C529 · 902: interp. 800/1000 MHz Tasker C529 | 1296: interp. 1000/2000 MHz Tasker C529
             U("C538 Low Loss (Tasker)", 13.0, 'i', 15.8, 'i');   // Tasker C538 · 902: interp. 800/1000 MHz Tasker C538 | 1296: interp. 1000/1500 MHz Tasker C538
             U("RG 213 U (Tasker)", 22.9, 'i', 28.3, 'e');   // Tasker RG 213 U · 902: interp. 800/1000 MHz Tasker RG 213 U | 1296: estrap. 800/1000 MHz Tasker RG 213 U
+            foreach (Cavo c in Elenco) Formula(c);
             NumBase = Elenco.Count;
             CaricaPersonali();
         }
@@ -65177,7 +65418,9 @@ namespace LunaCalc
                         double.TryParse(p[2 + i], NumberStyles.Float, CultureInfo.InvariantCulture, out c.Db[i]);
                         c.Segno[i] = 'm';
                     }
-                    Estrapola(c, noti);
+                    for (int i = noti; i < Fb.Length; i++) c.Segno[i] = 'e';
+                    Formula(c);
+                    if (noti >= 2 && c.K1 == 0 && c.K2 == 0) Estrapola(c, noti);
                     Elenco.Add(c);
                 }
             }
@@ -65276,6 +65519,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0,065 · π · R_L^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ con §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (raggio della Luna), riflettività lunare 0,065.",
+                "#### La perdita di tratta banda per banda",
+                "La perdita di tratta cresce con il quadrato della frequenza (§λ^2§ al denominatore: 6 dB per ogni raddoppio) e con la quarta potenza della distanza. Il Budget EME (yagi e dischi) la calcola sempre alla frequenza della banda scelta e alle distanze dell'istante scelto. La tabella dà i valori della formula qui sopra con le due stazioni alla stessa distanza dal centro della Terra:",
+                "|h| Banda | >Perigeo (356 900 km) | >Distanza media (384 400 km) | >Apogeo (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Frequenze di calcolo: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Tra perigeo e apogeo la differenza è di circa 2,3 dB in tutte le bande. Con la Luna alta nel cielo la distanza topocentrica è più corta di quella dal centro della Terra fino a circa 6 400 km, e la perdita scende ancora di circa 0,3 dB.",
+                "> Salire di banda costa in perdita di tratta (da 50 a 1296 MHz circa 28 dB in più), ma a parità di dimensioni l'antenna guadagna di più: un disco di diametro fisso guadagna 6 dB per ogni raddoppio della frequenza, in trasmissione e in ricezione, e il rumore del cielo cala. Per questo il bilancio si fa sempre banda per banda.",
                 "La potenza irradiata e il segnale ai morsetti dell'antenna ricevente:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -65426,11 +65681,11 @@ namespace LunaCalc
             };
             d["it"]["S48"] = new string[] {
                 "## Cavi coassiali e perdite",
-                "La linguetta **CAVI COASSIALI** raccoglie l'attenuazione dei cavi a 50 Ω più usati dai radioamatori, in dB ogni 100 m a 20 °C, nelle cinque bande di YAEC. Le schede dei costruttori danno valori a frequenze diverse; YAEC li ha riportati alle bande con la legge di potenza, una retta sul grafico log-log tra le due frequenze più vicine della scheda:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α in dB/100 m, ℓ lunghezza del cavo in metri. Il numero pieno è il valore della scheda; ≈ indica un valore interpolato, e uno estrapolato oltre l'ultima frequenza della scheda.",
+                "La linguetta **CAVI COASSIALI** raccoglie l'attenuazione dei cavi a 50 Ω più usati dai radioamatori, in dB ogni 100 m a 20 °C, nelle bande di YAEC da 50 a 1296 MHz. Le schede dei costruttori danno valori a frequenze diverse; YAEC li riporta alle bande con la formula fisica dell'attenuazione del coassiale, somma delle perdite nei conduttori (effetto pelle, crescono con §\\sqrt{f}§) e di quelle nel dielettrico (crescono con §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α in dB/100 m, f in MHz, ℓ lunghezza del cavo in metri. Per ogni cavo §k_1§ e §k_2§ (mai negativi) si ricavano con i minimi quadrati, pesando l'errore relativo, dai valori della scheda del costruttore. Il numero pieno è il valore della scheda; ≈ indica un valore calcolato con la formula dentro le frequenze della scheda, e uno calcolato fuori, da usare con cautela. Con un solo termine la formula si riduce al caso del cavo dominato dai conduttori (§k_2 = 0§) o dal dielettrico (§k_1 = 0§).",
                 "I cavi con lo stesso tipo, diametro uguale entro ±0,2 mm e attenuazione entro 0,2 dB/100 m in tutte le bande sono accorpati in una riga (≡), con il valore medio; le sigle equivalenti sono indicate con \"anche:\" (per esempio LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Le sigle cinesi 50-3, 50-5, 50-7, 50-9, 50-12 indicano il diametro del dielettrico in millimetri.",
-                "> Si possono aggiungere cavi personalizzati con le loro cinque attenuazioni: vengono salvati in data\\cavi_personali.txt e compaiono anche nelle tendine dello schema dell'impianto del Budget EME. Il fumetto di ogni riga della tabella cita la fonte di quel cavo.",
+                "> Si possono aggiungere cavi personalizzati con le attenuazioni di 5 o 7 bande (le mancanti sono calcolate con la formula): vengono salvati in data\\cavi_personali.txt e compaiono anche nelle tendine dello schema dell'impianto del Budget EME. Il fumetto di ogni riga della tabella cita la fonte di quel cavo.",
                 "### I connettori (NJ9R)",
                 "Anche i connettori fanno parte della linea. Il consiglio pratico di NJ9R è di contare circa 1 dB ogni 8 – 10 connettori, dal retro della radio fino all'antenna, compresi adattatori, relè e divisori: nel suo impianto a quattro antenne i 24 connettori valgono più di 2 dB, quanto 40 – 45 m di LMR-400 nuovo in 144 MHz [2]. Nel Budget EME il riquadro del relè coassiale ha due caselle, Connettori in TX e Connettori in RX: ogni connettore vale 0,11 dB; in trasmissione si contano quelli tra il PA e l'antenna, in ricezione quelli tra l'antenna e il preamplificatore.",
                 "[1] Le fonti dei singoli cavi: schede di Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, tramite WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogo MIL-C-17F (RG-142, RG-393), R.F. elettronica di Senago (RG-115), le tabelle di DD1US ed EA5IP (H100) e la tabella di SV1BSX per RG-58, RG-213, H-155 e H-2000 (valori da verificare).",
@@ -65821,6 +66076,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ with §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737.4 \\t{ km}§ (radius of the Moon), lunar reflectivity 0.065.",
+                "#### Path loss band by band",
+                "The path loss grows with the square of the frequency (§λ^2§ in the denominator: 6 dB for every doubling) and with the fourth power of the distance. The EME budget (yagis and dishes) always computes it at the frequency of the chosen band and at the distances of the chosen instant. The table gives the values of the formula above with the two stations at the same distance from the centre of the Earth:",
+                "|h| Band | >Perigee (356 900 km) | >Mean distance (384 400 km) | >Apogee (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ Calculation frequencies: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz. Between perigee and apogee the difference is about 2.3 dB on all bands. With the Moon high in the sky the topocentric distance is shorter than the distance from the centre of the Earth by up to about 6 400 km, and the loss drops by a further 0.3 dB or so.",
+                "> Moving up in band costs path loss (from 50 to 1296 MHz about 28 dB more), but for the same size the antenna gains more: a dish of fixed diameter gains 6 dB for every doubling of the frequency, in transmission and in reception, and the sky noise drops. This is why the budget is always worked out band by band.",
                 "The radiated power and the signal at the terminals of the receiving antenna:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -65971,11 +66238,11 @@ namespace LunaCalc
             };
             d["en"]["S48"] = new string[] {
                 "## Coaxial cables and losses",
-                "The **COAXIAL CABLES** tab collects the attenuation of the 50 Ω cables most used by radio amateurs, in dB per 100 m at 20 °C, on the five YAEC bands. The makers' data sheets give values at different frequencies; YAEC has brought them to the bands with the power law, a straight line on the log-log chart between the two nearest frequencies of the data sheet:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α in dB/100 m, ℓ cable length in metres. A plain number is the data sheet value; ≈ marks an interpolated value, and e one extrapolated beyond the last frequency of the data sheet.",
+                "The **COAXIAL CABLES** tab collects the attenuation of the 50 Ω cables most used by radio amateurs, in dB per 100 m at 20 °C, on the YAEC bands from 50 to 1296 MHz. The makers' data sheets give values at different frequencies; YAEC brings them to the bands with the physical formula for coaxial cable attenuation, the sum of the losses in the conductors (skin effect, growing with §\\sqrt{f}§) and of those in the dielectric (growing with §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α in dB/100 m, f in MHz, ℓ cable length in metres. For each cable §k_1§ and §k_2§ (never negative) are obtained by least squares, weighting the relative error, from the values in the maker's data sheet. A plain number is the data sheet value; ≈ marks a value computed with the formula within the frequencies of the data sheet, and e one computed outside them, to be used with caution. With a single term the formula reduces to the case of a cable dominated by the conductors (§k_2 = 0§) or by the dielectric (§k_1 = 0§).",
                 "Cables of the same type, with the same diameter within ±0.2 mm and attenuation within 0.2 dB/100 m on all bands are grouped in one row (≡), with the mean value; equivalent names are shown with \"also:\" (for example LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). The Chinese names 50-3, 50-5, 50-7, 50-9, 50-12 give the diameter of the dielectric in millimetres.",
-                "> Custom cables can be added with their five attenuations: they are saved in data\\cavi_personali.txt and also appear in the drop-downs of the station diagram of the EME budget. The tooltip of each table row cites the source of that cable.",
+                "> Custom cables can be added with the attenuations of 5 or 7 bands (the missing ones are computed with the formula): they are saved in data\\cavi_personali.txt and also appear in the drop-downs of the station diagram of the EME budget. The tooltip of each table row cites the source of that cable.",
                 "### Connectors (NJ9R)",
                 "Connectors are part of the line too. NJ9R's practical advice is to count about 1 dB for every 8 – 10 connectors, from the back of the radio to the antenna, adapters, relays and splitters included: in his four-antenna system the 24 connectors are worth more than 2 dB, as much as 40 – 45 m of new LMR-400 on 144 MHz [2]. In the EME budget the coaxial relay box has two fields, TX connectors and RX connectors: each connector is worth 0.11 dB; in transmission count those between the PA and the antenna, in reception those between the antenna and the preamplifier.",
                 "[1] The sources of the individual cables: data sheets by Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F catalogue (RG-142, RG-393), R.F. elettronica of Senago (RG-115), the tables by DD1US and EA5IP (H100) and the table by SV1BSX for RG-58, RG-213, H-155 and H-2000 (values to be verified).",
@@ -66358,6 +66625,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ mit §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (Mondradius), Reflexionsvermögen des Mondes 0,065.",
+                "#### Die Streckendämpfung Band für Band",
+                "Die Streckendämpfung wächst mit dem Quadrat der Frequenz (§λ^2§ im Nenner: 6 dB je Verdopplung) und mit der vierten Potenz der Entfernung. Das EME-Budget (Yagis und Spiegel) berechnet sie immer bei der Frequenz des gewählten Bandes und mit den Entfernungen des gewählten Zeitpunkts. Die Tabelle gibt die Werte der obigen Formel an, mit beiden Stationen in gleicher Entfernung vom Erdmittelpunkt:",
+                "|h| Band | >Perigäum (356 900 km) | >Mittlere Entfernung (384 400 km) | >Apogäum (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Rechenfrequenzen: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Zwischen Perigäum und Apogäum beträgt der Unterschied auf allen Bändern etwa 2,3 dB. Steht der Mond hoch am Himmel, ist die topozentrische Entfernung um bis zu etwa 6 400 km kürzer als die Entfernung vom Erdmittelpunkt, und die Dämpfung sinkt um weitere etwa 0,3 dB.",
+                "> Ein höheres Band kostet Streckendämpfung (von 50 bis 1296 MHz etwa 28 dB mehr), aber bei gleicher Größe gewinnt die Antenne mehr: Ein Spiegel mit festem Durchmesser gewinnt je Verdopplung der Frequenz 6 dB, beim Senden und beim Empfang, und das Himmelsrauschen nimmt ab. Deshalb wird die Bilanz immer Band für Band aufgestellt.",
                 "Die abgestrahlte Leistung und das Signal an den Klemmen der Empfangsantenne:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -66508,11 +66787,11 @@ namespace LunaCalc
             };
             d["de"]["S48"] = new string[] {
                 "## Koaxialkabel und Verluste",
-                "Der Reiter **KOAXIALKABEL** sammelt die Dämpfung der bei Funkamateuren gebräuchlichsten 50-Ω-Kabel in dB pro 100 m bei 20 °C auf den fünf YAEC-Bändern. Die Datenblätter der Hersteller geben Werte bei anderen Frequenzen an; YAEC hat sie mit dem Potenzgesetz auf die Bänder umgerechnet, einer Geraden im doppelt logarithmischen Diagramm zwischen den beiden nächstgelegenen Frequenzen des Datenblatts:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α in dB/100 m, ℓ Kabellänge in Metern. Eine einfache Zahl ist der Datenblattwert; ≈ kennzeichnet einen interpolierten Wert und e einen über die letzte Frequenz des Datenblatts hinaus extrapolierten.",
+                "Der Reiter **KOAXIALKABEL** sammelt die Dämpfung der bei Funkamateuren gebräuchlichsten 50-Ω-Kabel in dB pro 100 m bei 20 °C auf den YAEC-Bändern von 50 bis 1296 MHz. Die Datenblätter der Hersteller geben Werte bei anderen Frequenzen an; YAEC rechnet sie mit der physikalischen Formel der Koaxialkabeldämpfung auf die Bänder um, der Summe der Verluste in den Leitern (Skineffekt, wachsen mit §\\sqrt{f}§) und der Verluste im Dielektrikum (wachsen mit §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α in dB/100 m, f in MHz, ℓ Kabellänge in Metern. Für jedes Kabel werden §k_1§ und §k_2§ (nie negativ) mit der Methode der kleinsten Quadrate, gewichtet nach dem relativen Fehler, aus den Werten des Herstellerdatenblatts ermittelt. Eine einfache Zahl ist der Datenblattwert; ≈ kennzeichnet einen mit der Formel innerhalb der Frequenzen des Datenblatts berechneten Wert und e einen außerhalb davon berechneten, der mit Vorsicht zu verwenden ist. Mit nur einem Term reduziert sich die Formel auf den Fall eines von den Leitern (§k_2 = 0§) oder vom Dielektrikum (§k_1 = 0§) dominierten Kabels.",
                 "Kabel desselben Typs mit gleichem Durchmesser innerhalb ±0,2 mm und einer Dämpfung innerhalb 0,2 dB/100 m auf allen Bändern sind in einer Zeile (≡) mit dem Mittelwert zusammengefasst; gleichwertige Bezeichnungen werden mit „also:“ angezeigt (zum Beispiel LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Die chinesischen Bezeichnungen 50-3, 50-5, 50-7, 50-9, 50-12 geben den Durchmesser des Dielektrikums in Millimetern an.",
-                "> Eigene Kabel können mit ihren fünf Dämpfungswerten hinzugefügt werden: Sie werden in data\\cavi_personali.txt gespeichert und erscheinen auch in den Auswahllisten des Stationsschemas im EME-Budget. Der Tooltip jeder Tabellenzeile nennt die Quelle des betreffenden Kabels.",
+                "> Eigene Kabel können mit den Dämpfungswerten von 5 oder 7 Bändern hinzugefügt werden (die fehlenden werden mit der Formel berechnet): Sie werden in data\\cavi_personali.txt gespeichert und erscheinen auch in den Auswahllisten des Stationsschemas im EME-Budget. Der Tooltip jeder Tabellenzeile nennt die Quelle des betreffenden Kabels.",
                 "### Die Stecker (NJ9R)",
                 "Auch die Stecker gehören zur Leitung. Der praktische Rat von NJ9R lautet, etwa 1 dB je 8 – 10 Stecker zu rechnen, von der Rückseite des Funkgeräts bis zur Antenne, einschließlich Adapter, Relais und Leistungsteiler: In seiner Anlage mit vier Antennen machen die 24 Stecker mehr als 2 dB aus, so viel wie 40 – 45 m neues LMR-400 auf 144 MHz [2]. Im EME-Budget hat der Kasten des Koaxialrelais zwei Felder, Stecker TX und Stecker RX: Jeder Stecker zählt 0,11 dB; beim Senden zählen die Stecker zwischen PA und Antenne, beim Empfang die zwischen Antenne und Vorverstärker.",
                 "[1] Die Quellen der einzelnen Kabel: Datenblätter von Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, über WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, Katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica aus Senago (RG-115), die Tabellen von DD1US und EA5IP (H100) und die Tabelle von SV1BSX für RG-58, RG-213, H-155 und H-2000 (Werte zu überprüfen).",
@@ -66895,6 +67174,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ avec §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (rayon de la Lune), réflectivité lunaire 0,065.",
+                "#### L'affaiblissement de trajet bande par bande",
+                "L'affaiblissement de trajet croît avec le carré de la fréquence (§λ^2§ au dénominateur : 6 dB à chaque doublement) et avec la puissance quatrième de la distance. Le bilan EME (yagis et paraboles) le calcule toujours à la fréquence de la bande choisie et aux distances de l'instant choisi. Le tableau donne les valeurs de la formule ci-dessus avec les deux stations à la même distance du centre de la Terre :",
+                "|h| Bande | >Périgée (356 900 km) | >Distance moyenne (384 400 km) | >Apogée (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Fréquences de calcul : 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Entre périgée et apogée, la différence est d'environ 2,3 dB sur toutes les bandes. Avec la Lune haute dans le ciel, la distance topocentrique est plus courte que la distance depuis le centre de la Terre, jusqu'à environ 6 400 km de moins, et l'affaiblissement baisse encore d'environ 0,3 dB.",
+                "> Monter en bande se paie en affaiblissement de trajet (de 50 à 1296 MHz environ 28 dB de plus), mais à dimensions égales l'antenne gagne davantage : une parabole de diamètre fixe gagne 6 dB à chaque doublement de la fréquence, en émission et en réception, et le bruit du ciel diminue. C'est pourquoi le bilan se fait toujours bande par bande.",
                 "La puissance rayonnée et le signal aux bornes de l'antenne de réception :",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -67045,11 +67336,11 @@ namespace LunaCalc
             };
             d["fr"]["S48"] = new string[] {
                 "## Câbles coaxiaux et pertes",
-                "L'onglet **CÂBLES COAXIAUX** rassemble l'affaiblissement des câbles 50 Ω les plus utilisés par les radioamateurs, en dB pour 100 m à 20 °C, sur les cinq bandes de YAEC. Les fiches techniques des fabricants donnent des valeurs à des fréquences différentes ; YAEC les a ramenées aux bandes avec la loi de puissance, une droite sur le graphique log-log entre les deux fréquences les plus proches de la fiche technique :",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α en dB/100 m, ℓ longueur du câble en mètres. Un nombre simple est la valeur de la fiche technique ; ≈ signale une valeur interpolée, et e une valeur extrapolée au-delà de la dernière fréquence de la fiche technique.",
+                "L'onglet **CÂBLES COAXIAUX** rassemble l'affaiblissement des câbles 50 Ω les plus utilisés par les radioamateurs, en dB pour 100 m à 20 °C, sur les bandes de YAEC de 50 à 1296 MHz. Les fiches techniques des fabricants donnent des valeurs à des fréquences différentes ; YAEC les ramène aux bandes avec la formule physique de l'affaiblissement du câble coaxial, somme des pertes dans les conducteurs (effet de peau, croissant avec §\\sqrt{f}§) et de celles dans le diélectrique (croissant avec §f§) :",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α en dB/100 m, f en MHz, ℓ longueur du câble en mètres. Pour chaque câble, §k_1§ et §k_2§ (jamais négatifs) sont obtenus par les moindres carrés, en pondérant l'erreur relative, à partir des valeurs de la fiche technique du fabricant. Un nombre simple est la valeur de la fiche technique ; ≈ signale une valeur calculée avec la formule à l'intérieur des fréquences de la fiche technique, et e une valeur calculée en dehors, à utiliser avec prudence. Avec un seul terme, la formule se réduit au cas du câble dominé par les conducteurs (§k_2 = 0§) ou par le diélectrique (§k_1 = 0§).",
                 "Les câbles du même type, de même diamètre à ±0,2 mm près et d'affaiblissement à 0,2 dB/100 m près sur toutes les bandes sont regroupés sur une seule ligne (≡), avec la valeur moyenne ; les noms équivalents sont indiqués avec « also: » (par exemple LMR-400 = HF400, CNT-400, 50-7 low loss ; LMR-600 = CNT-600). Les noms chinois 50-3, 50-5, 50-7, 50-9, 50-12 donnent le diamètre du diélectrique en millimètres.",
-                "> On peut ajouter des câbles personnels avec leurs cinq affaiblissements : ils sont enregistrés dans data\\cavi_personali.txt et apparaissent aussi dans les listes déroulantes du schéma de la station du bilan EME. L'infobulle de chaque ligne du tableau cite la source de ce câble.",
+                "> On peut ajouter des câbles personnels avec les affaiblissements de 5 ou 7 bandes (les valeurs manquantes sont calculées avec la formule) : ils sont enregistrés dans data\\cavi_personali.txt et apparaissent aussi dans les listes déroulantes du schéma de la station du bilan EME. L'infobulle de chaque ligne du tableau cite la source de ce câble.",
                 "### Les connecteurs (NJ9R)",
                 "Les connecteurs font eux aussi partie de la ligne. Le conseil pratique de NJ9R est de compter environ 1 dB tous les 8 – 10 connecteurs, depuis l'arrière du poste jusqu'à l'antenne, adaptateurs, relais et diviseurs compris : dans son installation à quatre antennes, les 24 connecteurs valent plus de 2 dB, autant que 40 – 45 m de LMR-400 neuf sur 144 MHz [2]. Dans le bilan EME, le cadre du relais coaxial a deux champs, Connecteurs TX et Connecteurs RX : chaque connecteur vaut 0,11 dB ; en émission on compte ceux entre le PA et l'antenne, en réception ceux entre l'antenne et le préamplificateur.",
                 "[1] Les sources des différents câbles : fiches techniques de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogue MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), les tables de DD1US et EA5IP (H100) et la table de SV1BSX pour RG-58, RG-213, H-155 et H-2000 (valeurs à vérifier).",
@@ -67432,6 +67723,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ con §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (radio de la Luna), reflectividad lunar 0,065.",
+                "#### La pérdida del trayecto banda por banda",
+                "La pérdida del trayecto crece con el cuadrado de la frecuencia (§λ^2§ en el denominador: 6 dB por cada duplicación) y con la cuarta potencia de la distancia. El balance EME (yagis y parábolas) la calcula siempre a la frecuencia de la banda elegida y a las distancias del instante elegido. La tabla da los valores de la fórmula anterior con las dos estaciones a la misma distancia del centro de la Tierra:",
+                "|h| Banda | >Perigeo (356 900 km) | >Distancia media (384 400 km) | >Apogeo (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Frecuencias de cálculo: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Entre perigeo y apogeo la diferencia es de unos 2,3 dB en todas las bandas. Con la Luna alta en el cielo, la distancia topocéntrica es más corta que la distancia desde el centro de la Tierra hasta en unos 6 400 km, y la pérdida baja todavía unos 0,3 dB.",
+                "> Subir de banda cuesta pérdida del trayecto (de 50 a 1296 MHz unos 28 dB más), pero con las mismas dimensiones la antena gana más: una parábola de diámetro fijo gana 6 dB por cada duplicación de la frecuencia, en transmisión y en recepción, y el ruido del cielo disminuye. Por eso el balance se hace siempre banda por banda.",
                 "La potencia radiada y la señal en los bornes de la antena receptora:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -67582,11 +67885,11 @@ namespace LunaCalc
             };
             d["es"]["S48"] = new string[] {
                 "## Cables coaxiales y pérdidas",
-                "La pestaña **CABLES COAXIALES** recoge la atenuación de los cables de 50 Ω más usados por los radioaficionados, en dB por 100 m a 20 °C, en las cinco bandas de YAEC. Las hojas de datos de los fabricantes dan valores a frecuencias distintas; YAEC los ha llevado a las bandas con la ley de potencia, una recta en el gráfico log-log entre las dos frecuencias más cercanas de la hoja de datos:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α en dB/100 m, ℓ longitud del cable en metros. Un número sin marca es el valor de la hoja de datos; ≈ indica un valor interpolado, y e uno extrapolado más allá de la última frecuencia de la hoja de datos.",
+                "La pestaña **CABLES COAXIALES** recoge la atenuación de los cables de 50 Ω más usados por los radioaficionados, en dB por 100 m a 20 °C, en las bandas de YAEC de 50 a 1296 MHz. Las hojas de datos de los fabricantes dan valores a frecuencias distintas; YAEC los lleva a las bandas con la fórmula física de la atenuación del cable coaxial, suma de las pérdidas en los conductores (efecto pelicular, crecen con §\\sqrt{f}§) y de las pérdidas en el dieléctrico (crecen con §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α en dB/100 m, f en MHz, ℓ longitud del cable en metros. Para cada cable, §k_1§ y §k_2§ (nunca negativos) se obtienen por mínimos cuadrados, ponderando el error relativo, a partir de los valores de la hoja de datos del fabricante. Un número sin marca es el valor de la hoja de datos; ≈ indica un valor calculado con la fórmula dentro de las frecuencias de la hoja de datos, y e uno calculado fuera de ellas, que debe usarse con cautela. Con un solo término, la fórmula se reduce al caso del cable dominado por los conductores (§k_2 = 0§) o por el dieléctrico (§k_1 = 0§).",
                 "Los cables del mismo tipo, con el mismo diámetro dentro de ±0,2 mm y una atenuación dentro de 0,2 dB/100 m en todas las bandas se agrupan en una sola fila (≡), con el valor medio; los nombres equivalentes se muestran con \"also:\" (por ejemplo LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Los nombres chinos 50-3, 50-5, 50-7, 50-9, 50-12 indican el diámetro del dieléctrico en milímetros.",
-                "> Se pueden añadir cables personalizados con sus cinco atenuaciones: se guardan en data\\cavi_personali.txt y aparecen también en los desplegables del esquema de la estación del balance EME. La información emergente de cada fila de la tabla cita la fuente de ese cable.",
+                "> Se pueden añadir cables personalizados con las atenuaciones de 5 o 7 bandas (las que faltan se calculan con la fórmula): se guardan en data\\cavi_personali.txt y aparecen también en los desplegables del esquema de la estación del balance EME. La información emergente de cada fila de la tabla cita la fuente de ese cable.",
                 "### Los conectores (NJ9R)",
                 "También los conectores forman parte de la línea. El consejo práctico de NJ9R es contar aproximadamente 1 dB por cada 8 – 10 conectores, desde la parte trasera de la radio hasta la antena, incluidos adaptadores, relés y divisores: en su instalación de cuatro antenas los 24 conectores suman más de 2 dB, tanto como 40 – 45 m de LMR-400 nuevo en 144 MHz [2]. En el balance EME el recuadro del relé coaxial tiene dos casillas, Conectores TX y Conectores RX: cada conector vale 0,11 dB; en transmisión se cuentan los que hay entre el PA y la antena, en recepción los que hay entre la antena y el preamplificador.",
                 "[1] Las fuentes de cada cable: hojas de datos de Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, vía WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), las tablas de DD1US y EA5IP (H100) y la tabla de SV1BSX para RG-58, RG-213, H-155 y H-2000 (valores por verificar).",
@@ -67969,6 +68272,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ com §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (raio da Lua), refletividade lunar 0,065.",
+                "#### A perda de percurso banda a banda",
+                "A perda de percurso cresce com o quadrado da frequência (§λ^2§ no denominador: 6 dB por cada duplicação) e com a quarta potência da distância. O budget EME (yagis e parabólicas) calcula-a sempre na frequência da banda escolhida e às distâncias do instante escolhido. A tabela dá os valores da fórmula acima com as duas estações à mesma distância do centro da Terra:",
+                "|h| Banda | >Perigeu (356 900 km) | >Distância média (384 400 km) | >Apogeu (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Frequências de cálculo: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Entre perigeu e apogeu a diferença é de cerca de 2,3 dB em todas as bandas. Com a Lua alta no céu, a distância topocêntrica é mais curta do que a distância ao centro da Terra até cerca de 6 400 km, e a perda desce ainda cerca de 0,3 dB.",
+                "> Subir de banda custa perda de percurso (de 50 a 1296 MHz cerca de 28 dB a mais), mas com as mesmas dimensões a antena ganha mais: uma parabólica de diâmetro fixo ganha 6 dB por cada duplicação da frequência, em transmissão e em receção, e o ruído do céu diminui. É por isso que o budget se faz sempre banda a banda.",
                 "A potência irradiada e o sinal nos terminais da antena de receção:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -68119,11 +68434,11 @@ namespace LunaCalc
             };
             d["pt"]["S48"] = new string[] {
                 "## Cabos coaxiais e perdas",
-                "O separador **CABOS COAXIAIS** reúne a atenuação dos cabos de 50 Ω mais usados pelos radioamadores, em dB por 100 m a 20 °C, nas cinco bandas do YAEC. As folhas de dados dos fabricantes dão valores em frequências diferentes; o YAEC levou-os às bandas com a lei de potência, uma reta no gráfico log-log entre as duas frequências mais próximas da folha de dados:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α em dB/100 m, ℓ comprimento do cabo em metros. Um número simples é o valor da folha de dados; ≈ indica um valor interpolado, e e um valor extrapolado para além da última frequência da folha de dados.",
+                "O separador **CABOS COAXIAIS** reúne a atenuação dos cabos de 50 Ω mais usados pelos radioamadores, em dB por 100 m a 20 °C, nas bandas do YAEC de 50 a 1296 MHz. As folhas de dados dos fabricantes dão valores em frequências diferentes; o YAEC leva-os às bandas com a fórmula física da atenuação do cabo coaxial, soma das perdas nos condutores (efeito pelicular, crescem com §\\sqrt{f}§) e das perdas no dielétrico (crescem com §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α em dB/100 m, f em MHz, ℓ comprimento do cabo em metros. Para cada cabo, §k_1§ e §k_2§ (nunca negativos) obtêm-se pelos mínimos quadrados, ponderando o erro relativo, a partir dos valores da folha de dados do fabricante. Um número simples é o valor da folha de dados; ≈ indica um valor calculado com a fórmula dentro das frequências da folha de dados, e e um valor calculado fora delas, a usar com cautela. Com um só termo, a fórmula reduz-se ao caso do cabo dominado pelos condutores (§k_2 = 0§) ou pelo dielétrico (§k_1 = 0§).",
                 "Os cabos do mesmo tipo, com o mesmo diâmetro dentro de ±0,2 mm e atenuação dentro de 0,2 dB/100 m em todas as bandas, são agrupados numa única linha (≡), com o valor médio; os nomes equivalentes são indicados com “also:” (por exemplo LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Os nomes chineses 50-3, 50-5, 50-7, 50-9, 50-12 indicam o diâmetro do dielétrico em milímetros.",
-                "> É possível acrescentar cabos personalizados com as suas cinco atenuações: são guardados em data\\cavi_personali.txt e aparecem também nas listas pendentes do esquema da estação do budget EME. A dica (tooltip) de cada linha da tabela cita a fonte desse cabo.",
+                "> Podes acrescentar cabos personalizados com as atenuações de 5 ou 7 bandas (as que faltam são calculadas com a fórmula): são guardados em data\\cavi_personali.txt e aparecem também nas listas pendentes do esquema da estação do budget EME. A dica (tooltip) de cada linha da tabela cita a fonte desse cabo.",
                 "### Os conectores (NJ9R)",
                 "Também os conectores fazem parte da linha. O conselho prático de NJ9R é contar cerca de 1 dB por cada 8 – 10 conectores, desde a traseira do rádio até à antena, incluindo adaptadores, relés e divisores: na sua instalação de quatro antenas, os 24 conectores valem mais de 2 dB, tanto como 40 – 45 m de LMR-400 novo em 144 MHz [2]. No balanço EME o quadro do relé coaxial tem duas caixas, Conectores TX e Conectores RX: cada conector vale 0,11 dB; na transmissão contam-se os que estão entre o PA e a antena, na receção os que estão entre a antena e o pré-amplificador.",
                 "[1] As fontes de cada cabo: folhas de dados da Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catálogo MIL-C-17F (RG-142, RG-393), R.F. elettronica de Senago (RG-115), as tabelas de DD1US e EA5IP (H100) e a tabela de SV1BSX para RG-58, RG-213, H-155 e H-2000 (valores a verificar).",
@@ -68506,6 +68821,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ 其中 §c = 299 792 458 \\t{ m/s}§，§R_M = 1 737.4 \\t{ km}§（月球半径），月球反射率 0.065。",
+                "#### 各频段的路径损耗",
+                "路径损耗随频率的平方增大（§λ^2§ 位于分母：频率每加倍增加 6 dB），并随距离的四次方增大。EME 链路预算（八木与抛物面）始终按所选频段的频率和所选时刻的距离计算路径损耗。下表给出两个电台与地心距离相同时上述公式的数值：",
+                "|h| 频段 | >近地点（356 900 km） | >平均距离（384 400 km） | >远地点（406 700 km）",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ 计算频率：50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz。近地点与远地点之间的差异在所有频段均约为 2.3 dB。月球高悬天空时，站心距离比到地心的距离最多短约 6 400 km，损耗还会再降低约 0.3 dB。",
+                "> 升高频段要付出路径损耗的代价（从 50 MHz 到 1296 MHz 约多 28 dB），但尺寸相同时天线的增益更高：口径固定的抛物面在频率每加倍时，发射和接收增益都提高 6 dB，而且天空噪声降低。因此链路预算总是逐个频段计算。",
                 "辐射功率以及接收天线端口处的信号：",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -68656,11 +68983,11 @@ namespace LunaCalc
             };
             d["zh"]["S48"] = new string[] {
                 "## 同轴电缆与损耗",
-                "**同轴电缆** 选项卡汇集了业余无线电爱好者最常用的 50 Ω 电缆在 YAEC 五个频段上的衰减，单位为 dB/100 m（20 °C）。厂家数据手册给出的是不同频率下的数值；YAEC 用幂律将其换算到各频段，即在双对数图上取数据手册中两个最近频率之间的直线：",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α 单位为 dB/100 m，ℓ 为电缆长度（米）。普通数字为数据手册数值；≈ 表示插值得到的数值，e 表示超出数据手册最高频率外推得到的数值。",
+                "**同轴电缆** 选项卡汇集了业余无线电爱好者最常用的 50 Ω 电缆在 YAEC 50 至 1296 MHz 各频段上的衰减，单位为 dB/100 m（20 °C）。厂家数据手册给出的是不同频率下的数值；YAEC 用同轴电缆衰减的物理公式将其换算到各频段，该公式为导体损耗（集肤效应，随 §\\sqrt{f}§ 增大）与介质损耗（随 §f§ 增大）之和：",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α 单位为 dB/100 m，f 单位为 MHz，ℓ 为电缆长度（米）。每种电缆的 §k_1§ 和 §k_2§（均不为负）由厂家数据手册中的数值，按相对误差加权的最小二乘法求得。普通数字为数据手册数值；≈ 表示在数据手册频率范围内用公式计算的数值，e 表示在该范围之外计算的数值，应谨慎使用。只保留一项时，公式简化为以导体损耗为主（§k_2 = 0§）或以介质损耗为主（§k_1 = 0§）的电缆情形。",
                 "同类型、直径相差在 ±0.2 mm 以内且各频段衰减相差在 0.2 dB/100 m 以内的电缆合并为一行（≡），取平均值；等效名称以 \"also:\" 标出（例如 LMR-400 = HF400、CNT-400、50-7 低损耗；LMR-600 = CNT-600）。中国型号 50-3、50-5、50-7、50-9、50-12 表示介质直径（毫米）。",
-                "> 可以输入五个衰减值来添加自定义电缆：它们保存在 data\\cavi_personali.txt 中，也会出现在 EME 链路预算电台框图的下拉列表中。表格每一行的工具提示注明了该电缆的数据来源。",
+                "> 可以输入 5 个或 7 个频段的衰减值来添加自定义电缆（缺少的数值用公式计算）：它们保存在 data\\cavi_personali.txt 中，也会出现在 EME 链路预算电台框图的下拉列表中。表格每一行的工具提示注明了该电缆的数据来源。",
                 "### 连接器（NJ9R）",
                 "连接器也是传输线的一部分。NJ9R 的实用建议是每 8 – 10 个连接器计约 1 dB，从电台背面一直数到天线，包括转接头、继电器和功分器：在他的四天线系统中，24 个连接器的损耗超过 2 dB，相当于 144 MHz 上 40 – 45 m 全新 LMR-400 电缆的损耗 [2]。在 EME 链路预算中，同轴继电器框内有“TX 连接器”和“RX 连接器”两栏：每个连接器按 0.11 dB 计；发射时计入 PA 与天线之间的连接器，接收时计入天线与前置放大器之间的连接器。",
                 "[1] 各电缆的数据来源：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell、Ecoflex、Aircom Plus）、Messi & Paoloni（Hyperflex、Ultraflex，经 WiMo）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020、XT2400）、QAXIAL（LLF195）、Caledonian Cables 的数据手册，MIL-C-17F 目录（RG-142、RG-393），Senago 的 R.F. elettronica（RG-115），DD1US 和 EA5IP 的表格（H100），以及 SV1BSX 关于 RG-58、RG-213、H-155 和 H-2000 的表格（数值有待核实）。",
@@ -69043,6 +69370,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ §c = 299 792 458 \\t{ m/s}§、§R_M = 1 737.4 \\t{ km}§（月の半径）、月の反射率0.065。",
+                "#### バンドごとの伝搬損失",
+                "伝搬損失は周波数の2乗（分母の §λ^2§：周波数が2倍になるごとに6 dB）と距離の4乗に応じて増えます。EMEバジェット（八木とディッシュ）は、常に選択したバンドの周波数と選択した時刻の距離で伝搬損失を計算します。下の表は、2局が地球の中心から同じ距離にあるとして上の式で求めた値です：",
+                "|h| バンド | >近地点（356 900 km） | >平均距離（384 400 km） | >遠地点（406 700 km）",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ 計算周波数：50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz。近地点と遠地点の差はすべてのバンドで約2.3 dBです。月が空高くにあるときは、トポセントリック距離が地球中心からの距離より最大約6 400 km短くなり、損失はさらに約0.3 dB下がります。",
+                "> バンドを上げると伝搬損失が増えます（50 MHzから1296 MHzまでで約28 dB増）が、同じ大きさならアンテナの利得は大きくなります。直径が一定のディッシュは、周波数が2倍になるごとに送信でも受信でも利得が6 dB増え、空の雑音も減ります。そのため、バジェットは常にバンドごとに計算します。",
                 "放射電力と受信アンテナ端子での信号：",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -69193,11 +69532,11 @@ namespace LunaCalc
             };
             d["ja"]["S48"] = new string[] {
                 "## 同軸ケーブルと損失",
-                "**同軸ケーブル** タブには、アマチュア無線家がよく使う50 Ωケーブルの減衰量を、YAECの5つのバンドについて20 °Cでの100 mあたりのdBでまとめています。メーカーのデータシートは異なる周波数での値を示しているため、YAECはべき乗則、すなわちデータシートの最も近い2つの周波数の間を両対数グラフ上の直線で結ぶ方法で各バンドの値を求めています：",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ αはdB/100 m、ℓはケーブル長（メートル）。数字のみはデータシートの値、≈ は補間値、e はデータシートの最後の周波数を超えて外挿した値を示します。",
+                "**同軸ケーブル** タブには、アマチュア無線家がよく使う50 Ωケーブルの減衰量を、YAECの50～1296 MHzの各バンドについて20 °Cでの100 mあたりのdBでまとめています。メーカーのデータシートは異なる周波数での値を示しているため、YAECは同軸ケーブルの減衰の物理式、すなわち導体での損失（表皮効果、§\\sqrt{f}§ に比例して増加）と誘電体での損失（§f§ に比例して増加）の和を使って各バンドの値を求めています：",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ αはdB/100 m、fはMHz、ℓはケーブル長（メートル）。各ケーブルの §k_1§ と §k_2§（負にはならない）は、メーカーのデータシートの値から、相対誤差で重み付けした最小二乗法で求めます。数字のみはデータシートの値、≈ はデータシートの周波数範囲内で式から計算した値、e は範囲外で計算した値で、注意して使う必要があります。項が1つだけの場合、式は導体が支配的なケーブル（§k_2 = 0§）または誘電体が支配的なケーブル（§k_1 = 0§）の場合になります。",
                 "同じ種類で、直径の差が±0.2 mm以内、全バンドで減衰量の差が0.2 dB/100 m以内のケーブルは1行（≡）にまとめ、平均値を示しています。同等の名称は \"also:\" で示します（例：LMR-400 = HF400, CNT-400, 50-7 low loss；LMR-600 = CNT-600）。中国の名称50-3、50-5、50-7、50-9、50-12は誘電体の直径をミリメートルで表しています。",
-                "> ユーザー定義のケーブルは5つの減衰量を入力して追加できます。data\\cavi_personali.txt に保存され、EMEバジェットの局構成図のドロップダウンにも表示されます。表の各行のツールチップには、そのケーブルの出典が表示されます。",
+                "> ユーザー定義のケーブルは5または7バンドの減衰量を入力して追加できます（不足分は式で計算されます）。data\\cavi_personali.txt に保存され、EMEバジェットの局構成図のドロップダウンにも表示されます。表の各行のツールチップには、そのケーブルの出典が表示されます。",
                 "### コネクター (NJ9R)",
                 "コネクターも伝送路の一部です。NJ9Rの実用的なアドバイスは、コネクター8～10個ごとに約1 dBと見積もることで、無線機の背面からアンテナまで、アダプター、リレー、分配器も含めて数えます。彼の4アンテナの設備では24個のコネクターで2 dBを超え、144 MHzでの新品のLMR-400 40～45 mに相当します [2]。EME 回線計算の同軸リレーの枠には「TXコネクター数」と「RXコネクター数」の2つの欄があり、コネクター 1 個を 0.11 dB とします。送信では PA とアンテナの間、受信ではアンテナとプリアンプの間のコネクターを数えます。",
                 "[1] 各ケーブルの出典：Times Microwave（LMR）、RFS（CELLFLEX LCF/SCF）、CommScope Andrew（HELIAX LDF/FSJ）、Siva Cavi（HF 240/287/400）、SSB-Electronic（Aircell, Ecoflex, Aircom Plus）、Messi & Paoloni（Hyperflex, Ultraflex、WiMo経由）、Symair、SYV50-7（szansy.com）、Belden（H1000）、Prospecta（RT5020, XT2400）、QAXIAL（LLF195）、Caledonian Cablesの各データシート、MIL-C-17Fカタログ（RG-142, RG-393）、SenagoのR.F. elettronica（RG-115）、DD1USおよびEA5IPの表（H100）、RG-58、RG-213、H-155、H-2000についてはSV1BSXの表（値は要確認）。",
@@ -69580,6 +69919,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ जहाँ §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737.4 \\t{ km}§ (चंद्रमा की त्रिज्या), चंद्र परावर्तकता 0.065।",
+                "#### बैंड-दर-बैंड पाथ लॉस",
+                "पाथ लॉस फ़्रीक्वेंसी के वर्ग के साथ (भाजक में §λ^2§: फ़्रीक्वेंसी के हर बार दोगुना होने पर 6 dB) और दूरी की चौथी घात के साथ बढ़ता है। EME बजट (यागी और डिश) इसे हमेशा चुने गए बैंड की फ़्रीक्वेंसी पर और चुने गए क्षण की दूरियों पर गणना करता है। तालिका ऊपर दिए सूत्र के मान देती है, जब दोनों स्टेशन पृथ्वी के केंद्र से समान दूरी पर हों:",
+                "|h| बैंड | >पेरिजी (356 900 km) | >औसत दूरी (384 400 km) | >एपोजी (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ गणना की फ़्रीक्वेंसियाँ: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz। पेरिजी और एपोजी के बीच अंतर सभी बैंडों में लगभग 2.3 dB है। जब चंद्रमा आकाश में ऊँचा हो, तो टोपोसेंट्रिक दूरी पृथ्वी के केंद्र से दूरी की तुलना में लगभग 6 400 km तक कम होती है, और लॉस लगभग 0.3 dB और घट जाता है।",
+                "> ऊँचे बैंड पर जाने की कीमत पाथ लॉस में चुकानी पड़ती है (50 से 1296 MHz तक लगभग 28 dB अधिक), लेकिन समान आकार पर एंटेना का गेन अधिक होता है: स्थिर व्यास वाली डिश का गेन फ़्रीक्वेंसी के हर बार दोगुना होने पर ट्रांसमिशन और रिसेप्शन दोनों में 6 dB बढ़ता है, और आकाशीय नॉइज़ घटता है। इसीलिए बजट हमेशा बैंड-दर-बैंड बनाया जाता है।",
                 "विकिरित पावर और रिसीविंग एंटेना के टर्मिनलों पर सिग्नल:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -69730,11 +70081,11 @@ namespace LunaCalc
             };
             d["hi"]["S48"] = new string[] {
                 "## कोएक्सियल केबल और नुकसान",
-                "**कोएक्सियल केबल** टैब रेडियो एमेच्योरों द्वारा सबसे अधिक इस्तेमाल की जाने वाली 50 Ω केबलों का एटेन्यूएशन, 20 °C पर dB प्रति 100 m में, YAEC के पाँच बैंडों पर एकत्र करता है। निर्माताओं की डेटा शीट अलग-अलग फ़्रीक्वेंसियों पर मान देती हैं; YAEC ने उन्हें पावर लॉ से बैंडों पर लाया है, जो डेटा शीट की दो निकटतम फ़्रीक्वेंसियों के बीच log-log चार्ट पर एक सीधी रेखा है:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α dB/100 m में, ℓ केबल की लंबाई मीटर में। सादा अंक डेटा शीट का मान है; ≈ इंटरपोलेट किए गए मान को दर्शाता है, और e डेटा शीट की अंतिम फ़्रीक्वेंसी से आगे एक्सट्रापोलेट किए गए मान को।",
+                "**कोएक्सियल केबल** टैब रेडियो एमेच्योरों द्वारा सबसे अधिक इस्तेमाल की जाने वाली 50 Ω केबलों का एटेन्यूएशन, 20 °C पर dB प्रति 100 m में, 50 से 1296 MHz तक YAEC के बैंडों पर एकत्र करता है। निर्माताओं की डेटा शीट अलग-अलग फ़्रीक्वेंसियों पर मान देती हैं; YAEC उन्हें कोएक्सियल केबल के एटेन्यूएशन के भौतिक सूत्र से बैंडों पर लाता है, जो कंडक्टरों में नुकसान (स्किन इफ़ेक्ट, §\\sqrt{f}§ के साथ बढ़ता है) और डाइइलेक्ट्रिक में नुकसान (§f§ के साथ बढ़ता है) का योग है:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α dB/100 m में, f MHz में, ℓ केबल की लंबाई मीटर में। हर केबल के लिए §k_1§ और §k_2§ (कभी ऋणात्मक नहीं) निर्माता की डेटा शीट के मानों से, सापेक्ष त्रुटि को भार देते हुए, न्यूनतम वर्ग विधि से निकाले जाते हैं। सादा अंक डेटा शीट का मान है; ≈ डेटा शीट की फ़्रीक्वेंसियों के भीतर सूत्र से गणना किए गए मान को दर्शाता है, और e उनके बाहर गणना किए गए मान को, जिसे सावधानी से इस्तेमाल करना चाहिए। केवल एक पद रहने पर सूत्र उस केबल के मामले में बदल जाता है जिसमें कंडक्टरों (§k_2 = 0§) या डाइइलेक्ट्रिक (§k_1 = 0§) का नुकसान प्रमुख हो।",
                 "एक ही प्रकार की केबलें, जिनका व्यास ±0.2 mm के भीतर और सभी बैंडों पर एटेन्यूएशन 0.2 dB/100 m के भीतर समान हो, एक पंक्ति (≡) में औसत मान के साथ समूहित की जाती हैं; समतुल्य नाम \"also:\" के साथ दिखाए जाते हैं (उदाहरण के लिए LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600)। चीनी नाम 50-3, 50-5, 50-7, 50-9, 50-12 डाइइलेक्ट्रिक का व्यास मिलीमीटर में बताते हैं।",
-                "> कस्टम केबलें उनके पाँच एटेन्यूएशन मानों के साथ जोड़ी जा सकती हैं: वे data\\cavi_personali.txt में सहेजी जाती हैं और EME बजट के स्टेशन आरेख की ड्रॉप-डाउन सूचियों में भी दिखाई देती हैं। तालिका की हर पंक्ति का टूलटिप उस केबल का स्रोत बताता है।",
+                "> कस्टम केबलें 5 या 7 बैंडों के एटेन्यूएशन मानों के साथ जोड़ी जा सकती हैं (छूटे हुए मान सूत्र से गणना किए जाते हैं): वे data\\cavi_personali.txt में सहेजी जाती हैं और EME बजट के स्टेशन आरेख की ड्रॉप-डाउन सूचियों में भी दिखाई देती हैं। तालिका की हर पंक्ति का टूलटिप उस केबल का स्रोत बताता है।",
                 "### कनेक्टर (NJ9R)",
                 "कनेक्टर भी लाइन का हिस्सा हैं। NJ9R की व्यावहारिक सलाह है कि हर 8 – 10 कनेक्टर पर लगभग 1 dB गिनें, रेडियो के पिछले हिस्से से एंटेना तक, एडेप्टर, रिले और पावर डिवाइडर समेत: उनकी चार एंटेना वाली स्थापना में 24 कनेक्टर 2 dB से अधिक के बराबर हैं, यानी 144 MHz पर 40 – 45 m नए LMR-400 जितने [2]। EME बजट में कोएक्सियल रिले के बॉक्स में दो फ़ील्ड हैं, 'TX कनेक्टर' और 'RX कनेक्टर': हर कनेक्टर 0.11 dB का है; ट्रांसमिशन में PA और एंटेना के बीच वाले गिने जाते हैं, रिसेप्शन में एंटेना और प्रीएम्प्लीफ़ायर के बीच वाले।",
                 "[1] अलग-अलग केबलों के स्रोत: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo के माध्यम से), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables की डेटा शीट, MIL-C-17F कैटलॉग (RG-142, RG-393), Senago की R.F. elettronica (RG-115), DD1US और EA5IP की तालिकाएँ (H100) और RG-58, RG-213, H-155 और H-2000 के लिए SV1BSX की तालिका (सत्यापन आवश्यक मान)।",
@@ -70117,6 +70468,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737.4 \\t{ km}§ (달의 반지름), 달의 반사율 0.065.",
+                "#### 밴드별 경로 손실",
+                "경로 손실은 주파수의 제곱(분모의 §λ^2§: 주파수가 두 배가 될 때마다 6 dB)과 거리의 네제곱에 따라 커집니다. EME 버짓(야기와 접시 안테나)은 항상 선택한 밴드의 주파수와 선택한 시각의 거리로 경로 손실을 계산합니다. 아래 표는 두 국이 지구 중심에서 같은 거리에 있을 때 위 공식으로 구한 값입니다:",
+                "|h| 밴드 | >근지점 (356 900 km) | >평균 거리 (384 400 km) | >원지점 (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ 계산 주파수: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz. 근지점과 원지점의 차이는 모든 밴드에서 약 2.3 dB입니다. 달이 하늘 높이 있을 때는 지표 중심 거리가 지구 중심으로부터의 거리보다 최대 약 6 400 km 짧아지고, 손실은 약 0.3 dB 더 줄어듭니다.",
+                "> 밴드를 올리면 경로 손실이 커지지만(50 MHz에서 1296 MHz까지 약 28 dB 증가), 같은 크기라면 안테나 이득이 더 커집니다. 지름이 고정된 접시 안테나는 주파수가 두 배가 될 때마다 송신과 수신에서 각각 이득이 6 dB씩 늘어나고, 하늘 잡음은 줄어듭니다. 그래서 버짓은 항상 밴드별로 계산합니다.",
                 "복사 전력과 수신 안테나 단자에서의 신호:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -70267,11 +70630,11 @@ namespace LunaCalc
             };
             d["ko"]["S48"] = new string[] {
                 "## 동축 케이블과 손실",
-                "**동축 케이블** 탭에는 아마추어 무선사가 가장 많이 사용하는 50 Ω 케이블의 감쇠가 YAEC의 다섯 밴드에 대해 20 °C에서 100 m당 dB로 정리되어 있습니다. 제조사 데이터 시트는 서로 다른 주파수의 값을 제시하므로, YAEC는 데이터 시트에서 가장 가까운 두 주파수 사이를 로그-로그 그래프상의 직선, 즉 거듭제곱 법칙으로 밴드 주파수에 맞추었습니다:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α는 dB/100 m, ℓ은 미터 단위의 케이블 길이입니다. 숫자만 있으면 데이터 시트 값이고, ≈는 내삽한 값, e는 데이터 시트의 마지막 주파수를 넘어 외삽한 값입니다.",
+                "**동축 케이블** 탭에는 아마추어 무선사가 가장 많이 사용하는 50 Ω 케이블의 감쇠가 50~1296 MHz의 YAEC 밴드에 대해 20 °C에서 100 m당 dB로 정리되어 있습니다. 제조사 데이터 시트는 서로 다른 주파수의 값을 제시하므로, YAEC는 동축 케이블 감쇠의 물리 공식, 즉 도체 손실(표피 효과, §\\sqrt{f}§에 따라 증가)과 유전체 손실(§f§에 따라 증가)의 합으로 밴드 주파수의 값을 구합니다:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α는 dB/100 m, f는 MHz, ℓ은 미터 단위의 케이블 길이입니다. 각 케이블의 §k_1§과 §k_2§(음수가 되지 않음)는 제조사 데이터 시트 값으로부터 상대 오차에 가중치를 둔 최소제곱법으로 구합니다. 숫자만 있으면 데이터 시트 값이고, ≈는 데이터 시트 주파수 범위 안에서 공식으로 계산한 값, e는 범위 밖에서 계산한 값으로 주의해서 사용해야 합니다. 항이 하나뿐이면 공식은 도체가 지배적인 케이블(§k_2 = 0§) 또는 유전체가 지배적인 케이블(§k_1 = 0§)의 경우로 줄어듭니다.",
                 "같은 종류이고 지름이 ±0.2 mm 이내, 모든 밴드에서 감쇠가 0.2 dB/100 m 이내인 케이블은 한 행(≡)으로 묶어 평균값을 표시합니다. 동등한 이름은 \"also:\"로 표시합니다(예: LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). 중국식 이름 50-3, 50-5, 50-7, 50-9, 50-12는 유전체의 지름을 밀리미터로 나타냅니다.",
-                "> 사용자 케이블은 다섯 개의 감쇠값과 함께 추가할 수 있습니다. data\\cavi_personali.txt에 저장되며 EME 버짓 국 구성도의 드롭다운에도 나타납니다. 표의 각 행 툴팁에는 해당 케이블의 출처가 표시됩니다.",
+                "> 사용자 케이블은 5개 또는 7개 밴드의 감쇠값과 함께 추가할 수 있습니다(빠진 값은 공식으로 계산). data\\cavi_personali.txt에 저장되며 EME 버짓 국 구성도의 드롭다운에도 나타납니다. 표의 각 행 툴팁에는 해당 케이블의 출처가 표시됩니다.",
                 "### 커넥터 (NJ9R)",
                 "커넥터도 선로의 일부입니다. NJ9R의 실용적인 조언은 커넥터 8~10개마다 약 1 dB로 계산하는 것이며, 무선기 뒷면에서 안테나까지 어댑터, 릴레이, 분배기를 포함해 셉니다. 그의 4안테나 설비에서는 커넥터 24개가 2 dB를 넘으며, 이는 144 MHz에서 새 LMR-400 40~45 m에 해당합니다 [2]. EME 링크 버짓의 동축 릴레이 상자에는 'TX 커넥터 수'와 'RX 커넥터 수' 두 칸이 있습니다. 커넥터 하나를 0.11 dB로 보며, 송신에서는 PA와 안테나 사이의 커넥터를, 수신에서는 안테나와 프리앰프 사이의 커넥터를 셉니다.",
                 "[1] 개별 케이블의 출처: Times Microwave(LMR), RFS(CELLFLEX LCF/SCF), CommScope Andrew(HELIAX LDF/FSJ), Siva Cavi(HF 240/287/400), SSB-Electronic(Aircell, Ecoflex, Aircom Plus), Messi & Paoloni(Hyperflex, Ultraflex, WiMo 경유), Symair, SYV50-7(szansy.com), Belden(H1000), Prospecta(RT5020, XT2400), QAXIAL(LLF195), Caledonian Cables의 데이터 시트, MIL-C-17F 카탈로그(RG-142, RG-393), Senago의 R.F. elettronica(RG-115), DD1US와 EA5IP의 표(H100), 그리고 RG-58, RG-213, H-155, H-2000에 대한 SV1BSX의 표(확인이 필요한 값).",
@@ -70654,6 +71017,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ dengan §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (jari-jari Bulan), reflektivitas Bulan 0,065.",
+                "#### Redaman lintasan per pita",
+                "Redaman lintasan bertambah sebanding dengan kuadrat frekuensi (§λ^2§ di penyebut: 6 dB untuk setiap penggandaan) dan dengan pangkat empat jarak. Anggaran EME (yagi dan parabola) selalu menghitungnya pada frekuensi pita yang dipilih dan pada jarak saat yang dipilih. Tabel memberikan nilai rumus di atas dengan kedua stasiun pada jarak yang sama dari pusat Bumi:",
+                "|h| Pita | >Perigee (356 900 km) | >Jarak rata-rata (384 400 km) | >Apogee (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Frekuensi perhitungan: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Antara perigee dan apogee selisihnya sekitar 2,3 dB di semua pita. Saat Bulan tinggi di langit, jarak toposentris lebih pendek hingga sekitar 6 400 km daripada jarak dari pusat Bumi, dan redaman turun lagi sekitar 0,3 dB.",
+                "> Naik pita harus dibayar dengan redaman lintasan (dari 50 ke 1296 MHz sekitar 28 dB lebih besar), tetapi dengan ukuran yang sama antena memberikan penguatan lebih besar: parabola berdiameter tetap mendapat tambahan penguatan 6 dB untuk setiap penggandaan frekuensi, saat memancar maupun menerima, dan derau langit berkurang. Karena itu anggaran selalu dihitung pita per pita.",
                 "Daya yang dipancarkan dan sinyal di terminal antena penerima:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -70804,11 +71179,11 @@ namespace LunaCalc
             };
             d["id"]["S48"] = new string[] {
                 "## Kabel koaksial dan redaman",
-                "Tab **KABEL KOAKSIAL** menghimpun redaman kabel 50 Ω yang paling banyak dipakai radio amatir, dalam dB per 100 m pada 20 °C, di lima pita YAEC. Lembar data pembuat memberikan nilai pada frekuensi yang berbeda-beda; YAEC menyesuaikannya ke pita-pita tersebut dengan hukum pangkat, yaitu garis lurus pada grafik log-log di antara dua frekuensi terdekat dari lembar data:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α dalam dB/100 m, ℓ panjang kabel dalam meter. Angka biasa adalah nilai lembar data; ≈ menandai nilai hasil interpolasi, dan e nilai hasil ekstrapolasi di luar frekuensi terakhir lembar data.",
+                "Tab **KABEL KOAKSIAL** menghimpun redaman kabel 50 Ω yang paling banyak dipakai radio amatir, dalam dB per 100 m pada 20 °C, di pita-pita YAEC dari 50 hingga 1296 MHz. Lembar data pembuat memberikan nilai pada frekuensi yang berbeda-beda; YAEC menyesuaikannya ke pita-pita tersebut dengan rumus fisis redaman kabel koaksial, yaitu jumlah rugi pada konduktor (efek kulit, bertambah sebanding dengan §\\sqrt{f}§) dan rugi pada dielektrik (bertambah sebanding dengan §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α dalam dB/100 m, f dalam MHz, ℓ panjang kabel dalam meter. Untuk setiap kabel, §k_1§ dan §k_2§ (tidak pernah negatif) diperoleh dengan metode kuadrat terkecil, dengan pembobotan galat relatif, dari nilai-nilai lembar data pembuat. Angka biasa adalah nilai lembar data; ≈ menandai nilai yang dihitung dengan rumus di dalam rentang frekuensi lembar data, dan e nilai yang dihitung di luarnya, yang harus dipakai dengan hati-hati. Dengan satu suku saja, rumus tersebut menjadi kasus kabel yang didominasi oleh konduktor (§k_2 = 0§) atau oleh dielektrik (§k_1 = 0§).",
                 "Kabel dengan jenis yang sama, diameter yang sama dalam ±0,2 mm dan redaman dalam 0,2 dB/100 m di semua pita dikelompokkan dalam satu baris (≡), dengan nilai rata-ratanya; nama yang setara ditampilkan dengan \"also:\" (misalnya LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Nama Tiongkok 50-3, 50-5, 50-7, 50-9, 50-12 menyatakan diameter dielektrik dalam milimeter.",
-                "> Kabel kustom dapat ditambahkan dengan lima nilai redamannya: kabel tersebut disimpan di data\\cavi_personali.txt dan juga muncul di daftar drop-down diagram stasiun pada budget EME. Tooltip setiap baris tabel menyebutkan sumber kabel tersebut.",
+                "> Kabel kustom dapat ditambahkan dengan redaman pada 5 atau 7 pita (yang tidak diisi dihitung dengan rumus): kabel tersebut disimpan di data\\cavi_personali.txt dan juga muncul di daftar drop-down diagram stasiun pada Anggaran EME. Tooltip setiap baris tabel menyebutkan sumber kabel tersebut.",
                 "### Konektor (NJ9R)",
                 "Konektor juga merupakan bagian dari saluran. Saran praktis NJ9R adalah menghitung sekitar 1 dB untuk setiap 8 – 10 konektor, dari bagian belakang radio sampai antena, termasuk adaptor, relay, dan pembagi: pada instalasinya yang terdiri atas empat antena, 24 konektor bernilai lebih dari 2 dB, setara dengan 40 – 45 m LMR-400 baru di 144 MHz [2]. Dalam anggaran EME, kotak relai koaksial memiliki dua isian, Konektor TX dan Konektor RX: setiap konektor bernilai 0,11 dB; saat memancar dihitung konektor antara PA dan antena, saat menerima konektor antara antena dan preamplifier.",
                 "[1] Sumber masing-masing kabel: lembar data dari Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, melalui WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica dari Senago (RG-115), tabel dari DD1US dan EA5IP (H100) serta tabel dari SV1BSX untuk RG-58, RG-213, H-155 dan H-2000 (nilai perlu diverifikasi).",
@@ -71191,6 +71566,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ где §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (радиус Луны), отражательная способность Луны 0,065.",
+                "#### Потери на трассе по диапазонам",
+                "Потери на трассе растут пропорционально квадрату частоты (§λ^2§ в знаменателе: 6 дБ на каждое удвоение) и четвёртой степени расстояния. Бюджет EME (Яги и параболические антенны) всегда рассчитывает их на частоте выбранного диапазона и для расстояний в выбранный момент. В таблице приведены значения по формуле выше для случая, когда обе станции находятся на одинаковом расстоянии от центра Земли:",
+                "|h| Диапазон | >Перигей (356 900 km) | >Среднее расстояние (384 400 km) | >Апогей (406 700 km)",
+                "| 50 MHz | 241,7 дБ | 242,9 дБ | 243,9 дБ",
+                "| 70 MHz | 244,6 дБ | 245,9 дБ | 246,8 дБ",
+                "| 144 MHz | 250,8 дБ | 252,1 дБ | 253,1 дБ",
+                "| 222 MHz | 254,6 дБ | 255,9 дБ | 256,8 дБ",
+                "| 432 MHz | 260,4 дБ | 261,6 дБ | 262,6 дБ",
+                "| 902 MHz | 266,7 дБ | 268,0 дБ | 269,0 дБ",
+                "| 1296 MHz | 269,9 дБ | 271,2 дБ | 272,2 дБ",
+                "~ Частоты расчёта: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Разница между перигеем и апогеем составляет около 2,3 дБ на всех диапазонах. Когда Луна высоко в небе, топоцентрическое расстояние короче расстояния от центра Земли — максимум примерно на 6 400 km, — и потери уменьшаются ещё примерно на 0,3 дБ.",
+                "> Переход на более высокий диапазон оплачивается ростом потерь на трассе (от 50 до 1296 MHz примерно на 28 дБ больше), но при тех же размерах антенна даёт большее усиление: параболическая антенна фиксированного диаметра выигрывает 6 дБ на каждое удвоение частоты, как при передаче, так и при приёме, а шум неба уменьшается. Поэтому бюджет всегда рассчитывают отдельно для каждого диапазона.",
                 "Излучаемая мощность и сигнал на зажимах приёмной антенны:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -71341,11 +71728,11 @@ namespace LunaCalc
             };
             d["ru"]["S48"] = new string[] {
                 "## Коаксиальные кабели и потери",
-                "Вкладка **КОАКСИАЛЬНЫЕ КАБЕЛИ** содержит затухание 50-омных кабелей, наиболее используемых радиолюбителями, в dB на 100 m при 20 °C, на пяти диапазонах YAEC. Технические описания производителей дают значения на других частотах; YAEC привела их к диапазонам по степенному закону — прямой на графике в двойном логарифмическом масштабе между двумя ближайшими частотами из описания:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α в dB/100 m, ℓ — длина кабеля в метрах. Число без пометок — значение из технического описания; ≈ обозначает интерполированное значение, а e — экстраполированное за последнюю частоту описания.",
+                "Вкладка **КОАКСИАЛЬНЫЕ КАБЕЛИ** содержит затухание 50-омных кабелей, наиболее используемых радиолюбителями, в дБ на 100 m при 20 °C, на диапазонах YAEC от 50 до 1296 MHz. Технические описания производителей дают значения на других частотах; YAEC приводит их к диапазонам по физической формуле затухания коаксиального кабеля — сумме потерь в проводниках (скин-эффект, растут как §\\sqrt{f}§) и потерь в диэлектрике (растут как §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α в дБ/100 m, f в MHz, ℓ — длина кабеля в метрах. Для каждого кабеля §k_1§ и §k_2§ (никогда не отрицательные) находятся методом наименьших квадратов, со взвешиванием относительной ошибки, по значениям из технического описания производителя. Число без пометок — значение из технического описания; ≈ обозначает значение, рассчитанное по формуле в пределах частот описания, а e — рассчитанное за их пределами, которое следует использовать с осторожностью. С одним слагаемым формула сводится к случаю кабеля, в котором преобладают потери в проводниках (§k_2 = 0§) или в диэлектрике (§k_1 = 0§).",
                 "Кабели одного типа с одинаковым диаметром в пределах ±0,2 mm и затуханием в пределах 0,2 dB/100 m на всех диапазонах объединены в одну строку (≡) со средним значением; эквивалентные названия показаны с пометкой \"also:\" (например, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Китайские названия 50-3, 50-5, 50-7, 50-9, 50-12 указывают диаметр диэлектрика в миллиметрах.",
-                "> Можно добавлять собственные кабели с их пятью значениями затухания: они сохраняются в data\\cavi_personali.txt и появляются также в выпадающих списках схемы станции бюджета EME. Всплывающая подсказка каждой строки таблицы указывает источник данных для этого кабеля.",
+                "> Можно добавлять собственные кабели с затуханием на 5 или 7 диапазонах (недостающие значения рассчитываются по формуле): они сохраняются в data\\cavi_personali.txt и появляются также в выпадающих списках схемы станции бюджета EME. Всплывающая подсказка каждой строки таблицы указывает источник данных для этого кабеля.",
                 "### Разъёмы (NJ9R)",
                 "Разъёмы тоже входят в линию. Практический совет NJ9R — считать около 1 dB на каждые 8 – 10 разъёмов, от задней панели трансивера до антенны, включая переходники, реле и делители: в его установке из четырёх антенн 24 разъёма дают больше 2 dB — столько же, сколько 40 – 45 m нового LMR-400 на 144 MHz [2]. В бюджете EME в блоке коаксиального реле есть два поля, «Разъёмов TX» и «Разъёмов RX»: каждый разъём даёт 0,11 дБ; при передаче учитываются разъёмы между PA и антенной, при приёме — между антенной и предусилителем.",
                 "[1] Источники данных по отдельным кабелям: технические описания Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica из Сенаго (RG-115), таблицы DD1US и EA5IP (H100) и таблица SV1BSX для RG-58, RG-213, H-155 и H-2000 (значения требуют проверки).",
@@ -71728,6 +72115,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ де §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (радіус Місяця), відбивна здатність Місяця 0,065.",
+                "#### Втрати на трасі за діапазонами",
+                "Втрати на трасі зростають пропорційно квадрату частоти (§λ^2§ у знаменнику: 6 дБ на кожне подвоєння) і четвертому степеню відстані. Бюджет EME (яги та параболічні антени) завжди обчислює їх на частоті вибраного діапазону і для відстаней у вибраний момент. У таблиці наведено значення за формулою вище для випадку, коли обидві станції перебувають на однаковій відстані від центру Землі:",
+                "|h| Діапазон | >Перигей (356 900 km) | >Середня відстань (384 400 km) | >Апогей (406 700 km)",
+                "| 50 MHz | 241,7 дБ | 242,9 дБ | 243,9 дБ",
+                "| 70 MHz | 244,6 дБ | 245,9 дБ | 246,8 дБ",
+                "| 144 MHz | 250,8 дБ | 252,1 дБ | 253,1 дБ",
+                "| 222 MHz | 254,6 дБ | 255,9 дБ | 256,8 дБ",
+                "| 432 MHz | 260,4 дБ | 261,6 дБ | 262,6 дБ",
+                "| 902 MHz | 266,7 дБ | 268,0 дБ | 269,0 дБ",
+                "| 1296 MHz | 269,9 дБ | 271,2 дБ | 272,2 дБ",
+                "~ Частоти розрахунку: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Різниця між перигеєм і апогеєм становить близько 2,3 дБ на всіх діапазонах. Коли Місяць високо в небі, топоцентрична відстань коротша за відстань від центру Землі — щонайбільше приблизно на 6 400 km, — і втрати зменшуються ще приблизно на 0,3 дБ.",
+                "> Перехід на вищий діапазон коштує зростання втрат на трасі (від 50 до 1296 MHz приблизно на 28 дБ більше), але за тих самих розмірів антена дає більше підсилення: параболічна антена фіксованого діаметра виграє 6 дБ на кожне подвоєння частоти, як під час передавання, так і під час приймання, а шум неба зменшується. Тому бюджет завжди розраховують окремо для кожного діапазону.",
                 "Випромінювана потужність і сигнал на клемах приймальної антени:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -71878,11 +72277,11 @@ namespace LunaCalc
             };
             d["uk"]["S48"] = new string[] {
                 "## Коаксіальні кабелі та втрати",
-                "Вкладка **КОАКСІАЛЬНІ КАБЕЛІ** містить загасання кабелів 50 Ω, найуживаніших серед радіоаматорів, у dB на 100 m при 20 °C, на п'яти діапазонах YAEC. Технічні описи виробників наводять значення на інших частотах; YAEC привів їх до діапазонів за степеневим законом — прямою лінією на графіку в подвійному логарифмічному масштабі між двома найближчими частотами технічного опису:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α у dB/100 m, ℓ — довжина кабелю в метрах. Число без позначок — значення з технічного опису; ≈ позначає інтерпольоване значення, а e — екстрапольоване за останню частоту технічного опису.",
+                "Вкладка **КОАКСІАЛЬНІ КАБЕЛІ** містить загасання кабелів 50 Ω, найуживаніших серед радіоаматорів, у дБ на 100 m при 20 °C, на діапазонах YAEC від 50 до 1296 MHz. Технічні описи виробників наводять значення на інших частотах; YAEC приводить їх до діапазонів за фізичною формулою загасання коаксіального кабелю — сумою втрат у провідниках (скін-ефект, зростають як §\\sqrt{f}§) і втрат у діелектрику (зростають як §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α у дБ/100 m, f у MHz, ℓ — довжина кабелю в метрах. Для кожного кабелю §k_1§ і §k_2§ (ніколи не від'ємні) знаходять методом найменших квадратів, зі зважуванням відносної похибки, за значеннями з технічного опису виробника. Число без позначок — значення з технічного опису; ≈ позначає значення, обчислене за формулою в межах частот технічного опису, а e — обчислене поза ними, яке слід використовувати обережно. З одним доданком формула зводиться до випадку кабелю, у якому переважають втрати в провідниках (§k_2 = 0§) або в діелектрику (§k_1 = 0§).",
                 "Кабелі одного типу з однаковим діаметром у межах ±0,2 mm і загасанням у межах 0,2 dB/100 m на всіх діапазонах згруповано в один рядок (≡) із середнім значенням; еквівалентні назви показано з \"also:\" (наприклад, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Китайські назви 50-3, 50-5, 50-7, 50-9, 50-12 вказують діаметр діелектрика в міліметрах.",
-                "> Власні кабелі можна додати з їхніми п'ятьма значеннями загасання: вони зберігаються в data\\cavi_personali.txt і також з'являються у випадних списках схеми станції в бюджеті EME. Підказка кожного рядка таблиці вказує джерело даних цього кабелю.",
+                "> Власні кабелі можна додати із загасанням на 5 або 7 діапазонах (відсутні значення обчислюються за формулою): вони зберігаються в data\\cavi_personali.txt і також з'являються у випадних списках схеми станції в бюджеті EME. Підказка кожного рядка таблиці вказує джерело даних цього кабелю.",
                 "### Роз'єми (NJ9R)",
                 "Роз'єми теж є частиною лінії. Практична порада NJ9R — рахувати близько 1 dB на кожні 8 – 10 роз'ємів, від задньої панелі трансивера до антени, разом із перехідниками, реле й дільниками: в його установці з чотирьох антен 24 роз'єми дають понад 2 dB — стільки ж, скільки 40 – 45 m нового LMR-400 на 144 MHz [2]. У бюджеті EME в блоці коаксіального реле є два поля, «Роз’ємів TX» і «Роз’ємів RX»: кожен роз’єм дає 0,11 дБ; при передаванні враховуються роз’єми між PA та антеною, при прийманні — між антеною та попереднім підсилювачем.",
                 "[1] Джерела даних окремих кабелів: технічні описи Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, через WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, каталог MIL-C-17F (RG-142, RG-393), R.F. elettronica із Сенаго (RG-115), таблиці DD1US та EA5IP (H100) і таблиця SV1BSX для RG-58, RG-213, H-155 та H-2000 (значення потребують перевірки).",
@@ -72265,6 +72664,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ met §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (radius van die Maan), maanrefleksiwiteit 0,065.",
+                "#### Die padverlies band vir band",
+                "Die padverlies neem toe met die kwadraat van die frekwensie (§λ^2§ in die noemer: 6 dB vir elke verdubbeling) en met die vierde mag van die afstand. Die EME-begroting (yagi's en skottels) bereken dit altyd by die frekwensie van die gekose band en by die afstande van die gekose oomblik. Die tabel gee die waardes van die formule hierbo met die twee stasies op dieselfde afstand van die middelpunt van die Aarde:",
+                "|h| Band | >Perigee (356 900 km) | >Gemiddelde afstand (384 400 km) | >Apogee (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Berekeningsfrekwensies: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Tussen perigee en apogee is die verskil ongeveer 2,3 dB op alle bande. Met die Maan hoog in die lug is die topo-sentriese afstand tot ongeveer 6 400 km korter as dié vanaf die middelpunt van die Aarde, en die verlies daal nog met ongeveer 0,3 dB.",
+                "> 'n Hoër band kos padverlies (van 50 tot 1296 MHz ongeveer 28 dB meer), maar by dieselfde afmetings het die antenna meer versterking: 'n skottel met 'n vaste deursnee wen 6 dB vir elke verdubbeling van die frekwensie, by uitsending en by ontvangs, en die hemelruis neem af. Daarom word die begroting altyd band vir band opgestel.",
                 "Die uitgestraalde drywing en die sein by die terminale van die ontvangsantenna:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -72415,11 +72826,11 @@ namespace LunaCalc
             };
             d["af"]["S48"] = new string[] {
                 "## Koaksiale kabels en verliese",
-                "Die oortjie **KOAKSIALE KABELS** versamel die verswakking van die 50 Ω-kabels wat die meeste deur radioamateurs gebruik word, in dB per 100 m by 20 °C, op die vyf YAEC-bande. Die datablaaie van die vervaardigers gee waardes by verskillende frekwensies; YAEC het dit met die magswet na die bande herlei, 'n reguit lyn op die log-log-grafiek tussen die twee naaste frekwensies van die datablad:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α in dB/100 m, ℓ kabellengte in meter. 'n Gewone getal is die databladwaarde; ≈ merk 'n geïnterpoleerde waarde, en e een wat verby die laaste frekwensie van die datablad geëkstrapoleer is.",
+                "Die oortjie **KOAKSIALE KABELS** versamel die verswakking van die 50 Ω-kabels wat die meeste deur radioamateurs gebruik word, in dB per 100 m by 20 °C, op die YAEC-bande van 50 tot 1296 MHz. Die datablaaie van die vervaardigers gee waardes by verskillende frekwensies; YAEC herlei dit na die bande met die fisiese formule vir die verswakking van koaksiale kabel, die som van die verliese in die geleiers (veleffek, neem toe met §\\sqrt{f}§) en dié in die diëlektrikum (neem toe met §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α in dB/100 m, f in MHz, ℓ kabellengte in meter. Vir elke kabel word §k_1§ en §k_2§ (nooit negatief nie) met die kleinste-kwadratemetode, met weging van die relatiewe fout, uit die waardes van die vervaardiger se datablad bepaal. 'n Gewone getal is die databladwaarde; ≈ merk 'n waarde wat met die formule binne die frekwensies van die datablad bereken is, en e een wat daarbuite bereken is, wat versigtig gebruik moet word. Met net een term word die formule die geval van 'n kabel wat deur die geleiers (§k_2 = 0§) of deur die diëlektrikum (§k_1 = 0§) oorheers word.",
                 "Kabels van dieselfde tipe, met dieselfde deursnee binne ±0,2 mm en verswakking binne 0,2 dB/100 m op alle bande, word in een ry saamgegroepeer (≡), met die gemiddelde waarde; gelykwaardige name word met \"also:\" getoon (byvoorbeeld LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Die Chinese name 50-3, 50-5, 50-7, 50-9, 50-12 gee die deursnee van die diëlektrikum in millimeter.",
-                "> Eie kabels kan met hul vyf verswakkings bygevoeg word: hulle word in data\\cavi_personali.txt gestoor en verskyn ook in die aftreklyste van die stasiediagram van die EME-begroting. Die wenkteks van elke tabelry noem die bron van daardie kabel.",
+                "> Eie kabels kan met hul verswakkings op 5 of 7 bande bygevoeg word (die ontbrekende word met die formule bereken): hulle word in data\\cavi_personali.txt gestoor en verskyn ook in die aftreklyste van die stasiediagram van die EME-begroting. Die wenkteks van elke tabelry noem die bron van daardie kabel.",
                 "### Koppelstukke (NJ9R)",
                 "Koppelstukke is ook deel van die lyn. NJ9R se praktiese raad is om ongeveer 1 dB vir elke 8 – 10 koppelstukke te tel, van die agterkant van die radio tot by die antenna, insluitend adapters, relais en verdelers: in sy installasie met vier antennas is die 24 koppelstukke meer as 2 dB werd, soveel as 40 – 45 m nuwe LMR-400 op 144 MHz [2]. In die EME-begroting het die koaksiale relê se blok twee velde, TX-verbindings en RX-verbindings: elke verbinding tel 0,11 dB; by uitsending tel jy dié tussen die PA en die antenna, by ontvangs dié tussen die antenna en die voorversterker.",
                 "[1] Die bronne van die individuele kabels: datablaaie van Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F-katalogus (RG-142, RG-393), R.F. elettronica van Senago (RG-115), die tabelle van DD1US en EA5IP (H100) en die tabel van SV1BSX vir RG-58, RG-213, H-155 en H-2000 (waardes moet nog geverifieer word).",
@@ -72802,6 +73213,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ যেখানে §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737.4 \\t{ km}§ (চাঁদের ব্যাসার্ধ), চাঁদের প্রতিফলন ক্ষমতা 0.065।",
+                "#### ব্যান্ড অনুযায়ী পাথ লস",
+                "পাথ লস ফ্রিকোয়েন্সির বর্গের সাথে (§λ^2§ হরে: ফ্রিকোয়েন্সি প্রতিবার দ্বিগুণ হলে 6 dB) এবং দূরত্বের চতুর্থ ঘাতের সাথে বাড়ে। EME বাজেট (ইয়াগি ও ডিশ) সবসময় নির্বাচিত ব্যান্ডের ফ্রিকোয়েন্সিতে এবং নির্বাচিত মুহূর্তের দূরত্বে এটি গণনা করে। দুই স্টেশন পৃথিবীর কেন্দ্র থেকে একই দূরত্বে থাকলে উপরের সূত্রের মানগুলো টেবিলে দেওয়া হলো:",
+                "|h| ব্যান্ড | >পেরিজি (356 900 km) | >গড় দূরত্ব (384 400 km) | >অ্যাপোজি (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ গণনার ফ্রিকোয়েন্সি: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz। পেরিজি ও অ্যাপোজির মধ্যে পার্থক্য সব ব্যান্ডে প্রায় 2.3 dB। চাঁদ আকাশে উঁচুতে থাকলে টোপোসেন্ট্রিক দূরত্ব পৃথিবীর কেন্দ্র থেকে দূরত্বের চেয়ে সর্বোচ্চ প্রায় 6 400 km কম হয়, এবং লস আরও প্রায় 0.3 dB কমে।",
+                "> উঁচু ব্যান্ডে গেলে পাথ লসের মূল্য দিতে হয় (50 থেকে 1296 MHz-এ প্রায় 28 dB বেশি), কিন্তু একই আকারে অ্যান্টেনার গেইন বেশি হয়: নির্দিষ্ট ব্যাসের একটি ডিশ ফ্রিকোয়েন্সি প্রতিবার দ্বিগুণ হলে ট্রান্সমিট ও রিসিভ উভয় ক্ষেত্রেই 6 dB বেশি গেইন পায়, এবং আকাশের নয়েজ কমে। এজন্য বাজেট সবসময় ব্যান্ড ধরে ধরে হিসাব করা হয়।",
                 "বিকিরিত শক্তি এবং রিসিভিং অ্যান্টেনার টার্মিনালে সিগন্যাল:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -72952,11 +73375,11 @@ namespace LunaCalc
             };
             d["bn"]["S48"] = new string[] {
                 "## কোঅ্যাক্সিয়াল কেবল ও লস",
-                "**কোঅ্যাক্সিয়াল কেবল** ট্যাবে রেডিও অ্যামেচারদের সবচেয়ে বেশি ব্যবহৃত 50 Ω কেবলগুলোর অ্যাটেনুয়েশন সংগ্রহ করা আছে, 20 °C-এ প্রতি 100 m-এ dB-তে, YAEC-এর পাঁচটি ব্যান্ডে। নির্মাতাদের ডেটা শিট বিভিন্ন ফ্রিকোয়েন্সিতে মান দেয়; YAEC পাওয়ার ল দিয়ে সেগুলোকে ব্যান্ডগুলোতে এনেছে, অর্থাৎ ডেটা শিটের নিকটতম দুটি ফ্রিকোয়েন্সির মধ্যে লগ-লগ চার্টে একটি সরলরেখা:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α হলো dB/100 m-এ, ℓ হলো মিটারে কেবলের দৈর্ঘ্য। শুধু সংখ্যা মানে ডেটা শিটের মান; ≈ চিহ্ন একটি ইন্টারপোলেটেড মান বোঝায়, এবং e ডেটা শিটের শেষ ফ্রিকোয়েন্সির বাইরে এক্সট্রাপোলেটেড মান।",
+                "**কোঅ্যাক্সিয়াল কেবল** ট্যাবে রেডিও অ্যামেচারদের সবচেয়ে বেশি ব্যবহৃত 50 Ω কেবলগুলোর অ্যাটেনুয়েশন সংগ্রহ করা আছে, 20 °C-এ প্রতি 100 m-এ dB-তে, 50 থেকে 1296 MHz পর্যন্ত YAEC-এর ব্যান্ডগুলোতে। নির্মাতাদের ডেটা শিট বিভিন্ন ফ্রিকোয়েন্সিতে মান দেয়; YAEC কোঅ্যাক্সিয়াল কেবলের অ্যাটেনুয়েশনের ভৌত সূত্র দিয়ে সেগুলোকে ব্যান্ডগুলোতে আনে, যা কন্ডাক্টরের লস (স্কিন ইফেক্ট, §\\sqrt{f}§-এর সাথে বাড়ে) ও ডাইইলেকট্রিকের লসের (§f§-এর সাথে বাড়ে) যোগফল:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α হলো dB/100 m-এ, f হলো MHz-এ, ℓ হলো মিটারে কেবলের দৈর্ঘ্য। প্রতিটি কেবলের জন্য §k_1§ ও §k_2§ (কখনো ঋণাত্মক নয়) নির্মাতার ডেটা শিটের মান থেকে, আপেক্ষিক ত্রুটিকে ওজন দিয়ে, ন্যূনতম বর্গ পদ্ধতিতে নির্ণয় করা হয়। শুধু সংখ্যা মানে ডেটা শিটের মান; ≈ চিহ্ন ডেটা শিটের ফ্রিকোয়েন্সির ভেতরে সূত্র দিয়ে গণনা করা মান বোঝায়, এবং e তার বাইরে গণনা করা মান, যা সাবধানে ব্যবহার করতে হবে। একটি মাত্র পদ থাকলে সূত্রটি এমন কেবলের ক্ষেত্রে পরিণত হয় যেখানে কন্ডাক্টর (§k_2 = 0§) বা ডাইইলেকট্রিক (§k_1 = 0§) প্রধান।",
                 "একই ধরনের কেবল, যাদের ব্যাস ±0.2 mm-এর মধ্যে এবং সব ব্যান্ডে অ্যাটেনুয়েশন 0.2 dB/100 m-এর মধ্যে, একটি সারিতে (≡) গড় মানসহ একত্র করা হয়েছে; সমতুল্য নামগুলো \"also:\" দিয়ে দেখানো হয় (যেমন LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600)। চীনা নাম 50-3, 50-5, 50-7, 50-9, 50-12 মিলিমিটারে ডাইইলেকট্রিকের ব্যাস নির্দেশ করে।",
-                "> নিজস্ব কেবল তাদের পাঁচটি অ্যাটেনুয়েশনসহ যোগ করা যায়: এগুলো data\\cavi_personali.txt-এ সংরক্ষিত হয় এবং EME বাজেটের স্টেশন ডায়াগ্রামের ড্রপ-ডাউনেও দেখা যায়। টেবিলের প্রতিটি সারির টুলটিপ সেই কেবলের উৎস উল্লেখ করে।",
+                "> নিজস্ব কেবল 5 বা 7টি ব্যান্ডের অ্যাটেনুয়েশনসহ যোগ করা যায় (বাকিগুলো সূত্র দিয়ে গণনা করা হয়): এগুলো data\\cavi_personali.txt-এ সংরক্ষিত হয় এবং EME বাজেটের স্টেশন ডায়াগ্রামের ড্রপ-ডাউনেও দেখা যায়। টেবিলের প্রতিটি সারির টুলটিপ সেই কেবলের উৎস উল্লেখ করে।",
                 "### সংযোগকারী (NJ9R)",
                 "সংযোগকারীও লাইনের অংশ। NJ9R-এর ব্যবহারিক পরামর্শ হলো প্রতি 8 – 10টি সংযোগকারীতে প্রায় 1 dB ধরা, রেডিওর পেছন থেকে অ্যান্টেনা পর্যন্ত, অ্যাডাপ্টার, রিলে ও পাওয়ার ডিভাইডারসহ: তাঁর চার-অ্যান্টেনার স্থাপনায় 24টি সংযোগকারীর লস 2 dB-এর বেশি, যা 144 MHz-এ 40 – 45 m নতুন LMR-400-এর সমান [2]। EME বাজেটে কোঅ্যাক্সিয়াল রিলের বাক্সে দুটি ঘর আছে, 'TX কানেক্টর' ও 'RX কানেক্টর': প্রতিটি কানেক্টর 0.11 dB; ট্রান্সমিশনে PA ও অ্যান্টেনার মাঝের কানেক্টরগুলো গোনা হয়, রিসেপশনে অ্যান্টেনা ও প্রিঅ্যাম্প্লিফায়ারের মাঝেরগুলো।",
                 "[1] প্রতিটি কেবলের উৎস: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo মারফত), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables-এর ডেটা শিট, MIL-C-17F ক্যাটালগ (RG-142, RG-393), Senago-র R.F. elettronica (RG-115), DD1US ও EA5IP-এর টেবিল (H100) এবং RG-58, RG-213, H-155 ও H-2000-এর জন্য SV1BSX-এর টেবিল (মান যাচাইসাপেক্ষ)।",
@@ -73339,6 +73762,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ حيث §c = 299 792 458 \\t{ m/s}§، و§R_M = 1 737.4 \\t{ km}§ (نصف قطر القمر)، وانعكاسية القمر 0.065.",
+                "#### فقد المسار نطاقًا بنطاق",
+                "يزداد فقد المسار مع مربع التردد (§λ^2§ في المقام: 6 dB لكل مضاعفة) ومع القوة الرابعة للمسافة. وتحسبه ميزانية EME (هوائيات ياغي والصحون) دائمًا عند تردد النطاق المختار وبمسافات اللحظة المختارة. يعطي الجدول قيم المعادلة أعلاه عندما تكون المحطتان على المسافة نفسها من مركز الأرض:",
+                "|h| النطاق | >الحضيض (356 900 km) | >المسافة المتوسطة (384 400 km) | >الأوج (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ ترددات الحساب: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz. الفرق بين الحضيض والأوج نحو 2.3 dB في جميع النطاقات. وعندما يكون القمر عاليًا في السماء تكون المسافة الطوبوغرافية المركزية أقصر من المسافة من مركز الأرض بما يصل إلى نحو 6 400 km، فينخفض الفقد بنحو 0.3 dB إضافية.",
+                "> الانتقال إلى نطاق أعلى ثمنه فقد أكبر في المسار (من 50 إلى 1296 MHz نحو 28 dB زيادة)، لكن الهوائي بالأبعاد نفسها يعطي كسبًا أكبر: فالصحن ذو القطر الثابت يكسب 6 dB إضافية مع كل مضاعفة للتردد، في الإرسال وفي الاستقبال، كما تنخفض ضوضاء السماء. لذلك تُحسب الميزانية دائمًا نطاقًا بنطاق.",
                 "القدرة المشعّة والإشارة عند أطراف هوائي الاستقبال:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -73489,11 +73924,11 @@ namespace LunaCalc
             };
             d["ar"]["S48"] = new string[] {
                 "## الكابلات المحورية والفقد",
-                "يجمع تبويب **الكابلات المحورية** توهين كابلات 50 Ω الأكثر استخدامًا لدى هواة الراديو، بالـ dB لكل 100 m عند 20 °C، على نطاقات YAEC الخمسة. تعطي صحائف بيانات الصانعين القيم عند ترددات مختلفة؛ وقد نقلها YAEC إلى النطاقات بقانون القوة، أي خط مستقيم على المخطط اللوغاريتمي-اللوغاريتمي بين أقرب ترددين في صحيفة البيانات:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α بوحدة dB/100 m، وℓ طول الكابل بالأمتار. الرقم المجرد هو قيمة صحيفة البيانات؛ وتدل ≈ على قيمة مستوفاة (interpolated)، وتدل e على قيمة مستقرأة خارج آخر تردد في صحيفة البيانات.",
+                "يجمع تبويب **الكابلات المحورية** توهين كابلات 50 Ω الأكثر استخدامًا لدى هواة الراديو، بالـ dB لكل 100 m عند 20 °C، على نطاقات YAEC من 50 إلى 1296 MHz. تعطي صحائف بيانات الصانعين القيم عند ترددات مختلفة؛ وينقلها YAEC إلى النطاقات بالمعادلة الفيزيائية لتوهين الكابل المحوري، وهي مجموع الفقد في الموصلات (الظاهرة القشرية، يزداد مع §\\sqrt{f}§) والفقد في العازل (يزداد مع §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α بوحدة dB/100 m، وf بوحدة MHz، وℓ طول الكابل بالأمتار. لكل كابل يُستخرج §k_1§ و§k_2§ (غير سالبين أبدًا) بطريقة المربعات الصغرى، مع ترجيح الخطأ النسبي، من قيم صحيفة بيانات الصانع. الرقم المجرد هو قيمة صحيفة البيانات؛ وتدل ≈ على قيمة محسوبة بالمعادلة ضمن ترددات صحيفة البيانات، وتدل e على قيمة محسوبة خارجها، يجب استخدامها بحذر. وبحدٍّ واحد فقط تؤول المعادلة إلى حالة كابل يغلب فيه فقد الموصلات (§k_2 = 0§) أو فقد العازل (§k_1 = 0§).",
                 "الكابلات من النوع نفسه، ذات القطر نفسه ضمن ±0.2 mm والتوهين ضمن 0.2 dB/100 m على جميع النطاقات، تُجمع في صف واحد (≡) بالقيمة المتوسطة؛ وتُعرض الأسماء المكافئة بعد \"also:\" (مثلًا LMR-400 = HF400، CNT-400، 50-7 low loss؛ LMR-600 = CNT-600). الأسماء الصينية 50-3، 50-5، 50-7، 50-9، 50-12 تعطي قطر العازل بالمليمترات.",
-                "> يمكن إضافة كابلات مخصصة بقيم توهينها الخمس: تُحفظ في data\\cavi_personali.txt وتظهر أيضًا في القوائم المنسدلة لمخطط المحطة في ميزانية EME. يذكر التلميح (tooltip) لكل صف في الجدول مصدر ذلك الكابل.",
+                "> يمكن إضافة كابلات مخصصة بقيم توهينها على 5 أو 7 نطاقات (تُحسب القيم الناقصة بالمعادلة): تُحفظ في data\\cavi_personali.txt وتظهر أيضًا في القوائم المنسدلة لمخطط المحطة في ميزانية EME. يذكر التلميح (tooltip) لكل صف في الجدول مصدر ذلك الكابل.",
                 "### الموصلات (NJ9R)",
                 "الموصلات أيضًا جزء من الخط. النصيحة العملية لدى NJ9R هي احتساب نحو 1 dB لكل 8 – 10 موصلات، من خلف جهاز الراديو حتى الهوائي، بما فيها المهايئات والمرحّلات ومقسّمات القدرة: في منظومته ذات الهوائيات الأربعة تساوي الموصلات الـ 24 أكثر من 2 dB، أي ما يعادل 40 – 45 m من كابل LMR-400 جديد على 144 MHz [2]. في ميزانية EME يحتوي إطار المرحّل المحوري على خانتين، «موصلات TX» و«موصلات RX»: كل موصل يساوي 0.11 dB؛ في الإرسال تُحتسب الموصلات بين PA والهوائي، وفي الاستقبال تلك التي بين الهوائي والمضخم الأولي.",
                 "[1] مصادر الكابلات المفردة: صحائف بيانات Times Microwave (LMR)، RFS (CELLFLEX LCF/SCF)، CommScope Andrew (HELIAX LDF/FSJ)، Siva Cavi (HF 240/287/400)، SSB-Electronic (Aircell، Ecoflex، Aircom Plus)، Messi & Paoloni (Hyperflex، Ultraflex، عبر WiMo)، Symair، SYV50-7 (szansy.com)، Belden (H1000)، Prospecta (RT5020، XT2400)، QAXIAL (LLF195)، Caledonian Cables، كتالوج MIL-C-17F (RG-142، RG-393)، R.F. elettronica في Senago (RG-115)، جداول DD1US وEA5IP (H100) وجدول SV1BSX لكابلات RG-58 وRG-213 وH-155 وH-2000 (قيم تحتاج إلى تحقق).",
@@ -73876,6 +74311,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ §c = 299 792 458 \\t{ m/s}§, §R_M = 1 737,4 \\t{ km}§ (Ay'ın yarıçapı), Ay yansıtıcılığı 0,065 ile.",
+                "#### Bant bant yol kaybı",
+                "Yol kaybı frekansın karesiyle (§λ^2§ paydada: her iki katına çıkışta 6 dB) ve mesafenin dördüncü kuvvetiyle artar. EME bütçesi (yagiler ve çanaklar) bunu her zaman seçilen bandın frekansında ve seçilen andaki mesafelerle hesaplar. Tablo, iki istasyon Dünya'nın merkezinden aynı uzaklıktayken yukarıdaki formülün değerlerini verir:",
+                "|h| Bant | >Perigee (356 900 km) | >Ortalama mesafe (384 400 km) | >Apogee (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Hesap frekansları: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Perigee ile apogee arasındaki fark tüm bantlarda yaklaşık 2,3 dB'dir. Ay gökyüzünde yüksekteyken topo-merkezli mesafe, Dünya'nın merkezinden olan mesafeden yaklaşık 6 400 km'ye kadar daha kısadır ve kayıp yaklaşık 0,3 dB daha azalır.",
+                "> Daha yüksek bir banda çıkmanın bedeli yol kaybıdır (50'den 1296 MHz'e yaklaşık 28 dB fazla), ancak aynı boyutlarda anten daha fazla kazanç sağlar: sabit çaplı bir çanak, hem göndermede hem almada, frekansın her iki katına çıkışında 6 dB kazanır ve gökyüzü gürültüsü azalır. Bu yüzden bütçe her zaman bant bant hesaplanır.",
                 "Yayılan güç ve alıcı antenin uçlarındaki sinyal:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -74026,11 +74473,11 @@ namespace LunaCalc
             };
             d["tr"]["S48"] = new string[] {
                 "## Koaksiyel kablolar ve kayıplar",
-                "**KOAKSİYEL KABLOLAR** sekmesi, radyo amatörlerince en çok kullanılan 50 Ω kabloların zayıflamasını, 20 °C'de 100 m başına dB olarak, beş YAEC bandında toplar. Üreticilerin veri sayfaları farklı frekanslarda değerler verir; YAEC bunları üs yasasıyla, yani veri sayfasının en yakın iki frekansı arasında log-log grafikte bir doğruyla bantlara uyarlamıştır:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α dB/100 m cinsinden, ℓ metre cinsinden kablo uzunluğu. Yalın bir sayı veri sayfası değeridir; ≈ ara değerlemeyle bulunmuş bir değeri, e ise veri sayfasının son frekansının ötesine dış değerlemeyle bulunmuş bir değeri gösterir.",
+                "**KOAKSİYEL KABLOLAR** sekmesi, radyo amatörlerince en çok kullanılan 50 Ω kabloların zayıflamasını, 20 °C'de 100 m başına dB olarak, YAEC'nin 50 ile 1296 MHz arasındaki bantlarında toplar. Üreticilerin veri sayfaları farklı frekanslarda değerler verir; YAEC bunları koaksiyel kablo zayıflamasının fiziksel formülüyle, yani iletkenlerdeki kayıplar (deri etkisi, §\\sqrt{f}§ ile artar) ile dielektrikteki kayıpların (§f§ ile artar) toplamıyla bantlara uyarlar:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α dB/100 m cinsinden, f MHz cinsinden, ℓ metre cinsinden kablo uzunluğu. Her kablo için §k_1§ ve §k_2§ (hiçbir zaman negatif değil), üreticinin veri sayfasındaki değerlerden, bağıl hata ağırlıklandırılarak en küçük kareler yöntemiyle bulunur. Yalın bir sayı veri sayfası değeridir; ≈ formülle veri sayfasının frekansları içinde hesaplanmış bir değeri, e ise bunların dışında hesaplanmış ve dikkatli kullanılması gereken bir değeri gösterir. Tek bir terimle formül, kaybın iletkenlerce (§k_2 = 0§) veya dielektrikçe (§k_1 = 0§) belirlendiği kablo durumuna indirgenir.",
                 "Aynı tipte, çapı ±0,2 mm ve zayıflaması tüm bantlarda 0,2 dB/100 m içinde olan kablolar, ortalama değerle tek bir satırda (≡) toplanır; eşdeğer adlar \"also:\" ile gösterilir (örneğin LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Çince adlar 50-3, 50-5, 50-7, 50-9, 50-12 dielektriğin milimetre cinsinden çapını verir.",
-                "> Özel kablolar beş zayıflama değeriyle eklenebilir: data\\cavi_personali.txt dosyasına kaydedilir ve EME bütçesinin istasyon şemasındaki açılır listelerde de görünür. Her tablo satırının araç ipucu o kablonun kaynağını belirtir.",
+                "> Özel kablolar 5 veya 7 bandın zayıflama değerleriyle eklenebilir (eksik olanlar formülle hesaplanır): data\\cavi_personali.txt dosyasına kaydedilir ve EME bütçesinin istasyon şemasındaki açılır listelerde de görünür. Her tablo satırının araç ipucu o kablonun kaynağını belirtir.",
                 "### Konnektörler (NJ9R)",
                 "Konnektörler de hattın bir parçasıdır. NJ9R'nin pratik tavsiyesi, telsizin arkasından antene kadar adaptörler, röleler ve bölücüler dahil her 8 – 10 konnektör için yaklaşık 1 dB saymaktır: onun dört antenli tesisatında 24 konnektör 2 dB'den fazlasına, yani 144 MHz'de 40 – 45 m yeni LMR-400 kadarına karşılık gelir [2]. EME bütçesinde koaksiyel röle kutusunda iki alan vardır, TX konektörleri ve RX konektörleri: her konektör 0,11 dB sayılır; gönderimde PA ile anten arasındakiler, alımda ise anten ile ön yükseltici arasındakiler sayılır.",
                 "[1] Tek tek kabloların kaynakları: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo aracılığıyla), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables veri sayfaları, MIL-C-17F kataloğu (RG-142, RG-393), Senago'daki R.F. elettronica (RG-115), DD1US ve EA5IP tabloları (H100) ve RG-58, RG-213, H-155 ve H-2000 için SV1BSX tablosu (doğrulanması gereken değerler).",
@@ -74413,6 +74860,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ met §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (straal van de Maan), maanreflectiviteit 0,065.",
+                "#### Het trajectverlies per band",
+                "Het trajectverlies neemt toe met het kwadraat van de frequentie (§λ^2§ in de noemer: 6 dB per verdubbeling) en met de vierde macht van de afstand. Het EME-budget (yagi's en schotels) berekent het altijd op de frequentie van de gekozen band en met de afstanden van het gekozen tijdstip. De tabel geeft de waarden van de formule hierboven met de twee stations op dezelfde afstand van het middelpunt van de Aarde:",
+                "|h| Band | >Perigeum (356 900 km) | >Gemiddelde afstand (384 400 km) | >Apogeum (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Rekenfrequenties: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Tussen perigeum en apogeum is het verschil circa 2,3 dB in alle banden. Met de Maan hoog aan de hemel is de topocentrische afstand tot circa 6 400 km korter dan die vanaf het middelpunt van de Aarde, en daalt het verlies nog met circa 0,3 dB.",
+                "> Een hogere band kost trajectverlies (van 50 naar 1296 MHz circa 28 dB meer), maar bij gelijke afmetingen heeft de antenne meer winst: een schotel met vaste diameter wint 6 dB per verdubbeling van de frequentie, bij zenden en bij ontvangen, en de hemelruis neemt af. Daarom wordt het budget altijd per band opgesteld.",
                 "Het uitgestraalde vermogen en het signaal aan de klemmen van de ontvangstantenne:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -74563,11 +75022,11 @@ namespace LunaCalc
             };
             d["nl"]["S48"] = new string[] {
                 "## Coaxkabels en verliezen",
-                "Het tabblad **COAXKABELS** verzamelt de demping van de 50 Ω-kabels die radioamateurs het meest gebruiken, in dB per 100 m bij 20 °C, in de vijf banden van YAEC. De datasheets van de fabrikanten geven waarden bij verschillende frequenties; YAEC heeft ze met de machtswet omgerekend naar de banden, een rechte lijn in de log-log-grafiek tussen de twee dichtstbijzijnde frequenties van de datasheet:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α in dB/100 m, ℓ lengte van de kabel in meters. Het gewone getal is de waarde uit de datasheet; ≈ geeft een geïnterpoleerde waarde aan, e een waarde geëxtrapoleerd voorbij de laatste frequentie van de datasheet.",
+                "Het tabblad **COAXKABELS** verzamelt de demping van de 50 Ω-kabels die radioamateurs het meest gebruiken, in dB per 100 m bij 20 °C, in de banden van YAEC van 50 tot 1296 MHz. De datasheets van de fabrikanten geven waarden bij verschillende frequenties; YAEC rekent ze om naar de banden met de fysische formule voor de demping van coaxkabel, de som van de verliezen in de geleiders (skineffect, nemen toe met §\\sqrt{f}§) en die in het diëlektricum (nemen toe met §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α in dB/100 m, f in MHz, ℓ lengte van de kabel in meters. Voor elke kabel worden §k_1§ en §k_2§ (nooit negatief) met de kleinstekwadratenmethode, met weging van de relatieve fout, bepaald uit de waarden van de datasheet van de fabrikant. Het gewone getal is de waarde uit de datasheet; ≈ geeft een waarde aan die met de formule binnen de frequenties van de datasheet is berekend, e een waarde die daarbuiten is berekend en met voorzichtigheid moet worden gebruikt. Met slechts één term herleidt de formule zich tot het geval van een kabel die wordt gedomineerd door de geleiders (§k_2 = 0§) of door het diëlektricum (§k_1 = 0§).",
                 "Kabels van hetzelfde type, met gelijke diameter binnen ±0,2 mm en demping binnen 0,2 dB/100 m in alle banden worden samengevoegd in één rij (≡), met de gemiddelde waarde; de gelijkwaardige typeaanduidingen worden aangegeven met \"ook:\" (bijvoorbeeld LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). De Chinese typeaanduidingen 50-3, 50-5, 50-7, 50-9, 50-12 geven de diameter van het diëlektricum in millimeters.",
-                "> Je kunt aangepaste kabels toevoegen met hun vijf dempingswaarden: ze worden opgeslagen in data\\cavi_personali.txt en verschijnen ook in de keuzelijsten van het installatieschema van het EME-budget. De tooltip van elke rij van de tabel vermeldt de bron van die kabel.",
+                "> Je kunt aangepaste kabels toevoegen met de dempingen van 5 of 7 banden (de ontbrekende worden met de formule berekend): ze worden opgeslagen in data\\cavi_personali.txt en verschijnen ook in de keuzelijsten van het installatieschema van het EME-budget. De tooltip van elke rij van de tabel vermeldt de bron van die kabel.",
                 "### De connectoren (NJ9R)",
                 "Ook de connectoren maken deel uit van de lijn. Het praktische advies van NJ9R is circa 1 dB per 8 – 10 connectoren te rekenen, van de achterkant van de radio tot aan de antenne, inclusief verloopstukken, relais en delers: in zijn installatie met vier antennes zijn de 24 connectoren goed voor meer dan 2 dB, evenveel als 40 – 45 m nieuwe LMR-400 op 144 MHz [2]. In het EME-budget heeft het kader van het coaxrelais twee vakken, TX-connectoren en RX-connectoren: elke connector is 0,11 dB; bij zenden tellen die tussen de PA en de antenne, bij ontvangen die tussen de antenne en de voorversterker.",
                 "[1] De bronnen van de afzonderlijke kabels: datasheets van Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, catalogus MIL-C-17F (RG-142, RG-393), R.F. elettronica uit Senago (RG-115), de tabellen van DD1US en EA5IP (H100) en de tabel van SV1BSX voor RG-58, RG-213, H-155 en H-2000 (te controleren waarden).",
@@ -74958,6 +75417,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ kus §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (Kuu raadius), Kuu peegeldustegur 0,065.",
+                "#### Teekonnakadu sagedusalade kaupa",
+                "Teekonnakadu kasvab võrdeliselt sageduse ruuduga (§λ^2§ nimetajas: 6 dB iga kahekordistumise kohta) ja kauguse neljanda astmega. EME eelarve (yagid ja paraboolid) arvutab selle alati valitud sagedusala sagedusel ja valitud hetke kaugustega. Tabel annab ülaltoodud valemi väärtused juhul, kui mõlemad jaamad on Maa keskpunktist samal kaugusel:",
+                "|h| Sagedusala | >Perigee (356 900 km) | >Keskmine kaugus (384 400 km) | >Apogee (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Arvutussagedused: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Perigee ja apogee vahe on kõigil sagedusaladel umbes 2,3 dB. Kui Kuu on taevas kõrgel, on topotsentriline kaugus Maa keskpunktist mõõdetud kaugusest kuni umbes 6 400 km lühem ja kadu väheneb veel umbes 0,3 dB võrra.",
+                "> Kõrgemale sagedusalale minek maksab teekonnakaoga (50-lt 1296 MHz-le umbes 28 dB rohkem), kuid samade mõõtmete juures on antenni võimendus suurem: kindla läbimõõduga parabool võidab iga sageduse kahekordistumisega 6 dB nii saatmisel kui ka vastuvõtul ja taevamüra väheneb. Seepärast koostatakse eelarve alati sagedusala kaupa.",
                 "Kiiratud võimsus ja signaal vastuvõtuantenni klemmidel:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -75108,11 +75579,11 @@ namespace LunaCalc
             };
             d["et"]["S48"] = new string[] {
                 "## Koaksiaalkaablid ja kaod",
-                "Sakk **KOAKSIAALKAABLID** koondab raadioamatööride enim kasutatavate 50 Ω kaablite sumbuvuse, dB 100 m kohta temperatuuril 20 °C, YAEC-i viiel sagedusalal. Tootjate andmelehed annavad väärtused eri sagedustel; YAEC on need taandanud sagedusaladele astmeseadusega, sirgega log-log graafikul andmelehe kahe lähima sageduse vahel:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α ühikutes dB/100 m, ℓ kaabli pikkus meetrites. Täisarv on andmelehe väärtus; ≈ tähistab interpoleeritud väärtust ja e üle andmelehe viimase sageduse ekstrapoleeritud väärtust.",
+                "Sakk **KOAKSIAALKAABLID** koondab raadioamatööride enim kasutatavate 50 Ω kaablite sumbuvuse, dB 100 m kohta temperatuuril 20 °C, YAEC-i sagedusaladel 50 kuni 1296 MHz. Tootjate andmelehed annavad väärtused eri sagedustel; YAEC taandab need sagedusaladele koaksiaalkaabli sumbuvuse füüsikalise valemiga, mis on juhtide kadude (pinnaefekt, kasvavad nagu §\\sqrt{f}§) ja dielektriku kadude (kasvavad nagu §f§) summa:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α ühikutes dB/100 m, f ühikutes MHz, ℓ kaabli pikkus meetrites. Iga kaabli §k_1§ ja §k_2§ (ei ole kunagi negatiivsed) leitakse tootja andmelehe väärtustest vähimruutude meetodil, suhtelist viga kaaludes. Täisarv on andmelehe väärtus; ≈ tähistab valemiga andmelehe sageduste piires arvutatud väärtust ja e väljaspool neid arvutatud väärtust, mida tuleb kasutada ettevaatlikult. Ühe liikmega taandub valem juhtudele, kus kaablis domineerivad juhtide kaod (§k_2 = 0§) või dielektriku kaod (§k_1 = 0§).",
                 "Sama tüüpi, ±0,2 mm piires sama läbimõõduga ja kõigil sagedusaladel 0,2 dB/100 m piires sama sumbuvusega kaablid on koondatud ühele reale (≡) keskmise väärtusega; samaväärsed tähised on märgitud kujul \"ka:\" (näiteks LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Hiina tähised 50-3, 50-5, 50-7, 50-9, 50-12 näitavad dielektriku läbimõõtu millimeetrites.",
-                "> Lisada saab kohandatud kaableid nende viie sumbuvusega: need salvestatakse faili data\\cavi_personali.txt ja ilmuvad ka „EME eelarve“ süsteemi skeemi rippmenüüdesse. Tabeli iga rea kohtspikker viitab selle kaabli allikale.",
+                "> Lisada saab kohandatud kaableid 5 või 7 sagedusala sumbuvustega (puuduvad arvutatakse valemiga): need salvestatakse faili data\\cavi_personali.txt ja ilmuvad ka „EME eelarve“ süsteemi skeemi rippmenüüdesse. Tabeli iga rea kohtspikker viitab selle kaabli allikale.",
                 "### Pistikud (NJ9R)",
                 "Ka pistikud on liini osa. NJ9R praktiline nõuanne on arvestada umbes 1 dB iga 8 – 10 pistiku kohta, raadio tagaküljest kuni antennini, sh adapterid, releed ja jagurid: tema nelja antenniga süsteemis annavad 24 pistikut üle 2 dB, sama palju kui 40 – 45 m uut LMR-400 kaablit 144 MHz-l [2]. „EME eelarves“ on koaksiaalrelee paneelil kaks lahtrit, TX pistikud ja RX pistikud: iga pistik annab 0,11 dB; saatel loetakse pistikud PA ja antenni vahel, vastuvõtul antenni ja eelvõimendi vahel.",
                 "[1] Üksikute kaablite allikad: Times Microwave'i (LMR), RFS-i (CELLFLEX LCF/SCF), CommScope Andrew' (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronicu (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, WiMo kaudu), Symairi, SYV50-7 (szansy.com), Beldeni (H1000), Prospecta (RT5020, XT2400), QAXIALi (LLF195) andmelehed, Caledonian Cables, kataloog MIL-C-17F (RG-142, RG-393), R.F. elettronica Senagost (RG-115), DD1US ja EA5IP tabelid (H100) ning SV1BSX tabel RG-58, RG-213, H-155 ja H-2000 jaoks (väärtused vajavad kontrollimist).",
@@ -75503,6 +75974,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ kur §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (Mēness rādiuss), Mēness atstarošanas koeficients 0,065.",
+                "#### Trases zudumi pa diapazoniem",
+                "Trases zudumi pieaug proporcionāli frekvences kvadrātam (§λ^2§ saucējā: 6 dB par katru divkāršošanu) un attāluma ceturtajai pakāpei. „EME budžets” (Yagi antenas un paraboliskās antenas) tos vienmēr aprēķina izvēlētā diapazona frekvencē un izvēlētā brīža attālumos. Tabulā dotas iepriekš minētās formulas vērtības, abām stacijām atrodoties vienādā attālumā no Zemes centra:",
+                "|h| Diapazons | >Perigejs (356 900 km) | >Vidējais attālums (384 400 km) | >Apogejs (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Aprēķina frekvences: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Starpība starp perigeju un apogeju visos diapazonos ir aptuveni 2,3 dB. Kad Mēness ir augstu debesīs, topocentriskais attālums ir līdz aptuveni 6 400 km īsāks par attālumu no Zemes centra, un zudumi samazinās vēl par aptuveni 0,3 dB.",
+                "> Pāreja uz augstāku diapazonu maksā trases zudumos (no 50 līdz 1296 MHz aptuveni par 28 dB vairāk), taču pie vienādiem izmēriem antenai ir lielāks pastiprinājums: fiksēta diametra paraboliskās antenas pastiprinājums pieaug par 6 dB ar katru frekvences divkāršošanu gan raidīšanā, gan uztveršanā, un debess troksnis samazinās. Tāpēc bilanci vienmēr rēķina katram diapazonam atsevišķi.",
                 "Izstarotā jauda un signāls uztverošās antenas spailēs:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -75653,11 +76136,11 @@ namespace LunaCalc
             };
             d["lv"]["S48"] = new string[] {
                 "## Koaksiālie kabeļi un zudumi",
-                "Cilnē **KOAKSIĀLIE KABEĻI** apkopots radioamatieru biežāk izmantoto 50 Ω kabeļu vājinājums dB uz 100 m pie 20 °C piecos YAEC diapazonos. Ražotāju datu lapas sniedz vērtības dažādās frekvencēs; YAEC tās pārrēķinājusi uz diapazoniem ar pakāpes likumu – taisni log-log grafikā starp divām tuvākajām datu lapas frekvencēm:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α dB/100 m, ℓ – kabeļa garums metros. Pilns skaitlis ir datu lapas vērtība; ≈ apzīmē interpolētu vērtību, un e – ekstrapolētu aiz datu lapas pēdējās frekvences.",
+                "Cilnē **KOAKSIĀLIE KABEĻI** apkopots radioamatieru biežāk izmantoto 50 Ω kabeļu vājinājums dB uz 100 m pie 20 °C YAEC diapazonos no 50 līdz 1296 MHz. Ražotāju datu lapas sniedz vērtības dažādās frekvencēs; YAEC tās pārrēķina uz diapazoniem ar koaksiālā kabeļa vājinājuma fizikālo formulu – vadītāju zudumu (skinefekts, pieaug ar §\\sqrt{f}§) un dielektriķa zudumu (pieaug ar §f§) summu:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α dB/100 m, f MHz, ℓ – kabeļa garums metros. Katram kabelim §k_1§ un §k_2§ (nekad negatīvi) iegūst ar mazāko kvadrātu metodi, svarojot relatīvo kļūdu, no ražotāja datu lapas vērtībām. Pilns skaitlis ir datu lapas vērtība; ≈ apzīmē ar formulu aprēķinātu vērtību datu lapas frekvenču robežās, un e – aprēķinātu ārpus tām, kas jālieto piesardzīgi. Ar vienu locekli formula reducējas uz gadījumu, kad kabelī dominē vadītāji (§k_2 = 0§) vai dielektriķis (§k_1 = 0§).",
                 "Kabeļi ar vienādu tipu, vienādu diametru ±0,2 mm robežās un vājinājumu 0,2 dB/100 m robežās visos diapazonos ir apvienoti vienā rindā (≡) ar vidējo vērtību; ekvivalentie apzīmējumi norādīti ar „arī:” (piemēram, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Ķīniešu apzīmējumi 50-3, 50-5, 50-7, 50-9, 50-12 norāda dielektriķa diametru milimetros.",
-                "> Var pievienot pielāgotus kabeļus ar to piecām vājinājuma vērtībām: tie tiek saglabāti data\\cavi_personali.txt un parādās arī „EME budžets” iekārtas shēmas izkrītošajos sarakstos. Katras tabulas rindas uznirstošais padoms min attiecīgā kabeļa avotu.",
+                "> Var pievienot pielāgotus kabeļus ar 5 vai 7 diapazonu vājinājumiem (trūkstošos aprēķina ar formulu): tie tiek saglabāti data\\cavi_personali.txt un parādās arī „EME budžets” iekārtas shēmas izkrītošajos sarakstos. Katras tabulas rindas uznirstošais padoms min attiecīgā kabeļa avotu.",
                 "### Savienotāji (NJ9R)",
                 "Arī savienotāji ir līnijas daļa. NJ9R praktiskais padoms ir rēķināt aptuveni 1 dB uz katriem 8 – 10 savienotājiem, no raidītāja-uztvērēja aizmugures līdz antenai, ieskaitot adapterus, relejus un dalītājus: viņa četru antenu iekārtā 24 savienotāji dod vairāk nekā 2 dB – tikpat, cik 40 – 45 m jauna LMR-400 kabeļa 144 MHz [2]. Cilnē „EME budžets” koaksiālā releja rāmī ir divi lodziņi, „TX savienotāji” un „RX savienotāji”: katrs savienotājs ir 0,11 dB; raidīšanā skaita savienotājus starp PA un antenu, uztveršanā – starp antenu un priekšpastiprinātāju.",
                 "[1] Atsevišķu kabeļu avoti: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, ar WiMo starpniecību), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables datu lapas, MIL-C-17F katalogs (RG-142, RG-393), R.F. elettronica no Senago (RG-115), DD1US un EA5IP tabulas (H100) un SV1BSX tabula RG-58, RG-213, H-155 un H-2000 (vērtības jāpārbauda).",
@@ -76048,6 +76531,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ kur §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (Mėnulio spindulys), Mėnulio atspindžio koeficientas 0,065.",
+                "#### Trasos nuostoliai pagal diapazonus",
+                "Trasos nuostoliai didėja proporcingai dažnio kvadratui (§λ^2§ vardiklyje: 6 dB kiekvienam padvigubinimui) ir ketvirtajam atstumo laipsniui. EME biudžetas (Yagi ir parabolinės antenos) juos visada skaičiuoja pasirinkto diapazono dažniu ir pasirinkto momento atstumams. Lentelėje pateiktos aukščiau esančios formulės vertės, kai abi stotys yra vienodu atstumu nuo Žemės centro:",
+                "|h| Diapazonas | >Perigėjus (356 900 km) | >Vidutinis atstumas (384 400 km) | >Apogėjus (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Skaičiavimo dažniai: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Skirtumas tarp perigėjaus ir apogėjaus visuose diapazonuose yra apie 2,3 dB. Kai Mėnulis aukštai danguje, topocentrinis atstumas yra iki maždaug 6 400 km trumpesnis už atstumą nuo Žemės centro, ir nuostoliai sumažėja dar apie 0,3 dB.",
+                "> Perėjimas į aukštesnį diapazoną kainuoja trasos nuostolių (nuo 50 iki 1296 MHz apie 28 dB daugiau), tačiau esant tiems patiems matmenims antena stiprina daugiau: pastovaus skersmens parabolinės antenos stiprinimas padidėja 6 dB kiekvieną kartą padvigubinus dažnį, tiek siunčiant, tiek priimant, o dangaus triukšmas mažėja. Todėl balansas visada skaičiuojamas kiekvienam diapazonui atskirai.",
                 "Spinduliuojama galia ir signalas priimančiosios antenos gnybtuose:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -76198,11 +76693,11 @@ namespace LunaCalc
             };
             d["lt"]["S48"] = new string[] {
                 "## Koaksialiniai kabeliai ir nuostoliai",
-                "Skirtuke **KOAKSIALINIAI KABELIAI** surinktas radijo mėgėjų dažniausiai naudojamų 50 Ω kabelių slopinimas dB 100 m esant 20 °C penkiuose YAEC diapazonuose. Gamintojų techniniuose aprašuose vertės pateikiamos skirtingiems dažniams; YAEC jas perskaičiavo diapazonams pagal laipsninį dėsnį – tiesę log-log grafike tarp dviejų artimiausių techninio aprašo dažnių:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α dB/100 m, ℓ – kabelio ilgis metrais. Įprastas skaičius yra techninio aprašo vertė; ≈ žymi interpoliuotą vertę, o e – ekstrapoliuotą už paskutinio techninio aprašo dažnio.",
+                "Skirtuke **KOAKSIALINIAI KABELIAI** surinktas radijo mėgėjų dažniausiai naudojamų 50 Ω kabelių slopinimas dB 100 m esant 20 °C YAEC diapazonuose nuo 50 iki 1296 MHz. Gamintojų techniniuose aprašuose vertės pateikiamos skirtingiems dažniams; YAEC jas perskaičiuoja diapazonams pagal fizikinę koaksialinio kabelio slopinimo formulę – laidininkų nuostolių (paviršinis efektas, didėja su §\\sqrt{f}§) ir dielektriko nuostolių (didėja su §f§) sumą:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α dB/100 m, f MHz, ℓ – kabelio ilgis metrais. Kiekvienam kabeliui §k_1§ ir §k_2§ (niekada neneigiami) gaunami mažiausiųjų kvadratų metodu, sveriant santykinę paklaidą, iš gamintojo techninio aprašo verčių. Įprastas skaičius yra techninio aprašo vertė; ≈ žymi pagal formulę apskaičiuotą vertę techninio aprašo dažnių ribose, o e – apskaičiuotą už jų ribų, naudotiną atsargiai. Palikus vieną narį, formulė virsta kabelio, kuriame vyrauja laidininkai (§k_2 = 0§) arba dielektrikas (§k_1 = 0§), atveju.",
                 "To paties tipo kabeliai, kurių skersmuo sutampa ±0,2 mm tikslumu, o slopinimas visuose diapazonuose skiriasi ne daugiau kaip 0,2 dB/100 m, sujungiami į vieną eilutę (≡) su vidutine verte; lygiaverčiai žymenys nurodomi po „taip pat:“ (pavyzdžiui, LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Kiniški žymenys 50-3, 50-5, 50-7, 50-9, 50-12 nurodo dielektriko skersmenį milimetrais.",
-                "> Galima pridėti pasirinktinių kabelių su jų penkiais slopinimais: jie išsaugomi data\\cavi_personali.txt ir rodomi EME biudžeto įrangos schemos išskleidžiamuosiuose sąrašuose. Kiekvienos lentelės eilutės paaiškinime nurodytas to kabelio šaltinis.",
+                "> Galima pridėti pasirinktinių kabelių su 5 arba 7 diapazonų slopinimais (trūkstami apskaičiuojami pagal formulę): jie išsaugomi data\\cavi_personali.txt ir taip pat rodomi EME biudžeto įrangos schemos išskleidžiamuosiuose sąrašuose. Kiekvienos lentelės eilutės paaiškinime nurodytas to kabelio šaltinis.",
                 "### Jungtys (NJ9R)",
                 "Jungtys taip pat yra linijos dalis. NJ9R praktinis patarimas – skaičiuoti apie 1 dB kas 8 – 10 jungčių, nuo radijo stoties galinės sienelės iki antenos, įskaitant adapterius, reles ir daliklius: jo keturių antenų sistemoje 24 jungtys sudaro daugiau nei 2 dB – tiek pat, kiek 40 – 45 m naujo LMR-400 kabelio 144 MHz diapazone [2]. EME biudžete koaksialinės relės lauke yra du laukeliai, TX jungtys ir RX jungtys: kiekviena jungtis – 0,11 dB; perduodant skaičiuojamos jungtys tarp PA ir antenos, priimant – tarp antenos ir išankstinio stiprintuvo.",
                 "[1] Atskirų kabelių šaltiniai: Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, per WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195) techniniai aprašai, Caledonian Cables MIL-C-17F katalogas (RG-142, RG-393), R.F. elettronica di Senago (RG-115), DD1US ir EA5IP lentelės (H100) ir SV1BSX lentelė RG-58, RG-213, H-155 ir H-2000 kabeliams (vertes reikia patikrinti).",
@@ -76593,6 +77088,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ med §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (Månens radie), Månens reflektivitet 0,065.",
+                "#### Sträckdämpningen band för band",
+                "Sträckdämpningen ökar med kvadraten på frekvensen (§λ^2§ i nämnaren: 6 dB för varje fördubbling) och med avståndets fjärde potens. EME-budget (yagi och paraboler) beräknar den alltid på det valda bandets frekvens och med avstånden vid vald tidpunkt. Tabellen ger värdena från formeln ovan med de två stationerna på samma avstånd från Jordens medelpunkt:",
+                "|h| Band | >Perigeum (356 900 km) | >Medelavstånd (384 400 km) | >Apogeum (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Beräkningsfrekvenser: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Mellan perigeum och apogeum är skillnaden cirka 2,3 dB på alla band. Med Månen högt på himlen är det topocentriska avståndet upp till cirka 6 400 km kortare än avståndet från Jordens medelpunkt, och dämpningen minskar med ytterligare cirka 0,3 dB.",
+                "> Att gå upp i band kostar i sträckdämpning (från 50 till 1296 MHz cirka 28 dB mer), men vid samma storlek ger antennen mer förstärkning: en parabol med fast diameter vinner 6 dB för varje fördubbling av frekvensen, vid sändning och vid mottagning, och himmelsbruset minskar. Därför görs budgeten alltid band för band.",
                 "Utstrålad effekt och signalen vid den mottagande antennens anslutning:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -76743,11 +77250,11 @@ namespace LunaCalc
             };
             d["sv"]["S48"] = new string[] {
                 "## Koaxialkablar och förluster",
-                "Fliken **KOAXIALKABLAR** samlar dämpningen för de 50 Ω-kablar som radioamatörer använder mest, i dB per 100 m vid 20 °C, på YAEC:s fem band. Tillverkarnas datablad anger värden på olika frekvenser; YAEC har räknat om dem till banden med potenslagen, en rät linje i log-log-diagrammet mellan databladets två närmaste frekvenser:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α i dB/100 m, ℓ kabelns längd i meter. En siffra utan tecken är databladets värde; ≈ anger ett interpolerat värde, och e ett värde extrapolerat bortom databladets sista frekvens.",
+                "Fliken **KOAXIALKABLAR** samlar dämpningen för de 50 Ω-kablar som radioamatörer använder mest, i dB per 100 m vid 20 °C, på YAEC:s band från 50 till 1296 MHz. Tillverkarnas datablad anger värden på olika frekvenser; YAEC räknar om dem till banden med den fysikaliska formeln för koaxialkabelns dämpning, summan av förlusterna i ledarna (skinneffekt, ökar med §\\sqrt{f}§) och förlusterna i dielektrikumet (ökar med §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α i dB/100 m, f i MHz, ℓ kabelns längd i meter. För varje kabel bestäms §k_1§ och §k_2§ (aldrig negativa) med minsta kvadratmetoden, med det relativa felet som vikt, ur värdena i tillverkarens datablad. En siffra utan tecken är databladets värde; ≈ anger ett värde beräknat med formeln inom databladets frekvenser, och e ett värde beräknat utanför dem, att använda med försiktighet. Med en enda term reduceras formeln till fallet med en kabel som domineras av ledarna (§k_2 = 0§) eller av dielektrikumet (§k_1 = 0§).",
                 "Kablar av samma typ, med samma diameter inom ±0,2 mm och dämpning inom 0,2 dB/100 m på alla band slås samman på en rad (≡), med medelvärdet; likvärdiga beteckningar anges med ”även:” (till exempel LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). De kinesiska beteckningarna 50-3, 50-5, 50-7, 50-9, 50-12 anger dielektrikumets diameter i millimeter.",
-                "> Man kan lägga till anpassade kablar med deras fem dämpningar: de sparas i data\\cavi_personali.txt och visas även i rullgardinslistorna i anläggningsschemat i EME-budget. Verktygstipset för varje rad i tabellen anger källan för den kabeln.",
+                "> Man kan lägga till anpassade kablar med dämpningarna för 5 eller 7 band (de som saknas beräknas med formeln): de sparas i data\\cavi_personali.txt och visas även i rullgardinslistorna i anläggningsschemat i EME-budget. Verktygstipset för varje rad i tabellen anger källan för den kabeln.",
                 "### Kontakterna (NJ9R)",
                 "Även kontakterna är en del av ledningen. NJ9R:s praktiska råd är att räkna cirka 1 dB per 8 – 10 kontakter, från radions baksida fram till antennen, inklusive adaptrar, reläer och delare: i hans anläggning med fyra antenner motsvarar de 24 kontakterna mer än 2 dB, lika mycket som 40 – 45 m ny LMR-400 på 144 MHz [2]. I EME-budget har koaxialreläets ruta två fält, TX-kontakter och RX-kontakter: varje kontakt motsvarar 0,11 dB; vid sändning räknas de mellan PA och antennen, vid mottagning de mellan antennen och förförstärkaren.",
                 "[1] Källorna för de enskilda kablarna: datablad från Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica i Senago (RG-115), DD1US:s och EA5IP:s tabeller (H100) och SV1BSX:s tabell för RG-58, RG-213, H-155 och H-2000 (värden att kontrollera).",
@@ -77138,6 +77645,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ med §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (Månens radius), månerefleksjonsevne 0,065.",
+                "#### Strekningstapet bånd for bånd",
+                "Strekningstapet øker med kvadratet av frekvensen (§λ^2§ i nevneren: 6 dB for hver dobling) og med fjerde potens av avstanden. EME-budsjett (yagi og paraboler) beregner det alltid på frekvensen til valgt bånd og med avstandene på valgt tidspunkt. Tabellen gir verdiene fra formelen ovenfor med de to stasjonene i samme avstand fra Jordens sentrum:",
+                "|h| Bånd | >Perigeum (356 900 km) | >Middelavstand (384 400 km) | >Apogeum (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Beregningsfrekvenser: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Mellom perigeum og apogeum er forskjellen ca. 2,3 dB på alle bånd. Med Månen høyt på himmelen er den topsentriske avstanden opptil ca. 6 400 km kortere enn avstanden fra Jordens sentrum, og tapet synker med ytterligere ca. 0,3 dB.",
+                "> Å gå opp i bånd koster i strekningstap (fra 50 til 1296 MHz ca. 28 dB mer), men ved samme størrelse gir antennen mer forsterkning: en parabol med fast diameter vinner 6 dB for hver dobling av frekvensen, både ved sending og mottak, og himmelstøyen avtar. Derfor gjøres budsjettet alltid bånd for bånd.",
                 "Utstrålt effekt og signalet på klemmene til mottaksantennen:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -77288,11 +77807,11 @@ namespace LunaCalc
             };
             d["nb"]["S48"] = new string[] {
                 "## Koaksialkabler og tap",
-                "Fanen **KOAKSIALKABLER** samler dempingen for de 50 Ω-kablene som radioamatører bruker mest, i dB per 100 m ved 20 °C, på de fem YAEC-båndene. Produsentenes datablad gir verdier på forskjellige frekvenser; YAEC har omregnet dem til båndene med potensloven, en rett linje i log-log-diagrammet mellom de to nærmeste frekvensene i databladet:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α i dB/100 m, ℓ kabellengden i meter. Et helt tall er verdien fra databladet; ≈ angir en interpolert verdi, og e en ekstrapolert verdi utover siste frekvens i databladet.",
+                "Fanen **KOAKSIALKABLER** samler dempingen for de 50 Ω-kablene som radioamatører bruker mest, i dB per 100 m ved 20 °C, på YAEC-båndene fra 50 til 1296 MHz. Produsentenes datablad gir verdier på forskjellige frekvenser; YAEC omregner dem til båndene med den fysiske formelen for koaksialkabelens demping, summen av tapene i lederne (skinneffekt, øker med §\\sqrt{f}§) og tapene i dielektrikumet (øker med §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α i dB/100 m, f i MHz, ℓ kabellengden i meter. For hver kabel bestemmes §k_1§ og §k_2§ (aldri negative) med minste kvadraters metode, vektet etter relativ feil, ut fra verdiene i produsentens datablad. Et helt tall er verdien fra databladet; ≈ angir en verdi beregnet med formelen innenfor databladets frekvenser, og e en verdi beregnet utenfor dem, som må brukes med forsiktighet. Med bare ett ledd reduseres formelen til tilfellet med en kabel dominert av lederne (§k_2 = 0§) eller av dielektrikumet (§k_1 = 0§).",
                 "Kabler med samme type, lik diameter innenfor ±0,2 mm og demping innenfor 0,2 dB/100 m på alle bånd er slått sammen på én rad (≡), med gjennomsnittsverdien; ekvivalente betegnelser er angitt med «også:» (for eksempel LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). De kinesiske betegnelsene 50-3, 50-5, 50-7, 50-9, 50-12 angir dielektrikumets diameter i millimeter.",
-                "> Du kan legge til egendefinerte kabler med sine fem dempingsverdier: de lagres i data\\cavi_personali.txt og vises også i nedtrekkslistene i anleggsskjemaet i EME-budsjett. Verktøytipset for hver rad i tabellen oppgir kilden for den kabelen.",
+                "> Du kan legge til egendefinerte kabler med dempingsverdier for 5 eller 7 bånd (de som mangler, beregnes med formelen): de lagres i data\\cavi_personali.txt og vises også i nedtrekkslistene i anleggsskjemaet i EME-budsjett. Verktøytipset for hver rad i tabellen oppgir kilden for den kabelen.",
                 "### Kontaktene (NJ9R)",
                 "Også kontaktene er en del av linjen. Det praktiske rådet fra NJ9R er å regne ca. 1 dB per 8 – 10 kontakter, fra baksiden av radioen og fram til antennen, inkludert adaptere, releer og delere: i hans anlegg med fire antenner utgjør de 24 kontaktene mer enn 2 dB, like mye som 40 – 45 m ny LMR-400 på 144 MHz [2]. I EME-budsjett har ruten for koaksialreleet to felt, TX-kontakter og RX-kontakter: hver kontakt utgjør 0,11 dB; ved sending telles de mellom PA og antennen, ved mottak de mellom antennen og forforsterkeren.",
                 "[1] Kildene for de enkelte kablene: datablad fra Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, katalog MIL-C-17F (RG-142, RG-393), R.F. elettronica i Senago (RG-115), tabellene til DD1US og EA5IP (H100) og tabellen til SV1BSX for RG-58, RG-213, H-155 og H-2000 (verdiene må kontrolleres).",
@@ -77683,6 +78202,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ með §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (radíus tunglsins), endurskinsstuðull tunglsins 0,065.",
+                "#### Leiðartapið eftir böndum",
+                "Leiðartapið vex með tíðninni í öðru veldi (§λ^2§ í nefnaranum: 6 dB fyrir hverja tvöföldun) og með fjarlægðinni í fjórða veldi. EME-aflreikningur (Yagi-loftnet og diskar) reiknar það alltaf á tíðni valins bands og með fjarlægðum valins tímapunkts. Taflan sýnir gildi formúlunnar hér að ofan þegar báðar stöðvarnar eru í sömu fjarlægð frá miðju jarðar:",
+                "|h| Band | >Jarðnánd (356 900 km) | >Meðalfjarlægð (384 400 km) | >Jarðfirð (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Reikningstíðnir: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Munurinn milli jarðnándar og jarðfirðar er um 2,3 dB á öllum böndum. Þegar tunglið er hátt á himni er staðbundna fjarlægðin allt að um 6 400 km styttri en fjarlægðin frá miðju jarðar, og tapið minnkar um u.þ.b. 0,3 dB til viðbótar.",
+                "> Það kostar leiðartap að fara upp um band (frá 50 til 1296 MHz um 28 dB meira), en við sömu stærð magnar loftnetið meira: diskur með fast þvermál vinnur 6 dB fyrir hverja tvöföldun tíðninnar, bæði í sendingu og móttöku, og himinsuðið minnkar. Þess vegna er aflreikningurinn alltaf gerður band fyrir band.",
                 "Útgeislað afl og merkið við tengi móttökuloftnetsins:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -77833,11 +78364,11 @@ namespace LunaCalc
             };
             d["is"]["S48"] = new string[] {
                 "## Kóaxkaplar og tap",
-                "Flipinn **KÓAXKAPLAR** safnar saman deyfingu þeirra 50 Ω kapla sem radíóamatörar nota mest, í dB á hverja 100 m við 20 °C, á böndunum fimm í YAEC. Gagnablöð framleiðenda gefa gildi á mismunandi tíðnum; YAEC hefur fært þau yfir á böndin með veldislögmálinu, beinni línu á log-log grafi milli tveggja næstu tíðna gagnablaðsins:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α í dB/100 m, ℓ lengd kapalsins í metrum. Heil tala er gildi gagnablaðsins; ≈ merkir brúað gildi, og e framreiknað gildi út fyrir síðustu tíðni gagnablaðsins.",
+                "Flipinn **KÓAXKAPLAR** safnar saman deyfingu þeirra 50 Ω kapla sem radíóamatörar nota mest, í dB á hverja 100 m við 20 °C, á böndum YAEC frá 50 til 1296 MHz. Gagnablöð framleiðenda gefa gildi á mismunandi tíðnum; YAEC færir þau yfir á böndin með eðlisfræðilegri formúlu fyrir deyfingu kóaxkapals, summu tapsins í leiðurunum (skinhrif, vex með §\\sqrt{f}§) og tapsins í einangraranum (vex með §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α í dB/100 m, f í MHz, ℓ lengd kapalsins í metrum. Fyrir hvern kapal eru §k_1§ og §k_2§ (aldrei neikvæð) fundin með aðferð minnstu kvaðrata, þar sem hlutfallsleg skekkja er vegin, út frá gildum í gagnablaði framleiðandans. Heil tala er gildi gagnablaðsins; ≈ merkir gildi reiknað með formúlunni innan tíðna gagnablaðsins, og e gildi reiknað utan þeirra, sem nota skal með varúð. Með einum lið einfaldast formúlan í tilvik kapals þar sem leiðararnir ráða (§k_2 = 0§) eða einangrarinn (§k_1 = 0§).",
                 "Kaplar af sömu gerð, með sama þvermál innan ±0,2 mm og deyfingu innan 0,2 dB/100 m á öllum böndum eru sameinaðir í eina línu (≡), með meðalgildinu; jafngild heiti eru tilgreind með „einnig:“ (til dæmis LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Kínversku auðkennin 50-3, 50-5, 50-7, 50-9, 50-12 gefa þvermál einangrarans í millimetrum.",
-                "> Hægt er að bæta við sérsniðnum köplum með fimm deyfingargildum sínum: þeir eru vistaðir í data\\cavi_personali.txt og birtast líka í fellilistum skýringarmyndar búnaðarins í EME-aflreikningi. Skýringarblaðra hverrar línu í töflunni tilgreinir heimild þess kapals.",
+                "> Hægt er að bæta við sérsniðnum köplum með deyfingargildum 5 eða 7 banda (þau sem vantar eru reiknuð með formúlunni): þeir eru vistaðir í data\\cavi_personali.txt og birtast líka í fellilistum skýringarmyndar búnaðarins í EME-aflreikningi. Skýringarblaðra hverrar línu í töflunni tilgreinir heimild þess kapals.",
                 "### Tengin (NJ9R)",
                 "Tengin eru líka hluti af línunni. Hagnýtt ráð NJ9R er að reikna um 1 dB fyrir hver 8 – 10 tengi, frá bakhlið stöðvarinnar að loftnetinu, að meðtöldum millistykkjum, liðum og aflskiptum: í fjögurra loftneta kerfi hans nema 24 tengin meira en 2 dB, jafnmiklu og 40 – 45 m af nýjum LMR-400 á 144 MHz [2]. Í EME-aflreikningi hefur reitur kóaxliðans tvö svæði, TX-tengi og RX-tengi: hvert tengi telst 0,11 dB; við sendingu eru talin tengin milli PA og loftnetsins, við móttöku tengin milli loftnetsins og formagnarans.",
                 "[1] Heimildir einstakra kapla: gagnablöð frá Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, í gegnum WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, vörulisti MIL-C-17F (RG-142, RG-393), R.F. elettronica í Senago (RG-115), töflur DD1US og EA5IP (H100) og tafla SV1BSX fyrir RG-58, RG-213, H-155 og H-2000 (gildi sem þarf að staðfesta).",
@@ -78228,6 +78759,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ עם §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (רדיוס הירח), מקדם החזרה של הירח 0.065.",
+                "#### הפסד המסלול תחום אחר תחום",
+                "הפסד המסלול גדל עם ריבוע התדר (§λ^2§ במכנה: 6 dB לכל הכפלה) ועם החזקה הרביעית של המרחק. תקציב EME (Yagi וצלחות) מחשב אותו תמיד בתדר של התחום הנבחר ובמרחקים של הרגע הנבחר. הטבלה מציגה את ערכי הנוסחה שלמעלה כאשר שתי התחנות נמצאות באותו מרחק ממרכז כדור הארץ:",
+                "|h| תחום | >פריגיאה (356 900 km) | >מרחק ממוצע (384 400 km) | >אפוגיאה (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ תדרי החישוב: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz. ההפרש בין פריגיאה לאפוגיאה הוא כ-2.3 dB בכל התחומים. כשהירח גבוה בשמיים, המרחק הטופוצנטרי קצר מהמרחק ממרכז כדור הארץ בעד כ-6 400 km, וההפסד יורד בעוד כ-0.3 dB.",
+                "> המעבר לתחום גבוה יותר עולה בהפסד מסלול (מ-50 עד 1296 MHz כ-28 dB יותר), אבל באותם ממדים האנטנה מגבירה יותר: צלחת בקוטר קבוע מרוויחה 6 dB בכל הכפלה של התדר, בשידור ובקליטה, ורעש השמיים יורד. לכן המאזן נעשה תמיד תחום אחר תחום.",
                 "ההספק המוקרן והאות בהדקי האנטנה הקולטת:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -78378,11 +78921,11 @@ namespace LunaCalc
             };
             d["he"]["S48"] = new string[] {
                 "## כבלים קואקסיאליים והפסדים",
-                "הלשונית **כבלים קואקסיאליים** מרכזת את ההנחתה של כבלי 50 Ω הנפוצים ביותר בקרב חובבי הרדיו, ב-dB לכל 100 m ב-20 °C, בחמשת התחומים של YAEC. דפי הנתונים של היצרנים נותנים ערכים בתדרים שונים; YAEC החזירה אותם לתחומים לפי חוק חזקה, קו ישר בגרף log-log בין שני התדרים הקרובים ביותר בדף הנתונים:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α ב-dB/100 m, ℓ אורך הכבל במטרים. המספר המלא הוא הערך מדף הנתונים; ≈ מציין ערך באינטרפולציה, ו-e ערך באקסטרפולציה מעבר לתדר האחרון בדף הנתונים.",
+                "הלשונית **כבלים קואקסיאליים** מרכזת את ההנחתה של כבלי 50 Ω הנפוצים ביותר בקרב חובבי הרדיו, ב-dB לכל 100 m ב-20 °C, בתחומים של YAEC מ-50 עד 1296 MHz. דפי הנתונים של היצרנים נותנים ערכים בתדרים שונים; YAEC מחזירה אותם לתחומים לפי הנוסחה הפיזיקלית של הנחתת הכבל הקואקסיאלי, סכום ההפסדים במוליכים (אפקט העור, גדלים עם §\\sqrt{f}§) וההפסדים בדיאלקטרי (גדלים עם §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α ב-dB/100 m, f ב-MHz, ℓ אורך הכבל במטרים. לכל כבל, §k_1§ ו-§k_2§ (לעולם לא שליליים) מחושבים בשיטת הריבועים הפחותים, בשקלול השגיאה היחסית, מתוך ערכי דף הנתונים של היצרן. המספר המלא הוא הערך מדף הנתונים; ≈ מציין ערך שחושב בנוסחה בתוך תדרי דף הנתונים, ו-e ערך שחושב מחוץ להם, שיש להשתמש בו בזהירות. עם איבר אחד בלבד הנוסחה מצטמצמת למקרה של כבל שבו שולטים המוליכים (§k_2 = 0§) או הדיאלקטרי (§k_1 = 0§).",
                 "כבלים מאותו סוג, בקוטר זהה בטווח ±0.2 mm ובהנחתה בטווח 0.2 dB/100 m בכל התחומים מאוחדים בשורה אחת (≡), עם הערך הממוצע; הכינויים השקולים מצוינים ב-\"גם:\" (לדוגמה LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). הכינויים הסיניים 50-3, 50-5, 50-7, 50-9, 50-12 מציינים את קוטר הדיאלקטרי במילימטרים.",
-                "> ניתן להוסיף כבלים מותאמים אישית עם חמש ההנחתות שלהם: הם נשמרים ב-data\\cavi_personali.txt ומופיעים גם ברשימות הנפתחות של תרשים המערך בתקציב EME. בועת ההסבר של כל שורה בטבלה מציינת את המקור של אותו כבל.",
+                "> ניתן להוסיף כבלים מותאמים אישית עם ההנחתות של 5 או 7 תחומים (החסרות מחושבות בנוסחה): הם נשמרים ב-data\\cavi_personali.txt ומופיעים גם ברשימות הנפתחות של תרשים המערך בתקציב EME. בועת ההסבר של כל שורה בטבלה מציינת את המקור של אותו כבל.",
                 "### המחברים (NJ9R)",
                 "גם המחברים הם חלק מהקו. העצה המעשית של NJ9R היא לחשב כ-1 dB לכל 8 – 10 מחברים, מגב המקמ\"ש ועד האנטנה, כולל מתאמים, ממסרים ומחלקים: במערך שלו עם ארבע אנטנות 24 המחברים שווים יותר מ-2 dB, כמו 40 – 45 m של LMR-400 חדש ב-144 MHz [2]. בתקציב EME במסגרת הממסר הקואקסיאלי יש שתי תיבות, מחברי TX ומחברי RX: כל מחבר שווה 0.11 dB; בשידור סופרים את המחברים שבין ה-PA לאנטנה, ובקליטה את אלה שבין האנטנה לקדם-המגבר.",
                 "[1] המקורות של הכבלים הבודדים: דפי נתונים של Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, דרך WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, קטלוג MIL-C-17F (RG-142, RG-393), R.F. elettronica מ-Senago (RG-115), הטבלאות של DD1US ו-EA5IP (H100) והטבלה של SV1BSX עבור RG-58, RG-213, H-155 ו-H-2000 (ערכים לבדיקה).",
@@ -78773,6 +79316,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ جہاں §c = 299 792 458 \\t{ m/s}§، §R_L = 1 737,4 \\t{ km}§ (چاند کا رداس)، چاند کی انعکاسیت 0.065۔",
+                "#### بینڈ بہ بینڈ راستے کا نقصان",
+                "راستے کا نقصان فریکوئنسی کے مربع کے ساتھ (§λ^2§ نسب نما میں: ہر دُگنا ہونے پر 6 dB) اور فاصلے کی چوتھی طاقت کے ساتھ بڑھتا ہے۔ EME بجٹ (Yagi اور ڈشیں) اسے ہمیشہ منتخب بینڈ کی فریکوئنسی اور منتخب لمحے کے فاصلوں پر شمار کرتا ہے۔ جدول اوپر والے فارمولے کی قدریں دیتا ہے جب دونوں اسٹیشن زمین کے مرکز سے یکساں فاصلے پر ہوں:",
+                "|h| بینڈ | >حضیض (356 900 km) | >اوسط فاصلہ (384 400 km) | >اوج (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ حساب کی فریکوئنسیاں: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz۔ حضیض اور اوج کے درمیان فرق تمام بینڈز میں تقریباً 2.3 dB ہے۔ جب چاند آسمان میں اونچا ہو تو ٹوپوسینٹرک فاصلہ زمین کے مرکز سے فاصلے کے مقابلے میں تقریباً 6 400 km تک کم ہوتا ہے، اور نقصان مزید تقریباً 0.3 dB گھٹ جاتا ہے۔",
+                "> اونچے بینڈ پر جانے کی قیمت راستے کے نقصان میں ادا کرنی پڑتی ہے (50 سے 1296 MHz تک تقریباً 28 dB زیادہ)، لیکن یکساں جسامت پر اینٹینا زیادہ گین دیتا ہے: مقررہ قطر کی ڈش کا گین فریکوئنسی کے ہر دُگنا ہونے پر 6 dB بڑھ جاتا ہے، ٹرانسمیشن اور ریسیپشن دونوں میں، اور آسمانی شور کم ہو جاتا ہے۔ اسی لیے بجٹ ہمیشہ بینڈ بہ بینڈ بنایا جاتا ہے۔",
                 "شعاعی پاور اور ریسیو کرنے والے اینٹینا کے ٹرمینلز پر سگنل:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -78923,11 +79478,11 @@ namespace LunaCalc
             };
             d["ur"]["S48"] = new string[] {
                 "## کوایکسیل کیبلیں اور نقصانات",
-                "ٹیب **کوایکسیل کیبلیں** ریڈیو شوقیہ حضرات میں سب سے زیادہ استعمال ہونے والی 50 Ω کیبلوں کی تخفیف، 20 °C پر ہر 100 m کے لیے dB میں، YAEC کے پانچ بینڈز میں جمع کرتا ہے۔ بنانے والوں کی ڈیٹا شیٹس مختلف فریکوئنسیوں پر قدریں دیتی ہیں؛ YAEC نے انہیں پاور لا کے ذریعے بینڈز پر منتقل کیا ہے، یعنی ڈیٹا شیٹ کی دو قریب ترین فریکوئنسیوں کے درمیان log-log گراف پر سیدھی لکیر:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α dB/100 m میں، ℓ کیبل کی لمبائی میٹر میں۔ مکمل عدد ڈیٹا شیٹ کی قدر ہے؛ ≈ انٹرپولیٹڈ قدر کو ظاہر کرتا ہے، اور e ڈیٹا شیٹ کی آخری فریکوئنسی سے آگے ایکسٹراپولیٹڈ قدر کو۔",
+                "ٹیب **کوایکسیل کیبلیں** ریڈیو شوقیہ حضرات میں سب سے زیادہ استعمال ہونے والی 50 Ω کیبلوں کی تخفیف، 20 °C پر ہر 100 m کے لیے dB میں، YAEC کے 50 سے 1296 MHz تک کے بینڈز میں جمع کرتا ہے۔ بنانے والوں کی ڈیٹا شیٹس مختلف فریکوئنسیوں پر قدریں دیتی ہیں؛ YAEC انہیں کوایکسیل کیبل کی تخفیف کے طبیعیاتی فارمولے کے ذریعے بینڈز پر منتقل کرتا ہے، جو موصلوں کے نقصانات (اسکن ایفیکٹ، §\\sqrt{f}§ کے ساتھ بڑھتے ہیں) اور ڈائی الیکٹرک کے نقصانات (§f§ کے ساتھ بڑھتے ہیں) کا مجموعہ ہے:",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α dB/100 m میں، f MHz میں، ℓ کیبل کی لمبائی میٹر میں۔ ہر کیبل کے لیے §k_1§ اور §k_2§ (کبھی منفی نہیں) بنانے والے کی ڈیٹا شیٹ کی قدروں سے، نسبتی غلطی کو وزن دیتے ہوئے، کم از کم مربعات کے طریقے سے حاصل کیے جاتے ہیں۔ مکمل عدد ڈیٹا شیٹ کی قدر ہے؛ ≈ ڈیٹا شیٹ کی فریکوئنسیوں کے اندر فارمولے سے حساب کی گئی قدر کو ظاہر کرتا ہے، اور e ان سے باہر حساب کی گئی قدر کو، جسے احتیاط سے استعمال کرنا چاہیے۔ صرف ایک جزو کے ساتھ فارمولا اس کیبل کی صورت بن جاتا ہے جس میں موصل غالب ہوں (§k_2 = 0§) یا ڈائی الیکٹرک (§k_1 = 0§)۔",
                 "ایک ہی قسم، ±0.2 mm کے اندر برابر قطر اور تمام بینڈز میں 0.2 dB/100 m کے اندر تخفیف والی کیبلیں ایک سطر (≡) میں اوسط قدر کے ساتھ یکجا کی جاتی ہیں؛ مساوی نام “یہ بھی:” کے ساتھ دکھائے جاتے ہیں (مثلاً LMR-400 = HF400، CNT-400، 50-7 low loss؛ LMR-600 = CNT-600)۔ چینی کوڈ 50-3، 50-5، 50-7، 50-9، 50-12 ڈائی الیکٹرک کا قطر ملی میٹر میں بتاتے ہیں۔",
-                "> اپنی پانچ تخفیفات کے ساتھ حسبِ ضرورت کیبلیں شامل کی جا سکتی ہیں: یہ data\\cavi_personali.txt میں محفوظ ہوتی ہیں اور EME بجٹ کے نظام کے خاکے کے ڈراپ ڈاؤن میں بھی ظاہر ہوتی ہیں۔ جدول کی ہر سطر کا ٹول ٹپ اس کیبل کا ماخذ بتاتا ہے۔",
+                "> 5 یا 7 بینڈز کی تخفیفات کے ساتھ حسبِ ضرورت کیبلیں شامل کی جا سکتی ہیں (غائب قدریں فارمولے سے حساب کی جاتی ہیں): یہ data\\cavi_personali.txt میں محفوظ ہوتی ہیں اور EME بجٹ کے نظام کے خاکے کے ڈراپ ڈاؤن میں بھی ظاہر ہوتی ہیں۔ جدول کی ہر سطر کا ٹول ٹپ اس کیبل کا ماخذ بتاتا ہے۔",
                 "### کنیکٹرز (NJ9R)",
                 "کنیکٹرز بھی لائن کا حصہ ہیں۔ NJ9R کا عملی مشورہ یہ ہے کہ ہر 8 – 10 کنیکٹرز پر تقریباً 1 dB گنا جائے، ریڈیو کی پشت سے اینٹینا تک، اڈاپٹرز، ریلے اور ڈیوائیڈرز سمیت: ان کے چار اینٹینا والے نظام میں 24 کنیکٹرز 2 dB سے زیادہ کے برابر ہیں، یعنی 144 MHz میں 40 – 45 m نئی LMR-400 جتنے [2]۔ EME بجٹ میں کوایکسیل ریلے کے حصے میں دو خانے ہیں، TX کنیکٹرز اور RX کنیکٹرز: ہر کنیکٹر 0.11 dB کے برابر ہے؛ ٹرانسمیشن میں PA اور اینٹینا کے درمیان والے گنے جاتے ہیں، ریسیپشن میں اینٹینا اور پری ایمپلیفائر کے درمیان والے۔",
                 "[1] انفرادی کیبلوں کے ماخذ: Times Microwave (LMR)، RFS (CELLFLEX LCF/SCF)، CommScope Andrew (HELIAX LDF/FSJ)، Siva Cavi (HF 240/287/400)، SSB-Electronic (Aircell، Ecoflex، Aircom Plus)، Messi & Paoloni (Hyperflex، Ultraflex، بذریعہ WiMo)، Symair، SYV50-7 (szansy.com)، Belden (H1000)، Prospecta (RT5020، XT2400)، QAXIAL (LLF195) کی ڈیٹا شیٹس، Caledonian Cables، کیٹلاگ MIL-C-17F (RG-142، RG-393)، Senago کی R.F. elettronica (RG-115)، DD1US اور EA5IP کے جدول (H100) اور RG-58، RG-213، H-155 اور H-2000 کے لیے SV1BSX کا جدول (تصدیق طلب قدریں)۔",
@@ -79318,6 +79873,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ med §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (Månens radius), Månens refleksionsevne 0,065.",
+                "#### Udbredelsestabet bånd for bånd",
+                "Udbredelsestabet vokser med frekvensens kvadrat (§λ^2§ i nævneren: 6 dB for hver fordobling) og med afstandens fjerde potens. EME-budget (yagi og paraboler) beregner det altid ved det valgte bånds frekvens og med afstandene på det valgte tidspunkt. Tabellen giver værdierne fra formlen ovenfor med de to stationer i samme afstand fra Jordens centrum:",
+                "|h| Bånd | >Perigæum (356 900 km) | >Middelafstand (384 400 km) | >Apogæum (406 700 km)",
+                "| 50 MHz | 241,7 dB | 242,9 dB | 243,9 dB",
+                "| 70 MHz | 244,6 dB | 245,9 dB | 246,8 dB",
+                "| 144 MHz | 250,8 dB | 252,1 dB | 253,1 dB",
+                "| 222 MHz | 254,6 dB | 255,9 dB | 256,8 dB",
+                "| 432 MHz | 260,4 dB | 261,6 dB | 262,6 dB",
+                "| 902 MHz | 266,7 dB | 268,0 dB | 269,0 dB",
+                "| 1296 MHz | 269,9 dB | 271,2 dB | 272,2 dB",
+                "~ Beregningsfrekvenser: 50,2 · 70,2 · 144,1 · 222,1 · 432,065 · 902,1 · 1296,065 MHz. Mellem perigæum og apogæum er forskellen ca. 2,3 dB på alle bånd. Med Månen højt på himlen er den topocentriske afstand op til ca. 6 400 km kortere end afstanden fra Jordens centrum, og tabet falder med yderligere ca. 0,3 dB.",
+                "> At gå op i bånd koster i udbredelsestab (fra 50 til 1296 MHz ca. 28 dB mere), men ved samme størrelse giver antennen mere forstærkning: en parabol med fast diameter vinder 6 dB for hver fordobling af frekvensen, både ved sending og modtagelse, og himmelstøjen falder. Derfor laves budgettet altid bånd for bånd.",
                 "Den udstrålede effekt og signalet ved den modtagende antennes klemmer:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -79468,11 +80035,11 @@ namespace LunaCalc
             };
             d["da"]["S48"] = new string[] {
                 "## Koaksialkabler og tab",
-                "Fanen **KOAKSIALKABLER** samler dæmpningen for de 50 Ω-kabler, radioamatører bruger mest, i dB pr. 100 m ved 20 °C, på YAEC's fem bånd. Fabrikanternes datablade angiver værdier ved forskellige frekvenser; YAEC har omregnet dem til båndene med potensloven, en ret linje i log-log-grafen mellem databladets to nærmeste frekvenser:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α i dB/100 m, ℓ kablets længde i meter. Tal uden tegn er databladets værdi; ≈ angiver en interpoleret værdi og e en værdi ekstrapoleret ud over databladets sidste frekvens.",
+                "Fanen **KOAKSIALKABLER** samler dæmpningen for de 50 Ω-kabler, radioamatører bruger mest, i dB pr. 100 m ved 20 °C, på YAEC's bånd fra 50 til 1296 MHz. Fabrikanternes datablade angiver værdier ved forskellige frekvenser; YAEC omregner dem til båndene med den fysiske formel for koaksialkablets dæmpning, summen af tabene i lederne (skineffekt, vokser med §\\sqrt{f}§) og tabene i dielektrikummet (vokser med §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α i dB/100 m, f i MHz, ℓ kablets længde i meter. For hvert kabel bestemmes §k_1§ og §k_2§ (aldrig negative) med mindste kvadraters metode, vægtet efter den relative fejl, ud fra værdierne i fabrikantens datablad. Tal uden tegn er databladets værdi; ≈ angiver en værdi beregnet med formlen inden for databladets frekvenser og e en værdi beregnet uden for dem, som skal bruges med forsigtighed. Med kun ét led reduceres formlen til tilfældet med et kabel domineret af lederne (§k_2 = 0§) eller af dielektrikummet (§k_1 = 0§).",
                 "Kabler med samme type, samme diameter inden for ±0,2 mm og dæmpning inden for 0,2 dB/100 m på alle bånd er samlet i én række (≡) med gennemsnitsværdien; tilsvarende betegnelser er angivet med \"også:\" (f.eks. LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). De kinesiske betegnelser 50-3, 50-5, 50-7, 50-9, 50-12 angiver dielektrikummets diameter i millimeter.",
-                "> Man kan tilføje brugerdefinerede kabler med deres fem dæmpninger: de gemmes i data\\cavi_personali.txt og vises også i rullemenuerne i anlægsdiagrammet i EME-budget. Værktøjstippet for hver række i tabellen angiver kilden til det kabel.",
+                "> Man kan tilføje brugerdefinerede kabler med dæmpningerne for 5 eller 7 bånd (de manglende beregnes med formlen): de gemmes i data\\cavi_personali.txt og vises også i rullemenuerne i anlægsdiagrammet i EME-budget. Værktøjstippet for hver række i tabellen angiver kilden til det kabel.",
                 "### Stikkene (NJ9R)",
                 "Også stikkene er en del af linjen. NJ9R's praktiske råd er at regne med ca. 1 dB pr. 8 – 10 stik, fra radioens bagside og helt op til antennen, inklusive adaptere, relæer og delere: i hans anlæg med fire antenner er de 24 stik værd mere end 2 dB, lige så meget som 40 – 45 m nyt LMR-400 på 144 MHz [2]. I EME-budget har boksen for koaksialrelæet to felter, Stik ved TX og Stik ved RX: hvert stik tæller 0,11 dB; ved sending tælles dem mellem PA og antenne, ved modtagning dem mellem antenne og forforstærker.",
                 "[1] Kilderne til de enkelte kabler: datablade fra Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, via WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, MIL-C-17F-katalog (RG-142, RG-393), R.F. elettronica i Senago (RG-115), tabellerne fra DD1US og EA5IP (H100) og SV1BSX' tabel for RG-58, RG-213, H-155 og H-2000 (værdierne bør kontrolleres).",
@@ -79863,6 +80430,18 @@ namespace LunaCalc
                 "= λ = \\frac{c}{f} \\quad σ = 0.065 · π · R_M^2",
                 "= L_{EME} = 10 · log_{10} \\b{\\frac{\\p{4π}^3 · d_1^2 · d_2^2}{σ · λ^2}} \\t{ dB}",
                 "~ kung saan §c = 299 792 458 \\t{ m/s}§, §R_L = 1 737,4 \\t{ km}§ (radius ng Buwan), lunar reflectivity na 0.065.",
+                "#### Ang path loss sa bawat band",
+                "Lumalaki ang path loss kasabay ng square ng frequency (§λ^2§ sa denominator: 6 dB sa bawat pagdoble) at ng ikaapat na power ng layo. Palaging kinukuwenta ito ng EME budget (yagi at dish) sa frequency ng napiling band at sa mga layo sa napiling sandali. Ibinibigay ng talaan ang mga halaga ng formula sa itaas kapag nasa parehong layo mula sa gitna ng Daigdig ang dalawang istasyon:",
+                "|h| Band | >Perigee (356 900 km) | >Average na layo (384 400 km) | >Apogee (406 700 km)",
+                "| 50 MHz | 241.7 dB | 242.9 dB | 243.9 dB",
+                "| 70 MHz | 244.6 dB | 245.9 dB | 246.8 dB",
+                "| 144 MHz | 250.8 dB | 252.1 dB | 253.1 dB",
+                "| 222 MHz | 254.6 dB | 255.9 dB | 256.8 dB",
+                "| 432 MHz | 260.4 dB | 261.6 dB | 262.6 dB",
+                "| 902 MHz | 266.7 dB | 268.0 dB | 269.0 dB",
+                "| 1296 MHz | 269.9 dB | 271.2 dB | 272.2 dB",
+                "~ Mga frequency ng kalkulasyon: 50.2 · 70.2 · 144.1 · 222.1 · 432.065 · 902.1 · 1296.065 MHz. Mga 2.3 dB ang pagkakaiba sa pagitan ng perigee at apogee sa lahat ng band. Kapag mataas ang Buwan sa langit, mas maikli ang topocentric na layo kaysa sa layo mula sa gitna ng Daigdig nang hanggang mga 6 400 km, at bumababa pa ang loss nang mga 0.3 dB.",
+                "> May kapalit sa path loss ang pag-akyat ng band (mula 50 hanggang 1296 MHz, mga 28 dB pa), pero sa parehong laki, mas malaki ang gain ng antena: nadadagdagan nang 6 dB ang gain ng dish na may nakapirming diameter sa bawat pagdoble ng frequency, sa pag-transmit at sa pag-receive, at bumababa ang ingay ng langit. Kaya palaging ginagawa ang budget nang hiwalay sa bawat band.",
                 "Ang radiated power at ang signal sa mga terminal ng tumatanggap na antena:",
                 "= EIRP = P_{dBW} − L_{TX} + G_{ant} + 10 · log_{10} N + G_g \\quad S_{ant} = EIRP + 30 − L_{EME} − L_{pol} + G_{RX}",
                 "= G_g = 20 · log_{10} \\a{2 · sin \\p{\\frac{2π · h · sin El}{λ}}} \\quad L_{pol} = −20 · log_{10} \\a{cos D_{pol}}",
@@ -80013,11 +80592,11 @@ namespace LunaCalc
             };
             d["tl"]["S48"] = new string[] {
                 "## Mga coaxial na kable at pagkawala",
-                "Tinitipon ng tab na **MGA COAXIAL NA KABLE** ang attenuation ng mga 50 Ω na kable na pinakaginagamit ng mga radio amateur, sa dB bawat 100 m sa 20 °C, sa limang band ng YAEC. Nagbibigay ang mga data sheet ng mga manufacturer ng mga halaga sa iba't ibang frequency; inilipat ng YAEC ang mga ito sa mga band gamit ang power law, isang tuwid na linya sa log-log na graph sa pagitan ng dalawang pinakamalapit na frequency ng data sheet:",
-                "= α(f) = α_1 · \\p{\\frac{f}{f_1}}^{n} \\quad n = \\frac{log \\p{α_2 / α_1}}{log \\p{f_2 / f_1}} \\quad L = α(f) · \\frac{ℓ}{100}",
-                "~ α sa dB/100 m, ℓ haba ng kable sa metro. Ang buong numero ay ang halaga sa data sheet; ang ≈ ay nagsasaad ng in-interpolate na halaga, at ang e ng in-extrapolate lampas sa huling frequency ng data sheet.",
+                "Tinitipon ng tab na **MGA COAXIAL NA KABLE** ang attenuation ng mga 50 Ω na kable na pinakaginagamit ng mga radio amateur, sa dB bawat 100 m sa 20 °C, sa mga band ng YAEC mula 50 hanggang 1296 MHz. Nagbibigay ang mga data sheet ng mga manufacturer ng mga halaga sa iba't ibang frequency; inililipat ng YAEC ang mga ito sa mga band gamit ang pisikal na formula ng attenuation ng coaxial, ang kabuuan ng mga loss sa mga conductor (skin effect, lumalaki kasabay ng §\\sqrt{f}§) at ng mga loss sa dielectric (lumalaki kasabay ng §f§):",
+                "= α(f) = k_1 · \\sqrt{f} + k_2 · f \\quad L = α(f) · \\frac{ℓ}{100}",
+                "~ α sa dB/100 m, f sa MHz, ℓ haba ng kable sa metro. Para sa bawat kable, kinukuha ang §k_1§ at §k_2§ (hindi kailanman negatibo) sa pamamagitan ng least squares, na tinitimbang ang relative error, mula sa mga halaga sa data sheet ng manufacturer. Ang buong numero ay ang halaga sa data sheet; ang ≈ ay nagsasaad ng halagang kinuwenta gamit ang formula sa loob ng mga frequency ng data sheet, at ang e ng halagang kinuwenta sa labas nito, na dapat gamitin nang may pag-iingat. Kapag iisang term lamang, nagiging kaso ng kableng dominado ng mga conductor (§k_2 = 0§) o ng dielectric (§k_1 = 0§) ang formula.",
                 "Ang mga kableng magkapareho ang uri, ang diameter ay nasa loob ng ±0.2 mm at ang attenuation ay nasa loob ng 0.2 dB/100 m sa lahat ng band ay pinagsasama sa iisang row (≡), na may average na halaga; ipinapakita ang mga katumbas na pangalan gamit ang “pati:” (halimbawa LMR-400 = HF400, CNT-400, 50-7 low loss; LMR-600 = CNT-600). Ang mga pangalang Tsino na 50-3, 50-5, 50-7, 50-9, 50-12 ay nagsasaad ng diameter ng dielectric sa milimetro.",
-                "> Puwedeng magdagdag ng mga custom na kable kasama ang limang attenuation nila: sine-save ang mga ito sa data\\cavi_personali.txt at lumalabas din sa mga drop-down ng diagram ng sistema sa EME budget. Binabanggit ng tooltip ng bawat row ng talaan ang source ng kableng iyon.",
+                "> Puwedeng magdagdag ng mga custom na kable kasama ang mga attenuation ng 5 o 7 band (kinukuwenta gamit ang formula ang mga kulang): sine-save ang mga ito sa data\\cavi_personali.txt at lumalabas din sa mga drop-down ng diagram ng sistema sa EME budget. Binabanggit ng tooltip ng bawat row ng talaan ang source ng kableng iyon.",
                 "### Ang mga connector (NJ9R)",
                 "Bahagi rin ng linya ang mga connector. Ang praktikal na payo ni NJ9R ay bilangin ang mga 1 dB bawat 8 – 10 connector, mula sa likod ng radyo hanggang sa antena, kasama ang mga adapter, relay at divider: sa sistema niyang may apat na antena, ang 24 na connector ay katumbas ng higit sa 2 dB, kasinlaki ng 40 – 45 m ng bagong LMR-400 sa 144 MHz [2]. Sa EME budget, may dalawang kahon ang kahon ng coaxial relay, Mga connector sa TX at Mga connector sa RX: 0.11 dB ang bawat connector; sa pag-transmit, binibilang ang mga nasa pagitan ng PA at antena; sa pagtanggap, ang mga nasa pagitan ng antena at preamplifier.",
                 "[1] Ang mga source ng bawat kable: mga data sheet ng Times Microwave (LMR), RFS (CELLFLEX LCF/SCF), CommScope Andrew (HELIAX LDF/FSJ), Siva Cavi (HF 240/287/400), SSB-Electronic (Aircell, Ecoflex, Aircom Plus), Messi & Paoloni (Hyperflex, Ultraflex, sa pamamagitan ng WiMo), Symair, SYV50-7 (szansy.com), Belden (H1000), Prospecta (RT5020, XT2400), QAXIAL (LLF195), Caledonian Cables, katalogo ng MIL-C-17F (RG-142, RG-393), R.F. elettronica ng Senago (RG-115), ang mga talaan nina DD1US at EA5IP (H100) at ang talaan ni SV1BSX para sa RG-58, RG-213, H-155 at H-2000 (mga halagang kailangang suriin).",

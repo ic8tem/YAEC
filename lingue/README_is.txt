@@ -6,24 +6,24 @@ Reiknivél fyrir radíóamatöra sem stunda EME (Jörð–Tungl–Jörð) á 50 
 Frumkóði og niðurhal: https://github.com/ic8tem/YAEC/releases
 
 UPPSETNING – WINDOWS
-1. Sæktu YAEC-1.5-Setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
+1. Sæktu YAEC-1.5-win-x64-setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
 2. Ef SmartScreen-viðvörunin birtist: "More info" → "Run anyway".
-3. Án uppsetningar: afþjappaðu YAEC-1.5-windows-portable.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
+3. Án uppsetningar: afþjappaðu YAEC-1.5-win-x64-portatile.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
 
 UPPSETNING – LINUX
 YAEC keyrir á Mono, frjálsa .NET-keyrsluumhverfinu.
-- Debian, Ubuntu, Mint: sæktu yaec_1.5_all.deb og settu hana upp með
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: sæktu yaec_1.5_amd64.deb og settu hana upp með
+      sudo apt install ./yaec_1.5_amd64.deb
   (setur einnig upp Mono). YAEC er ræst úr forritavalmyndinni eða með skipuninni "yaec".
-- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.5-linux.tar.gz og keyrðu ./install.sh.
+- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) og keyrðu ./install.sh.
 
 UPPSETNING – macOS (á tilraunastigi)
 1. Settu upp Mono fyrir macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
-2. Opnaðu YAEC-1.5-macOS.dmg og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
+2. Opnaðu YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
 
 ATHUGUN Á NIÐURHLÖÐNUM SKRÁM (SHA-256)
 Hver release inniheldur SHA256SUMS.txt með SHA-256-tætigildi hvers pakka. Berðu það saman við gildi niðurhlöðnu skrárinnar:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ef gildin tvö eru ólík skaltu ekki setja skrána upp: sæktu hana aftur.

@@ -6,24 +6,24 @@ Rechner für Funkamateure, die EME (Erde–Mond–Erde) von 50 bis 432 MHz betre
 Quellcode und Download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Lade YAEC-1.5-Setup.exe von der Seite Releases herunter und führe die Datei aus. Sie installiert YAEC in Dokumente\YAEC, ohne Administratorrechte, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm.
+1. Lade YAEC-1.5-win-x64-setup.exe von der Seite Releases herunter und führe die Datei aus. Sie installiert YAEC in Dokumente\YAEC, ohne Administratorrechte, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm.
 2. Wenn die SmartScreen-Warnung erscheint: „Weitere Informationen“ → „Trotzdem ausführen“.
-3. Ohne Installation: entpacke YAEC-1.5-windows-portable.zip in einen Ordner, in den du schreiben darfst, und starte YAEC.exe.
+3. Ohne Installation: entpacke YAEC-1.5-win-x64-portatile.zip in einen Ordner, in den du schreiben darfst, und starte YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC läuft mit Mono, der freien .NET-Laufzeitumgebung.
-- Debian, Ubuntu, Mint: lade yaec_1.5_all.deb herunter und installiere es mit
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: lade yaec_1.5_amd64.deb herunter und installiere es mit
+      sudo apt install ./yaec_1.5_amd64.deb
   (installiert auch Mono). YAEC startet über das Anwendungsmenü oder mit dem Befehl „yaec“.
-- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.5-linux.tar.gz und starte ./install.sh.
+- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) und starte ./install.sh.
 
 INSTALLATION – macOS (experimentell)
 1. Installiere Mono für macOS (https://www.mono-project.com/download/stable/) und XQuartz (https://www.xquartz.org).
-2. Öffne YAEC-1.5-macOS.dmg und ziehe YAEC in den Ordner Programme. Beim ersten Mal: Rechtsklick auf YAEC → Öffnen (die App ist nicht von Apple signiert).
+2. Öffne YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) und ziehe YAEC in den Ordner Programme. Beim ersten Mal: Rechtsklick auf YAEC → Öffnen (die App ist nicht von Apple signiert).
 
 PRÜFUNG DER HERUNTERGELADENEN DATEIEN (SHA-256)
 Jedes Release enthält SHA256SUMS.txt mit dem SHA-256-Hashwert jedes Pakets. Vergleiche ihn mit dem Wert der heruntergeladenen Datei:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Wenn die beiden Werte verschieden sind, installiere die Datei nicht, sondern lade sie erneut herunter.

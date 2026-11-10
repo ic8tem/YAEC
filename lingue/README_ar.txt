@@ -6,24 +6,24 @@
 المصدر والتنزيل: https://github.com/ic8tem/YAEC/releases
 
 التثبيت – WINDOWS
-1. نزّل YAEC-1.5-Setup.exe من صفحة Releases وشغّله. يثبّت YAEC في المستندات\YAEC دون صلاحيات المسؤول، مع اختصارات في قائمة "ابدأ" وعلى سطح المكتب، وبرنامج لإلغاء التثبيت.
+1. نزّل YAEC-1.5-win-x64-setup.exe من صفحة Releases وشغّله. يثبّت YAEC في المستندات\YAEC دون صلاحيات المسؤول، مع اختصارات في قائمة "ابدأ" وعلى سطح المكتب، وبرنامج لإلغاء التثبيت.
 2. إذا ظهر تحذير SmartScreen: "More info" ← "Run anyway".
-3. دون تثبيت: استخرج YAEC-1.5-windows-portable.zip في مجلد لديك صلاحية الكتابة فيه، ثم شغّل YAEC.exe.
+3. دون تثبيت: استخرج YAEC-1.5-win-x64-portatile.zip في مجلد لديك صلاحية الكتابة فيه، ثم شغّل YAEC.exe.
 
 التثبيت – LINUX
 يعمل YAEC على Mono، بيئة تشغيل .NET الحرة.
-- Debian وUbuntu وMint: نزّل yaec_1.5_all.deb وثبّته بالأمر
-      sudo apt install ./yaec_1.5_all.deb
+- Debian وUbuntu وMint: نزّل yaec_1.5_amd64.deb وثبّته بالأمر
+      sudo apt install ./yaec_1.5_amd64.deb
   (يثبّت Mono أيضًا). يُشغَّل YAEC من قائمة التطبيقات أو بالأمر "yaec".
-- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.5-linux.tar.gz وشغّل ./install.sh.
+- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) وشغّل ./install.sh.
 
 التثبيت – macOS (تجريبي)
 1. ثبّت Mono لنظام macOS (https://www.mono-project.com/download/stable/) وXQuartz (https://www.xquartz.org).
-2. افتح YAEC-1.5-macOS.dmg واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
+2. افتح YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
 
 التحقق من الملفات المنزّلة (SHA-256)
 يحتوي كل إصدار على SHA256SUMS.txt مع بصمة SHA-256 لكل حزمة. قارنها ببصمة الملف الذي نزّلته:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 إذا اختلفت القيمتان فلا تثبّت الملف: نزّله من جديد.

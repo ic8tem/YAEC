@@ -6,24 +6,24 @@
 קוד מקור והורדה: https://github.com/ic8tem/YAEC/releases
 
 התקנה – WINDOWS
-1. הורד את YAEC-1.5-Setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
+1. הורד את YAEC-1.5-win-x64-setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
 2. אם מופיעה אזהרת SmartScreen: "More info" ← "Run anyway".
-3. ללא התקנה: חלץ את YAEC-1.5-windows-portable.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
+3. ללא התקנה: חלץ את YAEC-1.5-win-x64-portatile.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
 
 התקנה – LINUX
 YAEC פועל על Mono, סביבת הריצה החופשית של .NET.
-- Debian, Ubuntu, Mint: הורד את yaec_1.5_all.deb והתקן אותו באמצעות
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: הורד את yaec_1.5_amd64.deb והתקן אותו באמצעות
+      sudo apt install ./yaec_1.5_amd64.deb
   (מתקין גם את Mono). YAEC מופעל מתפריט היישומים או בפקודה "yaec".
-- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.5-linux.tar.gz והפעל את ./install.sh.
+- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) והפעל את ./install.sh.
 
 התקנה – macOS (ניסיוני)
 1. התקן את Mono עבור macOS (https://www.mono-project.com/download/stable/) ואת XQuartz (https://www.xquartz.org).
-2. פתח את YAEC-1.5-macOS.dmg וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
+2. פתח את YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
 
 בדיקת הקבצים שהורדו (SHA-256)
 כל release כולל את SHA256SUMS.txt עם טביעת ה-SHA-256 של כל חבילה. השווה אותה לטביעה של הקובץ שהורדת:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 אם שני הערכים שונים, אל תתקין את הקובץ: הורד אותו מחדש.

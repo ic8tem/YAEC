@@ -44,13 +44,13 @@ jobs:
         run: |
           $v = "${{ steps.ver.outputs.version }}"
           New-Item -ItemType Directory -Force dist | Out-Null
-          Move-Item "YAEC-$v-Setup.exe" dist/
-          Move-Item "YAEC-$v-Setup-32bit.exe" dist/
+          Move-Item "YAEC-$v-Setup.exe" "dist/YAEC-$v-win-x64-setup.exe"
+          Move-Item "YAEC-$v-Setup-32bit.exe" "dist/YAEC-$v-win-x86-setup.exe"
           New-Item -ItemType Directory -Force p32 | Out-Null
           Copy-Item x86/YAEC.exe, YAEC.ico, README.txt, LICENZA.txt -Destination p32/
           Copy-Item -Recurse lingue p32/
-          Compress-Archive -Path p32/* -DestinationPath "dist/YAEC-$v-windows-32bit-portable.zip"
-          Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-windows-portable.zip"
+          Compress-Archive -Path p32/* -DestinationPath "dist/YAEC-$v-win-x86-portatile.zip"
+          Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-win-x64-portatile.zip"
           Compress-Archive -Path YAEC.cs, compila.bat, YAEC.manifest, YAEC.ico, README.txt, YAEC.iss, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-source.zip"
           Copy-Item YAEC.exe dist/
       - uses: actions/upload-artifact@v4
@@ -397,10 +397,10 @@ jobs:
           cat > notes.md <<NOTES
           YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
 
-          - **Windows**: YAEC-${V}-Setup.exe (installatore) oppure YAEC-${V}-windows-portable.zip; per Windows a 32 bit: YAEC-${V}-Setup-32bit.exe oppure YAEC-${V}-windows-32bit-portable.zip.
-          - **Linux**: yaec_${V}_all.deb (Debian, Ubuntu, Mint: sudo apt install ./yaec_${V}_all.deb) oppure YAEC-${V}-linux.tar.gz (tutte le distribuzioni, con Mono).
-          - **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb (sudo apt install ./yaec_${V}_arm64.deb).
-          - **macOS** (sperimentale): YAEC-${V}-macOS.dmg; servono Mono e XQuartz.
+          - **Windows a 64 bit**: YAEC-${V}-win-x64-setup.exe (installatore) oppure YAEC-${V}-win-x64-portatile.zip; **Windows a 32 bit**: YAEC-${V}-win-x86-setup.exe oppure YAEC-${V}-win-x86-portatile.zip.
+          - **Linux (Debian, Ubuntu, Mint)**: yaec_${V}_amd64.deb (sudo apt install ./yaec_${V}_amd64.deb); **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb.
+          - **Linux, tutte le distribuzioni (con Mono)**: YAEC-${V}-linux-x64-portatile.tar.gz (PC), YAEC-${V}-linux-arm64-portatile.tar.gz (ARM a 64 bit), YAEC-${V}-linux-arm-portatile.tar.gz (ARM a 32 bit).
+          - **macOS** (sperimentale; servono Mono e XQuartz): YAEC-${V}-osx-arm64.dmg oppure YAEC-${V}-osx-arm64-app.zip (Apple Silicon), YAEC-${V}-osx-x64.dmg oppure YAEC-${V}-osx-x64-app.zip (Intel).
 
           Impronte SHA-256 di tutti i file in SHA256SUMS.txt (come verificarle: README.txt).
 

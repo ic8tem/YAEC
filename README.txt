@@ -11,26 +11,26 @@ This README and the licence in every language: folder "lingue"
 All the versions before 1.0 are called beta (beta 1 ... beta 30).
 
 INSTALLATION - WINDOWS
-1. Download YAEC-1.5-Setup.exe from the "Releases" page on GitHub and run it.
+1. Download YAEC-1.5-win-x64-setup.exe from the "Releases" page on GitHub and run it.
    If SmartScreen shows a warning: "More info" -> "Run anyway".
    It installs into Documents\YAEC (no administrator rights needed), with
    Start menu and desktop shortcuts and the uninstaller.
-2. Portable alternative: YAEC-1.5-windows-portable.zip, extract it into a
+2. Portable alternative: YAEC-1.5-win-x64-portatile.zip, extract it into a
    folder where you can write (e.g. Documents\YAEC) and run YAEC.exe.
-   32-bit Windows: YAEC-1.5-Setup-32bit.exe or YAEC-1.5-windows-32bit-portable.zip.
+   32-bit Windows: YAEC-1.5-win-x86-setup.exe or YAEC-1.5-win-x86-portatile.zip.
 3. Developers only: to build it yourself, extract the source zip and
    double-click "compila.bat". You do not need it to use YAEC.
 
 INSTALLATION - LINUX (all distributions, the same program)
 YAEC runs with Mono (the open-source .NET runtime maintained by WineHQ).
-- Debian, Ubuntu, Mint: download yaec_1.5_all.deb and install it with
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: download yaec_1.5_amd64.deb and install it with
+      sudo apt install ./yaec_1.5_amd64.deb
   (apt installs Mono as well). Start it from the applications menu or with
   the command "yaec".
 - Fedora:   sudo dnf install mono-complete
   Arch:     sudo pacman -S mono
   openSUSE: sudo zypper install mono-complete
-  then extract YAEC-1.5-linux.tar.gz and run ./install.sh (installs into
+  then extract YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) and run ./install.sh (installs into
   ~/.local, no root needed), or simply ./yaec from the extracted folder.
 - Raspberry Pi (Raspberry Pi OS 64-bit, Pi 4 or 5): download
   yaec_1.5_arm64.deb and install it with
@@ -41,15 +41,15 @@ INSTALLATION - macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/ or
    the "Framework Mono" package from WineHQ) and XQuartz (https://www.xquartz.org):
    on macOS the Windows Forms window of Mono is drawn through X11.
-2. Download YAEC-1.5-macOS.dmg, open it and drag YAEC into Applications.
+2. Download YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel), open it and drag YAEC into Applications.
    The first time, right-click YAEC -> Open (the app is not signed by Apple).
 - Data: ~/Library/Application Support/YAEC/data
 
 CHECKING THE DOWNLOADED FILES (SHA-256)
 The release page also has SHA256SUMS.txt with the SHA-256 fingerprint of every
 package. Compare it with the fingerprint of the file you downloaded:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
-  or in the command prompt: certutil -hashfile YAEC-1.5-Setup.exe SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
+  or in the command prompt: certutil -hashfile YAEC-1.5-win-x64-setup.exe SHA256
 - Linux:  sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS:  shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 If the two values differ, do not install the file: download it again from

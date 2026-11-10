@@ -6,24 +6,24 @@ Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 
 Kode sumber dan unduhan: https://github.com/ic8tem/YAEC/releases
 
 INSTALASI – WINDOWS
-1. Unduh YAEC-1.5-Setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
+1. Unduh YAEC-1.5-win-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
 2. Jika muncul peringatan SmartScreen: "Info selengkapnya" → "Tetap jalankan".
-3. Tanpa instalasi: ekstrak YAEC-1.5-windows-portable.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
+3. Tanpa instalasi: ekstrak YAEC-1.5-win-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
 
 INSTALASI – LINUX
 YAEC berjalan dengan Mono, runtime .NET yang bebas.
-- Debian, Ubuntu, Mint: unduh yaec_1.5_all.deb dan pasang dengan
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: unduh yaec_1.5_amd64.deb dan pasang dengan
+      sudo apt install ./yaec_1.5_amd64.deb
   (Mono juga ikut terpasang). YAEC dijalankan dari menu aplikasi atau dengan perintah "yaec".
-- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.5-linux.tar.gz lalu jalankan ./install.sh.
+- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) lalu jalankan ./install.sh.
 
 INSTALASI – macOS (eksperimental)
 1. Pasang Mono untuk macOS (https://www.mono-project.com/download/stable/) dan XQuartz (https://www.xquartz.org).
-2. Buka YAEC-1.5-macOS.dmg dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
+2. Buka YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
 
 MEMERIKSA FILE YANG DIUNDUH (SHA-256)
 Setiap release berisi SHA256SUMS.txt dengan hash SHA-256 setiap paket. Bandingkan dengan hash file yang Anda unduh:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jika kedua nilai berbeda, jangan pasang file tersebut: unduh ulang.

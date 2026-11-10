@@ -6,24 +6,24 @@ Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigd
 Source at download: https://github.com/ic8tem/YAEC/releases
 
 PAG-INSTALL – WINDOWS
-1. I-download ang YAEC-1.5-Setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
+1. I-download ang YAEC-1.5-win-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
 2. Kung lumabas ang babala ng SmartScreen: "More info" → "Run anyway".
-3. Nang walang pag-install: i-extract ang YAEC-1.5-windows-portable.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
+3. Nang walang pag-install: i-extract ang YAEC-1.5-win-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
 
 PAG-INSTALL – LINUX
 Tumatakbo ang YAEC sa Mono, ang libreng .NET runtime.
-- Debian, Ubuntu, Mint: i-download ang yaec_1.5_all.deb at i-install ito gamit ang
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: i-download ang yaec_1.5_amd64.deb at i-install ito gamit ang
+      sudo apt install ./yaec_1.5_amd64.deb
   (ini-install din nito ang Mono). Pinapatakbo ang YAEC mula sa menu ng mga application o gamit ang command na "yaec".
-- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.5-linux.tar.gz at patakbuhin ang ./install.sh.
+- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) at patakbuhin ang ./install.sh.
 
 PAG-INSTALL – macOS (eksperimental)
 1. I-install ang Mono para sa macOS (https://www.mono-project.com/download/stable/) at ang XQuartz (https://www.xquartz.org).
-2. Buksan ang YAEC-1.5-macOS.dmg at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
+2. Buksan ang YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
 
 PAGSURI NG MGA NA-DOWNLOAD NA FILE (SHA-256)
 Bawat release ay may SHA256SUMS.txt na naglalaman ng SHA-256 hash ng bawat package. Ihambing ito sa hash ng na-download na file:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kung magkaiba ang dalawang halaga, huwag i-install ang file: i-download itong muli.

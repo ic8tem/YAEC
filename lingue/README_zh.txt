@@ -6,24 +6,24 @@
 源代码和下载：https://github.com/ic8tem/YAEC/releases
 
 安装 – WINDOWS
-1. 从 Releases 页面下载 YAEC-1.5-Setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
+1. 从 Releases 页面下载 YAEC-1.5-win-x64-setup.exe 并运行。它会将 YAEC 安装到 文档\YAEC，无需管理员权限，并在“开始”菜单和桌面上创建快捷方式，同时安装卸载程序。
 2. 如果出现 SmartScreen 警告：“更多信息” → “仍要运行”。
-3. 免安装：将 YAEC-1.5-windows-portable.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
+3. 免安装：将 YAEC-1.5-win-x64-portatile.zip 解压到一个有写入权限的文件夹，然后启动 YAEC.exe。
 
 安装 – LINUX
 YAEC 在 Mono（自由的 .NET 运行时）上运行。
-- Debian、Ubuntu、Mint：下载 yaec_1.5_all.deb，并用以下命令安装
-      sudo apt install ./yaec_1.5_all.deb
+- Debian、Ubuntu、Mint：下载 yaec_1.5_amd64.deb，并用以下命令安装
+      sudo apt install ./yaec_1.5_amd64.deb
   （同时会安装 Mono）。可从应用程序菜单或用命令“yaec”启动 YAEC。
-- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.5-linux.tar.gz 并运行 ./install.sh。
+- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) 并运行 ./install.sh。
 
 安装 – macOS（实验性）
 1. 安装 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
-2. 打开 YAEC-1.5-macOS.dmg，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
+2. 打开 YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel)，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
 
 校验下载的文件（SHA-256）
 每个 release 都包含 SHA256SUMS.txt，其中列出每个软件包的 SHA-256 校验值。请将其与下载文件的校验值进行比较：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 如果两个值不同，请不要安装该文件，而应重新下载。

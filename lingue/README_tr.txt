@@ -6,24 +6,24 @@ hazırlayan: Costantino IC8TEM
 Kaynak kod ve indirme: https://github.com/ic8tem/YAEC/releases
 
 KURULUM – WINDOWS
-1. YAEC-1.5-Setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
+1. YAEC-1.5-win-x64-setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
 2. SmartScreen uyarısı çıkarsa: "Ek bilgi" → "Yine de çalıştır".
-3. Kurulum olmadan: YAEC-1.5-windows-portable.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
+3. Kurulum olmadan: YAEC-1.5-win-x64-portatile.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
 
 KURULUM – LINUX
 YAEC, özgür .NET çalışma ortamı olan Mono ile çalışır.
-- Debian, Ubuntu, Mint: yaec_1.5_all.deb dosyasını indirin ve şu komutla kurun
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: yaec_1.5_amd64.deb dosyasını indirin ve şu komutla kurun
+      sudo apt install ./yaec_1.5_amd64.deb
   (Mono da kurulur). YAEC uygulamalar menüsünden veya "yaec" komutuyla başlatılır.
-- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.5-linux.tar.gz dosyasını çıkarın ve ./install.sh'yi çalıştırın.
+- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) dosyasını çıkarın ve ./install.sh'yi çalıştırın.
 
 KURULUM – macOS (deneysel)
 1. macOS için Mono (https://www.mono-project.com/download/stable/) ve XQuartz (https://www.xquartz.org) kurun.
-2. YAEC-1.5-macOS.dmg dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
+2. YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
 
 İNDİRİLEN DOSYALARIN DOĞRULANMASI (SHA-256)
 Her release, her paketin SHA-256 özetini içeren SHA256SUMS.txt dosyasını barındırır. Bunu indirdiğiniz dosyanın özetiyle karşılaştırın:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 İki değer farklıysa dosyayı kurmayın: yeniden indirin.

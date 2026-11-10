@@ -6,24 +6,24 @@ Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sag
 Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
 
 PAIGALDAMINE – WINDOWS
-1. Laadi Releases-lehelt alla YAEC-1.5-Setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
+1. Laadi Releases-lehelt alla YAEC-1.5-win-x64-setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
 2. Kui ilmub SmartScreeni hoiatus: "More info" → "Run anyway".
-3. Ilma paigaldamata: paki YAEC-1.5-windows-portable.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
+3. Ilma paigaldamata: paki YAEC-1.5-win-x64-portatile.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
 
 PAIGALDAMINE – LINUX
 YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
-- Debian, Ubuntu, Mint: laadi alla yaec_1.5_all.deb ja paigalda see käsuga
-      sudo apt install ./yaec_1.5_all.deb
+- Debian, Ubuntu, Mint: laadi alla yaec_1.5_amd64.deb ja paigalda see käsuga
+      sudo apt install ./yaec_1.5_amd64.deb
   (paigaldab ka Mono). YAEC käivitub rakenduste menüüst või käsuga "yaec".
-- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.5-linux.tar.gz ja käivita ./install.sh.
+- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.5-linux-x64-portatile.tar.gz (ARM: YAEC-1.5-linux-arm64-portatile.tar.gz, YAEC-1.5-linux-arm-portatile.tar.gz) ja käivita ./install.sh.
 
 PAIGALDAMINE – macOS (eksperimentaalne)
 1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
-2. Ava YAEC-1.5-macOS.dmg ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+2. Ava YAEC-1.5-osx-arm64.dmg (Apple Silicon) / YAEC-1.5-osx-x64.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
 
 ALLALAADITUD FAILIDE KONTROLL (SHA-256)
 Iga release sisaldab faili SHA256SUMS.txt iga paketi SHA-256 räsiga. Võrdle seda allalaaditud faili räsiga:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.5-Setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.5-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kui kaks väärtust erinevad, ära faili paigalda: laadi see uuesti alla.
