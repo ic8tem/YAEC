@@ -6,7 +6,7 @@
 
 ## What it shows
 
-- **The three best days** (★), in date order, in large cards.
+- **The three best days** (★), in date order, in large cards, plus a possible **fourth useful day** in a grey card without the star.
 - A **calendar of the days**: colour = Dgrd, grey = no window, Moon phase, useful hours.
 - A **chart** of 7 to 61 days with the **Dgrd** (0 dB = ideal, at the bottom) and the **daily mean Moon distance** (right scale), with perigee, apogee, new Moon and full Moon.
 - The **Moon declination** curve (blue, scale inside the left edge) with the northern and southern maxima and their dates; green area = Moon on the side of your hemisphere (higher and up for more hours), orange = opposite hemisphere.
@@ -25,6 +25,8 @@
 | **Usable hours in green on the Dgrd** | Colours green the parts of the Dgrd curve in the hours with the Moon inside your limits (or in the common window). |
 | Colour and thickness of the **Dgrd curve** and **Distance curve** | Bar above the chart. |
 | **Click a day** | Highlights its 24 hours (UTC) on the chart; click again to remove it. |
+| **Click a day in the chart** | Highlights it in the strip of days at the top too; click again to remove it. |
+| **Update now** · **Automatic update (every 10 minutes)** | Recompute now, or every 10 minutes. |
 
 The frequency and the limits are those of the [Moon position](Moon-Position) tab (shared with the whole program).
 
@@ -41,6 +43,8 @@ $$Dgrd = -40\log_{10}\frac{d}{356\,903\ \text{km}} - 10\log_{10}\frac{T_{sky}+80
 - **Sky noise:** when the Moon is in front of the Milky Way, Dgrd can drop by several dB, more than distance does.
 - Typical values are −1 to −2 dB. With the Moon on the galactic centre I2FAK saw −11 dB.
 - For a small station every dB counts: a day at −1 dB and one at −5 dB can make the difference between a QSO and no decode.
+
+> **Next version.** The noise model of the Dgrd (receiver and sky) is chosen in the new [DGRD by frequency](DGRD-by-Frequency) tab, and the choice applies throughout the program, including the best days (★) of this tab. By default the Dgrd uses your station's real noise (Tant and Te from the EME budget) and the sky averaged over the antenna beam; choose *fixed 80 K, like WSJT-X* and *Moon center only* there to get the WSJT-X formula above.
 
 ## The Moon's declination
 

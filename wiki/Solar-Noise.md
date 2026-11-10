@@ -2,7 +2,7 @@
 
 *Group: Link. Experimental.* Enabled with the **IN-DEPTH CALCULATIONS** box.
 
-The Sun is the strongest noise source in the sky. Around new Moon the Sun and the Moon are close: even if the Sun stays out of the main lobe it enters through the side lobes, and within a few beamwidths the received noise grows a lot. This tab downloads the **measured solar flux** and estimates **how much the Sun raises your receiver noise** at the chosen moment, for you and for the DX. The station parameters are those of the [EME budget](EME-Budget).
+The Sun is the strongest noise source in the sky. Around new Moon the Sun and the Moon are close: even if the Sun stays out of the main lobe it enters through the side lobes, and within a few beamwidths the received noise grows a lot. This tab downloads the **measured solar flux** and estimates **how much the Sun raises your receiver noise** at the chosen moment, for you and for the DX. The station parameters are those of the [EME budget](EME-Budget) (next version: for 432, 902 and 1296 MHz, those of the budget tab – Yagi or [dishes](EME-Budget-Dishes) – used last for that band).
 
 ## Layout
 
@@ -32,7 +32,7 @@ Buttons and options: **Update from web**, **Update at start-up** (downloads the 
 
 ## How it is estimated
 
-- Flux at the working frequency: 432 MHz interpolated between 410 and 610 MHz; 144 and 50 MHz **extrapolated** from 245 and 410 MHz with a power law – the most uncertain part, compare with a manual value.
+- Flux at the working frequency: 432 MHz interpolated between 410 and 610 MHz; 144 and 50 MHz **extrapolated** from 245 and 410 MHz with a power law – the most uncertain part, compare with a manual value. Next version: 902 and 1296 MHz are interpolated on a logarithmic scale between the nearest measured frequencies (610 and 1415 MHz).
 - The Sun is treated as an unpolarized point source (the antenna collects half of it): $T = S A_e / 2k$, with the effective area from the total gain, attenuated by the antenna pattern (Gaussian lobe with width estimated from the gain, θ ≈ √(41253/G), then side lobes at the set level; back lobes 10 dB lower).
 - Sun below the receiver horizon: no contribution.
 - RSTN values are local-noon measurements and **do not follow current bursts**.

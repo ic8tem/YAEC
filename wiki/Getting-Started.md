@@ -9,10 +9,10 @@ At the top of **Live position and +- 24h** there is a white settings bar:
 | Setting | What it does |
 |---|---|
 | **Callsign** | Your amateur radio callsign: it appears in the window title, on the main screen and on the map. |
-| **Language** | One of the 26 interface languages; applied at once, without restarting. |
+| **Language** | One of the 28 interface languages; applied at once, without restarting. |
 | **Colours** | Light, Night (blue tones), Black or one of eight pastel schemes. |
 | **Font size** | Size of all the program fonts, in %; applied at once. |
-| **Font** | Any font installed on your computer; *System default* uses the font suited to the chosen language. |
+| **Font** | *System default* (the font suited to the chosen language) or one of the *Fonts recommended for YAEC*: up to 10 fonts installed on your computer, chosen from a tested list for Windows, Linux and macOS. |
 
 On the right of the bar: the **BAND SELECTION** button and the **SHOW COMPLEX DATA ON THE MAIN SCREEN** box. More in [Settings and data folder](Settings-and-Data-Folder).
 
@@ -34,9 +34,9 @@ With a 10-character locator the ground height above sea level is looked up on th
 
 ## 3. The DX station
 
-In the *DX station — callsign and WWL locator* card type the **DX callsign**: if it is in [CALL3.TXT](CALL3-TXT), YAEC suggests the locator and enters it when you press **Enter**. Otherwise type the locator. When the DX locator is valid, the second station is enabled in all tabs and YAEC computes the **common windows** (Moon pointable from both stations).
+In the *DX station — callsign and WWL locator* card type the **DX callsign**: if it is in [CALL3.TXT](CALL3-TXT), YAEC suggests the locator and enters it when you press **Enter**. Otherwise type the locator. An orange border around the callsign means the station has been active in the N0UK EME chat in the last 90 days. When the DX locator is valid, the second station is enabled in all tabs and YAEC computes the **common windows** (Moon pointable from both stations).
 
-Want to test your receiver first? Press **GRAVES** in the same card: see [GRAVES radar](GRAVES-Radar).
+Want to test your receiver first? Press **GRAVES** in the same card, then open the **GRAVES radar** tab (group *Link*): see [GRAVES radar](GRAVES-Radar).
 
 ## 4. Your antenna limits
 
@@ -53,7 +53,7 @@ You can also drag the limits with the mouse (yellow handles) in [Reconnaissance 
 ## 5. Frequency and bands
 
 - The **frequency** is chosen in the **Echo and frequencies (CFOM)** card of the main screen: the MHz (from the list or typed) plus the kHz from 000 to 999, e.g. 144 and 180 = 144.180 MHz. It is the CFOM frequency used for Doppler, Tsky and Dgrd, and it is copied to every tab.
-- **BAND SELECTION** chooses the bands used in the calculations and lists: 50, 70, 144, 222 and 432 MHz. If the MHz match one of the selected bands, the EME budget switches to that band automatically (and vice versa).
+- **BAND SELECTION** chooses the bands used in the calculations and lists: 50, 70, 144, 222 and 432 MHz (next version: also 902 and 1296 MHz). If the MHz match one of the selected bands, the EME budget switches to that band automatically (and vice versa).
 
 ## 6. IN-DEPTH CALCULATIONS
 
@@ -61,12 +61,12 @@ The **IN-DEPTH CALCULATIONS** box (in the estimated S/N card of the main screen 
 
 ## 7. Describe your station
 
-Open the [EME budget](EME-Budget) and fill in the station diagram for each band: antenna gain and number, antenna temperature from the VE7BQH tables, cables, relay, preamplifier, transmitter power, radio MDS and mode. Each band keeps its own parameters.
+Open the [EME budget](EME-Budget) (next version: *EME budget Yagi*) and fill in the station diagram for each band: antenna gain and number, antenna temperature from the VE7BQH tables, cables, relay, preamplifier, transmitter power, radio MDS and mode. Each band keeps its own parameters. With a dish on 432, 902 or 1296 MHz, use the [EME budget dishes](EME-Budget-Dishes) tab (next version).
 
 ## 8. Find the good moments
 
 - **Now:** look at the status band of [Live position and +- 24h](Live-Position) (green = pointable, blue = common window with the DX).
-- **Next days:** [Distance and Dgrd](Distance-and-Dgrd) shows the three best days.
+- **Next days:** [Distance and Dgrd](Distance-and-Dgrd) shows the three best days; [DGRD by frequency](DGRD-by-Frequency) (next version) shows the Dgrd at your frequency with your station's noise.
 - **Exact windows:** [Moon position](Moon-Position) → **Compute table**.
 
 ## Advice for constrained stations
@@ -75,3 +75,5 @@ Open the [EME budget](EME-Budget) and fill in the station diagram for each band:
 - **QTH obstructions:** if an obstacle covers only a sector, narrow the azimuth sector or raise the minimum elevation; check the result in the [Sky view](Sky-View) (yellow lines).
 - **For a QSO with a DX** the *common* windows count, and the Dgrd of the more disadvantaged station.
 - **Near new Moon** check [Solar noise](Solar-Noise): with the Sun close to the Moon the noise can rise by many dB.
+
+> **Next version: new look of the controls.** Drop-down lists and dates have a rounded frame with a "v" arrow and a calendar icon drawn by YAEC, text boxes have rounded frames, buttons are written in capitals (e.g. **COMPUTE TABLE**) and the sliders have a thin track with a round knob. The names in this wiki are the same, only the capitals differ.

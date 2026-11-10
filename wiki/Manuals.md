@@ -32,9 +32,9 @@ Main sections:
 | 1.3 | Polarization, Dpol and MNR; Faraday rotation; summary of SM5BSZ's *Selecting Polarisation for EME* |
 | 1.4 | Sky noise and Dgrd; the Moon in front of the Galaxy (Sagittarius, Taurus); the Moon's declination |
 | – | Why the Sun matters (new Moon, side lobes, eclipses) |
-| 1.6 | The EME budget formulas; mode thresholds; ground gain in practice (IK1UWL, IK3XTV); published antenna gain and dBd (NJ9R) |
+| 1.6 | The EME budget formulas (next version: with the path loss band by band, 50 – 1296 MHz); mode thresholds; ground gain in practice (IK1UWL, IK3XTV); published antenna gain and dBd (NJ9R) |
 | 1.7 | The preamplifier and the noise figure of the radio (measured NF of many radios); **1.7.1** the transverter (models, combinations measured by DF9IC); the TX/RX sequencer (IK1UWL); the polarization relay |
-| 1.8 | Coaxial cables and losses; connectors (NJ9R) |
+| 1.8 | Coaxial cables and losses (next version: the formula α = k1·√f + k2·f, bands 50 – 1296 MHz); connectors (NJ9R) |
 | 1.10 | Doppler, compensation, CFOM and the radio CAT |
 | 1.11 | Pointing: precision, encoders and actuators; **checking the pointing with the GRAVES radar**; compass, mast camera and error log (NJ9R); dishes above 432 MHz |
 | 1.12 | Digital modes for EME: Q65 and JT65 (submodes, Doppler spread, JT65A vs Q65-60A, how Q65 builds the signal, WSJT-X settings, NJ9R's JT65B and MAP65 settings, the W7GJ DXpedition procedure) |
@@ -65,4 +65,4 @@ It also includes EME literature by SM5BSZ, other EME calculation tools, the VE7B
 | DF9IC, 144 MHz radio tests | <https://www.df9ic.de/tech/trxtest/trxtest.html> |
 | Franco I2FAK interviews (Italian) | [part 1](https://www.youtube.com/watch?v=aNsnSweIvPY), [part 2](https://www.youtube.com/watch?v=GPVNLiUiD_s) |
 
-> YAEC stops at 432 MHz. For 1 GHz and above, the manual recommends the tool by OE2IGL and DF3GJ.
+> Up to 1.5 YAEC stops at 432 MHz; the next version adds 902 and 1296 MHz and the [EME budget dishes](EME-Budget-Dishes) tab. For the higher bands and a complete dish analysis (1 – 300 GHz), the manual recommends the tool by OE2IGL and DF3GJ.

@@ -30,4 +30,10 @@ Click the **CALL3** button in the DX card of [Live position and +- 24h](Live-Pos
 
 If the WSJT-X folder is not found, YAEC asks where to copy the file. In WSJT-X you can find the folder with **File → Open log directory**.
 
+## Active stations
+
+On the main screen the **DX callsign** box gets an **orange border** when the station has written in the **N0UK EME chat** in the last 90 days; the tooltip says *Station active in the last 90 days (N0UK EME chat), last message on …*. It is only a hint: a station without the border is still computed normally.
+
+The list of active stations (callsign and date of the last message only) is prepared once a day on GitHub from the N0UK chat. YAEC downloads it into the data folder as `attivi.gz` at start-up when it is missing or more than 20 hours old; if the download fails, the saved list is used.
+
 > NJ9R: an up-to-date CALL3.TXT helps decoding by many dB, because WSJT-X and MSHV use it to recognize callsigns – but it is up to the operator to discard the wrong decodes.

@@ -50,6 +50,9 @@ With your antenna limits the Moon never becomes pointable in the period. Check t
 **The Moon direction looks slightly different from another program.**
 Check the **Correct for atmospheric refraction** box in Moon position: unticked, YAEC gives the geometric elevation, as most EME programs do. Also use a locator with at least 6 characters (4 characters can be off by about 1°).
 
+**(Next version) The Dgrd is different from WSJT-X.**
+The noise model of the Dgrd is chosen in [DGRD by frequency](DGRD-by-Frequency); by default it uses your station's noise and the sky averaged over the antenna beam. Choose *fixed 80 K, like WSJT-X* and *Moon center only* there to get values comparable with WSJT-X.
+
 **The EME budget says "the locators of both stations are needed".**
 Enter a valid DX locator (or callsign from CALL3.TXT) so that the second station is active.
 
@@ -77,7 +80,7 @@ It is looked up only with a 10-character locator and needs internet; otherwise e
 
 **Is YAEC really free?** Yes, for amateur radio use, study and teaching; the source is always included. Selling it or including it in paid products needs the author's written permission. See [Licence](Licence).
 
-**Does YAEC cover 1296 MHz and up?** No, YAEC stops at 432 MHz. For 1 – 300 GHz the manual recommends the [EME Link Budget & Analysis Tool](https://wettersat.bplaced.net/EME/EME.html) by OE2IGL and DF3GJ.
+**Does YAEC cover 1296 MHz and up?** Up to 1.5 YAEC stops at 432 MHz. The next version adds **902 and 1296 MHz** in the whole program, with the [EME budget dishes](EME-Budget-Dishes) tab for dish antennas at 432, 902 and 1296 MHz. Above 1296 MHz, and for a complete dish analysis (1 – 300 GHz), the manual recommends the [EME Link Budget & Analysis Tool](https://wettersat.bplaced.net/EME/EME.html) by OE2IGL and DF3GJ.
 
 **Does it control my rotator or radio?** No. YAEC is a calculator and planning tool; for Doppler tracking via CAT use your digital program (e.g. WSJT-X *Astronomical Data*).
 

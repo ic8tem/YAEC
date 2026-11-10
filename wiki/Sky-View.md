@@ -16,6 +16,7 @@ The sky seen from your QTH: **azimuth horizontally** (N-E-S-W-N), **elevation ve
 | Radio sources | Main sources (3C and other catalogues), with indicative fluxes |
 | DX horizon | Violet line |
 | Your antenna limits | Yellow dashed lines; the zones outside are covered with light grey diagonal lines |
+| Pointable area | Dashed purple boxes around the area your antenna can point at |
 
 A caption above the chart gives the instant, the Moon azimuth, elevation and declination, Tsky behind the Moon, and the Sun position and its distance from the Moon.
 
@@ -27,6 +28,7 @@ A caption above the chart gives the instant, the Moon azimuth, elevation and dec
 | **Moon path over the next 24 hours** | Draws the Moon path with UTC times. |
 | **My antenna limits** | Draws the limits and covers the zones outside them with grey diagonal lines. |
 | **Background colours** | Rainbow, black to white, or yellow to red. All labels have a dark outline to stay readable. |
+| **Grey tone** | Tone of the grey over the zones outside the limits, from white to black; it applies to all the maps. Used with the **My antenna limits** box. |
 
 The **GO TO SKY VIEW** button in the *Sky and geometry* card of the main screen opens this tab.
 

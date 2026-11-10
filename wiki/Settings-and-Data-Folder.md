@@ -7,13 +7,15 @@ The general settings are in the white bar at the top of [Live position and +- 24
 | Setting | Options |
 |---|---|
 | **Callsign** | Your callsign; shown in the window title ("… by Costantino IC8TEM for *your callsign*"), on the main screen and on the map. |
-| **Language** | 26 languages (see below). |
+| **Language** | 28 languages (see below). |
 | **Colours** | Light, Night (blue tones, for use at night), Black (black background, suited to the dark and to OLED screens), and eight pastel schemes. |
 | **Font size** | Size of all the program fonts, in %. |
-| **Font** | *System default* (the font suited to the chosen language) or any font installed on your computer; each name in the list is written in its own font, and suitable fonts are marked *recommended*. |
-| **BAND SELECTION** | Bands used in the calculations and lists: 50, 70, 144, 222, 432 MHz. |
+| **Font** | *System default* (the font suited to the chosen language) or one of the *Fonts recommended for YAEC*: at most 10 fonts installed on your computer, chosen from a list tested tab by tab for Windows, Linux and macOS (for non-Latin scripts, fonts that contain that script). Each name in the list is written in its own font, and the font suited to the language is marked *recommended*. |
+| **BAND SELECTION** | Bands used in the calculations and lists: 50, 70, 144, 222, 432 MHz (next version: also 902 and 1296 MHz). |
 | **SHOW COMPLEX DATA ON THE MAIN SCREEN** | Shows the S/N estimated now at the bottom right of the main screen. |
 | **IN-DEPTH CALCULATIONS** | Shows the advanced columns and rows and enables Solar noise, Export calculations to Excel and Calculation check. |
+
+The DGRD by frequency tab (next version) holds two more choices that apply to the whole program: the receiver noise and the sky used for the Dgrd – see [DGRD by frequency](DGRD-by-Frequency).
 
 ### Colour schemes
 
@@ -28,7 +30,7 @@ The scheme applies to all tabs.
 
 ### Languages
 
-YAEC, its two manuals, the licence and the README are available in **26 languages**:
+YAEC, its two manuals, the licence and the README are available in **28 languages**:
 
 | | | | |
 |---|---|---|---|
@@ -38,7 +40,7 @@ YAEC, its two manuals, the licence and the README are available in **26 language
 | Lietuvių `lt` | Русский `ru` | Українська `uk` | Türkçe `tr` |
 | Afrikaans `af` | العربية `ar` | עברית `he` | اردو `ur` |
 | हिन्दी `hi` | বাংলা `bn` | 中文 (简体) `zh` | 日本語 `ja` |
-| 한국어 `ko` | Bahasa Indonesia `id` | | |
+| 한국어 `ko` | Bahasa Indonesia `id` | Dansk `da` | Tagalog `tl` |
 
 Arabic, Hebrew and Urdu are right-to-left. The licence and README in every language are in the [`lingue`](https://github.com/ic8tem/YAEC/tree/main/lingue) folder of the repository. Some scripts need suitable fonts on Linux: see [Troubleshooting](Troubleshooting-FAQ).
 
@@ -62,6 +64,7 @@ On Windows you can therefore copy the whole program folder to a USB stick or ano
 | `solar-radio-flux.json` | Solar fluxes from NOAA SWPC (RSTN network). |
 | `CALL3.TXT` | Merged W7GJ + WSJT-X Improved callsign list. |
 | `lotw.adi` | Log downloaded from LoTW (only if you use the LoTW download). |
+| `attivi.gz` | List of the EME stations active in the N0UK chat in the last 90 days (callsign and date only), for the orange border of the DX callsign. |
 | `cavi_personali.txt` | Your custom coaxial cables. |
 | `tiles/` | Map tiles already downloaded. |
 | `errori.txt` | Unexpected errors (send it to the author if something goes wrong). |
@@ -74,6 +77,7 @@ During the green bar of the opening window YAEC checks the data folder: it creat
 - The **solar flux** is downloaded again from NOAA if missing, invalid or older than 12 hours.
 - **CALL3.TXT** is downloaded again if missing or older than 7 days.
 - The **LoTW log** is downloaded again if missing and if username and password are stored.
+- The **list of active stations** is downloaded again if missing or older than 20 hours.
 
 If a download fails, YAEC goes on with the saved data.
 
@@ -83,4 +87,4 @@ The LoTW password is stored **encrypted** for the current user: DPAPI on Windows
 
 ### Privacy
 
-YAEC collects no data and shows no advertising. It only connects to the internet to download public data: solar flux (NOAA and the other chosen sources), CALL3.TXT, map tiles and aerial images, ground height (Open Topo Data / Open-Meteo, only with a 10-character locator) and, if you ask for it, your LoTW log.
+YAEC collects no data and shows no advertising. It only connects to the internet to download public data: solar flux (NOAA and the other chosen sources), CALL3.TXT, map tiles and aerial images, ground height (Open Topo Data / Open-Meteo, only with a 10-character locator), the list of active EME stations (from the YAEC repository on GitHub) and, if you ask for it, your LoTW log.
