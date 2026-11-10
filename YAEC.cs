@@ -51889,6 +51889,8 @@ namespace LunaCalc
             }
         }
 
+        static readonly Color ColCursore = Color.FromArgb(198, 40, 40);   // rosso del cursore della striscia delle 24 ore
+
         bool AzLibero { get { return trk.Az2 - trk.Az1 >= 360.0 || trk.Az1 == trk.Az2; } }
 
         // Valore grande in blu e, sotto, il valore del DX in arancio
@@ -51951,12 +51953,12 @@ namespace LunaCalc
                     Testo(g, pc[i], fp, Tema.Scuro ? Tema.Fore : Color.FromArgb(55, 65, 81), new RectangleF(c.X + ddx - S(20), c.Y + ddy - S(12), S(40), S(24)), StringAlignment.Center, StringAlignment.Center);
                 }
             }
-            // azimut della Luna per il DX: linea arancio tratteggiata
+            // azimut della Luna per il DX all'ora del cursore rosso: linea rossa tratteggiata, dello stesso rosso del cursore
             if (trk.UsaDx)
             {
                 double ad = trk.AzDx * Math.PI / 180.0;
                 float rd = 110 * k;
-                using (Pen p = new Pen(ColArancio, (S(5) / 2f)))
+                using (Pen p = new Pen(ColCursore, (S(5) / 2f)))
                 {
                     p.DashPattern = new float[] { 2.4f, 1.6f };
                     g.DrawLine(p, c.X, c.Y, c.X + (float)Math.Sin(ad) * rd, c.Y - (float)Math.Cos(ad) * rd);
@@ -51964,7 +51966,7 @@ namespace LunaCalc
                 using (Font fd = FontPx(Lang.FontUi, S(12), true))
                 {
                     float rl = 124 * k + S(4);
-                    Testo(g, "DX", fd, ColArancio, new RectangleF(c.X + (float)Math.Sin(ad) * rl - S(16), c.Y - (float)Math.Cos(ad) * rl - S(9), S(32), S(18)), StringAlignment.Center, StringAlignment.Center);
+                    Testo(g, "DX", fd, ColCursore, new RectangleF(c.X + (float)Math.Sin(ad) * rl - S(16), c.Y - (float)Math.Cos(ad) * rl - S(9), S(32), S(18)), StringAlignment.Center, StringAlignment.Center);
                 }
             }
             // la mia Luna: ago blu
@@ -52018,11 +52020,11 @@ namespace LunaCalc
                         Testo(g, a.ToString(ci) + "°", fs, Tema.Muted, new RectangleF(tx - S(20), ty - S(9), S(40), S(18)), StringAlignment.Center, StringAlignment.Center);
                     }
                 }
-            // elevazione della Luna per il DX: linea arancio tratteggiata
+            // elevazione della Luna per il DX all'ora del cursore rosso: linea rossa tratteggiata
             if (trk.UsaDx)
             {
                 double ed = Math.Max(0, Math.Min(90, trk.ElDx)) * Math.PI / 180.0;
-                using (Pen p = new Pen(ColArancio, (S(5) / 2f)))
+                using (Pen p = new Pen(ColCursore, (S(5) / 2f)))
                 {
                     p.DashPattern = new float[] { 2.4f, 1.6f };
                     g.DrawLine(p, o.X, o.Y, o.X + (float)Math.Cos(ed) * 167 * k, o.Y - (float)Math.Sin(ed) * 167 * k);
