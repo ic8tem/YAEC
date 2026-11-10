@@ -46538,16 +46538,22 @@ namespace LunaCalc
                     RectangleF rf = new RectangleF(r1.Left + S(16), yy, r1.Width - S(32), Math.Max(S(52), r1.Bottom - yy - S(10)));
                     using (GraphicsPath gp = Arrotondato(rf, S(8)))
                     using (Brush bfm = new SolidBrush(Tema.Scuro ? Color.FromArgb(46, 38, 78) : Color.FromArgb(245, 243, 255))) g.FillPath(bfm, gp);
-                    // formule: si va a capo se la scheda è stretta
-                    string f1 = "Dgrd = −40·log(d / 356.903 km) − 10·log(Tsys / Tsys " + Lang.T("freddo") + ")";
-                    RectangleF rf1 = new RectangleF(rf.Left + S(8), rf.Top + S(6), rf.Width - S(16), rf.Height - S(30));
-                    g.DrawString(f1, fmono, bTxt, rf1);
-                    float hf1 = g.MeasureString(f1, fmono, (int)rf1.Width).Height;
-                    string f2 = "Tcielo(f) = Tcielo(144)·(144 / f)";
-                    float yf2 = rf1.Top + hf1 + S(4);
-                    g.DrawString(f2, fmono, bTxt, rf.Left + S(8), yf2);
-                    SizeF s2 = g.MeasureString(f2, fmono);
-                    using (Font fsup = FontPx("Consolas", S(9), false)) g.DrawString(2.6.ToString("0.0", ci), fsup, bTxt, rf.Left + S(8) + s2.Width - S(3), yf2 - S(4));
+                    // formule scritte come in un editor di equazioni (frazioni, pedici, esponenti), rimpicciolite se la scheda è stretta
+                    string f1 = "Dgrd = −40 · log_{10} \\p{\\frac{d}{356.903 \\t{ km}}} − 10 · log_{10} \\p{\\frac{T_{sys}}{T_{sys, \\t{" + Lang.T("freddo") + "}}}}";
+                    string f2 = "T_{sky}(f) = T_{sky}(144) · \\p{\\frac{144}{f}}^{" + 2.6.ToString("0.0", ci) + "}";
+                    float pxf = S(15);
+                    MBox m1 = null, m2 = null;
+                    for (int prova = 0; prova < 8; prova++)
+                    {
+                        m1 = Formula.Analizza(f1, pxf); m2 = Formula.Analizza(f2, pxf);
+                        float hTot = m1.A + m1.D + m2.A + m2.D + S(10);
+                        if (Math.Max(m1.W, m2.W) <= rf.Width - S(16) && hTot <= rf.Height - S(8)) break;
+                        pxf *= 0.9f;
+                    }
+                    float gapF = Math.Max(S(4), (rf.Height - (m1.A + m1.D + m2.A + m2.D)) / 3f);
+                    float yb1 = rf.Top + gapF + m1.A;
+                    m1.Draw(g, rf.Left + S(10), yb1, Tema.Fore);
+                    m2.Draw(g, rf.Left + S(10), yb1 + m1.D + gapF + m2.A, Tema.Fore);
                 }
                 y += h1 + gap;
                 // 2) stesso momento sulle altre bande
