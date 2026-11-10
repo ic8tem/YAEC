@@ -44031,6 +44031,26 @@ namespace LunaCalc
         static readonly int[] Bande = { 50, 70, 144, 222, 432, 902, 1296 };   // dalla v27 fino a 432 MHz; dalla v1.6 anche 902 e 1296 MHz
         static readonly int[] BandePredefinite = { 50, 70, 144, 222, 432, 902, 1296 };
         List<int> bandeAttive = new List<int>(BandePredefinite);
+
+        // Banda 23 cm: oltre a 1296 MHz si possono scegliere 1297 e 1298 MHz (piano di banda IARU Regione 1);
+        // tutti e tre appartengono alla banda dei 1296 MHz (budget, cavi, cielo)
+        static readonly int[] Mhz23cm = { 1296, 1297, 1298 };
+        static int BandaDiMhz(double mhz)
+        {
+            int m = (int)Math.Floor(mhz);
+            return m >= 1296 && m <= 1298 ? 1296 : m;
+        }
+
+        // MHz delle tendine della frequenza: le bande scelte, con 1297 e 1298 dopo 1296
+        void RiempiMhz(ComboBox c)
+        {
+            c.Items.Clear();
+            foreach (int f in bandeAttive)
+            {
+                if (f == 1296) foreach (int m in Mhz23cm) c.Items.Add(m.ToString(inv));
+                else c.Items.Add(f.ToString(inv));
+            }
+        }
         bool ricostruzioneBande;
         static string NomeBanda(int f)
         {
@@ -51095,7 +51115,8 @@ namespace LunaCalc
             }
             else
             {
-                foreach (int f in bandeAttive) c.Items.Add(f.ToString(inv));
+                RiempiMhz(c);
+                c.MaxDropDownItems = 12;
                 c.Width = S(110);
             }
             c.Anchor = AnchorStyles.Left;
@@ -51432,8 +51453,8 @@ namespace LunaCalc
             if (cardFreq == null || cmbTrkMhz == null) return;
             double mhz;
             string t = "";
-            if (double.TryParse(cmbTrkMhz.Text.Trim().Replace(',', '.'), NumberStyles.Float, inv, out mhz) && bandeAttive.Contains((int)Math.Floor(mhz)))
-                t = string.Format(ci, Lang.T("banda {0} MHz"), (int)Math.Floor(mhz));
+            if (double.TryParse(cmbTrkMhz.Text.Trim().Replace(',', '.'), NumberStyles.Float, inv, out mhz) && bandeAttive.Contains(BandaDiMhz(mhz)))
+                t = string.Format(ci, Lang.T("banda {0} MHz"), BandaDiMhz(mhz));
             if (t != subFreq) { subFreq = t; cardFreq.Invalidate(); }
         }
 
@@ -51603,7 +51624,7 @@ namespace LunaCalc
             if (syncBanda || cmbBand == null) return;
             double mhz;
             if (!double.TryParse(cmbFreq.Text.Trim().Replace(',', '.'), NumberStyles.Float, inv, out mhz)) return;
-            int idx = bandeAttive.IndexOf((int)Math.Floor(mhz));
+            int idx = bandeAttive.IndexOf(BandaDiMhz(mhz));
             if (idx >= 0 && idx != cmbBand.SelectedIndex)
             {
                 syncBanda = true;
@@ -51618,7 +51639,7 @@ namespace LunaCalc
             if (syncBanda || cmbFreq == null) return;
             double mhz;
             bool ok = double.TryParse(cmbFreq.Text.Trim().Replace(',', '.'), NumberStyles.Float, inv, out mhz);
-            if (ok && (int)Math.Floor(mhz) == curBand) return;
+            if (ok && BandaDiMhz(mhz) == curBand) return;
             syncBanda = true;
             cmbFreq.Text = curBand.ToString(inv);
             syncBanda = false;
@@ -53393,8 +53414,7 @@ namespace LunaCalc
                 {
                     if (c == null) continue;
                     string t = c.Text;
-                    c.Items.Clear();
-                    foreach (int f in bandeAttive) c.Items.Add(f.ToString(inv));
+                    RiempiMhz(c);
                     if (c.Text != t) c.Text = t;
                 }
                 if (bandeAttive.Contains(curBand))
@@ -57350,7 +57370,8 @@ namespace LunaCalc
             tip.SetToolTip(nudStep, Lang.T("Passo della tabella in minuti."));
             cmbFreq = new Tendina();
             cmbFreq.DropDownStyle = ComboBoxStyle.DropDown;
-            foreach (int f in bandeAttive) cmbFreq.Items.Add(f.ToString(inv));
+            RiempiMhz(cmbFreq);
+            cmbFreq.MaxDropDownItems = 12;
             cmbFreq.Text = "144";
             cmbFreq.Width = S(70);
             cmbFreq.Anchor = AnchorStyles.Left;
@@ -58570,6 +58591,9 @@ namespace LunaCalc
                 List<string> lb = new List<string>();
                 foreach (int f in bandeAttive) lb.Add(f.ToString(inv));
                 lines.Add("bande=" + string.Join(",", lb.ToArray()));
+                List<string> ln = new List<string>();
+                foreach (int f in Bande) ln.Add(f.ToString(inv));
+                lines.Add("bande_note=" + string.Join(",", ln.ToArray()));   // bande che esistevano quando l'elenco è stato salvato
                 lines.Add("dgrd_giorni=" + nudDgGiorni.Value.ToString(inv));
                 lines.Add("font_tabelle=" + fontTabelle.ToString("0.#", inv));
                 lines.Add("font_moduli=" + ((float)nudFontMod.Value).ToString("0.#", inv));
@@ -58648,7 +58672,7 @@ namespace LunaCalc
         void LoadSettings()
         {
             int banda = curBand;
-            List<int> bandeCaricate = null;
+            List<int> bandeCaricate = null, bandeNote = null;
             string adifDaCaricare = "";
             int mzL = 0;
             double mlatL = double.NaN, mlonL = double.NaN;
@@ -58756,6 +58780,16 @@ namespace LunaCalc
                         case "lotw_password": lotwPassword = v; break;
                         case "complessi": chkComplessi.Checked = v == "1"; break;
                         case "dati_principale": chkDatiMain.Checked = v == "1"; break;
+                        case "bande_note":
+                            {
+                                bandeNote = new List<int>();
+                                foreach (string x in v.Split(','))
+                                {
+                                    int bx;
+                                    if (int.TryParse(x.Trim(), NumberStyles.Integer, inv, out bx)) bandeNote.Add(bx);
+                                }
+                            }
+                            break;
                         case "bande":
                             {
                                 bandeCaricate = new List<int>();
@@ -58810,6 +58844,10 @@ namespace LunaCalc
             if (mzL > 0 && !double.IsNaN(mlatL) && !double.IsNaN(mlonL)) CentraMappa(mlatL, mlonL, mzL);
             if (adifDaCaricare.Length > 0 && File.Exists(adifDaCaricare)) CaricaAdif(adifDaCaricare, false);
             // Applica la banda salvata senza sovrascrivere i parametri appena letti
+            // le bande nuove (che non esistevano quando l'elenco è stato salvato) entrano subito nelle tendine
+            if (bandeCaricate != null && bandeCaricate.Count > 0)
+                foreach (int f in Bande)
+                    if (!bandeCaricate.Contains(f) && (bandeNote == null || !bandeNote.Contains(f))) bandeCaricate.Add(f);
             if (bandeCaricate != null && bandeCaricate.Count > 0) ApplicaBande(bandeCaricate, false);
             if (!bandeAttive.Contains(banda)) banda = bandeAttive[0];
             curBand = banda;
