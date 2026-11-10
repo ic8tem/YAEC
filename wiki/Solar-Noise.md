@@ -33,7 +33,8 @@ Buttons and options: **Update from web**, **Update at start-up** (downloads the 
 ## How it is estimated
 
 - Flux at the working frequency: 432 MHz interpolated between 410 and 610 MHz; 144 and 50 MHz **extrapolated** from 245 and 410 MHz with a power law – the most uncertain part, compare with a manual value. 902 and 1296 MHz are interpolated on a logarithmic scale between the nearest measured frequencies (610 and 1415 MHz).
-- The Sun is treated as an unpolarized point source (the antenna collects half of it): $T = S A_e / 2k$, with the effective area from the total gain, attenuated by the antenna pattern (Gaussian lobe with width estimated from the gain, θ ≈ √(41253/G), then side lobes at the set level; back lobes 10 dB lower).
+- The Sun is treated as an unpolarized point source (the antenna collects half of it): $T = S A_e / 2k$, with the effective area from the total gain, attenuated by the antenna pattern (Gaussian lobe with width θ ≈ 0.93·√(41253/G) for Yagis or 70·λ/D for dishes, then side lobes at the set level; back lobes 10 dB lower).
+- The same beamwidth is used everywhere in YAEC (Solar noise, Distance and Dgrd, DGRD by frequency, Calculation check): for Yagis it is Kraus's rule (J. D. Kraus, *Antennas*) corrected by the factor 0.93 that W4RNL found with NEC simulations of long Yagis, as in YA-MS; for dishes it is 70·λ/D (IZ0JNY).
 - Sun below the receiver horizon: no contribution.
 - RSTN values are local-noon measurements and **do not follow current bursts**.
 

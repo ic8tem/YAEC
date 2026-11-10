@@ -56,6 +56,6 @@ $$Dgrd = -40\log_{10}\frac{d}{356\,903\ \text{km}} - 10\log_{10}\frac{T_{sky}+80
 
 ## The Sun near the Moon
 
-Around new Moon the Sun gets close to the Moon in the sky. When it enters the main lobe or the first side lobes, the system noise rises by many dB and the echo can disappear even with an excellent Dgrd. YAEC computes for each day the minimum Sun–Moon distance in the useful hours and compares it with your beamwidth, θ ≈ √(41253/G) (from the gain set in the EME budget). Large antennas suffer less: with a 2 – 3° beam you can work a few degrees from the Sun, while a single 144 MHz Yagi (beam about 20°) needs tens of degrees. See [Solar noise](Solar-Noise).
+Around new Moon the Sun gets close to the Moon in the sky. When it enters the main lobe or the first side lobes, the system noise rises by many dB and the echo can disappear even with an excellent Dgrd. YAEC computes for each day the minimum Sun–Moon distance in the useful hours and compares it with your beamwidth: θ ≈ 0.93·√(41253/G) for Yagis and Yagi arrays (from the gain set in the EME budget), θ ≈ 70·λ/D for dishes. Large antennas suffer less: with a 2 – 3° beam you can work a few degrees from the Sun, while a single 144 MHz Yagi (beam about 20°) needs tens of degrees. See [Solar noise](Solar-Noise).
 
 Sources: WSJT-X `lib/astro.f90` (K1JT); Franco I2FAK, video interviews ([part 1](https://www.youtube.com/watch?v=aNsnSweIvPY), [part 2](https://www.youtube.com/watch?v=GPVNLiUiD_s)); Bob Atkins KA1GT, "New Moon EME operation" (Icarus offset).

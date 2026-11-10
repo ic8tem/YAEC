@@ -52,7 +52,7 @@ In both cases $Dgrd = -40\log_{10}(d/356\,903\ \text{km}) - 10\log_{10}(T_{sys}/
 | my station from the EME budget | $T_{ant} + \max(0,\ T_{sky} - T_{ref}) + T_e$ | $T_{ant} + T_e$ |
 
 - $T_e = 290\,(10^{NF/10} - 1)$, with NF the receiver noise figure of the band's EME budget (Friis, in 2500 Hz); $T_{ref}$ is the reference sky of the budget (200 K at 144 MHz, scaled with index 2.6).
-- *Moon center only*: $T_{sky}$ from the WSJT-X table along the ecliptic. *Averaged over the antenna beam*: the Global Sky Model at 144 MHz averaged over a Gaussian beam with half-power width $\approx\sqrt{32000/G}$ (G = total gain of the EME budget), then scaled to the working frequency with index 2.6.
+- *Moon center only*: $T_{sky}$ from the WSJT-X table along the ecliptic. *Averaged over the antenna beam*: the Global Sky Model at 144 MHz averaged over a Gaussian beam with half-power width $\approx 0.93\sqrt{41253/G}$ for Yagis (G = total gain of the EME budget) or $70\lambda/D$ for dishes, then scaled to the working frequency with index 2.6.
 
 The tooltip of the Dgrd in the other tabs reminds you: *The noise model (receiver and sky) is chosen in the DGRD by frequency tab.*
 

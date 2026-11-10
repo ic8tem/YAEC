@@ -40,7 +40,7 @@ Sources: Franco I2FAK video interviews; Paul Bock K4MSG, *Beginner's Guide to Sm
 
 ## Sun near the Moon
 
-In [Distance and Dgrd](Distance-and-Dgrd) the days when the Moon is close to the Sun are marked **☀**: **red** within 3 beamwidths of your antenna, **orange** within 6 (beamwidth θ ≈ √(41253/G) from the gain in the EME budget). The *Sun-Moon (°)* column of [Moon position](Moon-Position) gives the separation, and [Solar noise](Solar-Noise) estimates the noise increase.
+In [Distance and Dgrd](Distance-and-Dgrd) the days when the Moon is close to the Sun are marked **☀**: **red** within 3 beamwidths of your antenna, **orange** within 6 (beamwidth θ ≈ 0.93·√(41253/G) for Yagis, 70·λ/D for dishes). The *Sun-Moon (°)* column of [Moon position](Moon-Position) gives the separation, and [Solar noise](Solar-Noise) estimates the noise increase.
 
 ## Other messages
 
