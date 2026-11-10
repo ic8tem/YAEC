@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+LICENCJA YAEC, WERSJA 1
+© 2026 Costantino IC8TEM
+
+YAEC to wolny program, napisany przez krótkofalowca dla krótkofalowców. Jego kod powstał także z pomocą asystenta sztucznej inteligencji, a licencja odzwierciedla jego sposób pracy: być naprawdę użytecznym, zawsze mówić, jak jest, pokazywać swój tok rozumowania, nikomu nie szkodzić i uznawać pracę innych. Poniżej znajdują się zasady, a następnie właściwe warunki.
+
+• Użyteczny i bezpłatny: Program jest bezpłatny i możesz go używać bez ograniczeń w swojej działalności krótkofalarskiej, do nauki i do nauczania. Ma służyć temu, by powstawały QSO, a nie do sprzedawania czegokolwiek.
+• Przejrzysty: Kod źródłowy jest zawsze dostarczany razem z programem; każdy wzór jest widoczny w zakładce Kontrola obliczeń, a każda dana podaje swoje źródło. Żadnych czarnych skrzynek.
+• Uczciwy: Wartości zmierzone, wyprowadzone i szacowane są rozróżniane; to, co nie zostało zweryfikowane, jest jako takie deklarowane. Wynik niepewny jest oznaczany jako niepewny, a nie przedstawiany jako pewny.
+• Pełen szacunku: Szanuje pracę tych, którzy mierzyli, pisali i publikowali przed nami, prywatność użytkowników (żadnych zbieranych danych, żadnych reklam) oraz zasady służby radioamatorskiej.
+
+WARUNKI
+1. Używanie. Możesz bezpłatnie używać, kopiować i instalować YAEC na dowolnej liczbie komputerów.
+2. Modyfikacje. Możesz studiować kod źródłowy, poprawiać go i ulepszać na własny użytek lub na potrzeby swojego klubu krótkofalarskiego.
+3. Redystrybucja. Możesz rozpowszechniać program, oryginalny lub zmodyfikowany, tylko razem z jego pełnym kodem źródłowym i na tej samej licencji.
+4. Deklarowanie zmian. Zmodyfikowana wersja musi to wyraźnie zaznaczać w tytule lub w informacjach o wydaniu, podając, kto ją zmodyfikował i co zostało zmienione, tak aby nikt nie pomylił Twojej pracy z pracą autora ani odwrotnie.
+5. Uznanie autorstwa. Należy zachować nazwisko autora (Costantino IC8TEM), rozdział «Źródła, dane i podziękowania» instrukcji oraz wszystkie cytowania źródeł osób trzecich: dane, tabele, artykuły i pomiary należą do tych, którzy je wytworzyli.
+6. Bez użytku komercyjnego. Nie wolno sprzedawać YAEC ani wersji pochodnych, ani włączać go do płatnych produktów bez pisemnej zgody autora.
+7. Bez ukrytych danych. Żadna rozpowszechniana wersja nie może zbierać danych użytkowników, wyświetlać reklam ani wysyłać informacji osobom trzecim bez otwartego poinformowania o tym.
+8. Właściwe używanie radia. Program pomaga w planowaniu: używane częstotliwości, moce i emisje pozostają na odpowiedzialność operatora i jego pozwolenia radioamatorskiego.
+9. Brak gwarancji. YAEC jest dostarczany w stanie, w jakim jest. Obliczenia są wykonywane starannie i na podstawie deklarowanych źródeł, ale mogą zawierać błędy: sprawdź ważne dane, zanim na nich polegniesz.
+10. Zgłoszenia. Jeśli znajdziesz błąd lub lepszą daną, napisz do autora (zakładka KONTAKT Z AUTOREM I PODZIĘKOWANIA): zostanie poprawiona z podaniem Ciebie jako źródła.
+
+W skrócie: używaj go swobodnie, ucz się z kodu, ulepszaj go i udostępniaj, ale zawsze z kodem źródłowym, z cytowanymi źródłami, mówiąc, co zmieniłeś, i bez handlowania nim. Jeśli wątpisz w wynik, właściwą odpowiedzią jest sprawdzenie, a nie zaufanie.
+
+Tekst jest przetłumaczony na wszystkie języki programu; w razie wątpliwości rozstrzyga wersja włoska.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem
