@@ -57821,8 +57821,8 @@ namespace LunaCalc
             {
                 if (loadingB) return;
                 // l'offset non ha l'oscuramento dell'illuminatore (W2IMU): l'efficienza tipica passa dal 60 al 65 %
-                if (b.DiscoTipo.SelectedIndex == 1 && b.DiscoEff.Value == 60m) b.DiscoEff.Value = 65m;
-                else if (b.DiscoTipo.SelectedIndex == 0 && b.DiscoEff.Value == 65m) b.DiscoEff.Value = 60m;
+                if (bb.DiscoTipo.SelectedIndex == 1 && bb.DiscoEff.Value == 60m) bb.DiscoEff.Value = 65m;
+                else if (bb.DiscoTipo.SelectedIndex == 0 && bb.DiscoEff.Value == 65m) bb.DiscoEff.Value = 60m;
                 RecalcBudget(); MostraSchema();
                 if (bb.Card != null) bb.Card.Invalidate();
             };
