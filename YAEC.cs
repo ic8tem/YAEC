@@ -55521,7 +55521,7 @@ namespace LunaCalc
                 List<string[]> grazie = new List<string[]>();
                 grazie.Add(new string[] { Lang.T("per il patrocinio della"), "Sezione ARI \"Valle del Liri\"", "IZ0JNY|Ivan" });
                 grazie.Add(new string[] { Lang.T("per il controllo in regime di"), Lang.T("beta-tester"), "IZ7NLJ|Fabio", "I2NOY|Maurizio", "IK4GNG|Gilberto" });
-                grazie.Add(new string[] { Lang.T("per le notizie di sviluppo"), Lang.T("sulle frequenze sopra i 432 MHz"), "HA5OLA|" });
+                grazie.Add(new string[] { Lang.T("per le notizie di sviluppo"), Lang.T("sulle frequenze sopra i 432 MHz"), "HA5OLA|Robert" });
                 grazie.Add(new string[] { Lang.T("per l'incitamento a non mollare"), Lang.T("nell'ambiente dell'EME"),
                     "NJ9R|Relu|0|" + FumettoGrazie("NJ9R", "Relu", "“2M EME the easy way… the secret sauce to success”", "PREF, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13, 1.14") });
                 grazie.Add(new string[] { Lang.T("un pensiero e un ricordo a"), Lang.T("Giorgio IK1UWL, pioniere italiano dell'EME"),
