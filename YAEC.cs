@@ -58470,19 +58470,30 @@ namespace LunaCalc
     static class Tema
     {
         public static bool Scuro;
-        public static int Schema;   // 0 chiaro, 1 notte (blu), 2 nero, 3 – 10 pastello (vedi Pastelli)
+        public static int Schema;   // 0 chiaro, 1 notte (blu), 2 nero, 3 – 10 pastello (vedi Pastelli), 11 – 13 scuri di IP-TRX-CTRL
+        // schemi scuri presi da IP-TRX-CTRL (UI/Themes.cs): blu, viola, verde
+        public static readonly string[] IpChiave = { "blu", "viola", "verde" };
+        public static readonly string[] IpNome = { "Blu", "Viola", "Verde" };
+        // per ogni schema: Bg, Panel, Inset, Border, Field, Text, Muted, Btn2, Accent, Ok, Tx, Qrg
+        static readonly int[][] IpColori = {
+            new int[] { 0x12417B, 0x16498A, 0x0C3162, 0x2F64A8, 0x0C3162, 0xFFFFFF, 0xC9D8EC, 0x2B63AD, 0xFFD24A, 0x9BF0B5, 0xFF5A52, 0xFFD24A },
+            new int[] { 0x2A1A41, 0x33204F, 0x22143A, 0x573A85, 0x3C245D, 0xF4EEFB, 0xCDBFDF, 0x583789, 0xE2C6FF, 0xB9F2A0, 0xFF5C7A, 0xFFD98A },
+            new int[] { 0x12301F, 0x173B27, 0x0B2215, 0x2E6C49, 0x0B2215, 0xE6F6EC, 0xBAD4C5, 0x2B6644, 0xA6E35F, 0xA6E35F, 0xFF5A4E, 0xE8F5A0 } };
+        static Color Hex(int v) { return Color.FromArgb((v >> 16) & 255, (v >> 8) & 255, v & 255); }
+        static Color Fra(Color a, Color b, float k) { return Color.FromArgb((int)(a.R + (b.R - a.R) * k), (int)(a.G + (b.G - a.G) * k), (int)(a.B + (b.B - a.B) * k)); }
         // schemi pastello chiari: nome nelle impostazioni, nome da tradurre, tinta (colore pieno di riferimento)
         public static readonly string[] PastelloChiave = { "azzurro", "arancione", "acquamarina", "verde", "rosa", "lilla", "indaco", "marrone" };
         public static readonly string[] PastelloNome = { "Pastello azzurro", "Pastello arancione", "Pastello acquamarina", "Pastello verde", "Pastello rosa", "Pastello lilla", "Pastello indaco", "Pastello marrone" };
         static readonly Color[] PastelloTinta = {
             Color.FromArgb(70, 150, 230), Color.FromArgb(240, 140, 50), Color.FromArgb(40, 180, 170), Color.FromArgb(80, 170, 90),
             Color.FromArgb(230, 110, 160), Color.FromArgb(160, 120, 210), Color.FromArgb(80, 90, 190), Color.FromArgb(150, 105, 70) };
-        public static string Chiave { get { return Schema == 2 ? "nero" : (Schema == 1 ? "scuro" : (Schema >= 3 ? "pastello-" + PastelloChiave[Schema - 3] : "chiaro")); } }
+        public static string Chiave { get { return Schema >= 11 ? "ip-" + IpChiave[Schema - 11] : (Schema == 2 ? "nero" : (Schema == 1 ? "scuro" : (Schema >= 3 ? "pastello-" + PastelloChiave[Schema - 3] : "chiaro"))); } }
         public static int DaChiave(string k)
         {
             if (k == "nero") return 2;
             if (k == "scuro") return 1;
             if (k != null && k.StartsWith("pastello-")) { int i = Array.IndexOf(PastelloChiave, k.Substring(9)); if (i >= 0) return 3 + i; }
+            if (k != null && k.StartsWith("ip-")) { int i = Array.IndexOf(IpChiave, k.Substring(3)); if (i >= 0) return 11 + i; }
             return 0;
         }
         static Color Mix(Color tinta, float k) { return Color.FromArgb((int)(255 + (tinta.R - 255) * k), (int)(255 + (tinta.G - 255) * k), (int)(255 + (tinta.B - 255) * k)); }
@@ -58496,8 +58507,23 @@ namespace LunaCalc
 
         public static void Imposta(int schema)
         {
-            Schema = Math.Max(0, Math.Min(2 + PastelloTinta.Length, schema));
-            Scuro = Schema == 1 || Schema == 2;
+            Schema = Math.Max(0, Math.Min(2 + PastelloTinta.Length + IpColori.Length, schema));
+            Scuro = Schema == 1 || Schema == 2 || Schema >= 11;
+            if (Schema >= 11)
+            {
+                // schemi scuri di IP-TRX-CTRL: fondo pieno colorato, riquadri un poco più chiari, accento acceso
+                int[] c = IpColori[Schema - 11];
+                Color bg = Hex(c[0]), pan = Hex(c[1]), ins = Hex(c[2]), bor = Hex(c[3]), fld = Hex(c[4]), txt = Hex(c[5]), mut = Hex(c[6]), btn = Hex(c[7]);
+                Back = bg; Fore = txt; Muted = mut; Field = fld; FieldFore = txt; Section = pan;
+                Accent = Hex(c[8]); OkFg = Hex(c[9]); BadFg = Hex(c[10]); WarnFg = Hex(c[11]);
+                OkBg = Fra(bg, OkFg, 0.28f); SoloBg = Fra(bg, WarnFg, 0.25f); SottoFg = Fra(mut, bg, 0.35f);
+                SnBg = Fra(bg, Color.White, 0.08f); MarginBg = Fra(bg, WarnFg, 0.15f);
+                Warn1 = Fra(bg, BadFg, 0.30f); Warn2 = Fra(bg, WarnFg, 0.22f);
+                ChartBg = ins; ChartGrid = bor; ChartText = mut;
+                Button = btn;
+                Carta = pan; Linea = bor; Limiti = Color.FromArgb(255, 209, 72);
+                return;
+            }
             if (Schema == 2)
             {
                 // nero: sfondo nero pieno, riquadri grigio molto scuro, colori di stato accesi
@@ -59058,6 +59084,8 @@ namespace LunaCalc
         public TimeZoneInfo Tz = TimeZoneInfo.Utc;
         public string TzNome = "";
         public bool TzStimato;
+        // elevazione del terreno all'azimut (linguetta «Il mio orizzonte»); null = orizzonte piatto
+        public Func<double, double> Orizzonte;
 
         public bool InAz(double az)
         {
@@ -59071,11 +59099,14 @@ namespace LunaCalc
         public string Valuta(MoonPos p, out bool ok)
         {
             double e1 = (double)El1.Value, e2 = (double)El2.Value;
+            double et = Orizzonte != null ? Orizzonte(p.Az) : double.NaN;
+            bool dietro = !double.IsNaN(et) && p.El < et;
             bool azOk = InAz(p.Az);
-            bool elOk = p.El >= e1 && p.El <= e2;
+            bool elOk = p.El >= e1 && p.El <= e2 && !dietro;
             ok = azOk && elOk;
             if (ok) return Lang.T("PUNTABILE");
             if (p.El < 0 && e1 >= 0) return Lang.T("sotto l'orizzonte");
+            if (dietro && azOk && p.El >= e1 && p.El <= e2) return Lang.T("dietro il terreno");
             if (!azOk && !elOk) return Lang.T("fuori az. ed el.");
             if (!azOk) return Lang.T("fuori azimut");
             return p.El < e1 ? Lang.T("elev. troppo bassa") : Lang.T("elev. troppo alta");
@@ -61164,6 +61195,1576 @@ namespace LunaCalc
         int FonteSfu { get { return cmbSfuFonte == null ? 0 : Math.Max(0, cmbSfuFonte.SelectedIndex); } }
         string CacheSfu { get { return Path.Combine(Path.GetDirectoryName(settingsPath), SfuFontiCache[FonteSfu]); } }
 
+        // ---------- Linguetta "Il mio orizzonte" (bozzetti approvati): orizzonte dal terreno (DEM SRTM1) e mappa del rumore locale (NJ9R) ----------
+        TabPage tpOriz;
+        Orizzonte orizz;
+        bool usaTerreno = true;          // minimo dell'elevazione: dalle ostruzioni del terreno (true) o 0° (false)
+        int orizVista;                   // 0 orizzonte dal terreno, 1 mappa del rumore locale
+        int orizRaggioIdx, orizPassoIdx = 1, orizKIdx, orizPal;
+        bool orizSfondo = true, orizInCorso, orizSync;
+        DateTime orizT = DateTime.MinValue;
+        static readonly int[] OrizRaggi = { 0, 50, 100, 150, 200, 300 };
+        static readonly double[] OrizPassi = { 0.25, 0.5, 1.0 };
+        static readonly double[] OrizK = { 4.0 / 3.0, 1.0, 2.0 / 3.0 };
+        static readonly string[] OrizKNome = { "4/3", "1", "2/3" };
+        PannelloDisegno pnlOrizSel, pnlOriz;
+        Panel pnlOrizScroll, pnlOrizTop, pnlRumTop;
+        Tendina cmbOrizRaggio, cmbOrizPasso, cmbOrizK, cmbOrizPal;
+        Label lblOrizQth, lblOrizRaggio, lblOrizStato;
+        NumericUpDown nudOrizAnt, nudOrizMax;
+        Spunta chkOrizUsa, chkOrizSfondo;
+        Tondino rbOrizMinT, rbOrizMin0;
+        DateTimePicker dtpOrizData, dtpOrizOra;
+        Pillola bOrizAdesso, bOrizMeno, bOrizPiu, bOrizCalc;
+        Bitmap orizCielo;
+        string orizCieloChiave = "";
+        List<Spunta> chkTerrenoAltrove = new List<Spunta>();
+        Dictionary<RectangleF, int> orizSelZone = new Dictionary<RectangleF, int>();
+        HashSet<TabPage> pagineNuove = new HashSet<TabPage>();
+
+        // dati della Luna per il passaggio che contiene (o segue) l'istante scelto
+        class PassaggioLuna
+        {
+            public DateTime AstroSorge, AstroTramonta, TerraSorge = DateTime.MinValue, TerraTramonta = DateTime.MinValue;
+            public double MinTot, MinVisibili, MinUtili, PersiSorge, PersiTramonto;
+            public List<DateTime> T = new List<DateTime>();
+            public List<MoonPos> P = new List<MoonPos>();
+            public bool Ok;
+        }
+        PassaggioLuna orizPass;
+        string orizPassChiave = "";
+
+        bool OrizzonteValido { get { return orizz != null && orizz.Valido && me.Ok && string.Equals(orizz.Loc.Trim(), me.Loc.Text.Trim(), StringComparison.OrdinalIgnoreCase); } }
+
+        // l'orizzonte entra nei calcoli (StationUi.Valuta) solo se è stato calcolato per il locator attuale
+        void ApplicaTerreno()
+        {
+            if (me == null) return;
+            me.Orizzonte = (usaTerreno && OrizzonteValido) ? new Func<double, double>(orizz.Elev) : null;
+        }
+
+        string ChiaveTerreno { get { return me != null && me.Orizzonte != null && orizz != null ? "T" + orizz.Quando.Ticks.ToString(inv) : "0"; } }
+
+        void TerrenoCambiato(bool salva)
+        {
+            ApplicaTerreno();
+            orizSync = true;
+            try
+            {
+                if (chkOrizUsa != null) chkOrizUsa.Checked = usaTerreno;
+                if (rbOrizMinT != null) { rbOrizMinT.Checked = usaTerreno; rbOrizMin0.Checked = !usaTerreno; }
+                foreach (Spunta c in chkTerrenoAltrove) c.Checked = usaTerreno;
+            }
+            finally { orizSync = false; }
+            if (salva && !caricamento) SaveSettings();
+            if (caricamento) return;
+            UpdateLive();
+            trkWinCalc = DateTime.MinValue;
+            AggiornaTracciamento(true);
+            if (pnlPunt != null) pnlPunt.Invalidate();
+            if (dgChart != null && tabs != null && tabs.SelectedTab == tpDgrd) RecalcDgrd();
+            if (sky != null && tabs != null && tabs.SelectedTab == tpSky) RecalcSky();
+            orizPassChiave = "";
+            if (pnlOriz != null) pnlOriz.Invalidate();
+            if (pnlRum != null) pnlRum.Invalidate();
+        }
+
+        // casella "Ostruzioni dal terreno (DEM SRTM1)" per le altre schermate: stessa scelta, ovunque
+        Spunta CasellaTerreno()
+        {
+            Spunta c = new Spunta();
+            c.Text = Lang.T("Ostruzioni dal terreno (DEM SRTM1)");
+            c.AutoSize = true;
+            c.Colore = Color.FromArgb(22, 163, 74);
+            c.Checked = usaTerreno;
+            c.Margin = new Padding(S(8), S(3), S(3), S(3));
+            tip.SetToolTip(c, Lang.T("Il minimo dell'elevazione segue il terreno calcolato nella linguetta «Il mio orizzonte» (In diretta); senza la casella vale 0°."));
+            c.CheckedChanged += (s, e) => { if (orizSync) return; usaTerreno = c.Checked; TerrenoCambiato(true); };
+            chkTerrenoAltrove.Add(c);
+            return c;
+        }
+
+        Pillola PillolaPiena(string t, Color c)
+        {
+            Pillola p = new Pillola(t, StilePillola.Pieno, c, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            p.Margin = new Padding(S(4), S(2), S(4), S(2));
+            return p;
+        }
+        Pillola PillolaBordo(string t, Color c)
+        {
+            Pillola p = new Pillola(t, StilePillola.Bordo, c, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            p.Margin = new Padding(S(4), S(2), S(4), S(2));
+            p.Maiuscolo = false;
+            return p;
+        }
+        Tendina TendinaDi(string[] voci, int w)
+        {
+            Tendina t = new Tendina();
+            t.DropDownStyle = ComboBoxStyle.DropDownList;
+            t.Items.AddRange(voci);
+            t.Width = S(w);
+            t.Margin = new Padding(S(3), S(3), S(3), S(3));
+            return t;
+        }
+        FlowLayoutPanel Riga()
+        {
+            FlowLayoutPanel f = new FlowLayoutPanel();
+            f.AutoSize = true; f.AutoSizeMode = AutoSizeMode.GrowAndShrink; f.Dock = DockStyle.Top; f.WrapContents = true;
+            f.Padding = new Padding(S(6), S(2), S(6), S(2));
+            return f;
+        }
+        Label Grassetto(string t)
+        {
+            Label l = L(t);
+            l.Font = new Font(Lang.FontUi, 10.5F * fontFactor, FontStyle.Bold);
+            return l;
+        }
+
+        void BuildOrizTab(TabPage tp)
+        {
+            orizz = Orizzonte.Carica();
+            orizT = NowUtcMinute();
+            Color blu = Color.FromArgb(31, 111, 209), verde = Color.FromArgb(22, 163, 74), viola = Color.FromArgb(109, 40, 217);
+
+            // ----- le due viste, come pillole
+            pnlOrizSel = new PannelloDisegno();
+            pnlOrizSel.Dock = DockStyle.Top;
+            pnlOrizSel.Height = S(42);
+            pnlOrizSel.Paint += DisegnaOrizSel;
+            pnlOrizSel.Cursor = Cursors.Hand;
+            pnlOrizSel.MouseClick += (s, e) =>
+            {
+                foreach (KeyValuePair<RectangleF, int> kv in orizSelZone)
+                    if (kv.Key.Contains(e.Location)) { orizVista = kv.Value; MostraVistaOriz(); if (!caricamento) SaveSettings(); return; }
+            };
+
+            // ----- barra dell'orizzonte dal terreno
+            pnlOrizTop = new Panel();
+            pnlOrizTop.Dock = DockStyle.Top; pnlOrizTop.AutoSize = true; pnlOrizTop.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            FlowLayoutPanel r1 = Riga(), r2 = Riga(), r3 = Riga();
+            r1.Controls.Add(Grassetto(Lang.T("Orizzonte dal terreno (DEM SRTM1)")));
+            chkOrizUsa = new Spunta();
+            chkOrizUsa.Text = Lang.T("Usa le ostruzioni del terreno nei calcoli");
+            chkOrizUsa.AutoSize = true; chkOrizUsa.Colore = verde; chkOrizUsa.Checked = usaTerreno;
+            chkOrizUsa.Margin = new Padding(S(6), S(3), S(6), S(3));
+            tip.SetToolTip(chkOrizUsa, Lang.T("La Luna conta come puntabile solo quando sta sopra il terreno, grado per grado di azimut: vale per tutto il programma (Posizione della Luna, Distanza e Dgrd, Budget EME, finestre comuni)."));
+            chkOrizUsa.CheckedChanged += (s, e) => { if (orizSync) return; usaTerreno = chkOrizUsa.Checked; TerrenoCambiato(true); };
+            r1.Controls.Add(chkOrizUsa);
+            lblOrizQth = L(""); r1.Controls.Add(lblOrizQth);
+            r1.Controls.Add(L(Lang.T("Antenna")));
+            nudOrizAnt = Nud(-100, 9000, me.H.Value, 0, 70);
+            tip.SetToolTip(nudOrizAnt, Lang.T("Quota dell'antenna sul livello del mare: è la quota della tua stazione nella prima linguetta (cambiarla qui la cambia anche là)."));
+            r1.Controls.Add(Tonda(nudOrizAnt)); r1.Controls.Add(L(Lang.T("m s.l.m.")));
+            nudOrizAnt.ValueChanged += (s, e) => { if (orizSync) return; orizSync = true; try { me.H.Value = nudOrizAnt.Value; } finally { orizSync = false; } AggiornaOrizTop(); };
+            me.H.ValueChanged += (s, e) => { if (orizSync || nudOrizAnt == null) return; orizSync = true; try { nudOrizAnt.Value = Math.Max(nudOrizAnt.Minimum, Math.Min(nudOrizAnt.Maximum, me.H.Value)); } finally { orizSync = false; } };
+            r1.Controls.Add(L(Lang.T("Raggio")));
+            cmbOrizRaggio = TendinaDi(new string[] { Lang.T("automatico"), "50 km", "100 km", "150 km", "200 km", "300 km" }, 120);
+            cmbOrizRaggio.SelectedIndex = orizRaggioIdx;
+            cmbOrizRaggio.SelectedIndexChanged += (s, e) => { orizRaggioIdx = cmbOrizRaggio.SelectedIndex; AggiornaOrizTop(); if (!caricamento) SaveSettings(); };
+            tip.SetToolTip(cmbOrizRaggio, Lang.T("Automatico: il raggio cresce finché il rilievo più alto trovato potrebbe ancora sporgere sopra l'orizzonte, tenendo conto della curvatura della Terra e della rifrazione."));
+            r1.Controls.Add(Tonda(cmbOrizRaggio));
+            lblOrizRaggio = L(""); lblOrizRaggio.Font = new Font(Lang.FontUi, 9.5F * fontFactor, FontStyle.Bold); r1.Controls.Add(lblOrizRaggio);
+            r1.Controls.Add(L(Lang.T("Passo")));
+            cmbOrizPasso = TendinaDi(new string[] { "0" + Lang.Cultura.NumberFormat.NumberDecimalSeparator + "25°", "0" + Lang.Cultura.NumberFormat.NumberDecimalSeparator + "5°", "1°" }, 80);
+            cmbOrizPasso.SelectedIndex = orizPassoIdx;
+            cmbOrizPasso.SelectedIndexChanged += (s, e) => { orizPassoIdx = cmbOrizPasso.SelectedIndex; if (!caricamento) SaveSettings(); };
+            tip.SetToolTip(cmbOrizPasso, Lang.T("Passo in azimut del calcolo dell'orizzonte."));
+            r1.Controls.Add(Tonda(cmbOrizPasso));
+            r1.Controls.Add(L(Lang.T("Rifrazione k")));
+            cmbOrizK = TendinaDi(OrizKNome, 70);
+            cmbOrizK.SelectedIndex = orizKIdx;
+            cmbOrizK.SelectedIndexChanged += (s, e) => { orizKIdx = cmbOrizK.SelectedIndex; if (!caricamento) SaveSettings(); };
+            tip.SetToolTip(cmbOrizK, Lang.T("Fattore k del raggio terrestre equivalente: 4/3 è l'atmosfera standard, 1 senza rifrazione, 2/3 con rifrazione scarsa."));
+            r1.Controls.Add(Tonda(cmbOrizK));
+
+            bOrizCalc = PillolaPiena("▶ " + Lang.T("CALCOLA L'ORIZZONTE"), blu);
+            bOrizCalc.Click += (s, e) => CalcolaOrizzonte();
+            tip.SetToolTip(bOrizCalc, Lang.T("Scarica i riquadri SRTM1 che mancano (la prima volta qualche centinaio di MB) e calcola l'orizzonte della tua stazione."));
+            Pillola bCart = PillolaBordo(Lang.T("Apri la cartella data\\dem"), blu);
+            bCart.Click += (s, e) => { try { System.Diagnostics.Process.Start(Terreno.Cartella); } catch { } };
+            lblOrizStato = L(""); lblOrizStato.ForeColor = Tema.Muted;
+            r2.Controls.Add(bOrizCalc); r2.Controls.Add(bCart); r2.Controls.Add(lblOrizStato);
+
+            r3.Controls.Add(Grassetto(Lang.T("Limiti di elevazione dell'antenna")));
+            FlowLayoutPanel gm = Coppia();
+            gm.Margin = new Padding(S(10), 0, 0, 0);
+            rbOrizMinT = new Tondino(); rbOrizMinT.Text = Lang.T("dalle ostruzioni del terreno");
+            rbOrizMin0 = new Tondino(); rbOrizMin0.Text = "0°";
+            rbOrizMinT.Checked = usaTerreno; rbOrizMin0.Checked = !usaTerreno;
+            EventHandler cm = (s, e) =>
+            {
+                Tondino t = s as Tondino;
+                if (orizSync || t == null || !t.Checked) return;
+                usaTerreno = rbOrizMinT.Checked; TerrenoCambiato(true);
+            };
+            rbOrizMinT.CheckedChanged += cm; rbOrizMin0.CheckedChanged += cm;
+            gm.Controls.Add(L(Lang.T("Minimo:"))); gm.Controls.Add(rbOrizMinT); gm.Controls.Add(rbOrizMin0);
+            r3.Controls.Add(gm);
+            r3.Controls.Add(L(Lang.T("Massimo")));
+            nudOrizMax = Nud(0, 90, me.El2.Value, 1, 70);
+            nudOrizMax.ValueChanged += (s, e) => { if (orizSync) return; orizSync = true; try { me.El2.Value = nudOrizMax.Value; } finally { orizSync = false; } if (pnlOriz != null) { orizPassChiave = ""; pnlOriz.Invalidate(); } };
+            me.El2.ValueChanged += (s, e) => { if (orizSync || nudOrizMax == null) return; orizSync = true; try { nudOrizMax.Value = me.El2.Value; } finally { orizSync = false; } orizPassChiave = ""; if (pnlOriz != null) pnlOriz.Invalidate(); };
+            r3.Controls.Add(Tonda(nudOrizMax));
+            Label lm = L(Lang.T("° (0° per chi ha l'antenna fissa all'orizzonte, 90° se si alza fino allo zenit)")); lm.ForeColor = Tema.Muted; r3.Controls.Add(lm);
+            Label lv2 = L(Lang.T("La Luna è utile solo tra il minimo e il massimo, grado per grado di azimut"));
+            lv2.ForeColor = viola; lv2.Font = new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold); r3.Controls.Add(lv2);
+            pnlOrizTop.Controls.Add(r3); pnlOrizTop.Controls.Add(r2); pnlOrizTop.Controls.Add(r1);
+
+            // ----- disegno dell'orizzonte
+            pnlOrizScroll = new Panel();
+            pnlOrizScroll.Dock = DockStyle.Fill;
+            pnlOrizScroll.AutoScroll = true;
+            pnlOriz = new PannelloDisegno();
+            pnlOriz.Location = new Point(0, 0);
+            pnlOriz.Paint += DisegnaOriz;
+            pnlOrizScroll.Controls.Add(pnlOriz);
+            chkOrizSfondo = new Spunta();
+            chkOrizSfondo.Text = Lang.T("Sfondo: volta celeste con le fonti di rumore");
+            chkOrizSfondo.AutoSize = true; chkOrizSfondo.Colore = verde; chkOrizSfondo.Checked = orizSfondo;
+            chkOrizSfondo.CheckedChanged += (s, e) => { orizSfondo = chkOrizSfondo.Checked; cmbOrizPal.Enabled = orizSfondo; pnlOriz.Invalidate(); if (!caricamento) SaveSettings(); };
+            tip.SetToolTip(chkOrizSfondo, Lang.T("Dietro il terreno il cielo con i colori del rumore alla frequenza di lavoro, come nella Volta celeste; senza la casella il cielo è azzurro."));
+            cmbOrizPal = TendinaDi(new string[] { Lang.T("Arcobaleno"), Lang.T("Dal nero (meno rumore) al bianco (più rumore)"), Lang.T("Dal giallo (meno rumore) al rosso (più rumore)") }, 250);
+            cmbOrizPal.SelectedIndex = Math.Max(0, Math.Min(2, orizPal));
+            cmbOrizPal.SelectedIndexChanged += (s, e) => { orizPal = cmbOrizPal.SelectedIndex; orizCieloChiave = ""; pnlOriz.Invalidate(); if (!caricamento) SaveSettings(); };
+            pnlOriz.Controls.Add(chkOrizSfondo);
+            pnlOriz.Controls.Add(Tonda(cmbOrizPal));
+            dtpOrizData = new DateTimePicker(); dtpOrizData.Format = DateTimePickerFormat.Custom; dtpOrizData.CustomFormat = "dd/MM/yyyy"; dtpOrizData.Width = S(118);
+            dtpOrizOra = new DateTimePicker(); dtpOrizOra.Format = DateTimePickerFormat.Custom; dtpOrizOra.CustomFormat = "HH:mm"; dtpOrizOra.ShowUpDown = true; dtpOrizOra.Width = S(78);
+            dtpOrizData.Value = orizT.Date; dtpOrizOra.Value = orizT;
+            EventHandler cambiaT = (s, e) =>
+            {
+                if (orizSync) return;
+                DateTime d = dtpOrizData.Value.Date, o = dtpOrizOra.Value;
+                orizT = new DateTime(d.Year, d.Month, d.Day, o.Hour, o.Minute, 0, DateTimeKind.Utc);
+                orizPassChiave = ""; orizCieloChiave = "";
+                pnlOriz.Invalidate();
+            };
+            dtpOrizData.ValueChanged += cambiaT; dtpOrizOra.ValueChanged += cambiaT;
+            pnlOriz.Controls.Add(Tonda(dtpOrizData)); pnlOriz.Controls.Add(Tonda(dtpOrizOra));
+            bOrizAdesso = PillolaPiena(Lang.T("ADESSO"), blu);
+            bOrizMeno = PillolaBordo("◀ 1 h", blu); bOrizPiu = PillolaBordo("1 h ▶", blu);
+            bOrizAdesso.Click += (s, e) => ImpostaOrizT(NowUtcMinute());
+            bOrizMeno.Click += (s, e) => ImpostaOrizT(orizT.AddHours(-1));
+            bOrizPiu.Click += (s, e) => ImpostaOrizT(orizT.AddHours(1));
+            pnlOriz.Controls.Add(bOrizAdesso); pnlOriz.Controls.Add(bOrizMeno); pnlOriz.Controls.Add(bOrizPiu);
+            Action dim = () =>
+            {
+                int w = Math.Max(S(1150), pnlOrizScroll.ClientSize.Width);
+                int h = Math.Max(S(760), pnlOrizScroll.ClientSize.Height);
+                if (h > pnlOrizScroll.ClientSize.Height) w = Math.Max(S(1150), pnlOrizScroll.ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
+                if (pnlOriz.Size != new Size(w, h)) pnlOriz.Size = new Size(w, h);
+            };
+            pnlOrizScroll.Resize += (s, e) => dim();
+            dim();
+
+            // ----- mappa del rumore locale
+            BuildRumore();
+
+            tp.Controls.Add(pnlOrizScroll);
+            tp.Controls.Add(pnlRumScroll);
+            tp.Controls.Add(pnlOrizTop);
+            tp.Controls.Add(pnlRumTop);
+            tp.Controls.Add(pnlOrizSel);
+            AggiornaOrizTop();
+            MostraVistaOriz();
+            ApplicaTerreno();
+        }
+
+        // dopo la lettura delle impostazioni: le scelte salvate passano ai comandi della linguetta
+        void AllineaOrizzonteDopoImpostazioni()
+        {
+            if (cmbOrizRaggio == null) return;
+            cmbOrizRaggio.SelectedIndex = orizRaggioIdx;
+            cmbOrizPasso.SelectedIndex = orizPassoIdx;
+            cmbOrizK.SelectedIndex = orizKIdx;
+            chkOrizSfondo.Checked = orizSfondo;
+            cmbOrizPal.SelectedIndex = orizPal;
+            cmbOrizPal.Enabled = orizSfondo;
+            rumCarica = true;
+            try { chkRumSegnala.Checked = rumSegnala; nudRumSoglia.Value = rumSoglia; } finally { rumCarica = false; }
+            orizSync = true;
+            try { nudOrizAnt.Value = Math.Max(nudOrizAnt.Minimum, Math.Min(nudOrizAnt.Maximum, me.H.Value)); nudOrizMax.Value = me.El2.Value; } finally { orizSync = false; }
+            MostraVistaOriz();
+        }
+
+        void ImpostaOrizT(DateTime t)
+        {
+            orizT = DateTime.SpecifyKind(t, DateTimeKind.Utc);
+            orizSync = true;
+            try { dtpOrizData.Value = orizT.Date; dtpOrizOra.Value = orizT; } finally { orizSync = false; }
+            orizPassChiave = ""; orizCieloChiave = "";
+            pnlOriz.Invalidate();
+        }
+
+        void MostraVistaOriz()
+        {
+            if (pnlOrizTop == null) return;
+            bool t = orizVista == 0;
+            pnlOrizTop.Visible = t; pnlOrizScroll.Visible = t;
+            pnlRumTop.Visible = !t; pnlRumScroll.Visible = !t;
+            pnlOrizSel.Invalidate();
+            if (t) pnlOriz.Invalidate(); else { RiempiRilievi(); pnlRum.Invalidate(); }
+        }
+
+        void AggiornaOrizTop()
+        {
+            if (lblOrizQth == null) return;
+            string suolo = orizz != null && OrizzonteValido ? " · " + string.Format(Lang.Cultura, Lang.T("suolo {0} m (dal DEM)"), Math.Round(orizz.Suolo).ToString("0", Lang.Cultura)) : "";
+            lblOrizQth.Text = "QTH " + me.Loc.Text.Trim().ToUpperInvariant() + suolo;
+            lblOrizRaggio.Text = OrizzonteValido ? "→ " + orizz.Raggio.ToString("0", Lang.Cultura) + " km" : "";
+        }
+
+        void DisegnaOrizSel(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            PreparaGrafica(g);
+            g.Clear(Tema.Back);
+            orizSelZone.Clear();
+            string[] voci = { Lang.T("Orizzonte dal terreno"), Lang.T("Mappa del rumore locale (NJ9R)") };
+            Color blu = Tema.Scuro ? Color.FromArgb(96, 165, 250) : Color.FromArgb(31, 111, 209);
+            float x = S(10), y = S(6), h = pnlOrizSel.Height - S(12);
+            using (Font f = FontPx(Lang.FontUi, S(14), false))
+            using (Font fb = FontPx(Lang.FontUi, S(14), true))
+            using (Font fn = FontPx(Lang.FontUi, S(10), true))
+                for (int i = 0; i < voci.Length; i++)
+                {
+                    bool on = i == orizVista;
+                    Font ff = on ? fb : f;
+                    float wt = g.MeasureString(voci[i], ff).Width;
+                    string nuova = i == 1 ? Lang.T("NUOVA") : null;
+                    float wn = nuova != null ? g.MeasureString(nuova, fn).Width + S(10) : 0;
+                    RectangleF r = new RectangleF(x, y, wt + wn + S(30), h);
+                    using (GraphicsPath p = Arrotondato(r, h / 2f))
+                    {
+                        using (Brush b = new SolidBrush(on ? (Tema.Scuro ? Tema.Field : Color.White) : Tema.Section)) g.FillPath(b, p);
+                        if (on) using (Pen pn = new Pen(blu, S(2))) g.DrawPath(pn, p);
+                    }
+                    Testo(g, voci[i], ff, on ? blu : Tema.Fore, new RectangleF(r.Left + S(14), r.Top, wt + S(4), r.Height), StringAlignment.Near, StringAlignment.Center);
+                    if (nuova != null) Distintivo(g, nuova, fn, r.Left + S(16) + wt + S(4), r.Top + r.Height / 2f);
+                    orizSelZone[r] = i;
+                    x = r.Right + S(10);
+                }
+        }
+
+        // distintivo viola "NUOVA" centrato in verticale su yc
+        void Distintivo(Graphics g, string t, Font f, float x, float yc)
+        {
+            SizeF sz = g.MeasureString(t, f);
+            RectangleF r = new RectangleF(x, yc - sz.Height / 2f - S(1), sz.Width + S(6), sz.Height + S(2));
+            using (GraphicsPath p = Arrotondato(r, r.Height / 2f))
+            using (Brush b = new SolidBrush(Color.FromArgb(124, 58, 237))) g.FillPath(b, p);
+            Testo(g, t, f, Color.White, r, StringAlignment.Center, StringAlignment.Center);
+        }
+
+        void CalcolaOrizzonte()
+        {
+            if (orizInCorso) return;
+            if (!me.Ok)
+            {
+                Messaggio(this, Lang.T("Imposta un locator valido nella prima linguetta."), "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            orizInCorso = true;
+            bOrizCalc.Enabled = false;
+            string loc = me.Loc.Text.Trim().ToUpperInvariant();
+            double lat = me.Lat, lon = me.Lon, ant = (double)me.H.Value;
+            double raggio = OrizRaggi[Math.Max(0, orizRaggioIdx)], passo = OrizPassi[Math.Max(0, orizPassoIdx)], k = OrizK[Math.Max(0, orizKIdx)];
+            Action<string> stato = t => { try { this.BeginInvoke((Action)(() => { lblOrizStato.Text = t; })); } catch { } };
+            System.Threading.Thread th = new System.Threading.Thread(() =>
+            {
+                Orizzonte o = null; string errore = null;
+                try
+                {
+                    o = Orizzonte.Calcola(loc, lat, lon, ant, raggio, passo, k, stato);
+                    o.Salva();
+                    Terreno.Svuota();   // la memoria dei riquadri non serve più: l'orizzonte è salvato
+                }
+                catch (Exception ex) { errore = ex.Message; }
+                try
+                {
+                    this.BeginInvoke((Action)(() =>
+                    {
+                        orizInCorso = false;
+                        bOrizCalc.Enabled = true;
+                        if (o == null)
+                        {
+                            lblOrizStato.Text = Lang.T("Calcolo non riuscito: ") + errore;
+                            Messaggio(this, Lang.T("Non è stato possibile scaricare o leggere i dati del terreno. Controlla la connessione a internet e riprova.") + "\n\n" + errore, "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                        orizz = o;
+                        lblOrizStato.Text = Lang.T("Orizzonte calcolato. Cerco i nomi degli ostacoli su OpenStreetMap…");
+                        AggiornaOrizTop();
+                        TerrenoCambiato(false);
+                        System.Threading.Thread tn = new System.Threading.Thread(() =>
+                        {
+                            try { o.CercaNomi(); o.Salva(); } catch { }
+                            try { this.BeginInvoke((Action)(() => { lblOrizStato.Text = ""; pnlOriz.Invalidate(); })); } catch { }
+                        });
+                        tn.IsBackground = true;
+                        tn.Start();
+                    }));
+                }
+                catch { }
+            });
+            th.IsBackground = true;
+            th.Start();
+        }
+
+        // passaggio della Luna (sopra 0°) che contiene l'istante scelto, o il successivo; con i minuti persi per il terreno
+        PassaggioLuna CalcolaPassaggio(DateTime t0)
+        {
+            PassaggioLuna ps = new PassaggioLuna();
+            if (!me.Ok) return ps;
+            double h = (double)me.H.Value;
+            int passo = 2;
+            List<DateTime> tt = new List<DateTime>();
+            List<MoonPos> pp = new List<MoonPos>();
+            for (int m = -26 * 60; m <= 30 * 60; m += passo)
+            {
+                DateTime t = t0.AddMinutes(m);
+                tt.Add(t); pp.Add(Moon.Compute(t, me.Lat, me.Lon, h, false));
+            }
+            int i0 = 26 * 60 / passo, a = -1, b = -1;
+            if (pp[i0].El > 0)
+            {
+                a = i0; while (a > 0 && pp[a - 1].El > 0) a--;
+                b = i0; while (b < pp.Count - 1 && pp[b + 1].El > 0) b++;
+            }
+            else
+            {
+                a = i0; while (a < pp.Count && pp[a].El <= 0) a++;
+                if (a >= pp.Count) return ps;
+                b = a; while (b < pp.Count - 1 && pp[b + 1].El > 0) b++;
+            }
+            ps.AstroSorge = tt[a]; ps.AstroTramonta = tt[b];
+            ps.MinTot = (b - a) * passo;
+            bool terr = OrizzonteValido;
+            int primo = -1, ultimo = -1;
+            for (int i = a; i <= b; i++)
+            {
+                double et = terr ? orizz.Elev(pp[i].Az) : 0;
+                bool vis = pp[i].El >= et;
+                if (vis) { if (primo < 0) primo = i; ultimo = i; if (i < b) ps.MinVisibili += passo; }
+                bool utile = vis && pp[i].El <= (double)me.El2.Value && pp[i].El >= (double)me.El1.Value && me.InAz(pp[i].Az);
+                if (utile && i < b) ps.MinUtili += passo;
+            }
+            if (primo >= 0) { ps.TerraSorge = tt[primo]; ps.TerraTramonta = tt[ultimo]; ps.PersiSorge = (primo - a) * passo; ps.PersiTramonto = (b - ultimo) * passo; }
+            else { ps.PersiSorge = ps.MinTot; }
+            // percorso da disegnare: dal sorgere al tramonto, con un'ora prima e dopo
+            for (int i = Math.Max(0, a - 30); i <= Math.Min(pp.Count - 1, b + 30); i += 5) { ps.T.Add(tt[i]); ps.P.Add(pp[i]); }
+            ps.Ok = true;
+            return ps;
+        }
+
+        static string Durata(double min, CultureInfo ci)
+        {
+            int m = (int)Math.Round(min);
+            if (m < 60) return m.ToString(ci) + " min";
+            return (m / 60).ToString(ci) + " h " + (m % 60).ToString(ci) + " min";
+        }
+
+        // testo con un alone chiaro, leggibile sul terreno e sul cielo
+        void TestoAlone(Graphics g, string t, Font f, Color c, float x, float y)
+        {
+            using (GraphicsPath p = new GraphicsPath())
+            {
+                p.AddString(t, f.FontFamily, (int)f.Style, f.Size, new PointF(x, y), StringFormat.GenericDefault);
+                using (Pen pn = new Pen(Color.FromArgb(235, 255, 255, 255), S(3.5f))) { pn.LineJoin = LineJoin.Round; g.DrawPath(pn, p); }
+                using (Brush b = new SolidBrush(c)) g.FillPath(b, p);
+            }
+        }
+
+        static Color ColoreCieloPal(double t, int pal, double tlo, double thi)
+        {
+            if (pal == 0) return Spettro(t, tlo, thi);
+            double x = Math.Log(Math.Max(t, tlo) / tlo) / Math.Log(thi / tlo);
+            if (x < 0) x = 0;
+            if (x > 1) x = 1;
+            if (pal == 1) { int v = (int)Math.Round(8 + 247 * x); return Color.FromArgb(v, v, v); }
+            double r, gg, b;
+            if (x < 0.5) { double u = x / 0.5; r = 255; gg = 240 - 100 * u; b = 120 - 120 * u; }
+            else { double u = (x - 0.5) / 0.5; r = 255 - 80 * u; gg = 140 - 140 * u; b = 0; }
+            return Color.FromArgb((int)r, (int)gg, (int)b);
+        }
+
+        void PosizionaControllo(Control c, float x, float y)
+        {
+            Point p = new Point((int)Math.Round(x), (int)Math.Round(y));
+            if (c.Location != p) c.Location = p;
+            if (!c.Visible) c.Visible = true;
+        }
+
+        void DisegnaOriz(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            PreparaGrafica(g);
+            CultureInfo ci = Lang.Cultura;
+            Rectangle cr = pnlOriz.ClientRectangle;
+            using (Brush bf = new SolidBrush(Tema.Back)) g.FillRectangle(bf, cr);
+            if (cr.Width < 300) return;
+            Color titCol = Tema.Scuro ? Color.FromArgb(196, 181, 253) : Color.FromArgb(91, 33, 182);
+            Color rosso = Color.FromArgb(214, 32, 92), giallo = Color.FromArgb(245, 180, 20), blu = Color.FromArgb(31, 111, 209);
+            float pad = S(8), gap = S(14);
+            float wDx = Math.Max(S(430), (cr.Width - 2 * pad - gap) * 0.32f);
+            RectangleF cl = new RectangleF(pad, S(6), cr.Width - 2 * pad - gap - wDx, cr.Height - S(14));
+            float xr = cl.Right + gap;
+            double f;
+            if (!ReadFreq(out f)) f = 144;
+            string loc = me.Loc.Text.Trim().ToUpperInvariant();
+            bool valido = OrizzonteValido;
+            if (orizPassChiave != orizT.Ticks.ToString(inv) + loc + ChiaveTerreno + me.El2.Value + me.El1.Value + me.Az1.Value + me.Az2.Value + (valido ? "1" : "0"))
+            {
+                orizPassChiave = orizT.Ticks.ToString(inv) + loc + ChiaveTerreno + me.El2.Value + me.El1.Value + me.Az1.Value + me.Az2.Value + (valido ? "1" : "0");
+                orizPass = CalcolaPassaggio(orizT);
+            }
+            using (Font ft = FontPx(Lang.FontUi, S(13), true))
+            using (Font fs = FontPx(Lang.FontUi, S(12.5f), false))
+            using (Font fsb = FontPx(Lang.FontUi, S(12.5f), true))
+            using (Font fp = FontPx(Lang.FontUi, S(11.5f), false))
+            using (Font fpb = FontPx(Lang.FontUi, S(11.5f), true))
+            using (Font fl = FontPx(Lang.FontUi, S(12), true))
+            using (Brush bTxt = new SolidBrush(Tema.Fore))
+            {
+                // ================= panorama
+                Scheda(g, cl, Color.Empty);
+                string tit = string.Format(ci, Lang.T("PANORAMA DELL'ORIZZONTE VISTO DA {0} · {1} UTC"), loc, orizT.ToString("dd/MM/yyyy HH:mm", inv));
+                Testo(g, Spaziato(tit), ft, titCol, new RectangleF(cl.Left + S(16), cl.Top + S(12), cl.Width * 0.55f, S(22)), StringAlignment.Near, StringAlignment.Near);
+                // casella dello sfondo e scelta dei colori, in alto a destra
+                chkOrizSfondo.Text = Lang.T("Sfondo: volta celeste con le fonti di rumore") + " (" + f.ToString("0.###", ci) + " MHz)";
+                Control cPal = cmbOrizPal.Parent;
+                PosizionaControllo(cPal, cl.Right - S(16) - cPal.Width, cl.Top + S(8));
+                PosizionaControllo(chkOrizSfondo, cPal.Left - S(8) - chkOrizSfondo.Width, cl.Top + S(8));
+                double sc = Math.Pow(144.0 / f, 2.6), tlo = (150.0 - 2.7) * sc + 2.7, thi = (4000.0 - 2.7) * sc + 2.7;
+                float yInfo = cl.Top + S(44);
+                if (orizSfondo)
+                {
+                    // scala dei colori del cielo
+                    float x = cl.Left + S(16);
+                    string a1 = "Tcielo: " + tlo.ToString("0", ci) + " K";
+                    Testo(g, a1, fp, Tema.Muted, new RectangleF(x, yInfo, S(160), S(16)), StringAlignment.Near, StringAlignment.Center);
+                    x += g.MeasureString(a1, fp).Width + S(4);
+                    for (int k = 0; k < 12; k++)
+                    {
+                        double tk = tlo * Math.Pow(thi / tlo, k / 11.0);
+                        using (Brush bk = new SolidBrush(ColoreCieloPal(tk, orizPal, tlo, thi))) g.FillRectangle(bk, x, yInfo + S(3), S(14), S(10));
+                        x += S(18);
+                    }
+                    string a2 = thi.ToString("0", ci) + " " + Lang.T("K e oltre") + " · ◇ " + Lang.T("radiosorgenti") + " · " + Lang.T("senza la casella torna il cielo azzurro");
+                    Testo(g, a2, fp, Tema.Muted, new RectangleF(x + S(2), yInfo, cl.Right - x - S(20), S(16)), StringAlignment.Near, StringAlignment.Center);
+                }
+                float yLeg = cl.Bottom - S(40);
+                RectangleF a = new RectangleF(cl.Left + S(56), cl.Top + S(72), cl.Width - S(80), yLeg - cl.Top - S(72) - S(36));
+                double hmax = valido ? orizz.MaxEl : 10;
+                double ymax = Math.Max(35, Math.Ceiling((hmax + 4) / 5.0) * 5), ymin = -3;
+                Func<double, float> X = az => a.Left + (float)((((az % 360) + 360) % 360) / 360.0 * a.Width);
+                Func<double, float> Y = el => a.Bottom - (float)((el - ymin) / (ymax - ymin) * a.Height);
+                // cielo: volta celeste con le fonti di rumore oppure azzurro
+                if (orizSfondo && me.Ok)
+                {
+                    string kc = orizT.Ticks + "|" + f.ToString(inv) + "|" + orizPal + "|" + me.Lat.ToString(inv) + "|" + me.Lon.ToString(inv) + "|" + ymax;
+                    if (kc != orizCieloChiave || orizCielo == null)
+                    {
+                        orizCieloChiave = kc;
+                        double lst = Moon.Lst(orizT, me.Lon);
+                        int bw = 360, bh = (int)Math.Round((ymax - ymin) * 2);
+                        Bitmap bmp = new Bitmap(bw, bh);
+                        for (int j = 0; j < bh; j++)
+                        {
+                            double el = ymax - (j + 0.5) / 2.0;
+                            for (int i = 0; i < bw; i++)
+                            {
+                                double ra, dec;
+                                RaDecDa(i + 0.5, el, lst, me.Lat, out ra, out dec);
+                                bmp.SetPixel(i, j, ColoreCieloPal(CieloGsm.Tsky(ra, dec, f), orizPal, tlo, thi));
+                            }
+                        }
+                        if (orizCielo != null) orizCielo.Dispose();
+                        orizCielo = bmp;
+                    }
+                    InterpolationMode im = g.InterpolationMode;
+                    g.InterpolationMode = InterpolationMode.Bilinear;
+                    g.PixelOffsetMode = PixelOffsetMode.Half;
+                    g.DrawImage(orizCielo, a);
+                    g.PixelOffsetMode = PixelOffsetMode.Default;
+                    g.InterpolationMode = im;
+                }
+                else
+                    using (LinearGradientBrush lg = new LinearGradientBrush(a, Color.FromArgb(186, 214, 247), Color.FromArgb(232, 242, 253), LinearGradientMode.Vertical))
+                        g.FillRectangle(lg, a);
+                // griglia
+                string[] punti = { "N", "30", "60", "E", "120", "150", "S", "210", "240", Lang.T("O"), "300", "330", "N" };
+                using (Pen pg = new Pen(Color.FromArgb(90, 120, 130, 150), 1f))
+                {
+                    for (int k = 0; k <= 12; k++)
+                    {
+                        float x = k == 12 ? a.Right : X(k * 30.0);
+                        g.DrawLine(pg, x, a.Top, x, a.Bottom);
+                        Testo(g, punti[k], fp, Tema.Muted, new RectangleF(x - S(30), a.Bottom + S(4), S(60), S(16)), StringAlignment.Center, StringAlignment.Near);
+                    }
+                    for (double v = 0; v <= ymax + 0.01; v += 5)
+                    {
+                        g.DrawLine(pg, a.Left, Y(v), a.Right, Y(v));
+                        Testo(g, (v > 0 ? "+" : "") + v.ToString("0", ci) + "°", fp, Tema.Muted, new RectangleF(a.Left - S(54), Y(v) - S(8), S(48), S(16)), StringAlignment.Far, StringAlignment.Center);
+                    }
+                }
+                Testo(g, Lang.T("azimut"), fp, Tema.Muted, new RectangleF(a.Left, a.Bottom + S(20), a.Width, S(16)), StringAlignment.Center, StringAlignment.Near);
+                // radiosorgenti e Sole (solo con lo sfondo della volta celeste)
+                List<RectangleF> occ = new List<RectangleF>();
+                double lstT = Moon.Lst(orizT, me.Lon);
+                g.SetClip(a);
+                if (orizSfondo && me.Ok)
+                    foreach (Radiosorgente rs in Sorgenti)
+                    {
+                        double az, el;
+                        AzElDa(rs.Ra, rs.Dec, lstT, me.Lat, out az, out el);
+                        if (el < ymin || el > ymax) continue;
+                        float x = X(az), y = Y(el), d = S(5);
+                        PointF[] rombo = { new PointF(x, y - d), new PointF(x + d, y), new PointF(x, y + d), new PointF(x - d, y) };
+                        using (Brush bw2 = new SolidBrush(Color.White)) g.FillPolygon(bw2, rombo);
+                        using (Pen pr = new Pen(Color.FromArgb(40, 40, 40), S(1.4f))) g.DrawPolygon(pr, rombo);
+                        TestoAlone(g, rs.Nome, fpb, Color.FromArgb(30, 30, 30), x - S(4), y - S(20));
+                    }
+                // terreno
+                if (valido)
+                {
+                    int n = orizz.El.Length;
+                    List<PointF> pts = new List<PointF>();
+                    pts.Add(new PointF(a.Left, a.Bottom));
+                    for (int i = 0; i <= n; i++) pts.Add(new PointF(a.Left + (float)(i * orizz.Passo / 360.0) * a.Width, Y(Math.Max(ymin, orizz.El[i % n]))));
+                    pts.Add(new PointF(a.Right, a.Bottom));
+                    using (LinearGradientBrush lt = new LinearGradientBrush(new RectangleF(a.Left, Y(hmax) - 1, a.Width, a.Bottom - Y(hmax) + 2), Color.FromArgb(122, 142, 88), Color.FromArgb(62, 82, 44), LinearGradientMode.Vertical))
+                        g.FillPolygon(lt, pts.ToArray());
+                    using (Pen pt = new Pen(Color.FromArgb(40, 56, 28), S(1.2f))) g.DrawLines(pt, pts.GetRange(1, pts.Count - 2).ToArray());
+                }
+                // orizzonte astronomico
+                using (Pen p0 = new Pen(blu, S(1.6f))) g.DrawLine(p0, a.Left, Y(0), a.Right, Y(0));
+                // percorso della Luna
+                PassaggioLuna ps = orizPass;
+                if (ps != null && ps.Ok)
+                {
+                    using (Pen pv = new Pen(giallo, S(2.6f)))
+                    using (Pen pd = new Pen(Color.FromArgb(130, 136, 148), S(2f)))
+                    {
+                        pd.DashPattern = new float[] { 3f, 2f };
+                        for (int i = 1; i < ps.P.Count; i++)
+                        {
+                            MoonPos p1 = ps.P[i - 1], p2 = ps.P[i];
+                            if (Math.Abs(p1.Az - p2.Az) > 180) continue;
+                            if (p1.El < ymin && p2.El < ymin) continue;
+                            double et = valido ? orizz.Elev((p1.Az + p2.Az) / 2) : 0;
+                            bool vis = (p1.El + p2.El) / 2 >= Math.Max(0, et);
+                            g.DrawLine(vis ? pv : pd, X(p1.Az), Y(p1.El), X(p2.Az), Y(p2.El));
+                        }
+                    }
+                    // ore intere
+                    for (int i = 0; i < ps.P.Count; i++)
+                    {
+                        DateTime t = ps.T[i];
+                        if (t.Minute != 0 || ps.P[i].El < ymin || ps.P[i].El > ymax) continue;
+                        float x = X(ps.P[i].Az), y = Y(ps.P[i].El);
+                        using (Brush bh = new SolidBrush(giallo)) g.FillEllipse(bh, x - S(3.5f), y - S(3.5f), S(7), S(7));
+                        RectangleF rt;
+                        SizeF sz = g.MeasureString(t.ToString("HH", inv), fp);
+                        if (PostoLibero(sz, x, y, S(6), occ, a, true, out rt)) { }
+                        Testo(g, t.ToString("HH", inv), fp, Color.FromArgb(40, 40, 40), rt, StringAlignment.Near, StringAlignment.Near);
+                    }
+                    // sorgere e tramonto per il terreno
+                    if (valido && ps.TerraSorge != DateTime.MinValue)
+                    {
+                        DateTime[] tt = { ps.TerraSorge, ps.TerraTramonta };
+                        string[] et = { Lang.T("sorge per il terreno"), Lang.T("tramonta per il terreno") };
+                        for (int k = 0; k < 2; k++)
+                        {
+                            MoonPos mp = Moon.Compute(tt[k], me.Lat, me.Lon, (double)me.H.Value, false);
+                            float x = X(mp.Az), y = Y(mp.El);
+                            using (Pen pr = new Pen(rosso, S(2.2f))) g.DrawEllipse(pr, x - S(6), y - S(6), S(12), S(12));
+                            string s = et[k] + " " + tt[k].ToString("HH:mm", inv);
+                            SizeF sz = g.MeasureString(s, fpb);
+                            float xs = k == 0 ? x + S(10) : x - sz.Width - S(10);
+                            float ys = Math.Min(a.Bottom - sz.Height - S(2), y + S(8));
+                            TestoAlone(g, s, fpb, rosso, xs, ys);
+                            occ.Add(new RectangleF(xs, ys, sz.Width, sz.Height));
+                        }
+                    }
+                }
+                // Luna e Sole nell'istante scelto
+                if (me.Ok)
+                {
+                    MoonPos mn = Moon.Compute(orizT, me.Lat, me.Lon, (double)me.H.Value, false);
+                    double saz, sel, sra, sdec;
+                    Moon.SunPos(orizT, me.Lat, me.Lon, out saz, out sel, out sra, out sdec);
+                    if (sel >= ymin && sel <= ymax)
+                    {
+                        float x = X(saz), y = Y(sel), rr = S(9);
+                        using (Pen praggi = new Pen(Color.FromArgb(245, 158, 11), S(1.6f)))
+                            for (int k = 0; k < 8; k++)
+                            {
+                                double an = k * Math.PI / 4;
+                                g.DrawLine(praggi, x + (float)Math.Cos(an) * rr * 1.25f, y + (float)Math.Sin(an) * rr * 1.25f, x + (float)Math.Cos(an) * rr * 1.7f, y + (float)Math.Sin(an) * rr * 1.7f);
+                            }
+                        using (Brush bs = new SolidBrush(Color.FromArgb(251, 176, 36))) g.FillEllipse(bs, x - rr, y - rr, 2 * rr, 2 * rr);
+                        string s = Lang.T("Sole") + " " + orizT.ToString("HH:mm", inv) + " · " + saz.ToString("0.0", ci) + "°/" + sel.ToString("0.0", ci) + "°";
+                        TestoAlone(g, s, fpb, Color.FromArgb(30, 30, 30), x + S(22), y - S(8));
+                    }
+                    if (mn.El >= ymin && mn.El <= ymax)
+                    {
+                        float x = X(mn.Az), y = Y(mn.El), rr = S(9);
+                        using (Brush bm = new SolidBrush(Color.FromArgb(255, 252, 235))) g.FillEllipse(bm, x - rr, y - rr, 2 * rr, 2 * rr);
+                        using (Pen pm = new Pen(Color.FromArgb(60, 60, 60), S(1.5f))) g.DrawEllipse(pm, x - rr, y - rr, 2 * rr, 2 * rr);
+                        string s = Lang.T("Luna") + " " + orizT.ToString("HH:mm", inv) + " · " + mn.Az.ToString("0.0", ci) + "°/" + mn.El.ToString("0.0", ci) + "°";
+                        SizeF sz = g.MeasureString(s, fpb);
+                        float xs = x + S(12) + sz.Width > a.Right ? x - S(12) - sz.Width : x + S(12);
+                        TestoAlone(g, s, fpb, Color.FromArgb(30, 30, 30), xs, y - sz.Height - S(2));
+                    }
+                }
+                // nomi degli ostacoli
+                if (valido)
+                    foreach (Ostacolo o in orizz.Ostacoli)
+                    {
+                        string s = (o.Nome.Length > 0 ? o.Nome + " · " : "")
+                            + (o.Varco ? string.Format(ci, Lang.T("{0}° a {1} km"), o.ElMin.ToString("0.0", ci), (o.Dist / 1000.0).ToString(o.Dist < 10000 ? "0.0" : "0", ci))
+                                       : string.Format(ci, Lang.T("fino a {0}° a {1} km"), o.ElMax.ToString("0.0", ci), (o.Dist / 1000.0).ToString(o.Dist < 10000 ? "0.0" : "0", ci)));
+                        SizeF sz = g.MeasureString(s, fl);
+                        float x = Math.Max(a.Left + S(2), Math.Min(a.Right - sz.Width - S(2), X(o.AzPicco) - sz.Width / 2));
+                        float y = Y(o.Varco ? Math.Max(o.ElMax, 0) + 1.2 : o.ElMax) - sz.Height - S(4);
+                        RectangleF rr = new RectangleF(x, y, sz.Width, sz.Height);
+                        foreach (RectangleF q in occ) if (q.IntersectsWith(rr)) { y = q.Top - sz.Height - S(2); rr.Y = y; }
+                        TestoAlone(g, s, fl, Color.FromArgb(20, 20, 20), x, Math.Max(a.Top + S(2), y));
+                        occ.Add(rr);
+                    }
+                g.ResetClip();
+                using (Pen pb = new Pen(Tema.Linea, 1f)) g.DrawRectangle(pb, a.X, a.Y, a.Width, a.Height);
+                if (!valido)
+                {
+                    string s = orizz != null && orizz.Valido ? string.Format(ci, Lang.T("L'orizzonte salvato è del locator {0}: premi CALCOLA L'ORIZZONTE per la stazione attuale."), orizz.Loc)
+                        : Lang.T("Orizzonte non ancora calcolato: premi CALCOLA L'ORIZZONTE (la prima volta scarica qualche centinaio di MB).");
+                    SizeF sz = g.MeasureString(s, fsb, (int)(a.Width * 0.7f));
+                    RectangleF rb = new RectangleF(a.Left + (a.Width - sz.Width) / 2 - S(12), a.Top + a.Height * 0.35f, sz.Width + S(24), sz.Height + S(16));
+                    using (GraphicsPath p = Arrotondato(rb, S(8)))
+                    using (Brush b = new SolidBrush(Color.FromArgb(235, 255, 255, 255))) g.FillPath(b, p);
+                    Testo(g, s, fsb, Color.FromArgb(30, 30, 30), new RectangleF(rb.Left + S(12), rb.Top + S(8), sz.Width + S(2), sz.Height + S(2)), StringAlignment.Center, StringAlignment.Near);
+                }
+                // legenda
+                {
+                    float x = cl.Left + S(16), y = yLeg;
+                    Color[] cc = { Color.FromArgb(62, 82, 44), blu, giallo, Color.FromArgb(130, 136, 148) };
+                    string[] ll = { Lang.T("terreno (SRTM1, curvatura e rifrazione comprese)"), Lang.T("orizzonte astronomico 0°"), Lang.T("Luna visibile (ore UTC)"), Lang.T("Luna dietro il terreno") };
+                    for (int k = 0; k < 4; k++)
+                    {
+                        using (Brush bk = new SolidBrush(cc[k])) g.FillRectangle(bk, x, y + S(6), S(26), S(4));
+                        float w = g.MeasureString(ll[k], fs).Width;
+                        Testo(g, ll[k], fs, Tema.Fore, new RectangleF(x + S(32), y - S(1), w + S(4), S(20)), StringAlignment.Near, StringAlignment.Center);
+                        x += S(32) + w + S(20);
+                    }
+                }
+
+                // ================= colonna destra
+                float yr = S(6);
+                // data e ora del calcolo
+                {
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(150));
+                    Scheda(g, r, Color.Empty);
+                    Testo(g, Spaziato(Lang.T("DATA E ORA DEL CALCOLO")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                    float x = r.Left + S(16), y = r.Top + S(40);
+                    Control cd = dtpOrizData.Parent, co = dtpOrizOra.Parent;
+                    PosizionaControllo(cd, x, y); x += cd.Width + S(6);
+                    PosizionaControllo(co, x, y); x += co.Width + S(6);
+                    DateTime loc2 = TimeZoneInfo.ConvertTimeFromUtc(orizT, TimeZoneInfo.Local);
+                    string su = "UTC (" + loc2.ToString("HH:mm", inv) + " " + Lang.T("ora locale") + ")";
+                    float wsu = g.MeasureString(su, fp).Width;
+                    Testo(g, su, fp, Tema.Muted, new RectangleF(x, y, wsu + S(4), co.Height), StringAlignment.Near, StringAlignment.Center);
+                    x += wsu + S(10);
+                    if (x + bOrizAdesso.Width > r.Right - S(10)) { x = r.Left + S(16); y += co.Height + S(4); }
+                    PosizionaControllo(bOrizAdesso, x, y + (co.Height - bOrizAdesso.Height) / 2); x += bOrizAdesso.Width + S(4);
+                    if (x + bOrizMeno.Width > r.Right - S(10)) { x = r.Left + S(16); y += co.Height + S(4); }
+                    PosizionaControllo(bOrizMeno, x, y + (co.Height - bOrizMeno.Height) / 2); x += bOrizMeno.Width + S(4);
+                    if (x + bOrizPiu.Width > r.Right - S(10)) { x = r.Left + S(16); y += co.Height + S(4); }
+                    PosizionaControllo(bOrizPiu, x, y + (co.Height - bOrizPiu.Height) / 2);
+                    y += co.Height + S(8);
+                    if (me.Ok)
+                    {
+                        MoonPos mn = Moon.Compute(orizT, me.Lat, me.Lon, (double)me.H.Value, false);
+                        double saz, sel, sra, sdec;
+                        Moon.SunPos(orizT, me.Lat, me.Lon, out saz, out sel, out sra, out sdec);
+                        string sopra = "";
+                        if (valido && mn.El > -2)
+                        {
+                            double et = orizz.Elev(mn.Az);
+                            sopra = " · " + string.Format(ci, mn.El >= et ? Lang.T("sopra il terreno ({0}°)") : Lang.T("dietro il terreno ({0}°)"), (mn.El - et).ToString("0.0", ci));
+                        }
+                        string[][] righe = {
+                            new string[] { "● " + Lang.T("Luna"), string.Format(ci, "Az {0}° · El {1}°", mn.Az.ToString("0.0", ci), mn.El.ToString("0.0", ci)) + sopra },
+                            new string[] { "☀ " + Lang.T("Sole"), string.Format(ci, "Az {0}° · El {1}°", saz.ToString("0.0", ci), sel.ToString("0.0", ci)) },
+                            new string[] { Lang.T("Cielo dietro la Luna"), CieloGsm.Tsky(mn.Ra, mn.Dec, f).ToString("0", ci) + " K " + string.Format(ci, Lang.T("a {0} MHz"), f.ToString("0.###", ci)) } };
+                        float rh = S(21);
+                        float yy = Math.Max(y, r.Bottom - 3 * rh - S(8));
+                        r.Height = Math.Max(r.Height, yy - r.Top + 3 * rh + S(10));
+                        foreach (string[] rg in righe)
+                        {
+                            Testo(g, rg[0], fs, Tema.Fore, new RectangleF(r.Left + S(16), yy, r.Width * 0.4f, rh), StringAlignment.Near, StringAlignment.Center);
+                            Testo(g, rg[1], fsb, Tema.Fore, new RectangleF(r.Left + r.Width * 0.3f, yy, r.Width * 0.7f - S(16), rh), StringAlignment.Far, StringAlignment.Center);
+                            yy += rh;
+                        }
+                    }
+                    yr = r.Bottom + S(12);
+                }
+                // effetto sulla Luna
+                {
+                    PassaggioLuna ps2 = orizPass;
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(176));
+                    Scheda(g, r, Color.Empty);
+                    string tl = ps2 != null && ps2.Ok ? string.Format(ci, Lang.T("EFFETTO SULLA LUNA DEL {0}"), ps2.AstroSorge.ToString("dd/MM", inv)) : Lang.T("EFFETTO SULLA LUNA");
+                    Testo(g, Spaziato(tl), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                    float y = r.Top + S(42), rh = S(25);
+                    if (ps2 == null || !ps2.Ok) Testo(g, Lang.T("Imposta un locator valido nella prima linguetta."), fs, Tema.Muted, new RectangleF(r.Left + S(16), y, r.Width - S(30), S(40)), StringAlignment.Near, StringAlignment.Near);
+                    else
+                    {
+                        Func<DateTime, string> H = t => t == DateTime.MinValue ? "—" : t.ToString("HH:mm", inv) + " UTC";
+                        string[][] righe = {
+                            new string[] { Lang.T("Sorge per il terreno"), H(valido ? ps2.TerraSorge : ps2.AstroSorge), "(" + Lang.T("astron.") + " " + ps2.AstroSorge.ToString("HH:mm", inv) + ")" },
+                            new string[] { Lang.T("Tramonta per il terreno"), H(valido ? ps2.TerraTramonta : ps2.AstroTramonta), "(" + Lang.T("astron.") + " " + ps2.AstroTramonta.ToString("HH:mm", inv) + ")" },
+                            new string[] { Lang.T("Luna visibile"), Durata(ps2.MinVisibili, ci), Lang.T("su") + " " + Durata(ps2.MinTot, ci) },
+                            new string[] { Lang.T("Persi per il terreno"), Durata(ps2.PersiSorge + ps2.PersiTramonto, ci), "(" + string.Format(ci, Lang.T("{0} al sorgere, {1} al tramonto"), Math.Round(ps2.PersiSorge).ToString("0", ci), Math.Round(ps2.PersiTramonto).ToString("0", ci)) + ")" },
+                            new string[] { string.Format(ci, Lang.T("Utile con il massimo a {0}°"), ((double)me.El2.Value).ToString("0.#", ci)), Durata(ps2.MinUtili, ci), "" } };
+                        for (int k = 0; k < righe.Length; k++)
+                        {
+                            bool rosso2 = k >= 3;
+                            Color cv = rosso2 ? rosso : Tema.Fore;
+                            Testo(g, righe[k][0], fs, Tema.Fore, new RectangleF(r.Left + S(16), y, r.Width * 0.5f, rh), StringAlignment.Near, StringAlignment.Center);
+                            float wn = g.MeasureString(righe[k][2], fs).Width;
+                            Testo(g, righe[k][2], fs, rosso2 ? rosso : Tema.Muted, new RectangleF(r.Right - S(16) - wn, y, wn + S(2), rh), StringAlignment.Far, StringAlignment.Center);
+                            Testo(g, righe[k][1], fsb, cv, new RectangleF(r.Left + r.Width * 0.3f, y, r.Width * 0.7f - S(20) - wn, rh), StringAlignment.Far, StringAlignment.Center);
+                            if (k < righe.Length - 1) using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), y + rh, r.Right - S(16), y + rh);
+                            y += rh;
+                        }
+                    }
+                    yr = r.Bottom + S(12);
+                }
+                // ostacoli principali
+                {
+                    int nr = valido ? orizz.Ostacoli.Count : 0;
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(70) + Math.Max(1, nr) * S(25));
+                    Scheda(g, r, Color.Empty);
+                    Testo(g, Spaziato(Lang.T("OSTACOLI PRINCIPALI")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                    float[] cx = { 0f, 0.22f, 0.40f, 0.55f };
+                    string[] th = { Lang.T("Azimut"), Lang.T("El. max"), Lang.T("Dist."), Lang.T("Che cos'è") };
+                    float y = r.Top + S(42), rh = S(25), wi = r.Width - S(32);
+                    for (int k = 0; k < 4; k++) Testo(g, th[k], fsb, Tema.Fore, new RectangleF(r.Left + S(16) + cx[k] * wi, y, wi * 0.45f, rh), StringAlignment.Near, StringAlignment.Center);
+                    using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), y + rh, r.Right - S(16), y + rh);
+                    y += rh;
+                    if (nr == 0) Testo(g, "—", fs, Tema.Muted, new RectangleF(r.Left + S(16), y, wi, rh), StringAlignment.Near, StringAlignment.Center);
+                    for (int i = 0; i < nr; i++)
+                    {
+                        Ostacolo o = orizz.Ostacoli[i];
+                        string[] v = {
+                            o.Az1.ToString("0", ci) + "°–" + o.Az2.ToString("0", ci) + "°",
+                            o.Varco ? o.ElMin.ToString("0.0", ci) + "°–" + o.ElMax.ToString("0.0", ci) + "°" : o.ElMax.ToString("0.0", ci) + "°",
+                            (o.Dist / 1000.0).ToString(o.Dist < 10000 ? "0.0" : "0", ci) + " km",
+                            o.Nome.Length > 0 ? o.Nome : (o.Varco ? Lang.T("varco") : "—") };
+                        for (int k = 0; k < 4; k++) Testo(g, v[k], fs, Tema.Fore, new RectangleF(r.Left + S(16) + cx[k] * wi, y, k == 3 ? wi * 0.45f : wi * 0.2f, rh), StringAlignment.Near, StringAlignment.Center);
+                        using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), y + rh, r.Right - S(16), y + rh);
+                        y += rh;
+                    }
+                    yr = r.Bottom + S(12);
+                }
+                // dati del terreno
+                {
+                    List<KeyValuePair<string, bool>> righe = new List<KeyValuePair<string, bool>>();
+                    if (orizz != null && orizz.Valido)
+                    {
+                        Func<int, bool, string> nl = (v, lat) => lat ? (v >= 0 ? "N" : "S") + Math.Abs(v).ToString("00", inv) : (v >= 0 ? "E" : "W") + Math.Abs(v).ToString("000", inv);
+                        righe.Add(new KeyValuePair<string, bool>(string.Format(ci, Lang.T("{0} riquadri SRTM1 (1″, circa 30 m) da {1} a {2}, da {3} a {4} · {5} MB"),
+                            orizz.Riquadri, nl(orizz.LatMin, true), nl(orizz.LatMax, true), nl(orizz.LonMin, false), nl(orizz.LonMax, false), (orizz.Byte / 1048576.0).ToString("0", ci)), false));
+                        righe.Add(new KeyValuePair<string, bool>(OrizRaggi[Math.Max(0, orizRaggioIdx)] == 0
+                            ? string.Format(ci, Lang.T("Raggio esteso finché un rilievo può ancora sporgere: rilievo più alto {0} m → {1} km"), orizz.HMax.ToString("0", ci), orizz.Raggio.ToString("0", ci))
+                            : string.Format(ci, Lang.T("Raggio scelto {0} km · rilievo più alto {1} m"), orizz.Raggio.ToString("0", ci), orizz.HMax.ToString("0", ci)), false));
+                        righe.Add(new KeyValuePair<string, bool>(string.Format(ci, Lang.T("Calcolato il {0} UTC per {1}, antenna a {2} m s.l.m., k = {3}"),
+                            orizz.Quando.ToString("dd/MM/yyyy HH:mm", inv), orizz.Loc, orizz.Antenna.ToString("0", ci), OrizKNome[Math.Max(0, Array.IndexOf(OrizK, orizz.K))]), false));
+                    }
+                    else righe.Add(new KeyValuePair<string, bool>(Lang.T("Orizzonte non ancora calcolato: premi CALCOLA L'ORIZZONTE (la prima volta scarica qualche centinaio di MB)."), false));
+                    righe.Add(new KeyValuePair<string, bool>(Lang.T("Fonte: AWS Open Data, elevation-tiles-prod (SRTM) · salvati in data\\dem, mai in AppData"), false));
+                    righe.Add(new KeyValuePair<string, bool>(Lang.T("Edifici e alberi vicini non sono nel modello: controlla con la Ricognizione."), true));
+                    float y = yr + S(42), wi = wDx - S(32);
+                    float hTot = 0;
+                    foreach (KeyValuePair<string, bool> kv in righe) hTot += g.MeasureString(kv.Key, fs, (int)wi).Height + S(3);
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(52) + hTot);
+                    Scheda(g, r, Color.Empty);
+                    Testo(g, Spaziato(Lang.T("DATI DEL TERRENO")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                    foreach (KeyValuePair<string, bool> kv in righe)
+                    {
+                        float hh = g.MeasureString(kv.Key, fs, (int)wi).Height;
+                        using (Brush b = new SolidBrush(kv.Value ? Tema.Muted : Tema.Fore)) g.DrawString(kv.Key, fs, b, new RectangleF(r.Left + S(16), y, wi, hh + 2));
+                        y += hh + S(3);
+                    }
+                    yr = r.Bottom + S(12);
+                }
+                int hNec = (int)(Math.Max(yr, cl.Top + S(560)) + S(10));
+                if (pnlOriz.Height < hNec) pnlOriz.Height = hNec;
+            }
+        }
+
+        // ---------- Mappa del rumore locale (NJ9R, «2M EME the easy way»): un voto da 1 a 10 per azimut ed elevazione ----------
+        class RilievoRumore
+        {
+            public DateTime Data;
+            public double Freq = 144;
+            public int PassoAz = 15, ElMax = 45, PassoEl = 5;
+            public int[,] V = new int[10, 24];   // [elevazione, azimut]; 0 = non annotato
+            public bool Esempio;
+            public string File = "";
+            public int NAz { get { return 360 / PassoAz; } }
+            public int NEl { get { return ElMax / PassoEl + 1; } }
+            public string Nome(CultureInfo ci) { return Data.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture) + " · " + Freq.ToString("0.###", ci) + " MHz"; }
+
+            // cambia la griglia conservando i voti (cella più vicina)
+            public void Griglia(int passoAz, int elMax, int passoEl)
+            {
+                int[,] nv = new int[elMax / passoEl + 1, 360 / passoAz];
+                for (int i = 0; i < nv.GetLength(0); i++)
+                    for (int j = 0; j < nv.GetLength(1); j++)
+                    {
+                        int oi = (int)Math.Round(i * passoEl / (double)PassoEl), oj = (int)Math.Round(j * passoAz / (double)PassoAz) % NAz;
+                        nv[i, j] = oi < NEl ? V[oi, oj] : 0;
+                    }
+                V = nv; PassoAz = passoAz; ElMax = elMax; PassoEl = passoEl;
+            }
+
+            // voto della cella che contiene (az, el); 0 se non annotata o fuori dalla griglia
+            public int Voto(double az, double el)
+            {
+                if (el < -PassoEl / 2.0 || el > ElMax + PassoEl / 2.0) return 0;
+                int i = Math.Max(0, Math.Min(NEl - 1, (int)Math.Round(el / PassoEl)));
+                int j = (int)Math.Round((((az % 360) + 360) % 360) / PassoAz) % NAz;
+                return V[i, j];
+            }
+
+            public string Testo()
+            {
+                CultureInfo iv = CultureInfo.InvariantCulture;
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("# YAEC - rumore locale (NJ9R): voto da 1 a 10 per azimut ed elevazione, 0 = non annotato");
+                sb.AppendLine("data=" + Data.ToString("yyyy-MM-dd HH:mm", iv));
+                sb.AppendLine("freq=" + Freq.ToString("0.###", iv));
+                sb.AppendLine("passo_az=" + PassoAz.ToString(iv));
+                sb.AppendLine("el_max=" + ElMax.ToString(iv));
+                sb.AppendLine("passo_el=" + PassoEl.ToString(iv));
+                StringBuilder h = new StringBuilder("el\\az");
+                for (int j = 0; j < NAz; j++) h.Append(";" + (j * PassoAz).ToString(iv));
+                sb.AppendLine(h.ToString());
+                for (int i = NEl - 1; i >= 0; i--)
+                {
+                    StringBuilder r = new StringBuilder((i * PassoEl).ToString(iv));
+                    for (int j = 0; j < NAz; j++) r.Append(";" + V[i, j].ToString(iv));
+                    sb.AppendLine(r.ToString());
+                }
+                return sb.ToString();
+            }
+
+            // legge il formato salvato da YAEC (anche con ',' o tabulazione al posto di ';')
+            public static RilievoRumore Leggi(string testo)
+            {
+                CultureInfo iv = CultureInfo.InvariantCulture;
+                RilievoRumore r = new RilievoRumore();
+                r.Data = DateTime.UtcNow;
+                List<int[]> righe = new List<int[]>();
+                List<int> el = new List<int>();
+                int[] az = null;
+                foreach (string r0 in testo.Replace("\r", "").Split('\n'))
+                {
+                    string t = r0.Trim().TrimStart('﻿');
+                    if (t.Length == 0 || t.StartsWith("#")) continue;
+                    int k = t.IndexOf('=');
+                    if (k > 0 && az == null)
+                    {
+                        string c = t.Substring(0, k).Trim(), v = t.Substring(k + 1).Trim();
+                        DateTime d; double f; int n;
+                        if (c == "data" && DateTime.TryParseExact(v, "yyyy-MM-dd HH:mm", iv, DateTimeStyles.None, out d)) r.Data = d;
+                        if (c == "freq" && double.TryParse(v, NumberStyles.Float, iv, out f)) r.Freq = f;
+                        continue;
+                    }
+                    string[] p = t.Split(new char[] { ';', '\t', ',' });
+                    if (az == null)
+                    {
+                        az = new int[p.Length - 1];
+                        for (int j = 1; j < p.Length; j++) { int a; int.TryParse(p[j].Replace("°", "").Trim(), NumberStyles.Integer, iv, out a); az[j - 1] = a; }
+                        continue;
+                    }
+                    int e;
+                    if (!int.TryParse(p[0].Replace("°", "").Trim(), NumberStyles.Integer, iv, out e)) continue;
+                    int[] vv = new int[az.Length];
+                    for (int j = 1; j < p.Length && j - 1 < az.Length; j++) { int x; int.TryParse(p[j].Trim(), NumberStyles.Integer, iv, out x); vv[j - 1] = Math.Max(0, Math.Min(10, x)); }
+                    el.Add(e); righe.Add(vv);
+                }
+                if (az == null || az.Length < 4 || el.Count < 2) throw new FormatException("CSV");
+                r.PassoAz = Math.Max(1, az[1] - az[0]);
+                int emax = 0, emin = int.MaxValue;
+                foreach (int e in el) { emax = Math.Max(emax, e); emin = Math.Min(emin, e); }
+                r.ElMax = emax; r.PassoEl = Math.Max(1, (emax - emin) / Math.Max(1, el.Count - 1));
+                r.V = new int[r.NEl, r.NAz];
+                for (int i = 0; i < el.Count; i++)
+                {
+                    int ii = (int)Math.Round(el[i] / (double)r.PassoEl);
+                    if (ii < 0 || ii >= r.NEl) continue;
+                    for (int j = 0; j < az.Length && j < r.NAz; j++) r.V[ii, j] = righe[i][j];
+                }
+                return r;
+            }
+
+            // valori d'esempio del bozzetto (Capri, JN70CN): solo da guardare, non entrano nei calcoli
+            public static RilievoRumore DiEsempio()
+            {
+                string[] g = {
+                    "1 1 1 1 1 1 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+                    "1 1 2 2 2 1 2 1 2 2 1 1 2 1 1 1 1 1 1 1 1 1 1 1",
+                    "1 1 1 2 2 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+                    "1 1 1 2 2 2 2 2 1 1 2 1 1 2 1 1 1 1 1 1 1 1 1 1",
+                    "1 1 2 2 2 1 3 2 2 1 1 1 2 1 1 1 0 1 1 1 1 1 1 1",
+                    "1 2 2 3 2 3 3 3 2 2 1 1 1 0 0 0 0 0 2 1 2 1 1 1",
+                    "1 1 3 4 3 3 3 3 3 3 2 2 2 0 0 0 0 0 0 2 2 1 2 1",
+                    "2 2 3 3 4 3 4 4 3 2 3 2 3 0 0 0 0 0 0 1 2 1 2 2",
+                    "2 3 3 4 4 4 5 5 3 3 3 0 0 0 0 0 0 0 0 2 1 2 2 1",
+                    "2 3 0 5 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 1" };
+                RilievoRumore r = new RilievoRumore();
+                r.Esempio = true; r.Data = new DateTime(2026, 11, 8, 21, 30, 0); r.Freq = 144; r.PassoAz = 15; r.ElMax = 45; r.PassoEl = 5;
+                r.V = new int[10, 24];
+                for (int i = 0; i < 10; i++)
+                {
+                    string[] p = g[i].Split(' ');
+                    for (int j = 0; j < 24; j++) r.V[9 - i, j] = int.Parse(p[j]);
+                }
+                return r;
+            }
+        }
+
+        class PannelloTasti : PannelloDisegno
+        {
+            protected override bool IsInputKey(Keys k)
+            {
+                Keys c = k & Keys.KeyCode;
+                if (c == Keys.Left || c == Keys.Right || c == Keys.Up || c == Keys.Down) return true;
+                return base.IsInputKey(k);
+            }
+        }
+
+        List<RilievoRumore> rilievi = new List<RilievoRumore>();
+        RilievoRumore rilAtt;
+        int rilSelI = -1, rilSelJ = -1;
+        int rumSoglia = 7;
+        bool rumSegnala = true, rumCarica;
+        PannelloTasti pnlRum;
+        Panel pnlRumScroll;
+        Tendina cmbRil, cmbRumAz, cmbRumEl;
+        Spunta chkRumSegnala;
+        NumericUpDown nudRumSoglia;
+        Label lRumDa, lRumInSu;
+        RectangleF rumGriglia;
+        static readonly int[] RumPassiAz = { 10, 15, 20, 30 };
+        static readonly int[][] RumGriglieEl = { new int[] { 45, 5 }, new int[] { 90, 10 }, new int[] { 30, 5 } };
+
+        static string CartellaRumore { get { string d = Dati.Percorso("rumore"); try { Directory.CreateDirectory(d); } catch { } return d; } }
+
+        static Color ColoreVoto(int v)
+        {
+            switch (v)
+            {
+                case 1: return Color.FromArgb(26, 148, 73);
+                case 2: return Color.FromArgb(76, 175, 80);
+                case 3: return Color.FromArgb(140, 198, 82);
+                case 4: return Color.FromArgb(200, 228, 120);
+                case 5: return Color.FromArgb(244, 238, 140);
+                case 6: return Color.FromArgb(254, 214, 128);
+                case 7: return Color.FromArgb(252, 174, 96);
+                case 8: return Color.FromArgb(244, 118, 70);
+                case 9: return Color.FromArgb(230, 74, 54);
+                case 10: return Color.FromArgb(196, 30, 40);
+                default: return Color.Empty;
+            }
+        }
+
+        void CaricaRilievi()
+        {
+            rilievi.Clear();
+            try
+            {
+                foreach (string f in Directory.GetFiles(CartellaRumore, "*.txt"))
+                    try { RilievoRumore r = RilievoRumore.Leggi(File.ReadAllText(f, Encoding.UTF8)); r.File = f; rilievi.Add(r); } catch { }
+            }
+            catch { }
+            rilievi.Sort((x, y) => y.Data.CompareTo(x.Data));
+        }
+
+        void SalvaRilievo(RilievoRumore r)
+        {
+            if (r == null || r.Esempio) return;
+            try
+            {
+                if (string.IsNullOrEmpty(r.File)) r.File = Path.Combine(CartellaRumore, r.Data.ToString("yyyyMMdd_HHmm", inv) + "_" + r.Freq.ToString("0", inv) + ".txt");
+                Dati.ScriviAtomico(r.File, Encoding.UTF8.GetBytes(r.Testo()));
+            }
+            catch { }
+        }
+
+        // rilievo usato nei calcoli: il più recente vero (l'esempio non conta)
+        RilievoRumore RilievoInUso { get { return rilAtt != null && !rilAtt.Esempio ? rilAtt : (rilievi.Count > 0 ? rilievi[0] : null); } }
+
+        // voto del rumore locale nella direzione (az, el): 0 se non c'è un rilievo o la cella non è annotata
+        int RumoreLocale(double az, double el)
+        {
+            RilievoRumore r = RilievoInUso;
+            return r == null ? 0 : r.Voto(az, el);
+        }
+
+        // la Luna sta in una direzione rumorosa (segno ⚠ rumore locale)?
+        bool LunaRumorosa(double az, double el)
+        {
+            return rumSegnala && el >= 0 && RumoreLocale(az, el) >= rumSoglia;
+        }
+
+        void BuildRumore()
+        {
+            CaricaRilievi();
+            Color blu = Color.FromArgb(31, 111, 209);
+            pnlRumTop = new Panel();
+            pnlRumTop.Dock = DockStyle.Top; pnlRumTop.AutoSize = true; pnlRumTop.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            FlowLayoutPanel r1 = Riga();
+            r1.Controls.Add(Grassetto(Lang.T("Annotatore del rumore da 1 a 10")));
+            r1.Controls.Add(L(Lang.T("Rilievo")));
+            cmbRil = TendinaDi(new string[0], 230);
+            cmbRil.SelectedIndexChanged += (s, e) =>
+            {
+                if (rumCarica) return;
+                int i = cmbRil.SelectedIndex;
+                rilAtt = i >= 0 && i < rilievi.Count ? rilievi[i] : RilievoRumore.DiEsempio();
+                MostraGrigliaRil();
+                RumoreCambiato();
+            };
+            r1.Controls.Add(Tonda(cmbRil));
+            Pillola bNuovo = new Pillola("+ " + Lang.T("Nuovo rilievo"), StilePillola.Pieno, blu, new Font(Lang.FontUi, 9F * fontFactor, FontStyle.Bold));
+            bNuovo.Maiuscolo = false; bNuovo.Margin = new Padding(S(4), S(2), S(4), S(2));
+            tip.SetToolTip(bNuovo, Lang.T("Nuovo rilievo con la data e l'ora di adesso e la frequenza di lavoro: tutte le celle vuote, da annotare."));
+            bNuovo.Click += (s, e) =>
+            {
+                double f;
+                if (!ReadFreq(out f)) f = 144;
+                RilievoRumore r = new RilievoRumore();
+                r.Data = NowUtcMinute(); r.Freq = f;
+                int pa = RumPassiAz[Math.Max(0, cmbRumAz.SelectedIndex)];
+                int[] ge = RumGriglieEl[Math.Max(0, cmbRumEl.SelectedIndex)];
+                r.PassoAz = pa; r.ElMax = ge[0]; r.PassoEl = ge[1];
+                r.V = new int[r.NEl, r.NAz];
+                SalvaRilievo(r);
+                CaricaRilievi();
+                rilAtt = null;
+                foreach (RilievoRumore x in rilievi) if (x.File == r.File) rilAtt = x;
+                RiempiRilievi();
+                rilSelI = 0; rilSelJ = 0;
+                pnlRum.Focus();
+                RumoreCambiato();
+            };
+            r1.Controls.Add(bNuovo);
+            r1.Controls.Add(L(Lang.T("Passo azimut")));
+            cmbRumAz = TendinaDi(new string[] { "10°", "15°", "20°", "30°" }, 70);
+            cmbRumAz.SelectedIndex = 1;
+            r1.Controls.Add(Tonda(cmbRumAz));
+            r1.Controls.Add(L(Lang.T("Elevazione")));
+            cmbRumEl = TendinaDi(new string[] { string.Format(Lang.Cultura, Lang.T("0°–{0}° ogni {1}°"), 45, 5), string.Format(Lang.Cultura, Lang.T("0°–{0}° ogni {1}°"), 90, 10), string.Format(Lang.Cultura, Lang.T("0°–{0}° ogni {1}°"), 30, 5) }, 130);
+            cmbRumEl.SelectedIndex = 0;
+            r1.Controls.Add(Tonda(cmbRumEl));
+            EventHandler cg = (s, e) =>
+            {
+                if (rumCarica || rilAtt == null) return;
+                int pa = RumPassiAz[Math.Max(0, cmbRumAz.SelectedIndex)];
+                int[] ge = RumGriglieEl[Math.Max(0, cmbRumEl.SelectedIndex)];
+                if (pa == rilAtt.PassoAz && ge[0] == rilAtt.ElMax && ge[1] == rilAtt.PassoEl) return;
+                rilAtt.Griglia(pa, ge[0], ge[1]);
+                SalvaRilievo(rilAtt);
+                RumoreCambiato();
+            };
+            cmbRumAz.SelectedIndexChanged += cg; cmbRumEl.SelectedIndexChanged += cg;
+            Label li = L(Lang.T("Clic sulla cella, poi tasti 1–9 (0 = 10); frecce per spostarsi")); li.ForeColor = Tema.Muted;
+            r1.Controls.Add(li);
+            Pillola bXls = PillolaBordo(Lang.T("Esporta in Excel"), blu);
+            bXls.Click += (s, e) => EsportaRumore();
+            Pillola bCsv = PillolaBordo(Lang.T("Importa CSV"), blu);
+            bCsv.Click += (s, e) => ImportaRumore();
+            r1.Controls.Add(bXls); r1.Controls.Add(bCsv);
+            pnlRumTop.Controls.Add(r1);
+
+            pnlRumScroll = new Panel();
+            pnlRumScroll.Dock = DockStyle.Fill;
+            pnlRumScroll.AutoScroll = true;
+            pnlRum = new PannelloTasti();
+            pnlRum.Location = new Point(0, 0);
+            pnlRum.Paint += DisegnaRum;
+            pnlRum.TabStop = true;
+            pnlRum.MouseClick += (s, e) =>
+            {
+                pnlRum.Focus();
+                if (rilAtt == null || rumGriglia.Width < 10 || !rumGriglia.Contains(e.Location)) return;
+                int j = (int)((e.X - rumGriglia.Left) / rumGriglia.Width * rilAtt.NAz);
+                int i = rilAtt.NEl - 1 - (int)((e.Y - rumGriglia.Top) / rumGriglia.Height * rilAtt.NEl);
+                rilSelI = Math.Max(0, Math.Min(rilAtt.NEl - 1, i)); rilSelJ = Math.Max(0, Math.Min(rilAtt.NAz - 1, j));
+                pnlRum.Invalidate();
+            };
+            pnlRum.KeyDown += (s, e) =>
+            {
+                if (rilAtt == null || rilSelI < 0) return;
+                Keys k = e.KeyCode;
+                int v = -1;
+                if (k >= Keys.D0 && k <= Keys.D9) v = k - Keys.D0;
+                else if (k >= Keys.NumPad0 && k <= Keys.NumPad9) v = k - Keys.NumPad0;
+                if (v >= 0 || k == Keys.Delete || k == Keys.Back)
+                {
+                    if (rilAtt.Esempio)
+                    {
+                        Messaggio(this, Lang.T("Questi sono valori di esempio: premi «+ Nuovo rilievo» per annotare il rumore della tua stazione."), "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    rilAtt.V[rilSelI, rilSelJ] = v < 0 ? 0 : (v == 0 ? 10 : v);
+                    SalvaRilievo(rilAtt);
+                    // dopo il voto si passa alla cella a destra
+                    if (v >= 0) rilSelJ = (rilSelJ + 1) % rilAtt.NAz;
+                    RumoreCambiato();
+                    e.Handled = true;
+                    return;
+                }
+                if (k == Keys.Left) rilSelJ = (rilSelJ - 1 + rilAtt.NAz) % rilAtt.NAz;
+                else if (k == Keys.Right) rilSelJ = (rilSelJ + 1) % rilAtt.NAz;
+                else if (k == Keys.Up) rilSelI = Math.Min(rilAtt.NEl - 1, rilSelI + 1);
+                else if (k == Keys.Down) rilSelI = Math.Max(0, rilSelI - 1);
+                else return;
+                e.Handled = true;
+                pnlRum.Invalidate();
+            };
+            pnlRumScroll.Controls.Add(pnlRum);
+            chkRumSegnala = new Spunta();
+            chkRumSegnala.Text = Lang.T("Segnala la Luna nelle direzioni rumorose");
+            chkRumSegnala.AutoSize = true; chkRumSegnala.Colore = Color.FromArgb(22, 163, 74); chkRumSegnala.Checked = rumSegnala;
+            chkRumSegnala.CheckedChanged += (s, e) => { if (rumCarica) return; rumSegnala = chkRumSegnala.Checked; RumoreCambiato(); if (!caricamento) SaveSettings(); };
+            nudRumSoglia = Nud(1, 10, rumSoglia, 0, 50);
+            nudRumSoglia.ValueChanged += (s, e) => { if (rumCarica) return; rumSoglia = (int)nudRumSoglia.Value; RumoreCambiato(); if (!caricamento) SaveSettings(); };
+            lRumDa = L(Lang.T("da")); lRumInSu = L(Lang.T("in su"));
+            lRumDa.BackColor = Color.Transparent; lRumInSu.BackColor = Color.Transparent;
+            pnlRum.Controls.Add(chkRumSegnala); pnlRum.Controls.Add(lRumDa); pnlRum.Controls.Add(Tonda(nudRumSoglia)); pnlRum.Controls.Add(lRumInSu);
+            Action dim = () =>
+            {
+                int w = Math.Max(S(1150), pnlRumScroll.ClientSize.Width);
+                int h = Math.Max(S(720), pnlRumScroll.ClientSize.Height);
+                if (h > pnlRumScroll.ClientSize.Height) w = Math.Max(S(1150), pnlRumScroll.ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
+                if (pnlRum.Size != new Size(w, h)) pnlRum.Size = new Size(w, h);
+            };
+            pnlRumScroll.Resize += (s, e) => dim();
+            dim();
+            RiempiRilievi();
+        }
+
+        void RiempiRilievi()
+        {
+            if (cmbRil == null) return;
+            rumCarica = true;
+            try
+            {
+                cmbRil.Items.Clear();
+                foreach (RilievoRumore r in rilievi) cmbRil.Items.Add(r.Nome(Lang.Cultura));
+                if (rilievi.Count == 0)
+                {
+                    RilievoRumore es = RilievoRumore.DiEsempio();
+                    cmbRil.Items.Add(es.Nome(Lang.Cultura) + " · " + Lang.T("esempio"));
+                    rilAtt = es;
+                    cmbRil.SelectedIndex = 0;
+                }
+                else
+                {
+                    int i = rilAtt != null ? rilievi.IndexOf(rilAtt) : -1;
+                    if (i < 0) { i = 0; rilAtt = rilievi[0]; }
+                    cmbRil.SelectedIndex = i;
+                }
+                MostraGrigliaRil();
+            }
+            finally { rumCarica = false; }
+        }
+
+        void MostraGrigliaRil()
+        {
+            if (rilAtt == null) return;
+            bool c0 = rumCarica;
+            rumCarica = true;
+            try
+            {
+                int ia = Array.IndexOf(RumPassiAz, rilAtt.PassoAz);
+                if (ia >= 0) cmbRumAz.SelectedIndex = ia;
+                for (int k = 0; k < RumGriglieEl.Length; k++) if (RumGriglieEl[k][0] == rilAtt.ElMax && RumGriglieEl[k][1] == rilAtt.PassoEl) cmbRumEl.SelectedIndex = k;
+                cmbRumAz.Enabled = !rilAtt.Esempio; cmbRumEl.Enabled = !rilAtt.Esempio;
+            }
+            finally { rumCarica = c0; }
+            if (rilSelI >= rilAtt.NEl || rilSelJ >= rilAtt.NAz) { rilSelI = -1; rilSelJ = -1; }
+        }
+
+        void RumoreCambiato()
+        {
+            if (pnlRum != null) pnlRum.Invalidate();
+            if (caricamento) return;
+            if (lv != null) lv.Invalidate();
+            if (lvDg != null) RiempiTabellaDg();
+            if (sky != null) sky.Invalidate();
+        }
+
+        void EsportaRumore()
+        {
+            if (rilAtt == null) return;
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = Lang.T("File CSV (*.csv)|*.csv|Tutti i file (*.*)|*.*");
+            dlg.FileName = "YAEC_rumore_" + me.Loc.Text.Trim() + "_" + rilAtt.Data.ToString("yyyyMMdd_HHmm", inv) + ".csv";
+            if (dlg.ShowDialog(this) != DialogResult.OK) return;
+            try { File.WriteAllText(dlg.FileName, rilAtt.Testo(), new UTF8Encoding(true)); }
+            catch (Exception ex) { Messaggio(this, Lang.T("Impossibile salvare il file:\n") + ex.Message, "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        void ImportaRumore()
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = Lang.T("File CSV (*.csv)|*.csv|Tutti i file (*.*)|*.*");
+            if (dlg.ShowDialog(this) != DialogResult.OK) return;
+            try
+            {
+                RilievoRumore r = RilievoRumore.Leggi(File.ReadAllText(dlg.FileName, Encoding.UTF8));
+                r.File = "";
+                foreach (RilievoRumore x in rilievi) if (x.Data == r.Data) r.Data = r.Data.AddMinutes(1);
+                SalvaRilievo(r);
+                CaricaRilievi();
+                rilAtt = null;
+                foreach (RilievoRumore x in rilievi) if (x.File == r.File) rilAtt = x;
+                RiempiRilievi();
+                RumoreCambiato();
+            }
+            catch (Exception ex)
+            {
+                Messaggio(this, Lang.T("Il file non è una tabella del rumore locale (prima riga con gli azimut, poi una riga per ogni elevazione).") + "\n\n" + ex.Message, "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        static readonly string[] Rose16 = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSO", "SO", "OSO", "O", "ONO", "NO", "NNO" };
+        static string Direzione(double az)
+        {
+            string d = Rose16[(int)Math.Round((((az % 360) + 360) % 360) / 22.5) % 16];
+            return d.Replace("O", Lang.T("O"));   // O = ovest, tradotto come nella Volta celeste
+        }
+
+        void DisegnaRum(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            PreparaGrafica(g);
+            CultureInfo ci = Lang.Cultura;
+            Rectangle cr = pnlRum.ClientRectangle;
+            using (Brush bf = new SolidBrush(Tema.Back)) g.FillRectangle(bf, cr);
+            if (cr.Width < 300 || rilAtt == null) return;
+            RilievoRumore R = rilAtt;
+            Color titCol = Tema.Scuro ? Color.FromArgb(196, 181, 253) : Color.FromArgb(91, 33, 182);
+            Color blu = Color.FromArgb(31, 111, 209);
+            float pad = S(8), gap = S(14);
+            float wDx = Math.Max(S(430), (cr.Width - 2 * pad - gap) * 0.32f);
+            float y0 = S(6);
+            using (Font ft = FontPx(Lang.FontUi, S(13), true))
+            using (Font fs = FontPx(Lang.FontUi, S(12.5f), false))
+            using (Font fsb = FontPx(Lang.FontUi, S(12.5f), true))
+            using (Font fp = FontPx(Lang.FontUi, S(11.5f), false))
+            using (Font fpb = FontPx(Lang.FontUi, S(11.5f), true))
+            using (Font fc = FontPx(Lang.FontUi, S(14), true))
+            {
+                if (R.Esempio)
+                {
+                    string es = Lang.T("valori di esempio");
+                    SizeF sz = g.MeasureString(es, fpb);
+                    RectangleF rb = new RectangleF(pad + S(4), y0, sz.Width + S(14), sz.Height + S(4));
+                    using (GraphicsPath p = Arrotondato(rb, rb.Height / 2f))
+                    using (Brush b = new SolidBrush(Color.FromArgb(254, 240, 170))) g.FillPath(b, p);
+                    Testo(g, es, fpb, Color.FromArgb(146, 64, 14), rb, StringAlignment.Center, StringAlignment.Center);
+                    y0 = rb.Bottom + S(8);
+                }
+                RectangleF cl = new RectangleF(pad, y0, cr.Width - 2 * pad - gap - wDx, Math.Min(cr.Height - y0 - S(10), S(560)));
+                float xr = cl.Right + gap;
+                // ----- griglia
+                Scheda(g, cl, Color.Empty);
+                string tit = string.Format(ci, Lang.T("RUMORE LOCALE PER AZIMUT ED ELEVAZIONE · {0} · {1} MHz"), me.Loc.Text.Trim().ToUpperInvariant(), R.Freq.ToString("0.###", ci));
+                Testo(g, Spaziato(tit), ft, titCol, new RectangleF(cl.Left + S(16), cl.Top + S(12), cl.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                int nA = R.NAz, nE = R.NEl;
+                float gl = cl.Left + S(52), gt = cl.Top + S(64);
+                float cw = (cl.Right - S(16) - gl) / nA;
+                float ch = Math.Min(cw, (cl.Bottom - S(64) - gt) / nE);
+                RectangleF gr = new RectangleF(gl, gt, cw * nA, ch * nE);
+                rumGriglia = gr;
+                bool terr = OrizzonteValido;
+                for (int j = 0; j < nA; j++)
+                {
+                    int az = j * R.PassoAz;
+                    string s = az == 0 ? "N" : az == 90 ? "E" : az == 180 ? "S" : az == 270 ? Lang.T("O") : az.ToString(ci);
+                    Testo(g, s, fpb, Tema.Muted, new RectangleF(gl + j * cw, gt - S(20), cw, S(18)), StringAlignment.Center, StringAlignment.Center);
+                }
+                using (HatchBrush hb = new HatchBrush(HatchStyle.WideUpwardDiagonal, Tema.Scuro ? Color.FromArgb(70, 80, 100) : Color.FromArgb(206, 212, 222), Tema.Scuro ? Tema.Field : Color.FromArgb(236, 239, 244)))
+                    for (int i = 0; i < nE; i++)
+                    {
+                        int el = i * R.PassoEl;
+                        float y = gt + (nE - 1 - i) * ch;
+                        Testo(g, el.ToString(ci) + "°", fpb, Tema.Muted, new RectangleF(cl.Left + S(4), y, S(44), ch), StringAlignment.Far, StringAlignment.Center);
+                        for (int j = 0; j < nA; j++)
+                        {
+                            RectangleF c = new RectangleF(gl + j * cw + S(2), y + S(2), cw - S(4), ch - S(4));
+                            int v = R.V[i, j];
+                            bool dietro = terr && el + R.PassoEl / 2.0 < orizz.Elev(j * R.PassoAz);
+                            using (GraphicsPath p = Arrotondato(c, S(5)))
+                            {
+                                if (v > 0)
+                                {
+                                    using (Brush b = new SolidBrush(ColoreVoto(v))) g.FillPath(b, p);
+                                    Testo(g, v.ToString(ci), fc, v >= 9 ? Color.White : Color.FromArgb(20, 30, 25), c, StringAlignment.Center, StringAlignment.Center);
+                                }
+                                else if (dietro)
+                                {
+                                    g.FillPath(hb, p);
+                                    Testo(g, "·", fpb, Tema.Muted, c, StringAlignment.Center, StringAlignment.Center);
+                                }
+                                else
+                                    using (Pen pv = new Pen(Tema.Linea, 1f)) g.DrawPath(pv, p);
+                                if (i == rilSelI && j == rilSelJ)
+                                    using (Pen ps = new Pen(blu, S(2.6f))) g.DrawPath(ps, p);
+                            }
+                        }
+                    }
+                // legenda dei voti
+                float xl = cl.Left + S(16), yl = gr.Bottom + S(14);
+                for (int v = 1; v <= 10; v++)
+                {
+                    RectangleF c = new RectangleF(xl + (v - 1) * S(38), yl, S(34), S(24));
+                    using (GraphicsPath p = Arrotondato(c, S(4)))
+                    using (Brush b = new SolidBrush(ColoreVoto(v))) g.FillPath(b, p);
+                    Testo(g, v.ToString(ci), fpb, v >= 9 ? Color.White : Color.FromArgb(20, 30, 25), c, StringAlignment.Center, StringAlignment.Center);
+                }
+                string leg = Lang.T("1 = come il cielo freddo (0 dB sul riferimento) · 10 = rumore fortissimo") + (terr ? " · ▨ " + Lang.T("dietro il terreno (da «Orizzonte dal terreno»)") : "");
+                Testo(g, leg, fp, Tema.Muted, new RectangleF(xl + 10 * S(38) + S(10), yl, cl.Right - S(16) - xl - 10 * S(38) - S(10), S(24)), StringAlignment.Far, StringAlignment.Center);
+
+                // ----- vista dall'alto
+                float yr = S(6);
+                {
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(250));
+                    Scheda(g, r, Color.Empty);
+                    float rad = S(96), cx = r.Left + S(24) + rad, cy = r.Top + S(22) + rad;
+                    for (int i = nE - 1; i >= 0; i--)
+                    {
+                        float r1 = rad * (1 - (float)(i * R.PassoEl) / (R.ElMax + R.PassoEl)), r0 = rad * (1 - (float)((i + 1) * R.PassoEl) / (R.ElMax + R.PassoEl));
+                        for (int j = 0; j < nA; j++)
+                        {
+                            int v = R.V[i, j];
+                            bool dietro = terr && i * R.PassoEl + R.PassoEl / 2.0 < orizz.Elev(j * R.PassoAz);
+                            Color c = v > 0 ? ColoreVoto(v) : (dietro ? Color.FromArgb(203, 208, 216) : (Tema.Scuro ? Tema.Field : Color.FromArgb(240, 242, 246)));
+                            float a0 = j * R.PassoAz - R.PassoAz / 2f - 90;
+                            using (GraphicsPath p = new GraphicsPath())
+                            {
+                                p.AddArc(cx - r1, cy - r1, 2 * r1, 2 * r1, a0, R.PassoAz);
+                                if (r0 > 0.5f) p.AddArc(cx - r0, cy - r0, 2 * r0, 2 * r0, a0 + R.PassoAz, -R.PassoAz);
+                                else p.AddLine(cx, cy, cx, cy);
+                                p.CloseFigure();
+                                using (Brush b = new SolidBrush(c)) g.FillPath(b, p);
+                                using (Pen pw = new Pen(Tema.Scuro ? Tema.Carta : Color.White, 1f)) g.DrawPath(pw, p);
+                            }
+                        }
+                    }
+                    using (Font fo = FontPx("Georgia", S(13), true))
+                    {
+                        Testo(g, "N", fo, Tema.Fore, new RectangleF(cx - S(10), cy - rad - S(20), S(20), S(18)), StringAlignment.Center, StringAlignment.Center);
+                        Testo(g, "S", fo, Tema.Fore, new RectangleF(cx - S(10), cy + rad + S(2), S(20), S(18)), StringAlignment.Center, StringAlignment.Center);
+                        Testo(g, "E", fo, Tema.Fore, new RectangleF(cx + rad + S(4), cy - S(9), S(20), S(18)), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, Lang.T("O"), fo, Tema.Fore, new RectangleF(cx - rad - S(24), cy - S(9), S(20), S(18)), StringAlignment.Far, StringAlignment.Center);
+                    }
+                    // direzione più e meno rumorosa (media sulle elevazioni annotate)
+                    double best = 99, worst = -1; int jb = -1, jw = -1;
+                    for (int j = 0; j < nA; j++)
+                    {
+                        double sum = 0; int n = 0;
+                        for (int i = 0; i < nE; i++) if (R.V[i, j] > 0) { sum += R.V[i, j]; n++; }
+                        if (n == 0) continue;
+                        double m = sum / n;
+                        if (m > worst) { worst = m; jw = j; }
+                        if (m < best) { best = m; jb = j; }
+                    }
+                    string nota = string.Format(ci, Lang.T("Vista dall'alto: anelli da 0° (esterno) a {0}° di elevazione."), R.ElMax);
+                    if (jw >= 0 && worst > best)
+                        nota += " " + string.Format(ci, Lang.T("Rumore più alto verso {0}, più basso verso {1}."), Direzione(jw * R.PassoAz), Direzione(jb * R.PassoAz));
+                    Testo(g, nota, fp, Tema.Muted, new RectangleF(cx + rad + S(34), r.Top + S(40), r.Right - cx - rad - S(46), r.Height - S(60)), StringAlignment.Near, StringAlignment.Center);
+                    yr = r.Bottom + S(12);
+                }
+                // ----- come si fa
+                {
+                    string[] passi = {
+                        Lang.T("Punta lontano da Luna e Sole: si misura solo il rumore locale. Spegni alimentatori e apparati sospetti."),
+                        Lang.T("In WSJT-X porta il livello a 0 dB. Quando ruotando sale sopra 0 dB, riportalo a 0 e annota; se scende, lascialo."),
+                        Lang.T("Ruota l'antenna a passi di 15–30° e annota un voto da 1 a 10 per direzione."),
+                        Lang.T("Con l'elevazione, ripeti da 0° a 45° a passi di 5–10°."),
+                        Lang.T("Ripeti ogni tanto: l'obiettivo è un rumore più basso oggi di ieri.") };
+                    float wi = wDx - S(52), hTot = 0;
+                    foreach (string p in passi) hTot += g.MeasureString(p, fs, (int)wi).Height + S(2);
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(52) + hTot + S(14));
+                    Scheda(g, r, Color.Empty);
+                    Testo(g, Spaziato(Lang.T("COME SI FA (NJ9R, «EME THE EASY WAY»)")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                    float y = r.Top + S(44);
+                    using (Brush bt = new SolidBrush(Tema.Fore))
+                        for (int k = 0; k < passi.Length; k++)
+                        {
+                            float hh = g.MeasureString(passi[k], fs, (int)wi).Height;
+                            g.DrawString((k + 1).ToString(ci) + ".", fs, bt, r.Left + S(18), y);
+                            g.DrawString(passi[k], fs, bt, new RectangleF(r.Left + S(36), y, wi, hh + 2));
+                            y += hh + S(2);
+                        }
+                    yr = r.Bottom + S(12);
+                }
+                // ----- uso nei calcoli
+                {
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(170));
+                    Scheda(g, r, Color.Empty);
+                    Testo(g, Spaziato(Lang.T("USO NEI CALCOLI")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                    float x = r.Left + S(16), y = r.Top + S(40);
+                    Control cn = nudRumSoglia.Parent;
+                    PosizionaControllo(chkRumSegnala, x, y); x += chkRumSegnala.Width + S(4);
+                    PosizionaControllo(lRumDa, x, y + (chkRumSegnala.Height - lRumDa.Height) / 2); x += lRumDa.Width + S(2);
+                    PosizionaControllo(cn, x, y + (chkRumSegnala.Height - cn.Height) / 2); x += cn.Width + S(2);
+                    PosizionaControllo(lRumInSu, x, y + (chkRumSegnala.Height - lRumInSu.Height) / 2);
+                    y += Math.Max(chkRumSegnala.Height, cn.Height) + S(8);
+                    string t1 = string.Format(ci, Lang.T("Nel calendario (Posizione della Luna, Distanza e Dgrd) e nella Volta celeste le ore con la Luna in una cella ≥ {0} hanno il segno ⚠ rumore locale."), rumSoglia);
+                    float wi = r.Width - S(32);
+                    float h1 = g.MeasureString(t1, fs, (int)wi).Height;
+                    using (Brush bt = new SolidBrush(Tema.Fore)) g.DrawString(t1, fs, bt, new RectangleF(r.Left + S(16), y, wi, h1 + 2));
+                    y += h1 + S(4);
+                    // oggi: minuti con la Luna (sopra l'orizzonte) in una cella rumorosa
+                    string t2;
+                    RilievoRumore ru = RilievoInUso;
+                    if (ru == null) t2 = Lang.T("Non c'è ancora un rilievo tuo: i valori di esempio non entrano nei calcoli.");
+                    else if (!me.Ok) t2 = "";
+                    else
+                    {
+                        DateTime d0 = DateTime.UtcNow.Date;
+                        int min = 0; double azMin = 999, azMax = -999, eMin = 99, eMax = -1;
+                        for (int m = 0; m < 1440; m += 10)
+                        {
+                            MoonPos mp = Moon.Compute(d0.AddMinutes(m), me.Lat, me.Lon, (double)me.H.Value, false);
+                            if (mp.El < 0 || ru.Voto(mp.Az, mp.El) < rumSoglia) continue;
+                            min += 10; azMin = Math.Min(azMin, mp.Az); azMax = Math.Max(azMax, mp.Az); eMin = Math.Min(eMin, mp.El); eMax = Math.Max(eMax, mp.El);
+                        }
+                        if (min == 0) t2 = string.Format(ci, Lang.T("Oggi la Luna non passa da celle con rumore ≥ {0}."), rumSoglia);
+                        else
+                        {
+                            string dir = Direzione(azMin) == Direzione(azMax) ? Direzione(azMin) : Direzione(azMin) + "–" + Direzione(azMax);
+                            t2 = string.Format(ci, Lang.T("Oggi: {0} con la Luna verso {1}, tra {2}° e {3}°."), Durata(min, ci), dir,
+                                (Math.Floor(eMin / 5) * 5).ToString("0", ci), (Math.Ceiling(eMax / 5) * 5).ToString("0", ci));
+                        }
+                    }
+                    using (Brush bt = new SolidBrush(Tema.Fore)) g.DrawString(t2, fsb, bt, new RectangleF(r.Left + S(16), y, wi, S(40)));
+                    yr = r.Bottom + S(12);
+                }
+                int hNec = (int)Math.Max(yr, cl.Bottom) + S(10);
+                if (pnlRum.Height < hNec) pnlRum.Height = hNec;
+            }
+        }
+
         // ---------- Linguetta "DGRD per frequenza" (bozzetto approvato) ----------
         // Il Dgrd alla frequenza di lavoro, con il rumore vero della stazione (Tant e Te dal Budget EME della banda)
         // e con il cielo mediato sul fascio dell'antenna (mappa del cielo a 144 MHz, fascio gaussiano ricavato dal guadagno).
@@ -61791,7 +63392,7 @@ namespace LunaCalc
         void GrPrepara(DateTime giorno)
         {
             string k = giorno.ToString("yyyyMMdd", inv) + "|" + me.Lat.ToString("F4", inv) + "|" + me.Lon.ToString("F4", inv) + "|"
-                + me.Az1.Value + "|" + me.Az2.Value + "|" + me.El1.Value + "|" + me.El2.Value + "|" + DateTime.UtcNow.ToString("yyyyMMddHH", inv);
+                + me.Az1.Value + "|" + me.Az2.Value + "|" + me.El1.Value + "|" + me.El2.Value + "|" + ChiaveTerreno + "|" + DateTime.UtcNow.ToString("yyyyMMddHH", inv);
             if (k == grChiave) return;
             grChiave = k; grGiorno = giorno;
             for (int i = 0; i < 720; i++)
@@ -63567,6 +65168,11 @@ namespace LunaCalc
                         using (Brush bc = new SolidBrush(Color.FromArgb(160, 0, 0, 0))) g.FillEllipse(bc, x - r / 2 - 1.5f, y - r / 2 - 1.5f, r + 3, r + 3);
                         g.FillEllipse(db, x - r / 2, y - r / 2, r, r);
                         if (skyTrack[i][2] > 0) oreEtich.Add(new object[] { skyTrackT[i].ToString("HH", inv) + "h", x, y });
+                        // segno del rumore locale (mappa NJ9R): la Luna passa in una direzione rumorosa
+                        if (LunaRumorosa(skyTrack[i][0], skyTrack[i][1]) && (i % 2 == 0))
+                            using (Font fw = new Font(Lang.FontUi, 11F, FontStyle.Bold))
+                            using (Brush bw = new SolidBrush(Color.FromArgb(255, 196, 0)))
+                                g.DrawString("⚠", fw, bw, x - S(7), y - S(24));
                     }
                 }
             }
@@ -63665,7 +65271,7 @@ namespace LunaCalc
                 g.Nome = nome; g.Icona = icona; g.Pagine = pagine; g.Ultima = pagine[0];
                 gruppiNav.Add(g);
             };
-            add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpSky });
+            add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpOriz, tpSky });
             add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpPos, tpMondo });
             add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpBudgetD, tpGraves, tpSolar, tpExcel, tpDebug });
             add(Lang.T("Log"), "▦", new TabPage[] { tpMap });
@@ -63753,22 +65359,15 @@ namespace LunaCalc
                     float wi = g.MeasureString(gr.Icona, fi).Width, wt = g.MeasureString(gr.Nome, fg).Width;
                     RectangleF r = new RectangleF(x, y1, wi + wt + pxG * 2f, h1);
                     bool on = gr == att, sopra = object.Equals(navSopra, gr);
+                    // nuovo stile (YA-MS): il gruppo scelto è una pillola blu piena con la scritta bianca
+                    Color blu = Tema.Scuro ? Color.FromArgb(59, 130, 246) : Color.FromArgb(31, 111, 209);
+                    RectangleF rp = new RectangleF(r.Left, r.Top + S(6), r.Width, r.Height - S(10));
                     if (on || sopra)
-                    {
-                        using (GraphicsPath p = new GraphicsPath())
-                        {
-                            float rr = S(10);
-                            p.AddArc(r.Left, r.Top, 2 * rr, 2 * rr, 180, 90);
-                            p.AddArc(r.Right - 2 * rr, r.Top, 2 * rr, 2 * rr, 270, 90);
-                            p.AddLine(r.Right, r.Bottom + 1, r.Left, r.Bottom + 1);
-                            p.CloseFigure();
-                            using (Brush b = new SolidBrush(on ? Tema.Section : Color.FromArgb(90, Tema.Section))) g.FillPath(b, p);
-                            if (on) using (Pen pn = new Pen(Tema.Linea)) g.DrawPath(pn, p);
-                        }
-                    }
-                    Color c = on ? Tema.Fore : Tema.Muted;
-                    Testo(g, gr.Icona, fi, on ? Tema.Accent : c, new RectangleF(r.Left + pxG * 0.8f, r.Top, wi + S(4), r.Height), StringAlignment.Near, StringAlignment.Center);
-                    Testo(g, gr.Nome, fg, c, new RectangleF(r.Left + pxG * 0.93f + wi, r.Top, wt + S(6), r.Height), StringAlignment.Near, StringAlignment.Center);
+                        using (GraphicsPath p = Arrotondato(rp, rp.Height / 2f))
+                        using (Brush b = new SolidBrush(on ? blu : Color.FromArgb(Tema.Scuro ? 60 : 36, blu))) g.FillPath(b, p);
+                    Color c = on ? Color.White : Tema.Fore;
+                    Testo(g, gr.Icona, fi, c, new RectangleF(r.Left + pxG * 0.8f, rp.Top, wi + S(4), rp.Height), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, gr.Nome, fg, c, new RectangleF(r.Left + pxG * 0.93f + wi, rp.Top, wt + S(6), rp.Height), StringAlignment.Near, StringAlignment.Center);
                     navZone.Add(new KeyValuePair<RectangleF, object>(r, gr));
                     x = r.Right + S(4);
                 }
@@ -63778,18 +65377,42 @@ namespace LunaCalc
                 using (Pen pn = new Pen(Tema.Linea)) g.DrawLine(pn, 0, fascia.Top, cr.Width, fascia.Top);
                 if (att == null) return;
                 // riga 2: le linguette del gruppo scelto
-                x = S(26);
+                x = S(14);
                 foreach (TabPage p in att.Pagine)
                 {
                     bool on = p == tabs.SelectedTab, spenta = PaginaSpenta(p), sopra = object.Equals(navSopra, p);
                     Font f = on ? fsb : fs;
                     float wt = g.MeasureString(p.Text, f).Width;
-                    RectangleF r = new RectangleF(x, fascia.Top, wt + S(8), fascia.Height);
-                    Color c = spenta ? Color.FromArgb(Tema.Scuro ? 90 : 140, Tema.Muted) : (on ? Tema.Fore : (sopra ? Tema.Fore : Tema.Muted));
-                    Testo(g, p.Text, f, c, r, StringAlignment.Center, StringAlignment.Center);
-                    if (on) using (Brush b = new SolidBrush(Tema.Accent)) g.FillRectangle(b, r.Left, r.Bottom - S(4), r.Width, S(3));
+                    RectangleF r = new RectangleF(x, fascia.Top, wt + S(28), fascia.Height);
+                    // nuovo stile (YA-MS): la linguetta scelta è una pillola bianca con bordo e scritta blu
+                    Color blu2 = Tema.Scuro ? Color.FromArgb(96, 165, 250) : Color.FromArgb(31, 111, 209);
+                    RectangleF rp = new RectangleF(r.Left, r.Top + S(6), r.Width, r.Height - S(11));
+                    if (on || (sopra && !spenta))
+                        using (GraphicsPath gp = Arrotondato(rp, rp.Height / 2f))
+                        {
+                            using (Brush b = new SolidBrush(on ? (Tema.Scuro ? Tema.Field : Color.White) : Color.FromArgb(Tema.Scuro ? 40 : 60, Color.White))) g.FillPath(b, gp);
+                            if (on) using (Pen pn = new Pen(blu2, S(2))) g.DrawPath(pn, gp);
+                        }
+                    Color c = spenta ? Color.FromArgb(Tema.Scuro ? 90 : 140, Tema.Muted) : (on ? blu2 : Tema.Fore);
+                    if (pagineNuove.Contains(p))
+                    {
+                        using (Font fn = FontPx(Lang.FontUi, S(10), true))
+                        {
+                            float wn = g.MeasureString(Lang.T("NUOVA"), fn).Width + S(10);
+                            r.Width += wn; rp.Width += wn;
+                            if (on || (sopra && !spenta))
+                                using (GraphicsPath gp2 = Arrotondato(rp, rp.Height / 2f))
+                                {
+                                    using (Brush b2 = new SolidBrush(on ? (Tema.Scuro ? Tema.Field : Color.White) : Color.FromArgb(Tema.Scuro ? 40 : 60, Color.White))) g.FillPath(b2, gp2);
+                                    if (on) using (Pen pn2 = new Pen(blu2, S(2))) g.DrawPath(pn2, gp2);
+                                }
+                            Testo(g, p.Text, f, c, new RectangleF(rp.Left + S(14), rp.Top, wt + S(4), rp.Height), StringAlignment.Near, StringAlignment.Center);
+                            Distintivo(g, Lang.T("NUOVA"), fn, rp.Left + S(16) + wt + S(2), rp.Top + rp.Height / 2f);
+                        }
+                    }
+                    else Testo(g, p.Text, f, c, rp, StringAlignment.Center, StringAlignment.Center);
                     navZone.Add(new KeyValuePair<RectangleF, object>(r, p));
-                    x = r.Right + S(26);
+                    x = r.Right + S(10);
                 }
             }
         }
@@ -65742,7 +67365,13 @@ namespace LunaCalc
                 bool valido = !double.IsNaN(gg.Score);
                 if (chkDgSoloUtili.Checked && !valido) continue;
                 // i 3 giorni migliori hanno la stella con il numero, come sul grafico
-                ListViewItem it = new ListViewItem((valido && gg.Rango <= 3 ? "★" + gg.Rango.ToString(ci) + "  " : "") + gg.Giorno.ToString("ddd dd/MM/yyyy", itCi));
+                bool rum = false;
+                if (valido && rumSegnala && RilievoInUso != null && me.Ok)
+                {
+                    MoonPos pm = Moon.Compute(gg.Migliore, me.Lat, me.Lon, (double)me.H.Value, false);
+                    rum = LunaRumorosa(pm.Az, pm.El);
+                }
+                ListViewItem it = new ListViewItem((rum ? "⚠ " : "") + (valido && gg.Rango <= 3 ? "★" + gg.Rango.ToString(ci) + "  " : "") + gg.Giorno.ToString("ddd dd/MM/yyyy", itCi));
                 it.SubItems.Add(gg.LunaNuova ? Lang.T("● Luna nuova") : (gg.LunaPiena ? Lang.T("Luna piena") : ""));
                 it.SubItems.Add(gg.Ore.ToString("0.0", ci));
                 it.SubItems.Add(valido ? gg.Score.ToString("F2", ci) : Lang.T("nessuna finestra"));
@@ -66686,7 +68315,23 @@ namespace LunaCalc
             cardMe.Controls.Add(txtTrkLoc);
             cardDx.Controls.Add(txtTrkDx);
             cardDx.Controls.Add(txtTrkDxCall);
-            cardMe.Layout += (s, e) => { txtTrkLoc.Location = new Point(S(18), S(31)); txtTrkLoc.Width = Math.Max(S(60), Math.Min(cardMe.Width - S(40), S(250))); };
+            Spunta chkTrkTerreno = CasellaTerreno();
+            chkTrkTerreno.Font = new Font(Lang.FontUi, 8F * fontFactor, FontStyle.Bold);
+            chkTrkTerreno.Margin = new Padding(0);
+            cardMe.Controls.Add(chkTrkTerreno);
+            cardMe.Layout += (s, e) =>
+            {
+                txtTrkLoc.Location = new Point(S(18), S(31));
+                Size sc = chkTrkTerreno.GetPreferredSize(Size.Empty);
+                int wl = Math.Max(S(60), Math.Min(cardMe.Width - S(40), S(250)));
+                // casella del terreno a destra del locator, se c'è posto (il locator resta largo almeno 200 px)
+                bool posto = cardMe.Width - S(40) - S(12) - sc.Width >= S(200);
+                if (posto) wl = Math.Min(wl, cardMe.Width - S(40) - S(12) - sc.Width);
+                txtTrkLoc.Width = wl;
+                chkTrkTerreno.Size = sc;
+                chkTrkTerreno.Location = new Point(txtTrkLoc.Right + S(12), txtTrkLoc.Top + (txtTrkLoc.Height - sc.Height) / 2);
+                chkTrkTerreno.Visible = posto;
+            };
             cardDx.Layout += (s, e) =>
             {
                 // due caselle affiancate: nominativo (circa 4 parti su 10) e locator
@@ -68947,6 +70592,7 @@ namespace LunaCalc
             cmbTema.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTema.Items.AddRange(new object[] { Lang.T("Chiaro"), Lang.T("Notte"), Lang.T("Nero") });
             foreach (string pn in Tema.PastelloNome) cmbTema.Items.Add(Lang.T(pn));
+            foreach (string pn in Tema.IpNome) cmbTema.Items.Add(Lang.T(pn));
             cmbTema.DropDownWidth = S(200);
             cmbTema.SelectedIndex = Tema.Schema;
             cmbTema.Width = S(100);
@@ -69678,7 +71324,7 @@ namespace LunaCalc
                 Dictionary<string, string> desc = new Dictionary<string, string>();
                 foreach (string[] x in DescrizioniLinguette()) desc[x[0]] = x[1];
                 string[][] gruppi = {
-                    new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Volta celeste") },
+                    new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Il mio orizzonte"), Lang.T("Volta celeste") },
                     new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
                     new string[] { Lang.T("Collegamento"), Lang.T("Budget EME yagi"), Lang.T("Budget EME dischi"), Lang.T("Radar GRAVES"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
                     new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
@@ -72137,7 +73783,9 @@ namespace LunaCalc
             }
             caricamento = true;
             LoadSettings();
+            AllineaOrizzonteDopoImpostazioni();
             caricamento = false;
+            TerrenoCambiato(false);
             SetupColumns(true);
             AgganciaLocatorTracciamento();
             AgganciaLimitiPunt();
@@ -72735,6 +74383,10 @@ namespace LunaCalc
             TableLayoutPanel g1;
             Group(Lang.T("La mia stazione"), 4, out g1);
             me = BuildStation(g1, 0, "", 0);
+            {
+                Spunta ctp = CasellaTerreno();
+                g1.Controls.Add(ctp, 0, 4); g1.SetColumnSpan(ctp, 4);
+            }
             top.Controls.Add(SchedaCampi(Lang.T("La mia stazione"), Color.FromArgb(31, 111, 209), g1, null), 0, 0);
 
             // Stazione DX: la casella CONFRONTA sta nel titolo
@@ -72934,6 +74586,9 @@ namespace LunaCalc
             BuildSkyTab(tpSky);
             tpPunt = new TabPage(Lang.T("Ricognizione dei miei ostacoli"));
             BuildPuntTab(tpPunt);
+            tpOriz = new TabPage(Lang.T("Il mio orizzonte"));
+            BuildOrizTab(tpOriz);
+            pagineNuove.Add(tpOriz);
             tpDgrd = new TabPage(Lang.T("Distanza e Dgrd"));
             BuildDgrdTab(tpDgrd);
             tpDgFreq = new TabPage(Lang.T("DGRD per frequenza"));
@@ -72955,7 +74610,7 @@ namespace LunaCalc
             BuildExcelTab(tpExcel);
             tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
-            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpSky, tpPunt, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
+            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpSky, tpPunt, tpOriz, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
             BuildMondoTab(tpMondo);   // dopo che tabs esiste: segue il cambio di linguetta
             BuildManualeTab(tpIstr, false);   // dopo le altre linguette: il manuale ne mostra le schermate
@@ -72991,6 +74646,7 @@ namespace LunaCalc
                 if (sel == tpDgrd) RecalcDgrd();
                 if (sel == tpMap) map.Invalidate();
                 if (sel == tpPunt) pnlPunt.Invalidate();
+                if (sel == tpOriz) { AggiornaOrizTop(); if (orizVista == 0) pnlOriz.Invalidate(); else pnlRum.Invalidate(); }
                 if (sel == tpBudget) ImpostaModoBudget(false);
                 if (sel == tpBudgetD) ImpostaModoBudget(true);
                 if (sel == tpBudget || sel == tpBudgetD || sel == tpSolar) RecalcBudget();
@@ -73546,7 +75202,7 @@ namespace LunaCalc
             string[] v = new string[ColTitle.Length];
             for (int i = 0; i < v.Length; i++) v[i] = "";
             v[0] = FmtWD(r.Utc);
-            v[1] = FmtT(r.Utc);
+            v[1] = (LunaRumorosa(r.P.Az, r.P.El) ? "⚠ " : "") + FmtT(r.Utc);
             v[2] = FmtT(loc);
             v[3] = r.P.Az.ToString(fmtAng, ci);
             v[4] = r.P.El.ToString(fmtAng, ci);
@@ -73967,6 +75623,15 @@ namespace LunaCalc
                 lines.Add("khz=" + cmbKhz.Text.Trim());
                 lines.Add("adif=" + adifPath);
                 if (cmbSkyColori != null) lines.Add("cielo_colori=" + cmbSkyColori.SelectedIndex.ToString(inv));
+                lines.Add("terreno=" + (usaTerreno ? "1" : "0"));
+                lines.Add("orizzonte_vista=" + orizVista.ToString(inv));
+                lines.Add("orizzonte_raggio=" + orizRaggioIdx.ToString(inv));
+                lines.Add("orizzonte_passo=" + orizPassoIdx.ToString(inv));
+                lines.Add("orizzonte_k=" + orizKIdx.ToString(inv));
+                lines.Add("orizzonte_sfondo=" + (orizSfondo ? "1" : "0"));
+                lines.Add("orizzonte_colori=" + orizPal.ToString(inv));
+                lines.Add("rumore_segnala=" + (rumSegnala ? "1" : "0"));
+                lines.Add("rumore_soglia=" + rumSoglia.ToString(inv));
                 if (cmbPuntMappa != null) lines.Add("punt_mappa=" + cmbPuntMappa.SelectedIndex.ToString(inv));
                 lines.Add("punt_zoom=" + puntZoom.ToString(inv));
                 lines.Add("dg_col_dgrd=" + (dgColDg.IsEmpty ? "" : dgColDg.ToArgb().ToString(inv)));
@@ -74186,6 +75851,15 @@ namespace LunaCalc
                                 if (int.TryParse(v, NumberStyles.Integer, inv, out pz)) { puntZoom = Math.Max(3, Math.Min(19, pz)); AggiornaZoomPunt(); }
                                 break;
                             }
+                        case "terreno": usaTerreno = v != "0"; break;
+                        case "orizzonte_vista": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizVista = Math.Max(0, Math.Min(1, x)); break; }
+                        case "orizzonte_raggio": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizRaggioIdx = Math.Max(0, Math.Min(OrizRaggi.Length - 1, x)); break; }
+                        case "orizzonte_passo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizPassoIdx = Math.Max(0, Math.Min(OrizPassi.Length - 1, x)); break; }
+                        case "orizzonte_k": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizKIdx = Math.Max(0, Math.Min(OrizK.Length - 1, x)); break; }
+                        case "orizzonte_sfondo": orizSfondo = v != "0"; break;
+                        case "orizzonte_colori": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizPal = Math.Max(0, Math.Min(2, x)); break; }
+                        case "rumore_segnala": rumSegnala = v != "0"; break;
+                        case "rumore_soglia": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) rumSoglia = Math.Max(1, Math.Min(10, x)); break; }
                         case "cielo_colori":
                             {
                                 int pc;
@@ -77974,6 +79648,454 @@ namespace LunaCalc
         public static readonly bool Linux = !Windows && !Mac;
         public static readonly bool Mono = Type.GetType("Mono.Runtime") != null;
         public static string Nome { get { return Windows ? "Windows" : (Mac ? "macOS" : "Linux"); } }
+    }
+
+    // ---------- Orizzonte dal terreno (DEM SRTM1) ----------
+    // Riquadri SRTM da 1" (3601 × 3601 quote a 16 bit, big-endian) presi da AWS Open Data (elevation-tiles-prod, formato "skadi")
+    // e salvati compressi in data/dem. I riquadri vicini alla stazione si leggono a piena risoluzione, quelli lontani uno
+    // ogni tre punti (circa 90 m), che bastano per l'orizzonte e tengono bassa la memoria.
+    static class Terreno
+    {
+        public const string UrlBase = "https://s3.amazonaws.com/elevation-tiles-prod/skadi/";
+        class Riquadro { public short[] H; public int N; }
+        static readonly Dictionary<string, Riquadro> cache = new Dictionary<string, Riquadro>();
+        static readonly object blocco = new object();
+
+        public static string Cartella
+        {
+            get { string d = Dati.Percorso("dem"); try { Directory.CreateDirectory(d); } catch { } return d; }
+        }
+
+        public static string Nome(int lat, int lon)
+        {
+            return (lat >= 0 ? "N" : "S") + Math.Abs(lat).ToString("00", CultureInfo.InvariantCulture)
+                + (lon >= 0 ? "E" : "W") + Math.Abs(lon).ToString("000", CultureInfo.InvariantCulture);
+        }
+
+        public static void Svuota() { lock (blocco) cache.Clear(); }
+
+        // Scarica (se manca) e legge il riquadro; fine = piena risoluzione. Restituisce i byte del file compresso (0 se è mare).
+        public static long Prepara(int lat, int lon, bool fine)
+        {
+            string n = Nome(lat, lon);
+            string p = Path.Combine(Cartella, n + ".hgt.gz"), mare = Path.Combine(Cartella, n + ".mare");
+            lock (blocco)
+            {
+                Riquadro r;
+                if (cache.TryGetValue(n, out r) && (r == null || !fine || r.N == 3601)) return File.Exists(p) ? new FileInfo(p).Length : 0;
+            }
+            if (!File.Exists(p) && !File.Exists(mare))
+            {
+                string url = UrlBase + n.Substring(0, 3) + "/" + n + ".hgt.gz";
+                try
+                {
+                    byte[] b = Dati.Scarica(url, 120000);
+                    if (b.Length < 1000) throw new IOException("short");
+                    Dati.ScriviAtomico(p, b);
+                }
+                catch (WebException ex)
+                {
+                    HttpWebResponse hr = ex.Response as HttpWebResponse;
+                    if (hr != null && (hr.StatusCode == HttpStatusCode.NotFound || hr.StatusCode == HttpStatusCode.Forbidden))
+                    {
+                        // riquadro senza terre emerse: mare a quota 0
+                        try { File.WriteAllText(mare, ""); } catch { }
+                    }
+                    else throw;
+                }
+            }
+            Riquadro q = null;
+            if (File.Exists(p))
+            {
+                byte[] raw;
+                using (FileStream fs = File.OpenRead(p))
+                using (System.IO.Compression.GZipStream z = new System.IO.Compression.GZipStream(fs, System.IO.Compression.CompressionMode.Decompress))
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    z.CopyTo(ms);
+                    raw = ms.ToArray();
+                }
+                int n0 = (int)Math.Round(Math.Sqrt(raw.Length / 2.0));
+                if (n0 < 100 || n0 * n0 * 2 != raw.Length) throw new IOException("DEM " + n);
+                int passo = fine || n0 < 3601 ? 1 : 3;
+                int nn = (n0 - 1) / passo + 1;
+                short[] h = new short[nn * nn];
+                for (int i = 0; i < nn; i++)
+                    for (int j = 0; j < nn; j++)
+                    {
+                        int k = ((i * passo) * n0 + j * passo) * 2;
+                        short v = (short)((raw[k] << 8) | raw[k + 1]);
+                        h[i * nn + j] = v < -500 ? (short)0 : v;   // vuoti dei dati (−32768): quota 0
+                    }
+                q = new Riquadro(); q.H = h; q.N = nn;
+            }
+            lock (blocco) cache[n] = q;
+            return File.Exists(p) ? new FileInfo(p).Length : 0;
+        }
+
+        // Quota del terreno (m) con interpolazione bilineare; 0 sul mare o se il riquadro non è caricato
+        public static double Quota(double lat, double lon)
+        {
+            int la = (int)Math.Floor(lat), lo = (int)Math.Floor(lon);
+            Riquadro r;
+            lock (blocco) { if (!cache.TryGetValue(Nome(la, lo), out r)) return 0; }
+            if (r == null) return 0;
+            int n = r.N;
+            double y = (la + 1 - lat) * (n - 1), x = (lon - lo) * (n - 1);
+            int i = Math.Max(0, Math.Min(n - 2, (int)y)), j = Math.Max(0, Math.Min(n - 2, (int)x));
+            double fy = y - i, fx = x - j;
+            double a = r.H[i * n + j], b = r.H[i * n + j + 1], c = r.H[(i + 1) * n + j], d = r.H[(i + 1) * n + j + 1];
+            return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy;
+        }
+
+        // Quota più alta di un riquadro caricato
+        public static int Massimo(int lat, int lon)
+        {
+            Riquadro r;
+            lock (blocco) { if (!cache.TryGetValue(Nome(lat, lon), out r) || r == null) return 0; }
+            int m = 0;
+            foreach (short v in r.H) if (v > m) m = v;
+            return m;
+        }
+
+        // Punto a distanza d (m) e azimut az (gradi) da (lat, lon), su una sfera di 6371 km
+        public static void Destinazione(double lat, double lon, double az, double d, out double la2, out double lo2)
+        {
+            double R = 6371000.0, f1 = lat * Math.PI / 180.0, l1 = lon * Math.PI / 180.0, b = az * Math.PI / 180.0, dr = d / R;
+            double sf2 = Math.Sin(f1) * Math.Cos(dr) + Math.Cos(f1) * Math.Sin(dr) * Math.Cos(b);
+            double f2 = Math.Asin(Math.Max(-1, Math.Min(1, sf2)));
+            double l2 = l1 + Math.Atan2(Math.Sin(b) * Math.Sin(dr) * Math.Cos(f1), Math.Cos(dr) - Math.Sin(f1) * Math.Sin(f2));
+            la2 = f2 * 180.0 / Math.PI; lo2 = l2 * 180.0 / Math.PI;
+        }
+    }
+
+    // Un ostacolo dell'orizzonte: settore di azimut, elevazione, distanza e nome (da OpenStreetMap, se raggiungibile)
+    class Ostacolo
+    {
+        public double Az1, Az2, AzPicco, ElMax, ElMin, Dist, Lat, Lon;
+        public bool Varco;
+        public string Nome = "";
+    }
+
+    // L'orizzonte calcolato: elevazione del terreno grado per grado (passo scelto), con i dati del calcolo.
+    // Salvato in data/dem/orizzonte.txt, così vale anche alla riapertura del programma.
+    class Orizzonte
+    {
+        public double Passo = 0.5, Lat, Lon, Suolo, Antenna, Raggio, K = 4.0 / 3.0, HMax;
+        public double[] El = new double[0], Dist = new double[0];
+        public string Loc = "";
+        public int Riquadri, RiquadriMare, LatMin, LatMax, LonMin, LonMax;
+        public long Byte;
+        public DateTime Quando;
+        public List<Ostacolo> Ostacoli = new List<Ostacolo>();
+
+        public bool Valido { get { return El.Length > 0; } }
+        public double MaxEl { get { double m = -90; foreach (double v in El) if (v > m) m = v; return m; } }
+
+        // elevazione del terreno (gradi) all'azimut az, interpolata
+        public double Elev(double az)
+        {
+            int n = El.Length;
+            if (n == 0) return double.NaN;
+            double x = (((az % 360.0) + 360.0) % 360.0) / Passo;
+            int i = (int)Math.Floor(x) % n;
+            double f = x - Math.Floor(x);
+            return El[i] * (1 - f) + El[(i + 1) % n] * f;
+        }
+        public double Distanza(double az)
+        {
+            int n = Dist.Length;
+            if (n == 0) return 0;
+            int i = (int)Math.Round((((az % 360.0) + 360.0) % 360.0) / Passo) % n;
+            return Dist[i];
+        }
+
+        static string Percorso { get { return Path.Combine(Terreno.Cartella, "orizzonte.txt"); } }
+
+        public void Salva()
+        {
+            CultureInfo iv = CultureInfo.InvariantCulture;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("# YAEC - orizzonte dal terreno (DEM SRTM1)");
+            sb.AppendLine("locator=" + Loc);
+            sb.AppendLine("lat=" + Lat.ToString("R", iv)); sb.AppendLine("lon=" + Lon.ToString("R", iv));
+            sb.AppendLine("suolo=" + Suolo.ToString("F1", iv)); sb.AppendLine("antenna=" + Antenna.ToString("F1", iv));
+            sb.AppendLine("raggio=" + Raggio.ToString("F0", iv)); sb.AppendLine("k=" + K.ToString("R", iv));
+            sb.AppendLine("hmax=" + HMax.ToString("F0", iv)); sb.AppendLine("passo=" + Passo.ToString("R", iv));
+            sb.AppendLine("riquadri=" + Riquadri.ToString(iv) + "," + RiquadriMare.ToString(iv) + "," + LatMin + "," + LatMax + "," + LonMin + "," + LonMax);
+            sb.AppendLine("byte=" + Byte.ToString(iv));
+            sb.AppendLine("quando=" + Quando.ToString("yyyy-MM-dd HH:mm", iv));
+            foreach (Ostacolo o in Ostacoli)
+                sb.AppendLine("ostacolo=" + string.Join(";", new string[] { o.Az1.ToString("F1", iv), o.Az2.ToString("F1", iv), o.AzPicco.ToString("F1", iv),
+                    o.ElMax.ToString("F2", iv), o.ElMin.ToString("F2", iv), o.Dist.ToString("F0", iv), o.Lat.ToString("F5", iv), o.Lon.ToString("F5", iv),
+                    o.Varco ? "1" : "0", (o.Nome ?? "").Replace(";", ",") }));
+            sb.AppendLine("dati");
+            for (int i = 0; i < El.Length; i++) sb.AppendLine(El[i].ToString("F3", iv) + ";" + Dist[i].ToString("F0", iv));
+            try { Dati.ScriviAtomico(Percorso, Encoding.UTF8.GetBytes(sb.ToString())); } catch { }
+        }
+
+        public static Orizzonte Carica()
+        {
+            try
+            {
+                if (!File.Exists(Percorso)) return null;
+                CultureInfo iv = CultureInfo.InvariantCulture;
+                Orizzonte o = new Orizzonte();
+                List<double> el = new List<double>(), di = new List<double>();
+                bool dati = false;
+                foreach (string r0 in File.ReadAllLines(Percorso, Encoding.UTF8))
+                {
+                    string r = r0.Trim();
+                    if (r.Length == 0 || r.StartsWith("#")) continue;
+                    if (dati)
+                    {
+                        string[] p = r.Split(';');
+                        if (p.Length == 2) { el.Add(double.Parse(p[0], iv)); di.Add(double.Parse(p[1], iv)); }
+                        continue;
+                    }
+                    if (r == "dati") { dati = true; continue; }
+                    int k = r.IndexOf('=');
+                    if (k < 0) continue;
+                    string c = r.Substring(0, k), v = r.Substring(k + 1);
+                    switch (c)
+                    {
+                        case "locator": o.Loc = v; break;
+                        case "lat": o.Lat = double.Parse(v, iv); break;
+                        case "lon": o.Lon = double.Parse(v, iv); break;
+                        case "suolo": o.Suolo = double.Parse(v, iv); break;
+                        case "antenna": o.Antenna = double.Parse(v, iv); break;
+                        case "raggio": o.Raggio = double.Parse(v, iv); break;
+                        case "k": o.K = double.Parse(v, iv); break;
+                        case "hmax": o.HMax = double.Parse(v, iv); break;
+                        case "passo": o.Passo = double.Parse(v, iv); break;
+                        case "byte": o.Byte = long.Parse(v, iv); break;
+                        case "quando": o.Quando = DateTime.ParseExact(v, "yyyy-MM-dd HH:mm", iv); break;
+                        case "riquadri":
+                            {
+                                string[] p = v.Split(',');
+                                if (p.Length >= 6) { o.Riquadri = int.Parse(p[0], iv); o.RiquadriMare = int.Parse(p[1], iv); o.LatMin = int.Parse(p[2], iv); o.LatMax = int.Parse(p[3], iv); o.LonMin = int.Parse(p[4], iv); o.LonMax = int.Parse(p[5], iv); }
+                                break;
+                            }
+                        case "ostacolo":
+                            {
+                                string[] p = v.Split(';');
+                                if (p.Length < 10) break;
+                                Ostacolo s = new Ostacolo();
+                                s.Az1 = double.Parse(p[0], iv); s.Az2 = double.Parse(p[1], iv); s.AzPicco = double.Parse(p[2], iv);
+                                s.ElMax = double.Parse(p[3], iv); s.ElMin = double.Parse(p[4], iv); s.Dist = double.Parse(p[5], iv);
+                                s.Lat = double.Parse(p[6], iv); s.Lon = double.Parse(p[7], iv); s.Varco = p[8] == "1"; s.Nome = p[9];
+                                o.Ostacoli.Add(s);
+                                break;
+                            }
+                    }
+                }
+                if (el.Count < 36 || Math.Abs(el.Count * o.Passo - 360.0) > 0.01) return null;
+                o.El = el.ToArray(); o.Dist = di.ToArray();
+                return o;
+            }
+            catch { return null; }
+        }
+
+        // Calcolo completo (da eseguire fuori dal thread dell'interfaccia). raggioKm ≤ 0 = automatico.
+        public static Orizzonte Calcola(string loc, double lat, double lon, double antenna, double raggioKm, double passo, double k, Action<string> stato)
+        {
+            Orizzonte o = new Orizzonte();
+            o.Loc = loc; o.Lat = lat; o.Lon = lon; o.Passo = passo; o.K = k;
+            double Reff = 6371000.0 * k;
+            CultureInfo ci = Lang.Cultura;
+            HashSet<string> fatti = new HashSet<string>();
+            long byteTot = 0;
+            int nTerra = 0, nMare = 0;
+            int laMin = int.MaxValue, laMax = int.MinValue, loMin = int.MaxValue, loMax = int.MinValue;
+            // carica tutti i riquadri entro r km (quelli entro 20 km a piena risoluzione); restituisce la quota più alta
+            Func<double, double> CaricaFino = r =>
+            {
+                double dLat = r / 111.0, dLon = r / (111.0 * Math.Max(0.2, Math.Cos(lat * Math.PI / 180.0)));
+                int a0 = (int)Math.Floor(lat - dLat), a1 = (int)Math.Floor(lat + dLat), b0 = (int)Math.Floor(lon - dLon), b1 = (int)Math.Floor(lon + dLon);
+                List<int[]> elenco = new List<int[]>();
+                for (int a = a0; a <= a1; a++)
+                    for (int b = b0; b <= b1; b++)
+                    {
+                        // distanza dalla stazione al punto più vicino del riquadro
+                        double cla = Math.Max(a, Math.Min(a + 1, lat)), clo = Math.Max(b, Math.Min(b + 1, lon));
+                        double dy = (cla - lat) * 111.0, dx = (clo - lon) * 111.0 * Math.Cos(lat * Math.PI / 180.0);
+                        double dmin = Math.Sqrt(dx * dx + dy * dy);
+                        if (dmin > r) continue;
+                        elenco.Add(new int[] { a, b, dmin < 20 ? 1 : 0 });
+                    }
+                double hm = 0;
+                int nn = 0;
+                foreach (int[] t in elenco)
+                {
+                    nn++;
+                    string nome = Terreno.Nome(t[0], t[1]);
+                    if (stato != null) stato(string.Format(ci, Lang.T("Riquadro {0} ({1} di {2})…"), nome, nn, elenco.Count));
+                    long by = Terreno.Prepara(t[0], t[1], t[2] == 1);
+                    if (!fatti.Contains(nome))
+                    {
+                        fatti.Add(nome);
+                        if (by > 0) { nTerra++; byteTot += by; } else nMare++;
+                        laMin = Math.Min(laMin, t[0]); laMax = Math.Max(laMax, t[0]); loMin = Math.Min(loMin, t[1]); loMax = Math.Max(loMax, t[1]);
+                    }
+                    hm = Math.Max(hm, Terreno.Massimo(t[0], t[1]));
+                }
+                return hm;
+            };
+            o.Suolo = 0;
+            double raggio;
+            if (raggioKm > 0)
+            {
+                raggio = raggioKm;
+                o.HMax = CaricaFino(raggio);
+                o.Suolo = Terreno.Quota(lat, lon);
+            }
+            else
+            {
+                // automatico: il raggio cresce finché il rilievo più alto trovato potrebbe ancora sporgere sopra 0°
+                raggio = 60;
+                o.HMax = CaricaFino(raggio);
+                o.Suolo = Terreno.Quota(lat, lon);
+                for (int it = 0; it < 6; it++)
+                {
+                    double hAnt = Math.Max(antenna, o.Suolo + 2);
+                    double rr = (Math.Sqrt(2 * Reff * hAnt) + Math.Sqrt(2 * Reff * Math.Max(1, o.HMax))) / 1000.0;
+                    rr = Math.Min(350, Math.Max(30, Math.Ceiling(rr / 10.0) * 10.0));
+                    if (rr <= raggio + 1) { raggio = rr; break; }
+                    raggio = rr;
+                    o.HMax = Math.Max(o.HMax, CaricaFino(raggio));
+                }
+            }
+            o.Raggio = raggio;
+            o.Antenna = Math.Max(antenna, o.Suolo + 2);
+            o.Riquadri = nTerra; o.RiquadriMare = nMare; o.Byte = byteTot;
+            o.LatMin = laMin; o.LatMax = laMax; o.LonMin = loMin; o.LonMax = loMax;
+            if (stato != null) stato(Lang.T("Calcolo dell'orizzonte…"));
+            int n = (int)Math.Round(360.0 / passo);
+            o.El = new double[n]; o.Dist = new double[n];
+            double dMax = raggio * 1000.0;
+            for (int i = 0; i < n; i++)
+            {
+                double az = i * passo, best = -90, bestD = 0;
+                double d = 90;
+                while (d <= dMax)
+                {
+                    double la2, lo2;
+                    Terreno.Destinazione(lat, lon, az, d, out la2, out lo2);
+                    double h = Terreno.Quota(la2, lo2);
+                    double ang = Math.Atan((h - o.Antenna) / d - d / (2 * Reff)) * 180.0 / Math.PI;
+                    if (ang > best) { best = ang; bestD = d; }
+                    d += Math.Max(30.0, d * 0.004);
+                }
+                o.El[i] = best; o.Dist[i] = bestD;
+            }
+            o.Quando = DateTime.UtcNow;
+            o.TrovaOstacoli();
+            return o;
+        }
+
+        // I tre rilievi più alti (separati da almeno 20°) e il varco più basso
+        public void TrovaOstacoli()
+        {
+            Ostacoli.Clear();
+            int n = El.Length;
+            if (n == 0) return;
+            bool[] preso = new bool[n];
+            int sep = (int)Math.Round(20.0 / Passo);
+            for (int q = 0; q < 3; q++)
+            {
+                int im = -1;
+                for (int i = 0; i < n; i++)
+                {
+                    if (preso[i]) continue;
+                    bool vicino = false;
+                    foreach (Ostacolo o in Ostacoli) { double dd = Math.Abs(i * Passo - o.AzPicco); if (Math.Min(dd, 360 - dd) < sep * Passo) { vicino = true; break; } }
+                    if (vicino) continue;
+                    if (im < 0 || El[i] > El[im]) im = i;
+                }
+                if (im < 0 || El[im] < 0.5) break;
+                double soglia = El[im] > 2 ? El[im] * 0.5 : El[im] - 0.5;
+                int a = im, b = im;
+                while (El[(a - 1 + n) % n] >= soglia && (im - a) < n / 2) a--;
+                while (El[(b + 1) % n] >= soglia && (b - im) < n / 2) b++;
+                for (int k = a; k <= b; k++) preso[(k + n) % n] = true;
+                Ostacolo s = new Ostacolo();
+                s.Az1 = (((a * Passo) % 360) + 360) % 360; s.Az2 = (((b * Passo) % 360) + 360) % 360; s.AzPicco = im * Passo;
+                s.ElMax = El[im]; s.ElMin = El[im]; s.Dist = Dist[im];
+                Terreno.Destinazione(Lat, Lon, s.AzPicco, s.Dist, out s.Lat, out s.Lon);
+                Ostacoli.Add(s);
+            }
+            // varco: il tratto più basso dell'orizzonte
+            int iv = 0;
+            for (int i = 1; i < n; i++) if (El[i] < El[iv]) iv = i;
+            {
+                double soglia = El[iv] + 0.5;
+                int a = iv, b = iv;
+                while (El[(a - 1 + n) % n] <= soglia && (iv - a) < n / 4) a--;
+                while (El[(b + 1) % n] <= soglia && (b - iv) < n / 4) b++;
+                double mx = El[iv];
+                for (int k = a; k <= b; k++) mx = Math.Max(mx, El[(k + n) % n]);
+                Ostacolo s = new Ostacolo();
+                s.Varco = true;
+                s.Az1 = (((a * Passo) % 360) + 360) % 360; s.Az2 = (((b * Passo) % 360) + 360) % 360; s.AzPicco = iv * Passo;
+                s.ElMin = El[iv]; s.ElMax = mx; s.Dist = Dist[iv];
+                Terreno.Destinazione(Lat, Lon, s.AzPicco, s.Dist, out s.Lat, out s.Lon);
+                Ostacoli.Add(s);
+            }
+        }
+
+        // Nomi degli ostacoli da OpenStreetMap: la cima più vicina (Overpass), altrimenti il luogo (Nominatim).
+        // Se la rete non risponde i nomi restano vuoti.
+        public void CercaNomi()
+        {
+            CultureInfo iv = CultureInfo.InvariantCulture;
+            foreach (Ostacolo o in Ostacoli)
+            {
+                string nome = "";
+                try
+                {
+                    if (!o.Varco)
+                    {
+                        string q = "[out:json][timeout:20];node(around:2500," + o.Lat.ToString("F5", iv) + "," + o.Lon.ToString("F5", iv) + ")[natural=peak][name];out 20;";
+                        string js = Encoding.UTF8.GetString(Dati.Scarica("https://overpass-api.de/api/interpreter?data=" + Uri.EscapeDataString(q), 25000));
+                        // la cima più alta tra quelle trovate
+                        double bestEle = -1;
+                        foreach (System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(js, "\"tags\"\\s*:\\s*\\{([^}]*)\\}"))
+                        {
+                            string t = m.Groups[1].Value;
+                            System.Text.RegularExpressions.Match mn = System.Text.RegularExpressions.Regex.Match(t, "\"name\"\\s*:\\s*\"((?:[^\"\\\\]|\\\\.)*)\"");
+                            if (!mn.Success) continue;
+                            System.Text.RegularExpressions.Match mel = System.Text.RegularExpressions.Regex.Match(t, "\"ele\"\\s*:\\s*\"([0-9.]+)");
+                            double ele = 0;
+                            if (mel.Success) double.TryParse(mel.Groups[1].Value, NumberStyles.Float, iv, out ele);
+                            if (ele > bestEle) { bestEle = ele; nome = System.Text.RegularExpressions.Regex.Unescape(mn.Groups[1].Value) + (ele > 0 ? " " + Math.Round(ele).ToString("0", iv) + " m" : ""); }
+                        }
+                    }
+                }
+                catch { }
+                if (nome.Length == 0)
+                {
+                    try
+                    {
+                        System.Threading.Thread.Sleep(1100);   // Nominatim: al massimo una richiesta al secondo
+                        string url = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&zoom=14&accept-language=" + Lang.Codici[Lang.Idx]
+                            + "&lat=" + o.Lat.ToString("F5", iv) + "&lon=" + o.Lon.ToString("F5", iv);
+                        string js = Encoding.UTF8.GetString(Dati.Scarica(url, 20000));
+                        System.Text.RegularExpressions.Match mn = System.Text.RegularExpressions.Regex.Match(js, "\"name\"\\s*:\\s*\"((?:[^\"\\\\]|\\\\.)*)\"");
+                        if (mn.Success) nome = System.Text.RegularExpressions.Regex.Unescape(mn.Groups[1].Value);
+                        if (nome.Length == 0)
+                        {
+                            System.Text.RegularExpressions.Match ma = System.Text.RegularExpressions.Regex.Match(js, "\"(?:village|town|city|hamlet|suburb)\"\\s*:\\s*\"((?:[^\"\\\\]|\\\\.)*)\"");
+                            if (ma.Success) nome = System.Text.RegularExpressions.Regex.Unescape(ma.Groups[1].Value);
+                        }
+                    }
+                    catch { }
+                }
+                if (o.Varco && Terreno.Quota(o.Lat, o.Lon) < 1)
+                    nome = nome.Length > 0 ? Lang.T("mare") + ", " + string.Format(Lang.Cultura, Lang.T("varco verso {0}"), nome) : Lang.T("mare");
+                else if (o.Varco && nome.Length > 0) nome = string.Format(Lang.Cultura, Lang.T("varco verso {0}"), nome);
+                o.Nome = nome;
+            }
+        }
     }
 
     static class Dati
