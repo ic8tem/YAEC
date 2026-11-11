@@ -3375,6 +3375,24 @@ namespace LunaCalc
             "file cty.dat non trovato",
             "nominativo non riconosciuto",
             "Riconosce il paese dal nominativo con il file cty.dat di AD1C (country-files.com): YAEC lo scarica nella cartella data e lo aggiorna ogni mese; se non ci riesce, usa quello di WSJT-X o di N1MM Logger+ se lo trova. Il tuo paese: {0}.",
+            "YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta, si chiude e si aggiorna da solo; i tuoi dati nella cartella data restano dove sono.",
+            "Si apre la pagina di GitHub con i pacchetti della nuova versione.",
+            "Nuova versione di YAEC",
+            "È disponibile YAEC {0} su GitHub (tu hai la {1}). Vuoi aggiornarlo adesso?",
+            "Vuoi che YAEC non ti avvisi più per la versione {0}?",
+            "Ti avviserà comunque alla prossima versione.",
+            "Il file {0} manca nella versione {1} su GitHub.",
+            "L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.",
+            "Riprova più tardi o scarica il pacchetto dalla pagina di GitHub.",
+            "YAEC {0} è stato scaricato: ora il programma si chiude, si aggiorna e si riapre da solo.",
+            "Non è stato possibile avviare l'aggiornamento.",
+            "Non è stato possibile scaricare l'aggiornamento.",
+            "File mancanti",
+            "Mancano {0} file del programma: {1}",
+            "Vuoi che YAEC li scarichi ora da GitHub (versione {0})?",
+            "I file mancanti sono stati scaricati.",
+            "Non è stato possibile scaricare {0} file: {1}",
+            "Se la cartella del programma è protetta, avvia YAEC come amministratore oppure reinstallalo dalla pagina di GitHub.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -5095,6 +5113,24 @@ namespace LunaCalc
             "cty.dat file not found",
             "callsign not recognised",
             "Recognises the country from the callsign with the cty.dat file by AD1C (country-files.com): YAEC downloads it into the data folder and updates it every month; if it cannot, it uses the one of WSJT-X or N1MM Logger+ if it finds it. Your country: {0}.",
+            "YAEC downloads the new package from GitHub, checks its fingerprint, closes and updates itself; your data in the data folder stays where it is.",
+            "The GitHub page with the packages of the new version opens.",
+            "New version of YAEC",
+            "YAEC {0} is available on GitHub (you have {1}). Do you want to update now?",
+            "Do you want YAEC to stop notifying you about version {0}?",
+            "It will still notify you of the next version.",
+            "The file {0} is missing from version {1} on GitHub.",
+            "The fingerprint of the downloaded package does not match the one published on GitHub: the update is cancelled.",
+            "Try again later or download the package from the GitHub page.",
+            "YAEC {0} has been downloaded: the program now closes, updates and reopens by itself.",
+            "The update could not be started.",
+            "The update could not be downloaded.",
+            "Missing files",
+            "{0} program files are missing: {1}",
+            "Do you want YAEC to download them now from GitHub (version {0})?",
+            "The missing files have been downloaded.",
+            "{0} files could not be downloaded: {1}",
+            "If the program folder is protected, run YAEC as administrator or reinstall it from the GitHub page.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6815,6 +6851,24 @@ namespace LunaCalc
             "Datei cty.dat nicht gefunden",
             "Rufzeichen nicht erkannt",
             "Erkennt das Land am Rufzeichen mit der Datei cty.dat von AD1C (country-files.com): YAEC lädt sie in den Ordner data und aktualisiert sie jeden Monat; gelingt das nicht, nimmt es die von WSJT-X oder N1MM Logger+, falls vorhanden. Dein Land: {0}.",
+            "YAEC lädt das neue Paket von GitHub, prüft seinen Fingerabdruck, schließt sich und aktualisiert sich selbst; deine Daten im Ordner data bleiben, wo sie sind.",
+            "Die GitHub-Seite mit den Paketen der neuen Version wird geöffnet.",
+            "Neue Version von YAEC",
+            "YAEC {0} ist auf GitHub verfügbar (du hast {1}). Jetzt aktualisieren?",
+            "Soll YAEC dich über die Version {0} nicht mehr benachrichtigen?",
+            "Über die nächste Version wirst du trotzdem benachrichtigt.",
+            "Die Datei {0} fehlt in der Version {1} auf GitHub.",
+            "Der Fingerabdruck des heruntergeladenen Pakets stimmt nicht mit dem auf GitHub veröffentlichten überein: Die Aktualisierung wird abgebrochen.",
+            "Versuche es später erneut oder lade das Paket von der GitHub-Seite herunter.",
+            "YAEC {0} wurde heruntergeladen: Das Programm schließt sich jetzt, aktualisiert sich und startet von selbst neu.",
+            "Die Aktualisierung konnte nicht gestartet werden.",
+            "Die Aktualisierung konnte nicht heruntergeladen werden.",
+            "Fehlende Dateien",
+            "Es fehlen {0} Programmdateien: {1}",
+            "Soll YAEC sie jetzt von GitHub herunterladen (Version {0})?",
+            "Die fehlenden Dateien wurden heruntergeladen.",
+            "{0} Dateien konnten nicht heruntergeladen werden: {1}",
+            "Wenn der Programmordner geschützt ist, starte YAEC als Administrator oder installiere es von der GitHub-Seite neu.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -8535,6 +8589,24 @@ namespace LunaCalc
             "fichier cty.dat introuvable",
             "indicatif non reconnu",
             "Reconnaît le pays à partir de l'indicatif avec le fichier cty.dat d'AD1C (country-files.com) : YAEC le télécharge dans le dossier data et le met à jour chaque mois ; s'il n'y parvient pas, il utilise celui de WSJT-X ou de N1MM Logger+ s'il le trouve. Ton pays : {0}.",
+            "YAEC télécharge le nouveau paquet depuis GitHub, vérifie son empreinte, se ferme et se met à jour tout seul ; tes données dans le dossier data restent où elles sont.",
+            "La page GitHub avec les paquets de la nouvelle version s'ouvre.",
+            "Nouvelle version de YAEC",
+            "YAEC {0} est disponible sur GitHub (tu as la {1}). Veux-tu mettre à jour maintenant ?",
+            "Veux-tu que YAEC ne te prévienne plus pour la version {0} ?",
+            "Il te préviendra quand même pour la prochaine version.",
+            "Le fichier {0} manque dans la version {1} sur GitHub.",
+            "L'empreinte du paquet téléchargé ne correspond pas à celle publiée sur GitHub : la mise à jour est annulée.",
+            "Réessaie plus tard ou télécharge le paquet depuis la page GitHub.",
+            "YAEC {0} a été téléchargé : le programme va se fermer, se mettre à jour et se rouvrir tout seul.",
+            "Impossible de lancer la mise à jour.",
+            "Impossible de télécharger la mise à jour.",
+            "Fichiers manquants",
+            "Il manque {0} fichiers du programme : {1}",
+            "Veux-tu que YAEC les télécharge maintenant depuis GitHub (version {0}) ?",
+            "Les fichiers manquants ont été téléchargés.",
+            "Impossible de télécharger {0} fichiers : {1}",
+            "Si le dossier du programme est protégé, lance YAEC en tant qu'administrateur ou réinstalle-le depuis la page GitHub.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -10255,6 +10327,24 @@ namespace LunaCalc
             "archivo cty.dat no encontrado",
             "indicativo no reconocido",
             "Reconoce el país por el indicativo con el archivo cty.dat de AD1C (country-files.com): YAEC lo descarga en la carpeta data y lo actualiza cada mes; si no lo consigue, usa el de WSJT-X o N1MM Logger+ si lo encuentra. Tu país: {0}.",
+            "YAEC descarga el nuevo paquete de GitHub, comprueba su huella, se cierra y se actualiza solo; tus datos de la carpeta data se quedan donde están.",
+            "Se abre la página de GitHub con los paquetes de la nueva versión.",
+            "Nueva versión de YAEC",
+            "YAEC {0} está disponible en GitHub (tú tienes la {1}). ¿Quieres actualizar ahora?",
+            "¿Quieres que YAEC deje de avisarte de la versión {0}?",
+            "Te avisará igualmente de la próxima versión.",
+            "El archivo {0} falta en la versión {1} de GitHub.",
+            "La huella del paquete descargado no coincide con la publicada en GitHub: la actualización se cancela.",
+            "Inténtalo más tarde o descarga el paquete desde la página de GitHub.",
+            "YAEC {0} se ha descargado: ahora el programa se cierra, se actualiza y se vuelve a abrir solo.",
+            "No se pudo iniciar la actualización.",
+            "No se pudo descargar la actualización.",
+            "Archivos que faltan",
+            "Faltan {0} archivos del programa: {1}",
+            "¿Quieres que YAEC los descargue ahora de GitHub (versión {0})?",
+            "Los archivos que faltaban se han descargado.",
+            "No se pudieron descargar {0} archivos: {1}",
+            "Si la carpeta del programa está protegida, ejecuta YAEC como administrador o reinstálalo desde la página de GitHub.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -11975,6 +12065,24 @@ namespace LunaCalc
             "ficheiro cty.dat não encontrado",
             "indicativo não reconhecido",
             "Reconhece o país pelo indicativo com o ficheiro cty.dat de AD1C (country-files.com): o YAEC descarrega-o para a pasta data e atualiza-o todos os meses; se não conseguir, usa o do WSJT-X ou do N1MM Logger+ se o encontrar. O teu país: {0}.",
+            "O YAEC descarrega o novo pacote do GitHub, verifica a sua impressão digital, fecha-se e atualiza-se sozinho; os teus dados na pasta data ficam onde estão.",
+            "Abre-se a página do GitHub com os pacotes da nova versão.",
+            "Nova versão do YAEC",
+            "O YAEC {0} está disponível no GitHub (tens a {1}). Queres atualizar agora?",
+            "Queres que o YAEC deixe de te avisar da versão {0}?",
+            "Avisar-te-á na mesma da próxima versão.",
+            "O ficheiro {0} falta na versão {1} no GitHub.",
+            "A impressão digital do pacote descarregado não corresponde à publicada no GitHub: a atualização foi cancelada.",
+            "Tenta mais tarde ou descarrega o pacote da página do GitHub.",
+            "O YAEC {0} foi descarregado: o programa vai fechar-se, atualizar-se e reabrir-se sozinho.",
+            "Não foi possível iniciar a atualização.",
+            "Não foi possível descarregar a atualização.",
+            "Ficheiros em falta",
+            "Faltam {0} ficheiros do programa: {1}",
+            "Queres que o YAEC os descarregue agora do GitHub (versão {0})?",
+            "Os ficheiros em falta foram descarregados.",
+            "Não foi possível descarregar {0} ficheiros: {1}",
+            "Se a pasta do programa estiver protegida, executa o YAEC como administrador ou reinstala-o a partir da página do GitHub.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -13695,6 +13803,24 @@ namespace LunaCalc
             "未找到 cty.dat 文件",
             "无法识别呼号",
             "使用 AD1C 的 cty.dat 文件（country-files.com）根据呼号识别国家：YAEC 将其下载到 data 文件夹并每月更新；若无法下载，则使用找到的 WSJT-X 或 N1MM Logger+ 的副本。你的国家：{0}。",
+            "YAEC 从 GitHub 下载新软件包，校验其指纹，然后自行关闭并更新；data 文件夹中的数据保持不变。",
+            "将打开 GitHub 上新版本的软件包页面。",
+            "YAEC 新版本",
+            "GitHub 上已有 YAEC {0}（你的版本是 {1}）。现在更新吗？",
+            "以后不再提醒版本 {0} 吗？",
+            "下一个版本仍会提醒你。",
+            "GitHub 上的 {1} 版本中缺少文件 {0}。",
+            "下载的软件包指纹与 GitHub 上公布的不一致：更新已取消。",
+            "请稍后再试，或从 GitHub 页面下载软件包。",
+            "YAEC {0} 已下载：程序现在将关闭、更新并自动重新打开。",
+            "无法启动更新。",
+            "无法下载更新。",
+            "缺少文件",
+            "缺少 {0} 个程序文件：{1}",
+            "要让 YAEC 现在从 GitHub 下载它们吗（版本 {0}）？",
+            "缺少的文件已下载。",
+            "有 {0} 个文件无法下载：{1}",
+            "如果程序文件夹受保护，请以管理员身份运行 YAEC，或从 GitHub 页面重新安装。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -15415,6 +15541,24 @@ namespace LunaCalc
             "cty.dat ファイルが見つかりません",
             "コールサインを認識できません",
             "AD1C の cty.dat ファイル（country-files.com）でコールサインから国を判別します。YAEC は data フォルダーにダウンロードして毎月更新し、できない場合は見つかった WSJT-X または N1MM Logger+ のものを使います。あなたの国：{0}。",
+            "YAEC は GitHub から新しいパッケージをダウンロードし、指紋を確認してから自動的に終了して更新します。data フォルダーのデータはそのまま残ります。",
+            "新しいバージョンのパッケージがある GitHub のページを開きます。",
+            "YAEC の新しいバージョン",
+            "GitHub に YAEC {0} があります（お使いのバージョンは {1}）。今すぐ更新しますか？",
+            "バージョン {0} についての通知を今後表示しないようにしますか？",
+            "次のバージョンについては通知します。",
+            "GitHub のバージョン {1} にファイル {0} がありません。",
+            "ダウンロードしたパッケージの指紋が GitHub で公開されているものと一致しません。更新を中止しました。",
+            "後でもう一度試すか、GitHub のページからパッケージをダウンロードしてください。",
+            "YAEC {0} をダウンロードしました。プログラムを終了し、更新して自動的に再起動します。",
+            "更新を開始できませんでした。",
+            "更新をダウンロードできませんでした。",
+            "不足しているファイル",
+            "プログラムのファイルが {0} 個不足しています：{1}",
+            "今すぐ GitHub からダウンロードしますか（バージョン {0}）？",
+            "不足していたファイルをダウンロードしました。",
+            "{0} 個のファイルをダウンロードできませんでした：{1}",
+            "プログラムのフォルダーが保護されている場合は、YAEC を管理者として実行するか、GitHub のページから再インストールしてください。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -17135,6 +17279,24 @@ namespace LunaCalc
             "cty.dat फ़ाइल नहीं मिली",
             "कॉल साइन पहचाना नहीं गया",
             "AD1C की cty.dat फ़ाइल (country-files.com) से कॉल साइन द्वारा देश पहचानता है: YAEC इसे data फ़ोल्डर में डाउनलोड करता है और हर महीने अद्यतन करता है; न हो सके तो मिलने पर WSJT-X या N1MM Logger+ वाली उपयोग करता है। आपका देश: {0}।",
+            "YAEC GitHub से नया पैकेज डाउनलोड करता है, उसकी छाप जाँचता है, बंद होकर खुद अद्यतन होता है; data फ़ोल्डर में आपका डेटा जहाँ है वहीं रहता है।",
+            "नए संस्करण के पैकेज वाला GitHub पृष्ठ खुलता है।",
+            "YAEC का नया संस्करण",
+            "GitHub पर YAEC {0} उपलब्ध है (आपके पास {1} है)। क्या अभी अद्यतन करें?",
+            "क्या YAEC संस्करण {0} के बारे में अब सूचित न करे?",
+            "अगले संस्करण के बारे में फिर भी सूचित करेगा।",
+            "GitHub पर संस्करण {1} में फ़ाइल {0} नहीं है।",
+            "डाउनलोड किए गए पैकेज की छाप GitHub पर प्रकाशित छाप से मेल नहीं खाती: अद्यतन रद्द किया गया।",
+            "बाद में फिर प्रयास करें या GitHub पृष्ठ से पैकेज डाउनलोड करें।",
+            "YAEC {0} डाउनलोड हो गया: अब प्रोग्राम बंद होगा, अद्यतन होगा और अपने आप फिर खुलेगा।",
+            "अद्यतन शुरू नहीं हो सका।",
+            "अद्यतन डाउनलोड नहीं हो सका।",
+            "गायब फ़ाइलें",
+            "प्रोग्राम की {0} फ़ाइलें गायब हैं: {1}",
+            "क्या YAEC इन्हें अभी GitHub से डाउनलोड करे (संस्करण {0})?",
+            "गायब फ़ाइलें डाउनलोड हो गईं।",
+            "{0} फ़ाइलें डाउनलोड नहीं हो सकीं: {1}",
+            "यदि प्रोग्राम फ़ोल्डर सुरक्षित है, तो YAEC को व्यवस्थापक के रूप में चलाएँ या GitHub पृष्ठ से फिर से स्थापित करें।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -18855,6 +19017,24 @@ namespace LunaCalc
             "cty.dat 파일을 찾을 수 없음",
             "호출부호를 인식할 수 없음",
             "AD1C의 cty.dat 파일(country-files.com)로 호출부호에서 나라를 알아냅니다. YAEC는 data 폴더에 내려받아 매달 갱신하며, 실패하면 찾은 WSJT-X 또는 N1MM Logger+의 파일을 사용합니다. 당신의 나라: {0}.",
+            "YAEC가 GitHub에서 새 패키지를 내려받아 지문을 확인한 뒤 스스로 종료하고 업데이트합니다. data 폴더의 데이터는 그대로 남습니다.",
+            "새 버전의 패키지가 있는 GitHub 페이지가 열립니다.",
+            "YAEC 새 버전",
+            "GitHub에 YAEC {0}이(가) 있습니다(현재 {1}). 지금 업데이트할까요?",
+            "버전 {0}에 대해 더 이상 알리지 않을까요?",
+            "다음 버전은 그래도 알려 드립니다.",
+            "GitHub의 버전 {1}에 파일 {0}이(가) 없습니다.",
+            "내려받은 패키지의 지문이 GitHub에 공개된 것과 일치하지 않습니다. 업데이트를 취소합니다.",
+            "나중에 다시 시도하거나 GitHub 페이지에서 패키지를 내려받으세요.",
+            "YAEC {0}을(를) 내려받았습니다. 프로그램이 종료되고 업데이트된 뒤 자동으로 다시 열립니다.",
+            "업데이트를 시작할 수 없습니다.",
+            "업데이트를 내려받을 수 없습니다.",
+            "없는 파일",
+            "프로그램 파일 {0}개가 없습니다: {1}",
+            "지금 GitHub에서 내려받을까요(버전 {0})?",
+            "없던 파일을 내려받았습니다.",
+            "파일 {0}개를 내려받을 수 없습니다: {1}",
+            "프로그램 폴더가 보호되어 있으면 YAEC를 관리자 권한으로 실행하거나 GitHub 페이지에서 다시 설치하세요.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -20575,6 +20755,24 @@ namespace LunaCalc
             "berkas cty.dat tidak ditemukan",
             "tanda panggil tidak dikenali",
             "Mengenali negara dari tanda panggil dengan berkas cty.dat dari AD1C (country-files.com): YAEC mengunduhnya ke folder data dan memperbaruinya setiap bulan; bila gagal, memakai milik WSJT-X atau N1MM Logger+ jika ditemukan. Negara Anda: {0}.",
+            "YAEC mengunduh paket baru dari GitHub, memeriksa sidik jarinya, menutup diri, lalu memperbarui sendiri; data Anda di folder data tetap di tempatnya.",
+            "Halaman GitHub dengan paket versi baru akan dibuka.",
+            "Versi baru YAEC",
+            "YAEC {0} tersedia di GitHub (Anda memakai {1}). Perbarui sekarang?",
+            "Hentikan pemberitahuan YAEC untuk versi {0}?",
+            "Anda tetap akan diberi tahu tentang versi berikutnya.",
+            "Berkas {0} tidak ada di versi {1} di GitHub.",
+            "Sidik jari paket yang diunduh tidak cocok dengan yang dipublikasikan di GitHub: pembaruan dibatalkan.",
+            "Coba lagi nanti atau unduh paket dari halaman GitHub.",
+            "YAEC {0} sudah diunduh: program sekarang menutup, memperbarui, dan membuka lagi sendiri.",
+            "Pembaruan tidak dapat dimulai.",
+            "Pembaruan tidak dapat diunduh.",
+            "Berkas yang hilang",
+            "{0} berkas program hilang: {1}",
+            "Unduh sekarang dari GitHub (versi {0})?",
+            "Berkas yang hilang sudah diunduh.",
+            "{0} berkas tidak dapat diunduh: {1}",
+            "Jika folder program dilindungi, jalankan YAEC sebagai administrator atau pasang ulang dari halaman GitHub.",
         };
 
         public static readonly string[] RU = {
@@ -22296,6 +22494,24 @@ namespace LunaCalc
             "файл cty.dat не найден",
             "позывной не распознан",
             "Определяет страну по позывному с помощью файла cty.dat от AD1C (country-files.com): YAEC загружает его в папку data и обновляет каждый месяц; если не удаётся, использует файл WSJT-X или N1MM Logger+, если найдёт. Ваша страна: {0}.",
+            "YAEC загружает новый пакет с GitHub, проверяет его отпечаток, закрывается и обновляется сам; ваши данные в папке data остаются на месте.",
+            "Откроется страница GitHub с пакетами новой версии.",
+            "Новая версия YAEC",
+            "На GitHub доступна YAEC {0} (у вас {1}). Обновить сейчас?",
+            "Больше не напоминать о версии {0}?",
+            "О следующей версии YAEC всё равно сообщит.",
+            "В версии {1} на GitHub нет файла {0}.",
+            "Отпечаток загруженного пакета не совпадает с опубликованным на GitHub: обновление отменено.",
+            "Повторите попытку позже или загрузите пакет со страницы GitHub.",
+            "YAEC {0} загружена: программа сейчас закроется, обновится и откроется снова сама.",
+            "Не удалось запустить обновление.",
+            "Не удалось загрузить обновление.",
+            "Отсутствующие файлы",
+            "Отсутствуют файлы программы ({0}): {1}",
+            "Загрузить их сейчас с GitHub (версия {0})?",
+            "Отсутствующие файлы загружены.",
+            "Не удалось загрузить файлы ({0}): {1}",
+            "Если папка программы защищена, запустите YAEC от имени администратора или переустановите со страницы GitHub.",
         };
 
         public static readonly string[] UK = {
@@ -24017,6 +24233,24 @@ namespace LunaCalc
             "файл cty.dat не знайдено",
             "позивний не розпізнано",
             "Визначає країну за позивним за допомогою файлу cty.dat від AD1C (country-files.com): YAEC завантажує його в теку data й оновлює щомісяця; якщо не вдається, використовує файл WSJT-X або N1MM Logger+, якщо знайде. Ваша країна: {0}.",
+            "YAEC завантажує новий пакет із GitHub, перевіряє його відбиток, закривається й оновлюється сам; ваші дані в теці data лишаються на місці.",
+            "Відкриється сторінка GitHub із пакетами нової версії.",
+            "Нова версія YAEC",
+            "На GitHub доступна YAEC {0} (у вас {1}). Оновити зараз?",
+            "Більше не нагадувати про версію {0}?",
+            "Про наступну версію YAEC однаково повідомить.",
+            "У версії {1} на GitHub немає файлу {0}.",
+            "Відбиток завантаженого пакета не збігається з опублікованим на GitHub: оновлення скасовано.",
+            "Спробуйте пізніше або завантажте пакет зі сторінки GitHub.",
+            "YAEC {0} завантажено: програма зараз закриється, оновиться й відкриється знову сама.",
+            "Не вдалося запустити оновлення.",
+            "Не вдалося завантажити оновлення.",
+            "Відсутні файли",
+            "Бракує файлів програми ({0}): {1}",
+            "Завантажити їх зараз із GitHub (версія {0})?",
+            "Відсутні файли завантажено.",
+            "Не вдалося завантажити файли ({0}): {1}",
+            "Якщо тека програми захищена, запустіть YAEC від імені адміністратора або перевстановіть зі сторінки GitHub.",
         };
 
         public static readonly string[] AF = {
@@ -25738,6 +25972,24 @@ namespace LunaCalc
             "lêer cty.dat nie gevind nie",
             "roepsein nie herken nie",
             "Herken die land uit die roepsein met die cty.dat-lêer van AD1C (country-files.com): YAEC laai dit in die data-gids af en werk dit elke maand by; as dit nie kan nie, gebruik dit dié van WSJT-X of N1MM Logger+ as dit dit vind. Jou land: {0}.",
+            "YAEC laai die nuwe pakket van GitHub af, kontroleer sy vingerafdruk, sluit en werk homself by; jou data in die data-gids bly waar dit is.",
+            "Die GitHub-blad met die pakkette van die nuwe weergawe word oopgemaak.",
+            "Nuwe weergawe van YAEC",
+            "YAEC {0} is op GitHub beskikbaar (jy het {1}). Wil jy nou bywerk?",
+            "Wil jy hê YAEC moet jou nie meer oor weergawe {0} laat weet nie?",
+            "Dit sal jou steeds oor die volgende weergawe laat weet.",
+            "Die lêer {0} ontbreek in weergawe {1} op GitHub.",
+            "Die vingerafdruk van die afgelaaide pakket stem nie ooreen met dié op GitHub nie: die bywerking word gekanselleer.",
+            "Probeer later weer of laai die pakket van die GitHub-blad af.",
+            "YAEC {0} is afgelaai: die program sluit nou, werk by en maak self weer oop.",
+            "Die bywerking kon nie begin word nie.",
+            "Die bywerking kon nie afgelaai word nie.",
+            "Ontbrekende lêers",
+            "{0} programlêers ontbreek: {1}",
+            "Wil jy hê YAEC moet hulle nou van GitHub aflaai (weergawe {0})?",
+            "Die ontbrekende lêers is afgelaai.",
+            "{0} lêers kon nie afgelaai word nie: {1}",
+            "As die programgids beskerm is, begin YAEC as administrateur of installeer dit weer van die GitHub-blad af.",
         };
 
         public static readonly string[] BN = {
@@ -27458,6 +27710,24 @@ namespace LunaCalc
             "cty.dat ফাইল পাওয়া যায়নি",
             "কলসাইন চেনা যায়নি",
             "AD1C-এর cty.dat ফাইল (country-files.com) দিয়ে কলসাইন থেকে দেশ চেনে: YAEC এটি data ফোল্ডারে ডাউনলোড করে এবং প্রতি মাসে হালনাগাদ করে; না পারলে পাওয়া গেলে WSJT-X বা N1MM Logger+-এর ফাইল ব্যবহার করে। আপনার দেশ: {0}।",
+            "YAEC GitHub থেকে নতুন প্যাকেজ নামায়, এর ছাপ যাচাই করে, বন্ধ হয়ে নিজে হালনাগাদ হয়; data ফোল্ডারে আপনার তথ্য যেখানে আছে সেখানেই থাকে।",
+            "নতুন সংস্করণের প্যাকেজসহ GitHub পাতা খোলে।",
+            "YAEC-এর নতুন সংস্করণ",
+            "GitHub-এ YAEC {0} পাওয়া যাচ্ছে (আপনার আছে {1})। এখনই হালনাগাদ করবেন?",
+            "YAEC কি সংস্করণ {0} নিয়ে আর জানাবে না?",
+            "পরের সংস্করণ এলে তবুও জানাবে।",
+            "GitHub-এ সংস্করণ {1}-এ {0} ফাইলটি নেই।",
+            "নামানো প্যাকেজের ছাপ GitHub-এ প্রকাশিত ছাপের সাথে মেলে না: হালনাগাদ বাতিল।",
+            "পরে আবার চেষ্টা করুন বা GitHub পাতা থেকে প্যাকেজ নামান।",
+            "YAEC {0} নামানো হয়েছে: এখন প্রোগ্রাম বন্ধ হবে, হালনাগাদ হবে এবং নিজে আবার খুলবে।",
+            "হালনাগাদ শুরু করা যায়নি।",
+            "হালনাগাদ নামানো যায়নি।",
+            "অনুপস্থিত ফাইল",
+            "প্রোগ্রামের {0}টি ফাইল নেই: {1}",
+            "YAEC কি এখন GitHub থেকে এগুলো নামাবে (সংস্করণ {0})?",
+            "অনুপস্থিত ফাইলগুলো নামানো হয়েছে।",
+            "{0}টি ফাইল নামানো যায়নি: {1}",
+            "প্রোগ্রামের ফোল্ডার সুরক্ষিত থাকলে YAEC প্রশাসক হিসেবে চালান বা GitHub পাতা থেকে আবার ইনস্টল করুন।",
         };
 
         public static readonly string[] AR = {
@@ -29178,6 +29448,24 @@ namespace LunaCalc
             "لم يُعثر على ملف cty.dat",
             "النداء غير معروف",
             "يتعرف على البلد من النداء بملف cty.dat من AD1C ‏(country-files.com): ينزّله YAEC في مجلد data ويحدّثه كل شهر؛ وإن تعذّر ذلك يستخدم ملف WSJT-X أو N1MM Logger+ إن وجده. بلدك: {0}.",
+            "ينزّل YAEC الحزمة الجديدة من GitHub، ويتحقق من بصمتها، ثم يُغلق ويحدّث نفسه؛ تبقى بياناتك في مجلد data في مكانها.",
+            "تُفتح صفحة GitHub التي فيها حزم الإصدار الجديد.",
+            "إصدار جديد من YAEC",
+            "يتوفر YAEC {0} على GitHub (لديك {1}). هل تريد التحديث الآن؟",
+            "هل تريد ألا ينبهك YAEC بعد الآن بشأن الإصدار {0}؟",
+            "سينبهك مع ذلك عند الإصدار التالي.",
+            "الملف {0} غير موجود في الإصدار {1} على GitHub.",
+            "بصمة الحزمة المنزّلة لا تطابق المنشورة على GitHub: أُلغي التحديث.",
+            "حاول لاحقاً أو نزّل الحزمة من صفحة GitHub.",
+            "نُزّل YAEC {0}: سيُغلق البرنامج الآن ويُحدَّث ثم يُفتح من جديد تلقائياً.",
+            "تعذّر بدء التحديث.",
+            "تعذّر تنزيل التحديث.",
+            "ملفات ناقصة",
+            "هناك {0} ملفات ناقصة من البرنامج: {1}",
+            "هل تريد أن ينزّلها YAEC الآن من GitHub (الإصدار {0})؟",
+            "نُزّلت الملفات الناقصة.",
+            "تعذّر تنزيل {0} ملفات: {1}",
+            "إذا كان مجلد البرنامج محمياً، شغّل YAEC كمسؤول أو أعد تثبيته من صفحة GitHub.",
         };
 
         public static readonly string[] TR = {
@@ -30898,6 +31186,24 @@ namespace LunaCalc
             "cty.dat dosyası bulunamadı",
             "çağrı işareti tanınmadı",
             "Ülkeyi, AD1C'nin cty.dat dosyasıyla (country-files.com) çağrı işaretinden tanır: YAEC onu data klasörüne indirir ve her ay günceller; indiremezse bulursa WSJT-X ya da N1MM Logger+ dosyasını kullanır. Ülken: {0}.",
+            "YAEC yeni paketi GitHub'dan indirir, parmak izini denetler, kapanır ve kendini günceller; data klasöründeki verilerin yerinde kalır.",
+            "Yeni sürümün paketlerinin bulunduğu GitHub sayfası açılır.",
+            "YAEC'in yeni sürümü",
+            "GitHub'da YAEC {0} var (sendeki {1}). Şimdi güncellensin mi?",
+            "YAEC {0} sürümü için seni bir daha uyarmasın mı?",
+            "Bir sonraki sürümde yine de uyaracak.",
+            "GitHub'daki {1} sürümünde {0} dosyası yok.",
+            "İndirilen paketin parmak izi GitHub'da yayımlananla uyuşmuyor: güncelleme iptal edildi.",
+            "Daha sonra yeniden dene ya da paketi GitHub sayfasından indir.",
+            "YAEC {0} indirildi: program şimdi kapanacak, güncellenecek ve kendiliğinden yeniden açılacak.",
+            "Güncelleme başlatılamadı.",
+            "Güncelleme indirilemedi.",
+            "Eksik dosyalar",
+            "Programın {0} dosyası eksik: {1}",
+            "YAEC bunları şimdi GitHub'dan indirsin mi (sürüm {0})?",
+            "Eksik dosyalar indirildi.",
+            "{0} dosya indirilemedi: {1}",
+            "Program klasörü korumalıysa YAEC'i yönetici olarak çalıştır ya da GitHub sayfasından yeniden kur.",
         };
 
         public static readonly string[] NL = {
@@ -32618,6 +32924,24 @@ namespace LunaCalc
             "bestand cty.dat niet gevonden",
             "roepnaam niet herkend",
             "Herkent het land aan de roepnaam met het bestand cty.dat van AD1C (country-files.com): YAEC downloadt het naar de map data en werkt het elke maand bij; lukt dat niet, dan gebruikt het dat van WSJT-X of N1MM Logger+ als het dat vindt. Jouw land: {0}.",
+            "YAEC downloadt het nieuwe pakket van GitHub, controleert de vingerafdruk, sluit af en werkt zichzelf bij; je gegevens in de map data blijven waar ze zijn.",
+            "De GitHub-pagina met de pakketten van de nieuwe versie wordt geopend.",
+            "Nieuwe versie van YAEC",
+            "YAEC {0} is beschikbaar op GitHub (jij hebt {1}). Nu bijwerken?",
+            "Wil je dat YAEC je niet meer waarschuwt voor versie {0}?",
+            "Over de volgende versie krijg je toch een melding.",
+            "Het bestand {0} ontbreekt in versie {1} op GitHub.",
+            "De vingerafdruk van het gedownloade pakket komt niet overeen met die op GitHub: de update is geannuleerd.",
+            "Probeer het later opnieuw of download het pakket van de GitHub-pagina.",
+            "YAEC {0} is gedownload: het programma sluit nu af, werkt zich bij en start vanzelf opnieuw.",
+            "De update kon niet worden gestart.",
+            "De update kon niet worden gedownload.",
+            "Ontbrekende bestanden",
+            "Er ontbreken {0} programmabestanden: {1}",
+            "Wil je dat YAEC ze nu van GitHub downloadt (versie {0})?",
+            "De ontbrekende bestanden zijn gedownload.",
+            "{0} bestanden konden niet worden gedownload: {1}",
+            "Als de programmamap beveiligd is, start YAEC als administrator of installeer het opnieuw via de GitHub-pagina.",
         };
 
         public static readonly string[] ET = {
@@ -34338,6 +34662,24 @@ namespace LunaCalc
             "faili cty.dat ei leitud",
             "kutsungit ei tuvastatud",
             "Tuvastab riigi kutsungi järgi AD1C faili cty.dat abil (country-files.com): YAEC laadib selle kausta data ja uuendab iga kuu; kui see ei õnnestu, kasutab leitud WSJT-X või N1MM Logger+ faili. Sinu riik: {0}.",
+            "YAEC laadib GitHubist uue paketi, kontrollib selle sõrmejälge, sulgub ja uuendab end ise; sinu andmed kaustas data jäävad paigale.",
+            "Avaneb GitHubi leht uue versiooni pakettidega.",
+            "YAEC uus versioon",
+            "GitHubis on saadaval YAEC {0} (sul on {1}). Kas uuendada kohe?",
+            "Kas YAEC ei peaks versioonist {0} enam teatama?",
+            "Järgmisest versioonist teatab see siiski.",
+            "Fail {0} puudub GitHubi versioonist {1}.",
+            "Allalaaditud paketi sõrmejälg ei klapi GitHubis avaldatuga: uuendus katkestati.",
+            "Proovi hiljem uuesti või laadi pakett GitHubi lehelt alla.",
+            "YAEC {0} on alla laaditud: programm sulgub, uueneb ja avaneb ise uuesti.",
+            "Uuendust ei õnnestunud käivitada.",
+            "Uuendust ei õnnestunud alla laadida.",
+            "Puuduvad failid",
+            "Programmist puudub {0} faili: {1}",
+            "Kas YAEC peaks need kohe GitHubist alla laadima (versioon {0})?",
+            "Puuduvad failid on alla laaditud.",
+            "{0} faili ei õnnestunud alla laadida: {1}",
+            "Kui programmi kaust on kaitstud, käivita YAEC administraatorina või paigalda see GitHubi lehelt uuesti.",
         };
 
         public static readonly string[] LV = {
@@ -36058,6 +36400,24 @@ namespace LunaCalc
             "fails cty.dat nav atrasts",
             "izsaukuma signāls nav atpazīts",
             "Atpazīst valsti pēc izsaukuma signāla ar AD1C failu cty.dat (country-files.com): YAEC to lejupielādē mapē data un atjaunina katru mēnesi; ja neizdodas, izmanto WSJT-X vai N1MM Logger+ failu, ja to atrod. Tava valsts: {0}.",
+            "YAEC lejupielādē jauno pakotni no GitHub, pārbauda tās pirkstu nospiedumu, aizveras un atjaunina sevi; tavi dati mapē data paliek vietā.",
+            "Atveras GitHub lapa ar jaunās versijas pakotnēm.",
+            "Jauna YAEC versija",
+            "GitHub ir pieejama YAEC {0} (tev ir {1}). Atjaunināt tagad?",
+            "Vai YAEC vairs neziņot par versiju {0}?",
+            "Par nākamo versiju tas tomēr paziņos.",
+            "GitHub versijā {1} trūkst faila {0}.",
+            "Lejupielādētās pakotnes nospiedums nesakrīt ar GitHub publicēto: atjaunināšana atcelta.",
+            "Mēģini vēlāk vēlreiz vai lejupielādē pakotni no GitHub lapas.",
+            "YAEC {0} ir lejupielādēta: programma tagad aizvērsies, atjaunināsies un atvērsies pati.",
+            "Atjaunināšanu neizdevās sākt.",
+            "Atjauninājumu neizdevās lejupielādēt.",
+            "Trūkstošie faili",
+            "Trūkst {0} programmas failu: {1}",
+            "Vai YAEC tos tagad lejupielādēt no GitHub (versija {0})?",
+            "Trūkstošie faili ir lejupielādēti.",
+            "Neizdevās lejupielādēt {0} failus: {1}",
+            "Ja programmas mape ir aizsargāta, palaid YAEC kā administrators vai pārinstalē to no GitHub lapas.",
         };
 
         public static readonly string[] LT = {
@@ -37778,6 +38138,24 @@ namespace LunaCalc
             "failas cty.dat nerastas",
             "šaukinys neatpažintas",
             "Atpažįsta šalį pagal šaukinį naudodama AD1C failą cty.dat (country-files.com): YAEC jį atsisiunčia į aplanką data ir atnaujina kas mėnesį; jei nepavyksta, naudoja rastą WSJT-X arba N1MM Logger+ failą. Jūsų šalis: {0}.",
+            "YAEC atsisiunčia naują paketą iš GitHub, patikrina jo kontrolinį kodą, užsidaro ir pats atsinaujina; jūsų duomenys aplanke data lieka vietoje.",
+            "Atsidaro GitHub puslapis su naujos versijos paketais.",
+            "Nauja YAEC versija",
+            "GitHub yra YAEC {0} (jūs turite {1}). Atnaujinti dabar?",
+            "Ar YAEC daugiau nebepranešti apie versiją {0}?",
+            "Apie kitą versiją vis tiek praneš.",
+            "GitHub versijoje {1} nėra failo {0}.",
+            "Atsisiųsto paketo kontrolinis kodas nesutampa su paskelbtu GitHub: atnaujinimas atšauktas.",
+            "Bandykite vėliau arba atsisiųskite paketą iš GitHub puslapio.",
+            "YAEC {0} atsisiųsta: programa dabar užsidarys, atsinaujins ir pati vėl atsidarys.",
+            "Nepavyko pradėti atnaujinimo.",
+            "Nepavyko atsisiųsti atnaujinimo.",
+            "Trūkstami failai",
+            "Trūksta {0} programos failų: {1}",
+            "Ar YAEC dabar juos atsisiųsti iš GitHub (versija {0})?",
+            "Trūkstami failai atsisiųsti.",
+            "Nepavyko atsisiųsti {0} failų: {1}",
+            "Jei programos aplankas apsaugotas, paleiskite YAEC kaip administratorius arba įdiekite iš naujo iš GitHub puslapio.",
         };
 
         public static readonly string[] SV = {
@@ -39498,6 +39876,24 @@ namespace LunaCalc
             "filen cty.dat hittades inte",
             "anropssignalen känns inte igen",
             "Känner igen landet från anropssignalen med filen cty.dat av AD1C (country-files.com): YAEC laddar ner den till mappen data och uppdaterar den varje månad; om det inte går används den från WSJT-X eller N1MM Logger+ om den hittas. Ditt land: {0}.",
+            "YAEC laddar ner det nya paketet från GitHub, kontrollerar dess fingeravtryck, stänger sig och uppdaterar sig själv; dina data i mappen data ligger kvar.",
+            "GitHub-sidan med paketen för den nya versionen öppnas.",
+            "Ny version av YAEC",
+            "YAEC {0} finns på GitHub (du har {1}). Vill du uppdatera nu?",
+            "Vill du att YAEC slutar påminna om version {0}?",
+            "Du får ändå besked om nästa version.",
+            "Filen {0} saknas i version {1} på GitHub.",
+            "Fingeravtrycket för det nedladdade paketet stämmer inte med det som publicerats på GitHub: uppdateringen avbryts.",
+            "Försök igen senare eller ladda ner paketet från GitHub-sidan.",
+            "YAEC {0} har laddats ner: programmet stängs nu, uppdateras och öppnas igen av sig självt.",
+            "Uppdateringen kunde inte startas.",
+            "Uppdateringen kunde inte laddas ner.",
+            "Saknade filer",
+            "{0} programfiler saknas: {1}",
+            "Vill du att YAEC laddar ner dem nu från GitHub (version {0})?",
+            "De saknade filerna har laddats ner.",
+            "{0} filer kunde inte laddas ner: {1}",
+            "Om programmappen är skyddad, starta YAEC som administratör eller installera om det från GitHub-sidan.",
         };
 
         public static readonly string[] NB = {
@@ -41218,6 +41614,24 @@ namespace LunaCalc
             "filen cty.dat ble ikke funnet",
             "kallesignalet ble ikke gjenkjent",
             "Gjenkjenner landet fra kallesignalet med filen cty.dat fra AD1C (country-files.com): YAEC laster den ned til mappen data og oppdaterer den hver måned; hvis det ikke går, brukes den fra WSJT-X eller N1MM Logger+ hvis den finnes. Ditt land: {0}.",
+            "YAEC laster ned den nye pakken fra GitHub, kontrollerer fingeravtrykket, lukker seg og oppdaterer seg selv; dataene dine i mappen data blir liggende.",
+            "GitHub-siden med pakkene for den nye versjonen åpnes.",
+            "Ny versjon av YAEC",
+            "YAEC {0} er tilgjengelig på GitHub (du har {1}). Vil du oppdatere nå?",
+            "Vil du at YAEC slutter å varsle om versjon {0}?",
+            "Du blir likevel varslet om neste versjon.",
+            "Filen {0} mangler i versjon {1} på GitHub.",
+            "Fingeravtrykket til den nedlastede pakken stemmer ikke med det som er publisert på GitHub: oppdateringen er avbrutt.",
+            "Prøv igjen senere eller last ned pakken fra GitHub-siden.",
+            "YAEC {0} er lastet ned: programmet lukkes nå, oppdateres og åpnes igjen av seg selv.",
+            "Oppdateringen kunne ikke startes.",
+            "Oppdateringen kunne ikke lastes ned.",
+            "Manglende filer",
+            "{0} programfiler mangler: {1}",
+            "Vil du at YAEC laster dem ned fra GitHub nå (versjon {0})?",
+            "De manglende filene er lastet ned.",
+            "{0} filer kunne ikke lastes ned: {1}",
+            "Hvis programmappen er beskyttet, start YAEC som administrator eller installer det på nytt fra GitHub-siden.",
         };
 
         public static readonly string[] IS = {
@@ -42938,6 +43352,24 @@ namespace LunaCalc
             "skráin cty.dat fannst ekki",
             "kallmerki ekki þekkt",
             "Þekkir landið af kallmerkinu með skránni cty.dat frá AD1C (country-files.com): YAEC sækir hana í möppuna data og uppfærir hana mánaðarlega; takist það ekki notar það skrá WSJT-X eða N1MM Logger+ ef hún finnst. Landið þitt: {0}.",
+            "YAEC sækir nýja pakkann af GitHub, kannar fingrafar hans, lokast og uppfærir sig sjálft; gögnin þín í möppunni data verða kyrr.",
+            "GitHub-síðan með pökkum nýju útgáfunnar opnast.",
+            "Ný útgáfa af YAEC",
+            "YAEC {0} er fáanlegt á GitHub (þú ert með {1}). Uppfæra núna?",
+            "Viltu að YAEC hætti að láta vita af útgáfu {0}?",
+            "Það lætur samt vita af næstu útgáfu.",
+            "Skrána {0} vantar í útgáfu {1} á GitHub.",
+            "Fingrafar sótta pakkans passar ekki við það sem birt er á GitHub: hætt við uppfærsluna.",
+            "Reyndu aftur síðar eða sæktu pakkann af GitHub-síðunni.",
+            "YAEC {0} hefur verið sótt: forritið lokast núna, uppfærist og opnast aftur sjálft.",
+            "Ekki tókst að hefja uppfærsluna.",
+            "Ekki tókst að sækja uppfærsluna.",
+            "Skrár sem vantar",
+            "Það vantar {0} skrár forritsins: {1}",
+            "Viltu að YAEC sæki þær núna af GitHub (útgáfa {0})?",
+            "Skrárnar sem vantaði hafa verið sóttar.",
+            "Ekki tókst að sækja {0} skrár: {1}",
+            "Ef forritamappan er varin skaltu keyra YAEC sem stjórnandi eða setja það upp aftur af GitHub-síðunni.",
         };
 
         public static readonly string[] HE = {
@@ -44658,6 +45090,24 @@ namespace LunaCalc
             "קובץ cty.dat לא נמצא",
             "אות הקריאה לא זוהה",
             "מזהה את המדינה לפי אות הקריאה בעזרת הקובץ cty.dat של AD1C ‏(country-files.com): YAEC מוריד אותו לתיקייה data ומעדכן אותו כל חודש; אם אינו מצליח, משתמש בקובץ של WSJT-X או של N1MM Logger+ אם הוא מוצא אותו. המדינה שלך: {0}.",
+            "YAEC מוריד את החבילה החדשה מ־GitHub, בודק את טביעת האצבע שלה, נסגר ומתעדכן לבד; הנתונים שלך בתיקייה data נשארים במקומם.",
+            "נפתח דף GitHub עם החבילות של הגרסה החדשה.",
+            "גרסה חדשה של YAEC",
+            "YAEC {0} זמין ב־GitHub (אצלך {1}). לעדכן עכשיו?",
+            "להפסיק את ההודעות של YAEC על גרסה {0}?",
+            "על הגרסה הבאה תקבל הודעה בכל זאת.",
+            "הקובץ {0} חסר בגרסה {1} ב־GitHub.",
+            "טביעת האצבע של החבילה שהורדה אינה תואמת לזו שפורסמה ב־GitHub: העדכון בוטל.",
+            "נסה שוב מאוחר יותר או הורד את החבילה מדף GitHub.",
+            "YAEC {0} הורד: התוכנה תיסגר עכשיו, תתעדכן ותיפתח מחדש לבד.",
+            "לא ניתן היה להתחיל את העדכון.",
+            "לא ניתן היה להוריד את העדכון.",
+            "קבצים חסרים",
+            "חסרים {0} קבצים של התוכנה: {1}",
+            "להוריד אותם עכשיו מ־GitHub (גרסה {0})?",
+            "הקבצים החסרים הורדו.",
+            "לא ניתן היה להוריד {0} קבצים: {1}",
+            "אם תיקיית התוכנה מוגנת, הפעל את YAEC כמנהל או התקן אותו מחדש מדף GitHub.",
         };
 
         public static readonly string[] UR = {
@@ -46378,6 +46828,24 @@ namespace LunaCalc
             "cty.dat فائل نہیں ملی",
             "کال سائن پہچانا نہیں گیا",
             "AD1C کی cty.dat فائل (country-files.com) سے کال سائن کے ذریعے ملک پہچانتا ہے: YAEC اسے data فولڈر میں ڈاؤن لوڈ کرتا ہے اور ہر ماہ تازہ کرتا ہے؛ نہ ہو سکے تو ملنے پر WSJT-X یا N1MM Logger+ والی استعمال کرتا ہے۔ آپ کا ملک: {0}۔",
+            "YAEC گِٹ ہب سے نیا پیکج ڈاؤن لوڈ کرتا ہے، اس کا فنگر پرنٹ جانچتا ہے، بند ہو کر خود اپ ڈیٹ ہوتا ہے؛ data فولڈر میں آپ کا ڈیٹا اپنی جگہ رہتا ہے۔",
+            "نئے ورژن کے پیکجوں والا GitHub صفحہ کھلتا ہے۔",
+            "YAEC کا نیا ورژن",
+            "GitHub پر YAEC {0} دستیاب ہے (آپ کے پاس {1} ہے)۔ کیا ابھی اپ ڈیٹ کریں؟",
+            "کیا YAEC ورژن {0} کے بارے میں مزید اطلاع نہ دے؟",
+            "اگلے ورژن کی اطلاع پھر بھی دے گا۔",
+            "GitHub پر ورژن {1} میں فائل {0} موجود نہیں۔",
+            "ڈاؤن لوڈ کیے گئے پیکج کا فنگر پرنٹ GitHub پر شائع شدہ سے نہیں ملتا: اپ ڈیٹ منسوخ۔",
+            "بعد میں دوبارہ کوشش کریں یا GitHub صفحے سے پیکج ڈاؤن لوڈ کریں۔",
+            "YAEC {0} ڈاؤن لوڈ ہو گیا: اب پروگرام بند ہو گا، اپ ڈیٹ ہو گا اور خود دوبارہ کھلے گا۔",
+            "اپ ڈیٹ شروع نہیں ہو سکا۔",
+            "اپ ڈیٹ ڈاؤن لوڈ نہیں ہو سکا۔",
+            "گمشدہ فائلیں",
+            "پروگرام کی {0} فائلیں موجود نہیں: {1}",
+            "کیا YAEC انہیں ابھی GitHub سے ڈاؤن لوڈ کرے (ورژن {0})؟",
+            "گمشدہ فائلیں ڈاؤن لوڈ ہو گئیں۔",
+            "{0} فائلیں ڈاؤن لوڈ نہیں ہو سکیں: {1}",
+            "اگر پروگرام کا فولڈر محفوظ ہے تو YAEC کو بطور منتظم چلائیں یا GitHub صفحے سے دوبارہ انسٹال کریں۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -48097,6 +48565,24 @@ namespace LunaCalc
             "filen cty.dat blev ikke fundet",
             "kaldesignalet blev ikke genkendt",
             "Genkender landet ud fra kaldesignalet med filen cty.dat fra AD1C (country-files.com): YAEC henter den til mappen data og opdaterer den hver måned; hvis det ikke lykkes, bruges den fra WSJT-X eller N1MM Logger+, hvis den findes. Dit land: {0}.",
+            "YAEC henter den nye pakke fra GitHub, kontrollerer dens fingeraftryk, lukker og opdaterer sig selv; dine data i mappen data bliver, hvor de er.",
+            "GitHub-siden med pakkerne til den nye version åbnes.",
+            "Ny version af YAEC",
+            "YAEC {0} findes på GitHub (du har {1}). Vil du opdatere nu?",
+            "Skal YAEC holde op med at minde dig om version {0}?",
+            "Du får stadig besked om næste version.",
+            "Filen {0} mangler i version {1} på GitHub.",
+            "Fingeraftrykket på den hentede pakke passer ikke med det, der er offentliggjort på GitHub: opdateringen er annulleret.",
+            "Prøv igen senere, eller hent pakken fra GitHub-siden.",
+            "YAEC {0} er hentet: programmet lukker nu, opdaterer sig og åbner igen af sig selv.",
+            "Opdateringen kunne ikke startes.",
+            "Opdateringen kunne ikke hentes.",
+            "Manglende filer",
+            "Der mangler {0} programfiler: {1}",
+            "Skal YAEC hente dem fra GitHub nu (version {0})?",
+            "De manglende filer er hentet.",
+            "{0} filer kunne ikke hentes: {1}",
+            "Hvis programmappen er beskyttet, så start YAEC som administrator, eller geninstallér det fra GitHub-siden.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -49816,6 +50302,24 @@ namespace LunaCalc
             "hindi makita ang file na cty.dat",
             "hindi makilala ang callsign",
             "Kinikilala ang bansa mula sa callsign gamit ang file na cty.dat ni AD1C (country-files.com): dina-download ito ng YAEC sa folder na data at ina-update bawat buwan; kung hindi magawa, ginagamit ang sa WSJT-X o N1MM Logger+ kung makita. Ang iyong bansa: {0}.",
+            "Dina-download ng YAEC ang bagong package mula sa GitHub, sinusuri ang fingerprint nito, nagsasara at kusang nag-a-update; nananatili sa kinalalagyan ang iyong data sa folder na data.",
+            "Bubuksan ang pahina ng GitHub na may mga package ng bagong bersyon.",
+            "Bagong bersyon ng YAEC",
+            "Available sa GitHub ang YAEC {0} (ang sa iyo ay {1}). Mag-update na ngayon?",
+            "Ayaw mo na bang abisuhan ka ng YAEC tungkol sa bersyon {0}?",
+            "Aabisuhan ka pa rin sa susunod na bersyon.",
+            "Wala ang file na {0} sa bersyon {1} sa GitHub.",
+            "Hindi tugma ang fingerprint ng na-download na package sa nakalathala sa GitHub: kinansela ang update.",
+            "Subukan muli mamaya o i-download ang package mula sa pahina ng GitHub.",
+            "Na-download na ang YAEC {0}: magsasara ngayon ang programa, mag-a-update at kusang magbubukas muli.",
+            "Hindi masimulan ang update.",
+            "Hindi ma-download ang update.",
+            "Mga nawawalang file",
+            "Nawawala ang {0} file ng programa: {1}",
+            "I-download na ba ng YAEC ang mga ito mula sa GitHub (bersyon {0})?",
+            "Na-download na ang mga nawawalang file.",
+            "Hindi ma-download ang {0} file: {1}",
+            "Kung protektado ang folder ng programa, patakbuhin ang YAEC bilang administrator o i-install muli mula sa pahina ng GitHub.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -51535,6 +52039,24 @@ namespace LunaCalc
             "arquivo cty.dat não encontrado",
             "indicativo não reconhecido",
             "Reconhece o país pelo indicativo com o arquivo cty.dat de AD1C (country-files.com): o YAEC o baixa na pasta data e o atualiza todo mês; se não conseguir, usa o do WSJT-X ou do N1MM Logger+, se o encontrar. Seu país: {0}.",
+            "O YAEC baixa o novo pacote do GitHub, verifica a impressão digital, fecha e se atualiza sozinho; seus dados na pasta data ficam onde estão.",
+            "Abre-se a página do GitHub com os pacotes da nova versão.",
+            "Nova versão do YAEC",
+            "O YAEC {0} está disponível no GitHub (você tem a {1}). Quer atualizar agora?",
+            "Quer que o YAEC pare de avisar sobre a versão {0}?",
+            "Ele avisará mesmo assim na próxima versão.",
+            "O arquivo {0} está faltando na versão {1} no GitHub.",
+            "A impressão digital do pacote baixado não confere com a publicada no GitHub: a atualização foi cancelada.",
+            "Tente mais tarde ou baixe o pacote na página do GitHub.",
+            "O YAEC {0} foi baixado: o programa vai fechar, se atualizar e abrir de novo sozinho.",
+            "Não foi possível iniciar a atualização.",
+            "Não foi possível baixar a atualização.",
+            "Arquivos faltando",
+            "Faltam {0} arquivos do programa: {1}",
+            "Quer que o YAEC os baixe agora do GitHub (versão {0})?",
+            "Os arquivos que faltavam foram baixados.",
+            "Não foi possível baixar {0} arquivos: {1}",
+            "Se a pasta do programa estiver protegida, execute o YAEC como administrador ou reinstale-o pela página do GitHub.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -53254,6 +53776,24 @@ namespace LunaCalc
             "ไม่พบไฟล์ cty.dat",
             "ไม่รู้จักสัญญาณเรียกขาน",
             "ระบุประเทศจากสัญญาณเรียกขานด้วยไฟล์ cty.dat ของ AD1C (country-files.com): YAEC ดาวน์โหลดไว้ในโฟลเดอร์ data และปรับปรุงทุกเดือน หากทำไม่ได้จะใช้ไฟล์ของ WSJT-X หรือ N1MM Logger+ ถ้าพบ ประเทศของคุณ: {0}",
+            "YAEC ดาวน์โหลดแพ็กเกจใหม่จาก GitHub ตรวจสอบลายนิ้วมือ แล้วปิดตัวและอัปเดตเอง ข้อมูลของคุณในโฟลเดอร์ data ยังอยู่ที่เดิม",
+            "จะเปิดหน้า GitHub ที่มีแพ็กเกจของเวอร์ชันใหม่",
+            "YAEC เวอร์ชันใหม่",
+            "มี YAEC {0} บน GitHub (ของคุณคือ {1}) ต้องการอัปเดตตอนนี้หรือไม่?",
+            "ไม่ต้องแจ้งเตือนเรื่องเวอร์ชัน {0} อีกหรือไม่?",
+            "จะยังแจ้งเตือนเมื่อมีเวอร์ชันถัดไป",
+            "ไม่มีไฟล์ {0} ในเวอร์ชัน {1} บน GitHub",
+            "ลายนิ้วมือของแพ็กเกจที่ดาวน์โหลดไม่ตรงกับที่เผยแพร่บน GitHub: ยกเลิกการอัปเดต",
+            "ลองใหม่ภายหลังหรือดาวน์โหลดแพ็กเกจจากหน้า GitHub",
+            "ดาวน์โหลด YAEC {0} แล้ว: โปรแกรมจะปิด อัปเดต และเปิดใหม่เอง",
+            "ไม่สามารถเริ่มการอัปเดตได้",
+            "ไม่สามารถดาวน์โหลดการอัปเดตได้",
+            "ไฟล์ที่ขาดหายไป",
+            "ไฟล์ของโปรแกรมขาดหายไป {0} ไฟล์: {1}",
+            "ให้ YAEC ดาวน์โหลดจาก GitHub ตอนนี้หรือไม่ (เวอร์ชัน {0})?",
+            "ดาวน์โหลดไฟล์ที่ขาดหายไปแล้ว",
+            "ไม่สามารถดาวน์โหลดได้ {0} ไฟล์: {1}",
+            "หากโฟลเดอร์ของโปรแกรมถูกป้องกัน ให้เรียกใช้ YAEC ในฐานะผู้ดูแลระบบ หรือติดตั้งใหม่จากหน้า GitHub",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -54973,6 +55513,24 @@ namespace LunaCalc
             "找不到 cty.dat 檔案",
             "無法辨識呼號",
             "使用 AD1C 的 cty.dat 檔案（country-files.com）依呼號辨識國家：YAEC 會下載到 data 資料夾並每月更新；若無法下載，則使用找到的 WSJT-X 或 N1MM Logger+ 的副本。你的國家：{0}。",
+            "YAEC 從 GitHub 下載新套件，檢查其指紋，然後自行關閉並更新；data 資料夾中的資料保持不變。",
+            "將開啟 GitHub 上新版本的套件頁面。",
+            "YAEC 新版本",
+            "GitHub 上已有 YAEC {0}（你的版本是 {1}）。要現在更新嗎？",
+            "以後不再提醒版本 {0} 嗎？",
+            "下一個版本仍會提醒你。",
+            "GitHub 上的 {1} 版本中缺少檔案 {0}。",
+            "下載的套件指紋與 GitHub 上公布的不一致：更新已取消。",
+            "請稍後再試，或從 GitHub 頁面下載套件。",
+            "YAEC {0} 已下載：程式現在將關閉、更新並自動重新開啟。",
+            "無法啟動更新。",
+            "無法下載更新。",
+            "缺少檔案",
+            "缺少 {0} 個程式檔案：{1}",
+            "要讓 YAEC 現在從 GitHub 下載它們嗎（版本 {0}）？",
+            "缺少的檔案已下載。",
+            "有 {0} 個檔案無法下載：{1}",
+            "如果程式資料夾受保護，請以系統管理員身分執行 YAEC，或從 GitHub 頁面重新安裝。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -56692,6 +57250,24 @@ namespace LunaCalc
             "nie znaleziono pliku cty.dat",
             "znak wywoławczy nierozpoznany",
             "Rozpoznaje kraj po znaku wywoławczym za pomocą pliku cty.dat od AD1C (country-files.com): YAEC pobiera go do folderu data i aktualizuje co miesiąc; jeśli się nie uda, używa pliku z WSJT-X lub N1MM Logger+, jeśli go znajdzie. Twój kraj: {0}.",
+            "YAEC pobiera nowy pakiet z GitHub, sprawdza jego odcisk, zamyka się i sam się aktualizuje; twoje dane w folderze data zostają na miejscu.",
+            "Otwiera się strona GitHub z pakietami nowej wersji.",
+            "Nowa wersja YAEC",
+            "Na GitHub jest dostępny YAEC {0} (masz {1}). Zaktualizować teraz?",
+            "Czy YAEC ma już nie przypominać o wersji {0}?",
+            "O następnej wersji i tak poinformuje.",
+            "W wersji {1} na GitHub brakuje pliku {0}.",
+            "Odcisk pobranego pakietu nie zgadza się z opublikowanym na GitHub: aktualizacja anulowana.",
+            "Spróbuj później lub pobierz pakiet ze strony GitHub.",
+            "YAEC {0} został pobrany: program zamknie się, zaktualizuje i sam uruchomi ponownie.",
+            "Nie udało się uruchomić aktualizacji.",
+            "Nie udało się pobrać aktualizacji.",
+            "Brakujące pliki",
+            "Brakuje {0} plików programu: {1}",
+            "Czy YAEC ma je teraz pobrać z GitHub (wersja {0})?",
+            "Brakujące pliki zostały pobrane.",
+            "Nie udało się pobrać {0} plików: {1}",
+            "Jeśli folder programu jest chroniony, uruchom YAEC jako administrator lub zainstaluj ponownie ze strony GitHub.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -58411,6 +58987,24 @@ namespace LunaCalc
             "soubor cty.dat nenalezen",
             "volací znak nerozpoznán",
             "Rozpozná zemi podle volacího znaku pomocí souboru cty.dat od AD1C (country-files.com): YAEC ho stáhne do složky data a každý měsíc aktualizuje; pokud to nejde, použije soubor z WSJT-X nebo N1MM Logger+, pokud ho najde. Tvoje země: {0}.",
+            "YAEC stáhne nový balík z GitHubu, ověří jeho otisk, zavře se a sám se aktualizuje; tvá data ve složce data zůstanou, kde jsou.",
+            "Otevře se stránka GitHubu s balíky nové verze.",
+            "Nová verze YAEC",
+            "Na GitHubu je k dispozici YAEC {0} (máš {1}). Aktualizovat teď?",
+            "Má YAEC přestat upozorňovat na verzi {0}?",
+            "Na další verzi tě i tak upozorní.",
+            "Ve verzi {1} na GitHubu chybí soubor {0}.",
+            "Otisk staženého balíku neodpovídá otisku zveřejněnému na GitHubu: aktualizace je zrušena.",
+            "Zkus to později nebo stáhni balík ze stránky GitHubu.",
+            "YAEC {0} je stažen: program se teď zavře, aktualizuje a sám znovu otevře.",
+            "Aktualizaci se nepodařilo spustit.",
+            "Aktualizaci se nepodařilo stáhnout.",
+            "Chybějící soubory",
+            "Chybí {0} souborů programu: {1}",
+            "Má je YAEC teď stáhnout z GitHubu (verze {0})?",
+            "Chybějící soubory byly staženy.",
+            "Nepodařilo se stáhnout {0} souborů: {1}",
+            "Pokud je složka programu chráněná, spusť YAEC jako správce nebo ho přeinstaluj ze stránky GitHubu.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -60130,6 +60724,24 @@ namespace LunaCalc
             "fișierul cty.dat nu a fost găsit",
             "indicativ nerecunoscut",
             "Recunoaște țara după indicativ cu fișierul cty.dat al lui AD1C (country-files.com): YAEC îl descarcă în dosarul data și îl actualizează lunar; dacă nu reușește, îl folosește pe cel din WSJT-X sau N1MM Logger+, dacă îl găsește. Țara ta: {0}.",
+            "YAEC descarcă noul pachet de pe GitHub, îi verifică amprenta, se închide și se actualizează singur; datele tale din dosarul data rămân pe loc.",
+            "Se deschide pagina GitHub cu pachetele noii versiuni.",
+            "Versiune nouă de YAEC",
+            "YAEC {0} este disponibil pe GitHub (tu ai {1}). Actualizezi acum?",
+            "Vrei ca YAEC să nu te mai anunțe despre versiunea {0}?",
+            "Te va anunța totuși la versiunea următoare.",
+            "Fișierul {0} lipsește din versiunea {1} de pe GitHub.",
+            "Amprenta pachetului descărcat nu corespunde cu cea publicată pe GitHub: actualizarea este anulată.",
+            "Încearcă mai târziu sau descarcă pachetul de pe pagina GitHub.",
+            "YAEC {0} a fost descărcat: programul se închide acum, se actualizează și se redeschide singur.",
+            "Actualizarea nu a putut fi pornită.",
+            "Actualizarea nu a putut fi descărcată.",
+            "Fișiere lipsă",
+            "Lipsesc {0} fișiere ale programului: {1}",
+            "Vrei ca YAEC să le descarce acum de pe GitHub (versiunea {0})?",
+            "Fișierele lipsă au fost descărcate.",
+            "Nu s-au putut descărca {0} fișiere: {1}",
+            "Dacă dosarul programului este protejat, pornește YAEC ca administrator sau reinstalează-l de pe pagina GitHub.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -61849,6 +62461,24 @@ namespace LunaCalc
             "δεν βρέθηκε το αρχείο cty.dat",
             "το διακριτικό δεν αναγνωρίστηκε",
             "Αναγνωρίζει τη χώρα από το διακριτικό με το αρχείο cty.dat του AD1C (country-files.com): το YAEC το κατεβάζει στον φάκελο data και το ενημερώνει κάθε μήνα· αν δεν τα καταφέρει, χρησιμοποιεί αυτό του WSJT-X ή του N1MM Logger+ αν το βρει. Η χώρα σου: {0}.",
+            "Το YAEC κατεβάζει το νέο πακέτο από το GitHub, ελέγχει το αποτύπωμά του, κλείνει και ενημερώνεται μόνο του· τα δεδομένα σου στον φάκελο data μένουν στη θέση τους.",
+            "Ανοίγει η σελίδα του GitHub με τα πακέτα της νέας έκδοσης.",
+            "Νέα έκδοση του YAEC",
+            "Το YAEC {0} είναι διαθέσιμο στο GitHub (έχεις την {1}). Να γίνει ενημέρωση τώρα;",
+            "Να μη σε ειδοποιεί πια το YAEC για την έκδοση {0};",
+            "Θα σε ειδοποιήσει πάντως για την επόμενη έκδοση.",
+            "Το αρχείο {0} λείπει από την έκδοση {1} στο GitHub.",
+            "Το αποτύπωμα του πακέτου που κατέβηκε δεν ταιριάζει με αυτό που δημοσιεύτηκε στο GitHub: η ενημέρωση ακυρώθηκε.",
+            "Δοκίμασε αργότερα ή κατέβασε το πακέτο από τη σελίδα του GitHub.",
+            "Το YAEC {0} κατέβηκε: το πρόγραμμα τώρα κλείνει, ενημερώνεται και ξανανοίγει μόνο του.",
+            "Δεν ήταν δυνατή η έναρξη της ενημέρωσης.",
+            "Δεν ήταν δυνατή η λήψη της ενημέρωσης.",
+            "Αρχεία που λείπουν",
+            "Λείπουν {0} αρχεία του προγράμματος: {1}",
+            "Να τα κατεβάσει τώρα το YAEC από το GitHub (έκδοση {0});",
+            "Τα αρχεία που έλειπαν κατέβηκαν.",
+            "Δεν ήταν δυνατή η λήψη {0} αρχείων: {1}",
+            "Αν ο φάκελος του προγράμματος είναι προστατευμένος, άνοιξε το YAEC ως διαχειριστής ή εγκατάστησέ το ξανά από τη σελίδα του GitHub.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -63568,6 +64198,24 @@ namespace LunaCalc
             "a cty.dat fájl nem található",
             "a hívójel nem ismerhető fel",
             "Az országot a hívójelből ismeri fel az AD1C cty.dat fájljával (country-files.com): a YAEC letölti a data mappába, és havonta frissíti; ha ez nem sikerül, a WSJT-X vagy az N1MM Logger+ fájlját használja, ha megtalálja. Az országod: {0}.",
+            "A YAEC letölti az új csomagot a GitHubról, ellenőrzi az ujjlenyomatát, bezárul és magától frissül; a data mappában lévő adataid a helyükön maradnak.",
+            "Megnyílik a GitHub oldal az új változat csomagjaival.",
+            "A YAEC új változata",
+            "A GitHubon elérhető a YAEC {0} (neked {1} van). Frissítsünk most?",
+            "Ne figyelmeztessen többé a YAEC a(z) {0} változatra?",
+            "A következő változatról azért szólni fog.",
+            "A(z) {0} fájl hiányzik a GitHubon a(z) {1} változatból.",
+            "A letöltött csomag ujjlenyomata nem egyezik a GitHubon közzétettel: a frissítés megszakadt.",
+            "Próbáld később, vagy töltsd le a csomagot a GitHub oldalról.",
+            "A YAEC {0} letöltődött: a program most bezárul, frissül és magától újraindul.",
+            "A frissítést nem sikerült elindítani.",
+            "A frissítést nem sikerült letölteni.",
+            "Hiányzó fájlok",
+            "Hiányzik {0} programfájl: {1}",
+            "Letöltse őket most a YAEC a GitHubról ({0}. változat)?",
+            "A hiányzó fájlok letöltődtek.",
+            "{0} fájlt nem sikerült letölteni: {1}",
+            "Ha a program mappája védett, indítsd a YAEC-et rendszergazdaként, vagy telepítsd újra a GitHub oldalról.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -65287,6 +65935,24 @@ namespace LunaCalc
             "súbor cty.dat sa nenašiel",
             "volacia značka nerozpoznaná",
             "Rozpozná krajinu podľa volacej značky pomocou súboru cty.dat od AD1C (country-files.com): YAEC ho stiahne do priečinka data a každý mesiac aktualizuje; ak to nejde, použije súbor z WSJT-X alebo N1MM Logger+, ak ho nájde. Tvoja krajina: {0}.",
+            "YAEC stiahne nový balík z GitHubu, overí jeho odtlačok, zavrie sa a sám sa aktualizuje; tvoje dáta v priečinku data zostanú, kde sú.",
+            "Otvorí sa stránka GitHubu s balíkmi novej verzie.",
+            "Nová verzia YAEC",
+            "Na GitHube je dostupný YAEC {0} (máš {1}). Aktualizovať teraz?",
+            "Má YAEC prestať upozorňovať na verziu {0}?",
+            "Na ďalšiu verziu ťa aj tak upozorní.",
+            "Vo verzii {1} na GitHube chýba súbor {0}.",
+            "Odtlačok stiahnutého balíka nezodpovedá odtlačku zverejnenému na GitHube: aktualizácia je zrušená.",
+            "Skús to neskôr alebo stiahni balík zo stránky GitHubu.",
+            "YAEC {0} je stiahnutý: program sa teraz zavrie, aktualizuje a sám znova otvorí.",
+            "Aktualizáciu sa nepodarilo spustiť.",
+            "Aktualizáciu sa nepodarilo stiahnuť.",
+            "Chýbajúce súbory",
+            "Chýba {0} súborov programu: {1}",
+            "Má ich YAEC teraz stiahnuť z GitHubu (verzia {0})?",
+            "Chýbajúce súbory boli stiahnuté.",
+            "Nepodarilo sa stiahnuť {0} súborov: {1}",
+            "Ak je priečinok programu chránený, spusti YAEC ako správca alebo ho preinštaluj zo stránky GitHubu.",
         };
     }
 
@@ -70397,18 +71063,22 @@ namespace LunaCalc
                 Scheda(g, rc, Color.Empty);
                 string tc = string.Format(ci, Lang.T("{0} STAZIONI DA PROVARE · {1} (UTC) · 144 MHz"), stazMostrate.Count, stazGiorno.ToString("dd/MM/yyyy", inv));
                 bStazTutte.Text = stazTutte ? Lang.T("Mostra le migliori") : Lang.T("Mostra tutte le stazioni attive");
-                PosizionaControllo(bStazTutte, rc.Right - S(16) - bStazTutte.Width, rc.Top + S(8));
-                Testo(g, Spaziato(tc), ft, titCol, new RectangleF(rc.Left + S(16), rc.Top + S(12), rc.Width - S(40) - bStazTutte.Width, S(22)), StringAlignment.Near, StringAlignment.Near);
+                // il pulsante sta a destra del titolo se c'è posto, altrimenti sulla riga sotto, sempre in alto
+                float wTit = g.MeasureString(Spaziato(tc), ft).Width;
+                bool pulsAccanto = rc.Left + S(16) + wTit + S(16) + bStazTutte.Width <= rc.Right - S(16);
+                float yTitExtra = pulsAccanto ? 0 : bStazTutte.Height + S(6);
+                PosizionaControllo(bStazTutte, rc.Right - S(16) - bStazTutte.Width, pulsAccanto ? rc.Top + S(8) : rc.Top + S(36));
+                Testo(g, Spaziato(tc), ft, titCol, new RectangleF(rc.Left + S(16), rc.Top + S(12), pulsAccanto ? rc.Width - S(40) - bStazTutte.Width : rc.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
                 string sub = stazAttive == 0
                     ? Lang.T("L'elenco delle stazioni attive (chat EME di N0UK) non è ancora stato scaricato: serve la connessione a internet all'avvio del programma.")
                     : string.Format(ci, Lang.T("Le migliori tra le {0} stazioni attive (N0UK, ultimi 90 giorni), una per campo di locator. Clic sul nominativo per sostituirlo con un altro."), stazAttive);
                 if (stazTutte) sub = string.Format(ci, Lang.T("Tutte le {0} stazioni attive con almeno una finestra comune nel giorno scelto."), stazTutteSt.Count);
                 if (!me.Ok) sub = Lang.T("Imposta un locator valido nella prima linguetta.");
                 float hs = g.MeasureString(sub, fp, (int)(rc.Width - S(32))).Height;
-                using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(sub, fp, bm, new RectangleF(rc.Left + S(16), rc.Top + S(38), rc.Width - S(32), hs + 2));
+                using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(sub, fp, bm, new RectangleF(rc.Left + S(16), rc.Top + S(38) + yTitExtra, rc.Width - S(32), hs + 2));
                 int sbw = SystemInformation.VerticalScrollBarWidth;
                 float xb = rc.Left + S(72), wbar = rc.Right - S(24) - sbw - xb;
-                float yy = rc.Top + S(44) + hs;
+                float yy = rc.Top + S(44) + hs + yTitExtra;
                 // scala delle ore
                 for (int h = 0; h <= 24; h += 6)
                     Testo(g, h == 0 ? "0" : h.ToString("00", inv), fp, Tema.Muted, new RectangleF(xb + wbar * h / 24f - S(15), yy, S(30), S(16)), h == 0 ? StringAlignment.Near : (h == 24 ? StringAlignment.Far : StringAlignment.Center), StringAlignment.Center);
@@ -81746,6 +82416,196 @@ namespace LunaCalc
             // tutte le caselle dei numeri con la cornice arrotondata e le frecce ben visibili
             ArrotondaNumeri(this);
             this.Shown += (s, e) => ArrotondaNumeri(this);
+            this.Shown += (s, e) => { ControllaFileMancanti(); AvviaControlloAggiornamenti(); };
+        }
+
+
+        // ---------- Aggiornamenti da GitHub e file mancanti ----------
+        // All'avvio (al massimo una volta ogni 20 ore) YAEC chiede a GitHub l'ultima versione pubblicata; se è più nuova
+        // lo dice con un avviso. Su Windows scarica il pacchetto giusto (installatore o portatile, 64 o 32 bit), ne controlla
+        // l'impronta SHA-256 con SHA256SUMS.txt, si chiude e si aggiorna da solo; su Linux e macOS apre la pagina della versione.
+        const string RepoGit = "ic8tem/YAEC";
+        string aggSalta = "";
+        long aggUltimo;
+
+        static bool InProva { get { return Environment.GetEnvironmentVariable("CI") != null || Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null; } }
+        static bool SuWindows { get { return Environment.OSVersion.Platform == PlatformID.Win32NT; } }
+
+        static int[] NumeriVersione(string v)
+        {
+            List<int> l = new List<int>();
+            foreach (string x in (v ?? "").TrimStart('v', 'V').Split('.')) { int n; l.Add(int.TryParse(x, out n) ? n : 0); }
+            while (l.Count < 3) l.Add(0);
+            return l.ToArray();
+        }
+        static bool PiuNuova(string a, string b)
+        {
+            int[] x = NumeriVersione(a), y = NumeriVersione(b);
+            for (int i = 0; i < Math.Max(x.Length, y.Length); i++)
+            {
+                int u = i < x.Length ? x[i] : 0, w = i < y.Length ? y[i] : 0;
+                if (u != w) return u > w;
+            }
+            return false;
+        }
+
+        void AvviaControlloAggiornamenti()
+        {
+            if (InProva) return;
+            if (DateTime.UtcNow.Ticks - aggUltimo < TimeSpan.FromHours(20).Ticks) return;
+            System.Threading.Thread t = new System.Threading.Thread(() =>
+            {
+                try
+                {
+                    System.Threading.Thread.Sleep(6000);
+                    string js = Encoding.UTF8.GetString(Dati.Scarica("https://api.github.com/repos/" + RepoGit + "/releases/latest", 15000));
+                    System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(js, "\"tag_name\"\\s*:\\s*\"v?([0-9][0-9.]*)\"");
+                    if (!m.Success) return;
+                    string ver = m.Groups[1].Value;
+                    aggUltimo = DateTime.UtcNow.Ticks;
+                    if (!PiuNuova(ver, Versione) || ver == aggSalta) return;
+                    this.BeginInvoke((Action)(() => ProponiAggiornamento(ver)));
+                }
+                catch { }
+            });
+            t.IsBackground = true;
+            t.Start();
+        }
+
+        void ProponiAggiornamento(string ver)
+        {
+            string nota = SuWindows
+                ? Lang.T("YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta, si chiude e si aggiorna da solo; i tuoi dati nella cartella data restano dove sono.")
+                : Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione.");
+            if (!ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("È disponibile YAEC {0} su GitHub (tu hai la {1}). Vuoi aggiornarlo adesso?"), ver, Versione), nota))
+            {
+                if (ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("Vuoi che YAEC non ti avvisi più per la versione {0}?"), ver), Lang.T("Ti avviserà comunque alla prossima versione.")))
+                { aggSalta = ver; SaveSettings(); }
+                return;
+            }
+            string pagina = "https://github.com/" + RepoGit + "/releases/tag/v" + ver;
+            if (!SuWindows) { try { System.Diagnostics.Process.Start(pagina); } catch { } return; }
+            System.Threading.Thread t = new System.Threading.Thread(() => ScaricaAggiornamento(ver, pagina));
+            t.IsBackground = true;
+            t.Start();
+        }
+
+        void ScaricaAggiornamento(string ver, string pagina)
+        {
+            string app = AppDomain.CurrentDomain.BaseDirectory;
+            bool installato = File.Exists(Path.Combine(app, "unins000.exe"));
+            string arch = IntPtr.Size == 8 ? "x64" : "x86";
+            string nome = "YAEC-" + ver + "-win-" + arch + (installato ? "-setup.exe" : "-portatile.zip");
+            string baseUrl = "https://github.com/" + RepoGit + "/releases/download/v" + ver + "/";
+            try
+            {
+                byte[] somme = null, pacchetto;
+                try { somme = Dati.Scarica(baseUrl + "SHA256SUMS.txt", 30000); } catch { }
+                try { pacchetto = Dati.Scarica(baseUrl + nome, 300000); }
+                catch
+                {
+                    this.BeginInvoke((Action)(() =>
+                    {
+                        Messaggio(this, string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver) + "\n" + Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        try { System.Diagnostics.Process.Start(pagina); } catch { }
+                    }));
+                    return;
+                }
+                // impronta SHA-256: se c'è l'elenco deve combaciare
+                if (somme != null)
+                {
+                    string h;
+                    using (System.Security.Cryptography.SHA256 sh = System.Security.Cryptography.SHA256.Create())
+                        h = BitConverter.ToString(sh.ComputeHash(pacchetto)).Replace("-", "").ToLowerInvariant();
+                    string elenco = Encoding.ASCII.GetString(somme);
+                    bool trovato = false, ok = false;
+                    foreach (string r in elenco.Split('\n'))
+                    {
+                        string rr = r.Trim();
+                        if (rr.EndsWith(nome)) { trovato = true; ok = rr.StartsWith(h, StringComparison.OrdinalIgnoreCase); }
+                    }
+                    if (trovato && !ok)
+                    {
+                        this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error)));
+                        return;
+                    }
+                }
+                string dir = Dati.Percorso("aggiornamento");
+                Directory.CreateDirectory(dir);
+                string file = Path.Combine(dir, nome);
+                File.WriteAllBytes(file, pacchetto);
+                // script che aspetta la chiusura di YAEC, aggiorna e lo riavvia
+                int pid = System.Diagnostics.Process.GetCurrentProcess().Id;
+                string exe = Application.ExecutablePath;
+                StringBuilder sb = new StringBuilder();
+                sb.Append("@echo off\r\nchcp 65001 >nul\r\n");
+                sb.Append(":attesa\r\ntasklist /FI \"PID eq " + pid + "\" | find \"" + pid + "\" >nul && (timeout /t 1 >nul & goto attesa)\r\n");
+                if (installato)
+                    sb.Append("start \"\" /wait \"" + file + "\" /SILENT /SUPPRESSMSGBOXES /NORESTART /DIR=\"" + app.TrimEnd('\\') + "\"\r\n");
+                else
+                {
+                    string tmp = Path.Combine(dir, "nuovo");
+                    sb.Append("if exist \"" + tmp + "\" rmdir /s /q \"" + tmp + "\"\r\n");
+                    sb.Append("powershell -NoProfile -ExecutionPolicy Bypass -Command \"Expand-Archive -Force -LiteralPath '" + file.Replace("'", "''") + "' -DestinationPath '" + tmp.Replace("'", "''") + "'\"\r\n");
+                    sb.Append("xcopy /E /Y /I /Q \"" + tmp + "\\*\" \"" + app.TrimEnd('\\') + "\\\" >nul\r\n");
+                    sb.Append("rmdir /s /q \"" + tmp + "\"\r\n");
+                }
+                sb.Append("start \"\" \"" + exe + "\"\r\n");
+                sb.Append("del \"" + file + "\" >nul 2>&1\r\n");
+                sb.Append("(goto) 2>nul & del \"%~f0\"\r\n");
+                string cmd = Path.Combine(dir, "aggiorna.cmd");
+                File.WriteAllText(cmd, sb.ToString(), new UTF8Encoding(false));
+                this.BeginInvoke((Action)(() =>
+                {
+                    Messaggio(this, string.Format(Lang.T("YAEC {0} è stato scaricato: ora il programma si chiude, si aggiorna e si riapre da solo."), ver), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("cmd.exe", "/c \"" + cmd + "\"");
+                    psi.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden; psi.CreateNoWindow = true; psi.UseShellExecute = false;
+                    try { System.Diagnostics.Process.Start(psi); Application.Exit(); }
+                    catch { Messaggio(this, Lang.T("Non è stato possibile avviare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                }));
+            }
+            catch
+            {
+                this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("Non è stato possibile scaricare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning)));
+            }
+        }
+
+        // File che accompagnano il programma su Windows: se ne manca qualcuno lo si dice e si propone di riscaricarlo
+        void ControllaFileMancanti()
+        {
+            if (InProva || !SuWindows) return;
+            string app = AppDomain.CurrentDomain.BaseDirectory;
+            List<string> servono = new List<string> { "YAEC.ico", "README.txt", "LICENZA.txt" };
+            foreach (string c in Lang.Codici) { servono.Add("lingue\\README_" + c + ".txt"); servono.Add("lingue\\LICENSE_" + c + ".txt"); }
+            List<string> mancano = new List<string>();
+            foreach (string f in servono) if (!File.Exists(Path.Combine(app, f))) mancano.Add(f);
+            if (mancano.Count == 0) return;
+            string elenco = string.Join(", ", mancano.GetRange(0, Math.Min(6, mancano.Count)).ToArray()) + (mancano.Count > 6 ? " … (+" + (mancano.Count - 6) + ")" : "");
+            if (!ChiediSiNo(Lang.T("File mancanti"), string.Format(Lang.T("Mancano {0} file del programma: {1}"), mancano.Count, elenco),
+                string.Format(Lang.T("Vuoi che YAEC li scarichi ora da GitHub (versione {0})?"), Versione))) return;
+            System.Threading.Thread t = new System.Threading.Thread(() =>
+            {
+                List<string> falliti = new List<string>();
+                foreach (string f in mancano)
+                {
+                    try
+                    {
+                        byte[] b = Dati.Scarica("https://raw.githubusercontent.com/" + RepoGit + "/v" + Versione + "/" + f.Replace('\\', '/'), 20000);
+                        string dest = Path.Combine(app, f);
+                        Directory.CreateDirectory(Path.GetDirectoryName(dest));
+                        File.WriteAllBytes(dest, b);
+                    }
+                    catch { falliti.Add(f); }
+                }
+                this.BeginInvoke((Action)(() =>
+                {
+                    if (falliti.Count == 0) Messaggio(this, Lang.T("I file mancanti sono stati scaricati."), Lang.T("File mancanti"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else Messaggio(this, string.Format(Lang.T("Non è stato possibile scaricare {0} file: {1}"), falliti.Count, string.Join(", ", falliti.GetRange(0, Math.Min(6, falliti.Count)).ToArray()))
+                        + "\n" + Lang.T("Se la cartella del programma è protetta, avvia YAEC come amministratore oppure reinstallalo dalla pagina di GitHub."), Lang.T("File mancanti"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }));
+            });
+            t.IsBackground = true;
+            t.Start();
         }
 
         // Mette ogni casella dei numeri dentro la cornice arrotondata (come tendine e impostazioni generali),
@@ -83561,6 +84421,8 @@ namespace LunaCalc
                 lines.Add("bw=" + cmbBw.Text);
                 if (chkEco != null) lines.Add("b_eco=" + (chkEco.Checked ? "1" : "0"));
                 lines.Add("tema=" + Tema.Chiave);
+                lines.Add("aggiorna_salta=" + aggSalta);
+                lines.Add("aggiorna_ultimo=" + aggUltimo.ToString(CultureInfo.InvariantCulture));
                 lines.Add("lingua=" + Lang.Codici[cmbLingua.SelectedIndex]);
                 lines.Add("font_nome=" + (cmbFontNome != null && cmbFontNome.SelectedItem is VoceFont && ((VoceFont)cmbFontNome.SelectedItem).Tipo == 2 ? ((VoceFont)cmbFontNome.SelectedItem).Nome : ""));
                 lines.Add("nominativo=" + txtCall.Text.Trim());
@@ -83744,6 +84606,8 @@ namespace LunaCalc
                         case "terreno": usaTerreno = v != "0"; break;
                         case "prova_modo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazModoVoce = Math.Max(0, Math.Min(BudgetParams.ModiOrdine.Length - 1, x)); break; }
                         case "prova_temperature": stazTemp = v != "0"; break;
+                        case "aggiorna_salta": aggSalta = v; break;
+                        case "aggiorna_ultimo": long.TryParse(v, NumberStyles.Integer, CultureInfo.InvariantCulture, out aggUltimo); break;
                         case "prova_no_paese": stazNoPaese = v == "1"; if (chkStazPaese != null) chkStazPaese.Checked = stazNoPaese; break;
                         case "prova_pol": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazPol = Math.Max(0, Math.Min(2, x)); break; }
                         case "orizzonte_vista": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizVista = Math.Max(0, Math.Min(1, x)); break; }
