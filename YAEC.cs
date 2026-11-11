@@ -68572,6 +68572,34 @@ namespace LunaCalc
                 }
                 // orizzonte astronomico
                 using (Pen p0 = new Pen(blu, S(1.6f))) g.DrawLine(p0, a.Left, Y(0), a.Right, Y(0));
+                // riquadri della zona puntabile, come nella Volta celeste: viola tratteggiato fra i limiti di elevazione e di azimut dell'antenna
+                {
+                    double e1 = (double)me.El1.Value, e2 = (double)me.El2.Value, z1 = (double)me.Az1.Value, z2 = (double)me.Az2.Value;
+                    double e1c = Math.Max(ymin, e1), e2c = Math.Min(ymax, e2);
+                    if (e2c > e1c)
+                    {
+                        List<RectangleF> zone = new List<RectangleF>();
+                        float yt = Y(e2c), yb = Y(e1c);
+                        Func<double, float> Xd = zz => a.Left + (float)(zz / 360.0 * a.Width);
+                        double s1 = ((z1 % 360.0) + 360.0) % 360.0, s2 = z2 >= 360 ? 360.0 : ((z2 % 360.0) + 360.0) % 360.0;
+                        if (z2 - z1 >= 360 || z1 == z2) zone.Add(new RectangleF(a.Left, yt, a.Width, yb - yt));
+                        else if (s1 < s2) zone.Add(new RectangleF(Xd(s1), yt, Xd(s2) - Xd(s1), yb - yt));
+                        else
+                        {
+                            zone.Add(new RectangleF(Xd(s1), yt, Xd(360) - Xd(s1), yb - yt));
+                            zone.Add(new RectangleF(Xd(0), yt, Xd(s2) - Xd(0), yb - yt));
+                        }
+                        Region primaClipV = g.Clip;
+                        g.SetClip(a, CombineMode.Intersect);
+                        using (Pen vp = new Pen(Color.FromArgb(240, 147, 51, 234), S(4f)))
+                        {
+                            vp.DashStyle = DashStyle.Dash;
+                            foreach (RectangleF rv in zone)
+                                if (rv.Width > 1 && rv.Height > 1) g.DrawRectangle(vp, rv.X, rv.Y, rv.Width, rv.Height);
+                        }
+                        g.Clip = primaClipV;
+                    }
+                }
                 // percorso della Luna
                 PassaggioLuna ps = orizPass;
                 if (ps != null && ps.Ok)
