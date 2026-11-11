@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.8
+﻿YAEC – Yet Another EME Calc 1.9
 pripravil Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkulačka pre rádioamatérov pracujúcich cez EME (Zem–Mesiac–Zem) od 50 
 Zdrojový kód a stiahnutie: https://github.com/ic8tem/YAEC/releases
 
 INŠTALÁCIA – WINDOWS
-1. Stiahni YAEC-1.8-win-x64-setup.exe zo stránky Releases a spusti ho. Nainštaluje YAEC do priečinka Dokumenty (Documents\YAEC), bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom.
+1. Stiahni YAEC-1.9-win-x64-setup.exe zo stránky Releases a spusti ho. Nainštaluje YAEC do priečinka Dokumenty (Documents\YAEC), bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom.
 2. Ak sa objaví upozornenie SmartScreen: "Ďalšie informácie" → "Napriek tomu spustiť".
-3. Bez inštalácie: rozbaľ YAEC-1.8-win-x64-portatile.zip do priečinka, do ktorého môžeš zapisovať, a spusti YAEC.exe.
+3. Bez inštalácie: rozbaľ YAEC-1.9-win-x64-portatile.zip do priečinka, do ktorého môžeš zapisovať, a spusti YAEC.exe.
 
 INŠTALÁCIA – LINUX
 YAEC beží pod Mono, slobodným behovým prostredím .NET.
-- Debian, Ubuntu, Mint: stiahni yaec_1.8_amd64.deb a nainštaluj ho príkazom
-      sudo apt install ./yaec_1.8_amd64.deb
+- Debian, Ubuntu, Mint: stiahni yaec_1.9_amd64.deb a nainštaluj ho príkazom
+      sudo apt install ./yaec_1.9_amd64.deb
   (nainštaluje aj Mono). YAEC sa spúšťa z ponuky aplikácií alebo príkazom "yaec".
-- Iné distribúcie: nainštaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbaľ YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) a spusti ./install.sh.
+- Iné distribúcie: nainštaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbaľ YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) a spusti ./install.sh.
 
 INŠTALÁCIA – macOS (experimentálna)
 1. Nainštaluj Mono pre macOS (https://www.mono-project.com/download/stable/) a XQuartz (https://www.xquartz.org).
-2. Otvor YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) a pretiahni YAEC do priečinka Aplikácie. Prvýkrát: pravý klik na YAEC → Otvoriť (aplikácia nie je podpísaná spoločnosťou Apple).
+2. Otvor YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) a pretiahni YAEC do priečinka Aplikácie. Prvýkrát: pravý klik na YAEC → Otvoriť (aplikácia nie je podpísaná spoločnosťou Apple).
 
 KONTROLA STIAHNUTÝCH SÚBOROV (SHA-256)
 Každé vydanie obsahuje SHA256SUMS.txt s odtlačkom SHA-256 každého balíčka. Porovnaj ho s odtlačkom stiahnutého súboru:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ak sa obe hodnoty líšia, súbor neinštaluj: stiahni ho znova.
@@ -39,7 +39,8 @@ Chyby, lepšie údaje, preklady: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 HISTÓRIA VERZIÍ
 Verzie pred 1.0 sa nazývajú beta.
-- 1.8 - Nový jazyk slovenčina (spolu 37), s príručkami, README a licenciou; jediná šírka zväzku v celom programe: 0,93·√(41253/G) pre antény yagi (Krausovo pravidlo opravené simuláciami NEC od W4RNL, rovnako ako v YA-MS) a 70·λ/D pre paraboly (IZ0JNY), namiesto √(32000/G) bez zdroja v DGRD podľa kmitočtu; príručka aktualizovaná o nový vzorec a príklad namierenia; na macOS spúšťač sám otvorí XQuartz, zapíše verziu Mono do protokolu a upozorní, ak sa YAEC nespustí; prezentácia README aj v portugalčine, turečtine, češtine, slovenčine, čínštine, japončine a kórejčine; opravené preklady do thajčiny, rumunčiny, gréčtiny, brazílskej portugalčiny, poľštiny, češtiny a maďarčiny.
+- 1.9 - Nová karta Môj obzor (Naživo): obzor z terénu vypočítaný z dát SRTM1 so zakrivením Zeme a refrakciou, na pozadí Nebeská klenba v jednej z troch farebných škál, dráha Mesiaca, hlavné prekážky s názvami z OpenStreetMap a stratené minúty Mesiaca; začiarkavacie políčko na použitie terénu ako minimálnej elevácie v celom programe; mapa miestneho šumu podľa NJ9R, s ⚠ v hodinách, keď je Mesiac v hlučnom smere; nová karta Stanice na vyskúšanie (Plánovanie), nápad Matteo IW5DHN: aktívne stanice četu N0UK zoradené podľa indexu od 0 do 100; číselné polia so šípkami vedľa seba, karty v tvare tabletky a tri nové farebné schémy z IP-TRX-CTRL.
+- 1.8 - Nový jazyk slovenčina (spolu 37), s príručkami, README a licenciou; jediná šírka zväzku v celom programe: 0,93·√(41253/G) pre antény yagi (Krausovo pravidlo opravené simuláciami NEC od W4RNL, rovnako ako v YA-MS) a 70·λ/D pre paraboly (IZ0JNY), namiesto √(32000/G) bez zdroja v DGRD podľa kmitočtu; príručka aktualizovaná o nový vzorec a príklad namierenia; na macOS spúšťač sám otvorí XQuartz, zapíše verziu Mono do protokolu a upozorní, ak sa YAEC nespustí; prezentácia README aj v portugalčine, turečtine, češtine, slovenčine, čínštine, japončine a kórejčine; opravené preklady do thajčiny, rumunčiny, gréčtiny, brazílskej portugalčiny, poľštiny, češtiny a maďarčiny.
 - 1.7 - Osem nových jazykov: brazílska portugalčina, thajčina, tradičná čínština, poľština, čeština, rumunčina, gréčtina a maďarčina (spolu 36), s príručkami a súbormi README; v záložkách Bilancia EME yagi a Bilancia EME paraboly výpočet echa vlastnej stanice (Vysielam a prijímam svoje echo); parabola s primárnym ohniskom alebo offsetová (W2IMU); na 1296 MHz s parabolami strata kruhovej polarizácie skutočných ožarovačov (KA1GT); v záložke Kontrola výpočtov voľba medzi Bilanciou EME yagi a Bilanciou EME paraboly; vzorce v záložke DGRD podľa kmitočtu zapísané ako v editore rovníc; príručka: Faradayova rotácia na 1296 MHz podľa ITU-R P.531, depolarizácia v pásme 23 cm (Hagfors) a kruhová polarizácia v pásme 23 cm.
 - 1.6 - Pásma 902 MHz a 23 cm (1296 a 1298 MHz) v celom programe, so všetkými pásmami v rozbaľovacom zozname MHz; záložka Bilancia EME sa mení na Bilanciu EME yagi a pribudla nová záložka Bilancia EME paraboly (parabola s primárnym ohniskom, zisk podľa vzorca PE1RKI, predzosilňovač aj dvojstupňový, transvertor a budenie PA); nová záložka DGRD podľa kmitočtu, so skutočným šumom stanice a oblohou priemerovanou cez zväzok, používaná v celom programe; koaxiálne káble počítané vzorcom α = k1·√f + k2·f z údajov katalógových listov, aj na 902 a 1296 MHz; nový štýl ovládacích prvkov na všetkých záložkách; v Polohe naživo a +- 24h bublina nápovedy pri červenom kurzore a červené čiary DX v čase kurzora; príručka prepracovaná po porovnaní zdrojov (útlm trasy pásmo po pásme, prahy Q65-60B a Q65-60C, ground gain podľa meraní IK1UWL, konektory, Dgrd v iných programoch, paraboly nad 432 MHz); balíčky pre každú architektúru (Windows x64 a x86, Linux x64, arm64 a arm, macOS Apple Silicon a Intel); poďakovanie Robertovi HA5OLA. Pásma nad 432 MHz sa dokončujú.
 - 1.5 - Nová záložka Radar GRAVES v skupine Spojenie: Mesiac vo zväzku radaru so sektorom a krokom, spoločné okno s tebou, Doppler a oneskorenie echa, ďalší prechod zväzku cez Mesiac, obloha videná z GRAVES, rekonštrukcia 24 hodín UTC s detailom nasledujúcich 10 sekúnd, rady na počúvanie echa a zdroje; zoznam aktívnych staníc aj v JSON a ako text pre LunaCalc Mobile; dva nové jazyky, dánčina a tagalčina (spolu 28), s príručkami.

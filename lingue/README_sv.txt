@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.8
+﻿YAEC – Yet Another EME Calc 1.9
 av Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Kalkylator för radioamatörer som kör EME (Jord–Måne–Jord) från 50 MHz t
 Källkod och nedladdning: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Ladda ner YAEC-1.8-win-x64-setup.exe från sidan Releases och kör den. Den installerar YAEC i Dokument\YAEC, utan administratörsrättigheter, med genvägar i Start-menyn och på skrivbordet samt ett avinstallationsprogram.
+1. Ladda ner YAEC-1.9-win-x64-setup.exe från sidan Releases och kör den. Den installerar YAEC i Dokument\YAEC, utan administratörsrättigheter, med genvägar i Start-menyn och på skrivbordet samt ett avinstallationsprogram.
 2. Om SmartScreen-varningen visas: ”Mer information” → ”Kör ändå”.
-3. Utan installation: packa upp YAEC-1.8-win-x64-portatile.zip i en mapp där du har skrivrätt och starta YAEC.exe.
+3. Utan installation: packa upp YAEC-1.9-win-x64-portatile.zip i en mapp där du har skrivrätt och starta YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC körs med Mono, den fria .NET-körmiljön.
-- Debian, Ubuntu, Mint: ladda ner yaec_1.8_amd64.deb och installera den med
-      sudo apt install ./yaec_1.8_amd64.deb
+- Debian, Ubuntu, Mint: ladda ner yaec_1.9_amd64.deb och installera den med
+      sudo apt install ./yaec_1.9_amd64.deb
   (installerar även Mono). YAEC startas från programmenyn eller med kommandot ”yaec”.
-- Andra distributioner: installera Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), packa upp YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) och kör ./install.sh.
+- Andra distributioner: installera Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), packa upp YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) och kör ./install.sh.
 
 INSTALLATION – macOS (experimentell)
 1. Installera Mono för macOS (https://www.mono-project.com/download/stable/) och XQuartz (https://www.xquartz.org).
-2. Öppna YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) och dra YAEC till Appar. Första gången: högerklicka på YAEC → Öppna (appen är inte signerad av Apple).
+2. Öppna YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) och dra YAEC till Appar. Första gången: högerklicka på YAEC → Öppna (appen är inte signerad av Apple).
 
 KONTROLL AV NEDLADDADE FILER (SHA-256)
 Varje release innehåller SHA256SUMS.txt med SHA-256-kontrollsumman för varje paket. Jämför den med kontrollsumman för den nedladdade filen:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Om de två värdena skiljer sig åt ska du inte installera filen: ladda ner den igen.
@@ -39,7 +39,8 @@ Fel, bättre data, översättningar: ccerrotta@gmail.com · ic8tem@gmail.com · 
 
 VERSIONSHISTORIK
 Versioner före 1.0 kallas beta.
-- 1.8 - Nytt språk slovakiska (37 totalt), med handböckerna, README och licensen; en enda lobbredd i hela programmet: 0,93·√(41253/G) för yagiantenner (Kraus regel, korrigerad med W4RNL:s NEC-simuleringar, som i YA-MS) och 70·λ/D för paraboler (IZ0JNY), i stället för den källösa √(32000/G) i DGRD per frekvens; handboken uppdaterad med den nya formeln och riktningsexemplet; på macOS öppnar startprogrammet själv XQuartz, skriver Mono-versionen i loggen och varnar om YAEC inte startar; README-presentationen även på portugisiska, turkiska, tjeckiska, slovakiska, kinesiska, japanska och koreanska; översättningar rättade på thai, rumänska, grekiska, brasiliansk portugisiska, polska, tjeckiska och ungerska.
+- 1.9 - Ny flik Min horisont (Live): horisont från terrängen beräknad ur SRTM1-data med jordens krökning och refraktion, mot bakgrunden av Himlavalvet i en av de tre färgskalorna, månens bana, de viktigaste hindren med namn från OpenStreetMap och förlorade månminuter; kryssruta för att använda terrängen som minsta elevation i hela programmet; karta över lokalt brus enligt NJ9R, med ⚠ de timmar då månen står i en brusig riktning; ny flik Stationer att prova (Planering), idé av Matteo IW5DHN: de aktiva stationerna i N0UK-chatten ordnade efter ett index från 0 till 100; sifferrutor med pilarna bredvid varandra, pillerformade flikar och tre nya färgscheman från IP-TRX-CTRL.
+- 1.8 - Nytt språk slovakiska (37 totalt), med handböckerna, README och licensen; en enda lobbredd i hela programmet: 0,93·√(41253/G) för yagiantenner (Kraus regel, korrigerad med W4RNL:s NEC-simuleringar, som i YA-MS) och 70·λ/D för paraboler (IZ0JNY), i stället för den källösa √(32000/G) i DGRD per frekvens; handboken uppdaterad med den nya formeln och riktningsexemplet; på macOS öppnar startprogrammet själv XQuartz, skriver Mono-versionen i loggen och varnar om YAEC inte startar; README-presentationen även på portugisiska, turkiska, tjeckiska, slovakiska, kinesiska, japanska och koreanska; översättningar rättade på thai, rumänska, grekiska, brasiliansk portugisiska, polska, tjeckiska och ungerska.
 - 1.7 - Åtta nya språk: brasiliansk portugisiska, thailändska, traditionell kinesiska, polska, tjeckiska, rumänska, grekiska och ungerska (36 totalt), med manualerna och README-filerna; i EME-budget yagi och EME-budget parabol ekoberäkningen för den egna stationen (Jag sänder och tar emot mitt eget eko); primärfokus- eller offsetparabol (W2IMU); på 1296 MHz med paraboler förlusten från den cirkulära polarisationen hos verkliga matare (KA1GT); i Kontroll av beräkningarna valet mellan EME-budget yagi och EME-budget parabol; formlerna i DGRD per frekvens skrivna som i en formelredigerare; manual: Faradayrotation på 1296 MHz enligt ITU-R P.531, depolarisation på 23 cm (Hagfors) och cirkulär polarisation på 23 cm.
 - 1.6 - Banden 902 MHz och 23 cm (1296 och 1298 MHz) i hela programmet, med alla band i MHz-rullgardinslistan; fliken EME-budget blir EME-budget yagi och det finns en ny flik EME-budget parabol (primärfokusparabol, förstärkning med PE1RKI:s formel, förförstärkare även i två steg, transverter och utstyrning av PA); ny flik DGRD per frekvens, med stationens verkliga brus och himlen medelvärdesbildad över loben, som används i hela programmet; koaxialkablar beräknade med formeln α = k1·√f + k2·f utifrån databladens data, även på 902 och 1296 MHz; ny stil på kontrollerna i alla flikar; i Live-position och +- 24h verktygstips vid den röda markören och DX-stationens röda linjer vid markörens tid; manualen reviderad efter jämförelse av källorna (sträckdämpning band för band, trösklarna för Q65-60B och Q65-60C, ground gain enligt IK1UWL:s mätningar, kontakter, andra programs Dgrd, paraboler över 432 MHz); paket för alla arkitekturer (Windows x64 och x86, Linux x64, arm64 och arm, macOS Apple Silicon och Intel); tack till Robert HA5OLA. Banden över 432 MHz håller på att färdigställas.
 - 1.5 - Ny flik GRAVES-radar i gruppen Förbindelse: Månen i radarloben med sektor och steg, gemensamt fönster med dig, ekots doppler och fördröjning, lobens nästa passage över Månen, himlen sedd från GRAVES, rekonstruktion av dygnets 24 UTC-timmar med detaljer för de kommande 10 sekunderna, tips för att höra ekot och källor; listan över aktiva stationer även i JSON och text för LunaCalc Mobile; två nya språk, danska och tagalog (28 totalt), med handböckerna.

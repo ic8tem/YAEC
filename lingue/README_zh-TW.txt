@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.8
+﻿YAEC – Yet Another EME Calc 1.9
 作者：Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@
 原始碼和下載：https://github.com/ic8tem/YAEC/releases
 
 安裝 – WINDOWS
-1. 從 Releases 頁面下載 YAEC-1.8-win-x64-setup.exe 並執行。它會將 YAEC 安裝到文件\YAEC，無需系統管理員權限，並在「開始」選單和桌面上建立捷徑，同時安裝解除安裝程式。
+1. 從 Releases 頁面下載 YAEC-1.9-win-x64-setup.exe 並執行。它會將 YAEC 安裝到文件\YAEC，無需系統管理員權限，並在「開始」選單和桌面上建立捷徑，同時安裝解除安裝程式。
 2. 如果出現 SmartScreen 警告：「更多資訊」 → 「仍要執行」。
-3. 免安裝：將 YAEC-1.8-win-x64-portatile.zip 解壓縮到一個有寫入權限的資料夾，然後啟動 YAEC.exe。
+3. 免安裝：將 YAEC-1.9-win-x64-portatile.zip 解壓縮到一個有寫入權限的資料夾，然後啟動 YAEC.exe。
 
 安裝 – LINUX
 YAEC 在 Mono（自由的 .NET 執行環境）上執行。
-- Debian、Ubuntu、Mint：下載 yaec_1.8_amd64.deb，並用以下命令安裝
-      sudo apt install ./yaec_1.8_amd64.deb
+- Debian、Ubuntu、Mint：下載 yaec_1.9_amd64.deb，並用以下命令安裝
+      sudo apt install ./yaec_1.9_amd64.deb
   （同時會安裝 Mono）。可從應用程式選單或用命令“yaec”啟動 YAEC。
-- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) 並執行 ./install.sh。
+- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) 並執行 ./install.sh。
 
 安裝 – macOS（實驗性）
 1. 安裝 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
-2. 開啟 YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel)，將 YAEC 拖到「應用程式」中。首次執行：按右鍵 YAEC → 開啟（該應用未經 Apple 簽名）。
+2. 開啟 YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel)，將 YAEC 拖到「應用程式」中。首次執行：按右鍵 YAEC → 開啟（該應用未經 Apple 簽名）。
 
 驗證下載的檔案（SHA-256）
 每個 release 都包含 SHA256SUMS.txt，其中列出每個套件的 SHA-256 雜湊值。請將其與下載檔案的雜湊值進行比較：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 如果兩個值不同，請不要安裝該檔案，而應重新下載。
@@ -39,7 +39,8 @@ YAEC 是免費的；授權條款文字見檔案 LICENSE_zh-TW.txt 以及程式�
 
 版本歷史
 1.0 之前的版本稱為 beta 版。
-- 1.8 - 新增斯洛伐克語（共 37 種），含手冊、README 和授權；全程式統一波束寬度：八木天線用 0.93·√(41253/G)（依 W4RNL 的 NEC 模擬修正的 Kraus 規則，與 YA-MS 相同），拋物面用 70·λ/D（IZ0JNY），取代「依頻率的 DGRD」中無出處的 √(32000/G)；手冊已依新公式與指向範例更新；在 macOS 上啟動器會自動開啟 XQuartz、將 Mono 版本寫入記錄檔，並在 YAEC 無法啟動時提出警告；README 介紹新增葡萄牙語、土耳其語、捷克語、斯洛伐克語、中文、日語和韓語版本；修正了泰語、羅馬尼亞語、希臘語、巴西葡萄牙語、波蘭語、捷克語和匈牙利語的翻譯。
+- 1.9 - 新分頁 我的地平線（即時）：根據 SRTM1 資料計算的地形地平線，考慮地球曲率與折射，背景為三種配色之一的天穹，顯示月球軌跡、附 OpenStreetMap 名稱的主要障礙物以及損失的月球分鐘數；可勾選在整個程式中把地形當作最低仰角；依 NJ9R 方法的本地雜訊地圖，月球位於雜訊方向的時段標 ⚠；新分頁 值得嘗試的電台（規劃），構想來自 Matteo IW5DHN：N0UK 聊天室中的活躍電台依 0 到 100 的指數排序；數字框箭頭並排、藥丸形分頁，以及取自 IP-TRX-CTRL 的三種新配色方案。
+- 1.8 - 新增斯洛伐克語（共 37 種），含手冊、README 和授權；全程式統一波束寬度：八木天線用 0.93·√(41253/G)（依 W4RNL 的 NEC 模擬修正的 Kraus 規則，與 YA-MS 相同），拋物面用 70·λ/D（IZ0JNY），取代「依頻率的 DGRD」中無出處的 √(32000/G)；手冊已依新公式與指向範例更新；在 macOS 上啟動器會自動開啟 XQuartz、將 Mono 版本寫入記錄檔，並在 YAEC 無法啟動時提出警告；README 介紹新增葡萄牙語、土耳其語、捷克語、斯洛伐克語、中文、日語和韓語版本；修正了泰語、羅馬尼亞語、希臘語、巴西葡萄牙語、波蘭語、捷克語和匈牙利語的翻譯。
 - 1.7 - 新增八種語言：巴西葡萄牙語、泰語、繁體中文、波蘭語、捷克語、羅馬尼亞語、希臘語和匈牙利語（共 36 種），含手冊和 README；「EME 鏈路預算 八木」和「EME 鏈路預算 拋物面」中新增本台回波計算（「我發射並接收自己的回波」）；主焦點或偏饋拋物面（W2IMU）；1296 MHz 使用拋物面時計入實際饋源的圓極化損耗（KA1GT）；「計算核查」中可在「EME 鏈路預算 八木」和「EME 鏈路預算 拋物面」之間選擇；「按頻率 DGRD」的公式以方程式編輯器的樣式書寫；手冊：依據 ITU-R P.531 的 1296 MHz 法拉第旋轉、23 cm 的去極化（Hagfors）以及 23 cm 的圓極化。
 - 1.6 - 整個程式新增 902 MHz 和 23 cm（1296 和 1298 MHz）頻段，MHz 下拉式清單中包含所有頻段；「EME 鏈路預算」分頁更名為「EME 鏈路預算八木」，並新增「EME 鏈路預算拋物面」分頁（主焦點拋物面天線，用 PE1RKI 公式計算增益，前置放大器也可為兩級，轉頻器和 PA 激勵）；新增「按頻率 DGRD」分頁，使用電台的真實雜訊和在波束內平均的天空，並在整個程式中使用；同軸電纜根據規格書資料用公式 α = k1·√f + k2·f 計算，也包括 902 和 1296 MHz；所有分頁採用新的控制項樣式；「即時位置與 +- 24h」中紅色游標上顯示提示，並顯示游標時刻 DX 的紅線；對照各資料來源修訂手冊（逐頻段路徑損耗、Q65-60B 和 Q65-60C 的門限、依據 IK1UWL 實測的地面增益、連接器、其他程式的 Dgrd、432 MHz 以上的拋物面天線）；提供各種架構的安裝套件（Windows x64 和 x86，Linux x64、arm64 和 arm，macOS Apple Silicon 和 Intel）；感謝 Robert HA5OLA。432 MHz 以上的頻段仍在完善中。
 - 1.5 - 「通聯」組新增「GRAVES 雷達」分頁：月球是否在雷達波束內（扇區與波位）、與你的共同時窗、回波的都卜勒和延遲、波束下一次掃過月球的時間、從 GRAVES 看到的天空、24 小時 UTC 重建及未來 10 秒的細節、收聽回波的建議和資料來源；活躍電台清單另提供 JSON 和文字格式，供 LunaCalc Mobile 使用；新增兩種語言：丹麥語和他加祿語（共 28 種），含手冊。

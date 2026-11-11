@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.8
+﻿YAEC – Yet Another EME Calc 1.9
 hazırlayan: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ hazırlayan: Costantino IC8TEM
 Kaynak kod ve indirme: https://github.com/ic8tem/YAEC/releases
 
 KURULUM – WINDOWS
-1. YAEC-1.8-win-x64-setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
+1. YAEC-1.9-win-x64-setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
 2. SmartScreen uyarısı çıkarsa: "Ek bilgi" → "Yine de çalıştır".
-3. Kurulum olmadan: YAEC-1.8-win-x64-portatile.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
+3. Kurulum olmadan: YAEC-1.9-win-x64-portatile.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
 
 KURULUM – LINUX
 YAEC, özgür .NET çalışma ortamı olan Mono ile çalışır.
-- Debian, Ubuntu, Mint: yaec_1.8_amd64.deb dosyasını indirin ve şu komutla kurun
-      sudo apt install ./yaec_1.8_amd64.deb
+- Debian, Ubuntu, Mint: yaec_1.9_amd64.deb dosyasını indirin ve şu komutla kurun
+      sudo apt install ./yaec_1.9_amd64.deb
   (Mono da kurulur). YAEC uygulamalar menüsünden veya "yaec" komutuyla başlatılır.
-- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) dosyasını çıkarın ve ./install.sh'yi çalıştırın.
+- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) dosyasını çıkarın ve ./install.sh'yi çalıştırın.
 
 KURULUM – macOS (deneysel)
 1. macOS için Mono (https://www.mono-project.com/download/stable/) ve XQuartz (https://www.xquartz.org) kurun.
-2. YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
+2. YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
 
 İNDİRİLEN DOSYALARIN DOĞRULANMASI (SHA-256)
 Her release, her paketin SHA-256 özetini içeren SHA256SUMS.txt dosyasını barındırır. Bunu indirdiğiniz dosyanın özetiyle karşılaştırın:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 İki değer farklıysa dosyayı kurmayın: yeniden indirin.
@@ -39,7 +39,8 @@ Hatalar, daha iyi veriler, çeviriler: ccerrotta@gmail.com · ic8tem@gmail.com �
 
 SÜRÜM GEÇMİŞİ
 1.0'dan önceki sürümlere beta denir.
-- 1.8 - Yeni dil Slovakça (toplam 37), kılavuzlar, README ve lisans ile; tüm programda tek hüzme genişliği: yagiler için 0,93·√(41253/G) (W4RNL'nin NEC benzetimleriyle düzeltilmiş Kraus kuralı, YA-MS'deki gibi) ve çanaklar için 70·λ/D (IZ0JNY); frekansa göre DGRD'deki kaynaksız √(32000/G) yerine; kılavuz yeni formül ve yönlendirme örneğiyle güncellendi; macOS'ta başlatıcı XQuartz'ı kendisi açar, Mono sürümünü günlüğe yazar ve YAEC başlamazsa uyarır; README tanıtımı ayrıca Portekizce, Türkçe, Çekçe, Slovakça, Çince, Japonca ve Korece; Tayca, Rumence, Yunanca, Brezilya Portekizcesi, Lehçe, Çekçe ve Macarca çeviriler düzeltildi.
+- 1.9 - Yeni sekme Ufkum (Canlı): Dünya eğriliği ve kırılma hesaba katılarak SRTM1 verilerinden hesaplanan arazi ufku, üç renk ölçeğinden biriyle Gök kubbesi arka planı üzerinde; Ay'ın yolu, OpenStreetMap adlarıyla başlıca engeller ve kaybedilen Ay dakikaları; araziyi tüm programda en düşük yükseklik açısı olarak kullanmak için onay kutusu; NJ9R'ye göre yerel gürültü haritası, Ay'ın gürültülü bir yönde olduğu saatlerde ⚠ ile; yeni sekme Denenecek istasyonlar (Planlama), fikir Matteo IW5DHN'den: N0UK sohbetindeki etkin istasyonlar 0'dan 100'e bir endeksle sıralanır; yan yana oklu sayı kutuları, hap biçimli sekmeler ve IP-TRX-CTRL'den alınan üç yeni renk şeması.
+- 1.8 - Yeni dil Slovakça (toplam 37), kılavuzlar, README ve lisans ile; tüm programda tek hüzme genişliği: yagiler için 0,93·√(41253/G) (W4RNL'nin NEC benzetimleriyle düzeltilmiş Kraus kuralı, YA-MS'deki gibi) ve çanaklar için 70·λ/D (IZ0JNY); frekansa göre DGRD'deki kaynaksız √(32000/G) yerine; kılavuz yeni formül ve yönlendirme örneğiyle güncellendi; macOS'ta başlatıcı XQuartz'ı kendisi açar, Mono sürümünü günlüğe yazar ve YAEC başlamazsa uyarır; README tanıtımı ayrıca Portekizce, Türkçe, Çekçe, Slovakça, Çince, Japonca ve Korece; Tayca, Rumence, Yunanca, Brezilya Portekizcesi, Lehçe, Çekçe ve Macarca çeviriler düzeltildi.
 - 1.7 - Sekiz yeni dil: Brezilya Portekizcesi, Tayca, Geleneksel Çince, Lehçe, Çekçe, Rumence, Yunanca ve Macarca (toplam 36), kılavuzları ve README dosyalarıyla birlikte; EME bütçesi yagi ve EME bütçesi çanaklar sekmelerinde kendi istasyonunun eko hesabı (Ben yayın yapar ve kendi yankımı alırım); birincil odaklı ya da offset çanak (W2IMU); 1296 MHz'de çanaklarla gerçek besleyicilerin dairesel polarizasyon kaybı (KA1GT); Hesapların kontrolü sekmesinde EME bütçesi yagi ile EME bütçesi çanaklar arasında seçim; Frekansa göre DGRD formülleri bir denklem düzenleyicisindeki gibi yazılmış; kılavuz: ITU-R P.531'e göre 1296 MHz'de Faraday dönmesi, 23 cm'de depolarizasyon (Hagfors) ve 23 cm'de dairesel polarizasyon.
 - 1.6 - Programın tamamında 902 MHz ve 23 cm (1296 ve 1298 MHz) bantları, MHz açılır listesinde tüm bantlar; EME bütçesi sekmesi EME bütçesi yagi olur ve yeni EME bütçesi çanaklar sekmesi eklenir (birincil odaklı çanak, PE1RKI formülüyle kazanç, iki katlı da olabilen ön yükseltici, transverter ve PA sürümü); istasyonun gerçek gürültüsü ve hüzme üzerinden ortalanmış gökyüzüyle yeni Frekansa göre DGRD sekmesi, programın tamamında kullanılır; koaksiyel kablolar veri sayfalarındaki verilerden α = k1·√f + k2·f formülüyle hesaplanır, 902 ve 1296 MHz'de de; tüm sekmelerde denetimlerin yeni stili; Canlı konum ve +- 24h'de kırmızı imleçte bilgi balonu ve imlecin saatinde DX'in kırmızı çizgileri; kaynakların karşılaştırılmasından sonra gözden geçirilmiş kılavuz (bant bant yol kaybı, Q65-60B ve Q65-60C eşikleri, IK1UWL ölçümlerine göre zemin kazancı, konektörler, diğer programların Dgrd'si, 432 MHz üzerindeki çanaklar); her mimari için paketler (Windows x64 ve x86, Linux x64, arm64 ve arm, macOS Apple Silicon ve Intel); Robert HA5OLA'ya teşekkürler. 432 MHz'in üzerindeki bantlar tamamlanma aşamasındadır.
 - 1.5 - Bağlantı grubunda yeni GRAVES radarı sekmesi: sektör ve adımıyla radar ışınındaki Ay, seninle ortak pencere, ekonun Doppler'i ve gecikmesi, ışının Ay üzerinden bir sonraki geçişi, GRAVES'ten görülen gökyüzü, sonraki 10 saniyenin ayrıntısıyla 24 saatlik UTC yeniden yapılandırması, ekoyu duymak için öneriler ve kaynaklar; etkin istasyon listesi LunaCalc Mobile için JSON ve metin olarak da; iki yeni dil, Danca ve Tagalogca (toplam 28), kılavuzlarıyla birlikte.
