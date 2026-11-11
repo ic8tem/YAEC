@@ -199,6 +199,37 @@ jobs:
             kill $PID 2>/dev/null || true
           done
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+      - name: Schermate del README nelle lingue nuove (solo con [readme] nel messaggio del commit)
+        if: contains(github.event.head_commit.message, '[readme]')
+        run: |
+          sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-core > /dev/null 2>&1 || true
+          fc-cache -f > /dev/null
+          Xvfb :96 -screen 0 1600x1000x24 &
+          export DISPLAY=:96
+          sleep 2
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          mkdir -p shotr
+          while IFS='|' read -r LG T2 T3; do
+            printf 'lingua=%s\nlocator=JN70CN83CL\ndx=1\ndx_locator=BL20BB\ndx_nominativo=W7GJ\n' "$LG" > "$F"
+            N=1
+            for T in "" "$T2" "$T3"; do
+              if [ -z "$T" ]; then mono YAEC.exe & else YAEC_LINGUETTA="$T" mono YAEC.exe & fi
+              PID=$!
+              sleep 35
+              import -window root shotr/x.png || true
+              convert shotr/x.png -resize 1200x -quality 85 shotr/x.jpg 2>/dev/null && echo "SCREENSHOT-README-$LG-$N-B64:$(base64 -w 0 shotr/x.jpg)" || true
+              kill $PID 2>/dev/null || true; sleep 2
+              N=$((N+1))
+            done
+          done <<'EOF'
+          pt|Balanço EME Yagi|Distância e Dgrd
+          tr|EME bütçesi yagi|Mesafe ve Dgrd
+          cs|Bilance EME yagi|Vzdálenost a Dgrd
+          sk|Bilancia EME yagi|Vzdialenosť a Dgrd
+          zh|EME 链路预算 八木|距离与 Dgrd
+          ja|EME 回線計算 八木|距離と Dgrd
+          ko|EME 링크 버짓 야기|거리와 Dgrd
+          EOF
       - name: Prova dei caratteri consigliati, linguetta per linguetta (solo con [caratteri] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[caratteri]')
         run: |

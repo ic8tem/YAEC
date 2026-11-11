@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.7
+﻿YAEC – Yet Another EME Calc 1.8
 by Costantino IC8TEM
 ==========================================
 
-A calculator for radio amateurs working EME (Earth–Moon–Earth) from 50 MHz to 23 cm (1296 MHz): Moon position and pointing windows within the limits of your own antenna, planning of the days with the best Dgrd, EME link budget with yagis or dishes, sky and Sun noise, a coaxial cable database and EME manuals. For Windows, Linux and macOS, in 36 languages. The bands above 432 MHz are still being completed, but DGRD is already calculated correctly at every frequency.
+A calculator for radio amateurs working EME (Earth–Moon–Earth) from 50 MHz to 23 cm (1296 MHz): Moon position and pointing windows within the limits of your own antenna, planning of the days with the best Dgrd, EME link budget with yagis or dishes, sky and Sun noise, a coaxial cable database and EME manuals. For Windows, Linux and macOS, in 37 languages. The bands above 432 MHz are still being completed, but DGRD is already calculated correctly at every frequency.
 Source and downloads: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Download YAEC-1.7-win-x64-setup.exe from the Releases page and run it. It installs YAEC in Documents\YAEC, without administrator rights, with shortcuts in the Start menu and on the desktop, and an uninstaller.
+1. Download YAEC-1.8-win-x64-setup.exe from the Releases page and run it. It installs YAEC in Documents\YAEC, without administrator rights, with shortcuts in the Start menu and on the desktop, and an uninstaller.
 2. If the SmartScreen warning appears: "More info" → "Run anyway".
-3. Without installing: extract YAEC-1.7-win-x64-portatile.zip into a folder you can write to and start YAEC.exe.
+3. Without installing: extract YAEC-1.8-win-x64-portatile.zip into a folder you can write to and start YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC runs on Mono, the free .NET runtime.
-- Debian, Ubuntu, Mint: download yaec_1.7_amd64.deb and install it with
-      sudo apt install ./yaec_1.7_amd64.deb
+- Debian, Ubuntu, Mint: download yaec_1.8_amd64.deb and install it with
+      sudo apt install ./yaec_1.8_amd64.deb
   (this also installs Mono). Start YAEC from the applications menu or with the command "yaec".
-- Other distributions: install Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extract YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) and run ./install.sh.
+- Other distributions: install Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extract YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) and run ./install.sh.
 
 INSTALLATION – macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/) and XQuartz (https://www.xquartz.org).
-2. Open YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) and drag YAEC into Applications. The first time: right-click YAEC → Open (the app is not signed by Apple).
+2. Open YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) and drag YAEC into Applications. The first time: right-click YAEC → Open (the app is not signed by Apple).
 
 CHECKING THE DOWNLOADED FILES (SHA-256)
 Every release contains SHA256SUMS.txt with the SHA-256 hash of each package. Compare it with the hash of the downloaded file:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 If the two values differ, do not install the file: download it again.
@@ -39,6 +39,7 @@ Bugs, better data, translations: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 VERSION HISTORY
 Versions before 1.0 are called beta.
+- 1.8 - New Slovak language (37 in total), with the manuals, the README and the licence; one beamwidth throughout the program: 0.93·√(41253/G) for Yagis (Kraus's rule corrected with W4RNL's NEC simulations, as in YA-MS) and 70·λ/D for dishes (IZ0JNY), replacing the unsourced √(32000/G) in DGRD by frequency; manual updated with the new formula and the pointing example; on macOS the launcher starts XQuartz by itself, writes the Mono version to the log and warns if YAEC does not start; README presentation also in Portuguese, Turkish, Czech, Slovak, Chinese, Japanese and Korean; translations corrected in Thai, Romanian, Greek, Brazilian Portuguese, Polish, Czech and Hungarian.
 - 1.7 - Eight new languages: Brazilian Portuguese, Thai, Traditional Chinese, Polish, Czech, Romanian, Greek and Hungarian (36 in all), with the manuals and the READMEs; in EME budget Yagi and EME budget dishes, the echo calculation for your own station (I transmit and receive my own echo); prime-focus or offset dish (W2IMU); at 1296 MHz with dishes, the circular polarization loss of real feeds (KA1GT); in Calculation check, the choice between EME budget Yagi and EME budget dishes; formulas of DGRD by frequency written as in an equation editor; manual: Faraday rotation at 1296 MHz according to ITU-R P.531, depolarization at 23 cm (Hagfors) and circular polarization on 23 cm.
 - 1.6 - 902 MHz and 23 cm (1296 and 1298 MHz) bands throughout the program, with all the bands in the MHz drop-down list; the EME budget tab becomes EME budget Yagi and there is the new EME budget dishes tab (prime-focus dish, gain with the PE1RKI formula, preamplifier also with two stages, transverter and PA drive); new DGRD by frequency tab, with the real noise of the station and the sky averaged over the beam, used throughout the program; coaxial cables calculated with the formula α = k1·√f + k2·f from the datasheet data, also at 902 and 1296 MHz; new style of the controls in all tabs; in Live position and +- 24h, the tooltip on the red cursor and the red DX lines at the cursor time; manual revised after comparing the sources (path loss band by band, thresholds of Q65-60B and Q65-60C, ground gain according to IK1UWL's measurements, connectors, Dgrd of other programs, dishes above 432 MHz); packages for every architecture (Windows x64 and x86, Linux x64, arm64 and arm, macOS Apple Silicon and Intel); thanks to Robert HA5OLA. The bands above 432 MHz are still being completed.
 - 1.5 - New Radar GRAVES tab in the Link group: Moon in the radar beam with sector and step, common window with you, Doppler and delay of the echo, next beam pass on the Moon, sky seen from GRAVES, reconstruction of the 24 UTC hours with the detail of the next 10 seconds, tips for hearing the echo and sources; list of active stations also in JSON and text for LunaCalc Mobile; two new languages, Danish and Tagalog (28 in all), with the manuals.

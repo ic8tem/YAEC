@@ -2,14 +2,14 @@
 
 *a cura di Costantino IC8TEM*
 
-Moon position, pointing windows, EME link budget, sky and solar noise calculator for radio amateurs, in 36 languages.
+Moon position, pointing windows, EME link budget, sky and solar noise calculator for radio amateurs, in 37 languages.
 Windows, Linux and macOS (Linux and macOS with Mono).
 
-Posizione della Luna, finestre di puntamento, budget del collegamento EME, rumore del cielo e del Sole per radioamatori, in 36 lingue.
+Posizione della Luna, finestre di puntamento, budget del collegamento EME, rumore del cielo e del Sole per radioamatori, in 37 lingue.
 
 ## Languages
 
-YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence and the README are available in **36 languages**; the language is chosen at the top of the main screen. Licence and README in every language are in the [`lingue`](lingue) folder.
+YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence and the README are available in **37 languages**; the language is chosen at the top of the main screen. Licence and README in every language are in the [`lingue`](lingue) folder.
 
 | | | | |
 |---|---|---|---|
@@ -22,10 +22,11 @@ YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence an
 | 한국어 `ko` | Bahasa Indonesia `id` | Dansk `da` | Tagalog `tl` |
 | Português (Brasil) `pt-BR` | ไทย `th` | 中文 (繁體) `zh-TW` | Polski `pl` |
 | Čeština `cs` | Română `ro` | Ελληνικά `el` | Magyar `hu` |
+| Slovenčina `sk` | | | |
 
 ## Installation
 
-[English](#english) · [Italiano](#italiano) · [Deutsch](#deutsch) · [Français](#français) · [Español](#español)
+[English](#english) · [Italiano](#italiano) · [Deutsch](#deutsch) · [Français](#français) · [Español](#español) · [Português](#português) · [Türkçe](#türkçe) · [Čeština](#čeština) · [Slovenčina](#slovenčina) · [中文](#中文) · [日本語](#日本語) · [한국어](#한국어)
 
 Download the files from the **[Releases](../../releases/latest)** page (x.y = version number).
 
@@ -74,11 +75,74 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 - **macOS (experimental)** – instala Mono para macOS y XQuartz, abre `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) y arrastra YAEC a Aplicaciones; la primera vez, clic derecho → *Abrir*.
 - Cada versión incluye `SHA256SUMS.txt` para comprobar los archivos descargados.
 
+### Português
+- **Windows** – descarrega `YAEC-x.y-win-x64-setup.exe` e executa-o. Instala o YAEC em *Documentos\YAEC* sem direitos de administrador, com atalhos no menu Iniciar e no ambiente de trabalho e um desinstalador. Se o SmartScreen avisar: *Mais informações* → *Executar mesmo assim*. Sem instalação: extrai `YAEC-x.y-win-x64-portatile.zip` para uma pasta onde possas escrever e executa `YAEC.exe`.
+- **Linux – Debian, Ubuntu, Mint** – descarrega `yaec_x.y_amd64.deb` e executa `sudo apt install ./yaec_x.y_amd64.deb` (o Mono também é instalado); o YAEC abre-se a partir do menu de aplicações ou com `yaec`.
+- **Windows de 32 bits** – `YAEC-x.y-win-x86-setup.exe` ou `YAEC-x.y-win-x86-portatile.zip`.
+- **Raspberry Pi** (Raspberry Pi OS de 64 bits, Pi 4/5) – descarrega `yaec_x.y_arm64.deb` e executa `sudo apt install ./yaec_x.y_arm64.deb`.
+- **Linux – outras distribuições** – instala o Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrai `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`) e executa `./install.sh`.
+- **macOS (experimental)** – instala o Mono para macOS e o XQuartz, abre `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) e arrasta o YAEC para Aplicações; da primeira vez, clique direito → *Abrir*.
+- Cada versão inclui `SHA256SUMS.txt` para verificar os ficheiros descarregados.
+
+### Türkçe
+- **Windows** – `YAEC-x.y-win-x64-setup.exe` dosyasını indirip çalıştırın. YAEC, yönetici hakları olmadan *Belgeler\YAEC* klasörüne kurulur; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturulur. SmartScreen uyarı verirse: *Ek bilgi* → *Yine de çalıştır*. Kurulum istemiyorsanız: `YAEC-x.y-win-x64-portatile.zip` dosyasını yazabildiğiniz bir klasöre açın ve `YAEC.exe` dosyasını çalıştırın.
+- **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb` dosyasını indirip `sudo apt install ./yaec_x.y_amd64.deb` komutunu çalıştırın (Mono da kurulur); YAEC uygulamalar menüsünden ya da `yaec` komutuyla açılır.
+- **32 bit Windows** – `YAEC-x.y-win-x86-setup.exe` veya `YAEC-x.y-win-x86-portatile.zip`.
+- **Raspberry Pi** (64 bit Raspberry Pi OS, Pi 4/5) – `yaec_x.y_arm64.deb` dosyasını indirip `sudo apt install ./yaec_x.y_arm64.deb` komutunu çalıştırın.
+- **Linux – diğer dağıtımlar** – Mono'yu kurun (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64-portatile.tar.gz` dosyasını açın (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`) ve `./install.sh` komutunu çalıştırın.
+- **macOS (deneysel)** – macOS için Mono'yu ve XQuartz'ı kurun, `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin; ilk seferde sağ tık → *Aç*.
+- Her sürümde, indirilen dosyaları doğrulamak için `SHA256SUMS.txt` bulunur.
+
+### Čeština
+- **Windows** – stáhni `YAEC-x.y-win-x64-setup.exe` a spusť ho. Nainstaluje YAEC do *Dokumenty\YAEC* bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem. Pokud se objeví upozornění SmartScreen: *Další informace* → *Přesto spustit*. Bez instalace: rozbal `YAEC-x.y-win-x64-portatile.zip` do složky, do které můžeš zapisovat, a spusť `YAEC.exe`.
+- **Linux – Debian, Ubuntu, Mint** – stáhni `yaec_x.y_amd64.deb` a spusť `sudo apt install ./yaec_x.y_amd64.deb` (nainstaluje i Mono); YAEC se spouští z nabídky aplikací nebo příkazem `yaec`.
+- **32bitové Windows** – `YAEC-x.y-win-x86-setup.exe` nebo `YAEC-x.y-win-x86-portatile.zip`.
+- **Raspberry Pi** (64bitový Raspberry Pi OS, Pi 4/5) – stáhni `yaec_x.y_arm64.deb` a spusť `sudo apt install ./yaec_x.y_arm64.deb`.
+- **Linux – jiné distribuce** – nainstaluj Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), rozbal `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`) a spusť `./install.sh`.
+- **macOS (experimentální)** – nainstaluj Mono pro macOS a XQuartz, otevři `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) a přetáhni YAEC do složky Aplikace; poprvé pravý klik → *Otevřít*.
+- Každé vydání obsahuje `SHA256SUMS.txt` pro kontrolu stažených souborů.
+
+### Slovenčina
+- **Windows** – stiahni `YAEC-x.y-win-x64-setup.exe` a spusti ho. Nainštaluje YAEC do *Dokumenty\YAEC* bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom. Ak sa objaví upozornenie SmartScreen: *Ďalšie informácie* → *Napriek tomu spustiť*. Bez inštalácie: rozbaľ `YAEC-x.y-win-x64-portatile.zip` do priečinka, do ktorého môžeš zapisovať, a spusti `YAEC.exe`.
+- **Linux – Debian, Ubuntu, Mint** – stiahni `yaec_x.y_amd64.deb` a spusti `sudo apt install ./yaec_x.y_amd64.deb` (nainštaluje aj Mono); YAEC sa spúšťa z ponuky aplikácií alebo príkazom `yaec`.
+- **32-bitové Windows** – `YAEC-x.y-win-x86-setup.exe` alebo `YAEC-x.y-win-x86-portatile.zip`.
+- **Raspberry Pi** (64-bitový Raspberry Pi OS, Pi 4/5) – stiahni `yaec_x.y_arm64.deb` a spusti `sudo apt install ./yaec_x.y_arm64.deb`.
+- **Linux – iné distribúcie** – nainštaluj Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), rozbaľ `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`) a spusti `./install.sh`.
+- **macOS (experimentálne)** – nainštaluj Mono pre macOS a XQuartz, otvor `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) a pretiahni YAEC do priečinka Aplikácie; prvýkrát pravý klik → *Otvoriť*.
+- Každé vydanie obsahuje `SHA256SUMS.txt` na kontrolu stiahnutých súborov.
+
+### 中文
+- **Windows** – 下载 `YAEC-x.y-win-x64-setup.exe` 并运行。它无需管理员权限，把 YAEC 安装到 *文档\YAEC*，并在开始菜单和桌面创建快捷方式，附带卸载程序。若 SmartScreen 发出警告：*更多信息* → *仍要运行*。不想安装：把 `YAEC-x.y-win-x64-portatile.zip` 解压到可写的文件夹，运行 `YAEC.exe`。
+- **Linux – Debian、Ubuntu、Mint** – 下载 `yaec_x.y_amd64.deb`，运行 `sudo apt install ./yaec_x.y_amd64.deb`（会同时安装 Mono）；从应用菜单或用 `yaec` 命令启动 YAEC。
+- **32 位 Windows** – `YAEC-x.y-win-x86-setup.exe` 或 `YAEC-x.y-win-x86-portatile.zip`。
+- **树莓派**（64 位 Raspberry Pi OS，Pi 4/5）– 下载 `yaec_x.y_arm64.deb`，运行 `sudo apt install ./yaec_x.y_arm64.deb`。
+- **Linux – 其他发行版** – 安装 Mono（`sudo dnf install mono-complete`、`sudo pacman -S mono`、`sudo zypper install mono-complete`），解压 `YAEC-x.y-linux-x64-portatile.tar.gz`（ARM：`YAEC-x.y-linux-arm64-portatile.tar.gz`、`YAEC-x.y-linux-arm-portatile.tar.gz`），运行 `./install.sh`。
+- **macOS（实验性）** – 安装 macOS 版 Mono 和 XQuartz，打开 `YAEC-x.y-osx-arm64.dmg`（Apple Silicon）/ `YAEC-x.y-osx-x64.dmg`（Intel），把 YAEC 拖到“应用程序”；第一次请右键 → *打开*。
+- 每个版本都附有 `SHA256SUMS.txt`，用于校验下载的文件。
+
+### 日本語
+- **Windows** – `YAEC-x.y-win-x64-setup.exe` をダウンロードして実行します。管理者権限なしで *ドキュメント\YAEC* にインストールされ、スタートメニューとデスクトップのショートカット、アンインストーラーが作成されます。SmartScreen の警告が出たら：*詳細情報* → *実行*。インストールしない場合：`YAEC-x.y-win-x64-portatile.zip` を書き込み可能なフォルダーに展開し、`YAEC.exe` を実行します。
+- **Linux – Debian、Ubuntu、Mint** – `yaec_x.y_amd64.deb` をダウンロードし、`sudo apt install ./yaec_x.y_amd64.deb` を実行します（Mono も一緒にインストールされます）。YAEC はアプリケーションメニューまたは `yaec` コマンドで起動します。
+- **32 ビット Windows** – `YAEC-x.y-win-x86-setup.exe` または `YAEC-x.y-win-x86-portatile.zip`。
+- **Raspberry Pi**（64 ビット Raspberry Pi OS、Pi 4/5）– `yaec_x.y_arm64.deb` をダウンロードし、`sudo apt install ./yaec_x.y_arm64.deb` を実行します。
+- **Linux – その他のディストリビューション** – Mono をインストールし（`sudo dnf install mono-complete`、`sudo pacman -S mono`、`sudo zypper install mono-complete`）、`YAEC-x.y-linux-x64-portatile.tar.gz`（ARM：`YAEC-x.y-linux-arm64-portatile.tar.gz`、`YAEC-x.y-linux-arm-portatile.tar.gz`）を展開して `./install.sh` を実行します。
+- **macOS（試験的）** – macOS 用 Mono と XQuartz をインストールし、`YAEC-x.y-osx-arm64.dmg`（Apple Silicon）/ `YAEC-x.y-osx-x64.dmg`（Intel）を開いて YAEC をアプリケーションへドラッグします。初回は右クリック → *開く*。
+- 各リリースには、ダウンロードしたファイルを確認するための `SHA256SUMS.txt` が含まれます。
+
+### 한국어
+- **Windows** – `YAEC-x.y-win-x64-setup.exe`를 내려받아 실행합니다. 관리자 권한 없이 *문서\YAEC*에 설치되며, 시작 메뉴와 바탕 화면 바로 가기, 제거 프로그램이 만들어집니다. SmartScreen 경고가 나오면: *추가 정보* → *실행*. 설치하지 않으려면: `YAEC-x.y-win-x64-portatile.zip`을 쓰기 가능한 폴더에 풀고 `YAEC.exe`를 실행합니다.
+- **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb`를 내려받아 `sudo apt install ./yaec_x.y_amd64.deb`를 실행합니다(Mono도 함께 설치됨). YAEC는 응용 프로그램 메뉴나 `yaec` 명령으로 시작합니다.
+- **32비트 Windows** – `YAEC-x.y-win-x86-setup.exe` 또는 `YAEC-x.y-win-x86-portatile.zip`.
+- **Raspberry Pi**(64비트 Raspberry Pi OS, Pi 4/5) – `yaec_x.y_arm64.deb`를 내려받아 `sudo apt install ./yaec_x.y_arm64.deb`를 실행합니다.
+- **Linux – 기타 배포판** – Mono를 설치하고(`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64-portatile.tar.gz`(ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`)를 풀고 `./install.sh`를 실행합니다.
+- **macOS(실험적)** – macOS용 Mono와 XQuartz를 설치하고 `YAEC-x.y-osx-arm64.dmg`(Apple Silicon) / `YAEC-x.y-osx-x64.dmg`(Intel)를 열어 YAEC를 응용 프로그램으로 끌어다 놓습니다. 처음에는 오른쪽 클릭 → *열기*.
+- 각 릴리스에는 내려받은 파일을 확인하는 `SHA256SUMS.txt`가 들어 있습니다.
+
 All the versions before 1.0 are called **beta**.
 
 ## Features
 
-[English](#english-1) · [Italiano](#italiano-1) · [Deutsch](#deutsch-1) · [Français](#français-1) · [Español](#español-1)
+[English](#english-1) · [Italiano](#italiano-1) · [Deutsch](#deutsch-1) · [Français](#français-1) · [Español](#español-1) · [Português](#português-1) · [Türkçe](#türkçe-1) · [Čeština](#čeština-1) · [Slovenčina](#slovenčina-1) · [中文](#中文-1) · [日本語](#日本語-1) · [한국어](#한국어-1)
 
 ### English
 
@@ -112,7 +176,7 @@ YAEC puts in one program everything you need to run an EME (Earth–Moon–Earth
 **Also**
 - CALL3.TXT downloaded from W7GJ and WSJT-X Improved, merged, refreshed every 7 days and copied into WSJT-X on request.
 - Warnings for polar-cap and auroral absorption (PCA) when a station is beyond the polar circles or in the auroral zone.
-- 36 languages; light, night (blue), black and eight pastel colour schemes.
+- 37 languages; light, night (blue), black and eight pastel colour schemes.
 - Moon positions accurate to about 0.01° (Meeus, ELP-2000/82), all calculations on your computer; data in a single `data` folder.
 
 ### Italiano
@@ -147,7 +211,7 @@ YAEC raccoglie in un solo programma tutto quello che serve per l'EME (Terra–Lu
 **Inoltre**
 - CALL3.TXT scaricato da W7GJ e da WSJT-X Improved, unito, aggiornato ogni 7 giorni e copiato in WSJT-X a richiesta.
 - Avvisi di assorbimento della calotta polare e aurorale (PCA) quando una stazione è oltre i circoli polari o nella zona aurorale.
-- 36 lingue; schemi di colori chiaro, notte (blu), nero e otto pastello.
+- 37 lingue; schemi di colori chiaro, notte (blu), nero e otto pastello.
 - Posizioni della Luna precise a circa 0,01° (Meeus, ELP-2000/82), tutti i calcoli sul tuo computer; dati in un'unica cartella `data`.
 
 ### Deutsch
@@ -182,7 +246,7 @@ YAEC vereint in einem Programm alles, was man für den EME-Betrieb (Erde–Mond�
 **Außerdem**
 - CALL3.TXT von W7GJ und WSJT-X Improved geladen, zusammengeführt, alle 7 Tage erneuert und auf Wunsch nach WSJT-X kopiert.
 - Warnungen vor Polkappen- und Polarlichtabsorption (PCA), wenn eine Station jenseits der Polarkreise oder in der Polarlichtzone liegt.
-- 36 Sprachen; Farbschemata hell, Nacht (blau), schwarz und acht Pastelltöne.
+- 37 Sprachen; Farbschemata hell, Nacht (blau), schwarz und acht Pastelltöne.
 - Mondpositionen auf etwa 0,01° genau (Meeus, ELP-2000/82), alle Berechnungen auf deinem Computer; Daten in einem einzigen Ordner `data`.
 
 ### Français
@@ -217,7 +281,7 @@ YAEC réunit dans un seul programme tout ce qu'il faut pour trafiquer en EME (Te
 **Et aussi**
 - CALL3.TXT téléchargé chez W7GJ et WSJT-X Improved, fusionné, renouvelé tous les 7 jours et copié dans WSJT-X sur demande.
 - Alertes d'absorption de la calotte polaire et aurorale (PCA) quand une station est au-delà des cercles polaires ou dans la zone aurorale.
-- 36 langues ; thèmes de couleurs clair, nuit (bleu), noir et huit pastels.
+- 37 langues ; thèmes de couleurs clair, nuit (bleu), noir et huit pastels.
 - Positions de la Lune précises à environ 0,01° (Meeus, ELP-2000/82), tous les calculs sur votre ordinateur ; données dans un seul dossier `data`.
 
 ### Español
@@ -252,8 +316,253 @@ YAEC reúne en un solo programa todo lo necesario para operar EME (Tierra–Luna
 **Además**
 - CALL3.TXT descargado de W7GJ y de WSJT-X Improved, fusionado, renovado cada 7 días y copiado en WSJT-X a petición.
 - Avisos de absorción del casquete polar y auroral (PCA) cuando una estación está más allá de los círculos polares o en la zona auroral.
-- 36 idiomas; esquemas de colores claro, noche (azul), negro y ocho pastel.
+- 37 idiomas; esquemas de colores claro, noche (azul), negro y ocho pastel.
 - Posiciones de la Luna con una precisión de unos 0,01° (Meeus, ELP-2000/82), todos los cálculos en tu ordenador; datos en una sola carpeta `data`.
+
+### Português
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/pt-1.jpg"><img src="docs/screenshots/pt-1.jpg" alt="Posição em direto e +- 24h"></a><br><sub>Posição em direto e +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/pt-2.jpg"><img src="docs/screenshots/pt-2.jpg" alt="Balanço EME Yagi"></a><br><sub>Balanço EME Yagi</sub></td><td width="33%" align="center"><a href="docs/screenshots/pt-3.jpg"><img src="docs/screenshots/pt-3.jpg" alt="Distância e Dgrd"></a><br><sub>Distância e Dgrd</sub></td></tr></table>
+
+O YAEC reúne num só programa tudo o que é preciso para trabalhar em EME (Terra–Lua–Terra) em 50, 70, 144, 222, 432 e 902 MHz e 23 cm (1296 MHz), sobretudo quando a estação tem limitações: uma antena sem elevação, um rotor de curso limitado, obstáculos que escondem parte do céu. Não diz apenas onde está a Lua, mas se a **tua** antena a alcança mesmo, quando e em que condições. As bandas acima de 432 MHz estão a ser concluídas, mas a DGRD já é calculada corretamente em todas as frequências; seguir-se-ão mais conselhos para quem começa acima de 900 MHz.
+
+**Em direto**
+- **Posição em direto e +- 24h** – o ecrã principal, atualizado a cada segundo: o teu locator e o do DX (de 4 a 14 caracteres), frequência, relógios UTC, local e do DX, faixa de estado (apontável, fora dos limites, abaixo do horizonte, janela comum) com contagem decrescente, bússola e arco de elevação. Ao escrever o indicativo do DX, o locator vem do CALL3.TXT.
+- **Reconhecimento dos meus obstáculos** – mapa aéreo ou topográfico centrado na tua estação com o céu desenhado por cima: posição da Lua, percurso nas próximas 24 horas, nascimento e ocaso, limites da antena que se arrastam com o rato.
+- **Abóbada celeste** – o céu visto do teu QTH com as cores do ruído do céu na tua frequência, os limites da antena, o horizonte do DX, as radiofontes, o Sol e o percurso da Lua.
+
+**Planeamento**
+- **Distância e Dgrd** – de 7 a 61 dias de Dgrd e distância média da Lua, com a declinação sobreposta, perigeu, apogeu, lua nova, os três melhores dias (por ordem de data), um eventual quarto dia útil e um aviso para os dias com a Lua perto do Sol. Só contam as horas em que a Lua é realmente apontável com os teus limites.
+- **DGRD por frequência** – a Dgrd na tua frequência de trabalho com o ruído real da tua estação e o céu médio sobre o feixe da antena, comparada com o cálculo habitual do WSJT-X; a escolha vale para todo o programa.
+- **Posição da Lua** – tabela para o período escolhido, colorida segundo a apontabilidade, com as janelas comuns a ti e ao DX; exportação CSV para Excel.
+- **Lua sobre o mundo** – mapa do mundo colorido segundo a elevação da Lua vista de cada lugar; com um clique esse ponto passa a ser o DX.
+
+**Ligação**
+- **Balanço EME Yagi** – balanço da ligação para cada banda, guardado banda a banda: seis indicadores (ligação possível, o meu EIRP, EIRP do DX, perda de percurso, S/N eu → DX e DX → eu, também com o Sol e em 2500 Hz), a tabela completa dos passos e um esquema interativo da estação (antena, cabos, relé, pré-amplificador, transverter, rádio). Ganho do solo para antenas sem elevação. Modos com período de 60 s: JT65, Q65-60A, Q65-60B, Q65-60C e personalizado. Cálculo do eco (*Eu transmito e recebo o meu próprio eco*): nível, atraso e Doppler do eco.
+- **Balanço EME parabólicas** – o mesmo balanço, eco incluído, para antenas parabólicas em 432, 902 e 1296 MHz, de foco primário ou offset (W2IMU): ganho com a fórmula de PE1RKI, largura do feixe 70·λ/D, pré-amplificador de um ou dois andares, transverter e excitação do PA; em 23 cm, polarização circular com 0,4 dB de perda (KA1GT).
+- **Radar GRAVES** – o radar francês GRAVES (143,050 MHz) como banco de ensaio: quando a Lua está no seu feixe e dentro dos limites da tua antena, com o Doppler e o atraso do eco.
+- **Ruído solar** – descarrega os fluxos solares medidos pela rede RSTN (NOAA) e estima quanto o Sol aumenta o ruído do recetor perto da lua nova.
+- **Exportar os cálculos para Excel** e **Verificação dos cálculos** – o balanço como folha de Excel, e cada fórmula com os valores substituídos, passo a passo, para o balanço Yagi ou parabólicas.
+
+**Registo, ajuda e ferramentas**
+- **Mapa WWL e ADIF** – grelha Maidenhead com os quadrados trabalhados e confirmados a partir do teu ficheiro ADIF ou descarregados diretamente do LoTW, também por banda e só EME.
+- **MANUAL DE UTILIZAÇÃO** e **TEORIA E CONSELHOS SOBRE EME** – manuais completos dentro do programa em todas as línguas, com índice clicável, pesquisa, fórmulas e fontes; exportáveis para Word. O manual de teoria inclui os conselhos de operadores EME experientes, uma secção sobre os chats na Internet e as tabelas de antenas de VE7BQH.
+- **CABOS COAXIAIS** – base de dados de cabos de 50 Ω com a atenuação de 50 a 1296 MHz (valores das fichas técnicas e fórmula α = k1·√f + k2·f) e a fonte de cada valor; ordenável, filtrável, com cálculo de perda e um botão que leva o cabo para o balanço EME. Podem acrescentar-se cabos próprios.
+
+**E ainda**
+- CALL3.TXT descarregado de W7GJ e do WSJT-X Improved, fundido, renovado a cada 7 dias e copiado para o WSJT-X a pedido.
+- Avisos de absorção da calote polar e auroral (PCA) quando uma estação está para lá dos círculos polares ou na zona auroral.
+- 37 línguas; esquemas de cores claro, noite (azul), preto e oito pastel.
+- Posições da Lua com uma precisão de cerca de 0,01° (Meeus, ELP-2000/82), todos os cálculos no teu computador; dados numa única pasta `data`.
+
+### Türkçe
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/tr-1.jpg"><img src="docs/screenshots/tr-1.jpg" alt="Canlı konum ve +- 24h"></a><br><sub>Canlı konum ve +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/tr-2.jpg"><img src="docs/screenshots/tr-2.jpg" alt="EME bütçesi yagi"></a><br><sub>EME bütçesi yagi</sub></td><td width="33%" align="center"><a href="docs/screenshots/tr-3.jpg"><img src="docs/screenshots/tr-3.jpg" alt="Mesafe ve Dgrd"></a><br><sub>Mesafe ve Dgrd</sub></td></tr></table>
+
+YAEC, 50, 70, 144, 222, 432 ve 902 MHz ile 23 cm (1296 MHz) bantlarında EME (Dünya–Ay–Dünya) çalışmak için gereken her şeyi tek bir programda toplar; özellikle istasyonun kısıtları olduğunda: elevasyonu olmayan bir anten, sınırlı dönüşlü bir rotor, gökyüzünün bir kısmını gizleyen engeller. Yalnızca Ay'ın nerede olduğunu değil, **sizin** antenin ona gerçekten ulaşıp ulaşamadığını, ne zaman ve hangi koşullarda ulaştığını söyler. 432 MHz üstündeki bantlar tamamlanma aşamasındadır, ancak DGRD her frekansta zaten doğru hesaplanır; 900 MHz üstüne yeni başlayanlar için daha fazla öneri gelecek.
+
+**Canlı**
+- **Canlı konum ve +- 24h** – her saniye güncellenen ana ekran: sizin ve DX'in lokatörü (4 ila 14 karakter), frekans, UTC, yerel ve DX saatleri, geri sayımlı bir durum şeridi (yönlendirilebilir, sınırların dışında, ufkun altında, ortak pencere), pusula ve elevasyon yayı. DX'in çağrı işareti yazıldığında lokatörü CALL3.TXT'den gelir.
+- **Engellerimin keşfi** – istasyonunuzu merkeze alan, üzerine gökyüzü çizilmiş hava fotoğrafı veya topografik harita: Ay'ın konumu, sonraki 24 saatteki yolu, doğuş ve batış, fareyle sürüklenen anten sınırları.
+- **Gök kubbesi** – QTH'nizden görülen gökyüzü; frekansınızdaki gök gürültüsü renkleri, anten sınırları, DX'in ufku, radyo kaynakları, Güneş ve Ay'ın yolu.
+
+**Planlama**
+- **Mesafe ve Dgrd** – 7 ila 61 günlük Dgrd ve ortalama Ay mesafesi; üzerine bindirilmiş deklinasyon, yerberi, yeröte, yeni Ay, en iyi üç gün (tarih sırasıyla), olası dördüncü kullanışlı gün ve Ay'ın Güneş'e yakın olduğu günler için uyarı. Yalnızca Ay'ın sınırlarınızla gerçekten yönlendirilebilir olduğu saatler sayılır.
+- **Frekansa göre DGRD** – istasyonunuzun gerçek gürültüsü ve anten hüzmesi üzerinde ortalanmış gökyüzüyle çalışma frekansınızdaki Dgrd, alışılmış WSJT-X hesabıyla karşılaştırmalı; seçim tüm programda geçerlidir.
+- **Ay konumu** – seçilen dönem için, yönlendirilebilirliğe göre renklendirilmiş tablo; sizin ve DX'in ortak pencereleriyle; Excel için CSV dışa aktarma.
+- **Dünya üzerinde Ay** – her yerden görülen Ay elevasyonuna göre renklendirilmiş dünya haritası; tek tıkla o nokta DX olur.
+
+**Bağlantı**
+- **EME bütçesi yagi** – her bant için bağlantı bütçesi, bant bant saklanır: altı gösterge (bağlantı mümkün, benim EIRP'm, DX'in EIRP'si, yol kaybı, S/N ben → DX ve DX → ben, Güneş ile ve 2500 Hz'de de), tüm adımların tablosu ve istasyonun etkileşimli şeması (anten, kablolar, röle, ön yükselteç, transverter, telsiz). Elevasyonsuz antenler için yer kazancı. 60 s periyotlu modlar: JT65, Q65-60A, Q65-60B, Q65-60C ve özel. Yankı hesabı (*Ben yayın yapar ve kendi yankımı alırım*): yankının seviyesi, gecikmesi ve Doppler'i.
+- **EME bütçesi çanaklar** – aynı bütçe, yankı dahil, 432, 902 ve 1296 MHz'de birincil odaklı veya ofset (W2IMU) parabolik antenler için: PE1RKI formülüyle kazanç, 70·λ/D hüzme genişliği, tek veya iki katlı ön yükselteç, transverter ve PA sürüşü; 23 cm'de 0,4 dB kayıplı dairesel polarizasyon (KA1GT).
+- **GRAVES radarı** – deneme tezgâhı olarak Fransız GRAVES radarı (143,050 MHz): Ay'ın onun hüzmesinde ve anteninizin sınırları içinde olduğu zamanlar, Doppler ve yankı gecikmesiyle.
+- **Güneş gürültüsü** – RSTN ağının (NOAA) ölçtüğü Güneş akılarını indirir ve yeni Ay yakınında Güneş'in alıcı gürültüsünü ne kadar artırdığını tahmin eder.
+- **Hesaplamaları Excel'e aktar** ve **Hesapların kontrolü** – bütçe bir Excel sayfası olarak ve her formül yerine konmuş değerleriyle adım adım, yagi veya çanak bütçesi için.
+
+**Kayıt, yardım ve araçlar**
+- **WWL haritası ve ADIF** – ADIF dosyanızdan veya doğrudan LoTW'den indirilen çalışılmış ve onaylanmış karelerle Maidenhead ızgarası, bant bazında ve yalnızca EME olarak da.
+- **KULLANIM KILAVUZU** ve **EME ÜZERİNE TEORİ VE ÖNERİLER** – programın içinde, tüm dillerde, tıklanabilir içindekiler, arama, formüller ve kaynaklarla eksiksiz kılavuzlar; Word'e aktarılabilir. Teori kılavuzunda deneyimli EME operatörlerinin önerileri, internet sohbetleri üzerine bir bölüm ve VE7BQH anten tabloları bulunur.
+- **KOAKSİYEL KABLOLAR** – 50 Ω kabloların 50 ila 1296 MHz arasındaki zayıflamasını (veri sayfası değerleri ve α = k1·√f + k2·f formülü) ve her değerin kaynağını içeren veritabanı; sıralanabilir, süzülebilir, kayıp hesabı ve kabloyu EME bütçesine gönderen bir düğmeyle. Kendi kablolarınızı ekleyebilirsiniz.
+
+**Ayrıca**
+- W7GJ'den ve WSJT-X Improved'dan indirilen, birleştirilen, 7 günde bir yenilenen ve istenirse WSJT-X'e kopyalanan CALL3.TXT.
+- Bir istasyon kutup dairelerinin ötesinde veya auroral bölgede olduğunda kutup başlığı ve auroral soğurma (PCA) uyarıları.
+- 37 dil; açık, gece (mavi), siyah ve sekiz pastel renk şeması.
+- Yaklaşık 0,01° doğrulukta Ay konumları (Meeus, ELP-2000/82), tüm hesaplar bilgisayarınızda; veriler tek bir `data` klasöründe.
+
+### Čeština
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/cs-1.jpg"><img src="docs/screenshots/cs-1.jpg" alt="Poloha živě a +- 24h"></a><br><sub>Poloha živě a +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/cs-2.jpg"><img src="docs/screenshots/cs-2.jpg" alt="Bilance EME yagi"></a><br><sub>Bilance EME yagi</sub></td><td width="33%" align="center"><a href="docs/screenshots/cs-3.jpg"><img src="docs/screenshots/cs-3.jpg" alt="Vzdálenost a Dgrd"></a><br><sub>Vzdálenost a Dgrd</sub></td></tr></table>
+
+YAEC shromažďuje v jediném programu vše, co je potřeba pro provoz EME (Země–Měsíc–Země) na 50, 70, 144, 222, 432 a 902 MHz a v pásmu 23 cm (1296 MHz), zejména když má stanice omezení: anténu bez elevace, rotátor s omezeným rozsahem, překážky, které zakrývají část oblohy. Neříká jen, kde je Měsíc, ale zda na něj **tvá** anténa opravdu dosáhne, kdy a za jakých podmínek. Pásma nad 432 MHz se dokončují, ale DGRD se již počítá správně na každém kmitočtu; budou následovat další rady pro začátečníky nad 900 MHz.
+
+**Živě**
+- **Poloha živě a +- 24h** – hlavní obrazovka, aktualizovaná každou sekundu: tvůj lokátor a lokátor DX (4 až 14 znaků), kmitočet, hodiny UTC, místní a DX, stavový pruh (zamiřitelný, mimo limity, pod obzorem, společné okno) s odpočtem, kompas a oblouk elevace. Po napsání značky DX se lokátor doplní z CALL3.TXT.
+- **Průzkum mých překážek** – letecká nebo topografická mapa vystředěná na tvou stanici s oblohou nakreslenou navrch: poloha Měsíce, dráha v příštích 24 hodinách, východ a západ, limity antény, které se táhnou myší.
+- **Nebeská klenba** – obloha viděná z tvého QTH s barvami šumu oblohy na tvém kmitočtu, limity antény, obzor DX, rádiové zdroje, Slunce a dráha Měsíce.
+
+**Plánování**
+- **Vzdálenost a Dgrd** – 7 až 61 dní Dgrd a průměrné vzdálenosti Měsíce, s překrytou deklinací, perigeem, apogeem, novem, třemi nejlepšími dny (podle data), případným čtvrtým užitečným dnem a upozorněním na dny s Měsícem blízko Slunce. Počítají se jen hodiny, kdy je Měsíc s tvými limity opravdu zamiřitelný.
+- **DGRD podle kmitočtu** – Dgrd na tvém pracovním kmitočtu se skutečným šumem tvé stanice a oblohou průměrovanou přes svazek antény, porovnaná s obvyklým výpočtem WSJT-X; volba platí v celém programu.
+- **Poloha Měsíce** – tabulka pro zvolené období, obarvená podle zamiřitelnosti, se společnými okny pro tebe a DX; export CSV pro Excel.
+- **Měsíc nad světem** – mapa světa obarvená podle elevace Měsíce viděné z každého místa; jedním kliknutím se bod stane stanicí DX.
+
+**Spojení**
+- **Bilance EME yagi** – bilance spojení pro každé pásmo, ukládaná pásmo po pásmu: šest ukazatelů (spojení možné, moje EIRP, EIRP DX, útlum trasy, S/N já → DX a DX → já, i se Sluncem a v 2500 Hz), úplná tabulka kroků a interaktivní schéma stanice (anténa, kabely, relé, předzesilovač, transvertor, rádio). Ground gain pro antény bez elevace. Druhy provozu s periodou 60 s: JT65, Q65-60A, Q65-60B, Q65-60C a vlastní. Výpočet echa (*Vysílám a přijímám své echo*): úroveň, zpoždění a Doppler echa.
+- **Bilance EME paraboly** – stejná bilance, včetně echa, pro parabolické antény na 432, 902 a 1296 MHz, s primárním ohniskem nebo offsetové (W2IMU): zisk podle vzorce PE1RKI, šířka svazku 70·λ/D, jedno- nebo dvoustupňový předzesilovač, transvertor a buzení PA; v pásmu 23 cm kruhová polarizace se ztrátou 0,4 dB (KA1GT).
+- **Radar GRAVES** – francouzský radar GRAVES (143,050 MHz) jako zkušební stolice: kdy je Měsíc v jeho svazku a v limitech tvé antény, s Dopplerem a zpožděním echa.
+- **Sluneční šum** – stáhne sluneční toky měřené sítí RSTN (NOAA) a odhadne, o kolik Slunce zvýší šum přijímače v blízkosti novu.
+- **Export výpočtů do Excelu** a **Kontrola výpočtů** – bilance jako list Excelu a každý vzorec s dosazenými hodnotami, krok za krokem, pro bilanci yagi nebo parabol.
+
+**Deník, nápověda a nástroje**
+- **Mapa WWL a ADIF** – síť Maidenhead s pracovanými a potvrzenými čtverci z tvého souboru ADIF nebo stažené přímo z LoTW, i podle pásma a jen EME.
+- **PŘÍRUČKA K POUŽITÍ** a **TEORIE A RADY K EME** – úplné příručky uvnitř programu ve všech jazycích, s klikatelným obsahem, vyhledáváním, vzorci a zdroji; exportovatelné do Wordu. Příručka teorie obsahuje rady zkušených operátorů EME, oddíl o chatech na internetu a tabulky antén VE7BQH.
+- **KOAXIÁLNÍ KABELY** – databáze kabelů 50 Ω s útlumem od 50 do 1296 MHz (hodnoty z katalogových listů a vzorec α = k1·√f + k2·f) a zdrojem každé hodnoty; řaditelná, filtrovatelná, s výpočtem ztráty a tlačítkem, které přenese kabel do bilance EME. Lze přidat vlastní kabely.
+
+**Dále**
+- CALL3.TXT stažený od W7GJ a z WSJT-X Improved, sloučený, obnovovaný každých 7 dní a na požádání zkopírovaný do WSJT-X.
+- Upozornění na absorpci v polární čepičce a aurorální absorpci (PCA), když je stanice za polárními kruhy nebo v aurorální zóně.
+- 37 jazyků; barevná schémata světlé, noční (modré), černé a osm pastelových.
+- Polohy Měsíce s přesností asi 0,01° (Meeus, ELP-2000/82), všechny výpočty na tvém počítači; data v jediné složce `data`.
+
+### Slovenčina
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/sk-1.jpg"><img src="docs/screenshots/sk-1.jpg" alt="Poloha naživo a +- 24h"></a><br><sub>Poloha naživo a +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/sk-2.jpg"><img src="docs/screenshots/sk-2.jpg" alt="Bilancia EME yagi"></a><br><sub>Bilancia EME yagi</sub></td><td width="33%" align="center"><a href="docs/screenshots/sk-3.jpg"><img src="docs/screenshots/sk-3.jpg" alt="Vzdialenosť a Dgrd"></a><br><sub>Vzdialenosť a Dgrd</sub></td></tr></table>
+
+YAEC zhromažďuje v jedinom programe všetko, čo treba na prevádzku EME (Zem–Mesiac–Zem) na 50, 70, 144, 222, 432 a 902 MHz a v pásme 23 cm (1296 MHz), najmä keď má stanica obmedzenia: anténu bez elevácie, rotátor s obmedzeným rozsahom, prekážky, ktoré zakrývajú časť oblohy. Nehovorí len, kde je Mesiac, ale či naň **tvoja** anténa naozaj dosiahne, kedy a za akých podmienok. Pásma nad 432 MHz sa dokončujú, ale DGRD sa už počíta správne na každom kmitočte; budú nasledovať ďalšie rady pre začiatočníkov nad 900 MHz.
+
+**Naživo**
+- **Poloha naživo a +- 24h** – hlavná obrazovka, aktualizovaná každú sekundu: tvoj lokátor a lokátor DX (4 až 14 znakov), kmitočet, hodiny UTC, miestne a DX, stavový pás (namieriteľný, mimo limitov, pod obzorom, spoločné okno) s odpočtom, kompas a oblúk elevácie. Po napísaní značky DX sa lokátor doplní z CALL3.TXT.
+- **Prieskum mojich prekážok** – letecká alebo topografická mapa vycentrovaná na tvoju stanicu s oblohou nakreslenou navrchu: poloha Mesiaca, dráha v nasledujúcich 24 hodinách, východ a západ, limity antény, ktoré sa ťahajú myšou.
+- **Nebeská klenba** – obloha videná z tvojho QTH s farbami šumu oblohy na tvojom kmitočte, limity antény, obzor DX, rádiové zdroje, Slnko a dráha Mesiaca.
+
+**Plánovanie**
+- **Vzdialenosť a Dgrd** – 7 až 61 dní Dgrd a priemernej vzdialenosti Mesiaca, s prekrytou deklináciou, perigeom, apogeom, novom, tromi najlepšími dňami (podľa dátumu), prípadným štvrtým užitočným dňom a upozornením na dni s Mesiacom blízko Slnka. Počítajú sa len hodiny, keď je Mesiac s tvojimi limitmi naozaj namieriteľný.
+- **DGRD podľa kmitočtu** – Dgrd na tvojom pracovnom kmitočte so skutočným šumom tvojej stanice a oblohou priemerovanou cez zväzok antény, porovnaný s obvyklým výpočtom WSJT-X; voľba platí v celom programe.
+- **Poloha Mesiaca** – tabuľka pre zvolené obdobie, zafarbená podľa namieriteľnosti, so spoločnými oknami pre teba a DX; export CSV pre Excel.
+- **Mesiac nad svetom** – mapa sveta zafarbená podľa elevácie Mesiaca videnej z každého miesta; jedným kliknutím sa bod stane stanicou DX.
+
+**Spojenie**
+- **Bilancia EME yagi** – bilancia spojenia pre každé pásmo, ukladaná pásmo po pásme: šesť ukazovateľov (spojenie možné, moje EIRP, EIRP DX, útlm trasy, S/N ja → DX a DX → ja, aj so Slnkom a v 2500 Hz), úplná tabuľka krokov a interaktívna schéma stanice (anténa, káble, relé, predzosilňovač, transvertor, rádio). Ground gain pre antény bez elevácie. Druhy prevádzky s periódou 60 s: JT65, Q65-60A, Q65-60B, Q65-60C a vlastný. Výpočet echa (*Vysielam a prijímam svoje echo*): úroveň, oneskorenie a Doppler echa.
+- **Bilancia EME paraboly** – rovnaká bilancia, vrátane echa, pre parabolické antény na 432, 902 a 1296 MHz, s primárnym ohniskom alebo offsetové (W2IMU): zisk podľa vzorca PE1RKI, šírka zväzku 70·λ/D, jedno- alebo dvojstupňový predzosilňovač, transvertor a budenie PA; v pásme 23 cm kruhová polarizácia so stratou 0,4 dB (KA1GT).
+- **Radar GRAVES** – francúzsky radar GRAVES (143,050 MHz) ako skúšobná stolica: kedy je Mesiac v jeho zväzku a v limitoch tvojej antény, s Dopplerom a oneskorením echa.
+- **Slnečný šum** – stiahne slnečné toky merané sieťou RSTN (NOAA) a odhadne, o koľko Slnko zvýši šum prijímača v blízkosti novu.
+- **Export výpočtov do Excelu** a **Kontrola výpočtov** – bilancia ako hárok Excelu a každý vzorec s dosadenými hodnotami, krok za krokom, pre bilanciu yagi alebo parabol.
+
+**Denník, nápoveda a nástroje**
+- **Mapa WWL a ADIF** – sieť Maidenhead s pracovanými a potvrdenými štvorcami z tvojho súboru ADIF alebo stiahnutými priamo z LoTW, aj podľa pásma a len EME.
+- **PRÍRUČKA NA POUŽITIE** a **TEÓRIA A RADY K EME** – úplné príručky vnútri programu vo všetkých jazykoch, s klikateľným obsahom, vyhľadávaním, vzorcami a zdrojmi; exportovateľné do Wordu. Príručka teórie obsahuje rady skúsených operátorov EME, oddiel o chatoch na internete a tabuľky antén VE7BQH.
+- **KOAXIÁLNE KÁBLE** – databáza káblov 50 Ω s útlmom od 50 do 1296 MHz (hodnoty z katalógových listov a vzorec α = k1·√f + k2·f) a zdrojom každej hodnoty; zoraditeľná, filtrovateľná, s výpočtom straty a tlačidlom, ktoré prenesie kábel do bilancie EME. Možno pridať vlastné káble.
+
+**Ďalej**
+- CALL3.TXT stiahnutý od W7GJ a z WSJT-X Improved, zlúčený, obnovovaný každých 7 dní a na požiadanie skopírovaný do WSJT-X.
+- Upozornenia na absorpciu v polárnej čiapočke a aurorálnu absorpciu (PCA), keď je stanica za polárnymi kruhmi alebo v aurorálnej zóne.
+- 37 jazykov; farebné schémy svetlá, nočná (modrá), čierna a osem pastelových.
+- Polohy Mesiaca s presnosťou asi 0,01° (Meeus, ELP-2000/82), všetky výpočty na tvojom počítači; údaje v jedinom priečinku `data`.
+
+### 中文
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/zh-1.jpg"><img src="docs/screenshots/zh-1.jpg" alt="实时位置与 +- 24h"></a><br><sub>实时位置与 +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/zh-2.jpg"><img src="docs/screenshots/zh-2.jpg" alt="EME 链路预算 八木"></a><br><sub>EME 链路预算 八木</sub></td><td width="33%" align="center"><a href="docs/screenshots/zh-3.jpg"><img src="docs/screenshots/zh-3.jpg" alt="距离与 Dgrd"></a><br><sub>距离与 Dgrd</sub></td></tr></table>
+
+YAEC 把在 50、70、144、222、432、902 MHz 和 23 cm（1296 MHz）上进行 EME（地–月–地）通信所需的一切集中在一个程序里，尤其适合有限制的电台：没有仰角的天线、转动范围有限的转台、遮挡部分天空的障碍物。它不仅告诉你月亮在哪里，还告诉你**你的**天线能否真正对准它、何时、在什么条件下。432 MHz 以上的频段仍在完善中，但 DGRD 已在每个频率上正确计算；之后还会为刚接触 900 MHz 以上频段的人提供更多建议。
+
+**实时**
+- **实时位置与 +- 24h** – 每秒更新的主屏幕：你和 DX 的定位码（4 至 14 个字符）、频率、UTC、本地和 DX 时钟、带倒计时的状态条（可对准、超出限制、在地平线下、共同窗口）、罗盘和仰角弧。输入 DX 呼号后，定位码从 CALL3.TXT 自动填入。
+- **我的障碍物勘察** – 以你的电台为中心的航拍或地形图，上面叠加天空：月亮位置、未来 24 小时的轨迹、升起和落下、可用鼠标拖动的天线限制。
+- **天穹** – 从你的 QTH 看到的天空，以你所用频率的天空噪声着色，并显示天线限制、DX 的地平线、射电源、太阳和月亮轨迹。
+
+**规划**
+- **距离与 Dgrd** – 7 至 61 天的 Dgrd 和月球平均距离，叠加赤纬、近地点、远地点、新月、三个最佳日（按日期排序）、可能的第四个可用日，以及月亮靠近太阳日子的提醒。只计算月亮在你的限制范围内真正可对准的时段。
+- **按频率 DGRD** – 你的工作频率上的 Dgrd，使用你电台的真实噪声和在天线波束上平均的天空，并与 WSJT-X 的常规计算对比；该选择在整个程序中生效。
+- **月球位置** – 所选时段的表格，按可对准性着色，显示你和 DX 的共同窗口；可导出为 Excel 用的 CSV。
+- **月照全球** – 按各地所见月亮仰角着色的世界地图；单击即可把该点设为 DX。
+
+**通联**
+- **EME 链路预算 八木** – 每个频段的链路预算，按频段分别保存：六个指标（能否通联、我的 EIRP、DX 的 EIRP、路径损耗、S/N 我 → DX 和 DX → 我，也包括有太阳时和 2500 Hz 下的值）、全部步骤的表格，以及电台的交互式示意图（天线、电缆、继电器、前置放大器、变频器、电台）。无仰角天线的地面增益。60 s 周期的模式：JT65、Q65-60A、Q65-60B、Q65-60C 和自定义。回波计算（*我发射并接收自己的回波*）：回波电平、延迟和多普勒。
+- **EME 链路预算 抛物面** – 同样的预算（含回波），用于 432、902 和 1296 MHz 的抛物面天线，可选主焦点或偏馈（W2IMU）：按 PE1RKI 公式计算增益，波束宽度 70·λ/D，单级或两级前置放大器，变频器和功放激励；在 23 cm 上使用圆极化，损耗 0.4 dB（KA1GT）。
+- **GRAVES 雷达** – 把法国 GRAVES 雷达（143.050 MHz）作为测试台：月亮何时位于其波束中且在你的天线限制内，并给出多普勒和回波延迟。
+- **太阳噪声** – 下载 RSTN 网络（NOAA）测得的太阳通量，估算新月附近太阳使接收机噪声升高多少。
+- **计算结果导出到 Excel** 和 **计算核查** – 把预算导出为 Excel 工作表，并逐步列出代入数值的每个公式，可选八木或抛物面预算。
+
+**日志、帮助和工具**
+- **WWL 与 ADIF 地图** – Maidenhead 网格，显示来自你的 ADIF 文件或直接从 LoTW 下载的已通联和已确认方格，也可按频段或仅 EME 显示。
+- **使用手册** 和 **EME 理论与建议** – 程序内置、提供所有语言的完整手册，含可点击目录、搜索、公式和来源；可导出为 Word。理论手册包含资深 EME 操作员的建议、关于网络聊天室的章节以及 VE7BQH 天线表。
+- **同轴电缆** – 50 Ω 电缆数据库，含 50 至 1296 MHz 的衰减（数据手册数值和公式 α = k1·√f + k2·f）以及每个数值的来源；可排序、筛选，带损耗计算和把电缆送入 EME 预算的按钮。可以添加自己的电缆。
+
+**此外**
+- 从 W7GJ 和 WSJT-X Improved 下载并合并的 CALL3.TXT，每 7 天更新一次，可按需复制到 WSJT-X。
+- 当电台位于极圈以外或极光区时，提示极盖吸收和极光吸收（PCA）。
+- 37 种语言；浅色、夜间（蓝色）、黑色和八种柔和配色方案。
+- 月球位置精度约 0.01°（Meeus，ELP-2000/82），所有计算都在你的电脑上完成；数据集中在一个 `data` 文件夹里。
+
+### 日本語
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/ja-1.jpg"><img src="docs/screenshots/ja-1.jpg" alt="ライブ位置と +- 24h"></a><br><sub>ライブ位置と +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/ja-2.jpg"><img src="docs/screenshots/ja-2.jpg" alt="EME 回線計算 八木"></a><br><sub>EME 回線計算 八木</sub></td><td width="33%" align="center"><a href="docs/screenshots/ja-3.jpg"><img src="docs/screenshots/ja-3.jpg" alt="距離と Dgrd"></a><br><sub>距離と Dgrd</sub></td></tr></table>
+
+YAEC は、50、70、144、222、432、902 MHz と 23 cm（1296 MHz）で EME（地球–月–地球）運用に必要なものを一つのプログラムにまとめています。特に、仰角のないアンテナ、回転範囲が限られたローテーター、空の一部を隠す障害物など、制約のある局に向いています。月がどこにあるかだけでなく、**あなたの**アンテナが本当に月に向けられるか、いつ、どんな条件でかを示します。432 MHz より上のバンドは整備中ですが、DGRD はすでにすべての周波数で正しく計算されます。900 MHz 以上を始めたばかりの方へのアドバイスも今後追加します。
+
+**ライブ**
+- **ライブ位置と +- 24h** – 毎秒更新されるメイン画面：自局と DX のロケーター（4～14 文字）、周波数、UTC・ローカル・DX の時計、カウントダウン付きの状態帯（指向可能、制限外、地平線下、共通ウィンドウ）、コンパスと仰角の弧。DX のコールサインを入力すると、ロケーターが CALL3.TXT から入ります。
+- **自局障害物の偵察** – 自局を中心にした航空写真または地形図に空を重ねて表示：月の位置、今後 24 時間の軌跡、出と入り、マウスでドラッグできるアンテナの制限。
+- **天球** – 自局 QTH から見た空を、使用周波数の空の雑音の色で表示し、アンテナの制限、DX の地平線、電波源、太陽、月の軌跡も示します。
+
+**計画**
+- **距離と Dgrd** – 7～61 日分の Dgrd と月の平均距離。赤緯の重ね表示、近地点、遠地点、新月、最良の 3 日（日付順）、4 日目の候補、月が太陽に近い日の警告付き。月が制限内で本当に指向できる時間だけを数えます。
+- **周波数別 DGRD** – 自局の実際の雑音とアンテナビームで平均した空を使った運用周波数での Dgrd を、通常の WSJT-X の計算と比較。選択はプログラム全体に適用されます。
+- **月の位置** – 選んだ期間の表。指向の可否で色分けし、自局と DX の共通ウィンドウを表示。Excel 用 CSV 書き出し。
+- **世界から見た月** – 各地から見た月の仰角で色分けした世界地図。クリックするとその地点が DX になります。
+
+**交信**
+- **EME 回線計算 八木** – バンドごとに保存される回線計算：6 つの指標（交信可能か、自局 EIRP、DX の EIRP、伝搬損失、S/N 自局 → DX と DX → 自局、太陽ありと 2500 Hz 換算も）、全ステップの表、局の対話型ブロック図（アンテナ、ケーブル、リレー、プリアンプ、トランスバーター、無線機）。仰角のないアンテナのグラウンドゲイン。周期 60 s のモード：JT65、Q65-60A、Q65-60B、Q65-60C とカスタム。エコー計算（*自局送信 → 自局エコー受信*）：エコーのレベル、遅延、ドップラー。
+- **EME 回線計算 パラボラ** – 同じ回線計算（エコーを含む）を、432、902、1296 MHz のパラボラアンテナ（プライムフォーカスまたはオフセット、W2IMU）に適用：PE1RKI の式による利得、ビーム幅 70·λ/D、1 段または 2 段のプリアンプ、トランスバーターと PA のドライブ。23 cm では損失 0.4 dB の円偏波（KA1GT）。
+- **GRAVES レーダー** – フランスの GRAVES レーダー（143.050 MHz）を試験台として使用：月がそのビーム内かつアンテナの制限内にあるとき、ドップラーとエコー遅延付き。
+- **太陽雑音** – RSTN 網（NOAA）が測定した太陽フラックスをダウンロードし、新月付近で太陽が受信雑音をどれだけ上げるかを推定します。
+- **計算結果を Excel へエクスポート** と **計算のチェック** – 回線計算を Excel シートとして出力し、すべての式を値を代入して一歩ずつ表示。八木またはパラボラの回線計算を選べます。
+
+**ログ、ヘルプ、ツール**
+- **WWL・ADIF 地図** – ADIF ファイルから、または LoTW から直接ダウンロードした交信済み・確認済みのグリッドを Maidenhead 格子上に表示。バンド別や EME のみの表示も可能。
+- **取扱説明書** と **EME の理論とアドバイス** – プログラム内蔵の完全なマニュアル（全言語）。クリックできる目次、検索、数式、出典付きで、Word に書き出せます。理論マニュアルには経験豊富な EME 運用者のアドバイス、インターネットのチャットに関する節、VE7BQH のアンテナ表が含まれます。
+- **同軸ケーブル** – 50 Ω ケーブルのデータベース。50～1296 MHz の減衰量（データシートの値と式 α = k1·√f + k2·f）と各値の出典付き。並べ替え・絞り込み、損失計算、ケーブルを EME 回線計算に送るボタンがあります。独自のケーブルも追加できます。
+
+**その他**
+- W7GJ と WSJT-X Improved からダウンロードして統合し、7 日ごとに更新、必要に応じて WSJT-X にコピーする CALL3.TXT。
+- 局が極圏の外側やオーロラ帯にあるときの極冠吸収・オーロラ吸収（PCA）の警告。
+- 37 言語。ライト、ナイト（青）、ブラック、8 種類のパステル配色。
+- 月の位置の精度は約 0.01°（Meeus、ELP-2000/82）。すべての計算はあなたのパソコン上で行い、データは一つの `data` フォルダーにまとめます。
+
+### 한국어
+
+<table><tr><td width="33%" align="center"><a href="docs/screenshots/ko-1.jpg"><img src="docs/screenshots/ko-1.jpg" alt="실시간 위치 및 +- 24h"></a><br><sub>실시간 위치 및 +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/ko-2.jpg"><img src="docs/screenshots/ko-2.jpg" alt="EME 링크 버짓 야기"></a><br><sub>EME 링크 버짓 야기</sub></td><td width="33%" align="center"><a href="docs/screenshots/ko-3.jpg"><img src="docs/screenshots/ko-3.jpg" alt="거리와 Dgrd"></a><br><sub>거리와 Dgrd</sub></td></tr></table>
+
+YAEC는 50, 70, 144, 222, 432, 902 MHz와 23 cm(1296 MHz)에서 EME(지구–달–지구) 운용에 필요한 모든 것을 하나의 프로그램에 모았습니다. 특히 앙각이 없는 안테나, 회전 범위가 제한된 로테이터, 하늘 일부를 가리는 장애물처럼 제약이 있는 국에 유용합니다. 달이 어디 있는지뿐 아니라 **당신의** 안테나가 정말 달에 닿을 수 있는지, 언제, 어떤 조건에서인지 알려 줍니다. 432 MHz 이상의 밴드는 아직 보완 중이지만 DGRD는 이미 모든 주파수에서 올바르게 계산됩니다. 900 MHz 이상을 처음 시작하는 분을 위한 조언도 추가될 예정입니다.
+
+**실시간**
+- **실시간 위치 및 +- 24h** – 매초 갱신되는 주 화면: 내 로케이터와 DX 로케이터(4~14자), 주파수, UTC·현지·DX 시계, 카운트다운이 있는 상태 띠(지향 가능, 한계 밖, 지평선 아래, 공통 창), 나침반과 앙각 호. DX 호출 부호를 입력하면 로케이터가 CALL3.TXT에서 채워집니다.
+- **내 장애물 정찰** – 내 국을 중심으로 한 항공 사진 또는 지형도 위에 하늘을 겹쳐 표시: 달의 위치, 다음 24시간 경로, 월출과 월몰, 마우스로 끌어 조정하는 안테나 한계.
+- **하늘 보기** – 내 QTH에서 본 하늘을 사용 주파수의 하늘 잡음 색으로 보여 주며, 안테나 한계, DX의 지평선, 전파원, 태양과 달의 경로를 표시합니다.
+
+**계획**
+- **거리와 Dgrd** – 7~61일간의 Dgrd와 달의 평균 거리, 적위 겹쳐 보기, 근지점, 원지점, 신월, 최고의 3일(날짜순), 가능한 네 번째 유효일, 달이 태양에 가까운 날의 경고. 내 한계 안에서 달을 정말 지향할 수 있는 시간만 셉니다.
+- **주파수별 DGRD** – 내 국의 실제 잡음과 안테나 빔에서 평균한 하늘을 사용한 운용 주파수의 Dgrd를 일반적인 WSJT-X 계산과 비교합니다. 선택은 프로그램 전체에 적용됩니다.
+- **달의 위치** – 선택한 기간의 표를 지향 가능 여부에 따라 색으로 표시하고, 나와 DX의 공통 창을 보여 줍니다. Excel용 CSV 내보내기.
+- **세계 위의 달** – 각 지역에서 본 달의 앙각으로 색칠한 세계 지도. 클릭하면 그 지점이 DX가 됩니다.
+
+**교신**
+- **EME 링크 버짓 야기** – 밴드별로 저장되는 링크 버짓: 6개 지표(교신 가능 여부, 내 EIRP, DX EIRP, 경로 손실, S/N 나 → DX와 DX → 나, 태양 포함 및 2500 Hz 기준), 모든 단계의 표, 국의 대화형 계통도(안테나, 케이블, 릴레이, 프리앰프, 트랜스버터, 무선기). 앙각 없는 안테나의 그라운드 게인. 60 s 주기 모드: JT65, Q65-60A, Q65-60B, Q65-60C, 사용자 지정. 에코 계산(*내가 송신하고 내 에코를 수신*): 에코의 레벨, 지연, 도플러.
+- **EME 링크 버짓 파라볼라** – 같은 버짓(에코 포함)을 432, 902, 1296 MHz의 파라볼라 안테나(주초점 또는 오프셋, W2IMU)에 적용: PE1RKI 공식에 의한 이득, 빔폭 70·λ/D, 1단 또는 2단 프리앰프, 트랜스버터와 PA 구동. 23 cm에서는 손실 0.4 dB의 원편파(KA1GT).
+- **GRAVES 레이더** – 프랑스 GRAVES 레이더(143.050 MHz)를 시험대로 사용: 달이 레이더 빔 안에 있고 내 안테나 한계 안에 있는 때를 도플러와 에코 지연과 함께 보여 줍니다.
+- **태양 잡음** – RSTN 망(NOAA)이 측정한 태양 플럭스를 내려받아, 신월 무렵 태양이 수신기 잡음을 얼마나 올리는지 추정합니다.
+- **계산 결과 Excel 내보내기**와 **계산 검증** – 버짓을 Excel 시트로 내보내고, 모든 공식을 값을 대입하여 단계별로 보여 줍니다. 야기 또는 파라볼라 버짓을 선택할 수 있습니다.
+
+**로그, 도움말, 도구**
+- **WWL 지도와 ADIF** – ADIF 파일이나 LoTW에서 직접 내려받은 교신·확인 그리드를 Maidenhead 격자에 표시합니다. 밴드별, EME만 보기도 가능합니다.
+- **사용 설명서**와 **EME 이론과 조언** – 프로그램에 내장된 모든 언어의 완전한 설명서로, 클릭 가능한 목차, 검색, 공식, 출처가 있으며 Word로 내보낼 수 있습니다. 이론 설명서에는 숙련된 EME 운용자의 조언, 인터넷 채팅에 관한 절, VE7BQH 안테나 표가 들어 있습니다.
+- **동축 케이블** – 50 Ω 케이블 데이터베이스로, 50~1296 MHz의 감쇠(데이터시트 값과 공식 α = k1·√f + k2·f)와 각 값의 출처를 담고 있습니다. 정렬·필터, 손실 계산, 케이블을 EME 버짓으로 보내는 버튼이 있으며, 직접 케이블을 추가할 수 있습니다.
+
+**그 밖에**
+- W7GJ와 WSJT-X Improved에서 내려받아 합치고 7일마다 갱신하며, 요청하면 WSJT-X로 복사하는 CALL3.TXT.
+- 국이 극권 너머나 오로라대에 있을 때 극관 흡수와 오로라 흡수(PCA) 경고.
+- 37개 언어; 밝은, 야간(파랑), 검정과 8가지 파스텔 색 구성.
+- 약 0.01° 정확도의 달 위치(Meeus, ELP-2000/82), 모든 계산은 내 컴퓨터에서 수행하며 데이터는 하나의 `data` 폴더에 저장합니다.
 
 ## For developers
 

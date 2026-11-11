@@ -20,5 +20,19 @@ if [ ! -d "/Applications/Utilities/XQuartz.app" ] && [ ! -d "/Applications/XQuar
 fi
 export MONO_MWF_MAC_FORCE_X11=1
 [ -z "$DISPLAY" ] && export DISPLAY=:0
-mkdir -p "$HOME/Library/Application Support/YAEC/data"
-exec "$MONO" "$EXE" "$@" >>"$HOME/Library/Application Support/YAEC/data/mono-log.txt" 2>&1
+# avviato dal Finder XQuartz può non essere ancora in esecuzione: lo apre e aspetta il suo socket (fino a 20 s)
+if [ ! -S /tmp/.X11-unix/X0 ]; then
+  open -a XQuartz >/dev/null 2>&1
+  for i in $(seq 1 40); do [ -S /tmp/.X11-unix/X0 ] && break; sleep 0.5; done
+fi
+DATA="$HOME/Library/Application Support/YAEC/data"
+mkdir -p "$DATA"
+LOG="$DATA/mono-log.txt"
+echo "--- $(date) · $MONO · $("$MONO" --version 2>/dev/null | head -1) · $(uname -m) · DISPLAY=$DISPLAY" >>"$LOG"
+"$MONO" "$EXE" "$@" >>"$LOG" 2>&1
+RC=$?
+if [ $RC -ne 0 ]; then
+  osascript -e "display alert \"YAEC did not start (code $RC)\" message \"Details are in ~/Library/Application Support/YAEC/data/mono-log.txt. Please send that file to the author.\" as critical" >/dev/null 2>&1
+  open -R "$LOG"
+fi
+exit $RC

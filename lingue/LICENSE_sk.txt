@@ -1,0 +1,27 @@
+﻿YAEC – Yet Another EME Calc
+LICENCIA YAEC, VERZIA 1
+© 2026 Costantino IC8TEM
+
+YAEC je slobodný softvér, napísaný rádioamatérom pre rádioamatérov. Jeho kód bol vyvíjaný aj s pomocou asistenta umelej inteligencie a licencia sa riadi jeho spôsobom práce: byť naozaj užitočný, vždy hovoriť, ako sa veci majú, ukazovať vlastné úvahy, nikomu neškodiť a uznávať prácu druhých. Nižšie sú najprv zásady a potom samotné podmienky.
+
+• Užitočný a zadarmo: Program je zadarmo a môžeš ho bez obmedzení používať na svoju rádioamatérsku činnosť, na štúdium a na výučbu. Má pomáhať uskutočňovať QSO, nie niečo predávať.
+• Priehľadný: Zdrojový kód sa vždy dodáva s programom; každý vzorec je vidieť v záložke Kontrola výpočtov a pri každom údaji je uvedený jeho zdroj. Žiadne čierne skrinky.
+• Poctivý: Namerané, odvodené a odhadnuté hodnoty sú držané oddelene; čo nie je overené, je tak aj označené. Neistý výsledok sa ukazuje ako neistý, nevydáva sa za istý.
+• Ohľaduplný: Rešpektuje prácu tých, čo merali, písali a publikovali pred nami, súkromie svojich používateľov (žiadny zber údajov, žiadna reklama) a pravidlá rádioamatérskej služby.
+
+PODMIENKY
+1. Použitie. YAEC môžeš zadarmo používať, kopírovať a inštalovať na ľubovoľný počet počítačov.
+2. Úpravy. Zdrojový kód môžeš študovať, opravovať a vylepšovať pre vlastnú potrebu alebo pre svoj rádioklub.
+3. Ďalšie šírenie. Program, pôvodný alebo upravený, môžeš ďalej šíriť len spolu s jeho úplným zdrojovým kódom a pod touto licenciou.
+4. Ohlásenie zmien. Upravená verzia to musí jasne uviesť v názve alebo v poznámkach k vydaniu, s uvedením, kto ju upravil a čo sa zmenilo, aby si nikto nepomýlil tvoju prácu s prácou autora, ani naopak.
+5. Uvedenie autorstva. Musí byť zachované meno autora (Costantino IC8TEM), kapitola príručky «Zdroje, údaje a poďakovania» a všetky citácie zdrojov tretích strán: údaje, tabuľky, články a merania patria tým, čo ich vytvorili.
+6. Žiadne komerčné využitie. Predávať YAEC alebo odvodené verzie, alebo ho zahŕňať do platených produktov, nie je dovolené bez písomného súhlasu autora.
+7. Žiadne skryté údaje. Žiadna šírená verzia nesmie zbierať údaje používateľov, zobrazovať reklamu ani posielať informácie tretím stranám bez toho, aby to otvorene uviedla.
+8. Správne používanie rádia. Program pomáha s plánovaním: použité kmitočty, výkony a druhy prevádzky zostávajú zodpovednosťou operátora a jeho rádioamatérskeho povolenia.
+9. Bez záruky. YAEC sa poskytuje tak, ako je. Výpočty sa robia starostlivo a s uvedenými zdrojmi, ale môžu obsahovať chyby: dôležité údaje si over, kým sa na ne spoľahneš.
+10. Hlásenia. Ak nájdeš chybu alebo lepší údaj, napíš autorovi (záložka KONTAKTY NA AUTORA A POĎAKOVANIA): bude opravený a ty budeš uvedený ako zdroj.
+
+Stručne: používaj ho slobodne, uč sa z kódu, vylepšuj ho a zdieľaj, ale vždy so zdrojovým kódom, s citovanými zdrojmi, s uvedením, čo si zmenil, a bez predaja. Ak o výsledku pochybuješ, správnou odpoveďou je overiť, nie veriť.
+
+Text je preložený do všetkých jazykov programu; v prípade pochybností je rozhodujúca talianska verzia.
+ccerrotta@gmail.com · ic8tem@gmail.com · www.qrz.com/db/ic8tem

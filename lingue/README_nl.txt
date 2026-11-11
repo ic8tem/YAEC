@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.7
+﻿YAEC – Yet Another EME Calc 1.8
 door Costantino IC8TEM
 ==========================================
 
-Rekenprogramma voor radioamateurs die EME (Aarde–Maan–Aarde) werken van 50 MHz tot 23 cm (1296 MHz): positie van de Maan en richtvensters binnen de grenzen van je eigen antenne, planning van de dagen met de beste Dgrd, EME-linkbudget met yagi's of schotels, hemel- en zonneruis, een database van coaxkabels en handleidingen over EME. Voor Windows, Linux en macOS, in 36 talen. De banden boven 432 MHz worden nog voltooid, maar de DGRD wordt al op elke frequentie correct berekend.
+Rekenprogramma voor radioamateurs die EME (Aarde–Maan–Aarde) werken van 50 MHz tot 23 cm (1296 MHz): positie van de Maan en richtvensters binnen de grenzen van je eigen antenne, planning van de dagen met de beste Dgrd, EME-linkbudget met yagi's of schotels, hemel- en zonneruis, een database van coaxkabels en handleidingen over EME. Voor Windows, Linux en macOS, in 37 talen. De banden boven 432 MHz worden nog voltooid, maar de DGRD wordt al op elke frequentie correct berekend.
 Broncode en download: https://github.com/ic8tem/YAEC/releases
 
 INSTALLATIE – WINDOWS
-1. Download YAEC-1.7-win-x64-setup.exe van de pagina Releases en voer het uit. Het installeert YAEC in Documenten\YAEC, zonder beheerdersrechten, met snelkoppelingen in het menu Start en op het bureaublad, en met een verwijderprogramma.
+1. Download YAEC-1.8-win-x64-setup.exe van de pagina Releases en voer het uit. Het installeert YAEC in Documenten\YAEC, zonder beheerdersrechten, met snelkoppelingen in het menu Start en op het bureaublad, en met een verwijderprogramma.
 2. Als de SmartScreen-waarschuwing verschijnt: "Meer informatie" → "Toch uitvoeren".
-3. Zonder installatie: pak YAEC-1.7-win-x64-portatile.zip uit in een map waarin je kunt schrijven en start YAEC.exe.
+3. Zonder installatie: pak YAEC-1.8-win-x64-portatile.zip uit in een map waarin je kunt schrijven en start YAEC.exe.
 
 INSTALLATIE – LINUX
 YAEC draait op Mono, de vrije .NET-runtime.
-- Debian, Ubuntu, Mint: download yaec_1.7_amd64.deb en installeer het met
-      sudo apt install ./yaec_1.7_amd64.deb
+- Debian, Ubuntu, Mint: download yaec_1.8_amd64.deb en installeer het met
+      sudo apt install ./yaec_1.8_amd64.deb
   (dit installeert ook Mono). YAEC start vanuit het toepassingenmenu of met het commando "yaec".
-- Andere distributies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) uit en start ./install.sh.
+- Andere distributies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) uit en start ./install.sh.
 
 INSTALLATIE – macOS (experimenteel)
 1. Installeer Mono voor macOS (https://www.mono-project.com/download/stable/) en XQuartz (https://www.xquartz.org).
-2. Open YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) en sleep YAEC naar Apps. De eerste keer: klik met de rechtermuisknop op YAEC → Open (de app is niet door Apple ondertekend).
+2. Open YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) en sleep YAEC naar Apps. De eerste keer: klik met de rechtermuisknop op YAEC → Open (de app is niet door Apple ondertekend).
 
 CONTROLE VAN DE GEDOWNLOADE BESTANDEN (SHA-256)
 Elke release bevat SHA256SUMS.txt met de SHA-256-hash van elk pakket. Vergelijk die met de hash van het gedownloade bestand:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Als de twee waarden verschillen, installeer het bestand dan niet: download het opnieuw.
@@ -39,6 +39,7 @@ Fouten, betere gegevens, vertalingen: ccerrotta@gmail.com · ic8tem@gmail.com ·
 
 VERSIEGESCHIEDENIS
 Versies vóór 1.0 heten bèta.
+- 1.8 - Nieuwe taal Slowaaks (37 in totaal), met de handleidingen, de README en de licentie; één bundelbreedte in het hele programma: 0,93·√(41253/G) voor yagi's (regel van Kraus, gecorrigeerd met de NEC-simulaties van W4RNL, zoals in YA-MS) en 70·λ/D voor schotels (IZ0JNY), in plaats van de bronloze √(32000/G) in DGRD per frequentie; handleiding bijgewerkt met de nieuwe formule en het richtvoorbeeld; op macOS opent het startprogramma zelf XQuartz, schrijft de Mono-versie in het logboek en waarschuwt als YAEC niet start; README-presentatie ook in het Portugees, Turks, Tsjechisch, Slowaaks, Chinees, Japans en Koreaans; vertalingen gecorrigeerd in het Thai, Roemeens, Grieks, Braziliaans Portugees, Pools, Tsjechisch en Hongaars.
 - 1.7 - Acht nieuwe talen: Braziliaans Portugees, Thai, traditioneel Chinees, Pools, Tsjechisch, Roemeens, Grieks en Hongaars (36 in totaal), met de handleidingen en de LEESMIJ's; in EME-budget yagi en EME-budget schotels de echoberekening van het eigen station (Ik zend en ontvang mijn eigen echo); schotel met primair focus of offset (W2IMU); op 1296 MHz met schotels het verlies door de circulaire polarisatie van echte feeds (KA1GT); in Controle van de berekeningen de keuze tussen EME-budget yagi en EME-budget schotels; formules van DGRD per frequentie geschreven zoals in een formule-editor; handleiding: Faraday-rotatie op 1296 MHz volgens ITU-R P.531, depolarisatie op 23 cm (Hagfors) en circulaire polarisatie op 23 cm.
 - 1.6 - Banden 902 MHz en 23 cm (1296 en 1298 MHz) in het hele programma, met alle banden in de MHz-keuzelijst; het tabblad EME-budget wordt EME-budget yagi en er is het nieuwe tabblad EME-budget schotels (schotel met primair focus, winst met de formule van PE1RKI, voorversterker ook met twee trappen, transverter en aansturing van de PA); nieuw tabblad DGRD per frequentie, met de echte ruis van het station en de hemel gemiddeld over de bundel, gebruikt in het hele programma; coaxkabels berekend met de formule α = k1·√f + k2·f uit de gegevens van de datasheets, ook op 902 en 1296 MHz; nieuwe stijl van de bedieningselementen in alle tabbladen; in Live positie en +- 24h de tooltip bij de rode cursor en de rode lijnen van de DX op het tijdstip van de cursor; handleiding herzien na de vergelijking van de bronnen (padverlies per band, drempels van Q65-60B en Q65-60C, ground gain volgens de metingen van IK1UWL, connectoren, Dgrd van andere programma's, schotels boven 432 MHz); pakketten voor elke architectuur (Windows x64 en x86, Linux x64, arm64 en arm, macOS Apple Silicon en Intel); dank aan Robert HA5OLA. De banden boven 432 MHz worden nog voltooid.
 - 1.5 - Nieuw tabblad GRAVES-radar in de groep Verbinding: Maan in de radarbundel met sector en stap, gemeenschappelijk venster met jou, Doppler en vertraging van de echo, volgende doorgang van de bundel over de Maan, hemel gezien vanuit GRAVES, reconstructie van de 24 UTC-uren met het detail van de komende 10 seconden, tips om de echo te horen en bronnen; lijst van actieve stations ook als JSON en tekst voor LunaCalc Mobile; twee nieuwe talen, Deens en Tagalog (28 in totaal), met de handleidingen.

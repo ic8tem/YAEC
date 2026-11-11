@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.7
+﻿YAEC – Yet Another EME Calc 1.8
 höfundur: Costantino IC8TEM
 ==========================================
 
-Reiknivél fyrir radíóamatöra sem stunda EME (Jörð–Tungl–Jörð) frá 50 MHz upp í 23 cm (1296 MHz): staða tunglsins og miðunargluggar innan marka eigin loftnets, skipulagning daganna með besta Dgrd, aflbókhald EME-sambands með Yagi-loftnetum eða diskum, himin- og sólarsuð, gagnagrunnur yfir kóaxkapla og handbækur um EME. Fyrir Windows, Linux og macOS, á 36 tungumálum. Verið er að ljúka böndunum yfir 432 MHz, en DGRD er þegar reiknað rétt á hvaða tíðni sem er.
+Reiknivél fyrir radíóamatöra sem stunda EME (Jörð–Tungl–Jörð) frá 50 MHz upp í 23 cm (1296 MHz): staða tunglsins og miðunargluggar innan marka eigin loftnets, skipulagning daganna með besta Dgrd, aflbókhald EME-sambands með Yagi-loftnetum eða diskum, himin- og sólarsuð, gagnagrunnur yfir kóaxkapla og handbækur um EME. Fyrir Windows, Linux og macOS, á 37 tungumálum. Verið er að ljúka böndunum yfir 432 MHz, en DGRD er þegar reiknað rétt á hvaða tíðni sem er.
 Frumkóði og niðurhal: https://github.com/ic8tem/YAEC/releases
 
 UPPSETNING – WINDOWS
-1. Sæktu YAEC-1.7-win-x64-setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
+1. Sæktu YAEC-1.8-win-x64-setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
 2. Ef SmartScreen-viðvörunin birtist: "More info" → "Run anyway".
-3. Án uppsetningar: afþjappaðu YAEC-1.7-win-x64-portatile.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
+3. Án uppsetningar: afþjappaðu YAEC-1.8-win-x64-portatile.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
 
 UPPSETNING – LINUX
 YAEC keyrir á Mono, frjálsa .NET-keyrsluumhverfinu.
-- Debian, Ubuntu, Mint: sæktu yaec_1.7_amd64.deb og settu hana upp með
-      sudo apt install ./yaec_1.7_amd64.deb
+- Debian, Ubuntu, Mint: sæktu yaec_1.8_amd64.deb og settu hana upp með
+      sudo apt install ./yaec_1.8_amd64.deb
   (setur einnig upp Mono). YAEC er ræst úr forritavalmyndinni eða með skipuninni "yaec".
-- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) og keyrðu ./install.sh.
+- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) og keyrðu ./install.sh.
 
 UPPSETNING – macOS (á tilraunastigi)
 1. Settu upp Mono fyrir macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
-2. Opnaðu YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
+2. Opnaðu YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
 
 ATHUGUN Á NIÐURHLÖÐNUM SKRÁM (SHA-256)
 Hver release inniheldur SHA256SUMS.txt með SHA-256-tætigildi hvers pakka. Berðu það saman við gildi niðurhlöðnu skrárinnar:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ef gildin tvö eru ólík skaltu ekki setja skrána upp: sæktu hana aftur.
@@ -39,6 +39,7 @@ Villur, betri gögn, þýðingar: ccerrotta@gmail.com · ic8tem@gmail.com · www
 
 ÚTGÁFUSAGA
 Útgáfur á undan 1.0 kallast beta.
+- 1.8 - Nýtt tungumál, slóvakíska (37 alls), með handbókunum, README og leyfinu; ein geislabreidd í öllu forritinu: 0,93·√(41253/G) fyrir yagi-loftnet (regla Kraus, leiðrétt með NEC-hermunum W4RNL, eins og í YA-MS) og 70·λ/D fyrir diska (IZ0JNY), í stað heimildalausa √(32000/G) í DGRD eftir tíðni; handbókin uppfærð með nýju formúlunni og miðunardæminu; á macOS opnar ræsirinn XQuartz sjálfur, skrifar Mono-útgáfuna í annálinn og varar við ef YAEC ræsist ekki; README-kynning einnig á portúgölsku, tyrknesku, tékknesku, slóvakísku, kínversku, japönsku og kóresku; þýðingar leiðréttar á taílensku, rúmensku, grísku, brasilískri portúgölsku, pólsku, tékknesku og ungversku.
 - 1.7 - Átta ný tungumál: brasilísk portúgalska, taílenska, hefðbundin kínverska, pólska, tékkneska, rúmenska, gríska og ungverska (36 alls), með handbókunum og README-skránum; í EME-aflreikningur yagi og EME-aflreikningur diskar útreikningur bergmáls eigin stöðvar (Ég sendi og tek á móti eigin bergmáli); diskur með fæðihorn í brennipunkti eða offset-diskur (W2IMU); á 1296 MHz með diskum tap vegna hringskautunar raunverulegra fæða (KA1GT); í Yfirferð útreikninga valið milli EME-aflreikningur yagi og EME-aflreikningur diskar; formúlur í DGRD eftir tíðni skrifaðar eins og í jöfnuritli; handbók: Faraday-snúningur á 1296 MHz samkvæmt ITU-R P.531, afskautun á 23 cm (Hagfors) og hringskautun á 23 cm.
 - 1.6 - Böndin 902 MHz og 23 cm (1296 og 1298 MHz) í öllu forritinu, með öll bönd í MHz-fellilistanum; flipinn EME-aflreikningur verður EME-aflreikningur yagi og nýr flipi EME-aflreikningur diskar bætist við (diskur með fæðihorn í brennipunkti, mögnun með formúlu PE1RKI, formagnari líka í tveimur þrepum, transverter og útstýring PA); nýr flipi DGRD eftir tíðni, með raunverulegu suði stöðvarinnar og himninum að meðaltali yfir geislann, notaður í öllu forritinu; kóaxkaplar reiknaðir með formúlunni α = k1·√f + k2·f út frá gögnum gagnablaðanna, líka á 902 og 1296 MHz; nýtt útlit stýringa í öllum flipum; í Staða í beinni og +- 24 klst. ábending við rauða bendilinn og rauðar línur DX á tíma bendilsins; handbókin endurskoðuð eftir samanburð heimilda (leiðartap band fyrir band, þröskuldar Q65-60B og Q65-60C, ground gain samkvæmt mælingum IK1UWL, tengi, Dgrd annarra forrita, diskar yfir 432 MHz); pakkar fyrir allar tölvugerðir (Windows x64 og x86, Linux x64, arm64 og arm, macOS Apple Silicon og Intel); þakkir til Robert HA5OLA. Verið er að ljúka böndunum yfir 432 MHz.
 - 1.5 - Nýr flipi GRAVES-ratsjá í hópnum Samband: tunglið í geisla ratsjárinnar með geira og skrefi, sameiginlegur gluggi með þér, Doppler og töf bergmálsins, næsta yfirferð geislans yfir tunglið, himinninn séður frá GRAVES, endurgerð 24 UTC-stunda með smáatriðum næstu 10 sekúndna, ráð til að heyra bergmálið og heimildir; listi yfir virkar stöðvar líka á JSON- og textasniði fyrir LunaCalc Mobile; tvö ný tungumál, danska og tagalog (28 alls), með handbókunum.

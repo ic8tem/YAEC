@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.7
+﻿YAEC – Yet Another EME Calc 1.8
 oleh Costantino IC8TEM
 ==========================================
 
-Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 MHz hingga 23 cm (1296 MHz): posisi Bulan dan jendela pengarahan sesuai batas antena Anda sendiri, perencanaan hari dengan Dgrd terbaik, anggaran link EME dengan yagi atau antena parabola, derau langit dan Matahari, basis data kabel koaksial, serta manual tentang EME. Untuk Windows, Linux, dan macOS, dalam 36 bahasa. Pita di atas 432 MHz masih dalam tahap penyelesaian, tetapi DGRD sudah dihitung dengan benar di setiap frekuensi.
+Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 MHz hingga 23 cm (1296 MHz): posisi Bulan dan jendela pengarahan sesuai batas antena Anda sendiri, perencanaan hari dengan Dgrd terbaik, anggaran link EME dengan yagi atau antena parabola, derau langit dan Matahari, basis data kabel koaksial, serta manual tentang EME. Untuk Windows, Linux, dan macOS, dalam 37 bahasa. Pita di atas 432 MHz masih dalam tahap penyelesaian, tetapi DGRD sudah dihitung dengan benar di setiap frekuensi.
 Kode sumber dan unduhan: https://github.com/ic8tem/YAEC/releases
 
 INSTALASI – WINDOWS
-1. Unduh YAEC-1.7-win-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
+1. Unduh YAEC-1.8-win-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
 2. Jika muncul peringatan SmartScreen: "Info selengkapnya" → "Tetap jalankan".
-3. Tanpa instalasi: ekstrak YAEC-1.7-win-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
+3. Tanpa instalasi: ekstrak YAEC-1.8-win-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
 
 INSTALASI – LINUX
 YAEC berjalan dengan Mono, runtime .NET yang bebas.
-- Debian, Ubuntu, Mint: unduh yaec_1.7_amd64.deb dan pasang dengan
-      sudo apt install ./yaec_1.7_amd64.deb
+- Debian, Ubuntu, Mint: unduh yaec_1.8_amd64.deb dan pasang dengan
+      sudo apt install ./yaec_1.8_amd64.deb
   (Mono juga ikut terpasang). YAEC dijalankan dari menu aplikasi atau dengan perintah "yaec".
-- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) lalu jalankan ./install.sh.
+- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) lalu jalankan ./install.sh.
 
 INSTALASI – macOS (eksperimental)
 1. Pasang Mono untuk macOS (https://www.mono-project.com/download/stable/) dan XQuartz (https://www.xquartz.org).
-2. Buka YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
+2. Buka YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
 
 MEMERIKSA FILE YANG DIUNDUH (SHA-256)
 Setiap release berisi SHA256SUMS.txt dengan hash SHA-256 setiap paket. Bandingkan dengan hash file yang Anda unduh:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jika kedua nilai berbeda, jangan pasang file tersebut: unduh ulang.
@@ -39,6 +39,7 @@ Kesalahan, data yang lebih baik, terjemahan: ccerrotta@gmail.com · ic8tem@gmail
 
 RIWAYAT VERSI
 Versi sebelum 1.0 disebut beta.
+- 1.8 - Bahasa baru: Slowakia (total 37), dengan manual, README, dan lisensi; satu lebar berkas di seluruh program: 0,93·√(41253/G) untuk yagi (aturan Kraus yang dikoreksi dengan simulasi NEC W4RNL, seperti di YA-MS) dan 70·λ/D untuk parabola (IZ0JNY), menggantikan √(32000/G) tanpa sumber di DGRD per frekuensi; manual diperbarui dengan rumus baru dan contoh pengarahan; di macOS peluncur membuka XQuartz sendiri, menulis versi Mono ke log, dan memberi peringatan jika YAEC tidak berjalan; presentasi README juga dalam bahasa Portugis, Turki, Ceko, Slowakia, Tionghoa, Jepang, dan Korea; terjemahan diperbaiki dalam bahasa Thai, Rumania, Yunani, Portugis Brasil, Polandia, Ceko, dan Hongaria.
 - 1.7 - Delapan bahasa baru: Portugis Brasil, Thai, Tionghoa Tradisional, Polandia, Ceko, Rumania, Yunani dan Hungaria (total 36), beserta manual dan README; di Anggaran EME yagi dan Anggaran EME parabola, perhitungan gema stasiun sendiri (Saya memancar dan menerima gema saya sendiri); parabola prime focus atau offset (W2IMU); di 1296 MHz dengan parabola, rugi polarisasi sirkular dari feed nyata (KA1GT); di Pemeriksaan perhitungan, pilihan antara Anggaran EME yagi dan Anggaran EME parabola; rumus DGRD per frekuensi ditulis seperti di editor persamaan; manual: rotasi Faraday di 1296 MHz menurut ITU-R P.531, depolarisasi di 23 cm (Hagfors) dan polarisasi sirkular di 23 cm.
 - 1.6 - Pita 902 MHz dan 23 cm (1296 dan 1298 MHz) di seluruh program, dengan semua pita di menu tarik-turun MHz; tab Anggaran EME menjadi Anggaran EME yagi dan ada tab baru Anggaran EME parabola (parabola prime focus, penguatan dengan rumus PE1RKI, preamplifier juga dua tingkat, transverter dan pengendalian PA); tab baru DGRD per frekuensi, dengan derau nyata stasiun dan langit yang dirata-ratakan pada berkas, dipakai di seluruh program; kabel koaksial dihitung dengan rumus α = k1·√f + k2·f dari data lembar data, juga di 902 dan 1296 MHz; gaya kontrol baru di semua tab; di Posisi langsung dan +- 24h, balon keterangan pada kursor merah dan garis merah DX pada jam kursor; manual direvisi setelah membandingkan sumber (rugi lintasan per pita, ambang Q65-60B dan Q65-60C, penguatan tanah menurut pengukuran IK1UWL, konektor, Dgrd program lain, antena parabola di atas 432 MHz); paket untuk setiap arsitektur (Windows x64 dan x86, Linux x64, arm64 dan arm, macOS Apple Silicon dan Intel); terima kasih kepada Robert HA5OLA. Pita di atas 432 MHz masih dalam tahap penyelesaian.
 - 1.5 - Tab baru Radar GRAVES di grup Hubungan: Bulan di dalam berkas radar dengan sektor dan langkah, jendela bersama denganmu, Doppler dan tunda gema, lintasan berkas berikutnya pada Bulan, langit dilihat dari GRAVES, rekonstruksi 24 jam UTC dengan rincian 10 detik berikutnya, tips mendengar gema dan sumber; daftar stasiun aktif juga dalam JSON dan teks untuk LunaCalc Mobile; dua bahasa baru, Denmark dan Tagalog (total 28), dengan manualnya.

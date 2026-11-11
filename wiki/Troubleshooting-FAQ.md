@@ -17,6 +17,9 @@ The app is not signed by Apple. The first time, **right-click YAEC → Open** an
 **macOS: "YAEC needs Mono" or "YAEC needs XQuartz".**
 Install Mono for macOS ([mono-project.com](https://www.mono-project.com/download/stable/) or the *Framework Mono* package from WineHQ) and [XQuartz](https://www.xquartz.org); after installing XQuartz, **log out and in again**. Mono draws the window through X11. If something goes wrong, look at `~/Library/Application Support/YAEC/data/mono-log.txt`. macOS support is experimental.
 
+**macOS (Apple Silicon): Mono and XQuartz are installed but YAEC does not open.**
+Use the official Mono package from mono-project.com (Mono 6.12 "Stable", universal): the Homebrew `mono` has no libgdiplus, so the window cannot be drawn (with Homebrew also run `brew install mono-libgdiplus`). On macOS 15, after the first attempt go to *System Settings → Privacy & Security* and click **Open Anyway**, or run `xattr -dr com.apple.quarantine /Applications/YAEC.app`. From version 1.8 the launcher starts XQuartz by itself, writes the Mono version and the architecture in `mono-log.txt` and shows a message if YAEC does not start; to see the error directly run `/Applications/YAEC.app/Contents/MacOS/YAEC` in Terminal and send the output and the log to the author.
+
 ## Display
 
 **Linux: some languages show boxes or empty squares (Urdu, Bengali, Hindi, Arabic, Hebrew, Chinese, Japanese, Korean…).**

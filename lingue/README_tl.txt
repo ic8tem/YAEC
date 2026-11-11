@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.7
+﻿YAEC – Yet Another EME Calc 1.8
 inihanda ni Costantino IC8TEM
 ==========================================
 
-Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigdig) mula 50 MHz hanggang 23 cm (1296 MHz): posisyon ng Buwan at mga window ng pagtutok ayon sa mga limitasyon ng sarili mong antena, pagpaplano ng mga araw na may pinakamahusay na Dgrd, EME link budget gamit ang yagi o dish, ingay ng langit at ng Araw, database ng mga coaxial na kable at mga manwal tungkol sa EME. Para sa Windows, Linux at macOS, sa 36 wika. Kasalukuyang kinukumpleto ang mga band sa itaas ng 432 MHz, pero tama na ang pagkuwenta ng DGRD sa bawat frequency.
+Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigdig) mula 50 MHz hanggang 23 cm (1296 MHz): posisyon ng Buwan at mga window ng pagtutok ayon sa mga limitasyon ng sarili mong antena, pagpaplano ng mga araw na may pinakamahusay na Dgrd, EME link budget gamit ang yagi o dish, ingay ng langit at ng Araw, database ng mga coaxial na kable at mga manwal tungkol sa EME. Para sa Windows, Linux at macOS, sa 37 wika. Kasalukuyang kinukumpleto ang mga band sa itaas ng 432 MHz, pero tama na ang pagkuwenta ng DGRD sa bawat frequency.
 Source at download: https://github.com/ic8tem/YAEC/releases
 
 PAG-INSTALL – WINDOWS
-1. I-download ang YAEC-1.7-win-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
+1. I-download ang YAEC-1.8-win-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
 2. Kung lumabas ang babala ng SmartScreen: "More info" → "Run anyway".
-3. Nang walang pag-install: i-extract ang YAEC-1.7-win-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
+3. Nang walang pag-install: i-extract ang YAEC-1.8-win-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
 
 PAG-INSTALL – LINUX
 Tumatakbo ang YAEC sa Mono, ang libreng .NET runtime.
-- Debian, Ubuntu, Mint: i-download ang yaec_1.7_amd64.deb at i-install ito gamit ang
-      sudo apt install ./yaec_1.7_amd64.deb
+- Debian, Ubuntu, Mint: i-download ang yaec_1.8_amd64.deb at i-install ito gamit ang
+      sudo apt install ./yaec_1.8_amd64.deb
   (ini-install din nito ang Mono). Pinapatakbo ang YAEC mula sa menu ng mga application o gamit ang command na "yaec".
-- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) at patakbuhin ang ./install.sh.
+- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) at patakbuhin ang ./install.sh.
 
 PAG-INSTALL – macOS (eksperimental)
 1. I-install ang Mono para sa macOS (https://www.mono-project.com/download/stable/) at ang XQuartz (https://www.xquartz.org).
-2. Buksan ang YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
+2. Buksan ang YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
 
 PAGSURI NG MGA NA-DOWNLOAD NA FILE (SHA-256)
 Bawat release ay may SHA256SUMS.txt na naglalaman ng SHA-256 hash ng bawat package. Ihambing ito sa hash ng na-download na file:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kung magkaiba ang dalawang halaga, huwag i-install ang file: i-download itong muli.
@@ -39,6 +39,7 @@ Mga mali, mas mahusay na datos, mga salin: ccerrotta@gmail.com · ic8tem@gmail.c
 
 KASAYSAYAN NG MGA BERSYON
 Beta ang tawag sa mga bersyon bago ang 1.0.
+- 1.8 - Bagong wika: Slovak (37 lahat), kasama ang mga manwal, README at lisensya; iisang beamwidth sa buong programa: 0.93·√(41253/G) para sa mga yagi (tuntunin ni Kraus na itinama ng mga NEC simulation ni W4RNL, gaya ng sa YA-MS) at 70·λ/D para sa mga dish (IZ0JNY), kapalit ng walang sangguniang √(32000/G) sa DGRD ayon sa frequency; na-update ang manwal sa bagong pormula at halimbawa ng pagtutok; sa macOS kusang binubuksan ng launcher ang XQuartz, isinusulat ang bersyon ng Mono sa log at nagbababala kung hindi magsimula ang YAEC; presentasyon ng README sa Portuges, Turko, Czech, Slovak, Chinese, Japanese at Korean din; naitama ang mga salin sa Thai, Romanian, Greek, Brazilian Portuguese, Polish, Czech at Hungarian.
 - 1.7 - Walong bagong wika: Brazilian Portuguese, Thai, Traditional Chinese, Polish, Czech, Romanian, Greek at Hungarian (36 lahat-lahat), kasama ang mga manwal at mga README; sa EME budget yagi at EME budget dish, ang kalkulasyon ng echo ng sariling istasyon (Nagta-transmit ako at tinatanggap ko ang sarili kong echo); prime-focus o offset na dish (W2IMU); sa 1296 MHz gamit ang dish, ang loss ng circular polarization ng mga totoong feed (KA1GT); sa Pagsuri ng mga kalkulasyon, ang pagpili sa pagitan ng EME budget yagi at EME budget dish; mga formula ng DGRD ayon sa frequency na isinulat na parang sa equation editor; manwal: Faraday rotation sa 1296 MHz ayon sa ITU-R P.531, depolarization sa 23 cm (Hagfors) at circular polarization sa 23 cm.
 - 1.6 - Mga band na 902 MHz at 23 cm (1296 at 1298 MHz) sa buong programa, kasama ang lahat ng band sa dropdown ng MHz; ang tab na EME budget ay naging EME budget yagi at may bagong tab na EME budget dish (prime-focus na dish, gain gamit ang formula ni PE1RKI, preamplifier na puwede ring dalawang stage, transverter at drive ng PA); bagong tab na DGRD ayon sa frequency, gamit ang tunay na ingay ng istasyon at ang langit na in-average sa beam, na ginagamit sa buong programa; mga coaxial na kable na kinukuwenta gamit ang formula na α = k1·√f + k2·f mula sa data ng mga data sheet, pati sa 902 at 1296 MHz; bagong istilo ng mga kontrol sa lahat ng tab; sa Live na posisyon at +- 24h, tooltip sa pulang cursor at mga pulang linya ng DX sa oras ng cursor; nirebisa ang manwal matapos paghambingin ang mga source (path loss bawat band, mga threshold ng Q65-60B at Q65-60C, ground gain ayon sa mga sukat ni IK1UWL, mga connector, Dgrd ng ibang programa, mga dish sa itaas ng 432 MHz); mga package para sa bawat architecture (Windows x64 at x86, Linux x64, arm64 at arm, macOS Apple Silicon at Intel); pasasalamat kay Robert HA5OLA. Kasalukuyang kinukumpleto ang mga band sa itaas ng 432 MHz.
 - 1.5 - Bagong tab na GRAVES radar sa grupong Link: ang Buwan sa sinag ng radar kasama ang sektor at hakbang, ang karaniwang bintana ninyo, ang Doppler at pagkaantala ng echo, ang susunod na pagdaan ng sinag sa Buwan, ang langit na nakikita mula sa GRAVES, ang muling pagbuo ng 24 na oras UTC kasama ang detalye ng susunod na 10 segundo, mga payo para marinig ang echo at mga pinagmulan; ang listahan ng mga aktibong istasyon ay nasa JSON at teksto rin para sa LunaCalc Mobile; dalawang bagong wika, Danish at Tagalog (28 lahat), kasama ang mga manwal.

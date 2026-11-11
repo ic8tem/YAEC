@@ -1,29 +1,29 @@
-﻿YAEC – Yet Another EME Calc 1.7
+﻿YAEC – Yet Another EME Calc 1.8
 autor: Costantino IC8TEM
 ==========================================
 
-Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 MHz kuni 23 cm (1296 MHz): Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss yagide või paraboolantennidega, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 36 keeles. Sagedusalad üle 432 MHz on veel valmimisel, kuid DGRD arvutatakse juba igal sagedusel õigesti.
+Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sagedustel 50 MHz kuni 23 cm (1296 MHz): Kuu asukoht ja suunamisaknad vastavalt oma antenni piirangutele, parima Dgrd-ga päevade planeerimine, EME-side energiabilanss yagide või paraboolantennidega, taeva- ja Päikesemüra, koaksiaalkaablite andmebaas ning EME käsiraamatud. Windowsile, Linuxile ja macOS-ile, 37 keeles. Sagedusalad üle 432 MHz on veel valmimisel, kuid DGRD arvutatakse juba igal sagedusel õigesti.
 Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
 
 PAIGALDAMINE – WINDOWS
-1. Laadi Releases-lehelt alla YAEC-1.7-win-x64-setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
+1. Laadi Releases-lehelt alla YAEC-1.8-win-x64-setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
 2. Kui ilmub SmartScreeni hoiatus: "More info" → "Run anyway".
-3. Ilma paigaldamata: paki YAEC-1.7-win-x64-portatile.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
+3. Ilma paigaldamata: paki YAEC-1.8-win-x64-portatile.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
 
 PAIGALDAMINE – LINUX
 YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
-- Debian, Ubuntu, Mint: laadi alla yaec_1.7_amd64.deb ja paigalda see käsuga
-      sudo apt install ./yaec_1.7_amd64.deb
+- Debian, Ubuntu, Mint: laadi alla yaec_1.8_amd64.deb ja paigalda see käsuga
+      sudo apt install ./yaec_1.8_amd64.deb
   (paigaldab ka Mono). YAEC käivitub rakenduste menüüst või käsuga "yaec".
-- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.7-linux-x64-portatile.tar.gz (ARM: YAEC-1.7-linux-arm64-portatile.tar.gz, YAEC-1.7-linux-arm-portatile.tar.gz) ja käivita ./install.sh.
+- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) ja käivita ./install.sh.
 
 PAIGALDAMINE – macOS (eksperimentaalne)
 1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
-2. Ava YAEC-1.7-osx-arm64.dmg (Apple Silicon) / YAEC-1.7-osx-x64.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+2. Ava YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
 
 ALLALAADITUD FAILIDE KONTROLL (SHA-256)
 Iga release sisaldab faili SHA256SUMS.txt iga paketi SHA-256 räsiga. Võrdle seda allalaaditud faili räsiga:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.7-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kui kaks väärtust erinevad, ära faili paigalda: laadi see uuesti alla.
@@ -39,6 +39,7 @@ Vead, paremad andmed, tõlked: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 VERSIOONIAJALUGU
 Versioone enne 1.0 nimetatakse beetaks.
+- 1.8 - Uus keel slovaki (kokku 37), koos juhendite, README ja litsentsiga; kogu programmis üks keilu laius: jagidele 0,93·√(41253/G) (Krausi reegel, korrigeeritud W4RNL-i NEC-simulatsioonidega, nagu YA-MS-is) ja paraboolidele 70·λ/D (IZ0JNY), allikata √(32000/G) asemel sagedusepõhises DGRD-s; juhend uuendatud uue valemi ja suunamise näitega; macOS-is avab käivitaja ise XQuartzi, kirjutab Mono versiooni logisse ja hoiatab, kui YAEC ei käivitu; README tutvustus ka portugali, türgi, tšehhi, slovaki, hiina, jaapani ja korea keeles; parandatud tõlked tai, rumeenia, kreeka, Brasiilia portugali, poola, tšehhi ja ungari keeles.
 - 1.7 - Kaheksa uut keelt: Brasiilia portugali, tai, traditsiooniline hiina, poola, tšehhi, rumeenia, kreeka ja ungari (kokku 36), koos juhendite ja README-failidega; sakkides „EME eelarve yagi“ ja „EME eelarve paraboolid“ oma jaama kaja arvutus („Mina saadan ja võtan vastu oma kaja“); primaarfookusega või offset-parabool (W2IMU); 1296 MHz juures paraboolidega tegelike kiiritajate ringpolarisatsiooni kadu (KA1GT); sakis „Arvutuste kontroll“ valik „EME eelarve yagi“ ja „EME eelarve paraboolid“ vahel; sakki „DGRD sageduse järgi“ valemid kirjutatud nagu valemiredaktoris; juhend: Faraday pöördumine 1296 MHz juures ITU-R P.531 järgi, depolarisatsioon 23 cm-l (Hagfors) ja ringpolarisatsioon 23 cm-l.
 - 1.6 - Sagedusalad 902 MHz ja 23 cm (1296 ja 1298 MHz) kogu programmis, kõik sagedusalad MHz-i ripploendis; sakk „EME eelarve“ muutub sakiks „EME eelarve yagi“ ja lisandus uus sakk „EME eelarve paraboolid“ (primaarfookusega parabool, võimendus PE1RKI valemiga, eelvõimendi ka kaheastmelisena, transverter ja PA juhtimine); uus sakk „DGRD sageduse järgi“ jaama tegeliku müraga ja keilu ulatuses keskmistatud taevaga, mida kasutatakse kogu programmis; koaksiaalkaablid arvutatakse valemiga α = k1·√f + k2·f andmelehtede andmetest, ka 902 ja 1296 MHz juures; juhtelementide uus stiil kõigil sakkidel; sakis „Asukoht reaalajas ja +- 24h“ vihjemull punase kursori juures ja DX-i punased jooned kursori kellaajal; juhend üle vaadatud pärast allikate võrdlemist (teekonnakadu sagedusalade kaupa, Q65-60B ja Q65-60C lävendid, ground gain IK1UWL mõõtmiste järgi, pistikud, teiste programmide Dgrd, paraboolid üle 432 MHz); paketid igale arhitektuurile (Windows x64 ja x86, Linux x64, arm64 ja arm, macOS Apple Silicon ja Intel); tänu Robert HA5OLA-le. Sagedusalad üle 432 MHz on veel valmimisel.
 - 1.5 - Uus vahekaart „GRAVES-radar“ rühmas Side: Kuu radari kiires koos sektori ja sammuga, ühine aken sinuga, kaja Doppler ja viivitus, kiire järgmine üleminek Kuult, taevas GRAVES-i vaates, 24 UTC tunni rekonstruktsioon järgmise 10 sekundi üksikasjadega, nõuanded kaja kuulmiseks ja allikad; aktiivsete jaamade loend ka JSON- ja tekstivormingus LunaCalc Mobile'i jaoks; kaks uut keelt, taani ja tagalogi (kokku 28), koos juhenditega.

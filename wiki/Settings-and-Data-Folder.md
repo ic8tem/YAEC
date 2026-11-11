@@ -7,7 +7,7 @@ The general settings are in the white bar at the top of [Live position and +- 24
 | Setting | Options |
 |---|---|
 | **Callsign** | Your callsign; shown in the window title ("… by Costantino IC8TEM for *your callsign*"), on the main screen and on the map. |
-| **Language** | 36 languages (see below). |
+| **Language** | 37 languages (see below). |
 | **Colours** | Light, Night (blue tones, for use at night), Black (black background, suited to the dark and to OLED screens), and eight pastel schemes. |
 | **Font size** | Size of all the program fonts, in %. |
 | **Font** | *System default* (the font suited to the chosen language) or one of the *Fonts recommended for YAEC*: at most 10 fonts installed on your computer, chosen from a list tested tab by tab for Windows, Linux and macOS (for non-Latin scripts, fonts that contain that script). Each name in the list is written in its own font, and the font suited to the language is marked *recommended*. |
@@ -30,7 +30,7 @@ The scheme applies to all tabs.
 
 ### Languages
 
-YAEC, its two manuals, the licence and the README are available in **36 languages**:
+YAEC, its two manuals, the licence and the README are available in **37 languages**:
 
 | | | | |
 |---|---|---|---|
@@ -43,6 +43,7 @@ YAEC, its two manuals, the licence and the README are available in **36 language
 | 한국어 `ko` | Bahasa Indonesia `id` | Dansk `da` | Tagalog `tl` |
 | Português (Brasil) `pt-BR` | ไทย `th` | 中文 (繁體) `zh-TW` | Polski `pl` |
 | Čeština `cs` | Română `ro` | Ελληνικά `el` | Magyar `hu` |
+| Slovenčina `sk` | | | |
 
 Arabic, Hebrew and Urdu are right-to-left. The licence and README in every language are in the [`lingue`](https://github.com/ic8tem/YAEC/tree/main/lingue) folder of the repository. Some scripts need suitable fonts on Linux: see [Troubleshooting](Troubleshooting-FAQ).
 
