@@ -7,6 +7,8 @@ Windows, Linux and macOS (Linux and macOS with Mono).
 
 Posizione della Luna, finestre di puntamento, budget del collegamento EME, rumore del cielo e del Sole per radioamatori, in 37 lingue.
 
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-ic8tem-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/ic8tem)
+
 ## Languages
 
 YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence and the README are available in **37 languages**; the language is chosen at the top of the main screen. Licence and README in every language are in the [`lingue`](lingue) folder.
