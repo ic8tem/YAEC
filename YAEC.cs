@@ -68284,8 +68284,8 @@ namespace LunaCalc
                     if (ps2 != null && ps2.Ok)
                     {
                         // la prossima volta la scheda è alta quanto serve (le note spezzate su due righe)
-                        float extra = Math.Max(0, y - yEff0 - 5 * S(25));
-                        if (Math.Abs(extra - orizEffettoExtra) > 0.5f) { orizEffettoExtra = extra; pnlOriz.Invalidate(); }
+                        float extraEff = Math.Max(0, y - yEff0 - 5 * S(25));
+                        if (Math.Abs(extraEff - orizEffettoExtra) > 0.5f) { orizEffettoExtra = extraEff; pnlOriz.Invalidate(); }
                     }
                     yr = r.Bottom + S(12);
                 }
