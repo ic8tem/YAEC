@@ -3367,6 +3367,14 @@ namespace LunaCalc
             "OSTACOLI",
             "Torna a Orizzonte dal terreno",
             "Porta il momento della riga selezionata nella vista degli ostacoli della linguetta Il mio orizzonte.",
+            "Torna a Stazioni da provare",
+            "Porta il giorno della riga selezionata nella linguetta Stazioni da provare.",
+            "Giorno dalla tabella",
+            "Apre la tabella della linguetta Posizione della Luna: scegli una riga (anche nei giorni futuri) e premi «↩ {0}» per tornare qui con quel giorno.",
+            "Escludi le stazioni del mio paese",
+            "file cty.dat non trovato",
+            "nominativo non riconosciuto",
+            "Riconosce il paese dal nominativo con il file cty.dat di AD1C (country-files.com): YAEC lo scarica nella cartella data e lo aggiorna ogni mese; se non ci riesce, usa quello di WSJT-X o di N1MM Logger+ se lo trova. Il tuo paese: {0}.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -5079,6 +5087,14 @@ namespace LunaCalc
             "OBSTACLES",
             "Back to Horizon from terrain",
             "Takes the moment of the selected row to the obstacles view of the My horizon tab.",
+            "Back to Stations to try",
+            "Takes the day of the selected row to the Stations to try tab.",
+            "Day from the table",
+            "Opens the table of the Moon position tab: choose a row (future days too) and press «↩ {0}» to come back here with that day.",
+            "Exclude stations of my country",
+            "cty.dat file not found",
+            "callsign not recognised",
+            "Recognises the country from the callsign with the cty.dat file by AD1C (country-files.com): YAEC downloads it into the data folder and updates it every month; if it cannot, it uses the one of WSJT-X or N1MM Logger+ if it finds it. Your country: {0}.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6791,6 +6807,14 @@ namespace LunaCalc
             "HINDERNISSE",
             "Zurück zu Horizont aus dem Gelände",
             "Übernimmt den Zeitpunkt der gewählten Zeile in die Hindernisansicht des Reiters Mein Horizont.",
+            "Zurück zu Stationen zum Ausprobieren",
+            "Übernimmt den Tag der gewählten Zeile in den Reiter Stationen zum Ausprobieren.",
+            "Tag aus der Tabelle",
+            "Öffnet die Tabelle des Reiters Mondposition: Wähle eine Zeile (auch an künftigen Tagen) und drücke «↩ {0}», um mit diesem Tag hierher zurückzukehren.",
+            "Stationen meines Landes ausschließen",
+            "Datei cty.dat nicht gefunden",
+            "Rufzeichen nicht erkannt",
+            "Erkennt das Land am Rufzeichen mit der Datei cty.dat von AD1C (country-files.com): YAEC lädt sie in den Ordner data und aktualisiert sie jeden Monat; gelingt das nicht, nimmt es die von WSJT-X oder N1MM Logger+, falls vorhanden. Dein Land: {0}.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -8503,6 +8527,14 @@ namespace LunaCalc
             "OBSTACLES",
             "Retour à Horizon du relief",
             "Reporte le moment de la ligne sélectionnée dans la vue des obstacles de l'onglet Mon horizon.",
+            "Retour à Stations à essayer",
+            "Reporte le jour de la ligne sélectionnée dans l'onglet Stations à essayer.",
+            "Jour depuis le tableau",
+            "Ouvre le tableau de l'onglet Position de la Lune : choisis une ligne (jours futurs compris) et appuie sur «↩ {0}» pour revenir ici avec ce jour.",
+            "Exclure les stations de mon pays",
+            "fichier cty.dat introuvable",
+            "indicatif non reconnu",
+            "Reconnaît le pays à partir de l'indicatif avec le fichier cty.dat d'AD1C (country-files.com) : YAEC le télécharge dans le dossier data et le met à jour chaque mois ; s'il n'y parvient pas, il utilise celui de WSJT-X ou de N1MM Logger+ s'il le trouve. Ton pays : {0}.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -10215,6 +10247,14 @@ namespace LunaCalc
             "OBSTÁCULOS",
             "Volver a Horizonte del terreno",
             "Lleva el momento de la fila seleccionada a la vista de obstáculos de la pestaña Mi horizonte.",
+            "Volver a Estaciones para probar",
+            "Lleva el día de la fila seleccionada a la pestaña Estaciones para probar.",
+            "Día desde la tabla",
+            "Abre la tabla de la pestaña Posición de la Luna: elige una fila (también de días futuros) y pulsa «↩ {0}» para volver aquí con ese día.",
+            "Excluir las estaciones de mi país",
+            "archivo cty.dat no encontrado",
+            "indicativo no reconocido",
+            "Reconoce el país por el indicativo con el archivo cty.dat de AD1C (country-files.com): YAEC lo descarga en la carpeta data y lo actualiza cada mes; si no lo consigue, usa el de WSJT-X o N1MM Logger+ si lo encuentra. Tu país: {0}.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -11927,6 +11967,14 @@ namespace LunaCalc
             "OBSTÁCULOS",
             "Voltar a Horizonte do relevo",
             "Leva o momento da linha selecionada para a vista dos obstáculos do separador O meu horizonte.",
+            "Voltar a Estações a experimentar",
+            "Leva o dia da linha selecionada para o separador Estações a experimentar.",
+            "Dia da tabela",
+            "Abre a tabela do separador Posição da Lua: escolhe uma linha (também de dias futuros) e carrega em «↩ {0}» para voltar aqui com esse dia.",
+            "Excluir as estações do meu país",
+            "ficheiro cty.dat não encontrado",
+            "indicativo não reconhecido",
+            "Reconhece o país pelo indicativo com o ficheiro cty.dat de AD1C (country-files.com): o YAEC descarrega-o para a pasta data e atualiza-o todos os meses; se não conseguir, usa o do WSJT-X ou do N1MM Logger+ se o encontrar. O teu país: {0}.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -13639,6 +13687,14 @@ namespace LunaCalc
             "障碍物",
             "返回地形地平线",
             "将所选行的时刻带到“我的地平线”标签页的障碍物视图。",
+            "返回值得尝试的电台",
+            "将所选行的日期带到“值得尝试的电台”标签页。",
+            "从表格取日期",
+            "打开“月球位置”标签页的表格：选择一行（也可以是未来的日子），然后按「↩ {0}」带着该日期回到这里。",
+            "排除本国电台",
+            "未找到 cty.dat 文件",
+            "无法识别呼号",
+            "使用 AD1C 的 cty.dat 文件（country-files.com）根据呼号识别国家：YAEC 将其下载到 data 文件夹并每月更新；若无法下载，则使用找到的 WSJT-X 或 N1MM Logger+ 的副本。你的国家：{0}。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -15351,6 +15407,14 @@ namespace LunaCalc
             "障害物",
             "地形からの地平線に戻る",
             "選んだ行の時刻を「自局の地平線」タブの障害物の表示に送ります。",
+            "試してみたい局に戻る",
+            "選んだ行の日付を「試してみたい局」タブに送ります。",
+            "表から日付を選ぶ",
+            "「月の位置」タブの表を開きます。行を選び（未来の日も可）、「↩ {0}」を押すとその日付でここに戻ります。",
+            "自国の局を除外",
+            "cty.dat ファイルが見つかりません",
+            "コールサインを認識できません",
+            "AD1C の cty.dat ファイル（country-files.com）でコールサインから国を判別します。YAEC は data フォルダーにダウンロードして毎月更新し、できない場合は見つかった WSJT-X または N1MM Logger+ のものを使います。あなたの国：{0}。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -17063,6 +17127,14 @@ namespace LunaCalc
             "बाधाएँ",
             "भूभाग से क्षितिज पर लौटें",
             "चुनी गई पंक्ति का समय मेरा क्षितिज टैब के बाधाओं वाले दृश्य में ले जाता है।",
+            "आज़माने के लिए स्टेशन पर लौटें",
+            "चुनी गई पंक्ति का दिन आज़माने के लिए स्टेशन टैब में ले जाता है।",
+            "तालिका से दिन",
+            "चंद्रमा की स्थिति टैब की तालिका खोलता है: एक पंक्ति चुनें (आने वाले दिनों की भी) और उस दिन के साथ यहाँ लौटने के लिए «↩ {0}» दबाएँ।",
+            "मेरे देश के स्टेशन हटाएँ",
+            "cty.dat फ़ाइल नहीं मिली",
+            "कॉल साइन पहचाना नहीं गया",
+            "AD1C की cty.dat फ़ाइल (country-files.com) से कॉल साइन द्वारा देश पहचानता है: YAEC इसे data फ़ोल्डर में डाउनलोड करता है और हर महीने अद्यतन करता है; न हो सके तो मिलने पर WSJT-X या N1MM Logger+ वाली उपयोग करता है। आपका देश: {0}।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -18775,6 +18847,14 @@ namespace LunaCalc
             "장애물",
             "지형 지평선(으)로 돌아가기",
             "선택한 행의 시각을 「내 지평선」 탭의 장애물 보기로 가져갑니다.",
+            "시도해 볼 국(으)로 돌아가기",
+            "선택한 행의 날짜를 「시도해 볼 국」 탭으로 가져갑니다.",
+            "표에서 날짜 선택",
+            "「달의 위치」 탭의 표를 엽니다. 행을 고르고(미래 날짜도 가능) 「↩ {0}」를 누르면 그 날짜로 여기로 돌아옵니다.",
+            "우리나라 국 제외",
+            "cty.dat 파일을 찾을 수 없음",
+            "호출부호를 인식할 수 없음",
+            "AD1C의 cty.dat 파일(country-files.com)로 호출부호에서 나라를 알아냅니다. YAEC는 data 폴더에 내려받아 매달 갱신하며, 실패하면 찾은 WSJT-X 또는 N1MM Logger+의 파일을 사용합니다. 당신의 나라: {0}.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -20487,6 +20567,14 @@ namespace LunaCalc
             "RINTANGAN",
             "Kembali ke Cakrawala dari medan",
             "Membawa waktu baris yang dipilih ke tampilan rintangan di tab Cakrawala saya.",
+            "Kembali ke Stasiun untuk dicoba",
+            "Membawa hari dari baris yang dipilih ke tab Stasiun untuk dicoba.",
+            "Hari dari tabel",
+            "Membuka tabel tab Posisi Bulan: pilih satu baris (juga hari-hari mendatang) lalu tekan «↩ {0}» untuk kembali ke sini dengan hari itu.",
+            "Kecualikan stasiun negara saya",
+            "berkas cty.dat tidak ditemukan",
+            "tanda panggil tidak dikenali",
+            "Mengenali negara dari tanda panggil dengan berkas cty.dat dari AD1C (country-files.com): YAEC mengunduhnya ke folder data dan memperbaruinya setiap bulan; bila gagal, memakai milik WSJT-X atau N1MM Logger+ jika ditemukan. Negara Anda: {0}.",
         };
 
         public static readonly string[] RU = {
@@ -22200,6 +22288,14 @@ namespace LunaCalc
             "ПРЕПЯТСТВИЯ",
             "Назад к Горизонт по рельефу",
             "Переносит момент выбранной строки в вид препятствий вкладки Мой горизонт.",
+            "Назад к Станции для попытки",
+            "Переносит день выбранной строки во вкладку Станции для попытки.",
+            "День из таблицы",
+            "Открывает таблицу вкладки Положение Луны: выберите строку (в том числе на будущие дни) и нажмите «↩ {0}», чтобы вернуться сюда с этим днём.",
+            "Исключить станции моей страны",
+            "файл cty.dat не найден",
+            "позывной не распознан",
+            "Определяет страну по позывному с помощью файла cty.dat от AD1C (country-files.com): YAEC загружает его в папку data и обновляет каждый месяц; если не удаётся, использует файл WSJT-X или N1MM Logger+, если найдёт. Ваша страна: {0}.",
         };
 
         public static readonly string[] UK = {
@@ -23913,6 +24009,14 @@ namespace LunaCalc
             "ПЕРЕШКОДИ",
             "Назад до Горизонт за рельєфом",
             "Переносить момент вибраного рядка у вигляд перешкод вкладки Мій горизонт.",
+            "Назад до Станції для спроби",
+            "Переносить день вибраного рядка у вкладку Станції для спроби.",
+            "День із таблиці",
+            "Відкриває таблицю вкладки Положення Місяця: виберіть рядок (зокрема на майбутні дні) і натисніть «↩ {0}», щоб повернутися сюди з цим днем.",
+            "Виключити станції моєї країни",
+            "файл cty.dat не знайдено",
+            "позивний не розпізнано",
+            "Визначає країну за позивним за допомогою файлу cty.dat від AD1C (country-files.com): YAEC завантажує його в теку data й оновлює щомісяця; якщо не вдається, використовує файл WSJT-X або N1MM Logger+, якщо знайде. Ваша країна: {0}.",
         };
 
         public static readonly string[] AF = {
@@ -25626,6 +25730,14 @@ namespace LunaCalc
             "HINDERNISSE",
             "Terug na Horison uit die terrein",
             "Neem die oomblik van die gekose ry na die hindernisaansig van die oortjie My horison.",
+            "Terug na Stasies om te probeer",
+            "Neem die dag van die gekose ry na die oortjie Stasies om te probeer.",
+            "Dag uit die tabel",
+            "Maak die tabel van die oortjie Maanposisie oop: kies 'n ry (ook toekomstige dae) en druk «↩ {0}» om met daardie dag hierheen terug te keer.",
+            "Sluit stasies van my land uit",
+            "lêer cty.dat nie gevind nie",
+            "roepsein nie herken nie",
+            "Herken die land uit die roepsein met die cty.dat-lêer van AD1C (country-files.com): YAEC laai dit in die data-gids af en werk dit elke maand by; as dit nie kan nie, gebruik dit dié van WSJT-X of N1MM Logger+ as dit dit vind. Jou land: {0}.",
         };
 
         public static readonly string[] BN = {
@@ -27338,6 +27450,14 @@ namespace LunaCalc
             "বাধা",
             "ভূখণ্ড থেকে দিগন্ত-এ ফিরুন",
             "নির্বাচিত সারির সময় আমার দিগন্ত ট্যাবের বাধার দৃশ্যে নিয়ে যায়।",
+            "চেষ্টা করার স্টেশন-এ ফিরুন",
+            "নির্বাচিত সারির দিন চেষ্টা করার স্টেশন ট্যাবে নিয়ে যায়।",
+            "সারণি থেকে দিন",
+            "চাঁদের অবস্থান ট্যাবের সারণি খোলে: একটি সারি বেছে নিন (ভবিষ্যতের দিনও) এবং সেই দিন নিয়ে এখানে ফিরতে «↩ {0}» চাপুন।",
+            "আমার দেশের স্টেশন বাদ দিন",
+            "cty.dat ফাইল পাওয়া যায়নি",
+            "কলসাইন চেনা যায়নি",
+            "AD1C-এর cty.dat ফাইল (country-files.com) দিয়ে কলসাইন থেকে দেশ চেনে: YAEC এটি data ফোল্ডারে ডাউনলোড করে এবং প্রতি মাসে হালনাগাদ করে; না পারলে পাওয়া গেলে WSJT-X বা N1MM Logger+-এর ফাইল ব্যবহার করে। আপনার দেশ: {0}।",
         };
 
         public static readonly string[] AR = {
@@ -29050,6 +29170,14 @@ namespace LunaCalc
             "العوائق",
             "العودة إلى الأفق من التضاريس",
             "ينقل لحظة الصف المحدد إلى عرض العوائق في تبويب أفق محطتي.",
+            "العودة إلى محطات للتجربة",
+            "ينقل يوم الصف المحدد إلى تبويب محطات للتجربة.",
+            "يوم من الجدول",
+            "يفتح جدول تبويب موقع القمر: اختر صفاً (حتى في الأيام القادمة) واضغط «↩ {0}» للعودة إلى هنا بذلك اليوم.",
+            "استبعاد محطات بلدي",
+            "لم يُعثر على ملف cty.dat",
+            "النداء غير معروف",
+            "يتعرف على البلد من النداء بملف cty.dat من AD1C ‏(country-files.com): ينزّله YAEC في مجلد data ويحدّثه كل شهر؛ وإن تعذّر ذلك يستخدم ملف WSJT-X أو N1MM Logger+ إن وجده. بلدك: {0}.",
         };
 
         public static readonly string[] TR = {
@@ -30762,6 +30890,14 @@ namespace LunaCalc
             "ENGELLER",
             "Araziden ufuk görünümüne dön",
             "Seçili satırın anını Ufkum sekmesinin engel görünümüne taşır.",
+            "Denenecek istasyonlar görünümüne dön",
+            "Seçili satırın gününü Denenecek istasyonlar sekmesine taşır.",
+            "Tablodan gün",
+            "Ay konumu sekmesinin tablosunu açar: bir satır seç (gelecek günler de olur) ve o günle buraya dönmek için «↩ {0}» düğmesine bas.",
+            "Ülkemin istasyonlarını hariç tut",
+            "cty.dat dosyası bulunamadı",
+            "çağrı işareti tanınmadı",
+            "Ülkeyi, AD1C'nin cty.dat dosyasıyla (country-files.com) çağrı işaretinden tanır: YAEC onu data klasörüne indirir ve her ay günceller; indiremezse bulursa WSJT-X ya da N1MM Logger+ dosyasını kullanır. Ülken: {0}.",
         };
 
         public static readonly string[] NL = {
@@ -32474,6 +32610,14 @@ namespace LunaCalc
             "OBSTAKELS",
             "Terug naar Horizon uit het terrein",
             "Neemt het moment van de gekozen rij mee naar de obstakelweergave van het tabblad Mijn horizon.",
+            "Terug naar Stations om te proberen",
+            "Neemt de dag van de gekozen rij mee naar het tabblad Stations om te proberen.",
+            "Dag uit de tabel",
+            "Opent de tabel van het tabblad Maanpositie: kies een rij (ook op toekomstige dagen) en druk op «↩ {0}» om met die dag hier terug te komen.",
+            "Stations van mijn land uitsluiten",
+            "bestand cty.dat niet gevonden",
+            "roepnaam niet herkend",
+            "Herkent het land aan de roepnaam met het bestand cty.dat van AD1C (country-files.com): YAEC downloadt het naar de map data en werkt het elke maand bij; lukt dat niet, dan gebruikt het dat van WSJT-X of N1MM Logger+ als het dat vindt. Jouw land: {0}.",
         };
 
         public static readonly string[] ET = {
@@ -34186,6 +34330,14 @@ namespace LunaCalc
             "TAKISTUSED",
             "Tagasi: Horisont maastikust",
             "Viib valitud rea hetke vahekaardi Minu horisont takistuste vaatesse.",
+            "Tagasi: Jaamad proovimiseks",
+            "Viib valitud rea päeva vahekaardile Jaamad proovimiseks.",
+            "Päev tabelist",
+            "Avab vahekaardi Kuu asukoht tabeli: vali rida (ka tulevaste päevade oma) ja vajuta «↩ {0}», et selle päevaga siia tagasi tulla.",
+            "Jäta välja minu riigi jaamad",
+            "faili cty.dat ei leitud",
+            "kutsungit ei tuvastatud",
+            "Tuvastab riigi kutsungi järgi AD1C faili cty.dat abil (country-files.com): YAEC laadib selle kausta data ja uuendab iga kuu; kui see ei õnnestu, kasutab leitud WSJT-X või N1MM Logger+ faili. Sinu riik: {0}.",
         };
 
         public static readonly string[] LV = {
@@ -35898,6 +36050,14 @@ namespace LunaCalc
             "ŠĶĒRŠĻI",
             "Atpakaļ uz Horizonts no reljefa",
             "Pārnes izvēlētās rindas brīdi uz cilnes Mans horizonts šķēršļu skatu.",
+            "Atpakaļ uz Stacijas, ko izmēģināt",
+            "Pārnes izvēlētās rindas dienu uz cilni Stacijas, ko izmēģināt.",
+            "Diena no tabulas",
+            "Atver cilnes Mēness pozīcija tabulu: izvēlies rindu (arī nākamajām dienām) un nospied «↩ {0}», lai atgrieztos šeit ar šo dienu.",
+            "Izslēgt manas valsts stacijas",
+            "fails cty.dat nav atrasts",
+            "izsaukuma signāls nav atpazīts",
+            "Atpazīst valsti pēc izsaukuma signāla ar AD1C failu cty.dat (country-files.com): YAEC to lejupielādē mapē data un atjaunina katru mēnesi; ja neizdodas, izmanto WSJT-X vai N1MM Logger+ failu, ja to atrod. Tava valsts: {0}.",
         };
 
         public static readonly string[] LT = {
@@ -37610,6 +37770,14 @@ namespace LunaCalc
             "KLIŪTYS",
             "Grįžti į Horizontas pagal reljefą",
             "Perkelia pasirinktos eilutės momentą į skirtuko Mano horizontas kliūčių vaizdą.",
+            "Grįžti į Stotys išbandyti",
+            "Perkelia pasirinktos eilutės dieną į skirtuką Stotys išbandyti.",
+            "Diena iš lentelės",
+            "Atidaro skirtuko Mėnulio padėtis lentelę: pasirinkite eilutę (ir ateities dienų) ir paspauskite «↩ {0}», kad grįžtumėte čia su ta diena.",
+            "Neįtraukti mano šalies stočių",
+            "failas cty.dat nerastas",
+            "šaukinys neatpažintas",
+            "Atpažįsta šalį pagal šaukinį naudodama AD1C failą cty.dat (country-files.com): YAEC jį atsisiunčia į aplanką data ir atnaujina kas mėnesį; jei nepavyksta, naudoja rastą WSJT-X arba N1MM Logger+ failą. Jūsų šalis: {0}.",
         };
 
         public static readonly string[] SV = {
@@ -39322,6 +39490,14 @@ namespace LunaCalc
             "HINDER",
             "Tillbaka till Horisont från terrängen",
             "För över tidpunkten för den valda raden till hindervyn i fliken Min horisont.",
+            "Tillbaka till Stationer att prova",
+            "För över dagen för den valda raden till fliken Stationer att prova.",
+            "Dag från tabellen",
+            "Öppnar tabellen i fliken Månens position: välj en rad (även kommande dagar) och tryck på «↩ {0}» för att komma tillbaka hit med den dagen.",
+            "Uteslut stationer från mitt land",
+            "filen cty.dat hittades inte",
+            "anropssignalen känns inte igen",
+            "Känner igen landet från anropssignalen med filen cty.dat av AD1C (country-files.com): YAEC laddar ner den till mappen data och uppdaterar den varje månad; om det inte går används den från WSJT-X eller N1MM Logger+ om den hittas. Ditt land: {0}.",
         };
 
         public static readonly string[] NB = {
@@ -41034,6 +41210,14 @@ namespace LunaCalc
             "HINDRINGER",
             "Tilbake til Horisont fra terrenget",
             "Tar med tidspunktet for den valgte raden til hindringsvisningen i fanen Min horisont.",
+            "Tilbake til Stasjoner å prøve",
+            "Tar med dagen for den valgte raden til fanen Stasjoner å prøve.",
+            "Dag fra tabellen",
+            "Åpner tabellen i fanen Månens posisjon: velg en rad (også kommende dager) og trykk «↩ {0}» for å komme tilbake hit med den dagen.",
+            "Utelat stasjoner fra mitt land",
+            "filen cty.dat ble ikke funnet",
+            "kallesignalet ble ikke gjenkjent",
+            "Gjenkjenner landet fra kallesignalet med filen cty.dat fra AD1C (country-files.com): YAEC laster den ned til mappen data og oppdaterer den hver måned; hvis det ikke går, brukes den fra WSJT-X eller N1MM Logger+ hvis den finnes. Ditt land: {0}.",
         };
 
         public static readonly string[] IS = {
@@ -42746,6 +42930,14 @@ namespace LunaCalc
             "HINDRANIR",
             "Aftur í Sjóndeildarhringur út frá landslagi",
             "Flytur tímapunkt valinnar línu í hindranasýnina í flipanum Sjóndeildarhringurinn minn.",
+            "Aftur í Stöðvar til að prófa",
+            "Flytur dag valinnar línu í flipann Stöðvar til að prófa.",
+            "Dagur úr töflunni",
+            "Opnar töfluna í flipanum Staða tunglsins: veldu línu (líka komandi daga) og ýttu á «↩ {0}» til að koma hingað aftur með þann dag.",
+            "Útiloka stöðvar frá mínu landi",
+            "skráin cty.dat fannst ekki",
+            "kallmerki ekki þekkt",
+            "Þekkir landið af kallmerkinu með skránni cty.dat frá AD1C (country-files.com): YAEC sækir hana í möppuna data og uppfærir hana mánaðarlega; takist það ekki notar það skrá WSJT-X eða N1MM Logger+ ef hún finnst. Landið þitt: {0}.",
         };
 
         public static readonly string[] HE = {
@@ -44458,6 +44650,14 @@ namespace LunaCalc
             "מכשולים",
             "חזרה אל אופק מפני השטח",
             "מעביר את הרגע של השורה הנבחרת לתצוגת המכשולים של הלשונית האופק שלי.",
+            "חזרה אל תחנות לנסות",
+            "מעביר את היום של השורה הנבחרת ללשונית תחנות לנסות.",
+            "יום מהטבלה",
+            "פותח את הטבלה של הלשונית מיקום הירח: בחר שורה (גם בימים הבאים) ולחץ «↩ {0}» כדי לחזור לכאן עם אותו יום.",
+            "החרג תחנות מהמדינה שלי",
+            "קובץ cty.dat לא נמצא",
+            "אות הקריאה לא זוהה",
+            "מזהה את המדינה לפי אות הקריאה בעזרת הקובץ cty.dat של AD1C ‏(country-files.com): YAEC מוריד אותו לתיקייה data ומעדכן אותו כל חודש; אם אינו מצליח, משתמש בקובץ של WSJT-X או של N1MM Logger+ אם הוא מוצא אותו. המדינה שלך: {0}.",
         };
 
         public static readonly string[] UR = {
@@ -46170,6 +46370,14 @@ namespace LunaCalc
             "رکاوٹیں",
             "زمین سے افق پر واپس",
             "منتخب قطار کا لمحہ میرا افق ٹیب کے رکاوٹوں والے منظر میں لے جاتا ہے۔",
+            "آزمانے کے لیے اسٹیشن پر واپس",
+            "منتخب قطار کا دن آزمانے کے لیے اسٹیشن ٹیب میں لے جاتا ہے۔",
+            "جدول سے دن",
+            "چاند کا مقام ٹیب کا جدول کھولتا ہے: ایک قطار چنیں (آنے والے دنوں کی بھی) اور اسی دن کے ساتھ یہاں لوٹنے کے لیے «↩ {0}» دبائیں۔",
+            "میرے ملک کے اسٹیشن خارج کریں",
+            "cty.dat فائل نہیں ملی",
+            "کال سائن پہچانا نہیں گیا",
+            "AD1C کی cty.dat فائل (country-files.com) سے کال سائن کے ذریعے ملک پہچانتا ہے: YAEC اسے data فولڈر میں ڈاؤن لوڈ کرتا ہے اور ہر ماہ تازہ کرتا ہے؛ نہ ہو سکے تو ملنے پر WSJT-X یا N1MM Logger+ والی استعمال کرتا ہے۔ آپ کا ملک: {0}۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -47881,6 +48089,14 @@ namespace LunaCalc
             "FORHINDRINGER",
             "Tilbage til Horisont fra terrænet",
             "Overfører tidspunktet for den valgte række til forhindringsvisningen i fanen Min horisont.",
+            "Tilbage til Stationer at prøve",
+            "Overfører dagen for den valgte række til fanen Stationer at prøve.",
+            "Dag fra tabellen",
+            "Åbner tabellen i fanen Månens position: vælg en række (også kommende dage) og tryk på «↩ {0}» for at komme tilbage hertil med den dag.",
+            "Udelad stationer fra mit land",
+            "filen cty.dat blev ikke fundet",
+            "kaldesignalet blev ikke genkendt",
+            "Genkender landet ud fra kaldesignalet med filen cty.dat fra AD1C (country-files.com): YAEC henter den til mappen data og opdaterer den hver måned; hvis det ikke lykkes, bruges den fra WSJT-X eller N1MM Logger+, hvis den findes. Dit land: {0}.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -49592,6 +49808,14 @@ namespace LunaCalc
             "MGA HADLANG",
             "Bumalik sa Horizon mula sa lupain",
             "Dinadala ang oras ng napiling hilera sa view ng mga hadlang ng tab na Aking horizon.",
+            "Bumalik sa Mga istasyong susubukan",
+            "Dinadala ang araw ng napiling hilera sa tab na Mga istasyong susubukan.",
+            "Araw mula sa talaan",
+            "Binubuksan ang talaan ng tab na Posisyon ng Buwan: pumili ng isang hilera (pati sa mga darating na araw) at pindutin ang «↩ {0}» para bumalik dito dala ang araw na iyon.",
+            "Huwag isama ang mga istasyon ng aking bansa",
+            "hindi makita ang file na cty.dat",
+            "hindi makilala ang callsign",
+            "Kinikilala ang bansa mula sa callsign gamit ang file na cty.dat ni AD1C (country-files.com): dina-download ito ng YAEC sa folder na data at ina-update bawat buwan; kung hindi magawa, ginagamit ang sa WSJT-X o N1MM Logger+ kung makita. Ang iyong bansa: {0}.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -51303,6 +51527,14 @@ namespace LunaCalc
             "OBSTÁCULOS",
             "Voltar para Horizonte do relevo",
             "Leva o momento da linha selecionada para a visão dos obstáculos da aba Meu horizonte.",
+            "Voltar para Estações para testar",
+            "Leva o dia da linha selecionada para a aba Estações para testar.",
+            "Dia da tabela",
+            "Abre a tabela da aba Posição da Lua: escolha uma linha (inclusive de dias futuros) e clique em «↩ {0}» para voltar aqui com esse dia.",
+            "Excluir as estações do meu país",
+            "arquivo cty.dat não encontrado",
+            "indicativo não reconhecido",
+            "Reconhece o país pelo indicativo com o arquivo cty.dat de AD1C (country-files.com): o YAEC o baixa na pasta data e o atualiza todo mês; se não conseguir, usa o do WSJT-X ou do N1MM Logger+, se o encontrar. Seu país: {0}.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -53014,6 +53246,14 @@ namespace LunaCalc
             "สิ่งกีดขวาง",
             "กลับไปที่ ขอบฟ้าจากภูมิประเทศ",
             "นำเวลาของแถวที่เลือกไปยังมุมมองสิ่งกีดขวางของแท็บ ขอบฟ้าของฉัน",
+            "กลับไปที่ สถานีที่ควรลอง",
+            "นำวันของแถวที่เลือกไปยังแท็บ สถานีที่ควรลอง",
+            "วันจากตาราง",
+            "เปิดตารางของแท็บ ตำแหน่งดวงจันทร์: เลือกแถว (รวมถึงวันข้างหน้า) แล้วกด «↩ {0}» เพื่อกลับมาที่นี่พร้อมวันนั้น",
+            "ไม่รวมสถานีในประเทศของฉัน",
+            "ไม่พบไฟล์ cty.dat",
+            "ไม่รู้จักสัญญาณเรียกขาน",
+            "ระบุประเทศจากสัญญาณเรียกขานด้วยไฟล์ cty.dat ของ AD1C (country-files.com): YAEC ดาวน์โหลดไว้ในโฟลเดอร์ data และปรับปรุงทุกเดือน หากทำไม่ได้จะใช้ไฟล์ของ WSJT-X หรือ N1MM Logger+ ถ้าพบ ประเทศของคุณ: {0}",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -54725,6 +54965,14 @@ namespace LunaCalc
             "障礙物",
             "返回地形地平線",
             "將所選列的時刻帶到「我的地平線」分頁的障礙物檢視。",
+            "返回值得嘗試的電台",
+            "將所選列的日期帶到「值得嘗試的電台」分頁。",
+            "從表格取日期",
+            "開啟「月球位置」分頁的表格：選擇一列（也可以是未來的日子），再按「↩ {0}」帶著該日期回到這裡。",
+            "排除本國電台",
+            "找不到 cty.dat 檔案",
+            "無法辨識呼號",
+            "使用 AD1C 的 cty.dat 檔案（country-files.com）依呼號辨識國家：YAEC 會下載到 data 資料夾並每月更新；若無法下載，則使用找到的 WSJT-X 或 N1MM Logger+ 的副本。你的國家：{0}。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -56436,6 +56684,14 @@ namespace LunaCalc
             "PRZESZKODY",
             "Powrót do Horyzont z terenu",
             "Przenosi moment wybranego wiersza do widoku przeszkód zakładki Mój horyzont.",
+            "Powrót do Stacje do spróbowania",
+            "Przenosi dzień wybranego wiersza do zakładki Stacje do spróbowania.",
+            "Dzień z tabeli",
+            "Otwiera tabelę zakładki Pozycja Księżyca: wybierz wiersz (także z przyszłych dni) i naciśnij «↩ {0}», aby wrócić tutaj z tym dniem.",
+            "Wyklucz stacje z mojego kraju",
+            "nie znaleziono pliku cty.dat",
+            "znak wywoławczy nierozpoznany",
+            "Rozpoznaje kraj po znaku wywoławczym za pomocą pliku cty.dat od AD1C (country-files.com): YAEC pobiera go do folderu data i aktualizuje co miesiąc; jeśli się nie uda, używa pliku z WSJT-X lub N1MM Logger+, jeśli go znajdzie. Twój kraj: {0}.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -58147,6 +58403,14 @@ namespace LunaCalc
             "PŘEKÁŽKY",
             "Zpět na Obzor z terénu",
             "Přenese okamžik vybraného řádku do zobrazení překážek karty Můj obzor.",
+            "Zpět na Stanice k vyzkoušení",
+            "Přenese den vybraného řádku do karty Stanice k vyzkoušení.",
+            "Den z tabulky",
+            "Otevře tabulku karty Poloha Měsíce: vyber řádek (i v budoucích dnech) a stiskni «↩ {0}» pro návrat sem s tímto dnem.",
+            "Vyloučit stanice z mé země",
+            "soubor cty.dat nenalezen",
+            "volací znak nerozpoznán",
+            "Rozpozná zemi podle volacího znaku pomocí souboru cty.dat od AD1C (country-files.com): YAEC ho stáhne do složky data a každý měsíc aktualizuje; pokud to nejde, použije soubor z WSJT-X nebo N1MM Logger+, pokud ho najde. Tvoje země: {0}.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -59858,6 +60122,14 @@ namespace LunaCalc
             "OBSTACOLE",
             "Înapoi la Orizont din relief",
             "Duce momentul rândului selectat în vederea obstacolelor din fila Orizontul meu.",
+            "Înapoi la Stații de încercat",
+            "Duce ziua rândului selectat în fila Stații de încercat.",
+            "Zi din tabel",
+            "Deschide tabelul filei Poziția Lunii: alege un rând (și din zilele viitoare) și apasă «↩ {0}» ca să revii aici cu acea zi.",
+            "Exclude stațiile din țara mea",
+            "fișierul cty.dat nu a fost găsit",
+            "indicativ nerecunoscut",
+            "Recunoaște țara după indicativ cu fișierul cty.dat al lui AD1C (country-files.com): YAEC îl descarcă în dosarul data și îl actualizează lunar; dacă nu reușește, îl folosește pe cel din WSJT-X sau N1MM Logger+, dacă îl găsește. Țara ta: {0}.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -61569,6 +61841,14 @@ namespace LunaCalc
             "ΕΜΠΟΔΙΑ",
             "Επιστροφή στο Ορίζοντας από το ανάγλυφο",
             "Μεταφέρει τη στιγμή της επιλεγμένης γραμμής στην προβολή εμποδίων της καρτέλας Ο ορίζοντάς μου.",
+            "Επιστροφή στο Σταθμοί για δοκιμή",
+            "Μεταφέρει την ημέρα της επιλεγμένης γραμμής στην καρτέλα Σταθμοί για δοκιμή.",
+            "Ημέρα από τον πίνακα",
+            "Ανοίγει τον πίνακα της καρτέλας Θέση της Σελήνης: διάλεξε μια γραμμή (και μελλοντικών ημερών) και πάτησε «↩ {0}» για να επιστρέψεις εδώ με εκείνη την ημέρα.",
+            "Εξαίρεση σταθμών της χώρας μου",
+            "δεν βρέθηκε το αρχείο cty.dat",
+            "το διακριτικό δεν αναγνωρίστηκε",
+            "Αναγνωρίζει τη χώρα από το διακριτικό με το αρχείο cty.dat του AD1C (country-files.com): το YAEC το κατεβάζει στον φάκελο data και το ενημερώνει κάθε μήνα· αν δεν τα καταφέρει, χρησιμοποιεί αυτό του WSJT-X ή του N1MM Logger+ αν το βρει. Η χώρα σου: {0}.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -63280,6 +63560,14 @@ namespace LunaCalc
             "AKADÁLYOK",
             "Vissza: Horizont a domborzatból",
             "A kijelölt sor időpontját átviszi a(z) Az én horizontom fül akadálynézetébe.",
+            "Vissza: Kipróbálandó állomások",
+            "A kijelölt sor napját átviszi a(z) Kipróbálandó állomások fülre.",
+            "Nap a táblázatból",
+            "Megnyitja a(z) A Hold helyzete fül táblázatát: válassz egy sort (jövőbeli napokét is), majd nyomd meg a «↩ {0}» gombot, hogy ezzel a nappal térj vissza ide.",
+            "Saját országom állomásainak kizárása",
+            "a cty.dat fájl nem található",
+            "a hívójel nem ismerhető fel",
+            "Az országot a hívójelből ismeri fel az AD1C cty.dat fájljával (country-files.com): a YAEC letölti a data mappába, és havonta frissíti; ha ez nem sikerül, a WSJT-X vagy az N1MM Logger+ fájlját használja, ha megtalálja. Az országod: {0}.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -64991,6 +65279,14 @@ namespace LunaCalc
             "PREKÁŽKY",
             "Späť na Obzor z terénu",
             "Prenesie okamih vybraného riadku do zobrazenia prekážok karty Môj obzor.",
+            "Späť na Stanice na vyskúšanie",
+            "Prenesie deň vybraného riadku do karty Stanice na vyskúšanie.",
+            "Deň z tabuľky",
+            "Otvorí tabuľku karty Poloha Mesiaca: vyber riadok (aj v budúcich dňoch) a stlač «↩ {0}» na návrat sem s týmto dňom.",
+            "Vylúčiť stanice z mojej krajiny",
+            "súbor cty.dat sa nenašiel",
+            "volacia značka nerozpoznaná",
+            "Rozpozná krajinu podľa volacej značky pomocou súboru cty.dat od AD1C (country-files.com): YAEC ho stiahne do priečinka data a každý mesiac aktualizuje; ak to nejde, použije súbor z WSJT-X alebo N1MM Logger+, ak ho nájde. Tvoja krajina: {0}.",
         };
     }
 
@@ -67914,21 +68210,43 @@ namespace LunaCalc
         Tondino rbOrizMinT, rbOrizMin0;
         DateTimePicker dtpOrizData, dtpOrizOra;
         Pillola bOrizAdesso, bOrizMeno, bOrizPiu, bOrizCalc, bOrizTab, btnPosOstacoli;
-        bool orizDaTabella;   // si è andati alla tabella della Posizione della Luna per scegliere il momento
+        int tabRitorno;   // si è andati alla tabella della Posizione della Luna per scegliere il momento: 1 = Orizzonte dal terreno, 2 = Stazioni da provare
 
-        // «Orizzonte dal terreno» → tabella della Posizione della Luna: si sceglie una riga e si torna con «↩ OSTACOLI»
-        void OrizVaiTabella()
+        // «Orizzonte dal terreno» o «Stazioni da provare» → tabella della Posizione della Luna: si sceglie una riga e si torna con il pulsante verde
+        void VaiTabella(int verso)
         {
-            orizDaTabella = true;
-            if (btnPosOstacoli != null) btnPosOstacoli.Visible = true;
+            tabRitorno = verso;
+            if (btnPosOstacoli != null)
+            {
+                if (verso == 2)
+                {
+                    btnPosOstacoli.Text = "↩ " + Lang.T("Stazioni da provare").ToUpper(Lang.Cultura);
+                    tip.SetToolTip(btnPosOstacoli, Lang.T("Torna a Stazioni da provare") + "\u0001" + Lang.T("Porta il giorno della riga selezionata nella linguetta Stazioni da provare."));
+                }
+                else
+                {
+                    btnPosOstacoli.Text = "↩ " + Lang.T("OSTACOLI");
+                    tip.SetToolTip(btnPosOstacoli, Lang.T("Torna a Orizzonte dal terreno") + "\u0001" + Lang.T("Porta il momento della riga selezionata nella vista degli ostacoli della linguetta Il mio orizzonte."));
+                }
+                btnPosOstacoli.Visible = true;
+                if (btnPosOstacoli.Parent != null) btnPosOstacoli.Parent.PerformLayout();
+            }
             if (tabs != null && tpPos != null) tabs.SelectedTab = tpPos;
         }
+        void OrizVaiTabella() { VaiTabella(1); }
         void OrizTornaOstacoli()
         {
             DateTime t;
             if (!RigaSelezionata(out t)) return;
-            orizDaTabella = false;
+            int verso = tabRitorno;
+            tabRitorno = 0;
             if (btnPosOstacoli != null) btnPosOstacoli.Visible = false;
+            if (verso == 2)
+            {
+                if (dtpStaz != null) dtpStaz.Value = t.Date;
+                if (tabs != null && tpStaz != null) tabs.SelectedTab = tpStaz;
+                return;
+            }
             orizVista = 0;
             MostraVistaOriz();
             ImpostaOrizT(DateTime.SpecifyKind(t, DateTimeKind.Utc));
@@ -69565,6 +69883,10 @@ namespace LunaCalc
         TabPage tpStaz;
         PannelloDisegno pnlStaz;
         Panel pnlStazScroll;
+        VScrollBar sbStaz;
+        int stazOff;               // scorrimento dell'elenco delle stazioni (pixel)
+        bool stazImposta;
+        RectangleF stazListaRett;
         DateTimePicker dtpStaz;
         Tendina cmbStazModo, cmbStazPol;
         Spunta chkStazTemp;
@@ -69572,7 +69894,8 @@ namespace LunaCalc
         TextBox txtStazLoss;
         Pillola bStazRipr, bStazApri, bStazTutte;
         DateTime stazGiorno = DateTime.UtcNow.Date;
-        bool stazTutte, stazTemp = true, stazCarica;
+        bool stazTutte, stazTemp = true, stazCarica, stazNoPaese;
+        Spunta chkStazPaese;
         int stazPol = 0, stazModoVoce;
         List<StazProva> stazTutteSt = new List<StazProva>(), stazMostrate = new List<StazProva>();
         int stazAttive;
@@ -69637,6 +69960,10 @@ namespace LunaCalc
             bDopo.Click += (s, e) => dtpStaz.Value = dtpStaz.Value.AddDays(1);
             bOggi.Click += (s, e) => dtpStaz.Value = DateTime.UtcNow.Date;
             r1.Controls.Add(bPrima); r1.Controls.Add(bDopo); r1.Controls.Add(bOggi);
+            Pillola bStazTab = PillolaBordo("⇄ " + Lang.T("DALLA TABELLA"), blu);
+            tip.SetToolTip(bStazTab, Lang.T("Giorno dalla tabella") + "\u0001" + string.Format(Lang.T("Apre la tabella della linguetta Posizione della Luna: scegli una riga (anche nei giorni futuri) e premi «↩ {0}» per tornare qui con quel giorno."), Lang.T("Stazioni da provare").ToUpper(Lang.Cultura)));
+            bStazTab.Click += (s, e) => VaiTabella(2);
+            r1.Controls.Add(bStazTab);
             Label lb = L(Lang.T("Banda") + " 144 MHz"); lb.Font = new Font(Lang.FontUi, 9.5F * fontFactor, FontStyle.Bold); lb.Margin = new Padding(S(14), S(6), 0, S(3));
             Label lb2 = L("(" + Lang.T("solo 2 m, come la chat di N0UK") + ")"); lb2.ForeColor = Tema.Muted;
             r1.Controls.Add(lb); r1.Controls.Add(lb2);
@@ -69654,6 +69981,14 @@ namespace LunaCalc
             chkStazTemp.Margin = new Padding(S(10), S(3), S(4), S(3));
             chkStazTemp.CheckedChanged += (s, e) => { if (stazCarica) return; stazTemp = chkStazTemp.Checked; stazChiave = ""; RicalcolaStaz(); if (!caricamento) SaveSettings(); };
             r1.Controls.Add(chkStazTemp);
+            chkStazPaese = new Spunta();
+            chkStazPaese.Text = Lang.T("Escludi le stazioni del mio paese");
+            chkStazPaese.AutoSize = true; chkStazPaese.Colore = verde; chkStazPaese.Checked = stazNoPaese;
+            chkStazPaese.Margin = new Padding(S(10), S(3), S(4), S(3));
+            chkStazPaese.CheckedChanged += (s, e) => { if (stazCarica) return; stazNoPaese = chkStazPaese.Checked; stazChiave = ""; stazOff = 0; RicalcolaStaz(); if (!caricamento) SaveSettings(); };
+            chkStazPaese.MouseEnter += (s, e) => TipPaese();
+            TipPaese();
+            r1.Controls.Add(chkStazPaese);
             Label ln = L(Lang.T("senza: Dgrd e rumore di riferimento, come i calcoli semplici · con: Tant, Te,") + "\n" + Lang.T("cielo dietro la Luna e rumore locale, come CALCOLI APPROFONDITI"));
             ln.ForeColor = Tema.Muted; ln.Font = new Font(Lang.FontUi, 8F * fontFactor);
             r1.Controls.Add(ln);
@@ -69714,7 +70049,19 @@ namespace LunaCalc
                 tabs.SelectedTab = tpBudget;
             };
             bStazTutte = PillolaBordo(Lang.T("Mostra tutte le stazioni attive"), blu);
-            bStazTutte.Click += (s, e) => { stazTutte = !stazTutte; ScegliStaz(); pnlStaz.Invalidate(); };
+            bStazTutte.Click += (s, e) => { stazTutte = !stazTutte; stazOff = 0; ScegliStaz(); pnlStaz.Invalidate(); };
+            sbStaz = new VScrollBar();
+            sbStaz.Visible = false;
+            sbStaz.ValueChanged += (s, e) => { if (stazImposta) return; stazOff = sbStaz.Value; pnlStaz.Invalidate(); };
+            pnlStaz.Controls.Add(sbStaz);
+            pnlStaz.MouseWheel += (s, e) =>
+            {
+                if (!sbStaz.Visible || !stazListaRett.Contains(e.Location)) return;
+                int mx = Math.Max(0, sbStaz.Maximum - sbStaz.LargeChange + 1);
+                stazOff = Math.Max(0, Math.Min(mx, stazOff - Math.Sign(e.Delta) * S(60)));
+                pnlStaz.Invalidate();
+            };
+            pnlStaz.MouseEnter += (s, e) => { if (!pnlStaz.Focused) pnlStaz.Focus(); };
             pnlStaz.Controls.Add(bStazRipr); pnlStaz.Controls.Add(bStazApri); pnlStaz.Controls.Add(bStazTutte);
             Action dim = () =>
             {
@@ -69729,6 +70076,15 @@ namespace LunaCalc
             tp.Controls.Add(pnlStazScroll);
             tp.Controls.Add(r1);
             LeggiBudgetStaz();
+        }
+
+        void TipPaese()
+        {
+            if (chkStazPaese == null) return;
+            string call = txtCall == null ? "" : txtCall.Text.Trim();
+            string paese = !Cty.Presente ? Lang.T("file cty.dat non trovato") : (Cty.Paese(call) ?? Lang.T("nominativo non riconosciuto"));
+            tip.SetToolTip(chkStazPaese, Lang.T("Escludi le stazioni del mio paese") + "\u0001"
+                + string.Format(Lang.T("Riconosce il paese dal nominativo con il file cty.dat di AD1C (country-files.com): YAEC lo scarica nella cartella data e lo aggiorna ogni mese; se non ci riesce, usa quello di WSJT-X o di N1MM Logger+ se lo trova. Il tuo paese: {0}."), paese));
         }
 
         BudgetParams Budget144()
@@ -69789,7 +70145,8 @@ namespace LunaCalc
             string loc = me.Loc.Text.Trim().ToUpperInvariant();
             BudgetParams b = Budget144();
             string k = stazGiorno.ToString("yyyyMMdd", inv) + loc + "|" + ChiaveTerreno + "|" + stazModoVoce + stazTemp + stazPol + "|" + b.P + b.NAnt + b.GAnt + b.Nf + b.Tant + b.CavoTx + b.AccTx
-                + "|" + me.Az1.Value + me.Az2.Value + me.El1.Value + me.El2.Value + "|" + Impianti.Firma + Attivi.Firma + "|" + (RilievoInUso != null ? RilievoInUso.File + rumSoglia : "");
+                + "|" + me.Az1.Value + me.Az2.Value + me.El1.Value + me.El2.Value + "|" + Impianti.Firma + Attivi.Firma + "|" + (RilievoInUso != null ? RilievoInUso.File + rumSoglia : "")
+                + "|" + (stazNoPaese ? "P" + Cty.Firma + (txtCall == null ? "" : txtCall.Text.Trim()) : "");
             if (k == stazChiave) return;
             stazChiave = k;
             stazTutteSt.Clear();
@@ -69810,8 +70167,11 @@ namespace LunaCalc
                 me.Valuta(pm[i], out okMe[i]);
             }
             double kB = 1.380649e-23, bw = 2500;
+            // stazioni del mio paese escluse (riconosciute con cty.dat)
+            string mioPaese = stazNoPaese ? Cty.Paese(txtCall == null ? "" : txtCall.Text.Trim()) : null;
             foreach (KeyValuePair<string, DateTime> kv in att)
             {
+                if (mioPaese != null && Cty.Paese(kv.Key) == mioPaese) continue;
                 StazProva s = new StazProva();
                 s.Call = kv.Key;
                 string iloc, imp;
@@ -69964,7 +70324,8 @@ namespace LunaCalc
                 float wSx = Math.Max(S(370), (cr.Width - 2 * pad - 2 * gap) * 0.26f), wDx = Math.Max(S(300), (cr.Width - 2 * pad - 2 * gap) * 0.24f);
                 float wC = cr.Width - 2 * pad - 2 * gap - wSx - wDx;
                 RectangleF rs = new RectangleF(pad, y0, wSx, S(420));
-                RectangleF rc = new RectangleF(rs.Right + gap, y0, wC, Math.Max(S(560), cr.Height - y0 - S(10)));
+                // l'elenco ha la sua barra di scorrimento: la scheda è alta quanto la finestra
+                RectangleF rc = new RectangleF(rs.Right + gap, y0, wC, Math.Max(S(560), pnlStazScroll.ClientSize.Height - y0 - S(10)));
                 float xr = rc.Right + gap;
 
                 // ----- la mia stazione
@@ -70035,7 +70396,9 @@ namespace LunaCalc
                 // ----- elenco delle stazioni
                 Scheda(g, rc, Color.Empty);
                 string tc = string.Format(ci, Lang.T("{0} STAZIONI DA PROVARE · {1} (UTC) · 144 MHz"), stazMostrate.Count, stazGiorno.ToString("dd/MM/yyyy", inv));
-                Testo(g, Spaziato(tc), ft, titCol, new RectangleF(rc.Left + S(16), rc.Top + S(12), rc.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                bStazTutte.Text = stazTutte ? Lang.T("Mostra le migliori") : Lang.T("Mostra tutte le stazioni attive");
+                PosizionaControllo(bStazTutte, rc.Right - S(16) - bStazTutte.Width, rc.Top + S(8));
+                Testo(g, Spaziato(tc), ft, titCol, new RectangleF(rc.Left + S(16), rc.Top + S(12), rc.Width - S(40) - bStazTutte.Width, S(22)), StringAlignment.Near, StringAlignment.Near);
                 string sub = stazAttive == 0
                     ? Lang.T("L'elenco delle stazioni attive (chat EME di N0UK) non è ancora stato scaricato: serve la connessione a internet all'avvio del programma.")
                     : string.Format(ci, Lang.T("Le migliori tra le {0} stazioni attive (N0UK, ultimi 90 giorni), una per campo di locator. Clic sul nominativo per sostituirlo con un altro."), stazAttive);
@@ -70043,12 +70406,22 @@ namespace LunaCalc
                 if (!me.Ok) sub = Lang.T("Imposta un locator valido nella prima linguetta.");
                 float hs = g.MeasureString(sub, fp, (int)(rc.Width - S(32))).Height;
                 using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(sub, fp, bm, new RectangleF(rc.Left + S(16), rc.Top + S(38), rc.Width - S(32), hs + 2));
-                float xb = rc.Left + S(72), wbar = rc.Right - S(20) - xb;
+                int sbw = SystemInformation.VerticalScrollBarWidth;
+                float xb = rc.Left + S(72), wbar = rc.Right - S(24) - sbw - xb;
                 float yy = rc.Top + S(44) + hs;
                 // scala delle ore
                 for (int h = 0; h <= 24; h += 6)
                     Testo(g, h == 0 ? "0" : h.ToString("00", inv), fp, Tema.Muted, new RectangleF(xb + wbar * h / 24f - S(15), yy, S(30), S(16)), h == 0 ? StringAlignment.Near : (h == 24 ? StringAlignment.Far : StringAlignment.Center), StringAlignment.Center);
                 yy += S(20);
+                // zona dell'elenco, che scorre con la barra a destra; la legenda resta in fondo alla scheda
+                RectangleF rl = new RectangleF(rc.Left + S(4), yy, rc.Width - S(8), rc.Bottom - S(44) - yy);
+                stazListaRett = rl;
+                float yListaTop = yy;
+                yy -= stazOff;
+                Region clipPrima = g.Clip;
+                g.SetClip(rl, CombineMode.Intersect);
+                RectangleF rcPieno = rc;
+                rc = new RectangleF(rc.Left, rc.Top, rc.Width - sbw - S(6), rc.Height);
                 foreach (StazProva s in stazMostrate)
                 {
                     float ys = yy;
@@ -70059,7 +70432,8 @@ namespace LunaCalc
                     // nominativo, locator e distanza
                     SizeF sc = g.MeasureString(s.Call, fcall);
                     using (Brush bb = new SolidBrush(blu)) g.DrawString(s.Call, fcall, bb, xb - S(2), ys);
-                    stazZone.Add(new KeyValuePair<RectangleF, StazProva>(new RectangleF(xb - S(2), ys, sc.Width, sc.Height), s));
+                    RectangleF zc = new RectangleF(xb - S(2), ys, sc.Width, sc.Height);
+                    if (rl.Contains(zc.Left, zc.Top + zc.Height / 2)) stazZone.Add(new KeyValuePair<RectangleF, StazProva>(zc, s));
                     string ld = s.Loc.ToUpperInvariant().Substring(0, Math.Min(6, s.Loc.Length)) + " · " + s.Dist.ToString("N0", ci) + " km";
                     Testo(g, ld, fp, Tema.Muted, new RectangleF(xb + sc.Width, ys + S(4), S(260), sc.Height - S(4)), StringAlignment.Near, StringAlignment.Center);
                     if (!s.Dichiarato)
@@ -70127,7 +70501,27 @@ namespace LunaCalc
                     Testo(g, Lang.T("Nessuna finestra comune nel giorno scelto con i tuoi limiti di puntamento."), fs, Tema.Muted, new RectangleF(rc.Left + S(16), yy, rc.Width - S(32), S(40)), StringAlignment.Near, StringAlignment.Near);
                     yy += S(44);
                 }
-                // legenda e pulsante
+                g.Clip = clipPrima;
+                rc = rcPieno;
+                // barra di scorrimento dell'elenco
+                {
+                    int alto = (int)Math.Ceiling(yy + stazOff - yListaTop), vis = (int)rl.Height;
+                    bool serve = alto > vis && vis > S(40);
+                    stazImposta = true;
+                    if (serve)
+                    {
+                        sbStaz.Bounds = new Rectangle((int)(rc.Right - S(6) - sbw), (int)rl.Top, sbw, vis);
+                        sbStaz.Maximum = alto; sbStaz.LargeChange = Math.Max(1, vis); sbStaz.SmallChange = S(40);
+                        int mx = Math.Max(0, alto - vis);
+                        if (stazOff > mx) { stazOff = mx; pnlStaz.Invalidate(); }
+                        sbStaz.Value = Math.Min(stazOff, Math.Max(0, sbStaz.Maximum - sbStaz.LargeChange + 1));
+                    }
+                    else if (stazOff != 0) { stazOff = 0; pnlStaz.Invalidate(); }
+                    if (sbStaz.Visible != serve) sbStaz.Visible = serve;
+                    stazImposta = false;
+                    yy = rl.Bottom + S(6);
+                }
+                // legenda
                 {
                     float x = rc.Left + S(16);
                     string[] lg = { "● " + Lang.T("75–100 probabile"), "● " + Lang.T("50–74 possibile"), "● " + Lang.T("sotto 50 difficile") };
@@ -70138,11 +70532,8 @@ namespace LunaCalc
                         Testo(g, lg[k], fpb, cl[k], new RectangleF(x, yy, w + S(4), S(26)), StringAlignment.Near, StringAlignment.Center);
                         x += w + S(14);
                     }
-                    bStazTutte.Text = stazTutte ? Lang.T("Mostra le migliori") : Lang.T("Mostra tutte le stazioni attive");
-                    PosizionaControllo(bStazTutte, rc.Right - S(16) - bStazTutte.Width, yy);
                     yy += S(36);
                 }
-                rc.Height = Math.Max(rc.Height, yy - rc.Top);
 
                 // ----- come si calcola l'indice
                 float yr = y0;
@@ -82012,7 +82403,7 @@ namespace LunaCalc
             btnPosOstacoli.Margin = new Padding(S(4), S(2), S(6), S(2));
             tip.SetToolTip(btnPosOstacoli, Lang.T("Torna a Orizzonte dal terreno") + "\u0001" + Lang.T("Porta il momento della riga selezionata nella vista degli ostacoli della linguetta Il mio orizzonte."));
             btnPosOstacoli.Click += (s, e) => OrizTornaOstacoli();
-            btnPosOstacoli.Visible = orizDaTabella;
+            btnPosOstacoli.Visible = tabRitorno != 0;
             bar.Controls.Add(btnPosOstacoli);
             barT.Controls.Add(bar, 0, 0);
             barT.Controls.Add(pnlLive, 1, 0);
@@ -83129,6 +83520,7 @@ namespace LunaCalc
                 lines.Add("rumore_soglia=" + rumSoglia.ToString(inv));
                 lines.Add("prova_modo=" + stazModoVoce.ToString(inv));
                 lines.Add("prova_temperature=" + (stazTemp ? "1" : "0"));
+                lines.Add("prova_no_paese=" + (stazNoPaese ? "1" : "0"));
                 lines.Add("prova_pol=" + stazPol.ToString(inv));
                 if (cmbPuntMappa != null) lines.Add("punt_mappa=" + cmbPuntMappa.SelectedIndex.ToString(inv));
                 lines.Add("punt_zoom=" + puntZoom.ToString(inv));
@@ -83352,6 +83744,7 @@ namespace LunaCalc
                         case "terreno": usaTerreno = v != "0"; break;
                         case "prova_modo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazModoVoce = Math.Max(0, Math.Min(BudgetParams.ModiOrdine.Length - 1, x)); break; }
                         case "prova_temperature": stazTemp = v != "0"; break;
+                        case "prova_no_paese": stazNoPaese = v == "1"; if (chkStazPaese != null) chkStazPaese.Checked = stazNoPaese; break;
                         case "prova_pol": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazPol = Math.Max(0, Math.Min(2, x)); break; }
                         case "orizzonte_vista": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizVista = Math.Max(0, Math.Min(1, x)); break; }
                         case "orizzonte_raggio": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizRaggioIdx = Math.Max(0, Math.Min(OrizRaggi.Length - 1, x)); break; }
@@ -87693,6 +88086,162 @@ namespace LunaCalc
 
     // Impianti dichiarati nell'intestazione dei messaggi della chat EME di N0UK (ramo "attivi" del repository,
     // tools/n0uk_attivi.py): nominativo, data, locator e impianto (es. 4X14HV/1K). Serve a «Stazioni da provare».
+    // Riconoscimento del paese dal nominativo con il file cty.dat di AD1C (country-files.com).
+    // Il file sta in data\cty.dat: YAEC lo scarica e lo aggiorna ogni 30 giorni; se non ci riesce, copia quello di
+    // WSJT-X o di N1MM Logger+ se lo trova sul computer. Le entità solo WAE (nome con *) non si usano: conta il paese DXCC.
+    static class Cty
+    {
+        public static readonly string[] Url = { "https://www.country-files.com/cty/cty.dat", "http://www.country-files.com/cty/cty.dat" };
+        static readonly object blocco = new object();
+        static Dictionary<string, string> prefissi, esatti;
+        static DateTime letto = DateTime.MinValue;
+        static volatile bool inCorso;
+
+        public static string Percorso { get { return Dati.Percorso("cty.dat"); } }
+        public static bool Presente { get { try { return File.Exists(Percorso); } catch { return false; } } }
+        public static string Firma { get { try { return File.Exists(Percorso) ? File.GetLastWriteTimeUtc(Percorso).Ticks.ToString(CultureInfo.InvariantCulture) : "0"; } catch { return "0"; } } }
+
+        static bool Valido(string t) { return t != null && t.Contains("EU:") && t.Contains(";") && t.Length > 20000; }
+
+        // posti dove WSJT-X e N1MM Logger+ tengono la loro copia
+        static IEnumerable<string> CopieLocali()
+        {
+            List<string> l = new List<string>();
+            try
+            {
+                string la = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                string pf = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+                string pf86 = Environment.GetEnvironmentVariable("ProgramFiles(x86)") ?? "";
+                string doc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                l.Add(Path.Combine(la, "WSJT-X", "cty.dat"));
+                l.Add(Path.Combine(@"C:\WSJT", "wsjtx", "share", "wsjtx", "cty.dat"));
+                l.Add(Path.Combine(pf, "wsjtx", "share", "wsjtx", "cty.dat"));
+                if (pf86.Length > 0) l.Add(Path.Combine(pf86, "wsjtx", "share", "wsjtx", "cty.dat"));
+                l.Add(Path.Combine(doc, "N1MM Logger+", "SupportFiles", "cty.dat"));
+                l.Add("/usr/share/wsjtx/cty.dat");
+                l.Add("/usr/local/share/wsjtx/cty.dat");
+                l.Add(Path.Combine(home, ".local", "share", "WSJT-X", "cty.dat"));
+                l.Add("/Applications/wsjtx.app/Contents/Resources/cty.dat");
+                l.Add(Path.Combine(home, "Library", "Application Support", "WSJT-X", "cty.dat"));
+            }
+            catch { }
+            return l;
+        }
+
+        // Scarica il file se manca o ha più di 30 giorni; se non ci riesce e manca, cerca una copia locale (in silenzio)
+        public static bool Aggiorna()
+        {
+            if (inCorso) return false;
+            inCorso = true;
+            try
+            {
+                string p = Percorso;
+                if (File.Exists(p) && (DateTime.UtcNow - File.GetLastWriteTimeUtc(p)).TotalDays < 30) return false;
+                foreach (string u in Url)
+                {
+                    try
+                    {
+                        byte[] b = Dati.Scarica(u, 20000);
+                        if (Valido(Encoding.ASCII.GetString(b))) { Dati.ScriviAtomico(p, b); lock (blocco) letto = DateTime.MinValue; return true; }
+                    }
+                    catch { }
+                }
+                if (File.Exists(p)) return false;
+                foreach (string c in CopieLocali())
+                {
+                    try
+                    {
+                        if (!File.Exists(c)) continue;
+                        byte[] b = File.ReadAllBytes(c);
+                        if (!Valido(Encoding.ASCII.GetString(b))) continue;
+                        Dati.ScriviAtomico(p, b);
+                        // la data del file copiato: così al prossimo avvio si riprova a scaricare la versione nuova
+                        try { File.SetLastWriteTimeUtc(p, File.GetLastWriteTimeUtc(c)); } catch { }
+                        lock (blocco) letto = DateTime.MinValue;
+                        return true;
+                    }
+                    catch { }
+                }
+                return false;
+            }
+            catch { return false; }
+            finally { inCorso = false; }
+        }
+
+        static void Carica()
+        {
+            string p = Percorso;
+            if (!File.Exists(p)) { prefissi = null; esatti = null; return; }
+            DateTime m = File.GetLastWriteTimeUtc(p);
+            if (prefissi != null && m == letto) return;
+            Dictionary<string, string> pr = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            Dictionary<string, string> ex = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            string t = File.ReadAllText(p, Encoding.GetEncoding(28591));
+            int i = 0;
+            while (i < t.Length)
+            {
+                int fineTesta = t.IndexOf('\n', i);
+                if (fineTesta < 0) break;
+                string testa = t.Substring(i, fineTesta - i).Trim();
+                int fine = t.IndexOf(';', fineTesta);
+                if (fine < 0) break;
+                string corpo = t.Substring(fineTesta + 1, fine - fineTesta - 1);
+                i = fine + 1;
+                string[] campi = testa.Split(':');
+                if (campi.Length < 8) continue;
+                string nome = campi[0].Trim();
+                string prin = campi[7].Trim();
+                if (nome.Length == 0 || prin.StartsWith("*")) continue;   // entità solo WAE: si resta nel paese DXCC
+                foreach (string v0 in corpo.Split(','))
+                {
+                    string v = v0.Trim();
+                    if (v.Length == 0) continue;
+                    // via le correzioni di zona, coordinate, continente e fuso: (..) [..] <..> {..} ~..~
+                    v = System.Text.RegularExpressions.Regex.Replace(v, @"\(.*?\)|\[.*?\]|<.*?>|\{.*?\}|~.*?~", "").Trim();
+                    if (v.Length == 0) continue;
+                    if (v[0] == '=') { string c = v.Substring(1); if (c.Length > 0 && !ex.ContainsKey(c)) ex[c] = nome; }
+                    else if (!pr.ContainsKey(v)) pr[v] = nome;
+                }
+            }
+            prefissi = pr; esatti = ex; letto = m;
+        }
+
+        static readonly HashSet<string> Suffissi = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "P", "M", "MM", "AM", "QRP", "A", "B", "LH", "J", "E", "R" };
+
+        static string Prefisso(string c)
+        {
+            for (int n = c.Length; n >= 1; n--)
+            {
+                string v;
+                if (prefissi.TryGetValue(c.Substring(0, n), out v)) return v;
+            }
+            return null;
+        }
+
+        // Paese DXCC del nominativo (nome di cty.dat), oppure null
+        public static string Paese(string call)
+        {
+            if (string.IsNullOrEmpty(call)) return null;
+            string c = call.Trim().ToUpperInvariant();
+            lock (blocco)
+            {
+                try { Carica(); } catch { prefissi = null; }
+                if (prefissi == null) return null;
+                string v;
+                if (esatti.TryGetValue(c, out v)) return v;
+                string[] pz = c.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+                List<string> parti = new List<string>();
+                foreach (string x in pz) if (!Suffissi.Contains(x) && !(x.Length == 1 && char.IsDigit(x[0]))) parti.Add(x);
+                if (parti.Count == 0) return null;
+                if (parti.Count == 1) return esatti.TryGetValue(parti[0], out v) ? v : Prefisso(parti[0]);
+                // CALL/XX o XX/CALL: la parte più corta è il prefisso del paese in cui si trasmette
+                string corto = parti[0].Length <= parti[1].Length ? parti[0] : parti[1];
+                return Prefisso(corto);
+            }
+        }
+    }
+
     static class Impianti
     {
         public const string Url = "https://raw.githubusercontent.com/ic8tem/YAEC/attivi/impianti.gz";
@@ -88091,6 +88640,7 @@ namespace LunaCalc
             stato(Call3.Aggiorna(false));
             Attivi.Aggiorna();   // stazioni attive (chat N0UK): in silenzio
             Impianti.Aggiorna(); // impianti dichiarati nella chat (Stazioni da provare): in silenzio
+            Cty.Aggiorna();      // paesi dei nominativi (cty.dat di AD1C) per escludere le stazioni del mio paese
             stato(Lang.T("Cartella data pronta"));
         }
     }
