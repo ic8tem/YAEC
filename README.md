@@ -153,11 +153,13 @@ YAEC puts in one program everything you need to run an EME (Earth–Moon–Earth
 **Live**
 - **Live position and +- 24h** – main screen updated every second: your locator and the DX's (4 to 14 characters), frequency, UTC, local and DX clocks, a status band (pointable, outside the limits, below the horizon, common window) with countdown, compass and elevation arc. Typing the DX callsign fills in its locator from CALL3.TXT.
 - **Reconnaissance of my obstacles** – aerial or topographic map centred on your station with the sky drawn on it: Moon position, its path over the next 24 hours, rise and set, antenna limits that you drag with the mouse.
+- **My horizon** – *Horizon from terrain*: panorama of the terrain around your station from SRTM1 elevation data (about 30 m), with Earth curvature and refraction, over the sky view (three colour scales) or a light-blue sky; Moon path, rise and set above the terrain, main obstacles named from OpenStreetMap and minutes of Moon lost. One checkbox makes the terrain the minimum elevation in the whole program. *Local noise map (NJ9R)*: azimuth × elevation grid where you type the noise seen in WSJT-X while turning the antenna; the hours with the Moon in a noisy direction get a ⚠.
 - **Sky view** – the sky seen from your QTH with the sky-noise colours at your frequency, antenna limits, the DX horizon, radio sources, the Sun and the Moon path.
 
 **Planning**
 - **Distance and Dgrd** – 7 to 61 days of Dgrd and mean Moon distance, with the declination overlaid, perigee, apogee, new Moon, the three best days (in date order), a possible fourth useful day and a warning for the days when the Moon is close to the Sun. Only the hours in which the Moon is really pointable with your limits are counted.
 - **DGRD by frequency** – the Dgrd at your working frequency with the real noise of your station and the sky averaged over the antenna beam, compared with the usual WSJT-X calculation; the choice applies to the whole program.
+- **Stations to try** – for the chosen day, the stations active in the N0UK EME chat (144 MHz) with a common window with you, the best per locator field, ranked by an index from 0 to 100 from the S/N in both directions; the DX setup is read from what it writes in the chat. A rough example calculation, idea by Matteo IW5DHN.
 - **Moon position** – table for the chosen period, coloured by pointability, with the common windows for you and the DX; CSV export for Excel.
 - **Moon over the world** – world map coloured by the Moon elevation seen from every place; one click makes that point the DX.
 
@@ -176,7 +178,7 @@ YAEC puts in one program everything you need to run an EME (Earth–Moon–Earth
 **Also**
 - CALL3.TXT downloaded from W7GJ and WSJT-X Improved, merged, refreshed every 7 days and copied into WSJT-X on request.
 - Warnings for polar-cap and auroral absorption (PCA) when a station is beyond the polar circles or in the auroral zone.
-- 37 languages; light, night (blue), black and eight pastel colour schemes.
+- 37 languages; light, night (blue), black and eight pastel and three IP-TRX-CTRL (blue, violet, green) colour schemes.
 - Moon positions accurate to about 0.01° (Meeus, ELP-2000/82), all calculations on your computer; data in a single `data` folder.
 
 ### Italiano
@@ -188,11 +190,13 @@ YAEC raccoglie in un solo programma tutto quello che serve per l'EME (Terra–Lu
 **In diretta**
 - **Posizione live e +- 24h** – la schermata principale, aggiornata ogni secondo: locator tuo e del DX (da 4 a 14 caratteri), frequenza, orologi UTC, locale e del DX, fascia di stato (puntabile, fuori dai limiti, sotto l'orizzonte, finestra comune) con il conto alla rovescia, bussola e arco dell'elevazione. Scrivendo il nominativo del DX il locator arriva dal CALL3.TXT.
 - **Ricognizione dei miei ostacoli** – mappa aerofotografica o topografica centrata sulla tua stazione con sopra il cielo: posizione della Luna, percorso nelle prossime 24 ore, sorgere e tramonto, limiti dell'antenna da trascinare con il mouse.
+- **Il mio orizzonte** – *Orizzonte dal terreno*: panorama del terreno intorno alla tua stazione dai dati altimetrici SRTM1 (circa 30 m), con curvatura terrestre e rifrazione, sullo sfondo della Volta celeste (tre colorazioni) o di un cielo azzurro; percorso della Luna, sorgere e tramonto sopra il terreno, ostacoli principali con i nomi di OpenStreetMap e minuti di Luna persi. Con una casella il terreno diventa l'elevazione minima in tutto il programma. *Mappa del rumore locale (NJ9R)*: griglia azimut × elevazione in cui scrivi il rumore visto in WSJT-X girando l'antenna; le ore con la Luna in una direzione rumorosa hanno il ⚠.
 - **Volta celeste** – il cielo visto dal tuo QTH con i colori del rumore del cielo alla tua frequenza, i limiti dell'antenna, l'orizzonte del DX, le radiosorgenti, il Sole e il percorso della Luna.
 
 **Pianificazione**
 - **Distanza e Dgrd** – da 7 a 61 giorni di Dgrd e distanza media della Luna, con la declinazione sovrapposta, perigeo, apogeo, luna nuova, i tre giorni migliori (in ordine di data), un possibile quarto giorno utile e l'avviso dei giorni con la Luna vicina al Sole. Contano solo le ore in cui la Luna è davvero puntabile con i tuoi limiti.
 - **DGRD per frequenza** – il Dgrd alla tua frequenza di lavoro con il rumore vero della tua stazione e il cielo mediato sul fascio dell'antenna, confrontato con il calcolo di sempre di WSJT-X; la scelta vale in tutto il programma.
+- **Stazioni da provare** – per il giorno scelto, le stazioni attive nella chat EME di N0UK (144 MHz) con una finestra comune con te, la migliore per campo di locator, ordinate con un indice da 0 a 100 ricavato dal S/N nei due sensi; l'impianto del DX è letto da quello che scrive in chat. Un calcolo di esempio, molto approssimativo, idea di Matteo IW5DHN.
 - **Posizione della Luna** – tabella per il periodo scelto, colorata secondo la puntabilità, con le finestre comuni a te e al DX; esportazione CSV per Excel.
 - **Luna sul mondo** – mappa del mondo colorata secondo l'elevazione della Luna vista da ogni località; con un clic il punto diventa il DX.
 
@@ -211,7 +215,7 @@ YAEC raccoglie in un solo programma tutto quello che serve per l'EME (Terra–Lu
 **Inoltre**
 - CALL3.TXT scaricato da W7GJ e da WSJT-X Improved, unito, aggiornato ogni 7 giorni e copiato in WSJT-X a richiesta.
 - Avvisi di assorbimento della calotta polare e aurorale (PCA) quando una stazione è oltre i circoli polari o nella zona aurorale.
-- 37 lingue; schemi di colori chiaro, notte (blu), nero e otto pastello.
+- 37 lingue; schemi di colori chiaro, notte (blu), nero, otto pastello e tre di IP-TRX-CTRL (blu, viola, verde).
 - Posizioni della Luna precise a circa 0,01° (Meeus, ELP-2000/82), tutti i calcoli sul tuo computer; dati in un'unica cartella `data`.
 
 ### Deutsch
@@ -223,11 +227,13 @@ YAEC vereint in einem Programm alles, was man für den EME-Betrieb (Erde–Mond�
 **Live**
 - **Position live und +- 24h** – Hauptbildschirm, jede Sekunde aktualisiert: dein Locator und der des DX (4 bis 14 Zeichen), Frequenz, UTC-, Orts- und DX-Uhr, Statusband (ausrichtbar, außerhalb der Grenzen, unter dem Horizont, gemeinsames Fenster) mit Countdown, Kompass und Elevationsbogen. Bei Eingabe des DX-Rufzeichens kommt der Locator aus CALL3.TXT.
 - **Erkundung meiner Hindernisse** – Luftbild- oder topografische Karte um deine Station mit dem Himmel darüber: Mondposition, Bahn der nächsten 24 Stunden, Auf- und Untergang, Antennengrenzen, die man mit der Maus zieht.
+- **Mein Horizont** – *Horizont aus dem Gelände*: Panorama des Geländes um deine Station aus SRTM1-Höhendaten (etwa 30 m), mit Erdkrümmung und Refraktion, vor der Himmelsansicht (drei Farbskalen) oder einem hellblauen Himmel; Mondbahn, Auf- und Untergang über dem Gelände, Haupthindernisse mit Namen aus OpenStreetMap und verlorene Mondminuten. Ein Kästchen macht das Gelände im ganzen Programm zur Mindestelevation. *Karte des lokalen Rauschens (NJ9R)*: Raster Azimut × Elevation, in das du das in WSJT-X gesehene Rauschen beim Drehen der Antenne einträgst; Stunden mit dem Mond in einer verrauschten Richtung erhalten ein ⚠.
 - **Himmelsansicht** – der Himmel von deinem QTH aus mit den Farben des Himmelsrauschens auf deiner Frequenz, Antennengrenzen, DX-Horizont, Radioquellen, Sonne und Mondbahn.
 
 **Planung**
 - **Entfernung und Dgrd** – 7 bis 61 Tage Dgrd und mittlere Mondentfernung, mit überlagerter Deklination, Perigäum, Apogäum, Neumond, den drei besten Tagen (nach Datum), einem möglichen vierten nutzbaren Tag und einer Warnung für Tage mit dem Mond nahe der Sonne. Gezählt werden nur die Stunden, in denen der Mond mit deinen Grenzen wirklich erreichbar ist.
 - **DGRD nach Frequenz** – der Dgrd auf deiner Arbeitsfrequenz mit dem echten Rauschen deiner Station und dem über die Antennenkeule gemittelten Himmel, verglichen mit der üblichen Rechnung von WSJT-X; die Wahl gilt im ganzen Programm.
+- **Stationen zum Ausprobieren** – für den gewählten Tag die im N0UK-EME-Chat aktiven Stationen (144 MHz) mit gemeinsamem Fenster, die beste je Locator-Feld, geordnet nach einem Index von 0 bis 100 aus dem S/N in beiden Richtungen; die Anlage des DX wird aus seinen Chat-Angaben gelesen. Eine grobe Beispielrechnung, Idee von Matteo IW5DHN.
 - **Mondposition** – Tabelle für den gewählten Zeitraum, nach Ausrichtbarkeit eingefärbt, mit den gemeinsamen Fenstern für dich und den DX; CSV-Export für Excel.
 - **Mond über der Welt** – Weltkarte, eingefärbt nach der Mondelevation an jedem Ort; ein Klick macht den Punkt zum DX.
 
@@ -246,7 +252,7 @@ YAEC vereint in einem Programm alles, was man für den EME-Betrieb (Erde–Mond�
 **Außerdem**
 - CALL3.TXT von W7GJ und WSJT-X Improved geladen, zusammengeführt, alle 7 Tage erneuert und auf Wunsch nach WSJT-X kopiert.
 - Warnungen vor Polkappen- und Polarlichtabsorption (PCA), wenn eine Station jenseits der Polarkreise oder in der Polarlichtzone liegt.
-- 37 Sprachen; Farbschemata hell, Nacht (blau), schwarz und acht Pastelltöne.
+- 37 Sprachen; Farbschemata hell, Nacht (blau), schwarz, acht Pastelltöne und drei aus IP-TRX-CTRL (blau, violett, grün).
 - Mondpositionen auf etwa 0,01° genau (Meeus, ELP-2000/82), alle Berechnungen auf deinem Computer; Daten in einem einzigen Ordner `data`.
 
 ### Français
@@ -258,11 +264,13 @@ YAEC réunit dans un seul programme tout ce qu'il faut pour trafiquer en EME (Te
 **En direct**
 - **Position en direct et +- 24h** – l'écran principal, mis à jour chaque seconde : votre locator et celui du DX (4 à 14 caractères), fréquence, horloges UTC, locale et du DX, bande d'état (pointable, hors limites, sous l'horizon, fenêtre commune) avec compte à rebours, boussole et arc d'élévation. En saisissant l'indicatif du DX, son locator vient de CALL3.TXT.
 - **Reconnaissance de mes obstacles** – carte aérienne ou topographique centrée sur votre station avec le ciel dessiné dessus : position de la Lune, trajet des 24 prochaines heures, lever et coucher, limites de l'antenne à faire glisser à la souris.
+- **Mon horizon** – *Horizon du relief* : panorama du relief autour de ta station à partir des altitudes SRTM1 (environ 30 m), avec la courbure terrestre et la réfraction, sur le fond de la voûte céleste (trois échelles de couleurs) ou d'un ciel bleu clair ; trajectoire de la Lune, lever et coucher au-dessus du relief, principaux obstacles nommés d'après OpenStreetMap et minutes de Lune perdues. Une case fait du relief l'élévation minimale dans tout le programme. *Carte du bruit local (NJ9R)* : grille azimut × élévation où tu notes le bruit vu dans WSJT-X en tournant l'antenne ; les heures où la Lune est dans une direction bruyante reçoivent un ⚠.
 - **Voûte céleste** – le ciel vu de votre QTH avec les couleurs du bruit du ciel à votre fréquence, les limites de l'antenne, l'horizon du DX, les radiosources, le Soleil et le trajet de la Lune.
 
 **Planification**
 - **Distance et Dgrd** – de 7 à 61 jours de Dgrd et de distance moyenne de la Lune, avec la déclinaison superposée, périgée, apogée, nouvelle lune, les trois meilleurs jours (dans l'ordre chronologique), un éventuel quatrième jour utile et une alerte pour les jours où la Lune est proche du Soleil. Seules comptent les heures où la Lune est vraiment pointable avec vos limites.
 - **DGRD par fréquence** – le Dgrd à votre fréquence de travail avec le bruit réel de votre station et le ciel moyenné sur le faisceau de l'antenne, comparé au calcul habituel de WSJT-X ; le choix vaut pour tout le programme.
+- **Stations à essayer** – pour le jour choisi, les stations actives sur le chat EME de N0UK (144 MHz) ayant une fenêtre commune avec toi, la meilleure par champ de locator, classées par un indice de 0 à 100 tiré du S/N dans les deux sens ; l'installation du DX est lue dans ce qu'il écrit sur le chat. Un calcul d'exemple, très approximatif, idée de Matteo IW5DHN.
 - **Position de la Lune** – tableau pour la période choisie, coloré selon la pointabilité, avec les fenêtres communes à vous et au DX ; export CSV pour Excel.
 - **La Lune sur le monde** – carte du monde colorée selon l'élévation de la Lune vue de chaque lieu ; un clic fait de ce point le DX.
 
@@ -281,7 +289,7 @@ YAEC réunit dans un seul programme tout ce qu'il faut pour trafiquer en EME (Te
 **Et aussi**
 - CALL3.TXT téléchargé chez W7GJ et WSJT-X Improved, fusionné, renouvelé tous les 7 jours et copié dans WSJT-X sur demande.
 - Alertes d'absorption de la calotte polaire et aurorale (PCA) quand une station est au-delà des cercles polaires ou dans la zone aurorale.
-- 37 langues ; thèmes de couleurs clair, nuit (bleu), noir et huit pastels.
+- 37 langues ; thèmes de couleurs clair, nuit (bleu), noir, huit pastels et trois d'IP-TRX-CTRL (bleu, violet, vert).
 - Positions de la Lune précises à environ 0,01° (Meeus, ELP-2000/82), tous les calculs sur votre ordinateur ; données dans un seul dossier `data`.
 
 ### Español
@@ -293,11 +301,13 @@ YAEC reúne en un solo programa todo lo necesario para operar EME (Tierra–Luna
 **En directo**
 - **Posición en vivo y +- 24h** – la pantalla principal, actualizada cada segundo: tu locator y el del DX (de 4 a 14 caracteres), frecuencia, relojes UTC, local y del DX, franja de estado (apuntable, fuera de límites, bajo el horizonte, ventana común) con cuenta atrás, brújula y arco de elevación. Al escribir el indicativo del DX, su locator llega del CALL3.TXT.
 - **Reconocimiento de mis obstáculos** – mapa aéreo o topográfico centrado en tu estación con el cielo dibujado encima: posición de la Luna, trayectoria de las próximas 24 horas, salida y puesta, límites de la antena que se arrastran con el ratón.
+- **Mi horizonte** – *Horizonte del terreno*: panorama del terreno alrededor de tu estación con los datos de altitud SRTM1 (unos 30 m), con curvatura terrestre y refracción, sobre el fondo de la bóveda celeste (tres escalas de color) o de un cielo celeste; trayectoria de la Luna, salida y puesta sobre el terreno, obstáculos principales con los nombres de OpenStreetMap y minutos de Luna perdidos. Una casilla convierte el terreno en la elevación mínima en todo el programa. *Mapa del ruido local (NJ9R)*: cuadrícula acimut × elevación donde anotas el ruido visto en WSJT-X al girar la antena; las horas con la Luna en una dirección ruidosa llevan ⚠.
 - **Bóveda celeste** – el cielo visto desde tu QTH con los colores del ruido del cielo en tu frecuencia, los límites de la antena, el horizonte del DX, las radiofuentes, el Sol y la trayectoria de la Luna.
 
 **Planificación**
 - **Distancia y Dgrd** – de 7 a 61 días de Dgrd y distancia media de la Luna, con la declinación superpuesta, perigeo, apogeo, luna nueva, los tres mejores días (por orden de fecha), un posible cuarto día útil y un aviso para los días con la Luna cerca del Sol. Solo cuentan las horas en que la Luna es realmente apuntable con tus límites.
 - **DGRD por frecuencia** – el Dgrd en tu frecuencia de trabajo con el ruido real de tu estación y el cielo promediado sobre el haz de la antena, comparado con el cálculo habitual de WSJT-X; la elección vale en todo el programa.
+- **Estaciones para probar** – para el día elegido, las estaciones activas en el chat EME de N0UK (144 MHz) con una ventana común contigo, la mejor por campo de locator, ordenadas por un índice de 0 a 100 obtenido del S/N en ambos sentidos; el equipo del DX se lee de lo que escribe en el chat. Un cálculo de ejemplo, muy aproximado, idea de Matteo IW5DHN.
 - **Posición de la Luna** – tabla para el periodo elegido, coloreada según la apuntabilidad, con las ventanas comunes para ti y el DX; exportación CSV para Excel.
 - **La Luna sobre el mundo** – mapa del mundo coloreado según la elevación de la Luna vista desde cada lugar; con un clic ese punto pasa a ser el DX.
 
@@ -316,7 +326,7 @@ YAEC reúne en un solo programa todo lo necesario para operar EME (Tierra–Luna
 **Además**
 - CALL3.TXT descargado de W7GJ y de WSJT-X Improved, fusionado, renovado cada 7 días y copiado en WSJT-X a petición.
 - Avisos de absorción del casquete polar y auroral (PCA) cuando una estación está más allá de los círculos polares o en la zona auroral.
-- 37 idiomas; esquemas de colores claro, noche (azul), negro y ocho pastel.
+- 37 idiomas; esquemas de colores claro, noche (azul), negro, ocho pastel y tres de IP-TRX-CTRL (azul, violeta, verde).
 - Posiciones de la Luna con una precisión de unos 0,01° (Meeus, ELP-2000/82), todos los cálculos en tu ordenador; datos en una sola carpeta `data`.
 
 ### Português
@@ -328,11 +338,13 @@ O YAEC reúne num só programa tudo o que é preciso para trabalhar em EME (Terr
 **Em direto**
 - **Posição em direto e +- 24h** – o ecrã principal, atualizado a cada segundo: o teu locator e o do DX (de 4 a 14 caracteres), frequência, relógios UTC, local e do DX, faixa de estado (apontável, fora dos limites, abaixo do horizonte, janela comum) com contagem decrescente, bússola e arco de elevação. Ao escrever o indicativo do DX, o locator vem do CALL3.TXT.
 - **Reconhecimento dos meus obstáculos** – mapa aéreo ou topográfico centrado na tua estação com o céu desenhado por cima: posição da Lua, percurso nas próximas 24 horas, nascimento e ocaso, limites da antena que se arrastam com o rato.
+- **O meu horizonte** – *Horizonte do relevo*: panorama do terreno em redor da tua estação a partir das altitudes SRTM1 (cerca de 30 m), com curvatura terrestre e refração, sobre o fundo da abóbada celeste (três escalas de cores) ou de um céu azul-claro; trajetória da Lua, nascer e ocaso acima do terreno, obstáculos principais com os nomes do OpenStreetMap e minutos de Lua perdidos. Uma caixa torna o terreno a elevação mínima em todo o programa. *Mapa do ruído local (NJ9R)*: grelha azimute × elevação onde anotas o ruído visto no WSJT-X ao rodar a antena; as horas com a Lua numa direção ruidosa recebem ⚠.
 - **Abóbada celeste** – o céu visto do teu QTH com as cores do ruído do céu na tua frequência, os limites da antena, o horizonte do DX, as radiofontes, o Sol e o percurso da Lua.
 
 **Planeamento**
 - **Distância e Dgrd** – de 7 a 61 dias de Dgrd e distância média da Lua, com a declinação sobreposta, perigeu, apogeu, lua nova, os três melhores dias (por ordem de data), um eventual quarto dia útil e um aviso para os dias com a Lua perto do Sol. Só contam as horas em que a Lua é realmente apontável com os teus limites.
 - **DGRD por frequência** – a Dgrd na tua frequência de trabalho com o ruído real da tua estação e o céu médio sobre o feixe da antena, comparada com o cálculo habitual do WSJT-X; a escolha vale para todo o programa.
+- **Estações a experimentar** – para o dia escolhido, as estações ativas no chat EME de N0UK (144 MHz) com uma janela comum contigo, a melhor por campo de locator, ordenadas por um índice de 0 a 100 obtido do S/N nos dois sentidos; a instalação do DX é lida do que escreve no chat. Um cálculo de exemplo, muito aproximado, ideia de Matteo IW5DHN.
 - **Posição da Lua** – tabela para o período escolhido, colorida segundo a apontabilidade, com as janelas comuns a ti e ao DX; exportação CSV para Excel.
 - **Lua sobre o mundo** – mapa do mundo colorido segundo a elevação da Lua vista de cada lugar; com um clique esse ponto passa a ser o DX.
 
@@ -351,7 +363,7 @@ O YAEC reúne num só programa tudo o que é preciso para trabalhar em EME (Terr
 **E ainda**
 - CALL3.TXT descarregado de W7GJ e do WSJT-X Improved, fundido, renovado a cada 7 dias e copiado para o WSJT-X a pedido.
 - Avisos de absorção da calote polar e auroral (PCA) quando uma estação está para lá dos círculos polares ou na zona auroral.
-- 37 línguas; esquemas de cores claro, noite (azul), preto e oito pastel.
+- 37 línguas; esquemas de cores claro, noite (azul), preto, oito pastel e três do IP-TRX-CTRL (azul, violeta, verde).
 - Posições da Lua com uma precisão de cerca de 0,01° (Meeus, ELP-2000/82), todos os cálculos no teu computador; dados numa única pasta `data`.
 
 ### Türkçe
@@ -363,11 +375,13 @@ YAEC, 50, 70, 144, 222, 432 ve 902 MHz ile 23 cm (1296 MHz) bantlarında EME (D�
 **Canlı**
 - **Canlı konum ve +- 24h** – her saniye güncellenen ana ekran: sizin ve DX'in lokatörü (4 ila 14 karakter), frekans, UTC, yerel ve DX saatleri, geri sayımlı bir durum şeridi (yönlendirilebilir, sınırların dışında, ufkun altında, ortak pencere), pusula ve elevasyon yayı. DX'in çağrı işareti yazıldığında lokatörü CALL3.TXT'den gelir.
 - **Engellerimin keşfi** – istasyonunuzu merkeze alan, üzerine gökyüzü çizilmiş hava fotoğrafı veya topografik harita: Ay'ın konumu, sonraki 24 saatteki yolu, doğuş ve batış, fareyle sürüklenen anten sınırları.
+- **Ufkum** – *Araziden ufuk*: istasyonunun çevresindeki arazinin SRTM1 yükseklik verilerinden (yaklaşık 30 m), Dünya eğriliği ve kırılmayla hesaplanan panoraması, gök kubbesi (üç renk ölçeği) ya da açık mavi bir gök arka planında; Ay'ın yolu, arazinin üzerinde doğuş ve batış, OpenStreetMap adlarıyla başlıca engeller ve kaybedilen Ay dakikaları. Bir onay kutusu araziyi tüm programda en düşük yükseklik açısı yapar. *Yerel gürültü haritası (NJ9R)*: anteni döndürürken WSJT-X'te görülen gürültüyü yazdığın azimut × yükseklik ızgarası; Ay'ın gürültülü bir yönde olduğu saatler ⚠ alır.
 - **Gök kubbesi** – QTH'nizden görülen gökyüzü; frekansınızdaki gök gürültüsü renkleri, anten sınırları, DX'in ufku, radyo kaynakları, Güneş ve Ay'ın yolu.
 
 **Planlama**
 - **Mesafe ve Dgrd** – 7 ila 61 günlük Dgrd ve ortalama Ay mesafesi; üzerine bindirilmiş deklinasyon, yerberi, yeröte, yeni Ay, en iyi üç gün (tarih sırasıyla), olası dördüncü kullanışlı gün ve Ay'ın Güneş'e yakın olduğu günler için uyarı. Yalnızca Ay'ın sınırlarınızla gerçekten yönlendirilebilir olduğu saatler sayılır.
 - **Frekansa göre DGRD** – istasyonunuzun gerçek gürültüsü ve anten hüzmesi üzerinde ortalanmış gökyüzüyle çalışma frekansınızdaki Dgrd, alışılmış WSJT-X hesabıyla karşılaştırmalı; seçim tüm programda geçerlidir.
+- **Denenecek istasyonlar** – seçilen gün için N0UK EME sohbetinde etkin olan ve seninle ortak penceresi bulunan istasyonlar (144 MHz), her lokatör alanından en iyisi, iki yöndeki S/N'den elde edilen 0–100 endeksine göre sıralı; DX'in donanımı sohbette yazdıklarından okunur. Çok kaba bir örnek hesap, fikir Matteo IW5DHN'den.
 - **Ay konumu** – seçilen dönem için, yönlendirilebilirliğe göre renklendirilmiş tablo; sizin ve DX'in ortak pencereleriyle; Excel için CSV dışa aktarma.
 - **Dünya üzerinde Ay** – her yerden görülen Ay elevasyonuna göre renklendirilmiş dünya haritası; tek tıkla o nokta DX olur.
 
@@ -386,7 +400,7 @@ YAEC, 50, 70, 144, 222, 432 ve 902 MHz ile 23 cm (1296 MHz) bantlarında EME (D�
 **Ayrıca**
 - W7GJ'den ve WSJT-X Improved'dan indirilen, birleştirilen, 7 günde bir yenilenen ve istenirse WSJT-X'e kopyalanan CALL3.TXT.
 - Bir istasyon kutup dairelerinin ötesinde veya auroral bölgede olduğunda kutup başlığı ve auroral soğurma (PCA) uyarıları.
-- 37 dil; açık, gece (mavi), siyah ve sekiz pastel renk şeması.
+- 37 dil; açık, gece (mavi), siyah, sekiz pastel ve IP-TRX-CTRL'den üç (mavi, mor, yeşil) renk şeması.
 - Yaklaşık 0,01° doğrulukta Ay konumları (Meeus, ELP-2000/82), tüm hesaplar bilgisayarınızda; veriler tek bir `data` klasöründe.
 
 ### Čeština
@@ -398,11 +412,13 @@ YAEC shromažďuje v jediném programu vše, co je potřeba pro provoz EME (Zem�
 **Živě**
 - **Poloha živě a +- 24h** – hlavní obrazovka, aktualizovaná každou sekundu: tvůj lokátor a lokátor DX (4 až 14 znaků), kmitočet, hodiny UTC, místní a DX, stavový pruh (zamiřitelný, mimo limity, pod obzorem, společné okno) s odpočtem, kompas a oblouk elevace. Po napsání značky DX se lokátor doplní z CALL3.TXT.
 - **Průzkum mých překážek** – letecká nebo topografická mapa vystředěná na tvou stanici s oblohou nakreslenou navrch: poloha Měsíce, dráha v příštích 24 hodinách, východ a západ, limity antény, které se táhnou myší.
+- **Můj obzor** – *Obzor z terénu*: panorama terénu kolem tvé stanice z výškových dat SRTM1 (asi 30 m), se zakřivením Země a refrakcí, na pozadí nebeské klenby (tři barevné škály) nebo světle modrého nebe; dráha Měsíce, východ a západ nad terénem, hlavní překážky s názvy z OpenStreetMap a ztracené minuty Měsíce. Jedno políčko udělá z terénu minimální elevaci v celém programu. *Mapa místního rušení (NJ9R)*: mřížka azimut × elevace, do které zapisuješ šum viděný ve WSJT-X při otáčení antény; hodiny s Měsícem v hlučném směru dostanou ⚠.
 - **Nebeská klenba** – obloha viděná z tvého QTH s barvami šumu oblohy na tvém kmitočtu, limity antény, obzor DX, rádiové zdroje, Slunce a dráha Měsíce.
 
 **Plánování**
 - **Vzdálenost a Dgrd** – 7 až 61 dní Dgrd a průměrné vzdálenosti Měsíce, s překrytou deklinací, perigeem, apogeem, novem, třemi nejlepšími dny (podle data), případným čtvrtým užitečným dnem a upozorněním na dny s Měsícem blízko Slunce. Počítají se jen hodiny, kdy je Měsíc s tvými limity opravdu zamiřitelný.
 - **DGRD podle kmitočtu** – Dgrd na tvém pracovním kmitočtu se skutečným šumem tvé stanice a oblohou průměrovanou přes svazek antény, porovnaná s obvyklým výpočtem WSJT-X; volba platí v celém programu.
+- **Stanice k vyzkoušení** – pro zvolený den stanice aktivní v EME chatu N0UK (144 MHz) se společným oknem, nejlepší v každém poli lokátoru, seřazené podle indexu 0 až 100 z S/N v obou směrech; vybavení DX se čte z toho, co píše v chatu. Hrubý ukázkový výpočet, nápad Matteo IW5DHN.
 - **Poloha Měsíce** – tabulka pro zvolené období, obarvená podle zamiřitelnosti, se společnými okny pro tebe a DX; export CSV pro Excel.
 - **Měsíc nad světem** – mapa světa obarvená podle elevace Měsíce viděné z každého místa; jedním kliknutím se bod stane stanicí DX.
 
@@ -421,7 +437,7 @@ YAEC shromažďuje v jediném programu vše, co je potřeba pro provoz EME (Zem�
 **Dále**
 - CALL3.TXT stažený od W7GJ a z WSJT-X Improved, sloučený, obnovovaný každých 7 dní a na požádání zkopírovaný do WSJT-X.
 - Upozornění na absorpci v polární čepičce a aurorální absorpci (PCA), když je stanice za polárními kruhy nebo v aurorální zóně.
-- 37 jazyků; barevná schémata světlé, noční (modré), černé a osm pastelových.
+- 37 jazyků; barevná schémata světlé, noční (modré), černé, osm pastelových a tři z IP-TRX-CTRL (modré, fialové, zelené).
 - Polohy Měsíce s přesností asi 0,01° (Meeus, ELP-2000/82), všechny výpočty na tvém počítači; data v jediné složce `data`.
 
 ### Slovenčina
@@ -433,11 +449,13 @@ YAEC zhromažďuje v jedinom programe všetko, čo treba na prevádzku EME (Zem�
 **Naživo**
 - **Poloha naživo a +- 24h** – hlavná obrazovka, aktualizovaná každú sekundu: tvoj lokátor a lokátor DX (4 až 14 znakov), kmitočet, hodiny UTC, miestne a DX, stavový pás (namieriteľný, mimo limitov, pod obzorom, spoločné okno) s odpočtom, kompas a oblúk elevácie. Po napísaní značky DX sa lokátor doplní z CALL3.TXT.
 - **Prieskum mojich prekážok** – letecká alebo topografická mapa vycentrovaná na tvoju stanicu s oblohou nakreslenou navrchu: poloha Mesiaca, dráha v nasledujúcich 24 hodinách, východ a západ, limity antény, ktoré sa ťahajú myšou.
+- **Môj obzor** – *Obzor z terénu*: panoráma terénu okolo tvojej stanice z výškových dát SRTM1 (asi 30 m), so zakrivením Zeme a refrakciou, na pozadí nebeskej klenby (tri farebné škály) alebo svetlomodrej oblohy; dráha Mesiaca, východ a západ nad terénom, hlavné prekážky s názvami z OpenStreetMap a stratené minúty Mesiaca. Jedno políčko urobí z terénu minimálnu eleváciu v celom programe. *Mapa miestneho rušenia (NJ9R)*: mriežka azimut × elevácia, do ktorej zapisuješ šum videný vo WSJT-X pri otáčaní antény; hodiny s Mesiacom v hlučnom smere dostanú ⚠.
 - **Nebeská klenba** – obloha videná z tvojho QTH s farbami šumu oblohy na tvojom kmitočte, limity antény, obzor DX, rádiové zdroje, Slnko a dráha Mesiaca.
 
 **Plánovanie**
 - **Vzdialenosť a Dgrd** – 7 až 61 dní Dgrd a priemernej vzdialenosti Mesiaca, s prekrytou deklináciou, perigeom, apogeom, novom, tromi najlepšími dňami (podľa dátumu), prípadným štvrtým užitočným dňom a upozornením na dni s Mesiacom blízko Slnka. Počítajú sa len hodiny, keď je Mesiac s tvojimi limitmi naozaj namieriteľný.
 - **DGRD podľa kmitočtu** – Dgrd na tvojom pracovnom kmitočte so skutočným šumom tvojej stanice a oblohou priemerovanou cez zväzok antény, porovnaný s obvyklým výpočtom WSJT-X; voľba platí v celom programe.
+- **Stanice na vyskúšanie** – pre zvolený deň stanice aktívne v EME čete N0UK (144 MHz) so spoločným oknom, najlepšia v každom poli lokátora, zoradené podľa indexu 0 až 100 zo S/N v oboch smeroch; vybavenie DX sa číta z toho, čo píše v čete. Hrubý ukážkový výpočet, nápad Matteo IW5DHN.
 - **Poloha Mesiaca** – tabuľka pre zvolené obdobie, zafarbená podľa namieriteľnosti, so spoločnými oknami pre teba a DX; export CSV pre Excel.
 - **Mesiac nad svetom** – mapa sveta zafarbená podľa elevácie Mesiaca videnej z každého miesta; jedným kliknutím sa bod stane stanicou DX.
 
@@ -456,7 +474,7 @@ YAEC zhromažďuje v jedinom programe všetko, čo treba na prevádzku EME (Zem�
 **Ďalej**
 - CALL3.TXT stiahnutý od W7GJ a z WSJT-X Improved, zlúčený, obnovovaný každých 7 dní a na požiadanie skopírovaný do WSJT-X.
 - Upozornenia na absorpciu v polárnej čiapočke a aurorálnu absorpciu (PCA), keď je stanica za polárnymi kruhmi alebo v aurorálnej zóne.
-- 37 jazykov; farebné schémy svetlá, nočná (modrá), čierna a osem pastelových.
+- 37 jazykov; farebné schémy svetlá, nočná (modrá), čierna, osem pastelových a tri z IP-TRX-CTRL (modrá, fialová, zelená).
 - Polohy Mesiaca s presnosťou asi 0,01° (Meeus, ELP-2000/82), všetky výpočty na tvojom počítači; údaje v jedinom priečinku `data`.
 
 ### 中文
@@ -468,11 +486,13 @@ YAEC 把在 50、70、144、222、432、902 MHz 和 23 cm（1296 MHz）上进行
 **实时**
 - **实时位置与 +- 24h** – 每秒更新的主屏幕：你和 DX 的定位码（4 至 14 个字符）、频率、UTC、本地和 DX 时钟、带倒计时的状态条（可对准、超出限制、在地平线下、共同窗口）、罗盘和仰角弧。输入 DX 呼号后，定位码从 CALL3.TXT 自动填入。
 - **我的障碍物勘察** – 以你的电台为中心的航拍或地形图，上面叠加天空：月亮位置、未来 24 小时的轨迹、升起和落下、可用鼠标拖动的天线限制。
+- **我的地平线** – *地形地平线*：根据 SRTM1 高程数据（约 30 米）计算你电台周围的地形全景，考虑地球曲率和折射，背景为天穹（三种配色）或浅蓝色天空；月球轨迹、在地形之上的升起与落下、带 OpenStreetMap 名称的主要障碍物以及损失的月球分钟数。勾选一个框即可在整个程序中把地形用作最低仰角。*本地噪声图 (NJ9R)*：方位角 × 仰角网格，转动天线时记下 WSJT-X 中看到的噪声；月球处于噪声方向的时段标 ⚠。
 - **天穹** – 从你的 QTH 看到的天空，以你所用频率的天空噪声着色，并显示天线限制、DX 的地平线、射电源、太阳和月亮轨迹。
 
 **规划**
 - **距离与 Dgrd** – 7 至 61 天的 Dgrd 和月球平均距离，叠加赤纬、近地点、远地点、新月、三个最佳日（按日期排序）、可能的第四个可用日，以及月亮靠近太阳日子的提醒。只计算月亮在你的限制范围内真正可对准的时段。
 - **按频率 DGRD** – 你的工作频率上的 Dgrd，使用你电台的真实噪声和在天线波束上平均的天空，并与 WSJT-X 的常规计算对比；该选择在整个程序中生效。
+- **值得尝试的电台** – 所选日期中，N0UK EME 聊天里与你有共同窗口的活跃电台（144 MHz），每个定位网格取最佳一个，按由双向 S/N 得出的 0–100 指数排序；DX 的设备取自其在聊天中所写内容。非常粗略的示例计算，创意来自 Matteo IW5DHN。
 - **月球位置** – 所选时段的表格，按可对准性着色，显示你和 DX 的共同窗口；可导出为 Excel 用的 CSV。
 - **月照全球** – 按各地所见月亮仰角着色的世界地图；单击即可把该点设为 DX。
 
@@ -491,7 +511,7 @@ YAEC 把在 50、70、144、222、432、902 MHz 和 23 cm（1296 MHz）上进行
 **此外**
 - 从 W7GJ 和 WSJT-X Improved 下载并合并的 CALL3.TXT，每 7 天更新一次，可按需复制到 WSJT-X。
 - 当电台位于极圈以外或极光区时，提示极盖吸收和极光吸收（PCA）。
-- 37 种语言；浅色、夜间（蓝色）、黑色和八种柔和配色方案。
+- 37 种语言；浅色、夜间（蓝色）、黑色、八种柔和配色以及三种 IP-TRX-CTRL 配色（蓝、紫、绿）。
 - 月球位置精度约 0.01°（Meeus，ELP-2000/82），所有计算都在你的电脑上完成；数据集中在一个 `data` 文件夹里。
 
 ### 日本語
@@ -503,11 +523,13 @@ YAEC は、50、70、144、222、432、902 MHz と 23 cm（1296 MHz）で EME（
 **ライブ**
 - **ライブ位置と +- 24h** – 毎秒更新されるメイン画面：自局と DX のロケーター（4～14 文字）、周波数、UTC・ローカル・DX の時計、カウントダウン付きの状態帯（指向可能、制限外、地平線下、共通ウィンドウ）、コンパスと仰角の弧。DX のコールサインを入力すると、ロケーターが CALL3.TXT から入ります。
 - **自局障害物の偵察** – 自局を中心にした航空写真または地形図に空を重ねて表示：月の位置、今後 24 時間の軌跡、出と入り、マウスでドラッグできるアンテナの制限。
+- **自局の地平線** – *地形からの地平線*：SRTM1 標高データ（約 30 m）から地球の曲率と屈折を考慮して計算した局周辺の地形パノラマを、天球（3 配色）または水色の空の上に表示。月の軌跡、地形上の出と入り、OpenStreetMap の名前付きの主な障害物、失われる月の分数。チェックボックス 1 つで地形をプログラム全体の最低仰角にできます。*ローカル雑音マップ (NJ9R)*：アンテナを回しながら WSJT-X で見たノイズを入力する方位角 × 仰角のグリッド。月がノイズの多い方向にある時間には ⚠ が付きます。
 - **天球** – 自局 QTH から見た空を、使用周波数の空の雑音の色で表示し、アンテナの制限、DX の地平線、電波源、太陽、月の軌跡も示します。
 
 **計画**
 - **距離と Dgrd** – 7～61 日分の Dgrd と月の平均距離。赤緯の重ね表示、近地点、遠地点、新月、最良の 3 日（日付順）、4 日目の候補、月が太陽に近い日の警告付き。月が制限内で本当に指向できる時間だけを数えます。
 - **周波数別 DGRD** – 自局の実際の雑音とアンテナビームで平均した空を使った運用周波数での Dgrd を、通常の WSJT-X の計算と比較。選択はプログラム全体に適用されます。
+- **試してみたい局** – 選んだ日に N0UK EME チャットでアクティブで共通ウィンドウがある局（144 MHz）を、ロケーター フィールドごとに最良の 1 局ずつ、双方向の S/N から求めた 0〜100 の指数で並べます。DX の設備はチャットへの書き込みから読み取ります。非常に大まかな計算例で、Matteo IW5DHN のアイデアです。
 - **月の位置** – 選んだ期間の表。指向の可否で色分けし、自局と DX の共通ウィンドウを表示。Excel 用 CSV 書き出し。
 - **世界から見た月** – 各地から見た月の仰角で色分けした世界地図。クリックするとその地点が DX になります。
 
@@ -526,7 +548,7 @@ YAEC は、50、70、144、222、432、902 MHz と 23 cm（1296 MHz）で EME（
 **その他**
 - W7GJ と WSJT-X Improved からダウンロードして統合し、7 日ごとに更新、必要に応じて WSJT-X にコピーする CALL3.TXT。
 - 局が極圏の外側やオーロラ帯にあるときの極冠吸収・オーロラ吸収（PCA）の警告。
-- 37 言語。ライト、ナイト（青）、ブラック、8 種類のパステル配色。
+- 37 言語。ライト、ナイト（青）、ブラック、8 種類のパステル、IP-TRX-CTRL の 3 配色（青、紫、緑）。
 - 月の位置の精度は約 0.01°（Meeus、ELP-2000/82）。すべての計算はあなたのパソコン上で行い、データは一つの `data` フォルダーにまとめます。
 
 ### 한국어
@@ -537,11 +559,13 @@ YAEC는 50, 70, 144, 222, 432, 902 MHz와 23 cm(1296 MHz)에서 EME(지구–달
 **실시간**
 - **실시간 위치 및 +- 24h** – 매초 갱신되는 주 화면: 내 로케이터와 DX 로케이터(4~14자), 주파수, UTC·현지·DX 시계, 카운트다운이 있는 상태 띠(지향 가능, 한계 밖, 지평선 아래, 공통 창), 나침반과 앙각 호. DX 호출 부호를 입력하면 로케이터가 CALL3.TXT에서 채워집니다.
 - **내 장애물 정찰** – 내 국을 중심으로 한 항공 사진 또는 지형도 위에 하늘을 겹쳐 표시: 달의 위치, 다음 24시간 경로, 월출과 월몰, 마우스로 끌어 조정하는 안테나 한계.
+- **내 지평선** – *지형 지평선*: SRTM1 고도 데이터(약 30 m)로 지구 곡률과 굴절을 고려해 계산한 국 주변 지형의 파노라마를 천구(세 가지 색상) 또는 하늘색 하늘 위에 표시합니다. 달의 경로, 지형 위의 출몰, OpenStreetMap 이름이 붙은 주요 장애물, 잃는 달의 분. 확인란 하나로 지형을 프로그램 전체의 최소 앙각으로 사용합니다. *국지 잡음 지도(NJ9R)*: 안테나를 돌리며 WSJT-X에서 본 잡음을 입력하는 방위각 × 앙각 격자; 달이 잡음이 많은 방향에 있는 시간에는 ⚠ 표시.
 - **하늘 보기** – 내 QTH에서 본 하늘을 사용 주파수의 하늘 잡음 색으로 보여 주며, 안테나 한계, DX의 지평선, 전파원, 태양과 달의 경로를 표시합니다.
 
 **계획**
 - **거리와 Dgrd** – 7~61일간의 Dgrd와 달의 평균 거리, 적위 겹쳐 보기, 근지점, 원지점, 신월, 최고의 3일(날짜순), 가능한 네 번째 유효일, 달이 태양에 가까운 날의 경고. 내 한계 안에서 달을 정말 지향할 수 있는 시간만 셉니다.
 - **주파수별 DGRD** – 내 국의 실제 잡음과 안테나 빔에서 평균한 하늘을 사용한 운용 주파수의 Dgrd를 일반적인 WSJT-X 계산과 비교합니다. 선택은 프로그램 전체에 적용됩니다.
+- **시도해 볼 국** – 선택한 날에 N0UK EME 채팅에서 활동하며 공통 창이 있는 국(144 MHz)을 로케이터 필드마다 가장 좋은 한 국씩, 양방향 S/N에서 구한 0~100 지수로 정렬합니다. DX의 설비는 채팅에 쓴 내용에서 읽습니다. 매우 대략적인 예시 계산이며, 아이디어는 Matteo IW5DHN입니다.
 - **달의 위치** – 선택한 기간의 표를 지향 가능 여부에 따라 색으로 표시하고, 나와 DX의 공통 창을 보여 줍니다. Excel용 CSV 내보내기.
 - **세계 위의 달** – 각 지역에서 본 달의 앙각으로 색칠한 세계 지도. 클릭하면 그 지점이 DX가 됩니다.
 
@@ -560,7 +584,7 @@ YAEC는 50, 70, 144, 222, 432, 902 MHz와 23 cm(1296 MHz)에서 EME(지구–달
 **그 밖에**
 - W7GJ와 WSJT-X Improved에서 내려받아 합치고 7일마다 갱신하며, 요청하면 WSJT-X로 복사하는 CALL3.TXT.
 - 국이 극권 너머나 오로라대에 있을 때 극관 흡수와 오로라 흡수(PCA) 경고.
-- 37개 언어; 밝은, 야간(파랑), 검정과 8가지 파스텔 색 구성.
+- 37개 언어; 밝은, 야간(파랑), 검정, 8가지 파스텔과 IP-TRX-CTRL의 3가지(파랑, 보라, 초록) 색 구성.
 - 약 0.01° 정확도의 달 위치(Meeus, ELP-2000/82), 모든 계산은 내 컴퓨터에서 수행하며 데이터는 하나의 `data` 폴더에 저장합니다.
 
 ## For developers

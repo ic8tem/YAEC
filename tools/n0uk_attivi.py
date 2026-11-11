@@ -8,6 +8,9 @@ Gira una volta al giorno su GitHub (.github/workflows/attivi.yml). Dalla pagina 
 Le semplici citazioni nel testo non contano. Nessun testo dei messaggi viene salvato: solo
 nominativo e data dell'ultimo messaggio. Un nominativo esce dall'elenco 90 giorni dopo.
 Uscita: attivi.gz (righe "NOMINATIVO AAAA-MM-GG", compresse con gzip).
+Seconda uscita, impianti.gz: per chi scrive, l'impianto dichiarato nell'intestazione e il locator
+({S52LM/4X14HV/1K Milos xx JN65tx} -> "S52LM 2026-11-10 JN65TX 4X14HV/1K"), per la linguetta
+«Stazioni da provare» di YAEC. Anche qui solo dati pubblici dell'intestazione, tolti dopo 90 giorni.
 """
 import datetime as dt, gzip, os, re, sys, urllib.request
 
@@ -39,6 +42,10 @@ def data_riga(gg, mese, oggi):
         return None
 
 
+IMPIANTI = {}   # nominativo -> (data, locator, impianto) dall'intestazione dei messaggi
+LOC = re.compile(r'^[A-R]{2}[0-9]{2}(?:[A-X]{2})?$', re.I)
+
+
 def da_pagina(testo, oggi):
     trovati = {}
     testo = re.sub(r'<[^>]+>', ' ', testo).replace('&nbsp;', ' ')
@@ -55,7 +62,15 @@ def da_pagina(testo, oggi):
         g = re.search(r'\{\s*([^}\s]+)', corpo)            # chi scrive
         if g:
             c = valido(g.group(1).split('/')[0])
-            if c: nomi.add(c)
+            if c:
+                nomi.add(c)
+                testa = re.search(r'\{([^}]*)\}', corpo)
+                parti = testa.group(1).split() if testa else []
+                loc = next((x.upper() for x in reversed(parti) if LOC.match(x)), '-')
+                imp = g.group(1).split('/', 1)[1] if '/' in g.group(1) else '-'
+                imp = re.sub(r'[^A-Za-z0-9/.+-]', '', imp) or '-'
+                if c not in IMPIANTI or IMPIANTI[c][0] <= d:
+                    IMPIANTI[c] = (d, loc, imp)
         msg = corpo.split('======')[0]
         # decodifiche incollate: "... Freq 1157 Hz   CQ IU4CHE JN64" o "K1JT IU4CHE JN64"
         for dm in re.finditer(r'\b(CQ|QRZ)\s+(?:[A-Z]{2,4}\s+)?([A-Z0-9/]{3,12})\b', msg):
@@ -92,6 +107,27 @@ def main():
         for c in sorted(db):
             f.write('%s %s\n' % (c, db[c].isoformat()))
     print('nominativi nella pagina:', len(nuovi), ' nel database (90 giorni):', len(db))
+    # impianti dichiarati: si fondono con quelli dei giorni prima (vince il più recente)
+    fi = os.path.join(os.path.dirname(os.path.abspath(FILE)), 'impianti.gz')
+    imp = {}
+    if os.path.exists(fi):
+        for r in gzip.open(fi, 'rt', encoding='utf-8'):
+            p = r.split()
+            if len(p) == 4:
+                try: imp[p[0]] = (dt.date.fromisoformat(p[1]), p[2], p[3])
+                except ValueError: pass
+    for c, v in IMPIANTI.items():
+        if c not in imp or imp[c][0] <= v[0]:
+            vecchio = imp.get(c)
+            # un messaggio senza impianto o senza locator non cancella quelli già noti
+            loc = v[1] if v[1] != '-' or not vecchio else vecchio[1]
+            im = v[2] if v[2] != '-' or not vecchio else vecchio[2]
+            imp[c] = (v[0], loc, im)
+    imp = {c: v for c, v in imp.items() if v[0] >= limite}
+    with gzip.open(fi, 'wt', encoding='utf-8') as f:
+        for c in sorted(imp):
+            f.write('%s %s %s %s\n' % (c, imp[c][0].isoformat(), imp[c][1], imp[c][2]))
+    print('impianti dichiarati:', len(imp))
 
 
 if __name__ == '__main__':

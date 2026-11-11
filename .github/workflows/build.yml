@@ -165,6 +165,33 @@ jobs:
             convert shot/x.png -resize 1200x shot/x.jpg 2>/dev/null && echo "SCREENSHOT-${T// /_}-B64:$(base64 -w 0 shot/x.jpg)" || true
             kill $PID 2>/dev/null || true
           done
+          # Il mio orizzonte: orizzonte dal terreno calcolato (raggio 100 km per fare presto), poi la mappa del rumore; Stazioni da provare
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          cp "$F" /tmp/imp0.bak
+          printf 'orizzonte_raggio=2\norizzonte_vista=0\n' >> "$F"
+          YAEC_LINGUETTA="Il mio orizzonte" YAEC_ORIZZONTE=1 mono YAEC.exe &
+          PID=$!
+          sleep 240
+          import -window root shot/o.png || true
+          convert shot/o.png -resize 1400x shot/o.jpg 2>/dev/null && echo "SCREENSHOT-ORIZZONTE-B64:$(base64 -w 0 shot/o.jpg)" || true
+          kill $PID 2>/dev/null || true
+          ls -la "$HOME/.local/share/YAEC/data/dem" | head -20 || true
+          head -20 "$HOME/.local/share/YAEC/data/dem/orizzonte.txt" 2>/dev/null || true
+          printf 'orizzonte_vista=1\n' >> "$F"
+          YAEC_LINGUETTA="Il mio orizzonte" mono YAEC.exe &
+          PID=$!
+          sleep 30
+          import -window root shot/r.png || true
+          convert shot/r.png -resize 1400x shot/r.jpg 2>/dev/null && echo "SCREENSHOT-RUMORE-B64:$(base64 -w 0 shot/r.jpg)" || true
+          kill $PID 2>/dev/null || true
+          YAEC_LINGUETTA="Stazioni da provare" mono YAEC.exe &
+          PID=$!
+          sleep 40
+          import -window root shot/p.png || true
+          convert shot/p.png -resize 1400x shot/p.jpg 2>/dev/null && echo "SCREENSHOT-PROVARE-B64:$(base64 -w 0 shot/p.jpg)" || true
+          kill $PID 2>/dev/null || true
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+          cp /tmp/imp0.bak "$F"
           # Volta celeste con limiti dell'antenna (az 285 -> 80, el 0 -> 12): riquadri viola della zona puntabile
           F="$HOME/.local/share/YAEC/data/impostazioni.txt"
           cp "$F" /tmp/imp.bak

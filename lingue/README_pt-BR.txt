@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.8
+﻿YAEC – Yet Another EME Calc 1.9
 por Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,24 @@ Calculadora para radioamadores que operam em EME (Terra–Lua–Terra) de 50 MHz
 Código-fonte e download: https://github.com/ic8tem/YAEC/releases
 
 INSTALAÇÃO – WINDOWS
-1. Baixe YAEC-1.8-win-x64-setup.exe da página Releases e execute-o. Ele instala o YAEC em Documentos\YAEC, sem direitos de administrador, com atalhos no menu Iniciar e na área de trabalho e o programa de desinstalação.
+1. Baixe YAEC-1.9-win-x64-setup.exe da página Releases e execute-o. Ele instala o YAEC em Documentos\YAEC, sem direitos de administrador, com atalhos no menu Iniciar e na área de trabalho e o programa de desinstalação.
 2. Se aparecer o aviso do SmartScreen: "Mais informações" → "Executar assim mesmo".
-3. Sem instalação: extraia YAEC-1.8-win-x64-portatile.zip em uma pasta onde você tenha permissão de gravação e inicie YAEC.exe.
+3. Sem instalação: extraia YAEC-1.9-win-x64-portatile.zip em uma pasta onde você tenha permissão de gravação e inicie YAEC.exe.
 
 INSTALAÇÃO – LINUX
 O YAEC funciona com o Mono, o runtime .NET livre.
-- Debian, Ubuntu, Mint: baixe yaec_1.8_amd64.deb e instale-o com
-      sudo apt install ./yaec_1.8_amd64.deb
+- Debian, Ubuntu, Mint: baixe yaec_1.9_amd64.deb e instale-o com
+      sudo apt install ./yaec_1.9_amd64.deb
   (instala também o Mono). O YAEC é iniciado pelo menu de aplicativos ou com o comando "yaec".
-- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.8-linux-x64-portatile.tar.gz (ARM: YAEC-1.8-linux-arm64-portatile.tar.gz, YAEC-1.8-linux-arm-portatile.tar.gz) e execute ./install.sh.
+- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) e execute ./install.sh.
 
 INSTALAÇÃO – macOS (experimental)
 1. Instale o Mono para macOS (https://www.mono-project.com/download/stable/) e o XQuartz (https://www.xquartz.org).
-2. Abra YAEC-1.8-osx-arm64.dmg (Apple Silicon) / YAEC-1.8-osx-x64.dmg (Intel) e arraste o YAEC para Aplicativos. Na primeira vez: clique com o botão direito em YAEC → Abrir (o app não é assinado pela Apple).
+2. Abra YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) e arraste o YAEC para Aplicativos. Na primeira vez: clique com o botão direito em YAEC → Abrir (o app não é assinado pela Apple).
 
 VERIFICAÇÃO DOS ARQUIVOS BAIXADOS (SHA-256)
 Cada release contém SHA256SUMS.txt com o hash SHA-256 de cada pacote. Compare-o com o do arquivo baixado:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.8-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Se os dois valores forem diferentes, não instale o arquivo: baixe-o de novo.
@@ -39,7 +39,8 @@ Erros, dados melhores, traduções: ccerrotta@gmail.com · ic8tem@gmail.com · w
 
 HISTÓRICO DE VERSÕES
 As versões anteriores à 1.0 são chamadas beta.
-- 1.8 - Novo idioma eslovaco (37 no total), com os manuais, o LEIA-ME e a licença; uma só largura de feixe em todo o programa: 0,93·√(41253/G) para as yagis (regra de Kraus corrigida com as simulações NEC de W4RNL, como no YA-MS) e 70·λ/D para as parabólicas (IZ0JNY), no lugar de √(32000/G) sem fonte na DGRD por frequência; manual atualizado com a nova fórmula e o exemplo de apontamento; no macOS o inicializador abre o XQuartz sozinho, grava a versão do Mono no log e avisa se o YAEC não iniciar; apresentação do README também em português, turco, tcheco, eslovaco, chinês, japonês e coreano; traduções corrigidas em tailandês, romeno, grego, português do Brasil, polonês, tcheco e húngaro.
+- 1.9 - Nova aba Meu horizonte (Ao vivo): horizonte do terreno calculado a partir dos dados SRTM1 com curvatura da Terra e refração, sobre o fundo da Abóbada celeste em uma das três escalas de cores, trajetória da Lua, obstáculos principais com os nomes do OpenStreetMap e minutos de Lua perdidos; caixa para usar o terreno como elevação mínima em todo o programa; mapa do ruído local segundo NJ9R, com ⚠ nas horas em que a Lua está em uma direção ruidosa; nova aba Estações para testar (Planejamento), ideia de Matteo IW5DHN: as estações ativas do chat N0UK ordenadas por um índice de 0 a 100; caixas numéricas com setas lado a lado, abas em formato de pílula e três novos esquemas de cores tirados do IP-TRX-CTRL.
+- 1.8 - Novo idioma eslovaco (37 no total), com os manuais, o LEIA-ME e a licença; uma só largura de feixe em todo o programa: 0,93·√(41253/G) para as yagis (regra de Kraus corrigida com as simulações NEC de W4RNL, como no YA-MS) e 70·λ/D para as parabólicas (IZ0JNY), no lugar de √(32000/G) sem fonte na DGRD por frequência; manual atualizado com a nova fórmula e o exemplo de apontamento; no macOS o inicializador abre o XQuartz sozinho, grava a versão do Mono no log e avisa se o YAEC não iniciar; apresentação do README também em português, turco, tcheco, eslovaco, chinês, japonês e coreano; traduções corrigidas em tailandês, romeno, grego, português do Brasil, polonês, tcheco e húngaro.
 - 1.7 - Oito novos idiomas: português brasileiro, tailandês, chinês tradicional, polonês, tcheco, romeno, grego e húngaro (36 no total), com os manuais e os LEIA-ME; no Balanço EME Yagi e no Balanço EME parabólicas, o cálculo do eco da própria estação (Eu transmito e recebo meu próprio eco); parabólica de foco primário ou offset (W2IMU); em 1296 MHz com as parabólicas, a perda da polarização circular dos iluminadores reais (KA1GT); na Verificação dos cálculos, a escolha entre Balanço EME Yagi e Balanço EME parabólicas; fórmulas do DGRD por frequência escritas como em um editor de equações; manual: rotação de Faraday em 1296 MHz segundo a ITU-R P.531, despolarização em 23 cm (Hagfors) e polarização circular em 23 cm.
 - 1.6 - Bandas de 902 MHz e 23 cm (1296 e 1298 MHz) em todo o programa, com todas as bandas na lista suspensa dos MHz; a aba Balanço EME passa a se chamar Balanço EME Yagi e há a nova aba Balanço EME parabólicas (parabólica de foco primário, ganho com a fórmula de PE1RKI, pré-amplificador também de dois estágios, transverter e excitação do PA); nova aba DGRD por frequência, com o ruído real da estação e o céu em média sobre o feixe, usada em todo o programa; cabos coaxiais calculados com a fórmula α = k1·√f + k2·f a partir dos dados das fichas técnicas, também a 902 e 1296 MHz; novo estilo dos comandos em todas as abas; na Posição ao vivo e +- 24h, a dica sobre o cursor vermelho e as linhas vermelhas do DX à hora do cursor; manual revisto após a comparação das fontes (perda de percurso banda a banda, limiares do Q65-60B e do Q65-60C, ground gain segundo as medições de IK1UWL, conectores, Dgrd de outros programas, parabólicas acima de 432 MHz); pacotes para cada arquitetura (Windows x64 e x86, Linux x64, arm64 e arm, macOS Apple Silicon e Intel); agradecimentos a Robert HA5OLA. As bandas acima de 432 MHz estão em fase de conclusão.
 - 1.5 - Nova aba Radar GRAVES no grupo Enlace: Lua no feixe do radar com setor e passo, janela comum com você, Doppler e atraso do eco, próxima passagem do feixe pela Lua, céu visto do GRAVES, reconstrução das 24 horas UTC com o detalhe dos próximos 10 segundos, conselhos para ouvir o eco e fontes; lista das estações ativas também em JSON e em texto para o LunaCalc Mobile; dois novos idiomas, dinamarquês e tagalo (28 no total), com os manuais.
