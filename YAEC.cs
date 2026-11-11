@@ -61482,6 +61482,11 @@ namespace LunaCalc
             cmbOrizPal.Enabled = orizSfondo;
             rumCarica = true;
             try { chkRumSegnala.Checked = rumSegnala; nudRumSoglia.Value = rumSoglia; } finally { rumCarica = false; }
+            if (cmbStazModo != null)
+            {
+                stazCarica = true;
+                try { cmbStazModo.SelectedIndex = stazModoVoce; chkStazTemp.Checked = stazTemp; cmbStazPol.SelectedIndex = stazPol; } finally { stazCarica = false; }
+            }
             orizSync = true;
             try { nudOrizAnt.Value = Math.Max(nudOrizAnt.Minimum, Math.Min(nudOrizAnt.Maximum, me.H.Value)); nudOrizMax.Value = me.El2.Value; } finally { orizSync = false; }
             MostraVistaOriz();
@@ -62762,6 +62767,647 @@ namespace LunaCalc
                 }
                 int hNec = (int)Math.Max(yr, cl.Bottom) + S(10);
                 if (pnlRum.Height < hNec) pnlRum.Height = hNec;
+            }
+        }
+
+        // ---------- Linguetta "Stazioni da provare" (bozzetto approvato; idea di Matteo IW5DHN) ----------
+        // Le stazioni attive nella chat EME di N0UK (2 m), con l'impianto ricostruito dall'intestazione dei loro messaggi
+        // (es. {S52LM/4X14HV/1K ...} = 4 yagi da 14 elementi, H e V, 1 kW): per il giorno scelto le finestre comuni,
+        // l'S/N nei due sensi nel momento migliore e un indice da 0 a 100. Calcolo d'esempio, molto approssimato.
+        class FinestraProva { public DateTime T1, T2, Meglio; public double SnIoDx, SnDxIo; public int Indice; }
+        class StazProva
+        {
+            public string Call = "", Loc = "", Imp = "";
+            public bool Dichiarato;
+            public int NAnt = 4, El = 14, Pol;   // Pol: 0 H, 1 V, 2 H e V
+            public double Boom, G, Gtot, P = 1000, Lat, Lon, Dist;
+            public List<FinestraProva> Fin = new List<FinestraProva>();
+            public int Indice = -1;
+            public string Campo { get { return Loc.Length >= 2 ? Loc.Substring(0, 2).ToUpperInvariant() : "?"; } }
+        }
+
+        TabPage tpStaz;
+        PannelloDisegno pnlStaz;
+        Panel pnlStazScroll;
+        DateTimePicker dtpStaz;
+        Tendina cmbStazModo, cmbStazPol;
+        Spunta chkStazTemp;
+        NumericUpDown nudStazP, nudStazN, nudStazG, nudStazNf, nudStazTant;
+        TextBox txtStazLoss;
+        Pillola bStazRipr, bStazApri, bStazTutte;
+        DateTime stazGiorno = DateTime.UtcNow.Date;
+        bool stazTutte, stazTemp = true, stazCarica;
+        int stazPol = 0, stazModoVoce;
+        List<StazProva> stazTutteSt = new List<StazProva>(), stazMostrate = new List<StazProva>();
+        int stazAttive;
+        string stazChiave = "";
+        Dictionary<string, int> stazAlternativa = new Dictionary<string, int>();
+        List<KeyValuePair<RectangleF, StazProva>> stazZone = new List<KeyValuePair<RectangleF, StazProva>>();
+        static readonly double[] Dl6wuPassi = { 0.075, 0.180, 0.215, 0.250, 0.280, 0.300, 0.315, 0.330, 0.345, 0.360, 0.375, 0.390 };
+        const double DxPerdite = 1.5, DxNf = 0.5, DxTant = 250;
+
+        // lunghezza del boom (in λ) di una yagi DL6WU con n elementi: riflettore a 0,2 λ, poi le spaziature dei direttori
+        static double BoomDl6wu(int n)
+        {
+            double l = n >= 2 ? 0.2 : 0;
+            for (int i = 0; i < n - 2; i++) l += i < Dl6wuPassi.Length ? Dl6wuPassi[i] : 0.4;
+            return l;
+        }
+        // guadagno (dBi) dalla lunghezza del boom: G = 7,773·log(L/λ) + 11,43 (curva DL6WU riportata da W8IO)
+        static double GuadagnoDl6wu(int n) { return 7.773 * Math.Log10(Math.Max(0.2, BoomDl6wu(n))) + 11.43; }
+
+        // impianto dichiarato nell'intestazione della chat: "4X14HV/1K", "2X10H750", "17H/600", "4X13H/KW"...
+        static void LeggiImpianto(string imp, StazProva s)
+        {
+            s.Dichiarato = false;
+            if (string.IsNullOrEmpty(imp) || imp == "-") return;
+            string t = imp.ToUpperInvariant();
+            System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(t, @"^(\d{1,2})X(\d{1,2})([A-Z]*)(.*)$");
+            string pol, resto;
+            if (m.Success) { s.NAnt = int.Parse(m.Groups[1].Value); s.El = int.Parse(m.Groups[2].Value); pol = m.Groups[3].Value; resto = m.Groups[4].Value; }
+            else
+            {
+                m = System.Text.RegularExpressions.Regex.Match(t, @"^(\d{1,2})(EL|ELE)?([HV]*|XP)(.*)$");
+                if (!m.Success) return;
+                s.NAnt = 1; s.El = int.Parse(m.Groups[1].Value); pol = m.Groups[3].Value; resto = m.Groups[4].Value;
+            }
+            if (s.El < 3 || s.El > 40 || s.NAnt < 1 || s.NAnt > 64) return;
+            s.Dichiarato = true;
+            s.Pol = pol.Contains("HV") || pol.Contains("XP") || pol.Contains("RPOL") || pol.Contains("CP") || (pol.Contains("H") && pol.Contains("V")) ? 2 : (pol.StartsWith("V") ? 1 : 0);
+            // potenza: 1K = 1000 W, 1K2 = 1200 W, KW o K = 1000 W, 750 = 750 W, QRO = 1000 W
+            string pw = resto.TrimStart('/');
+            int sl = pw.IndexOf('/');
+            if (sl >= 0) pw = pw.Substring(0, sl);
+            System.Text.RegularExpressions.Match mk = System.Text.RegularExpressions.Regex.Match(pw, @"^(\d+)K(\d?)");
+            System.Text.RegularExpressions.Match mw = System.Text.RegularExpressions.Regex.Match(pw, @"^(\d+)");
+            if (mk.Success) s.P = int.Parse(mk.Groups[1].Value) * 1000 + (mk.Groups[2].Value.Length > 0 ? int.Parse(mk.Groups[2].Value) * 100 : 0);
+            else if (pw.StartsWith("K")) s.P = 1000;
+            else if (mw.Success) { int w = int.Parse(mw.Groups[1].Value); s.P = w < 10 ? w * 1000 : w; }
+            else s.P = 1000;
+            s.P = Math.Max(10, Math.Min(5000, s.P));
+        }
+
+        void BuildStazTab(TabPage tp)
+        {
+            Color blu = Color.FromArgb(31, 111, 209), verde = Color.FromArgb(22, 163, 74);
+            FlowLayoutPanel r1 = Riga();
+            r1.Controls.Add(L(Lang.T("Giorno")));
+            dtpStaz = new DateTimePicker(); dtpStaz.Format = DateTimePickerFormat.Custom; dtpStaz.CustomFormat = "dd/MM/yyyy"; dtpStaz.Width = S(118);
+            dtpStaz.Value = stazGiorno;
+            dtpStaz.ValueChanged += (s, e) => { if (stazCarica) return; stazGiorno = dtpStaz.Value.Date; stazAlternativa.Clear(); RicalcolaStaz(); };
+            r1.Controls.Add(Tonda(dtpStaz));
+            Pillola bPrima = PillolaBordo("◀", blu), bDopo = PillolaBordo("▶", blu), bOggi = PillolaPiena(Lang.T("OGGI"), blu);
+            bPrima.Click += (s, e) => dtpStaz.Value = dtpStaz.Value.AddDays(-1);
+            bDopo.Click += (s, e) => dtpStaz.Value = dtpStaz.Value.AddDays(1);
+            bOggi.Click += (s, e) => dtpStaz.Value = DateTime.UtcNow.Date;
+            r1.Controls.Add(bPrima); r1.Controls.Add(bDopo); r1.Controls.Add(bOggi);
+            Label lb = L(Lang.T("Banda") + " 144 MHz"); lb.Font = new Font(Lang.FontUi, 9.5F * fontFactor, FontStyle.Bold); lb.Margin = new Padding(S(14), S(6), 0, S(3));
+            Label lb2 = L("(" + Lang.T("solo 2 m, come la chat di N0UK") + ")"); lb2.ForeColor = Tema.Muted;
+            r1.Controls.Add(lb); r1.Controls.Add(lb2);
+            r1.Controls.Add(L(Lang.T("Modo")));
+            List<string> modi = new List<string>();
+            foreach (int m in BudgetParams.ModiOrdine)
+                modi.Add(BudgetParams.ModiNome[m] + " · " + Lang.T("soglia") + " " + BudgetParams.ModiSn[m].ToString("0.#", Lang.Cultura).Replace("-", "−") + " dB");
+            cmbStazModo = TendinaDi(modi.ToArray(), 190);
+            cmbStazModo.SelectedIndex = Math.Max(0, Math.Min(modi.Count - 1, stazModoVoce));
+            cmbStazModo.SelectedIndexChanged += (s, e) => { if (stazCarica) return; stazModoVoce = cmbStazModo.SelectedIndex; stazChiave = ""; RicalcolaStaz(); if (!caricamento) SaveSettings(); };
+            r1.Controls.Add(Tonda(cmbStazModo));
+            chkStazTemp = new Spunta();
+            chkStazTemp.Text = Lang.T("Tieni conto delle temperature di rumore");
+            chkStazTemp.AutoSize = true; chkStazTemp.Colore = verde; chkStazTemp.Checked = stazTemp;
+            chkStazTemp.Margin = new Padding(S(10), S(3), S(4), S(3));
+            chkStazTemp.CheckedChanged += (s, e) => { if (stazCarica) return; stazTemp = chkStazTemp.Checked; stazChiave = ""; RicalcolaStaz(); if (!caricamento) SaveSettings(); };
+            r1.Controls.Add(chkStazTemp);
+            Label ln = L(Lang.T("senza: Dgrd e rumore di riferimento, come i calcoli semplici · con: Tant, Te,") + "\n" + Lang.T("cielo dietro la Luna e rumore locale, come CALCOLI APPROFONDITI"));
+            ln.ForeColor = Tema.Muted; ln.Font = new Font(Lang.FontUi, 8F * fontFactor);
+            r1.Controls.Add(ln);
+
+            pnlStazScroll = new Panel();
+            pnlStazScroll.Dock = DockStyle.Fill;
+            pnlStazScroll.AutoScroll = true;
+            pnlStaz = new PannelloDisegno();
+            pnlStaz.Location = new Point(0, 0);
+            pnlStaz.Paint += DisegnaStaz;
+            pnlStaz.MouseMove += (s, e) =>
+            {
+                bool su = false;
+                foreach (KeyValuePair<RectangleF, StazProva> kv in stazZone) if (kv.Key.Contains(e.Location)) su = true;
+                pnlStaz.Cursor = su ? Cursors.Hand : Cursors.Default;
+            };
+            pnlStaz.MouseClick += (s, e) =>
+            {
+                foreach (KeyValuePair<RectangleF, StazProva> kv in stazZone)
+                    if (kv.Key.Contains(e.Location))
+                    {
+                        // clic sul nominativo: la prossima stazione dello stesso campo di locator
+                        string c = kv.Value.Campo;
+                        int n = 0;
+                        foreach (StazProva x in stazTutteSt) if (x.Campo == c && x.Indice > 0) n++;
+                        int a;
+                        stazAlternativa.TryGetValue(c, out a);
+                        stazAlternativa[c] = n > 0 ? (a + 1) % n : 0;
+                        ScegliStaz();
+                        pnlStaz.Invalidate();
+                        return;
+                    }
+            };
+            pnlStazScroll.Controls.Add(pnlStaz);
+            // comandi della scheda "La mia stazione" (dentro il disegno)
+            nudStazP = Nud(1, 5000, 1000, 0, 70);
+            txtStazLoss = BoxDgf("", 55);
+            nudStazN = Nud(1, 64, 4, 0, 50);
+            nudStazG = Nud(0, 40, 17, 1, 60);
+            nudStazNf = Nud(0, 10, 0.5m, 1, 55); ((NumericUpDown)nudStazNf).Increment = 0.1m;
+            nudStazTant = Nud(10, 20000, 250, 0, 65);
+            cmbStazPol = TendinaDi(new string[] { "H", "V", Lang.T("H e V") }, 80);
+            cmbStazPol.SelectedIndex = stazPol;
+            foreach (NumericUpDown n in new NumericUpDown[] { nudStazP, nudStazN, nudStazG, nudStazNf, nudStazTant })
+            {
+                n.ValueChanged += (s, e) => { if (!stazCarica) ScriviBudgetStaz(); };
+                pnlStaz.Controls.Add(Tonda(n));
+            }
+            pnlStaz.Controls.Add(Tonda(txtStazLoss));
+            cmbStazPol.SelectedIndexChanged += (s, e) => { if (stazCarica) return; stazPol = cmbStazPol.SelectedIndex; stazChiave = ""; RicalcolaStaz(); if (!caricamento) SaveSettings(); };
+            pnlStaz.Controls.Add(Tonda(cmbStazPol));
+            bStazRipr = PillolaBordo(Lang.T("Ripristina dal Budget EME"), blu);
+            bStazRipr.Click += (s, e) => { LeggiBudgetStaz(); stazChiave = ""; RicalcolaStaz(); };
+            bStazApri = PillolaBordo(Lang.T("Apri il Budget EME"), blu);
+            bStazApri.Click += (s, e) =>
+            {
+                if (bandeAttive.Contains(144)) cmbBand.SelectedIndex = bandeAttive.IndexOf(144);
+                tabs.SelectedTab = tpBudget;
+            };
+            bStazTutte = PillolaBordo(Lang.T("Mostra tutte le stazioni attive"), blu);
+            bStazTutte.Click += (s, e) => { stazTutte = !stazTutte; ScegliStaz(); pnlStaz.Invalidate(); };
+            pnlStaz.Controls.Add(bStazRipr); pnlStaz.Controls.Add(bStazApri); pnlStaz.Controls.Add(bStazTutte);
+            Action dim = () =>
+            {
+                int w = Math.Max(S(1250), pnlStazScroll.ClientSize.Width);
+                int h = Math.Max(S(780), pnlStazScroll.ClientSize.Height);
+                if (pnlStaz.Height > pnlStazScroll.ClientSize.Height || h > pnlStazScroll.ClientSize.Height) w = Math.Max(S(1250), pnlStazScroll.ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
+                if (pnlStaz.Width != w) pnlStaz.Width = w;
+                if (pnlStaz.Height < h) pnlStaz.Height = h;
+            };
+            pnlStazScroll.Resize += (s, e) => dim();
+            dim();
+            tp.Controls.Add(pnlStazScroll);
+            tp.Controls.Add(r1);
+            LeggiBudgetStaz();
+        }
+
+        BudgetParams Budget144()
+        {
+            if (curBand == 144 && bMe != null) SalvaBanda(144);
+            BudgetParams b;
+            if (!bpMe.TryGetValue(144, out b)) { b = BudgetParams.Default(144); bpMe[144] = b; }
+            return b;
+        }
+
+        void LeggiBudgetStaz()
+        {
+            if (nudStazP == null) return;
+            BudgetParams b = Budget144();
+            stazCarica = true;
+            try
+            {
+                Action<NumericUpDown, double> imposta = (n, v) => n.Value = Math.Max(n.Minimum, Math.Min(n.Maximum, (decimal)Math.Round(v, n.DecimalPlaces)));
+                imposta(nudStazP, b.P); imposta(nudStazN, b.NAnt); imposta(nudStazG, b.GAnt); imposta(nudStazNf, b.Nf); imposta(nudStazTant, b.Tant);
+                txtStazLoss.Text = (b.CavoTx + b.AccTx).ToString("0.0", Lang.Cultura);
+            }
+            finally { stazCarica = false; }
+        }
+
+        // i dati della mia stazione cambiati qui cambiano anche nel Budget EME (banda 144 MHz)
+        void ScriviBudgetStaz()
+        {
+            BudgetParams b = Budget144();
+            b.P = (double)nudStazP.Value; b.NAnt = (int)nudStazN.Value; b.GAnt = (double)nudStazG.Value; b.Nf = (double)nudStazNf.Value; b.Tant = (double)nudStazTant.Value;
+            if (curBand == 144 && bMe != null) CaricaBanda(144);
+            if (!caricamento) SaveSettings();
+            stazChiave = "";
+            RicalcolaStaz();
+        }
+
+        // rumore del sistema ricevente (K) secondo la casella delle temperature
+        double TsysStaz(double tant, double te, MoonPos p, bool mia)
+        {
+            if (!stazTemp) return tant + te;
+            double t = tant + Math.Max(0, CieloGsm.Tsky(p.Ra, p.Dec, 144.0) - TskyRif(144.0)) + te;
+            if (mia)
+            {
+                int v = RumoreLocale(p.Az, p.El);
+                if (v > 1) t *= Math.Pow(10.0, (v - 1) / 10.0);   // ogni grado della scala NJ9R vale circa 1 dB sopra il cielo freddo
+            }
+            return t;
+        }
+
+        void RicalcolaStaz()
+        {
+            if (pnlStaz == null) return;
+            stazChiave = "";
+            pnlStaz.Invalidate();
+        }
+
+        void CalcolaStaz()
+        {
+            string loc = me.Loc.Text.Trim().ToUpperInvariant();
+            BudgetParams b = Budget144();
+            string k = stazGiorno.ToString("yyyyMMdd", inv) + loc + "|" + ChiaveTerreno + "|" + stazModoVoce + stazTemp + stazPol + "|" + b.P + b.NAnt + b.GAnt + b.Nf + b.Tant + b.CavoTx + b.AccTx
+                + "|" + me.Az1.Value + me.Az2.Value + me.El1.Value + me.El2.Value + "|" + Impianti.Firma + Attivi.Firma + "|" + (RilievoInUso != null ? RilievoInUso.File + rumSoglia : "");
+            if (k == stazChiave) return;
+            stazChiave = k;
+            stazTutteSt.Clear();
+            stazAttive = 0;
+            if (!me.Ok) { ScegliStaz(); return; }
+            Dictionary<string, DateTime> att = Attivi.Tutti();
+            stazAttive = att.Count;
+            // la mia stazione
+            double teMe = TeStazione(b), lossMe = b.CavoTx + b.AccTx, gMe = b.GAnt + 10 * Math.Log10(Math.Max(1, b.NAnt));
+            double pMe = 10 * Math.Log10(Math.Max(1, b.P)) - lossMe;
+            double soglia = BudgetParams.ModiSn[BudgetParams.ModiOrdine[Math.Max(0, Math.Min(BudgetParams.ModiOrdine.Length - 1, stazModoVoce))]];
+            int passo = 5, ns = 24 * 60 / passo;
+            MoonPos[] pm = new MoonPos[ns + 1];
+            bool[] okMe = new bool[ns + 1];
+            for (int i = 0; i <= ns; i++)
+            {
+                pm[i] = Moon.Compute(stazGiorno.AddMinutes(i * passo), me.Lat, me.Lon, (double)me.H.Value, false);
+                me.Valuta(pm[i], out okMe[i]);
+            }
+            double kB = 1.380649e-23, bw = 2500;
+            foreach (KeyValuePair<string, DateTime> kv in att)
+            {
+                StazProva s = new StazProva();
+                s.Call = kv.Key;
+                string iloc, imp;
+                if (Impianti.Cerca(kv.Key, out iloc, out imp)) { s.Loc = iloc; s.Imp = imp; }
+                if (s.Loc.Length < 4) { string c3; string g3 = Call3.Cerca(kv.Key, out c3); if (g3 != null) s.Loc = g3; }
+                if (s.Loc.Length < 4 || !Locator.TryParse(s.Loc, out s.Lat, out s.Lon)) continue;
+                if (string.Equals(s.Loc.Substring(0, 4), loc.Length >= 4 ? loc.Substring(0, 4) : loc, StringComparison.OrdinalIgnoreCase)) continue;
+                s.Dist = GreatCircleKm(me.Lat, me.Lon, s.Lat, s.Lon);
+                if (s.Dist < 100) continue;
+                LeggiImpianto(s.Imp, s);
+                if (!s.Dichiarato) { s.NAnt = 4; s.El = 14; s.Pol = 0; s.P = 1000; }
+                s.Boom = BoomDl6wu(s.El) * 299.792458 / 144.0;
+                s.G = GuadagnoDl6wu(s.El); s.Gtot = s.G + 10 * Math.Log10(s.NAnt);
+                double teDx = 290.0 * (Math.Pow(10, DxNf / 10) - 1), pDx = 10 * Math.Log10(s.P) - DxPerdite;
+                // finestre comuni: io puntabile (limiti e terreno), il DX con la Luna sopra l'orizzonte
+                FinestraProva f = null;
+                double bestM = double.NegativeInfinity;
+                for (int i = 0; i <= ns; i++)
+                {
+                    DateTime t = stazGiorno.AddMinutes(i * passo);
+                    MoonPos q = i < ns ? Moon.Compute(t, s.Lat, s.Lon, 0, false) : new MoonPos();
+                    bool ok = i < ns && okMe[i] && q.El >= 0;
+                    if (ok)
+                    {
+                        if (f == null) { f = new FinestraProva(); f.T1 = t; bestM = double.NegativeInfinity; }
+                        f.T2 = t.AddMinutes(passo);
+                        double lp = Moon.PathLoss(144.0, pm[i].DistTopo, q.DistTopo);
+                        double lpol = 0;
+                        if (stazPol != 2 && s.Pol != 2)
+                        {
+                            double dp = Moon.PolOffset(Moon.PolAngle(me.Lat, pm[i].Az, pm[i].ElGeo), Moon.PolAngle(s.Lat, q.Az, q.ElGeo));
+                            lpol = Math.Min(30, Moon.PolLoss(stazPol == s.Pol ? dp : dp + 90));
+                        }
+                        double nMe = 10 * Math.Log10(kB * TsysStaz(b.Tant, teMe, pm[i], true) * bw), nDx = 10 * Math.Log10(kB * TsysStaz(DxTant, teDx, q, false) * bw);
+                        double snA = pMe + gMe - lp - lpol + s.Gtot - nDx, snB = pDx + s.Gtot - lp - lpol + gMe - nMe;
+                        if (!stazTemp)
+                        {
+                            double ts;
+                            snA += DgrdScelto(q, 144.0, true, out ts) - (-40.0 * Math.Log10(q.DistTopo / 356903.0));
+                            snB += DgrdScelto(pm[i], 144.0, false, out ts) - (-40.0 * Math.Log10(pm[i].DistTopo / 356903.0));
+                        }
+                        double m = Math.Min(snA, snB) - soglia;
+                        if (m > bestM) { bestM = m; f.Meglio = t; f.SnIoDx = snA; f.SnDxIo = snB; }
+                    }
+                    if ((!ok || i == ns) && f != null)
+                    {
+                        double dur = (f.T2 - f.T1).TotalMinutes;
+                        double ind = Math.Max(0, Math.Min(100, 50 + 5 * bestM)) * Math.Min(1.0, dur / 60.0);
+                        f.Indice = (int)Math.Round(ind);
+                        s.Fin.Add(f);
+                        f = null;
+                    }
+                }
+                foreach (FinestraProva x in s.Fin) s.Indice = Math.Max(s.Indice, x.Indice);
+                if (s.Fin.Count > 0) stazTutteSt.Add(s);
+            }
+            stazTutteSt.Sort((x, y) => y.Indice != x.Indice ? y.Indice.CompareTo(x.Indice) : x.Dist.CompareTo(y.Dist));
+            ScegliStaz();
+        }
+
+        // le migliori, una per campo di locator (clic sul nominativo = la successiva dello stesso campo); oppure tutte
+        void ScegliStaz()
+        {
+            stazMostrate.Clear();
+            if (stazTutte) { stazMostrate.AddRange(stazTutteSt); return; }
+            Dictionary<string, List<StazProva>> campi = new Dictionary<string, List<StazProva>>();
+            foreach (StazProva s in stazTutteSt)
+            {
+                if (s.Indice <= 0) continue;
+                List<StazProva> l;
+                if (!campi.TryGetValue(s.Campo, out l)) { l = new List<StazProva>(); campi[s.Campo] = l; }
+                l.Add(s);
+            }
+            List<StazProva> scelte = new List<StazProva>();
+            foreach (KeyValuePair<string, List<StazProva>> kv in campi)
+            {
+                int a;
+                stazAlternativa.TryGetValue(kv.Key, out a);
+                scelte.Add(kv.Value[a % kv.Value.Count]);
+            }
+            scelte.Sort((x, y) => y.Indice != x.Indice ? y.Indice.CompareTo(x.Indice) : x.Dist.CompareTo(y.Dist));
+            for (int i = 0; i < scelte.Count && i < 6; i++) stazMostrate.Add(scelte[i]);
+        }
+
+        static Color ColoreIndice(int v)
+        {
+            if (v >= 75) return Color.FromArgb(22, 163, 74);
+            if (v >= 50) return Color.FromArgb(245, 158, 11);
+            return Color.FromArgb(220, 38, 38);
+        }
+
+        static string Db1m(double v, CultureInfo ci) { return v.ToString("0.0", ci).Replace("-", "−"); }
+
+        void DisegnaStaz(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            PreparaGrafica(g);
+            CultureInfo ci = Lang.Cultura;
+            Rectangle cr = pnlStaz.ClientRectangle;
+            using (Brush bf = new SolidBrush(Tema.Back)) g.FillRectangle(bf, cr);
+            if (cr.Width < 300) return;
+            CalcolaStaz();
+            stazZone.Clear();
+            Color titCol = Tema.Scuro ? Color.FromArgb(196, 181, 253) : Color.FromArgb(91, 33, 182);
+            Color blu = Tema.Scuro ? Color.FromArgb(96, 165, 250) : Color.FromArgb(31, 111, 209);
+            float pad = S(8), gap = S(14);
+            using (Font ft = FontPx(Lang.FontUi, S(13), true))
+            using (Font fs = FontPx(Lang.FontUi, S(12.5f), false))
+            using (Font fsb = FontPx(Lang.FontUi, S(12.5f), true))
+            using (Font fp = FontPx(Lang.FontUi, S(11.5f), false))
+            using (Font fpb = FontPx(Lang.FontUi, S(11.5f), true))
+            using (Font fpi = new Font(Lang.FontUi, S(10.5f), FontStyle.Italic, GraphicsUnit.Pixel))
+            using (Font fcall = FontPx(Lang.FontUi, S(17), true))
+            using (Font fidx = FontPx(Lang.FontUi, S(17), true))
+            {
+                // ----- avviso
+                string av1 = Lang.T("Calcolo d'esempio, molto approssimato.");
+                string av2 = Lang.T("L'impianto delle stazioni DX è ricostruito da quello che scrivono nella chat di N0UK (solo 144 MHz): numero di antenne, elementi e potenza. Il guadagno è stimato dal numero di elementi con la regola DL6WU; cavi, preamplificatore e Tant sono valori tipici. L'indice dà solo una presunta indicazione della fattibilità giorno per giorno: confrontalo con i QSO che fai davvero e usalo per tarare le capacità della tua stazione.");
+                float wav = cr.Width - 2 * pad - S(60);
+                float hr = g.MeasureString("Ag", fs).Height;
+                float wb = g.MeasureString(av1 + " ", fsb).Width;
+                // la prima riga: la frase in grassetto e l'inizio del testo normale; poi il resto, a capo
+                int nfit, nl;
+                g.MeasureString(av2, fs, new SizeF(Math.Max(10, wav - wb), hr * 1.2f), StringFormat.GenericDefault, out nfit, out nl);
+                if (nfit > 0 && nfit < av2.Length) { int sp = av2.LastIndexOf(' ', Math.Max(0, nfit - 1)); nfit = sp > 0 ? sp + 1 : 0; }
+                nfit = Math.Max(0, Math.Min(av2.Length, nfit));
+                string resto = av2.Substring(nfit);
+                float hResto = resto.Length > 0 ? g.MeasureString(resto, fs, (int)wav).Height : 0;
+                float hav = hr + hResto + S(18);
+                RectangleF ra = new RectangleF(pad, S(4), cr.Width - 2 * pad, hav);
+                using (GraphicsPath p = Arrotondato(ra, S(10)))
+                {
+                    using (Brush b0 = new SolidBrush(Tema.Scuro ? Color.FromArgb(70, 56, 10) : Color.FromArgb(254, 249, 219))) g.FillPath(b0, p);
+                    using (Pen pn = new Pen(Color.FromArgb(234, 179, 8), S(1.4f))) g.DrawPath(pn, p);
+                }
+                using (Font fw = FontPx(Lang.FontUi, S(18), true)) Testo(g, "⚠", fw, Color.FromArgb(161, 98, 7), new RectangleF(ra.Left + S(10), ra.Top, S(30), ra.Height), StringAlignment.Center, StringAlignment.Center);
+                using (Brush bt = new SolidBrush(Tema.Scuro ? Color.FromArgb(254, 240, 170) : Color.FromArgb(113, 63, 18)))
+                {
+                    float xt = ra.Left + S(46), yt = ra.Top + S(9);
+                    g.DrawString(av1, fsb, bt, xt, yt);
+                    g.DrawString(av2.Substring(0, nfit), fs, bt, xt + wb, yt);
+                    if (resto.Length > 0) g.DrawString(resto, fs, bt, new RectangleF(xt, yt + hr, wav, hResto + 2));
+                }
+                float y0 = ra.Bottom + S(12);
+                float wSx = Math.Max(S(320), (cr.Width - 2 * pad - 2 * gap) * 0.24f), wDx = Math.Max(S(310), (cr.Width - 2 * pad - 2 * gap) * 0.24f);
+                float wC = cr.Width - 2 * pad - 2 * gap - wSx - wDx;
+                RectangleF rs = new RectangleF(pad, y0, wSx, S(420));
+                RectangleF rc = new RectangleF(rs.Right + gap, y0, wC, Math.Max(S(560), cr.Height - y0 - S(10)));
+                float xr = rc.Right + gap;
+
+                // ----- la mia stazione
+                BudgetParams b = Budget144();
+                Scheda(g, rs, Color.Empty);
+                Testo(g, Spaziato(Lang.T("LA MIA STAZIONE") + " · 144 MHz"), ft, titCol, new RectangleF(rs.Left + S(16), rs.Top + S(12), rs.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                string nb = Lang.T("Dati del Budget EME: se li cambi qui cambiano anche là, e l'indice si ricalcola subito.");
+                float hnb = g.MeasureString(nb, fp, (int)(rs.Width - S(32))).Height;
+                using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(nb, fp, bm, new RectangleF(rs.Left + S(16), rs.Top + S(38), rs.Width - S(32), hnb + 2));
+                float y = rs.Top + S(44) + hnb, rh = S(34);
+                Func<string, float> Etich = t => { Testo(g, t, fs, Tema.Fore, new RectangleF(rs.Left + S(16), y, rs.Width * 0.55f, rh), StringAlignment.Near, StringAlignment.Center); return y; };
+                Action riga = () => { using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, rs.Left + S(16), y + rh, rs.Right - S(16), y + rh); y += rh; };
+                float xd = rs.Right - S(16);
+                // locator
+                Etich(Lang.T("Locator")); Testo(g, me.Loc.Text.Trim().ToUpperInvariant(), fsb, Tema.Fore, new RectangleF(rs.Left, y, xd - rs.Left, rh), StringAlignment.Far, StringAlignment.Center); riga();
+                Func<Control, string, float> Campo = (c, unita) =>
+                {
+                    float wu = unita.Length > 0 ? g.MeasureString(unita, fs).Width + S(4) : 0;
+                    Control cc = c.Parent is CorniceTonda ? c.Parent : c;
+                    PosizionaControllo(cc, xd - wu - cc.Width, y + (rh - cc.Height) / 2);
+                    if (unita.Length > 0) Testo(g, unita, fs, Tema.Fore, new RectangleF(xd - wu, y, wu + S(2), rh), StringAlignment.Near, StringAlignment.Center);
+                    return cc.Left;
+                };
+                Etich(Lang.T("Potenza")); Campo(nudStazP, "W"); riga();
+                Etich(Lang.T("Perdite in trasmissione")); Campo(txtStazLoss, "dB"); riga();
+                {
+                    Etich(Lang.T("Antenne"));
+                    string gt = "= " + (b.GAnt + 10 * Math.Log10(Math.Max(1, b.NAnt))).ToString("0.0", ci) + " dBi";
+                    float wgt = g.MeasureString(gt, fsb).Width + S(2);
+                    Testo(g, gt, fsb, Tema.Fore, new RectangleF(xd - wgt, y, wgt + S(2), rh), StringAlignment.Near, StringAlignment.Center);
+                    float wdb = g.MeasureString("dBi", fs).Width + S(4);
+                    Control cg = nudStazG.Parent, cn = nudStazN.Parent;
+                    PosizionaControllo(cg, xd - wgt - wdb - S(2) - cg.Width, y + (rh - cg.Height) / 2);
+                    Testo(g, "dBi", fs, Tema.Fore, new RectangleF(cg.Right + S(2), y, wdb, rh), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, "×", fs, Tema.Fore, new RectangleF(cg.Left - S(16), y, S(14), rh), StringAlignment.Center, StringAlignment.Center);
+                    PosizionaControllo(cn, cg.Left - S(18) - cn.Width, y + (rh - cn.Height) / 2);
+                    riga();
+                }
+                {
+                    Etich(Lang.T("Preamplificatore NF"));
+                    string te = "dB → Te " + TeStazione(b).ToString("0", ci) + " K";
+                    Campo(nudStazNf, te); riga();
+                }
+                Etich(Lang.T("Temperatura d'antenna Tant")); Campo(nudStazTant, "K"); riga();
+                Etich(Lang.T("Polarizzazione")); Campo(cmbStazPol, ""); riga();
+                {
+                    Etich(Lang.T("Limiti"));
+                    string lim = (me.Orizzonte != null ? Lang.T("orizzonte dal terreno") : "El min " + ((double)me.El1.Value).ToString("0.#", ci) + "°")
+                        + " · El max " + ((double)me.El2.Value).ToString("0.#", ci) + "°";
+                    if ((double)me.Az2.Value - (double)me.Az1.Value < 360) lim = "Az " + ((double)me.Az1.Value).ToString("0", ci) + "°→" + ((double)me.Az2.Value).ToString("0", ci) + "° · " + lim;
+                    Testo(g, lim, fp, Tema.Muted, new RectangleF(rs.Left + rs.Width * 0.3f, y, xd - rs.Left - rs.Width * 0.3f, rh), StringAlignment.Far, StringAlignment.Center);
+                    riga();
+                }
+                {
+                    Etich("EIRP");
+                    double eirp = 10 * Math.Log10(Math.Max(1, b.P)) - (b.CavoTx + b.AccTx) + b.GAnt + 10 * Math.Log10(Math.Max(1, b.NAnt));
+                    string ev = eirp.ToString("0.0", ci) + " dBW · " + (Math.Pow(10, eirp / 10) / 1000).ToString(eirp >= 40 ? "0" : "0.0", ci) + " kW";
+                    Testo(g, ev, fsb, Tema.Fore, new RectangleF(rs.Left, y, xd - rs.Left, rh), StringAlignment.Far, StringAlignment.Center);
+                    y += rh;
+                }
+                y += S(10);
+                PosizionaControllo(bStazRipr, rs.Left + S(14), y);
+                if (rs.Left + S(14) + bStazRipr.Width + S(8) + bStazApri.Width <= rs.Right - S(10)) PosizionaControllo(bStazApri, bStazRipr.Right + S(8), y);
+                else { y += bStazRipr.Height + S(6); PosizionaControllo(bStazApri, rs.Left + S(14), y); }
+                y += bStazApri.Height + S(14);
+                rs.Height = y - rs.Top;
+
+                // ----- elenco delle stazioni
+                Scheda(g, rc, Color.Empty);
+                string tc = string.Format(ci, Lang.T("{0} STAZIONI DA PROVARE · {1} (UTC) · 144 MHz"), stazMostrate.Count, stazGiorno.ToString("dd/MM/yyyy", inv));
+                Testo(g, Spaziato(tc), ft, titCol, new RectangleF(rc.Left + S(16), rc.Top + S(12), rc.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                string sub = stazAttive == 0
+                    ? Lang.T("L'elenco delle stazioni attive (chat EME di N0UK) non è ancora stato scaricato: serve la connessione a internet all'avvio del programma.")
+                    : string.Format(ci, Lang.T("Le migliori tra le {0} stazioni attive (N0UK, ultimi 90 giorni), una per campo di locator. Clic sul nominativo per sostituirlo con un altro."), stazAttive);
+                if (stazTutte) sub = string.Format(ci, Lang.T("Tutte le {0} stazioni attive con almeno una finestra comune nel giorno scelto."), stazTutteSt.Count);
+                if (!me.Ok) sub = Lang.T("Imposta un locator valido nella prima linguetta.");
+                float hs = g.MeasureString(sub, fp, (int)(rc.Width - S(32))).Height;
+                using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(sub, fp, bm, new RectangleF(rc.Left + S(16), rc.Top + S(38), rc.Width - S(32), hs + 2));
+                float xb = rc.Left + S(72), wbar = rc.Right - S(20) - xb;
+                float yy = rc.Top + S(44) + hs;
+                // scala delle ore
+                for (int h = 0; h <= 24; h += 6)
+                    Testo(g, h == 0 ? "0" : h.ToString("00", inv), fp, Tema.Muted, new RectangleF(xb + wbar * h / 24f - S(15), yy, S(30), S(16)), h == 0 ? StringAlignment.Near : (h == 24 ? StringAlignment.Far : StringAlignment.Center), StringAlignment.Center);
+                yy += S(20);
+                foreach (StazProva s in stazMostrate)
+                {
+                    float ys = yy;
+                    // cerchio dell'indice
+                    RectangleF ci0 = new RectangleF(rc.Left + S(16), ys + S(4), S(42), S(42));
+                    using (Brush bc = new SolidBrush(ColoreIndice(s.Indice))) g.FillEllipse(bc, ci0);
+                    Testo(g, s.Indice.ToString(ci), fidx, Color.White, ci0, StringAlignment.Center, StringAlignment.Center);
+                    // nominativo, locator e distanza
+                    SizeF sc = g.MeasureString(s.Call, fcall);
+                    using (Brush bb = new SolidBrush(blu)) g.DrawString(s.Call, fcall, bb, xb - S(2), ys);
+                    stazZone.Add(new KeyValuePair<RectangleF, StazProva>(new RectangleF(xb - S(2), ys, sc.Width, sc.Height), s));
+                    string ld = s.Loc.ToUpperInvariant().Substring(0, Math.Min(6, s.Loc.Length)) + " · " + s.Dist.ToString("N0", ci) + " km";
+                    Testo(g, ld, fp, Tema.Muted, new RectangleF(xb + sc.Width, ys + S(4), S(260), sc.Height - S(4)), StringAlignment.Near, StringAlignment.Center);
+                    // impianto
+                    string pol = s.Pol == 2 ? Lang.T("H e V") : (s.Pol == 1 ? "V" : "H");
+                    string im = string.Format(ci, Lang.T("{0} × {1} el (boom {2} m)"), s.NAnt, s.El, s.Boom.ToString("0.0", ci)) + " · " + s.Gtot.ToString("0.0", ci) + " dBi · " + s.P.ToString("N0", ci) + " W · " + pol;
+                    float yi = ys + sc.Height + S(1);
+                    Testo(g, im, fp, Tema.Fore, new RectangleF(xb, yi, wbar, S(17)), StringAlignment.Near, StringAlignment.Center);
+                    {
+                        string tag = s.Dichiarato ? Lang.T("esempio") : Lang.T("impianto non dichiarato");
+                        float wi = g.MeasureString(im, fp).Width;
+                        SizeF st = g.MeasureString(tag, fpi);
+                        RectangleF rt = new RectangleF(xb + wi + S(6), yi + S(1), st.Width + S(8), S(15));
+                        using (GraphicsPath p = Arrotondato(rt, rt.Height / 2f))
+                        using (Brush b2 = new SolidBrush(Tema.Scuro ? Tema.Section : Color.FromArgb(236, 239, 244))) g.FillPath(b2, p);
+                        Testo(g, tag, fpi, Tema.Muted, rt, StringAlignment.Center, StringAlignment.Center);
+                    }
+                    // barra delle 24 ore
+                    float yb = yi + S(21);
+                    using (GraphicsPath p = Arrotondato(new RectangleF(xb, yb, wbar, S(9)), S(4)))
+                    using (Brush b2 = new SolidBrush(Tema.Scuro ? Tema.Section : Color.FromArgb(233, 236, 241))) g.FillPath(b2, p);
+                    using (Pen pt = new Pen(Color.FromArgb(160, Tema.Muted)))
+                        for (int h = 6; h < 24; h += 6) g.DrawLine(pt, xb + wbar * h / 24f, yb - S(1), xb + wbar * h / 24f, yb + S(10));
+                    foreach (FinestraProva f in s.Fin)
+                    {
+                        float x1 = xb + wbar * (float)((f.T1 - stazGiorno).TotalMinutes / 1440.0), x2 = xb + wbar * (float)((f.T2 - stazGiorno).TotalMinutes / 1440.0);
+                        using (GraphicsPath p = Arrotondato(new RectangleF(x1, yb, Math.Max(S(4), x2 - x1), S(9)), S(4)))
+                        using (Brush b2 = new SolidBrush(ColoreIndice(f.Indice))) g.FillPath(b2, p);
+                    }
+                    // pillole delle finestre
+                    float yf = yb + S(15);
+                    foreach (FinestraProva f in s.Fin)
+                    {
+                        string fx = f.T1.ToString("HH:mm", inv) + "–" + (f.T2 >= stazGiorno.AddDays(1) ? "24:00" : f.T2.ToString("HH:mm", inv))
+                            + " · " + Lang.T("meglio") + " " + f.Meglio.ToString("HH:mm", inv)
+                            + " · S/N " + Lang.T("io→DX") + " " + Db1m(f.SnIoDx, ci) + " · " + Lang.T("DX→io") + " " + Db1m(f.SnDxIo, ci) + " dB";
+                        string ni = f.Indice.ToString(ci);
+                        float wn = g.MeasureString(ni, fpb).Width, wfx = g.MeasureString(fx, fp).Width;
+                        RectangleF rp = new RectangleF(xb, yf, wn + wfx + S(22), S(20));
+                        Color cf = ColoreIndice(f.Indice);
+                        using (GraphicsPath p = Arrotondato(rp, rp.Height / 2f))
+                        {
+                            using (Brush b2 = new SolidBrush(Tema.Scuro ? Tema.Field : Color.White)) g.FillPath(b2, p);
+                            using (Pen pn = new Pen(cf, S(1.5f))) g.DrawPath(pn, p);
+                        }
+                        Testo(g, ni, fpb, cf, new RectangleF(rp.Left + S(8), rp.Top, wn + S(2), rp.Height), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, fx, fp, Tema.Fore, new RectangleF(rp.Left + S(14) + wn, rp.Top, wfx + S(4), rp.Height), StringAlignment.Near, StringAlignment.Center);
+                        yf += S(23);
+                    }
+                    yy = Math.Max(yf, ys + S(56)) + S(8);
+                    using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, rc.Left + S(16), yy - S(4), rc.Right - S(16), yy - S(4));
+                    yy += S(6);
+                }
+                if (stazMostrate.Count == 0 && me.Ok && stazAttive > 0)
+                {
+                    Testo(g, Lang.T("Nessuna finestra comune nel giorno scelto con i tuoi limiti di puntamento."), fs, Tema.Muted, new RectangleF(rc.Left + S(16), yy, rc.Width - S(32), S(40)), StringAlignment.Near, StringAlignment.Near);
+                    yy += S(44);
+                }
+                // legenda e pulsante
+                {
+                    float x = rc.Left + S(16);
+                    string[] lg = { "● " + Lang.T("75–100 probabile"), "● " + Lang.T("50–74 possibile"), "● " + Lang.T("sotto 50 difficile") };
+                    Color[] cl = { ColoreIndice(80), ColoreIndice(60), ColoreIndice(10) };
+                    for (int k = 0; k < 3; k++)
+                    {
+                        float w = g.MeasureString(lg[k], fpb).Width;
+                        Testo(g, lg[k], fpb, cl[k], new RectangleF(x, yy, w + S(4), S(26)), StringAlignment.Near, StringAlignment.Center);
+                        x += w + S(14);
+                    }
+                    bStazTutte.Text = stazTutte ? Lang.T("Mostra le migliori") : Lang.T("Mostra tutte le stazioni attive");
+                    PosizionaControllo(bStazTutte, rc.Right - S(16) - bStazTutte.Width, yy);
+                    yy += S(36);
+                }
+                rc.Height = Math.Max(rc.Height, yy - rc.Top);
+
+                // ----- come si calcola l'indice
+                float yr = y0;
+                {
+                    string[] passi = {
+                        Lang.T("S/N nei due sensi nel momento migliore di ogni finestra comune: potenza, perdite, guadagni, tratta EME, Dgrd, polarizzazione e rumore in 2500 Hz."),
+                        Lang.T("Margine = S/N del senso più debole − soglia del modo."),
+                        Lang.T("Indice = 50 + 5 × margine, da 0 a 100: margine 0 dB = 50, +10 dB = 100, −10 dB = 0."),
+                        Lang.T("Le finestre sotto un'ora pesano in proporzione alla durata.") };
+                    string nota = Lang.T("Con la casella delle temperature: Tsys = Tant + cielo dietro la Luna + Te, rumore locale dalla Mappa del rumore (NJ9R). Senza: rumore di riferimento e Dgrd di WSJT-X.");
+                    float wi = wDx - S(50), hTot = 0;
+                    foreach (string p in passi) hTot += g.MeasureString(p, fs, (int)wi).Height + S(2);
+                    float hn = g.MeasureString(nota, fp, (int)(wDx - S(32))).Height;
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(56) + hTot + hn + S(10));
+                    Scheda(g, r, Color.Empty);
+                    Testo(g, Spaziato(Lang.T("COME SI CALCOLA L'INDICE")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                    float yq = r.Top + S(42);
+                    using (Brush bt = new SolidBrush(Tema.Fore))
+                        for (int k = 0; k < passi.Length; k++)
+                        {
+                            float hh = g.MeasureString(passi[k], fs, (int)wi).Height;
+                            g.DrawString((k + 1).ToString(ci) + ".", fs, bt, r.Left + S(16), yq);
+                            g.DrawString(passi[k], fs, bt, new RectangleF(r.Left + S(34), yq, wi, hh + 2));
+                            yq += hh + S(2);
+                        }
+                    using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(nota, fp, bm, new RectangleF(r.Left + S(16), yq + S(6), wDx - S(32), hn + 2));
+                    yr = r.Bottom + S(12);
+                }
+                // ----- dagli elementi al guadagno
+                {
+                    int[] els = { 7, 9, 11, 13, 14, 17, 19, 22 };
+                    string nota = Lang.T("Spaziature DL6WU (W4RNL): riflettore 0,2 λ, primo direttore 0,075 λ, poi in crescita fino a 0,4 λ. G = 7,773·log(L/λ) + 11,43 (W8IO). Sotto i 2 λ di boom il valore è indicativo; antenne non DL6WU possono differire.");
+                    float hn = g.MeasureString(nota, fp, (int)(wDx - S(32))).Height;
+                    float rh2 = S(22);
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(70) + (els.Length + 1) * rh2 + hn);
+                    Scheda(g, r, Color.Empty);
+                    Testo(g, Spaziato(Lang.T("DAGLI ELEMENTI AL GUADAGNO (DL6WU, 144 MHz)")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(40)), StringAlignment.Near, StringAlignment.Near);
+                    float yq = r.Top + S(52), wi = r.Width - S(32);
+                    string[] th = { Lang.T("Elementi"), Lang.T("Boom (m)"), Lang.T("Guadagno (dBi)") };
+                    Testo(g, th[0], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.33f, rh2), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, th[1], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.62f, rh2), StringAlignment.Far, StringAlignment.Center);
+                    Testo(g, th[2], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
+                    yq += rh2;
+                    foreach (int n in els)
+                    {
+                        using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), yq, r.Right - S(16), yq);
+                        Testo(g, n.ToString(ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.33f, rh2), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, (BoomDl6wu(n) * 299.792458 / 144.0).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.62f, rh2), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, GuadagnoDl6wu(n).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
+                        yq += rh2;
+                    }
+                    using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(nota, fp, bm, new RectangleF(r.Left + S(16), yq + S(8), wi, hn + 2));
+                    yr = r.Bottom + S(12);
+                }
+                int hNec = (int)(Math.Max(Math.Max(yr, rc.Bottom), rs.Bottom) + S(10));
+                if (pnlStaz.Height != hNec && hNec > pnlStazScroll.ClientSize.Height) pnlStaz.Height = hNec;
             }
         }
 
@@ -65272,7 +65918,7 @@ namespace LunaCalc
                 gruppiNav.Add(g);
             };
             add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpOriz, tpSky });
-            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpPos, tpMondo });
+            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpStaz, tpPos, tpMondo });
             add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpBudgetD, tpGraves, tpSolar, tpExcel, tpDebug });
             add(Lang.T("Log"), "▦", new TabPage[] { tpMap });
             add(Lang.T("Aiuto e tools"), "?", new TabPage[] { tpIstr, tpEme, tpCavi });
@@ -71325,7 +71971,7 @@ namespace LunaCalc
                 foreach (string[] x in DescrizioniLinguette()) desc[x[0]] = x[1];
                 string[][] gruppi = {
                     new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Il mio orizzonte"), Lang.T("Volta celeste") },
-                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
+                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Stazioni da provare"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
                     new string[] { Lang.T("Collegamento"), Lang.T("Budget EME yagi"), Lang.T("Budget EME dischi"), Lang.T("Radar GRAVES"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
                     new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
                     new string[] { Lang.T("Aiuto e tools"), Lang.T("MANUALE D'USO"), Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("CAVI COASSIALI") },
@@ -72592,6 +73238,7 @@ namespace LunaCalc
                 grazie.Add(new string[] { Lang.T("per il patrocinio della"), "Sezione ARI \"Valle del Liri\"", "IZ0JNY|Ivan" });
                 grazie.Add(new string[] { Lang.T("per il controllo in regime di"), Lang.T("beta-tester"), "IZ7NLJ|Fabio", "I2NOY|Maurizio", "IK4GNG|Gilberto" });
                 grazie.Add(new string[] { Lang.T("per le notizie di sviluppo"), Lang.T("sulle frequenze sopra i 432 MHz"), "HA5OLA|Robert" });
+                grazie.Add(new string[] { Lang.T("per l'idea della linguetta"), Lang.T("Stazioni da provare"), "IW5DHN|Matteo" });
                 grazie.Add(new string[] { Lang.T("per l'incitamento a non mollare"), Lang.T("nell'ambiente dell'EME"),
                     "NJ9R|Relu|0|" + FumettoGrazie("NJ9R", "Relu", "“2M EME the easy way… the secret sauce to success”", "PREF, 1.6, 1.7, 1.8, 1.11, 1.12, 1.13, 1.14") });
                 grazie.Add(new string[] { Lang.T("un pensiero e un ricordo a"), Lang.T("Giorgio IK1UWL, pioniere italiano dell'EME"),
@@ -73816,6 +74463,14 @@ namespace LunaCalc
                 tk.Tick += (s2, e2) => { tk.Stop(); tk.Dispose(); try { Calcola(); } catch { } };
                 tk.Start();
             };
+            // solo per le prove automatiche: YAEC_ORIZZONTE=1 calcola l'orizzonte dal terreno dopo l'avvio
+            if (Environment.GetEnvironmentVariable("YAEC_ORIZZONTE") == "1") this.Shown += (s, e) =>
+            {
+                System.Windows.Forms.Timer to = new System.Windows.Forms.Timer();
+                to.Interval = 3000;
+                to.Tick += (s2, e2) => { to.Stop(); to.Dispose(); try { CalcolaOrizzonte(); } catch { } };
+                to.Start();
+            };
             // solo per le prove automatiche: YAEC_CHIUSURA=1 apre la finestra di chiusura dopo 5 secondi
             if (Environment.GetEnvironmentVariable("YAEC_CHIUSURA") == "1") this.Shown += (s, e) =>
             {
@@ -74593,6 +75248,9 @@ namespace LunaCalc
             BuildDgrdTab(tpDgrd);
             tpDgFreq = new TabPage(Lang.T("DGRD per frequenza"));
             BuildDgFreqTab(tpDgFreq);
+            tpStaz = new TabPage(Lang.T("Stazioni da provare"));
+            BuildStazTab(tpStaz);
+            pagineNuove.Add(tpStaz);
             tpMondo = new TabPage(Lang.T("Luna sul mondo"));
             tpMap = new TabPage(Lang.T("Mappa WWL e ADIF"));
             BuildMapTab(tpMap);
@@ -74610,7 +75268,7 @@ namespace LunaCalc
             BuildExcelTab(tpExcel);
             tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
-            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpSky, tpPunt, tpOriz, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
+            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpStaz, tpSky, tpPunt, tpOriz, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
             BuildMondoTab(tpMondo);   // dopo che tabs esiste: segue il cambio di linguetta
             BuildManualeTab(tpIstr, false);   // dopo le altre linguette: il manuale ne mostra le schermate
@@ -74646,6 +75304,7 @@ namespace LunaCalc
                 if (sel == tpDgrd) RecalcDgrd();
                 if (sel == tpMap) map.Invalidate();
                 if (sel == tpPunt) pnlPunt.Invalidate();
+                if (sel == tpStaz) { LeggiBudgetStaz(); RicalcolaStaz(); }
                 if (sel == tpOriz) { AggiornaOrizTop(); if (orizVista == 0) pnlOriz.Invalidate(); else pnlRum.Invalidate(); }
                 if (sel == tpBudget) ImpostaModoBudget(false);
                 if (sel == tpBudgetD) ImpostaModoBudget(true);
@@ -75632,6 +76291,9 @@ namespace LunaCalc
                 lines.Add("orizzonte_colori=" + orizPal.ToString(inv));
                 lines.Add("rumore_segnala=" + (rumSegnala ? "1" : "0"));
                 lines.Add("rumore_soglia=" + rumSoglia.ToString(inv));
+                lines.Add("prova_modo=" + stazModoVoce.ToString(inv));
+                lines.Add("prova_temperature=" + (stazTemp ? "1" : "0"));
+                lines.Add("prova_pol=" + stazPol.ToString(inv));
                 if (cmbPuntMappa != null) lines.Add("punt_mappa=" + cmbPuntMappa.SelectedIndex.ToString(inv));
                 lines.Add("punt_zoom=" + puntZoom.ToString(inv));
                 lines.Add("dg_col_dgrd=" + (dgColDg.IsEmpty ? "" : dgColDg.ToArgb().ToString(inv)));
@@ -75852,6 +76514,9 @@ namespace LunaCalc
                                 break;
                             }
                         case "terreno": usaTerreno = v != "0"; break;
+                        case "prova_modo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazModoVoce = Math.Max(0, Math.Min(BudgetParams.ModiOrdine.Length - 1, x)); break; }
+                        case "prova_temperature": stazTemp = v != "0"; break;
+                        case "prova_pol": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazPol = Math.Max(0, Math.Min(2, x)); break; }
                         case "orizzonte_vista": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizVista = Math.Max(0, Math.Min(1, x)); break; }
                         case "orizzonte_raggio": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizRaggioIdx = Math.Max(0, Math.Min(OrizRaggi.Length - 1, x)); break; }
                         case "orizzonte_passo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizPassoIdx = Math.Max(0, Math.Min(OrizPassi.Length - 1, x)); break; }
@@ -80098,6 +80763,84 @@ namespace LunaCalc
         }
     }
 
+    // Impianti dichiarati nell'intestazione dei messaggi della chat EME di N0UK (ramo "attivi" del repository,
+    // tools/n0uk_attivi.py): nominativo, data, locator e impianto (es. 4X14HV/1K). Serve a «Stazioni da provare».
+    static class Impianti
+    {
+        public const string Url = "https://raw.githubusercontent.com/ic8tem/YAEC/attivi/impianti.gz";
+        static readonly object blocco = new object();
+        static Dictionary<string, string[]> elenco;
+        static DateTime letto = DateTime.MinValue;
+        static volatile bool inCorso;
+
+        public static string Percorso { get { return Dati.Percorso("impianti.gz"); } }
+        public static string Firma { get { try { return File.Exists(Percorso) ? File.GetLastWriteTimeUtc(Percorso).Ticks.ToString(CultureInfo.InvariantCulture) : "0"; } catch { return "0"; } } }
+
+        static Dictionary<string, string[]> Leggi(byte[] gz)
+        {
+            Dictionary<string, string[]> d = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase);
+            string t;
+            using (MemoryStream ms = new MemoryStream(gz))
+            using (System.IO.Compression.GZipStream z = new System.IO.Compression.GZipStream(ms, System.IO.Compression.CompressionMode.Decompress))
+            using (StreamReader sr = new StreamReader(z, Encoding.ASCII))
+                t = sr.ReadToEnd();
+            foreach (string r0 in t.Split('\n'))
+            {
+                string[] p = r0.Trim().Split(' ');
+                if (p.Length != 4 || p[0].Length < 3) continue;
+                d[p[0]] = new string[] { p[2] == "-" ? "" : p[2], p[3] == "-" ? "" : p[3] };
+            }
+            return d;
+        }
+
+        // Scarica l'elenco se manca o ha più di 20 ore (in silenzio)
+        public static bool Aggiorna()
+        {
+            if (inCorso) return false;
+            inCorso = true;
+            try
+            {
+                string p = Percorso;
+                if (File.Exists(p) && (DateTime.UtcNow - File.GetLastWriteTimeUtc(p)).TotalHours < 20) return false;
+                byte[] b = Dati.Scarica(Url, 20000);
+                Leggi(b);
+                Dati.ScriviAtomico(p, b);
+                lock (blocco) letto = DateTime.MinValue;
+                return true;
+            }
+            catch { return false; }
+            finally { inCorso = false; }
+        }
+
+        // locator e impianto dichiarati dal nominativo (anche con prefisso o suffisso)
+        public static bool Cerca(string call, out string loc, out string imp)
+        {
+            loc = ""; imp = "";
+            if (string.IsNullOrEmpty(call)) return false;
+            lock (blocco)
+            {
+                try
+                {
+                    string p = Percorso;
+                    if (!File.Exists(p)) return false;
+                    DateTime m = File.GetLastWriteTimeUtc(p);
+                    if (elenco == null || m != letto) { elenco = Leggi(File.ReadAllBytes(p)); letto = m; }
+                }
+                catch { return false; }
+                string[] v;
+                string c = call.Trim().ToUpperInvariant();
+                if (!elenco.TryGetValue(c, out v))
+                {
+                    string lungo = "";
+                    foreach (string parte in c.Split('/')) if (parte.Length > lungo.Length) lungo = parte;
+                    if (!elenco.TryGetValue(lungo, out v)) return false;
+                }
+                loc = v[0]; imp = v[1];
+                return true;
+            }
+        }
+    }
+
     static class Dati
     {
         public static readonly string[] FileNoti = { "impostazioni.txt", "solar-radio-flux.json", "lotw.adi" };
@@ -80419,6 +81162,7 @@ namespace LunaCalc
                 stato(Lang.T("CALL3.TXT più vecchio di 7 giorni: scaricamento da W7GJ e WSJT-X Improved…"));
             stato(Call3.Aggiorna(false));
             Attivi.Aggiorna();   // stazioni attive (chat N0UK): in silenzio
+            Impianti.Aggiorna(); // impianti dichiarati nella chat (Stazioni da provare): in silenzio
             stato(Lang.T("Cartella data pronta"));
         }
     }
@@ -80482,6 +81226,22 @@ namespace LunaCalc
         public static bool DaAggiornare
         {
             get { try { return !File.Exists(Percorso) || (DateTime.UtcNow - File.GetLastWriteTimeUtc(Percorso)).TotalHours >= 20; } catch { return false; } }
+        }
+
+        public static string Firma { get { try { return File.Exists(Percorso) ? File.GetLastWriteTimeUtc(Percorso).Ticks.ToString(CultureInfo.InvariantCulture) : "0"; } catch { return "0"; } } }
+
+        // tutte le stazioni attive negli ultimi 90 giorni, con la data dell'ultimo messaggio
+        public static Dictionary<string, DateTime> Tutti()
+        {
+            Dictionary<string, DateTime> r = new Dictionary<string, DateTime>(StringComparer.OrdinalIgnoreCase);
+            lock (blocco)
+            {
+                Carica();
+                if (elenco == null) return r;
+                DateTime limite = DateTime.UtcNow.Date.AddDays(-Giorni);
+                foreach (KeyValuePair<string, DateTime> kv in elenco) if (kv.Value >= limite) r[kv.Key] = kv.Value;
+            }
+            return r;
         }
 
         static void Carica()

@@ -29,6 +29,7 @@ jobs:
           mkdir -p /tmp/d
           if git fetch -q origin attivi 2>/dev/null; then
             git show origin/attivi:attivi.gz > /tmp/d/attivi.gz || rm -f /tmp/d/attivi.gz
+            git show origin/attivi:impianti.gz > /tmp/d/impianti.gz || rm -f /tmp/d/impianti.gz
             git show origin/attivi:call3-attivi.txt > /tmp/d/call3-attivi.txt || rm -f /tmp/d/call3-attivi.txt
             git show origin/attivi:call3.gz > /tmp/d/call3.gz || rm -f /tmp/d/call3.gz
           fi
@@ -42,6 +43,7 @@ jobs:
           git rm -rqf --cached . > /dev/null
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp /tmp/d/attivi.gz attivi.gz
+          if [ -f /tmp/d/impianti.gz ]; then cp /tmp/d/impianti.gz impianti.gz; fi
           if [ -f /tmp/d/call3-attivi.txt ]; then cp /tmp/d/call3-attivi.txt call3-attivi.txt; fi
           if [ -f /tmp/d/call3.gz ]; then cp /tmp/d/call3.gz call3.gz; fi
           # stessa lista anche in JSON e in testo semplice (per LunaCalc Mobile e per altri programmi):
@@ -55,8 +57,9 @@ jobs:
           json.dump(d, open('attivi.json', 'w'), separators=(',', ':'), sort_keys=True)
           open('attivi.txt', 'w').write(''.join('%s %s\n' % (c, g) for c, g in righe))
           PY
-          printf 'Active EME stations (N0UK chat, last 90 days), updated daily by .github/workflows/attivi.yml on main.\nattivi.gz (YAEC), attivi.json and attivi.txt (LunaCalc Mobile, other programs): callsign and date of the last message.\ncall3-attivi.txt (LunaCalc Mobile): CALL3.TXT of W7GJ + WSJT-X Improved reduced to the active stations (CALL,LOCATOR,date).\ncall3.gz (LunaCalc Mobile): the whole merged CALL3.TXT, callsign and locator only (inactive stations are not excluded from the calculation).\n' > README.md
+          printf 'Active EME stations (N0UK chat, last 90 days), updated daily by .github/workflows/attivi.yml on main.\nattivi.gz (YAEC), attivi.json and attivi.txt (LunaCalc Mobile, other programs): callsign and date of the last message.\ncall3-attivi.txt (LunaCalc Mobile): CALL3.TXT of W7GJ + WSJT-X Improved reduced to the active stations (CALL,LOCATOR,date).\ncall3.gz (LunaCalc Mobile): the whole merged CALL3.TXT, callsign and locator only (inactive stations are not excluded from the calculation).\nimpianti.gz (YAEC, Stations to try): callsign, date, locator and station setup declared in the chat header (e.g. 4X14HV/1K).\n' > README.md
           git add attivi.gz attivi.json attivi.txt README.md
+          if [ -f impianti.gz ]; then git add impianti.gz; fi
           if [ -f call3-attivi.txt ]; then git add call3-attivi.txt; fi
           if [ -f call3.gz ]; then git add call3.gz; fi
           git commit -qm "Active stations $(date -u +%F)"
