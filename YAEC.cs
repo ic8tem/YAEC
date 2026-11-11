@@ -1898,7 +1898,7 @@ namespace LunaCalc
             "Dgrd io / DX (dB)",
             "Distanza media del giorno (km)",
             "Giorno migliore nei prossimi ",
-            " giorni: {0}, Dgrd {1:F2} dB alle {2} UTC (distanza {3:N0} km), {4:0.0} ore utili.   Calcolato per {5} a {6} MHz (frequenza della linguetta Posizione della Luna){7}. Aggiornato alle {8} UTC.",
+            " giorni: {0}, Dgrd {1:F2} dB alle {2} UTC (distanza {3:N0} km), {4:0.0} ore utili.   Calcolato per {5} a {6} MHz (Dgrd classica, come le tabelle EME){7}. Aggiornato alle {8} UTC.",
             ", con il DX ",
             " (conta la Dgrd peggiore delle due stazioni e solo le finestre comuni)",
             ", solo le ore con la Luna dentro i limiti della tua antenna",
@@ -3354,6 +3354,7 @@ namespace LunaCalc
             "Viola",
             "Verde",
             "1.9 - Nuova linguetta Il mio orizzonte (In diretta): orizzonte dal terreno calcolato dai dati SRTM1 con curvatura terrestre e rifrazione, sullo sfondo della Volta celeste con una delle tre colorazioni, percorso della Luna, ostacoli principali con i nomi di OpenStreetMap e minuti di Luna persi; casella per usare il terreno come elevazione minima in tutto il programma; mappa del rumore locale secondo NJ9R, con ⚠ nelle ore in cui la Luna è in una direzione rumorosa; nuova linguetta Stazioni da provare (Pianificazione), idea di Matteo IW5DHN: le stazioni attive della chat N0UK ordinate con un indice da 0 a 100; caselle numeriche con le frecce affiancate, linguette a pillola e tre nuovi schemi di colori presi da IP-TRX-CTRL.",
+            " giorni: {0}, Dgrd {1:F2} dB alle {2} UTC (distanza {3:N0} km), {4:0.0} ore utili.   Calcolato per {5} a {6} MHz (Dgrd classica, come le tabelle EME){7}. Aggiornato alle {8} UTC.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -5053,6 +5054,7 @@ namespace LunaCalc
             "Purple",
             "Green",
             "1.9 - New tab My horizon (Live): horizon from the terrain computed from SRTM1 data with Earth curvature and refraction, over the Sky view background in one of the three colour scales, Moon path, main obstacles with OpenStreetMap names and minutes of Moon lost; checkbox to use the terrain as minimum elevation throughout the program; local noise map after NJ9R, with ⚠ in the hours when the Moon is in a noisy direction; new tab Stations to try (Planning), idea by Matteo IW5DHN: the active stations of the N0UK chat ranked by an index from 0 to 100; numeric boxes with side-by-side arrows, pill-shaped tabs and three new colour schemes taken from IP-TRX-CTRL.",
+            " days: {0}, Dgrd {1:F2} dB at {2} UTC (distance {3:N0} km), {4:0.0} useful hours.   Computed for {5} at {6} MHz (classic Dgrd, as in the EME tables){7}. Updated at {8} UTC.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6752,6 +6754,7 @@ namespace LunaCalc
             "Violett",
             "Grün",
             "1.9 - Neuer Reiter Mein Horizont (Live): Horizont aus dem Gelände, berechnet aus SRTM1-Daten mit Erdkrümmung und Refraktion, vor dem Hintergrund der Himmelsansicht in einer der drei Farbskalen, Mondbahn, Haupthindernisse mit Namen aus OpenStreetMap und verlorene Mondminuten; Kästchen, um das Gelände im ganzen Programm als Mindestelevation zu verwenden; Karte des lokalen Rauschens nach NJ9R, mit ⚠ in den Stunden, in denen der Mond in einer verrauschten Richtung steht; neuer Reiter Stationen zum Ausprobieren (Planung), Idee von Matteo IW5DHN: die aktiven Stationen des N0UK-Chats, geordnet nach einem Index von 0 bis 100; Zahlenfelder mit nebeneinander liegenden Pfeilen, Reiter in Pillenform und drei neue Farbschemata aus IP-TRX-CTRL.",
+            " Tagen: {0}, Dgrd {1:F2} dB um {2} UTC (Entfernung {3:N0} km), {4:0.0} nutzbare Stunden.   Berechnet für {5} bei {6} MHz (klassische Dgrd, wie in den EME-Tabellen){7}. Aktualisiert um {8} UTC.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -8451,6 +8454,7 @@ namespace LunaCalc
             "Violet",
             "Vert",
             "1.9 - Nouvel onglet Mon horizon (En direct) : horizon du relief calculé à partir des données SRTM1 avec la courbure terrestre et la réfraction, sur le fond de la Voûte céleste dans l'une des trois échelles de couleurs, trajectoire de la Lune, principaux obstacles avec les noms d'OpenStreetMap et minutes de Lune perdues ; case pour utiliser le relief comme élévation minimale dans tout le programme ; carte du bruit local selon NJ9R, avec ⚠ aux heures où la Lune est dans une direction bruyante ; nouvel onglet Stations à essayer (Planification), idée de Matteo IW5DHN : les stations actives du chat N0UK classées par un indice de 0 à 100 ; champs numériques avec flèches côte à côte, onglets en forme de pilule et trois nouveaux schémas de couleurs repris d'IP-TRX-CTRL.",
+            " jours : {0}, Dgrd {1:F2} dB à {2} UTC (distance {3:N0} km), {4:0.0} heures utiles.   Calculé pour {5} à {6} MHz (Dgrd classique, comme dans les tables EME){7}. Mis à jour à {8} UTC.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -10150,6 +10154,7 @@ namespace LunaCalc
             "Violeta",
             "Verde",
             "1.9 - Nueva pestaña Mi horizonte (En directo): horizonte del terreno calculado con datos SRTM1 con curvatura terrestre y refracción, sobre el fondo de la Bóveda celeste en una de las tres escalas de color, trayectoria de la Luna, obstáculos principales con los nombres de OpenStreetMap y minutos de Luna perdidos; casilla para usar el terreno como elevación mínima en todo el programa; mapa del ruido local según NJ9R, con ⚠ en las horas en que la Luna está en una dirección ruidosa; nueva pestaña Estaciones para probar (Planificación), idea de Matteo IW5DHN: las estaciones activas del chat N0UK ordenadas con un índice de 0 a 100; casillas numéricas con flechas una al lado de otra, pestañas en forma de píldora y tres nuevos esquemas de colores tomados de IP-TRX-CTRL.",
+            " días: {0}, Dgrd {1:F2} dB a las {2} UTC (distancia {3:N0} km), {4:0.0} horas útiles.   Calculado para {5} a {6} MHz (Dgrd clásica, como en las tablas EME){7}. Actualizado a las {8} UTC.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -11849,6 +11854,7 @@ namespace LunaCalc
             "Violeta",
             "Verde",
             "1.9 - Novo separador O meu horizonte (Em direto): horizonte do terreno calculado a partir dos dados SRTM1 com curvatura terrestre e refração, sobre o fundo da Abóbada celeste numa das três escalas de cores, trajetória da Lua, obstáculos principais com os nomes do OpenStreetMap e minutos de Lua perdidos; caixa para usar o terreno como elevação mínima em todo o programa; mapa do ruído local segundo NJ9R, com ⚠ nas horas em que a Lua está numa direção ruidosa; novo separador Estações a experimentar (Planeamento), ideia de Matteo IW5DHN: as estações ativas do chat N0UK ordenadas por um índice de 0 a 100; caixas numéricas com setas lado a lado, separadores em forma de pílula e três novos esquemas de cores retirados do IP-TRX-CTRL.",
+            " dias: {0}, Dgrd {1:F2} dB às {2} UTC (distância {3:N0} km), {4:0.0} horas úteis.   Calculado para {5} a {6} MHz (Dgrd clássica, como nas tabelas EME){7}. Atualizado às {8} UTC.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -13548,6 +13554,7 @@ namespace LunaCalc
             "紫色",
             "绿色",
             "1.9 - 新标签页 我的地平线（实时）：根据 SRTM1 数据计算的地形地平线，考虑地球曲率和折射，背景为三种配色之一的天穹，显示月球轨迹、带 OpenStreetMap 名称的主要障碍物以及损失的月球分钟数；可勾选在整个程序中把地形用作最低仰角；按 NJ9R 方法的本地噪声地图，月球处于噪声方向的时段标 ⚠；新标签页 值得尝试的电台（规划），创意来自 Matteo IW5DHN：N0UK 聊天中的活跃电台按 0 到 100 的指数排序；数字框箭头并排、药丸形标签页，以及取自 IP-TRX-CTRL 的三种新配色方案。",
+            " 天中最佳日：{0}，Dgrd {1:F2} dB，{2} UTC（距离 {3:N0} km），可用 {4:0.0} 小时。   计算对象 {5}，{6} MHz（经典 Dgrd，与 EME 表相同）{7}。更新于 {8} UTC。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -15247,6 +15254,7 @@ namespace LunaCalc
             "パープル",
             "グリーン",
             "1.9 - 新しいタブ 自局の地平線（ライブ）：SRTM1 データから地球の曲率と屈折を考慮して計算した地形の地平線を、3 つの配色から選べる天球の背景上に表示し、月の軌跡、OpenStreetMap の名前付きの主な障害物、失われる月の分数を示します。プログラム全体で地形を最低仰角として使うチェックボックス。NJ9R による局所ノイズマップで、月がノイズの多い方向にある時間に ⚠ を表示。新しいタブ 試してみたい局（計画）、Matteo IW5DHN のアイデア：N0UK チャットのアクティブ局を 0〜100 の指数で並べます。数値ボックスの矢印を横並びに、タブを錠剤形にし、IP-TRX-CTRL から 3 つの新しい配色を追加。",
+            " 日間の最良日：{0}、Dgrd {1:F2} dB、{2} UTC（距離 {3:N0} km）、使用可能 {4:0.0} 時間。   計算対象 {5}、{6} MHz（従来の Dgrd、EME 表と同じ）{7}。更新 {8} UTC。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -16946,6 +16954,7 @@ namespace LunaCalc
             "बैंगनी",
             "हरा",
             "1.9 - नया टैब मेरा क्षितिज (लाइव): पृथ्वी की वक्रता और अपवर्तन सहित SRTM1 डेटा से गणना किया गया भूभाग से क्षितिज, तीन रंग पैमानों में से एक वाले आकाश दृश्य की पृष्ठभूमि पर, चंद्रमा का पथ, OpenStreetMap के नामों वाली मुख्य बाधाएँ और खोए हुए चंद्रमा के मिनट; पूरे प्रोग्राम में भूभाग को न्यूनतम उन्नयन के रूप में उपयोग करने का बॉक्स; NJ9R के अनुसार स्थानीय शोर का नक्शा, जिन घंटों में चंद्रमा शोर वाली दिशा में हो उन पर ⚠; नया टैब आज़माने के लिए स्टेशन (योजना), Matteo IW5DHN का विचार: N0UK चैट के सक्रिय स्टेशन 0 से 100 के सूचकांक से क्रमबद्ध; साथ-साथ तीरों वाले संख्या बॉक्स, गोली के आकार के टैब और IP-TRX-CTRL से लिए गए तीन नए रंग योजनाएँ।",
+            " दिनों में सर्वश्रेष्ठ दिन: {0}, Dgrd {1:F2} dB, {2} UTC पर (दूरी {3:N0} km), {4:0.0} उपयोगी घंटे।   {5} के लिए {6} MHz पर गणना (पारंपरिक Dgrd, EME तालिकाओं की तरह){7}। अद्यतन {8} UTC पर।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -18645,6 +18654,7 @@ namespace LunaCalc
             "보라",
             "초록",
             "1.9 - 새 탭 내 지평선(실시간): SRTM1 데이터로 지구 곡률과 굴절을 고려해 계산한 지형 지평선을 세 가지 색상 중 하나의 하늘 보기 배경 위에 표시하고, 달의 경로, OpenStreetMap 이름이 붙은 주요 장애물, 잃는 달의 분을 보여 줍니다; 프로그램 전체에서 지형을 최소 앙각으로 쓰는 확인란; NJ9R 방식의 국지 잡음 지도, 달이 잡음이 많은 방향에 있는 시간에 ⚠ 표시; 새 탭 시도해 볼 국(계획), Matteo IW5DHN의 아이디어: N0UK 채팅의 활동 국을 0~100 지수로 정렬; 화살표가 나란히 있는 숫자 상자, 알약 모양 탭, IP-TRX-CTRL에서 가져온 새 색 구성표 세 가지.",
+            " 일 중 최적의 날: {0}, Dgrd {1:F2} dB, {2} UTC (거리 {3:N0} km), 사용 가능 {4:0.0}시간.   {5}에 대해 {6} MHz로 계산 (기존 Dgrd, EME 표와 같음){7}. 업데이트 {8} UTC.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -20344,6 +20354,7 @@ namespace LunaCalc
             "Ungu",
             "Hijau",
             "1.9 - Tab baru Cakrawala saya (Langsung): cakrawala dari medan yang dihitung dari data SRTM1 dengan kelengkungan Bumi dan refraksi, di atas latar Kubah langit dengan salah satu dari tiga skala warna, lintasan Bulan, rintangan utama dengan nama dari OpenStreetMap dan menit Bulan yang hilang; centang untuk memakai medan sebagai elevasi minimum di seluruh program; peta derau lokal menurut NJ9R, dengan ⚠ pada jam-jam ketika Bulan berada di arah yang berderau; tab baru Stasiun untuk dicoba (Perencanaan), ide dari Matteo IW5DHN: stasiun aktif obrolan N0UK diurutkan dengan indeks 0 sampai 100; kotak angka dengan panah berdampingan, tab berbentuk pil, dan tiga skema warna baru dari IP-TRX-CTRL.",
+            " hari ke depan: {0}, Dgrd {1:F2} dB pukul {2} UTC (jarak {3:N0} km), {4:0.0} jam berguna.   Dihitung untuk {5} pada {6} MHz (Dgrd klasik, seperti di tabel EME){7}. Diperbarui pukul {8} UTC.",
         };
 
         public static readonly string[] RU = {
@@ -22044,6 +22055,7 @@ namespace LunaCalc
             "Фиолетовая",
             "Зелёная",
             "1.9 - Новая вкладка Мой горизонт (В реальном времени): горизонт по рельефу, рассчитанный по данным SRTM1 с учётом кривизны Земли и рефракции, на фоне Небесный свод в одной из трёх цветовых шкал, путь Луны, основные препятствия с названиями из OpenStreetMap и потерянные минуты Луны; флажок для использования рельефа как минимального угла места во всей программе; карта местных помех по NJ9R, со знаком ⚠ в часы, когда Луна в шумном направлении; новая вкладка Станции для попытки (Планирование), идея Matteo IW5DHN: активные станции чата N0UK, упорядоченные по индексу от 0 до 100; числовые поля со стрелками рядом, вкладки в форме таблетки и три новые цветовые схемы из IP-TRX-CTRL.",
+            " дней: {0}, Dgrd {1:F2} дБ в {2} UTC (расстояние {3:N0} км), полезных часов: {4:0.0}.   Рассчитано для {5} на {6} МГц (классическая Dgrd, как в таблицах EME){7}. Обновлено в {8} UTC.",
         };
 
         public static readonly string[] UK = {
@@ -23744,6 +23756,7 @@ namespace LunaCalc
             "Фіолетова",
             "Зелена",
             "1.9 - Нова вкладка Мій горизонт (Наживо): горизонт за рельєфом, обчислений за даними SRTM1 з урахуванням кривини Землі та рефракції, на тлі Небесне склепіння в одній із трьох колірних шкал, шлях Місяця, основні перешкоди з назвами з OpenStreetMap і втрачені хвилини Місяця; прапорець для використання рельєфу як мінімального кута місця в усій програмі; карта місцевих завад за NJ9R, зі знаком ⚠ у години, коли Місяць у шумному напрямку; нова вкладка Станції для спроби (Планування), ідея Matteo IW5DHN: активні станції чату N0UK, упорядковані за індексом від 0 до 100; числові поля зі стрілками поруч, вкладки у формі пігулки та три нові колірні схеми з IP-TRX-CTRL.",
+            " днів: {0}, Dgrd {1:F2} дБ о {2} UTC (відстань {3:N0} км), корисних годин: {4:0.0}.   Розраховано для {5} на {6} МГц (класична Dgrd, як у таблицях EME){7}. Оновлено о {8} UTC.",
         };
 
         public static readonly string[] AF = {
@@ -25444,6 +25457,7 @@ namespace LunaCalc
             "Pers",
             "Groen",
             "1.9 - Nuwe oortjie My horison (Regstreeks): horison van die terrein bereken uit SRTM1-data met aardkromming en refraksie, oor die agtergrond van die Lugaansig in een van die drie kleurskale, Maanbaan, hoofhindernisse met name uit OpenStreetMap en verlore Maanminute; merkblokkie om die terrein in die hele program as minimum elevasie te gebruik; kaart van plaaslike geraas volgens NJ9R, met ⚠ in die ure wanneer die Maan in 'n raserige rigting is; nuwe oortjie Stasies om te probeer (Beplanning), idee van Matteo IW5DHN: die aktiewe stasies van die N0UK-klets gerangskik volgens 'n indeks van 0 tot 100; getalblokkies met pyle langs mekaar, pilvormige oortjies en drie nuwe kleurskemas uit IP-TRX-CTRL.",
+            " dae: {0}, Dgrd {1:F2} dB om {2} UTC (afstand {3:N0} km), {4:0.0} bruikbare ure.   Bereken vir {5} by {6} MHz (klassieke Dgrd, soos in die EME-tabelle){7}. Opgedateer om {8} UTC.",
         };
 
         public static readonly string[] BN = {
@@ -27143,6 +27157,7 @@ namespace LunaCalc
             "বেগুনি",
             "সবুজ",
             "1.9 - নতুন ট্যাব আমার দিগন্ত (সরাসরি): পৃথিবীর বক্রতা ও প্রতিসরণসহ SRTM1 তথ্য থেকে গণনা করা ভূখণ্ড থেকে দিগন্ত, তিনটি রঙের স্কেলের একটিতে আকাশ-গম্বুজ এর পটভূমিতে, চাঁদের পথ, OpenStreetMap এর নামসহ প্রধান বাধা এবং হারানো চাঁদের মিনিট; পুরো প্রোগ্রামে ভূখণ্ডকে ন্যূনতম উচ্চতা হিসেবে ব্যবহারের টিক; NJ9R অনুযায়ী স্থানীয় শব্দের মানচিত্র, যে ঘণ্টায় চাঁদ শব্দযুক্ত দিকে থাকে সেখানে ⚠; নতুন ট্যাব চেষ্টা করার স্টেশন (পরিকল্পনা), Matteo IW5DHN এর ধারণা: N0UK চ্যাটের সক্রিয় স্টেশন 0 থেকে 100 সূচকে সাজানো; পাশাপাশি তীরসহ সংখ্যার বাক্স, বড়ি-আকৃতির ট্যাব এবং IP-TRX-CTRL থেকে নেওয়া তিনটি নতুন রঙের স্কিম।",
+            " দিন: {0}, Dgrd {1:F2} dB, {2} UTC-তে (দূরত্ব {3:N0} km), {4:0.0} উপযোগী ঘণ্টা।   {5}-এর জন্য {6} MHz-এ হিসাব (প্রচলিত Dgrd, EME সারণির মতো){7}। হালনাগাদ {8} UTC।",
         };
 
         public static readonly string[] AR = {
@@ -28842,6 +28857,7 @@ namespace LunaCalc
             "بنفسجي",
             "أخضر",
             "1.9 - تبويب جديد أفق محطتي (مباشر): الأفق من التضاريس محسوباً من بيانات SRTM1 مع تحدّب الأرض والانكسار، على خلفية قبة السماء بأحد سلالم الألوان الثلاثة، مع مسار القمر والعوائق الرئيسية بأسماء من OpenStreetMap ودقائق القمر المفقودة؛ خانة لاستخدام التضاريس كارتفاع أدنى في البرنامج كله؛ خريطة الضوضاء المحلية وفق NJ9R، مع ⚠ في الساعات التي يكون فيها القمر في اتجاه مليء بالضوضاء؛ تبويب جديد محطات للتجربة (التخطيط)، فكرة Matteo IW5DHN: المحطات النشطة في دردشة N0UK مرتبة بمؤشر من 0 إلى 100؛ خانات رقمية بأسهم متجاورة، وتبويبات على شكل حبة، وثلاثة أنظمة ألوان جديدة مأخوذة من IP-TRX-CTRL.",
+            " يومًا: {0}، Dgrd {1:F2} dB عند {2} UTC (المسافة {3:N0} km)، {4:0.0} ساعات مفيدة.   محسوب لـ {5} عند {6} MHz (Dgrd الكلاسيكية، كما في جداول EME){7}. حُدِّث عند {8} UTC.",
         };
 
         public static readonly string[] TR = {
@@ -30541,6 +30557,7 @@ namespace LunaCalc
             "Mor",
             "Yeşil",
             "1.9 - Yeni sekme Ufkum (Canlı): Dünya eğriliği ve kırılma hesaba katılarak SRTM1 verilerinden hesaplanan arazi ufku, üç renk ölçeğinden biriyle Gök kubbesi arka planı üzerinde; Ay'ın yolu, OpenStreetMap adlarıyla başlıca engeller ve kaybedilen Ay dakikaları; araziyi tüm programda en düşük yükseklik açısı olarak kullanmak için onay kutusu; NJ9R'ye göre yerel gürültü haritası, Ay'ın gürültülü bir yönde olduğu saatlerde ⚠ ile; yeni sekme Denenecek istasyonlar (Planlama), fikir Matteo IW5DHN'den: N0UK sohbetindeki etkin istasyonlar 0'dan 100'e bir endeksle sıralanır; yan yana oklu sayı kutuları, hap biçimli sekmeler ve IP-TRX-CTRL'den alınan üç yeni renk şeması.",
+            " gün: {0}, Dgrd {1:F2} dB, {2} UTC'de (uzaklık {3:N0} km), {4:0.0} yararlı saat.   {5} için {6} MHz'de hesaplandı (klasik Dgrd, EME tablolarındaki gibi){7}. Güncelleme {8} UTC.",
         };
 
         public static readonly string[] NL = {
@@ -32240,6 +32257,7 @@ namespace LunaCalc
             "Paars",
             "Groen",
             "1.9 - Nieuw tabblad Mijn horizon (Live): horizon van het terrein berekend uit SRTM1-gegevens met aardkromming en refractie, op de achtergrond van de Hemelkoepel in een van de drie kleurschalen, maanbaan, belangrijkste obstakels met namen uit OpenStreetMap en verloren maanminuten; vakje om het terrein in het hele programma als minimale elevatie te gebruiken; kaart van de lokale ruis volgens NJ9R, met ⚠ in de uren waarin de Maan in een rumoerige richting staat; nieuw tabblad Stations om te proberen (Planning), idee van Matteo IW5DHN: de actieve stations van de N0UK-chat gerangschikt met een index van 0 tot 100; numerieke vakken met pijlen naast elkaar, pilvormige tabbladen en drie nieuwe kleurenschema's uit IP-TRX-CTRL.",
+            " dagen: {0}, Dgrd {1:F2} dB om {2} UTC (afstand {3:N0} km), {4:0.0} bruikbare uren.   Berekend voor {5} op {6} MHz (klassieke Dgrd, zoals in de EME-tabellen){7}. Bijgewerkt om {8} UTC.",
         };
 
         public static readonly string[] ET = {
@@ -33939,6 +33957,7 @@ namespace LunaCalc
             "Lilla",
             "Roheline",
             "1.9 - Uus vahekaart Minu horisont (Reaalajas): maastiku horisont, arvutatud SRTM1 andmetest koos Maa kõveruse ja refraktsiooniga, Taevavõlv taustal ühes kolmest värviskaalast, Kuu teekond, peamised takistused OpenStreetMapi nimedega ja kaotatud Kuu minutid; märkeruut maastiku kasutamiseks minimaalse kõrgusnurgana kogu programmis; kohaliku müra kaart NJ9R järgi, ⚠ tundidel, mil Kuu on mürarikkas suunas; uus vahekaart Jaamad proovimiseks (Planeerimine), Matteo IW5DHN idee: N0UK vestluse aktiivsed jaamad järjestatud indeksiga 0 kuni 100; arvuväljad kõrvuti nooltega, pillikujulised vahekaardid ja kolm uut värviskeemi IP-TRX-CTRL-ist.",
+            " päeva jooksul: {0}, Dgrd {1:F2} dB kell {2} UTC (kaugus {3:N0} km), {4:0.0} kasulikku tundi.   Arvutatud jaamale {5} sagedusel {6} MHz (klassikaline Dgrd, nagu EME tabelites){7}. Uuendatud kell {8} UTC.",
         };
 
         public static readonly string[] LV = {
@@ -35638,6 +35657,7 @@ namespace LunaCalc
             "Violeta",
             "Zaļa",
             "1.9 - Jauna cilne Mans horizonts (Tiešraide): reljefa horizonts, aprēķināts no SRTM1 datiem, ņemot vērā Zemes izliekumu un refrakciju, uz Debess velve fona vienā no trim krāsu skalām, Mēness ceļš, galvenie šķēršļi ar OpenStreetMap nosaukumiem un zaudētās Mēness minūtes; izvēles rūtiņa, lai visā programmā izmantotu reljefu kā minimālo elevāciju; vietējā trokšņa karte pēc NJ9R ar ⚠ stundās, kad Mēness ir trokšņainā virzienā; jauna cilne Stacijas, ko izmēģināt (Plānošana), Matteo IW5DHN ideja: N0UK tērzētavas aktīvās stacijas, sakārtotas pēc indeksa no 0 līdz 100; skaitļu lauki ar blakus novietotām bultiņām, tabletes formas cilnes un trīs jaunas krāsu shēmas no IP-TRX-CTRL.",
+            " dienās: {0}, Dgrd {1:F2} dB plkst. {2} UTC (attālums {3:N0} km), {4:0.0} izmantojamās stundas.   Aprēķināts {5} pie {6} MHz (klasiskā Dgrd, kā EME tabulās){7}. Atjaunināts plkst. {8} UTC.",
         };
 
         public static readonly string[] LT = {
@@ -37337,6 +37357,7 @@ namespace LunaCalc
             "Violetinė",
             "Žalia",
             "1.9 - Naujas skirtukas Mano horizontas (Tiesiogiai): reljefo horizontas, apskaičiuotas iš SRTM1 duomenų atsižvelgiant į Žemės kreivumą ir refrakciją, Dangaus skliautas fone viena iš trijų spalvų skalių, Mėnulio kelias, pagrindinės kliūtys su OpenStreetMap pavadinimais ir prarastos Mėnulio minutės; žymimasis langelis reljefui naudoti kaip mažiausiam pakilimo kampui visoje programoje; vietinio triukšmo žemėlapis pagal NJ9R, su ⚠ valandomis, kai Mėnulis yra triukšminga kryptimi; naujas skirtukas Stotys išbandyti (Planavimas), Matteo IW5DHN idėja: N0UK pokalbių aktyvios stotys, surikiuotos pagal indeksą nuo 0 iki 100; skaičių laukai su greta esančiomis rodyklėmis, piliulės formos skirtukai ir trys naujos spalvų schemos iš IP-TRX-CTRL.",
+            " dienas: {0}, Dgrd {1:F2} dB {2} UTC (atstumas {3:N0} km), {4:0.0} tinkamų valandų.   Apskaičiuota {5} ties {6} MHz (klasikinė Dgrd, kaip EME lentelėse){7}. Atnaujinta {8} UTC.",
         };
 
         public static readonly string[] SV = {
@@ -39036,6 +39057,7 @@ namespace LunaCalc
             "Lila",
             "Grön",
             "1.9 - Ny flik Min horisont (Live): horisont från terrängen beräknad ur SRTM1-data med jordens krökning och refraktion, mot bakgrunden av Himlavalvet i en av de tre färgskalorna, månens bana, de viktigaste hindren med namn från OpenStreetMap och förlorade månminuter; kryssruta för att använda terrängen som minsta elevation i hela programmet; karta över lokalt brus enligt NJ9R, med ⚠ de timmar då månen står i en brusig riktning; ny flik Stationer att prova (Planering), idé av Matteo IW5DHN: de aktiva stationerna i N0UK-chatten ordnade efter ett index från 0 till 100; sifferrutor med pilarna bredvid varandra, pillerformade flikar och tre nya färgscheman från IP-TRX-CTRL.",
+            " dagarna: {0}, Dgrd {1:F2} dB kl. {2} UTC (avstånd {3:N0} km), {4:0.0} användbara timmar.   Beräknat för {5} på {6} MHz (klassisk Dgrd, som i EME-tabellerna){7}. Uppdaterat kl. {8} UTC.",
         };
 
         public static readonly string[] NB = {
@@ -40735,6 +40757,7 @@ namespace LunaCalc
             "Lilla",
             "Grønn",
             "1.9 - Ny fane Min horisont (Direkte): horisont fra terrenget beregnet ut fra SRTM1-data med jordkrumning og refraksjon, mot bakgrunnen av Himmelhvelvingen i en av de tre fargeskalaene, månebane, de viktigste hindringene med navn fra OpenStreetMap og tapte måneminutter; avkrysningsboks for å bruke terrenget som minste elevasjon i hele programmet; kart over lokal støy etter NJ9R, med ⚠ i timene da månen står i en støyende retning; ny fane Stasjoner å prøve (Planlegging), idé fra Matteo IW5DHN: de aktive stasjonene i N0UK-chatten ordnet etter en indeks fra 0 til 100; tallfelt med pilene ved siden av hverandre, pilleformede faner og tre nye fargeskjemaer fra IP-TRX-CTRL.",
+            " dagene: {0}, Dgrd {1:F2} dB kl. {2} UTC (avstand {3:N0} km), {4:0.0} nyttige timer.   Beregnet for {5} på {6} MHz (klassisk Dgrd, som i EME-tabellene){7}. Oppdatert kl. {8} UTC.",
         };
 
         public static readonly string[] IS = {
@@ -42434,6 +42457,7 @@ namespace LunaCalc
             "Fjólublátt",
             "Grænt",
             "1.9 - Nýr flipi Sjóndeildarhringurinn minn (Í beinni): sjóndeildarhringur landslags reiknaður út frá SRTM1-gögnum með sveigju jarðar og ljósbroti, á bakgrunni Himinhvelfing í einum af þremur litakvörðum, braut tunglsins, helstu hindranir með nöfnum úr OpenStreetMap og töpuðum tunglmínútum; gátreitur til að nota landslagið sem lágmarkshæðarhorn í öllu forritinu; kort af staðbundnu suði samkvæmt NJ9R, með ⚠ á þeim klukkustundum þegar tunglið er í suðsamri átt; nýr flipi Stöðvar til að prófa (Áætlanagerð), hugmynd Matteo IW5DHN: virkar stöðvar í N0UK-spjallinu raðað eftir vísitölu frá 0 til 100; talnareitir með örvum hlið við hlið, pillulaga flipar og þrjú ný litaskemu úr IP-TRX-CTRL.",
+            " daga: {0}, Dgrd {1:F2} dB kl. {2} UTC (fjarlægð {3:N0} km), {4:0.0} nothæfar klukkustundir.   Reiknað fyrir {5} á {6} MHz (hefðbundin Dgrd, eins og í EME-töflunum){7}. Uppfært kl. {8} UTC.",
         };
 
         public static readonly string[] HE = {
@@ -44133,6 +44157,7 @@ namespace LunaCalc
             "סגול",
             "ירוק",
             "1.9 - לשונית חדשה האופק שלי (חי): אופק מפני השטח המחושב מנתוני SRTM1 עם עקמומיות כדור הארץ ושבירה, על רקע כיפת השמיים באחד משלושת סולמות הצבע, מסלול הירח, המכשולים העיקריים עם שמות מ־OpenStreetMap ודקות הירח שאבדו; תיבת סימון לשימוש בפני השטח כגובה מינימלי בכל התוכנה; מפת רעש מקומי לפי NJ9R, עם ⚠ בשעות שבהן הירח בכיוון רועש; לשונית חדשה תחנות לנסות (תכנון), רעיון של Matteo IW5DHN: התחנות הפעילות בצ'אט N0UK ממוינות לפי מדד מ־0 עד 100; תיבות מספרים עם חצים זה לצד זה, לשוניות בצורת גלולה ושלוש ערכות צבעים חדשות מ־IP-TRX-CTRL.",
+            " הימים הבאים: {0}, Dgrd {1:F2} dB בשעה {2} UTC (מרחק {3:N0} km), {4:0.0} שעות שימושיות.   חושב עבור {5} ב-{6} MHz (Dgrd קלאסית, כמו בטבלאות EME){7}. עודכן בשעה {8} UTC.",
         };
 
         public static readonly string[] UR = {
@@ -45832,6 +45857,7 @@ namespace LunaCalc
             "بنفشی",
             "سبز",
             "1.9 - نیا ٹیب میرا افق (براہِ راست): زمین کے خم اور انعطاف کے ساتھ SRTM1 ڈیٹا سے حساب کیا گیا زمین سے افق، تین رنگ پیمانوں میں سے ایک میں آسمانی گنبد کے پس منظر پر، چاند کا راستہ، OpenStreetMap کے ناموں کے ساتھ اہم رکاوٹیں اور ضائع ہونے والے چاند کے منٹ؛ پورے پروگرام میں زمین کو کم از کم بلندی کے طور پر استعمال کرنے کا خانہ؛ NJ9R کے مطابق مقامی شور کا نقشہ، ان گھنٹوں میں ⚠ کے ساتھ جب چاند شور والی سمت میں ہو؛ نیا ٹیب آزمانے کے لیے اسٹیشن (منصوبہ بندی)، خیال Matteo IW5DHN کا: N0UK چیٹ کے فعال اسٹیشن 0 سے 100 کے اشاریے سے ترتیب دیے گئے؛ ساتھ ساتھ تیروں والے عددی خانے، گولی نما ٹیب اور IP-TRX-CTRL سے لیے گئے تین نئے رنگ منصوبے۔",
+            " دنوں میں بہترین دن: {0}، Dgrd {1:F2} dB، {2} UTC پر (فاصلہ {3:N0} km)، {4:0.0} قابلِ استعمال گھنٹے۔   {5} کے لیے {6} MHz پر حساب کیا گیا (روایتی Dgrd، EME جدولوں کی طرح){7}۔ {8} UTC پر اپ ڈیٹ کیا گیا۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -47530,6 +47556,7 @@ namespace LunaCalc
             "Lilla",
             "Grøn",
             "1.9 - Ny fane Min horisont (Live): horisont fra terrænet beregnet ud fra SRTM1-data med jordens krumning og refraktion, på baggrund af Himmelhvælving i en af de tre farveskalaer, Månens bane, de vigtigste forhindringer med navne fra OpenStreetMap og tabte måneminutter; afkrydsningsfelt til at bruge terrænet som mindste elevation i hele programmet; kort over lokal støj efter NJ9R, med ⚠ i de timer hvor Månen står i en støjende retning; ny fane Stationer at prøve (Planlægning), idé fra Matteo IW5DHN: de aktive stationer i N0UK-chatten ordnet efter et indeks fra 0 til 100; talfelter med pilene side om side, pilleformede faner og tre nye farveskemaer fra IP-TRX-CTRL.",
+            " dage: {0}, Dgrd {1:F2} dB kl. {2} UTC (afstand {3:N0} km), {4:0.0} brugbare timer.   Beregnet for {5} ved {6} MHz (klassisk Dgrd, som i EME-tabellerne){7}. Opdateret kl. {8} UTC.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -49228,6 +49255,7 @@ namespace LunaCalc
             "Lila",
             "Berde",
             "1.9 - Bagong tab na Aking horizon (Live): abot-tanaw mula sa lupain na kinalkula mula sa datos ng SRTM1 kasama ang kurbada ng Daigdig at repraksyon, sa ibabaw ng background ng Tanaw ng langit sa isa sa tatlong eskala ng kulay, landas ng Buwan, pangunahing mga hadlang na may pangalan mula sa OpenStreetMap at mga minuto ng Buwan na nawala; kahon para gamitin ang lupain bilang pinakamababang elebasyon sa buong programa; mapa ng lokal na ingay ayon kay NJ9R, may ⚠ sa mga oras na nasa maingay na direksyon ang Buwan; bagong tab na Mga istasyong susubukan (Pagpaplano), ideya ni Matteo IW5DHN: ang mga aktibong istasyon ng chat ng N0UK na nakaayos ayon sa indeks mula 0 hanggang 100; mga numerong kahon na may magkatabing palaso, mga tab na hugis-tableta at tatlong bagong scheme ng kulay mula sa IP-TRX-CTRL.",
+            " araw: {0}, Dgrd {1:F2} dB sa {2} UTC (layo {3:N0} km), {4:0.0} magagamit na oras.   Kinuwenta para sa {5} sa {6} MHz (klasikong Dgrd, gaya ng sa mga talaan ng EME){7}. Na-update noong {8} UTC.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -50926,6 +50954,7 @@ namespace LunaCalc
             "Violeta",
             "Verde",
             "1.9 - Nova aba Meu horizonte (Ao vivo): horizonte do terreno calculado a partir dos dados SRTM1 com curvatura da Terra e refração, sobre o fundo da Abóbada celeste em uma das três escalas de cores, trajetória da Lua, obstáculos principais com os nomes do OpenStreetMap e minutos de Lua perdidos; caixa para usar o terreno como elevação mínima em todo o programa; mapa do ruído local segundo NJ9R, com ⚠ nas horas em que a Lua está em uma direção ruidosa; nova aba Estações para testar (Planejamento), ideia de Matteo IW5DHN: as estações ativas do chat N0UK ordenadas por um índice de 0 a 100; caixas numéricas com setas lado a lado, abas em formato de pílula e três novos esquemas de cores tirados do IP-TRX-CTRL.",
+            " dias: {0}, Dgrd {1:F2} dB às {2} UTC (distância {3:N0} km), {4:0.0} horas úteis.   Calculado para {5} a {6} MHz (Dgrd clássica, como nas tabelas de EME){7}. Atualizado às {8} UTC.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -52624,6 +52653,7 @@ namespace LunaCalc
             "ม่วง",
             "เขียว",
             "1.9 - แท็บใหม่ ขอบฟ้าของฉัน (สด): ขอบฟ้าจากภูมิประเทศคำนวณจากข้อมูล SRTM1 พร้อมความโค้งของโลกและการหักเห บนพื้นหลัง ทรงกลมฟ้า ในหนึ่งในสามสเกลสี เส้นทางดวงจันทร์ สิ่งกีดขวางหลักพร้อมชื่อจาก OpenStreetMap และนาทีของดวงจันทร์ที่เสียไป; ช่องเลือกเพื่อใช้ภูมิประเทศเป็นมุมเงยต่ำสุดทั้งโปรแกรม; แผนที่สัญญาณรบกวนท้องถิ่นตาม NJ9R พร้อม ⚠ ในชั่วโมงที่ดวงจันทร์อยู่ในทิศที่มีสัญญาณรบกวน; แท็บใหม่ สถานีที่ควรลอง (การวางแผน) แนวคิดจาก Matteo IW5DHN: สถานีที่ใช้งานในแชท N0UK เรียงตามดัชนี 0 ถึง 100; ช่องตัวเลขที่มีลูกศรวางเคียงกัน แท็บรูปเม็ดยา และชุดสีใหม่สามชุดจาก IP-TRX-CTRL",
+            " วันข้างหน้า: {0}, Dgrd {1:F2} dB เวลา {2} UTC (ระยะทาง {3:N0} km), ชั่วโมงที่ใช้ได้ {4:0.0} ชั่วโมง   คำนวณสำหรับ {5} ที่ {6} MHz (Dgrd แบบดั้งเดิม เหมือนในตาราง EME){7} อัปเดตเวลา {8} UTC",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -54322,6 +54352,7 @@ namespace LunaCalc
             "紫色",
             "綠色",
             "1.9 - 新分頁 我的地平線（即時）：根據 SRTM1 資料計算的地形地平線，考慮地球曲率與折射，背景為三種配色之一的天穹，顯示月球軌跡、附 OpenStreetMap 名稱的主要障礙物以及損失的月球分鐘數；可勾選在整個程式中把地形當作最低仰角；依 NJ9R 方法的本地雜訊地圖，月球位於雜訊方向的時段標 ⚠；新分頁 值得嘗試的電台（規劃），構想來自 Matteo IW5DHN：N0UK 聊天室中的活躍電台依 0 到 100 的指數排序；數字框箭頭並排、藥丸形分頁，以及取自 IP-TRX-CTRL 的三種新配色方案。",
+            " 天中最佳日：{0}，Dgrd {1:F2} dB，{2} UTC（距離 {3:N0} km），可用 {4:0.0} 小時。   計算對象 {5}，{6} MHz（傳統 Dgrd，與 EME 表相同）{7}。更新於 {8} UTC。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -56020,6 +56051,7 @@ namespace LunaCalc
             "Fioletowy",
             "Zielony",
             "1.9 - Nowa zakładka Mój horyzont (Na żywo): horyzont z terenu obliczony z danych SRTM1 z uwzględnieniem krzywizny Ziemi i refrakcji, na tle Sklepienie niebieskie w jednej z trzech skal barw, droga Księżyca, główne przeszkody z nazwami z OpenStreetMap i utracone minuty Księżyca; pole wyboru, aby w całym programie używać terenu jako minimalnej elewacji; mapa lokalnego szumu według NJ9R, z ⚠ w godzinach, gdy Księżyc jest w zaszumionym kierunku; nowa zakładka Stacje do spróbowania (Planowanie), pomysł Matteo IW5DHN: aktywne stacje czatu N0UK uporządkowane według indeksu od 0 do 100; pola liczbowe ze strzałkami obok siebie, zakładki w kształcie pigułki i trzy nowe schematy kolorów z IP-TRX-CTRL.",
+            " dni: {0}, Dgrd {1:F2} dB o {2} UTC (odległość {3:N0} km), {4:0.0} użytecznych godzin.   Obliczono dla {5} przy {6} MHz (klasyczna Dgrd, jak w tabelach EME){7}. Zaktualizowano o {8} UTC.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -57718,6 +57750,7 @@ namespace LunaCalc
             "Fialová",
             "Zelená",
             "1.9 - Nová karta Můj obzor (Živě): obzor z terénu vypočtený z dat SRTM1 se zakřivením Země a refrakcí, na pozadí Nebeská klenba v jedné ze tří barevných škál, dráha Měsíce, hlavní překážky s názvy z OpenStreetMap a ztracené minuty Měsíce; zaškrtávací políčko pro použití terénu jako minimální elevace v celém programu; mapa místního šumu podle NJ9R, s ⚠ v hodinách, kdy je Měsíc v hlučném směru; nová karta Stanice k vyzkoušení (Plánování), nápad Matteo IW5DHN: aktivní stanice chatu N0UK seřazené podle indexu od 0 do 100; číselná pole se šipkami vedle sebe, karty ve tvaru pilulky a tři nová barevná schémata z IP-TRX-CTRL.",
+            " dnech: {0}, Dgrd {1:F2} dB v {2} UTC (vzdálenost {3:N0} km), {4:0.0} užitečných hodin.   Počítáno pro {5} na {6} MHz (klasická Dgrd, jako v tabulkách EME){7}. Aktualizováno v {8} UTC.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -59416,6 +59449,7 @@ namespace LunaCalc
             "Violet",
             "Verde",
             "1.9 - Filă nouă Orizontul meu (În direct): orizontul din relief calculat din datele SRTM1 cu curbura Pământului și refracția, pe fundalul Bolta cerească într-una dintre cele trei scale de culori, traiectoria Lunii, obstacolele principale cu numele din OpenStreetMap și minutele de Lună pierdute; casetă pentru a folosi relieful ca elevație minimă în tot programul; harta zgomotului local după NJ9R, cu ⚠ în orele în care Luna este într-o direcție zgomotoasă; filă nouă Stații de încercat (Planificare), idee de Matteo IW5DHN: stațiile active din chatul N0UK ordonate după un indice de la 0 la 100; câmpuri numerice cu săgețile alăturate, file în formă de pastilă și trei scheme de culori noi preluate din IP-TRX-CTRL.",
+            " zile: {0}, Dgrd {1:F2} dB la {2} UTC (distanța {3:N0} km), {4:0.0} ore utile.   Calculat pentru {5} la {6} MHz (Dgrd clasică, ca în tabelele EME){7}. Actualizat la {8} UTC.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -61114,6 +61148,7 @@ namespace LunaCalc
             "Μωβ",
             "Πράσινο",
             "1.9 - Νέα καρτέλα Ο ορίζοντάς μου (Ζωντανά): ορίζοντας από το έδαφος υπολογισμένος από δεδομένα SRTM1 με την καμπυλότητα της Γης και τη διάθλαση, στο φόντο του Ουράνιος θόλος σε μία από τις τρεις χρωματικές κλίμακες, τροχιά της Σελήνης, κύρια εμπόδια με ονόματα από το OpenStreetMap και χαμένα λεπτά Σελήνης· πλαίσιο για χρήση του εδάφους ως ελάχιστης ανύψωσης σε όλο το πρόγραμμα· χάρτης τοπικού θορύβου κατά NJ9R, με ⚠ στις ώρες που η Σελήνη βρίσκεται σε θορυβώδη κατεύθυνση· νέα καρτέλα Σταθμοί για δοκιμή (Σχεδιασμός), ιδέα του Matteo IW5DHN: οι ενεργοί σταθμοί της συνομιλίας N0UK ταξινομημένοι με δείκτη από 0 έως 100· αριθμητικά πεδία με βέλη δίπλα-δίπλα, καρτέλες σε σχήμα χαπιού και τρία νέα χρωματικά σχήματα από το IP-TRX-CTRL.",
+            " ημέρες: {0}, Dgrd {1:F2} dB στις {2} UTC (απόσταση {3:N0} km), {4:0.0} χρήσιμες ώρες.   Υπολογισμένο για {5} στα {6} MHz (κλασική Dgrd, όπως στους πίνακες EME){7}. Ενημερώθηκε στις {8} UTC.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -62812,6 +62847,7 @@ namespace LunaCalc
             "Lila",
             "Zöld",
             "1.9 - Új fül: Az én horizontom (Élő): a terepből számított horizont SRTM1 adatokból, a Föld görbületével és a fénytöréssel, a(z) Égbolt hátterén a három színskála egyikével, a Hold pályája, a fő akadályok OpenStreetMap-nevekkel és az elveszett Hold-percek; jelölőnégyzet a terep minimális elevációként való használatához az egész programban; helyi zajtérkép NJ9R szerint, ⚠ jellel azokban az órákban, amikor a Hold zajos irányban van; új fül: Kipróbálandó állomások (Tervezés), Matteo IW5DHN ötlete: az N0UK csevegő aktív állomásai 0-tól 100-ig terjedő index szerint rendezve; számmezők egymás melletti nyilakkal, tabletta alakú fülek és három új színséma az IP-TRX-CTRL-ből.",
+            " napban: {0}, Dgrd {1:F2} dB {2} UTC-kor (távolság {3:N0} km), {4:0.0} hasznos óra.   Számítva: {5}, {6} MHz (klasszikus Dgrd, mint az EME-táblázatokban){7}. Frissítve {8} UTC-kor.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -64510,6 +64546,7 @@ namespace LunaCalc
             "Fialová",
             "Zelená",
             "1.9 - Nová karta Môj obzor (Naživo): obzor z terénu vypočítaný z dát SRTM1 so zakrivením Zeme a refrakciou, na pozadí Nebeská klenba v jednej z troch farebných škál, dráha Mesiaca, hlavné prekážky s názvami z OpenStreetMap a stratené minúty Mesiaca; začiarkavacie políčko na použitie terénu ako minimálnej elevácie v celom programe; mapa miestneho šumu podľa NJ9R, s ⚠ v hodinách, keď je Mesiac v hlučnom smere; nová karta Stanice na vyskúšanie (Plánovanie), nápad Matteo IW5DHN: aktívne stanice četu N0UK zoradené podľa indexu od 0 do 100; číselné polia so šípkami vedľa seba, karty v tvare tabletky a tri nové farebné schémy z IP-TRX-CTRL.",
+            " dňoch: {0}, Dgrd {1:F2} dB o {2} UTC (vzdialenosť {3:N0} km), {4:0.0} užitočných hodín.   Počítané pre {5} na {6} MHz (klasická Dgrd, ako v tabuľkách EME){7}. Aktualizované o {8} UTC.",
         };
     }
 
@@ -74158,8 +74195,7 @@ namespace LunaCalc
             if (dgChart == null) return;
             dgT.Clear(); dgDgrd.Clear(); dgDec.Clear(); dgOk.Clear(); dgGiorni.Clear(); dgTop.Clear(); dgNuova.Clear(); dgPiena.Clear(); dgOrd.Clear();
             if (!me.Ok) { lblDg.Text = Lang.T("Imposta un locator valido nella prima linguetta."); lvDg.Items.Clear(); dgChart.Invalidate(); pnlDgTop.Invalidate(); pnlDgCal.Invalidate(); return; }
-            double f;
-            if (!ReadFreq(out f)) f = 144;
+            double f = 144;   // Distanza e Dgrd: sempre a 144 MHz, come le tabelle EME e i portali
             dgFreq = f;
             dgDx = chkDx.Checked && dx.Ok;
             DateTime now = DateTime.UtcNow;
@@ -74246,7 +74282,7 @@ namespace LunaCalc
             if (ord.Count > 0)
             {
                 GiornoEme b = ord[0];
-                lblDg.Text = string.Format(ci, Lang.T("Giorno migliore nei prossimi ") + ngiorni.ToString(ci) + Lang.T(" giorni: {0}, Dgrd {1:F2} dB alle {2} UTC (distanza {3:N0} km), {4:0.0} ore utili.   Calcolato per {5} a {6} MHz (frequenza della linguetta Posizione della Luna){7}. Aggiornato alle {8} UTC."),
+                lblDg.Text = string.Format(ci, Lang.T("Giorno migliore nei prossimi ") + ngiorni.ToString(ci) + Lang.T(" giorni: {0}, Dgrd {1:F2} dB alle {2} UTC (distanza {3:N0} km), {4:0.0} ore utili.   Calcolato per {5} a {6} MHz (Dgrd classica, come le tabelle EME){7}. Aggiornato alle {8} UTC."),
                     b.Giorno.ToString("dddd dd/MM", itCi), b.Score, FmtT(b.Migliore), b.Dist, b.Ore,
                     me.Loc.Text.Trim(), f.ToString("0.000", ci),
                     dgDx ? Lang.T(", con il DX ") + dx.Loc.Text.Trim() + Lang.T(" (conta la Dgrd peggiore delle due stazioni e solo le finestre comuni)") : Lang.T(", solo le ore con la Luna dentro i limiti della tua antenna"),
