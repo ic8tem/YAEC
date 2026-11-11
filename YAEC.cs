@@ -69753,9 +69753,10 @@ namespace LunaCalc
         }
 
         // Dgrd usato da tutto il programma, secondo le scelte della linguetta DGRD per frequenza
+        bool dgrdClassico;
         double DgrdScelto(MoonPos p, double f, bool dxSt, out double tsky)
         {
-            if (dgfRx == 0 && dgfCielo == 0) { tsky = Moon.Tsky(p.Lambda, f); return Moon.Dgrd(p.Lambda, p.DistTopo, f); }
+            if (dgrdClassico || dgfRx == 0 && dgfCielo == 0) { tsky = Moon.Tsky(p.Lambda, f); return Moon.Dgrd(p.Lambda, p.DistTopo, f); }
             DgfDett d = DgrdDett(p, f, BpBanda(dxSt ? bpDx : bpMe, f), dgfRx, dgfCielo);
             tsky = d.Tsky;
             return d.Dgrd;
@@ -74170,7 +74171,9 @@ namespace LunaCalc
             DateTime tPrev = dgStart;
             for (DateTime t = dgStart; t <= dgEnd; t = t.AddMinutes(30))
             {
-                Riga r = Calcola1(t, dgDx, f, chkRefr.Checked);
+                dgrdClassico = true;   // Distanza e Dgrd: sempre il calcolo classico (WSJT-X), non il modello della DGRD per frequenza
+                Riga r;
+                try { r = Calcola1(t, dgDx, f, chkRefr.Checked); } finally { dgrdClassico = false; }
                 double score = dgDx ? Math.Min(r.DgrdMe, r.DgrdDx) : r.DgrdMe;
                 dgT.Add(t); dgDgrd.Add(r.DgrdMe); dgOk.Add(r.Ok); dgDec.Add(r.P.DecGeo);
 
