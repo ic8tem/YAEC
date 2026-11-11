@@ -9,6 +9,11 @@ on:
     branches: [ main ]
   pull_request:
   workflow_dispatch:
+    inputs:
+      articolo:
+        description: 'Schermate per gli articoli'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -302,7 +307,7 @@ jobs:
           git commit -qm "Font test ${GITHUB_SHA::7}"
           git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:prova-caratteri
       - name: Schermate per gli articoli (solo con [articolo] nel messaggio del commit)
-        if: contains(github.event.head_commit.message, '[articolo]')
+        if: contains(github.event.head_commit.message, '[articolo]') || github.event.inputs.articolo == 'true'
         run: |
           sudo apt-get install -y -qq xdotool fonts-noto-core faketime > /dev/null 2>&1 || true
           fc-cache -f > /dev/null
@@ -318,17 +323,33 @@ jobs:
           } > "$F"
           mkdir -p articolo
           i=0
-          for T in "Posizione live e +- 24h" "Distanza e Dgrd" "Posizione della Luna" "Budget EME yagi" "Budget EME dischi" "Volta celeste" "Luna sul mondo" "Rumore solare" "Radar GRAVES" "Ricognizione dei miei ostacoli" "Controllo dei calcoli" "CAVI COASSIALI" "DGRD per frequenza"; do
-            i=$((i+1))
-            YAEC_LINGUETTA="$T" YAEC_CALCOLA=1 TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
+          scatta() {  # $1 = linguetta, $2 = nome del file, $3 = attesa in secondi, altre variabili gia' esportate
+            YAEC_LINGUETTA="$1" TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
             PID=$!
             sleep 25
             W=$(xdotool search --name "YAEC" | tail -1)
             if [ -n "$W" ]; then xdotool windowmove $W 0 0 windowsize $W 1920 1080; fi
-            sleep 12; xdotool mousemove 1915 1075 || true; sleep 1
-            import -window root "articolo/$(printf %02d $i)-${T// /_}.png" || true
+            sleep "$3"; xdotool mousemove 1915 1075 || true; sleep 1
+            import -window root "articolo/$2.png" || true
             kill $PID 2>/dev/null || true; pkill -f YAEC.exe || true; sleep 3
-          done
+          }
+          export YAEC_CALCOLA=1
+          scatta "Posizione live e +- 24h" 01-principale 12
+          scatta "Distanza e Dgrd" 02-distanza_dgrd 20
+          scatta "Posizione della Luna" 03-posizione 15
+          scatta "Budget EME yagi" 04-budget_yagi 12
+          unset YAEC_CALCOLA
+          # la stazione dell'autore a Capri per «Il mio orizzonte» e «Stazioni da provare»
+          {
+            printf 'lingua=it\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
+            printf 'locator=JN70CN83CL\nquota=62\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
+            printf 'orizzonte_raggio=2\norizzonte_vista=0\nterreno=1\n'
+            printf 'b144_me_p=1000\nb144_me_nant=4\nb144_me_gant=17\n'
+          } > "$F"
+          YAEC_ORIZZONTE=1 scatta "Il mio orizzonte" 05-orizzonte 240
+          scatta "Stazioni da provare" 06-stazioni_da_provare 40
+          printf 'orizzonte_vista=1\n' >> "$F"
+          scatta "Il mio orizzonte" 07-rumore_locale 20
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           H=$(git config --get http.https://github.com/.extraheader)
           U=$(git remote get-url origin)
