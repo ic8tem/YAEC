@@ -531,7 +531,6 @@ YAEC は、50、70、144、222、432、902 MHz と 23 cm（1296 MHz）で EME（
 
 ### 한국어
 
-<table><tr><td width="33%" align="center"><a href="docs/screenshots/ko-1.jpg"><img src="docs/screenshots/ko-1.jpg" alt="실시간 위치 및 +- 24h"></a><br><sub>실시간 위치 및 +- 24h</sub></td><td width="33%" align="center"><a href="docs/screenshots/ko-2.jpg"><img src="docs/screenshots/ko-2.jpg" alt="EME 링크 버짓 야기"></a><br><sub>EME 링크 버짓 야기</sub></td><td width="33%" align="center"><a href="docs/screenshots/ko-3.jpg"><img src="docs/screenshots/ko-3.jpg" alt="거리와 Dgrd"></a><br><sub>거리와 Dgrd</sub></td></tr></table>
 
 YAEC는 50, 70, 144, 222, 432, 902 MHz와 23 cm(1296 MHz)에서 EME(지구–달–지구) 운용에 필요한 모든 것을 하나의 프로그램에 모았습니다. 특히 앙각이 없는 안테나, 회전 범위가 제한된 로테이터, 하늘 일부를 가리는 장애물처럼 제약이 있는 국에 유용합니다. 달이 어디 있는지뿐 아니라 **당신의** 안테나가 정말 달에 닿을 수 있는지, 언제, 어떤 조건에서인지 알려 줍니다. 432 MHz 이상의 밴드는 아직 보완 중이지만 DGRD는 이미 모든 주파수에서 올바르게 계산됩니다. 900 MHz 이상을 처음 시작하는 분을 위한 조언도 추가될 예정입니다.
 

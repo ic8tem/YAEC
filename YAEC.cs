@@ -67670,7 +67670,7 @@ namespace LunaCalc
                     Testo(g, trk.Avvisi, fs, Tema.WarnFg, new RectangleF(x, y + S(2), wi, yMax - y), StringAlignment.Near, StringAlignment.Near);
                 // casella CALCOLI APPROFONDITI (la stessa del Budget EME) e pulsante VAI AI CALCOLI
                 bool on = chkComplessi != null && chkComplessi.Checked;
-                string tc = Lang.T("CALCOLI APPROFONDITI"), tl = "⇄ Budget";
+                string tc = Lang.T("CALCOLI APPROFONDITI"), tl = "⇄ " + Lang.T("Budget EME");
                 float wg = g.MeasureString(Lang.T("VAI AI CALCOLI") + " ➜", fbtn).Width + S(32);
                 float disp = wi - wg - S(10);
                 // la scritta non si sovrappone mai: prima si toglie "⇄ Budget", poi si rimpicciolisce il carattere
