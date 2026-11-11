@@ -67424,6 +67424,7 @@ namespace LunaCalc
         static readonly double[] OrizK = { 4.0 / 3.0, 1.0, 2.0 / 3.0 };
         static readonly string[] OrizKNome = { "4/3", "1", "2/3" };
         PannelloDisegno pnlOrizSel, pnlOriz;
+        float orizEffettoExtra;
         Panel pnlOrizScroll, pnlOrizTop, pnlRumTop;
         Tendina cmbOrizRaggio, cmbOrizPasso, cmbOrizK, cmbOrizPal;
         Label lblOrizQth, lblOrizRaggio, lblOrizStato;
@@ -68239,11 +68240,13 @@ namespace LunaCalc
                 // effetto sulla Luna
                 {
                     PassaggioLuna ps2 = orizPass;
-                    RectangleF r = new RectangleF(xr, yr, wDx, S(176));
+                    RectangleF r = new RectangleF(xr, yr, wDx, S(176) + orizEffettoExtra);
                     Scheda(g, r, Color.Empty);
+                    float yEff0 = 0;
                     string tl = ps2 != null && ps2.Ok ? string.Format(ci, Lang.T("EFFETTO SULLA LUNA DEL {0}"), ps2.AstroSorge.ToString("dd/MM", inv)) : Lang.T("EFFETTO SULLA LUNA");
                     Testo(g, Spaziato(tl), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
                     float y = r.Top + S(42), rh = S(25);
+                    yEff0 = y;
                     if (ps2 == null || !ps2.Ok) Testo(g, Lang.T("Imposta un locator valido nella prima linguetta."), fs, Tema.Muted, new RectangleF(r.Left + S(16), y, r.Width - S(30), S(40)), StringAlignment.Near, StringAlignment.Near);
                     else
                     {
@@ -68260,13 +68263,29 @@ namespace LunaCalc
                             Color cv = rosso2 ? rosso : Tema.Fore;
                             float wl = g.MeasureString(righe[k][0], fs).Width;
                             Testo(g, righe[k][0], fs, Tema.Fore, new RectangleF(r.Left + S(16), y, wl + S(4), rh), StringAlignment.Near, StringAlignment.Center);
-                            float wn = g.MeasureString(righe[k][2], fs).Width;
-                            Testo(g, righe[k][2], fs, rosso2 ? rosso : Tema.Muted, new RectangleF(r.Right - S(16) - wn, y, wn + S(2), rh), StringAlignment.Far, StringAlignment.Center);
+                            float wn = g.MeasureString(righe[k][2], fs).Width, wv = g.MeasureString(righe[k][1], fsb).Width;
                             float xv = r.Left + S(24) + wl;
+                            if (xv + wv + S(8) + wn > r.Right - S(16) && wn > 0)
+                            {
+                                // la nota non entra accanto al valore: va sulla riga sotto, allineata a destra
+                                Testo(g, righe[k][1], fsb, cv, new RectangleF(xv, y, r.Right - S(16) - xv, rh), StringAlignment.Far, StringAlignment.Center);
+                                y += S(18);
+                                Testo(g, righe[k][2], fs, rosso2 ? rosso : Tema.Muted, new RectangleF(r.Left + S(16), y, r.Width - S(32), rh), StringAlignment.Far, StringAlignment.Center);
+                                if (k < righe.Length - 1) using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), y + rh, r.Right - S(16), y + rh);
+                                y += rh;
+                                continue;
+                            }
+                            Testo(g, righe[k][2], fs, rosso2 ? rosso : Tema.Muted, new RectangleF(r.Right - S(16) - wn, y, wn + S(2), rh), StringAlignment.Far, StringAlignment.Center);
                             Testo(g, righe[k][1], fsb, cv, new RectangleF(xv, y, Math.Max(S(20), r.Right - S(20) - wn - xv), rh), StringAlignment.Far, StringAlignment.Center);
                             if (k < righe.Length - 1) using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), y + rh, r.Right - S(16), y + rh);
                             y += rh;
                         }
+                    }
+                    if (ps2 != null && ps2.Ok)
+                    {
+                        // la prossima volta la scheda è alta quanto serve (le note spezzate su due righe)
+                        float extra = Math.Max(0, y - yEff0 - 5 * S(25));
+                        if (Math.Abs(extra - orizEffettoExtra) > 0.5f) { orizEffettoExtra = extra; pnlOriz.Invalidate(); }
                     }
                     yr = r.Bottom + S(12);
                 }
@@ -69382,10 +69401,15 @@ namespace LunaCalc
                 float hr = g.MeasureString("Ag", fs).Height;
                 float wb = g.MeasureString(av1 + " ", fsb).Width;
                 // la prima riga: la frase in grassetto e l'inizio del testo normale; poi il resto, a capo
-                int nfit, nl;
-                g.MeasureString(av2, fs, new SizeF(Math.Max(10, wav - wb), hr * 1.2f), StringFormat.GenericDefault, out nfit, out nl);
-                if (nfit > 0 && nfit < av2.Length) { int sp = av2.LastIndexOf(' ', Math.Max(0, nfit - 1)); nfit = sp > 0 ? sp + 1 : 0; }
-                nfit = Math.Max(0, Math.Min(av2.Length, nfit));
+                // parola per parola: MeasureString con i caratteri contati non è affidabile su Mono
+                int nfit = 0;
+                for (int k = av2.IndexOf(' '); ; k = av2.IndexOf(' ', k + 1))
+                {
+                    int fine = k < 0 ? av2.Length : k;
+                    if (g.MeasureString(av2.Substring(0, fine), fs).Width > wav - wb) break;
+                    nfit = k < 0 ? av2.Length : k + 1;
+                    if (k < 0) break;
+                }
                 string resto = av2.Substring(nfit);
                 float hResto = resto.Length > 0 ? g.MeasureString(resto, fs, (int)wav).Height : 0;
                 float hav = hr + hResto + S(18);
@@ -69505,20 +69529,23 @@ namespace LunaCalc
                     stazZone.Add(new KeyValuePair<RectangleF, StazProva>(new RectangleF(xb - S(2), ys, sc.Width, sc.Height), s));
                     string ld = s.Loc.ToUpperInvariant().Substring(0, Math.Min(6, s.Loc.Length)) + " · " + s.Dist.ToString("N0", ci) + " km";
                     Testo(g, ld, fp, Tema.Muted, new RectangleF(xb + sc.Width, ys + S(4), S(260), sc.Height - S(4)), StringAlignment.Near, StringAlignment.Center);
+                    if (!s.Dichiarato)
+                    {
+                        string tag = Lang.T("impianto non dichiarato");
+                        SizeF st = g.MeasureString(tag, fpi);
+                        RectangleF rt = new RectangleF(xb + sc.Width + g.MeasureString(ld, fp).Width + S(8), ys + S(4) + (sc.Height - S(4) - S(15)) / 2f, st.Width + S(8), S(15));
+                        if (rt.Right <= rc.Right - S(12))
+                        {
+                            using (GraphicsPath p = Arrotondato(rt, rt.Height / 2f))
+                            using (Brush b2 = new SolidBrush(Tema.Scuro ? Tema.Section : Color.FromArgb(236, 239, 244))) g.FillPath(b2, p);
+                            Testo(g, tag, fpi, Tema.Muted, rt, StringAlignment.Center, StringAlignment.Center);
+                        }
+                    }
                     // impianto
                     string pol = s.Pol == 2 ? Lang.T("H e V") : (s.Pol == 1 ? "V" : "H");
                     string im = string.Format(ci, Lang.T("{0} × {1} el (boom {2} m)"), s.NAnt, s.El, s.Boom.ToString("0.0", ci)) + " · " + s.Gtot.ToString("0.0", ci) + " dBi · " + s.P.ToString("N0", ci) + " W · " + pol;
                     float yi = ys + sc.Height + S(1);
                     Testo(g, im, fp, Tema.Fore, new RectangleF(xb, yi, wbar, S(17)), StringAlignment.Near, StringAlignment.Center);
-                    {
-                        string tag = s.Dichiarato ? Lang.T("esempio") : Lang.T("impianto non dichiarato");
-                        float wi = g.MeasureString(im, fp).Width;
-                        SizeF st = g.MeasureString(tag, fpi);
-                        RectangleF rt = new RectangleF(xb + wi + S(6), yi + S(1), st.Width + S(8), S(15));
-                        using (GraphicsPath p = Arrotondato(rt, rt.Height / 2f))
-                        using (Brush b2 = new SolidBrush(Tema.Scuro ? Tema.Section : Color.FromArgb(236, 239, 244))) g.FillPath(b2, p);
-                        Testo(g, tag, fpi, Tema.Muted, rt, StringAlignment.Center, StringAlignment.Center);
-                    }
                     // barra delle 24 ore
                     float yb = yi + S(21);
                     using (GraphicsPath p = Arrotondato(new RectangleF(xb, yb, wbar, S(9)), S(4)))
@@ -69540,16 +69567,23 @@ namespace LunaCalc
                             + " · S/N " + Lang.T("io→DX") + " " + Db1m(f.SnIoDx, ci) + " · " + Lang.T("DX→io") + " " + Db1m(f.SnDxIo, ci) + " dB";
                         string ni = f.Indice.ToString(ci);
                         float wn = g.MeasureString(ni, fpb).Width, wfx = g.MeasureString(fx, fp).Width;
-                        RectangleF rp = new RectangleF(xb, yf, wn + wfx + S(22), S(20));
+                        float hp = S(20);
+                        if (xb + wn + wfx + S(22) > rc.Right - S(12))
+                        {
+                            // non entra in una riga: orari sopra, S/N sotto
+                            fx = fx.Replace(" · S/N ", "\n S/N ");
+                            wfx = g.MeasureString(fx, fp).Width; hp = S(36);
+                        }
+                        RectangleF rp = new RectangleF(xb, yf, Math.Min(wn + wfx + S(22), rc.Right - S(12) - xb), hp);
                         Color cf = ColoreIndice(f.Indice);
-                        using (GraphicsPath p = Arrotondato(rp, rp.Height / 2f))
+                        using (GraphicsPath p = Arrotondato(rp, Math.Min(rp.Height / 2f, S(10))))
                         {
                             using (Brush b2 = new SolidBrush(Tema.Scuro ? Tema.Field : Color.White)) g.FillPath(b2, p);
                             using (Pen pn = new Pen(cf, S(1.5f))) g.DrawPath(pn, p);
                         }
                         Testo(g, ni, fpb, cf, new RectangleF(rp.Left + S(8), rp.Top, wn + S(2), rp.Height), StringAlignment.Near, StringAlignment.Center);
                         Testo(g, fx, fp, Tema.Fore, new RectangleF(rp.Left + S(14) + wn, rp.Top, wfx + S(4), rp.Height), StringAlignment.Near, StringAlignment.Center);
-                        yf += S(23);
+                        yf += hp + S(3);
                     }
                     yy = Math.Max(yf, ys + S(56)) + S(8);
                     using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, rc.Left + S(16), yy - S(4), rc.Right - S(16), yy - S(4));
