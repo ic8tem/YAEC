@@ -15,7 +15,7 @@ YAEC працює в Mono — вільному середовищі викона
 - Debian, Ubuntu, Mint: завантажте yaec_1.9_amd64.deb і встановіть його командою
       sudo apt install ./yaec_1.9_amd64.deb
   (заразом встановлюється й Mono). YAEC запускається з меню застосунків або командою «yaec».
-- Інші дистрибутиви: встановіть Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), розпакуйте YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) і запустіть ./install.sh.
+- Інші дистрибутиви: встановіть Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), розпакуйте YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) і запустіть ./install.sh.
 
 ВСТАНОВЛЕННЯ – macOS (експериментально)
 1. Встановіть Mono для macOS (https://www.mono-project.com/download/stable/) і XQuartz (https://www.xquartz.org).

@@ -15,7 +15,7 @@ YAEC keyrir á Mono, frjálsa .NET-keyrsluumhverfinu.
 - Debian, Ubuntu, Mint: sæktu yaec_1.9_amd64.deb og settu hana upp með
       sudo apt install ./yaec_1.9_amd64.deb
   (setur einnig upp Mono). YAEC er ræst úr forritavalmyndinni eða með skipuninni "yaec".
-- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) og keyrðu ./install.sh.
+- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) og keyrðu ./install.sh.
 
 UPPSETNING – macOS (á tilraunastigi)
 1. Settu upp Mono fyrir macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).

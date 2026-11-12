@@ -14,6 +14,10 @@ on:
         description: 'Schermate per gli articoli'
         type: boolean
         default: false
+      aggiungi_pacchetti:
+        description: 'Aggiunge alla release gia esistente (tag vVERSION) i pacchetti che le mancano'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -57,6 +61,9 @@ jobs:
           Compress-Archive -Path p32/* -DestinationPath "dist/YAEC-$v-win-x86-portatile.zip"
           Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-win-x64-portatile.zip"
           Compress-Archive -Path YAEC.cs, compila.bat, YAEC.manifest, YAEC.ico, README.txt, YAEC.iss, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-source.zip"
+          # Windows su ARM64 (PC con Snapdragon): YAEC.exe e' AnyCPU, con .NET Framework 4.8.1 gira nativo su ARM64
+          Copy-Item "dist/YAEC-$v-win-x64-setup.exe" "dist/YAEC-$v-win-arm64-setup.exe"
+          Copy-Item "dist/YAEC-$v-win-x64-portatile.zip" "dist/YAEC-$v-win-arm64-portatile.zip"
           Copy-Item YAEC.exe dist/
       - uses: actions/upload-artifact@v4
         with:
@@ -89,10 +96,18 @@ jobs:
           done
           curl -sSL -m 30 http://www.bigskyspaces.com/w7gj/ | grep -io 'href="[^"]*call3[^"]*"' | head || true
           curl -sSL -m 30 http://www.bigskyspaces.com/w7gj/tracker.htm | grep -io 'href="[^"]*\.txt"' | head || true
-      - name: Pacchetti .deb e .tar.gz
+      - name: Pacchetti .deb, .rpm e .tar.gz
         run: |
+          sudo apt-get install -y -qq rpm > /dev/null
           cp win/YAEC.exe .
           packaging/linux/build-linux.sh "${{ steps.ver.outputs.version }}" dist
+          ls dist/*.rpm dist/*_armhf.deb > /dev/null
+          rpm -qpi dist/*.rpm; rpm -qpl dist/*.rpm | head -20
+      - name: Prova del .rpm su openSUSE e Fedora (solo informativa)
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD/dist:/d" opensuse/leap:15.6 sh -c 'zypper -q --non-interactive --no-gpg-checks install /d/*.noarch.rpm && rpm -q yaec && test -f /usr/lib/yaec/YAEC.exe && echo "openSUSE: rpm installato"' || echo "openSUSE: installazione non riuscita"
+          docker run --rm -v "$PWD/dist:/d" fedora:latest sh -c 'dnf -q -y install /d/*.noarch.rpm && rpm -q yaec && echo "Fedora: rpm installato"' || echo "Fedora: installazione non riuscita"
       - name: Prova di avvio con Mono (schermo virtuale Xvfb) e schermata
         run: |
           sudo apt-get update -qq
@@ -482,6 +497,8 @@ jobs:
           cat > notes.md <<NOTES
           YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
 
+          - **Windows su ARM64** (PC con Snapdragon): YAEC-${V}-win-arm64-setup.exe oppure YAEC-${V}-win-arm64-portatile.zip.
+          - **Fedora, openSUSE**: yaec-${V}-1.noarch.rpm (con Mono); **Raspberry Pi OS a 32 bit**: yaec_${V}_armhf.deb; **OpenBSD amd64** (con Mono, non ancora provato): YAEC-${V}-openbsd-x64-portatile.tar.gz.
           - **Windows a 64 bit**: YAEC-${V}-win-x64-setup.exe (installatore) oppure YAEC-${V}-win-x64-portatile.zip; **Windows a 32 bit**: YAEC-${V}-win-x86-setup.exe oppure YAEC-${V}-win-x86-portatile.zip.
           - **Linux (Debian, Ubuntu, Mint)**: yaec_${V}_amd64.deb (sudo apt install ./yaec_${V}_amd64.deb); **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb.
           - **Linux, tutte le distribuzioni (con Mono)**: YAEC-${V}-linux-x64-portatile.tar.gz (PC), YAEC-${V}-linux-arm64-portatile.tar.gz (ARM a 64 bit), YAEC-${V}-linux-arm-portatile.tar.gz (ARM a 32 bit, armv7l), YAEC-${V}-linux-x86-portatile.tar.gz (Linux i686, non ancora provato); Raspberry Pi Slackware ARM64: YAEC-${V}-linux-arm64-portatile.tar.gz (non ancora provato).
@@ -493,3 +510,42 @@ jobs:
           Le versioni precedenti alla 1.0 si chiamano beta. Dettagli nel file README.txt.
           NOTES
           gh release create "$TAG" out/windows/* out/linux/* out/macos/* SHA256SUMS.txt --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
+
+  aggiungi:
+    # Avvio manuale con aggiungi_pacchetti: carica sulla release esistente solo i pacchetti che non ha ancora
+    if: github.event_name == 'workflow_dispatch' && inputs.aggiungi_pacchetti
+    needs: [ windows, linux, macos ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+      - name: Carica i pacchetti mancanti e aggiorna SHA256SUMS.txt e le note
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V="$(tr -d ' \r\n' < VERSION)"
+          TAG="v${V}"
+          gh release view "$TAG" > /dev/null
+          gh release view "$TAG" --json assets -q '.assets[].name' | sort > presenti.txt
+          rm -f out/windows/YAEC.exe
+          NUOVI=()
+          for f in out/windows/* out/linux/* out/macos/*; do
+            n="$(basename "$f")"
+            grep -qxF "$n" presenti.txt || NUOVI+=("$f")
+          done
+          if [ ${#NUOVI[@]} -eq 0 ]; then echo "Nessun pacchetto nuovo."; exit 0; fi
+          printf 'Nuovi: %s\n' "${NUOVI[@]}"
+          gh release download "$TAG" -p SHA256SUMS.txt -O SHA256SUMS.txt --clobber
+          for f in "${NUOVI[@]}"; do sha256sum "$f" | sed 's|  .*/|  |' >> SHA256SUMS.txt; done
+          cat SHA256SUMS.txt
+          gh release upload "$TAG" "${NUOVI[@]}"
+          gh release upload "$TAG" SHA256SUMS.txt --clobber
+          gh release view "$TAG" --json body -q .body > note.md
+          {
+            echo
+            echo "**Pacchetti aggiunti dopo la pubblicazione** (stesso programma ${V}):"
+            for f in "${NUOVI[@]}"; do echo "- $(basename "$f")"; done
+          } >> note.md
+          gh release edit "$TAG" --notes-file note.md

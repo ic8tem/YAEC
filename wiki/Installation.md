@@ -6,16 +6,21 @@ All the packages are on the **[Releases](https://github.com/ic8tem/YAEC/releases
 |---|---|---|
 | Windows 64-bit | `YAEC-x.y-win-x64-setup.exe` (installer) or `YAEC-x.y-win-x64-portatile.zip` | nothing (.NET Framework 4 is part of Windows) |
 | Windows 32-bit | `YAEC-x.y-win-x86-setup.exe` (installer) or `YAEC-x.y-win-x86-portatile.zip` | nothing |
+| Windows ARM64 (PC with Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe` (installer) or `YAEC-x.y-win-arm64-portatile.zip` | nothing (same AnyCPU program; .NET Framework 4.8.1 runs it natively on ARM64) |
 | Debian, Ubuntu, Mint | `yaec_x.y_amd64.deb` | Mono (installed automatically by apt) |
 | Raspberry Pi (Raspberry Pi OS 64-bit, Pi 4 and 5) | `yaec_x.y_arm64.deb` | Mono (installed automatically by apt) |
+| Raspberry Pi OS 32-bit (armhf) ¹ | `yaec_x.y_armhf.deb` | Mono (installed automatically by apt) |
+| Fedora, openSUSE ¹ | `yaec-x.y-1.noarch.rpm` | Mono (`mono-core`, `mono-winforms`, installed by dnf/zypper) |
+| Linux aarch64 (ARM 64-bit PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` | Mono |
 | Other Linux distributions | `YAEC-x.y-linux-x64-portatile.tar.gz` (PC), `YAEC-x.y-linux-arm64-portatile.tar.gz` (ARM 64-bit), `YAEC-x.y-linux-arm-portatile.tar.gz` (ARM 32-bit) | Mono |
 | Linux i686 (32-bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` | Mono |
 | Linux armv7l (Raspberry Pi OS 32-bit and other ARM 32-bit boards) | `YAEC-x.y-linux-arm-portatile.tar.gz` | Mono |
 | Raspberry Pi Slackware ARM64 ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` | Mono |
 | FreeBSD amd64 ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` | Mono and libgdiplus |
+| OpenBSD amd64 ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` | Mono and libgdiplus |
 | macOS (experimental) | `YAEC-x.y-osx-arm64.dmg` or `YAEC-x.y-osx-arm64-app.zip` (Apple Silicon), `YAEC-x.y-osx-x64.dmg` or `YAEC-x.y-osx-x64-app.zip` (Intel) | Mono for macOS and XQuartz |
 
-¹ Same `YAEC.exe` as on the other systems; not yet tested on this platform. The Linux i686 and FreeBSD archives exist from 1.9.1.
+¹ Same `YAEC.exe` as on the other systems; not yet tested on this platform: reports from users are welcome.
 
 > **File names.** These names apply from 1.6. Releases up to 1.5 use the old names (the 32-bit Windows and Raspberry Pi packages exist since 1.4): `YAEC-x.y-Setup.exe` and `YAEC-x.y-windows-portable.zip` (Windows), `YAEC-x.y-Setup-32bit.exe` and `YAEC-x.y-windows-32bit-portable.zip` (Windows 32-bit), `yaec_x.y_all.deb` (Debian, Ubuntu, Mint), `yaec_x.y_arm64.deb` (Raspberry Pi), `YAEC-x.y-linux.tar.gz` (other Linux) and `YAEC-x.y-macOS.dmg` (macOS).
 
@@ -54,7 +59,7 @@ Install Mono first:
 | Arch | `sudo pacman -S mono` |
 | openSUSE | `sudo zypper install mono-complete` |
 
-Then extract `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`) and run `./install.sh` (it installs into `~/.local`, no root needed), or simply run `./yaec` from the extracted folder.
+Then extract `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) and run `./install.sh` (it installs into `~/.local`, no root needed), or simply run `./yaec` from the extracted folder.
 
 Data folder: `~/.local/share/YAEC/data`.
 

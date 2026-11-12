@@ -15,7 +15,7 @@ A YAEC a Monóval, a szabad .NET-futtatókörnyezettel működik.
 - Debian, Ubuntu, Mint: töltsd le a yaec_1.9_amd64.deb fájlt, és telepítsd ezzel:
       sudo apt install ./yaec_1.9_amd64.deb
   (a Monót is telepíti). A YAEC az alkalmazásmenüből vagy a „yaec” paranccsal indítható.
-- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz), és futtasd a ./install.sh-t.
+- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe), és futtasd a ./install.sh-t.
 
 TELEPÍTÉS – macOS (kísérleti)
 1. Telepítsd a macOS-es Monót (https://www.mono-project.com/download/stable/) és az XQuartzot (https://www.xquartz.org).

@@ -15,7 +15,7 @@ YAEC চলে Mono-তে, যা একটি মুক্ত .NET রান�
 - Debian, Ubuntu, Mint: yaec_1.9_amd64.deb ডাউনলোড করে এই কমান্ড দিয়ে ইনস্টল করুন
       sudo apt install ./yaec_1.9_amd64.deb
   (এতে Mono-ও ইনস্টল হয়)। YAEC অ্যাপ্লিকেশন মেনু থেকে বা "yaec" কমান্ড দিয়ে চালু হয়।
-- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) এক্সট্র্যাক্ট করে ./install.sh চালান।
+- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) এক্সট্র্যাক্ট করে ./install.sh চালান।
 
 ইনস্টলেশন – macOS (পরীক্ষামূলক)
 1. macOS-এর জন্য Mono (https://www.mono-project.com/download/stable/) এবং XQuartz (https://www.xquartz.org) ইনস্টল করুন।
