@@ -15,7 +15,7 @@ YAEC darbojas ar Mono — brīvo .NET izpildlaika vidi.
 - Debian, Ubuntu, Mint: lejupielādējiet yaec_1.9_amd64.deb un instalējiet to ar komandu
       sudo apt install ./yaec_1.9_amd64.deb
   (tiek instalēts arī Mono). YAEC palaiž no lietotņu izvēlnes vai ar komandu "yaec".
-- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) un palaidiet ./install.sh.
+- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) un palaidiet ./install.sh.
 
 INSTALĒŠANA – macOS (eksperimentāli)
 1. Instalējiet Mono operētājsistēmai macOS (https://www.mono-project.com/download/stable/) un XQuartz (https://www.xquartz.org).

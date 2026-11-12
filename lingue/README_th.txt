@@ -15,7 +15,7 @@ YAEC ทำงานบน Mono ซึ่งเป็นรันไทม์ .N
 - Debian, Ubuntu, Mint: ดาวน์โหลด yaec_1.9_amd64.deb แล้วติดตั้งด้วย
       sudo apt install ./yaec_1.9_amd64.deb
   (คำสั่งนี้ติดตั้ง Mono ด้วย) เรียกใช้ YAEC จากเมนูแอปพลิเคชันหรือด้วยคำสั่ง "yaec"
-- ดิสทริบิวชันอื่น: ติดตั้ง Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete) แตกไฟล์ YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) แล้วเรียกใช้ ./install.sh
+- ดิสทริบิวชันอื่น: ติดตั้ง Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete) แตกไฟล์ YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) แล้วเรียกใช้ ./install.sh
 
 การติดตั้ง – macOS (ทดลอง)
 1. ติดตั้ง Mono สำหรับ macOS (https://www.mono-project.com/download/stable/) และ XQuartz (https://www.xquartz.org)
