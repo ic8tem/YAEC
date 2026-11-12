@@ -1,5 +1,5 @@
 #!/bin/bash
-# Crea yaec_<versione>_amd64.deb, yaec_<versione>_arm64.deb (Raspberry Pi) e YAEC-<versione>-linux-{x64,arm64,arm}-portatile.tar.gz da YAEC.exe (lo stesso eseguibile di Windows)
+# Crea yaec_<versione>_amd64.deb, yaec_<versione>_arm64.deb (Raspberry Pi) e YAEC-<versione>-linux-{x64,x86,arm64,arm}-portatile.tar.gz, YAEC-<versione>-freebsd-x64-portatile.tar.gz da YAEC.exe (lo stesso eseguibile di Windows)
 set -euo pipefail
 VER="$1"; OUT="${2:-dist}"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -42,5 +42,7 @@ cp "$ROOT/packaging/linux/yaec" "$ROOT/packaging/linux/install.sh" "$ROOT/packag
 cp "$ROOT/packaging/icons/yaec-256.png" "$T/yaec.png"
 chmod +x "$T/yaec" "$T/install.sh"
 # stesso contenuto (YAEC.exe gira con Mono su ogni processore): un archivio per architettura, come le altre distribuzioni
-for A in x64 arm64 arm; do tar -C "$(dirname "$T")" -czf "$OUT/YAEC-${VER}-linux-${A}-portatile.tar.gz" "$(basename "$T")"; done
+for A in x64 x86 arm64 arm; do tar -C "$(dirname "$T")" -czf "$OUT/YAEC-${VER}-linux-${A}-portatile.tar.gz" "$(basename "$T")"; done
+# FreeBSD amd64: stesso contenuto (Mono da pkg), non ancora provato
+tar -C "$(dirname "$T")" -czf "$OUT/YAEC-${VER}-freebsd-x64-portatile.tar.gz" "$(basename "$T")"
 ls -l "$OUT"

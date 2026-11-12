@@ -15,7 +15,7 @@ YAEC는 자유 .NET 런타임인 Mono에서 동작합니다.
 - Debian, Ubuntu, Mint: yaec_1.9_amd64.deb를 다운로드하여 다음 명령으로 설치합니다
       sudo apt install ./yaec_1.9_amd64.deb
   (Mono도 함께 설치됩니다). YAEC는 응용 프로그램 메뉴에서 또는 "yaec" 명령으로 실행합니다.
-- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
+- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
 
 설치 – macOS (실험적)
 1. macOS용 Mono(https://www.mono-project.com/download/stable/)와 XQuartz(https://www.xquartz.org)를 설치합니다.

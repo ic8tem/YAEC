@@ -15,7 +15,7 @@ YAEC běží pod Mono, svobodným běhovým prostředím .NET.
 - Debian, Ubuntu, Mint: stáhni yaec_1.9_amd64.deb a nainstaluj ho příkazem
       sudo apt install ./yaec_1.9_amd64.deb
   (nainstaluje i Mono). YAEC se spouští z nabídky aplikací nebo příkazem "yaec".
-- Jiné distribuce: nainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbal YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) a spusť ./install.sh.
+- Jiné distribuce: nainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbal YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) a spusť ./install.sh.
 
 INSTALACE – macOS (experimentální)
 1. Nainstaluj Mono pro macOS (https://www.mono-project.com/download/stable/) a XQuartz (https://www.xquartz.org).

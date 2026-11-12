@@ -484,7 +484,8 @@ jobs:
 
           - **Windows a 64 bit**: YAEC-${V}-win-x64-setup.exe (installatore) oppure YAEC-${V}-win-x64-portatile.zip; **Windows a 32 bit**: YAEC-${V}-win-x86-setup.exe oppure YAEC-${V}-win-x86-portatile.zip.
           - **Linux (Debian, Ubuntu, Mint)**: yaec_${V}_amd64.deb (sudo apt install ./yaec_${V}_amd64.deb); **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb.
-          - **Linux, tutte le distribuzioni (con Mono)**: YAEC-${V}-linux-x64-portatile.tar.gz (PC), YAEC-${V}-linux-arm64-portatile.tar.gz (ARM a 64 bit), YAEC-${V}-linux-arm-portatile.tar.gz (ARM a 32 bit).
+          - **Linux, tutte le distribuzioni (con Mono)**: YAEC-${V}-linux-x64-portatile.tar.gz (PC), YAEC-${V}-linux-arm64-portatile.tar.gz (ARM a 64 bit), YAEC-${V}-linux-arm-portatile.tar.gz (ARM a 32 bit, armv7l), YAEC-${V}-linux-x86-portatile.tar.gz (Linux i686, non ancora provato); Raspberry Pi Slackware ARM64: YAEC-${V}-linux-arm64-portatile.tar.gz (non ancora provato).
+          - **FreeBSD amd64** (con Mono, non ancora provato): YAEC-${V}-freebsd-x64-portatile.tar.gz.
           - **macOS** (sperimentale; servono Mono e XQuartz): YAEC-${V}-osx-arm64.dmg oppure YAEC-${V}-osx-arm64-app.zip (Apple Silicon), YAEC-${V}-osx-x64.dmg oppure YAEC-${V}-osx-x64-app.zip (Intel).
 
           Impronte SHA-256 di tutti i file in SHA256SUMS.txt (come verificarle: README.txt).

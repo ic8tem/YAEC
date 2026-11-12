@@ -15,7 +15,7 @@ YAEC werk met Mono, die vrye .NET-looptydomgewing.
 - Debian, Ubuntu, Mint: laai yaec_1.9_amd64.deb af en installeer dit met
       sudo apt install ./yaec_1.9_amd64.deb
   (dit installeer ook Mono). YAEC begin uit die toepassingskieslys of met die opdrag "yaec".
-- Ander distribusies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) uit en voer ./install.sh uit.
+- Ander distribusies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) uit en voer ./install.sh uit.
 
 INSTALLASIE – macOS (eksperimenteel)
 1. Installeer Mono vir macOS (https://www.mono-project.com/download/stable/) en XQuartz (https://www.xquartz.org).

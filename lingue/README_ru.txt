@@ -15,7 +15,7 @@ YAEC работает в Mono — свободной среде выполнен
 - Debian, Ubuntu, Mint: скачайте yaec_1.9_amd64.deb и установите его командой
       sudo apt install ./yaec_1.9_amd64.deb
   (заодно устанавливается и Mono). YAEC запускается из меню приложений или командой «yaec».
-- Другие дистрибутивы: установите Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), распакуйте YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) и запустите ./install.sh.
+- Другие дистрибутивы: установите Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), распакуйте YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) и запустите ./install.sh.
 
 УСТАНОВКА – macOS (экспериментально)
 1. Установите Mono для macOS (https://www.mono-project.com/download/stable/) и XQuartz (https://www.xquartz.org).

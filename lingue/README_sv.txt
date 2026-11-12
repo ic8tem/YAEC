@@ -15,7 +15,7 @@ YAEC körs med Mono, den fria .NET-körmiljön.
 - Debian, Ubuntu, Mint: ladda ner yaec_1.9_amd64.deb och installera den med
       sudo apt install ./yaec_1.9_amd64.deb
   (installerar även Mono). YAEC startas från programmenyn eller med kommandot ”yaec”.
-- Andra distributioner: installera Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), packa upp YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) och kör ./install.sh.
+- Andra distributioner: installera Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), packa upp YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) och kör ./install.sh.
 
 INSTALLATION – macOS (experimentell)
 1. Installera Mono för macOS (https://www.mono-project.com/download/stable/) och XQuartz (https://www.xquartz.org).

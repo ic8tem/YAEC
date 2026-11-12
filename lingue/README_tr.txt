@@ -15,7 +15,7 @@ YAEC, özgür .NET çalışma ortamı olan Mono ile çalışır.
 - Debian, Ubuntu, Mint: yaec_1.9_amd64.deb dosyasını indirin ve şu komutla kurun
       sudo apt install ./yaec_1.9_amd64.deb
   (Mono da kurulur). YAEC uygulamalar menüsünden veya "yaec" komutuyla başlatılır.
-- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) dosyasını çıkarın ve ./install.sh'yi çalıştırın.
+- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) dosyasını çıkarın ve ./install.sh'yi çalıştırın.
 
 KURULUM – macOS (deneysel)
 1. macOS için Mono (https://www.mono-project.com/download/stable/) ve XQuartz (https://www.xquartz.org) kurun.

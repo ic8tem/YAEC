@@ -15,7 +15,7 @@ YAEC veikia su Mono – laisvąja .NET vykdymo aplinka.
 - Debian, Ubuntu, Mint: atsisiųskite yaec_1.9_amd64.deb ir įdiekite komanda
       sudo apt install ./yaec_1.9_amd64.deb
   (kartu įdiegiama ir Mono). YAEC paleidžiama iš programų meniu arba komanda "yaec".
-- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) ir paleiskite ./install.sh.
+- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz) ir paleiskite ./install.sh.
 
 ĮDIEGIMAS – macOS (eksperimentinis)
 1. Įdiekite Mono, skirtą macOS (https://www.mono-project.com/download/stable/), ir XQuartz (https://www.xquartz.org).
