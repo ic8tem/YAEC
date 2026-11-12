@@ -1053,12 +1053,6 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 You do not need to compile anything to use YAEC: the installer and the packages above are built automatically. If you want to build it yourself on Windows, `compila.bat` compiles `YAEC.cs` with the C# compiler included in Windows (.NET Framework 4, C# 5). Every push is compiled by GitHub Actions on Windows and started on Linux with Mono; when the `VERSION` file on `main` holds a new version, the workflow publishes the release with the Windows installer (Inno Setup) and the Linux and macOS packages (`.github/workflows/build.yml`).
 
-## Support the project
-
-YAEC is free. If you find it useful, you can buy me a coffee on **[Ko-fi](https://ko-fi.com/ic8tem)**.
-
-YAEC è gratuito. Se ti è utile puoi offrirmi un caffè su **[Ko-fi](https://ko-fi.com/ic8tem)**.
-
 ## License
 
 See `LICENZA.txt`.
