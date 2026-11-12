@@ -9,6 +9,15 @@ on:
     branches: [ main ]
   pull_request:
   workflow_dispatch:
+    inputs:
+      articolo:
+        description: 'Schermate per gli articoli'
+        type: boolean
+        default: false
+      aggiungi_pacchetti:
+        description: 'Aggiunge alla release gia esistente (tag vVERSION) i pacchetti che le mancano'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -52,6 +61,9 @@ jobs:
           Compress-Archive -Path p32/* -DestinationPath "dist/YAEC-$v-win-x86-portatile.zip"
           Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-win-x64-portatile.zip"
           Compress-Archive -Path YAEC.cs, compila.bat, YAEC.manifest, YAEC.ico, README.txt, YAEC.iss, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-source.zip"
+          # Windows su ARM64 (PC con Snapdragon): YAEC.exe e' AnyCPU, con .NET Framework 4.8.1 gira nativo su ARM64
+          Copy-Item "dist/YAEC-$v-win-x64-setup.exe" "dist/YAEC-$v-win-arm64-setup.exe"
+          Copy-Item "dist/YAEC-$v-win-x64-portatile.zip" "dist/YAEC-$v-win-arm64-portatile.zip"
           Copy-Item YAEC.exe dist/
       - uses: actions/upload-artifact@v4
         with:
@@ -84,10 +96,18 @@ jobs:
           done
           curl -sSL -m 30 http://www.bigskyspaces.com/w7gj/ | grep -io 'href="[^"]*call3[^"]*"' | head || true
           curl -sSL -m 30 http://www.bigskyspaces.com/w7gj/tracker.htm | grep -io 'href="[^"]*\.txt"' | head || true
-      - name: Pacchetti .deb e .tar.gz
+      - name: Pacchetti .deb, .rpm e .tar.gz
         run: |
+          sudo apt-get install -y -qq rpm > /dev/null
           cp win/YAEC.exe .
           packaging/linux/build-linux.sh "${{ steps.ver.outputs.version }}" dist
+          ls dist/*.rpm dist/*_armhf.deb > /dev/null
+          rpm -qpi dist/*.rpm; rpm -qpl dist/*.rpm | head -20
+      - name: Prova del .rpm su openSUSE e Fedora (solo informativa)
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD/dist:/d" opensuse/leap:15.6 sh -c 'zypper -q --non-interactive --no-gpg-checks install /d/*.noarch.rpm && rpm -q yaec && test -f /usr/lib/yaec/YAEC.exe && echo "openSUSE: rpm installato"' || echo "openSUSE: installazione non riuscita"
+          docker run --rm -v "$PWD/dist:/d" fedora:latest sh -c 'dnf -q -y install /d/*.noarch.rpm && rpm -q yaec && echo "Fedora: rpm installato"' || echo "Fedora: installazione non riuscita"
       - name: Prova di avvio con Mono (schermo virtuale Xvfb) e schermata
         run: |
           sudo apt-get update -qq
@@ -226,7 +246,7 @@ jobs:
             kill $PID 2>/dev/null || true
           done
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
-      - name: Schermate del README nelle lingue nuove (solo con [readme] nel messaggio del commit)
+      - name: Schermate del README in tutte le lingue (solo con [readme] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[readme]')
         run: |
           sudo apt-get install -y -qq fonts-noto-cjk fonts-noto-core > /dev/null 2>&1 || true
@@ -244,18 +264,22 @@ jobs:
               PID=$!
               sleep 35
               import -window root shotr/x.png || true
-              convert shotr/x.png -resize 1200x -quality 85 shotr/x.jpg 2>/dev/null && echo "SCREENSHOT-README-$LG-$N-B64:$(base64 -w 0 shotr/x.jpg)" || true
+              convert shotr/x.png -trim +repage -quality 85 shotr/x.jpg 2>/dev/null && echo "SCREENSHOT-README-$LG-$N-B64:$(base64 -w 0 shotr/x.jpg)" || true
               kill $PID 2>/dev/null || true; sleep 2
               N=$((N+1))
             done
           done <<'EOF'
+          it|Budget EME yagi|Distanza e Dgrd
+          en|EME budget Yagi|Distance and Dgrd
+          de|EME-Budget Yagi|Entfernung und Dgrd
+          fr|Bilan EME Yagi|Distance et Dgrd
+          es|Balance EME Yagi|Distancia y Dgrd
           pt|Balanço EME Yagi|Distância e Dgrd
           tr|EME bütçesi yagi|Mesafe ve Dgrd
           cs|Bilance EME yagi|Vzdálenost a Dgrd
           sk|Bilancia EME yagi|Vzdialenosť a Dgrd
           zh|EME 链路预算 八木|距离与 Dgrd
           ja|EME 回線計算 八木|距離と Dgrd
-          ko|EME 링크 버짓 야기|거리와 Dgrd
           EOF
       - name: Prova dei caratteri consigliati, linguetta per linguetta (solo con [caratteri] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[caratteri]')
@@ -298,7 +322,7 @@ jobs:
           git commit -qm "Font test ${GITHUB_SHA::7}"
           git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:prova-caratteri
       - name: Schermate per gli articoli (solo con [articolo] nel messaggio del commit)
-        if: contains(github.event.head_commit.message, '[articolo]')
+        if: contains(github.event.head_commit.message, '[articolo]') || github.event.inputs.articolo == 'true'
         run: |
           sudo apt-get install -y -qq xdotool fonts-noto-core faketime > /dev/null 2>&1 || true
           fc-cache -f > /dev/null
@@ -310,21 +334,39 @@ jobs:
             printf 'lingua=it\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
             printf 'locator=JN81MA\nquota=50\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
             printf 'b144_me_p=500\nb144_me_nant=2\nb144_me_gant=14\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
-            printf 'b144_dx_p=500\nb144_dx_nant=4\nb144_dx_gant=14.5\nb144_dx_pregain=25\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=30\nb144_dx_lendis=30\n'
+            printf 'b144_dx_p=900\nb144_dx_nant=4\nb144_dx_gant=15.4\nb144_dx_pregain=25\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=30\nb144_dx_lendis=30\n'
           } > "$F"
           mkdir -p articolo
           i=0
-          for T in "Posizione live e +- 24h" "Distanza e Dgrd" "Posizione della Luna" "Budget EME yagi" "Budget EME dischi" "Volta celeste" "Luna sul mondo" "Rumore solare" "Radar GRAVES" "Ricognizione dei miei ostacoli" "Controllo dei calcoli" "CAVI COASSIALI" "DGRD per frequenza"; do
-            i=$((i+1))
-            YAEC_LINGUETTA="$T" YAEC_CALCOLA=1 TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
+          scatta() {  # $1 = linguetta, $2 = nome del file, $3 = attesa in secondi, altre variabili gia' esportate
+            YAEC_LINGUETTA="$1" TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
             PID=$!
             sleep 25
             W=$(xdotool search --name "YAEC" | tail -1)
             if [ -n "$W" ]; then xdotool windowmove $W 0 0 windowsize $W 1920 1080; fi
-            sleep 12; xdotool mousemove 1915 1075 || true; sleep 1
-            import -window root "articolo/$(printf %02d $i)-${T// /_}.png" || true
+            sleep "$3"; xdotool mousemove 1915 1075 || true; sleep 1
+            import -window root "articolo/$2.png" || true
             kill $PID 2>/dev/null || true; pkill -f YAEC.exe || true; sleep 3
-          done
+          }
+          export YAEC_CALCOLA=1
+          scatta "Posizione live e +- 24h" 01-principale 12
+          scatta "Distanza e Dgrd" 02-distanza_dgrd 20
+          scatta "Posizione della Luna" 03-posizione 15
+          scatta "Budget EME yagi" 04-budget_yagi 12
+          # «Stazioni da provare» dalla stazione di Bari JN81MA: 2 x 11 elementi (14,5 dBi DL6WU), 500 W
+          sed -i '/^b144_me_gant=/d' "$F"; printf 'b144_me_gant=14.5\n' >> "$F"
+          scatta "Stazioni da provare" 06-stazioni_da_provare 40
+          unset YAEC_CALCOLA
+          # la stazione dell'autore a Capri per «Il mio orizzonte» e «Stazioni da provare»
+          {
+            printf 'lingua=it\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
+            printf 'locator=JN70CN83CL\nquota=62\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
+            printf 'orizzonte_raggio=2\norizzonte_vista=0\nterreno=1\n'
+            printf 'b144_me_p=1000\nb144_me_nant=4\nb144_me_gant=17\n'
+          } > "$F"
+          YAEC_ORIZZONTE=1 scatta "Il mio orizzonte" 05-orizzonte 240
+          printf 'orizzonte_vista=1\n' >> "$F"
+          scatta "Il mio orizzonte" 07-rumore_locale 20
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           H=$(git config --get http.https://github.com/.extraheader)
           U=$(git remote get-url origin)
@@ -455,9 +497,12 @@ jobs:
           cat > notes.md <<NOTES
           YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
 
+          - **Windows su ARM64** (PC con Snapdragon): YAEC-${V}-win-arm64-setup.exe oppure YAEC-${V}-win-arm64-portatile.zip.
+          - **Fedora, openSUSE**: yaec-${V}-1.noarch.rpm (con Mono); **Raspberry Pi OS a 32 bit**: yaec_${V}_armhf.deb; **OpenBSD amd64** (con Mono, non ancora provato): YAEC-${V}-openbsd-x64-portatile.tar.gz.
           - **Windows a 64 bit**: YAEC-${V}-win-x64-setup.exe (installatore) oppure YAEC-${V}-win-x64-portatile.zip; **Windows a 32 bit**: YAEC-${V}-win-x86-setup.exe oppure YAEC-${V}-win-x86-portatile.zip.
           - **Linux (Debian, Ubuntu, Mint)**: yaec_${V}_amd64.deb (sudo apt install ./yaec_${V}_amd64.deb); **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb.
-          - **Linux, tutte le distribuzioni (con Mono)**: YAEC-${V}-linux-x64-portatile.tar.gz (PC), YAEC-${V}-linux-arm64-portatile.tar.gz (ARM a 64 bit), YAEC-${V}-linux-arm-portatile.tar.gz (ARM a 32 bit).
+          - **Linux, tutte le distribuzioni (con Mono)**: YAEC-${V}-linux-x64-portatile.tar.gz (PC), YAEC-${V}-linux-arm64-portatile.tar.gz (ARM a 64 bit), YAEC-${V}-linux-arm-portatile.tar.gz (ARM a 32 bit, armv7l), YAEC-${V}-linux-x86-portatile.tar.gz (Linux i686, non ancora provato); Raspberry Pi Slackware ARM64: YAEC-${V}-linux-arm64-portatile.tar.gz (non ancora provato).
+          - **FreeBSD amd64** (con Mono, non ancora provato): YAEC-${V}-freebsd-x64-portatile.tar.gz.
           - **macOS** (sperimentale; servono Mono e XQuartz): YAEC-${V}-osx-arm64.dmg oppure YAEC-${V}-osx-arm64-app.zip (Apple Silicon), YAEC-${V}-osx-x64.dmg oppure YAEC-${V}-osx-x64-app.zip (Intel).
 
           Impronte SHA-256 di tutti i file in SHA256SUMS.txt (come verificarle: README.txt).
@@ -465,3 +510,42 @@ jobs:
           Le versioni precedenti alla 1.0 si chiamano beta. Dettagli nel file README.txt.
           NOTES
           gh release create "$TAG" out/windows/* out/linux/* out/macos/* SHA256SUMS.txt --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
+
+  aggiungi:
+    # Avvio manuale con aggiungi_pacchetti: carica sulla release esistente solo i pacchetti che non ha ancora
+    if: github.event_name == 'workflow_dispatch' && inputs.aggiungi_pacchetti
+    needs: [ windows, linux, macos ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+      - name: Carica i pacchetti mancanti e aggiorna SHA256SUMS.txt e le note
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V="$(tr -d ' \r\n' < VERSION)"
+          TAG="v${V}"
+          gh release view "$TAG" > /dev/null
+          gh release view "$TAG" --json assets -q '.assets[].name' | sort > presenti.txt
+          rm -f out/windows/YAEC.exe
+          NUOVI=()
+          for f in out/windows/* out/linux/* out/macos/*; do
+            n="$(basename "$f")"
+            grep -qxF "$n" presenti.txt || NUOVI+=("$f")
+          done
+          if [ ${#NUOVI[@]} -eq 0 ]; then echo "Nessun pacchetto nuovo."; exit 0; fi
+          printf 'Nuovi: %s\n' "${NUOVI[@]}"
+          gh release download "$TAG" -p SHA256SUMS.txt -O SHA256SUMS.txt --clobber
+          for f in "${NUOVI[@]}"; do sha256sum "$f" | sed 's|  .*/|  |' >> SHA256SUMS.txt; done
+          cat SHA256SUMS.txt
+          gh release upload "$TAG" "${NUOVI[@]}"
+          gh release upload "$TAG" SHA256SUMS.txt --clobber
+          gh release view "$TAG" --json body -q .body > note.md
+          {
+            echo
+            echo "**Pacchetti aggiunti dopo la pubblicazione** (stesso programma ${V}):"
+            for f in "${NUOVI[@]}"; do echo "- $(basename "$f")"; done
+          } >> note.md
+          gh release edit "$TAG" --notes-file note.md

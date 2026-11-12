@@ -15,7 +15,7 @@ YAEC läuft mit Mono, der freien .NET-Laufzeitumgebung.
 - Debian, Ubuntu, Mint: lade yaec_1.9_amd64.deb herunter und installiere es mit
       sudo apt install ./yaec_1.9_amd64.deb
   (installiert auch Mono). YAEC startet über das Anwendungsmenü oder mit dem Befehl „yaec“.
-- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz) und starte ./install.sh.
+- Andere Distributionen: installiere Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), entpacke YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) und starte ./install.sh.
 
 INSTALLATION – macOS (experimentell)
 1. Installiere Mono für macOS (https://www.mono-project.com/download/stable/) und XQuartz (https://www.xquartz.org).
