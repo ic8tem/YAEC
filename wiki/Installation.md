@@ -10,7 +10,7 @@ All the packages are on the **[Releases](https://github.com/ic8tem/YAEC/releases
 | Debian, Ubuntu, Mint | `yaec_x.y_amd64.deb` | Mono (installed automatically by apt) |
 | Raspberry Pi (Raspberry Pi OS 64-bit, Pi 4 and 5) | `yaec_x.y_arm64.deb` | Mono (installed automatically by apt) |
 | Raspberry Pi OS 32-bit (armhf) ¹ | `yaec_x.y_armhf.deb` | Mono (installed automatically by apt) |
-| Fedora, openSUSE ¹ | `yaec-x.y-1.noarch.rpm` | Mono (`mono-core`, `mono-winforms`, installed by dnf/zypper) |
+| Fedora, openSUSE | `yaec-x.y-1.noarch.rpm` | Mono (`mono-core`, `mono-winforms`, installed by dnf/zypper) |
 | Linux aarch64 (ARM 64-bit PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` | Mono |
 | Other Linux distributions | `YAEC-x.y-linux-x64-portatile.tar.gz` (PC), `YAEC-x.y-linux-arm64-portatile.tar.gz` (ARM 64-bit), `YAEC-x.y-linux-arm-portatile.tar.gz` (ARM 32-bit) | Mono |
 | Linux i686 (32-bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` | Mono |

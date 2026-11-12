@@ -42,7 +42,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64-bit, PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb package) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm package) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (.rpm package) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -72,7 +72,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 bit, PC e mini-PC non Raspberry) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (pacchetto .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (pacchetto .rpm) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (pacchetto .rpm) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -102,7 +102,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 Bit, PCs und Mini-PCs außer Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb-Paket) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm-Paket) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (.rpm-Paket) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -132,7 +132,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 bits, PC et mini-PC autres que Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (paquet .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (paquet .rpm) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (paquet .rpm) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -162,7 +162,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM de 64 bits, PC y mini PC que no son Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (paquete .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (paquete .rpm) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (paquete .rpm) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -192,7 +192,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM de 64 bits, PC e mini-PC que não são Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (pacote .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (pacote .rpm) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (pacote .rpm) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -222,7 +222,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 bit, Raspberry Pi dışındaki PC'ler ve mini PC'ler) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb paketi) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm paketi) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (.rpm paketi) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -252,7 +252,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 bit, PC a mini-PC kromě Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (balíček .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (balíček .rpm) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (balíček .rpm) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -282,7 +282,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 bit, PC a mini-PC okrem Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (balík .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (balík .rpm) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (balík .rpm) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -312,7 +312,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 位，树莓派以外的 PC 和迷你 PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb 软件包) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm 软件包) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (.rpm 软件包) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -342,7 +342,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64 ビット、Raspberry Pi 以外の PC とミニ PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb パッケージ) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm パッケージ) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (.rpm パッケージ) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -372,7 +372,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
 | **Linux aarch64** (ARM 64비트, Raspberry Pi 이외의 PC와 미니 PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb 패키지) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm 패키지) ¹ | `yaec-x.y-1.noarch.rpm` |
+| **Fedora / openSUSE** (.rpm 패키지) | `yaec-x.y-1.noarch.rpm` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
