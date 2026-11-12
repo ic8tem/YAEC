@@ -333,7 +333,7 @@ jobs:
           {
             printf 'lingua=it\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
             printf 'locator=JN81MA\nquota=50\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
-            printf 'b144_me_p=500\nb144_me_nant=2\nb144_me_gant=14\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
+            printf 'b144_me_p=500\nb144_me_nant=2\nb144_me_gant=14.5\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
             printf 'b144_dx_p=900\nb144_dx_nant=4\nb144_dx_gant=15.4\nb144_dx_pregain=25\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=30\nb144_dx_lendis=30\n'
           } > "$F"
           mkdir -p articolo
@@ -354,7 +354,6 @@ jobs:
           scatta "Posizione della Luna" 03-posizione 15
           scatta "Budget EME yagi" 04-budget_yagi 12
           # «Stazioni da provare» dalla stazione di Bari JN81MA: 2 x 11 elementi (14,5 dBi DL6WU), 500 W
-          sed -i '/^b144_me_gant=/d' "$F"; printf 'b144_me_gant=14.5\n' >> "$F"
           scatta "Stazioni da provare" 06-stazioni_da_provare 40
           unset YAEC_CALCOLA
           # la stazione dell'autore a Capri per «Il mio orizzonte» e «Stazioni da provare»
