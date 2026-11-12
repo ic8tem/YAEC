@@ -338,6 +338,9 @@ jobs:
           scatta "Distanza e Dgrd" 02-distanza_dgrd 20
           scatta "Posizione della Luna" 03-posizione 15
           scatta "Budget EME yagi" 04-budget_yagi 12
+          # «Stazioni da provare» dalla stazione di Bari JN81MA: 2 x 11 elementi (14,5 dBi DL6WU), 500 W
+          sed -i '/^b144_me_gant=/d' "$F"; printf 'b144_me_gant=14.5\n' >> "$F"
+          scatta "Stazioni da provare" 06-stazioni_da_provare 40
           unset YAEC_CALCOLA
           # la stazione dell'autore a Capri per «Il mio orizzonte» e «Stazioni da provare»
           {
@@ -347,7 +350,6 @@ jobs:
             printf 'b144_me_p=1000\nb144_me_nant=4\nb144_me_gant=17\n'
           } > "$F"
           YAEC_ORIZZONTE=1 scatta "Il mio orizzonte" 05-orizzonte 240
-          scatta "Stazioni da provare" 06-stazioni_da_provare 40
           printf 'orizzonte_vista=1\n' >> "$F"
           scatta "Il mio orizzonte" 07-rumore_locale 20
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
