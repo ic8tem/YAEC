@@ -11,6 +11,10 @@ All the packages are on the **[Releases](https://github.com/ic8tem/YAEC/releases
 | Raspberry Pi (Raspberry Pi OS 64-bit, Pi 4 and 5) | `yaec_x.y_arm64.deb` | Mono (installed automatically by apt) |
 | Raspberry Pi OS 32-bit (armhf) ¹ | `yaec_x.y_armhf.deb` | Mono (installed automatically by apt) |
 | Fedora, openSUSE | `yaec-x.y-1.noarch.rpm` | Mono (`mono-core`, `mono-winforms`, installed by dnf/zypper) |
+| Arch Linux, Manjaro, EndeavourOS | `yaec-x.y-1-any.pkg.tar.zst` | Mono (`mono`, installed by pacman) |
+| Slackware ¹ | `yaec-x.y-noarch-1_ic8tem.txz` | Mono (from SlackBuilds) |
+| Any Linux (AppImage) ¹ | `YAEC-x.y-x86_64.AppImage` (PC), `YAEC-x.y-aarch64.AppImage` (ARM 64-bit) | Mono |
+| Alpine Linux (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` | Mono from the Alpine repositories |
 | Linux aarch64 (ARM 64-bit PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` | Mono |
 | Other Linux distributions | `YAEC-x.y-linux-x64-portatile.tar.gz` (PC), `YAEC-x.y-linux-arm64-portatile.tar.gz` (ARM 64-bit), `YAEC-x.y-linux-arm-portatile.tar.gz` (ARM 32-bit) | Mono |
 | Linux i686 (32-bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` | Mono |
@@ -48,6 +52,24 @@ apt installs Mono as well. Start YAEC from the applications menu or with the com
 On Raspberry Pi OS 64-bit (Pi 4 and 5) the same, with the ARM package:
 ```sh
 sudo apt install ./yaec_x.y_arm64.deb
+```
+
+### Arch Linux, Manjaro, EndeavourOS
+```sh
+sudo pacman -U yaec-x.y-1-any.pkg.tar.zst
+```
+pacman installs Mono as well.
+
+### Slackware
+Install Mono (SlackBuilds), then as root:
+```sh
+installpkg yaec-x.y-noarch-1_ic8tem.txz
+```
+
+### AppImage
+With Mono installed, make the file executable and run it:
+```sh
+chmod +x YAEC-x.y-x86_64.AppImage && ./YAEC-x.y-x86_64.AppImage
 ```
 
 ### Other distributions
@@ -88,7 +110,17 @@ If the values differ, **do not install** the file: download it again from the [R
 
 ## Updating
 
-Install the new version over the old one (or extract the new portable zip into the same folder). Your settings stay in the `data` folder; see [Settings and data folder](Settings-and-Data-Folder).
+**Automatic updates (from 1.9.1).** At start-up (at most once every 20 hours) YAEC asks GitHub for the latest release. If it is newer, it offers to update and then:
+
+| Installed from | What happens |
+|---|---|
+| Windows installer or portable zip (x64, x86, ARM64) | downloads the same kind of package, checks it against `SHA256SUMS.txt`, closes, updates and restarts |
+| Portable `.tar.gz` (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), also when installed with `./install.sh` | downloads the archive for the system, checks it and replaces its files; the new version starts at the next launch |
+| AppImage | downloads the new AppImage, checks it and replaces the file; the new version starts at the next launch |
+| macOS app (`.dmg` or `-app.zip`) | downloads the `-app.zip`, checks it and replaces the files inside `YAEC.app`; the new version starts at the next launch |
+| `.deb`, `.rpm`, Arch `.pkg.tar.zst`, Slackware `.txz` | **no automatic update**: these packages belong to the system package manager. YAEC tells you about the new version and opens the GitHub page; install the new package as you installed the first one |
+
+You can also update by hand: install the new version over the old one (or extract the new portable package into the same folder). Your settings stay in the `data` folder; see [Settings and data folder](Settings-and-Data-Folder).
 
 ## Building from source (developers only)
 

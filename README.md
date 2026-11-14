@@ -43,6 +43,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64-bit, PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb package) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (.rpm package) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst package) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (.txz package) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (any Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -53,6 +57,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Not yet tested on this platform: reports from users are welcome.
+
+**Automatic updates** — from 1.9.1: at start-up YAEC checks GitHub for a new version and updates itself with the Windows installer or zip, the portable .tar.gz archives (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), the AppImage and the macOS app; every package is checked against SHA256SUMS.txt. The .deb, .rpm, Arch (.pkg.tar.zst) and Slackware (.txz) packages are updated with the system package manager instead: YAEC announces the new version and opens the GitHub page.
 
 - **Windows** – download `YAEC-x.y-win-x64-setup.exe` and run it. It installs YAEC into *Documents\YAEC* without administrator rights, with Start menu and desktop shortcuts and an uninstaller. If SmartScreen warns you: *More info* → *Run anyway*. No installation wanted? Extract `YAEC-x.y-win-x64-portatile.zip` into a folder where you can write and run `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – download `yaec_x.y_amd64.deb` and run `sudo apt install ./yaec_x.y_amd64.deb` (Mono is installed too); start YAEC from the applications menu or with `yaec`.
@@ -73,6 +79,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 bit, PC e mini-PC non Raspberry) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (pacchetto .deb) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (pacchetto .rpm) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (pacchetto .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (pacchetto .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (qualsiasi Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -83,6 +93,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Non ancora provato su questa piattaforma: le prove degli utenti sono benvenute.
+
+**Aggiornamenti automatici** — dalla 1.9.1: all'avvio YAEC controlla su GitHub se c'è una versione nuova e si aggiorna da solo con l'installatore o lo zip per Windows, gli archivi portatili .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), l'AppImage e l'app per macOS; ogni pacchetto viene verificato con SHA256SUMS.txt. I pacchetti .deb, .rpm, Arch (.pkg.tar.zst) e Slackware (.txz) si aggiornano invece con il gestore dei pacchetti del sistema: YAEC avvisa della nuova versione e apre la pagina di GitHub.
 
 - **Windows** – scarica `YAEC-x.y-win-x64-setup.exe` ed eseguilo. Installa YAEC in *Documenti\YAEC* senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione. Se compare l'avviso di SmartScreen: *Ulteriori informazioni* → *Esegui comunque*. Senza installazione: estrai `YAEC-x.y-win-x64-portatile.zip` in una cartella in cui puoi scrivere e avvia `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – scarica `yaec_x.y_amd64.deb` e dai `sudo apt install ./yaec_x.y_amd64.deb` (installa anche Mono); YAEC si avvia dal menu delle applicazioni o con `yaec`.
@@ -103,6 +115,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 Bit, PCs und Mini-PCs außer Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb-Paket) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (.rpm-Paket) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst-Paket) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (.txz-Paket) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (jedes Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -113,6 +129,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Auf dieser Plattform noch nicht getestet: Erfahrungsberichte sind willkommen.
+
+**Automatische Updates** — ab 1.9.1: Beim Start prüft YAEC auf GitHub, ob es eine neue Version gibt, und aktualisiert sich selbst beim Windows-Installer oder -Zip, bei den portablen .tar.gz-Archiven (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), beim AppImage und bei der macOS-App; jedes Paket wird mit SHA256SUMS.txt geprüft. Die Pakete .deb, .rpm, Arch (.pkg.tar.zst) und Slackware (.txz) werden dagegen mit der Paketverwaltung des Systems aktualisiert: YAEC meldet die neue Version und öffnet die GitHub-Seite.
 
 - **Windows** – `YAEC-x.y-win-x64-setup.exe` herunterladen und ausführen. YAEC wird ohne Administratorrechte in *Dokumente\YAEC* installiert, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm. Bei einer SmartScreen-Warnung: *Weitere Informationen* → *Trotzdem ausführen*. Ohne Installation: `YAEC-x.y-win-x64-portatile.zip` in einen beschreibbaren Ordner entpacken und `YAEC.exe` starten.
 - **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb` herunterladen und `sudo apt install ./yaec_x.y_amd64.deb` ausführen (Mono wird mitinstalliert); YAEC startet aus dem Anwendungsmenü oder mit `yaec`.
@@ -133,6 +151,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 bits, PC et mini-PC autres que Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (paquet .deb) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (paquet .rpm) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (paquet .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (paquet .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (n'importe quel Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -143,6 +165,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Pas encore testé sur cette plateforme : les retours des utilisateurs sont les bienvenus.
+
+**Mises à jour automatiques** — à partir de la 1.9.1 : au démarrage, YAEC vérifie sur GitHub s'il existe une nouvelle version et se met à jour tout seul avec l'installateur ou le zip pour Windows, les archives portables .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), l'AppImage et l'application macOS ; chaque paquet est vérifié avec SHA256SUMS.txt. Les paquets .deb, .rpm, Arch (.pkg.tar.zst) et Slackware (.txz) se mettent à jour avec le gestionnaire de paquets du système : YAEC signale la nouvelle version et ouvre la page GitHub.
 
 - **Windows** – téléchargez `YAEC-x.y-win-x64-setup.exe` et lancez-le. Il installe YAEC dans *Documents\YAEC* sans droits d'administrateur, avec les raccourcis dans le menu Démarrer et sur le bureau et un programme de désinstallation. Si SmartScreen affiche un avertissement : *Informations complémentaires* → *Exécuter quand même*. Sans installation : extrayez `YAEC-x.y-win-x64-portatile.zip` dans un dossier où vous pouvez écrire et lancez `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – téléchargez `yaec_x.y_amd64.deb` et lancez `sudo apt install ./yaec_x.y_amd64.deb` (Mono est installé aussi) ; YAEC se lance depuis le menu des applications ou avec `yaec`.
@@ -163,6 +187,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM de 64 bits, PC y mini PC que no son Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (paquete .deb) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (paquete .rpm) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (paquete .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (paquete .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (cualquier Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -173,6 +201,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Aún no probado en esta plataforma: los informes de los usuarios son bienvenidos.
+
+**Actualizaciones automáticas** — desde la 1.9.1: al arrancar, YAEC comprueba en GitHub si hay una versión nueva y se actualiza solo con el instalador o el zip de Windows, los archivos portátiles .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), la AppImage y la aplicación de macOS; cada paquete se verifica con SHA256SUMS.txt. Los paquetes .deb, .rpm, Arch (.pkg.tar.zst) y Slackware (.txz) se actualizan en cambio con el gestor de paquetes del sistema: YAEC avisa de la nueva versión y abre la página de GitHub.
 
 - **Windows** – descarga `YAEC-x.y-win-x64-setup.exe` y ejecútalo. Instala YAEC en *Documentos\YAEC* sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio y un desinstalador. Si SmartScreen muestra un aviso: *Más información* → *Ejecutar de todas formas*. Sin instalación: extrae `YAEC-x.y-win-x64-portatile.zip` en una carpeta en la que puedas escribir y ejecuta `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – descarga `yaec_x.y_amd64.deb` y ejecuta `sudo apt install ./yaec_x.y_amd64.deb` (también instala Mono); YAEC se abre desde el menú de aplicaciones o con `yaec`.
@@ -193,6 +223,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM de 64 bits, PC e mini-PC que não são Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (pacote .deb) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (pacote .rpm) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (pacote .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (pacote .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (qualquer Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -203,6 +237,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Ainda não testado nesta plataforma: os relatos dos utilizadores são bem-vindos.
+
+**Atualizações automáticas** — a partir da 1.9.1: ao arrancar, o YAEC verifica no GitHub se há uma versão nova e atualiza-se sozinho com o instalador ou o zip para Windows, os arquivos portáteis .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), a AppImage e a aplicação para macOS; cada pacote é verificado com SHA256SUMS.txt. Os pacotes .deb, .rpm, Arch (.pkg.tar.zst) e Slackware (.txz) atualizam-se com o gestor de pacotes do sistema: o YAEC avisa da nova versão e abre a página do GitHub.
 
 - **Windows** – descarrega `YAEC-x.y-win-x64-setup.exe` e executa-o. Instala o YAEC em *Documentos\YAEC* sem direitos de administrador, com atalhos no menu Iniciar e no ambiente de trabalho e um desinstalador. Se o SmartScreen avisar: *Mais informações* → *Executar mesmo assim*. Sem instalação: extrai `YAEC-x.y-win-x64-portatile.zip` para uma pasta onde possas escrever e executa `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – descarrega `yaec_x.y_amd64.deb` e executa `sudo apt install ./yaec_x.y_amd64.deb` (o Mono também é instalado); o YAEC abre-se a partir do menu de aplicações ou com `yaec`.
@@ -223,6 +259,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 bit, Raspberry Pi dışındaki PC'ler ve mini PC'ler) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb paketi) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (.rpm paketi) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst paketi) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (.txz paketi) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (her Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -233,6 +273,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Bu platformda henüz denenmedi: kullanıcı geri bildirimleri memnuniyetle karşılanır.
+
+**Otomatik güncellemeler** — 1.9.1'den itibaren: YAEC açılışta GitHub'da yeni bir sürüm olup olmadığını denetler ve Windows kurulum programı veya zip'i, taşınabilir .tar.gz arşivleri (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage ve macOS uygulamasıyla kendini günceller; her paket SHA256SUMS.txt ile doğrulanır. .deb, .rpm, Arch (.pkg.tar.zst) ve Slackware (.txz) paketleri ise sistemin paket yöneticisiyle güncellenir: YAEC yeni sürümü bildirir ve GitHub sayfasını açar.
 
 - **Windows** – `YAEC-x.y-win-x64-setup.exe` dosyasını indirip çalıştırın. YAEC, yönetici hakları olmadan *Belgeler\YAEC* klasörüne kurulur; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturulur. SmartScreen uyarı verirse: *Ek bilgi* → *Yine de çalıştır*. Kurulum istemiyorsanız: `YAEC-x.y-win-x64-portatile.zip` dosyasını yazabildiğiniz bir klasöre açın ve `YAEC.exe` dosyasını çalıştırın.
 - **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb` dosyasını indirip `sudo apt install ./yaec_x.y_amd64.deb` komutunu çalıştırın (Mono da kurulur); YAEC uygulamalar menüsünden ya da `yaec` komutuyla açılır.
@@ -253,6 +295,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 bit, PC a mini-PC kromě Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (balíček .deb) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (balíček .rpm) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (balíček .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (balíček .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (jakýkoli Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -263,6 +309,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Na této platformě zatím nevyzkoušeno: zprávy od uživatelů jsou vítány.
+
+**Automatické aktualizace** — od verze 1.9.1: YAEC při spuštění zjistí na GitHubu, zda existuje nová verze, a sám se aktualizuje u instalátoru nebo zipu pro Windows, přenosných archivů .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage a aplikace pro macOS; každý balíček se ověří podle SHA256SUMS.txt. Balíčky .deb, .rpm, Arch (.pkg.tar.zst) a Slackware (.txz) se naopak aktualizují správcem balíčků systému: YAEC na novou verzi upozorní a otevře stránku GitHub.
 
 - **Windows** – stáhni `YAEC-x.y-win-x64-setup.exe` a spusť ho. Nainstaluje YAEC do *Dokumenty\YAEC* bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem. Pokud se objeví upozornění SmartScreen: *Další informace* → *Přesto spustit*. Bez instalace: rozbal `YAEC-x.y-win-x64-portatile.zip` do složky, do které můžeš zapisovat, a spusť `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – stáhni `yaec_x.y_amd64.deb` a spusť `sudo apt install ./yaec_x.y_amd64.deb` (nainstaluje i Mono); YAEC se spouští z nabídky aplikací nebo příkazem `yaec`.
@@ -283,6 +331,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 bit, PC a mini-PC okrem Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (balík .deb) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (balík .rpm) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (balík .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (balík .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (akýkoľvek Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -293,6 +345,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ Na tejto platforme zatiaľ nevyskúšané: správy od používateľov sú vítané.
+
+**Automatické aktualizácie** — od verzie 1.9.1: YAEC pri spustení zistí na GitHube, či existuje nová verzia, a sám sa aktualizuje pri inštalátore alebo zipe pre Windows, prenosných archívoch .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage a aplikácii pre macOS; každý balík sa overí podľa SHA256SUMS.txt. Balíky .deb, .rpm, Arch (.pkg.tar.zst) a Slackware (.txz) sa naopak aktualizujú správcom balíkov systému: YAEC upozorní na novú verziu a otvorí stránku GitHub.
 
 - **Windows** – stiahni `YAEC-x.y-win-x64-setup.exe` a spusti ho. Nainštaluje YAEC do *Dokumenty\YAEC* bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom. Ak sa objaví upozornenie SmartScreen: *Ďalšie informácie* → *Napriek tomu spustiť*. Bez inštalácie: rozbaľ `YAEC-x.y-win-x64-portatile.zip` do priečinka, do ktorého môžeš zapisovať, a spusti `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – stiahni `yaec_x.y_amd64.deb` a spusti `sudo apt install ./yaec_x.y_amd64.deb` (nainštaluje aj Mono); YAEC sa spúšťa z ponuky aplikácií alebo príkazom `yaec`.
@@ -313,6 +367,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 位，树莓派以外的 PC 和迷你 PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb 软件包) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (.rpm 软件包) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst 软件包) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (.txz 软件包) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (任何 Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -323,6 +381,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ 尚未在此平台上测试：欢迎用户反馈。
+
+**自动更新** — 自 1.9.1 起：YAEC 启动时会在 GitHub 上检查是否有新版本，并对 Windows 安装程序或 zip、便携 .tar.gz 归档（Linux、树莓派、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 应用自动更新；每个软件包都会用 SHA256SUMS.txt 校验。.deb、.rpm、Arch（.pkg.tar.zst）和 Slackware（.txz）软件包则通过系统的软件包管理器更新：YAEC 会提示新版本并打开 GitHub 页面。
 
 - **Windows** – 下载 `YAEC-x.y-win-x64-setup.exe` 并运行。它无需管理员权限，把 YAEC 安装到 *文档\YAEC*，并在开始菜单和桌面创建快捷方式，附带卸载程序。若 SmartScreen 发出警告：*更多信息* → *仍要运行*。不想安装：把 `YAEC-x.y-win-x64-portatile.zip` 解压到可写的文件夹，运行 `YAEC.exe`。
 - **Linux – Debian、Ubuntu、Mint** – 下载 `yaec_x.y_amd64.deb`，运行 `sudo apt install ./yaec_x.y_amd64.deb`（会同时安装 Mono）；从应用菜单或用 `yaec` 命令启动 YAEC。
@@ -343,6 +403,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64 ビット、Raspberry Pi 以外の PC とミニ PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb パッケージ) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (.rpm パッケージ) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst パッケージ) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (.txz パッケージ) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (あらゆる Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -353,6 +417,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ このプラットフォームではまだ試験していません。ユーザーからの報告を歓迎します。
+
+**自動更新** — 1.9.1 から：YAEC は起動時に GitHub で新しいバージョンを確認し、Windows のインストーラーまたは zip、ポータブルの .tar.gz アーカイブ（Linux、Raspberry Pi、FreeBSD、OpenBSD、Alpine）、AppImage、macOS アプリでは自動的に更新します。各パッケージは SHA256SUMS.txt で検証されます。.deb、.rpm、Arch（.pkg.tar.zst）、Slackware（.txz）のパッケージはシステムのパッケージマネージャーで更新します。YAEC は新しいバージョンを知らせ、GitHub のページを開きます。
 
 - **Windows** – `YAEC-x.y-win-x64-setup.exe` をダウンロードして実行します。管理者権限なしで *ドキュメント\YAEC* にインストールされ、スタートメニューとデスクトップのショートカット、アンインストーラーが作成されます。SmartScreen の警告が出たら：*詳細情報* → *実行*。インストールしない場合：`YAEC-x.y-win-x64-portatile.zip` を書き込み可能なフォルダーに展開し、`YAEC.exe` を実行します。
 - **Linux – Debian、Ubuntu、Mint** – `yaec_x.y_amd64.deb` をダウンロードし、`sudo apt install ./yaec_x.y_amd64.deb` を実行します（Mono も一緒にインストールされます）。YAEC はアプリケーションメニューまたは `yaec` コマンドで起動します。
@@ -373,6 +439,10 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **Linux aarch64** (ARM 64비트, Raspberry Pi 이외의 PC와 미니 PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb 패키지) | `yaec_x.y_amd64.deb` |
 | **Fedora / openSUSE** (.rpm 패키지) | `yaec-x.y-1.noarch.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst 패키지) | `yaec-x.y-1-any.pkg.tar.zst` |
+| **Slackware** (.txz 패키지) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **AppImage** (모든 Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
 | **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
 | **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
 | **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
@@ -383,6 +453,8 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 | **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
 
 ¹ 이 플랫폼에서는 아직 시험하지 않았습니다. 사용자 보고를 환영합니다.
+
+**자동 업데이트** — 1.9.1부터: YAEC는 시작할 때 GitHub에서 새 버전이 있는지 확인하고, Windows 설치 프로그램이나 zip, 휴대용 .tar.gz 압축 파일(Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage, macOS 앱에서는 스스로 업데이트합니다. 모든 패키지는 SHA256SUMS.txt로 검증합니다. .deb, .rpm, Arch(.pkg.tar.zst), Slackware(.txz) 패키지는 시스템의 패키지 관리자로 업데이트합니다. YAEC는 새 버전을 알리고 GitHub 페이지를 엽니다.
 
 - **Windows** – `YAEC-x.y-win-x64-setup.exe`를 내려받아 실행합니다. 관리자 권한 없이 *문서\YAEC*에 설치되며, 시작 메뉴와 바탕 화면 바로 가기, 제거 프로그램이 만들어집니다. SmartScreen 경고가 나오면: *추가 정보* → *실행*. 설치하지 않으려면: `YAEC-x.y-win-x64-portatile.zip`을 쓰기 가능한 폴더에 풀고 `YAEC.exe`를 실행합니다.
 - **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb`를 내려받아 `sudo apt install ./yaec_x.y_amd64.deb`를 실행합니다(Mono도 함께 설치됨). YAEC는 응용 프로그램 메뉴나 `yaec` 명령으로 시작합니다.
