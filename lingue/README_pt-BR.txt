@@ -15,11 +15,15 @@ O YAEC funciona com o Mono, o runtime .NET livre.
 - Debian, Ubuntu, Mint: baixe yaec_1.9_amd64.deb e instale-o com
       sudo apt install ./yaec_1.9_amd64.deb
   (instala também o Mono). O YAEC é iniciado pelo menu de aplicativos ou com o comando "yaec".
-- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) e execute ./install.sh.
+- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) e execute ./install.sh.
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 INSTALAÇÃO – macOS (experimental)
 1. Instale o Mono para macOS (https://www.mono-project.com/download/stable/) e o XQuartz (https://www.xquartz.org).
 2. Abra YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) e arraste o YAEC para Aplicativos. Na primeira vez: clique com o botão direito em YAEC → Abrir (o app não é assinado pela Apple).
+
+ATUALIZAÇÕES AUTOMÁTICAS
+Ao iniciar, o YAEC verifica no GitHub se há uma versão nova e se atualiza sozinho (Windows, arquivos portáteis .tar.gz, AppImage, aplicativo para macOS), conferindo a impressão SHA-256. Os pacotes .deb, .rpm, Arch, Slackware são atualizados pelo gerenciador de pacotes do sistema: o YAEC avisa da nova versão e abre a página do GitHub.
 
 VERIFICAÇÃO DOS ARQUIVOS BAIXADOS (SHA-256)
 Cada release contém SHA256SUMS.txt com o hash SHA-256 de cada pacote. Compare-o com o do arquivo baixado:

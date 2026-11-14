@@ -15,11 +15,15 @@
 - Debian وUbuntu وMint: نزّل yaec_1.9_amd64.deb وثبّته بالأمر
       sudo apt install ./yaec_1.9_amd64.deb
   (يثبّت Mono أيضًا). يُشغَّل YAEC من قائمة التطبيقات أو بالأمر "yaec".
-- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) وشغّل ./install.sh.
+- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) وشغّل ./install.sh.
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 التثبيت – macOS (تجريبي)
 1. ثبّت Mono لنظام macOS (https://www.mono-project.com/download/stable/) وXQuartz (https://www.xquartz.org).
 2. افتح YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
+
+التحديثات التلقائية
+عند التشغيل يتحقق YAEC في GitHub من وجود إصدار جديد ويحدّث نفسه (Windows، أرشيفات ‎.tar.gz المحمولة، AppImage، تطبيق macOS) مع التحقق من بصمة SHA-256. أما حزم .deb, .rpm, Arch, Slackware فتُحدَّث بمدير الحزم في النظام: ينبّه YAEC إلى الإصدار الجديد ويفتح صفحة GitHub.
 
 التحقق من الملفات المنزّلة (SHA-256)
 يحتوي كل إصدار على SHA256SUMS.txt مع بصمة SHA-256 لكل حزمة. قارنها ببصمة الملف الذي نزّلته:

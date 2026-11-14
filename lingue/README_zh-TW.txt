@@ -15,11 +15,15 @@ YAEC 在 Mono（自由的 .NET 執行環境）上執行。
 - Debian、Ubuntu、Mint：下載 yaec_1.9_amd64.deb，並用以下命令安裝
       sudo apt install ./yaec_1.9_amd64.deb
   （同時會安裝 Mono）。可從應用程式選單或用命令“yaec”啟動 YAEC。
-- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) 並執行 ./install.sh。
+- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) 並執行 ./install.sh。
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 安裝 – macOS（實驗性）
 1. 安裝 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
 2. 開啟 YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel)，將 YAEC 拖到「應用程式」中。首次執行：按右鍵 YAEC → 開啟（該應用未經 Apple 簽名）。
+
+自動更新
+YAEC 啟動時會在 GitHub 上檢查是否有新版本，並自動更新（Windows、可攜式 .tar.gz 封存檔、AppImage、macOS 應用程式），同時核對 SHA-256 指紋。.deb, .rpm, Arch, Slackware 套件則透過系統的套件管理員更新：YAEC 會提示新版本並開啟 GitHub 頁面。
 
 驗證下載的檔案（SHA-256）
 每個 release 都包含 SHA256SUMS.txt，其中列出每個套件的 SHA-256 雜湊值。請將其與下載檔案的雜湊值進行比較：

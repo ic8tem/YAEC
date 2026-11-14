@@ -15,11 +15,15 @@ YAEC はフリーの .NET ランタイムである Mono で動作します。
 - Debian、Ubuntu、Mint：yaec_1.9_amd64.deb をダウンロードし、次のコマンドでインストールします
       sudo apt install ./yaec_1.9_amd64.deb
   （Mono も同時にインストールされます）。YAEC はアプリケーションメニューから、またはコマンド「yaec」で起動します。
-- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) を展開して ./install.sh を実行します。
+- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) を展開して ./install.sh を実行します。
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 インストール – macOS（試験的）
 1. macOS 用 Mono（https://www.mono-project.com/download/stable/）と XQuartz（https://www.xquartz.org）をインストールします。
 2. YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
+
+自動更新
+YAEC は起動時に GitHub で新しいバージョンを確認し、自動的に更新します（Windows、ポータブルの .tar.gz アーカイブ、AppImage、macOS アプリ）。その際 SHA-256 フィンガープリントを検証します。.deb, .rpm, Arch, Slackware のパッケージはシステムのパッケージマネージャーで更新します。YAEC は新しいバージョンを知らせ、GitHub のページを開きます。
 
 ダウンロードしたファイルの確認（SHA-256）
 各 release には、すべてのパッケージの SHA-256 ハッシュを記載した SHA256SUMS.txt が含まれています。ダウンロードしたファイルのハッシュと比較してください：

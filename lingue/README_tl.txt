@@ -15,11 +15,15 @@ Tumatakbo ang YAEC sa Mono, ang libreng .NET runtime.
 - Debian, Ubuntu, Mint: i-download ang yaec_1.9_amd64.deb at i-install ito gamit ang
       sudo apt install ./yaec_1.9_amd64.deb
   (ini-install din nito ang Mono). Pinapatakbo ang YAEC mula sa menu ng mga application o gamit ang command na "yaec".
-- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) at patakbuhin ang ./install.sh.
+- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) at patakbuhin ang ./install.sh.
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 PAG-INSTALL – macOS (eksperimental)
 1. I-install ang Mono para sa macOS (https://www.mono-project.com/download/stable/) at ang XQuartz (https://www.xquartz.org).
 2. Buksan ang YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
+
+AWTOMATIKONG PAG-UPDATE
+Sa pagsisimula, tinitingnan ng YAEC sa GitHub kung may bagong bersyon at kusa itong nag-a-update (Windows, portable na .tar.gz archive, AppImage, macOS app), habang sinusuri ang SHA-256 fingerprint. Ang mga package na .deb, .rpm, Arch, Slackware ay ina-update naman gamit ang package manager ng system: inaabisuhan ng YAEC ang bagong bersyon at binubuksan ang pahina ng GitHub.
 
 PAGSURI NG MGA NA-DOWNLOAD NA FILE (SHA-256)
 Bawat release ay may SHA256SUMS.txt na naglalaman ng SHA-256 hash ng bawat package. Ihambing ito sa hash ng na-download na file:

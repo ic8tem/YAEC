@@ -15,11 +15,15 @@ A YAEC a Monóval, a szabad .NET-futtatókörnyezettel működik.
 - Debian, Ubuntu, Mint: töltsd le a yaec_1.9_amd64.deb fájlt, és telepítsd ezzel:
       sudo apt install ./yaec_1.9_amd64.deb
   (a Monót is telepíti). A YAEC az alkalmazásmenüből vagy a „yaec” paranccsal indítható.
-- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe), és futtasd a ./install.sh-t.
+- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz), és futtasd a ./install.sh-t.
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 TELEPÍTÉS – macOS (kísérleti)
 1. Telepítsd a macOS-es Monót (https://www.mono-project.com/download/stable/) és az XQuartzot (https://www.xquartz.org).
 2. Nyisd meg a YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
+
+AUTOMATIKUS FRISSÍTÉSEK
+Induláskor a YAEC megnézi a GitHubon, van-e új verzió, és magától frissül (Windows, hordozható .tar.gz archívumok, AppImage, macOS-alkalmazás), az SHA-256 ujjlenyomat ellenőrzésével. A(z) .deb, .rpm, Arch, Slackware csomagokat viszont a rendszer csomagkezelője frissíti: a YAEC jelzi az új verziót, és megnyitja a GitHub-oldalt.
 
 A LETÖLTÖTT FÁJLOK ELLENŐRZÉSE (SHA-256)
 Minden kiadás tartalmazza az SHA256SUMS.txt fájlt, benne minden csomag SHA-256 ujjlenyomatával. Vesd össze a letöltött fájléval:

@@ -15,11 +15,15 @@ YAEC는 자유 .NET 런타임인 Mono에서 동작합니다.
 - Debian, Ubuntu, Mint: yaec_1.9_amd64.deb를 다운로드하여 다음 명령으로 설치합니다
       sudo apt install ./yaec_1.9_amd64.deb
   (Mono도 함께 설치됩니다). YAEC는 응용 프로그램 메뉴에서 또는 "yaec" 명령으로 실행합니다.
-- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe)의 압축을 푼 뒤 ./install.sh를 실행합니다.
+- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 설치 – macOS (실험적)
 1. macOS용 Mono(https://www.mono-project.com/download/stable/)와 XQuartz(https://www.xquartz.org)를 설치합니다.
 2. YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel)를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
+
+자동 업데이트
+YAEC는 시작할 때 GitHub에서 새 버전이 있는지 확인하고 SHA-256 지문을 검증하여 스스로 업데이트합니다(Windows, 휴대용 .tar.gz 압축 파일, AppImage, macOS 앱). .deb, .rpm, Arch, Slackware 패키지는 시스템의 패키지 관리자로 업데이트합니다. YAEC는 새 버전을 알리고 GitHub 페이지를 엽니다.
 
 다운로드한 파일 확인 (SHA-256)
 각 release에는 모든 패키지의 SHA-256 해시가 담긴 SHA256SUMS.txt가 포함되어 있습니다. 다운로드한 파일의 해시와 비교하십시오:

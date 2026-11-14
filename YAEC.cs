@@ -3393,6 +3393,10 @@ namespace LunaCalc
             "I file mancanti sono stati scaricati.",
             "Non è stato possibile scaricare {0} file: {1}",
             "Se la cartella del programma è protetta, avvia YAEC come amministratore oppure reinstallalo dalla pagina di GitHub.",
+            "YAEC è installato con un pacchetto del sistema (.deb, .rpm, Arch o Slackware), che si aggiorna con il gestore dei pacchetti: si apre la pagina di GitHub con il pacchetto nuovo.",
+            "YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta e sostituisce i suoi file; la nuova versione parte al prossimo avvio. I tuoi dati restano dove sono.",
+            "YAEC {0} è installato: la nuova versione parte al prossimo avvio.",
+            "Non è stato possibile scrivere i file nella cartella del programma.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -5131,6 +5135,10 @@ namespace LunaCalc
             "The missing files have been downloaded.",
             "{0} files could not be downloaded: {1}",
             "If the program folder is protected, run YAEC as administrator or reinstall it from the GitHub page.",
+            "YAEC was installed with a system package (.deb, .rpm, Arch, Slackware), which is updated with the package manager: the GitHub page with the new package opens.",
+            "YAEC downloads the new package from GitHub, checks its fingerprint and replaces its own files; the new version starts at the next launch. Your data stays where it is.",
+            "YAEC {0} is installed: the new version starts at the next launch.",
+            "The files could not be written to the program folder.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6869,6 +6877,10 @@ namespace LunaCalc
             "Die fehlenden Dateien wurden heruntergeladen.",
             "{0} Dateien konnten nicht heruntergeladen werden: {1}",
             "Wenn der Programmordner geschützt ist, starte YAEC als Administrator oder installiere es von der GitHub-Seite neu.",
+            "YAEC wurde mit einem Systempaket (.deb, .rpm, Arch, Slackware) installiert, das über die Paketverwaltung aktualisiert wird: Die GitHub-Seite mit dem neuen Paket wird geöffnet.",
+            "YAEC lädt das neue Paket von GitHub herunter, prüft seinen Fingerabdruck und ersetzt seine eigenen Dateien; die neue Version startet beim nächsten Aufruf. Ihre Daten bleiben, wo sie sind.",
+            "YAEC {0} ist installiert: Die neue Version startet beim nächsten Aufruf.",
+            "Die Dateien konnten nicht in den Programmordner geschrieben werden.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -8607,6 +8619,10 @@ namespace LunaCalc
             "Les fichiers manquants ont été téléchargés.",
             "Impossible de télécharger {0} fichiers : {1}",
             "Si le dossier du programme est protégé, lance YAEC en tant qu'administrateur ou réinstalle-le depuis la page GitHub.",
+            "YAEC est installé avec un paquet du système (.deb, .rpm, Arch, Slackware), qui se met à jour avec le gestionnaire de paquets : la page GitHub avec le nouveau paquet s'ouvre.",
+            "YAEC télécharge le nouveau paquet depuis GitHub, vérifie son empreinte et remplace ses propres fichiers ; la nouvelle version démarre au prochain lancement. Vos données restent où elles sont.",
+            "YAEC {0} est installé : la nouvelle version démarre au prochain lancement.",
+            "Impossible d'écrire les fichiers dans le dossier du programme.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -10345,6 +10361,10 @@ namespace LunaCalc
             "Los archivos que faltaban se han descargado.",
             "No se pudieron descargar {0} archivos: {1}",
             "Si la carpeta del programa está protegida, ejecuta YAEC como administrador o reinstálalo desde la página de GitHub.",
+            "YAEC está instalado con un paquete del sistema (.deb, .rpm, Arch, Slackware), que se actualiza con el gestor de paquetes: se abre la página de GitHub con el paquete nuevo.",
+            "YAEC descarga el nuevo paquete de GitHub, comprueba su huella y sustituye sus propios archivos; la nueva versión arranca en el próximo inicio. Tus datos se quedan donde están.",
+            "YAEC {0} está instalado: la nueva versión arranca en el próximo inicio.",
+            "No se han podido escribir los archivos en la carpeta del programa.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -12083,6 +12103,10 @@ namespace LunaCalc
             "Os ficheiros em falta foram descarregados.",
             "Não foi possível descarregar {0} ficheiros: {1}",
             "Se a pasta do programa estiver protegida, executa o YAEC como administrador ou reinstala-o a partir da página do GitHub.",
+            "O YAEC foi instalado com um pacote do sistema (.deb, .rpm, Arch, Slackware), que se atualiza com o gestor de pacotes: abre-se a página do GitHub com o pacote novo.",
+            "O YAEC descarrega o novo pacote do GitHub, verifica a sua impressão digital e substitui os seus ficheiros; a nova versão arranca no próximo início. Os seus dados ficam onde estão.",
+            "O YAEC {0} está instalado: a nova versão arranca no próximo início.",
+            "Não foi possível escrever os ficheiros na pasta do programa.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -13821,6 +13845,10 @@ namespace LunaCalc
             "缺少的文件已下载。",
             "有 {0} 个文件无法下载：{1}",
             "如果程序文件夹受保护，请以管理员身份运行 YAEC，或从 GitHub 页面重新安装。",
+            "YAEC 是通过系统软件包 (.deb, .rpm, Arch, Slackware) 安装的，需要用软件包管理器更新：现在打开包含新软件包的 GitHub 页面。",
+            "YAEC 从 GitHub 下载新软件包，核对其指纹并替换自身文件；新版本在下次启动时生效。您的数据保持原位。",
+            "YAEC {0} 已安装：新版本在下次启动时生效。",
+            "无法将文件写入程序文件夹。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -15559,6 +15587,10 @@ namespace LunaCalc
             "不足していたファイルをダウンロードしました。",
             "{0} 個のファイルをダウンロードできませんでした：{1}",
             "プログラムのフォルダーが保護されている場合は、YAEC を管理者として実行するか、GitHub のページから再インストールしてください。",
+            "YAEC はシステムのパッケージ (.deb, .rpm, Arch, Slackware) でインストールされているため、パッケージマネージャーで更新します。新しいパッケージのある GitHub のページを開きます。",
+            "YAEC は GitHub から新しいパッケージをダウンロードし、フィンガープリントを確認して自分のファイルを置き換えます。新しいバージョンは次回の起動から使われます。データはそのまま残ります。",
+            "YAEC {0} をインストールしました。新しいバージョンは次回の起動から使われます。",
+            "プログラムのフォルダーにファイルを書き込めませんでした。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -17297,6 +17329,10 @@ namespace LunaCalc
             "गायब फ़ाइलें डाउनलोड हो गईं।",
             "{0} फ़ाइलें डाउनलोड नहीं हो सकीं: {1}",
             "यदि प्रोग्राम फ़ोल्डर सुरक्षित है, तो YAEC को व्यवस्थापक के रूप में चलाएँ या GitHub पृष्ठ से फिर से स्थापित करें।",
+            "YAEC एक सिस्टम पैकेज (.deb, .rpm, Arch, Slackware) से इंस्टॉल है, जिसे पैकेज मैनेजर से अपडेट किया जाता है: नए पैकेज वाला GitHub पेज खुलता है।",
+            "YAEC GitHub से नया पैकेज डाउनलोड करता है, उसका फ़िंगरप्रिंट जाँचता है और अपनी फ़ाइलें बदल देता है; नया संस्करण अगली बार शुरू करने पर चलेगा। आपका डेटा जहाँ है वहीं रहता है।",
+            "YAEC {0} इंस्टॉल हो गया है: नया संस्करण अगली बार शुरू करने पर चलेगा।",
+            "प्रोग्राम फ़ोल्डर में फ़ाइलें नहीं लिखी जा सकीं।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -19035,6 +19071,10 @@ namespace LunaCalc
             "없던 파일을 내려받았습니다.",
             "파일 {0}개를 내려받을 수 없습니다: {1}",
             "프로그램 폴더가 보호되어 있으면 YAEC를 관리자 권한으로 실행하거나 GitHub 페이지에서 다시 설치하세요.",
+            "YAEC는 시스템 패키지 (.deb, .rpm, Arch, Slackware)로 설치되어 패키지 관리자로 업데이트합니다. 새 패키지가 있는 GitHub 페이지가 열립니다.",
+            "YAEC가 GitHub에서 새 패키지를 내려받아 지문을 확인하고 자신의 파일을 교체합니다. 새 버전은 다음 실행 때 시작됩니다. 데이터는 그대로 남습니다.",
+            "YAEC {0}이(가) 설치되었습니다. 새 버전은 다음 실행 때 시작됩니다.",
+            "프로그램 폴더에 파일을 쓸 수 없었습니다.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -20773,6 +20813,10 @@ namespace LunaCalc
             "Berkas yang hilang sudah diunduh.",
             "{0} berkas tidak dapat diunduh: {1}",
             "Jika folder program dilindungi, jalankan YAEC sebagai administrator atau pasang ulang dari halaman GitHub.",
+            "YAEC dipasang dengan paket sistem (.deb, .rpm, Arch, Slackware), yang diperbarui melalui manajer paket: halaman GitHub dengan paket baru akan dibuka.",
+            "YAEC mengunduh paket baru dari GitHub, memeriksa sidik jarinya dan mengganti berkasnya sendiri; versi baru berjalan pada peluncuran berikutnya. Data Anda tetap di tempatnya.",
+            "YAEC {0} sudah terpasang: versi baru berjalan pada peluncuran berikutnya.",
+            "Berkas tidak dapat ditulis ke folder program.",
         };
 
         public static readonly string[] RU = {
@@ -22512,6 +22556,10 @@ namespace LunaCalc
             "Отсутствующие файлы загружены.",
             "Не удалось загрузить файлы ({0}): {1}",
             "Если папка программы защищена, запустите YAEC от имени администратора или переустановите со страницы GitHub.",
+            "YAEC установлен системным пакетом (.deb, .rpm, Arch, Slackware), который обновляется менеджером пакетов: открывается страница GitHub с новым пакетом.",
+            "YAEC скачивает новый пакет с GitHub, проверяет его отпечаток и заменяет свои файлы; новая версия запустится при следующем старте. Ваши данные остаются на месте.",
+            "YAEC {0} установлен: новая версия запустится при следующем старте.",
+            "Не удалось записать файлы в папку программы.",
         };
 
         public static readonly string[] UK = {
@@ -24251,6 +24299,10 @@ namespace LunaCalc
             "Відсутні файли завантажено.",
             "Не вдалося завантажити файли ({0}): {1}",
             "Якщо тека програми захищена, запустіть YAEC від імені адміністратора або перевстановіть зі сторінки GitHub.",
+            "YAEC встановлено системним пакетом (.deb, .rpm, Arch, Slackware), який оновлюється менеджером пакетів: відкривається сторінка GitHub з новим пакетом.",
+            "YAEC завантажує новий пакет із GitHub, перевіряє його відбиток і замінює власні файли; нова версія запуститься під час наступного старту. Ваші дані залишаються на місці.",
+            "YAEC {0} встановлено: нова версія запуститься під час наступного старту.",
+            "Не вдалося записати файли до теки програми.",
         };
 
         public static readonly string[] AF = {
@@ -25990,6 +26042,10 @@ namespace LunaCalc
             "Die ontbrekende lêers is afgelaai.",
             "{0} lêers kon nie afgelaai word nie: {1}",
             "As die programgids beskerm is, begin YAEC as administrateur of installeer dit weer van die GitHub-blad af.",
+            "YAEC is met 'n stelselpakket (.deb, .rpm, Arch, Slackware) geïnstalleer, wat met die pakketbestuurder bygewerk word: die GitHub-blad met die nuwe pakket word oopgemaak.",
+            "YAEC laai die nuwe pakket van GitHub af, kontroleer sy vingerafdruk en vervang sy eie lêers; die nuwe weergawe begin by die volgende keer dat jy dit oopmaak. Jou data bly waar dit is.",
+            "YAEC {0} is geïnstalleer: die nuwe weergawe begin die volgende keer dat jy dit oopmaak.",
+            "Die lêers kon nie in die programvouer geskryf word nie.",
         };
 
         public static readonly string[] BN = {
@@ -27728,6 +27784,10 @@ namespace LunaCalc
             "অনুপস্থিত ফাইলগুলো নামানো হয়েছে।",
             "{0}টি ফাইল নামানো যায়নি: {1}",
             "প্রোগ্রামের ফোল্ডার সুরক্ষিত থাকলে YAEC প্রশাসক হিসেবে চালান বা GitHub পাতা থেকে আবার ইনস্টল করুন।",
+            "YAEC একটি সিস্টেম প্যাকেজ (.deb, .rpm, Arch, Slackware) দিয়ে ইনস্টল করা, যা প্যাকেজ ম্যানেজার দিয়ে হালনাগাদ হয়: নতুন প্যাকেজসহ GitHub পাতাটি খুলছে।",
+            "YAEC GitHub থেকে নতুন প্যাকেজ নামায়, তার ফিঙ্গারপ্রিন্ট মিলিয়ে দেখে এবং নিজের ফাইলগুলো বদলে দেয়; নতুন সংস্করণ পরের বার চালু করলে শুরু হবে। আপনার ডেটা যেখানে আছে সেখানেই থাকে।",
+            "YAEC {0} ইনস্টল হয়েছে: নতুন সংস্করণ পরের বার চালু করলে শুরু হবে।",
+            "প্রোগ্রামের ফোল্ডারে ফাইলগুলো লেখা যায়নি।",
         };
 
         public static readonly string[] AR = {
@@ -29466,6 +29526,10 @@ namespace LunaCalc
             "نُزّلت الملفات الناقصة.",
             "تعذّر تنزيل {0} ملفات: {1}",
             "إذا كان مجلد البرنامج محمياً، شغّل YAEC كمسؤول أو أعد تثبيته من صفحة GitHub.",
+            "ثُبّت YAEC بحزمة من النظام (.deb, .rpm, Arch, Slackware) تُحدَّث بمدير الحزم: تُفتح صفحة GitHub التي فيها الحزمة الجديدة.",
+            "يُنزّل YAEC الحزمة الجديدة من GitHub ويتحقق من بصمتها ويستبدل ملفاته؛ يبدأ الإصدار الجديد عند التشغيل التالي. تبقى بياناتك في مكانها.",
+            "ثُبّت YAEC {0}: يبدأ الإصدار الجديد عند التشغيل التالي.",
+            "تعذّرت كتابة الملفات في مجلد البرنامج.",
         };
 
         public static readonly string[] TR = {
@@ -31204,6 +31268,10 @@ namespace LunaCalc
             "Eksik dosyalar indirildi.",
             "{0} dosya indirilemedi: {1}",
             "Program klasörü korumalıysa YAEC'i yönetici olarak çalıştır ya da GitHub sayfasından yeniden kur.",
+            "YAEC bir sistem paketiyle (.deb, .rpm, Arch, Slackware) kuruldu; bu paket, paket yöneticisiyle güncellenir: yeni paketin bulunduğu GitHub sayfası açılıyor.",
+            "YAEC yeni paketi GitHub'dan indirir, parmak izini denetler ve kendi dosyalarını değiştirir; yeni sürüm bir sonraki açılışta başlar. Verileriniz yerinde kalır.",
+            "YAEC {0} kuruldu: yeni sürüm bir sonraki açılışta başlar.",
+            "Dosyalar program klasörüne yazılamadı.",
         };
 
         public static readonly string[] NL = {
@@ -32942,6 +33010,10 @@ namespace LunaCalc
             "De ontbrekende bestanden zijn gedownload.",
             "{0} bestanden konden niet worden gedownload: {1}",
             "Als de programmamap beveiligd is, start YAEC als administrator of installeer het opnieuw via de GitHub-pagina.",
+            "YAEC is geïnstalleerd met een systeempakket (.deb, .rpm, Arch, Slackware), dat wordt bijgewerkt met het pakketbeheer: de GitHub-pagina met het nieuwe pakket wordt geopend.",
+            "YAEC downloadt het nieuwe pakket van GitHub, controleert de vingerafdruk en vervangt zijn eigen bestanden; de nieuwe versie start bij de volgende keer opstarten. Je gegevens blijven waar ze zijn.",
+            "YAEC {0} is geïnstalleerd: de nieuwe versie start bij de volgende keer opstarten.",
+            "De bestanden konden niet naar de programmamap worden geschreven.",
         };
 
         public static readonly string[] ET = {
@@ -34680,6 +34752,10 @@ namespace LunaCalc
             "Puuduvad failid on alla laaditud.",
             "{0} faili ei õnnestunud alla laadida: {1}",
             "Kui programmi kaust on kaitstud, käivita YAEC administraatorina või paigalda see GitHubi lehelt uuesti.",
+            "YAEC on paigaldatud süsteemipaketiga (.deb, .rpm, Arch, Slackware), mida uuendatakse paketihalduriga: avaneb GitHubi leht uue paketiga.",
+            "YAEC laadib GitHubist alla uue paketi, kontrollib selle sõrmejälge ja asendab oma failid; uus versioon käivitub järgmisel avamisel. Sinu andmed jäävad oma kohale.",
+            "YAEC {0} on paigaldatud: uus versioon käivitub järgmisel avamisel.",
+            "Faile ei õnnestunud programmi kausta kirjutada.",
         };
 
         public static readonly string[] LV = {
@@ -36418,6 +36494,10 @@ namespace LunaCalc
             "Trūkstošie faili ir lejupielādēti.",
             "Neizdevās lejupielādēt {0} failus: {1}",
             "Ja programmas mape ir aizsargāta, palaid YAEC kā administrators vai pārinstalē to no GitHub lapas.",
+            "YAEC ir instalēts ar sistēmas pakotni (.deb, .rpm, Arch, Slackware), ko atjaunina ar pakotņu pārvaldnieku: tiek atvērta GitHub lapa ar jauno pakotni.",
+            "YAEC lejupielādē jauno pakotni no GitHub, pārbauda tās nospiedumu un aizstāj savas datnes; jaunā versija sāks darboties nākamajā palaišanas reizē. Jūsu dati paliek savā vietā.",
+            "YAEC {0} ir instalēts: jaunā versija sāks darboties nākamajā palaišanas reizē.",
+            "Neizdevās ierakstīt datnes programmas mapē.",
         };
 
         public static readonly string[] LT = {
@@ -38156,6 +38236,10 @@ namespace LunaCalc
             "Trūkstami failai atsisiųsti.",
             "Nepavyko atsisiųsti {0} failų: {1}",
             "Jei programos aplankas apsaugotas, paleiskite YAEC kaip administratorius arba įdiekite iš naujo iš GitHub puslapio.",
+            "YAEC įdiegta sistemos paketu (.deb, .rpm, Arch, Slackware), kuris atnaujinamas paketų tvarkykle: atidaromas GitHub puslapis su nauju paketu.",
+            "YAEC atsisiunčia naują paketą iš GitHub, patikrina jo kontrolinį kodą ir pakeičia savo failus; nauja versija pasileis kitą kartą paleidus. Jūsų duomenys lieka savo vietoje.",
+            "YAEC {0} įdiegta: nauja versija pasileis kitą kartą paleidus.",
+            "Nepavyko įrašyti failų į programos aplanką.",
         };
 
         public static readonly string[] SV = {
@@ -39894,6 +39978,10 @@ namespace LunaCalc
             "De saknade filerna har laddats ner.",
             "{0} filer kunde inte laddas ner: {1}",
             "Om programmappen är skyddad, starta YAEC som administratör eller installera om det från GitHub-sidan.",
+            "YAEC är installerat med ett systempaket (.deb, .rpm, Arch, Slackware), som uppdateras med pakethanteraren: GitHub-sidan med det nya paketet öppnas.",
+            "YAEC hämtar det nya paketet från GitHub, kontrollerar dess fingeravtryck och ersätter sina egna filer; den nya versionen startar nästa gång programmet öppnas. Dina data ligger kvar där de är.",
+            "YAEC {0} är installerat: den nya versionen startar nästa gång programmet öppnas.",
+            "Filerna kunde inte skrivas till programmappen.",
         };
 
         public static readonly string[] NB = {
@@ -41632,6 +41720,10 @@ namespace LunaCalc
             "De manglende filene er lastet ned.",
             "{0} filer kunne ikke lastes ned: {1}",
             "Hvis programmappen er beskyttet, start YAEC som administrator eller installer det på nytt fra GitHub-siden.",
+            "YAEC er installert med en systempakke (.deb, .rpm, Arch, Slackware), som oppdateres med pakkebehandleren: GitHub-siden med den nye pakken åpnes.",
+            "YAEC laster ned den nye pakken fra GitHub, kontrollerer fingeravtrykket og erstatter sine egne filer; den nye versjonen starter neste gang programmet åpnes. Dataene dine blir der de er.",
+            "YAEC {0} er installert: den nye versjonen starter neste gang programmet åpnes.",
+            "Filene kunne ikke skrives til programmappen.",
         };
 
         public static readonly string[] IS = {
@@ -43370,6 +43462,10 @@ namespace LunaCalc
             "Skrárnar sem vantaði hafa verið sóttar.",
             "Ekki tókst að sækja {0} skrár: {1}",
             "Ef forritamappan er varin skaltu keyra YAEC sem stjórnandi eða setja það upp aftur af GitHub-síðunni.",
+            "YAEC er sett upp með kerfispakka (.deb, .rpm, Arch, Slackware) sem er uppfærður með pakkastjóranum: GitHub-síðan með nýja pakkanum opnast.",
+            "YAEC sækir nýja pakkann frá GitHub, athugar fingrafar hans og skiptir út eigin skrám; nýja útgáfan ræsist næst þegar forritið er opnað. Gögnin þín verða áfram þar sem þau eru.",
+            "YAEC {0} er uppsett: nýja útgáfan ræsist næst þegar forritið er opnað.",
+            "Ekki tókst að skrifa skrárnar í möppu forritsins.",
         };
 
         public static readonly string[] HE = {
@@ -45108,6 +45204,10 @@ namespace LunaCalc
             "הקבצים החסרים הורדו.",
             "לא ניתן היה להוריד {0} קבצים: {1}",
             "אם תיקיית התוכנה מוגנת, הפעל את YAEC כמנהל או התקן אותו מחדש מדף GitHub.",
+            "YAEC הותקנה באמצעות חבילת מערכת (.deb, .rpm, Arch, Slackware), שמתעדכנת דרך מנהל החבילות: נפתח עמוד GitHub עם החבילה החדשה.",
+            "YAEC מוריד את החבילה החדשה מ־GitHub, בודק את טביעת האצבע שלה ומחליף את הקבצים שלו; הגרסה החדשה תופעל בהפעלה הבאה. הנתונים שלך נשארים במקומם.",
+            "YAEC {0} הותקן: הגרסה החדשה תופעל בהפעלה הבאה.",
+            "לא ניתן היה לכתוב את הקבצים לתיקיית התוכנה.",
         };
 
         public static readonly string[] UR = {
@@ -46846,6 +46946,10 @@ namespace LunaCalc
             "گمشدہ فائلیں ڈاؤن لوڈ ہو گئیں۔",
             "{0} فائلیں ڈاؤن لوڈ نہیں ہو سکیں: {1}",
             "اگر پروگرام کا فولڈر محفوظ ہے تو YAEC کو بطور منتظم چلائیں یا GitHub صفحے سے دوبارہ انسٹال کریں۔",
+            "YAEC ایک سسٹم پیکج (.deb, .rpm, Arch, Slackware) سے انسٹال ہے، جو پیکج مینیجر سے اپ ڈیٹ ہوتا ہے: نئے پیکج والا GitHub صفحہ کھل رہا ہے۔",
+            "YAEC نیا پیکج GitHub سے ڈاؤن لوڈ کرتا ہے، اس کا فنگر پرنٹ جانچتا ہے اور اپنی فائلیں بدل دیتا ہے؛ نیا ورژن اگلی بار کھولنے پر چلے گا۔ آپ کا ڈیٹا اپنی جگہ رہتا ہے۔",
+            "YAEC {0} انسٹال ہو گیا ہے: نیا ورژن اگلی بار کھولنے پر چلے گا۔",
+            "فائلیں پروگرام کے فولڈر میں نہیں لکھی جا سکیں۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -48583,6 +48687,10 @@ namespace LunaCalc
             "De manglende filer er hentet.",
             "{0} filer kunne ikke hentes: {1}",
             "Hvis programmappen er beskyttet, så start YAEC som administrator, eller geninstallér det fra GitHub-siden.",
+            "YAEC er installeret med en systempakke (.deb, .rpm, Arch, Slackware), som opdateres med pakkehåndteringen: GitHub-siden med den nye pakke åbnes.",
+            "YAEC henter den nye pakke fra GitHub, kontrollerer dens fingeraftryk og erstatter sine egne filer; den nye version starter, næste gang programmet åbnes. Dine data bliver, hvor de er.",
+            "YAEC {0} er installeret: den nye version starter, næste gang programmet åbnes.",
+            "Filerne kunne ikke skrives til programmappen.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -50320,6 +50428,10 @@ namespace LunaCalc
             "Na-download na ang mga nawawalang file.",
             "Hindi ma-download ang {0} file: {1}",
             "Kung protektado ang folder ng programa, patakbuhin ang YAEC bilang administrator o i-install muli mula sa pahina ng GitHub.",
+            "Naka-install ang YAEC gamit ang isang system package (.deb, .rpm, Arch, Slackware), na ina-update gamit ang package manager: bubuksan ang pahina ng GitHub na may bagong package.",
+            "Dina-download ng YAEC ang bagong package mula sa GitHub, sinusuri ang fingerprint nito at pinapalitan ang sarili nitong mga file; magsisimula ang bagong bersyon sa susunod na pagbukas. Mananatili ang iyong data kung nasaan ito.",
+            "Naka-install na ang YAEC {0}: magsisimula ang bagong bersyon sa susunod na pagbukas.",
+            "Hindi maisulat ang mga file sa folder ng programa.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -52057,6 +52169,10 @@ namespace LunaCalc
             "Os arquivos que faltavam foram baixados.",
             "Não foi possível baixar {0} arquivos: {1}",
             "Se a pasta do programa estiver protegida, execute o YAEC como administrador ou reinstale-o pela página do GitHub.",
+            "O YAEC foi instalado com um pacote do sistema (.deb, .rpm, Arch, Slackware), que é atualizado pelo gerenciador de pacotes: a página do GitHub com o pacote novo será aberta.",
+            "O YAEC baixa o novo pacote do GitHub, verifica a impressão digital dele e substitui os próprios arquivos; a nova versão começa na próxima vez que for aberto. Seus dados ficam onde estão.",
+            "O YAEC {0} está instalado: a nova versão começa na próxima vez que for aberto.",
+            "Não foi possível gravar os arquivos na pasta do programa.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -53794,6 +53910,10 @@ namespace LunaCalc
             "ดาวน์โหลดไฟล์ที่ขาดหายไปแล้ว",
             "ไม่สามารถดาวน์โหลดได้ {0} ไฟล์: {1}",
             "หากโฟลเดอร์ของโปรแกรมถูกป้องกัน ให้เรียกใช้ YAEC ในฐานะผู้ดูแลระบบ หรือติดตั้งใหม่จากหน้า GitHub",
+            "YAEC ติดตั้งด้วยแพ็กเกจของระบบ (.deb, .rpm, Arch, Slackware) ซึ่งอัปเดตด้วยตัวจัดการแพ็กเกจ: กำลังเปิดหน้า GitHub ที่มีแพ็กเกจใหม่",
+            "YAEC ดาวน์โหลดแพ็กเกจใหม่จาก GitHub ตรวจสอบลายนิ้วมือของแพ็กเกจ และแทนที่ไฟล์ของตัวเอง เวอร์ชันใหม่จะเริ่มทำงานในการเปิดครั้งถัดไป ข้อมูลของคุณยังอยู่ที่เดิม",
+            "ติดตั้ง YAEC {0} แล้ว: เวอร์ชันใหม่จะเริ่มทำงานในการเปิดครั้งถัดไป",
+            "ไม่สามารถเขียนไฟล์ลงในโฟลเดอร์ของโปรแกรมได้",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -55531,6 +55651,10 @@ namespace LunaCalc
             "缺少的檔案已下載。",
             "有 {0} 個檔案無法下載：{1}",
             "如果程式資料夾受保護，請以系統管理員身分執行 YAEC，或從 GitHub 頁面重新安裝。",
+            "YAEC 是透過系統套件 (.deb, .rpm, Arch, Slackware) 安裝的，需以套件管理員更新：現在開啟含有新套件的 GitHub 頁面。",
+            "YAEC 從 GitHub 下載新套件，核對其指紋並取代自身檔案；新版本在下次啟動時生效。您的資料保持原位。",
+            "YAEC {0} 已安裝：新版本在下次啟動時生效。",
+            "無法將檔案寫入程式資料夾。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -57268,6 +57392,10 @@ namespace LunaCalc
             "Brakujące pliki zostały pobrane.",
             "Nie udało się pobrać {0} plików: {1}",
             "Jeśli folder programu jest chroniony, uruchom YAEC jako administrator lub zainstaluj ponownie ze strony GitHub.",
+            "YAEC zainstalowano pakietem systemowym (.deb, .rpm, Arch, Slackware), który aktualizuje się menedżerem pakietów: otwiera się strona GitHub z nowym pakietem.",
+            "YAEC pobiera nowy pakiet z GitHub, sprawdza jego odcisk i zastępuje własne pliki; nowa wersja uruchomi się przy następnym starcie. Twoje dane zostają na miejscu.",
+            "YAEC {0} jest zainstalowany: nowa wersja uruchomi się przy następnym starcie.",
+            "Nie udało się zapisać plików w folderze programu.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -59005,6 +59133,10 @@ namespace LunaCalc
             "Chybějící soubory byly staženy.",
             "Nepodařilo se stáhnout {0} souborů: {1}",
             "Pokud je složka programu chráněná, spusť YAEC jako správce nebo ho přeinstaluj ze stránky GitHubu.",
+            "YAEC je nainstalován systémovým balíčkem (.deb, .rpm, Arch, Slackware), který se aktualizuje správcem balíčků: otevře se stránka GitHub s novým balíčkem.",
+            "YAEC stáhne nový balíček z GitHubu, ověří jeho otisk a nahradí své soubory; nová verze se spustí při příštím spuštění. Vaše data zůstávají tam, kde jsou.",
+            "YAEC {0} je nainstalován: nová verze se spustí při příštím spuštění.",
+            "Soubory se nepodařilo zapsat do složky programu.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -60742,6 +60874,10 @@ namespace LunaCalc
             "Fișierele lipsă au fost descărcate.",
             "Nu s-au putut descărca {0} fișiere: {1}",
             "Dacă dosarul programului este protejat, pornește YAEC ca administrator sau reinstalează-l de pe pagina GitHub.",
+            "YAEC este instalat cu un pachet al sistemului (.deb, .rpm, Arch, Slackware), care se actualizează cu managerul de pachete: se deschide pagina GitHub cu pachetul nou.",
+            "YAEC descarcă noul pachet de pe GitHub, îi verifică amprenta și își înlocuiește fișierele; noua versiune pornește la următoarea lansare. Datele tale rămân unde sunt.",
+            "YAEC {0} este instalat: noua versiune pornește la următoarea lansare.",
+            "Fișierele nu au putut fi scrise în dosarul programului.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -62479,6 +62615,10 @@ namespace LunaCalc
             "Τα αρχεία που έλειπαν κατέβηκαν.",
             "Δεν ήταν δυνατή η λήψη {0} αρχείων: {1}",
             "Αν ο φάκελος του προγράμματος είναι προστατευμένος, άνοιξε το YAEC ως διαχειριστής ή εγκατάστησέ το ξανά από τη σελίδα του GitHub.",
+            "Το YAEC εγκαταστάθηκε με πακέτο του συστήματος (.deb, .rpm, Arch, Slackware), που ενημερώνεται με τον διαχειριστή πακέτων: ανοίγει η σελίδα του GitHub με το νέο πακέτο.",
+            "Το YAEC κατεβάζει το νέο πακέτο από το GitHub, ελέγχει το αποτύπωμά του και αντικαθιστά τα δικά του αρχεία· η νέα έκδοση ξεκινά στην επόμενη εκκίνηση. Τα δεδομένα σας μένουν στη θέση τους.",
+            "Το YAEC {0} εγκαταστάθηκε: η νέα έκδοση ξεκινά στην επόμενη εκκίνηση.",
+            "Δεν ήταν δυνατή η εγγραφή των αρχείων στον φάκελο του προγράμματος.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -64216,6 +64356,10 @@ namespace LunaCalc
             "A hiányzó fájlok letöltődtek.",
             "{0} fájlt nem sikerült letölteni: {1}",
             "Ha a program mappája védett, indítsd a YAEC-et rendszergazdaként, vagy telepítsd újra a GitHub oldalról.",
+            "A YAEC rendszercsomaggal (.deb, .rpm, Arch, Slackware) van telepítve, amelyet a csomagkezelő frissít: megnyílik a GitHub-oldal az új csomaggal.",
+            "A YAEC letölti az új csomagot a GitHubról, ellenőrzi az ujjlenyomatát, és lecseréli a saját fájljait; az új verzió a következő indításkor indul. Az adatai a helyükön maradnak.",
+            "A YAEC {0} telepítve: az új verzió a következő indításkor indul.",
+            "A fájlokat nem sikerült a program mappájába írni.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -65953,6 +66097,10 @@ namespace LunaCalc
             "Chýbajúce súbory boli stiahnuté.",
             "Nepodarilo sa stiahnuť {0} súborov: {1}",
             "Ak je priečinok programu chránený, spusti YAEC ako správca alebo ho preinštaluj zo stránky GitHubu.",
+            "YAEC je nainštalovaný systémovým balíkom (.deb, .rpm, Arch, Slackware), ktorý sa aktualizuje správcom balíkov: otvorí sa stránka GitHub s novým balíkom.",
+            "YAEC stiahne nový balík z GitHubu, overí jeho odtlačok a nahradí svoje súbory; nová verzia sa spustí pri ďalšom spustení. Vaše údaje zostávajú tam, kde sú.",
+            "YAEC {0} je nainštalovaný: nová verzia sa spustí pri ďalšom spustení.",
+            "Súbory sa nepodarilo zapísať do priečinka programu.",
         };
     }
 
@@ -82423,7 +82571,10 @@ namespace LunaCalc
         // ---------- Aggiornamenti da GitHub e file mancanti ----------
         // All'avvio (al massimo una volta ogni 20 ore) YAEC chiede a GitHub l'ultima versione pubblicata; se è più nuova
         // lo dice con un avviso. Su Windows scarica il pacchetto giusto (installatore o portatile, 64 o 32 bit), ne controlla
-        // l'impronta SHA-256 con SHA256SUMS.txt, si chiude e si aggiorna da solo; su Linux e macOS apre la pagina della versione.
+        // l'impronta SHA-256 con SHA256SUMS.txt, si chiude e si aggiorna da solo. Su Linux, FreeBSD, OpenBSD e macOS fa lo stesso
+        // con l'archivio portatile, l'AppImage o l'app per Mac (la nuova versione parte al prossimo avvio); se YAEC è installato
+        // con un pacchetto del sistema (.deb, .rpm, Arch, Slackware: cartella sotto /usr) apre la pagina della versione, perché
+        // quei pacchetti si aggiornano con il gestore dei pacchetti.
         const string RepoGit = "ic8tem/YAEC";
         string aggSalta = "";
         long aggUltimo;
@@ -82476,7 +82627,9 @@ namespace LunaCalc
         {
             string nota = SuWindows
                 ? Lang.T("YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta, si chiude e si aggiorna da solo; i tuoi dati nella cartella data restano dove sono.")
-                : Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione.");
+                : (InstallatoDaPacchetto
+                    ? Lang.T("YAEC è installato con un pacchetto del sistema (.deb, .rpm, Arch o Slackware), che si aggiorna con il gestore dei pacchetti: si apre la pagina di GitHub con il pacchetto nuovo.")
+                    : Lang.T("YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta e sostituisce i suoi file; la nuova versione parte al prossimo avvio. I tuoi dati restano dove sono."));
             if (!ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("È disponibile YAEC {0} su GitHub (tu hai la {1}). Vuoi aggiornarlo adesso?"), ver, Versione), nota))
             {
                 if (ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("Vuoi che YAEC non ti avvisi più per la versione {0}?"), ver), Lang.T("Ti avviserà comunque alla prossima versione.")))
@@ -82484,8 +82637,8 @@ namespace LunaCalc
                 return;
             }
             string pagina = "https://github.com/" + RepoGit + "/releases/tag/v" + ver;
-            if (!SuWindows) { try { System.Diagnostics.Process.Start(pagina); } catch { } return; }
-            System.Threading.Thread t = new System.Threading.Thread(() => ScaricaAggiornamento(ver, pagina));
+            if (!SuWindows && InstallatoDaPacchetto) { try { System.Diagnostics.Process.Start(pagina); } catch { } return; }
+            System.Threading.Thread t = new System.Threading.Thread(() => { if (SuWindows) ScaricaAggiornamento(ver, pagina); else ScaricaAggiornamentoUnix(ver, pagina); });
             t.IsBackground = true;
             t.Start();
         }
@@ -82567,6 +82720,207 @@ namespace LunaCalc
             catch
             {
                 this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("Non è stato possibile scaricare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning)));
+            }
+        }
+
+        // ---- Linux, FreeBSD, OpenBSD, macOS ----
+        static string Uname(string opzione)
+        {
+            try
+            {
+                System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("uname", opzione);
+                psi.RedirectStandardOutput = true; psi.UseShellExecute = false; psi.CreateNoWindow = true;
+                using (System.Diagnostics.Process p = System.Diagnostics.Process.Start(psi))
+                {
+                    string r = p.StandardOutput.ReadToEnd().Trim();
+                    p.WaitForExit(3000);
+                    return r;
+                }
+            }
+            catch { return ""; }
+        }
+
+        static string FileAppImage
+        {
+            get { string a = Environment.GetEnvironmentVariable("APPIMAGE"); return !string.IsNullOrEmpty(a) && File.Exists(a) ? a : null; }
+        }
+
+        // Pacchetti del sistema (.deb, .rpm, Arch, Slackware) installano YAEC sotto /usr: si aggiornano con il gestore dei pacchetti
+        static bool InstallatoDaPacchetto
+        {
+            get
+            {
+                if (SuWindows || FileAppImage != null) return false;
+                string d = AppDomain.CurrentDomain.BaseDirectory.Replace('\\', '/');
+                return d.StartsWith("/usr/");
+            }
+        }
+
+        // Cartella da aggiornare: quella del programma, o la cartella YAEC.app su macOS (il programma sta in Contents/Resources)
+        static string RadiceUnix()
+        {
+            string d = AppDomain.CurrentDomain.BaseDirectory.TrimEnd('/', '\\');
+            if (Piattaforma.Mac && d.EndsWith("/Contents/Resources")) return Path.GetDirectoryName(Path.GetDirectoryName(d));
+            return d;
+        }
+
+        static string NomePacchettoUnix(string ver)
+        {
+            string m = Uname("-m").ToLowerInvariant(), so = Uname("-s");
+            bool arm64 = m == "aarch64" || m == "arm64", arm32 = m.StartsWith("arm"), x86 = m.Length == 4 && m[0] == 'i' && m.EndsWith("86");
+            if (FileAppImage != null) return "YAEC-" + ver + "-" + (arm64 ? "aarch64" : "x86_64") + ".AppImage";
+            if (Piattaforma.Mac) return "YAEC-" + ver + "-osx-" + (arm64 ? "arm64" : "x64") + "-app.zip";
+            if (so == "FreeBSD") return "YAEC-" + ver + "-freebsd-x64-portatile.tar.gz";
+            if (so == "OpenBSD") return "YAEC-" + ver + "-openbsd-x64-portatile.tar.gz";
+            if (File.Exists("/etc/alpine-release")) return "YAEC-" + ver + "-alpine-" + (arm64 ? "arm64" : "x64") + "-portatile.tar.gz";
+            return "YAEC-" + ver + "-linux-" + (arm64 ? "arm64" : arm32 ? "arm" : x86 ? "x86" : "x64") + "-portatile.tar.gz";
+        }
+
+        // Scrive un file accanto a quello vecchio e poi lo sostituisce (su Linux e macOS si può anche mentre il programma gira)
+        static void SostituisciFile(string dest, byte[] dati, bool eseguibile)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(dest));
+            string tmp = dest + ".nuovo";
+            File.WriteAllBytes(tmp, dati);
+            if (eseguibile || (File.Exists(dest) && EseguibileUnix(dest))) Chmod("+x", tmp);
+            if (File.Exists(dest)) File.Delete(dest);
+            File.Move(tmp, dest);
+        }
+
+        static bool EseguibileUnix(string f)
+        {
+            try
+            {
+                System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("test", "-x \"" + f + "\"");
+                psi.UseShellExecute = false; psi.CreateNoWindow = true;
+                using (System.Diagnostics.Process p = System.Diagnostics.Process.Start(psi)) { p.WaitForExit(3000); return p.ExitCode == 0; }
+            }
+            catch { return false; }
+        }
+
+        static void Chmod(string modo, string f)
+        {
+            try
+            {
+                System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("chmod", modo + " \"" + f + "\"");
+                psi.UseShellExecute = false; psi.CreateNoWindow = true;
+                using (System.Diagnostics.Process p = System.Diagnostics.Process.Start(psi)) p.WaitForExit(3000);
+            }
+            catch { }
+        }
+
+        // Legge un archivio .tar.gz: restituisce (percorso senza la prima cartella, contenuto, eseguibile)
+        static List<Tuple<string, byte[], bool>> LeggiTarGz(byte[] gz)
+        {
+            List<Tuple<string, byte[], bool>> r = new List<Tuple<string, byte[], bool>>();
+            byte[] tar;
+            using (MemoryStream o = new MemoryStream())
+            {
+                using (System.IO.Compression.GZipStream z = new System.IO.Compression.GZipStream(new MemoryStream(gz), System.IO.Compression.CompressionMode.Decompress)) z.CopyTo(o);
+                tar = o.ToArray();
+            }
+            int pos = 0;
+            string nomeLungo = null;
+            while (pos + 512 <= tar.Length)
+            {
+                if (tar[pos] == 0) break;
+                Func<int, int, string> campo = (a, n) => { int e = a; while (e < a + n && tar[pos + e] != 0) e++; return Encoding.UTF8.GetString(tar, pos + a, e - a); };
+                string nome = campo(0, 100), prefisso = campo(345, 155);
+                long dim = 0; foreach (char c in campo(124, 12).Trim()) if (c >= '0' && c <= '7') dim = dim * 8 + (c - '0');
+                int modo = 0; foreach (char c in campo(100, 8).Trim()) if (c >= '0' && c <= '7') modo = modo * 8 + (c - '0');
+                char tipo = (char)tar[pos + 156];
+                int dati = pos + 512;
+                if (tipo == 'L') nomeLungo = Encoding.UTF8.GetString(tar, dati, (int)dim).TrimEnd('\0');
+                else
+                {
+                    string pieno = nomeLungo ?? (prefisso.Length > 0 ? prefisso + "/" + nome : nome);
+                    nomeLungo = null;
+                    if (tipo == '0' || tipo == '\0')
+                    {
+                        int i = pieno.IndexOf('/');
+                        string rel = i >= 0 ? pieno.Substring(i + 1) : pieno;
+                        if (rel.Length > 0 && !rel.Contains("..") && !rel.StartsWith("/"))
+                        {
+                            byte[] b = new byte[dim]; Array.Copy(tar, dati, b, 0, dim);
+                            r.Add(Tuple.Create(rel, b, (modo & 0x49) != 0));
+                        }
+                    }
+                }
+                pos = dati + (int)((dim + 511) / 512 * 512);
+            }
+            return r;
+        }
+
+        // Legge YAEC-...-app.zip: i file dentro YAEC.app/, con il percorso relativo alla cartella YAEC.app
+        static List<Tuple<string, byte[], bool>> LeggiZipApp(byte[] zip)
+        {
+            List<Tuple<string, byte[], bool>> r = new List<Tuple<string, byte[], bool>>();
+            using (System.IO.Compression.ZipArchive z = new System.IO.Compression.ZipArchive(new MemoryStream(zip), System.IO.Compression.ZipArchiveMode.Read))
+                foreach (System.IO.Compression.ZipArchiveEntry e in z.Entries)
+                {
+                    string n = e.FullName.Replace('\\', '/');
+                    if (!n.StartsWith("YAEC.app/") || n.EndsWith("/") || n.Contains("/._") || n.Contains("..")) continue;
+                    string rel = n.Substring("YAEC.app/".Length);
+                    using (Stream st = e.Open()) using (MemoryStream o = new MemoryStream()) { st.CopyTo(o); r.Add(Tuple.Create(rel, o.ToArray(), rel.StartsWith("Contents/MacOS/"))); }
+                }
+            return r;
+        }
+
+        void ScaricaAggiornamentoUnix(string ver, string pagina)
+        {
+            string nome = NomePacchettoUnix(ver);
+            string baseUrl = "https://github.com/" + RepoGit + "/releases/download/v" + ver + "/";
+            Action<string, MessageBoxIcon> avvisa = (testo, icona) => this.BeginInvoke((Action)(() => Messaggio(this, testo, Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, icona)));
+            byte[] somme = null, pacchetto;
+            try { somme = Dati.Scarica(baseUrl + "SHA256SUMS.txt", 30000); } catch { }
+            try { pacchetto = Dati.Scarica(baseUrl + nome, 300000); }
+            catch
+            {
+                this.BeginInvoke((Action)(() =>
+                {
+                    Messaggio(this, string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver) + "\n" + Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    try { System.Diagnostics.Process.Start(pagina); } catch { }
+                }));
+                return;
+            }
+            if (somme != null)
+            {
+                string h;
+                using (System.Security.Cryptography.SHA256 sh = System.Security.Cryptography.SHA256.Create())
+                    h = BitConverter.ToString(sh.ComputeHash(pacchetto)).Replace("-", "").ToLowerInvariant();
+                bool trovato = false, ok = false;
+                foreach (string r in Encoding.ASCII.GetString(somme).Split('\n'))
+                {
+                    string rr = r.Trim();
+                    if (rr.EndsWith(nome)) { trovato = true; ok = rr.StartsWith(h, StringComparison.OrdinalIgnoreCase); }
+                }
+                if (trovato && !ok)
+                {
+                    avvisa(Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            try
+            {
+                string app = FileAppImage;
+                if (app != null) SostituisciFile(app, pacchetto, true);
+                else
+                {
+                    string radice = RadiceUnix();
+                    List<Tuple<string, byte[], bool>> file = nome.EndsWith(".zip") ? LeggiZipApp(pacchetto) : LeggiTarGz(pacchetto);
+                    if (file.Count == 0) throw new InvalidDataException();
+                    foreach (Tuple<string, byte[], bool> f in file)
+                        SostituisciFile(Path.Combine(radice, f.Item1.Replace('/', Path.DirectorySeparatorChar)), f.Item2, f.Item3);
+                }
+                avvisa(string.Format(Lang.T("YAEC {0} è installato: la nuova versione parte al prossimo avvio."), ver), MessageBoxIcon.Information);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                avvisa(Lang.T("Non è stato possibile scrivere i file nella cartella del programma.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                avvisa(Lang.T("Non è stato possibile avviare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Warning);
             }
         }
 

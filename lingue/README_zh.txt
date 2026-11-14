@@ -15,11 +15,15 @@ YAEC 在 Mono（自由的 .NET 运行时）上运行。
 - Debian、Ubuntu、Mint：下载 yaec_1.9_amd64.deb，并用以下命令安装
       sudo apt install ./yaec_1.9_amd64.deb
   （同时会安装 Mono）。可从应用程序菜单或用命令“yaec”启动 YAEC。
-- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) 并运行 ./install.sh。
+- 其他发行版：安装 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解压 YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) 并运行 ./install.sh。
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 安装 – macOS（实验性）
 1. 安装 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
 2. 打开 YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel)，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
+
+自动更新
+YAEC 启动时会在 GitHub 上检查是否有新版本，并自动更新（Windows、便携 .tar.gz 归档、AppImage、macOS 应用），同时校验 SHA-256 指纹。.deb, .rpm, Arch, Slackware 软件包则通过系统的软件包管理器更新：YAEC 会提示新版本并打开 GitHub 页面。
 
 校验下载的文件（SHA-256）
 每个 release 都包含 SHA256SUMS.txt，其中列出每个软件包的 SHA-256 校验值。请将其与下载文件的校验值进行比较：

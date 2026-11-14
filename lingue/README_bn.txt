@@ -15,11 +15,15 @@ YAEC চলে Mono-তে, যা একটি মুক্ত .NET রান�
 - Debian, Ubuntu, Mint: yaec_1.9_amd64.deb ডাউনলোড করে এই কমান্ড দিয়ে ইনস্টল করুন
       sudo apt install ./yaec_1.9_amd64.deb
   (এতে Mono-ও ইনস্টল হয়)। YAEC অ্যাপ্লিকেশন মেনু থেকে বা "yaec" কমান্ড দিয়ে চালু হয়।
-- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) এক্সট্র্যাক্ট করে ./install.sh চালান।
+- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) এক্সট্র্যাক্ট করে ./install.sh চালান।
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 ইনস্টলেশন – macOS (পরীক্ষামূলক)
 1. macOS-এর জন্য Mono (https://www.mono-project.com/download/stable/) এবং XQuartz (https://www.xquartz.org) ইনস্টল করুন।
 2. YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) খুলে YAEC-কে Applications-এ টেনে আনুন। প্রথমবার: YAEC-এ রাইট-ক্লিক → Open (অ্যাপটি Apple দ্বারা স্বাক্ষরিত নয়)।
+
+স্বয়ংক্রিয় হালনাগাদ
+চালু হওয়ার সময় YAEC GitHub-এ নতুন সংস্করণ আছে কি না দেখে এবং SHA-256 ফিঙ্গারপ্রিন্ট যাচাই করে নিজেই হালনাগাদ হয় (Windows, বহনযোগ্য .tar.gz আর্কাইভ, AppImage, macOS অ্যাপ)। .deb, .rpm, Arch, Slackware প্যাকেজগুলো সিস্টেমের প্যাকেজ ম্যানেজার দিয়ে হালনাগাদ হয়: YAEC নতুন সংস্করণের কথা জানায় এবং GitHub পাতা খোলে।
 
 ডাউনলোড করা ফাইল যাচাই (SHA-256)
 প্রতিটি release-এ SHA256SUMS.txt থাকে, যাতে প্রতিটি প্যাকেজের SHA-256 হ্যাশ দেওয়া আছে। ডাউনলোড করা ফাইলের হ্যাশের সঙ্গে এটি মিলিয়ে দেখুন:

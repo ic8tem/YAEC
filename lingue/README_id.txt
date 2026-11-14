@@ -15,11 +15,15 @@ YAEC berjalan dengan Mono, runtime .NET yang bebas.
 - Debian, Ubuntu, Mint: unduh yaec_1.9_amd64.deb dan pasang dengan
       sudo apt install ./yaec_1.9_amd64.deb
   (Mono juga ikut terpasang). YAEC dijalankan dari menu aplikasi atau dengan perintah "yaec".
-- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) lalu jalankan ./install.sh.
+- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) lalu jalankan ./install.sh.
+- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
 
 INSTALASI – macOS (eksperimental)
 1. Pasang Mono untuk macOS (https://www.mono-project.com/download/stable/) dan XQuartz (https://www.xquartz.org).
 2. Buka YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
+
+PEMBARUAN OTOMATIS
+Saat dijalankan, YAEC memeriksa GitHub untuk versi baru dan memperbarui dirinya sendiri (Windows, arsip portabel .tar.gz, AppImage, aplikasi macOS), dengan memeriksa sidik jari SHA-256. Paket .deb, .rpm, Arch, Slackware diperbarui dengan manajer paket sistem: YAEC memberi tahu versi baru dan membuka halaman GitHub.
 
 MEMERIKSA FILE YANG DIUNDUH (SHA-256)
 Setiap release berisi SHA256SUMS.txt dengan hash SHA-256 setiap paket. Bandingkan dengan hash file yang Anda unduh:
