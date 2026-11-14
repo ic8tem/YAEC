@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 โดย Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,28 @@
 ซอร์สโค้ดและการดาวน์โหลด: https://github.com/ic8tem/YAEC/releases
 
 การติดตั้ง – WINDOWS
-1. ดาวน์โหลด YAEC-1.9-win-x64-setup.exe จากหน้า Releases แล้วเรียกใช้ ตัวติดตั้งจะติดตั้ง YAEC ไว้ใน Documents\YAEC โดยไม่ต้องใช้สิทธิ์ผู้ดูแลระบบ พร้อมทางลัดในเมนู Start และบนเดสก์ท็อป และโปรแกรมถอนการติดตั้ง
+1. ดาวน์โหลด YAEC-1.9.1-win-x64-setup.exe จากหน้า Releases แล้วเรียกใช้ ตัวติดตั้งจะติดตั้ง YAEC ไว้ใน Documents\YAEC โดยไม่ต้องใช้สิทธิ์ผู้ดูแลระบบ พร้อมทางลัดในเมนู Start และบนเดสก์ท็อป และโปรแกรมถอนการติดตั้ง
 2. หากมีคำเตือนของ SmartScreen ปรากฏ: "More info" → "Run anyway"
-3. แบบไม่ต้องติดตั้ง: แตกไฟล์ YAEC-1.9-win-x64-portatile.zip ลงในโฟลเดอร์ที่คุณเขียนได้ แล้วเรียกใช้ YAEC.exe
+3. แบบไม่ต้องติดตั้ง: แตกไฟล์ YAEC-1.9.1-win-x64-portatile.zip ลงในโฟลเดอร์ที่คุณเขียนได้ แล้วเรียกใช้ YAEC.exe
 
 การติดตั้ง – LINUX
 YAEC ทำงานบน Mono ซึ่งเป็นรันไทม์ .NET แบบเสรี
-- Debian, Ubuntu, Mint: ดาวน์โหลด yaec_1.9_amd64.deb แล้วติดตั้งด้วย
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: ดาวน์โหลด yaec_1.9.1_amd64.deb แล้วติดตั้งด้วย
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (คำสั่งนี้ติดตั้ง Mono ด้วย) เรียกใช้ YAEC จากเมนูแอปพลิเคชันหรือด้วยคำสั่ง "yaec"
-- ดิสทริบิวชันอื่น: ติดตั้ง Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete) แตกไฟล์ YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) แล้วเรียกใช้ ./install.sh
+- ดิสทริบิวชันอื่น: ติดตั้ง Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete) แตกไฟล์ YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) แล้วเรียกใช้ ./install.sh
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 การติดตั้ง – macOS (ทดลอง)
 1. ติดตั้ง Mono สำหรับ macOS (https://www.mono-project.com/download/stable/) และ XQuartz (https://www.xquartz.org)
-2. เปิด YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) แล้วลาก YAEC ไปไว้ใน Applications ครั้งแรก: คลิกขวาที่ YAEC → Open (แอปไม่ได้ลงนามโดย Apple)
+2. เปิด YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) แล้วลาก YAEC ไปไว้ใน Applications ครั้งแรก: คลิกขวาที่ YAEC → Open (แอปไม่ได้ลงนามโดย Apple)
+
+การอัปเดตอัตโนมัติ
+เมื่อเริ่มทำงาน YAEC จะตรวจสอบใน GitHub ว่ามีเวอร์ชันใหม่หรือไม่ และอัปเดตตัวเองโดยตรวจสอบลายนิ้วมือ SHA-256 (Windows, ไฟล์ .tar.gz แบบพกพา, AppImage, แอป macOS) ส่วนแพ็กเกจ .deb, .rpm, Arch, Slackware จะอัปเดตด้วยตัวจัดการแพ็กเกจของระบบ: YAEC จะแจ้งเวอร์ชันใหม่และเปิดหน้า GitHub
 
 การตรวจสอบไฟล์ที่ดาวน์โหลด (SHA-256)
 ทุกรุ่นที่เผยแพร่มีไฟล์ SHA256SUMS.txt ที่มีค่าแฮช SHA-256 ของแต่ละแพ็กเกจ ให้เปรียบเทียบกับค่าแฮชของไฟล์ที่ดาวน์โหลด:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 หากค่าทั้งสองไม่ตรงกัน อย่าติดตั้งไฟล์นั้น: ให้ดาวน์โหลดใหม่
@@ -39,6 +43,7 @@ YAEC ใช้ได้ฟรี ข้อความของสัญญา�
 
 ประวัติเวอร์ชัน
 เวอร์ชันก่อน 1.0 เรียกว่า beta
+- 1.9.1 - อัปเดตอัตโนมัติจาก GitHub พร้อมตรวจลายนิ้วมือ SHA-256 บน Windows, ไฟล์บีบอัดแบบพกพา (Linux, FreeBSD, OpenBSD, Alpine), AppImage และแอป macOS (แพ็กเกจ .deb, .rpm, Arch, Slackware อัปเดตด้วยตัวจัดการแพ็กเกจ) และแจ้งเตือนไฟล์ที่หายไป; แพ็กเกจใหม่สำหรับ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; ปุ่ม แก้ไข สำหรับแก้โลเคเตอร์ของสถานีใน CALL3.TXT; ระยะทางและ Dgrd ใช้ Dgrd แบบดั้งเดิมที่ 144 MHz ส่วน Dgrd ตามย่านความถี่ยังอยู่ใน DGRD ตามความถี่; ขอบฟ้าของฉัน มีกรอบสีม่วงจาก ทรงกลมฟ้า และเวลาที่นำมาจากตารางวางแผน; สถานีที่ควรลอง ใช้เวลาจากตาราง มีแถบเลื่อน และตัดสถานีในประเทศของตนออกได้ (cty.dat); อัตราขยายยากิจากตาราง DL6WU (G3SEK) ใช้สูตรที่อ้างว่าเป็นของ W8IO เฉพาะต่ำกว่า 10 อิลิเมนต์; รายการแบบเลื่อนลงและช่องตัวเลขแบบ YA-MS; ทรานสเวอร์เตอร์ 144 MHz ในคู่มือ
 - 1.9 - แท็บใหม่ ขอบฟ้าของฉัน (สด): ขอบฟ้าจากภูมิประเทศคำนวณจากข้อมูล SRTM1 พร้อมความโค้งของโลกและการหักเห บนพื้นหลัง ทรงกลมฟ้า ในหนึ่งในสามสเกลสี เส้นทางดวงจันทร์ สิ่งกีดขวางหลักพร้อมชื่อจาก OpenStreetMap และนาทีของดวงจันทร์ที่เสียไป; ช่องเลือกเพื่อใช้ภูมิประเทศเป็นมุมเงยต่ำสุดทั้งโปรแกรม; แผนที่สัญญาณรบกวนท้องถิ่นตาม NJ9R พร้อม ⚠ ในชั่วโมงที่ดวงจันทร์อยู่ในทิศที่มีสัญญาณรบกวน; แท็บใหม่ สถานีที่ควรลอง (การวางแผน) แนวคิดจาก Matteo IW5DHN: สถานีที่ใช้งานในแชท N0UK เรียงตามดัชนี 0 ถึง 100; ช่องตัวเลขที่มีลูกศรวางเคียงกัน แท็บรูปเม็ดยา และชุดสีใหม่สามชุดจาก IP-TRX-CTRL
 - 1.8 - ภาษาใหม่: สโลวัก (รวม 37 ภาษา) พร้อมคู่มือ README และใบอนุญาต ความกว้างลำคลื่นเดียวทั้งโปรแกรม: 0.93·√(41253/G) สำหรับยากิ (กฎของ Kraus ที่แก้ด้วยการจำลอง NEC ของ W4RNL เหมือนใน YA-MS) และ 70·λ/D สำหรับจาน (IZ0JNY) แทน √(32000/G) ที่ไม่มีแหล่งอ้างอิงใน DGRD ตามความถี่ ปรับปรุงคู่มือด้วยสูตรใหม่และตัวอย่างการชี้ บน macOS ตัวเปิดโปรแกรมจะเปิด XQuartz เอง เขียนเวอร์ชัน Mono ลงบันทึก และเตือนเมื่อ YAEC เปิดไม่ได้ การนำเสนอใน README มีภาษาโปรตุเกส ตุรกี เช็ก สโลวัก จีน ญี่ปุ่น และเกาหลีด้วย แก้คำแปลภาษาไทย โรมาเนีย กรีก โปรตุเกสบราซิล โปแลนด์ เช็ก และฮังการี
 - 1.7 - ภาษาใหม่แปดภาษา: โปรตุเกสแบบบราซิล ไทย จีนตัวเต็ม โปแลนด์ เช็ก โรมาเนีย กรีก และฮังการี (รวม 36 ภาษา) พร้อมคู่มือและ README; ในบัดเจ็ต EME ยากิและบัดเจ็ต EME จาน มีการคำนวณเอคโค่ของสถานีตัวเอง (ฉันส่งและรับเอคโค่ของตัวเอง); จานแบบ prime focus หรือ offset (W2IMU); ที่ 1296 MHz กับจาน การสูญเสียจากโพลาไรเซชันวงกลมของฟีดจริง (KA1GT); ในตรวจสอบการคำนวณ เลือกได้ระหว่างบัดเจ็ต EME ยากิและบัดเจ็ต EME จาน; สูตรของ DGRD ตามความถี่เขียนแบบในโปรแกรมแก้ไขสมการ; คู่มือ: การหมุนฟาราเดย์ที่ 1296 MHz ตาม ITU-R P.531 การสูญเสียโพลาไรเซชันที่ 23 cm (Hagfors) และโพลาไรเซชันวงกลมใน 23 cm

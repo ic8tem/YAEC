@@ -103,6 +103,16 @@ jobs:
           packaging/linux/build-linux.sh "${{ steps.ver.outputs.version }}" dist
           ls dist/*.rpm dist/*_armhf.deb > /dev/null
           rpm -qpi dist/*.rpm; rpm -qpl dist/*.rpm | head -20
+      - name: Pacchetti Arch, Slackware, AppImage e Alpine
+        run: |
+          bash packaging/linux/build-extra.sh "${{ steps.ver.outputs.version }}" dist
+          ls dist/*.pkg.tar.zst dist/*.txz dist/*-x86_64.AppImage dist/*-aarch64.AppImage dist/*-alpine-x64-portatile.tar.gz > /dev/null
+      - name: Prova dei pacchetti Arch, AppImage e Slackware (solo informativa)
+        continue-on-error: true
+        run: |
+          docker run --rm -v "$PWD/dist:/d" archlinux:latest sh -c 'pacman --disable-sandbox -Syu --noconfirm >/dev/null && pacman --disable-sandbox -U --noconfirm /d/*.pkg.tar.zst >/dev/null && test -f /usr/lib/yaec/YAEC.exe && echo "Arch: pacchetto installato"' || echo "Arch: installazione non riuscita"
+          A="$(ls dist/*-x86_64.AppImage)"; chmod +x "$A"; ( cd "$(mktemp -d)" && "$OLDPWD/$A" --appimage-extract >/dev/null && test -x squashfs-root/AppRun && test -f squashfs-root/usr/lib/yaec/YAEC.exe && echo "AppImage: contenuto corretto" ) || echo "AppImage: contenuto non corretto"
+          tar -tJf dist/*.txz | grep -q '^usr/lib/yaec/YAEC.exe$' && tar -tJf dist/*.txz | grep -q '^install/slack-desc$' && echo "Slackware: pacchetto corretto" || echo "Slackware: pacchetto non corretto"
       - name: Prova del .rpm su openSUSE e Fedora (solo informativa)
         continue-on-error: true
         run: |
@@ -333,7 +343,7 @@ jobs:
           {
             printf 'lingua=it\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
             printf 'locator=JN81MA\nquota=50\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
-            printf 'b144_me_p=500\nb144_me_nant=2\nb144_me_gant=14\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
+            printf 'b144_me_p=500\nb144_me_nant=2\nb144_me_gant=14.5\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
             printf 'b144_dx_p=900\nb144_dx_nant=4\nb144_dx_gant=15.4\nb144_dx_pregain=25\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=30\nb144_dx_lendis=30\n'
           } > "$F"
           mkdir -p articolo
@@ -354,7 +364,6 @@ jobs:
           scatta "Posizione della Luna" 03-posizione 15
           scatta "Budget EME yagi" 04-budget_yagi 12
           # «Stazioni da provare» dalla stazione di Bari JN81MA: 2 x 11 elementi (14,5 dBi DL6WU), 500 W
-          sed -i '/^b144_me_gant=/d' "$F"; printf 'b144_me_gant=14.5\n' >> "$F"
           scatta "Stazioni da provare" 06-stazioni_da_provare 40
           unset YAEC_CALCOLA
           # la stazione dell'autore a Capri per «Il mio orizzonte» e «Stazioni da provare»
@@ -498,6 +507,8 @@ jobs:
           YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
 
           - **Windows su ARM64** (PC con Snapdragon): YAEC-${V}-win-arm64-setup.exe oppure YAEC-${V}-win-arm64-portatile.zip.
+          - **Arch Linux, Manjaro, EndeavourOS**: yaec-${V}-1-any.pkg.tar.zst (sudo pacman -U ...); **Slackware**: yaec-${V}-noarch-1_ic8tem.txz (installpkg ...); **qualsiasi Linux**: YAEC-${V}-x86_64.AppImage o YAEC-${V}-aarch64.AppImage (con Mono installato); **Alpine Linux**: YAEC-${V}-alpine-x64-portatile.tar.gz o -alpine-arm64- (non ancora provato).
+          - **Aggiornamenti automatici**: YAEC controlla GitHub all'avvio e si aggiorna da solo su Windows, con gli archivi portatili, l'AppImage e l'app per Mac. I pacchetti .deb, .rpm, Arch e Slackware si aggiornano invece con il gestore dei pacchetti: YAEC avvisa e apre questa pagina.
           - **Fedora, openSUSE**: yaec-${V}-1.noarch.rpm (con Mono); **Raspberry Pi OS a 32 bit**: yaec_${V}_armhf.deb; **OpenBSD amd64** (con Mono, non ancora provato): YAEC-${V}-openbsd-x64-portatile.tar.gz.
           - **Windows a 64 bit**: YAEC-${V}-win-x64-setup.exe (installatore) oppure YAEC-${V}-win-x64-portatile.zip; **Windows a 32 bit**: YAEC-${V}-win-x86-setup.exe oppure YAEC-${V}-win-x86-portatile.zip.
           - **Linux (Debian, Ubuntu, Mint)**: yaec_${V}_amd64.deb (sudo apt install ./yaec_${V}_amd64.deb); **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb.

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 作者：Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,28 @@
 原始碼和下載：https://github.com/ic8tem/YAEC/releases
 
 安裝 – WINDOWS
-1. 從 Releases 頁面下載 YAEC-1.9-win-x64-setup.exe 並執行。它會將 YAEC 安裝到文件\YAEC，無需系統管理員權限，並在「開始」選單和桌面上建立捷徑，同時安裝解除安裝程式。
+1. 從 Releases 頁面下載 YAEC-1.9.1-win-x64-setup.exe 並執行。它會將 YAEC 安裝到文件\YAEC，無需系統管理員權限，並在「開始」選單和桌面上建立捷徑，同時安裝解除安裝程式。
 2. 如果出現 SmartScreen 警告：「更多資訊」 → 「仍要執行」。
-3. 免安裝：將 YAEC-1.9-win-x64-portatile.zip 解壓縮到一個有寫入權限的資料夾，然後啟動 YAEC.exe。
+3. 免安裝：將 YAEC-1.9.1-win-x64-portatile.zip 解壓縮到一個有寫入權限的資料夾，然後啟動 YAEC.exe。
 
 安裝 – LINUX
 YAEC 在 Mono（自由的 .NET 執行環境）上執行。
-- Debian、Ubuntu、Mint：下載 yaec_1.9_amd64.deb，並用以下命令安裝
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian、Ubuntu、Mint：下載 yaec_1.9.1_amd64.deb，並用以下命令安裝
+      sudo apt install ./yaec_1.9.1_amd64.deb
   （同時會安裝 Mono）。可從應用程式選單或用命令“yaec”啟動 YAEC。
-- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) 並執行 ./install.sh。
+- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) 並執行 ./install.sh。
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 安裝 – macOS（實驗性）
 1. 安裝 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
-2. 開啟 YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel)，將 YAEC 拖到「應用程式」中。首次執行：按右鍵 YAEC → 開啟（該應用未經 Apple 簽名）。
+2. 開啟 YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel)，將 YAEC 拖到「應用程式」中。首次執行：按右鍵 YAEC → 開啟（該應用未經 Apple 簽名）。
+
+自動更新
+YAEC 啟動時會在 GitHub 上檢查是否有新版本，並自動更新（Windows、可攜式 .tar.gz 封存檔、AppImage、macOS 應用程式），同時核對 SHA-256 指紋。.deb, .rpm, Arch, Slackware 套件則透過系統的套件管理員更新：YAEC 會提示新版本並開啟 GitHub 頁面。
 
 驗證下載的檔案（SHA-256）
 每個 release 都包含 SHA256SUMS.txt，其中列出每個套件的 SHA-256 雜湊值。請將其與下載檔案的雜湊值進行比較：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 如果兩個值不同，請不要安裝該檔案，而應重新下載。
@@ -39,6 +43,7 @@ YAEC 是免費的；授權條款文字見檔案 LICENSE_zh-TW.txt 以及程式�
 
 版本歷史
 1.0 之前的版本稱為 beta 版。
+- 1.9.1 - 從 GitHub 自動更新並核對 SHA-256 指紋，適用於 Windows、可攜式封存檔（Linux、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 應用程式（.deb, .rpm, Arch, Slackware 套件以套件管理員更新），並提示缺少的檔案；新增套件：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；更正 按鈕，用於修正 CALL3.TXT 中某電台的定位碼；距離與 Dgrd 使用 144 MHz 的傳統 Dgrd，按波段的 Dgrd 保留在 按頻率 DGRD；我的地平線 加入 天穹 的紫色框，並從規劃表取得計算時刻；值得嘗試的電台 採用表格中的時刻，增加捲軸，可排除本國電台（cty.dat）；八木天線增益取自 DL6WU 表（G3SEK），僅在少於 10 元件時使用歸於 W8IO 的公式；下拉清單和數字框採用 YA-MS 風格；手冊加入 144 MHz 轉頻器。
 - 1.9 - 新分頁 我的地平線（即時）：根據 SRTM1 資料計算的地形地平線，考慮地球曲率與折射，背景為三種配色之一的天穹，顯示月球軌跡、附 OpenStreetMap 名稱的主要障礙物以及損失的月球分鐘數；可勾選在整個程式中把地形當作最低仰角；依 NJ9R 方法的本地雜訊地圖，月球位於雜訊方向的時段標 ⚠；新分頁 值得嘗試的電台（規劃），構想來自 Matteo IW5DHN：N0UK 聊天室中的活躍電台依 0 到 100 的指數排序；數字框箭頭並排、藥丸形分頁，以及取自 IP-TRX-CTRL 的三種新配色方案。
 - 1.8 - 新增斯洛伐克語（共 37 種），含手冊、README 和授權；全程式統一波束寬度：八木天線用 0.93·√(41253/G)（依 W4RNL 的 NEC 模擬修正的 Kraus 規則，與 YA-MS 相同），拋物面用 70·λ/D（IZ0JNY），取代「依頻率的 DGRD」中無出處的 √(32000/G)；手冊已依新公式與指向範例更新；在 macOS 上啟動器會自動開啟 XQuartz、將 Mono 版本寫入記錄檔，並在 YAEC 無法啟動時提出警告；README 介紹新增葡萄牙語、土耳其語、捷克語、斯洛伐克語、中文、日語和韓語版本；修正了泰語、羅馬尼亞語、希臘語、巴西葡萄牙語、波蘭語、捷克語和匈牙利語的翻譯。
 - 1.7 - 新增八種語言：巴西葡萄牙語、泰語、繁體中文、波蘭語、捷克語、羅馬尼亞語、希臘語和匈牙利語（共 36 種），含手冊和 README；「EME 鏈路預算 八木」和「EME 鏈路預算 拋物面」中新增本台回波計算（「我發射並接收自己的回波」）；主焦點或偏饋拋物面（W2IMU）；1296 MHz 使用拋物面時計入實際饋源的圓極化損耗（KA1GT）；「計算核查」中可在「EME 鏈路預算 八木」和「EME 鏈路預算 拋物面」之間選擇；「按頻率 DGRD」的公式以方程式編輯器的樣式書寫；手冊：依據 ITU-R P.531 的 1296 MHz 法拉第旋轉、23 cm 的去極化（Hagfors）以及 23 cm 的圓極化。

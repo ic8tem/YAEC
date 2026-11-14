@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 inihanda ni Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,28 @@ Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigd
 Source at download: https://github.com/ic8tem/YAEC/releases
 
 PAG-INSTALL – WINDOWS
-1. I-download ang YAEC-1.9-win-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
+1. I-download ang YAEC-1.9.1-win-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
 2. Kung lumabas ang babala ng SmartScreen: "More info" → "Run anyway".
-3. Nang walang pag-install: i-extract ang YAEC-1.9-win-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
+3. Nang walang pag-install: i-extract ang YAEC-1.9.1-win-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
 
 PAG-INSTALL – LINUX
 Tumatakbo ang YAEC sa Mono, ang libreng .NET runtime.
-- Debian, Ubuntu, Mint: i-download ang yaec_1.9_amd64.deb at i-install ito gamit ang
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: i-download ang yaec_1.9.1_amd64.deb at i-install ito gamit ang
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (ini-install din nito ang Mono). Pinapatakbo ang YAEC mula sa menu ng mga application o gamit ang command na "yaec".
-- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) at patakbuhin ang ./install.sh.
+- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) at patakbuhin ang ./install.sh.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 PAG-INSTALL – macOS (eksperimental)
 1. I-install ang Mono para sa macOS (https://www.mono-project.com/download/stable/) at ang XQuartz (https://www.xquartz.org).
-2. Buksan ang YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
+2. Buksan ang YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
+
+AWTOMATIKONG PAG-UPDATE
+Sa pagsisimula, tinitingnan ng YAEC sa GitHub kung may bagong bersyon at kusa itong nag-a-update (Windows, portable na .tar.gz archive, AppImage, macOS app), habang sinusuri ang SHA-256 fingerprint. Ang mga package na .deb, .rpm, Arch, Slackware ay ina-update naman gamit ang package manager ng system: inaabisuhan ng YAEC ang bagong bersyon at binubuksan ang pahina ng GitHub.
 
 PAGSURI NG MGA NA-DOWNLOAD NA FILE (SHA-256)
 Bawat release ay may SHA256SUMS.txt na naglalaman ng SHA-256 hash ng bawat package. Ihambing ito sa hash ng na-download na file:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kung magkaiba ang dalawang halaga, huwag i-install ang file: i-download itong muli.
@@ -39,6 +43,7 @@ Mga mali, mas mahusay na datos, mga salin: ccerrotta@gmail.com · ic8tem@gmail.c
 
 KASAYSAYAN NG MGA BERSYON
 Beta ang tawag sa mga bersyon bago ang 1.0.
+- 1.9.1 - Awtomatikong pag-update mula sa GitHub na may pagsusuri ng SHA-256 fingerprint sa Windows, sa mga portable na archive (Linux, FreeBSD, OpenBSD, Alpine), sa AppImage at sa macOS app (ang mga package na .deb, .rpm, Arch, Slackware ay ina-update gamit ang package manager), at babala sa mga nawawalang file; mga bagong package para sa Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; button na ITAMA para itama ang locator ng isang istasyon sa CALL3.TXT; Layo at Dgrd na may klasikong Dgrd sa 144 MHz, habang ang Dgrd ayon sa banda ay nananatili sa DGRD ayon sa frequency; Aking horizon na may mga lilang kahon mula sa Tanaw ng langit at oras na kinuha sa talahanayan ng pagpaplano; Mga istasyong susubukan na may oras mula sa talahanayan, scroll bar at opsiyong alisin ang mga istasyon ng sariling bansa (cty.dat); gain ng yagi mula sa talaan ng DL6WU (G3SEK), ang pormulang iniuugnay kay W8IO ay sa ilalim lang ng 10 element; mga drop-down list at numeric box sa istilo ng YA-MS; mga transverter sa 144 MHz sa manwal.
 - 1.9 - Bagong tab na Aking horizon (Live): abot-tanaw mula sa lupain na kinalkula mula sa datos ng SRTM1 kasama ang kurbada ng Daigdig at repraksyon, sa ibabaw ng background ng Tanaw ng langit sa isa sa tatlong eskala ng kulay, landas ng Buwan, pangunahing mga hadlang na may pangalan mula sa OpenStreetMap at mga minuto ng Buwan na nawala; kahon para gamitin ang lupain bilang pinakamababang elebasyon sa buong programa; mapa ng lokal na ingay ayon kay NJ9R, may ⚠ sa mga oras na nasa maingay na direksyon ang Buwan; bagong tab na Mga istasyong susubukan (Pagpaplano), ideya ni Matteo IW5DHN: ang mga aktibong istasyon ng chat ng N0UK na nakaayos ayon sa indeks mula 0 hanggang 100; mga numerong kahon na may magkatabing palaso, mga tab na hugis-tableta at tatlong bagong scheme ng kulay mula sa IP-TRX-CTRL.
 - 1.8 - Bagong wika: Slovak (37 lahat), kasama ang mga manwal, README at lisensya; iisang beamwidth sa buong programa: 0.93·√(41253/G) para sa mga yagi (tuntunin ni Kraus na itinama ng mga NEC simulation ni W4RNL, gaya ng sa YA-MS) at 70·λ/D para sa mga dish (IZ0JNY), kapalit ng walang sangguniang √(32000/G) sa DGRD ayon sa frequency; na-update ang manwal sa bagong pormula at halimbawa ng pagtutok; sa macOS kusang binubuksan ng launcher ang XQuartz, isinusulat ang bersyon ng Mono sa log at nagbababala kung hindi magsimula ang YAEC; presentasyon ng README sa Portuges, Turko, Czech, Slovak, Chinese, Japanese at Korean din; naitama ang mga salin sa Thai, Romanian, Greek, Brazilian Portuguese, Polish, Czech at Hungarian.
 - 1.7 - Walong bagong wika: Brazilian Portuguese, Thai, Traditional Chinese, Polish, Czech, Romanian, Greek at Hungarian (36 lahat-lahat), kasama ang mga manwal at mga README; sa EME budget yagi at EME budget dish, ang kalkulasyon ng echo ng sariling istasyon (Nagta-transmit ako at tinatanggap ko ang sarili kong echo); prime-focus o offset na dish (W2IMU); sa 1296 MHz gamit ang dish, ang loss ng circular polarization ng mga totoong feed (KA1GT); sa Pagsuri ng mga kalkulasyon, ang pagpili sa pagitan ng EME budget yagi at EME budget dish; mga formula ng DGRD ayon sa frequency na isinulat na parang sa equation editor; manwal: Faraday rotation sa 1296 MHz ayon sa ITU-R P.531, depolarization sa 23 cm (Hagfors) at circular polarization sa 23 cm.

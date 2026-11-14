@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 készítette: Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,28 @@ Számítóprogram EME-ben (Föld–Hold–Föld) dolgozó rádióamatőröknek 5
 Forráskód és letöltés: https://github.com/ic8tem/YAEC/releases
 
 TELEPÍTÉS – WINDOWS
-1. Töltsd le a YAEC-1.9-win-x64-setup.exe fájlt a Releases oldalról, és futtasd. A YAEC-et a Dokumentumok\YAEC mappába telepíti, rendszergazdai jogok nélkül, parancsikonokkal a Start menüben és az asztalon, valamint eltávolító programmal.
+1. Töltsd le a YAEC-1.9.1-win-x64-setup.exe fájlt a Releases oldalról, és futtasd. A YAEC-et a Dokumentumok\YAEC mappába telepíti, rendszergazdai jogok nélkül, parancsikonokkal a Start menüben és az asztalon, valamint eltávolító programmal.
 2. Ha megjelenik a SmartScreen figyelmeztetése: „További információ” → „Futtatás mindenképp”.
-3. Telepítés nélkül: csomagold ki a YAEC-1.9-win-x64-portatile.zip fájlt egy olyan mappába, amelybe írni tudsz, és indítsd el a YAEC.exe-t.
+3. Telepítés nélkül: csomagold ki a YAEC-1.9.1-win-x64-portatile.zip fájlt egy olyan mappába, amelybe írni tudsz, és indítsd el a YAEC.exe-t.
 
 TELEPÍTÉS – LINUX
 A YAEC a Monóval, a szabad .NET-futtatókörnyezettel működik.
-- Debian, Ubuntu, Mint: töltsd le a yaec_1.9_amd64.deb fájlt, és telepítsd ezzel:
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: töltsd le a yaec_1.9.1_amd64.deb fájlt, és telepítsd ezzel:
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (a Monót is telepíti). A YAEC az alkalmazásmenüből vagy a „yaec” paranccsal indítható.
-- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe), és futtasd a ./install.sh-t.
+- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9.1-linux-x64-portatile.tar.gz fájlt (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz), és futtasd a ./install.sh-t.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 TELEPÍTÉS – macOS (kísérleti)
 1. Telepítsd a macOS-es Monót (https://www.mono-project.com/download/stable/) és az XQuartzot (https://www.xquartz.org).
-2. Nyisd meg a YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
+2. Nyisd meg a YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
+
+AUTOMATIKUS FRISSÍTÉSEK
+Induláskor a YAEC megnézi a GitHubon, van-e új verzió, és magától frissül (Windows, hordozható .tar.gz archívumok, AppImage, macOS-alkalmazás), az SHA-256 ujjlenyomat ellenőrzésével. A(z) .deb, .rpm, Arch, Slackware csomagokat viszont a rendszer csomagkezelője frissíti: a YAEC jelzi az új verziót, és megnyitja a GitHub-oldalt.
 
 A LETÖLTÖTT FÁJLOK ELLENŐRZÉSE (SHA-256)
 Minden kiadás tartalmazza az SHA256SUMS.txt fájlt, benne minden csomag SHA-256 ujjlenyomatával. Vesd össze a letöltött fájléval:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ha a két érték eltér, ne telepítsd a fájlt: töltsd le újra.
@@ -39,6 +43,7 @@ Hibák, jobb adatok, fordítások: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERZIÓTÖRTÉNET
 Az 1.0 előtti verziók neve beta.
+- 1.9.1 - Automatikus frissítés a GitHubról az SHA-256 ujjlenyomat ellenőrzésével Windowson, a hordozható archívumoknál (Linux, FreeBSD, OpenBSD, Alpine), az AppImage-nél és a macOS-alkalmazásnál (a(z) .deb, .rpm, Arch, Slackware csomagokat a csomagkezelő frissíti), valamint figyelmeztetés a hiányzó fájlokra; új csomagok: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; JAVÍTÁS gomb egy állomás lokátorának javítására a CALL3.TXT-ben; Távolság és Dgrd a klasszikus Dgrd-vel 144 MHz-en, a sávonkénti Dgrd marad a(z) DGRD frekvenciánként fülön; Az én horizontom a(z) Égbolt lila kereteivel és a tervezési táblázatból vett időponttal; Kipróbálandó állomások a táblázat időpontjával, görgetősávval és a saját ország állomásainak kizárásával (cty.dat); Yagi-nyereség a DL6WU-táblázatból (G3SEK), a W8IO-nak tulajdonított képlet csak 10 elem alatt; legördülő listák és számmezők YA-MS-stílusban; 144 MHz-es transzverterek a kézikönyvben.
 - 1.9 - Új fül: Az én horizontom (Élő): a terepből számított horizont SRTM1 adatokból, a Föld görbületével és a fénytöréssel, a(z) Égbolt hátterén a három színskála egyikével, a Hold pályája, a fő akadályok OpenStreetMap-nevekkel és az elveszett Hold-percek; jelölőnégyzet a terep minimális elevációként való használatához az egész programban; helyi zajtérkép NJ9R szerint, ⚠ jellel azokban az órákban, amikor a Hold zajos irányban van; új fül: Kipróbálandó állomások (Tervezés), Matteo IW5DHN ötlete: az N0UK csevegő aktív állomásai 0-tól 100-ig terjedő index szerint rendezve; számmezők egymás melletti nyilakkal, tabletta alakú fülek és három új színséma az IP-TRX-CTRL-ből.
 - 1.8 - Új nyelv: szlovák (összesen 37), a kézikönyvekkel, a README-vel és a licenccel; egyetlen nyalábszélesség az egész programban: Yagikhoz 0,93·√(41253/G) (Kraus szabálya W4RNL NEC-szimulációival korrigálva, mint a YA-MS-ben), parabolákhoz 70·λ/D (IZ0JNY), a frekvencia szerinti DGRD forrás nélküli √(32000/G) képlete helyett; a kézikönyv frissítve az új képlettel és az irányzási példával; macOS-en az indító maga nyitja meg az XQuartzot, a naplóba írja a Mono verzióját és figyelmeztet, ha a YAEC nem indul; README-bemutató portugálul, törökül, csehül, szlovákul, kínaiul, japánul és koreaiul is; javított fordítások thai, román, görög, brazíliai portugál, lengyel, cseh és magyar nyelven.
 - 1.7 - Nyolc új nyelv: brazíliai portugál, thai, hagyományos kínai, lengyel, cseh, román, görög és magyar (összesen 36), kézikönyvekkel és OLVASSEL fájlokkal; a Yagi EME-mérlegben és a Parabola EME-mérlegben a saját állomás visszhangjának számítása (Én adok, és veszem a saját visszhangomat); primer fókuszú vagy offset parabola (W2IMU); 1296 MHz-en parabolákkal a valós megvilágítók cirkuláris polarizációjának vesztesége (KA1GT); a Számítások ellenőrzése fülön választás a Yagi EME-mérleg és a Parabola EME-mérleg között; a DGRD frekvenciánként képletei egyenletszerkesztőhöz hasonlóan írva; kézikönyv: Faraday-forgatás 1296 MHz-en az ITU-R P.531 szerint, depolarizáció a 23 cm-es sávban (Hagfors) és cirkuláris polarizáció a 23 cm-es sávban.

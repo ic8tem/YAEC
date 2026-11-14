@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 pripravil Costantino IC8TEM
 ==========================================
 
@@ -6,24 +6,28 @@ Kalkulačka pre rádioamatérov pracujúcich cez EME (Zem–Mesiac–Zem) od 50 
 Zdrojový kód a stiahnutie: https://github.com/ic8tem/YAEC/releases
 
 INŠTALÁCIA – WINDOWS
-1. Stiahni YAEC-1.9-win-x64-setup.exe zo stránky Releases a spusti ho. Nainštaluje YAEC do priečinka Dokumenty (Documents\YAEC), bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom.
+1. Stiahni YAEC-1.9.1-win-x64-setup.exe zo stránky Releases a spusti ho. Nainštaluje YAEC do priečinka Dokumenty (Documents\YAEC), bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom.
 2. Ak sa objaví upozornenie SmartScreen: "Ďalšie informácie" → "Napriek tomu spustiť".
-3. Bez inštalácie: rozbaľ YAEC-1.9-win-x64-portatile.zip do priečinka, do ktorého môžeš zapisovať, a spusti YAEC.exe.
+3. Bez inštalácie: rozbaľ YAEC-1.9.1-win-x64-portatile.zip do priečinka, do ktorého môžeš zapisovať, a spusti YAEC.exe.
 
 INŠTALÁCIA – LINUX
 YAEC beží pod Mono, slobodným behovým prostredím .NET.
-- Debian, Ubuntu, Mint: stiahni yaec_1.9_amd64.deb a nainštaluj ho príkazom
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: stiahni yaec_1.9.1_amd64.deb a nainštaluj ho príkazom
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (nainštaluje aj Mono). YAEC sa spúšťa z ponuky aplikácií alebo príkazom "yaec".
-- Iné distribúcie: nainštaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbaľ YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Fedora, openSUSE: yaec-1.9-1.noarch.rpm; Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb; Windows ARM64: YAEC-1.9-win-arm64-setup.exe) a spusti ./install.sh.
+- Iné distribúcie: nainštaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbaľ YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) a spusti ./install.sh.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 INŠTALÁCIA – macOS (experimentálna)
 1. Nainštaluj Mono pre macOS (https://www.mono-project.com/download/stable/) a XQuartz (https://www.xquartz.org).
-2. Otvor YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) a pretiahni YAEC do priečinka Aplikácie. Prvýkrát: pravý klik na YAEC → Otvoriť (aplikácia nie je podpísaná spoločnosťou Apple).
+2. Otvor YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) a pretiahni YAEC do priečinka Aplikácie. Prvýkrát: pravý klik na YAEC → Otvoriť (aplikácia nie je podpísaná spoločnosťou Apple).
+
+AUTOMATICKÉ AKTUALIZÁCIE
+Pri spustení YAEC zistí na GitHube, či existuje nová verzia, a sám sa aktualizuje (Windows, prenosné archívy .tar.gz, AppImage, aplikácia pre macOS) s overením odtlačku SHA-256. Balíky .deb, .rpm, Arch, Slackware sa naopak aktualizujú správcom balíkov systému: YAEC upozorní na novú verziu a otvorí stránku GitHub.
 
 KONTROLA STIAHNUTÝCH SÚBOROV (SHA-256)
 Každé vydanie obsahuje SHA256SUMS.txt s odtlačkom SHA-256 každého balíčka. Porovnaj ho s odtlačkom stiahnutého súboru:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ak sa obe hodnoty líšia, súbor neinštaluj: stiahni ho znova.
@@ -39,6 +43,7 @@ Chyby, lepšie údaje, preklady: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 HISTÓRIA VERZIÍ
 Verzie pred 1.0 sa nazývajú beta.
+- 1.9.1 - Automatická aktualizácia z GitHubu s overením odtlačku SHA-256 vo Windows, pri prenosných archívoch (Linux, FreeBSD, OpenBSD, Alpine), pri AppImage a aplikácii pre macOS (balíky .deb, .rpm, Arch, Slackware aktualizuje správca balíkov) a upozornenie na chýbajúce súbory; nové balíky pre Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačidlo OPRAVIŤ na opravu lokátora stanice v CALL3.TXT; Vzdialenosť a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podľa pásiem zostáva v DGRD podľa kmitočtu; Môj obzor s fialovými rámčekmi z Nebeská klenba a okamihom z plánovacej tabuľky; Stanice na vyskúšanie s okamihom z tabuľky, posuvníkom a vylúčením staníc vlastnej krajiny (cty.dat); zisk antén Yagi z tabuľky DL6WU (G3SEK), vzorec pripisovaný W8IO len pod 10 prvkov; rozbaľovacie zoznamy a číselné polia v štýle YA-MS; transvertory pre 144 MHz v príručke.
 - 1.9 - Nová karta Môj obzor (Naživo): obzor z terénu vypočítaný z dát SRTM1 so zakrivením Zeme a refrakciou, na pozadí Nebeská klenba v jednej z troch farebných škál, dráha Mesiaca, hlavné prekážky s názvami z OpenStreetMap a stratené minúty Mesiaca; začiarkavacie políčko na použitie terénu ako minimálnej elevácie v celom programe; mapa miestneho šumu podľa NJ9R, s ⚠ v hodinách, keď je Mesiac v hlučnom smere; nová karta Stanice na vyskúšanie (Plánovanie), nápad Matteo IW5DHN: aktívne stanice četu N0UK zoradené podľa indexu od 0 do 100; číselné polia so šípkami vedľa seba, karty v tvare tabletky a tri nové farebné schémy z IP-TRX-CTRL.
 - 1.8 - Nový jazyk slovenčina (spolu 37), s príručkami, README a licenciou; jediná šírka zväzku v celom programe: 0,93·√(41253/G) pre antény yagi (Krausovo pravidlo opravené simuláciami NEC od W4RNL, rovnako ako v YA-MS) a 70·λ/D pre paraboly (IZ0JNY), namiesto √(32000/G) bez zdroja v DGRD podľa kmitočtu; príručka aktualizovaná o nový vzorec a príklad namierenia; na macOS spúšťač sám otvorí XQuartz, zapíše verziu Mono do protokolu a upozorní, ak sa YAEC nespustí; prezentácia README aj v portugalčine, turečtine, češtine, slovenčine, čínštine, japončine a kórejčine; opravené preklady do thajčiny, rumunčiny, gréčtiny, brazílskej portugalčiny, poľštiny, češtiny a maďarčiny.
 - 1.7 - Osem nových jazykov: brazílska portugalčina, thajčina, tradičná čínština, poľština, čeština, rumunčina, gréčtina a maďarčina (spolu 36), s príručkami a súbormi README; v záložkách Bilancia EME yagi a Bilancia EME paraboly výpočet echa vlastnej stanice (Vysielam a prijímam svoje echo); parabola s primárnym ohniskom alebo offsetová (W2IMU); na 1296 MHz s parabolami strata kruhovej polarizácie skutočných ožarovačov (KA1GT); v záložke Kontrola výpočtov voľba medzi Bilanciou EME yagi a Bilanciou EME paraboly; vzorce v záložke DGRD podľa kmitočtu zapísané ako v editore rovníc; príručka: Faradayova rotácia na 1296 MHz podľa ITU-R P.531, depolarizácia v pásme 23 cm (Hagfors) a kruhová polarizácia v pásme 23 cm.

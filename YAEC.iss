@@ -5,7 +5,7 @@
 ; per questo l'installazione va nella cartella dell'utente, dove si può scrivere.
 
 #ifndef MyAppVersion
-  #define MyAppVersion "1.9"
+  #define MyAppVersion "1.9.1"
 #endif
 ; versione a 32 bit: ISCC /DExeDir=x86 /DSuffisso=-32bit YAEC.iss
 #ifndef ExeDir

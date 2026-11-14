@@ -3355,6 +3355,50 @@ namespace LunaCalc
             "Verde",
             "1.9 - Nuova linguetta Il mio orizzonte (In diretta): orizzonte dal terreno calcolato dai dati SRTM1 con curvatura terrestre e rifrazione, sullo sfondo della Volta celeste con una delle tre colorazioni, percorso della Luna, ostacoli principali con i nomi di OpenStreetMap e minuti di Luna persi; casella per usare il terreno come elevazione minima in tutto il programma; mappa del rumore locale secondo NJ9R, con ⚠ nelle ore in cui la Luna è in una direzione rumorosa; nuova linguetta Stazioni da provare (Pianificazione), idea di Matteo IW5DHN: le stazioni attive della chat N0UK ordinate con un indice da 0 a 100; caselle numeriche con le frecce affiancate, linguette a pillola e tre nuovi schemi di colori presi da IP-TRX-CTRL.",
             " giorni: {0}, Dgrd {1:F2} dB alle {2} UTC (distanza {3:N0} km), {4:0.0} ore utili.   Calcolato per {5} a {6} MHz (Dgrd classica, come le tabelle EME){7}. Aggiornato alle {8} UTC.",
+            "CORREGGI",
+            "Correggi il locator nel CALL3.TXT",
+            "Il locator che hai scritto è diverso da quello del CALL3.TXT: con un clic lo salvi come correzione. YAEC la ricorda in data\\call3_correzioni.txt, la applica subito al CALL3.TXT e di nuovo a ogni aggiornamento del file, anche nella copia per WSJT-X.",
+            "Correggere il locator di {0} nel CALL3.TXT da {1} a {2}?",
+            "La correzione resta valida anche dopo gli aggiornamenti del CALL3.TXT.",
+            "Non è stato possibile salvare la correzione.",
+            "DALLA TABELLA",
+            "Momento dalla tabella",
+            "Apre la tabella della linguetta Posizione della Luna: scegli una riga (anche nei giorni futuri) e premi «↩ OSTACOLI» per tornare qui con quel momento.",
+            "OSTACOLI",
+            "Torna a Orizzonte dal terreno",
+            "Porta il momento della riga selezionata nella vista degli ostacoli della linguetta Il mio orizzonte.",
+            "Torna a Stazioni da provare",
+            "Porta il giorno della riga selezionata nella linguetta Stazioni da provare.",
+            "Giorno dalla tabella",
+            "Apre la tabella della linguetta Posizione della Luna: scegli una riga (anche nei giorni futuri) e premi «↩ {0}» per tornare qui con quel giorno.",
+            "Escludi le stazioni del mio paese",
+            "file cty.dat non trovato",
+            "nominativo non riconosciuto",
+            "Riconosce il paese dal nominativo con il file cty.dat di AD1C (country-files.com): YAEC lo scarica nella cartella data e lo aggiorna ogni mese; se non ci riesce, usa quello di WSJT-X o di N1MM Logger+ se lo trova. Il tuo paese: {0}.",
+            "YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta, si chiude e si aggiorna da solo; i tuoi dati nella cartella data restano dove sono.",
+            "Si apre la pagina di GitHub con i pacchetti della nuova versione.",
+            "Nuova versione di YAEC",
+            "È disponibile YAEC {0} su GitHub (tu hai la {1}). Vuoi aggiornarlo adesso?",
+            "Vuoi che YAEC non ti avvisi più per la versione {0}?",
+            "Ti avviserà comunque alla prossima versione.",
+            "Il file {0} manca nella versione {1} su GitHub.",
+            "L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.",
+            "Riprova più tardi o scarica il pacchetto dalla pagina di GitHub.",
+            "YAEC {0} è stato scaricato: ora il programma si chiude, si aggiorna e si riapre da solo.",
+            "Non è stato possibile avviare l'aggiornamento.",
+            "Non è stato possibile scaricare l'aggiornamento.",
+            "File mancanti",
+            "Mancano {0} file del programma: {1}",
+            "Vuoi che YAEC li scarichi ora da GitHub (versione {0})?",
+            "I file mancanti sono stati scaricati.",
+            "Non è stato possibile scaricare {0} file: {1}",
+            "Se la cartella del programma è protetta, avvia YAEC come amministratore oppure reinstallalo dalla pagina di GitHub.",
+            "YAEC è installato con un pacchetto del sistema (.deb, .rpm, Arch o Slackware), che si aggiorna con il gestore dei pacchetti: si apre la pagina di GitHub con il pacchetto nuovo.",
+            "YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta e sostituisce i suoi file; la nuova versione parte al prossimo avvio. I tuoi dati restano dove sono.",
+            "YAEC {0} è installato: la nuova versione parte al prossimo avvio.",
+            "Non è stato possibile scrivere i file nella cartella del programma.",
+            "Spaziature e guadagni della tabella di DL6WU riportata da G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): riflettore 0,2 λ, primo direttore 0,075 λ, poi in crescita fino a 0,4 λ; guadagno in dBd + 2,15. La tabella parte da 10 elementi: sotto si usa la formula G = 7,773·log(L/λ) + 11,43 attribuita a W8IO, di cui non è stata trovata la fonte (dove si sovrappongono le due differiscono di 0,1 dB al massimo). Antenne non DL6WU possono differire.",
+            "1.9.1 - Aggiornamento automatico da GitHub, con controllo dell'impronta SHA-256, su Windows, con gli archivi portatili (Linux, FreeBSD, OpenBSD, Alpine), con l'AppImage e con l'app per macOS (i pacchetti .deb, .rpm, Arch e Slackware si aggiornano con il gestore dei pacchetti), e avviso dei file mancanti; nuovi pacchetti per Windows ARM64, Fedora e openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS a 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686 e AppImage; pulsante CORREGGI per correggere il locator di una stazione nel CALL3.TXT; Distanza e Dgrd con la Dgrd classica a 144 MHz, mentre la Dgrd per banda resta in DGRD per frequenza; Il mio orizzonte con i riquadri viola della Volta celeste e il momento preso dalla tabella di pianificazione; Stazioni da provare con il momento della tabella, la barra di scorrimento e l'esclusione delle stazioni del proprio paese (cty.dat); guadagno delle yagi dalla tabella di DL6WU (G3SEK), con la formula attribuita a W8IO solo sotto i 10 elementi; tendine e caselle numeriche nello stile di YA-MS; transverter per i 144 MHz nel manuale.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -5055,6 +5099,50 @@ namespace LunaCalc
             "Green",
             "1.9 - New tab My horizon (Live): horizon from the terrain computed from SRTM1 data with Earth curvature and refraction, over the Sky view background in one of the three colour scales, Moon path, main obstacles with OpenStreetMap names and minutes of Moon lost; checkbox to use the terrain as minimum elevation throughout the program; local noise map after NJ9R, with ⚠ in the hours when the Moon is in a noisy direction; new tab Stations to try (Planning), idea by Matteo IW5DHN: the active stations of the N0UK chat ranked by an index from 0 to 100; numeric boxes with side-by-side arrows, pill-shaped tabs and three new colour schemes taken from IP-TRX-CTRL.",
             " days: {0}, Dgrd {1:F2} dB at {2} UTC (distance {3:N0} km), {4:0.0} useful hours.   Computed for {5} at {6} MHz (classic Dgrd, as in the EME tables){7}. Updated at {8} UTC.",
+            "CORRECT",
+            "Correct the locator in CALL3.TXT",
+            "The locator you typed differs from the one in CALL3.TXT: one click saves it as a correction. YAEC keeps it in data\\call3_correzioni.txt, applies it to CALL3.TXT at once and again at every update of the file, including the copy for WSJT-X.",
+            "Change the locator of {0} in CALL3.TXT from {1} to {2}?",
+            "The correction stays valid after CALL3.TXT updates too.",
+            "The correction could not be saved.",
+            "FROM TABLE",
+            "Moment from the table",
+            "Opens the table of the Moon position tab: choose a row (future days too) and press «↩ OBSTACLES» to come back here with that moment.",
+            "OBSTACLES",
+            "Back to Horizon from terrain",
+            "Takes the moment of the selected row to the obstacles view of the My horizon tab.",
+            "Back to Stations to try",
+            "Takes the day of the selected row to the Stations to try tab.",
+            "Day from the table",
+            "Opens the table of the Moon position tab: choose a row (future days too) and press «↩ {0}» to come back here with that day.",
+            "Exclude stations of my country",
+            "cty.dat file not found",
+            "callsign not recognised",
+            "Recognises the country from the callsign with the cty.dat file by AD1C (country-files.com): YAEC downloads it into the data folder and updates it every month; if it cannot, it uses the one of WSJT-X or N1MM Logger+ if it finds it. Your country: {0}.",
+            "YAEC downloads the new package from GitHub, checks its fingerprint, closes and updates itself; your data in the data folder stays where it is.",
+            "The GitHub page with the packages of the new version opens.",
+            "New version of YAEC",
+            "YAEC {0} is available on GitHub (you have {1}). Do you want to update now?",
+            "Do you want YAEC to stop notifying you about version {0}?",
+            "It will still notify you of the next version.",
+            "The file {0} is missing from version {1} on GitHub.",
+            "The fingerprint of the downloaded package does not match the one published on GitHub: the update is cancelled.",
+            "Try again later or download the package from the GitHub page.",
+            "YAEC {0} has been downloaded: the program now closes, updates and reopens by itself.",
+            "The update could not be started.",
+            "The update could not be downloaded.",
+            "Missing files",
+            "{0} program files are missing: {1}",
+            "Do you want YAEC to download them now from GitHub (version {0})?",
+            "The missing files have been downloaded.",
+            "{0} files could not be downloaded: {1}",
+            "If the program folder is protected, run YAEC as administrator or reinstall it from the GitHub page.",
+            "YAEC was installed with a system package (.deb, .rpm, Arch, Slackware), which is updated with the package manager: the GitHub page with the new package opens.",
+            "YAEC downloads the new package from GitHub, checks its fingerprint and replaces its own files; the new version starts at the next launch. Your data stays where it is.",
+            "YAEC {0} is installed: the new version starts at the next launch.",
+            "The files could not be written to the program folder.",
+            "Spacings and gains from the DL6WU table given by G3SEK (The VHF/UHF DX Book, RSGB, ch. 7): reflector 0.2 λ, first director 0.075 λ, then increasing up to 0.4 λ; gain in dBd + 2.15. The table starts at 10 elements: below that the formula G = 7.773·log(L/λ) + 11.43 attributed to W8IO is used, for which no source has been found (where both apply they differ by 0.1 dB at most). Non-DL6WU antennas may differ.",
+            "1.9.1 - Automatic update from GitHub, with SHA-256 fingerprint check, on Windows, with the portable archives (Linux, FreeBSD, OpenBSD, Alpine), the AppImage and the macOS app (the .deb, .rpm, Arch, Slackware packages are updated with the package manager), and warning about missing files; new packages for Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CORRECT button to correct a station's locator in CALL3.TXT; Distance and Dgrd with the classic Dgrd at 144 MHz, while the per-band Dgrd stays in DGRD by frequency; My horizon with the violet boxes of Sky view and the time taken from the planning table; Stations to try with the time from the table, a scroll bar and the option to leave out the stations of your own country (cty.dat); Yagi gain from the DL6WU table (G3SEK), with the formula attributed to W8IO only below 10 elements; drop-down lists and numeric boxes in the YA-MS style; 144 MHz transverters in the manual.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6755,6 +6843,50 @@ namespace LunaCalc
             "Grün",
             "1.9 - Neuer Reiter Mein Horizont (Live): Horizont aus dem Gelände, berechnet aus SRTM1-Daten mit Erdkrümmung und Refraktion, vor dem Hintergrund der Himmelsansicht in einer der drei Farbskalen, Mondbahn, Haupthindernisse mit Namen aus OpenStreetMap und verlorene Mondminuten; Kästchen, um das Gelände im ganzen Programm als Mindestelevation zu verwenden; Karte des lokalen Rauschens nach NJ9R, mit ⚠ in den Stunden, in denen der Mond in einer verrauschten Richtung steht; neuer Reiter Stationen zum Ausprobieren (Planung), Idee von Matteo IW5DHN: die aktiven Stationen des N0UK-Chats, geordnet nach einem Index von 0 bis 100; Zahlenfelder mit nebeneinander liegenden Pfeilen, Reiter in Pillenform und drei neue Farbschemata aus IP-TRX-CTRL.",
             " Tagen: {0}, Dgrd {1:F2} dB um {2} UTC (Entfernung {3:N0} km), {4:0.0} nutzbare Stunden.   Berechnet für {5} bei {6} MHz (klassische Dgrd, wie in den EME-Tabellen){7}. Aktualisiert um {8} UTC.",
+            "KORRIGIEREN",
+            "Locator in der CALL3.TXT korrigieren",
+            "Der eingegebene Locator weicht von dem der CALL3.TXT ab: Mit einem Klick speicherst du ihn als Korrektur. YAEC merkt sie sich in data\\call3_correzioni.txt, wendet sie sofort auf die CALL3.TXT an und erneut bei jeder Aktualisierung der Datei, auch in der Kopie für WSJT-X.",
+            "Locator von {0} in der CALL3.TXT von {1} auf {2} ändern?",
+            "Die Korrektur bleibt auch nach Aktualisierungen der CALL3.TXT gültig.",
+            "Die Korrektur konnte nicht gespeichert werden.",
+            "AUS DER TABELLE",
+            "Zeitpunkt aus der Tabelle",
+            "Öffnet die Tabelle des Reiters Mondposition: Wähle eine Zeile (auch an künftigen Tagen) und drücke «↩ HINDERNISSE», um mit diesem Zeitpunkt hierher zurückzukehren.",
+            "HINDERNISSE",
+            "Zurück zu Horizont aus dem Gelände",
+            "Übernimmt den Zeitpunkt der gewählten Zeile in die Hindernisansicht des Reiters Mein Horizont.",
+            "Zurück zu Stationen zum Ausprobieren",
+            "Übernimmt den Tag der gewählten Zeile in den Reiter Stationen zum Ausprobieren.",
+            "Tag aus der Tabelle",
+            "Öffnet die Tabelle des Reiters Mondposition: Wähle eine Zeile (auch an künftigen Tagen) und drücke «↩ {0}», um mit diesem Tag hierher zurückzukehren.",
+            "Stationen meines Landes ausschließen",
+            "Datei cty.dat nicht gefunden",
+            "Rufzeichen nicht erkannt",
+            "Erkennt das Land am Rufzeichen mit der Datei cty.dat von AD1C (country-files.com): YAEC lädt sie in den Ordner data und aktualisiert sie jeden Monat; gelingt das nicht, nimmt es die von WSJT-X oder N1MM Logger+, falls vorhanden. Dein Land: {0}.",
+            "YAEC lädt das neue Paket von GitHub, prüft seinen Fingerabdruck, schließt sich und aktualisiert sich selbst; deine Daten im Ordner data bleiben, wo sie sind.",
+            "Die GitHub-Seite mit den Paketen der neuen Version wird geöffnet.",
+            "Neue Version von YAEC",
+            "YAEC {0} ist auf GitHub verfügbar (du hast {1}). Jetzt aktualisieren?",
+            "Soll YAEC dich über die Version {0} nicht mehr benachrichtigen?",
+            "Über die nächste Version wirst du trotzdem benachrichtigt.",
+            "Die Datei {0} fehlt in der Version {1} auf GitHub.",
+            "Der Fingerabdruck des heruntergeladenen Pakets stimmt nicht mit dem auf GitHub veröffentlichten überein: Die Aktualisierung wird abgebrochen.",
+            "Versuche es später erneut oder lade das Paket von der GitHub-Seite herunter.",
+            "YAEC {0} wurde heruntergeladen: Das Programm schließt sich jetzt, aktualisiert sich und startet von selbst neu.",
+            "Die Aktualisierung konnte nicht gestartet werden.",
+            "Die Aktualisierung konnte nicht heruntergeladen werden.",
+            "Fehlende Dateien",
+            "Es fehlen {0} Programmdateien: {1}",
+            "Soll YAEC sie jetzt von GitHub herunterladen (Version {0})?",
+            "Die fehlenden Dateien wurden heruntergeladen.",
+            "{0} Dateien konnten nicht heruntergeladen werden: {1}",
+            "Wenn der Programmordner geschützt ist, starte YAEC als Administrator oder installiere es von der GitHub-Seite neu.",
+            "YAEC wurde mit einem Systempaket (.deb, .rpm, Arch, Slackware) installiert, das über die Paketverwaltung aktualisiert wird: Die GitHub-Seite mit dem neuen Paket wird geöffnet.",
+            "YAEC lädt das neue Paket von GitHub herunter, prüft seinen Fingerabdruck und ersetzt seine eigenen Dateien; die neue Version startet beim nächsten Aufruf. Ihre Daten bleiben, wo sie sind.",
+            "YAEC {0} ist installiert: Die neue Version startet beim nächsten Aufruf.",
+            "Die Dateien konnten nicht in den Programmordner geschrieben werden.",
+            "Abstände und Gewinne aus der DL6WU-Tabelle bei G3SEK (The VHF/UHF DX Book, RSGB, Kap. 7): Reflektor 0,2 λ, erster Direktor 0,075 λ, dann zunehmend bis 0,4 λ; Gewinn in dBd + 2,15. Die Tabelle beginnt bei 10 Elementen: darunter wird die W8IO zugeschriebene Formel G = 7,773·log(L/λ) + 11,43 verwendet, für die keine Quelle gefunden wurde (wo beide gelten, weichen sie höchstens 0,1 dB ab). Nicht-DL6WU-Antennen können abweichen.",
+            "1.9.1 - Automatisches Update von GitHub mit Prüfung des SHA-256-Fingerabdrucks unter Windows, bei den portablen Archiven (Linux, FreeBSD, OpenBSD, Alpine), beim AppImage und bei der macOS-App (die Pakete .deb, .rpm, Arch, Slackware werden mit der Paketverwaltung aktualisiert) und Hinweis auf fehlende Dateien; neue Pakete für Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; Schaltfläche KORRIGIEREN, um den Locator einer Station in CALL3.TXT zu korrigieren; Entfernung und Dgrd mit der klassischen Dgrd bei 144 MHz, die Dgrd je Band bleibt in DGRD nach Frequenz; Mein Horizont mit den violetten Rahmen aus Himmelsansicht und dem Zeitpunkt aus der Planungstabelle; Stationen zum Ausprobieren mit dem Zeitpunkt aus der Tabelle, Bildlaufleiste und Ausschluss der Stationen des eigenen Landes (cty.dat); Yagi-Gewinn aus der DL6WU-Tabelle (G3SEK), die W8IO zugeschriebene Formel nur unter 10 Elementen; Auswahllisten und Zahlenfelder im YA-MS-Stil; 144-MHz-Transverter im Handbuch.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -8455,6 +8587,50 @@ namespace LunaCalc
             "Vert",
             "1.9 - Nouvel onglet Mon horizon (En direct) : horizon du relief calculé à partir des données SRTM1 avec la courbure terrestre et la réfraction, sur le fond de la Voûte céleste dans l'une des trois échelles de couleurs, trajectoire de la Lune, principaux obstacles avec les noms d'OpenStreetMap et minutes de Lune perdues ; case pour utiliser le relief comme élévation minimale dans tout le programme ; carte du bruit local selon NJ9R, avec ⚠ aux heures où la Lune est dans une direction bruyante ; nouvel onglet Stations à essayer (Planification), idée de Matteo IW5DHN : les stations actives du chat N0UK classées par un indice de 0 à 100 ; champs numériques avec flèches côte à côte, onglets en forme de pilule et trois nouveaux schémas de couleurs repris d'IP-TRX-CTRL.",
             " jours : {0}, Dgrd {1:F2} dB à {2} UTC (distance {3:N0} km), {4:0.0} heures utiles.   Calculé pour {5} à {6} MHz (Dgrd classique, comme dans les tables EME){7}. Mis à jour à {8} UTC.",
+            "CORRIGER",
+            "Corriger le locator dans CALL3.TXT",
+            "Le locator saisi diffère de celui de CALL3.TXT : un clic l'enregistre comme correction. YAEC la garde dans data\\call3_correzioni.txt, l'applique tout de suite à CALL3.TXT et à chaque mise à jour du fichier, y compris dans la copie pour WSJT-X.",
+            "Changer le locator de {0} dans CALL3.TXT de {1} en {2} ?",
+            "La correction reste valable après les mises à jour de CALL3.TXT.",
+            "Impossible d'enregistrer la correction.",
+            "DEPUIS LE TABLEAU",
+            "Moment depuis le tableau",
+            "Ouvre le tableau de l'onglet Position de la Lune : choisis une ligne (jours futurs compris) et appuie sur «↩ OBSTACLES» pour revenir ici avec ce moment.",
+            "OBSTACLES",
+            "Retour à Horizon du relief",
+            "Reporte le moment de la ligne sélectionnée dans la vue des obstacles de l'onglet Mon horizon.",
+            "Retour à Stations à essayer",
+            "Reporte le jour de la ligne sélectionnée dans l'onglet Stations à essayer.",
+            "Jour depuis le tableau",
+            "Ouvre le tableau de l'onglet Position de la Lune : choisis une ligne (jours futurs compris) et appuie sur «↩ {0}» pour revenir ici avec ce jour.",
+            "Exclure les stations de mon pays",
+            "fichier cty.dat introuvable",
+            "indicatif non reconnu",
+            "Reconnaît le pays à partir de l'indicatif avec le fichier cty.dat d'AD1C (country-files.com) : YAEC le télécharge dans le dossier data et le met à jour chaque mois ; s'il n'y parvient pas, il utilise celui de WSJT-X ou de N1MM Logger+ s'il le trouve. Ton pays : {0}.",
+            "YAEC télécharge le nouveau paquet depuis GitHub, vérifie son empreinte, se ferme et se met à jour tout seul ; tes données dans le dossier data restent où elles sont.",
+            "La page GitHub avec les paquets de la nouvelle version s'ouvre.",
+            "Nouvelle version de YAEC",
+            "YAEC {0} est disponible sur GitHub (tu as la {1}). Veux-tu mettre à jour maintenant ?",
+            "Veux-tu que YAEC ne te prévienne plus pour la version {0} ?",
+            "Il te préviendra quand même pour la prochaine version.",
+            "Le fichier {0} manque dans la version {1} sur GitHub.",
+            "L'empreinte du paquet téléchargé ne correspond pas à celle publiée sur GitHub : la mise à jour est annulée.",
+            "Réessaie plus tard ou télécharge le paquet depuis la page GitHub.",
+            "YAEC {0} a été téléchargé : le programme va se fermer, se mettre à jour et se rouvrir tout seul.",
+            "Impossible de lancer la mise à jour.",
+            "Impossible de télécharger la mise à jour.",
+            "Fichiers manquants",
+            "Il manque {0} fichiers du programme : {1}",
+            "Veux-tu que YAEC les télécharge maintenant depuis GitHub (version {0}) ?",
+            "Les fichiers manquants ont été téléchargés.",
+            "Impossible de télécharger {0} fichiers : {1}",
+            "Si le dossier du programme est protégé, lance YAEC en tant qu'administrateur ou réinstalle-le depuis la page GitHub.",
+            "YAEC est installé avec un paquet du système (.deb, .rpm, Arch, Slackware), qui se met à jour avec le gestionnaire de paquets : la page GitHub avec le nouveau paquet s'ouvre.",
+            "YAEC télécharge le nouveau paquet depuis GitHub, vérifie son empreinte et remplace ses propres fichiers ; la nouvelle version démarre au prochain lancement. Vos données restent où elles sont.",
+            "YAEC {0} est installé : la nouvelle version démarre au prochain lancement.",
+            "Impossible d'écrire les fichiers dans le dossier du programme.",
+            "Espacements et gains de la table de DL6WU publiée par G3SEK (The VHF/UHF DX Book, RSGB, chap. 7) : réflecteur 0,2 λ, premier directeur 0,075 λ, puis en augmentation jusqu'à 0,4 λ ; gain en dBd + 2,15. La table commence à 10 éléments : en dessous, on utilise la formule G = 7,773·log(L/λ) + 11,43 attribuée à W8IO, dont la source n'a pas été trouvée (là où les deux s'appliquent, elles diffèrent de 0,1 dB au plus). Les antennes non DL6WU peuvent différer.",
+            "1.9.1 - Mise à jour automatique depuis GitHub, avec contrôle de l'empreinte SHA-256, sous Windows, avec les archives portables (Linux, FreeBSD, OpenBSD, Alpine), l'AppImage et l'application macOS (les paquets .deb, .rpm, Arch, Slackware se mettent à jour avec le gestionnaire de paquets), et avertissement des fichiers manquants ; nouveaux paquets pour Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage ; bouton CORRIGER pour corriger le locator d'une station dans CALL3.TXT ; Distance et Dgrd avec la Dgrd classique à 144 MHz, la Dgrd par bande restant dans DGRD par fréquence ; Mon horizon avec les cadres violets de Voûte céleste et l'instant pris dans le tableau de planification ; Stations à essayer avec l'instant du tableau, une barre de défilement et l'exclusion des stations de son propre pays (cty.dat) ; gain des yagis d'après la table de DL6WU (G3SEK), la formule attribuée à W8IO seulement sous 10 éléments ; listes déroulantes et cases numériques dans le style de YA-MS ; transverters 144 MHz dans le manuel.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -10155,6 +10331,50 @@ namespace LunaCalc
             "Verde",
             "1.9 - Nueva pestaña Mi horizonte (En directo): horizonte del terreno calculado con datos SRTM1 con curvatura terrestre y refracción, sobre el fondo de la Bóveda celeste en una de las tres escalas de color, trayectoria de la Luna, obstáculos principales con los nombres de OpenStreetMap y minutos de Luna perdidos; casilla para usar el terreno como elevación mínima en todo el programa; mapa del ruido local según NJ9R, con ⚠ en las horas en que la Luna está en una dirección ruidosa; nueva pestaña Estaciones para probar (Planificación), idea de Matteo IW5DHN: las estaciones activas del chat N0UK ordenadas con un índice de 0 a 100; casillas numéricas con flechas una al lado de otra, pestañas en forma de píldora y tres nuevos esquemas de colores tomados de IP-TRX-CTRL.",
             " días: {0}, Dgrd {1:F2} dB a las {2} UTC (distancia {3:N0} km), {4:0.0} horas útiles.   Calculado para {5} a {6} MHz (Dgrd clásica, como en las tablas EME){7}. Actualizado a las {8} UTC.",
+            "CORREGIR",
+            "Corregir el locator en CALL3.TXT",
+            "El locator que escribiste es distinto del de CALL3.TXT: con un clic lo guardas como corrección. YAEC la guarda en data\\call3_correzioni.txt, la aplica enseguida a CALL3.TXT y de nuevo en cada actualización del archivo, también en la copia para WSJT-X.",
+            "¿Cambiar el locator de {0} en CALL3.TXT de {1} a {2}?",
+            "La corrección sigue siendo válida tras las actualizaciones de CALL3.TXT.",
+            "No se pudo guardar la corrección.",
+            "DESDE LA TABLA",
+            "Momento desde la tabla",
+            "Abre la tabla de la pestaña Posición de la Luna: elige una fila (también de días futuros) y pulsa «↩ OBSTÁCULOS» para volver aquí con ese momento.",
+            "OBSTÁCULOS",
+            "Volver a Horizonte del terreno",
+            "Lleva el momento de la fila seleccionada a la vista de obstáculos de la pestaña Mi horizonte.",
+            "Volver a Estaciones para probar",
+            "Lleva el día de la fila seleccionada a la pestaña Estaciones para probar.",
+            "Día desde la tabla",
+            "Abre la tabla de la pestaña Posición de la Luna: elige una fila (también de días futuros) y pulsa «↩ {0}» para volver aquí con ese día.",
+            "Excluir las estaciones de mi país",
+            "archivo cty.dat no encontrado",
+            "indicativo no reconocido",
+            "Reconoce el país por el indicativo con el archivo cty.dat de AD1C (country-files.com): YAEC lo descarga en la carpeta data y lo actualiza cada mes; si no lo consigue, usa el de WSJT-X o N1MM Logger+ si lo encuentra. Tu país: {0}.",
+            "YAEC descarga el nuevo paquete de GitHub, comprueba su huella, se cierra y se actualiza solo; tus datos de la carpeta data se quedan donde están.",
+            "Se abre la página de GitHub con los paquetes de la nueva versión.",
+            "Nueva versión de YAEC",
+            "YAEC {0} está disponible en GitHub (tú tienes la {1}). ¿Quieres actualizar ahora?",
+            "¿Quieres que YAEC deje de avisarte de la versión {0}?",
+            "Te avisará igualmente de la próxima versión.",
+            "El archivo {0} falta en la versión {1} de GitHub.",
+            "La huella del paquete descargado no coincide con la publicada en GitHub: la actualización se cancela.",
+            "Inténtalo más tarde o descarga el paquete desde la página de GitHub.",
+            "YAEC {0} se ha descargado: ahora el programa se cierra, se actualiza y se vuelve a abrir solo.",
+            "No se pudo iniciar la actualización.",
+            "No se pudo descargar la actualización.",
+            "Archivos que faltan",
+            "Faltan {0} archivos del programa: {1}",
+            "¿Quieres que YAEC los descargue ahora de GitHub (versión {0})?",
+            "Los archivos que faltaban se han descargado.",
+            "No se pudieron descargar {0} archivos: {1}",
+            "Si la carpeta del programa está protegida, ejecuta YAEC como administrador o reinstálalo desde la página de GitHub.",
+            "YAEC está instalado con un paquete del sistema (.deb, .rpm, Arch, Slackware), que se actualiza con el gestor de paquetes: se abre la página de GitHub con el paquete nuevo.",
+            "YAEC descarga el nuevo paquete de GitHub, comprueba su huella y sustituye sus propios archivos; la nueva versión arranca en el próximo inicio. Tus datos se quedan donde están.",
+            "YAEC {0} está instalado: la nueva versión arranca en el próximo inicio.",
+            "No se han podido escribir los archivos en la carpeta del programa.",
+            "Espaciados y ganancias de la tabla de DL6WU publicada por G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): reflector 0,2 λ, primer director 0,075 λ, luego creciendo hasta 0,4 λ; ganancia en dBd + 2,15. La tabla empieza en 10 elementos: por debajo se usa la fórmula G = 7,773·log(L/λ) + 11,43 atribuida a W8IO, cuya fuente no se ha encontrado (donde coinciden, difieren como mucho 0,1 dB). Las antenas que no son DL6WU pueden diferir.",
+            "1.9.1 - Actualización automática desde GitHub, con comprobación de la huella SHA-256, en Windows, con los archivos portátiles (Linux, FreeBSD, OpenBSD, Alpine), con la AppImage y con la aplicación de macOS (los paquetes .deb, .rpm, Arch, Slackware se actualizan con el gestor de paquetes), y aviso de archivos que faltan; nuevos paquetes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botón CORREGIR para corregir el locator de una estación en CALL3.TXT; Distancia y Dgrd con la Dgrd clásica a 144 MHz, mientras la Dgrd por banda sigue en DGRD por frecuencia; Mi horizonte con los recuadros violeta de Bóveda celeste y el momento tomado de la tabla de planificación; Estaciones para probar con el momento de la tabla, barra de desplazamiento y exclusión de las estaciones del propio país (cty.dat); ganancia de las yagis según la tabla de DL6WU (G3SEK), con la fórmula atribuida a W8IO solo por debajo de 10 elementos; listas desplegables y casillas numéricas al estilo de YA-MS; transverters de 144 MHz en el manual.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -11855,6 +12075,50 @@ namespace LunaCalc
             "Verde",
             "1.9 - Novo separador O meu horizonte (Em direto): horizonte do terreno calculado a partir dos dados SRTM1 com curvatura terrestre e refração, sobre o fundo da Abóbada celeste numa das três escalas de cores, trajetória da Lua, obstáculos principais com os nomes do OpenStreetMap e minutos de Lua perdidos; caixa para usar o terreno como elevação mínima em todo o programa; mapa do ruído local segundo NJ9R, com ⚠ nas horas em que a Lua está numa direção ruidosa; novo separador Estações a experimentar (Planeamento), ideia de Matteo IW5DHN: as estações ativas do chat N0UK ordenadas por um índice de 0 a 100; caixas numéricas com setas lado a lado, separadores em forma de pílula e três novos esquemas de cores retirados do IP-TRX-CTRL.",
             " dias: {0}, Dgrd {1:F2} dB às {2} UTC (distância {3:N0} km), {4:0.0} horas úteis.   Calculado para {5} a {6} MHz (Dgrd clássica, como nas tabelas EME){7}. Atualizado às {8} UTC.",
+            "CORRIGIR",
+            "Corrigir o locator no CALL3.TXT",
+            "O locator que escreveste é diferente do do CALL3.TXT: com um clique guarda-lo como correção. O YAEC guarda-a em data\\call3_correzioni.txt, aplica-a logo ao CALL3.TXT e de novo em cada atualização do ficheiro, também na cópia para o WSJT-X.",
+            "Alterar o locator de {0} no CALL3.TXT de {1} para {2}?",
+            "A correção continua válida depois das atualizações do CALL3.TXT.",
+            "Não foi possível guardar a correção.",
+            "DA TABELA",
+            "Momento da tabela",
+            "Abre a tabela do separador Posição da Lua: escolhe uma linha (também de dias futuros) e carrega em «↩ OBSTÁCULOS» para voltar aqui com esse momento.",
+            "OBSTÁCULOS",
+            "Voltar a Horizonte do relevo",
+            "Leva o momento da linha selecionada para a vista dos obstáculos do separador O meu horizonte.",
+            "Voltar a Estações a experimentar",
+            "Leva o dia da linha selecionada para o separador Estações a experimentar.",
+            "Dia da tabela",
+            "Abre a tabela do separador Posição da Lua: escolhe uma linha (também de dias futuros) e carrega em «↩ {0}» para voltar aqui com esse dia.",
+            "Excluir as estações do meu país",
+            "ficheiro cty.dat não encontrado",
+            "indicativo não reconhecido",
+            "Reconhece o país pelo indicativo com o ficheiro cty.dat de AD1C (country-files.com): o YAEC descarrega-o para a pasta data e atualiza-o todos os meses; se não conseguir, usa o do WSJT-X ou do N1MM Logger+ se o encontrar. O teu país: {0}.",
+            "O YAEC descarrega o novo pacote do GitHub, verifica a sua impressão digital, fecha-se e atualiza-se sozinho; os teus dados na pasta data ficam onde estão.",
+            "Abre-se a página do GitHub com os pacotes da nova versão.",
+            "Nova versão do YAEC",
+            "O YAEC {0} está disponível no GitHub (tens a {1}). Queres atualizar agora?",
+            "Queres que o YAEC deixe de te avisar da versão {0}?",
+            "Avisar-te-á na mesma da próxima versão.",
+            "O ficheiro {0} falta na versão {1} no GitHub.",
+            "A impressão digital do pacote descarregado não corresponde à publicada no GitHub: a atualização foi cancelada.",
+            "Tenta mais tarde ou descarrega o pacote da página do GitHub.",
+            "O YAEC {0} foi descarregado: o programa vai fechar-se, atualizar-se e reabrir-se sozinho.",
+            "Não foi possível iniciar a atualização.",
+            "Não foi possível descarregar a atualização.",
+            "Ficheiros em falta",
+            "Faltam {0} ficheiros do programa: {1}",
+            "Queres que o YAEC os descarregue agora do GitHub (versão {0})?",
+            "Os ficheiros em falta foram descarregados.",
+            "Não foi possível descarregar {0} ficheiros: {1}",
+            "Se a pasta do programa estiver protegida, executa o YAEC como administrador ou reinstala-o a partir da página do GitHub.",
+            "O YAEC foi instalado com um pacote do sistema (.deb, .rpm, Arch, Slackware), que se atualiza com o gestor de pacotes: abre-se a página do GitHub com o pacote novo.",
+            "O YAEC descarrega o novo pacote do GitHub, verifica a sua impressão digital e substitui os seus ficheiros; a nova versão arranca no próximo início. Os seus dados ficam onde estão.",
+            "O YAEC {0} está instalado: a nova versão arranca no próximo início.",
+            "Não foi possível escrever os ficheiros na pasta do programa.",
+            "Espaçamentos e ganhos da tabela de DL6WU publicada por G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): refletor 0,2 λ, primeiro diretor 0,075 λ, depois a crescer até 0,4 λ; ganho em dBd + 2,15. A tabela começa nos 10 elementos: abaixo usa-se a fórmula G = 7,773·log(L/λ) + 11,43 atribuída a W8IO, cuja fonte não foi encontrada (onde ambas se aplicam, diferem no máximo 0,1 dB). Antenas que não sejam DL6WU podem diferir.",
+            "1.9.1 - Atualização automática a partir do GitHub, com verificação da impressão SHA-256, no Windows, com os arquivos portáteis (Linux, FreeBSD, OpenBSD, Alpine), com a AppImage e com a aplicação para macOS (os pacotes .deb, .rpm, Arch, Slackware atualizam-se com o gestor de pacotes), e aviso de ficheiros em falta; novos pacotes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botão CORRIGIR para corrigir o locator de uma estação no CALL3.TXT; Distância e Dgrd com a Dgrd clássica a 144 MHz, ficando a Dgrd por banda em DGRD por frequência; O meu horizonte com os retângulos violeta de Abóbada celeste e o momento tirado da tabela de planeamento; Estações a experimentar com o momento da tabela, barra de deslocamento e exclusão das estações do próprio país (cty.dat); ganho das yagis pela tabela de DL6WU (G3SEK), com a fórmula atribuída a W8IO só abaixo de 10 elementos; listas pendentes e caixas numéricas no estilo do YA-MS; transverters de 144 MHz no manual.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -13555,6 +13819,50 @@ namespace LunaCalc
             "绿色",
             "1.9 - 新标签页 我的地平线（实时）：根据 SRTM1 数据计算的地形地平线，考虑地球曲率和折射，背景为三种配色之一的天穹，显示月球轨迹、带 OpenStreetMap 名称的主要障碍物以及损失的月球分钟数；可勾选在整个程序中把地形用作最低仰角；按 NJ9R 方法的本地噪声地图，月球处于噪声方向的时段标 ⚠；新标签页 值得尝试的电台（规划），创意来自 Matteo IW5DHN：N0UK 聊天中的活跃电台按 0 到 100 的指数排序；数字框箭头并排、药丸形标签页，以及取自 IP-TRX-CTRL 的三种新配色方案。",
             " 天中最佳日：{0}，Dgrd {1:F2} dB，{2} UTC（距离 {3:N0} km），可用 {4:0.0} 小时。   计算对象 {5}，{6} MHz（经典 Dgrd，与 EME 表相同）{7}。更新于 {8} UTC。",
+            "更正",
+            "更正 CALL3.TXT 中的网格",
+            "你输入的网格与 CALL3.TXT 中的不同：单击即可保存为更正。YAEC 将其记在 data\\call3_correzioni.txt 中，立即应用到 CALL3.TXT，并在每次更新该文件时再次应用，包括复制给 WSJT-X 的副本。",
+            "将 CALL3.TXT 中 {0} 的网格从 {1} 改为 {2}？",
+            "CALL3.TXT 更新后更正依然有效。",
+            "无法保存更正。",
+            "从表格",
+            "从表格取时刻",
+            "打开“月球位置”标签页的表格：选择一行（也可以是未来的日子），然后按「↩ 障碍物」带着该时刻回到这里。",
+            "障碍物",
+            "返回地形地平线",
+            "将所选行的时刻带到“我的地平线”标签页的障碍物视图。",
+            "返回值得尝试的电台",
+            "将所选行的日期带到“值得尝试的电台”标签页。",
+            "从表格取日期",
+            "打开“月球位置”标签页的表格：选择一行（也可以是未来的日子），然后按「↩ {0}」带着该日期回到这里。",
+            "排除本国电台",
+            "未找到 cty.dat 文件",
+            "无法识别呼号",
+            "使用 AD1C 的 cty.dat 文件（country-files.com）根据呼号识别国家：YAEC 将其下载到 data 文件夹并每月更新；若无法下载，则使用找到的 WSJT-X 或 N1MM Logger+ 的副本。你的国家：{0}。",
+            "YAEC 从 GitHub 下载新软件包，校验其指纹，然后自行关闭并更新；data 文件夹中的数据保持不变。",
+            "将打开 GitHub 上新版本的软件包页面。",
+            "YAEC 新版本",
+            "GitHub 上已有 YAEC {0}（你的版本是 {1}）。现在更新吗？",
+            "以后不再提醒版本 {0} 吗？",
+            "下一个版本仍会提醒你。",
+            "GitHub 上的 {1} 版本中缺少文件 {0}。",
+            "下载的软件包指纹与 GitHub 上公布的不一致：更新已取消。",
+            "请稍后再试，或从 GitHub 页面下载软件包。",
+            "YAEC {0} 已下载：程序现在将关闭、更新并自动重新打开。",
+            "无法启动更新。",
+            "无法下载更新。",
+            "缺少文件",
+            "缺少 {0} 个程序文件：{1}",
+            "要让 YAEC 现在从 GitHub 下载它们吗（版本 {0}）？",
+            "缺少的文件已下载。",
+            "有 {0} 个文件无法下载：{1}",
+            "如果程序文件夹受保护，请以管理员身份运行 YAEC，或从 GitHub 页面重新安装。",
+            "YAEC 是通过系统软件包 (.deb, .rpm, Arch, Slackware) 安装的，需要用软件包管理器更新：现在打开包含新软件包的 GitHub 页面。",
+            "YAEC 从 GitHub 下载新软件包，核对其指纹并替换自身文件；新版本在下次启动时生效。您的数据保持原位。",
+            "YAEC {0} 已安装：新版本在下次启动时生效。",
+            "无法将文件写入程序文件夹。",
+            "间距和增益取自 G3SEK 刊载的 DL6WU 表（The VHF/UHF DX Book, RSGB，第 7 章）：反射器 0.2 λ，第一引向器 0.075 λ，之后逐渐增加到 0.4 λ；增益为 dBd + 2.15。该表从 10 单元开始；少于 10 单元时使用归于 W8IO 的公式 G = 7.773·log(L/λ) + 11.43，但未找到其出处（两者都适用时最多相差 0.1 dB）。非 DL6WU 天线可能有所不同。",
+            "1.9.1 - 从 GitHub 自动更新并校验 SHA-256 指纹，适用于 Windows、便携归档（Linux、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 应用（.deb, .rpm, Arch, Slackware 软件包通过软件包管理器更新），并提示缺失的文件；新增软件包：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；更正 按钮，用于修正 CALL3.TXT 中某电台的定位符；距离与 Dgrd 使用 144 MHz 的经典 Dgrd，按波段的 Dgrd 保留在 按频率 DGRD；我的地平线 加入 天穹 的紫色框，并从计划表获取计算时刻；值得尝试的电台 采用表格中的时刻，增加滚动条，可排除本国电台（cty.dat）；八木天线增益取自 DL6WU 表（G3SEK），仅在少于 10 单元时使用归于 W8IO 的公式；下拉列表和数字框采用 YA-MS 风格；手册加入 144 MHz 变频器。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -15255,6 +15563,50 @@ namespace LunaCalc
             "グリーン",
             "1.9 - 新しいタブ 自局の地平線（ライブ）：SRTM1 データから地球の曲率と屈折を考慮して計算した地形の地平線を、3 つの配色から選べる天球の背景上に表示し、月の軌跡、OpenStreetMap の名前付きの主な障害物、失われる月の分数を示します。プログラム全体で地形を最低仰角として使うチェックボックス。NJ9R による局所ノイズマップで、月がノイズの多い方向にある時間に ⚠ を表示。新しいタブ 試してみたい局（計画）、Matteo IW5DHN のアイデア：N0UK チャットのアクティブ局を 0〜100 の指数で並べます。数値ボックスの矢印を横並びに、タブを錠剤形にし、IP-TRX-CTRL から 3 つの新しい配色を追加。",
             " 日間の最良日：{0}、Dgrd {1:F2} dB、{2} UTC（距離 {3:N0} km）、使用可能 {4:0.0} 時間。   計算対象 {5}、{6} MHz（従来の Dgrd、EME 表と同じ）{7}。更新 {8} UTC。",
+            "修正",
+            "CALL3.TXT のロケーターを修正",
+            "入力したロケーターが CALL3.TXT のものと異なります。クリックすると修正として保存します。YAEC は data\\call3_correzioni.txt に記録し、すぐに CALL3.TXT に反映し、ファイルを更新するたびに WSJT-X 用のコピーにも再び反映します。",
+            "CALL3.TXT の {0} のロケーターを {1} から {2} に変更しますか？",
+            "修正は CALL3.TXT を更新した後も有効です。",
+            "修正を保存できませんでした。",
+            "表から",
+            "表から時刻を選ぶ",
+            "「月の位置」タブの表を開きます。行を選び（未来の日も可）、「↩ 障害物」を押すとその時刻でここに戻ります。",
+            "障害物",
+            "地形からの地平線に戻る",
+            "選んだ行の時刻を「自局の地平線」タブの障害物の表示に送ります。",
+            "試してみたい局に戻る",
+            "選んだ行の日付を「試してみたい局」タブに送ります。",
+            "表から日付を選ぶ",
+            "「月の位置」タブの表を開きます。行を選び（未来の日も可）、「↩ {0}」を押すとその日付でここに戻ります。",
+            "自国の局を除外",
+            "cty.dat ファイルが見つかりません",
+            "コールサインを認識できません",
+            "AD1C の cty.dat ファイル（country-files.com）でコールサインから国を判別します。YAEC は data フォルダーにダウンロードして毎月更新し、できない場合は見つかった WSJT-X または N1MM Logger+ のものを使います。あなたの国：{0}。",
+            "YAEC は GitHub から新しいパッケージをダウンロードし、指紋を確認してから自動的に終了して更新します。data フォルダーのデータはそのまま残ります。",
+            "新しいバージョンのパッケージがある GitHub のページを開きます。",
+            "YAEC の新しいバージョン",
+            "GitHub に YAEC {0} があります（お使いのバージョンは {1}）。今すぐ更新しますか？",
+            "バージョン {0} についての通知を今後表示しないようにしますか？",
+            "次のバージョンについては通知します。",
+            "GitHub のバージョン {1} にファイル {0} がありません。",
+            "ダウンロードしたパッケージの指紋が GitHub で公開されているものと一致しません。更新を中止しました。",
+            "後でもう一度試すか、GitHub のページからパッケージをダウンロードしてください。",
+            "YAEC {0} をダウンロードしました。プログラムを終了し、更新して自動的に再起動します。",
+            "更新を開始できませんでした。",
+            "更新をダウンロードできませんでした。",
+            "不足しているファイル",
+            "プログラムのファイルが {0} 個不足しています：{1}",
+            "今すぐ GitHub からダウンロードしますか（バージョン {0}）？",
+            "不足していたファイルをダウンロードしました。",
+            "{0} 個のファイルをダウンロードできませんでした：{1}",
+            "プログラムのフォルダーが保護されている場合は、YAEC を管理者として実行するか、GitHub のページから再インストールしてください。",
+            "YAEC はシステムのパッケージ (.deb, .rpm, Arch, Slackware) でインストールされているため、パッケージマネージャーで更新します。新しいパッケージのある GitHub のページを開きます。",
+            "YAEC は GitHub から新しいパッケージをダウンロードし、フィンガープリントを確認して自分のファイルを置き換えます。新しいバージョンは次回の起動から使われます。データはそのまま残ります。",
+            "YAEC {0} をインストールしました。新しいバージョンは次回の起動から使われます。",
+            "プログラムのフォルダーにファイルを書き込めませんでした。",
+            "間隔と利得は G3SEK が掲載した DL6WU の表（The VHF/UHF DX Book, RSGB、第 7 章）によります。反射器 0.2 λ、第 1 導波器 0.075 λ、その後 0.4 λ まで増加。利得は dBd + 2.15。表は 10 エレメントからなので、それ未満では W8IO によるとされる式 G = 7.773·log(L/λ) + 11.43 を使いますが、その出典は見つかっていません（両方が使える範囲では差は最大 0.1 dB）。DL6WU 以外のアンテナでは異なることがあります。",
+            "1.9.1 - GitHub からの自動更新（SHA-256 フィンガープリントを確認）：Windows、ポータブルアーカイブ（Linux、FreeBSD、OpenBSD、Alpine）、AppImage、macOS アプリ（.deb, .rpm, Arch, Slackware のパッケージはパッケージマネージャーで更新）、不足ファイルの警告；新しいパッケージ：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；CALL3.TXT の局のロケーターを直す 修正 ボタン；距離と Dgrd は 144 MHz の従来の Dgrd、バンド別の Dgrd は 周波数別 DGRD に残る；自局の地平線 に 天球 の紫の枠と計画表からの時刻；試してみたい局 に表からの時刻、スクロールバー、自国の局を除外（cty.dat）；八木の利得は DL6WU の表（G3SEK）から、W8IO によるとされる式は 10 エレメント未満のみ；ドロップダウンと数値ボックスは YA-MS 風；マニュアルに 144 MHz トランスバーター。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -16955,6 +17307,50 @@ namespace LunaCalc
             "हरा",
             "1.9 - नया टैब मेरा क्षितिज (लाइव): पृथ्वी की वक्रता और अपवर्तन सहित SRTM1 डेटा से गणना किया गया भूभाग से क्षितिज, तीन रंग पैमानों में से एक वाले आकाश दृश्य की पृष्ठभूमि पर, चंद्रमा का पथ, OpenStreetMap के नामों वाली मुख्य बाधाएँ और खोए हुए चंद्रमा के मिनट; पूरे प्रोग्राम में भूभाग को न्यूनतम उन्नयन के रूप में उपयोग करने का बॉक्स; NJ9R के अनुसार स्थानीय शोर का नक्शा, जिन घंटों में चंद्रमा शोर वाली दिशा में हो उन पर ⚠; नया टैब आज़माने के लिए स्टेशन (योजना), Matteo IW5DHN का विचार: N0UK चैट के सक्रिय स्टेशन 0 से 100 के सूचकांक से क्रमबद्ध; साथ-साथ तीरों वाले संख्या बॉक्स, गोली के आकार के टैब और IP-TRX-CTRL से लिए गए तीन नए रंग योजनाएँ।",
             " दिनों में सर्वश्रेष्ठ दिन: {0}, Dgrd {1:F2} dB, {2} UTC पर (दूरी {3:N0} km), {4:0.0} उपयोगी घंटे।   {5} के लिए {6} MHz पर गणना (पारंपरिक Dgrd, EME तालिकाओं की तरह){7}। अद्यतन {8} UTC पर।",
+            "सुधारें",
+            "CALL3.TXT में लोकेटर सुधारें",
+            "आपने जो लोकेटर लिखा है वह CALL3.TXT वाले से अलग है: एक क्लिक से इसे सुधार के रूप में सहेजें। YAEC इसे data\\call3_correzioni.txt में रखता है, तुरंत CALL3.TXT पर लागू करता है और फ़ाइल के हर अद्यतन पर फिर से, WSJT-X की प्रति में भी।",
+            "CALL3.TXT में {0} का लोकेटर {1} से {2} करें?",
+            "CALL3.TXT के अद्यतन के बाद भी सुधार मान्य रहता है।",
+            "सुधार सहेजा नहीं जा सका।",
+            "तालिका से",
+            "तालिका से समय",
+            "चंद्रमा की स्थिति टैब की तालिका खोलता है: एक पंक्ति चुनें (आने वाले दिनों की भी) और उस समय के साथ यहाँ लौटने के लिए «↩ बाधाएँ» दबाएँ।",
+            "बाधाएँ",
+            "भूभाग से क्षितिज पर लौटें",
+            "चुनी गई पंक्ति का समय मेरा क्षितिज टैब के बाधाओं वाले दृश्य में ले जाता है।",
+            "आज़माने के लिए स्टेशन पर लौटें",
+            "चुनी गई पंक्ति का दिन आज़माने के लिए स्टेशन टैब में ले जाता है।",
+            "तालिका से दिन",
+            "चंद्रमा की स्थिति टैब की तालिका खोलता है: एक पंक्ति चुनें (आने वाले दिनों की भी) और उस दिन के साथ यहाँ लौटने के लिए «↩ {0}» दबाएँ।",
+            "मेरे देश के स्टेशन हटाएँ",
+            "cty.dat फ़ाइल नहीं मिली",
+            "कॉल साइन पहचाना नहीं गया",
+            "AD1C की cty.dat फ़ाइल (country-files.com) से कॉल साइन द्वारा देश पहचानता है: YAEC इसे data फ़ोल्डर में डाउनलोड करता है और हर महीने अद्यतन करता है; न हो सके तो मिलने पर WSJT-X या N1MM Logger+ वाली उपयोग करता है। आपका देश: {0}।",
+            "YAEC GitHub से नया पैकेज डाउनलोड करता है, उसकी छाप जाँचता है, बंद होकर खुद अद्यतन होता है; data फ़ोल्डर में आपका डेटा जहाँ है वहीं रहता है।",
+            "नए संस्करण के पैकेज वाला GitHub पृष्ठ खुलता है।",
+            "YAEC का नया संस्करण",
+            "GitHub पर YAEC {0} उपलब्ध है (आपके पास {1} है)। क्या अभी अद्यतन करें?",
+            "क्या YAEC संस्करण {0} के बारे में अब सूचित न करे?",
+            "अगले संस्करण के बारे में फिर भी सूचित करेगा।",
+            "GitHub पर संस्करण {1} में फ़ाइल {0} नहीं है।",
+            "डाउनलोड किए गए पैकेज की छाप GitHub पर प्रकाशित छाप से मेल नहीं खाती: अद्यतन रद्द किया गया।",
+            "बाद में फिर प्रयास करें या GitHub पृष्ठ से पैकेज डाउनलोड करें।",
+            "YAEC {0} डाउनलोड हो गया: अब प्रोग्राम बंद होगा, अद्यतन होगा और अपने आप फिर खुलेगा।",
+            "अद्यतन शुरू नहीं हो सका।",
+            "अद्यतन डाउनलोड नहीं हो सका।",
+            "गायब फ़ाइलें",
+            "प्रोग्राम की {0} फ़ाइलें गायब हैं: {1}",
+            "क्या YAEC इन्हें अभी GitHub से डाउनलोड करे (संस्करण {0})?",
+            "गायब फ़ाइलें डाउनलोड हो गईं।",
+            "{0} फ़ाइलें डाउनलोड नहीं हो सकीं: {1}",
+            "यदि प्रोग्राम फ़ोल्डर सुरक्षित है, तो YAEC को व्यवस्थापक के रूप में चलाएँ या GitHub पृष्ठ से फिर से स्थापित करें।",
+            "YAEC एक सिस्टम पैकेज (.deb, .rpm, Arch, Slackware) से इंस्टॉल है, जिसे पैकेज मैनेजर से अपडेट किया जाता है: नए पैकेज वाला GitHub पेज खुलता है।",
+            "YAEC GitHub से नया पैकेज डाउनलोड करता है, उसका फ़िंगरप्रिंट जाँचता है और अपनी फ़ाइलें बदल देता है; नया संस्करण अगली बार शुरू करने पर चलेगा। आपका डेटा जहाँ है वहीं रहता है।",
+            "YAEC {0} इंस्टॉल हो गया है: नया संस्करण अगली बार शुरू करने पर चलेगा।",
+            "प्रोग्राम फ़ोल्डर में फ़ाइलें नहीं लिखी जा सकीं।",
+            "दूरी और गेन G3SEK द्वारा दी गई DL6WU तालिका से (The VHF/UHF DX Book, RSGB, अध्याय 7): रिफ़्लेक्टर 0.2 λ, पहला डायरेक्टर 0.075 λ, फिर 0.4 λ तक बढ़ते हुए; गेन dBd + 2.15। तालिका 10 एलिमेंट से शुरू होती है: उससे कम पर W8IO के नाम से दिया गया सूत्र G = 7.773·log(L/λ) + 11.43 लिया जाता है, जिसका स्रोत नहीं मिला (जहाँ दोनों लागू हैं, अंतर अधिकतम 0.1 dB)। DL6WU के अलावा अन्य एंटेना अलग हो सकते हैं।",
+            "1.9.1 - GitHub से स्वचालित अपडेट, SHA-256 फ़िंगरप्रिंट जाँच के साथ: Windows, पोर्टेबल आर्काइव (Linux, FreeBSD, OpenBSD, Alpine), AppImage और macOS ऐप पर (.deb, .rpm, Arch, Slackware पैकेज पैकेज मैनेजर से अपडेट होते हैं), और गायब फ़ाइलों की चेतावनी; नए पैकेज: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT में किसी स्टेशन का लोकेटर ठीक करने के लिए सुधारें बटन; दूरी और Dgrd में 144 MHz पर पारंपरिक Dgrd, बैंड के अनुसार Dgrd आवृत्ति अनुसार DGRD में रहता है; मेरा क्षितिज में आकाश दृश्य के बैंगनी बॉक्स और योजना तालिका से लिया गया समय; आज़माने के लिए स्टेशन में तालिका का समय, स्क्रॉल बार और अपने देश के स्टेशन हटाने का विकल्प (cty.dat); यागी गेन DL6WU तालिका (G3SEK) से, W8IO के नाम वाला सूत्र केवल 10 एलिमेंट से कम पर; YA-MS शैली की ड्रॉप-डाउन सूचियाँ और संख्या बॉक्स; मैनुअल में 144 MHz ट्रांसवर्टर।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -18655,6 +19051,50 @@ namespace LunaCalc
             "초록",
             "1.9 - 새 탭 내 지평선(실시간): SRTM1 데이터로 지구 곡률과 굴절을 고려해 계산한 지형 지평선을 세 가지 색상 중 하나의 하늘 보기 배경 위에 표시하고, 달의 경로, OpenStreetMap 이름이 붙은 주요 장애물, 잃는 달의 분을 보여 줍니다; 프로그램 전체에서 지형을 최소 앙각으로 쓰는 확인란; NJ9R 방식의 국지 잡음 지도, 달이 잡음이 많은 방향에 있는 시간에 ⚠ 표시; 새 탭 시도해 볼 국(계획), Matteo IW5DHN의 아이디어: N0UK 채팅의 활동 국을 0~100 지수로 정렬; 화살표가 나란히 있는 숫자 상자, 알약 모양 탭, IP-TRX-CTRL에서 가져온 새 색 구성표 세 가지.",
             " 일 중 최적의 날: {0}, Dgrd {1:F2} dB, {2} UTC (거리 {3:N0} km), 사용 가능 {4:0.0}시간.   {5}에 대해 {6} MHz로 계산 (기존 Dgrd, EME 표와 같음){7}. 업데이트 {8} UTC.",
+            "수정",
+            "CALL3.TXT의 로케이터 수정",
+            "입력한 로케이터가 CALL3.TXT의 것과 다릅니다. 한 번 클릭하면 수정으로 저장됩니다. YAEC는 이를 data\\call3_correzioni.txt에 기록하고 즉시 CALL3.TXT에 적용하며, 파일을 갱신할 때마다 WSJT-X용 사본에도 다시 적용합니다.",
+            "CALL3.TXT에서 {0}의 로케이터를 {1}에서 {2}(으)로 바꿀까요?",
+            "수정 내용은 CALL3.TXT를 갱신한 뒤에도 유지됩니다.",
+            "수정을 저장할 수 없습니다.",
+            "표에서",
+            "표에서 시각 선택",
+            "「달의 위치」 탭의 표를 엽니다. 행을 고르고(미래 날짜도 가능) 「↩ 장애물」를 누르면 그 시각으로 여기로 돌아옵니다.",
+            "장애물",
+            "지형 지평선(으)로 돌아가기",
+            "선택한 행의 시각을 「내 지평선」 탭의 장애물 보기로 가져갑니다.",
+            "시도해 볼 국(으)로 돌아가기",
+            "선택한 행의 날짜를 「시도해 볼 국」 탭으로 가져갑니다.",
+            "표에서 날짜 선택",
+            "「달의 위치」 탭의 표를 엽니다. 행을 고르고(미래 날짜도 가능) 「↩ {0}」를 누르면 그 날짜로 여기로 돌아옵니다.",
+            "우리나라 국 제외",
+            "cty.dat 파일을 찾을 수 없음",
+            "호출부호를 인식할 수 없음",
+            "AD1C의 cty.dat 파일(country-files.com)로 호출부호에서 나라를 알아냅니다. YAEC는 data 폴더에 내려받아 매달 갱신하며, 실패하면 찾은 WSJT-X 또는 N1MM Logger+의 파일을 사용합니다. 당신의 나라: {0}.",
+            "YAEC가 GitHub에서 새 패키지를 내려받아 지문을 확인한 뒤 스스로 종료하고 업데이트합니다. data 폴더의 데이터는 그대로 남습니다.",
+            "새 버전의 패키지가 있는 GitHub 페이지가 열립니다.",
+            "YAEC 새 버전",
+            "GitHub에 YAEC {0}이(가) 있습니다(현재 {1}). 지금 업데이트할까요?",
+            "버전 {0}에 대해 더 이상 알리지 않을까요?",
+            "다음 버전은 그래도 알려 드립니다.",
+            "GitHub의 버전 {1}에 파일 {0}이(가) 없습니다.",
+            "내려받은 패키지의 지문이 GitHub에 공개된 것과 일치하지 않습니다. 업데이트를 취소합니다.",
+            "나중에 다시 시도하거나 GitHub 페이지에서 패키지를 내려받으세요.",
+            "YAEC {0}을(를) 내려받았습니다. 프로그램이 종료되고 업데이트된 뒤 자동으로 다시 열립니다.",
+            "업데이트를 시작할 수 없습니다.",
+            "업데이트를 내려받을 수 없습니다.",
+            "없는 파일",
+            "프로그램 파일 {0}개가 없습니다: {1}",
+            "지금 GitHub에서 내려받을까요(버전 {0})?",
+            "없던 파일을 내려받았습니다.",
+            "파일 {0}개를 내려받을 수 없습니다: {1}",
+            "프로그램 폴더가 보호되어 있으면 YAEC를 관리자 권한으로 실행하거나 GitHub 페이지에서 다시 설치하세요.",
+            "YAEC는 시스템 패키지 (.deb, .rpm, Arch, Slackware)로 설치되어 패키지 관리자로 업데이트합니다. 새 패키지가 있는 GitHub 페이지가 열립니다.",
+            "YAEC가 GitHub에서 새 패키지를 내려받아 지문을 확인하고 자신의 파일을 교체합니다. 새 버전은 다음 실행 때 시작됩니다. 데이터는 그대로 남습니다.",
+            "YAEC {0}이(가) 설치되었습니다. 새 버전은 다음 실행 때 시작됩니다.",
+            "프로그램 폴더에 파일을 쓸 수 없었습니다.",
+            "간격과 이득은 G3SEK가 실은 DL6WU 표(The VHF/UHF DX Book, RSGB, 7장)를 따릅니다. 반사기 0.2 λ, 첫 도파기 0.075 λ, 이후 0.4 λ까지 늘어남. 이득은 dBd + 2.15. 표는 10소자부터이므로 그 아래에서는 W8IO의 것으로 알려진 식 G = 7.773·log(L/λ) + 11.43을 쓰지만 출처는 찾지 못했습니다(둘 다 적용되는 범위에서 차이는 최대 0.1 dB). DL6WU가 아닌 안테나는 다를 수 있습니다.",
+            "1.9.1 - GitHub에서 자동 업데이트(SHA-256 지문 확인): Windows, 휴대용 압축 파일(Linux, FreeBSD, OpenBSD, Alpine), AppImage, macOS 앱(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트), 빠진 파일 경고; 새 패키지: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT에서 국의 로케이터를 고치는 수정 버튼; 거리와 Dgrd는 144 MHz의 고전적 Dgrd, 대역별 Dgrd는 주파수별 DGRD에 유지; 내 지평선에 하늘 보기의 보라색 상자와 계획 표에서 가져온 시각; 시도해 볼 국에 표의 시각, 스크롤 막대, 자국 국 제외(cty.dat); 야기 이득은 DL6WU 표(G3SEK)에서, W8IO의 것으로 알려진 식은 10소자 미만에서만; 드롭다운과 숫자 상자는 YA-MS 스타일; 매뉴얼에 144 MHz 트랜스버터.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -20355,6 +20795,50 @@ namespace LunaCalc
             "Hijau",
             "1.9 - Tab baru Cakrawala saya (Langsung): cakrawala dari medan yang dihitung dari data SRTM1 dengan kelengkungan Bumi dan refraksi, di atas latar Kubah langit dengan salah satu dari tiga skala warna, lintasan Bulan, rintangan utama dengan nama dari OpenStreetMap dan menit Bulan yang hilang; centang untuk memakai medan sebagai elevasi minimum di seluruh program; peta derau lokal menurut NJ9R, dengan ⚠ pada jam-jam ketika Bulan berada di arah yang berderau; tab baru Stasiun untuk dicoba (Perencanaan), ide dari Matteo IW5DHN: stasiun aktif obrolan N0UK diurutkan dengan indeks 0 sampai 100; kotak angka dengan panah berdampingan, tab berbentuk pil, dan tiga skema warna baru dari IP-TRX-CTRL.",
             " hari ke depan: {0}, Dgrd {1:F2} dB pukul {2} UTC (jarak {3:N0} km), {4:0.0} jam berguna.   Dihitung untuk {5} pada {6} MHz (Dgrd klasik, seperti di tabel EME){7}. Diperbarui pukul {8} UTC.",
+            "KOREKSI",
+            "Koreksi lokator di CALL3.TXT",
+            "Lokator yang Anda tulis berbeda dari yang ada di CALL3.TXT: satu klik menyimpannya sebagai koreksi. YAEC menyimpannya di data\\call3_correzioni.txt, langsung menerapkannya ke CALL3.TXT dan lagi pada setiap pembaruan berkas, juga di salinan untuk WSJT-X.",
+            "Ubah lokator {0} di CALL3.TXT dari {1} menjadi {2}?",
+            "Koreksi tetap berlaku setelah CALL3.TXT diperbarui.",
+            "Koreksi tidak dapat disimpan.",
+            "DARI TABEL",
+            "Waktu dari tabel",
+            "Membuka tabel tab Posisi Bulan: pilih satu baris (juga hari-hari mendatang) lalu tekan «↩ RINTANGAN» untuk kembali ke sini dengan waktu itu.",
+            "RINTANGAN",
+            "Kembali ke Cakrawala dari medan",
+            "Membawa waktu baris yang dipilih ke tampilan rintangan di tab Cakrawala saya.",
+            "Kembali ke Stasiun untuk dicoba",
+            "Membawa hari dari baris yang dipilih ke tab Stasiun untuk dicoba.",
+            "Hari dari tabel",
+            "Membuka tabel tab Posisi Bulan: pilih satu baris (juga hari-hari mendatang) lalu tekan «↩ {0}» untuk kembali ke sini dengan hari itu.",
+            "Kecualikan stasiun negara saya",
+            "berkas cty.dat tidak ditemukan",
+            "tanda panggil tidak dikenali",
+            "Mengenali negara dari tanda panggil dengan berkas cty.dat dari AD1C (country-files.com): YAEC mengunduhnya ke folder data dan memperbaruinya setiap bulan; bila gagal, memakai milik WSJT-X atau N1MM Logger+ jika ditemukan. Negara Anda: {0}.",
+            "YAEC mengunduh paket baru dari GitHub, memeriksa sidik jarinya, menutup diri, lalu memperbarui sendiri; data Anda di folder data tetap di tempatnya.",
+            "Halaman GitHub dengan paket versi baru akan dibuka.",
+            "Versi baru YAEC",
+            "YAEC {0} tersedia di GitHub (Anda memakai {1}). Perbarui sekarang?",
+            "Hentikan pemberitahuan YAEC untuk versi {0}?",
+            "Anda tetap akan diberi tahu tentang versi berikutnya.",
+            "Berkas {0} tidak ada di versi {1} di GitHub.",
+            "Sidik jari paket yang diunduh tidak cocok dengan yang dipublikasikan di GitHub: pembaruan dibatalkan.",
+            "Coba lagi nanti atau unduh paket dari halaman GitHub.",
+            "YAEC {0} sudah diunduh: program sekarang menutup, memperbarui, dan membuka lagi sendiri.",
+            "Pembaruan tidak dapat dimulai.",
+            "Pembaruan tidak dapat diunduh.",
+            "Berkas yang hilang",
+            "{0} berkas program hilang: {1}",
+            "Unduh sekarang dari GitHub (versi {0})?",
+            "Berkas yang hilang sudah diunduh.",
+            "{0} berkas tidak dapat diunduh: {1}",
+            "Jika folder program dilindungi, jalankan YAEC sebagai administrator atau pasang ulang dari halaman GitHub.",
+            "YAEC dipasang dengan paket sistem (.deb, .rpm, Arch, Slackware), yang diperbarui melalui manajer paket: halaman GitHub dengan paket baru akan dibuka.",
+            "YAEC mengunduh paket baru dari GitHub, memeriksa sidik jarinya dan mengganti berkasnya sendiri; versi baru berjalan pada peluncuran berikutnya. Data Anda tetap di tempatnya.",
+            "YAEC {0} sudah terpasang: versi baru berjalan pada peluncuran berikutnya.",
+            "Berkas tidak dapat ditulis ke folder program.",
+            "Jarak dan gain dari tabel DL6WU yang dimuat G3SEK (The VHF/UHF DX Book, RSGB, bab 7): reflektor 0,2 λ, direktor pertama 0,075 λ, lalu bertambah hingga 0,4 λ; gain dalam dBd + 2,15. Tabel dimulai dari 10 elemen: di bawahnya dipakai rumus G = 7,773·log(L/λ) + 11,43 yang dikaitkan dengan W8IO, yang sumbernya tidak ditemukan (bila keduanya berlaku, selisihnya paling banyak 0,1 dB). Antena selain DL6WU bisa berbeda.",
+            "1.9.1 - Pembaruan otomatis dari GitHub dengan pemeriksaan sidik jari SHA-256 di Windows, arsip portabel (Linux, FreeBSD, OpenBSD, Alpine), AppImage, dan aplikasi macOS (paket .deb, .rpm, Arch, Slackware diperbarui dengan manajer paket), serta peringatan berkas yang hilang; paket baru untuk Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tombol KOREKSI untuk membetulkan locator sebuah stasiun di CALL3.TXT; Jarak dan Dgrd dengan Dgrd klasik pada 144 MHz, sedangkan Dgrd per pita tetap di DGRD per frekuensi; Cakrawala saya dengan kotak ungu dari Kubah langit dan waktu dari tabel perencanaan; Stasiun untuk dicoba dengan waktu dari tabel, bilah gulir, dan pengecualian stasiun negara sendiri (cty.dat); gain yagi dari tabel DL6WU (G3SEK), rumus yang dikaitkan dengan W8IO hanya di bawah 10 elemen; daftar tarik-turun dan kotak angka bergaya YA-MS; transverter 144 MHz di manual.",
         };
 
         public static readonly string[] RU = {
@@ -22056,6 +22540,50 @@ namespace LunaCalc
             "Зелёная",
             "1.9 - Новая вкладка Мой горизонт (В реальном времени): горизонт по рельефу, рассчитанный по данным SRTM1 с учётом кривизны Земли и рефракции, на фоне Небесный свод в одной из трёх цветовых шкал, путь Луны, основные препятствия с названиями из OpenStreetMap и потерянные минуты Луны; флажок для использования рельефа как минимального угла места во всей программе; карта местных помех по NJ9R, со знаком ⚠ в часы, когда Луна в шумном направлении; новая вкладка Станции для попытки (Планирование), идея Matteo IW5DHN: активные станции чата N0UK, упорядоченные по индексу от 0 до 100; числовые поля со стрелками рядом, вкладки в форме таблетки и три новые цветовые схемы из IP-TRX-CTRL.",
             " дней: {0}, Dgrd {1:F2} дБ в {2} UTC (расстояние {3:N0} км), полезных часов: {4:0.0}.   Рассчитано для {5} на {6} МГц (классическая Dgrd, как в таблицах EME){7}. Обновлено в {8} UTC.",
+            "ИСПРАВИТЬ",
+            "Исправить локатор в CALL3.TXT",
+            "Введённый локатор отличается от указанного в CALL3.TXT: одним щелчком вы сохраните его как исправление. YAEC хранит его в data\\call3_correzioni.txt, сразу применяет к CALL3.TXT и снова при каждом обновлении файла, в том числе в копии для WSJT-X.",
+            "Изменить локатор {0} в CALL3.TXT с {1} на {2}?",
+            "Исправление сохраняется и после обновлений CALL3.TXT.",
+            "Не удалось сохранить исправление.",
+            "ИЗ ТАБЛИЦЫ",
+            "Момент из таблицы",
+            "Открывает таблицу вкладки Положение Луны: выберите строку (в том числе на будущие дни) и нажмите «↩ ПРЕПЯТСТВИЯ», чтобы вернуться сюда с этим моментом.",
+            "ПРЕПЯТСТВИЯ",
+            "Назад к Горизонт по рельефу",
+            "Переносит момент выбранной строки в вид препятствий вкладки Мой горизонт.",
+            "Назад к Станции для попытки",
+            "Переносит день выбранной строки во вкладку Станции для попытки.",
+            "День из таблицы",
+            "Открывает таблицу вкладки Положение Луны: выберите строку (в том числе на будущие дни) и нажмите «↩ {0}», чтобы вернуться сюда с этим днём.",
+            "Исключить станции моей страны",
+            "файл cty.dat не найден",
+            "позывной не распознан",
+            "Определяет страну по позывному с помощью файла cty.dat от AD1C (country-files.com): YAEC загружает его в папку data и обновляет каждый месяц; если не удаётся, использует файл WSJT-X или N1MM Logger+, если найдёт. Ваша страна: {0}.",
+            "YAEC загружает новый пакет с GitHub, проверяет его отпечаток, закрывается и обновляется сам; ваши данные в папке data остаются на месте.",
+            "Откроется страница GitHub с пакетами новой версии.",
+            "Новая версия YAEC",
+            "На GitHub доступна YAEC {0} (у вас {1}). Обновить сейчас?",
+            "Больше не напоминать о версии {0}?",
+            "О следующей версии YAEC всё равно сообщит.",
+            "В версии {1} на GitHub нет файла {0}.",
+            "Отпечаток загруженного пакета не совпадает с опубликованным на GitHub: обновление отменено.",
+            "Повторите попытку позже или загрузите пакет со страницы GitHub.",
+            "YAEC {0} загружена: программа сейчас закроется, обновится и откроется снова сама.",
+            "Не удалось запустить обновление.",
+            "Не удалось загрузить обновление.",
+            "Отсутствующие файлы",
+            "Отсутствуют файлы программы ({0}): {1}",
+            "Загрузить их сейчас с GitHub (версия {0})?",
+            "Отсутствующие файлы загружены.",
+            "Не удалось загрузить файлы ({0}): {1}",
+            "Если папка программы защищена, запустите YAEC от имени администратора или переустановите со страницы GitHub.",
+            "YAEC установлен системным пакетом (.deb, .rpm, Arch, Slackware), который обновляется менеджером пакетов: открывается страница GitHub с новым пакетом.",
+            "YAEC скачивает новый пакет с GitHub, проверяет его отпечаток и заменяет свои файлы; новая версия запустится при следующем старте. Ваши данные остаются на месте.",
+            "YAEC {0} установлен: новая версия запустится при следующем старте.",
+            "Не удалось записать файлы в папку программы.",
+            "Расстояния и усиления по таблице DL6WU, приведённой G3SEK (The VHF/UHF DX Book, RSGB, гл. 7): рефлектор 0,2 λ, первый директор 0,075 λ, далее с ростом до 0,4 λ; усиление в dBd + 2,15. Таблица начинается с 10 элементов: ниже используется формула G = 7,773·log(L/λ) + 11,43, приписываемая W8IO, источник которой не найден (там, где применимы обе, они расходятся не более чем на 0,1 дБ). Антенны не по DL6WU могут отличаться.",
+            "1.9.1 - Автоматическое обновление с GitHub с проверкой отпечатка SHA-256 в Windows, для переносных архивов (Linux, FreeBSD, OpenBSD, Alpine), AppImage и приложения macOS (пакеты .deb, .rpm, Arch, Slackware обновляются менеджером пакетов), предупреждение об отсутствующих файлах; новые пакеты для Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; кнопка ИСПРАВИТЬ для исправления локатора станции в CALL3.TXT; Расстояние и Dgrd с классической Dgrd на 144 МГц, а Dgrd по диапазонам остаётся в DGRD по частоте; Мой горизонт с фиолетовыми рамками из Небесный свод и моментом из таблицы планирования; Станции для попытки с моментом из таблицы, полосой прокрутки и исключением станций своей страны (cty.dat); усиление яги по таблице DL6WU (G3SEK), формула, приписываемая W8IO, только ниже 10 элементов; выпадающие списки и числовые поля в стиле YA-MS; трансвертеры на 144 МГц в руководстве.",
         };
 
         public static readonly string[] UK = {
@@ -23757,6 +24285,50 @@ namespace LunaCalc
             "Зелена",
             "1.9 - Нова вкладка Мій горизонт (Наживо): горизонт за рельєфом, обчислений за даними SRTM1 з урахуванням кривини Землі та рефракції, на тлі Небесне склепіння в одній із трьох колірних шкал, шлях Місяця, основні перешкоди з назвами з OpenStreetMap і втрачені хвилини Місяця; прапорець для використання рельєфу як мінімального кута місця в усій програмі; карта місцевих завад за NJ9R, зі знаком ⚠ у години, коли Місяць у шумному напрямку; нова вкладка Станції для спроби (Планування), ідея Matteo IW5DHN: активні станції чату N0UK, упорядковані за індексом від 0 до 100; числові поля зі стрілками поруч, вкладки у формі пігулки та три нові колірні схеми з IP-TRX-CTRL.",
             " днів: {0}, Dgrd {1:F2} дБ о {2} UTC (відстань {3:N0} км), корисних годин: {4:0.0}.   Розраховано для {5} на {6} МГц (класична Dgrd, як у таблицях EME){7}. Оновлено о {8} UTC.",
+            "ВИПРАВИТИ",
+            "Виправити локатор у CALL3.TXT",
+            "Введений локатор відрізняється від указаного в CALL3.TXT: одним клацанням ви збережете його як виправлення. YAEC зберігає його в data\\call3_correzioni.txt, одразу застосовує до CALL3.TXT і знову при кожному оновленні файлу, зокрема в копії для WSJT-X.",
+            "Змінити локатор {0} у CALL3.TXT з {1} на {2}?",
+            "Виправлення залишається чинним і після оновлень CALL3.TXT.",
+            "Не вдалося зберегти виправлення.",
+            "З ТАБЛИЦІ",
+            "Момент із таблиці",
+            "Відкриває таблицю вкладки Положення Місяця: виберіть рядок (зокрема на майбутні дні) і натисніть «↩ ПЕРЕШКОДИ», щоб повернутися сюди з цим моментом.",
+            "ПЕРЕШКОДИ",
+            "Назад до Горизонт за рельєфом",
+            "Переносить момент вибраного рядка у вигляд перешкод вкладки Мій горизонт.",
+            "Назад до Станції для спроби",
+            "Переносить день вибраного рядка у вкладку Станції для спроби.",
+            "День із таблиці",
+            "Відкриває таблицю вкладки Положення Місяця: виберіть рядок (зокрема на майбутні дні) і натисніть «↩ {0}», щоб повернутися сюди з цим днем.",
+            "Виключити станції моєї країни",
+            "файл cty.dat не знайдено",
+            "позивний не розпізнано",
+            "Визначає країну за позивним за допомогою файлу cty.dat від AD1C (country-files.com): YAEC завантажує його в теку data й оновлює щомісяця; якщо не вдається, використовує файл WSJT-X або N1MM Logger+, якщо знайде. Ваша країна: {0}.",
+            "YAEC завантажує новий пакет із GitHub, перевіряє його відбиток, закривається й оновлюється сам; ваші дані в теці data лишаються на місці.",
+            "Відкриється сторінка GitHub із пакетами нової версії.",
+            "Нова версія YAEC",
+            "На GitHub доступна YAEC {0} (у вас {1}). Оновити зараз?",
+            "Більше не нагадувати про версію {0}?",
+            "Про наступну версію YAEC однаково повідомить.",
+            "У версії {1} на GitHub немає файлу {0}.",
+            "Відбиток завантаженого пакета не збігається з опублікованим на GitHub: оновлення скасовано.",
+            "Спробуйте пізніше або завантажте пакет зі сторінки GitHub.",
+            "YAEC {0} завантажено: програма зараз закриється, оновиться й відкриється знову сама.",
+            "Не вдалося запустити оновлення.",
+            "Не вдалося завантажити оновлення.",
+            "Відсутні файли",
+            "Бракує файлів програми ({0}): {1}",
+            "Завантажити їх зараз із GitHub (версія {0})?",
+            "Відсутні файли завантажено.",
+            "Не вдалося завантажити файли ({0}): {1}",
+            "Якщо тека програми захищена, запустіть YAEC від імені адміністратора або перевстановіть зі сторінки GitHub.",
+            "YAEC встановлено системним пакетом (.deb, .rpm, Arch, Slackware), який оновлюється менеджером пакетів: відкривається сторінка GitHub з новим пакетом.",
+            "YAEC завантажує новий пакет із GitHub, перевіряє його відбиток і замінює власні файли; нова версія запуститься під час наступного старту. Ваші дані залишаються на місці.",
+            "YAEC {0} встановлено: нова версія запуститься під час наступного старту.",
+            "Не вдалося записати файли до теки програми.",
+            "Відстані й підсилення за таблицею DL6WU, наведеною G3SEK (The VHF/UHF DX Book, RSGB, розд. 7): рефлектор 0,2 λ, перший директор 0,075 λ, далі зі зростанням до 0,4 λ; підсилення в dBd + 2,15. Таблиця починається з 10 елементів: нижче використовується формула G = 7,773·log(L/λ) + 11,43, що приписується W8IO, джерело якої не знайдено (там, де діють обидві, вони різняться щонайбільше на 0,1 дБ). Антени не за DL6WU можуть відрізнятися.",
+            "1.9.1 - Автоматичне оновлення з GitHub із перевіркою відбитка SHA-256 у Windows, для переносних архівів (Linux, FreeBSD, OpenBSD, Alpine), AppImage і застосунку macOS (пакети .deb, .rpm, Arch, Slackware оновлюються менеджером пакетів), попередження про відсутні файли; нові пакети для Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; кнопка ВИПРАВИТИ для виправлення локатора станції в CALL3.TXT; Відстань і Dgrd із класичною Dgrd на 144 МГц, а Dgrd за діапазонами залишається в DGRD за частотою; Мій горизонт із фіолетовими рамками з Небесне склепіння і моментом із таблиці планування; Станції для спроби із моментом із таблиці, смугою прокручування та виключенням станцій своєї країни (cty.dat); підсилення яґі за таблицею DL6WU (G3SEK), формула, що приписується W8IO, лише нижче 10 елементів; випадні списки й числові поля в стилі YA-MS; трансвертери на 144 МГц у посібнику.",
         };
 
         public static readonly string[] AF = {
@@ -25458,6 +26030,50 @@ namespace LunaCalc
             "Groen",
             "1.9 - Nuwe oortjie My horison (Regstreeks): horison van die terrein bereken uit SRTM1-data met aardkromming en refraksie, oor die agtergrond van die Lugaansig in een van die drie kleurskale, Maanbaan, hoofhindernisse met name uit OpenStreetMap en verlore Maanminute; merkblokkie om die terrein in die hele program as minimum elevasie te gebruik; kaart van plaaslike geraas volgens NJ9R, met ⚠ in die ure wanneer die Maan in 'n raserige rigting is; nuwe oortjie Stasies om te probeer (Beplanning), idee van Matteo IW5DHN: die aktiewe stasies van die N0UK-klets gerangskik volgens 'n indeks van 0 tot 100; getalblokkies met pyle langs mekaar, pilvormige oortjies en drie nuwe kleurskemas uit IP-TRX-CTRL.",
             " dae: {0}, Dgrd {1:F2} dB om {2} UTC (afstand {3:N0} km), {4:0.0} bruikbare ure.   Bereken vir {5} by {6} MHz (klassieke Dgrd, soos in die EME-tabelle){7}. Opgedateer om {8} UTC.",
+            "KORRIGEER",
+            "Korrigeer die lokaliseerder in CALL3.TXT",
+            "Die lokaliseerder wat jy getik het verskil van dié in CALL3.TXT: met een klik stoor jy dit as 'n korreksie. YAEC hou dit in data\\call3_correzioni.txt, pas dit dadelik op CALL3.TXT toe en weer by elke bywerking van die lêer, ook in die kopie vir WSJT-X.",
+            "Verander die lokaliseerder van {0} in CALL3.TXT van {1} na {2}?",
+            "Die korreksie bly geldig ná bywerkings van CALL3.TXT.",
+            "Die korreksie kon nie gestoor word nie.",
+            "UIT DIE TABEL",
+            "Oomblik uit die tabel",
+            "Maak die tabel van die oortjie Maanposisie oop: kies 'n ry (ook toekomstige dae) en druk «↩ HINDERNISSE» om met daardie oomblik hierheen terug te keer.",
+            "HINDERNISSE",
+            "Terug na Horison uit die terrein",
+            "Neem die oomblik van die gekose ry na die hindernisaansig van die oortjie My horison.",
+            "Terug na Stasies om te probeer",
+            "Neem die dag van die gekose ry na die oortjie Stasies om te probeer.",
+            "Dag uit die tabel",
+            "Maak die tabel van die oortjie Maanposisie oop: kies 'n ry (ook toekomstige dae) en druk «↩ {0}» om met daardie dag hierheen terug te keer.",
+            "Sluit stasies van my land uit",
+            "lêer cty.dat nie gevind nie",
+            "roepsein nie herken nie",
+            "Herken die land uit die roepsein met die cty.dat-lêer van AD1C (country-files.com): YAEC laai dit in die data-gids af en werk dit elke maand by; as dit nie kan nie, gebruik dit dié van WSJT-X of N1MM Logger+ as dit dit vind. Jou land: {0}.",
+            "YAEC laai die nuwe pakket van GitHub af, kontroleer sy vingerafdruk, sluit en werk homself by; jou data in die data-gids bly waar dit is.",
+            "Die GitHub-blad met die pakkette van die nuwe weergawe word oopgemaak.",
+            "Nuwe weergawe van YAEC",
+            "YAEC {0} is op GitHub beskikbaar (jy het {1}). Wil jy nou bywerk?",
+            "Wil jy hê YAEC moet jou nie meer oor weergawe {0} laat weet nie?",
+            "Dit sal jou steeds oor die volgende weergawe laat weet.",
+            "Die lêer {0} ontbreek in weergawe {1} op GitHub.",
+            "Die vingerafdruk van die afgelaaide pakket stem nie ooreen met dié op GitHub nie: die bywerking word gekanselleer.",
+            "Probeer later weer of laai die pakket van die GitHub-blad af.",
+            "YAEC {0} is afgelaai: die program sluit nou, werk by en maak self weer oop.",
+            "Die bywerking kon nie begin word nie.",
+            "Die bywerking kon nie afgelaai word nie.",
+            "Ontbrekende lêers",
+            "{0} programlêers ontbreek: {1}",
+            "Wil jy hê YAEC moet hulle nou van GitHub aflaai (weergawe {0})?",
+            "Die ontbrekende lêers is afgelaai.",
+            "{0} lêers kon nie afgelaai word nie: {1}",
+            "As die programgids beskerm is, begin YAEC as administrateur of installeer dit weer van die GitHub-blad af.",
+            "YAEC is met 'n stelselpakket (.deb, .rpm, Arch, Slackware) geïnstalleer, wat met die pakketbestuurder bygewerk word: die GitHub-blad met die nuwe pakket word oopgemaak.",
+            "YAEC laai die nuwe pakket van GitHub af, kontroleer sy vingerafdruk en vervang sy eie lêers; die nuwe weergawe begin by die volgende keer dat jy dit oopmaak. Jou data bly waar dit is.",
+            "YAEC {0} is geïnstalleer: die nuwe weergawe begin die volgende keer dat jy dit oopmaak.",
+            "Die lêers kon nie in die programvouer geskryf word nie.",
+            "Spasiërings en wins uit die DL6WU-tabel wat G3SEK gee (The VHF/UHF DX Book, RSGB, hfst. 7): reflektor 0,2 λ, eerste direkteur 0,075 λ, dan toenemend tot 0,4 λ; wins in dBd + 2,15. Die tabel begin by 10 elemente: daaronder word die formule G = 7,773·log(L/λ) + 11,43 gebruik wat aan W8IO toegeskryf word, waarvoor geen bron gevind is nie (waar albei geld, verskil hulle hoogstens 0,1 dB). Nie-DL6WU-antennas kan verskil.",
+            "1.9.1 - Outomatiese bywerking vanaf GitHub met kontrole van die SHA-256-vingerafdruk op Windows, met die draagbare argiewe (Linux, FreeBSD, OpenBSD, Alpine), die AppImage en die macOS-toep (die .deb, .rpm, Arch, Slackware-pakkette word met die pakketbestuurder bygewerk), en waarskuwing oor ontbrekende lêers; nuwe pakkette vir Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; KORRIGEER-knoppie om 'n stasie se locator in CALL3.TXT reg te stel; Afstand en Dgrd met die klassieke Dgrd by 144 MHz, terwyl die Dgrd per band in DGRD per frekwensie bly; My horison met die pers raampies van Lugaansig en die tydstip uit die beplanningstabel; Stasies om te probeer met die tydstip uit die tabel, 'n rolstaaf en die weglating van stasies uit jou eie land (cty.dat); Yagi-wins uit die DL6WU-tabel (G3SEK), die formule wat aan W8IO toegeskryf word slegs onder 10 elemente; aftreklyste en getalblokkies in die YA-MS-styl; 144 MHz-transverters in die handleiding.",
         };
 
         public static readonly string[] BN = {
@@ -27158,6 +27774,50 @@ namespace LunaCalc
             "সবুজ",
             "1.9 - নতুন ট্যাব আমার দিগন্ত (সরাসরি): পৃথিবীর বক্রতা ও প্রতিসরণসহ SRTM1 তথ্য থেকে গণনা করা ভূখণ্ড থেকে দিগন্ত, তিনটি রঙের স্কেলের একটিতে আকাশ-গম্বুজ এর পটভূমিতে, চাঁদের পথ, OpenStreetMap এর নামসহ প্রধান বাধা এবং হারানো চাঁদের মিনিট; পুরো প্রোগ্রামে ভূখণ্ডকে ন্যূনতম উচ্চতা হিসেবে ব্যবহারের টিক; NJ9R অনুযায়ী স্থানীয় শব্দের মানচিত্র, যে ঘণ্টায় চাঁদ শব্দযুক্ত দিকে থাকে সেখানে ⚠; নতুন ট্যাব চেষ্টা করার স্টেশন (পরিকল্পনা), Matteo IW5DHN এর ধারণা: N0UK চ্যাটের সক্রিয় স্টেশন 0 থেকে 100 সূচকে সাজানো; পাশাপাশি তীরসহ সংখ্যার বাক্স, বড়ি-আকৃতির ট্যাব এবং IP-TRX-CTRL থেকে নেওয়া তিনটি নতুন রঙের স্কিম।",
             " দিন: {0}, Dgrd {1:F2} dB, {2} UTC-তে (দূরত্ব {3:N0} km), {4:0.0} উপযোগী ঘণ্টা।   {5}-এর জন্য {6} MHz-এ হিসাব (প্রচলিত Dgrd, EME সারণির মতো){7}। হালনাগাদ {8} UTC।",
+            "সংশোধন",
+            "CALL3.TXT-এ লোকেটর সংশোধন করুন",
+            "আপনার লেখা লোকেটর CALL3.TXT-এর থেকে আলাদা: এক ক্লিকে এটি সংশোধন হিসেবে সংরক্ষণ করুন। YAEC এটি data\\call3_correzioni.txt এ রাখে, সঙ্গে সঙ্গে CALL3.TXT-এ প্রয়োগ করে এবং ফাইলের প্রতিটি হালনাগাদে আবার, WSJT-X-এর অনুলিপিতেও।",
+            "CALL3.TXT-এ {0} এর লোকেটর {1} থেকে {2} করবেন?",
+            "CALL3.TXT হালনাগাদের পরেও সংশোধন বৈধ থাকে।",
+            "সংশোধন সংরক্ষণ করা যায়নি।",
+            "সারণি থেকে",
+            "সারণি থেকে সময়",
+            "চাঁদের অবস্থান ট্যাবের সারণি খোলে: একটি সারি বেছে নিন (ভবিষ্যতের দিনও) এবং সেই সময় নিয়ে এখানে ফিরতে «↩ বাধা» চাপুন।",
+            "বাধা",
+            "ভূখণ্ড থেকে দিগন্ত-এ ফিরুন",
+            "নির্বাচিত সারির সময় আমার দিগন্ত ট্যাবের বাধার দৃশ্যে নিয়ে যায়।",
+            "চেষ্টা করার স্টেশন-এ ফিরুন",
+            "নির্বাচিত সারির দিন চেষ্টা করার স্টেশন ট্যাবে নিয়ে যায়।",
+            "সারণি থেকে দিন",
+            "চাঁদের অবস্থান ট্যাবের সারণি খোলে: একটি সারি বেছে নিন (ভবিষ্যতের দিনও) এবং সেই দিন নিয়ে এখানে ফিরতে «↩ {0}» চাপুন।",
+            "আমার দেশের স্টেশন বাদ দিন",
+            "cty.dat ফাইল পাওয়া যায়নি",
+            "কলসাইন চেনা যায়নি",
+            "AD1C-এর cty.dat ফাইল (country-files.com) দিয়ে কলসাইন থেকে দেশ চেনে: YAEC এটি data ফোল্ডারে ডাউনলোড করে এবং প্রতি মাসে হালনাগাদ করে; না পারলে পাওয়া গেলে WSJT-X বা N1MM Logger+-এর ফাইল ব্যবহার করে। আপনার দেশ: {0}।",
+            "YAEC GitHub থেকে নতুন প্যাকেজ নামায়, এর ছাপ যাচাই করে, বন্ধ হয়ে নিজে হালনাগাদ হয়; data ফোল্ডারে আপনার তথ্য যেখানে আছে সেখানেই থাকে।",
+            "নতুন সংস্করণের প্যাকেজসহ GitHub পাতা খোলে।",
+            "YAEC-এর নতুন সংস্করণ",
+            "GitHub-এ YAEC {0} পাওয়া যাচ্ছে (আপনার আছে {1})। এখনই হালনাগাদ করবেন?",
+            "YAEC কি সংস্করণ {0} নিয়ে আর জানাবে না?",
+            "পরের সংস্করণ এলে তবুও জানাবে।",
+            "GitHub-এ সংস্করণ {1}-এ {0} ফাইলটি নেই।",
+            "নামানো প্যাকেজের ছাপ GitHub-এ প্রকাশিত ছাপের সাথে মেলে না: হালনাগাদ বাতিল।",
+            "পরে আবার চেষ্টা করুন বা GitHub পাতা থেকে প্যাকেজ নামান।",
+            "YAEC {0} নামানো হয়েছে: এখন প্রোগ্রাম বন্ধ হবে, হালনাগাদ হবে এবং নিজে আবার খুলবে।",
+            "হালনাগাদ শুরু করা যায়নি।",
+            "হালনাগাদ নামানো যায়নি।",
+            "অনুপস্থিত ফাইল",
+            "প্রোগ্রামের {0}টি ফাইল নেই: {1}",
+            "YAEC কি এখন GitHub থেকে এগুলো নামাবে (সংস্করণ {0})?",
+            "অনুপস্থিত ফাইলগুলো নামানো হয়েছে।",
+            "{0}টি ফাইল নামানো যায়নি: {1}",
+            "প্রোগ্রামের ফোল্ডার সুরক্ষিত থাকলে YAEC প্রশাসক হিসেবে চালান বা GitHub পাতা থেকে আবার ইনস্টল করুন।",
+            "YAEC একটি সিস্টেম প্যাকেজ (.deb, .rpm, Arch, Slackware) দিয়ে ইনস্টল করা, যা প্যাকেজ ম্যানেজার দিয়ে হালনাগাদ হয়: নতুন প্যাকেজসহ GitHub পাতাটি খুলছে।",
+            "YAEC GitHub থেকে নতুন প্যাকেজ নামায়, তার ফিঙ্গারপ্রিন্ট মিলিয়ে দেখে এবং নিজের ফাইলগুলো বদলে দেয়; নতুন সংস্করণ পরের বার চালু করলে শুরু হবে। আপনার ডেটা যেখানে আছে সেখানেই থাকে।",
+            "YAEC {0} ইনস্টল হয়েছে: নতুন সংস্করণ পরের বার চালু করলে শুরু হবে।",
+            "প্রোগ্রামের ফোল্ডারে ফাইলগুলো লেখা যায়নি।",
+            "দূরত্ব ও গেইন G3SEK প্রকাশিত DL6WU সারণি থেকে (The VHF/UHF DX Book, RSGB, অধ্যায় 7): রিফ্লেক্টর 0.2 λ, প্রথম ডিরেক্টর 0.075 λ, তারপর বাড়তে বাড়তে 0.4 λ; গেইন dBd + 2.15। সারণি 10 এলিমেন্ট থেকে শুরু: তার নিচে W8IO-র নামে প্রচলিত সূত্র G = 7.773·log(L/λ) + 11.43 ব্যবহার হয়, যার উৎস পাওয়া যায়নি (যেখানে দুটোই খাটে, পার্থক্য সর্বোচ্চ 0.1 dB)। DL6WU নয় এমন অ্যান্টেনা আলাদা হতে পারে।",
+            "1.9.1 - GitHub থেকে স্বয়ংক্রিয় হালনাগাদ, SHA-256 ফিঙ্গারপ্রিন্ট যাচাইসহ: Windows, বহনযোগ্য আর্কাইভ (Linux, FreeBSD, OpenBSD, Alpine), AppImage ও macOS অ্যাপে (.deb, .rpm, Arch, Slackware প্যাকেজ প্যাকেজ ম্যানেজার দিয়ে হালনাগাদ হয়), আর অনুপস্থিত ফাইলের সতর্কবার্তা; নতুন প্যাকেজ: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT-এ কোনো স্টেশনের লোকেটর ঠিক করার সংশোধন বোতাম; দূরত্ব ও Dgrd-এ 144 MHz-এ প্রচলিত Dgrd, ব্যান্ড অনুযায়ী Dgrd থাকে ফ্রিকোয়েন্সি অনুযায়ী DGRD-এ; আমার দিগন্ত-এ আকাশ-গম্বুজ-এর বেগুনি বাক্স ও পরিকল্পনা সারণি থেকে নেওয়া সময়; চেষ্টা করার স্টেশন-এ সারণির সময়, স্ক্রল বার ও নিজের দেশের স্টেশন বাদ দেওয়ার সুবিধা (cty.dat); ইয়াগি গেইন DL6WU সারণি (G3SEK) থেকে, W8IO-র নামে প্রচলিত সূত্র শুধু 10 এলিমেন্টের নিচে; YA-MS ধাঁচের ড্রপ-ডাউন তালিকা ও সংখ্যার বাক্স; ম্যানুয়ালে 144 MHz ট্রান্সভার্টার।",
         };
 
         public static readonly string[] AR = {
@@ -28858,6 +29518,50 @@ namespace LunaCalc
             "أخضر",
             "1.9 - تبويب جديد أفق محطتي (مباشر): الأفق من التضاريس محسوباً من بيانات SRTM1 مع تحدّب الأرض والانكسار، على خلفية قبة السماء بأحد سلالم الألوان الثلاثة، مع مسار القمر والعوائق الرئيسية بأسماء من OpenStreetMap ودقائق القمر المفقودة؛ خانة لاستخدام التضاريس كارتفاع أدنى في البرنامج كله؛ خريطة الضوضاء المحلية وفق NJ9R، مع ⚠ في الساعات التي يكون فيها القمر في اتجاه مليء بالضوضاء؛ تبويب جديد محطات للتجربة (التخطيط)، فكرة Matteo IW5DHN: المحطات النشطة في دردشة N0UK مرتبة بمؤشر من 0 إلى 100؛ خانات رقمية بأسهم متجاورة، وتبويبات على شكل حبة، وثلاثة أنظمة ألوان جديدة مأخوذة من IP-TRX-CTRL.",
             " يومًا: {0}، Dgrd {1:F2} dB عند {2} UTC (المسافة {3:N0} km)، {4:0.0} ساعات مفيدة.   محسوب لـ {5} عند {6} MHz (Dgrd الكلاسيكية، كما في جداول EME){7}. حُدِّث عند {8} UTC.",
+            "تصحيح",
+            "تصحيح المحدِّد في CALL3.TXT",
+            "المحدِّد الذي كتبته يختلف عن الموجود في CALL3.TXT: بنقرة واحدة تحفظه كتصحيح. يحتفظ به YAEC في data\\call3_correzioni.txt ويطبقه فوراً على CALL3.TXT ومن جديد عند كل تحديث للملف، وكذلك في النسخة الخاصة بـ WSJT-X.",
+            "تغيير محدِّد {0} في CALL3.TXT من {1} إلى {2}؟",
+            "يبقى التصحيح سارياً بعد تحديثات CALL3.TXT أيضاً.",
+            "تعذّر حفظ التصحيح.",
+            "من الجدول",
+            "لحظة من الجدول",
+            "يفتح جدول تبويب موقع القمر: اختر صفاً (حتى في الأيام القادمة) واضغط «↩ العوائق» للعودة إلى هنا بتلك اللحظة.",
+            "العوائق",
+            "العودة إلى الأفق من التضاريس",
+            "ينقل لحظة الصف المحدد إلى عرض العوائق في تبويب أفق محطتي.",
+            "العودة إلى محطات للتجربة",
+            "ينقل يوم الصف المحدد إلى تبويب محطات للتجربة.",
+            "يوم من الجدول",
+            "يفتح جدول تبويب موقع القمر: اختر صفاً (حتى في الأيام القادمة) واضغط «↩ {0}» للعودة إلى هنا بذلك اليوم.",
+            "استبعاد محطات بلدي",
+            "لم يُعثر على ملف cty.dat",
+            "النداء غير معروف",
+            "يتعرف على البلد من النداء بملف cty.dat من AD1C ‏(country-files.com): ينزّله YAEC في مجلد data ويحدّثه كل شهر؛ وإن تعذّر ذلك يستخدم ملف WSJT-X أو N1MM Logger+ إن وجده. بلدك: {0}.",
+            "ينزّل YAEC الحزمة الجديدة من GitHub، ويتحقق من بصمتها، ثم يُغلق ويحدّث نفسه؛ تبقى بياناتك في مجلد data في مكانها.",
+            "تُفتح صفحة GitHub التي فيها حزم الإصدار الجديد.",
+            "إصدار جديد من YAEC",
+            "يتوفر YAEC {0} على GitHub (لديك {1}). هل تريد التحديث الآن؟",
+            "هل تريد ألا ينبهك YAEC بعد الآن بشأن الإصدار {0}؟",
+            "سينبهك مع ذلك عند الإصدار التالي.",
+            "الملف {0} غير موجود في الإصدار {1} على GitHub.",
+            "بصمة الحزمة المنزّلة لا تطابق المنشورة على GitHub: أُلغي التحديث.",
+            "حاول لاحقاً أو نزّل الحزمة من صفحة GitHub.",
+            "نُزّل YAEC {0}: سيُغلق البرنامج الآن ويُحدَّث ثم يُفتح من جديد تلقائياً.",
+            "تعذّر بدء التحديث.",
+            "تعذّر تنزيل التحديث.",
+            "ملفات ناقصة",
+            "هناك {0} ملفات ناقصة من البرنامج: {1}",
+            "هل تريد أن ينزّلها YAEC الآن من GitHub (الإصدار {0})؟",
+            "نُزّلت الملفات الناقصة.",
+            "تعذّر تنزيل {0} ملفات: {1}",
+            "إذا كان مجلد البرنامج محمياً، شغّل YAEC كمسؤول أو أعد تثبيته من صفحة GitHub.",
+            "ثُبّت YAEC بحزمة من النظام (.deb, .rpm, Arch, Slackware) تُحدَّث بمدير الحزم: تُفتح صفحة GitHub التي فيها الحزمة الجديدة.",
+            "يُنزّل YAEC الحزمة الجديدة من GitHub ويتحقق من بصمتها ويستبدل ملفاته؛ يبدأ الإصدار الجديد عند التشغيل التالي. تبقى بياناتك في مكانها.",
+            "ثُبّت YAEC {0}: يبدأ الإصدار الجديد عند التشغيل التالي.",
+            "تعذّرت كتابة الملفات في مجلد البرنامج.",
+            "المسافات والكسب من جدول DL6WU الذي أورده G3SEK (The VHF/UHF DX Book, RSGB، الفصل 7): العاكس 0.2 λ، الموجّه الأول 0.075 λ، ثم تزداد حتى 0.4 λ؛ الكسب بوحدة dBd + 2.15. يبدأ الجدول من 10 عناصر: وما دونها تُستعمل الصيغة G = 7.773·log(L/λ) + 11.43 المنسوبة إلى W8IO، ولم يُعثر على مصدرها (حيث تنطبق الاثنتان لا يتجاوز الفرق 0.1 dB). قد تختلف الهوائيات غير المصممة على طريقة DL6WU.",
+            "1.9.1 - تحديث تلقائي من GitHub مع التحقق من بصمة SHA-256 على Windows، ومع الأرشيفات المحمولة (Linux، FreeBSD، OpenBSD، Alpine)، وAppImage، وتطبيق macOS (حزم .deb, .rpm, Arch, Slackware تُحدَّث بمدير الحزم)، وتنبيه إلى الملفات الناقصة؛ حزم جديدة لـ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage؛ زر تصحيح لتصحيح محدد موقع محطة في CALL3.TXT؛ المسافة وDgrd مع Dgrd الكلاسيكي عند 144 MHz، ويبقى Dgrd حسب النطاق في DGRD حسب التردد؛ أفق محطتي مع الإطارات البنفسجية من قبة السماء واللحظة المأخوذة من جدول التخطيط؛ محطات للتجربة مع لحظة الجدول وشريط التمرير واستبعاد محطات البلد نفسه (cty.dat)؛ كسب هوائيات ياغي من جدول DL6WU ‏(G3SEK)، والصيغة المنسوبة إلى W8IO تحت 10 عناصر فقط؛ قوائم منسدلة وخانات رقمية بأسلوب YA-MS؛ محوّلات 144 MHz في الدليل.",
         };
 
         public static readonly string[] TR = {
@@ -30558,6 +31262,50 @@ namespace LunaCalc
             "Yeşil",
             "1.9 - Yeni sekme Ufkum (Canlı): Dünya eğriliği ve kırılma hesaba katılarak SRTM1 verilerinden hesaplanan arazi ufku, üç renk ölçeğinden biriyle Gök kubbesi arka planı üzerinde; Ay'ın yolu, OpenStreetMap adlarıyla başlıca engeller ve kaybedilen Ay dakikaları; araziyi tüm programda en düşük yükseklik açısı olarak kullanmak için onay kutusu; NJ9R'ye göre yerel gürültü haritası, Ay'ın gürültülü bir yönde olduğu saatlerde ⚠ ile; yeni sekme Denenecek istasyonlar (Planlama), fikir Matteo IW5DHN'den: N0UK sohbetindeki etkin istasyonlar 0'dan 100'e bir endeksle sıralanır; yan yana oklu sayı kutuları, hap biçimli sekmeler ve IP-TRX-CTRL'den alınan üç yeni renk şeması.",
             " gün: {0}, Dgrd {1:F2} dB, {2} UTC'de (uzaklık {3:N0} km), {4:0.0} yararlı saat.   {5} için {6} MHz'de hesaplandı (klasik Dgrd, EME tablolarındaki gibi){7}. Güncelleme {8} UTC.",
+            "DÜZELT",
+            "CALL3.TXT'teki lokatörü düzelt",
+            "Yazdığın lokatör CALL3.TXT'tekinden farklı: tek tıkla düzeltme olarak kaydedersin. YAEC bunu data\\call3_correzioni.txt dosyasında tutar, hemen CALL3.TXT'e uygular ve dosyanın her güncellemesinde, WSJT-X kopyasında da yeniden uygular.",
+            "CALL3.TXT'te {0} lokatörü {1} yerine {2} olsun mu?",
+            "Düzeltme CALL3.TXT güncellemelerinden sonra da geçerli kalır.",
+            "Düzeltme kaydedilemedi.",
+            "TABLODAN",
+            "Tablodan an",
+            "Ay konumu sekmesinin tablosunu açar: bir satır seç (gelecek günler de olur) ve o anla buraya dönmek için «↩ ENGELLER» düğmesine bas.",
+            "ENGELLER",
+            "Araziden ufuk görünümüne dön",
+            "Seçili satırın anını Ufkum sekmesinin engel görünümüne taşır.",
+            "Denenecek istasyonlar görünümüne dön",
+            "Seçili satırın gününü Denenecek istasyonlar sekmesine taşır.",
+            "Tablodan gün",
+            "Ay konumu sekmesinin tablosunu açar: bir satır seç (gelecek günler de olur) ve o günle buraya dönmek için «↩ {0}» düğmesine bas.",
+            "Ülkemin istasyonlarını hariç tut",
+            "cty.dat dosyası bulunamadı",
+            "çağrı işareti tanınmadı",
+            "Ülkeyi, AD1C'nin cty.dat dosyasıyla (country-files.com) çağrı işaretinden tanır: YAEC onu data klasörüne indirir ve her ay günceller; indiremezse bulursa WSJT-X ya da N1MM Logger+ dosyasını kullanır. Ülken: {0}.",
+            "YAEC yeni paketi GitHub'dan indirir, parmak izini denetler, kapanır ve kendini günceller; data klasöründeki verilerin yerinde kalır.",
+            "Yeni sürümün paketlerinin bulunduğu GitHub sayfası açılır.",
+            "YAEC'in yeni sürümü",
+            "GitHub'da YAEC {0} var (sendeki {1}). Şimdi güncellensin mi?",
+            "YAEC {0} sürümü için seni bir daha uyarmasın mı?",
+            "Bir sonraki sürümde yine de uyaracak.",
+            "GitHub'daki {1} sürümünde {0} dosyası yok.",
+            "İndirilen paketin parmak izi GitHub'da yayımlananla uyuşmuyor: güncelleme iptal edildi.",
+            "Daha sonra yeniden dene ya da paketi GitHub sayfasından indir.",
+            "YAEC {0} indirildi: program şimdi kapanacak, güncellenecek ve kendiliğinden yeniden açılacak.",
+            "Güncelleme başlatılamadı.",
+            "Güncelleme indirilemedi.",
+            "Eksik dosyalar",
+            "Programın {0} dosyası eksik: {1}",
+            "YAEC bunları şimdi GitHub'dan indirsin mi (sürüm {0})?",
+            "Eksik dosyalar indirildi.",
+            "{0} dosya indirilemedi: {1}",
+            "Program klasörü korumalıysa YAEC'i yönetici olarak çalıştır ya da GitHub sayfasından yeniden kur.",
+            "YAEC bir sistem paketiyle (.deb, .rpm, Arch, Slackware) kuruldu; bu paket, paket yöneticisiyle güncellenir: yeni paketin bulunduğu GitHub sayfası açılıyor.",
+            "YAEC yeni paketi GitHub'dan indirir, parmak izini denetler ve kendi dosyalarını değiştirir; yeni sürüm bir sonraki açılışta başlar. Verileriniz yerinde kalır.",
+            "YAEC {0} kuruldu: yeni sürüm bir sonraki açılışta başlar.",
+            "Dosyalar program klasörüne yazılamadı.",
+            "Aralıklar ve kazançlar G3SEK'in verdiği DL6WU tablosundan (The VHF/UHF DX Book, RSGB, böl. 7): reflektör 0,2 λ, ilk direktör 0,075 λ, sonra 0,4 λ'ya kadar artarak; kazanç dBd + 2,15. Tablo 10 elemandan başlar: altında W8IO'ya atfedilen G = 7,773·log(L/λ) + 11,43 formülü kullanılır, kaynağı bulunamamıştır (ikisinin de geçerli olduğu yerde fark en çok 0,1 dB). DL6WU olmayan antenler farklı olabilir.",
+            "1.9.1 - GitHub'dan SHA-256 parmak izi denetimiyle otomatik güncelleme: Windows'ta, taşınabilir arşivlerde (Linux, FreeBSD, OpenBSD, Alpine), AppImage'da ve macOS uygulamasında (.deb, .rpm, Arch, Slackware paketleri paket yöneticisiyle güncellenir) ve eksik dosya uyarısı; yeni paketler: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT'te bir istasyonun lokatörünü düzeltmek için DÜZELT düğmesi; Mesafe ve Dgrd'de 144 MHz'te klasik Dgrd, banda göre Dgrd Frekansa göre DGRD'de kalır; Ufkum'de Gök kubbesi'nin mor çerçeveleri ve planlama tablosundan alınan an; Denenecek istasyonlar'de tablodaki an, kaydırma çubuğu ve kendi ülkenin istasyonlarını dışarıda bırakma (cty.dat); Yagi kazancı DL6WU tablosundan (G3SEK), W8IO'ya atfedilen formül yalnızca 10 elemanın altında; YA-MS tarzında açılır listeler ve sayı kutuları; el kitabında 144 MHz transverterler.",
         };
 
         public static readonly string[] NL = {
@@ -32258,6 +33006,50 @@ namespace LunaCalc
             "Groen",
             "1.9 - Nieuw tabblad Mijn horizon (Live): horizon van het terrein berekend uit SRTM1-gegevens met aardkromming en refractie, op de achtergrond van de Hemelkoepel in een van de drie kleurschalen, maanbaan, belangrijkste obstakels met namen uit OpenStreetMap en verloren maanminuten; vakje om het terrein in het hele programma als minimale elevatie te gebruiken; kaart van de lokale ruis volgens NJ9R, met ⚠ in de uren waarin de Maan in een rumoerige richting staat; nieuw tabblad Stations om te proberen (Planning), idee van Matteo IW5DHN: de actieve stations van de N0UK-chat gerangschikt met een index van 0 tot 100; numerieke vakken met pijlen naast elkaar, pilvormige tabbladen en drie nieuwe kleurenschema's uit IP-TRX-CTRL.",
             " dagen: {0}, Dgrd {1:F2} dB om {2} UTC (afstand {3:N0} km), {4:0.0} bruikbare uren.   Berekend voor {5} op {6} MHz (klassieke Dgrd, zoals in de EME-tabellen){7}. Bijgewerkt om {8} UTC.",
+            "CORRIGEREN",
+            "Locator in CALL3.TXT corrigeren",
+            "De ingevoerde locator verschilt van die in CALL3.TXT: met één klik sla je hem op als correctie. YAEC bewaart die in data\\call3_correzioni.txt, past hem meteen toe op CALL3.TXT en opnieuw bij elke update van het bestand, ook in de kopie voor WSJT-X.",
+            "Locator van {0} in CALL3.TXT wijzigen van {1} naar {2}?",
+            "De correctie blijft geldig na updates van CALL3.TXT.",
+            "De correctie kon niet worden opgeslagen.",
+            "UIT DE TABEL",
+            "Moment uit de tabel",
+            "Opent de tabel van het tabblad Maanpositie: kies een rij (ook op toekomstige dagen) en druk op «↩ OBSTAKELS» om met dat moment hier terug te komen.",
+            "OBSTAKELS",
+            "Terug naar Horizon uit het terrein",
+            "Neemt het moment van de gekozen rij mee naar de obstakelweergave van het tabblad Mijn horizon.",
+            "Terug naar Stations om te proberen",
+            "Neemt de dag van de gekozen rij mee naar het tabblad Stations om te proberen.",
+            "Dag uit de tabel",
+            "Opent de tabel van het tabblad Maanpositie: kies een rij (ook op toekomstige dagen) en druk op «↩ {0}» om met die dag hier terug te komen.",
+            "Stations van mijn land uitsluiten",
+            "bestand cty.dat niet gevonden",
+            "roepnaam niet herkend",
+            "Herkent het land aan de roepnaam met het bestand cty.dat van AD1C (country-files.com): YAEC downloadt het naar de map data en werkt het elke maand bij; lukt dat niet, dan gebruikt het dat van WSJT-X of N1MM Logger+ als het dat vindt. Jouw land: {0}.",
+            "YAEC downloadt het nieuwe pakket van GitHub, controleert de vingerafdruk, sluit af en werkt zichzelf bij; je gegevens in de map data blijven waar ze zijn.",
+            "De GitHub-pagina met de pakketten van de nieuwe versie wordt geopend.",
+            "Nieuwe versie van YAEC",
+            "YAEC {0} is beschikbaar op GitHub (jij hebt {1}). Nu bijwerken?",
+            "Wil je dat YAEC je niet meer waarschuwt voor versie {0}?",
+            "Over de volgende versie krijg je toch een melding.",
+            "Het bestand {0} ontbreekt in versie {1} op GitHub.",
+            "De vingerafdruk van het gedownloade pakket komt niet overeen met die op GitHub: de update is geannuleerd.",
+            "Probeer het later opnieuw of download het pakket van de GitHub-pagina.",
+            "YAEC {0} is gedownload: het programma sluit nu af, werkt zich bij en start vanzelf opnieuw.",
+            "De update kon niet worden gestart.",
+            "De update kon niet worden gedownload.",
+            "Ontbrekende bestanden",
+            "Er ontbreken {0} programmabestanden: {1}",
+            "Wil je dat YAEC ze nu van GitHub downloadt (versie {0})?",
+            "De ontbrekende bestanden zijn gedownload.",
+            "{0} bestanden konden niet worden gedownload: {1}",
+            "Als de programmamap beveiligd is, start YAEC als administrator of installeer het opnieuw via de GitHub-pagina.",
+            "YAEC is geïnstalleerd met een systeempakket (.deb, .rpm, Arch, Slackware), dat wordt bijgewerkt met het pakketbeheer: de GitHub-pagina met het nieuwe pakket wordt geopend.",
+            "YAEC downloadt het nieuwe pakket van GitHub, controleert de vingerafdruk en vervangt zijn eigen bestanden; de nieuwe versie start bij de volgende keer opstarten. Je gegevens blijven waar ze zijn.",
+            "YAEC {0} is geïnstalleerd: de nieuwe versie start bij de volgende keer opstarten.",
+            "De bestanden konden niet naar de programmamap worden geschreven.",
+            "Afstanden en winst uit de DL6WU-tabel van G3SEK (The VHF/UHF DX Book, RSGB, hfst. 7): reflector 0,2 λ, eerste director 0,075 λ, daarna oplopend tot 0,4 λ; winst in dBd + 2,15. De tabel begint bij 10 elementen: daaronder wordt de aan W8IO toegeschreven formule G = 7,773·log(L/λ) + 11,43 gebruikt, waarvan geen bron is gevonden (waar beide gelden, verschillen ze hooguit 0,1 dB). Niet-DL6WU-antennes kunnen afwijken.",
+            "1.9.1 - Automatische update via GitHub met controle van de SHA-256-vingerafdruk op Windows, bij de draagbare archieven (Linux, FreeBSD, OpenBSD, Alpine), de AppImage en de macOS-app (de pakketten .deb, .rpm, Arch, Slackware worden bijgewerkt met het pakketbeheer), en melding van ontbrekende bestanden; nieuwe pakketten voor Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knop CORRIGEREN om de locator van een station in CALL3.TXT te verbeteren; Afstand en Dgrd met de klassieke Dgrd op 144 MHz, de Dgrd per band blijft in DGRD per frequentie; Mijn horizon met de paarse kaders van Hemelkoepel en het moment uit de planningstabel; Stations om te proberen met het moment uit de tabel, schuifbalk en uitsluiting van stations uit het eigen land (cty.dat); yagiwinst uit de DL6WU-tabel (G3SEK), de aan W8IO toegeschreven formule alleen onder 10 elementen; keuzelijsten en getalvakken in de stijl van YA-MS; 144 MHz-transverters in de handleiding.",
         };
 
         public static readonly string[] ET = {
@@ -33958,6 +34750,50 @@ namespace LunaCalc
             "Roheline",
             "1.9 - Uus vahekaart Minu horisont (Reaalajas): maastiku horisont, arvutatud SRTM1 andmetest koos Maa kõveruse ja refraktsiooniga, Taevavõlv taustal ühes kolmest värviskaalast, Kuu teekond, peamised takistused OpenStreetMapi nimedega ja kaotatud Kuu minutid; märkeruut maastiku kasutamiseks minimaalse kõrgusnurgana kogu programmis; kohaliku müra kaart NJ9R järgi, ⚠ tundidel, mil Kuu on mürarikkas suunas; uus vahekaart Jaamad proovimiseks (Planeerimine), Matteo IW5DHN idee: N0UK vestluse aktiivsed jaamad järjestatud indeksiga 0 kuni 100; arvuväljad kõrvuti nooltega, pillikujulised vahekaardid ja kolm uut värviskeemi IP-TRX-CTRL-ist.",
             " päeva jooksul: {0}, Dgrd {1:F2} dB kell {2} UTC (kaugus {3:N0} km), {4:0.0} kasulikku tundi.   Arvutatud jaamale {5} sagedusel {6} MHz (klassikaline Dgrd, nagu EME tabelites){7}. Uuendatud kell {8} UTC.",
+            "PARANDA",
+            "Paranda lokaator failis CALL3.TXT",
+            "Sisestatud lokaator erineb CALL3.TXT omast: ühe klõpsuga salvestad selle parandusena. YAEC hoiab seda failis data\\call3_correzioni.txt, rakendab kohe CALL3.TXT-le ja uuesti faili igal uuendamisel, ka WSJT-X koopias.",
+            "Kas muuta {0} lokaator failis CALL3.TXT {1} asemel {2}?",
+            "Parandus jääb kehtima ka pärast CALL3.TXT uuendusi.",
+            "Parandust ei õnnestunud salvestada.",
+            "TABELIST",
+            "Hetk tabelist",
+            "Avab vahekaardi Kuu asukoht tabeli: vali rida (ka tulevaste päevade oma) ja vajuta «↩ TAKISTUSED», et selle hetkega siia tagasi tulla.",
+            "TAKISTUSED",
+            "Tagasi: Horisont maastikust",
+            "Viib valitud rea hetke vahekaardi Minu horisont takistuste vaatesse.",
+            "Tagasi: Jaamad proovimiseks",
+            "Viib valitud rea päeva vahekaardile Jaamad proovimiseks.",
+            "Päev tabelist",
+            "Avab vahekaardi Kuu asukoht tabeli: vali rida (ka tulevaste päevade oma) ja vajuta «↩ {0}», et selle päevaga siia tagasi tulla.",
+            "Jäta välja minu riigi jaamad",
+            "faili cty.dat ei leitud",
+            "kutsungit ei tuvastatud",
+            "Tuvastab riigi kutsungi järgi AD1C faili cty.dat abil (country-files.com): YAEC laadib selle kausta data ja uuendab iga kuu; kui see ei õnnestu, kasutab leitud WSJT-X või N1MM Logger+ faili. Sinu riik: {0}.",
+            "YAEC laadib GitHubist uue paketi, kontrollib selle sõrmejälge, sulgub ja uuendab end ise; sinu andmed kaustas data jäävad paigale.",
+            "Avaneb GitHubi leht uue versiooni pakettidega.",
+            "YAEC uus versioon",
+            "GitHubis on saadaval YAEC {0} (sul on {1}). Kas uuendada kohe?",
+            "Kas YAEC ei peaks versioonist {0} enam teatama?",
+            "Järgmisest versioonist teatab see siiski.",
+            "Fail {0} puudub GitHubi versioonist {1}.",
+            "Allalaaditud paketi sõrmejälg ei klapi GitHubis avaldatuga: uuendus katkestati.",
+            "Proovi hiljem uuesti või laadi pakett GitHubi lehelt alla.",
+            "YAEC {0} on alla laaditud: programm sulgub, uueneb ja avaneb ise uuesti.",
+            "Uuendust ei õnnestunud käivitada.",
+            "Uuendust ei õnnestunud alla laadida.",
+            "Puuduvad failid",
+            "Programmist puudub {0} faili: {1}",
+            "Kas YAEC peaks need kohe GitHubist alla laadima (versioon {0})?",
+            "Puuduvad failid on alla laaditud.",
+            "{0} faili ei õnnestunud alla laadida: {1}",
+            "Kui programmi kaust on kaitstud, käivita YAEC administraatorina või paigalda see GitHubi lehelt uuesti.",
+            "YAEC on paigaldatud süsteemipaketiga (.deb, .rpm, Arch, Slackware), mida uuendatakse paketihalduriga: avaneb GitHubi leht uue paketiga.",
+            "YAEC laadib GitHubist alla uue paketi, kontrollib selle sõrmejälge ja asendab oma failid; uus versioon käivitub järgmisel avamisel. Sinu andmed jäävad oma kohale.",
+            "YAEC {0} on paigaldatud: uus versioon käivitub järgmisel avamisel.",
+            "Faile ei õnnestunud programmi kausta kirjutada.",
+            "Vahekaugused ja võimendused G3SEK-i esitatud DL6WU tabelist (The VHF/UHF DX Book, RSGB, ptk 7): reflektor 0,2 λ, esimene direktor 0,075 λ, seejärel kasvades kuni 0,4 λ; võimendus dBd + 2,15. Tabel algab 10 elemendist: allpool kasutatakse W8IO-le omistatud valemit G = 7,773·log(L/λ) + 11,43, mille allikat ei leitud (kus mõlemad kehtivad, erinevad need kuni 0,1 dB). Muud kui DL6WU antennid võivad erineda.",
+            "1.9.1 - Automaatne uuendus GitHubist koos SHA-256 sõrmejälje kontrolliga Windowsis, kaasaskantavate arhiividega (Linux, FreeBSD, OpenBSD, Alpine), AppImage'iga ja macOS-i rakendusega (pakette .deb, .rpm, Arch, Slackware uuendatakse paketihalduriga) ning hoiatus puuduvate failide kohta; uued paketid: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; nupp PARANDA jaama lokaatori parandamiseks failis CALL3.TXT; Kaugus ja Dgrd klassikalise Dgrd-ga 144 MHz juures, sagedusala kaupa Dgrd jääb DGRD sageduse järgi alla; Minu horisont koos Taevavõlv lillade kastide ja planeerimistabelist võetud ajahetkega; Jaamad proovimiseks koos tabeli ajahetke, kerimisriba ja oma riigi jaamade väljajätmisega (cty.dat); yagi võimendus DL6WU tabelist (G3SEK), W8IO-le omistatud valem ainult alla 10 elemendi; YA-MS-i stiilis rippmenüüd ja numbriväljad; 144 MHz transverterid juhendis.",
         };
 
         public static readonly string[] LV = {
@@ -35658,6 +36494,50 @@ namespace LunaCalc
             "Zaļa",
             "1.9 - Jauna cilne Mans horizonts (Tiešraide): reljefa horizonts, aprēķināts no SRTM1 datiem, ņemot vērā Zemes izliekumu un refrakciju, uz Debess velve fona vienā no trim krāsu skalām, Mēness ceļš, galvenie šķēršļi ar OpenStreetMap nosaukumiem un zaudētās Mēness minūtes; izvēles rūtiņa, lai visā programmā izmantotu reljefu kā minimālo elevāciju; vietējā trokšņa karte pēc NJ9R ar ⚠ stundās, kad Mēness ir trokšņainā virzienā; jauna cilne Stacijas, ko izmēģināt (Plānošana), Matteo IW5DHN ideja: N0UK tērzētavas aktīvās stacijas, sakārtotas pēc indeksa no 0 līdz 100; skaitļu lauki ar blakus novietotām bultiņām, tabletes formas cilnes un trīs jaunas krāsu shēmas no IP-TRX-CTRL.",
             " dienās: {0}, Dgrd {1:F2} dB plkst. {2} UTC (attālums {3:N0} km), {4:0.0} izmantojamās stundas.   Aprēķināts {5} pie {6} MHz (klasiskā Dgrd, kā EME tabulās){7}. Atjaunināts plkst. {8} UTC.",
+            "LABOT",
+            "Labot lokatoru CALL3.TXT",
+            "Ievadītais lokators atšķiras no CALL3.TXT norādītā: ar vienu klikšķi to saglabā kā labojumu. YAEC to glabā data\\call3_correzioni.txt, uzreiz piemēro CALL3.TXT un atkārtoti katrā faila atjaunināšanā, arī kopijā WSJT-X.",
+            "Mainīt {0} lokatoru CALL3.TXT no {1} uz {2}?",
+            "Labojums paliek spēkā arī pēc CALL3.TXT atjaunināšanas.",
+            "Labojumu neizdevās saglabāt.",
+            "NO TABULAS",
+            "Brīdis no tabulas",
+            "Atver cilnes Mēness pozīcija tabulu: izvēlies rindu (arī nākamajām dienām) un nospied «↩ ŠĶĒRŠĻI», lai atgrieztos šeit ar šo brīdi.",
+            "ŠĶĒRŠĻI",
+            "Atpakaļ uz Horizonts no reljefa",
+            "Pārnes izvēlētās rindas brīdi uz cilnes Mans horizonts šķēršļu skatu.",
+            "Atpakaļ uz Stacijas, ko izmēģināt",
+            "Pārnes izvēlētās rindas dienu uz cilni Stacijas, ko izmēģināt.",
+            "Diena no tabulas",
+            "Atver cilnes Mēness pozīcija tabulu: izvēlies rindu (arī nākamajām dienām) un nospied «↩ {0}», lai atgrieztos šeit ar šo dienu.",
+            "Izslēgt manas valsts stacijas",
+            "fails cty.dat nav atrasts",
+            "izsaukuma signāls nav atpazīts",
+            "Atpazīst valsti pēc izsaukuma signāla ar AD1C failu cty.dat (country-files.com): YAEC to lejupielādē mapē data un atjaunina katru mēnesi; ja neizdodas, izmanto WSJT-X vai N1MM Logger+ failu, ja to atrod. Tava valsts: {0}.",
+            "YAEC lejupielādē jauno pakotni no GitHub, pārbauda tās pirkstu nospiedumu, aizveras un atjaunina sevi; tavi dati mapē data paliek vietā.",
+            "Atveras GitHub lapa ar jaunās versijas pakotnēm.",
+            "Jauna YAEC versija",
+            "GitHub ir pieejama YAEC {0} (tev ir {1}). Atjaunināt tagad?",
+            "Vai YAEC vairs neziņot par versiju {0}?",
+            "Par nākamo versiju tas tomēr paziņos.",
+            "GitHub versijā {1} trūkst faila {0}.",
+            "Lejupielādētās pakotnes nospiedums nesakrīt ar GitHub publicēto: atjaunināšana atcelta.",
+            "Mēģini vēlāk vēlreiz vai lejupielādē pakotni no GitHub lapas.",
+            "YAEC {0} ir lejupielādēta: programma tagad aizvērsies, atjaunināsies un atvērsies pati.",
+            "Atjaunināšanu neizdevās sākt.",
+            "Atjauninājumu neizdevās lejupielādēt.",
+            "Trūkstošie faili",
+            "Trūkst {0} programmas failu: {1}",
+            "Vai YAEC tos tagad lejupielādēt no GitHub (versija {0})?",
+            "Trūkstošie faili ir lejupielādēti.",
+            "Neizdevās lejupielādēt {0} failus: {1}",
+            "Ja programmas mape ir aizsargāta, palaid YAEC kā administrators vai pārinstalē to no GitHub lapas.",
+            "YAEC ir instalēts ar sistēmas pakotni (.deb, .rpm, Arch, Slackware), ko atjaunina ar pakotņu pārvaldnieku: tiek atvērta GitHub lapa ar jauno pakotni.",
+            "YAEC lejupielādē jauno pakotni no GitHub, pārbauda tās nospiedumu un aizstāj savas datnes; jaunā versija sāks darboties nākamajā palaišanas reizē. Jūsu dati paliek savā vietā.",
+            "YAEC {0} ir instalēts: jaunā versija sāks darboties nākamajā palaišanas reizē.",
+            "Neizdevās ierakstīt datnes programmas mapē.",
+            "Attālumi un pastiprinājumi no G3SEK publicētās DL6WU tabulas (The VHF/UHF DX Book, RSGB, 7. nod.): reflektors 0,2 λ, pirmais direktors 0,075 λ, pēc tam pieaugot līdz 0,4 λ; pastiprinājums dBd + 2,15. Tabula sākas no 10 elementiem: zemāk lieto W8IO piedēvēto formulu G = 7,773·log(L/λ) + 11,43, kuras avots nav atrasts (kur der abas, tās atšķiras ne vairāk kā par 0,1 dB). Ne-DL6WU antenas var atšķirties.",
+            "1.9.1 - Automātiska atjaunināšana no GitHub ar SHA-256 nospieduma pārbaudi operētājsistēmā Windows, pārnēsājamajiem arhīviem (Linux, FreeBSD, OpenBSD, Alpine), AppImage un macOS lietotnei (pakotnes .deb, .rpm, Arch, Slackware atjaunina ar pakotņu pārvaldnieku) un brīdinājums par trūkstošām datnēm; jaunas pakotnes: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; poga LABOT stacijas lokatora labošanai CALL3.TXT; Attālums un Dgrd ar klasisko Dgrd pie 144 MHz, bet Dgrd pa joslām paliek DGRD pēc frekvences; Mans horizonts ar Debess velve violetajiem rāmjiem un brīdi no plānošanas tabulas; Stacijas, ko izmēģināt ar tabulas brīdi, ritjoslu un savas valsts staciju izslēgšanu (cty.dat); Jagi pastiprinājums no DL6WU tabulas (G3SEK), W8IO piedēvētā formula tikai zem 10 elementiem; nolaižamie saraksti un skaitļu lauki YA-MS stilā; 144 MHz transverteri rokasgrāmatā.",
         };
 
         public static readonly string[] LT = {
@@ -37358,6 +38238,50 @@ namespace LunaCalc
             "Žalia",
             "1.9 - Naujas skirtukas Mano horizontas (Tiesiogiai): reljefo horizontas, apskaičiuotas iš SRTM1 duomenų atsižvelgiant į Žemės kreivumą ir refrakciją, Dangaus skliautas fone viena iš trijų spalvų skalių, Mėnulio kelias, pagrindinės kliūtys su OpenStreetMap pavadinimais ir prarastos Mėnulio minutės; žymimasis langelis reljefui naudoti kaip mažiausiam pakilimo kampui visoje programoje; vietinio triukšmo žemėlapis pagal NJ9R, su ⚠ valandomis, kai Mėnulis yra triukšminga kryptimi; naujas skirtukas Stotys išbandyti (Planavimas), Matteo IW5DHN idėja: N0UK pokalbių aktyvios stotys, surikiuotos pagal indeksą nuo 0 iki 100; skaičių laukai su greta esančiomis rodyklėmis, piliulės formos skirtukai ir trys naujos spalvų schemos iš IP-TRX-CTRL.",
             " dienas: {0}, Dgrd {1:F2} dB {2} UTC (atstumas {3:N0} km), {4:0.0} tinkamų valandų.   Apskaičiuota {5} ties {6} MHz (klasikinė Dgrd, kaip EME lentelėse){7}. Atnaujinta {8} UTC.",
+            "TAISYTI",
+            "Taisyti lokatorių CALL3.TXT",
+            "Įvestas lokatorius skiriasi nuo esančio CALL3.TXT: vienu spustelėjimu išsaugosite jį kaip pataisymą. YAEC jį saugo data\\call3_correzioni.txt, iškart pritaiko CALL3.TXT ir vėl kaskart atnaujinant failą, taip pat kopijoje WSJT-X.",
+            "Pakeisti {0} lokatorių CALL3.TXT iš {1} į {2}?",
+            "Pataisymas galioja ir atnaujinus CALL3.TXT.",
+            "Pataisymo išsaugoti nepavyko.",
+            "IŠ LENTELĖS",
+            "Momentas iš lentelės",
+            "Atidaro skirtuko Mėnulio padėtis lentelę: pasirinkite eilutę (ir ateities dienų) ir paspauskite «↩ KLIŪTYS», kad grįžtumėte čia su tuo momentu.",
+            "KLIŪTYS",
+            "Grįžti į Horizontas pagal reljefą",
+            "Perkelia pasirinktos eilutės momentą į skirtuko Mano horizontas kliūčių vaizdą.",
+            "Grįžti į Stotys išbandyti",
+            "Perkelia pasirinktos eilutės dieną į skirtuką Stotys išbandyti.",
+            "Diena iš lentelės",
+            "Atidaro skirtuko Mėnulio padėtis lentelę: pasirinkite eilutę (ir ateities dienų) ir paspauskite «↩ {0}», kad grįžtumėte čia su ta diena.",
+            "Neįtraukti mano šalies stočių",
+            "failas cty.dat nerastas",
+            "šaukinys neatpažintas",
+            "Atpažįsta šalį pagal šaukinį naudodama AD1C failą cty.dat (country-files.com): YAEC jį atsisiunčia į aplanką data ir atnaujina kas mėnesį; jei nepavyksta, naudoja rastą WSJT-X arba N1MM Logger+ failą. Jūsų šalis: {0}.",
+            "YAEC atsisiunčia naują paketą iš GitHub, patikrina jo kontrolinį kodą, užsidaro ir pats atsinaujina; jūsų duomenys aplanke data lieka vietoje.",
+            "Atsidaro GitHub puslapis su naujos versijos paketais.",
+            "Nauja YAEC versija",
+            "GitHub yra YAEC {0} (jūs turite {1}). Atnaujinti dabar?",
+            "Ar YAEC daugiau nebepranešti apie versiją {0}?",
+            "Apie kitą versiją vis tiek praneš.",
+            "GitHub versijoje {1} nėra failo {0}.",
+            "Atsisiųsto paketo kontrolinis kodas nesutampa su paskelbtu GitHub: atnaujinimas atšauktas.",
+            "Bandykite vėliau arba atsisiųskite paketą iš GitHub puslapio.",
+            "YAEC {0} atsisiųsta: programa dabar užsidarys, atsinaujins ir pati vėl atsidarys.",
+            "Nepavyko pradėti atnaujinimo.",
+            "Nepavyko atsisiųsti atnaujinimo.",
+            "Trūkstami failai",
+            "Trūksta {0} programos failų: {1}",
+            "Ar YAEC dabar juos atsisiųsti iš GitHub (versija {0})?",
+            "Trūkstami failai atsisiųsti.",
+            "Nepavyko atsisiųsti {0} failų: {1}",
+            "Jei programos aplankas apsaugotas, paleiskite YAEC kaip administratorius arba įdiekite iš naujo iš GitHub puslapio.",
+            "YAEC įdiegta sistemos paketu (.deb, .rpm, Arch, Slackware), kuris atnaujinamas paketų tvarkykle: atidaromas GitHub puslapis su nauju paketu.",
+            "YAEC atsisiunčia naują paketą iš GitHub, patikrina jo kontrolinį kodą ir pakeičia savo failus; nauja versija pasileis kitą kartą paleidus. Jūsų duomenys lieka savo vietoje.",
+            "YAEC {0} įdiegta: nauja versija pasileis kitą kartą paleidus.",
+            "Nepavyko įrašyti failų į programos aplanką.",
+            "Atstumai ir stiprinimas iš G3SEK pateiktos DL6WU lentelės (The VHF/UHF DX Book, RSGB, 7 sk.): reflektorius 0,2 λ, pirmasis direktorius 0,075 λ, toliau didėja iki 0,4 λ; stiprinimas dBd + 2,15. Lentelė prasideda nuo 10 elementų: mažiau naudojama W8IO priskiriama formulė G = 7,773·log(L/λ) + 11,43, kurios šaltinis nerastas (kur tinka abi, skiriasi ne daugiau kaip 0,1 dB). Ne DL6WU antenos gali skirtis.",
+            "1.9.1 - Automatinis atnaujinimas iš GitHub su SHA-256 kontrolinio kodo patikra Windows sistemoje, nešiojamiesiems archyvams (Linux, FreeBSD, OpenBSD, Alpine), AppImage ir macOS programai (paketai .deb, .rpm, Arch, Slackware atnaujinami paketų tvarkykle) bei įspėjimas apie trūkstamus failus; nauji paketai: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; mygtukas TAISYTI stoties lokatoriui CALL3.TXT pataisyti; Atstumas ir Dgrd su klasikine Dgrd ties 144 MHz, o Dgrd pagal juostas lieka DGRD pagal dažnį; Mano horizontas su Dangaus skliautas violetiniais rėmeliais ir momentu iš planavimo lentelės; Stotys išbandyti su lentelės momentu, slinkties juosta ir savos šalies stočių atmetimu (cty.dat); Yagi stiprinimas iš DL6WU lentelės (G3SEK), W8IO priskiriama formulė tik žemiau 10 elementų; išskleidžiamieji sąrašai ir skaičių laukai YA-MS stiliumi; 144 MHz transverteriai vadove.",
         };
 
         public static readonly string[] SV = {
@@ -39058,6 +39982,50 @@ namespace LunaCalc
             "Grön",
             "1.9 - Ny flik Min horisont (Live): horisont från terrängen beräknad ur SRTM1-data med jordens krökning och refraktion, mot bakgrunden av Himlavalvet i en av de tre färgskalorna, månens bana, de viktigaste hindren med namn från OpenStreetMap och förlorade månminuter; kryssruta för att använda terrängen som minsta elevation i hela programmet; karta över lokalt brus enligt NJ9R, med ⚠ de timmar då månen står i en brusig riktning; ny flik Stationer att prova (Planering), idé av Matteo IW5DHN: de aktiva stationerna i N0UK-chatten ordnade efter ett index från 0 till 100; sifferrutor med pilarna bredvid varandra, pillerformade flikar och tre nya färgscheman från IP-TRX-CTRL.",
             " dagarna: {0}, Dgrd {1:F2} dB kl. {2} UTC (avstånd {3:N0} km), {4:0.0} användbara timmar.   Beräknat för {5} på {6} MHz (klassisk Dgrd, som i EME-tabellerna){7}. Uppdaterat kl. {8} UTC.",
+            "KORRIGERA",
+            "Korrigera lokatorn i CALL3.TXT",
+            "Lokatorn du skrev skiljer sig från den i CALL3.TXT: med ett klick sparar du den som korrigering. YAEC sparar den i data\\call3_correzioni.txt, tillämpar den direkt på CALL3.TXT och igen vid varje uppdatering av filen, även i kopian för WSJT-X.",
+            "Ändra lokatorn för {0} i CALL3.TXT från {1} till {2}?",
+            "Korrigeringen gäller även efter uppdateringar av CALL3.TXT.",
+            "Korrigeringen kunde inte sparas.",
+            "FRÅN TABELLEN",
+            "Tidpunkt från tabellen",
+            "Öppnar tabellen i fliken Månens position: välj en rad (även kommande dagar) och tryck på «↩ HINDER» för att komma tillbaka hit med den tidpunkten.",
+            "HINDER",
+            "Tillbaka till Horisont från terrängen",
+            "För över tidpunkten för den valda raden till hindervyn i fliken Min horisont.",
+            "Tillbaka till Stationer att prova",
+            "För över dagen för den valda raden till fliken Stationer att prova.",
+            "Dag från tabellen",
+            "Öppnar tabellen i fliken Månens position: välj en rad (även kommande dagar) och tryck på «↩ {0}» för att komma tillbaka hit med den dagen.",
+            "Uteslut stationer från mitt land",
+            "filen cty.dat hittades inte",
+            "anropssignalen känns inte igen",
+            "Känner igen landet från anropssignalen med filen cty.dat av AD1C (country-files.com): YAEC laddar ner den till mappen data och uppdaterar den varje månad; om det inte går används den från WSJT-X eller N1MM Logger+ om den hittas. Ditt land: {0}.",
+            "YAEC laddar ner det nya paketet från GitHub, kontrollerar dess fingeravtryck, stänger sig och uppdaterar sig själv; dina data i mappen data ligger kvar.",
+            "GitHub-sidan med paketen för den nya versionen öppnas.",
+            "Ny version av YAEC",
+            "YAEC {0} finns på GitHub (du har {1}). Vill du uppdatera nu?",
+            "Vill du att YAEC slutar påminna om version {0}?",
+            "Du får ändå besked om nästa version.",
+            "Filen {0} saknas i version {1} på GitHub.",
+            "Fingeravtrycket för det nedladdade paketet stämmer inte med det som publicerats på GitHub: uppdateringen avbryts.",
+            "Försök igen senare eller ladda ner paketet från GitHub-sidan.",
+            "YAEC {0} har laddats ner: programmet stängs nu, uppdateras och öppnas igen av sig självt.",
+            "Uppdateringen kunde inte startas.",
+            "Uppdateringen kunde inte laddas ner.",
+            "Saknade filer",
+            "{0} programfiler saknas: {1}",
+            "Vill du att YAEC laddar ner dem nu från GitHub (version {0})?",
+            "De saknade filerna har laddats ner.",
+            "{0} filer kunde inte laddas ner: {1}",
+            "Om programmappen är skyddad, starta YAEC som administratör eller installera om det från GitHub-sidan.",
+            "YAEC är installerat med ett systempaket (.deb, .rpm, Arch, Slackware), som uppdateras med pakethanteraren: GitHub-sidan med det nya paketet öppnas.",
+            "YAEC hämtar det nya paketet från GitHub, kontrollerar dess fingeravtryck och ersätter sina egna filer; den nya versionen startar nästa gång programmet öppnas. Dina data ligger kvar där de är.",
+            "YAEC {0} är installerat: den nya versionen startar nästa gång programmet öppnas.",
+            "Filerna kunde inte skrivas till programmappen.",
+            "Avstånd och förstärkning från DL6WU-tabellen hos G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, första direktor 0,075 λ, sedan ökande upp till 0,4 λ; förstärkning i dBd + 2,15. Tabellen börjar vid 10 element: under det används formeln G = 7,773·log(L/λ) + 11,43 som tillskrivs W8IO, vars källa inte har hittats (där båda gäller skiljer de högst 0,1 dB). Antenner som inte är DL6WU kan avvika.",
+            "1.9.1 - Automatisk uppdatering från GitHub med kontroll av SHA-256-fingeravtrycket i Windows, för de portabla arkiven (Linux, FreeBSD, OpenBSD, Alpine), AppImage och macOS-appen (paketen .deb, .rpm, Arch, Slackware uppdateras med pakethanteraren), samt varning om saknade filer; nya paket för Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knappen KORRIGERA för att rätta en stations locator i CALL3.TXT; Avstånd och Dgrd med klassisk Dgrd vid 144 MHz, medan Dgrd per band finns kvar i DGRD per frekvens; Min horisont med de lila rutorna från Himlavalvet och tidpunkten från planeringstabellen; Stationer att prova med tidpunkten från tabellen, rullningslist och möjlighet att utesluta stationer från det egna landet (cty.dat); yagiförstärkning från DL6WU-tabellen (G3SEK), formeln som tillskrivs W8IO bara under 10 element; listrutor och sifferrutor i YA-MS-stil; 144 MHz-transvertrar i handboken.",
         };
 
         public static readonly string[] NB = {
@@ -40758,6 +41726,50 @@ namespace LunaCalc
             "Grønn",
             "1.9 - Ny fane Min horisont (Direkte): horisont fra terrenget beregnet ut fra SRTM1-data med jordkrumning og refraksjon, mot bakgrunnen av Himmelhvelvingen i en av de tre fargeskalaene, månebane, de viktigste hindringene med navn fra OpenStreetMap og tapte måneminutter; avkrysningsboks for å bruke terrenget som minste elevasjon i hele programmet; kart over lokal støy etter NJ9R, med ⚠ i timene da månen står i en støyende retning; ny fane Stasjoner å prøve (Planlegging), idé fra Matteo IW5DHN: de aktive stasjonene i N0UK-chatten ordnet etter en indeks fra 0 til 100; tallfelt med pilene ved siden av hverandre, pilleformede faner og tre nye fargeskjemaer fra IP-TRX-CTRL.",
             " dagene: {0}, Dgrd {1:F2} dB kl. {2} UTC (avstand {3:N0} km), {4:0.0} nyttige timer.   Beregnet for {5} på {6} MHz (klassisk Dgrd, som i EME-tabellene){7}. Oppdatert kl. {8} UTC.",
+            "KORRIGER",
+            "Korriger lokatoren i CALL3.TXT",
+            "Lokatoren du skrev er forskjellig fra den i CALL3.TXT: med ett klikk lagrer du den som korreksjon. YAEC tar vare på den i data\\call3_correzioni.txt, bruker den straks på CALL3.TXT og igjen ved hver oppdatering av filen, også i kopien for WSJT-X.",
+            "Endre lokatoren til {0} i CALL3.TXT fra {1} til {2}?",
+            "Korreksjonen gjelder også etter oppdateringer av CALL3.TXT.",
+            "Korreksjonen kunne ikke lagres.",
+            "FRA TABELLEN",
+            "Tidspunkt fra tabellen",
+            "Åpner tabellen i fanen Månens posisjon: velg en rad (også kommende dager) og trykk «↩ HINDRINGER» for å komme tilbake hit med det tidspunktet.",
+            "HINDRINGER",
+            "Tilbake til Horisont fra terrenget",
+            "Tar med tidspunktet for den valgte raden til hindringsvisningen i fanen Min horisont.",
+            "Tilbake til Stasjoner å prøve",
+            "Tar med dagen for den valgte raden til fanen Stasjoner å prøve.",
+            "Dag fra tabellen",
+            "Åpner tabellen i fanen Månens posisjon: velg en rad (også kommende dager) og trykk «↩ {0}» for å komme tilbake hit med den dagen.",
+            "Utelat stasjoner fra mitt land",
+            "filen cty.dat ble ikke funnet",
+            "kallesignalet ble ikke gjenkjent",
+            "Gjenkjenner landet fra kallesignalet med filen cty.dat fra AD1C (country-files.com): YAEC laster den ned til mappen data og oppdaterer den hver måned; hvis det ikke går, brukes den fra WSJT-X eller N1MM Logger+ hvis den finnes. Ditt land: {0}.",
+            "YAEC laster ned den nye pakken fra GitHub, kontrollerer fingeravtrykket, lukker seg og oppdaterer seg selv; dataene dine i mappen data blir liggende.",
+            "GitHub-siden med pakkene for den nye versjonen åpnes.",
+            "Ny versjon av YAEC",
+            "YAEC {0} er tilgjengelig på GitHub (du har {1}). Vil du oppdatere nå?",
+            "Vil du at YAEC slutter å varsle om versjon {0}?",
+            "Du blir likevel varslet om neste versjon.",
+            "Filen {0} mangler i versjon {1} på GitHub.",
+            "Fingeravtrykket til den nedlastede pakken stemmer ikke med det som er publisert på GitHub: oppdateringen er avbrutt.",
+            "Prøv igjen senere eller last ned pakken fra GitHub-siden.",
+            "YAEC {0} er lastet ned: programmet lukkes nå, oppdateres og åpnes igjen av seg selv.",
+            "Oppdateringen kunne ikke startes.",
+            "Oppdateringen kunne ikke lastes ned.",
+            "Manglende filer",
+            "{0} programfiler mangler: {1}",
+            "Vil du at YAEC laster dem ned fra GitHub nå (versjon {0})?",
+            "De manglende filene er lastet ned.",
+            "{0} filer kunne ikke lastes ned: {1}",
+            "Hvis programmappen er beskyttet, start YAEC som administrator eller installer det på nytt fra GitHub-siden.",
+            "YAEC er installert med en systempakke (.deb, .rpm, Arch, Slackware), som oppdateres med pakkebehandleren: GitHub-siden med den nye pakken åpnes.",
+            "YAEC laster ned den nye pakken fra GitHub, kontrollerer fingeravtrykket og erstatter sine egne filer; den nye versjonen starter neste gang programmet åpnes. Dataene dine blir der de er.",
+            "YAEC {0} er installert: den nye versjonen starter neste gang programmet åpnes.",
+            "Filene kunne ikke skrives til programmappen.",
+            "Avstander og forsterkning fra DL6WU-tabellen hos G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, første direktor 0,075 λ, deretter økende opp til 0,4 λ; forsterkning i dBd + 2,15. Tabellen starter ved 10 elementer: under det brukes formelen G = 7,773·log(L/λ) + 11,43 som tilskrives W8IO, og som det ikke er funnet kilde for (der begge gjelder, skiller de høyst 0,1 dB). Antenner som ikke er DL6WU kan avvike.",
+            "1.9.1 - Automatisk oppdatering fra GitHub med kontroll av SHA-256-fingeravtrykket i Windows, for de portable arkivene (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-appen (pakkene .deb, .rpm, Arch, Slackware oppdateres med pakkebehandleren), og varsel om manglende filer; nye pakker for Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knappen KORRIGER for å rette en stasjons lokator i CALL3.TXT; Avstand og Dgrd med klassisk Dgrd på 144 MHz, mens Dgrd per bånd blir i DGRD per frekvens; Min horisont med de fiolette rammene fra Himmelhvelvingen og tidspunktet fra planleggingstabellen; Stasjoner å prøve med tidspunktet fra tabellen, rullefelt og mulighet til å utelate stasjoner fra eget land (cty.dat); yagiforsterkning fra DL6WU-tabellen (G3SEK), formelen som tilskrives W8IO bare under 10 elementer; nedtrekkslister og tallfelt i YA-MS-stil; 144 MHz-transvertere i håndboken.",
         };
 
         public static readonly string[] IS = {
@@ -42458,6 +43470,50 @@ namespace LunaCalc
             "Grænt",
             "1.9 - Nýr flipi Sjóndeildarhringurinn minn (Í beinni): sjóndeildarhringur landslags reiknaður út frá SRTM1-gögnum með sveigju jarðar og ljósbroti, á bakgrunni Himinhvelfing í einum af þremur litakvörðum, braut tunglsins, helstu hindranir með nöfnum úr OpenStreetMap og töpuðum tunglmínútum; gátreitur til að nota landslagið sem lágmarkshæðarhorn í öllu forritinu; kort af staðbundnu suði samkvæmt NJ9R, með ⚠ á þeim klukkustundum þegar tunglið er í suðsamri átt; nýr flipi Stöðvar til að prófa (Áætlanagerð), hugmynd Matteo IW5DHN: virkar stöðvar í N0UK-spjallinu raðað eftir vísitölu frá 0 til 100; talnareitir með örvum hlið við hlið, pillulaga flipar og þrjú ný litaskemu úr IP-TRX-CTRL.",
             " daga: {0}, Dgrd {1:F2} dB kl. {2} UTC (fjarlægð {3:N0} km), {4:0.0} nothæfar klukkustundir.   Reiknað fyrir {5} á {6} MHz (hefðbundin Dgrd, eins og í EME-töflunum){7}. Uppfært kl. {8} UTC.",
+            "LEIÐRÉTTA",
+            "Leiðrétta staðsetningarkóða í CALL3.TXT",
+            "Kóðinn sem þú skrifaðir er annar en í CALL3.TXT: með einum smelli vistarðu hann sem leiðréttingu. YAEC geymir hana í data\\call3_correzioni.txt, beitir henni strax á CALL3.TXT og aftur við hverja uppfærslu skrárinnar, líka í afritinu fyrir WSJT-X.",
+            "Breyta kóða {0} í CALL3.TXT úr {1} í {2}?",
+            "Leiðréttingin gildir áfram eftir uppfærslur á CALL3.TXT.",
+            "Ekki tókst að vista leiðréttinguna.",
+            "ÚR TÖFLUNNI",
+            "Tímapunktur úr töflunni",
+            "Opnar töfluna í flipanum Staða tunglsins: veldu línu (líka komandi daga) og ýttu á «↩ HINDRANIR» til að koma hingað aftur með þann tímapunkt.",
+            "HINDRANIR",
+            "Aftur í Sjóndeildarhringur út frá landslagi",
+            "Flytur tímapunkt valinnar línu í hindranasýnina í flipanum Sjóndeildarhringurinn minn.",
+            "Aftur í Stöðvar til að prófa",
+            "Flytur dag valinnar línu í flipann Stöðvar til að prófa.",
+            "Dagur úr töflunni",
+            "Opnar töfluna í flipanum Staða tunglsins: veldu línu (líka komandi daga) og ýttu á «↩ {0}» til að koma hingað aftur með þann dag.",
+            "Útiloka stöðvar frá mínu landi",
+            "skráin cty.dat fannst ekki",
+            "kallmerki ekki þekkt",
+            "Þekkir landið af kallmerkinu með skránni cty.dat frá AD1C (country-files.com): YAEC sækir hana í möppuna data og uppfærir hana mánaðarlega; takist það ekki notar það skrá WSJT-X eða N1MM Logger+ ef hún finnst. Landið þitt: {0}.",
+            "YAEC sækir nýja pakkann af GitHub, kannar fingrafar hans, lokast og uppfærir sig sjálft; gögnin þín í möppunni data verða kyrr.",
+            "GitHub-síðan með pökkum nýju útgáfunnar opnast.",
+            "Ný útgáfa af YAEC",
+            "YAEC {0} er fáanlegt á GitHub (þú ert með {1}). Uppfæra núna?",
+            "Viltu að YAEC hætti að láta vita af útgáfu {0}?",
+            "Það lætur samt vita af næstu útgáfu.",
+            "Skrána {0} vantar í útgáfu {1} á GitHub.",
+            "Fingrafar sótta pakkans passar ekki við það sem birt er á GitHub: hætt við uppfærsluna.",
+            "Reyndu aftur síðar eða sæktu pakkann af GitHub-síðunni.",
+            "YAEC {0} hefur verið sótt: forritið lokast núna, uppfærist og opnast aftur sjálft.",
+            "Ekki tókst að hefja uppfærsluna.",
+            "Ekki tókst að sækja uppfærsluna.",
+            "Skrár sem vantar",
+            "Það vantar {0} skrár forritsins: {1}",
+            "Viltu að YAEC sæki þær núna af GitHub (útgáfa {0})?",
+            "Skrárnar sem vantaði hafa verið sóttar.",
+            "Ekki tókst að sækja {0} skrár: {1}",
+            "Ef forritamappan er varin skaltu keyra YAEC sem stjórnandi eða setja það upp aftur af GitHub-síðunni.",
+            "YAEC er sett upp með kerfispakka (.deb, .rpm, Arch, Slackware) sem er uppfærður með pakkastjóranum: GitHub-síðan með nýja pakkanum opnast.",
+            "YAEC sækir nýja pakkann frá GitHub, athugar fingrafar hans og skiptir út eigin skrám; nýja útgáfan ræsist næst þegar forritið er opnað. Gögnin þín verða áfram þar sem þau eru.",
+            "YAEC {0} er uppsett: nýja útgáfan ræsist næst þegar forritið er opnað.",
+            "Ekki tókst að skrifa skrárnar í möppu forritsins.",
+            "Bil og mögnun úr DL6WU-töflunni sem G3SEK birtir (The VHF/UHF DX Book, RSGB, 7. kafli): endurvarpi 0,2 λ, fyrsti stýrir 0,075 λ, síðan vaxandi upp í 0,4 λ; mögnun í dBd + 2,15. Taflan byrjar við 10 einingar: þar fyrir neðan er notuð formúlan G = 7,773·log(L/λ) + 11,43 sem eignuð er W8IO, en heimild hennar hefur ekki fundist (þar sem báðar gilda munar mest 0,1 dB). Önnur loftnet en DL6WU geta verið frábrugðin.",
+            "1.9.1 - Sjálfvirk uppfærsla frá GitHub með athugun á SHA-256-fingrafari í Windows, fyrir ferðasöfnin (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-forritið (pakkarnir .deb, .rpm, Arch, Slackware eru uppfærðir með pakkastjóranum), og viðvörun um skrár sem vantar; nýir pakkar fyrir Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; hnappurinn LEIÐRÉTTA til að leiðrétta staðsetningarkóða stöðvar í CALL3.TXT; Fjarlægð og Dgrd með hefðbundnu Dgrd á 144 MHz, en Dgrd eftir böndum er áfram í DGRD eftir tíðni; Sjóndeildarhringurinn minn með fjólubláum römmum úr Himinhvelfing og tímanum úr skipulagstöflunni; Stöðvar til að prófa með tímanum úr töflunni, skrunstiku og möguleika á að sleppa stöðvum eigin lands (cty.dat); Yagi-mögnun úr DL6WU-töflunni (G3SEK), formúlan sem eignuð er W8IO aðeins undir 10 einingum; fellilistar og talnareitir í YA-MS-stíl; 144 MHz-umbreytar í handbókinni.",
         };
 
         public static readonly string[] HE = {
@@ -44158,6 +45214,50 @@ namespace LunaCalc
             "ירוק",
             "1.9 - לשונית חדשה האופק שלי (חי): אופק מפני השטח המחושב מנתוני SRTM1 עם עקמומיות כדור הארץ ושבירה, על רקע כיפת השמיים באחד משלושת סולמות הצבע, מסלול הירח, המכשולים העיקריים עם שמות מ־OpenStreetMap ודקות הירח שאבדו; תיבת סימון לשימוש בפני השטח כגובה מינימלי בכל התוכנה; מפת רעש מקומי לפי NJ9R, עם ⚠ בשעות שבהן הירח בכיוון רועש; לשונית חדשה תחנות לנסות (תכנון), רעיון של Matteo IW5DHN: התחנות הפעילות בצ'אט N0UK ממוינות לפי מדד מ־0 עד 100; תיבות מספרים עם חצים זה לצד זה, לשוניות בצורת גלולה ושלוש ערכות צבעים חדשות מ־IP-TRX-CTRL.",
             " הימים הבאים: {0}, Dgrd {1:F2} dB בשעה {2} UTC (מרחק {3:N0} km), {4:0.0} שעות שימושיות.   חושב עבור {5} ב-{6} MHz (Dgrd קלאסית, כמו בטבלאות EME){7}. עודכן בשעה {8} UTC.",
+            "תיקון",
+            "תיקון הלוקטור ב־CALL3.TXT",
+            "הלוקטור שכתבת שונה מזה שב־CALL3.TXT: בלחיצה אחת שומרים אותו כתיקון. YAEC שומר אותו ב־data\\call3_correzioni.txt, מחיל אותו מיד על CALL3.TXT ושוב בכל עדכון של הקובץ, גם בעותק עבור WSJT-X.",
+            "לשנות את הלוקטור של {0} ב־CALL3.TXT מ־{1} ל־{2}?",
+            "התיקון נשאר בתוקף גם אחרי עדכוני CALL3.TXT.",
+            "לא ניתן היה לשמור את התיקון.",
+            "מהטבלה",
+            "רגע מהטבלה",
+            "פותח את הטבלה של הלשונית מיקום הירח: בחר שורה (גם בימים הבאים) ולחץ «↩ מכשולים» כדי לחזור לכאן עם אותו רגע.",
+            "מכשולים",
+            "חזרה אל אופק מפני השטח",
+            "מעביר את הרגע של השורה הנבחרת לתצוגת המכשולים של הלשונית האופק שלי.",
+            "חזרה אל תחנות לנסות",
+            "מעביר את היום של השורה הנבחרת ללשונית תחנות לנסות.",
+            "יום מהטבלה",
+            "פותח את הטבלה של הלשונית מיקום הירח: בחר שורה (גם בימים הבאים) ולחץ «↩ {0}» כדי לחזור לכאן עם אותו יום.",
+            "החרג תחנות מהמדינה שלי",
+            "קובץ cty.dat לא נמצא",
+            "אות הקריאה לא זוהה",
+            "מזהה את המדינה לפי אות הקריאה בעזרת הקובץ cty.dat של AD1C ‏(country-files.com): YAEC מוריד אותו לתיקייה data ומעדכן אותו כל חודש; אם אינו מצליח, משתמש בקובץ של WSJT-X או של N1MM Logger+ אם הוא מוצא אותו. המדינה שלך: {0}.",
+            "YAEC מוריד את החבילה החדשה מ־GitHub, בודק את טביעת האצבע שלה, נסגר ומתעדכן לבד; הנתונים שלך בתיקייה data נשארים במקומם.",
+            "נפתח דף GitHub עם החבילות של הגרסה החדשה.",
+            "גרסה חדשה של YAEC",
+            "YAEC {0} זמין ב־GitHub (אצלך {1}). לעדכן עכשיו?",
+            "להפסיק את ההודעות של YAEC על גרסה {0}?",
+            "על הגרסה הבאה תקבל הודעה בכל זאת.",
+            "הקובץ {0} חסר בגרסה {1} ב־GitHub.",
+            "טביעת האצבע של החבילה שהורדה אינה תואמת לזו שפורסמה ב־GitHub: העדכון בוטל.",
+            "נסה שוב מאוחר יותר או הורד את החבילה מדף GitHub.",
+            "YAEC {0} הורד: התוכנה תיסגר עכשיו, תתעדכן ותיפתח מחדש לבד.",
+            "לא ניתן היה להתחיל את העדכון.",
+            "לא ניתן היה להוריד את העדכון.",
+            "קבצים חסרים",
+            "חסרים {0} קבצים של התוכנה: {1}",
+            "להוריד אותם עכשיו מ־GitHub (גרסה {0})?",
+            "הקבצים החסרים הורדו.",
+            "לא ניתן היה להוריד {0} קבצים: {1}",
+            "אם תיקיית התוכנה מוגנת, הפעל את YAEC כמנהל או התקן אותו מחדש מדף GitHub.",
+            "YAEC הותקנה באמצעות חבילת מערכת (.deb, .rpm, Arch, Slackware), שמתעדכנת דרך מנהל החבילות: נפתח עמוד GitHub עם החבילה החדשה.",
+            "YAEC מוריד את החבילה החדשה מ־GitHub, בודק את טביעת האצבע שלה ומחליף את הקבצים שלו; הגרסה החדשה תופעל בהפעלה הבאה. הנתונים שלך נשארים במקומם.",
+            "YAEC {0} הותקן: הגרסה החדשה תופעל בהפעלה הבאה.",
+            "לא ניתן היה לכתוב את הקבצים לתיקיית התוכנה.",
+            "מרווחים והגבר מטבלת DL6WU שמביא G3SEK (The VHF/UHF DX Book, RSGB, פרק 7): מחזיר 0.2 λ, מכוון ראשון 0.075 λ, ואחר כך בהדרגה עד 0.4 λ; ההגבר ב־dBd + 2.15. הטבלה מתחילה מ־10 אלמנטים: מתחת לכך משמשת הנוסחה G = 7.773·log(L/λ) + 11.43 המיוחסת ל־W8IO, שמקורה לא נמצא (היכן ששתיהן חלות, ההפרש לכל היותר 0.1 dB). אנטנות שאינן DL6WU עשויות להיות שונות.",
+            "1.9.1 - עדכון אוטומטי מ־GitHub עם בדיקת טביעת SHA-256 ב־Windows, בארכיונים הניידים (Linux, FreeBSD, OpenBSD, Alpine), ב־AppImage ובאפליקציית macOS (חבילות .deb, .rpm, Arch, Slackware מתעדכנות דרך מנהל החבילות), והתרעה על קבצים חסרים; חבילות חדשות ל־Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; כפתור תיקון לתיקון הלוקייטור של תחנה ב־CALL3.TXT; מרחק ו-Dgrd עם Dgrd הקלאסי ב־144 MHz, וה־Dgrd לפי פס נשאר ב־DGRD לפי תדר; האופק שלי עם המסגרות הסגולות של כיפת השמיים והרגע שנלקח מטבלת התכנון; תחנות לנסות עם הרגע מהטבלה, פס גלילה והוצאת תחנות מהמדינה שלך (cty.dat); הגבר אנטנות יאגי מטבלת DL6WU ‏(G3SEK), והנוסחה המיוחסת ל־W8IO רק מתחת ל־10 אלמנטים; רשימות נפתחות ותיבות מספר בסגנון YA-MS; טרנסוורטרים ל־144 MHz במדריך.",
         };
 
         public static readonly string[] UR = {
@@ -45858,6 +46958,50 @@ namespace LunaCalc
             "سبز",
             "1.9 - نیا ٹیب میرا افق (براہِ راست): زمین کے خم اور انعطاف کے ساتھ SRTM1 ڈیٹا سے حساب کیا گیا زمین سے افق، تین رنگ پیمانوں میں سے ایک میں آسمانی گنبد کے پس منظر پر، چاند کا راستہ، OpenStreetMap کے ناموں کے ساتھ اہم رکاوٹیں اور ضائع ہونے والے چاند کے منٹ؛ پورے پروگرام میں زمین کو کم از کم بلندی کے طور پر استعمال کرنے کا خانہ؛ NJ9R کے مطابق مقامی شور کا نقشہ، ان گھنٹوں میں ⚠ کے ساتھ جب چاند شور والی سمت میں ہو؛ نیا ٹیب آزمانے کے لیے اسٹیشن (منصوبہ بندی)، خیال Matteo IW5DHN کا: N0UK چیٹ کے فعال اسٹیشن 0 سے 100 کے اشاریے سے ترتیب دیے گئے؛ ساتھ ساتھ تیروں والے عددی خانے، گولی نما ٹیب اور IP-TRX-CTRL سے لیے گئے تین نئے رنگ منصوبے۔",
             " دنوں میں بہترین دن: {0}، Dgrd {1:F2} dB، {2} UTC پر (فاصلہ {3:N0} km)، {4:0.0} قابلِ استعمال گھنٹے۔   {5} کے لیے {6} MHz پر حساب کیا گیا (روایتی Dgrd، EME جدولوں کی طرح){7}۔ {8} UTC پر اپ ڈیٹ کیا گیا۔",
+            "درست کریں",
+            "CALL3.TXT میں لوکیٹر درست کریں",
+            "آپ کا لکھا لوکیٹر CALL3.TXT والے سے مختلف ہے: ایک کلک سے اسے درستی کے طور پر محفوظ کریں۔ YAEC اسے data\\call3_correzioni.txt میں رکھتا ہے، فوراً CALL3.TXT پر لاگو کرتا ہے اور فائل کی ہر تازہ کاری پر دوبارہ، WSJT-X کی نقل میں بھی۔",
+            "CALL3.TXT میں {0} کا لوکیٹر {1} سے {2} کر دیں؟",
+            "CALL3.TXT کی تازہ کاری کے بعد بھی درستی برقرار رہتی ہے۔",
+            "درستی محفوظ نہیں ہو سکی۔",
+            "جدول سے",
+            "جدول سے لمحہ",
+            "چاند کا مقام ٹیب کا جدول کھولتا ہے: ایک قطار چنیں (آنے والے دنوں کی بھی) اور اسی لمحے کے ساتھ یہاں لوٹنے کے لیے «↩ رکاوٹیں» دبائیں۔",
+            "رکاوٹیں",
+            "زمین سے افق پر واپس",
+            "منتخب قطار کا لمحہ میرا افق ٹیب کے رکاوٹوں والے منظر میں لے جاتا ہے۔",
+            "آزمانے کے لیے اسٹیشن پر واپس",
+            "منتخب قطار کا دن آزمانے کے لیے اسٹیشن ٹیب میں لے جاتا ہے۔",
+            "جدول سے دن",
+            "چاند کا مقام ٹیب کا جدول کھولتا ہے: ایک قطار چنیں (آنے والے دنوں کی بھی) اور اسی دن کے ساتھ یہاں لوٹنے کے لیے «↩ {0}» دبائیں۔",
+            "میرے ملک کے اسٹیشن خارج کریں",
+            "cty.dat فائل نہیں ملی",
+            "کال سائن پہچانا نہیں گیا",
+            "AD1C کی cty.dat فائل (country-files.com) سے کال سائن کے ذریعے ملک پہچانتا ہے: YAEC اسے data فولڈر میں ڈاؤن لوڈ کرتا ہے اور ہر ماہ تازہ کرتا ہے؛ نہ ہو سکے تو ملنے پر WSJT-X یا N1MM Logger+ والی استعمال کرتا ہے۔ آپ کا ملک: {0}۔",
+            "YAEC گِٹ ہب سے نیا پیکج ڈاؤن لوڈ کرتا ہے، اس کا فنگر پرنٹ جانچتا ہے، بند ہو کر خود اپ ڈیٹ ہوتا ہے؛ data فولڈر میں آپ کا ڈیٹا اپنی جگہ رہتا ہے۔",
+            "نئے ورژن کے پیکجوں والا GitHub صفحہ کھلتا ہے۔",
+            "YAEC کا نیا ورژن",
+            "GitHub پر YAEC {0} دستیاب ہے (آپ کے پاس {1} ہے)۔ کیا ابھی اپ ڈیٹ کریں؟",
+            "کیا YAEC ورژن {0} کے بارے میں مزید اطلاع نہ دے؟",
+            "اگلے ورژن کی اطلاع پھر بھی دے گا۔",
+            "GitHub پر ورژن {1} میں فائل {0} موجود نہیں۔",
+            "ڈاؤن لوڈ کیے گئے پیکج کا فنگر پرنٹ GitHub پر شائع شدہ سے نہیں ملتا: اپ ڈیٹ منسوخ۔",
+            "بعد میں دوبارہ کوشش کریں یا GitHub صفحے سے پیکج ڈاؤن لوڈ کریں۔",
+            "YAEC {0} ڈاؤن لوڈ ہو گیا: اب پروگرام بند ہو گا، اپ ڈیٹ ہو گا اور خود دوبارہ کھلے گا۔",
+            "اپ ڈیٹ شروع نہیں ہو سکا۔",
+            "اپ ڈیٹ ڈاؤن لوڈ نہیں ہو سکا۔",
+            "گمشدہ فائلیں",
+            "پروگرام کی {0} فائلیں موجود نہیں: {1}",
+            "کیا YAEC انہیں ابھی GitHub سے ڈاؤن لوڈ کرے (ورژن {0})؟",
+            "گمشدہ فائلیں ڈاؤن لوڈ ہو گئیں۔",
+            "{0} فائلیں ڈاؤن لوڈ نہیں ہو سکیں: {1}",
+            "اگر پروگرام کا فولڈر محفوظ ہے تو YAEC کو بطور منتظم چلائیں یا GitHub صفحے سے دوبارہ انسٹال کریں۔",
+            "YAEC ایک سسٹم پیکج (.deb, .rpm, Arch, Slackware) سے انسٹال ہے، جو پیکج مینیجر سے اپ ڈیٹ ہوتا ہے: نئے پیکج والا GitHub صفحہ کھل رہا ہے۔",
+            "YAEC نیا پیکج GitHub سے ڈاؤن لوڈ کرتا ہے، اس کا فنگر پرنٹ جانچتا ہے اور اپنی فائلیں بدل دیتا ہے؛ نیا ورژن اگلی بار کھولنے پر چلے گا۔ آپ کا ڈیٹا اپنی جگہ رہتا ہے۔",
+            "YAEC {0} انسٹال ہو گیا ہے: نیا ورژن اگلی بار کھولنے پر چلے گا۔",
+            "فائلیں پروگرام کے فولڈر میں نہیں لکھی جا سکیں۔",
+            "فاصلے اور گین G3SEK کی دی گئی DL6WU جدول سے (The VHF/UHF DX Book, RSGB، باب 7): ریفلیکٹر 0.2 λ، پہلا ڈائریکٹر 0.075 λ، پھر بڑھتے ہوئے 0.4 λ تک؛ گین dBd + 2.15۔ جدول 10 عناصر سے شروع ہوتی ہے: اس سے کم پر W8IO سے منسوب فارمولا G = 7.773·log(L/λ) + 11.43 استعمال ہوتا ہے، جس کا ماخذ نہیں ملا (جہاں دونوں لاگو ہوں، فرق زیادہ سے زیادہ 0.1 dB)۔ DL6WU کے علاوہ اینٹینا مختلف ہو سکتے ہیں۔",
+            "1.9.1 - GitHub سے خودکار اپ ڈیٹ، SHA-256 فنگر پرنٹ کی جانچ کے ساتھ: Windows، پورٹیبل آرکائیو (Linux، FreeBSD، OpenBSD، Alpine)، AppImage اور macOS ایپ میں (.deb, .rpm, Arch, Slackware پیکج پیکج مینیجر سے اپ ڈیٹ ہوتے ہیں)، اور غائب فائلوں کی تنبیہ؛ نئے پیکج: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage؛ CALL3.TXT میں کسی اسٹیشن کا لوکیٹر درست کرنے کے لیے درست کریں بٹن؛ فاصلہ اور Dgrd میں 144 MHz پر روایتی Dgrd، جبکہ بینڈ کے حساب سے Dgrd فریکوئنسی کے لحاظ سے DGRD میں رہتا ہے؛ میرا افق میں آسمانی گنبد کے بنفشی خانے اور منصوبہ بندی جدول سے لیا گیا وقت؛ آزمانے کے لیے اسٹیشن میں جدول کا وقت، اسکرول بار اور اپنے ملک کے اسٹیشن نکالنے کا اختیار (cty.dat)؛ یاگی گین DL6WU جدول (G3SEK) سے، W8IO سے منسوب فارمولا صرف 10 عناصر سے کم پر؛ YA-MS طرز کی ڈراپ ڈاؤن فہرستیں اور عددی خانے؛ دستی میں 144 MHz ٹرانسورٹر۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -47557,6 +48701,50 @@ namespace LunaCalc
             "Grøn",
             "1.9 - Ny fane Min horisont (Live): horisont fra terrænet beregnet ud fra SRTM1-data med jordens krumning og refraktion, på baggrund af Himmelhvælving i en af de tre farveskalaer, Månens bane, de vigtigste forhindringer med navne fra OpenStreetMap og tabte måneminutter; afkrydsningsfelt til at bruge terrænet som mindste elevation i hele programmet; kort over lokal støj efter NJ9R, med ⚠ i de timer hvor Månen står i en støjende retning; ny fane Stationer at prøve (Planlægning), idé fra Matteo IW5DHN: de aktive stationer i N0UK-chatten ordnet efter et indeks fra 0 til 100; talfelter med pilene side om side, pilleformede faner og tre nye farveskemaer fra IP-TRX-CTRL.",
             " dage: {0}, Dgrd {1:F2} dB kl. {2} UTC (afstand {3:N0} km), {4:0.0} brugbare timer.   Beregnet for {5} ved {6} MHz (klassisk Dgrd, som i EME-tabellerne){7}. Opdateret kl. {8} UTC.",
+            "RET",
+            "Ret lokatoren i CALL3.TXT",
+            "Lokatoren du skrev er forskellig fra den i CALL3.TXT: med et klik gemmer du den som rettelse. YAEC gemmer den i data\\call3_correzioni.txt, anvender den straks på CALL3.TXT og igen ved hver opdatering af filen, også i kopien til WSJT-X.",
+            "Ændre lokatoren for {0} i CALL3.TXT fra {1} til {2}?",
+            "Rettelsen gælder også efter opdateringer af CALL3.TXT.",
+            "Rettelsen kunne ikke gemmes.",
+            "FRA TABELLEN",
+            "Tidspunkt fra tabellen",
+            "Åbner tabellen i fanen Månens position: vælg en række (også kommende dage) og tryk på «↩ FORHINDRINGER» for at komme tilbage hertil med det tidspunkt.",
+            "FORHINDRINGER",
+            "Tilbage til Horisont fra terrænet",
+            "Overfører tidspunktet for den valgte række til forhindringsvisningen i fanen Min horisont.",
+            "Tilbage til Stationer at prøve",
+            "Overfører dagen for den valgte række til fanen Stationer at prøve.",
+            "Dag fra tabellen",
+            "Åbner tabellen i fanen Månens position: vælg en række (også kommende dage) og tryk på «↩ {0}» for at komme tilbage hertil med den dag.",
+            "Udelad stationer fra mit land",
+            "filen cty.dat blev ikke fundet",
+            "kaldesignalet blev ikke genkendt",
+            "Genkender landet ud fra kaldesignalet med filen cty.dat fra AD1C (country-files.com): YAEC henter den til mappen data og opdaterer den hver måned; hvis det ikke lykkes, bruges den fra WSJT-X eller N1MM Logger+, hvis den findes. Dit land: {0}.",
+            "YAEC henter den nye pakke fra GitHub, kontrollerer dens fingeraftryk, lukker og opdaterer sig selv; dine data i mappen data bliver, hvor de er.",
+            "GitHub-siden med pakkerne til den nye version åbnes.",
+            "Ny version af YAEC",
+            "YAEC {0} findes på GitHub (du har {1}). Vil du opdatere nu?",
+            "Skal YAEC holde op med at minde dig om version {0}?",
+            "Du får stadig besked om næste version.",
+            "Filen {0} mangler i version {1} på GitHub.",
+            "Fingeraftrykket på den hentede pakke passer ikke med det, der er offentliggjort på GitHub: opdateringen er annulleret.",
+            "Prøv igen senere, eller hent pakken fra GitHub-siden.",
+            "YAEC {0} er hentet: programmet lukker nu, opdaterer sig og åbner igen af sig selv.",
+            "Opdateringen kunne ikke startes.",
+            "Opdateringen kunne ikke hentes.",
+            "Manglende filer",
+            "Der mangler {0} programfiler: {1}",
+            "Skal YAEC hente dem fra GitHub nu (version {0})?",
+            "De manglende filer er hentet.",
+            "{0} filer kunne ikke hentes: {1}",
+            "Hvis programmappen er beskyttet, så start YAEC som administrator, eller geninstallér det fra GitHub-siden.",
+            "YAEC er installeret med en systempakke (.deb, .rpm, Arch, Slackware), som opdateres med pakkehåndteringen: GitHub-siden med den nye pakke åbnes.",
+            "YAEC henter den nye pakke fra GitHub, kontrollerer dens fingeraftryk og erstatter sine egne filer; den nye version starter, næste gang programmet åbnes. Dine data bliver, hvor de er.",
+            "YAEC {0} er installeret: den nye version starter, næste gang programmet åbnes.",
+            "Filerne kunne ikke skrives til programmappen.",
+            "Afstande og forstærkning fra DL6WU-tabellen hos G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, første direktor 0,075 λ, derefter stigende op til 0,4 λ; forstærkning i dBd + 2,15. Tabellen starter ved 10 elementer: herunder bruges formlen G = 7,773·log(L/λ) + 11,43, der tilskrives W8IO, og som der ikke er fundet kilde til (hvor begge gælder, afviger de højst 0,1 dB). Antenner, der ikke er DL6WU, kan afvige.",
+            "1.9.1 - Automatisk opdatering fra GitHub med kontrol af SHA-256-fingeraftrykket i Windows, for de bærbare arkiver (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-appen (pakkerne .deb, .rpm, Arch, Slackware opdateres med pakkehåndteringen), og advarsel om manglende filer; nye pakker til Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knappen RET til at rette en stations locator i CALL3.TXT; Afstand og Dgrd med klassisk Dgrd ved 144 MHz, mens Dgrd pr. bånd bliver i DGRD pr. frekvens; Min horisont med de violette rammer fra Himmelhvælving og tidspunktet fra planlægningstabellen; Stationer at prøve med tidspunktet fra tabellen, rullepanel og mulighed for at udelade stationer fra eget land (cty.dat); yagiforstærkning fra DL6WU-tabellen (G3SEK), formlen der tilskrives W8IO kun under 10 elementer; rullelister og talfelter i YA-MS-stil; 144 MHz-transvertere i manualen.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -49256,6 +50444,50 @@ namespace LunaCalc
             "Berde",
             "1.9 - Bagong tab na Aking horizon (Live): abot-tanaw mula sa lupain na kinalkula mula sa datos ng SRTM1 kasama ang kurbada ng Daigdig at repraksyon, sa ibabaw ng background ng Tanaw ng langit sa isa sa tatlong eskala ng kulay, landas ng Buwan, pangunahing mga hadlang na may pangalan mula sa OpenStreetMap at mga minuto ng Buwan na nawala; kahon para gamitin ang lupain bilang pinakamababang elebasyon sa buong programa; mapa ng lokal na ingay ayon kay NJ9R, may ⚠ sa mga oras na nasa maingay na direksyon ang Buwan; bagong tab na Mga istasyong susubukan (Pagpaplano), ideya ni Matteo IW5DHN: ang mga aktibong istasyon ng chat ng N0UK na nakaayos ayon sa indeks mula 0 hanggang 100; mga numerong kahon na may magkatabing palaso, mga tab na hugis-tableta at tatlong bagong scheme ng kulay mula sa IP-TRX-CTRL.",
             " araw: {0}, Dgrd {1:F2} dB sa {2} UTC (layo {3:N0} km), {4:0.0} magagamit na oras.   Kinuwenta para sa {5} sa {6} MHz (klasikong Dgrd, gaya ng sa mga talaan ng EME){7}. Na-update noong {8} UTC.",
+            "ITAMA",
+            "Itama ang locator sa CALL3.TXT",
+            "Iba ang locator na isinulat mo sa nasa CALL3.TXT: sa isang click ay nase-save ito bilang pagtatama. Itinatago ito ng YAEC sa data\\call3_correzioni.txt, inilalapat agad sa CALL3.TXT at muli sa bawat update ng file, pati sa kopya para sa WSJT-X.",
+            "Palitan ang locator ng {0} sa CALL3.TXT mula {1} patungong {2}?",
+            "Mananatiling valid ang pagtatama kahit pagkatapos ng mga update ng CALL3.TXT.",
+            "Hindi ma-save ang pagtatama.",
+            "MULA SA TALAAN",
+            "Oras mula sa talaan",
+            "Binubuksan ang talaan ng tab na Posisyon ng Buwan: pumili ng isang hilera (pati sa mga darating na araw) at pindutin ang «↩ MGA HADLANG» para bumalik dito dala ang oras na iyon.",
+            "MGA HADLANG",
+            "Bumalik sa Horizon mula sa lupain",
+            "Dinadala ang oras ng napiling hilera sa view ng mga hadlang ng tab na Aking horizon.",
+            "Bumalik sa Mga istasyong susubukan",
+            "Dinadala ang araw ng napiling hilera sa tab na Mga istasyong susubukan.",
+            "Araw mula sa talaan",
+            "Binubuksan ang talaan ng tab na Posisyon ng Buwan: pumili ng isang hilera (pati sa mga darating na araw) at pindutin ang «↩ {0}» para bumalik dito dala ang araw na iyon.",
+            "Huwag isama ang mga istasyon ng aking bansa",
+            "hindi makita ang file na cty.dat",
+            "hindi makilala ang callsign",
+            "Kinikilala ang bansa mula sa callsign gamit ang file na cty.dat ni AD1C (country-files.com): dina-download ito ng YAEC sa folder na data at ina-update bawat buwan; kung hindi magawa, ginagamit ang sa WSJT-X o N1MM Logger+ kung makita. Ang iyong bansa: {0}.",
+            "Dina-download ng YAEC ang bagong package mula sa GitHub, sinusuri ang fingerprint nito, nagsasara at kusang nag-a-update; nananatili sa kinalalagyan ang iyong data sa folder na data.",
+            "Bubuksan ang pahina ng GitHub na may mga package ng bagong bersyon.",
+            "Bagong bersyon ng YAEC",
+            "Available sa GitHub ang YAEC {0} (ang sa iyo ay {1}). Mag-update na ngayon?",
+            "Ayaw mo na bang abisuhan ka ng YAEC tungkol sa bersyon {0}?",
+            "Aabisuhan ka pa rin sa susunod na bersyon.",
+            "Wala ang file na {0} sa bersyon {1} sa GitHub.",
+            "Hindi tugma ang fingerprint ng na-download na package sa nakalathala sa GitHub: kinansela ang update.",
+            "Subukan muli mamaya o i-download ang package mula sa pahina ng GitHub.",
+            "Na-download na ang YAEC {0}: magsasara ngayon ang programa, mag-a-update at kusang magbubukas muli.",
+            "Hindi masimulan ang update.",
+            "Hindi ma-download ang update.",
+            "Mga nawawalang file",
+            "Nawawala ang {0} file ng programa: {1}",
+            "I-download na ba ng YAEC ang mga ito mula sa GitHub (bersyon {0})?",
+            "Na-download na ang mga nawawalang file.",
+            "Hindi ma-download ang {0} file: {1}",
+            "Kung protektado ang folder ng programa, patakbuhin ang YAEC bilang administrator o i-install muli mula sa pahina ng GitHub.",
+            "Naka-install ang YAEC gamit ang isang system package (.deb, .rpm, Arch, Slackware), na ina-update gamit ang package manager: bubuksan ang pahina ng GitHub na may bagong package.",
+            "Dina-download ng YAEC ang bagong package mula sa GitHub, sinusuri ang fingerprint nito at pinapalitan ang sarili nitong mga file; magsisimula ang bagong bersyon sa susunod na pagbukas. Mananatili ang iyong data kung nasaan ito.",
+            "Naka-install na ang YAEC {0}: magsisimula ang bagong bersyon sa susunod na pagbukas.",
+            "Hindi maisulat ang mga file sa folder ng programa.",
+            "Ang mga pagitan at gain ay mula sa talaan ng DL6WU na inilathala ni G3SEK (The VHF/UHF DX Book, RSGB, kab. 7): reflector 0.2 λ, unang director 0.075 λ, saka lumalaki hanggang 0.4 λ; gain sa dBd + 2.15. Nagsisimula ang talaan sa 10 element: sa ibaba nito ginagamit ang pormulang G = 7.773·log(L/λ) + 11.43 na iniuugnay kay W8IO, na hindi natagpuan ang pinagmulan (kung saan pareho silang gamit, 0.1 dB lang ang pinakamalaking pagkakaiba). Maaaring iba ang mga antenang hindi DL6WU.",
+            "1.9.1 - Awtomatikong pag-update mula sa GitHub na may pagsusuri ng SHA-256 fingerprint sa Windows, sa mga portable na archive (Linux, FreeBSD, OpenBSD, Alpine), sa AppImage at sa macOS app (ang mga package na .deb, .rpm, Arch, Slackware ay ina-update gamit ang package manager), at babala sa mga nawawalang file; mga bagong package para sa Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; button na ITAMA para itama ang locator ng isang istasyon sa CALL3.TXT; Layo at Dgrd na may klasikong Dgrd sa 144 MHz, habang ang Dgrd ayon sa banda ay nananatili sa DGRD ayon sa frequency; Aking horizon na may mga lilang kahon mula sa Tanaw ng langit at oras na kinuha sa talahanayan ng pagpaplano; Mga istasyong susubukan na may oras mula sa talahanayan, scroll bar at opsiyong alisin ang mga istasyon ng sariling bansa (cty.dat); gain ng yagi mula sa talaan ng DL6WU (G3SEK), ang pormulang iniuugnay kay W8IO ay sa ilalim lang ng 10 element; mga drop-down list at numeric box sa istilo ng YA-MS; mga transverter sa 144 MHz sa manwal.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -50955,6 +52187,50 @@ namespace LunaCalc
             "Verde",
             "1.9 - Nova aba Meu horizonte (Ao vivo): horizonte do terreno calculado a partir dos dados SRTM1 com curvatura da Terra e refração, sobre o fundo da Abóbada celeste em uma das três escalas de cores, trajetória da Lua, obstáculos principais com os nomes do OpenStreetMap e minutos de Lua perdidos; caixa para usar o terreno como elevação mínima em todo o programa; mapa do ruído local segundo NJ9R, com ⚠ nas horas em que a Lua está em uma direção ruidosa; nova aba Estações para testar (Planejamento), ideia de Matteo IW5DHN: as estações ativas do chat N0UK ordenadas por um índice de 0 a 100; caixas numéricas com setas lado a lado, abas em formato de pílula e três novos esquemas de cores tirados do IP-TRX-CTRL.",
             " dias: {0}, Dgrd {1:F2} dB às {2} UTC (distância {3:N0} km), {4:0.0} horas úteis.   Calculado para {5} a {6} MHz (Dgrd clássica, como nas tabelas de EME){7}. Atualizado às {8} UTC.",
+            "CORRIGIR",
+            "Corrigir o locator no CALL3.TXT",
+            "O locator que você digitou é diferente do que está no CALL3.TXT: com um clique você o salva como correção. O YAEC a guarda em data\\call3_correzioni.txt, aplica-a na hora ao CALL3.TXT e de novo a cada atualização do arquivo, inclusive na cópia para o WSJT-X.",
+            "Mudar o locator de {0} no CALL3.TXT de {1} para {2}?",
+            "A correção continua valendo depois das atualizações do CALL3.TXT.",
+            "Não foi possível salvar a correção.",
+            "DA TABELA",
+            "Momento da tabela",
+            "Abre a tabela da aba Posição da Lua: escolha uma linha (inclusive de dias futuros) e clique em «↩ OBSTÁCULOS» para voltar aqui com esse momento.",
+            "OBSTÁCULOS",
+            "Voltar para Horizonte do relevo",
+            "Leva o momento da linha selecionada para a visão dos obstáculos da aba Meu horizonte.",
+            "Voltar para Estações para testar",
+            "Leva o dia da linha selecionada para a aba Estações para testar.",
+            "Dia da tabela",
+            "Abre a tabela da aba Posição da Lua: escolha uma linha (inclusive de dias futuros) e clique em «↩ {0}» para voltar aqui com esse dia.",
+            "Excluir as estações do meu país",
+            "arquivo cty.dat não encontrado",
+            "indicativo não reconhecido",
+            "Reconhece o país pelo indicativo com o arquivo cty.dat de AD1C (country-files.com): o YAEC o baixa na pasta data e o atualiza todo mês; se não conseguir, usa o do WSJT-X ou do N1MM Logger+, se o encontrar. Seu país: {0}.",
+            "O YAEC baixa o novo pacote do GitHub, verifica a impressão digital, fecha e se atualiza sozinho; seus dados na pasta data ficam onde estão.",
+            "Abre-se a página do GitHub com os pacotes da nova versão.",
+            "Nova versão do YAEC",
+            "O YAEC {0} está disponível no GitHub (você tem a {1}). Quer atualizar agora?",
+            "Quer que o YAEC pare de avisar sobre a versão {0}?",
+            "Ele avisará mesmo assim na próxima versão.",
+            "O arquivo {0} está faltando na versão {1} no GitHub.",
+            "A impressão digital do pacote baixado não confere com a publicada no GitHub: a atualização foi cancelada.",
+            "Tente mais tarde ou baixe o pacote na página do GitHub.",
+            "O YAEC {0} foi baixado: o programa vai fechar, se atualizar e abrir de novo sozinho.",
+            "Não foi possível iniciar a atualização.",
+            "Não foi possível baixar a atualização.",
+            "Arquivos faltando",
+            "Faltam {0} arquivos do programa: {1}",
+            "Quer que o YAEC os baixe agora do GitHub (versão {0})?",
+            "Os arquivos que faltavam foram baixados.",
+            "Não foi possível baixar {0} arquivos: {1}",
+            "Se a pasta do programa estiver protegida, execute o YAEC como administrador ou reinstale-o pela página do GitHub.",
+            "O YAEC foi instalado com um pacote do sistema (.deb, .rpm, Arch, Slackware), que é atualizado pelo gerenciador de pacotes: a página do GitHub com o pacote novo será aberta.",
+            "O YAEC baixa o novo pacote do GitHub, verifica a impressão digital dele e substitui os próprios arquivos; a nova versão começa na próxima vez que for aberto. Seus dados ficam onde estão.",
+            "O YAEC {0} está instalado: a nova versão começa na próxima vez que for aberto.",
+            "Não foi possível gravar os arquivos na pasta do programa.",
+            "Espaçamentos e ganhos da tabela de DL6WU publicada por G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): refletor 0,2 λ, primeiro diretor 0,075 λ, depois aumentando até 0,4 λ; ganho em dBd + 2,15. A tabela começa em 10 elementos: abaixo disso é usada a fórmula G = 7,773·log(L/λ) + 11,43 atribuída a W8IO, cuja fonte não foi encontrada (onde as duas valem, diferem no máximo 0,1 dB). Antenas que não são DL6WU podem diferir.",
+            "1.9.1 - Atualização automática pelo GitHub, com conferência da impressão SHA-256, no Windows, com os arquivos portáteis (Linux, FreeBSD, OpenBSD, Alpine), com a AppImage e com o aplicativo para macOS (os pacotes .deb, .rpm, Arch, Slackware são atualizados pelo gerenciador de pacotes), e aviso de arquivos faltando; novos pacotes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botão CORRIGIR para corrigir o locator de uma estação no CALL3.TXT; Distância e Dgrd com a Dgrd clássica em 144 MHz, enquanto a Dgrd por banda fica em DGRD por frequência; Meu horizonte com os retângulos violeta de Abóbada celeste e o momento tirado da tabela de planejamento; Estações para testar com o momento da tabela, barra de rolagem e exclusão das estações do próprio país (cty.dat); ganho das yagis pela tabela de DL6WU (G3SEK), com a fórmula atribuída a W8IO só abaixo de 10 elementos; listas suspensas e caixas numéricas no estilo do YA-MS; transverters de 144 MHz no manual.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -52654,6 +53930,50 @@ namespace LunaCalc
             "เขียว",
             "1.9 - แท็บใหม่ ขอบฟ้าของฉัน (สด): ขอบฟ้าจากภูมิประเทศคำนวณจากข้อมูล SRTM1 พร้อมความโค้งของโลกและการหักเห บนพื้นหลัง ทรงกลมฟ้า ในหนึ่งในสามสเกลสี เส้นทางดวงจันทร์ สิ่งกีดขวางหลักพร้อมชื่อจาก OpenStreetMap และนาทีของดวงจันทร์ที่เสียไป; ช่องเลือกเพื่อใช้ภูมิประเทศเป็นมุมเงยต่ำสุดทั้งโปรแกรม; แผนที่สัญญาณรบกวนท้องถิ่นตาม NJ9R พร้อม ⚠ ในชั่วโมงที่ดวงจันทร์อยู่ในทิศที่มีสัญญาณรบกวน; แท็บใหม่ สถานีที่ควรลอง (การวางแผน) แนวคิดจาก Matteo IW5DHN: สถานีที่ใช้งานในแชท N0UK เรียงตามดัชนี 0 ถึง 100; ช่องตัวเลขที่มีลูกศรวางเคียงกัน แท็บรูปเม็ดยา และชุดสีใหม่สามชุดจาก IP-TRX-CTRL",
             " วันข้างหน้า: {0}, Dgrd {1:F2} dB เวลา {2} UTC (ระยะทาง {3:N0} km), ชั่วโมงที่ใช้ได้ {4:0.0} ชั่วโมง   คำนวณสำหรับ {5} ที่ {6} MHz (Dgrd แบบดั้งเดิม เหมือนในตาราง EME){7} อัปเดตเวลา {8} UTC",
+            "แก้ไข",
+            "แก้ไขโลเคเตอร์ใน CALL3.TXT",
+            "โลเคเตอร์ที่คุณพิมพ์ต่างจากใน CALL3.TXT: คลิกครั้งเดียวเพื่อบันทึกเป็นการแก้ไข YAEC เก็บไว้ใน data\\call3_correzioni.txt ใช้กับ CALL3.TXT ทันที และใช้อีกครั้งทุกครั้งที่ปรับปรุงไฟล์ รวมถึงสำเนาสำหรับ WSJT-X",
+            "เปลี่ยนโลเคเตอร์ของ {0} ใน CALL3.TXT จาก {1} เป็น {2} หรือไม่?",
+            "การแก้ไขยังคงใช้ได้หลังการปรับปรุง CALL3.TXT",
+            "ไม่สามารถบันทึกการแก้ไขได้",
+            "จากตาราง",
+            "เวลาจากตาราง",
+            "เปิดตารางของแท็บ ตำแหน่งดวงจันทร์: เลือกแถว (รวมถึงวันข้างหน้า) แล้วกด «↩ สิ่งกีดขวาง» เพื่อกลับมาที่นี่พร้อมเวลานั้น",
+            "สิ่งกีดขวาง",
+            "กลับไปที่ ขอบฟ้าจากภูมิประเทศ",
+            "นำเวลาของแถวที่เลือกไปยังมุมมองสิ่งกีดขวางของแท็บ ขอบฟ้าของฉัน",
+            "กลับไปที่ สถานีที่ควรลอง",
+            "นำวันของแถวที่เลือกไปยังแท็บ สถานีที่ควรลอง",
+            "วันจากตาราง",
+            "เปิดตารางของแท็บ ตำแหน่งดวงจันทร์: เลือกแถว (รวมถึงวันข้างหน้า) แล้วกด «↩ {0}» เพื่อกลับมาที่นี่พร้อมวันนั้น",
+            "ไม่รวมสถานีในประเทศของฉัน",
+            "ไม่พบไฟล์ cty.dat",
+            "ไม่รู้จักสัญญาณเรียกขาน",
+            "ระบุประเทศจากสัญญาณเรียกขานด้วยไฟล์ cty.dat ของ AD1C (country-files.com): YAEC ดาวน์โหลดไว้ในโฟลเดอร์ data และปรับปรุงทุกเดือน หากทำไม่ได้จะใช้ไฟล์ของ WSJT-X หรือ N1MM Logger+ ถ้าพบ ประเทศของคุณ: {0}",
+            "YAEC ดาวน์โหลดแพ็กเกจใหม่จาก GitHub ตรวจสอบลายนิ้วมือ แล้วปิดตัวและอัปเดตเอง ข้อมูลของคุณในโฟลเดอร์ data ยังอยู่ที่เดิม",
+            "จะเปิดหน้า GitHub ที่มีแพ็กเกจของเวอร์ชันใหม่",
+            "YAEC เวอร์ชันใหม่",
+            "มี YAEC {0} บน GitHub (ของคุณคือ {1}) ต้องการอัปเดตตอนนี้หรือไม่?",
+            "ไม่ต้องแจ้งเตือนเรื่องเวอร์ชัน {0} อีกหรือไม่?",
+            "จะยังแจ้งเตือนเมื่อมีเวอร์ชันถัดไป",
+            "ไม่มีไฟล์ {0} ในเวอร์ชัน {1} บน GitHub",
+            "ลายนิ้วมือของแพ็กเกจที่ดาวน์โหลดไม่ตรงกับที่เผยแพร่บน GitHub: ยกเลิกการอัปเดต",
+            "ลองใหม่ภายหลังหรือดาวน์โหลดแพ็กเกจจากหน้า GitHub",
+            "ดาวน์โหลด YAEC {0} แล้ว: โปรแกรมจะปิด อัปเดต และเปิดใหม่เอง",
+            "ไม่สามารถเริ่มการอัปเดตได้",
+            "ไม่สามารถดาวน์โหลดการอัปเดตได้",
+            "ไฟล์ที่ขาดหายไป",
+            "ไฟล์ของโปรแกรมขาดหายไป {0} ไฟล์: {1}",
+            "ให้ YAEC ดาวน์โหลดจาก GitHub ตอนนี้หรือไม่ (เวอร์ชัน {0})?",
+            "ดาวน์โหลดไฟล์ที่ขาดหายไปแล้ว",
+            "ไม่สามารถดาวน์โหลดได้ {0} ไฟล์: {1}",
+            "หากโฟลเดอร์ของโปรแกรมถูกป้องกัน ให้เรียกใช้ YAEC ในฐานะผู้ดูแลระบบ หรือติดตั้งใหม่จากหน้า GitHub",
+            "YAEC ติดตั้งด้วยแพ็กเกจของระบบ (.deb, .rpm, Arch, Slackware) ซึ่งอัปเดตด้วยตัวจัดการแพ็กเกจ: กำลังเปิดหน้า GitHub ที่มีแพ็กเกจใหม่",
+            "YAEC ดาวน์โหลดแพ็กเกจใหม่จาก GitHub ตรวจสอบลายนิ้วมือของแพ็กเกจ และแทนที่ไฟล์ของตัวเอง เวอร์ชันใหม่จะเริ่มทำงานในการเปิดครั้งถัดไป ข้อมูลของคุณยังอยู่ที่เดิม",
+            "ติดตั้ง YAEC {0} แล้ว: เวอร์ชันใหม่จะเริ่มทำงานในการเปิดครั้งถัดไป",
+            "ไม่สามารถเขียนไฟล์ลงในโฟลเดอร์ของโปรแกรมได้",
+            "ระยะห่างและอัตราขยายจากตาราง DL6WU ที่ G3SEK นำเสนอ (The VHF/UHF DX Book, RSGB, บทที่ 7): ตัวสะท้อน 0.2 λ ไดเรกเตอร์ตัวแรก 0.075 λ แล้วเพิ่มขึ้นจนถึง 0.4 λ อัตราขยายเป็น dBd + 2.15 ตารางเริ่มที่ 10 อิลิเมนต์ ต่ำกว่านั้นใช้สูตร G = 7.773·log(L/λ) + 11.43 ที่อ้างว่าเป็นของ W8IO ซึ่งยังไม่พบแหล่งที่มา (ช่วงที่ใช้ได้ทั้งคู่ต่างกันไม่เกิน 0.1 dB) สายอากาศที่ไม่ใช่แบบ DL6WU อาจต่างออกไป",
+            "1.9.1 - อัปเดตอัตโนมัติจาก GitHub พร้อมตรวจลายนิ้วมือ SHA-256 บน Windows, ไฟล์บีบอัดแบบพกพา (Linux, FreeBSD, OpenBSD, Alpine), AppImage และแอป macOS (แพ็กเกจ .deb, .rpm, Arch, Slackware อัปเดตด้วยตัวจัดการแพ็กเกจ) และแจ้งเตือนไฟล์ที่หายไป; แพ็กเกจใหม่สำหรับ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; ปุ่ม แก้ไข สำหรับแก้โลเคเตอร์ของสถานีใน CALL3.TXT; ระยะทางและ Dgrd ใช้ Dgrd แบบดั้งเดิมที่ 144 MHz ส่วน Dgrd ตามย่านความถี่ยังอยู่ใน DGRD ตามความถี่; ขอบฟ้าของฉัน มีกรอบสีม่วงจาก ทรงกลมฟ้า และเวลาที่นำมาจากตารางวางแผน; สถานีที่ควรลอง ใช้เวลาจากตาราง มีแถบเลื่อน และตัดสถานีในประเทศของตนออกได้ (cty.dat); อัตราขยายยากิจากตาราง DL6WU (G3SEK) ใช้สูตรที่อ้างว่าเป็นของ W8IO เฉพาะต่ำกว่า 10 อิลิเมนต์; รายการแบบเลื่อนลงและช่องตัวเลขแบบ YA-MS; ทรานสเวอร์เตอร์ 144 MHz ในคู่มือ",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -54353,6 +55673,50 @@ namespace LunaCalc
             "綠色",
             "1.9 - 新分頁 我的地平線（即時）：根據 SRTM1 資料計算的地形地平線，考慮地球曲率與折射，背景為三種配色之一的天穹，顯示月球軌跡、附 OpenStreetMap 名稱的主要障礙物以及損失的月球分鐘數；可勾選在整個程式中把地形當作最低仰角；依 NJ9R 方法的本地雜訊地圖，月球位於雜訊方向的時段標 ⚠；新分頁 值得嘗試的電台（規劃），構想來自 Matteo IW5DHN：N0UK 聊天室中的活躍電台依 0 到 100 的指數排序；數字框箭頭並排、藥丸形分頁，以及取自 IP-TRX-CTRL 的三種新配色方案。",
             " 天中最佳日：{0}，Dgrd {1:F2} dB，{2} UTC（距離 {3:N0} km），可用 {4:0.0} 小時。   計算對象 {5}，{6} MHz（傳統 Dgrd，與 EME 表相同）{7}。更新於 {8} UTC。",
+            "更正",
+            "更正 CALL3.TXT 中的網格",
+            "你輸入的網格與 CALL3.TXT 中的不同：按一下即可儲存為更正。YAEC 會記在 data\\call3_correzioni.txt，立即套用到 CALL3.TXT，並在每次更新該檔案時再次套用，包括給 WSJT-X 的副本。",
+            "將 CALL3.TXT 中 {0} 的網格從 {1} 改為 {2}？",
+            "CALL3.TXT 更新後更正仍然有效。",
+            "無法儲存更正。",
+            "從表格",
+            "從表格取時刻",
+            "開啟「月球位置」分頁的表格：選擇一列（也可以是未來的日子），再按「↩ 障礙物」帶著該時刻回到這裡。",
+            "障礙物",
+            "返回地形地平線",
+            "將所選列的時刻帶到「我的地平線」分頁的障礙物檢視。",
+            "返回值得嘗試的電台",
+            "將所選列的日期帶到「值得嘗試的電台」分頁。",
+            "從表格取日期",
+            "開啟「月球位置」分頁的表格：選擇一列（也可以是未來的日子），再按「↩ {0}」帶著該日期回到這裡。",
+            "排除本國電台",
+            "找不到 cty.dat 檔案",
+            "無法辨識呼號",
+            "使用 AD1C 的 cty.dat 檔案（country-files.com）依呼號辨識國家：YAEC 會下載到 data 資料夾並每月更新；若無法下載，則使用找到的 WSJT-X 或 N1MM Logger+ 的副本。你的國家：{0}。",
+            "YAEC 從 GitHub 下載新套件，檢查其指紋，然後自行關閉並更新；data 資料夾中的資料保持不變。",
+            "將開啟 GitHub 上新版本的套件頁面。",
+            "YAEC 新版本",
+            "GitHub 上已有 YAEC {0}（你的版本是 {1}）。要現在更新嗎？",
+            "以後不再提醒版本 {0} 嗎？",
+            "下一個版本仍會提醒你。",
+            "GitHub 上的 {1} 版本中缺少檔案 {0}。",
+            "下載的套件指紋與 GitHub 上公布的不一致：更新已取消。",
+            "請稍後再試，或從 GitHub 頁面下載套件。",
+            "YAEC {0} 已下載：程式現在將關閉、更新並自動重新開啟。",
+            "無法啟動更新。",
+            "無法下載更新。",
+            "缺少檔案",
+            "缺少 {0} 個程式檔案：{1}",
+            "要讓 YAEC 現在從 GitHub 下載它們嗎（版本 {0}）？",
+            "缺少的檔案已下載。",
+            "有 {0} 個檔案無法下載：{1}",
+            "如果程式資料夾受保護，請以系統管理員身分執行 YAEC，或從 GitHub 頁面重新安裝。",
+            "YAEC 是透過系統套件 (.deb, .rpm, Arch, Slackware) 安裝的，需以套件管理員更新：現在開啟含有新套件的 GitHub 頁面。",
+            "YAEC 從 GitHub 下載新套件，核對其指紋並取代自身檔案；新版本在下次啟動時生效。您的資料保持原位。",
+            "YAEC {0} 已安裝：新版本在下次啟動時生效。",
+            "無法將檔案寫入程式資料夾。",
+            "間距與增益取自 G3SEK 刊載的 DL6WU 表（The VHF/UHF DX Book, RSGB，第 7 章）：反射器 0.2 λ，第一導向器 0.075 λ，之後逐漸增加到 0.4 λ；增益為 dBd + 2.15。該表從 10 元件開始；少於 10 元件時使用歸於 W8IO 的公式 G = 7.773·log(L/λ) + 11.43，但未找到其出處（兩者都適用時最多相差 0.1 dB）。非 DL6WU 天線可能有所不同。",
+            "1.9.1 - 從 GitHub 自動更新並核對 SHA-256 指紋，適用於 Windows、可攜式封存檔（Linux、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 應用程式（.deb, .rpm, Arch, Slackware 套件以套件管理員更新），並提示缺少的檔案；新增套件：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；更正 按鈕，用於修正 CALL3.TXT 中某電台的定位碼；距離與 Dgrd 使用 144 MHz 的傳統 Dgrd，按波段的 Dgrd 保留在 按頻率 DGRD；我的地平線 加入 天穹 的紫色框，並從規劃表取得計算時刻；值得嘗試的電台 採用表格中的時刻，增加捲軸，可排除本國電台（cty.dat）；八木天線增益取自 DL6WU 表（G3SEK），僅在少於 10 元件時使用歸於 W8IO 的公式；下拉清單和數字框採用 YA-MS 風格；手冊加入 144 MHz 轉頻器。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -56052,6 +57416,50 @@ namespace LunaCalc
             "Zielony",
             "1.9 - Nowa zakładka Mój horyzont (Na żywo): horyzont z terenu obliczony z danych SRTM1 z uwzględnieniem krzywizny Ziemi i refrakcji, na tle Sklepienie niebieskie w jednej z trzech skal barw, droga Księżyca, główne przeszkody z nazwami z OpenStreetMap i utracone minuty Księżyca; pole wyboru, aby w całym programie używać terenu jako minimalnej elewacji; mapa lokalnego szumu według NJ9R, z ⚠ w godzinach, gdy Księżyc jest w zaszumionym kierunku; nowa zakładka Stacje do spróbowania (Planowanie), pomysł Matteo IW5DHN: aktywne stacje czatu N0UK uporządkowane według indeksu od 0 do 100; pola liczbowe ze strzałkami obok siebie, zakładki w kształcie pigułki i trzy nowe schematy kolorów z IP-TRX-CTRL.",
             " dni: {0}, Dgrd {1:F2} dB o {2} UTC (odległość {3:N0} km), {4:0.0} użytecznych godzin.   Obliczono dla {5} przy {6} MHz (klasyczna Dgrd, jak w tabelach EME){7}. Zaktualizowano o {8} UTC.",
+            "POPRAW",
+            "Popraw lokator w CALL3.TXT",
+            "Wpisany lokator różni się od tego w CALL3.TXT: jednym kliknięciem zapiszesz go jako poprawkę. YAEC przechowuje ją w data\\call3_correzioni.txt, od razu stosuje do CALL3.TXT i ponownie przy każdej aktualizacji pliku, także w kopii dla WSJT-X.",
+            "Zmienić lokator {0} w CALL3.TXT z {1} na {2}?",
+            "Poprawka obowiązuje także po aktualizacjach CALL3.TXT.",
+            "Nie udało się zapisać poprawki.",
+            "Z TABELI",
+            "Moment z tabeli",
+            "Otwiera tabelę zakładki Pozycja Księżyca: wybierz wiersz (także z przyszłych dni) i naciśnij «↩ PRZESZKODY», aby wrócić tutaj z tym momentem.",
+            "PRZESZKODY",
+            "Powrót do Horyzont z terenu",
+            "Przenosi moment wybranego wiersza do widoku przeszkód zakładki Mój horyzont.",
+            "Powrót do Stacje do spróbowania",
+            "Przenosi dzień wybranego wiersza do zakładki Stacje do spróbowania.",
+            "Dzień z tabeli",
+            "Otwiera tabelę zakładki Pozycja Księżyca: wybierz wiersz (także z przyszłych dni) i naciśnij «↩ {0}», aby wrócić tutaj z tym dniem.",
+            "Wyklucz stacje z mojego kraju",
+            "nie znaleziono pliku cty.dat",
+            "znak wywoławczy nierozpoznany",
+            "Rozpoznaje kraj po znaku wywoławczym za pomocą pliku cty.dat od AD1C (country-files.com): YAEC pobiera go do folderu data i aktualizuje co miesiąc; jeśli się nie uda, używa pliku z WSJT-X lub N1MM Logger+, jeśli go znajdzie. Twój kraj: {0}.",
+            "YAEC pobiera nowy pakiet z GitHub, sprawdza jego odcisk, zamyka się i sam się aktualizuje; twoje dane w folderze data zostają na miejscu.",
+            "Otwiera się strona GitHub z pakietami nowej wersji.",
+            "Nowa wersja YAEC",
+            "Na GitHub jest dostępny YAEC {0} (masz {1}). Zaktualizować teraz?",
+            "Czy YAEC ma już nie przypominać o wersji {0}?",
+            "O następnej wersji i tak poinformuje.",
+            "W wersji {1} na GitHub brakuje pliku {0}.",
+            "Odcisk pobranego pakietu nie zgadza się z opublikowanym na GitHub: aktualizacja anulowana.",
+            "Spróbuj później lub pobierz pakiet ze strony GitHub.",
+            "YAEC {0} został pobrany: program zamknie się, zaktualizuje i sam uruchomi ponownie.",
+            "Nie udało się uruchomić aktualizacji.",
+            "Nie udało się pobrać aktualizacji.",
+            "Brakujące pliki",
+            "Brakuje {0} plików programu: {1}",
+            "Czy YAEC ma je teraz pobrać z GitHub (wersja {0})?",
+            "Brakujące pliki zostały pobrane.",
+            "Nie udało się pobrać {0} plików: {1}",
+            "Jeśli folder programu jest chroniony, uruchom YAEC jako administrator lub zainstaluj ponownie ze strony GitHub.",
+            "YAEC zainstalowano pakietem systemowym (.deb, .rpm, Arch, Slackware), który aktualizuje się menedżerem pakietów: otwiera się strona GitHub z nowym pakietem.",
+            "YAEC pobiera nowy pakiet z GitHub, sprawdza jego odcisk i zastępuje własne pliki; nowa wersja uruchomi się przy następnym starcie. Twoje dane zostają na miejscu.",
+            "YAEC {0} jest zainstalowany: nowa wersja uruchomi się przy następnym starcie.",
+            "Nie udało się zapisać plików w folderze programu.",
+            "Odstępy i zyski z tabeli DL6WU podanej przez G3SEK (The VHF/UHF DX Book, RSGB, rozdz. 7): reflektor 0,2 λ, pierwszy direktor 0,075 λ, dalej rosnąco do 0,4 λ; zysk w dBd + 2,15. Tabela zaczyna się od 10 elementów: poniżej stosuje się wzór G = 7,773·log(L/λ) + 11,43 przypisywany W8IO, którego źródła nie znaleziono (tam, gdzie obowiązują oba, różnią się najwyżej o 0,1 dB). Anteny inne niż DL6WU mogą się różnić.",
+            "1.9.1 - Automatyczna aktualizacja z GitHub ze sprawdzeniem odcisku SHA-256 w Windows, dla archiwów przenośnych (Linux, FreeBSD, OpenBSD, Alpine), AppImage i aplikacji macOS (pakiety .deb, .rpm, Arch, Slackware aktualizuje menedżer pakietów) oraz ostrzeżenie o brakujących plikach; nowe pakiety dla Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; przycisk POPRAW do poprawienia lokatora stacji w CALL3.TXT; Odległość i Dgrd z klasyczną Dgrd na 144 MHz, a Dgrd według pasm zostaje w DGRD według częstotliwości; Mój horyzont z fioletowymi ramkami z Sklepienie niebieskie i chwilą wziętą z tabeli planowania; Stacje do spróbowania z chwilą z tabeli, paskiem przewijania i wykluczeniem stacji z własnego kraju (cty.dat); zysk anten Yagi z tabeli DL6WU (G3SEK), wzór przypisywany W8IO tylko poniżej 10 elementów; listy rozwijane i pola liczbowe w stylu YA-MS; transwertery 144 MHz w podręczniku.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -57751,6 +59159,50 @@ namespace LunaCalc
             "Zelená",
             "1.9 - Nová karta Můj obzor (Živě): obzor z terénu vypočtený z dat SRTM1 se zakřivením Země a refrakcí, na pozadí Nebeská klenba v jedné ze tří barevných škál, dráha Měsíce, hlavní překážky s názvy z OpenStreetMap a ztracené minuty Měsíce; zaškrtávací políčko pro použití terénu jako minimální elevace v celém programu; mapa místního šumu podle NJ9R, s ⚠ v hodinách, kdy je Měsíc v hlučném směru; nová karta Stanice k vyzkoušení (Plánování), nápad Matteo IW5DHN: aktivní stanice chatu N0UK seřazené podle indexu od 0 do 100; číselná pole se šipkami vedle sebe, karty ve tvaru pilulky a tři nová barevná schémata z IP-TRX-CTRL.",
             " dnech: {0}, Dgrd {1:F2} dB v {2} UTC (vzdálenost {3:N0} km), {4:0.0} užitečných hodin.   Počítáno pro {5} na {6} MHz (klasická Dgrd, jako v tabulkách EME){7}. Aktualizováno v {8} UTC.",
+            "OPRAVIT",
+            "Opravit lokátor v CALL3.TXT",
+            "Zadaný lokátor se liší od lokátoru v CALL3.TXT: jedním kliknutím ho uložíš jako opravu. YAEC ji uchovává v data\\call3_correzioni.txt, hned ji použije v CALL3.TXT a znovu při každé aktualizaci souboru, i v kopii pro WSJT-X.",
+            "Změnit lokátor {0} v CALL3.TXT z {1} na {2}?",
+            "Oprava platí i po aktualizacích CALL3.TXT.",
+            "Opravu se nepodařilo uložit.",
+            "Z TABULKY",
+            "Okamžik z tabulky",
+            "Otevře tabulku karty Poloha Měsíce: vyber řádek (i v budoucích dnech) a stiskni «↩ PŘEKÁŽKY» pro návrat sem s tímto okamžikem.",
+            "PŘEKÁŽKY",
+            "Zpět na Obzor z terénu",
+            "Přenese okamžik vybraného řádku do zobrazení překážek karty Můj obzor.",
+            "Zpět na Stanice k vyzkoušení",
+            "Přenese den vybraného řádku do karty Stanice k vyzkoušení.",
+            "Den z tabulky",
+            "Otevře tabulku karty Poloha Měsíce: vyber řádek (i v budoucích dnech) a stiskni «↩ {0}» pro návrat sem s tímto dnem.",
+            "Vyloučit stanice z mé země",
+            "soubor cty.dat nenalezen",
+            "volací znak nerozpoznán",
+            "Rozpozná zemi podle volacího znaku pomocí souboru cty.dat od AD1C (country-files.com): YAEC ho stáhne do složky data a každý měsíc aktualizuje; pokud to nejde, použije soubor z WSJT-X nebo N1MM Logger+, pokud ho najde. Tvoje země: {0}.",
+            "YAEC stáhne nový balík z GitHubu, ověří jeho otisk, zavře se a sám se aktualizuje; tvá data ve složce data zůstanou, kde jsou.",
+            "Otevře se stránka GitHubu s balíky nové verze.",
+            "Nová verze YAEC",
+            "Na GitHubu je k dispozici YAEC {0} (máš {1}). Aktualizovat teď?",
+            "Má YAEC přestat upozorňovat na verzi {0}?",
+            "Na další verzi tě i tak upozorní.",
+            "Ve verzi {1} na GitHubu chybí soubor {0}.",
+            "Otisk staženého balíku neodpovídá otisku zveřejněnému na GitHubu: aktualizace je zrušena.",
+            "Zkus to později nebo stáhni balík ze stránky GitHubu.",
+            "YAEC {0} je stažen: program se teď zavře, aktualizuje a sám znovu otevře.",
+            "Aktualizaci se nepodařilo spustit.",
+            "Aktualizaci se nepodařilo stáhnout.",
+            "Chybějící soubory",
+            "Chybí {0} souborů programu: {1}",
+            "Má je YAEC teď stáhnout z GitHubu (verze {0})?",
+            "Chybějící soubory byly staženy.",
+            "Nepodařilo se stáhnout {0} souborů: {1}",
+            "Pokud je složka programu chráněná, spusť YAEC jako správce nebo ho přeinstaluj ze stránky GitHubu.",
+            "YAEC je nainstalován systémovým balíčkem (.deb, .rpm, Arch, Slackware), který se aktualizuje správcem balíčků: otevře se stránka GitHub s novým balíčkem.",
+            "YAEC stáhne nový balíček z GitHubu, ověří jeho otisk a nahradí své soubory; nová verze se spustí při příštím spuštění. Vaše data zůstávají tam, kde jsou.",
+            "YAEC {0} je nainstalován: nová verze se spustí při příštím spuštění.",
+            "Soubory se nepodařilo zapsat do složky programu.",
+            "Rozestupy a zisky z tabulky DL6WU uvedené G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, první direktor 0,075 λ, dále rostoucí až na 0,4 λ; zisk v dBd + 2,15. Tabulka začíná od 10 prvků: pod tím se používá vzorec G = 7,773·log(L/λ) + 11,43 připisovaný W8IO, jehož zdroj se nepodařilo najít (kde platí oba, liší se nejvýše o 0,1 dB). Antény jiné než DL6WU se mohou lišit.",
+            "1.9.1 - Automatická aktualizace z GitHubu s ověřením otisku SHA-256 ve Windows, u přenosných archivů (Linux, FreeBSD, OpenBSD, Alpine), u AppImage a aplikace pro macOS (balíčky .deb, .rpm, Arch, Slackware aktualizuje správce balíčků) a upozornění na chybějící soubory; nové balíčky pro Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačítko OPRAVIT k opravě lokátoru stanice v CALL3.TXT; Vzdálenost a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podle pásem zůstává v DGRD podle kmitočtu; Můj obzor s fialovými rámečky z Nebeská klenba a okamžikem z plánovací tabulky; Stanice k vyzkoušení s okamžikem z tabulky, posuvníkem a vyloučením stanic vlastní země (cty.dat); zisk antén Yagi z tabulky DL6WU (G3SEK), vzorec připisovaný W8IO jen pod 10 prvků; rozbalovací seznamy a číselná pole ve stylu YA-MS; transvertory pro 144 MHz v příručce.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -59450,6 +60902,50 @@ namespace LunaCalc
             "Verde",
             "1.9 - Filă nouă Orizontul meu (În direct): orizontul din relief calculat din datele SRTM1 cu curbura Pământului și refracția, pe fundalul Bolta cerească într-una dintre cele trei scale de culori, traiectoria Lunii, obstacolele principale cu numele din OpenStreetMap și minutele de Lună pierdute; casetă pentru a folosi relieful ca elevație minimă în tot programul; harta zgomotului local după NJ9R, cu ⚠ în orele în care Luna este într-o direcție zgomotoasă; filă nouă Stații de încercat (Planificare), idee de Matteo IW5DHN: stațiile active din chatul N0UK ordonate după un indice de la 0 la 100; câmpuri numerice cu săgețile alăturate, file în formă de pastilă și trei scheme de culori noi preluate din IP-TRX-CTRL.",
             " zile: {0}, Dgrd {1:F2} dB la {2} UTC (distanța {3:N0} km), {4:0.0} ore utile.   Calculat pentru {5} la {6} MHz (Dgrd clasică, ca în tabelele EME){7}. Actualizat la {8} UTC.",
+            "CORECTEAZĂ",
+            "Corectează locatorul în CALL3.TXT",
+            "Locatorul scris diferă de cel din CALL3.TXT: cu un clic îl salvezi ca corecție. YAEC o păstrează în data\\call3_correzioni.txt, o aplică imediat în CALL3.TXT și din nou la fiecare actualizare a fișierului, inclusiv în copia pentru WSJT-X.",
+            "Schimbi locatorul lui {0} în CALL3.TXT din {1} în {2}?",
+            "Corecția rămâne valabilă și după actualizările CALL3.TXT.",
+            "Corecția nu a putut fi salvată.",
+            "DIN TABEL",
+            "Moment din tabel",
+            "Deschide tabelul filei Poziția Lunii: alege un rând (și din zilele viitoare) și apasă «↩ OBSTACOLE» ca să revii aici cu acel moment.",
+            "OBSTACOLE",
+            "Înapoi la Orizont din relief",
+            "Duce momentul rândului selectat în vederea obstacolelor din fila Orizontul meu.",
+            "Înapoi la Stații de încercat",
+            "Duce ziua rândului selectat în fila Stații de încercat.",
+            "Zi din tabel",
+            "Deschide tabelul filei Poziția Lunii: alege un rând (și din zilele viitoare) și apasă «↩ {0}» ca să revii aici cu acea zi.",
+            "Exclude stațiile din țara mea",
+            "fișierul cty.dat nu a fost găsit",
+            "indicativ nerecunoscut",
+            "Recunoaște țara după indicativ cu fișierul cty.dat al lui AD1C (country-files.com): YAEC îl descarcă în dosarul data și îl actualizează lunar; dacă nu reușește, îl folosește pe cel din WSJT-X sau N1MM Logger+, dacă îl găsește. Țara ta: {0}.",
+            "YAEC descarcă noul pachet de pe GitHub, îi verifică amprenta, se închide și se actualizează singur; datele tale din dosarul data rămân pe loc.",
+            "Se deschide pagina GitHub cu pachetele noii versiuni.",
+            "Versiune nouă de YAEC",
+            "YAEC {0} este disponibil pe GitHub (tu ai {1}). Actualizezi acum?",
+            "Vrei ca YAEC să nu te mai anunțe despre versiunea {0}?",
+            "Te va anunța totuși la versiunea următoare.",
+            "Fișierul {0} lipsește din versiunea {1} de pe GitHub.",
+            "Amprenta pachetului descărcat nu corespunde cu cea publicată pe GitHub: actualizarea este anulată.",
+            "Încearcă mai târziu sau descarcă pachetul de pe pagina GitHub.",
+            "YAEC {0} a fost descărcat: programul se închide acum, se actualizează și se redeschide singur.",
+            "Actualizarea nu a putut fi pornită.",
+            "Actualizarea nu a putut fi descărcată.",
+            "Fișiere lipsă",
+            "Lipsesc {0} fișiere ale programului: {1}",
+            "Vrei ca YAEC să le descarce acum de pe GitHub (versiunea {0})?",
+            "Fișierele lipsă au fost descărcate.",
+            "Nu s-au putut descărca {0} fișiere: {1}",
+            "Dacă dosarul programului este protejat, pornește YAEC ca administrator sau reinstalează-l de pe pagina GitHub.",
+            "YAEC este instalat cu un pachet al sistemului (.deb, .rpm, Arch, Slackware), care se actualizează cu managerul de pachete: se deschide pagina GitHub cu pachetul nou.",
+            "YAEC descarcă noul pachet de pe GitHub, îi verifică amprenta și își înlocuiește fișierele; noua versiune pornește la următoarea lansare. Datele tale rămân unde sunt.",
+            "YAEC {0} este instalat: noua versiune pornește la următoarea lansare.",
+            "Fișierele nu au putut fi scrise în dosarul programului.",
+            "Distanțele și câștigurile din tabelul DL6WU prezentat de G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): reflector 0,2 λ, primul director 0,075 λ, apoi crescând până la 0,4 λ; câștigul în dBd + 2,15. Tabelul începe de la 10 elemente: sub acest număr se folosește formula G = 7,773·log(L/λ) + 11,43 atribuită lui W8IO, a cărei sursă nu a fost găsită (unde se aplică ambele, diferă cu cel mult 0,1 dB). Antenele care nu sunt DL6WU pot diferi.",
+            "1.9.1 - Actualizare automată de pe GitHub, cu verificarea amprentei SHA-256, pe Windows, cu arhivele portabile (Linux, FreeBSD, OpenBSD, Alpine), cu AppImage și cu aplicația macOS (pachetele .deb, .rpm, Arch, Slackware se actualizează cu managerul de pachete), și avertizare pentru fișierele lipsă; pachete noi pentru Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; butonul CORECTEAZĂ pentru corectarea locatorului unei stații în CALL3.TXT; Distanță și Dgrd cu Dgrd clasic la 144 MHz, iar Dgrd pe benzi rămâne în DGRD după frecvență; Orizontul meu cu chenarele violet din Bolta cerească și momentul luat din tabelul de planificare; Stații de încercat cu momentul din tabel, bară de derulare și excluderea stațiilor din propria țară (cty.dat); câștigul antenelor Yagi din tabelul DL6WU (G3SEK), formula atribuită lui W8IO doar sub 10 elemente; liste derulante și câmpuri numerice în stilul YA-MS; transvertere de 144 MHz în manual.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -61149,6 +62645,50 @@ namespace LunaCalc
             "Πράσινο",
             "1.9 - Νέα καρτέλα Ο ορίζοντάς μου (Ζωντανά): ορίζοντας από το έδαφος υπολογισμένος από δεδομένα SRTM1 με την καμπυλότητα της Γης και τη διάθλαση, στο φόντο του Ουράνιος θόλος σε μία από τις τρεις χρωματικές κλίμακες, τροχιά της Σελήνης, κύρια εμπόδια με ονόματα από το OpenStreetMap και χαμένα λεπτά Σελήνης· πλαίσιο για χρήση του εδάφους ως ελάχιστης ανύψωσης σε όλο το πρόγραμμα· χάρτης τοπικού θορύβου κατά NJ9R, με ⚠ στις ώρες που η Σελήνη βρίσκεται σε θορυβώδη κατεύθυνση· νέα καρτέλα Σταθμοί για δοκιμή (Σχεδιασμός), ιδέα του Matteo IW5DHN: οι ενεργοί σταθμοί της συνομιλίας N0UK ταξινομημένοι με δείκτη από 0 έως 100· αριθμητικά πεδία με βέλη δίπλα-δίπλα, καρτέλες σε σχήμα χαπιού και τρία νέα χρωματικά σχήματα από το IP-TRX-CTRL.",
             " ημέρες: {0}, Dgrd {1:F2} dB στις {2} UTC (απόσταση {3:N0} km), {4:0.0} χρήσιμες ώρες.   Υπολογισμένο για {5} στα {6} MHz (κλασική Dgrd, όπως στους πίνακες EME){7}. Ενημερώθηκε στις {8} UTC.",
+            "ΔΙΟΡΘΩΣΗ",
+            "Διόρθωση του locator στο CALL3.TXT",
+            "Το locator που έγραψες διαφέρει από αυτό του CALL3.TXT: με ένα κλικ το αποθηκεύεις ως διόρθωση. Το YAEC τη φυλάει στο data\\call3_correzioni.txt, την εφαρμόζει αμέσως στο CALL3.TXT και ξανά σε κάθε ενημέρωση του αρχείου, και στο αντίγραφο για το WSJT-X.",
+            "Να αλλάξει το locator του {0} στο CALL3.TXT από {1} σε {2};",
+            "Η διόρθωση ισχύει και μετά τις ενημερώσεις του CALL3.TXT.",
+            "Δεν ήταν δυνατή η αποθήκευση της διόρθωσης.",
+            "ΑΠΟ ΤΟΝ ΠΙΝΑΚΑ",
+            "Στιγμή από τον πίνακα",
+            "Ανοίγει τον πίνακα της καρτέλας Θέση της Σελήνης: διάλεξε μια γραμμή (και μελλοντικών ημερών) και πάτησε «↩ ΕΜΠΟΔΙΑ» για να επιστρέψεις εδώ με εκείνη τη στιγμή.",
+            "ΕΜΠΟΔΙΑ",
+            "Επιστροφή στο Ορίζοντας από το ανάγλυφο",
+            "Μεταφέρει τη στιγμή της επιλεγμένης γραμμής στην προβολή εμποδίων της καρτέλας Ο ορίζοντάς μου.",
+            "Επιστροφή στο Σταθμοί για δοκιμή",
+            "Μεταφέρει την ημέρα της επιλεγμένης γραμμής στην καρτέλα Σταθμοί για δοκιμή.",
+            "Ημέρα από τον πίνακα",
+            "Ανοίγει τον πίνακα της καρτέλας Θέση της Σελήνης: διάλεξε μια γραμμή (και μελλοντικών ημερών) και πάτησε «↩ {0}» για να επιστρέψεις εδώ με εκείνη την ημέρα.",
+            "Εξαίρεση σταθμών της χώρας μου",
+            "δεν βρέθηκε το αρχείο cty.dat",
+            "το διακριτικό δεν αναγνωρίστηκε",
+            "Αναγνωρίζει τη χώρα από το διακριτικό με το αρχείο cty.dat του AD1C (country-files.com): το YAEC το κατεβάζει στον φάκελο data και το ενημερώνει κάθε μήνα· αν δεν τα καταφέρει, χρησιμοποιεί αυτό του WSJT-X ή του N1MM Logger+ αν το βρει. Η χώρα σου: {0}.",
+            "Το YAEC κατεβάζει το νέο πακέτο από το GitHub, ελέγχει το αποτύπωμά του, κλείνει και ενημερώνεται μόνο του· τα δεδομένα σου στον φάκελο data μένουν στη θέση τους.",
+            "Ανοίγει η σελίδα του GitHub με τα πακέτα της νέας έκδοσης.",
+            "Νέα έκδοση του YAEC",
+            "Το YAEC {0} είναι διαθέσιμο στο GitHub (έχεις την {1}). Να γίνει ενημέρωση τώρα;",
+            "Να μη σε ειδοποιεί πια το YAEC για την έκδοση {0};",
+            "Θα σε ειδοποιήσει πάντως για την επόμενη έκδοση.",
+            "Το αρχείο {0} λείπει από την έκδοση {1} στο GitHub.",
+            "Το αποτύπωμα του πακέτου που κατέβηκε δεν ταιριάζει με αυτό που δημοσιεύτηκε στο GitHub: η ενημέρωση ακυρώθηκε.",
+            "Δοκίμασε αργότερα ή κατέβασε το πακέτο από τη σελίδα του GitHub.",
+            "Το YAEC {0} κατέβηκε: το πρόγραμμα τώρα κλείνει, ενημερώνεται και ξανανοίγει μόνο του.",
+            "Δεν ήταν δυνατή η έναρξη της ενημέρωσης.",
+            "Δεν ήταν δυνατή η λήψη της ενημέρωσης.",
+            "Αρχεία που λείπουν",
+            "Λείπουν {0} αρχεία του προγράμματος: {1}",
+            "Να τα κατεβάσει τώρα το YAEC από το GitHub (έκδοση {0});",
+            "Τα αρχεία που έλειπαν κατέβηκαν.",
+            "Δεν ήταν δυνατή η λήψη {0} αρχείων: {1}",
+            "Αν ο φάκελος του προγράμματος είναι προστατευμένος, άνοιξε το YAEC ως διαχειριστής ή εγκατάστησέ το ξανά από τη σελίδα του GitHub.",
+            "Το YAEC εγκαταστάθηκε με πακέτο του συστήματος (.deb, .rpm, Arch, Slackware), που ενημερώνεται με τον διαχειριστή πακέτων: ανοίγει η σελίδα του GitHub με το νέο πακέτο.",
+            "Το YAEC κατεβάζει το νέο πακέτο από το GitHub, ελέγχει το αποτύπωμά του και αντικαθιστά τα δικά του αρχεία· η νέα έκδοση ξεκινά στην επόμενη εκκίνηση. Τα δεδομένα σας μένουν στη θέση τους.",
+            "Το YAEC {0} εγκαταστάθηκε: η νέα έκδοση ξεκινά στην επόμενη εκκίνηση.",
+            "Δεν ήταν δυνατή η εγγραφή των αρχείων στον φάκελο του προγράμματος.",
+            "Αποστάσεις και κέρδη από τον πίνακα DL6WU που παραθέτει ο G3SEK (The VHF/UHF DX Book, RSGB, κεφ. 7): ανακλαστήρας 0,2 λ, πρώτος κατευθυντήρας 0,075 λ, έπειτα αυξανόμενα έως 0,4 λ· κέρδος σε dBd + 2,15. Ο πίνακας ξεκινά από 10 στοιχεία: κάτω από αυτά χρησιμοποιείται ο τύπος G = 7,773·log(L/λ) + 11,43 που αποδίδεται στον W8IO, για τον οποίο δεν βρέθηκε πηγή (όπου ισχύουν και τα δύο, διαφέρουν το πολύ 0,1 dB). Κεραίες που δεν είναι DL6WU μπορεί να διαφέρουν.",
+            "1.9.1 - Αυτόματη ενημέρωση από το GitHub με έλεγχο του αποτυπώματος SHA-256 στα Windows, στα φορητά αρχεία (Linux, FreeBSD, OpenBSD, Alpine), στο AppImage και στην εφαρμογή macOS (τα πακέτα .deb, .rpm, Arch, Slackware ενημερώνονται με τον διαχειριστή πακέτων), και προειδοποίηση για αρχεία που λείπουν· νέα πακέτα για Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage· κουμπί ΔΙΟΡΘΩΣΗ για διόρθωση του locator ενός σταθμού στο CALL3.TXT· Απόσταση και Dgrd με το κλασικό Dgrd στα 144 MHz, ενώ το Dgrd ανά μπάντα μένει στο DGRD ανά συχνότητα· Ο ορίζοντάς μου με τα μοβ πλαίσια του Ουράνιος θόλος και τη στιγμή από τον πίνακα προγραμματισμού· Σταθμοί για δοκιμή με τη στιγμή του πίνακα, γραμμή κύλισης και εξαίρεση των σταθμών της δικής σας χώρας (cty.dat)· κέρδος κεραιών Yagi από τον πίνακα DL6WU (G3SEK), ο τύπος που αποδίδεται στον W8IO μόνο κάτω από 10 στοιχεία· αναπτυσσόμενες λίστες και αριθμητικά πεδία σε στιλ YA-MS· μετατροπείς 144 MHz στο εγχειρίδιο.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -62848,6 +64388,50 @@ namespace LunaCalc
             "Zöld",
             "1.9 - Új fül: Az én horizontom (Élő): a terepből számított horizont SRTM1 adatokból, a Föld görbületével és a fénytöréssel, a(z) Égbolt hátterén a három színskála egyikével, a Hold pályája, a fő akadályok OpenStreetMap-nevekkel és az elveszett Hold-percek; jelölőnégyzet a terep minimális elevációként való használatához az egész programban; helyi zajtérkép NJ9R szerint, ⚠ jellel azokban az órákban, amikor a Hold zajos irányban van; új fül: Kipróbálandó állomások (Tervezés), Matteo IW5DHN ötlete: az N0UK csevegő aktív állomásai 0-tól 100-ig terjedő index szerint rendezve; számmezők egymás melletti nyilakkal, tabletta alakú fülek és három új színséma az IP-TRX-CTRL-ből.",
             " napban: {0}, Dgrd {1:F2} dB {2} UTC-kor (távolság {3:N0} km), {4:0.0} hasznos óra.   Számítva: {5}, {6} MHz (klasszikus Dgrd, mint az EME-táblázatokban){7}. Frissítve {8} UTC-kor.",
+            "JAVÍTÁS",
+            "Lokátor javítása a CALL3.TXT-ben",
+            "A beírt lokátor eltér a CALL3.TXT-ben lévőtől: egy kattintással javításként mented. A YAEC a(z) data\\call3_correzioni.txt fájlban tárolja, azonnal alkalmazza a CALL3.TXT-re, és újra a fájl minden frissítésekor, a WSJT-X másolatában is.",
+            "Módosítod {0} lokátorát a CALL3.TXT-ben {1} helyett {2} értékre?",
+            "A javítás a CALL3.TXT frissítései után is érvényes marad.",
+            "A javítást nem sikerült menteni.",
+            "A TÁBLÁZATBÓL",
+            "Időpont a táblázatból",
+            "Megnyitja a(z) A Hold helyzete fül táblázatát: válassz egy sort (jövőbeli napokét is), majd nyomd meg a «↩ AKADÁLYOK» gombot, hogy ezzel az időponttal térj vissza ide.",
+            "AKADÁLYOK",
+            "Vissza: Horizont a domborzatból",
+            "A kijelölt sor időpontját átviszi a(z) Az én horizontom fül akadálynézetébe.",
+            "Vissza: Kipróbálandó állomások",
+            "A kijelölt sor napját átviszi a(z) Kipróbálandó állomások fülre.",
+            "Nap a táblázatból",
+            "Megnyitja a(z) A Hold helyzete fül táblázatát: válassz egy sort (jövőbeli napokét is), majd nyomd meg a «↩ {0}» gombot, hogy ezzel a nappal térj vissza ide.",
+            "Saját országom állomásainak kizárása",
+            "a cty.dat fájl nem található",
+            "a hívójel nem ismerhető fel",
+            "Az országot a hívójelből ismeri fel az AD1C cty.dat fájljával (country-files.com): a YAEC letölti a data mappába, és havonta frissíti; ha ez nem sikerül, a WSJT-X vagy az N1MM Logger+ fájlját használja, ha megtalálja. Az országod: {0}.",
+            "A YAEC letölti az új csomagot a GitHubról, ellenőrzi az ujjlenyomatát, bezárul és magától frissül; a data mappában lévő adataid a helyükön maradnak.",
+            "Megnyílik a GitHub oldal az új változat csomagjaival.",
+            "A YAEC új változata",
+            "A GitHubon elérhető a YAEC {0} (neked {1} van). Frissítsünk most?",
+            "Ne figyelmeztessen többé a YAEC a(z) {0} változatra?",
+            "A következő változatról azért szólni fog.",
+            "A(z) {0} fájl hiányzik a GitHubon a(z) {1} változatból.",
+            "A letöltött csomag ujjlenyomata nem egyezik a GitHubon közzétettel: a frissítés megszakadt.",
+            "Próbáld később, vagy töltsd le a csomagot a GitHub oldalról.",
+            "A YAEC {0} letöltődött: a program most bezárul, frissül és magától újraindul.",
+            "A frissítést nem sikerült elindítani.",
+            "A frissítést nem sikerült letölteni.",
+            "Hiányzó fájlok",
+            "Hiányzik {0} programfájl: {1}",
+            "Letöltse őket most a YAEC a GitHubról ({0}. változat)?",
+            "A hiányzó fájlok letöltődtek.",
+            "{0} fájlt nem sikerült letölteni: {1}",
+            "Ha a program mappája védett, indítsd a YAEC-et rendszergazdaként, vagy telepítsd újra a GitHub oldalról.",
+            "A YAEC rendszercsomaggal (.deb, .rpm, Arch, Slackware) van telepítve, amelyet a csomagkezelő frissít: megnyílik a GitHub-oldal az új csomaggal.",
+            "A YAEC letölti az új csomagot a GitHubról, ellenőrzi az ujjlenyomatát, és lecseréli a saját fájljait; az új verzió a következő indításkor indul. Az adatai a helyükön maradnak.",
+            "A YAEC {0} telepítve: az új verzió a következő indításkor indul.",
+            "A fájlokat nem sikerült a program mappájába írni.",
+            "A távolságok és nyereségek a G3SEK által közölt DL6WU-táblázatból (The VHF/UHF DX Book, RSGB, 7. fej.): reflektor 0,2 λ, első direktor 0,075 λ, majd növekvően 0,4 λ-ig; nyereség dBd + 2,15. A táblázat 10 elemtől indul: alatta a W8IO-nak tulajdonított G = 7,773·log(L/λ) + 11,43 képletet használjuk, amelynek forrását nem találtuk (ahol mindkettő érvényes, legfeljebb 0,1 dB az eltérés). A nem DL6WU antennák eltérhetnek.",
+            "1.9.1 - Automatikus frissítés a GitHubról az SHA-256 ujjlenyomat ellenőrzésével Windowson, a hordozható archívumoknál (Linux, FreeBSD, OpenBSD, Alpine), az AppImage-nél és a macOS-alkalmazásnál (a(z) .deb, .rpm, Arch, Slackware csomagokat a csomagkezelő frissíti), valamint figyelmeztetés a hiányzó fájlokra; új csomagok: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; JAVÍTÁS gomb egy állomás lokátorának javítására a CALL3.TXT-ben; Távolság és Dgrd a klasszikus Dgrd-vel 144 MHz-en, a sávonkénti Dgrd marad a(z) DGRD frekvenciánként fülön; Az én horizontom a(z) Égbolt lila kereteivel és a tervezési táblázatból vett időponttal; Kipróbálandó állomások a táblázat időpontjával, görgetősávval és a saját ország állomásainak kizárásával (cty.dat); Yagi-nyereség a DL6WU-táblázatból (G3SEK), a W8IO-nak tulajdonított képlet csak 10 elem alatt; legördülő listák és számmezők YA-MS-stílusban; 144 MHz-es transzverterek a kézikönyvben.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -64547,6 +66131,50 @@ namespace LunaCalc
             "Zelená",
             "1.9 - Nová karta Môj obzor (Naživo): obzor z terénu vypočítaný z dát SRTM1 so zakrivením Zeme a refrakciou, na pozadí Nebeská klenba v jednej z troch farebných škál, dráha Mesiaca, hlavné prekážky s názvami z OpenStreetMap a stratené minúty Mesiaca; začiarkavacie políčko na použitie terénu ako minimálnej elevácie v celom programe; mapa miestneho šumu podľa NJ9R, s ⚠ v hodinách, keď je Mesiac v hlučnom smere; nová karta Stanice na vyskúšanie (Plánovanie), nápad Matteo IW5DHN: aktívne stanice četu N0UK zoradené podľa indexu od 0 do 100; číselné polia so šípkami vedľa seba, karty v tvare tabletky a tri nové farebné schémy z IP-TRX-CTRL.",
             " dňoch: {0}, Dgrd {1:F2} dB o {2} UTC (vzdialenosť {3:N0} km), {4:0.0} užitočných hodín.   Počítané pre {5} na {6} MHz (klasická Dgrd, ako v tabuľkách EME){7}. Aktualizované o {8} UTC.",
+            "OPRAVIŤ",
+            "Opraviť lokátor v CALL3.TXT",
+            "Zadaný lokátor sa líši od lokátora v CALL3.TXT: jedným kliknutím ho uložíš ako opravu. YAEC ju uchováva v data\\call3_correzioni.txt, hneď ju použije v CALL3.TXT a znova pri každej aktualizácii súboru, aj v kópii pre WSJT-X.",
+            "Zmeniť lokátor {0} v CALL3.TXT z {1} na {2}?",
+            "Oprava platí aj po aktualizáciách CALL3.TXT.",
+            "Opravu sa nepodarilo uložiť.",
+            "Z TABUĽKY",
+            "Okamih z tabuľky",
+            "Otvorí tabuľku karty Poloha Mesiaca: vyber riadok (aj v budúcich dňoch) a stlač «↩ PREKÁŽKY» na návrat sem s týmto okamihom.",
+            "PREKÁŽKY",
+            "Späť na Obzor z terénu",
+            "Prenesie okamih vybraného riadku do zobrazenia prekážok karty Môj obzor.",
+            "Späť na Stanice na vyskúšanie",
+            "Prenesie deň vybraného riadku do karty Stanice na vyskúšanie.",
+            "Deň z tabuľky",
+            "Otvorí tabuľku karty Poloha Mesiaca: vyber riadok (aj v budúcich dňoch) a stlač «↩ {0}» na návrat sem s týmto dňom.",
+            "Vylúčiť stanice z mojej krajiny",
+            "súbor cty.dat sa nenašiel",
+            "volacia značka nerozpoznaná",
+            "Rozpozná krajinu podľa volacej značky pomocou súboru cty.dat od AD1C (country-files.com): YAEC ho stiahne do priečinka data a každý mesiac aktualizuje; ak to nejde, použije súbor z WSJT-X alebo N1MM Logger+, ak ho nájde. Tvoja krajina: {0}.",
+            "YAEC stiahne nový balík z GitHubu, overí jeho odtlačok, zavrie sa a sám sa aktualizuje; tvoje dáta v priečinku data zostanú, kde sú.",
+            "Otvorí sa stránka GitHubu s balíkmi novej verzie.",
+            "Nová verzia YAEC",
+            "Na GitHube je dostupný YAEC {0} (máš {1}). Aktualizovať teraz?",
+            "Má YAEC prestať upozorňovať na verziu {0}?",
+            "Na ďalšiu verziu ťa aj tak upozorní.",
+            "Vo verzii {1} na GitHube chýba súbor {0}.",
+            "Odtlačok stiahnutého balíka nezodpovedá odtlačku zverejnenému na GitHube: aktualizácia je zrušená.",
+            "Skús to neskôr alebo stiahni balík zo stránky GitHubu.",
+            "YAEC {0} je stiahnutý: program sa teraz zavrie, aktualizuje a sám znova otvorí.",
+            "Aktualizáciu sa nepodarilo spustiť.",
+            "Aktualizáciu sa nepodarilo stiahnuť.",
+            "Chýbajúce súbory",
+            "Chýba {0} súborov programu: {1}",
+            "Má ich YAEC teraz stiahnuť z GitHubu (verzia {0})?",
+            "Chýbajúce súbory boli stiahnuté.",
+            "Nepodarilo sa stiahnuť {0} súborov: {1}",
+            "Ak je priečinok programu chránený, spusti YAEC ako správca alebo ho preinštaluj zo stránky GitHubu.",
+            "YAEC je nainštalovaný systémovým balíkom (.deb, .rpm, Arch, Slackware), ktorý sa aktualizuje správcom balíkov: otvorí sa stránka GitHub s novým balíkom.",
+            "YAEC stiahne nový balík z GitHubu, overí jeho odtlačok a nahradí svoje súbory; nová verzia sa spustí pri ďalšom spustení. Vaše údaje zostávajú tam, kde sú.",
+            "YAEC {0} je nainštalovaný: nová verzia sa spustí pri ďalšom spustení.",
+            "Súbory sa nepodarilo zapísať do priečinka programu.",
+            "Rozostupy a zisky z tabuľky DL6WU uvedenej G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, prvý direktor 0,075 λ, ďalej rastúce až na 0,4 λ; zisk v dBd + 2,15. Tabuľka začína od 10 prvkov: pod tým sa používa vzorec G = 7,773·log(L/λ) + 11,43 pripisovaný W8IO, ktorého zdroj sa nenašiel (kde platia oba, líšia sa najviac o 0,1 dB). Antény iné ako DL6WU sa môžu líšiť.",
+            "1.9.1 - Automatická aktualizácia z GitHubu s overením odtlačku SHA-256 vo Windows, pri prenosných archívoch (Linux, FreeBSD, OpenBSD, Alpine), pri AppImage a aplikácii pre macOS (balíky .deb, .rpm, Arch, Slackware aktualizuje správca balíkov) a upozornenie na chýbajúce súbory; nové balíky pre Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačidlo OPRAVIŤ na opravu lokátora stanice v CALL3.TXT; Vzdialenosť a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podľa pásiem zostáva v DGRD podľa kmitočtu; Môj obzor s fialovými rámčekmi z Nebeská klenba a okamihom z plánovacej tabuľky; Stanice na vyskúšanie s okamihom z tabuľky, posuvníkom a vylúčením staníc vlastnej krajiny (cty.dat); zisk antén Yagi z tabuľky DL6WU (G3SEK), vzorec pripisovaný W8IO len pod 10 prvkov; rozbaľovacie zoznamy a číselné polia v štýle YA-MS; transvertory pre 144 MHz v príručke.",
         };
     }
 
@@ -64923,9 +66551,9 @@ namespace LunaCalc
 
         // Transverter della tabella del manuale (§ 3.7.2) con figura di rumore e guadagno dichiarati dai costruttori;
         // l'ultima voce della tendina è "personalizzato" (TvMod = -1)
-        public static readonly string[] TvNome = { "Kuhne (DB6NT) MKU 144 G2", "Kuhne (DB6NT) TR 144 H +40", "Q5 Signal L144-28M", "HA1YA ME2T-PRO-II / ME2HT-PRO-II" };
-        public static readonly double[] TvNfMod = { 0.9, 1.2, 1.0, 1.0 };
-        public static readonly double[] TvGMod = { 25, 25, 20, 25 };
+        public static readonly string[] TvNome = { "Kuhne (DB6NT) MKU 144 G2", "Kuhne (DB6NT) TR 144 H +40", "Q5 Signal L144-28M", "HA1YA ME2T-PRO-II / ME2HT-PRO-II", "UR3LMZ 144/28 MHz (UX4LA)", "Elecraft XV144", "S53WW Javornik 144/14", "S53RM Murka 144/14", "Kuhne (DB6NT) TR 144 PRO", "Kuhne (DB6NT) TR 144 H", "Kuhne (DB6NT) 144TR7300" };
+        public static readonly double[] TvNfMod = { 0.9, 1.2, 1.0, 1.0, 1.0, 1.0, 0.9, 5.0, 1.4, 0.8, 0.7 };
+        public static readonly double[] TvGMod = { 25, 25, 20, 25, 20, 25, 25, 21, 25, 25, 17 };
 
         // Modi digitali e S/N richiesto in 2500 Hz (Guida di WSJT-X, § 7.1; FT4 = FT8 + 3,5 dB;
         // Q65: "Quick-Start Guide to Q65", K1JT e altri, 3 aprile 2021, soglia 50 % senza AP).
@@ -67469,7 +69097,49 @@ namespace LunaCalc
         Spunta chkOrizUsa, chkOrizSfondo;
         Tondino rbOrizMinT, rbOrizMin0;
         DateTimePicker dtpOrizData, dtpOrizOra;
-        Pillola bOrizAdesso, bOrizMeno, bOrizPiu, bOrizCalc;
+        Pillola bOrizAdesso, bOrizMeno, bOrizPiu, bOrizCalc, bOrizTab, btnPosOstacoli;
+        int tabRitorno;   // si è andati alla tabella della Posizione della Luna per scegliere il momento: 1 = Orizzonte dal terreno, 2 = Stazioni da provare
+
+        // «Orizzonte dal terreno» o «Stazioni da provare» → tabella della Posizione della Luna: si sceglie una riga e si torna con il pulsante verde
+        void VaiTabella(int verso)
+        {
+            tabRitorno = verso;
+            if (btnPosOstacoli != null)
+            {
+                if (verso == 2)
+                {
+                    btnPosOstacoli.Text = "↩ " + Lang.T("Stazioni da provare").ToUpper(Lang.Cultura);
+                    tip.SetToolTip(btnPosOstacoli, Lang.T("Torna a Stazioni da provare") + "\u0001" + Lang.T("Porta il giorno della riga selezionata nella linguetta Stazioni da provare."));
+                }
+                else
+                {
+                    btnPosOstacoli.Text = "↩ " + Lang.T("OSTACOLI");
+                    tip.SetToolTip(btnPosOstacoli, Lang.T("Torna a Orizzonte dal terreno") + "\u0001" + Lang.T("Porta il momento della riga selezionata nella vista degli ostacoli della linguetta Il mio orizzonte."));
+                }
+                btnPosOstacoli.Visible = true;
+                if (btnPosOstacoli.Parent != null) btnPosOstacoli.Parent.PerformLayout();
+            }
+            if (tabs != null && tpPos != null) tabs.SelectedTab = tpPos;
+        }
+        void OrizVaiTabella() { VaiTabella(1); }
+        void OrizTornaOstacoli()
+        {
+            DateTime t;
+            if (!RigaSelezionata(out t)) return;
+            int verso = tabRitorno;
+            tabRitorno = 0;
+            if (btnPosOstacoli != null) btnPosOstacoli.Visible = false;
+            if (verso == 2)
+            {
+                if (dtpStaz != null) dtpStaz.Value = t.Date;
+                if (tabs != null && tpStaz != null) tabs.SelectedTab = tpStaz;
+                return;
+            }
+            orizVista = 0;
+            MostraVistaOriz();
+            ImpostaOrizT(DateTime.SpecifyKind(t, DateTimeKind.Utc));
+            if (tabs != null && tpOriz != null) tabs.SelectedTab = tpOriz;
+        }
         Bitmap orizCielo;
         string orizCieloChiave = "";
         List<Spunta> chkTerrenoAltrove = new List<Spunta>();
@@ -67701,6 +69371,10 @@ namespace LunaCalc
             bOrizMeno.Click += (s, e) => ImpostaOrizT(orizT.AddHours(-1));
             bOrizPiu.Click += (s, e) => ImpostaOrizT(orizT.AddHours(1));
             pnlOriz.Controls.Add(bOrizAdesso); pnlOriz.Controls.Add(bOrizMeno); pnlOriz.Controls.Add(bOrizPiu);
+            bOrizTab = PillolaBordo("⇄ " + Lang.T("DALLA TABELLA"), blu);
+            tip.SetToolTip(bOrizTab, Lang.T("Momento dalla tabella") + "\u0001" + Lang.T("Apre la tabella della linguetta Posizione della Luna: scegli una riga (anche nei giorni futuri) e premi «↩ OSTACOLI» per tornare qui con quel momento."));
+            bOrizTab.Click += (s, e) => OrizVaiTabella();
+            pnlOriz.Controls.Add(bOrizTab);
             Action dim = () =>
             {
                 int w = Math.Max(S(1150), pnlOrizScroll.ClientSize.Width);
@@ -68104,6 +69778,34 @@ namespace LunaCalc
                 }
                 // orizzonte astronomico
                 using (Pen p0 = new Pen(blu, S(1.6f))) g.DrawLine(p0, a.Left, Y(0), a.Right, Y(0));
+                // riquadri della zona puntabile, come nella Volta celeste: viola tratteggiato fra i limiti di elevazione e di azimut dell'antenna
+                {
+                    double e1 = (double)me.El1.Value, e2 = (double)me.El2.Value, z1 = (double)me.Az1.Value, z2 = (double)me.Az2.Value;
+                    double e1c = Math.Max(ymin, e1), e2c = Math.Min(ymax, e2);
+                    if (e2c > e1c)
+                    {
+                        List<RectangleF> zone = new List<RectangleF>();
+                        float yt = Y(e2c), yb = Y(e1c);
+                        Func<double, float> Xd = zz => a.Left + (float)(zz / 360.0 * a.Width);
+                        double s1 = ((z1 % 360.0) + 360.0) % 360.0, s2 = z2 >= 360 ? 360.0 : ((z2 % 360.0) + 360.0) % 360.0;
+                        if (z2 - z1 >= 360 || z1 == z2) zone.Add(new RectangleF(a.Left, yt, a.Width, yb - yt));
+                        else if (s1 < s2) zone.Add(new RectangleF(Xd(s1), yt, Xd(s2) - Xd(s1), yb - yt));
+                        else
+                        {
+                            zone.Add(new RectangleF(Xd(s1), yt, Xd(360) - Xd(s1), yb - yt));
+                            zone.Add(new RectangleF(Xd(0), yt, Xd(s2) - Xd(0), yb - yt));
+                        }
+                        Region primaClipV = g.Clip;
+                        g.SetClip(a, CombineMode.Intersect);
+                        using (Pen vp = new Pen(Color.FromArgb(240, 147, 51, 234), S(4f)))
+                        {
+                            vp.DashStyle = DashStyle.Dash;
+                            foreach (RectangleF rv in zone)
+                                if (rv.Width > 1 && rv.Height > 1) g.DrawRectangle(vp, rv.X, rv.Y, rv.Width, rv.Height);
+                        }
+                        g.Clip = primaClipV;
+                    }
+                }
                 // percorso della Luna
                 PassaggioLuna ps = orizPass;
                 if (ps != null && ps.Ok)
@@ -68237,7 +69939,7 @@ namespace LunaCalc
                     float wsu = g.MeasureString(su, fp).Width;
                     RectangleF rsu = new RectangleF(x, y, wsu + S(4), co.Height);
                     x += wsu + S(10);
-                    foreach (Control pb in new Control[] { bOrizAdesso, bOrizMeno, bOrizPiu })
+                    foreach (Control pb in new Control[] { bOrizAdesso, bOrizMeno, bOrizPiu, bOrizTab })
                     {
                         if (x + pb.Width > rDx) { x = xr + S(16); y += co.Height + S(4); }
                         PosizionaControllo(pb, x, y + (co.Height - pb.Height) / 2); x += pb.Width + S(4);
@@ -69069,6 +70771,10 @@ namespace LunaCalc
         TabPage tpStaz;
         PannelloDisegno pnlStaz;
         Panel pnlStazScroll;
+        VScrollBar sbStaz;
+        int stazOff;               // scorrimento dell'elenco delle stazioni (pixel)
+        bool stazImposta;
+        RectangleF stazListaRett;
         DateTimePicker dtpStaz;
         Tendina cmbStazModo, cmbStazPol;
         Spunta chkStazTemp;
@@ -69076,7 +70782,8 @@ namespace LunaCalc
         TextBox txtStazLoss;
         Pillola bStazRipr, bStazApri, bStazTutte;
         DateTime stazGiorno = DateTime.UtcNow.Date;
-        bool stazTutte, stazTemp = true, stazCarica;
+        bool stazTutte, stazTemp = true, stazCarica, stazNoPaese;
+        Spunta chkStazPaese;
         int stazPol = 0, stazModoVoce;
         List<StazProva> stazTutteSt = new List<StazProva>(), stazMostrate = new List<StazProva>();
         int stazAttive;
@@ -69093,8 +70800,23 @@ namespace LunaCalc
             for (int i = 0; i < n - 2; i++) l += i < Dl6wuPassi.Length ? Dl6wuPassi[i] : 0.4;
             return l;
         }
-        // guadagno (dBi) dalla lunghezza del boom: G = 7,773·log(L/λ) + 11,43 (curva DL6WU riportata da W8IO)
-        static double GuadagnoDl6wu(int n) { return 7.773 * Math.Log10(Math.Max(0.2, BoomDl6wu(n))) + 11.43; }
+        // Guadagno approssimato delle yagi DL6WU in dBd, per numero di direttori (8…15, 20, 25, 30): tabella «Element spacings
+        // for DL6WU long-yagis» in I. White G3SEK (a cura di), The VHF/UHF DX Book, RSGB, cap. 7 «DL6WU Yagi Designs».
+        static readonly int[] Dl6wuDir = { 8, 9, 10, 11, 12, 13, 14, 15, 20, 25, 30 };
+        static readonly double[] Dl6wuDbd = { 11.9, 12.4, 12.8, 13.2, 13.6, 14.0, 14.3, 14.6, 15.8, 16.6, 17.3 };
+        // Formula attribuita a W8IO, senza fonte verificata: G = 7,773·log(L/λ) + 11,43 dBi (riproduce la tabella entro 0,1 dB)
+        static double GuadagnoW8io(int n) { return 7.773 * Math.Log10(Math.Max(0.2, BoomDl6wu(n))) + 11.43; }
+        // Tabella DL6WU (G3SEK), interpolata tra le righe, dove c'è (da 10 a 32 elementi); fuori dalla tabella la formula
+        static bool InTabellaDl6wu(int n) { return n - 2 >= Dl6wuDir[0] && n - 2 <= Dl6wuDir[Dl6wuDir.Length - 1]; }
+        static double GuadagnoTabellaDl6wu(int n)
+        {
+            int d = n - 2;
+            for (int i = 0; i < Dl6wuDir.Length - 1; i++)
+                if (d >= Dl6wuDir[i] && d <= Dl6wuDir[i + 1])
+                    return Dl6wuDbd[i] + (Dl6wuDbd[i + 1] - Dl6wuDbd[i]) * (d - Dl6wuDir[i]) / (Dl6wuDir[i + 1] - Dl6wuDir[i]) + 2.15;
+            return double.NaN;
+        }
+        static double GuadagnoDl6wu(int n) { return InTabellaDl6wu(n) ? GuadagnoTabellaDl6wu(n) : GuadagnoW8io(n); }
 
         // impianto dichiarato nell'intestazione della chat: "4X14HV/1K", "2X10H750", "17H/600", "4X13H/KW"...
         static void LeggiImpianto(string imp, StazProva s)
@@ -69141,6 +70863,10 @@ namespace LunaCalc
             bDopo.Click += (s, e) => dtpStaz.Value = dtpStaz.Value.AddDays(1);
             bOggi.Click += (s, e) => dtpStaz.Value = DateTime.UtcNow.Date;
             r1.Controls.Add(bPrima); r1.Controls.Add(bDopo); r1.Controls.Add(bOggi);
+            Pillola bStazTab = PillolaBordo("⇄ " + Lang.T("DALLA TABELLA"), blu);
+            tip.SetToolTip(bStazTab, Lang.T("Giorno dalla tabella") + "\u0001" + string.Format(Lang.T("Apre la tabella della linguetta Posizione della Luna: scegli una riga (anche nei giorni futuri) e premi «↩ {0}» per tornare qui con quel giorno."), Lang.T("Stazioni da provare").ToUpper(Lang.Cultura)));
+            bStazTab.Click += (s, e) => VaiTabella(2);
+            r1.Controls.Add(bStazTab);
             Label lb = L(Lang.T("Banda") + " 144 MHz"); lb.Font = new Font(Lang.FontUi, 9.5F * fontFactor, FontStyle.Bold); lb.Margin = new Padding(S(14), S(6), 0, S(3));
             Label lb2 = L("(" + Lang.T("solo 2 m, come la chat di N0UK") + ")"); lb2.ForeColor = Tema.Muted;
             r1.Controls.Add(lb); r1.Controls.Add(lb2);
@@ -69158,6 +70884,14 @@ namespace LunaCalc
             chkStazTemp.Margin = new Padding(S(10), S(3), S(4), S(3));
             chkStazTemp.CheckedChanged += (s, e) => { if (stazCarica) return; stazTemp = chkStazTemp.Checked; stazChiave = ""; RicalcolaStaz(); if (!caricamento) SaveSettings(); };
             r1.Controls.Add(chkStazTemp);
+            chkStazPaese = new Spunta();
+            chkStazPaese.Text = Lang.T("Escludi le stazioni del mio paese");
+            chkStazPaese.AutoSize = true; chkStazPaese.Colore = verde; chkStazPaese.Checked = stazNoPaese;
+            chkStazPaese.Margin = new Padding(S(10), S(3), S(4), S(3));
+            chkStazPaese.CheckedChanged += (s, e) => { if (stazCarica) return; stazNoPaese = chkStazPaese.Checked; stazChiave = ""; stazOff = 0; RicalcolaStaz(); if (!caricamento) SaveSettings(); };
+            chkStazPaese.MouseEnter += (s, e) => TipPaese();
+            TipPaese();
+            r1.Controls.Add(chkStazPaese);
             Label ln = L(Lang.T("senza: Dgrd e rumore di riferimento, come i calcoli semplici · con: Tant, Te,") + "\n" + Lang.T("cielo dietro la Luna e rumore locale, come CALCOLI APPROFONDITI"));
             ln.ForeColor = Tema.Muted; ln.Font = new Font(Lang.FontUi, 8F * fontFactor);
             r1.Controls.Add(ln);
@@ -69218,7 +70952,19 @@ namespace LunaCalc
                 tabs.SelectedTab = tpBudget;
             };
             bStazTutte = PillolaBordo(Lang.T("Mostra tutte le stazioni attive"), blu);
-            bStazTutte.Click += (s, e) => { stazTutte = !stazTutte; ScegliStaz(); pnlStaz.Invalidate(); };
+            bStazTutte.Click += (s, e) => { stazTutte = !stazTutte; stazOff = 0; ScegliStaz(); pnlStaz.Invalidate(); };
+            sbStaz = new VScrollBar();
+            sbStaz.Visible = false;
+            sbStaz.ValueChanged += (s, e) => { if (stazImposta) return; stazOff = sbStaz.Value; pnlStaz.Invalidate(); };
+            pnlStaz.Controls.Add(sbStaz);
+            pnlStaz.MouseWheel += (s, e) =>
+            {
+                if (!sbStaz.Visible || !stazListaRett.Contains(e.Location)) return;
+                int mx = Math.Max(0, sbStaz.Maximum - sbStaz.LargeChange + 1);
+                stazOff = Math.Max(0, Math.Min(mx, stazOff - Math.Sign(e.Delta) * S(60)));
+                pnlStaz.Invalidate();
+            };
+            pnlStaz.MouseEnter += (s, e) => { if (!pnlStaz.Focused) pnlStaz.Focus(); };
             pnlStaz.Controls.Add(bStazRipr); pnlStaz.Controls.Add(bStazApri); pnlStaz.Controls.Add(bStazTutte);
             Action dim = () =>
             {
@@ -69233,6 +70979,15 @@ namespace LunaCalc
             tp.Controls.Add(pnlStazScroll);
             tp.Controls.Add(r1);
             LeggiBudgetStaz();
+        }
+
+        void TipPaese()
+        {
+            if (chkStazPaese == null) return;
+            string call = txtCall == null ? "" : txtCall.Text.Trim();
+            string paese = !Cty.Presente ? Lang.T("file cty.dat non trovato") : (Cty.Paese(call) ?? Lang.T("nominativo non riconosciuto"));
+            tip.SetToolTip(chkStazPaese, Lang.T("Escludi le stazioni del mio paese") + "\u0001"
+                + string.Format(Lang.T("Riconosce il paese dal nominativo con il file cty.dat di AD1C (country-files.com): YAEC lo scarica nella cartella data e lo aggiorna ogni mese; se non ci riesce, usa quello di WSJT-X o di N1MM Logger+ se lo trova. Il tuo paese: {0}."), paese));
         }
 
         BudgetParams Budget144()
@@ -69293,7 +71048,8 @@ namespace LunaCalc
             string loc = me.Loc.Text.Trim().ToUpperInvariant();
             BudgetParams b = Budget144();
             string k = stazGiorno.ToString("yyyyMMdd", inv) + loc + "|" + ChiaveTerreno + "|" + stazModoVoce + stazTemp + stazPol + "|" + b.P + b.NAnt + b.GAnt + b.Nf + b.Tant + b.CavoTx + b.AccTx
-                + "|" + me.Az1.Value + me.Az2.Value + me.El1.Value + me.El2.Value + "|" + Impianti.Firma + Attivi.Firma + "|" + (RilievoInUso != null ? RilievoInUso.File + rumSoglia : "");
+                + "|" + me.Az1.Value + me.Az2.Value + me.El1.Value + me.El2.Value + "|" + Impianti.Firma + Attivi.Firma + "|" + (RilievoInUso != null ? RilievoInUso.File + rumSoglia : "")
+                + "|" + (stazNoPaese ? "P" + Cty.Firma + (txtCall == null ? "" : txtCall.Text.Trim()) : "");
             if (k == stazChiave) return;
             stazChiave = k;
             stazTutteSt.Clear();
@@ -69314,8 +71070,11 @@ namespace LunaCalc
                 me.Valuta(pm[i], out okMe[i]);
             }
             double kB = 1.380649e-23, bw = 2500;
+            // stazioni del mio paese escluse (riconosciute con cty.dat)
+            string mioPaese = stazNoPaese ? Cty.Paese(txtCall == null ? "" : txtCall.Text.Trim()) : null;
             foreach (KeyValuePair<string, DateTime> kv in att)
             {
+                if (mioPaese != null && Cty.Paese(kv.Key) == mioPaese) continue;
                 StazProva s = new StazProva();
                 s.Call = kv.Key;
                 string iloc, imp;
@@ -69468,7 +71227,8 @@ namespace LunaCalc
                 float wSx = Math.Max(S(370), (cr.Width - 2 * pad - 2 * gap) * 0.26f), wDx = Math.Max(S(300), (cr.Width - 2 * pad - 2 * gap) * 0.24f);
                 float wC = cr.Width - 2 * pad - 2 * gap - wSx - wDx;
                 RectangleF rs = new RectangleF(pad, y0, wSx, S(420));
-                RectangleF rc = new RectangleF(rs.Right + gap, y0, wC, Math.Max(S(560), cr.Height - y0 - S(10)));
+                // l'elenco ha la sua barra di scorrimento: la scheda è alta quanto la finestra
+                RectangleF rc = new RectangleF(rs.Right + gap, y0, wC, Math.Max(S(560), pnlStazScroll.ClientSize.Height - y0 - S(10)));
                 float xr = rc.Right + gap;
 
                 // ----- la mia stazione
@@ -69539,20 +71299,36 @@ namespace LunaCalc
                 // ----- elenco delle stazioni
                 Scheda(g, rc, Color.Empty);
                 string tc = string.Format(ci, Lang.T("{0} STAZIONI DA PROVARE · {1} (UTC) · 144 MHz"), stazMostrate.Count, stazGiorno.ToString("dd/MM/yyyy", inv));
-                Testo(g, Spaziato(tc), ft, titCol, new RectangleF(rc.Left + S(16), rc.Top + S(12), rc.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
+                bStazTutte.Text = stazTutte ? Lang.T("Mostra le migliori") : Lang.T("Mostra tutte le stazioni attive");
+                // il pulsante sta a destra del titolo se c'è posto, altrimenti sulla riga sotto, sempre in alto
+                float wTit = g.MeasureString(Spaziato(tc), ft).Width;
+                bool pulsAccanto = rc.Left + S(16) + wTit + S(16) + bStazTutte.Width <= rc.Right - S(16);
+                float yTitExtra = pulsAccanto ? 0 : bStazTutte.Height + S(6);
+                PosizionaControllo(bStazTutte, rc.Right - S(16) - bStazTutte.Width, pulsAccanto ? rc.Top + S(8) : rc.Top + S(36));
+                Testo(g, Spaziato(tc), ft, titCol, new RectangleF(rc.Left + S(16), rc.Top + S(12), pulsAccanto ? rc.Width - S(40) - bStazTutte.Width : rc.Width - S(30), S(22)), StringAlignment.Near, StringAlignment.Near);
                 string sub = stazAttive == 0
                     ? Lang.T("L'elenco delle stazioni attive (chat EME di N0UK) non è ancora stato scaricato: serve la connessione a internet all'avvio del programma.")
                     : string.Format(ci, Lang.T("Le migliori tra le {0} stazioni attive (N0UK, ultimi 90 giorni), una per campo di locator. Clic sul nominativo per sostituirlo con un altro."), stazAttive);
                 if (stazTutte) sub = string.Format(ci, Lang.T("Tutte le {0} stazioni attive con almeno una finestra comune nel giorno scelto."), stazTutteSt.Count);
                 if (!me.Ok) sub = Lang.T("Imposta un locator valido nella prima linguetta.");
                 float hs = g.MeasureString(sub, fp, (int)(rc.Width - S(32))).Height;
-                using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(sub, fp, bm, new RectangleF(rc.Left + S(16), rc.Top + S(38), rc.Width - S(32), hs + 2));
-                float xb = rc.Left + S(72), wbar = rc.Right - S(20) - xb;
-                float yy = rc.Top + S(44) + hs;
+                using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(sub, fp, bm, new RectangleF(rc.Left + S(16), rc.Top + S(38) + yTitExtra, rc.Width - S(32), hs + 2));
+                int sbw = SystemInformation.VerticalScrollBarWidth;
+                float xb = rc.Left + S(72), wbar = rc.Right - S(24) - sbw - xb;
+                float yy = rc.Top + S(44) + hs + yTitExtra;
                 // scala delle ore
                 for (int h = 0; h <= 24; h += 6)
                     Testo(g, h == 0 ? "0" : h.ToString("00", inv), fp, Tema.Muted, new RectangleF(xb + wbar * h / 24f - S(15), yy, S(30), S(16)), h == 0 ? StringAlignment.Near : (h == 24 ? StringAlignment.Far : StringAlignment.Center), StringAlignment.Center);
                 yy += S(20);
+                // zona dell'elenco, che scorre con la barra a destra; la legenda resta in fondo alla scheda
+                RectangleF rl = new RectangleF(rc.Left + S(4), yy, rc.Width - S(8), rc.Bottom - S(44) - yy);
+                stazListaRett = rl;
+                float yListaTop = yy;
+                yy -= stazOff;
+                Region clipPrima = g.Clip;
+                g.SetClip(rl, CombineMode.Intersect);
+                RectangleF rcPieno = rc;
+                rc = new RectangleF(rc.Left, rc.Top, rc.Width - sbw - S(6), rc.Height);
                 foreach (StazProva s in stazMostrate)
                 {
                     float ys = yy;
@@ -69563,7 +71339,8 @@ namespace LunaCalc
                     // nominativo, locator e distanza
                     SizeF sc = g.MeasureString(s.Call, fcall);
                     using (Brush bb = new SolidBrush(blu)) g.DrawString(s.Call, fcall, bb, xb - S(2), ys);
-                    stazZone.Add(new KeyValuePair<RectangleF, StazProva>(new RectangleF(xb - S(2), ys, sc.Width, sc.Height), s));
+                    RectangleF zc = new RectangleF(xb - S(2), ys, sc.Width, sc.Height);
+                    if (rl.Contains(zc.Left, zc.Top + zc.Height / 2)) stazZone.Add(new KeyValuePair<RectangleF, StazProva>(zc, s));
                     string ld = s.Loc.ToUpperInvariant().Substring(0, Math.Min(6, s.Loc.Length)) + " · " + s.Dist.ToString("N0", ci) + " km";
                     Testo(g, ld, fp, Tema.Muted, new RectangleF(xb + sc.Width, ys + S(4), S(260), sc.Height - S(4)), StringAlignment.Near, StringAlignment.Center);
                     if (!s.Dichiarato)
@@ -69631,7 +71408,27 @@ namespace LunaCalc
                     Testo(g, Lang.T("Nessuna finestra comune nel giorno scelto con i tuoi limiti di puntamento."), fs, Tema.Muted, new RectangleF(rc.Left + S(16), yy, rc.Width - S(32), S(40)), StringAlignment.Near, StringAlignment.Near);
                     yy += S(44);
                 }
-                // legenda e pulsante
+                g.Clip = clipPrima;
+                rc = rcPieno;
+                // barra di scorrimento dell'elenco
+                {
+                    int alto = (int)Math.Ceiling(yy + stazOff - yListaTop), vis = (int)rl.Height;
+                    bool serve = alto > vis && vis > S(40);
+                    stazImposta = true;
+                    if (serve)
+                    {
+                        sbStaz.Bounds = new Rectangle((int)(rc.Right - S(6) - sbw), (int)rl.Top, sbw, vis);
+                        sbStaz.Maximum = alto; sbStaz.LargeChange = Math.Max(1, vis); sbStaz.SmallChange = S(40);
+                        int mx = Math.Max(0, alto - vis);
+                        if (stazOff > mx) { stazOff = mx; pnlStaz.Invalidate(); }
+                        sbStaz.Value = Math.Min(stazOff, Math.Max(0, sbStaz.Maximum - sbStaz.LargeChange + 1));
+                    }
+                    else if (stazOff != 0) { stazOff = 0; pnlStaz.Invalidate(); }
+                    if (sbStaz.Visible != serve) sbStaz.Visible = serve;
+                    stazImposta = false;
+                    yy = rl.Bottom + S(6);
+                }
+                // legenda
                 {
                     float x = rc.Left + S(16);
                     string[] lg = { "● " + Lang.T("75–100 probabile"), "● " + Lang.T("50–74 possibile"), "● " + Lang.T("sotto 50 difficile") };
@@ -69642,11 +71439,8 @@ namespace LunaCalc
                         Testo(g, lg[k], fpb, cl[k], new RectangleF(x, yy, w + S(4), S(26)), StringAlignment.Near, StringAlignment.Center);
                         x += w + S(14);
                     }
-                    bStazTutte.Text = stazTutte ? Lang.T("Mostra le migliori") : Lang.T("Mostra tutte le stazioni attive");
-                    PosizionaControllo(bStazTutte, rc.Right - S(16) - bStazTutte.Width, yy);
                     yy += S(36);
                 }
-                rc.Height = Math.Max(rc.Height, yy - rc.Top);
 
                 // ----- come si calcola l'indice
                 float yr = y0;
@@ -69678,24 +71472,26 @@ namespace LunaCalc
                 // ----- dagli elementi al guadagno
                 {
                     int[] els = { 7, 9, 11, 13, 14, 17, 19, 22 };
-                    string nota = Lang.T("Spaziature DL6WU (W4RNL): riflettore 0,2 λ, primo direttore 0,075 λ, poi in crescita fino a 0,4 λ. G = 7,773·log(L/λ) + 11,43 (W8IO). Sotto i 2 λ di boom il valore è indicativo; antenne non DL6WU possono differire.");
+                    string nota = Lang.T("Spaziature e guadagni della tabella di DL6WU riportata da G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): riflettore 0,2 λ, primo direttore 0,075 λ, poi in crescita fino a 0,4 λ; guadagno in dBd + 2,15. La tabella parte da 10 elementi: sotto si usa la formula G = 7,773·log(L/λ) + 11,43 attribuita a W8IO, di cui non è stata trovata la fonte (dove si sovrappongono le due differiscono di 0,1 dB al massimo). Antenne non DL6WU possono differire.");
                     float hn = g.MeasureString(nota, fp, (int)(wDx - S(32))).Height;
                     float rh2 = S(22);
                     RectangleF r = new RectangleF(xr, yr, wDx, S(70) + (els.Length + 1) * rh2 + hn);
                     Scheda(g, r, Color.Empty);
                     Testo(g, Spaziato(Lang.T("DAGLI ELEMENTI AL GUADAGNO (DL6WU, 144 MHz)")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(40)), StringAlignment.Near, StringAlignment.Near);
                     float yq = r.Top + S(52), wi = r.Width - S(32);
-                    string[] th = { Lang.T("Elementi"), Lang.T("Boom (m)"), Lang.T("Guadagno (dBi)") };
-                    Testo(g, th[0], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.33f, rh2), StringAlignment.Near, StringAlignment.Center);
-                    Testo(g, th[1], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.62f, rh2), StringAlignment.Far, StringAlignment.Center);
-                    Testo(g, th[2], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
+                    string[] th = { Lang.T("Elementi"), Lang.T("Boom (m)"), "DL6WU dBi", "W8IO dBi" };
+                    Testo(g, th[0], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.30f, rh2), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, th[1], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.50f, rh2), StringAlignment.Far, StringAlignment.Center);
+                    Testo(g, th[2], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.76f, rh2), StringAlignment.Far, StringAlignment.Center);
+                    Testo(g, th[3], fpb, Tema.Muted, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
                     yq += rh2;
                     foreach (int n in els)
                     {
                         using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), yq, r.Right - S(16), yq);
-                        Testo(g, n.ToString(ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.33f, rh2), StringAlignment.Near, StringAlignment.Center);
-                        Testo(g, (BoomDl6wu(n) * 299.792458 / 144.0).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.62f, rh2), StringAlignment.Far, StringAlignment.Center);
-                        Testo(g, GuadagnoDl6wu(n).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, n.ToString(ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.30f, rh2), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, (BoomDl6wu(n) * 299.792458 / 144.0).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.50f, rh2), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, InTabellaDl6wu(n) ? GuadagnoTabellaDl6wu(n).ToString("0.0", ci) : "—", fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.76f, rh2), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, GuadagnoW8io(n).ToString("0.0", ci), fp, Tema.Muted, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
                         yq += rh2;
                     }
                     using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(nota, fp, bm, new RectangleF(r.Left + S(16), yq + S(8), wi, hn + 2));
@@ -74789,7 +76585,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.9";
+        public const string Versione = "1.9.1";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -75120,7 +76916,30 @@ namespace LunaCalc
         DateTime? trkScelto;                 // null = in diretta
         DateTimePicker dtpTrkGiorno;
         Pillola btnTrkAdesso, btnTrkCall3;
-        Pillola btnTrkGraves;
+        Pillola btnTrkGraves, btnTrkCorreggi;
+        bool corrDx;   // il locator del DX è diverso da quello del CALL3.TXT
+
+        void PosizionaCorreggi()
+        {
+            if (btnTrkCorreggi == null || cardDx == null) return;
+            Size sb = btnTrkCorreggi.GetPreferredSize(Size.Empty);
+            int x = cardDx.Width - S(11) - sb.Width;
+            int y = txtTrkDx.Top + Math.Max(0, (txtTrkDx.Height - sb.Height) / 2);
+            btnTrkCorreggi.Location = new Point(x, y);
+            btnTrkCorreggi.Visible = corrDx && txtTrkDx.Right + S(10) <= x;
+        }
+
+        void CorreggiCall3()
+        {
+            string g3, call = txtDxCall.Text.Trim().ToUpperInvariant(), loc = dx.Loc.Text.Trim().ToUpperInvariant();
+            if (StatoCall3(out g3) != 2 || !dx.Ok) return;
+            if (!ChiediSiNo(Lang.T("Correggi il locator nel CALL3.TXT"),
+                string.Format(Lang.T("Correggere il locator di {0} nel CALL3.TXT da {1} a {2}?"), call, g3, loc),
+                Lang.T("La correzione resta valida anche dopo gli aggiornamenti del CALL3.TXT."))) return;
+            if (!Call3.Correggi(call, loc)) { MessageBox.Show(this, Lang.T("Non è stato possibile salvare la correzione."), "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
+            AggiornaTracciamento(false);
+            cardDx.Invalidate();
+        }
         // il radar GRAVES (Broye-Aubigney-Montseugny, 47,35° N 5,52° E) come stazione DX: nominativo, locator e confronto attivo
         void ImpostaGraves()
         {
@@ -75298,6 +77117,14 @@ namespace LunaCalc
                 btnTrkCall3.Visible = S(12) + wt + S(6) + sb.Width + S(11) <= cardDx.Width;
             };
             btnTrkCall3.Click += (s, e) => FinestraCall3();
+            // pulsante CORREGGI: il locator scritto per il DX diventa la correzione del CALL3.TXT
+            btnTrkCorreggi = new Pillola(Lang.T("CORREGGI"), StilePillola.Pieno, Color.FromArgb(194, 124, 14), new Font(Lang.FontUi, 7.5F * fontFactor, FontStyle.Bold));
+            tip.SetToolTip(btnTrkCorreggi, Lang.T("Correggi il locator nel CALL3.TXT") + "\u0001"
+                + Lang.T("Il locator che hai scritto è diverso da quello del CALL3.TXT: con un clic lo salvi come correzione. YAEC la ricorda in data\\call3_correzioni.txt, la applica subito al CALL3.TXT e di nuovo a ogni aggiornamento del file, anche nella copia per WSJT-X."));
+            btnTrkCorreggi.Visible = false;
+            cardDx.Controls.Add(btnTrkCorreggi);
+            cardDx.Layout += (s, e) => PosizionaCorreggi();
+            btnTrkCorreggi.Click += (s, e) => CorreggiCall3();
             // pulsante GRAVES: il radar francese (143,050 MHz, JN27SI) diventa la stazione DX
             btnTrkGraves = new Pillola("GRAVES", StilePillola.Pieno, Color.FromArgb(124, 58, 237), new Font(Lang.FontUi, 7.5F * fontFactor, FontStyle.Bold));
             tip.SetToolTip(btnTrkGraves, Lang.T("Radar GRAVES come stazione DX") + "\u0001" + Lang.T("Mette come DX il radar francese GRAVES (143,050 MHz, locator JN27SI): le finestre comuni con GRAVES sono i momenti in cui puoi ricevere la sua eco dalla Luna e verificare ricevitore e puntamento. Vedi il manuale TEORIA E CONSIGLI SULL'EME, § 1.11."));
@@ -76568,6 +78395,8 @@ namespace LunaCalc
             string g3c;
             int st3 = StatoCall3(out g3c);
             subDxTag = "";
+            bool corr = st3 == 2 && dx.Ok;
+            if (corr != corrDx) { corrDx = corr; PosizionaCorreggi(); }
             if (st3 == 2) { subDx = string.Format(Lang.T("CALL3.TXT: {0} · Invio sul nominativo per usarlo"), g3c); subDxCol = Tema.Scuro ? ColArancio : Color.FromArgb(194, 124, 14); }
             else if (txtTrkDx.Text.Trim().Length == 0 && st3 == 3) { subDx = Lang.T("nominativo non presente nel CALL3.TXT: inserisci il locator"); subDxCol = Tema.Muted; }
             else if (txtTrkDx.Text.Trim().Length == 0) { subDx = Lang.T("inserisci il locator della stazione da ascoltare"); subDxCol = Tema.Muted; }
@@ -77939,6 +79768,7 @@ namespace LunaCalc
             Lang.T("1.7 - Otto lingue nuove: portoghese brasiliano, thailandese, cinese tradizionale, polacco, ceco, rumeno, greco e ungherese (36 in tutto), con i manuali e i LEGGIMI; nel Budget EME yagi e nel Budget EME dischi il calcolo dell'eco della propria stazione (io trasmetto e ricevo il mio eco); disco a primo fuoco oppure offset (W2IMU); a 1296 MHz con i dischi la perdita della polarizzazione circolare degli illuminatori reali (KA1GT); nel Controllo dei calcoli la scelta tra Budget EME yagi e Budget EME dischi; formule della DGRD per frequenza scritte come in un editor di equazioni; manuale: rotazione di Faraday a 1296 MHz secondo ITU-R P.531, depolarizzazione a 23 cm (Hagfors) e polarizzazione circolare in 23 cm."),
             Lang.T("1.8 - Nuova lingua slovacca (37 in tutto), con i manuali, il LEGGIMI e la licenza; larghezza del fascio unica in tutto il programma: 0,93·√(41253/G) per le yagi (regola di Kraus corretta con le simulazioni NEC di W4RNL, come in YA-MS) e 70·λ/D per i dischi (IZ0JNY), al posto di √(32000/G) senza fonte nella DGRD per frequenza; manuale aggiornato con la nuova formula e l'esempio del puntamento; su macOS l'avvio apre da solo XQuartz, scrive la versione di Mono nel registro e avvisa se YAEC non parte; presentazione del README anche in portoghese, turco, ceco, slovacco, cinese, giapponese e coreano; traduzioni corrette in thailandese, rumeno, greco, portoghese brasiliano, polacco, ceco e ungherese."),
             Lang.T("1.9 - Nuova linguetta Il mio orizzonte (In diretta): orizzonte dal terreno calcolato dai dati SRTM1 con curvatura terrestre e rifrazione, sullo sfondo della Volta celeste con una delle tre colorazioni, percorso della Luna, ostacoli principali con i nomi di OpenStreetMap e minuti di Luna persi; casella per usare il terreno come elevazione minima in tutto il programma; mappa del rumore locale secondo NJ9R, con ⚠ nelle ore in cui la Luna è in una direzione rumorosa; nuova linguetta Stazioni da provare (Pianificazione), idea di Matteo IW5DHN: le stazioni attive della chat N0UK ordinate con un indice da 0 a 100; caselle numeriche con le frecce affiancate, linguette a pillola e tre nuovi schemi di colori presi da IP-TRX-CTRL."),
+            Lang.T("1.9.1 - Aggiornamento automatico da GitHub, con controllo dell'impronta SHA-256, su Windows, con gli archivi portatili (Linux, FreeBSD, OpenBSD, Alpine), con l'AppImage e con l'app per macOS (i pacchetti .deb, .rpm, Arch e Slackware si aggiornano con il gestore dei pacchetti), e avviso dei file mancanti; nuovi pacchetti per Windows ARM64, Fedora e openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS a 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686 e AppImage; pulsante CORREGGI per correggere il locator di una stazione nel CALL3.TXT; Distanza e Dgrd con la Dgrd classica a 144 MHz, mentre la Dgrd per banda resta in DGRD per frequenza; Il mio orizzonte con i riquadri viola della Volta celeste e il momento preso dalla tabella di pianificazione; Stazioni da provare con il momento della tabella, la barra di scorrimento e l'esclusione delle stazioni del proprio paese (cty.dat); guadagno delle yagi dalla tabella di DL6WU (G3SEK), con la formula attribuita a W8IO solo sotto i 10 elementi; tendine e caselle numeriche nello stile di YA-MS; transverter per i 144 MHz nel manuale."),
         };
 
                     _AboutVersioniLg = Lang.Idx;
@@ -80826,6 +82656,402 @@ namespace LunaCalc
             // tutte le caselle dei numeri con la cornice arrotondata e le frecce ben visibili
             ArrotondaNumeri(this);
             this.Shown += (s, e) => ArrotondaNumeri(this);
+            this.Shown += (s, e) => { ControllaFileMancanti(); AvviaControlloAggiornamenti(); };
+        }
+
+
+        // ---------- Aggiornamenti da GitHub e file mancanti ----------
+        // All'avvio (al massimo una volta ogni 20 ore) YAEC chiede a GitHub l'ultima versione pubblicata; se è più nuova
+        // lo dice con un avviso. Su Windows scarica il pacchetto giusto (installatore o portatile, 64 o 32 bit), ne controlla
+        // l'impronta SHA-256 con SHA256SUMS.txt, si chiude e si aggiorna da solo. Su Linux, FreeBSD, OpenBSD e macOS fa lo stesso
+        // con l'archivio portatile, l'AppImage o l'app per Mac (la nuova versione parte al prossimo avvio); se YAEC è installato
+        // con un pacchetto del sistema (.deb, .rpm, Arch, Slackware: cartella sotto /usr) apre la pagina della versione, perché
+        // quei pacchetti si aggiornano con il gestore dei pacchetti.
+        const string RepoGit = "ic8tem/YAEC";
+        string aggSalta = "";
+        long aggUltimo;
+
+        static bool InProva { get { return Environment.GetEnvironmentVariable("CI") != null || Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null; } }
+        static bool SuWindows { get { return Environment.OSVersion.Platform == PlatformID.Win32NT; } }
+
+        static int[] NumeriVersione(string v)
+        {
+            List<int> l = new List<int>();
+            foreach (string x in (v ?? "").TrimStart('v', 'V').Split('.')) { int n; l.Add(int.TryParse(x, out n) ? n : 0); }
+            while (l.Count < 3) l.Add(0);
+            return l.ToArray();
+        }
+        static bool PiuNuova(string a, string b)
+        {
+            int[] x = NumeriVersione(a), y = NumeriVersione(b);
+            for (int i = 0; i < Math.Max(x.Length, y.Length); i++)
+            {
+                int u = i < x.Length ? x[i] : 0, w = i < y.Length ? y[i] : 0;
+                if (u != w) return u > w;
+            }
+            return false;
+        }
+
+        void AvviaControlloAggiornamenti()
+        {
+            if (InProva) return;
+            if (DateTime.UtcNow.Ticks - aggUltimo < TimeSpan.FromHours(20).Ticks) return;
+            System.Threading.Thread t = new System.Threading.Thread(() =>
+            {
+                try
+                {
+                    System.Threading.Thread.Sleep(6000);
+                    string js = Encoding.UTF8.GetString(Dati.Scarica("https://api.github.com/repos/" + RepoGit + "/releases/latest", 15000));
+                    System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(js, "\"tag_name\"\\s*:\\s*\"v?([0-9][0-9.]*)\"");
+                    if (!m.Success) return;
+                    string ver = m.Groups[1].Value;
+                    aggUltimo = DateTime.UtcNow.Ticks;
+                    if (!PiuNuova(ver, Versione) || ver == aggSalta) return;
+                    this.BeginInvoke((Action)(() => ProponiAggiornamento(ver)));
+                }
+                catch { }
+            });
+            t.IsBackground = true;
+            t.Start();
+        }
+
+        void ProponiAggiornamento(string ver)
+        {
+            string nota = SuWindows
+                ? Lang.T("YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta, si chiude e si aggiorna da solo; i tuoi dati nella cartella data restano dove sono.")
+                : (InstallatoDaPacchetto
+                    ? Lang.T("YAEC è installato con un pacchetto del sistema (.deb, .rpm, Arch o Slackware), che si aggiorna con il gestore dei pacchetti: si apre la pagina di GitHub con il pacchetto nuovo.")
+                    : Lang.T("YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta e sostituisce i suoi file; la nuova versione parte al prossimo avvio. I tuoi dati restano dove sono."));
+            if (!ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("È disponibile YAEC {0} su GitHub (tu hai la {1}). Vuoi aggiornarlo adesso?"), ver, Versione), nota))
+            {
+                if (ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("Vuoi che YAEC non ti avvisi più per la versione {0}?"), ver), Lang.T("Ti avviserà comunque alla prossima versione.")))
+                { aggSalta = ver; SaveSettings(); }
+                return;
+            }
+            string pagina = "https://github.com/" + RepoGit + "/releases/tag/v" + ver;
+            if (!SuWindows && InstallatoDaPacchetto) { try { System.Diagnostics.Process.Start(pagina); } catch { } return; }
+            System.Threading.Thread t = new System.Threading.Thread(() => { if (SuWindows) ScaricaAggiornamento(ver, pagina); else ScaricaAggiornamentoUnix(ver, pagina); });
+            t.IsBackground = true;
+            t.Start();
+        }
+
+        void ScaricaAggiornamento(string ver, string pagina)
+        {
+            string app = AppDomain.CurrentDomain.BaseDirectory;
+            bool installato = File.Exists(Path.Combine(app, "unins000.exe"));
+            string arch = IntPtr.Size == 8 ? "x64" : "x86";
+            string nome = "YAEC-" + ver + "-win-" + arch + (installato ? "-setup.exe" : "-portatile.zip");
+            string baseUrl = "https://github.com/" + RepoGit + "/releases/download/v" + ver + "/";
+            try
+            {
+                byte[] somme = null, pacchetto;
+                try { somme = Dati.Scarica(baseUrl + "SHA256SUMS.txt", 30000); } catch { }
+                try { pacchetto = Dati.Scarica(baseUrl + nome, 300000); }
+                catch
+                {
+                    this.BeginInvoke((Action)(() =>
+                    {
+                        Messaggio(this, string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver) + "\n" + Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        try { System.Diagnostics.Process.Start(pagina); } catch { }
+                    }));
+                    return;
+                }
+                // impronta SHA-256: se c'è l'elenco deve combaciare
+                if (somme != null)
+                {
+                    string h;
+                    using (System.Security.Cryptography.SHA256 sh = System.Security.Cryptography.SHA256.Create())
+                        h = BitConverter.ToString(sh.ComputeHash(pacchetto)).Replace("-", "").ToLowerInvariant();
+                    string elenco = Encoding.ASCII.GetString(somme);
+                    bool trovato = false, ok = false;
+                    foreach (string r in elenco.Split('\n'))
+                    {
+                        string rr = r.Trim();
+                        if (rr.EndsWith(nome)) { trovato = true; ok = rr.StartsWith(h, StringComparison.OrdinalIgnoreCase); }
+                    }
+                    if (trovato && !ok)
+                    {
+                        this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error)));
+                        return;
+                    }
+                }
+                string dir = Dati.Percorso("aggiornamento");
+                Directory.CreateDirectory(dir);
+                string file = Path.Combine(dir, nome);
+                File.WriteAllBytes(file, pacchetto);
+                // script che aspetta la chiusura di YAEC, aggiorna e lo riavvia
+                int pid = System.Diagnostics.Process.GetCurrentProcess().Id;
+                string exe = Application.ExecutablePath;
+                StringBuilder sb = new StringBuilder();
+                sb.Append("@echo off\r\nchcp 65001 >nul\r\n");
+                sb.Append(":attesa\r\ntasklist /FI \"PID eq " + pid + "\" | find \"" + pid + "\" >nul && (timeout /t 1 >nul & goto attesa)\r\n");
+                if (installato)
+                    sb.Append("start \"\" /wait \"" + file + "\" /SILENT /SUPPRESSMSGBOXES /NORESTART /DIR=\"" + app.TrimEnd('\\') + "\"\r\n");
+                else
+                {
+                    string tmp = Path.Combine(dir, "nuovo");
+                    sb.Append("if exist \"" + tmp + "\" rmdir /s /q \"" + tmp + "\"\r\n");
+                    sb.Append("powershell -NoProfile -ExecutionPolicy Bypass -Command \"Expand-Archive -Force -LiteralPath '" + file.Replace("'", "''") + "' -DestinationPath '" + tmp.Replace("'", "''") + "'\"\r\n");
+                    sb.Append("xcopy /E /Y /I /Q \"" + tmp + "\\*\" \"" + app.TrimEnd('\\') + "\\\" >nul\r\n");
+                    sb.Append("rmdir /s /q \"" + tmp + "\"\r\n");
+                }
+                sb.Append("start \"\" \"" + exe + "\"\r\n");
+                sb.Append("del \"" + file + "\" >nul 2>&1\r\n");
+                sb.Append("(goto) 2>nul & del \"%~f0\"\r\n");
+                string cmd = Path.Combine(dir, "aggiorna.cmd");
+                File.WriteAllText(cmd, sb.ToString(), new UTF8Encoding(false));
+                this.BeginInvoke((Action)(() =>
+                {
+                    Messaggio(this, string.Format(Lang.T("YAEC {0} è stato scaricato: ora il programma si chiude, si aggiorna e si riapre da solo."), ver), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("cmd.exe", "/c \"" + cmd + "\"");
+                    psi.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden; psi.CreateNoWindow = true; psi.UseShellExecute = false;
+                    try { System.Diagnostics.Process.Start(psi); Application.Exit(); }
+                    catch { Messaggio(this, Lang.T("Non è stato possibile avviare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                }));
+            }
+            catch
+            {
+                this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("Non è stato possibile scaricare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning)));
+            }
+        }
+
+        // ---- Linux, FreeBSD, OpenBSD, macOS ----
+        static string Uname(string opzione)
+        {
+            try
+            {
+                System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("uname", opzione);
+                psi.RedirectStandardOutput = true; psi.UseShellExecute = false; psi.CreateNoWindow = true;
+                using (System.Diagnostics.Process p = System.Diagnostics.Process.Start(psi))
+                {
+                    string r = p.StandardOutput.ReadToEnd().Trim();
+                    p.WaitForExit(3000);
+                    return r;
+                }
+            }
+            catch { return ""; }
+        }
+
+        static string FileAppImage
+        {
+            get { string a = Environment.GetEnvironmentVariable("APPIMAGE"); return !string.IsNullOrEmpty(a) && File.Exists(a) ? a : null; }
+        }
+
+        // Pacchetti del sistema (.deb, .rpm, Arch, Slackware) installano YAEC sotto /usr: si aggiornano con il gestore dei pacchetti
+        static bool InstallatoDaPacchetto
+        {
+            get
+            {
+                if (SuWindows || FileAppImage != null) return false;
+                string d = AppDomain.CurrentDomain.BaseDirectory.Replace('\\', '/');
+                return d.StartsWith("/usr/");
+            }
+        }
+
+        // Cartella da aggiornare: quella del programma, o la cartella YAEC.app su macOS (il programma sta in Contents/Resources)
+        static string RadiceUnix()
+        {
+            string d = AppDomain.CurrentDomain.BaseDirectory.TrimEnd('/', '\\');
+            if (Piattaforma.Mac && d.EndsWith("/Contents/Resources")) return Path.GetDirectoryName(Path.GetDirectoryName(d));
+            return d;
+        }
+
+        static string NomePacchettoUnix(string ver)
+        {
+            string m = Uname("-m").ToLowerInvariant(), so = Uname("-s");
+            bool arm64 = m == "aarch64" || m == "arm64", arm32 = m.StartsWith("arm"), x86 = m.Length == 4 && m[0] == 'i' && m.EndsWith("86");
+            if (FileAppImage != null) return "YAEC-" + ver + "-" + (arm64 ? "aarch64" : "x86_64") + ".AppImage";
+            if (Piattaforma.Mac) return "YAEC-" + ver + "-osx-" + (arm64 ? "arm64" : "x64") + "-app.zip";
+            if (so == "FreeBSD") return "YAEC-" + ver + "-freebsd-x64-portatile.tar.gz";
+            if (so == "OpenBSD") return "YAEC-" + ver + "-openbsd-x64-portatile.tar.gz";
+            if (File.Exists("/etc/alpine-release")) return "YAEC-" + ver + "-alpine-" + (arm64 ? "arm64" : "x64") + "-portatile.tar.gz";
+            return "YAEC-" + ver + "-linux-" + (arm64 ? "arm64" : arm32 ? "arm" : x86 ? "x86" : "x64") + "-portatile.tar.gz";
+        }
+
+        // Scrive un file accanto a quello vecchio e poi lo sostituisce (su Linux e macOS si può anche mentre il programma gira)
+        static void SostituisciFile(string dest, byte[] dati, bool eseguibile)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(dest));
+            string tmp = dest + ".nuovo";
+            File.WriteAllBytes(tmp, dati);
+            if (eseguibile || (File.Exists(dest) && EseguibileUnix(dest))) Chmod("+x", tmp);
+            if (File.Exists(dest)) File.Delete(dest);
+            File.Move(tmp, dest);
+        }
+
+        static bool EseguibileUnix(string f)
+        {
+            try
+            {
+                System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("test", "-x \"" + f + "\"");
+                psi.UseShellExecute = false; psi.CreateNoWindow = true;
+                using (System.Diagnostics.Process p = System.Diagnostics.Process.Start(psi)) { p.WaitForExit(3000); return p.ExitCode == 0; }
+            }
+            catch { return false; }
+        }
+
+        static void Chmod(string modo, string f)
+        {
+            try
+            {
+                System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("chmod", modo + " \"" + f + "\"");
+                psi.UseShellExecute = false; psi.CreateNoWindow = true;
+                using (System.Diagnostics.Process p = System.Diagnostics.Process.Start(psi)) p.WaitForExit(3000);
+            }
+            catch { }
+        }
+
+        // Legge un archivio .tar.gz: restituisce (percorso senza la prima cartella, contenuto, eseguibile)
+        static List<Tuple<string, byte[], bool>> LeggiTarGz(byte[] gz)
+        {
+            List<Tuple<string, byte[], bool>> r = new List<Tuple<string, byte[], bool>>();
+            byte[] tar;
+            using (MemoryStream o = new MemoryStream())
+            {
+                using (System.IO.Compression.GZipStream z = new System.IO.Compression.GZipStream(new MemoryStream(gz), System.IO.Compression.CompressionMode.Decompress)) z.CopyTo(o);
+                tar = o.ToArray();
+            }
+            int pos = 0;
+            string nomeLungo = null;
+            while (pos + 512 <= tar.Length)
+            {
+                if (tar[pos] == 0) break;
+                Func<int, int, string> campo = (a, n) => { int e = a; while (e < a + n && tar[pos + e] != 0) e++; return Encoding.UTF8.GetString(tar, pos + a, e - a); };
+                string nome = campo(0, 100), prefisso = campo(345, 155);
+                long dim = 0; foreach (char c in campo(124, 12).Trim()) if (c >= '0' && c <= '7') dim = dim * 8 + (c - '0');
+                int modo = 0; foreach (char c in campo(100, 8).Trim()) if (c >= '0' && c <= '7') modo = modo * 8 + (c - '0');
+                char tipo = (char)tar[pos + 156];
+                int dati = pos + 512;
+                if (tipo == 'L') nomeLungo = Encoding.UTF8.GetString(tar, dati, (int)dim).TrimEnd('\0');
+                else
+                {
+                    string pieno = nomeLungo ?? (prefisso.Length > 0 ? prefisso + "/" + nome : nome);
+                    nomeLungo = null;
+                    if (tipo == '0' || tipo == '\0')
+                    {
+                        int i = pieno.IndexOf('/');
+                        string rel = i >= 0 ? pieno.Substring(i + 1) : pieno;
+                        if (rel.Length > 0 && !rel.Contains("..") && !rel.StartsWith("/"))
+                        {
+                            byte[] b = new byte[dim]; Array.Copy(tar, dati, b, 0, dim);
+                            r.Add(Tuple.Create(rel, b, (modo & 0x49) != 0));
+                        }
+                    }
+                }
+                pos = dati + (int)((dim + 511) / 512 * 512);
+            }
+            return r;
+        }
+
+        // Legge YAEC-...-app.zip: i file dentro YAEC.app/, con il percorso relativo alla cartella YAEC.app
+        static List<Tuple<string, byte[], bool>> LeggiZipApp(byte[] zip)
+        {
+            List<Tuple<string, byte[], bool>> r = new List<Tuple<string, byte[], bool>>();
+            using (System.IO.Compression.ZipArchive z = new System.IO.Compression.ZipArchive(new MemoryStream(zip), System.IO.Compression.ZipArchiveMode.Read))
+                foreach (System.IO.Compression.ZipArchiveEntry e in z.Entries)
+                {
+                    string n = e.FullName.Replace('\\', '/');
+                    if (!n.StartsWith("YAEC.app/") || n.EndsWith("/") || n.Contains("/._") || n.Contains("..")) continue;
+                    string rel = n.Substring("YAEC.app/".Length);
+                    using (Stream st = e.Open()) using (MemoryStream o = new MemoryStream()) { st.CopyTo(o); r.Add(Tuple.Create(rel, o.ToArray(), rel.StartsWith("Contents/MacOS/"))); }
+                }
+            return r;
+        }
+
+        void ScaricaAggiornamentoUnix(string ver, string pagina)
+        {
+            string nome = NomePacchettoUnix(ver);
+            string baseUrl = "https://github.com/" + RepoGit + "/releases/download/v" + ver + "/";
+            Action<string, MessageBoxIcon> avvisa = (testo, icona) => this.BeginInvoke((Action)(() => Messaggio(this, testo, Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, icona)));
+            byte[] somme = null, pacchetto;
+            try { somme = Dati.Scarica(baseUrl + "SHA256SUMS.txt", 30000); } catch { }
+            try { pacchetto = Dati.Scarica(baseUrl + nome, 300000); }
+            catch
+            {
+                this.BeginInvoke((Action)(() =>
+                {
+                    Messaggio(this, string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver) + "\n" + Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    try { System.Diagnostics.Process.Start(pagina); } catch { }
+                }));
+                return;
+            }
+            if (somme != null)
+            {
+                string h;
+                using (System.Security.Cryptography.SHA256 sh = System.Security.Cryptography.SHA256.Create())
+                    h = BitConverter.ToString(sh.ComputeHash(pacchetto)).Replace("-", "").ToLowerInvariant();
+                bool trovato = false, ok = false;
+                foreach (string r in Encoding.ASCII.GetString(somme).Split('\n'))
+                {
+                    string rr = r.Trim();
+                    if (rr.EndsWith(nome)) { trovato = true; ok = rr.StartsWith(h, StringComparison.OrdinalIgnoreCase); }
+                }
+                if (trovato && !ok)
+                {
+                    avvisa(Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            try
+            {
+                string app = FileAppImage;
+                if (app != null) SostituisciFile(app, pacchetto, true);
+                else
+                {
+                    string radice = RadiceUnix();
+                    List<Tuple<string, byte[], bool>> file = nome.EndsWith(".zip") ? LeggiZipApp(pacchetto) : LeggiTarGz(pacchetto);
+                    if (file.Count == 0) throw new InvalidDataException();
+                    foreach (Tuple<string, byte[], bool> f in file)
+                        SostituisciFile(Path.Combine(radice, f.Item1.Replace('/', Path.DirectorySeparatorChar)), f.Item2, f.Item3);
+                }
+                avvisa(string.Format(Lang.T("YAEC {0} è installato: la nuova versione parte al prossimo avvio."), ver), MessageBoxIcon.Information);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                avvisa(Lang.T("Non è stato possibile scrivere i file nella cartella del programma.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                avvisa(Lang.T("Non è stato possibile avviare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Warning);
+            }
+        }
+
+        // File che accompagnano il programma su Windows: se ne manca qualcuno lo si dice e si propone di riscaricarlo
+        void ControllaFileMancanti()
+        {
+            if (InProva || !SuWindows) return;
+            string app = AppDomain.CurrentDomain.BaseDirectory;
+            List<string> servono = new List<string> { "YAEC.ico", "README.txt", "LICENZA.txt" };
+            foreach (string c in Lang.Codici) { servono.Add("lingue\\README_" + c + ".txt"); servono.Add("lingue\\LICENSE_" + c + ".txt"); }
+            List<string> mancano = new List<string>();
+            foreach (string f in servono) if (!File.Exists(Path.Combine(app, f))) mancano.Add(f);
+            if (mancano.Count == 0) return;
+            string elenco = string.Join(", ", mancano.GetRange(0, Math.Min(6, mancano.Count)).ToArray()) + (mancano.Count > 6 ? " … (+" + (mancano.Count - 6) + ")" : "");
+            if (!ChiediSiNo(Lang.T("File mancanti"), string.Format(Lang.T("Mancano {0} file del programma: {1}"), mancano.Count, elenco),
+                string.Format(Lang.T("Vuoi che YAEC li scarichi ora da GitHub (versione {0})?"), Versione))) return;
+            System.Threading.Thread t = new System.Threading.Thread(() =>
+            {
+                List<string> falliti = new List<string>();
+                foreach (string f in mancano)
+                {
+                    try
+                    {
+                        byte[] b = Dati.Scarica("https://raw.githubusercontent.com/" + RepoGit + "/v" + Versione + "/" + f.Replace('\\', '/'), 20000);
+                        string dest = Path.Combine(app, f);
+                        Directory.CreateDirectory(Path.GetDirectoryName(dest));
+                        File.WriteAllBytes(dest, b);
+                    }
+                    catch { falliti.Add(f); }
+                }
+                this.BeginInvoke((Action)(() =>
+                {
+                    if (falliti.Count == 0) Messaggio(this, Lang.T("I file mancanti sono stati scaricati."), Lang.T("File mancanti"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else Messaggio(this, string.Format(Lang.T("Non è stato possibile scaricare {0} file: {1}"), falliti.Count, string.Join(", ", falliti.GetRange(0, Math.Min(6, falliti.Count)).ToArray()))
+                        + "\n" + Lang.T("Se la cartella del programma è protetta, avvia YAEC come amministratore oppure reinstallalo dalla pagina di GitHub."), Lang.T("File mancanti"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }));
+            });
+            t.IsBackground = true;
+            t.Start();
         }
 
         // Mette ogni casella dei numeri dentro la cornice arrotondata (come tendine e impostazioni generali),
@@ -81478,6 +83704,13 @@ namespace LunaCalc
             tip.SetToolTip(btnColonne, Lang.T("Sceglie le colonne aggiuntive della tabella (da Data a MNR sono sempre visibili). La scelta viene salvata e vale anche per Esporta CSV. Le colonne aggiuntive si vedono con la casella CALCOLI APPROFONDITI."));
             bar.Controls.Add(btnColonne);
             TestoPulsanteColonne();
+            // ritorno a «Orizzonte dal terreno» con il momento della riga scelta (si vede solo arrivando da lì)
+            btnPosOstacoli = new Pillola("↩ " + Lang.T("OSTACOLI"), StilePillola.Pieno, Color.FromArgb(22, 128, 61), new Font(Lang.FontUi, 9.5F * fontFactor, FontStyle.Bold));
+            btnPosOstacoli.Margin = new Padding(S(4), S(2), S(6), S(2));
+            tip.SetToolTip(btnPosOstacoli, Lang.T("Torna a Orizzonte dal terreno") + "\u0001" + Lang.T("Porta il momento della riga selezionata nella vista degli ostacoli della linguetta Il mio orizzonte."));
+            btnPosOstacoli.Click += (s, e) => OrizTornaOstacoli();
+            btnPosOstacoli.Visible = tabRitorno != 0;
+            bar.Controls.Add(btnPosOstacoli);
             barT.Controls.Add(bar, 0, 0);
             barT.Controls.Add(pnlLive, 1, 0);
             root.Controls.Add(barT, 0, 1);
@@ -82593,6 +84826,7 @@ namespace LunaCalc
                 lines.Add("rumore_soglia=" + rumSoglia.ToString(inv));
                 lines.Add("prova_modo=" + stazModoVoce.ToString(inv));
                 lines.Add("prova_temperature=" + (stazTemp ? "1" : "0"));
+                lines.Add("prova_no_paese=" + (stazNoPaese ? "1" : "0"));
                 lines.Add("prova_pol=" + stazPol.ToString(inv));
                 if (cmbPuntMappa != null) lines.Add("punt_mappa=" + cmbPuntMappa.SelectedIndex.ToString(inv));
                 lines.Add("punt_zoom=" + puntZoom.ToString(inv));
@@ -82633,6 +84867,8 @@ namespace LunaCalc
                 lines.Add("bw=" + cmbBw.Text);
                 if (chkEco != null) lines.Add("b_eco=" + (chkEco.Checked ? "1" : "0"));
                 lines.Add("tema=" + Tema.Chiave);
+                lines.Add("aggiorna_salta=" + aggSalta);
+                lines.Add("aggiorna_ultimo=" + aggUltimo.ToString(CultureInfo.InvariantCulture));
                 lines.Add("lingua=" + Lang.Codici[cmbLingua.SelectedIndex]);
                 lines.Add("font_nome=" + (cmbFontNome != null && cmbFontNome.SelectedItem is VoceFont && ((VoceFont)cmbFontNome.SelectedItem).Tipo == 2 ? ((VoceFont)cmbFontNome.SelectedItem).Nome : ""));
                 lines.Add("nominativo=" + txtCall.Text.Trim());
@@ -82816,6 +85052,9 @@ namespace LunaCalc
                         case "terreno": usaTerreno = v != "0"; break;
                         case "prova_modo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazModoVoce = Math.Max(0, Math.Min(BudgetParams.ModiOrdine.Length - 1, x)); break; }
                         case "prova_temperature": stazTemp = v != "0"; break;
+                        case "aggiorna_salta": aggSalta = v; break;
+                        case "aggiorna_ultimo": long.TryParse(v, NumberStyles.Integer, CultureInfo.InvariantCulture, out aggUltimo); break;
+                        case "prova_no_paese": stazNoPaese = v == "1"; if (chkStazPaese != null) chkStazPaese.Checked = stazNoPaese; break;
                         case "prova_pol": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazPol = Math.Max(0, Math.Min(2, x)); break; }
                         case "orizzonte_vista": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizVista = Math.Max(0, Math.Min(1, x)); break; }
                         case "orizzonte_raggio": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizRaggioIdx = Math.Max(0, Math.Min(OrizRaggi.Length - 1, x)); break; }
@@ -82957,6 +85196,8 @@ namespace LunaCalc
         }
 
         FrecceNud frecce;
+        // zona delle frecce affiancate (coordinate della casella), per i separatori disegnati dalla cornice
+        public Rectangle ZonaFrecce { get { return frecce != null && frecce.Visible ? frecce.Bounds : Rectangle.Empty; } }
         int LargFrecce { get { return 2 * Math.Max(16, (int)Math.Round(this.Font.Height * 1.25)); } }
 
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
@@ -83077,15 +85318,15 @@ namespace LunaCalc
             Color fondo = nud.BackColor;
             using (Brush b = new SolidBrush(fondo)) g.FillRectangle(b, this.ClientRectangle);
             float w = this.Width / 2f, h = this.Height;
-            Color linea = Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(205, 211, 221);
-            Color cf = !nud.Enabled ? Color.FromArgb(160, 166, 176) : (Tema.Scuro ? Color.FromArgb(225, 230, 240) : Color.FromArgb(55, 65, 81));
+            Color linea = Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(206, 212, 221);
+            Color cf = !nud.Enabled ? Color.FromArgb(160, 166, 176) : (Tema.Scuro ? Color.FromArgb(225, 230, 240) : Color.FromArgb(68, 68, 68));
             for (int k = 0; k < 2; k++)
             {
                 RectangleF c = new RectangleF(k * w, 0, w, h);
                 if ((sopra == k || premuta == k) && nud.Enabled)
                     using (Brush bh = new SolidBrush(Color.FromArgb(premuta == k ? 70 : 38, 31, 111, 209))) g.FillRectangle(bh, c.X + 1, c.Y + 2, c.Width - 2, c.Height - 4);
-                float cx = c.X + w / 2f, cy = h / 2f, d = Math.Max(3.5f, Math.Min(w, h) * 0.2f);
-                using (Pen p = new Pen(sopra == k && nud.Enabled ? Color.FromArgb(31, 111, 209) : cf, Math.Max(1.4f, h / 15f)))
+                float cx = c.X + w / 2f, cy = h / 2f, d = Math.Max(3.5f, Math.Min(w * 0.30f, h / 4.2f));
+                using (Pen p = new Pen(sopra == k && nud.Enabled ? Color.FromArgb(31, 111, 209) : cf, Math.Max(1.1f, h / 20f)))
                 {
                     p.StartCap = LineCap.Round; p.EndCap = LineCap.Round; p.LineJoin = LineJoin.Round;
                     if (k == 0) g.DrawLines(p, new PointF[] { new PointF(cx - d, cy + d / 2f), new PointF(cx, cy - d / 2f), new PointF(cx + d, cy + d / 2f) });
@@ -83094,8 +85335,9 @@ namespace LunaCalc
             }
             using (Pen ps = new Pen(linea, 1f))
             {
-                g.DrawLine(ps, 0.5f, h * 0.15f, 0.5f, h * 0.85f);
-                g.DrawLine(ps, w, h * 0.15f, w, h * 0.85f);
+                // come in YA-MS: separatori a tutta altezza, da bordo a bordo
+                g.DrawLine(ps, 0.5f, 0, 0.5f, h);
+                g.DrawLine(ps, w, 0, w, h);
             }
         }
     }
@@ -83535,16 +85777,10 @@ namespace LunaCalc
                 int wf = Math.Max(14, SystemInformation.VerticalScrollBarWidth);
                 Rectangle rf = new Rectangle(cr.Right - wf - 1, cr.Top + 1, wf, cr.Height - 2);
                 using (Brush b = new SolidBrush(campo)) g.FillRectangle(b, rf);
-                float cx = rf.Left + rf.Width / 2f, cy = rf.Top + rf.Height / 2f, d = Math.Max(3f, cr.Height / 7f);
-                Color cfr = this.Enabled ? (Tema.Scuro ? Color.FromArgb(200, 206, 216) : Color.FromArgb(75, 85, 99)) : Color.FromArgb(160, 166, 176);
-                using (Pen pv = new Pen(cfr, Math.Max(1.3f, cr.Height / 16f)))
-                {
-                    pv.StartCap = LineCap.Round; pv.EndCap = LineCap.Round; pv.LineJoin = LineJoin.Round;
-                    g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy - d / 2f), new PointF(cx, cy + d / 2f), new PointF(cx + d, cy - d / 2f) });
-                }
+                FrecciaCornice.Chevron(g, rf, this.Enabled ? (Tema.Scuro ? Color.FromArgb(200, 206, 216) : Color.FromArgb(68, 68, 68)) : Color.FromArgb(160, 166, 176));
                 if (!Cornice) return;
                 // angoli arrotondati: fuori dal bordo il colore di ciò che sta dietro
-                float rag = Math.Min(cr.Height / 2f - 1, Math.Max(3f, this.Font.Height * 0.35f));
+                float rag = FrecciaCornice.RaggioTendina(this.Font, cr.Height);
                 RectangleF rb = new RectangleF(0.5f, 0.5f, cr.Width - 1.5f, cr.Height - 1.5f);
                 using (GraphicsPath p = MainForm.Arrotondato(rb, rag))
                 {
@@ -83554,8 +85790,7 @@ namespace LunaCalc
                         using (Brush bd = new SolidBrush(Dietro())) g.FillRegion(bd, fuori);
                     }
                     bool sopra = this.ClientRectangle.Contains(this.PointToClient(Control.MousePosition));
-                    Color cb = this.Focused || sopra ? Color.FromArgb(31, 111, 209) : (Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(201, 206, 216));
-                    using (Pen pn = new Pen(cb, 1.3f)) g.DrawPath(pn, p);
+                    using (Pen pn = new Pen(FrecciaCornice.BordoTendina(this.Focused, sopra), 1f)) g.DrawPath(pn, p);
                 }
             }
         }
@@ -83620,6 +85855,8 @@ namespace LunaCalc
             Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             RectangleF r = new RectangleF(1, 1, this.Width - 3, this.Height - 3);
+            bool cmb = Dentro is ComboBox || Dentro is UpDownBase || Dentro is TextBox;
+            if (cmb) { FrecciaCornice.DisegnaCampoTendina(g, r, Dentro, Dentro.Focused, freccia != null && freccia.Sopra, Dentro.Left); return; }
             using (GraphicsPath p = MainForm.Arrotondato(r, Math.Min(r.Height / 2f, Dentro.Font.Height * 0.45f)))
             {
                 using (Brush b = new SolidBrush(Dentro.BackColor)) g.FillPath(b, p);
@@ -83694,6 +85931,7 @@ namespace LunaCalc
             RectangleF r = new RectangleF(1, 1, this.Width - 3, this.Height - 3);
             Color campo = dentro.Enabled ? dentro.BackColor : (Tema.Scuro ? Tema.Section : Color.FromArgb(243, 244, 246));
             bool attivo = dentro.Focused || (freccia != null && freccia.Sopra);
+            if (dentro is ComboBox || dentro is UpDownBase || dentro is TextBox) { FrecciaCornice.DisegnaCampoTendina(g, r, dentro, dentro.Focused, freccia != null && freccia.Sopra, dentro.Left - this.Left); return; }
             using (GraphicsPath p = MainForm.Arrotondato(r, Math.Min(r.Height / 2f, dentro.Font.Height * 0.45f)))
             {
                 using (Brush b = new SolidBrush(campo)) g.FillPath(b, p);
@@ -83762,8 +86000,42 @@ namespace LunaCalc
                 }
                 return;
             }
-            float d = Math.Max(3f, h / 6.5f);
-            using (Pen pv = new Pen(cf, Math.Max(1.5f, h / 13f)))
+            Chevron(g, this.ClientRectangle, !dentro.Enabled ? Color.FromArgb(160, 166, 176) : (Sopra ? Color.FromArgb(31, 111, 209) : (Tema.Scuro ? Color.FromArgb(200, 206, 216) : Color.FromArgb(68, 68, 68))));
+        }
+
+        // Tendine nello stile di YA-MS (Fluent): angoli appena arrotondati, bordo sottile grigio chiaro, fondo del campo,
+        // freccia "v" larga e sottile; bordo blu quando è attiva, grigio più scuro con il mouse sopra.
+        public static float RaggioTendina(Font f, float h) { return Math.Min(h / 2f - 1, Math.Max(3f, f.Height * 0.27f)); }
+        public static Color BordoTendina(bool attivo, bool sopra)
+        {
+            if (attivo) return Color.FromArgb(31, 111, 209);
+            if (Tema.Scuro) return sopra ? Color.FromArgb(150, 160, 175) : Tema.ChartGrid;
+            return sopra ? Color.FromArgb(160, 166, 176) : Color.FromArgb(206, 212, 221);
+        }
+        public static void DisegnaCampoTendina(Graphics g, RectangleF r, Control c, bool attivo, bool sopra, float xDentro)
+        {
+            Color campo = c.Enabled ? c.BackColor : (Tema.Scuro ? Tema.Section : Color.FromArgb(243, 244, 246));
+            using (GraphicsPath p = MainForm.Arrotondato(r, RaggioTendina(c.Font, r.Height)))
+            {
+                using (Brush b = new SolidBrush(campo)) g.FillPath(b, p);
+                // caselle dei numeri: i due separatori delle frecce arrivano fino al bordo, sopra e sotto
+                NudUnita nu = c as NudUnita;
+                Rectangle z = nu != null ? nu.ZonaFrecce : Rectangle.Empty;
+                if (z.Width > 0)
+                    using (Pen ps = new Pen(Tema.Scuro ? Tema.ChartGrid : Color.FromArgb(206, 212, 221), 1f))
+                    {
+                        float x1 = xDentro + z.Left + 0.5f, x2 = xDentro + z.Left + z.Width / 2f;
+                        g.DrawLine(ps, x1, r.Top, x1, r.Bottom);
+                        g.DrawLine(ps, x2, r.Top, x2, r.Bottom);
+                    }
+                using (Pen pn = new Pen(BordoTendina(attivo, sopra), attivo ? 1.3f : 1f)) g.DrawPath(pn, p);
+            }
+        }
+        public static void Chevron(Graphics g, RectangleF r, Color c)
+        {
+            float cx = r.Left + r.Width / 2f, cy = r.Top + r.Height / 2f;
+            float d = Math.Max(3.5f, Math.Min(r.Width * 0.30f, r.Height / 4.2f));
+            using (Pen pv = new Pen(c, Math.Max(1.1f, r.Height / 20f)))
             {
                 pv.StartCap = LineCap.Round; pv.EndCap = LineCap.Round; pv.LineJoin = LineJoin.Round;
                 g.DrawLines(pv, new PointF[] { new PointF(cx - d, cy - d / 2f), new PointF(cx, cy + d / 2f), new PointF(cx + d, cy - d / 2f) });
@@ -87124,6 +89396,162 @@ namespace LunaCalc
 
     // Impianti dichiarati nell'intestazione dei messaggi della chat EME di N0UK (ramo "attivi" del repository,
     // tools/n0uk_attivi.py): nominativo, data, locator e impianto (es. 4X14HV/1K). Serve a «Stazioni da provare».
+    // Riconoscimento del paese dal nominativo con il file cty.dat di AD1C (country-files.com).
+    // Il file sta in data\cty.dat: YAEC lo scarica e lo aggiorna ogni 30 giorni; se non ci riesce, copia quello di
+    // WSJT-X o di N1MM Logger+ se lo trova sul computer. Le entità solo WAE (nome con *) non si usano: conta il paese DXCC.
+    static class Cty
+    {
+        public static readonly string[] Url = { "https://www.country-files.com/cty/cty.dat", "http://www.country-files.com/cty/cty.dat" };
+        static readonly object blocco = new object();
+        static Dictionary<string, string> prefissi, esatti;
+        static DateTime letto = DateTime.MinValue;
+        static volatile bool inCorso;
+
+        public static string Percorso { get { return Dati.Percorso("cty.dat"); } }
+        public static bool Presente { get { try { return File.Exists(Percorso); } catch { return false; } } }
+        public static string Firma { get { try { return File.Exists(Percorso) ? File.GetLastWriteTimeUtc(Percorso).Ticks.ToString(CultureInfo.InvariantCulture) : "0"; } catch { return "0"; } } }
+
+        static bool Valido(string t) { return t != null && t.Contains("EU:") && t.Contains(";") && t.Length > 20000; }
+
+        // posti dove WSJT-X e N1MM Logger+ tengono la loro copia
+        static IEnumerable<string> CopieLocali()
+        {
+            List<string> l = new List<string>();
+            try
+            {
+                string la = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                string pf = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+                string pf86 = Environment.GetEnvironmentVariable("ProgramFiles(x86)") ?? "";
+                string doc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string home = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                l.Add(Path.Combine(la, "WSJT-X", "cty.dat"));
+                l.Add(Path.Combine(@"C:\WSJT", "wsjtx", "share", "wsjtx", "cty.dat"));
+                l.Add(Path.Combine(pf, "wsjtx", "share", "wsjtx", "cty.dat"));
+                if (pf86.Length > 0) l.Add(Path.Combine(pf86, "wsjtx", "share", "wsjtx", "cty.dat"));
+                l.Add(Path.Combine(doc, "N1MM Logger+", "SupportFiles", "cty.dat"));
+                l.Add("/usr/share/wsjtx/cty.dat");
+                l.Add("/usr/local/share/wsjtx/cty.dat");
+                l.Add(Path.Combine(home, ".local", "share", "WSJT-X", "cty.dat"));
+                l.Add("/Applications/wsjtx.app/Contents/Resources/cty.dat");
+                l.Add(Path.Combine(home, "Library", "Application Support", "WSJT-X", "cty.dat"));
+            }
+            catch { }
+            return l;
+        }
+
+        // Scarica il file se manca o ha più di 30 giorni; se non ci riesce e manca, cerca una copia locale (in silenzio)
+        public static bool Aggiorna()
+        {
+            if (inCorso) return false;
+            inCorso = true;
+            try
+            {
+                string p = Percorso;
+                if (File.Exists(p) && (DateTime.UtcNow - File.GetLastWriteTimeUtc(p)).TotalDays < 30) return false;
+                foreach (string u in Url)
+                {
+                    try
+                    {
+                        byte[] b = Dati.Scarica(u, 20000);
+                        if (Valido(Encoding.ASCII.GetString(b))) { Dati.ScriviAtomico(p, b); lock (blocco) letto = DateTime.MinValue; return true; }
+                    }
+                    catch { }
+                }
+                if (File.Exists(p)) return false;
+                foreach (string c in CopieLocali())
+                {
+                    try
+                    {
+                        if (!File.Exists(c)) continue;
+                        byte[] b = File.ReadAllBytes(c);
+                        if (!Valido(Encoding.ASCII.GetString(b))) continue;
+                        Dati.ScriviAtomico(p, b);
+                        // la data del file copiato: così al prossimo avvio si riprova a scaricare la versione nuova
+                        try { File.SetLastWriteTimeUtc(p, File.GetLastWriteTimeUtc(c)); } catch { }
+                        lock (blocco) letto = DateTime.MinValue;
+                        return true;
+                    }
+                    catch { }
+                }
+                return false;
+            }
+            catch { return false; }
+            finally { inCorso = false; }
+        }
+
+        static void Carica()
+        {
+            string p = Percorso;
+            if (!File.Exists(p)) { prefissi = null; esatti = null; return; }
+            DateTime m = File.GetLastWriteTimeUtc(p);
+            if (prefissi != null && m == letto) return;
+            Dictionary<string, string> pr = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            Dictionary<string, string> ex = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            string t = File.ReadAllText(p, Encoding.GetEncoding(28591));
+            int i = 0;
+            while (i < t.Length)
+            {
+                int fineTesta = t.IndexOf('\n', i);
+                if (fineTesta < 0) break;
+                string testa = t.Substring(i, fineTesta - i).Trim();
+                int fine = t.IndexOf(';', fineTesta);
+                if (fine < 0) break;
+                string corpo = t.Substring(fineTesta + 1, fine - fineTesta - 1);
+                i = fine + 1;
+                string[] campi = testa.Split(':');
+                if (campi.Length < 8) continue;
+                string nome = campi[0].Trim();
+                string prin = campi[7].Trim();
+                if (nome.Length == 0 || prin.StartsWith("*")) continue;   // entità solo WAE: si resta nel paese DXCC
+                foreach (string v0 in corpo.Split(','))
+                {
+                    string v = v0.Trim();
+                    if (v.Length == 0) continue;
+                    // via le correzioni di zona, coordinate, continente e fuso: (..) [..] <..> {..} ~..~
+                    v = System.Text.RegularExpressions.Regex.Replace(v, @"\(.*?\)|\[.*?\]|<.*?>|\{.*?\}|~.*?~", "").Trim();
+                    if (v.Length == 0) continue;
+                    if (v[0] == '=') { string c = v.Substring(1); if (c.Length > 0 && !ex.ContainsKey(c)) ex[c] = nome; }
+                    else if (!pr.ContainsKey(v)) pr[v] = nome;
+                }
+            }
+            prefissi = pr; esatti = ex; letto = m;
+        }
+
+        static readonly HashSet<string> Suffissi = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "P", "M", "MM", "AM", "QRP", "A", "B", "LH", "J", "E", "R" };
+
+        static string Prefisso(string c)
+        {
+            for (int n = c.Length; n >= 1; n--)
+            {
+                string v;
+                if (prefissi.TryGetValue(c.Substring(0, n), out v)) return v;
+            }
+            return null;
+        }
+
+        // Paese DXCC del nominativo (nome di cty.dat), oppure null
+        public static string Paese(string call)
+        {
+            if (string.IsNullOrEmpty(call)) return null;
+            string c = call.Trim().ToUpperInvariant();
+            lock (blocco)
+            {
+                try { Carica(); } catch { prefissi = null; }
+                if (prefissi == null) return null;
+                string v;
+                if (esatti.TryGetValue(c, out v)) return v;
+                string[] pz = c.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+                List<string> parti = new List<string>();
+                foreach (string x in pz) if (!Suffissi.Contains(x) && !(x.Length == 1 && char.IsDigit(x[0]))) parti.Add(x);
+                if (parti.Count == 0) return null;
+                if (parti.Count == 1) return esatti.TryGetValue(parti[0], out v) ? v : Prefisso(parti[0]);
+                // CALL/XX o XX/CALL: la parte più corta è il prefisso del paese in cui si trasmette
+                string corto = parti[0].Length <= parti[1].Length ? parti[0] : parti[1];
+                return Prefisso(corto);
+            }
+        }
+    }
+
     static class Impianti
     {
         public const string Url = "https://raw.githubusercontent.com/ic8tem/YAEC/attivi/impianti.gz";
@@ -87522,6 +89950,7 @@ namespace LunaCalc
             stato(Call3.Aggiorna(false));
             Attivi.Aggiorna();   // stazioni attive (chat N0UK): in silenzio
             Impianti.Aggiorna(); // impianti dichiarati nella chat (Stazioni da provare): in silenzio
+            Cty.Aggiorna();      // paesi dei nominativi (cty.dat di AD1C) per escludere le stazioni del mio paese
             stato(Lang.T("Cartella data pronta"));
         }
     }
@@ -87797,6 +90226,8 @@ namespace LunaCalc
                         if (ga.TryGetValue(c, out g0)) { if (!LocatorCompatibili(g0, g)) diversi++; continue; }
                         if (visti.Add(c)) { righe.Add(r); if (a != null) aggiunti++; }
                     }
+                // le correzioni fatte dall'utente valgono anche sul file appena scaricato
+                righe = ApplicaCorrezioni(righe);
                 righe.Sort((x, y) => string.CompareOrdinal(x, y));
                 StringBuilder sb = new StringBuilder();
                 string fonti = a != null && b != null ? Fonti[0][0] + " + " + Fonti[1][0] : (a != null ? Fonti[0][0] : Fonti[1][0]);
@@ -87842,8 +90273,83 @@ namespace LunaCalc
                     }
                 }
                 catch { }
+                foreach (KeyValuePair<string, string> kv in Correzioni()) t[kv.Key] = kv.Value;   // le correzioni dell'utente prevalgono
                 griglie = t; caricato = d;
                 return t;
+            }
+        }
+
+        // Correzioni dei locator fatte dall'utente (pulsante CORREGGI nella scheda del DX): data\call3_correzioni.txt,
+        // una riga "NOMINATIVO,LOCATOR"; valgono sopra il CALL3.TXT e vengono riapplicate a ogni aggiornamento del file
+        public const string NomeCorrezioni = "call3_correzioni.txt";
+        static Dictionary<string, string> Correzioni()
+        {
+            Dictionary<string, string> d = new Dictionary<string, string>();
+            try
+            {
+                string pc = Dati.Percorso(NomeCorrezioni);
+                if (!File.Exists(pc)) return d;
+                string c, g;
+                foreach (string r in File.ReadAllLines(pc, Encoding.UTF8))
+                    if (RigaValida(r.Trim(), out c, out g)) d[c] = g;
+            }
+            catch { }
+            return d;
+        }
+        static List<string> ApplicaCorrezioni(List<string> righe)
+        {
+            Dictionary<string, string> cor = Correzioni();
+            if (cor.Count == 0) return righe;
+            List<string> out1 = new List<string>();
+            HashSet<string> fatti = new HashSet<string>();
+            string c, g;
+            foreach (string r in righe)
+            {
+                string g2;
+                if (RigaValida(r, out c, out g) && cor.TryGetValue(c, out g2))
+                {
+                    string[] pz = r.Split(',');
+                    pz[1] = g2;
+                    out1.Add(string.Join(",", pz));
+                    fatti.Add(c);
+                }
+                else out1.Add(r);
+            }
+            foreach (KeyValuePair<string, string> kv in cor)
+                if (!fatti.Contains(kv.Key)) out1.Add(kv.Key + "," + kv.Value + ",");
+            return out1;
+        }
+        // Salva la correzione e la applica subito al CALL3.TXT (così anche la copia per WSJT-X è giusta)
+        public static bool Correggi(string call, string loc)
+        {
+            call = (call ?? "").Trim().ToUpperInvariant(); loc = (loc ?? "").Trim().ToUpperInvariant();
+            string c, g;
+            if (!RigaValida(call + "," + loc, out c, out g)) return false;
+            lock (blocco)
+            {
+                try
+                {
+                    Dictionary<string, string> cor = Correzioni();
+                    cor[c] = g;
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("// YAEC: locator corretti dall'utente, applicati sopra il CALL3.TXT / locators corrected by the user\r\n");
+                    foreach (KeyValuePair<string, string> kv in cor) sb.Append(kv.Key).Append(',').Append(kv.Value).Append("\r\n");
+                    Dati.ScriviAtomico(Dati.Percorso(NomeCorrezioni), Encoding.UTF8.GetBytes(sb.ToString()));
+                    string p = Percorso;
+                    if (File.Exists(p))
+                    {
+                        List<string> righe = new List<string>(File.ReadAllLines(p, Encoding.GetEncoding(28591)));
+                        List<string> nuove = new List<string>(), dati = new List<string>();
+                        foreach (string r in righe) { if (r.StartsWith("//")) nuove.Add(r); else if (r.Trim().Length > 0) dati.Add(r.Trim()); }
+                        dati = ApplicaCorrezioni(dati);
+                        dati.Sort((x, y) => string.CompareOrdinal(x, y));
+                        nuove.AddRange(dati);
+                        Dati.ScriviAtomico(p, Encoding.GetEncoding(28591).GetBytes(string.Join("\r\n", nuove.ToArray()) + "\r\n"));
+                    }
+                    griglie = null;
+                    return true;
+                }
+                catch { return false; }
             }
         }
 
@@ -91069,13 +93575,22 @@ namespace LunaCalc
                 "#### Transverter per 144 MHz (IF 28 MHz)",
                 "|h| Costruttore · modello | >NF | >G RX | >TX | Fonte",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.d.} | {r:n.d.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (regolabile) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.d.} | {r:n.d.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.d.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.d.} | {r:n.d.} | – | [11]",
                 "~ Valori dichiarati dai costruttori. MKU 144 G2: primo stadio con NF 0,5 dB, IP3 d'uscita in ricezione +23 dBm, IF in ingresso 2 – 50 mW o 60 – 2000 µW; ¹ pilota da 100 mW, da completare con un amplificatore Kuhne da 60 o 120 W. TR 144 H +40: contiene il modulo MKU 144 G2, da cui il guadagno di 25 dB (indicazione di IC8TEM). Con 25 dB di guadagno, davanti a una radio con NF 10 dB il totale è 0,99 dB, con NF 20 dB è 1,88 dB [13]. Il manuale Kuhne indica 1,2 dB nella tabella e 0,9 dB nel testo; con il preampli Kuhne MKU LNA 144 A il totale scende a 0,3 dB [7]. Q5 Signal L144-28M: NF massima 1,0 dB con guadagno di conversione minimo 20 dB, guadagno RX-IF regolabile dall'utente per tarare lo S-meter; IF fino a 25 W [9]. HA1YA ME2T-PRO-II: NF complessiva 1 dB (primo stadio PGA103+ con NF 0,7 dB), guadagno RX fino a 25 dB regolabile, OIP3 tipico +35 dBm, IIP3 tipico +10 dBm, reiezione d'immagine > 80 dB, IF in ingresso da −20 a +37 dBm [10].",
+                "> Per i 432 e i 1296 MHz le note sui transverter saranno aggiornate nelle prossime versioni, ove ricorrano.",
                 "#### Combinazioni misurate (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Preampli radio | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -91119,7 +93634,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), aprile 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, gennaio 2012, § 4 «Sequenziamento relè, PA e PRE», fornita da IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentazione, luglio 2015, fornita da IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1° dicembre 2023, rev. 1.1 del 13 settembre 2025, fornito da IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, fornita da IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), fornita da IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, fornita da IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, fornita da IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["it"]["S48"] = new string[] {
                 "## Cavi coassiali e perdite",
@@ -91645,13 +94172,22 @@ namespace LunaCalc
                 "#### Transverters for 144 MHz (IF 28 MHz)",
                 "|h| Maker · model | >NF | >RX G | >TX | Source",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.a.} | {r:n.a.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (adjustable) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.a.} | {r:n.a.} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:n.a.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.a.} | {r:n.a.} | – | [11]",
                 "~ Values stated by the makers. MKU 144 G2: first stage with NF 0.5 dB, output IP3 in reception +23 dBm, IF input 2 – 50 mW or 60 – 2000 µW; ¹ 100 mW driver, to be completed with a Kuhne 60 or 120 W amplifier. TR 144 H +40: it contains the MKU 144 G2 module, hence the 25 dB gain (information from IC8TEM). With 25 dB of gain, in front of a radio with NF 10 dB the total is 0.99 dB, with NF 20 dB it is 1.88 dB [13]. The Kuhne manual states 1.2 dB in the table and 0.9 dB in the text; with the Kuhne MKU LNA 144 A preamp the total drops to 0.3 dB [7]. Q5 Signal L144-28M: maximum NF 1.0 dB with minimum conversion gain 20 dB, RX-IF gain adjustable by the user to calibrate the S-meter; IF up to 25 W [9]. HA1YA ME2T-PRO-II: overall NF 1 dB (first stage PGA103+ with NF 0.7 dB), RX gain adjustable up to 25 dB, typical OIP3 +35 dBm, typical IIP3 +10 dBm, image rejection > 80 dB, IF input from −20 to +37 dBm [10].",
+                "> For 432 and 1296 MHz the notes on transverters will be updated in the next versions, where applicable.",
                 "#### Measured combinations (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Radio preamp | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -91695,7 +94231,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, January 2012, § 4 “Sequenziamento relè, PA e PRE”, supplied by IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentation, July 2015, supplied by IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 of 1 December 2023, rev. 1.1 of 13 September 2025, supplied by IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, supplied by IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), supplied by IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, supplied by IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, supplied by IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["en"]["S48"] = new string[] {
                 "## Coaxial cables and losses",
@@ -92213,13 +94761,22 @@ namespace LunaCalc
                 "#### Transverter für 144 MHz (ZF 28 MHz)",
                 "|h| Hersteller · Modell | >NF | >RX-Verst. | >TX | Quelle",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (Modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:k. A.} | {r:k. A.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (Modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (einstellbar) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:k. A.} | {r:k. A.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:k. A.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:k. A.} | {r:k. A.} | – | [11]",
                 "~ Herstellerangaben. MKU 144 G2: erste Stufe mit NF 0,5 dB, Ausgangs-IP3 im Empfang +23 dBm, ZF-Eingang 2 – 50 mW oder 60 – 2000 µW; ¹ 100-mW-Treiber, zu ergänzen durch einen Kuhne-Verstärker mit 60 oder 120 W. TR 144 H +40: enthält das Modul MKU 144 G2, daher die Verstärkung von 25 dB (Information von IC8TEM). Mit 25 dB Verstärkung beträgt die Gesamtrauschzahl vor einem Funkgerät mit NF 10 dB 0,99 dB, mit NF 20 dB 1,88 dB [13]. Das Kuhne-Handbuch nennt in der Tabelle 1,2 dB und im Text 0,9 dB; mit dem Vorverstärker Kuhne MKU LNA 144 A sinkt die Gesamtrauschzahl auf 0,3 dB [7]. Q5 Signal L144-28M: maximale NF 1,0 dB bei minimaler Konversionsverstärkung 20 dB, RX-ZF-Verstärkung vom Benutzer zur Kalibrierung des S-Meters einstellbar; ZF bis 25 W [9]. HA1YA ME2T-PRO-II: Gesamt-NF 1 dB (erste Stufe PGA103+ mit NF 0,7 dB), RX-Verstärkung einstellbar bis 25 dB, OIP3 typisch +35 dBm, IIP3 typisch +10 dBm, Spiegelfrequenzunterdrückung > 80 dB, ZF-Eingang von −20 bis +37 dBm [10].",
+                "> Für 432 und 1296 MHz werden die Hinweise zu Transvertern in den nächsten Versionen ergänzt, wo zutreffend.",
                 "#### Gemessene Kombinationen (DF9IC, 144 MHz)",
                 "|h| Funkgerät + Transverter | Vorverstärker des Funkgeräts | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -92263,7 +94820,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, S. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Januar 2012, § 4 “Sequenziamento relè, PA e PRE”, bereitgestellt von IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, Präsentation, Juli 2015, bereitgestellt von IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, bereitgestellt von IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 vom 1. Dezember 2023, Rev. 1.1 vom 13. September 2025, bereitgestellt von IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, zur Verfügung gestellt von IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), zur Verfügung gestellt von IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, zur Verfügung gestellt von IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, zur Verfügung gestellt von IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["de"]["S48"] = new string[] {
                 "## Koaxialkabel und Verluste",
@@ -92781,13 +95350,22 @@ namespace LunaCalc
                 "#### Transverters pour 144 MHz (FI 28 MHz)",
                 "|h| Fabricant · modèle | >NF | >G RX | >TX | Source",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.d.} | {r:n.d.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (réglable) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.d.} | {r:n.d.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.d.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.d.} | {r:n.d.} | – | [11]",
                 "~ Valeurs déclarées par les fabricants. MKU 144 G2 : premier étage avec NF 0,5 dB, IP3 de sortie en réception +23 dBm, entrée FI 2 – 50 mW ou 60 – 2000 µW ; ¹ excitateur de 100 mW, à compléter par un amplificateur Kuhne de 60 ou 120 W. TR 144 H +40 : il contient le module MKU 144 G2, d'où le gain de 25 dB (information de IC8TEM). Avec 25 dB de gain, devant un poste avec NF 10 dB le total est de 0,99 dB, avec NF 20 dB il est de 1,88 dB [13]. Le manuel Kuhne indique 1,2 dB dans le tableau et 0,9 dB dans le texte ; avec le préampli Kuhne MKU LNA 144 A le total descend à 0,3 dB [7]. Q5 Signal L144-28M : NF maximal 1,0 dB avec gain de conversion minimal 20 dB, gain RX-FI réglable par l'utilisateur pour étalonner le S-mètre ; FI jusqu'à 25 W [9]. HA1YA ME2T-PRO-II : NF global 1 dB (premier étage PGA103+ avec NF 0,7 dB), gain RX réglable jusqu'à 25 dB, OIP3 typique +35 dBm, IIP3 typique +10 dBm, réjection de la fréquence image > 80 dB, entrée FI de −20 à +37 dBm [10].",
+                "> Pour 432 et 1296 MHz, les notes sur les transverters seront mises à jour dans les prochaines versions, le cas échéant.",
                 "#### Combinaisons mesurées (DF9IC, 144 MHz)",
                 "|h| Poste + transverter | Préampli du poste | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -92831,7 +95409,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), avril 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, janvier 2012, § 4 “Sequenziamento relè, PA e PRE”, fourni par IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, présentation, juillet 2015, fournie par IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 du 1er décembre 2023, rév. 1.1 du 13 septembre 2025, fourni par IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, fournie par IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), fournie par IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, fournie par IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, fournie par IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["fr"]["S48"] = new string[] {
                 "## Câbles coaxiaux et pertes",
@@ -93349,13 +95939,22 @@ namespace LunaCalc
                 "#### Transverters para 144 MHz (FI 28 MHz)",
                 "|h| Fabricante · modelo | >NF | >G RX | >TX | Fuente",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (módulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.d.} | {r:n.d.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (módulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (ajustable) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.d.} | {r:n.d.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.d.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.d.} | {r:n.d.} | – | [11]",
                 "~ Valores declarados por los fabricantes. MKU 144 G2: primera etapa con NF 0,5 dB, IP3 de salida en recepción +23 dBm, entrada de FI 2 – 50 mW o 60 – 2000 µW; ¹ excitador de 100 mW, a completar con un amplificador Kuhne de 60 o 120 W. TR 144 H +40: contiene el módulo MKU 144 G2, de ahí la ganancia de 25 dB (información de IC8TEM). Con 25 dB de ganancia, delante de una radio con NF 10 dB el total es 0,99 dB, con NF 20 dB es 1,88 dB [13]. El manual de Kuhne indica 1,2 dB en la tabla y 0,9 dB en el texto; con el preamplificador Kuhne MKU LNA 144 A el total baja a 0,3 dB [7]. Q5 Signal L144-28M: NF máxima 1,0 dB con ganancia mínima de conversión 20 dB, ganancia RX-FI ajustable por el usuario para calibrar el S-meter; FI hasta 25 W [9]. HA1YA ME2T-PRO-II: NF global 1 dB (primera etapa PGA103+ con NF 0,7 dB), ganancia RX ajustable hasta 25 dB, OIP3 típico +35 dBm, IIP3 típico +10 dBm, rechazo de imagen > 80 dB, entrada de FI de −20 a +37 dBm [10].",
+                "> Para 432 y 1296 MHz, las notas sobre los transverters se actualizarán en las próximas versiones, cuando corresponda.",
                 "#### Combinaciones medidas (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Preamplificador de la radio | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -93399,7 +95998,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), abril de 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, enero de 2012, § 4 “Sequenziamento relè, PA e PRE”, facilitada por IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentación, julio de 2015, facilitada por IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 del 1 de diciembre de 2023, rev. 1.1 del 13 de septiembre de 2025, facilitado por IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, facilitada por IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), facilitada por IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, facilitada por IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, facilitada por IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["es"]["S48"] = new string[] {
                 "## Cables coaxiales y pérdidas",
@@ -93917,13 +96528,22 @@ namespace LunaCalc
                 "#### Transverters para 144 MHz (FI 28 MHz)",
                 "|h| Fabricante · modelo | >NF | >G RX | >TX | Fonte",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (módulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.d.} | {r:n.d.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (módulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (ajustável) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.d.} | {r:n.d.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.d.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.d.} | {r:n.d.} | – | [11]",
                 "~ Valores declarados pelos fabricantes. MKU 144 G2: primeiro andar com NF 0,5 dB, IP3 de saída em receção +23 dBm, entrada FI 2 – 50 mW ou 60 – 2000 µW; ¹ excitador de 100 mW, a completar com um amplificador Kuhne de 60 ou 120 W. TR 144 H +40: contém o módulo MKU 144 G2, daí o ganho de 25 dB (informação de IC8TEM). Com 25 dB de ganho, à frente de um rádio com NF 10 dB o total é 0,99 dB, com NF 20 dB é 1,88 dB [13]. O manual da Kuhne indica 1,2 dB na tabela e 0,9 dB no texto; com o pré-amplificador Kuhne MKU LNA 144 A o total desce para 0,3 dB [7]. Q5 Signal L144-28M: NF máxima 1,0 dB com ganho de conversão mínimo de 20 dB, ganho RX-FI ajustável pelo utilizador para calibrar o S-meter; FI até 25 W [9]. HA1YA ME2T-PRO-II: NF global 1 dB (primeiro andar PGA103+ com NF 0,7 dB), ganho RX ajustável até 25 dB, OIP3 típico +35 dBm, IIP3 típico +10 dBm, rejeição de imagem > 80 dB, entrada FI de −20 a +37 dBm [10].",
+                "> Para 432 e 1296 MHz, as notas sobre os transverters serão atualizadas nas próximas versões, quando aplicável.",
                 "#### Combinações medidas (DF9IC, 144 MHz)",
                 "|h| Rádio + transverter | Pré-amp. do rádio | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -93967,7 +96587,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), abril de 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, janeiro de 2012, § 4 “Sequenziamento relè, PA e PRE”, fornecido por IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, apresentação, julho de 2015, fornecida por IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, fornecida por IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), fornecida por IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, fornecida por IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, fornecida por IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["pt"]["S48"] = new string[] {
                 "## Cabos coaxiais e perdas",
@@ -94485,13 +97117,22 @@ namespace LunaCalc
                 "#### 144 MHz 收发转换器（中频 28 MHz）",
                 "|h| 厂家 · 型号 | >NF | >RX 增益 | >TX | 来源",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2**（模块） | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:无数据} | {r:无数据} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2**（模块） | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB（可调） | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:无数据} | {r:无数据} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:无数据} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:无数据} | {r:无数据} | – | [11]",
                 "~ 数值为厂家标称值。MKU 144 G2：第一级 NF 0.5 dB，接收输出 IP3 +23 dBm，中频输入 2 – 50 mW 或 60 – 2000 µW；¹ 100 mW 激励级，需配合 Kuhne 60 W 或 120 W 功率放大器使用。TR 144 H +40：内含 MKU 144 G2 模块，因此增益为 25 dB（信息来自 IC8TEM）。增益为 25 dB 时，后接 NF 10 dB 的电台总 NF 为 0.99 dB，后接 NF 20 dB 的电台为 1.88 dB [13]。Kuhne 手册在表格中标为 1.2 dB，正文中为 0.9 dB；配合 Kuhne MKU LNA 144 A 前置放大器，总 NF 降至 0.3 dB [7]。Q5 Signal L144-28M：最大 NF 1.0 dB，最小变频增益 20 dB，RX 中频增益可由用户调节以校准 S 表；中频输入最大 25 W [9]。HA1YA ME2T-PRO-II：总 NF 1 dB（第一级 PGA103+，NF 0.7 dB），RX 增益可调至 25 dB，典型 OIP3 +35 dBm，典型 IIP3 +10 dBm，镜像抑制 > 80 dB，中频输入 −20 至 +37 dBm [10]。",
+                "> 432 和 1296 MHz 的变频器说明将在后续版本中视情况更新。",
                 "#### 实测组合（DF9IC，144 MHz）",
                 "|h| 电台 + 收发转换器 | 电台前置放大 | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -94535,7 +97176,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003 年 4 月，第 18–20 页 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012 年 1 月，§ 4 “Sequenziamento relè, PA e PRE”，由 IC8TEM 提供 – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”，演示文稿，2015 年 7 月，由 IC8TEM 提供。",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, 由 IC8TEM 提供 – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), 由 IC8TEM 提供",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, 由 IC8TEM 提供",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, 由 IC8TEM 提供",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["zh"]["S48"] = new string[] {
                 "## 同轴电缆与损耗",
@@ -95053,13 +97706,22 @@ namespace LunaCalc
                 "#### 144 MHz用トランスバーター（IF 28 MHz）",
                 "|h| メーカー · 型番 | >NF | >RX G | >TX | 出典",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2**（モジュール） | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:データなし} | {r:データなし} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2**（モジュール） | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB（可変） | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:データなし} | {r:データなし} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:データなし} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:データなし} | {r:データなし} | – | [11]",
                 "~ メーカー公表値。MKU 144 G2：初段NF 0.5 dB、受信時の出力IP3 +23 dBm、IF入力2～50 mWまたは60～2000 µW。¹ 100 mWのドライバーで、Kuhneの60 Wまたは120 Wアンプと組み合わせて使用します。TR 144 H +40：MKU 144 G2モジュールを内蔵しているため利得は25 dB（IC8TEMからの情報）。利得25 dBでは、NF 10 dBの無線機の前で総合0.99 dB、NF 20 dBでは1.88 dBです [13]。Kuhneのマニュアルは表で1.2 dB、本文で0.9 dBとしています。Kuhne MKU LNA 144 Aプリアンプを併用すると総合値は0.3 dBに下がります [7]。Q5 Signal L144-28M：最小変換利得20 dBで最大NF 1.0 dB、RX-IF利得はSメーター校正のためユーザーが調整可能、IFは最大25 W [9]。HA1YA ME2T-PRO-II：総合NF 1 dB（初段PGA103+、NF 0.7 dB）、RX利得は最大25 dBまで可変、OIP3標準+35 dBm、IIP3標準+10 dBm、イメージ除去比 > 80 dB、IF入力−20～+37 dBm [10]。",
+                "> 432 MHz と 1296 MHz のトランスバーターに関する注記は、該当する場合、今後のバージョンで更新します。",
                 "#### 実測された組み合わせ（DF9IC、144 MHz）",
                 "|h| 無線機 + トランスバーター | 無線機のプリアンプ | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -95103,7 +97765,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003年4月, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012年1月, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM提供 – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, プレゼンテーション, 2015年7月, IC8TEM提供。",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。"
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023年12月1日）, rev. 1.1（2025年9月13日）, IC8TEM提供。",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, IC8TEM提供 – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), IC8TEM提供",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, IC8TEM提供",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, IC8TEM提供",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["ja"]["S48"] = new string[] {
                 "## 同軸ケーブルと損失",
@@ -95621,13 +98295,22 @@ namespace LunaCalc
                 "#### 144 MHz के ट्रांसवर्टर (IF 28 MHz)",
                 "|h| निर्माता · मॉडल | >NF | >RX G | >TX | स्रोत",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (मॉड्यूल) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:उपलब्ध नहीं} | {r:उपलब्ध नहीं} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (मॉड्यूल) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (समायोज्य) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:उपलब्ध नहीं} | {r:उपलब्ध नहीं} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:उपलब्ध नहीं} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:उपलब्ध नहीं} | {r:उपलब्ध नहीं} | – | [11]",
                 "~ निर्माताओं द्वारा बताए गए मान। MKU 144 G2: पहली स्टेज NF 0.5 dB, रिसेप्शन में आउटपुट IP3 +23 dBm, IF इनपुट 2 – 50 mW या 60 – 2000 µW; ¹ 100 mW ड्राइवर, Kuhne 60 या 120 W एम्प्लीफ़ायर के साथ पूरा किया जाना है। TR 144 H +40: इसमें MKU 144 G2 मॉड्यूल है, इसलिए 25 dB गेन (IC8TEM से जानकारी)। 25 dB गेन के साथ, NF 10 dB वाले रेडियो के आगे कुल 0.99 dB है, NF 20 dB के साथ 1.88 dB [13]। Kuhne मैनुअल तालिका में 1.2 dB और पाठ में 0.9 dB बताता है; Kuhne MKU LNA 144 A प्रीएम्प के साथ कुल 0.3 dB तक गिरता है [7]। Q5 Signal L144-28M: अधिकतम NF 1.0 dB न्यूनतम कन्वर्ज़न गेन 20 dB के साथ, S-meter कैलिब्रेट करने के लिए उपयोगकर्ता द्वारा समायोज्य RX-IF गेन; IF 25 W तक [9]। HA1YA ME2T-PRO-II: कुल NF 1 dB (पहली स्टेज PGA103+ NF 0.7 dB के साथ), RX गेन 25 dB तक समायोज्य, सामान्य OIP3 +35 dBm, सामान्य IIP3 +10 dBm, इमेज रिजेक्शन > 80 dB, IF इनपुट −20 से +37 dBm [10]।",
+                "> 432 और 1296 MHz के लिए ट्रांसवर्टर संबंधी टिप्पणियाँ, जहाँ लागू हों, आगामी संस्करणों में अद्यतन की जाएँगी।",
                 "#### मापे गए संयोजन (DF9IC, 144 MHz)",
                 "|h| रेडियो + ट्रांसवर्टर | रेडियो प्रीएम्प | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -95671,7 +98354,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), अप्रैल 2003, पृ. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, जनवरी 2012, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM द्वारा उपलब्ध कराया गया – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, प्रस्तुति, जुलाई 2015, IC8TEM द्वारा उपलब्ध कराई गई।",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।"
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 दिसंबर 2023, संशोधन 1.1, 13 सितंबर 2025, IC8TEM द्वारा उपलब्ध कराया गया।",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, IC8TEM द्वारा उपलब्ध कराई गई – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), IC8TEM द्वारा उपलब्ध कराई गई",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, IC8TEM द्वारा उपलब्ध कराई गई",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, IC8TEM द्वारा उपलब्ध कराई गई",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["hi"]["S48"] = new string[] {
                 "## कोएक्सियल केबल और नुकसान",
@@ -96189,13 +98884,22 @@ namespace LunaCalc
                 "#### 144 MHz용 트랜스버터 (IF 28 MHz)",
                 "|h| 제조사 · 모델 | >NF | >RX G | >TX | 출처",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (모듈) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:자료 없음} | {r:자료 없음} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (모듈) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (조정 가능) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:자료 없음} | {r:자료 없음} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:자료 없음} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:자료 없음} | {r:자료 없음} | – | [11]",
                 "~ 제조사 공칭값. MKU 144 G2: 첫 단 NF 0.5 dB, 수신 출력 IP3 +23 dBm, IF 입력 2~50 mW 또는 60~2000 µW. ¹ 100 mW 드라이버로, Kuhne 60 W 또는 120 W 증폭기와 함께 사용합니다. TR 144 H +40: MKU 144 G2 모듈을 내장하므로 이득이 25 dB입니다(IC8TEM 제공 정보). 이득 25 dB이면 NF 10 dB 무선기 앞에서 전체 0.99 dB, NF 20 dB이면 1.88 dB입니다 [13]. Kuhne 매뉴얼은 표에서 1.2 dB, 본문에서 0.9 dB로 적고 있으며, Kuhne MKU LNA 144 A 프리앰프를 쓰면 전체가 0.3 dB로 떨어집니다 [7]. Q5 Signal L144-28M: 최소 변환 이득 20 dB에서 최대 NF 1.0 dB, S미터 교정을 위해 사용자가 RX-IF 이득을 조정할 수 있음, IF 최대 25 W [9]. HA1YA ME2T-PRO-II: 전체 NF 1 dB(첫 단 PGA103+, NF 0.7 dB), RX 이득 최대 25 dB까지 조정 가능, 대표 OIP3 +35 dBm, 대표 IIP3 +10 dBm, 이미지 억압 > 80 dB, IF 입력 −20~+37 dBm [10].",
+                "> 432 MHz와 1296 MHz 트랜스버터에 관한 설명은 해당되는 경우 다음 버전에서 갱신됩니다.",
                 "#### 측정된 조합 (DF9IC, 144 MHz)",
                 "|h| 무선기 + 트랜스버터 | 무선기 프리앰프 | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -96239,7 +98943,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003년 4월, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012년 1월, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM 제공 – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, 발표 자료, 2015년 7월, IC8TEM 제공.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 (2023년 12월 1일), rev. 1.1 (2025년 9월 13일), IC8TEM 제공.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, IC8TEM 제공 – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), IC8TEM 제공",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, IC8TEM 제공",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, IC8TEM 제공",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["ko"]["S48"] = new string[] {
                 "## 동축 케이블과 손실",
@@ -96757,13 +99473,22 @@ namespace LunaCalc
                 "#### Transverter untuk 144 MHz (IF 28 MHz)",
                 "|h| Pembuat · model | >NF | >G RX | >TX | Sumber",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:t.t.} | {r:t.t.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (dapat diatur) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:t.t.} | {r:t.t.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:t.t.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:t.t.} | {r:t.t.} | – | [11]",
                 "~ Nilai yang dinyatakan pembuat (t.t. = tidak tersedia). MKU 144 G2: tingkat pertama dengan NF 0,5 dB, IP3 keluaran saat menerima +23 dBm, masukan IF 2 – 50 mW atau 60 – 2000 µW; ¹ driver 100 mW, untuk dilengkapi dengan amplifier Kuhne 60 atau 120 W. TR 144 H +40: berisi modul MKU 144 G2, sehingga penguatannya 25 dB (informasi dari IC8TEM). Dengan penguatan 25 dB, di depan radio dengan NF 10 dB totalnya 0,99 dB, dengan NF 20 dB totalnya 1,88 dB [13]. Manual Kuhne menyebut 1,2 dB di tabel dan 0,9 dB di teks; dengan preamp Kuhne MKU LNA 144 A totalnya turun menjadi 0,3 dB [7]. Q5 Signal L144-28M: NF maksimum 1,0 dB dengan penguatan konversi minimum 20 dB, penguatan RX-IF dapat diatur pengguna untuk mengkalibrasi S-meter; IF hingga 25 W [9]. HA1YA ME2T-PRO-II: NF keseluruhan 1 dB (tingkat pertama PGA103+ dengan NF 0,7 dB), penguatan RX dapat diatur hingga 25 dB, OIP3 tipikal +35 dBm, IIP3 tipikal +10 dBm, penolakan frekuensi bayangan > 80 dB, masukan IF dari −20 hingga +37 dBm [10].",
+                "> Untuk 432 dan 1296 MHz, catatan tentang transverter akan diperbarui pada versi berikutnya, bila relevan.",
                 "#### Kombinasi terukur (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Preamp radio | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -96807,7 +99532,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, hlm. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Januari 2012, § 4 “Sequenziamento relè, PA e PRE”, disediakan oleh IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasi, Juli 2015, disediakan oleh IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 tanggal 1 Desember 2023, rev. 1.1 tanggal 13 September 2025, disediakan oleh IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, disediakan oleh IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), disediakan oleh IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, disediakan oleh IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, disediakan oleh IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["id"]["S48"] = new string[] {
                 "## Kabel koaksial dan redaman",
@@ -97325,13 +100062,22 @@ namespace LunaCalc
                 "#### Трансвертеры на 144 MHz (ПЧ 28 MHz)",
                 "|h| Производитель · модель | >NF | >Усиление RX | >TX | Источник",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (модуль) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:н/д} | {r:н/д} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (модуль) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (регулируемое) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:н/д} | {r:н/д} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:н/д} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:н/д} | {r:н/д} | – | [11]",
                 "~ Значения заявлены производителями. MKU 144 G2: первый каскад с NF 0,5 dB, выходная IP3 на приёме +23 dBm, вход ПЧ 2 – 50 mW или 60 – 2000 µW; ¹ возбудитель 100 mW, дополняется усилителем Kuhne на 60 или 120 W. TR 144 H +40: содержит модуль MKU 144 G2, отсюда усиление 25 dB (информация от IC8TEM). При усилении 25 dB перед радиостанцией с NF 10 dB общий NF составляет 0,99 dB, с NF 20 dB — 1,88 dB [13]. В руководстве Kuhne указано 1,2 dB в таблице и 0,9 dB в тексте; с предусилителем Kuhne MKU LNA 144 A общий NF снижается до 0,3 dB [7]. Q5 Signal L144-28M: максимальный NF 1,0 dB при минимальном усилении преобразования 20 dB, усиление RX-ПЧ регулируется пользователем для калибровки S-метра; ПЧ до 25 W [9]. HA1YA ME2T-PRO-II: общий NF 1 dB (первый каскад PGA103+ с NF 0,7 dB), усиление RX регулируется до 25 dB, типовая OIP3 +35 dBm, типовая IIP3 +10 dBm, подавление зеркального канала > 80 dB, вход ПЧ от −20 до +37 dBm [10].",
+                "> Для 432 и 1296 МГц примечания о трансвертерах будут дополнены в следующих версиях, где это уместно.",
                 "#### Измеренные комбинации (DF9IC, 144 MHz)",
                 "|h| Радиостанция + трансвертер | Предусилитель радиостанции | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -97375,7 +100121,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), апрель 2003, с. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, январь 2012, § 4 “Sequenziamento relè, PA e PRE”, предоставлено IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентация, июль 2015, предоставлена IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 от 1 декабря 2023, ред. 1.1 от 13 сентября 2025, предоставлено IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, предоставлено IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), предоставлено IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, предоставлено IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, предоставлено IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["ru"]["S48"] = new string[] {
                 "## Коаксиальные кабели и потери",
@@ -97893,13 +100651,22 @@ namespace LunaCalc
                 "#### Трансвертери на 144 MHz (ПЧ 28 MHz)",
                 "|h| Виробник · модель | >NF | >Підс. RX | >TX | Джерело",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (модуль) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:н/д} | {r:н/д} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (модуль) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (регульоване) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:н/д} | {r:н/д} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:н/д} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:н/д} | {r:н/д} | – | [11]",
                 "~ Значення, заявлені виробниками. MKU 144 G2: перший каскад з NF 0,5 dB, вихідна IP3 на прийомі +23 dBm, вхід ПЧ 2 – 50 mW або 60 – 2000 µW; ¹ драйвер 100 mW, доповнюється підсилювачем Kuhne на 60 або 120 W. TR 144 H +40: містить модуль MKU 144 G2, звідси підсилення 25 dB (інформація від IC8TEM). З підсиленням 25 dB перед радіостанцією з NF 10 dB загальний NF становить 0,99 dB, з NF 20 dB — 1,88 dB [13]. У посібнику Kuhne в таблиці вказано 1,2 dB, а в тексті 0,9 dB; з передпідсилювачем Kuhne MKU LNA 144 A загальний NF зменшується до 0,3 dB [7]. Q5 Signal L144-28M: максимальний NF 1,0 dB при мінімальному коефіцієнті перетворення 20 dB, підсилення RX-IF користувач може регулювати для калібрування S-метра; ПЧ до 25 W [9]. HA1YA ME2T-PRO-II: загальний NF 1 dB (перший каскад PGA103+ з NF 0,7 dB), підсилення RX регулюється до 25 dB, типова OIP3 +35 dBm, типова IIP3 +10 dBm, придушення дзеркального каналу > 80 dB, вхід ПЧ від −20 до +37 dBm [10].",
+                "> Для 432 і 1296 МГц примітки щодо трансвертерів буде доповнено в наступних версіях, де це доречно.",
                 "#### Виміряні комбінації (DF9IC, 144 MHz)",
                 "|h| Радіостанція + трансвертер | Передпідс. радіостанції | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -97943,7 +100710,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), квітень 2003, с. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, січень 2012, § 4 “Sequenziamento relè, PA e PRE”, надано IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, презентація, липень 2015, надано IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 від 1 грудня 2023, ред. 1.1 від 13 вересня 2025, надано IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, надано IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), надано IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, надано IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, надано IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["uk"]["S48"] = new string[] {
                 "## Коаксіальні кабелі та втрати",
@@ -98461,13 +101240,22 @@ namespace LunaCalc
                 "#### Transverters vir 144 MHz (MF 28 MHz)",
                 "|h| Vervaardiger · model | >NF | >RX G | >TX | Bron",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.b.} | {r:n.b.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (verstelbaar) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.b.} | {r:n.b.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.b.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.b.} | {r:n.b.} | – | [11]",
                 "~ Waardes soos deur die vervaardigers vermeld. MKU 144 G2: eerste trap met NF 0,5 dB, uitset-IP3 in ontvangs +23 dBm, MF-inset 2 – 50 mW of 60 – 2000 µW; ¹ 100 mW-drywer, aan te vul met 'n Kuhne-versterker van 60 of 120 W. TR 144 H +40: dit bevat die MKU 144 G2-module, vandaar die wins van 25 dB (inligting van IC8TEM). Met 25 dB wins is die totaal voor 'n radio met NF 10 dB 0,99 dB, met NF 20 dB is dit 1,88 dB [13]. Die Kuhne-handleiding vermeld 1,2 dB in die tabel en 0,9 dB in die teks; met die Kuhne MKU LNA 144 A-voorversterker daal die totaal tot 0,3 dB [7]. Q5 Signal L144-28M: maksimum NF 1,0 dB met minimum omsettingswins 20 dB, RX-MF-wins deur die gebruiker verstelbaar om die S-meter te kalibreer; MF tot 25 W [9]. HA1YA ME2T-PRO-II: algehele NF 1 dB (eerste trap PGA103+ met NF 0,7 dB), RX-wins verstelbaar tot 25 dB, tipiese OIP3 +35 dBm, tipiese IIP3 +10 dBm, beeldonderdrukking > 80 dB, MF-inset van −20 tot +37 dBm [10].",
+                "> Vir 432 en 1296 MHz sal die notas oor transverters in die volgende weergawes bygewerk word, waar van toepassing.",
                 "#### Gemete kombinasies (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Radio-voorversterker | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -98511,7 +101299,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), April 2003, bl. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Januarie 2012, § 4 “Sequenziamento relè, PA e PRE”, verskaf deur IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, aanbieding, Julie 2015, verskaf deur IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 Desember 2023, hersiening 1.1 van 13 September 2025, verskaf deur IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, verskaf deur IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), verskaf deur IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, verskaf deur IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, verskaf deur IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["af"]["S48"] = new string[] {
                 "## Koaksiale kabels en verliese",
@@ -99029,13 +101829,22 @@ namespace LunaCalc
                 "#### 144 MHz-এর ট্রান্সভার্টার (IF 28 MHz)",
                 "|h| নির্মাতা · মডেল | >NF | >RX G | >TX | উৎস",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (মডিউল) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:অনুপলব্ধ} | {r:অনুপলব্ধ} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (মডিউল) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (সমন্বয়যোগ্য) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:অনুপলব্ধ} | {r:অনুপলব্ধ} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:অনুপলব্ধ} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:অনুপলব্ধ} | {r:অনুপলব্ধ} | – | [11]",
                 "~ নির্মাতাদের ঘোষিত মান। MKU 144 G2: প্রথম স্টেজের NF 0.5 dB, রিসেপশনে আউটপুট IP3 +23 dBm, IF ইনপুট 2 – 50 mW বা 60 – 2000 µW; ¹ 100 mW ড্রাইভার, একটি Kuhne 60 বা 120 W অ্যামপ্লিফায়ার দিয়ে সম্পূর্ণ করতে হবে। TR 144 H +40: এতে MKU 144 G2 মডিউল রয়েছে, তাই 25 dB গেইন (IC8TEM-এর তথ্য)। 25 dB গেইনে, NF 10 dB-এর রেডিওর সামনে মোট 0.99 dB, NF 20 dB হলে 1.88 dB [13]। Kuhne ম্যানুয়াল টেবিলে 1.2 dB এবং লেখায় 0.9 dB বলে; Kuhne MKU LNA 144 A প্রিঅ্যাম্পসহ মোট নেমে আসে 0.3 dB-এ [7]। Q5 Signal L144-28M: সর্বোচ্চ NF 1.0 dB, ন্যূনতম কনভার্শন গেইন 20 dB, S-meter ক্যালিব্রেট করতে RX-IF গেইন ব্যবহারকারী সমন্বয় করতে পারেন; IF 25 W পর্যন্ত [9]। HA1YA ME2T-PRO-II: সামগ্রিক NF 1 dB (প্রথম স্টেজ PGA103+, NF 0.7 dB), RX গেইন 25 dB পর্যন্ত সমন্বয়যোগ্য, সাধারণ OIP3 +35 dBm, সাধারণ IIP3 +10 dBm, ইমেজ রিজেকশন > 80 dB, IF ইনপুট −20 থেকে +37 dBm [10]।",
+                "> 432 ও 1296 MHz-এর ট্রান্সভার্টার সংক্রান্ত টীকা, যেখানে প্রযোজ্য, পরবর্তী সংস্করণে হালনাগাদ করা হবে।",
                 "#### পরিমাপকৃত সংমিশ্রণ (DF9IC, 144 MHz)",
                 "|h| রেডিও + ট্রান্সভার্টার | রেডিওর প্রিঅ্যাম্প | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -99079,7 +101888,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), এপ্রিল 2003, পৃ. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, জানুয়ারি 2012, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM কর্তৃক সরবরাহকৃত – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, উপস্থাপনা, জুলাই 2015, IC8TEM প্রদত্ত।",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।"
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 ডিসেম্বর 2023, সংশোধন 1.1, 13 সেপ্টেম্বর 2025, IC8TEM প্রদত্ত।",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, IC8TEM প্রদত্ত – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), IC8TEM প্রদত্ত",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, IC8TEM প্রদত্ত",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, IC8TEM প্রদত্ত",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["bn"]["S48"] = new string[] {
                 "## কোঅ্যাক্সিয়াল কেবল ও লস",
@@ -99597,13 +102418,22 @@ namespace LunaCalc
                 "#### محوّلات ترددية لنطاق 144 MHz (IF 28 MHz)",
                 "|h| الصانع · الطراز | >NF | >G الاستقبال | >الإرسال | المصدر",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (وحدة) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:غير متوفر} | {r:غير متوفر} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (وحدة) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (قابل للضبط) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:غير متوفر} | {r:غير متوفر} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:غير متوفر} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:غير متوفر} | {r:غير متوفر} | – | [11]",
                 "~ القيم كما يذكرها الصانعون. MKU 144 G2: المرحلة الأولى برقم ضوضاء 0.5 dB، وIP3 الخرج في الاستقبال +23 dBm، ودخل IF بين 2 – 50 mW أو 60 – 2000 µW؛ ¹ مُشغِّل بقدرة 100 mW، يُستكمل بمضخم Kuhne بقدرة 60 أو 120 W. TR 144 H +40: يحتوي على وحدة MKU 144 G2، ومن هنا كسب 25 dB (معلومة من IC8TEM). مع كسب 25 dB، أمام جهاز برقم ضوضاء 10 dB يكون المجموع 0.99 dB، ومع رقم ضوضاء 20 dB يكون 1.88 dB [13]. يذكر دليل Kuhne قيمة 1.2 dB في الجدول و0.9 dB في النص؛ ومع المضخم الأولي Kuhne MKU LNA 144 A ينخفض المجموع إلى 0.3 dB [7]. Q5 Signal L144-28M: أقصى رقم ضوضاء 1.0 dB مع حد أدنى لكسب التحويل 20 dB، وكسب RX-IF قابل للضبط من المستخدم لمعايرة S-meter؛ ودخل IF حتى 25 W [9]. HA1YA ME2T-PRO-II: رقم ضوضاء إجمالي 1 dB (المرحلة الأولى PGA103+ برقم ضوضاء 0.7 dB)، وكسب استقبال قابل للضبط حتى 25 dB، وOIP3 نموذجي +35 dBm، وIIP3 نموذجي +10 dBm، ورفض الصورة > 80 dB، ودخل IF من −20 إلى +37 dBm [10].",
+                "> بالنسبة إلى 432 و1296 MHz، ستُحدَّث الملاحظات الخاصة بالمحوِّلات في الإصدارات القادمة، حيثما ينطبق ذلك.",
                 "#### تركيبات مقيسة (DF9IC، 144 MHz)",
                 "|h| الجهاز + المحوّل الترددي | المضخم الأولي للجهاز | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -99647,7 +102477,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX، “The Yaesu FT-897 HF/VHF/UHF Transceiver”، RadCom (RSGB)، أبريل 2003، ص. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL، “EME (Earth-Moon-Earth) – Guida operativa”، يناير 2012، § 4 “Sequenziamento relè, PA e PRE”، مقدَّم من IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG، “Beginner's Guide to Small-station EME”، عرض تقديمي، يوليو 2015، قدّمه IC8TEM.",
-                "[18] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM."
+                "[18] Relu Jianu NJ9R، “2M EME the easy way… the secret sauce to success”، الإصدار v1.0 بتاريخ 1 ديسمبر 2023، المراجعة 1.1 بتاريخ 13 سبتمبر 2025، قدّمه IC8TEM.",
+                "[19] hfvhfparts، “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”، eBay 134184049039، قدّمها IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft، “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”، Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016)، قدّمها IC8TEM",
+                "[21] IK7HIN Marcello، “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA)، 01/02/2020، قدّمها IC8TEM",
+                "[22] I1KFH، “144 MHz Anglian Transverter” (G4DDK)، 2018، Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG، “Description of a homemade 28-144 MHz Transverter”، 17/02/2007، قدّمها IC8TEM",
+                "[24] Robi S53WW، “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14)، 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM، “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic، “TR 144 H +40 – Handbuch”، 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic، “TR144-PRO 2m Linear Transverter”، V3.0، 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic، “MKU 144 G2 – Handbuch”، 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic، “TR 144 H – Handbuch”، 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT، “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300)، DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["ar"]["S48"] = new string[] {
                 "## الكابلات المحورية والفقد",
@@ -100165,13 +103007,22 @@ namespace LunaCalc
                 "#### 144 MHz transverter'ları (IF 28 MHz)",
                 "|h| Üretici · model | >NF | >RX G | >TX | Kaynak",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modül) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:yok} | {r:yok} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modül) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (ayarlanabilir) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:yok} | {r:yok} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:yok} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:yok} | {r:yok} | – | [11]",
                 "~ Üreticilerin bildirdiği değerler. MKU 144 G2: NF'si 0,5 dB olan ilk kat, almada çıkış IP3 +23 dBm, IF girişi 2 – 50 mW veya 60 – 2000 µW; ¹ 100 mW sürücü, bir Kuhne 60 veya 120 W amplifikatörle tamamlanmalıdır. TR 144 H +40: MKU 144 G2 modülünü içerir, 25 dB kazanç buradan gelir (IC8TEM'den alınan bilgi). 25 dB kazançla, NF'si 10 dB olan bir telsizin önünde toplam 0,99 dB, NF 20 dB ile 1,88 dB'dir [13]. Kuhne kılavuzu tabloda 1,2 dB, metinde 0,9 dB belirtir; Kuhne MKU LNA 144 A ön yükselteciyle toplam 0,3 dB'ye düşer [7]. Q5 Signal L144-28M: en az 20 dB dönüşüm kazancıyla en fazla 1,0 dB NF, S-metreyi kalibre etmek için RX-IF kazancı kullanıcı tarafından ayarlanabilir; IF 25 W'a kadar [9]. HA1YA ME2T-PRO-II: toplam NF 1 dB (NF'si 0,7 dB olan PGA103+ ilk katı), RX kazancı 25 dB'ye kadar ayarlanabilir, tipik OIP3 +35 dBm, tipik IIP3 +10 dBm, imaj bastırma > 80 dB, IF girişi −20 ile +37 dBm arası [10].",
+                "> 432 ve 1296 MHz için transverter notları, gerektiği yerlerde, sonraki sürümlerde güncellenecektir.",
                 "#### Ölçülmüş kombinasyonlar (DF9IC, 144 MHz)",
                 "|h| Telsiz + transverter | Telsiz ön yükselteci | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -100215,7 +103066,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), Nisan 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Ocak 2012, § 4 “Sequenziamento relè, PA e PRE”, IC8TEM tarafından sağlanmıştır – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, sunum, Temmuz 2015, IC8TEM tarafından sağlanmıştır.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 1 Aralık 2023; rev. 1.1, 13 Eylül 2025; IC8TEM tarafından sağlanmıştır.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, IC8TEM tarafından sağlanmıştır – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), IC8TEM tarafından sağlanmıştır",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, IC8TEM tarafından sağlanmıştır",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, IC8TEM tarafından sağlanmıştır",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["tr"]["S48"] = new string[] {
                 "## Koaksiyel kablolar ve kayıplar",
@@ -100733,13 +103596,22 @@ namespace LunaCalc
                 "#### Transverters voor 144 MHz (MF 28 MHz)",
                 "|h| Fabrikant · model | >NF | >G RX | >TX | Bron",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.b.} | {r:n.b.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (instelbaar) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.b.} | {r:n.b.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.b.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.b.} | {r:n.b.} | – | [11]",
                 "~ Waarden opgegeven door de fabrikanten. MKU 144 G2: eerste trap met NF 0,5 dB, uitgangs-IP3 bij ontvangst +23 dBm, MF-ingang 2 – 50 mW of 60 – 2000 µW; ¹ driver van 100 mW, aan te vullen met een Kuhne-eindversterker van 60 of 120 W. TR 144 H +40: bevat de module MKU 144 G2, vandaar de winst van 25 dB (aanwijzing van IC8TEM). Met 25 dB winst is het totaal vóór een radio met NF 10 dB 0,99 dB, met NF 20 dB 1,88 dB [13]. De handleiding van Kuhne geeft 1,2 dB in de tabel en 0,9 dB in de tekst; met de Kuhne-preamp MKU LNA 144 A daalt het totaal tot 0,3 dB [7]. Q5 Signal L144-28M: maximale NF 1,0 dB bij een minimale conversiewinst van 20 dB, RX-MF-winst door de gebruiker instelbaar om de S-meter te kalibreren; MF tot 25 W [9]. HA1YA ME2T-PRO-II: totale NF 1 dB (eerste trap PGA103+ met NF 0,7 dB), RX-winst tot 25 dB instelbaar, OIP3 typisch +35 dBm, IIP3 typisch +10 dBm, spiegelonderdrukking > 80 dB, MF-ingang van −20 tot +37 dBm [10].",
+                "> Voor 432 en 1296 MHz worden de opmerkingen over transverters in de volgende versies bijgewerkt, waar van toepassing.",
                 "#### Gemeten combinaties (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Preamp radio | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -100783,7 +103655,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), april 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, januari 2012, § 4 „Sequenziamento relè, PA e PRE”, aangeleverd door IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentatie, juli 2015, aangeleverd door IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 december 2023, rev. 1.1 van 13 september 2025, aangeleverd door IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 van 1 december 2023, rev. 1.1 van 13 september 2025, aangeleverd door IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, aangeleverd door IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), aangeleverd door IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, aangeleverd door IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, aangeleverd door IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["nl"]["S48"] = new string[] {
                 "## Coaxkabels en verliezen",
@@ -101309,13 +104193,22 @@ namespace LunaCalc
                 "#### Transverterid 144 MHz jaoks (IF 28 MHz)",
                 "|h| Tootja · mudel | >NF | >G RX | >TX | Allikas",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (moodul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:puudub} | {r:puudub} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (moodul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (reguleeritav) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:puudub} | {r:puudub} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:puudub} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:puudub} | {r:puudub} | – | [11]",
                 "~ Tootjate deklareeritud väärtused. MKU 144 G2: esimene aste NF-iga 0,5 dB, vastuvõtu väljundi IP3 +23 dBm, sisend-IF 2 – 50 mW või 60 – 2000 µW; ¹ 100 mW ergutusaste, mida tuleb täiendada Kuhne 60 või 120 W võimendiga. TR 144 H +40: sisaldab moodulit MKU 144 G2, millest tuleneb 25 dB võimendus (IC8TEM-i märkus). 25 dB võimenduse korral on summa 10 dB NF-iga raadio ees 0,99 dB, 20 dB NF-iga 1,88 dB [13]. Kuhne juhend märgib tabelis 1,2 dB ja tekstis 0,9 dB; Kuhne eelvõimendiga MKU LNA 144 A langeb summa 0,3 dB-ni [7]. Q5 Signal L144-28M: maksimaalne NF 1,0 dB minimaalse muundusvõimendusega 20 dB, RX-IF võimendus kasutaja poolt reguleeritav S-meetri kalibreerimiseks; IF kuni 25 W [9]. HA1YA ME2T-PRO-II: kogu-NF 1 dB (esimene aste PGA103+ NF-iga 0,7 dB), RX võimendus kuni 25 dB reguleeritav, tüüpiline OIP3 +35 dBm, tüüpiline IIP3 +10 dBm, peegelsageduse summutus > 80 dB, sisend-IF −20 kuni +37 dBm [10].",
+                "> 432 ja 1296 MHz jaoks uuendatakse transverterite märkusi järgmistes versioonides, kus asjakohane.",
                 "#### Mõõdetud kombinatsioonid (DF9IC, 144 MHz)",
                 "|h| Raadio + transverter | Raadio eelvõimendi | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -101359,7 +104252,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), aprill 2003, lk 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, jaanuar 2012, § 4 „Releede, PA ja PRE järjestamine“, andnud IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, ettekanne, juuli 2015, andnud IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 1. detsembrist 2023, rev. 1.1 13. septembrist 2025, andnud IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 1. detsembrist 2023, rev. 1.1 13. septembrist 2025, andnud IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, andnud IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), andnud IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, andnud IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, andnud IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["et"]["S48"] = new string[] {
                 "## Koaksiaalkaablid ja kaod",
@@ -101885,13 +104790,22 @@ namespace LunaCalc
                 "#### Transverteri 144 MHz (IF 28 MHz)",
                 "|h| Ražotājs · modelis | >NF | >G RX | >TX | Avots",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modulis) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:nav dat.} | {r:nav dat.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modulis) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (regulējams) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:nav dat.} | {r:nav dat.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:nav dat.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:nav dat.} | {r:nav dat.} | – | [11]",
                 "~ Ražotāju deklarētās vērtības. MKU 144 G2: pirmā pakāpe ar NF 0,5 dB, izejas IP3 uztveršanā +23 dBm, ieejas IF 2 – 50 mW vai 60 – 2000 µW; ¹ 100 mW ierosinātājs, papildināms ar Kuhne 60 vai 120 W pastiprinātāju. TR 144 H +40: satur moduli MKU 144 G2, no tā arī 25 dB pastiprinājums (IC8TEM norāde). Ar 25 dB pastiprinājumu raidītāja-uztvērēja ar NF 10 dB priekšā kopējais ir 0,99 dB, ar NF 20 dB – 1,88 dB [13]. Kuhne rokasgrāmatā tabulā norādīts 1,2 dB un tekstā 0,9 dB; ar Kuhne priekšpastiprinātāju MKU LNA 144 A kopējais samazinās līdz 0,3 dB [7]. Q5 Signal L144-28M: maksimālais NF 1,0 dB ar minimālo pārveidošanas pastiprinājumu 20 dB, RX-IF pastiprinājums lietotājam regulējams S-metra kalibrēšanai; IF līdz 25 W [9]. HA1YA ME2T-PRO-II: kopējais NF 1 dB (pirmā pakāpe PGA103+ ar NF 0,7 dB), RX pastiprinājums līdz 25 dB, regulējams, tipisks OIP3 +35 dBm, tipisks IIP3 +10 dBm, spoguļkanāla vājinājums > 80 dB, ieejas IF no −20 līdz +37 dBm [10].",
+                "> 432 un 1296 MHz piezīmes par transverteriem tiks atjauninātas nākamajās versijās, kur tas attiecas.",
                 "#### Izmērītās kombinācijas (DF9IC, 144 MHz)",
                 "|h| Raidītājs-uztvērējs + transverters | Raidītāja-uztvērēja priekšpast. | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -101935,7 +104849,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003. gada aprīlis, 18.–20. lpp. – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012. gada janvāris, § 4 «Sequenziamento relè, PA e PRE», nodrošināja IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, prezentācija, 2015. gada jūlijs, nodrošināja IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 2023. gada 1. decembris, rev. 1.1, 2025. gada 13. septembris, nodrošināja IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 2023. gada 1. decembris, rev. 1.1, 2025. gada 13. septembris, nodrošināja IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, nodrošināja IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), nodrošināja IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, nodrošināja IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, nodrošināja IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["lv"]["S48"] = new string[] {
                 "## Koaksiālie kabeļi un zudumi",
@@ -102461,13 +105387,22 @@ namespace LunaCalc
                 "#### Transverteriai 144 MHz diapazonui (IF 28 MHz)",
                 "|h| Gamintojas · modelis | >NF | >G RX | >TX | Šaltinis",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modulis) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:nėra} | {r:nėra} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modulis) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (reguliuojamas) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:nėra} | {r:nėra} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:nėra} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:nėra} | {r:nėra} | – | [11]",
                 "~ Gamintojų deklaruotos vertės. MKU 144 G2: pirmoji pakopa su NF 0,5 dB, priėmimo išėjimo IP3 +23 dBm, įėjimo IF 2 – 50 mW arba 60 – 2000 µW; ¹ 100 mW žadintuvas, papildomas Kuhne 60 arba 120 W stiprintuvu. TR 144 H +40: turi MKU 144 G2 modulį, iš čia 25 dB stiprinimas (IC8TEM nuoroda). Su 25 dB stiprinimu prieš radijo stotį su NF 10 dB bendra vertė yra 0,99 dB, su NF 20 dB – 1,88 dB [13]. Kuhne vadove lentelėje nurodyta 1,2 dB, o tekste 0,9 dB; su Kuhne MKU LNA 144 A išankstiniu stiprintuvu bendra vertė sumažėja iki 0,3 dB [7]. Q5 Signal L144-28M: didžiausias NF 1,0 dB, kai mažiausias keitimo stiprinimas 20 dB, RX-IF stiprinimą naudotojas gali reguliuoti S-metrui kalibruoti; IF iki 25 W [9]. HA1YA ME2T-PRO-II: bendras NF 1 dB (pirmoji pakopa PGA103+ su NF 0,7 dB), RX stiprinimas iki 25 dB reguliuojamas, tipinis OIP3 +35 dBm, tipinis IIP3 +10 dBm, veidrodinio kanalo slopinimas > 80 dB, įėjimo IF nuo −20 iki +37 dBm [10].",
+                "> 432 ir 1296 MHz pastabos apie transverterius bus atnaujintos kitose versijose, kur tinka.",
                 "#### Išmatuotos kombinacijos (DF9IC, 144 MHz)",
                 "|h| Radijo stotis + transverteris | Radijo stoties išank. stiprintuvas | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -102511,7 +105446,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003 m. balandis, p. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012 m. sausis, § 4 „Sequenziamento relè, PA e PRE“, pateikė IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, pristatymas, 2015 m. liepa, pateikė IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 2023 m. gruodžio 1 d., rev. 1.1, 2025 m. rugsėjo 13 d., pateikė IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 2023 m. gruodžio 1 d., rev. 1.1, 2025 m. rugsėjo 13 d., pateikė IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, pateikė IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), pateikė IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, pateikė IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, pateikė IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["lt"]["S48"] = new string[] {
                 "## Koaksialiniai kabeliai ir nuostoliai",
@@ -103037,13 +105984,22 @@ namespace LunaCalc
                 "#### Transvertrar för 144 MHz (MF 28 MHz)",
                 "|h| Tillverkare · modell | >NF | >G RX | >TX | Källa",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:saknas} | {r:saknas} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (justerbar) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:saknas} | {r:saknas} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:saknas} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:saknas} | {r:saknas} | – | [11]",
                 "~ Värden uppgivna av tillverkarna. MKU 144 G2: första steget med NF 0,5 dB, utgångs-IP3 vid mottagning +23 dBm, MF-ingång 2 – 50 mW eller 60 – 2000 µW; ¹ drivsteg på 100 mW, att kompletteras med ett Kuhne-slutsteg på 60 eller 120 W. TR 144 H +40: innehåller modulen MKU 144 G2, därav förstärkningen på 25 dB (uppgift från IC8TEM). Med 25 dB förstärkning framför en radio med NF 10 dB blir totalen 0,99 dB, med NF 20 dB blir den 1,88 dB [13]. Kuhnes manual anger 1,2 dB i tabellen och 0,9 dB i texten; med Kuhne-förförstärkaren MKU LNA 144 A sjunker totalen till 0,3 dB [7]. Q5 Signal L144-28M: högsta NF 1,0 dB med minsta konverteringsförstärkning 20 dB, RX-MF-förstärkning som användaren kan justera för att kalibrera S-metern; MF upp till 25 W [9]. HA1YA ME2T-PRO-II: total NF 1 dB (första steget PGA103+ med NF 0,7 dB), RX-förstärkning upp till 25 dB justerbar, typisk OIP3 +35 dBm, typisk IIP3 +10 dBm, spegelfrekvensdämpning > 80 dB, MF-ingång från −20 till +37 dBm [10].",
+                "> För 432 och 1296 MHz uppdateras anteckningarna om transvertrar i kommande versioner, där det är tillämpligt.",
                 "#### Uppmätta kombinationer (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Radions förförst. | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -103087,7 +106043,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), april 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, januari 2012, § 4 «Sequenziamento relè, PA e PRE», tillhandahållen av IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentation, juli 2015, tillhandahållen av IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 från 1 december 2023, rev. 1.1 från 13 september 2025, tillhandahållen av IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 från 1 december 2023, rev. 1.1 från 13 september 2025, tillhandahållen av IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, tillhandahållet av IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), tillhandahållet av IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, tillhandahållet av IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, tillhandahållet av IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["sv"]["S48"] = new string[] {
                 "## Koaxialkablar och förluster",
@@ -103613,13 +106581,22 @@ namespace LunaCalc
                 "#### Transvertere for 144 MHz (MF 28 MHz)",
                 "|h| Produsent · modell | >NF | >G RX | >TX | Kilde",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:i.t.} | {r:i.t.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (justerbar) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:i.t.} | {r:i.t.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:i.t.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:i.t.} | {r:i.t.} | – | [11]",
                 "~ Verdier oppgitt av produsentene. MKU 144 G2: første trinn med NF 0,5 dB, utgangs-IP3 ved mottak +23 dBm, MF-inngang 2 – 50 mW eller 60 – 2000 µW; ¹ driver på 100 mW, kompletteres med en Kuhne-forsterker på 60 eller 120 W. TR 144 H +40: inneholder modulen MKU 144 G2, derav forsterkningen på 25 dB (opplysning fra IC8TEM). Med 25 dB forsterkning foran en radio med NF 10 dB er totalen 0,99 dB, med NF 20 dB 1,88 dB [13]. Kuhne-manualen oppgir 1,2 dB i tabellen og 0,9 dB i teksten; med Kuhne-forforsterkeren MKU LNA 144 A synker totalen til 0,3 dB [7]. Q5 Signal L144-28M: maksimal NF 1,0 dB med minste konverteringsforsterkning 20 dB, RX-MF-forsterkning som brukeren kan justere for å kalibrere S-meteret; MF opptil 25 W [9]. HA1YA ME2T-PRO-II: samlet NF 1 dB (første trinn PGA103+ med NF 0,7 dB), RX-forsterkning opptil 25 dB justerbar, typisk OIP3 +35 dBm, typisk IIP3 +10 dBm, speilfrekvensundertrykkelse > 80 dB, MF-inngang fra −20 til +37 dBm [10].",
+                "> For 432 og 1296 MHz blir merknadene om transvertere oppdatert i kommende versjoner, der det er aktuelt.",
                 "#### Målte kombinasjoner (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Radioens forforsterker | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -103663,7 +106640,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), april 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, januar 2012, § 4 «Sequenziamento relè, PA e PRE», levert av IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasjon, juli 2015, levert av IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 av 1. desember 2023, rev. 1.1 av 13. september 2025, levert av IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 av 1. desember 2023, rev. 1.1 av 13. september 2025, levert av IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, levert av IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), levert av IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, levert av IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, levert av IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["nb"]["S48"] = new string[] {
                 "## Koaksialkabler og tap",
@@ -104189,13 +107178,22 @@ namespace LunaCalc
                 "#### Transverterar fyrir 144 MHz (IF 28 MHz)",
                 "|h| Framleiðandi · gerð | >NF | >G RX | >TX | Heimild",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (eining) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:e.u.} | {r:e.u.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (eining) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (stillanleg) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:e.u.} | {r:e.u.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:e.u.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:e.u.} | {r:e.u.} | – | [11]",
                 "~ Gildi uppgefin af framleiðendum. MKU 144 G2: fyrsta þrep með NF 0,5 dB, IP3 útgangs við móttöku +23 dBm, IF-inngangur 2 – 50 mW eða 60 – 2000 µW; ¹ drifþrep 100 mW, sem bæta þarf við Kuhne-magnara upp á 60 eða 120 W. TR 144 H +40: inniheldur eininguna MKU 144 G2, þaðan kemur 25 dB mögnunin (ábending IC8TEM). Með 25 dB mögnun, framan við stöð með NF 10 dB, er heildin 0,99 dB, með NF 20 dB 1,88 dB [13]. Handbók Kuhne gefur 1,2 dB í töflunni og 0,9 dB í textanum; með Kuhne MKU LNA 144 A formagnaranum fer heildin niður í 0,3 dB [7]. Q5 Signal L144-28M: hámarks-NF 1,0 dB með lágmarksumbreytingarmögnun 20 dB, RX-IF mögnun stillanleg af notanda til að kvarða S-mælinn; IF allt að 25 W [9]. HA1YA ME2T-PRO-II: heildar-NF 1 dB (fyrsta þrep PGA103+ með NF 0,7 dB), RX-mögnun allt að 25 dB stillanleg, OIP3 dæmigert +35 dBm, IIP3 dæmigert +10 dBm, speglunardeyfing > 80 dB, IF-inngangur frá −20 til +37 dBm [10].",
+                "> Fyrir 432 og 1296 MHz verða athugasemdir um transverta uppfærðar í næstu útgáfum, þar sem við á.",
                 "#### Mældar samsetningar (DF9IC, 144 MHz)",
                 "|h| Stöð + transverter | Formagnari stöðvar | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -104239,7 +107237,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), apríl 2003, bls. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, janúar 2012, § 4 „Sequenziamento relè, PA e PRE“, útveguð af IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, kynning, júlí 2015, útveguð af IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 frá 1. desember 2023, endursk. 1.1 frá 13. september 2025, útvegað af IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 frá 1. desember 2023, endursk. 1.1 frá 13. september 2025, útvegað af IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, útvegað af IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), útvegað af IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, útvegað af IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, útvegað af IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["is"]["S48"] = new string[] {
                 "## Kóaxkaplar og tap",
@@ -104765,13 +107775,22 @@ namespace LunaCalc
                 "#### טרנסוורטרים ל-144 MHz (IF 28 MHz)",
                 "|h| יצרן · דגם | >NF | >G RX | >TX | מקור",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (מודול) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:אין נתון} | {r:אין נתון} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (מודול) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (מתכוונן) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:אין נתון} | {r:אין נתון} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:אין נתון} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:אין נתון} | {r:אין נתון} | – | [11]",
                 "~ ערכים שהוצהרו על ידי היצרנים. MKU 144 G2: שלב ראשון עם NF 0.5 dB, IP3 ביציאה בקליטה +23 dBm, IF בכניסה 2 – 50 mW או 60 – 2000 µW; ¹ מנהיג של 100 mW, שיש להשלים במגבר Kuhne של 60 או 120 W. TR 144 H +40: מכיל את המודול MKU 144 G2, ומכאן ההגבר של 25 dB (לפי IC8TEM). עם הגבר של 25 dB, לפני מקמ\"ש עם NF 10 dB הסך הכול הוא 0.99 dB, עם NF 20 dB הוא 1.88 dB [13]. המדריך של Kuhne מציין 1.2 dB בטבלה ו-0.9 dB בטקסט; עם קדם-המגבר Kuhne MKU LNA 144 A הסך הכול יורד ל-0.3 dB [7]. Q5 Signal L144-28M: NF מרבי 1.0 dB עם הגבר המרה מינימלי 20 dB, הגבר RX-IF שהמשתמש יכול לכוונן כדי לכייל את מד ה-S; IF עד 25 W [9]. HA1YA ME2T-PRO-II: NF כולל 1 dB (שלב ראשון PGA103+ עם NF 0.7 dB), הגבר RX עד 25 dB מתכוונן, OIP3 אופייני +35 dBm, IIP3 אופייני +10 dBm, דחיית תדר דמות > 80 dB, IF בכניסה מ-−20 עד +37 dBm [10].",
+                "> עבור 432 ו־1296 MHz, ההערות על הטרנסוורטרים יעודכנו בגרסאות הבאות, היכן שרלוונטי.",
                 "#### צירופים שנמדדו (DF9IC, 144 MHz)",
                 "|h| מקמ\"ש + טרנסוורטר | קדם-מגבר המקמ\"ש | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -104815,7 +107834,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), אפריל 2003, עמ' 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, ינואר 2012, § 4 «Sequenziamento relè, PA e PRE», סופק על ידי IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, מצגת, יולי 2015, סופקה על ידי IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 מ-1 בדצמבר 2023, rev. 1.1 מ-13 בספטמבר 2025, סופק על ידי IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 מ-1 בדצמבר 2023, rev. 1.1 מ-13 בספטמבר 2025, סופק על ידי IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, סופק על ידי IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), סופק על ידי IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, סופק על ידי IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, סופק על ידי IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["he"]["S48"] = new string[] {
                 "## כבלים קואקסיאליים והפסדים",
@@ -105341,13 +108372,22 @@ namespace LunaCalc
                 "#### 144 MHz کے لیے ٹرانسورٹرز (IF 28 MHz)",
                 "|h| بنانے والا · ماڈل | >NF | >G RX | >TX | ماخذ",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (ماڈیول) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:دستیاب نہیں} | {r:دستیاب نہیں} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (ماڈیول) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (قابلِ ایڈجسٹ) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:دستیاب نہیں} | {r:دستیاب نہیں} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:دستیاب نہیں} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:دستیاب نہیں} | {r:دستیاب نہیں} | – | [11]",
                 "~ بنانے والوں کی بیان کردہ قدریں۔ MKU 144 G2: پہلا مرحلہ NF 0.5 dB کے ساتھ، ریسیپشن میں آؤٹ پٹ IP3 +23 dBm، ان پٹ IF 2 – 50 mW یا 60 – 2000 µW؛ ¹ 100 mW ڈرائیور، جسے Kuhne کے 60 یا 120 W ایمپلیفائر سے مکمل کرنا ہے۔ TR 144 H +40: اس میں MKU 144 G2 ماڈیول شامل ہے، اسی سے 25 dB گین (IC8TEM کی نشاندہی)۔ 25 dB گین کے ساتھ، NF 10 dB والے ریڈیو کے آگے کل 0.99 dB ہے، NF 20 dB کے ساتھ 1.88 dB [13]۔ Kuhne کا مینوئل جدول میں 1.2 dB اور متن میں 0.9 dB بتاتا ہے؛ Kuhne MKU LNA 144 A پری ایمپ کے ساتھ کل 0.3 dB تک گر جاتا ہے [7]۔ Q5 Signal L144-28M: زیادہ سے زیادہ NF 1.0 dB، کم از کم کنورژن گین 20 dB کے ساتھ، S-meter کی کیلیبریشن کے لیے صارف کے قابلِ ایڈجسٹ RX-IF گین؛ IF 25 W تک [9]۔ HA1YA ME2T-PRO-II: مجموعی NF 1 dB (پہلا مرحلہ PGA103+، NF 0.7 dB)، RX گین 25 dB تک قابلِ ایڈجسٹ، عام OIP3 +35 dBm، عام IIP3 +10 dBm، image rejection > 80 dB، ان پٹ IF −20 سے +37 dBm تک [10]۔",
+                "> 432 اور 1296 MHz کے لیے ٹرانسورٹر سے متعلق نوٹ، جہاں لاگو ہوں، اگلے ورژنز میں اپ ڈیٹ کیے جائیں گے۔",
                 "#### ناپے گئے مجموعے (DF9IC، 144 MHz)",
                 "|h| ریڈیو + ٹرانسورٹر | ریڈیو کا پری ایمپ | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -105391,7 +108431,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”، RadCom (RSGB)، اپریل 2003، صفحات 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”، جنوری 2012، § 4 “ریلے، PA اور PRE کی ترتیب”، IC8TEM کی فراہم کردہ – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”، پریزنٹیشن، جولائی 2015، IC8TEM کی فراہم کردہ۔",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”، v1.0 مورخہ 1 دسمبر 2023، rev. 1.1 مورخہ 13 ستمبر 2025، IC8TEM کی فراہم کردہ۔"
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”، v1.0 مورخہ 1 دسمبر 2023، rev. 1.1 مورخہ 13 ستمبر 2025، IC8TEM کی فراہم کردہ۔",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, IC8TEM کی فراہم کردہ – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), IC8TEM کی فراہم کردہ",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, IC8TEM کی فراہم کردہ",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, IC8TEM کی فراہم کردہ",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["ur"]["S48"] = new string[] {
                 "## کوایکسیل کیبلیں اور نقصانات",
@@ -105917,13 +108969,22 @@ namespace LunaCalc
                 "#### Transvertere til 144 MHz (MF 28 MHz)",
                 "|h| Fabrikant · model | >NF | >G RX | >TX | Kilde",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:i.o.} | {r:i.o.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (justerbar) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:i.o.} | {r:i.o.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:i.o.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:i.o.} | {r:i.o.} | – | [11]",
                 "~ Værdier opgivet af fabrikanterne (i.o. = ikke oplyst). MKU 144 G2: første trin med NF 0,5 dB, udgangs-IP3 ved modtagning +23 dBm, MF-indgang 2 – 50 mW eller 60 – 2000 µW; ¹ styretrin på 100 mW, der skal suppleres med en Kuhne-forstærker på 60 eller 120 W. TR 144 H +40: indeholder modulet MKU 144 G2, deraf forstærkningen på 25 dB (oplysning fra IC8TEM). Med 25 dB forstærkning foran en radio med NF 10 dB er totalen 0,99 dB, med NF 20 dB er den 1,88 dB [13]. Kuhne-manualen angiver 1,2 dB i tabellen og 0,9 dB i teksten; med Kuhne-forforstærkeren MKU LNA 144 A falder totalen til 0,3 dB [7]. Q5 Signal L144-28M: største NF 1,0 dB med mindste konverteringsforstærkning 20 dB, RX-MF-forstærkning, som brugeren kan justere for at kalibrere S-meteret; MF op til 25 W [9]. HA1YA ME2T-PRO-II: samlet NF 1 dB (første trin PGA103+ med NF 0,7 dB), RX-forstærkning op til 25 dB justerbar, typisk OIP3 +35 dBm, typisk IIP3 +10 dBm, spejlfrekvensdæmpning > 80 dB, MF-indgang fra −20 til +37 dBm [10].",
+                "> For 432 og 1296 MHz bliver noterne om transvertere opdateret i de kommende versioner, hvor det er relevant.",
                 "#### Målte kombinationer (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Radioens forforstærker | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -105967,7 +109028,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), april 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, januar 2012, § 4 »Sequenziamento relè, PA e PRE«, stillet til rådighed af IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, præsentation, juli 2015, stillet til rådighed af IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 af 1. december 2023, rev. 1.1 af 13. september 2025, stillet til rådighed af IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 af 1. december 2023, rev. 1.1 af 13. september 2025, stillet til rådighed af IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, stillet til rådighed af IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), stillet til rådighed af IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, stillet til rådighed af IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, stillet til rådighed af IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["da"]["S48"] = new string[] {
                 "## Koaksialkabler og tab",
@@ -106493,13 +109566,22 @@ namespace LunaCalc
                 "#### Mga transverter para sa 144 MHz (IF 28 MHz)",
                 "|h| Manufacturer · modelo | >NF | >G RX | >TX | Source",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.a.} | {r:n.a.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (module) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (naaayos) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.a.} | {r:n.a.} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:n.a.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.a.} | {r:n.a.} | – | [11]",
                 "~ Mga halagang nakasaad ng mga manufacturer. MKU 144 G2: unang stage na may NF 0.5 dB, output IP3 sa pagtanggap +23 dBm, IF input 2 – 50 mW o 60 – 2000 µW; ¹ driver na 100 mW, na kukumpletuhin ng Kuhne amplifier na 60 o 120 W. TR 144 H +40: naglalaman ito ng module na MKU 144 G2, kaya ang gain na 25 dB (impormasyon mula kay IC8TEM). Sa gain na 25 dB, bago ang radyong may NF 10 dB, ang kabuuan ay 0.99 dB; sa NF 20 dB, 1.88 dB [13]. Nakasaad sa manwal ng Kuhne ang 1.2 dB sa talaan at 0.9 dB sa teksto; kasama ang Kuhne MKU LNA 144 A na preamp, bumababa ang kabuuan sa 0.3 dB [7]. Q5 Signal L144-28M: maximum na NF 1.0 dB na may minimum na conversion gain na 20 dB, RX-IF gain na naaayos ng user para i-calibrate ang S-meter; IF hanggang 25 W [9]. HA1YA ME2T-PRO-II: kabuuang NF 1 dB (unang stage PGA103+ na may NF 0.7 dB), RX gain na naaayos hanggang 25 dB, karaniwang OIP3 +35 dBm, karaniwang IIP3 +10 dBm, image rejection > 80 dB, IF input mula −20 hanggang +37 dBm [10].",
+                "> Para sa 432 at 1296 MHz, ia-update sa mga susunod na bersyon ang mga tala tungkol sa mga transverter, kung saan naaangkop.",
                 "#### Mga sinukat na kombinasyon (DF9IC, 144 MHz)",
                 "|h| Radyo + transverter | Preamp ng radyo | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -106543,7 +109625,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), Abril 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Enero 2012, § 4 “Sequenziamento relè, PA e PRE”, ibinigay ni IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, presentasyon, Hulyo 2015, ibinigay ni IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 noong 1 Disyembre 2023, rev. 1.1 noong 13 Setyembre 2025, ibinigay ni IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 noong 1 Disyembre 2023, rev. 1.1 noong 13 Setyembre 2025, ibinigay ni IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, ibinigay ni IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), ibinigay ni IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, ibinigay ni IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, ibinigay ni IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["tl"]["S48"] = new string[] {
                 "## Mga coaxial na kable at pagkawala",
@@ -107069,13 +110163,22 @@ namespace LunaCalc
                 "#### Transverters para 144 MHz (FI 28 MHz)",
                 "|h| Fabricante · modelo | >NF | >G RX | >TX | Fonte",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (módulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.d.} | {r:n.d.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (módulo) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (ajustável) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.d.} | {r:n.d.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.d.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.d.} | {r:n.d.} | – | [11]",
                 "~ Valores declarados pelos fabricantes. MKU 144 G2: primeiro estágio com NF 0,5 dB, IP3 de saída em recepção +23 dBm, entrada FI 2 – 50 mW ou 60 – 2000 µW; ¹ excitador de 100 mW, a completar com um amplificador Kuhne de 60 ou 120 W. TR 144 H +40: contém o módulo MKU 144 G2, daí o ganho de 25 dB (informação de IC8TEM). Com 25 dB de ganho, à frente de um rádio com NF 10 dB o total é 0,99 dB, com NF 20 dB é 1,88 dB [13]. O manual da Kuhne indica 1,2 dB na tabela e 0,9 dB no texto; com o pré-amplificador Kuhne MKU LNA 144 A o total cai para 0,3 dB [7]. Q5 Signal L144-28M: NF máxima 1,0 dB com ganho de conversão mínimo de 20 dB, ganho RX-FI ajustável pelo usuário para calibrar o S-meter; FI até 25 W [9]. HA1YA ME2T-PRO-II: NF global 1 dB (primeiro estágio PGA103+ com NF 0,7 dB), ganho RX ajustável até 25 dB, OIP3 típico +35 dBm, IIP3 típico +10 dBm, rejeição de imagem > 80 dB, entrada FI de −20 a +37 dBm [10].",
+                "> Para 432 e 1296 MHz, as notas sobre os transverters serão atualizadas nas próximas versões, quando for o caso.",
                 "#### Combinações medidas (DF9IC, 144 MHz)",
                 "|h| Rádio + transverter | Pré-amp. do rádio | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -107119,7 +110222,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), abril de 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, janeiro de 2012, § 4 “Sequenziamento relè, PA e PRE”, fornecido por IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, apresentação, julho de 2015, fornecida por IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 de 1 de dezembro de 2023, rev. 1.1 de 13 de setembro de 2025, fornecido por IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, fornecida por IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), fornecida por IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, fornecida por IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, fornecida por IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["pt-BR"]["S48"] = new string[] {
                 "## Cabos coaxiais e perdas",
@@ -107645,13 +110760,22 @@ namespace LunaCalc
                 "#### ทรานสเวอร์เตอร์สำหรับ 144 MHz (IF 28 MHz)",
                 "|h| ผู้ผลิต · รุ่น | >NF | >G RX | >TX | แหล่งที่มา",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (โมดูล) | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:ไม่มีข้อมูล} | {r:ไม่มีข้อมูล} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (โมดูล) | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB (ปรับได้) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:ไม่มีข้อมูล} | {r:ไม่มีข้อมูล} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:ไม่มีข้อมูล} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:ไม่มีข้อมูล} | {r:ไม่มีข้อมูล} | – | [11]",
                 "~ ค่าที่ผู้ผลิตระบุ MKU 144 G2: ภาคแรกมี NF 0.5 dB, IP3 ขาออกในการรับ +23 dBm, อินพุต IF 2 – 50 mW หรือ 60 – 2000 µW; ¹ ภาคขับ 100 mW ต้องต่อเพิ่มด้วยแอมป์ Kuhne 60 หรือ 120 W TR 144 H +40: มีโมดูล MKU 144 G2 อยู่ภายใน จึงมีเกน 25 dB (ข้อมูลจาก IC8TEM) ด้วยเกน 25 dB ต่อหน้าวิทยุที่มี NF 10 dB ค่ารวมคือ 0.99 dB ถ้า NF 20 dB จะเป็น 1.88 dB [13] คู่มือของ Kuhne ระบุ 1.2 dB ในตาราง และ 0.9 dB ในเนื้อความ เมื่อใช้ปรีแอมป์ Kuhne MKU LNA 144 A ค่ารวมลดลงเหลือ 0.3 dB [7] Q5 Signal L144-28M: NF สูงสุด 1.0 dB กับเกนแปลงความถี่ต่ำสุด 20 dB, เกน RX-IF ผู้ใช้ปรับได้เพื่อสอบเทียบ S-meter, IF สูงสุด 25 W [9] HA1YA ME2T-PRO-II: NF รวม 1 dB (ภาคแรก PGA103+ มี NF 0.7 dB), เกน RX ปรับได้ถึง 25 dB, OIP3 ทั่วไป +35 dBm, IIP3 ทั่วไป +10 dBm, การลดทอนความถี่ภาพ > 80 dB, อินพุต IF ตั้งแต่ −20 ถึง +37 dBm [10]",
+                "> สำหรับ 432 และ 1296 MHz หมายเหตุเกี่ยวกับทรานสเวอร์เตอร์จะได้รับการปรับปรุงในเวอร์ชันถัดไปตามความเหมาะสม",
                 "#### ชุดรวมที่วัดได้ (DF9IC, 144 MHz)",
                 "|h| วิทยุ + ทรานสเวอร์เตอร์ | ปรีแอมป์ของวิทยุ | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -107695,7 +110819,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), เมษายน 2003, หน้า 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, มกราคม 2012, § 4 “Sequenziamento relè, PA e PRE”, ได้รับจาก IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, งานนำเสนอ, กรกฎาคม 2015, ได้รับจาก IC8TEM",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 วันที่ 1 ธันวาคม 2023, rev. 1.1 วันที่ 13 กันยายน 2025, ได้รับจาก IC8TEM"
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 วันที่ 1 ธันวาคม 2023, rev. 1.1 วันที่ 13 กันยายน 2025, ได้รับจาก IC8TEM",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, ได้รับจาก IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), ได้รับจาก IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, ได้รับจาก IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, ได้รับจาก IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["th"]["S48"] = new string[] {
                 "## สายโคแอกซ์และการสูญเสีย",
@@ -108221,13 +111357,22 @@ namespace LunaCalc
                 "#### 144 MHz 收發轉換器（中頻 28 MHz）",
                 "|h| 廠商 · 型號 | >NF | >RX 增益 | >TX | 來源",
                 "| DEMI L144-28 | < 1.0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2**（模組） | 0.9 dB | 25 dB | 0.1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:無資料} | {r:無資料} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2**（模組） | 0.9 dB | 25 dB | 0.1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0.9 – 1.2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1.4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0.8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0.7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1.0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1.0 dB | ≤ 25 dB（可調） | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1.0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1.0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:無資料} | {r:無資料} | 0.1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0.4 – 0.8 dB | {r:無資料} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0.9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:無資料} | {r:無資料} | – | [11]",
                 "~ 數值為廠商標稱值。MKU 144 G2：第一級 NF 0.5 dB，接收輸出 IP3 +23 dBm，中頻輸入 2 – 50 mW 或 60 – 2000 µW；¹ 100 mW 激勵級，需配合 Kuhne 60 W 或 120 W 功率放大器使用。TR 144 H +40：內含 MKU 144 G2 模組，因此增益為 25 dB（資訊來自 IC8TEM）。增益為 25 dB 時，後接 NF 10 dB 的電台總 NF 為 0.99 dB，後接 NF 20 dB 的電台為 1.88 dB [13]。Kuhne 手冊在表格中標為 1.2 dB，正文中為 0.9 dB；配合 Kuhne MKU LNA 144 A 前置放大器，總 NF 降至 0.3 dB [7]。Q5 Signal L144-28M：最大 NF 1.0 dB，最小變頻增益 20 dB，RX 中頻增益可由使用者調節以校準 S 表；中頻輸入最大 25 W [9]。HA1YA ME2T-PRO-II：總 NF 1 dB（第一級 PGA103+，NF 0.7 dB），RX 增益可調至 25 dB，典型 OIP3 +35 dBm，典型 IIP3 +10 dBm，鏡像抑制 > 80 dB，中頻輸入 −20 至 +37 dBm [10]。",
+                "> 432 與 1296 MHz 的變頻器說明將在後續版本中視情況更新。",
                 "#### 實測組合（DF9IC，144 MHz）",
                 "|h| 電台 + 收發轉換器 | 電台前置放大 | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1.0 dB",
@@ -108271,7 +111416,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003 年 4 月，第 18–20 頁 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012 年 1 月，§ 4 “Sequenziamento relè, PA e PRE”，由 IC8TEM 提供 – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”，簡報，2015 年 7 月，由 IC8TEM 提供。",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。"
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0（2023 年 12 月 1 日），rev. 1.1（2025 年 9 月 13 日），由 IC8TEM 提供。",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, 由 IC8TEM 提供 – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), 由 IC8TEM 提供",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, 由 IC8TEM 提供",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, 由 IC8TEM 提供",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["zh-TW"]["S48"] = new string[] {
                 "## 同軸電纜與損耗",
@@ -108797,13 +111954,22 @@ namespace LunaCalc
                 "#### Transwertery na 144 MHz (p.cz. 28 MHz)",
                 "|h| Producent · model | >NF | >G RX | >TX | Źródło",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (moduł) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:b.d.} | {r:b.d.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (moduł) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (regulowane) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:b.d.} | {r:b.d.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:b.d.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:b.d.} | {r:b.d.} | – | [11]",
                 "~ Wartości deklarowane przez producentów. MKU 144 G2: pierwszy stopień o NF 0,5 dB, wyjściowy IP3 przy odbiorze +23 dBm, wejście p.cz. 2 – 50 mW lub 60 – 2000 µW; ¹ sterowanie 100 mW, do uzupełnienia wzmacniaczem Kuhne 60 lub 120 W. TR 144 H +40: zawiera moduł MKU 144 G2, stąd wzmocnienie 25 dB (informacja IC8TEM). Przy wzmocnieniu 25 dB przed radiem o NF 10 dB całość wynosi 0,99 dB, przy NF 20 dB – 1,88 dB [13]. Instrukcja Kuhne podaje 1,2 dB w tabeli i 0,9 dB w tekście; z przedwzmacniaczem Kuhne MKU LNA 144 A całość spada do 0,3 dB [7]. Q5 Signal L144-28M: maksymalny NF 1,0 dB przy minimalnym wzmocnieniu konwersji 20 dB, wzmocnienie RX-p.cz. regulowane przez użytkownika do kalibracji S-metra; p.cz. do 25 W [9]. HA1YA ME2T-PRO-II: całkowity NF 1 dB (pierwszy stopień PGA103+ o NF 0,7 dB), wzmocnienie RX regulowane do 25 dB, typowy OIP3 +35 dBm, typowy IIP3 +10 dBm, tłumienie częstotliwości lustrzanej > 80 dB, wejście p.cz. od −20 do +37 dBm [10].",
+                "> Dla 432 i 1296 MHz uwagi o transwerterach zostaną uzupełnione w kolejnych wersjach, tam gdzie to potrzebne.",
                 "#### Zmierzone zestawy (DF9IC, 144 MHz)",
                 "|h| Radio + transwerter | Przedwzm. radia | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -108847,7 +112013,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), kwiecień 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, styczeń 2012, § 4 „Sequenziamento relè, PA e PRE”, dostarczone przez IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, prezentacja, lipiec 2015, dostarczona przez IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 z 1 grudnia 2023, rev. 1.1 z 13 września 2025, dostarczone przez IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 z 1 grudnia 2023, rev. 1.1 z 13 września 2025, dostarczone przez IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, dostarczona przez IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), dostarczona przez IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, dostarczona przez IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, dostarczona przez IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["pl"]["S48"] = new string[] {
                 "## Kable koncentryczne i straty",
@@ -109373,13 +112551,22 @@ namespace LunaCalc
                 "#### Transvertory pro 144 MHz (MF 28 MHz)",
                 "|h| Výrobce · model | >NF | >G RX | >TX | Zdroj",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:neuv.} | {r:neuv.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (nastavitelný) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:neuv.} | {r:neuv.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:neuv.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:neuv.} | {r:neuv.} | – | [11]",
                 "~ Hodnoty udávané výrobci. MKU 144 G2: první stupeň s NF 0,5 dB, výstupní IP3 při příjmu +23 dBm, vstupní MF 2 – 50 mW nebo 60 – 2000 µW; ¹ budič 100 mW, k doplnění zesilovačem Kuhne 60 nebo 120 W. TR 144 H +40: obsahuje modul MKU 144 G2, odtud zisk 25 dB (údaj IC8TEM). Se ziskem 25 dB před rádiem s NF 10 dB je celkem 0,99 dB, s NF 20 dB je to 1,88 dB [13]. Příručka Kuhne uvádí 1,2 dB v tabulce a 0,9 dB v textu; s předzesilovačem Kuhne MKU LNA 144 A klesne celková hodnota na 0,3 dB [7]. Q5 Signal L144-28M: maximální NF 1,0 dB při minimálním konverzním zisku 20 dB, zisk RX-MF nastavitelný uživatelem pro kalibraci S-metru; MF až 25 W [9]. HA1YA ME2T-PRO-II: celkové NF 1 dB (první stupeň PGA103+ s NF 0,7 dB), zisk RX až 25 dB nastavitelný, OIP3 typicky +35 dBm, IIP3 typicky +10 dBm, potlačení zrcadla > 80 dB, vstupní MF od −20 do +37 dBm [10].",
+                "> Pro 432 a 1296 MHz budou poznámky k transvertorům doplněny v dalších verzích, kde to bude relevantní.",
                 "#### Naměřené kombinace (DF9IC, 144 MHz)",
                 "|h| Rádio + transvertor | Předzes. rádia | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -109423,7 +112610,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), duben 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, leden 2012, § 4 «Sequenziamento relè, PA e PRE», poskytl IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, prezentace, červenec 2015, poskytl IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 z 1. prosince 2023, rev. 1.1 z 13. září 2025, poskytl IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 z 1. prosince 2023, rev. 1.1 z 13. září 2025, poskytl IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, poskytl IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), poskytl IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, poskytl IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, poskytl IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["cs"]["S48"] = new string[] {
                 "## Koaxiální kabely a ztráty",
@@ -109949,13 +113148,22 @@ namespace LunaCalc
                 "#### Transvertere pentru 144 MHz (IF 28 MHz)",
                 "|h| Producător · model | >NF | >G RX | >TX | Sursă",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.d.} | {r:n.d.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (reglabil) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.d.} | {r:n.d.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.d.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.d.} | {r:n.d.} | – | [11]",
                 "~ Valori declarate de producători. MKU 144 G2: primul etaj cu NF 0,5 dB, IP3 de ieșire la recepție +23 dBm, IF la intrare 2 – 50 mW sau 60 – 2000 µW; ¹ excitator de 100 mW, de completat cu un amplificator Kuhne de 60 sau 120 W. TR 144 H +40: conține modulul MKU 144 G2, de unde câștigul de 25 dB (indicație a lui IC8TEM). Cu 25 dB de câștig, în fața unui radio cu NF 10 dB totalul este 0,99 dB, cu NF 20 dB este 1,88 dB [13]. Manualul Kuhne indică 1,2 dB în tabel și 0,9 dB în text; cu preamplificatorul Kuhne MKU LNA 144 A totalul scade la 0,3 dB [7]. Q5 Signal L144-28M: NF maxim 1,0 dB cu câștig de conversie minim 20 dB, câștig RX-IF reglabil de utilizator pentru a calibra S-metrul; IF până la 25 W [9]. HA1YA ME2T-PRO-II: NF total 1 dB (primul etaj PGA103+ cu NF 0,7 dB), câștig RX până la 25 dB reglabil, OIP3 tipic +35 dBm, IIP3 tipic +10 dBm, rejecția imaginii > 80 dB, IF la intrare de la −20 la +37 dBm [10].",
+                "> Pentru 432 și 1296 MHz, notele despre transvertere vor fi actualizate în versiunile următoare, acolo unde este cazul.",
                 "#### Combinații măsurate (DF9IC, 144 MHz)",
                 "|h| Radio + transverter | Preamplificator radio | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -109999,7 +113207,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), aprilie 2003, pp. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, ianuarie 2012, § 4 «Sequenziamento relè, PA e PRE», furnizat de IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, prezentare, iulie 2015, furnizată de IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 din 1 decembrie 2023, rev. 1.1 din 13 septembrie 2025, furnizat de IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 din 1 decembrie 2023, rev. 1.1 din 13 septembrie 2025, furnizat de IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, furnizată de IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), furnizată de IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, furnizată de IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, furnizată de IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["ro"]["S48"] = new string[] {
                 "## Cabluri coaxiale și pierderi",
@@ -110525,13 +113745,22 @@ namespace LunaCalc
                 "#### Transverter για τα 144 MHz (IF 28 MHz)",
                 "|h| Κατασκευαστής · μοντέλο | >NF | >G RX | >TX | Πηγή",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (μονάδα) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:μ.δ.} | {r:μ.δ.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (μονάδα) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (ρυθμιζόμενο) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:μ.δ.} | {r:μ.δ.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:μ.δ.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:μ.δ.} | {r:μ.δ.} | – | [11]",
                 "~ Τιμές που δηλώνουν οι κατασκευαστές. MKU 144 G2: πρώτη βαθμίδα με NF 0,5 dB, IP3 εξόδου στη λήψη +23 dBm, IF εισόδου 2 – 50 mW ή 60 – 2000 µW· ¹ οδηγός 100 mW, που συμπληρώνεται με έναν ενισχυτή Kuhne 60 ή 120 W. TR 144 H +40: περιέχει τη μονάδα MKU 144 G2, εξ ου και το κέρδος των 25 dB (υπόδειξη του IC8TEM). Με κέρδος 25 dB, μπροστά σε πομποδέκτη με NF 10 dB το σύνολο είναι 0,99 dB, με NF 20 dB είναι 1,88 dB [13]. Το εγχειρίδιο της Kuhne αναφέρει 1,2 dB στον πίνακα και 0,9 dB στο κείμενο· με τον προενισχυτή Kuhne MKU LNA 144 A το σύνολο πέφτει στα 0,3 dB [7]. Q5 Signal L144-28M: μέγιστη NF 1,0 dB με ελάχιστο κέρδος μετατροπής 20 dB, κέρδος RX-IF ρυθμιζόμενο από τον χρήστη για τη βαθμονόμηση του S-meter· IF έως 25 W [9]. HA1YA ME2T-PRO-II: συνολική NF 1 dB (πρώτη βαθμίδα PGA103+ με NF 0,7 dB), κέρδος RX έως 25 dB ρυθμιζόμενο, τυπικό OIP3 +35 dBm, τυπικό IIP3 +10 dBm, απόρριψη ειδώλου > 80 dB, IF εισόδου από −20 έως +37 dBm [10].",
+                "> Για τα 432 και 1296 MHz, οι σημειώσεις για τους transverter θα ενημερωθούν στις επόμενες εκδόσεις, όπου ισχύει.",
                 "#### Μετρημένοι συνδυασμοί (DF9IC, 144 MHz)",
                 "|h| Πομποδέκτης + transverter | Προενισχ. πομποδέκτη | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -110575,7 +113804,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), Απρίλιος 2003, σελ. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, Ιανουάριος 2012, § 4 «Sequenziamento relè, PA e PRE», παρεχόμενο από τον IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, παρουσίαση, Ιούλιος 2015, παρεχόμενη από τον IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 της 1ης Δεκεμβρίου 2023, αναθ. 1.1 της 13ης Σεπτεμβρίου 2025, παρεχόμενο από τον IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 της 1ης Δεκεμβρίου 2023, αναθ. 1.1 της 13ης Σεπτεμβρίου 2025, παρεχόμενο από τον IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, παρεχόμενο από τον IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), παρεχόμενο από τον IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, παρεχόμενο από τον IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, παρεχόμενο από τον IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["el"]["S48"] = new string[] {
                 "## Ομοαξονικά καλώδια και απώλειες",
@@ -111101,13 +114342,22 @@ namespace LunaCalc
                 "#### Transzverterek 144 MHz-re (KF 28 MHz)",
                 "|h| Gyártó · típus | >NF | >RX G | >TX | Forrás",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:n.a.} | {r:n.a.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (állítható) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:n.a.} | {r:n.a.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:n.a.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:n.a.} | {r:n.a.} | – | [11]",
                 "~ A gyártók által megadott értékek. MKU 144 G2: első fokozat 0,5 dB NF-fel, kimeneti IP3 vételben +23 dBm, KF-bemenet 2 – 50 mW vagy 60 – 2000 µW; ¹ 100 mW-os meghajtó, egy 60 vagy 120 W-os Kuhne erősítővel kiegészítendő. TR 144 H +40: az MKU 144 G2 modult tartalmazza, innen a 25 dB nyereség (IC8TEM közlése). 25 dB nyereséggel egy 10 dB NF-ű rádió előtt az összesített érték 0,99 dB, 20 dB NF-nél 1,88 dB [13]. A Kuhne kézikönyve a táblázatban 1,2 dB-t, a szövegben 0,9 dB-t ad meg; a Kuhne MKU LNA 144 A előerősítővel az összesített érték 0,3 dB-re csökken [7]. Q5 Signal L144-28M: legfeljebb 1,0 dB NF legalább 20 dB konverziós nyereséggel, az RX-KF nyereség a felhasználó által állítható az S-méter kalibrálásához; KF legfeljebb 25 W [9]. HA1YA ME2T-PRO-II: teljes NF 1 dB (első fokozat PGA103+ 0,7 dB NF-fel), RX-nyereség 25 dB-ig állítható, tipikus OIP3 +35 dBm, tipikus IIP3 +10 dBm, tükörfrekvencia-elnyomás > 80 dB, KF-bemenet −20 és +37 dBm között [10].",
+                "> A 432 és 1296 MHz-es transzverterekre vonatkozó megjegyzések a következő változatokban frissülnek, ahol szükséges.",
                 "#### Mért kombinációk (DF9IC, 144 MHz)",
                 "|h| Rádió + transzverter | Rádió előerősítője | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -111151,7 +114401,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), 2003. április, 18–20. o. – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, 2012. január, 4. § „Sequenziamento relè, PA e PRE”, IC8TEM szíves közlése – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, előadás, 2015. július, IC8TEM szíves közlése.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 2023. december 1., rev. 1.1, 2025. szeptember 13., IC8TEM szíves közlése."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0, 2023. december 1., rev. 1.1, 2025. szeptember 13., IC8TEM szíves közlése.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, IC8TEM szíves közlése – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), IC8TEM szíves közlése",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, IC8TEM szíves közlése",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, IC8TEM szíves közlése",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["hu"]["S48"] = new string[] {
                 "## Koaxiális kábelek és veszteségek",
@@ -111677,13 +114939,22 @@ namespace LunaCalc
                 "#### Transvertory pre 144 MHz (MF 28 MHz)",
                 "|h| Výrobca · model | >NF | >G RX | >TX | Zdroj",
                 "| DEMI L144-28 | < 1,0 dB | ≥ 17 dB | 25 / 50 W | [6]",
-                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13]",
-                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7]",
-                "| Kuhne (DB6NT) TR-144 Pro | {r:neuv.} | {r:neuv.} | 25 W | [8]",
+                "|+ **Kuhne (DB6NT) MKU 144 G2** (modul) | 0,9 dB | 25 dB | 0,1 W¹ | [13] [28]",
+                "| Kuhne (DB6NT) TR 144 H +40 | 0,9 – 1,2 dB | 25 dB | 2 – 20 W | [7] [26]",
+                "| Kuhne (DB6NT) TR-144 Pro | 1,4 dB | 25 dB | 25 W | [8] [27]",
+                "| Kuhne (DB6NT) TR 144 H | 0,8 dB | 25 dB | 25 W | [29]",
+                "| Kuhne (DB6NT) 144TR7300 | 0,7 dB | 17 dB | 2 W | [30]",
                 "| Q5 Signal L144-28M | < 1,0 dB | ≥ 20 dB | 25 / 75 / 150 W | [9]",
                 "| HA1YA ME2T-PRO-II / ME2HT-PRO-II | 1,0 dB | ≤ 25 dB (nastaviteľný) | 30 / 50 W | [10]",
+                "| UR3LMZ 144/28 MHz (UX4LA, eBay) | 1,0 dB | 20 dB | 10 – 15 W | [19] [21]",
+                "| Elecraft XV144 | < 1,0 dB | 25 dB | 20 W CW/SSB · 10 W FM/FT8 | [20]",
+                "| G4DDK Anglian 3L (I1KFH) | {r:neuv.} | {r:neuv.} | 0,1 W | [22]",
+                "| ON4KHG (1996) | ≈ 0,4 – 0,8 dB | {r:neuv.} | 20 W | [23]",
+                "| S53WW Javornik 144/14 | 0,9 dB | 25 dB | 20 W | [24]",
+                "| S53RM Murka 144/14 | ≈ 5 dB | 21 dB | 10 – 15 W | [25]",
                 "| SSB-Electronic LT2S Mk II | {r:neuv.} | {r:neuv.} | – | [11]",
                 "~ Hodnoty udávané výrobcami. MKU 144 G2: prvý stupeň s NF 0,5 dB, výstupný IP3 pri príjme +23 dBm, vstupná MF 2 – 50 mW alebo 60 – 2000 µW; ¹ budič 100 mW, na doplnenie zosilňovačom Kuhne 60 alebo 120 W. TR 144 H +40: obsahuje modul MKU 144 G2, odtiaľ zisk 25 dB (údaj IC8TEM). So ziskom 25 dB pred rádiom s NF 10 dB je celkom 0,99 dB, s NF 20 dB je to 1,88 dB [13]. Príručka Kuhne uvádza 1,2 dB v tabuľke a 0,9 dB v texte; s predzosilňovačom Kuhne MKU LNA 144 A klesne celková hodnota na 0,3 dB [7]. Q5 Signal L144-28M: maximálne NF 1,0 dB pri minimálnom konverznom zisku 20 dB, zisk RX-MF nastaviteľný používateľom na kalibráciu S-metra; MF až 25 W [9]. HA1YA ME2T-PRO-II: celkové NF 1 dB (prvý stupeň PGA103+ s NF 0,7 dB), zisk RX až 25 dB nastaviteľný, OIP3 typicky +35 dBm, IIP3 typicky +10 dBm, potlačenie zrkadla > 80 dB, vstupná MF od −20 do +37 dBm [10].",
+                "> Pre 432 a 1296 MHz budú poznámky k transvertorom doplnené v ďalších verziách, kde to bude relevantné.",
                 "#### Namerané kombinácie (DF9IC, 144 MHz)",
                 "|h| Rádio + transvertor | Predzos. rádia | >NF",
                 "| Elecraft K2 + Kuhne TR144H+40 | – | 1,0 dB",
@@ -111727,7 +114998,19 @@ namespace LunaCalc
                 "[15] Peter Hart G3SJX, “The Yaesu FT-897 HF/VHF/UHF Transceiver”, RadCom (RSGB), apríl 2003, s. 18–20 – http://www.radiomanual.info/schemi/YAESU_HF/FT-897_review2_2003.pdf",
                 "[16] Giorgio Marchi IK1UWL, “EME (Earth-Moon-Earth) – Guida operativa”, január 2012, § 4 «Sequenziamento relè, PA e PRE», poskytol IC8TEM – http://www.qsl.net/ik3xtv",
                 "[17] Paul Bock K4MSG, “Beginner's Guide to Small-station EME”, prezentácia, júl 2015, poskytol IC8TEM.",
-                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 z 1. decembra 2023, rev. 1.1 z 13. septembra 2025, poskytol IC8TEM."
+                "[18] Relu Jianu NJ9R, “2M EME the easy way… the secret sauce to success”, v1.0 z 1. decembra 2023, rev. 1.1 z 13. septembra 2025, poskytol IC8TEM.",
+                "[19] hfvhfparts, “144 to 28 Mhz TRANSVERTER + ATTENUATOR BOARD SUPER SET”, eBay 134184049039, poskytol IC8TEM – https://www.ebay.it/itm/134184049039",
+                "[20] Elecraft, “Transverter Models XV50, XV144, XV222, XV432 – Owner’s Manual”, Rev F1 (16/04/2013) + errata Rev F1-3 (27/08/2016), poskytol IC8TEM",
+                "[21] IK7HIN Marcello, “TRANSVERTER 28-30/144-46 MHZ” (UR3LMZ, UX4LA), 01/02/2020, poskytol IC8TEM",
+                "[22] I1KFH, “144 MHz Anglian Transverter” (G4DDK), 2018, Radio Rivista 05/2020 – https://www.qsl.net/i1kfh/homebrew/vhf-rig/trxv-anglian-2018/main.htm",
+                "[23] Gaëtan Horlin ON4KHG, “Description of a homemade 28-144 MHz Transverter”, 17/02/2007, poskytol IC8TEM",
+                "[24] Robi S53WW, “Very High Performance Transverter for 144 MHz” (JAVORNIK-144/14), 01/03/2003 – https://lea.hamradio.si/~s53ww/xvrt/xvrt.htm",
+                "[25] Sine S53RM, “MURKA 144/14” – https://lea.hamradio.si/~s53rm/MURKA%20transverter.htm",
+                "[26] Kuhne electronic, “TR 144 H +40 – Handbuch”, 1.2015 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-40-Handbuch.pdf",
+                "[27] Kuhne electronic, “TR144-PRO 2m Linear Transverter”, V3.0, 16.09.2020 – https://db6nt.de/wp-content/uploads/2024/12/TR144PRO_Handbuch-v3.0.pdf",
+                "[28] Kuhne electronic, “MKU 144 G2 – Handbuch”, 10.06.2015 – https://db6nt.de/wp-content/uploads/2024/12/MKU-144-G2-Handbuch.pdf",
+                "[29] Kuhne electronic, “TR 144 H – Handbuch”, 19-08-05 – https://db6nt.de/wp-content/uploads/2024/12/TR-144-H-Handbuch-Deutsch.pdf",
+                "[30] DB6NT, “2m Band Transverter für den IC7300 SDR Transceiver” (144TR7300), DUBUS 3/2019 – https://db6nt.de/wp-content/uploads/2024/12/2m-Transverter-fuer-IC7300.pdf"
             };
             d["sk"]["S48"] = new string[] {
                 "## Koaxiálne káble a straty",
