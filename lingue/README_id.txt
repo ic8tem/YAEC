@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 oleh Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 
 Kode sumber dan unduhan: https://github.com/ic8tem/YAEC/releases
 
 INSTALASI – WINDOWS
-1. Unduh YAEC-1.9-win-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
+1. Unduh YAEC-1.9.1-win-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
 2. Jika muncul peringatan SmartScreen: "Info selengkapnya" → "Tetap jalankan".
-3. Tanpa instalasi: ekstrak YAEC-1.9-win-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
+3. Tanpa instalasi: ekstrak YAEC-1.9.1-win-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
 
 INSTALASI – LINUX
 YAEC berjalan dengan Mono, runtime .NET yang bebas.
-- Debian, Ubuntu, Mint: unduh yaec_1.9_amd64.deb dan pasang dengan
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: unduh yaec_1.9.1_amd64.deb dan pasang dengan
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (Mono juga ikut terpasang). YAEC dijalankan dari menu aplikasi atau dengan perintah "yaec".
-- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) lalu jalankan ./install.sh.
-- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
+- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) lalu jalankan ./install.sh.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 INSTALASI – macOS (eksperimental)
 1. Pasang Mono untuk macOS (https://www.mono-project.com/download/stable/) dan XQuartz (https://www.xquartz.org).
-2. Buka YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
+2. Buka YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
 
 PEMBARUAN OTOMATIS
 Saat dijalankan, YAEC memeriksa GitHub untuk versi baru dan memperbarui dirinya sendiri (Windows, arsip portabel .tar.gz, AppImage, aplikasi macOS), dengan memeriksa sidik jari SHA-256. Paket .deb, .rpm, Arch, Slackware diperbarui dengan manajer paket sistem: YAEC memberi tahu versi baru dan membuka halaman GitHub.
 
 MEMERIKSA FILE YANG DIUNDUH (SHA-256)
 Setiap release berisi SHA256SUMS.txt dengan hash SHA-256 setiap paket. Bandingkan dengan hash file yang Anda unduh:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jika kedua nilai berbeda, jangan pasang file tersebut: unduh ulang.
@@ -43,6 +43,7 @@ Kesalahan, data yang lebih baik, terjemahan: ccerrotta@gmail.com · ic8tem@gmail
 
 RIWAYAT VERSI
 Versi sebelum 1.0 disebut beta.
+- 1.9.1 - Pembaruan otomatis dari GitHub dengan pemeriksaan sidik jari SHA-256 di Windows, arsip portabel (Linux, FreeBSD, OpenBSD, Alpine), AppImage, dan aplikasi macOS (paket .deb, .rpm, Arch, Slackware diperbarui dengan manajer paket), serta peringatan berkas yang hilang; paket baru untuk Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tombol KOREKSI untuk membetulkan locator sebuah stasiun di CALL3.TXT; Jarak dan Dgrd dengan Dgrd klasik pada 144 MHz, sedangkan Dgrd per pita tetap di DGRD per frekuensi; Cakrawala saya dengan kotak ungu dari Kubah langit dan waktu dari tabel perencanaan; Stasiun untuk dicoba dengan waktu dari tabel, bilah gulir, dan pengecualian stasiun negara sendiri (cty.dat); gain yagi dari tabel DL6WU (G3SEK), rumus yang dikaitkan dengan W8IO hanya di bawah 10 elemen; daftar tarik-turun dan kotak angka bergaya YA-MS; transverter 144 MHz di manual.
 - 1.9 - Tab baru Cakrawala saya (Langsung): cakrawala dari medan yang dihitung dari data SRTM1 dengan kelengkungan Bumi dan refraksi, di atas latar Kubah langit dengan salah satu dari tiga skala warna, lintasan Bulan, rintangan utama dengan nama dari OpenStreetMap dan menit Bulan yang hilang; centang untuk memakai medan sebagai elevasi minimum di seluruh program; peta derau lokal menurut NJ9R, dengan ⚠ pada jam-jam ketika Bulan berada di arah yang berderau; tab baru Stasiun untuk dicoba (Perencanaan), ide dari Matteo IW5DHN: stasiun aktif obrolan N0UK diurutkan dengan indeks 0 sampai 100; kotak angka dengan panah berdampingan, tab berbentuk pil, dan tiga skema warna baru dari IP-TRX-CTRL.
 - 1.8 - Bahasa baru: Slowakia (total 37), dengan manual, README, dan lisensi; satu lebar berkas di seluruh program: 0,93·√(41253/G) untuk yagi (aturan Kraus yang dikoreksi dengan simulasi NEC W4RNL, seperti di YA-MS) dan 70·λ/D untuk parabola (IZ0JNY), menggantikan √(32000/G) tanpa sumber di DGRD per frekuensi; manual diperbarui dengan rumus baru dan contoh pengarahan; di macOS peluncur membuka XQuartz sendiri, menulis versi Mono ke log, dan memberi peringatan jika YAEC tidak berjalan; presentasi README juga dalam bahasa Portugis, Turki, Ceko, Slowakia, Tionghoa, Jepang, dan Korea; terjemahan diperbaiki dalam bahasa Thai, Rumania, Yunani, Portugis Brasil, Polandia, Ceko, dan Hongaria.
 - 1.7 - Delapan bahasa baru: Portugis Brasil, Thai, Tionghoa Tradisional, Polandia, Ceko, Rumania, Yunani dan Hungaria (total 36), beserta manual dan README; di Anggaran EME yagi dan Anggaran EME parabola, perhitungan gema stasiun sendiri (Saya memancar dan menerima gema saya sendiri); parabola prime focus atau offset (W2IMU); di 1296 MHz dengan parabola, rugi polarisasi sirkular dari feed nyata (KA1GT); di Pemeriksaan perhitungan, pilihan antara Anggaran EME yagi dan Anggaran EME parabola; rumus DGRD per frekuensi ditulis seperti di editor persamaan; manual: rotasi Faraday di 1296 MHz menurut ITU-R P.531, depolarisasi di 23 cm (Hagfors) dan polarisasi sirkular di 23 cm.

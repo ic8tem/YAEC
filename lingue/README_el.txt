@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 από τον Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 Πηγαίος κώδικας και λήψη: https://github.com/ic8tem/YAEC/releases
 
 ΕΓΚΑΤΑΣΤΑΣΗ – WINDOWS
-1. Κατεβάστε το YAEC-1.9-win-x64-setup.exe από τη σελίδα Releases και εκτελέστε το. Εγκαθιστά το YAEC στο Έγγραφα\YAEC, χωρίς δικαιώματα διαχειριστή, με συντομεύσεις στο μενού Έναρξη και στην επιφάνεια εργασίας και με πρόγραμμα απεγκατάστασης.
+1. Κατεβάστε το YAEC-1.9.1-win-x64-setup.exe από τη σελίδα Releases και εκτελέστε το. Εγκαθιστά το YAEC στο Έγγραφα\YAEC, χωρίς δικαιώματα διαχειριστή, με συντομεύσεις στο μενού Έναρξη και στην επιφάνεια εργασίας και με πρόγραμμα απεγκατάστασης.
 2. Αν εμφανιστεί η προειδοποίηση του SmartScreen: "Περισσότερες πληροφορίες" → "Εκτέλεση οπωσδήποτε".
-3. Χωρίς εγκατάσταση: αποσυμπιέστε το YAEC-1.9-win-x64-portatile.zip σε έναν φάκελο όπου μπορείτε να γράψετε και εκκινήστε το YAEC.exe.
+3. Χωρίς εγκατάσταση: αποσυμπιέστε το YAEC-1.9.1-win-x64-portatile.zip σε έναν φάκελο όπου μπορείτε να γράψετε και εκκινήστε το YAEC.exe.
 
 ΕΓΚΑΤΑΣΤΑΣΗ – LINUX
 Το YAEC λειτουργεί με το Mono, το ελεύθερο runtime .NET.
-- Debian, Ubuntu, Mint: κατεβάστε το yaec_1.9_amd64.deb και εγκαταστήστε το με
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: κατεβάστε το yaec_1.9.1_amd64.deb και εγκαταστήστε το με
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (εγκαθιστά και το Mono). Το YAEC εκκινείται από το μενού εφαρμογών ή με την εντολή "yaec".
-- Άλλες διανομές: εγκαταστήστε το Mono (Fedora: sudo dnf install mono-complete· Arch: sudo pacman -S mono· openSUSE: sudo zypper install mono-complete), αποσυμπιέστε το YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) και εκτελέστε το ./install.sh.
-- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
+- Άλλες διανομές: εγκαταστήστε το Mono (Fedora: sudo dnf install mono-complete· Arch: sudo pacman -S mono· openSUSE: sudo zypper install mono-complete), αποσυμπιέστε το YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) και εκτελέστε το ./install.sh.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 ΕΓΚΑΤΑΣΤΑΣΗ – macOS (ΠΕΙΡΑΜΑΤΙΚΗ)
 1. Εγκαταστήστε το Mono για macOS (https://www.mono-project.com/download/stable/) και το XQuartz (https://www.xquartz.org).
-2. Ανοίξτε το YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) και σύρετε το YAEC στις Εφαρμογές. Την πρώτη φορά: δεξί κλικ στο YAEC → Άνοιγμα (η εφαρμογή δεν είναι υπογεγραμμένη από την Apple).
+2. Ανοίξτε το YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) και σύρετε το YAEC στις Εφαρμογές. Την πρώτη φορά: δεξί κλικ στο YAEC → Άνοιγμα (η εφαρμογή δεν είναι υπογεγραμμένη από την Apple).
 
 ΑΥΤΟΜΑΤΕΣ ΕΝΗΜΕΡΩΣΕΙΣ
 Κατά την εκκίνηση το YAEC ελέγχει στο GitHub αν υπάρχει νέα έκδοση και ενημερώνεται μόνο του (Windows, φορητά αρχεία .tar.gz, AppImage, εφαρμογή macOS), επαληθεύοντας το αποτύπωμα SHA-256. Τα πακέτα .deb, .rpm, Arch, Slackware ενημερώνονται αντίθετα με τον διαχειριστή πακέτων του συστήματος: το YAEC ειδοποιεί για τη νέα έκδοση και ανοίγει τη σελίδα του GitHub.
 
 ΕΛΕΓΧΟΣ ΤΩΝ ΑΡΧΕΙΩΝ ΠΟΥ ΚΑΤΕΒΗΚΑΝ (SHA-256)
 Κάθε release περιέχει το SHA256SUMS.txt με το αποτύπωμα SHA-256 κάθε πακέτου. Συγκρίνετέ το με εκείνο του αρχείου που κατεβάσατε:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Αν οι δύο τιμές διαφέρουν μην εγκαταστήσετε το αρχείο: κατεβάστε το ξανά.
@@ -43,6 +43,7 @@
 
 ΙΣΤΟΡΙΚΟ ΕΚΔΟΣΕΩΝ
 Οι εκδόσεις πριν από την 1.0 ονομάζονται beta.
+- 1.9.1 - Αυτόματη ενημέρωση από το GitHub με έλεγχο του αποτυπώματος SHA-256 στα Windows, στα φορητά αρχεία (Linux, FreeBSD, OpenBSD, Alpine), στο AppImage και στην εφαρμογή macOS (τα πακέτα .deb, .rpm, Arch, Slackware ενημερώνονται με τον διαχειριστή πακέτων), και προειδοποίηση για αρχεία που λείπουν· νέα πακέτα για Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage· κουμπί ΔΙΟΡΘΩΣΗ για διόρθωση του locator ενός σταθμού στο CALL3.TXT· Απόσταση και Dgrd με το κλασικό Dgrd στα 144 MHz, ενώ το Dgrd ανά μπάντα μένει στο DGRD ανά συχνότητα· Ο ορίζοντάς μου με τα μοβ πλαίσια του Ουράνιος θόλος και τη στιγμή από τον πίνακα προγραμματισμού· Σταθμοί για δοκιμή με τη στιγμή του πίνακα, γραμμή κύλισης και εξαίρεση των σταθμών της δικής σας χώρας (cty.dat)· κέρδος κεραιών Yagi από τον πίνακα DL6WU (G3SEK), ο τύπος που αποδίδεται στον W8IO μόνο κάτω από 10 στοιχεία· αναπτυσσόμενες λίστες και αριθμητικά πεδία σε στιλ YA-MS· μετατροπείς 144 MHz στο εγχειρίδιο.
 - 1.9 - Νέα καρτέλα Ο ορίζοντάς μου (Ζωντανά): ορίζοντας από το έδαφος υπολογισμένος από δεδομένα SRTM1 με την καμπυλότητα της Γης και τη διάθλαση, στο φόντο του Ουράνιος θόλος σε μία από τις τρεις χρωματικές κλίμακες, τροχιά της Σελήνης, κύρια εμπόδια με ονόματα από το OpenStreetMap και χαμένα λεπτά Σελήνης· πλαίσιο για χρήση του εδάφους ως ελάχιστης ανύψωσης σε όλο το πρόγραμμα· χάρτης τοπικού θορύβου κατά NJ9R, με ⚠ στις ώρες που η Σελήνη βρίσκεται σε θορυβώδη κατεύθυνση· νέα καρτέλα Σταθμοί για δοκιμή (Σχεδιασμός), ιδέα του Matteo IW5DHN: οι ενεργοί σταθμοί της συνομιλίας N0UK ταξινομημένοι με δείκτη από 0 έως 100· αριθμητικά πεδία με βέλη δίπλα-δίπλα, καρτέλες σε σχήμα χαπιού και τρία νέα χρωματικά σχήματα από το IP-TRX-CTRL.
 - 1.8 - Νέα γλώσσα: σλοβακικά (37 συνολικά), με τα εγχειρίδια, το README και την άδεια· ενιαίο εύρος δέσμης σε όλο το πρόγραμμα: 0,93·√(41253/G) για τις Yagi (κανόνας του Kraus διορθωμένος με τις προσομοιώσεις NEC του W4RNL, όπως στο YA-MS) και 70·λ/D για τα παραβολικά (IZ0JNY), στη θέση του √(32000/G) χωρίς πηγή στο DGRD ανά συχνότητα· εγχειρίδιο ενημερωμένο με τον νέο τύπο και το παράδειγμα σκόπευσης· στο macOS ο εκκινητής ανοίγει μόνος του το XQuartz, γράφει την έκδοση του Mono στο αρχείο καταγραφής και προειδοποιεί αν το YAEC δεν ξεκινά· παρουσίαση του README και στα πορτογαλικά, τουρκικά, τσεχικά, σλοβακικά, κινεζικά, ιαπωνικά και κορεατικά· διορθωμένες μεταφράσεις στα ταϊλανδέζικα, ρουμανικά, ελληνικά, πορτογαλικά Βραζιλίας, πολωνικά, τσεχικά και ουγγρικά.
 - 1.7 - Οκτώ νέες γλώσσες: πορτογαλικά Βραζιλίας, ταϊλανδικά, παραδοσιακά κινεζικά, πολωνικά, τσεχικά, ρουμανικά, ελληνικά και ουγγρικά (36 συνολικά), με τα εγχειρίδια και τα ΔΙΑΒΑΣΤΕ ΜΕ· στον Προϋπολογισμό EME yagi και στον Προϋπολογισμό EME παραβολικά, ο υπολογισμός της ηχούς του δικού σας σταθμού (Εκπέμπω και λαμβάνω τη δική μου ηχώ)· παραβολικό πρωτεύουσας εστίας ή offset (W2IMU)· στα 1296 MHz με τα παραβολικά, η απώλεια της κυκλικής πόλωσης των πραγματικών τροφοδοτών (KA1GT)· στον Έλεγχο υπολογισμών, η επιλογή ανάμεσα σε Προϋπολογισμό EME yagi και Προϋπολογισμό EME παραβολικά· τύποι του DGRD ανά συχνότητα γραμμένοι όπως σε επεξεργαστή εξισώσεων· εγχειρίδιο: στροφή Faraday στα 1296 MHz κατά ITU-R P.531, αποπόλωση στα 23 cm (Hagfors) και κυκλική πόλωση στα 23 cm.

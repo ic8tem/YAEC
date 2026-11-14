@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 par Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Calculateur pour les radioamateurs qui pratiquent l'EME (Terre–Lune–Terre) d
 Sources et téléchargement : https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Téléchargez YAEC-1.9-win-x64-setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
+1. Téléchargez YAEC-1.9.1-win-x64-setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
 2. Si l'avertissement SmartScreen apparaît : « Informations complémentaires » → « Exécuter quand même ».
-3. Sans installation : extrayez YAEC-1.9-win-x64-portatile.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
+3. Sans installation : extrayez YAEC-1.9.1-win-x64-portatile.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC fonctionne avec Mono, l'environnement d'exécution .NET libre.
-- Debian, Ubuntu, Mint : téléchargez yaec_1.9_amd64.deb et installez-le avec
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint : téléchargez yaec_1.9.1_amd64.deb et installez-le avec
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (cela installe aussi Mono). YAEC se lance depuis le menu des applications ou avec la commande « yaec ».
-- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) et lancez ./install.sh.
-- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
+- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) et lancez ./install.sh.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 INSTALLATION – macOS (expérimental)
 1. Installez Mono pour macOS (https://www.mono-project.com/download/stable/) et XQuartz (https://www.xquartz.org).
-2. Ouvrez YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
+2. Ouvrez YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
 
 MISES À JOUR AUTOMATIQUES
 Au démarrage, YAEC vérifie sur GitHub s'il existe une nouvelle version et se met à jour tout seul (Windows, archives portables .tar.gz, AppImage, application macOS), en contrôlant l'empreinte SHA-256. Les paquets .deb, .rpm, Arch, Slackware se mettent à jour avec le gestionnaire de paquets du système : YAEC signale la nouvelle version et ouvre la page GitHub.
 
 VÉRIFICATION DES FICHIERS TÉLÉCHARGÉS (SHA-256)
 Chaque release contient SHA256SUMS.txt avec l'empreinte SHA-256 de chaque paquet. Comparez-la avec celle du fichier téléchargé :
-- Windows (PowerShell) : Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell) : Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux : sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS : shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Si les deux valeurs sont différentes, n'installez pas le fichier : téléchargez-le de nouveau.
@@ -43,6 +43,7 @@ Erreurs, meilleures données, traductions : ccerrotta@gmail.com · ic8tem@gmail.
 
 HISTORIQUE DES VERSIONS
 Les versions antérieures à la 1.0 sont appelées bêta.
+- 1.9.1 - Mise à jour automatique depuis GitHub, avec contrôle de l'empreinte SHA-256, sous Windows, avec les archives portables (Linux, FreeBSD, OpenBSD, Alpine), l'AppImage et l'application macOS (les paquets .deb, .rpm, Arch, Slackware se mettent à jour avec le gestionnaire de paquets), et avertissement des fichiers manquants ; nouveaux paquets pour Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage ; bouton CORRIGER pour corriger le locator d'une station dans CALL3.TXT ; Distance et Dgrd avec la Dgrd classique à 144 MHz, la Dgrd par bande restant dans DGRD par fréquence ; Mon horizon avec les cadres violets de Voûte céleste et l'instant pris dans le tableau de planification ; Stations à essayer avec l'instant du tableau, une barre de défilement et l'exclusion des stations de son propre pays (cty.dat) ; gain des yagis d'après la table de DL6WU (G3SEK), la formule attribuée à W8IO seulement sous 10 éléments ; listes déroulantes et cases numériques dans le style de YA-MS ; transverters 144 MHz dans le manuel.
 - 1.9 - Nouvel onglet Mon horizon (En direct) : horizon du relief calculé à partir des données SRTM1 avec la courbure terrestre et la réfraction, sur le fond de la Voûte céleste dans l'une des trois échelles de couleurs, trajectoire de la Lune, principaux obstacles avec les noms d'OpenStreetMap et minutes de Lune perdues ; case pour utiliser le relief comme élévation minimale dans tout le programme ; carte du bruit local selon NJ9R, avec ⚠ aux heures où la Lune est dans une direction bruyante ; nouvel onglet Stations à essayer (Planification), idée de Matteo IW5DHN : les stations actives du chat N0UK classées par un indice de 0 à 100 ; champs numériques avec flèches côte à côte, onglets en forme de pilule et trois nouveaux schémas de couleurs repris d'IP-TRX-CTRL.
 - 1.8 - Nouvelle langue slovaque (37 au total), avec les manuels, le LISEZMOI et la licence ; une seule largeur de faisceau dans tout le programme : 0,93·√(41253/G) pour les yagis (règle de Kraus corrigée par les simulations NEC de W4RNL, comme dans YA-MS) et 70·λ/D pour les paraboles (IZ0JNY), à la place de √(32000/G) sans source dans DGRD par fréquence ; manuel mis à jour avec la nouvelle formule et l'exemple de pointage ; sur macOS le lanceur ouvre XQuartz tout seul, écrit la version de Mono dans le journal et avertit si YAEC ne démarre pas ; présentation du README aussi en portugais, turc, tchèque, slovaque, chinois, japonais et coréen ; traductions corrigées en thaï, roumain, grec, portugais du Brésil, polonais, tchèque et hongrois.
 - 1.7 - Huit nouvelles langues : le portugais brésilien, le thaï, le chinois traditionnel, le polonais, le tchèque, le roumain, le grec et le hongrois (36 en tout), avec les manuels et les LISEZMOI ; dans Bilan EME Yagi et dans Bilan EME paraboles, le calcul de l'écho de sa propre station (J'émets et je reçois mon propre écho) ; parabole à foyer primaire ou offset (W2IMU) ; à 1296 MHz avec les paraboles, la perte due à la polarisation circulaire des sources réelles (KA1GT) ; dans Contrôle des calculs, le choix entre Bilan EME Yagi et Bilan EME paraboles ; formules de DGRD par fréquence écrites comme dans un éditeur d'équations ; manuel : rotation de Faraday à 1296 MHz selon ITU-R P.531, dépolarisation sur 23 cm (Hagfors) et polarisation circulaire sur 23 cm.

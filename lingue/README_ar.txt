@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 إعداد Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 المصدر والتنزيل: https://github.com/ic8tem/YAEC/releases
 
 التثبيت – WINDOWS
-1. نزّل YAEC-1.9-win-x64-setup.exe من صفحة Releases وشغّله. يثبّت YAEC في المستندات\YAEC دون صلاحيات المسؤول، مع اختصارات في قائمة "ابدأ" وعلى سطح المكتب، وبرنامج لإلغاء التثبيت.
+1. نزّل YAEC-1.9.1-win-x64-setup.exe من صفحة Releases وشغّله. يثبّت YAEC في المستندات\YAEC دون صلاحيات المسؤول، مع اختصارات في قائمة "ابدأ" وعلى سطح المكتب، وبرنامج لإلغاء التثبيت.
 2. إذا ظهر تحذير SmartScreen: "More info" ← "Run anyway".
-3. دون تثبيت: استخرج YAEC-1.9-win-x64-portatile.zip في مجلد لديك صلاحية الكتابة فيه، ثم شغّل YAEC.exe.
+3. دون تثبيت: استخرج YAEC-1.9.1-win-x64-portatile.zip في مجلد لديك صلاحية الكتابة فيه، ثم شغّل YAEC.exe.
 
 التثبيت – LINUX
 يعمل YAEC على Mono، بيئة تشغيل .NET الحرة.
-- Debian وUbuntu وMint: نزّل yaec_1.9_amd64.deb وثبّته بالأمر
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian وUbuntu وMint: نزّل yaec_1.9.1_amd64.deb وثبّته بالأمر
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (يثبّت Mono أيضًا). يُشغَّل YAEC من قائمة التطبيقات أو بالأمر "yaec".
-- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) وشغّل ./install.sh.
-- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
+- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) وشغّل ./install.sh.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 التثبيت – macOS (تجريبي)
 1. ثبّت Mono لنظام macOS (https://www.mono-project.com/download/stable/) وXQuartz (https://www.xquartz.org).
-2. افتح YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
+2. افتح YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
 
 التحديثات التلقائية
 عند التشغيل يتحقق YAEC في GitHub من وجود إصدار جديد ويحدّث نفسه (Windows، أرشيفات ‎.tar.gz المحمولة، AppImage، تطبيق macOS) مع التحقق من بصمة SHA-256. أما حزم .deb, .rpm, Arch, Slackware فتُحدَّث بمدير الحزم في النظام: ينبّه YAEC إلى الإصدار الجديد ويفتح صفحة GitHub.
 
 التحقق من الملفات المنزّلة (SHA-256)
 يحتوي كل إصدار على SHA256SUMS.txt مع بصمة SHA-256 لكل حزمة. قارنها ببصمة الملف الذي نزّلته:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 إذا اختلفت القيمتان فلا تثبّت الملف: نزّله من جديد.
@@ -43,6 +43,7 @@ YAEC مجاني؛ نص الترخيص موجود في الملف LICENSE_ar.txt 
 
 سجل الإصدارات
 تُسمّى الإصدارات السابقة للإصدار 1.0 إصدارات تجريبية (بيتا).
+- 1.9.1 - تحديث تلقائي من GitHub مع التحقق من بصمة SHA-256 على Windows، ومع الأرشيفات المحمولة (Linux، FreeBSD، OpenBSD، Alpine)، وAppImage، وتطبيق macOS (حزم .deb, .rpm, Arch, Slackware تُحدَّث بمدير الحزم)، وتنبيه إلى الملفات الناقصة؛ حزم جديدة لـ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage؛ زر تصحيح لتصحيح محدد موقع محطة في CALL3.TXT؛ المسافة وDgrd مع Dgrd الكلاسيكي عند 144 MHz، ويبقى Dgrd حسب النطاق في DGRD حسب التردد؛ أفق محطتي مع الإطارات البنفسجية من قبة السماء واللحظة المأخوذة من جدول التخطيط؛ محطات للتجربة مع لحظة الجدول وشريط التمرير واستبعاد محطات البلد نفسه (cty.dat)؛ كسب هوائيات ياغي من جدول DL6WU ‏(G3SEK)، والصيغة المنسوبة إلى W8IO تحت 10 عناصر فقط؛ قوائم منسدلة وخانات رقمية بأسلوب YA-MS؛ محوّلات 144 MHz في الدليل.
 - 1.9 - تبويب جديد أفق محطتي (مباشر): الأفق من التضاريس محسوباً من بيانات SRTM1 مع تحدّب الأرض والانكسار، على خلفية قبة السماء بأحد سلالم الألوان الثلاثة، مع مسار القمر والعوائق الرئيسية بأسماء من OpenStreetMap ودقائق القمر المفقودة؛ خانة لاستخدام التضاريس كارتفاع أدنى في البرنامج كله؛ خريطة الضوضاء المحلية وفق NJ9R، مع ⚠ في الساعات التي يكون فيها القمر في اتجاه مليء بالضوضاء؛ تبويب جديد محطات للتجربة (التخطيط)، فكرة Matteo IW5DHN: المحطات النشطة في دردشة N0UK مرتبة بمؤشر من 0 إلى 100؛ خانات رقمية بأسهم متجاورة، وتبويبات على شكل حبة، وثلاثة أنظمة ألوان جديدة مأخوذة من IP-TRX-CTRL.
 - 1.8 - لغة جديدة: السلوفاكية (37 لغة إجمالاً)، مع الأدلة وملف README والترخيص؛ عرض حزمة واحد في البرنامج كله: 0.93·√(41253/G) لهوائيات ياغي (قاعدة كراوس مصحَّحة بمحاكاة NEC من W4RNL، كما في YA-MS) و70·λ/D للأطباق (IZ0JNY)، بدلاً من √(32000/G) دون مصدر في «DGRD حسب التردد»؛ تحديث الدليل بالصيغة الجديدة ومثال التوجيه؛ على macOS يفتح المشغّل XQuartz تلقائياً ويكتب إصدار Mono في السجل وينبّه إذا لم يبدأ YAEC؛ عرض README أيضاً بالبرتغالية والتركية والتشيكية والسلوفاكية والصينية واليابانية والكورية؛ تصحيح الترجمات التايلاندية والرومانية واليونانية والبرتغالية البرازيلية والبولندية والتشيكية والمجرية.
 - 1.7 - ثماني لغات جديدة: البرتغالية البرازيلية والتايلاندية والصينية التقليدية والبولندية والتشيكية والرومانية واليونانية والمجرية (36 لغة في المجموع)، مع الأدلة وملفات README؛ في «ميزانية EME ياغي» و«ميزانية EME الأطباق» حساب صدى المحطة نفسها («أنا أرسل وأستقبل صداي»)؛ طبق ذو بؤرة أولية أو offset (W2IMU)؛ عند 1296 MHz مع الأطباق، خسارة الاستقطاب الدائري للمغذّيات الحقيقية (KA1GT)؛ في «التحقق من الحسابات» الاختيار بين «ميزانية EME ياغي» و«ميزانية EME الأطباق»؛ صيغ «DGRD حسب التردد» مكتوبة كما في محرر المعادلات؛ الدليل: دوران فاراداي عند 1296 MHz وفق ITU-R P.531، وإزالة الاستقطاب في 23 cm (Hagfors)، والاستقطاب الدائري في 23 cm.

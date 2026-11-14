@@ -3397,6 +3397,8 @@ namespace LunaCalc
             "YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta e sostituisce i suoi file; la nuova versione parte al prossimo avvio. I tuoi dati restano dove sono.",
             "YAEC {0} è installato: la nuova versione parte al prossimo avvio.",
             "Non è stato possibile scrivere i file nella cartella del programma.",
+            "Spaziature e guadagni della tabella di DL6WU riportata da G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): riflettore 0,2 λ, primo direttore 0,075 λ, poi in crescita fino a 0,4 λ; guadagno in dBd + 2,15. La tabella parte da 10 elementi: sotto si usa la formula G = 7,773·log(L/λ) + 11,43 attribuita a W8IO, di cui non è stata trovata la fonte (dove si sovrappongono le due differiscono di 0,1 dB al massimo). Antenne non DL6WU possono differire.",
+            "1.9.1 - Aggiornamento automatico da GitHub, con controllo dell'impronta SHA-256, su Windows, con gli archivi portatili (Linux, FreeBSD, OpenBSD, Alpine), con l'AppImage e con l'app per macOS (i pacchetti .deb, .rpm, Arch e Slackware si aggiornano con il gestore dei pacchetti), e avviso dei file mancanti; nuovi pacchetti per Windows ARM64, Fedora e openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS a 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686 e AppImage; pulsante CORREGGI per correggere il locator di una stazione nel CALL3.TXT; Distanza e Dgrd con la Dgrd classica a 144 MHz, mentre la Dgrd per banda resta in DGRD per frequenza; Il mio orizzonte con i riquadri viola della Volta celeste e il momento preso dalla tabella di pianificazione; Stazioni da provare con il momento della tabella, la barra di scorrimento e l'esclusione delle stazioni del proprio paese (cty.dat); guadagno delle yagi dalla tabella di DL6WU (G3SEK), con la formula attribuita a W8IO solo sotto i 10 elementi; tendine e caselle numeriche nello stile di YA-MS; transverter per i 144 MHz nel manuale.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -5139,6 +5141,8 @@ namespace LunaCalc
             "YAEC downloads the new package from GitHub, checks its fingerprint and replaces its own files; the new version starts at the next launch. Your data stays where it is.",
             "YAEC {0} is installed: the new version starts at the next launch.",
             "The files could not be written to the program folder.",
+            "Spacings and gains from the DL6WU table given by G3SEK (The VHF/UHF DX Book, RSGB, ch. 7): reflector 0.2 λ, first director 0.075 λ, then increasing up to 0.4 λ; gain in dBd + 2.15. The table starts at 10 elements: below that the formula G = 7.773·log(L/λ) + 11.43 attributed to W8IO is used, for which no source has been found (where both apply they differ by 0.1 dB at most). Non-DL6WU antennas may differ.",
+            "1.9.1 - Automatic update from GitHub, with SHA-256 fingerprint check, on Windows, with the portable archives (Linux, FreeBSD, OpenBSD, Alpine), the AppImage and the macOS app (the .deb, .rpm, Arch, Slackware packages are updated with the package manager), and warning about missing files; new packages for Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CORRECT button to correct a station's locator in CALL3.TXT; Distance and Dgrd with the classic Dgrd at 144 MHz, while the per-band Dgrd stays in DGRD by frequency; My horizon with the violet boxes of Sky view and the time taken from the planning table; Stations to try with the time from the table, a scroll bar and the option to leave out the stations of your own country (cty.dat); Yagi gain from the DL6WU table (G3SEK), with the formula attributed to W8IO only below 10 elements; drop-down lists and numeric boxes in the YA-MS style; 144 MHz transverters in the manual.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -6881,6 +6885,8 @@ namespace LunaCalc
             "YAEC lädt das neue Paket von GitHub herunter, prüft seinen Fingerabdruck und ersetzt seine eigenen Dateien; die neue Version startet beim nächsten Aufruf. Ihre Daten bleiben, wo sie sind.",
             "YAEC {0} ist installiert: Die neue Version startet beim nächsten Aufruf.",
             "Die Dateien konnten nicht in den Programmordner geschrieben werden.",
+            "Abstände und Gewinne aus der DL6WU-Tabelle bei G3SEK (The VHF/UHF DX Book, RSGB, Kap. 7): Reflektor 0,2 λ, erster Direktor 0,075 λ, dann zunehmend bis 0,4 λ; Gewinn in dBd + 2,15. Die Tabelle beginnt bei 10 Elementen: darunter wird die W8IO zugeschriebene Formel G = 7,773·log(L/λ) + 11,43 verwendet, für die keine Quelle gefunden wurde (wo beide gelten, weichen sie höchstens 0,1 dB ab). Nicht-DL6WU-Antennen können abweichen.",
+            "1.9.1 - Automatisches Update von GitHub mit Prüfung des SHA-256-Fingerabdrucks unter Windows, bei den portablen Archiven (Linux, FreeBSD, OpenBSD, Alpine), beim AppImage und bei der macOS-App (die Pakete .deb, .rpm, Arch, Slackware werden mit der Paketverwaltung aktualisiert) und Hinweis auf fehlende Dateien; neue Pakete für Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; Schaltfläche KORRIGIEREN, um den Locator einer Station in CALL3.TXT zu korrigieren; Entfernung und Dgrd mit der klassischen Dgrd bei 144 MHz, die Dgrd je Band bleibt in DGRD nach Frequenz; Mein Horizont mit den violetten Rahmen aus Himmelsansicht und dem Zeitpunkt aus der Planungstabelle; Stationen zum Ausprobieren mit dem Zeitpunkt aus der Tabelle, Bildlaufleiste und Ausschluss der Stationen des eigenen Landes (cty.dat); Yagi-Gewinn aus der DL6WU-Tabelle (G3SEK), die W8IO zugeschriebene Formel nur unter 10 Elementen; Auswahllisten und Zahlenfelder im YA-MS-Stil; 144-MHz-Transverter im Handbuch.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -8623,6 +8629,8 @@ namespace LunaCalc
             "YAEC télécharge le nouveau paquet depuis GitHub, vérifie son empreinte et remplace ses propres fichiers ; la nouvelle version démarre au prochain lancement. Vos données restent où elles sont.",
             "YAEC {0} est installé : la nouvelle version démarre au prochain lancement.",
             "Impossible d'écrire les fichiers dans le dossier du programme.",
+            "Espacements et gains de la table de DL6WU publiée par G3SEK (The VHF/UHF DX Book, RSGB, chap. 7) : réflecteur 0,2 λ, premier directeur 0,075 λ, puis en augmentation jusqu'à 0,4 λ ; gain en dBd + 2,15. La table commence à 10 éléments : en dessous, on utilise la formule G = 7,773·log(L/λ) + 11,43 attribuée à W8IO, dont la source n'a pas été trouvée (là où les deux s'appliquent, elles diffèrent de 0,1 dB au plus). Les antennes non DL6WU peuvent différer.",
+            "1.9.1 - Mise à jour automatique depuis GitHub, avec contrôle de l'empreinte SHA-256, sous Windows, avec les archives portables (Linux, FreeBSD, OpenBSD, Alpine), l'AppImage et l'application macOS (les paquets .deb, .rpm, Arch, Slackware se mettent à jour avec le gestionnaire de paquets), et avertissement des fichiers manquants ; nouveaux paquets pour Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage ; bouton CORRIGER pour corriger le locator d'une station dans CALL3.TXT ; Distance et Dgrd avec la Dgrd classique à 144 MHz, la Dgrd par bande restant dans DGRD par fréquence ; Mon horizon avec les cadres violets de Voûte céleste et l'instant pris dans le tableau de planification ; Stations à essayer avec l'instant du tableau, une barre de défilement et l'exclusion des stations de son propre pays (cty.dat) ; gain des yagis d'après la table de DL6WU (G3SEK), la formule attribuée à W8IO seulement sous 10 éléments ; listes déroulantes et cases numériques dans le style de YA-MS ; transverters 144 MHz dans le manuel.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -10365,6 +10373,8 @@ namespace LunaCalc
             "YAEC descarga el nuevo paquete de GitHub, comprueba su huella y sustituye sus propios archivos; la nueva versión arranca en el próximo inicio. Tus datos se quedan donde están.",
             "YAEC {0} está instalado: la nueva versión arranca en el próximo inicio.",
             "No se han podido escribir los archivos en la carpeta del programa.",
+            "Espaciados y ganancias de la tabla de DL6WU publicada por G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): reflector 0,2 λ, primer director 0,075 λ, luego creciendo hasta 0,4 λ; ganancia en dBd + 2,15. La tabla empieza en 10 elementos: por debajo se usa la fórmula G = 7,773·log(L/λ) + 11,43 atribuida a W8IO, cuya fuente no se ha encontrado (donde coinciden, difieren como mucho 0,1 dB). Las antenas que no son DL6WU pueden diferir.",
+            "1.9.1 - Actualización automática desde GitHub, con comprobación de la huella SHA-256, en Windows, con los archivos portátiles (Linux, FreeBSD, OpenBSD, Alpine), con la AppImage y con la aplicación de macOS (los paquetes .deb, .rpm, Arch, Slackware se actualizan con el gestor de paquetes), y aviso de archivos que faltan; nuevos paquetes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botón CORREGIR para corregir el locator de una estación en CALL3.TXT; Distancia y Dgrd con la Dgrd clásica a 144 MHz, mientras la Dgrd por banda sigue en DGRD por frecuencia; Mi horizonte con los recuadros violeta de Bóveda celeste y el momento tomado de la tabla de planificación; Estaciones para probar con el momento de la tabla, barra de desplazamiento y exclusión de las estaciones del propio país (cty.dat); ganancia de las yagis según la tabla de DL6WU (G3SEK), con la fórmula atribuida a W8IO solo por debajo de 10 elementos; listas desplegables y casillas numéricas al estilo de YA-MS; transverters de 144 MHz en el manual.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -12107,6 +12117,8 @@ namespace LunaCalc
             "O YAEC descarrega o novo pacote do GitHub, verifica a sua impressão digital e substitui os seus ficheiros; a nova versão arranca no próximo início. Os seus dados ficam onde estão.",
             "O YAEC {0} está instalado: a nova versão arranca no próximo início.",
             "Não foi possível escrever os ficheiros na pasta do programa.",
+            "Espaçamentos e ganhos da tabela de DL6WU publicada por G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): refletor 0,2 λ, primeiro diretor 0,075 λ, depois a crescer até 0,4 λ; ganho em dBd + 2,15. A tabela começa nos 10 elementos: abaixo usa-se a fórmula G = 7,773·log(L/λ) + 11,43 atribuída a W8IO, cuja fonte não foi encontrada (onde ambas se aplicam, diferem no máximo 0,1 dB). Antenas que não sejam DL6WU podem diferir.",
+            "1.9.1 - Atualização automática a partir do GitHub, com verificação da impressão SHA-256, no Windows, com os arquivos portáteis (Linux, FreeBSD, OpenBSD, Alpine), com a AppImage e com a aplicação para macOS (os pacotes .deb, .rpm, Arch, Slackware atualizam-se com o gestor de pacotes), e aviso de ficheiros em falta; novos pacotes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botão CORRIGIR para corrigir o locator de uma estação no CALL3.TXT; Distância e Dgrd com a Dgrd clássica a 144 MHz, ficando a Dgrd por banda em DGRD por frequência; O meu horizonte com os retângulos violeta de Abóbada celeste e o momento tirado da tabela de planeamento; Estações a experimentar com o momento da tabela, barra de deslocamento e exclusão das estações do próprio país (cty.dat); ganho das yagis pela tabela de DL6WU (G3SEK), com a fórmula atribuída a W8IO só abaixo de 10 elementos; listas pendentes e caixas numéricas no estilo do YA-MS; transverters de 144 MHz no manual.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -13849,6 +13861,8 @@ namespace LunaCalc
             "YAEC 从 GitHub 下载新软件包，核对其指纹并替换自身文件；新版本在下次启动时生效。您的数据保持原位。",
             "YAEC {0} 已安装：新版本在下次启动时生效。",
             "无法将文件写入程序文件夹。",
+            "间距和增益取自 G3SEK 刊载的 DL6WU 表（The VHF/UHF DX Book, RSGB，第 7 章）：反射器 0.2 λ，第一引向器 0.075 λ，之后逐渐增加到 0.4 λ；增益为 dBd + 2.15。该表从 10 单元开始；少于 10 单元时使用归于 W8IO 的公式 G = 7.773·log(L/λ) + 11.43，但未找到其出处（两者都适用时最多相差 0.1 dB）。非 DL6WU 天线可能有所不同。",
+            "1.9.1 - 从 GitHub 自动更新并校验 SHA-256 指纹，适用于 Windows、便携归档（Linux、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 应用（.deb, .rpm, Arch, Slackware 软件包通过软件包管理器更新），并提示缺失的文件；新增软件包：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；更正 按钮，用于修正 CALL3.TXT 中某电台的定位符；距离与 Dgrd 使用 144 MHz 的经典 Dgrd，按波段的 Dgrd 保留在 按频率 DGRD；我的地平线 加入 天穹 的紫色框，并从计划表获取计算时刻；值得尝试的电台 采用表格中的时刻，增加滚动条，可排除本国电台（cty.dat）；八木天线增益取自 DL6WU 表（G3SEK），仅在少于 10 单元时使用归于 W8IO 的公式；下拉列表和数字框采用 YA-MS 风格；手册加入 144 MHz 变频器。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -15591,6 +15605,8 @@ namespace LunaCalc
             "YAEC は GitHub から新しいパッケージをダウンロードし、フィンガープリントを確認して自分のファイルを置き換えます。新しいバージョンは次回の起動から使われます。データはそのまま残ります。",
             "YAEC {0} をインストールしました。新しいバージョンは次回の起動から使われます。",
             "プログラムのフォルダーにファイルを書き込めませんでした。",
+            "間隔と利得は G3SEK が掲載した DL6WU の表（The VHF/UHF DX Book, RSGB、第 7 章）によります。反射器 0.2 λ、第 1 導波器 0.075 λ、その後 0.4 λ まで増加。利得は dBd + 2.15。表は 10 エレメントからなので、それ未満では W8IO によるとされる式 G = 7.773·log(L/λ) + 11.43 を使いますが、その出典は見つかっていません（両方が使える範囲では差は最大 0.1 dB）。DL6WU 以外のアンテナでは異なることがあります。",
+            "1.9.1 - GitHub からの自動更新（SHA-256 フィンガープリントを確認）：Windows、ポータブルアーカイブ（Linux、FreeBSD、OpenBSD、Alpine）、AppImage、macOS アプリ（.deb, .rpm, Arch, Slackware のパッケージはパッケージマネージャーで更新）、不足ファイルの警告；新しいパッケージ：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；CALL3.TXT の局のロケーターを直す 修正 ボタン；距離と Dgrd は 144 MHz の従来の Dgrd、バンド別の Dgrd は 周波数別 DGRD に残る；自局の地平線 に 天球 の紫の枠と計画表からの時刻；試してみたい局 に表からの時刻、スクロールバー、自国の局を除外（cty.dat）；八木の利得は DL6WU の表（G3SEK）から、W8IO によるとされる式は 10 エレメント未満のみ；ドロップダウンと数値ボックスは YA-MS 風；マニュアルに 144 MHz トランスバーター。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -17333,6 +17349,8 @@ namespace LunaCalc
             "YAEC GitHub से नया पैकेज डाउनलोड करता है, उसका फ़िंगरप्रिंट जाँचता है और अपनी फ़ाइलें बदल देता है; नया संस्करण अगली बार शुरू करने पर चलेगा। आपका डेटा जहाँ है वहीं रहता है।",
             "YAEC {0} इंस्टॉल हो गया है: नया संस्करण अगली बार शुरू करने पर चलेगा।",
             "प्रोग्राम फ़ोल्डर में फ़ाइलें नहीं लिखी जा सकीं।",
+            "दूरी और गेन G3SEK द्वारा दी गई DL6WU तालिका से (The VHF/UHF DX Book, RSGB, अध्याय 7): रिफ़्लेक्टर 0.2 λ, पहला डायरेक्टर 0.075 λ, फिर 0.4 λ तक बढ़ते हुए; गेन dBd + 2.15। तालिका 10 एलिमेंट से शुरू होती है: उससे कम पर W8IO के नाम से दिया गया सूत्र G = 7.773·log(L/λ) + 11.43 लिया जाता है, जिसका स्रोत नहीं मिला (जहाँ दोनों लागू हैं, अंतर अधिकतम 0.1 dB)। DL6WU के अलावा अन्य एंटेना अलग हो सकते हैं।",
+            "1.9.1 - GitHub से स्वचालित अपडेट, SHA-256 फ़िंगरप्रिंट जाँच के साथ: Windows, पोर्टेबल आर्काइव (Linux, FreeBSD, OpenBSD, Alpine), AppImage और macOS ऐप पर (.deb, .rpm, Arch, Slackware पैकेज पैकेज मैनेजर से अपडेट होते हैं), और गायब फ़ाइलों की चेतावनी; नए पैकेज: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT में किसी स्टेशन का लोकेटर ठीक करने के लिए सुधारें बटन; दूरी और Dgrd में 144 MHz पर पारंपरिक Dgrd, बैंड के अनुसार Dgrd आवृत्ति अनुसार DGRD में रहता है; मेरा क्षितिज में आकाश दृश्य के बैंगनी बॉक्स और योजना तालिका से लिया गया समय; आज़माने के लिए स्टेशन में तालिका का समय, स्क्रॉल बार और अपने देश के स्टेशन हटाने का विकल्प (cty.dat); यागी गेन DL6WU तालिका (G3SEK) से, W8IO के नाम वाला सूत्र केवल 10 एलिमेंट से कम पर; YA-MS शैली की ड्रॉप-डाउन सूचियाँ और संख्या बॉक्स; मैनुअल में 144 MHz ट्रांसवर्टर।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -19075,6 +19093,8 @@ namespace LunaCalc
             "YAEC가 GitHub에서 새 패키지를 내려받아 지문을 확인하고 자신의 파일을 교체합니다. 새 버전은 다음 실행 때 시작됩니다. 데이터는 그대로 남습니다.",
             "YAEC {0}이(가) 설치되었습니다. 새 버전은 다음 실행 때 시작됩니다.",
             "프로그램 폴더에 파일을 쓸 수 없었습니다.",
+            "간격과 이득은 G3SEK가 실은 DL6WU 표(The VHF/UHF DX Book, RSGB, 7장)를 따릅니다. 반사기 0.2 λ, 첫 도파기 0.075 λ, 이후 0.4 λ까지 늘어남. 이득은 dBd + 2.15. 표는 10소자부터이므로 그 아래에서는 W8IO의 것으로 알려진 식 G = 7.773·log(L/λ) + 11.43을 쓰지만 출처는 찾지 못했습니다(둘 다 적용되는 범위에서 차이는 최대 0.1 dB). DL6WU가 아닌 안테나는 다를 수 있습니다.",
+            "1.9.1 - GitHub에서 자동 업데이트(SHA-256 지문 확인): Windows, 휴대용 압축 파일(Linux, FreeBSD, OpenBSD, Alpine), AppImage, macOS 앱(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트), 빠진 파일 경고; 새 패키지: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT에서 국의 로케이터를 고치는 수정 버튼; 거리와 Dgrd는 144 MHz의 고전적 Dgrd, 대역별 Dgrd는 주파수별 DGRD에 유지; 내 지평선에 하늘 보기의 보라색 상자와 계획 표에서 가져온 시각; 시도해 볼 국에 표의 시각, 스크롤 막대, 자국 국 제외(cty.dat); 야기 이득은 DL6WU 표(G3SEK)에서, W8IO의 것으로 알려진 식은 10소자 미만에서만; 드롭다운과 숫자 상자는 YA-MS 스타일; 매뉴얼에 144 MHz 트랜스버터.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -20817,6 +20837,8 @@ namespace LunaCalc
             "YAEC mengunduh paket baru dari GitHub, memeriksa sidik jarinya dan mengganti berkasnya sendiri; versi baru berjalan pada peluncuran berikutnya. Data Anda tetap di tempatnya.",
             "YAEC {0} sudah terpasang: versi baru berjalan pada peluncuran berikutnya.",
             "Berkas tidak dapat ditulis ke folder program.",
+            "Jarak dan gain dari tabel DL6WU yang dimuat G3SEK (The VHF/UHF DX Book, RSGB, bab 7): reflektor 0,2 λ, direktor pertama 0,075 λ, lalu bertambah hingga 0,4 λ; gain dalam dBd + 2,15. Tabel dimulai dari 10 elemen: di bawahnya dipakai rumus G = 7,773·log(L/λ) + 11,43 yang dikaitkan dengan W8IO, yang sumbernya tidak ditemukan (bila keduanya berlaku, selisihnya paling banyak 0,1 dB). Antena selain DL6WU bisa berbeda.",
+            "1.9.1 - Pembaruan otomatis dari GitHub dengan pemeriksaan sidik jari SHA-256 di Windows, arsip portabel (Linux, FreeBSD, OpenBSD, Alpine), AppImage, dan aplikasi macOS (paket .deb, .rpm, Arch, Slackware diperbarui dengan manajer paket), serta peringatan berkas yang hilang; paket baru untuk Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tombol KOREKSI untuk membetulkan locator sebuah stasiun di CALL3.TXT; Jarak dan Dgrd dengan Dgrd klasik pada 144 MHz, sedangkan Dgrd per pita tetap di DGRD per frekuensi; Cakrawala saya dengan kotak ungu dari Kubah langit dan waktu dari tabel perencanaan; Stasiun untuk dicoba dengan waktu dari tabel, bilah gulir, dan pengecualian stasiun negara sendiri (cty.dat); gain yagi dari tabel DL6WU (G3SEK), rumus yang dikaitkan dengan W8IO hanya di bawah 10 elemen; daftar tarik-turun dan kotak angka bergaya YA-MS; transverter 144 MHz di manual.",
         };
 
         public static readonly string[] RU = {
@@ -22560,6 +22582,8 @@ namespace LunaCalc
             "YAEC скачивает новый пакет с GitHub, проверяет его отпечаток и заменяет свои файлы; новая версия запустится при следующем старте. Ваши данные остаются на месте.",
             "YAEC {0} установлен: новая версия запустится при следующем старте.",
             "Не удалось записать файлы в папку программы.",
+            "Расстояния и усиления по таблице DL6WU, приведённой G3SEK (The VHF/UHF DX Book, RSGB, гл. 7): рефлектор 0,2 λ, первый директор 0,075 λ, далее с ростом до 0,4 λ; усиление в dBd + 2,15. Таблица начинается с 10 элементов: ниже используется формула G = 7,773·log(L/λ) + 11,43, приписываемая W8IO, источник которой не найден (там, где применимы обе, они расходятся не более чем на 0,1 дБ). Антенны не по DL6WU могут отличаться.",
+            "1.9.1 - Автоматическое обновление с GitHub с проверкой отпечатка SHA-256 в Windows, для переносных архивов (Linux, FreeBSD, OpenBSD, Alpine), AppImage и приложения macOS (пакеты .deb, .rpm, Arch, Slackware обновляются менеджером пакетов), предупреждение об отсутствующих файлах; новые пакеты для Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; кнопка ИСПРАВИТЬ для исправления локатора станции в CALL3.TXT; Расстояние и Dgrd с классической Dgrd на 144 МГц, а Dgrd по диапазонам остаётся в DGRD по частоте; Мой горизонт с фиолетовыми рамками из Небесный свод и моментом из таблицы планирования; Станции для попытки с моментом из таблицы, полосой прокрутки и исключением станций своей страны (cty.dat); усиление яги по таблице DL6WU (G3SEK), формула, приписываемая W8IO, только ниже 10 элементов; выпадающие списки и числовые поля в стиле YA-MS; трансвертеры на 144 МГц в руководстве.",
         };
 
         public static readonly string[] UK = {
@@ -24303,6 +24327,8 @@ namespace LunaCalc
             "YAEC завантажує новий пакет із GitHub, перевіряє його відбиток і замінює власні файли; нова версія запуститься під час наступного старту. Ваші дані залишаються на місці.",
             "YAEC {0} встановлено: нова версія запуститься під час наступного старту.",
             "Не вдалося записати файли до теки програми.",
+            "Відстані й підсилення за таблицею DL6WU, наведеною G3SEK (The VHF/UHF DX Book, RSGB, розд. 7): рефлектор 0,2 λ, перший директор 0,075 λ, далі зі зростанням до 0,4 λ; підсилення в dBd + 2,15. Таблиця починається з 10 елементів: нижче використовується формула G = 7,773·log(L/λ) + 11,43, що приписується W8IO, джерело якої не знайдено (там, де діють обидві, вони різняться щонайбільше на 0,1 дБ). Антени не за DL6WU можуть відрізнятися.",
+            "1.9.1 - Автоматичне оновлення з GitHub із перевіркою відбитка SHA-256 у Windows, для переносних архівів (Linux, FreeBSD, OpenBSD, Alpine), AppImage і застосунку macOS (пакети .deb, .rpm, Arch, Slackware оновлюються менеджером пакетів), попередження про відсутні файли; нові пакети для Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; кнопка ВИПРАВИТИ для виправлення локатора станції в CALL3.TXT; Відстань і Dgrd із класичною Dgrd на 144 МГц, а Dgrd за діапазонами залишається в DGRD за частотою; Мій горизонт із фіолетовими рамками з Небесне склепіння і моментом із таблиці планування; Станції для спроби із моментом із таблиці, смугою прокручування та виключенням станцій своєї країни (cty.dat); підсилення яґі за таблицею DL6WU (G3SEK), формула, що приписується W8IO, лише нижче 10 елементів; випадні списки й числові поля в стилі YA-MS; трансвертери на 144 МГц у посібнику.",
         };
 
         public static readonly string[] AF = {
@@ -26046,6 +26072,8 @@ namespace LunaCalc
             "YAEC laai die nuwe pakket van GitHub af, kontroleer sy vingerafdruk en vervang sy eie lêers; die nuwe weergawe begin by die volgende keer dat jy dit oopmaak. Jou data bly waar dit is.",
             "YAEC {0} is geïnstalleer: die nuwe weergawe begin die volgende keer dat jy dit oopmaak.",
             "Die lêers kon nie in die programvouer geskryf word nie.",
+            "Spasiërings en wins uit die DL6WU-tabel wat G3SEK gee (The VHF/UHF DX Book, RSGB, hfst. 7): reflektor 0,2 λ, eerste direkteur 0,075 λ, dan toenemend tot 0,4 λ; wins in dBd + 2,15. Die tabel begin by 10 elemente: daaronder word die formule G = 7,773·log(L/λ) + 11,43 gebruik wat aan W8IO toegeskryf word, waarvoor geen bron gevind is nie (waar albei geld, verskil hulle hoogstens 0,1 dB). Nie-DL6WU-antennas kan verskil.",
+            "1.9.1 - Outomatiese bywerking vanaf GitHub met kontrole van die SHA-256-vingerafdruk op Windows, met die draagbare argiewe (Linux, FreeBSD, OpenBSD, Alpine), die AppImage en die macOS-toep (die .deb, .rpm, Arch, Slackware-pakkette word met die pakketbestuurder bygewerk), en waarskuwing oor ontbrekende lêers; nuwe pakkette vir Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; KORRIGEER-knoppie om 'n stasie se locator in CALL3.TXT reg te stel; Afstand en Dgrd met die klassieke Dgrd by 144 MHz, terwyl die Dgrd per band in DGRD per frekwensie bly; My horison met die pers raampies van Lugaansig en die tydstip uit die beplanningstabel; Stasies om te probeer met die tydstip uit die tabel, 'n rolstaaf en die weglating van stasies uit jou eie land (cty.dat); Yagi-wins uit die DL6WU-tabel (G3SEK), die formule wat aan W8IO toegeskryf word slegs onder 10 elemente; aftreklyste en getalblokkies in die YA-MS-styl; 144 MHz-transverters in die handleiding.",
         };
 
         public static readonly string[] BN = {
@@ -27788,6 +27816,8 @@ namespace LunaCalc
             "YAEC GitHub থেকে নতুন প্যাকেজ নামায়, তার ফিঙ্গারপ্রিন্ট মিলিয়ে দেখে এবং নিজের ফাইলগুলো বদলে দেয়; নতুন সংস্করণ পরের বার চালু করলে শুরু হবে। আপনার ডেটা যেখানে আছে সেখানেই থাকে।",
             "YAEC {0} ইনস্টল হয়েছে: নতুন সংস্করণ পরের বার চালু করলে শুরু হবে।",
             "প্রোগ্রামের ফোল্ডারে ফাইলগুলো লেখা যায়নি।",
+            "দূরত্ব ও গেইন G3SEK প্রকাশিত DL6WU সারণি থেকে (The VHF/UHF DX Book, RSGB, অধ্যায় 7): রিফ্লেক্টর 0.2 λ, প্রথম ডিরেক্টর 0.075 λ, তারপর বাড়তে বাড়তে 0.4 λ; গেইন dBd + 2.15। সারণি 10 এলিমেন্ট থেকে শুরু: তার নিচে W8IO-র নামে প্রচলিত সূত্র G = 7.773·log(L/λ) + 11.43 ব্যবহার হয়, যার উৎস পাওয়া যায়নি (যেখানে দুটোই খাটে, পার্থক্য সর্বোচ্চ 0.1 dB)। DL6WU নয় এমন অ্যান্টেনা আলাদা হতে পারে।",
+            "1.9.1 - GitHub থেকে স্বয়ংক্রিয় হালনাগাদ, SHA-256 ফিঙ্গারপ্রিন্ট যাচাইসহ: Windows, বহনযোগ্য আর্কাইভ (Linux, FreeBSD, OpenBSD, Alpine), AppImage ও macOS অ্যাপে (.deb, .rpm, Arch, Slackware প্যাকেজ প্যাকেজ ম্যানেজার দিয়ে হালনাগাদ হয়), আর অনুপস্থিত ফাইলের সতর্কবার্তা; নতুন প্যাকেজ: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT-এ কোনো স্টেশনের লোকেটর ঠিক করার সংশোধন বোতাম; দূরত্ব ও Dgrd-এ 144 MHz-এ প্রচলিত Dgrd, ব্যান্ড অনুযায়ী Dgrd থাকে ফ্রিকোয়েন্সি অনুযায়ী DGRD-এ; আমার দিগন্ত-এ আকাশ-গম্বুজ-এর বেগুনি বাক্স ও পরিকল্পনা সারণি থেকে নেওয়া সময়; চেষ্টা করার স্টেশন-এ সারণির সময়, স্ক্রল বার ও নিজের দেশের স্টেশন বাদ দেওয়ার সুবিধা (cty.dat); ইয়াগি গেইন DL6WU সারণি (G3SEK) থেকে, W8IO-র নামে প্রচলিত সূত্র শুধু 10 এলিমেন্টের নিচে; YA-MS ধাঁচের ড্রপ-ডাউন তালিকা ও সংখ্যার বাক্স; ম্যানুয়ালে 144 MHz ট্রান্সভার্টার।",
         };
 
         public static readonly string[] AR = {
@@ -29530,6 +29560,8 @@ namespace LunaCalc
             "يُنزّل YAEC الحزمة الجديدة من GitHub ويتحقق من بصمتها ويستبدل ملفاته؛ يبدأ الإصدار الجديد عند التشغيل التالي. تبقى بياناتك في مكانها.",
             "ثُبّت YAEC {0}: يبدأ الإصدار الجديد عند التشغيل التالي.",
             "تعذّرت كتابة الملفات في مجلد البرنامج.",
+            "المسافات والكسب من جدول DL6WU الذي أورده G3SEK (The VHF/UHF DX Book, RSGB، الفصل 7): العاكس 0.2 λ، الموجّه الأول 0.075 λ، ثم تزداد حتى 0.4 λ؛ الكسب بوحدة dBd + 2.15. يبدأ الجدول من 10 عناصر: وما دونها تُستعمل الصيغة G = 7.773·log(L/λ) + 11.43 المنسوبة إلى W8IO، ولم يُعثر على مصدرها (حيث تنطبق الاثنتان لا يتجاوز الفرق 0.1 dB). قد تختلف الهوائيات غير المصممة على طريقة DL6WU.",
+            "1.9.1 - تحديث تلقائي من GitHub مع التحقق من بصمة SHA-256 على Windows، ومع الأرشيفات المحمولة (Linux، FreeBSD، OpenBSD، Alpine)، وAppImage، وتطبيق macOS (حزم .deb, .rpm, Arch, Slackware تُحدَّث بمدير الحزم)، وتنبيه إلى الملفات الناقصة؛ حزم جديدة لـ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage؛ زر تصحيح لتصحيح محدد موقع محطة في CALL3.TXT؛ المسافة وDgrd مع Dgrd الكلاسيكي عند 144 MHz، ويبقى Dgrd حسب النطاق في DGRD حسب التردد؛ أفق محطتي مع الإطارات البنفسجية من قبة السماء واللحظة المأخوذة من جدول التخطيط؛ محطات للتجربة مع لحظة الجدول وشريط التمرير واستبعاد محطات البلد نفسه (cty.dat)؛ كسب هوائيات ياغي من جدول DL6WU ‏(G3SEK)، والصيغة المنسوبة إلى W8IO تحت 10 عناصر فقط؛ قوائم منسدلة وخانات رقمية بأسلوب YA-MS؛ محوّلات 144 MHz في الدليل.",
         };
 
         public static readonly string[] TR = {
@@ -31272,6 +31304,8 @@ namespace LunaCalc
             "YAEC yeni paketi GitHub'dan indirir, parmak izini denetler ve kendi dosyalarını değiştirir; yeni sürüm bir sonraki açılışta başlar. Verileriniz yerinde kalır.",
             "YAEC {0} kuruldu: yeni sürüm bir sonraki açılışta başlar.",
             "Dosyalar program klasörüne yazılamadı.",
+            "Aralıklar ve kazançlar G3SEK'in verdiği DL6WU tablosundan (The VHF/UHF DX Book, RSGB, böl. 7): reflektör 0,2 λ, ilk direktör 0,075 λ, sonra 0,4 λ'ya kadar artarak; kazanç dBd + 2,15. Tablo 10 elemandan başlar: altında W8IO'ya atfedilen G = 7,773·log(L/λ) + 11,43 formülü kullanılır, kaynağı bulunamamıştır (ikisinin de geçerli olduğu yerde fark en çok 0,1 dB). DL6WU olmayan antenler farklı olabilir.",
+            "1.9.1 - GitHub'dan SHA-256 parmak izi denetimiyle otomatik güncelleme: Windows'ta, taşınabilir arşivlerde (Linux, FreeBSD, OpenBSD, Alpine), AppImage'da ve macOS uygulamasında (.deb, .rpm, Arch, Slackware paketleri paket yöneticisiyle güncellenir) ve eksik dosya uyarısı; yeni paketler: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT'te bir istasyonun lokatörünü düzeltmek için DÜZELT düğmesi; Mesafe ve Dgrd'de 144 MHz'te klasik Dgrd, banda göre Dgrd Frekansa göre DGRD'de kalır; Ufkum'de Gök kubbesi'nin mor çerçeveleri ve planlama tablosundan alınan an; Denenecek istasyonlar'de tablodaki an, kaydırma çubuğu ve kendi ülkenin istasyonlarını dışarıda bırakma (cty.dat); Yagi kazancı DL6WU tablosundan (G3SEK), W8IO'ya atfedilen formül yalnızca 10 elemanın altında; YA-MS tarzında açılır listeler ve sayı kutuları; el kitabında 144 MHz transverterler.",
         };
 
         public static readonly string[] NL = {
@@ -33014,6 +33048,8 @@ namespace LunaCalc
             "YAEC downloadt het nieuwe pakket van GitHub, controleert de vingerafdruk en vervangt zijn eigen bestanden; de nieuwe versie start bij de volgende keer opstarten. Je gegevens blijven waar ze zijn.",
             "YAEC {0} is geïnstalleerd: de nieuwe versie start bij de volgende keer opstarten.",
             "De bestanden konden niet naar de programmamap worden geschreven.",
+            "Afstanden en winst uit de DL6WU-tabel van G3SEK (The VHF/UHF DX Book, RSGB, hfst. 7): reflector 0,2 λ, eerste director 0,075 λ, daarna oplopend tot 0,4 λ; winst in dBd + 2,15. De tabel begint bij 10 elementen: daaronder wordt de aan W8IO toegeschreven formule G = 7,773·log(L/λ) + 11,43 gebruikt, waarvan geen bron is gevonden (waar beide gelden, verschillen ze hooguit 0,1 dB). Niet-DL6WU-antennes kunnen afwijken.",
+            "1.9.1 - Automatische update via GitHub met controle van de SHA-256-vingerafdruk op Windows, bij de draagbare archieven (Linux, FreeBSD, OpenBSD, Alpine), de AppImage en de macOS-app (de pakketten .deb, .rpm, Arch, Slackware worden bijgewerkt met het pakketbeheer), en melding van ontbrekende bestanden; nieuwe pakketten voor Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knop CORRIGEREN om de locator van een station in CALL3.TXT te verbeteren; Afstand en Dgrd met de klassieke Dgrd op 144 MHz, de Dgrd per band blijft in DGRD per frequentie; Mijn horizon met de paarse kaders van Hemelkoepel en het moment uit de planningstabel; Stations om te proberen met het moment uit de tabel, schuifbalk en uitsluiting van stations uit het eigen land (cty.dat); yagiwinst uit de DL6WU-tabel (G3SEK), de aan W8IO toegeschreven formule alleen onder 10 elementen; keuzelijsten en getalvakken in de stijl van YA-MS; 144 MHz-transverters in de handleiding.",
         };
 
         public static readonly string[] ET = {
@@ -34756,6 +34792,8 @@ namespace LunaCalc
             "YAEC laadib GitHubist alla uue paketi, kontrollib selle sõrmejälge ja asendab oma failid; uus versioon käivitub järgmisel avamisel. Sinu andmed jäävad oma kohale.",
             "YAEC {0} on paigaldatud: uus versioon käivitub järgmisel avamisel.",
             "Faile ei õnnestunud programmi kausta kirjutada.",
+            "Vahekaugused ja võimendused G3SEK-i esitatud DL6WU tabelist (The VHF/UHF DX Book, RSGB, ptk 7): reflektor 0,2 λ, esimene direktor 0,075 λ, seejärel kasvades kuni 0,4 λ; võimendus dBd + 2,15. Tabel algab 10 elemendist: allpool kasutatakse W8IO-le omistatud valemit G = 7,773·log(L/λ) + 11,43, mille allikat ei leitud (kus mõlemad kehtivad, erinevad need kuni 0,1 dB). Muud kui DL6WU antennid võivad erineda.",
+            "1.9.1 - Automaatne uuendus GitHubist koos SHA-256 sõrmejälje kontrolliga Windowsis, kaasaskantavate arhiividega (Linux, FreeBSD, OpenBSD, Alpine), AppImage'iga ja macOS-i rakendusega (pakette .deb, .rpm, Arch, Slackware uuendatakse paketihalduriga) ning hoiatus puuduvate failide kohta; uued paketid: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; nupp PARANDA jaama lokaatori parandamiseks failis CALL3.TXT; Kaugus ja Dgrd klassikalise Dgrd-ga 144 MHz juures, sagedusala kaupa Dgrd jääb DGRD sageduse järgi alla; Minu horisont koos Taevavõlv lillade kastide ja planeerimistabelist võetud ajahetkega; Jaamad proovimiseks koos tabeli ajahetke, kerimisriba ja oma riigi jaamade väljajätmisega (cty.dat); yagi võimendus DL6WU tabelist (G3SEK), W8IO-le omistatud valem ainult alla 10 elemendi; YA-MS-i stiilis rippmenüüd ja numbriväljad; 144 MHz transverterid juhendis.",
         };
 
         public static readonly string[] LV = {
@@ -36498,6 +36536,8 @@ namespace LunaCalc
             "YAEC lejupielādē jauno pakotni no GitHub, pārbauda tās nospiedumu un aizstāj savas datnes; jaunā versija sāks darboties nākamajā palaišanas reizē. Jūsu dati paliek savā vietā.",
             "YAEC {0} ir instalēts: jaunā versija sāks darboties nākamajā palaišanas reizē.",
             "Neizdevās ierakstīt datnes programmas mapē.",
+            "Attālumi un pastiprinājumi no G3SEK publicētās DL6WU tabulas (The VHF/UHF DX Book, RSGB, 7. nod.): reflektors 0,2 λ, pirmais direktors 0,075 λ, pēc tam pieaugot līdz 0,4 λ; pastiprinājums dBd + 2,15. Tabula sākas no 10 elementiem: zemāk lieto W8IO piedēvēto formulu G = 7,773·log(L/λ) + 11,43, kuras avots nav atrasts (kur der abas, tās atšķiras ne vairāk kā par 0,1 dB). Ne-DL6WU antenas var atšķirties.",
+            "1.9.1 - Automātiska atjaunināšana no GitHub ar SHA-256 nospieduma pārbaudi operētājsistēmā Windows, pārnēsājamajiem arhīviem (Linux, FreeBSD, OpenBSD, Alpine), AppImage un macOS lietotnei (pakotnes .deb, .rpm, Arch, Slackware atjaunina ar pakotņu pārvaldnieku) un brīdinājums par trūkstošām datnēm; jaunas pakotnes: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; poga LABOT stacijas lokatora labošanai CALL3.TXT; Attālums un Dgrd ar klasisko Dgrd pie 144 MHz, bet Dgrd pa joslām paliek DGRD pēc frekvences; Mans horizonts ar Debess velve violetajiem rāmjiem un brīdi no plānošanas tabulas; Stacijas, ko izmēģināt ar tabulas brīdi, ritjoslu un savas valsts staciju izslēgšanu (cty.dat); Jagi pastiprinājums no DL6WU tabulas (G3SEK), W8IO piedēvētā formula tikai zem 10 elementiem; nolaižamie saraksti un skaitļu lauki YA-MS stilā; 144 MHz transverteri rokasgrāmatā.",
         };
 
         public static readonly string[] LT = {
@@ -38240,6 +38280,8 @@ namespace LunaCalc
             "YAEC atsisiunčia naują paketą iš GitHub, patikrina jo kontrolinį kodą ir pakeičia savo failus; nauja versija pasileis kitą kartą paleidus. Jūsų duomenys lieka savo vietoje.",
             "YAEC {0} įdiegta: nauja versija pasileis kitą kartą paleidus.",
             "Nepavyko įrašyti failų į programos aplanką.",
+            "Atstumai ir stiprinimas iš G3SEK pateiktos DL6WU lentelės (The VHF/UHF DX Book, RSGB, 7 sk.): reflektorius 0,2 λ, pirmasis direktorius 0,075 λ, toliau didėja iki 0,4 λ; stiprinimas dBd + 2,15. Lentelė prasideda nuo 10 elementų: mažiau naudojama W8IO priskiriama formulė G = 7,773·log(L/λ) + 11,43, kurios šaltinis nerastas (kur tinka abi, skiriasi ne daugiau kaip 0,1 dB). Ne DL6WU antenos gali skirtis.",
+            "1.9.1 - Automatinis atnaujinimas iš GitHub su SHA-256 kontrolinio kodo patikra Windows sistemoje, nešiojamiesiems archyvams (Linux, FreeBSD, OpenBSD, Alpine), AppImage ir macOS programai (paketai .deb, .rpm, Arch, Slackware atnaujinami paketų tvarkykle) bei įspėjimas apie trūkstamus failus; nauji paketai: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; mygtukas TAISYTI stoties lokatoriui CALL3.TXT pataisyti; Atstumas ir Dgrd su klasikine Dgrd ties 144 MHz, o Dgrd pagal juostas lieka DGRD pagal dažnį; Mano horizontas su Dangaus skliautas violetiniais rėmeliais ir momentu iš planavimo lentelės; Stotys išbandyti su lentelės momentu, slinkties juosta ir savos šalies stočių atmetimu (cty.dat); Yagi stiprinimas iš DL6WU lentelės (G3SEK), W8IO priskiriama formulė tik žemiau 10 elementų; išskleidžiamieji sąrašai ir skaičių laukai YA-MS stiliumi; 144 MHz transverteriai vadove.",
         };
 
         public static readonly string[] SV = {
@@ -39982,6 +40024,8 @@ namespace LunaCalc
             "YAEC hämtar det nya paketet från GitHub, kontrollerar dess fingeravtryck och ersätter sina egna filer; den nya versionen startar nästa gång programmet öppnas. Dina data ligger kvar där de är.",
             "YAEC {0} är installerat: den nya versionen startar nästa gång programmet öppnas.",
             "Filerna kunde inte skrivas till programmappen.",
+            "Avstånd och förstärkning från DL6WU-tabellen hos G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, första direktor 0,075 λ, sedan ökande upp till 0,4 λ; förstärkning i dBd + 2,15. Tabellen börjar vid 10 element: under det används formeln G = 7,773·log(L/λ) + 11,43 som tillskrivs W8IO, vars källa inte har hittats (där båda gäller skiljer de högst 0,1 dB). Antenner som inte är DL6WU kan avvika.",
+            "1.9.1 - Automatisk uppdatering från GitHub med kontroll av SHA-256-fingeravtrycket i Windows, för de portabla arkiven (Linux, FreeBSD, OpenBSD, Alpine), AppImage och macOS-appen (paketen .deb, .rpm, Arch, Slackware uppdateras med pakethanteraren), samt varning om saknade filer; nya paket för Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knappen KORRIGERA för att rätta en stations locator i CALL3.TXT; Avstånd och Dgrd med klassisk Dgrd vid 144 MHz, medan Dgrd per band finns kvar i DGRD per frekvens; Min horisont med de lila rutorna från Himlavalvet och tidpunkten från planeringstabellen; Stationer att prova med tidpunkten från tabellen, rullningslist och möjlighet att utesluta stationer från det egna landet (cty.dat); yagiförstärkning från DL6WU-tabellen (G3SEK), formeln som tillskrivs W8IO bara under 10 element; listrutor och sifferrutor i YA-MS-stil; 144 MHz-transvertrar i handboken.",
         };
 
         public static readonly string[] NB = {
@@ -41724,6 +41768,8 @@ namespace LunaCalc
             "YAEC laster ned den nye pakken fra GitHub, kontrollerer fingeravtrykket og erstatter sine egne filer; den nye versjonen starter neste gang programmet åpnes. Dataene dine blir der de er.",
             "YAEC {0} er installert: den nye versjonen starter neste gang programmet åpnes.",
             "Filene kunne ikke skrives til programmappen.",
+            "Avstander og forsterkning fra DL6WU-tabellen hos G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, første direktor 0,075 λ, deretter økende opp til 0,4 λ; forsterkning i dBd + 2,15. Tabellen starter ved 10 elementer: under det brukes formelen G = 7,773·log(L/λ) + 11,43 som tilskrives W8IO, og som det ikke er funnet kilde for (der begge gjelder, skiller de høyst 0,1 dB). Antenner som ikke er DL6WU kan avvike.",
+            "1.9.1 - Automatisk oppdatering fra GitHub med kontroll av SHA-256-fingeravtrykket i Windows, for de portable arkivene (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-appen (pakkene .deb, .rpm, Arch, Slackware oppdateres med pakkebehandleren), og varsel om manglende filer; nye pakker for Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knappen KORRIGER for å rette en stasjons lokator i CALL3.TXT; Avstand og Dgrd med klassisk Dgrd på 144 MHz, mens Dgrd per bånd blir i DGRD per frekvens; Min horisont med de fiolette rammene fra Himmelhvelvingen og tidspunktet fra planleggingstabellen; Stasjoner å prøve med tidspunktet fra tabellen, rullefelt og mulighet til å utelate stasjoner fra eget land (cty.dat); yagiforsterkning fra DL6WU-tabellen (G3SEK), formelen som tilskrives W8IO bare under 10 elementer; nedtrekkslister og tallfelt i YA-MS-stil; 144 MHz-transvertere i håndboken.",
         };
 
         public static readonly string[] IS = {
@@ -43466,6 +43512,8 @@ namespace LunaCalc
             "YAEC sækir nýja pakkann frá GitHub, athugar fingrafar hans og skiptir út eigin skrám; nýja útgáfan ræsist næst þegar forritið er opnað. Gögnin þín verða áfram þar sem þau eru.",
             "YAEC {0} er uppsett: nýja útgáfan ræsist næst þegar forritið er opnað.",
             "Ekki tókst að skrifa skrárnar í möppu forritsins.",
+            "Bil og mögnun úr DL6WU-töflunni sem G3SEK birtir (The VHF/UHF DX Book, RSGB, 7. kafli): endurvarpi 0,2 λ, fyrsti stýrir 0,075 λ, síðan vaxandi upp í 0,4 λ; mögnun í dBd + 2,15. Taflan byrjar við 10 einingar: þar fyrir neðan er notuð formúlan G = 7,773·log(L/λ) + 11,43 sem eignuð er W8IO, en heimild hennar hefur ekki fundist (þar sem báðar gilda munar mest 0,1 dB). Önnur loftnet en DL6WU geta verið frábrugðin.",
+            "1.9.1 - Sjálfvirk uppfærsla frá GitHub með athugun á SHA-256-fingrafari í Windows, fyrir ferðasöfnin (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-forritið (pakkarnir .deb, .rpm, Arch, Slackware eru uppfærðir með pakkastjóranum), og viðvörun um skrár sem vantar; nýir pakkar fyrir Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; hnappurinn LEIÐRÉTTA til að leiðrétta staðsetningarkóða stöðvar í CALL3.TXT; Fjarlægð og Dgrd með hefðbundnu Dgrd á 144 MHz, en Dgrd eftir böndum er áfram í DGRD eftir tíðni; Sjóndeildarhringurinn minn með fjólubláum römmum úr Himinhvelfing og tímanum úr skipulagstöflunni; Stöðvar til að prófa með tímanum úr töflunni, skrunstiku og möguleika á að sleppa stöðvum eigin lands (cty.dat); Yagi-mögnun úr DL6WU-töflunni (G3SEK), formúlan sem eignuð er W8IO aðeins undir 10 einingum; fellilistar og talnareitir í YA-MS-stíl; 144 MHz-umbreytar í handbókinni.",
         };
 
         public static readonly string[] HE = {
@@ -45208,6 +45256,8 @@ namespace LunaCalc
             "YAEC מוריד את החבילה החדשה מ־GitHub, בודק את טביעת האצבע שלה ומחליף את הקבצים שלו; הגרסה החדשה תופעל בהפעלה הבאה. הנתונים שלך נשארים במקומם.",
             "YAEC {0} הותקן: הגרסה החדשה תופעל בהפעלה הבאה.",
             "לא ניתן היה לכתוב את הקבצים לתיקיית התוכנה.",
+            "מרווחים והגבר מטבלת DL6WU שמביא G3SEK (The VHF/UHF DX Book, RSGB, פרק 7): מחזיר 0.2 λ, מכוון ראשון 0.075 λ, ואחר כך בהדרגה עד 0.4 λ; ההגבר ב־dBd + 2.15. הטבלה מתחילה מ־10 אלמנטים: מתחת לכך משמשת הנוסחה G = 7.773·log(L/λ) + 11.43 המיוחסת ל־W8IO, שמקורה לא נמצא (היכן ששתיהן חלות, ההפרש לכל היותר 0.1 dB). אנטנות שאינן DL6WU עשויות להיות שונות.",
+            "1.9.1 - עדכון אוטומטי מ־GitHub עם בדיקת טביעת SHA-256 ב־Windows, בארכיונים הניידים (Linux, FreeBSD, OpenBSD, Alpine), ב־AppImage ובאפליקציית macOS (חבילות .deb, .rpm, Arch, Slackware מתעדכנות דרך מנהל החבילות), והתרעה על קבצים חסרים; חבילות חדשות ל־Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; כפתור תיקון לתיקון הלוקייטור של תחנה ב־CALL3.TXT; מרחק ו-Dgrd עם Dgrd הקלאסי ב־144 MHz, וה־Dgrd לפי פס נשאר ב־DGRD לפי תדר; האופק שלי עם המסגרות הסגולות של כיפת השמיים והרגע שנלקח מטבלת התכנון; תחנות לנסות עם הרגע מהטבלה, פס גלילה והוצאת תחנות מהמדינה שלך (cty.dat); הגבר אנטנות יאגי מטבלת DL6WU ‏(G3SEK), והנוסחה המיוחסת ל־W8IO רק מתחת ל־10 אלמנטים; רשימות נפתחות ותיבות מספר בסגנון YA-MS; טרנסוורטרים ל־144 MHz במדריך.",
         };
 
         public static readonly string[] UR = {
@@ -46950,6 +47000,8 @@ namespace LunaCalc
             "YAEC نیا پیکج GitHub سے ڈاؤن لوڈ کرتا ہے، اس کا فنگر پرنٹ جانچتا ہے اور اپنی فائلیں بدل دیتا ہے؛ نیا ورژن اگلی بار کھولنے پر چلے گا۔ آپ کا ڈیٹا اپنی جگہ رہتا ہے۔",
             "YAEC {0} انسٹال ہو گیا ہے: نیا ورژن اگلی بار کھولنے پر چلے گا۔",
             "فائلیں پروگرام کے فولڈر میں نہیں لکھی جا سکیں۔",
+            "فاصلے اور گین G3SEK کی دی گئی DL6WU جدول سے (The VHF/UHF DX Book, RSGB، باب 7): ریفلیکٹر 0.2 λ، پہلا ڈائریکٹر 0.075 λ، پھر بڑھتے ہوئے 0.4 λ تک؛ گین dBd + 2.15۔ جدول 10 عناصر سے شروع ہوتی ہے: اس سے کم پر W8IO سے منسوب فارمولا G = 7.773·log(L/λ) + 11.43 استعمال ہوتا ہے، جس کا ماخذ نہیں ملا (جہاں دونوں لاگو ہوں، فرق زیادہ سے زیادہ 0.1 dB)۔ DL6WU کے علاوہ اینٹینا مختلف ہو سکتے ہیں۔",
+            "1.9.1 - GitHub سے خودکار اپ ڈیٹ، SHA-256 فنگر پرنٹ کی جانچ کے ساتھ: Windows، پورٹیبل آرکائیو (Linux، FreeBSD، OpenBSD، Alpine)، AppImage اور macOS ایپ میں (.deb, .rpm, Arch, Slackware پیکج پیکج مینیجر سے اپ ڈیٹ ہوتے ہیں)، اور غائب فائلوں کی تنبیہ؛ نئے پیکج: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage؛ CALL3.TXT میں کسی اسٹیشن کا لوکیٹر درست کرنے کے لیے درست کریں بٹن؛ فاصلہ اور Dgrd میں 144 MHz پر روایتی Dgrd، جبکہ بینڈ کے حساب سے Dgrd فریکوئنسی کے لحاظ سے DGRD میں رہتا ہے؛ میرا افق میں آسمانی گنبد کے بنفشی خانے اور منصوبہ بندی جدول سے لیا گیا وقت؛ آزمانے کے لیے اسٹیشن میں جدول کا وقت، اسکرول بار اور اپنے ملک کے اسٹیشن نکالنے کا اختیار (cty.dat)؛ یاگی گین DL6WU جدول (G3SEK) سے، W8IO سے منسوب فارمولا صرف 10 عناصر سے کم پر؛ YA-MS طرز کی ڈراپ ڈاؤن فہرستیں اور عددی خانے؛ دستی میں 144 MHz ٹرانسورٹر۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -48691,6 +48743,8 @@ namespace LunaCalc
             "YAEC henter den nye pakke fra GitHub, kontrollerer dens fingeraftryk og erstatter sine egne filer; den nye version starter, næste gang programmet åbnes. Dine data bliver, hvor de er.",
             "YAEC {0} er installeret: den nye version starter, næste gang programmet åbnes.",
             "Filerne kunne ikke skrives til programmappen.",
+            "Afstande og forstærkning fra DL6WU-tabellen hos G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, første direktor 0,075 λ, derefter stigende op til 0,4 λ; forstærkning i dBd + 2,15. Tabellen starter ved 10 elementer: herunder bruges formlen G = 7,773·log(L/λ) + 11,43, der tilskrives W8IO, og som der ikke er fundet kilde til (hvor begge gælder, afviger de højst 0,1 dB). Antenner, der ikke er DL6WU, kan afvige.",
+            "1.9.1 - Automatisk opdatering fra GitHub med kontrol af SHA-256-fingeraftrykket i Windows, for de bærbare arkiver (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-appen (pakkerne .deb, .rpm, Arch, Slackware opdateres med pakkehåndteringen), og advarsel om manglende filer; nye pakker til Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knappen RET til at rette en stations locator i CALL3.TXT; Afstand og Dgrd med klassisk Dgrd ved 144 MHz, mens Dgrd pr. bånd bliver i DGRD pr. frekvens; Min horisont med de violette rammer fra Himmelhvælving og tidspunktet fra planlægningstabellen; Stationer at prøve med tidspunktet fra tabellen, rullepanel og mulighed for at udelade stationer fra eget land (cty.dat); yagiforstærkning fra DL6WU-tabellen (G3SEK), formlen der tilskrives W8IO kun under 10 elementer; rullelister og talfelter i YA-MS-stil; 144 MHz-transvertere i manualen.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -50432,6 +50486,8 @@ namespace LunaCalc
             "Dina-download ng YAEC ang bagong package mula sa GitHub, sinusuri ang fingerprint nito at pinapalitan ang sarili nitong mga file; magsisimula ang bagong bersyon sa susunod na pagbukas. Mananatili ang iyong data kung nasaan ito.",
             "Naka-install na ang YAEC {0}: magsisimula ang bagong bersyon sa susunod na pagbukas.",
             "Hindi maisulat ang mga file sa folder ng programa.",
+            "Ang mga pagitan at gain ay mula sa talaan ng DL6WU na inilathala ni G3SEK (The VHF/UHF DX Book, RSGB, kab. 7): reflector 0.2 λ, unang director 0.075 λ, saka lumalaki hanggang 0.4 λ; gain sa dBd + 2.15. Nagsisimula ang talaan sa 10 element: sa ibaba nito ginagamit ang pormulang G = 7.773·log(L/λ) + 11.43 na iniuugnay kay W8IO, na hindi natagpuan ang pinagmulan (kung saan pareho silang gamit, 0.1 dB lang ang pinakamalaking pagkakaiba). Maaaring iba ang mga antenang hindi DL6WU.",
+            "1.9.1 - Awtomatikong pag-update mula sa GitHub na may pagsusuri ng SHA-256 fingerprint sa Windows, sa mga portable na archive (Linux, FreeBSD, OpenBSD, Alpine), sa AppImage at sa macOS app (ang mga package na .deb, .rpm, Arch, Slackware ay ina-update gamit ang package manager), at babala sa mga nawawalang file; mga bagong package para sa Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; button na ITAMA para itama ang locator ng isang istasyon sa CALL3.TXT; Layo at Dgrd na may klasikong Dgrd sa 144 MHz, habang ang Dgrd ayon sa banda ay nananatili sa DGRD ayon sa frequency; Aking horizon na may mga lilang kahon mula sa Tanaw ng langit at oras na kinuha sa talahanayan ng pagpaplano; Mga istasyong susubukan na may oras mula sa talahanayan, scroll bar at opsiyong alisin ang mga istasyon ng sariling bansa (cty.dat); gain ng yagi mula sa talaan ng DL6WU (G3SEK), ang pormulang iniuugnay kay W8IO ay sa ilalim lang ng 10 element; mga drop-down list at numeric box sa istilo ng YA-MS; mga transverter sa 144 MHz sa manwal.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -52173,6 +52229,8 @@ namespace LunaCalc
             "O YAEC baixa o novo pacote do GitHub, verifica a impressão digital dele e substitui os próprios arquivos; a nova versão começa na próxima vez que for aberto. Seus dados ficam onde estão.",
             "O YAEC {0} está instalado: a nova versão começa na próxima vez que for aberto.",
             "Não foi possível gravar os arquivos na pasta do programa.",
+            "Espaçamentos e ganhos da tabela de DL6WU publicada por G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): refletor 0,2 λ, primeiro diretor 0,075 λ, depois aumentando até 0,4 λ; ganho em dBd + 2,15. A tabela começa em 10 elementos: abaixo disso é usada a fórmula G = 7,773·log(L/λ) + 11,43 atribuída a W8IO, cuja fonte não foi encontrada (onde as duas valem, diferem no máximo 0,1 dB). Antenas que não são DL6WU podem diferir.",
+            "1.9.1 - Atualização automática pelo GitHub, com conferência da impressão SHA-256, no Windows, com os arquivos portáteis (Linux, FreeBSD, OpenBSD, Alpine), com a AppImage e com o aplicativo para macOS (os pacotes .deb, .rpm, Arch, Slackware são atualizados pelo gerenciador de pacotes), e aviso de arquivos faltando; novos pacotes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botão CORRIGIR para corrigir o locator de uma estação no CALL3.TXT; Distância e Dgrd com a Dgrd clássica em 144 MHz, enquanto a Dgrd por banda fica em DGRD por frequência; Meu horizonte com os retângulos violeta de Abóbada celeste e o momento tirado da tabela de planejamento; Estações para testar com o momento da tabela, barra de rolagem e exclusão das estações do próprio país (cty.dat); ganho das yagis pela tabela de DL6WU (G3SEK), com a fórmula atribuída a W8IO só abaixo de 10 elementos; listas suspensas e caixas numéricas no estilo do YA-MS; transverters de 144 MHz no manual.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -53914,6 +53972,8 @@ namespace LunaCalc
             "YAEC ดาวน์โหลดแพ็กเกจใหม่จาก GitHub ตรวจสอบลายนิ้วมือของแพ็กเกจ และแทนที่ไฟล์ของตัวเอง เวอร์ชันใหม่จะเริ่มทำงานในการเปิดครั้งถัดไป ข้อมูลของคุณยังอยู่ที่เดิม",
             "ติดตั้ง YAEC {0} แล้ว: เวอร์ชันใหม่จะเริ่มทำงานในการเปิดครั้งถัดไป",
             "ไม่สามารถเขียนไฟล์ลงในโฟลเดอร์ของโปรแกรมได้",
+            "ระยะห่างและอัตราขยายจากตาราง DL6WU ที่ G3SEK นำเสนอ (The VHF/UHF DX Book, RSGB, บทที่ 7): ตัวสะท้อน 0.2 λ ไดเรกเตอร์ตัวแรก 0.075 λ แล้วเพิ่มขึ้นจนถึง 0.4 λ อัตราขยายเป็น dBd + 2.15 ตารางเริ่มที่ 10 อิลิเมนต์ ต่ำกว่านั้นใช้สูตร G = 7.773·log(L/λ) + 11.43 ที่อ้างว่าเป็นของ W8IO ซึ่งยังไม่พบแหล่งที่มา (ช่วงที่ใช้ได้ทั้งคู่ต่างกันไม่เกิน 0.1 dB) สายอากาศที่ไม่ใช่แบบ DL6WU อาจต่างออกไป",
+            "1.9.1 - อัปเดตอัตโนมัติจาก GitHub พร้อมตรวจลายนิ้วมือ SHA-256 บน Windows, ไฟล์บีบอัดแบบพกพา (Linux, FreeBSD, OpenBSD, Alpine), AppImage และแอป macOS (แพ็กเกจ .deb, .rpm, Arch, Slackware อัปเดตด้วยตัวจัดการแพ็กเกจ) และแจ้งเตือนไฟล์ที่หายไป; แพ็กเกจใหม่สำหรับ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; ปุ่ม แก้ไข สำหรับแก้โลเคเตอร์ของสถานีใน CALL3.TXT; ระยะทางและ Dgrd ใช้ Dgrd แบบดั้งเดิมที่ 144 MHz ส่วน Dgrd ตามย่านความถี่ยังอยู่ใน DGRD ตามความถี่; ขอบฟ้าของฉัน มีกรอบสีม่วงจาก ทรงกลมฟ้า และเวลาที่นำมาจากตารางวางแผน; สถานีที่ควรลอง ใช้เวลาจากตาราง มีแถบเลื่อน และตัดสถานีในประเทศของตนออกได้ (cty.dat); อัตราขยายยากิจากตาราง DL6WU (G3SEK) ใช้สูตรที่อ้างว่าเป็นของ W8IO เฉพาะต่ำกว่า 10 อิลิเมนต์; รายการแบบเลื่อนลงและช่องตัวเลขแบบ YA-MS; ทรานสเวอร์เตอร์ 144 MHz ในคู่มือ",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -55655,6 +55715,8 @@ namespace LunaCalc
             "YAEC 從 GitHub 下載新套件，核對其指紋並取代自身檔案；新版本在下次啟動時生效。您的資料保持原位。",
             "YAEC {0} 已安裝：新版本在下次啟動時生效。",
             "無法將檔案寫入程式資料夾。",
+            "間距與增益取自 G3SEK 刊載的 DL6WU 表（The VHF/UHF DX Book, RSGB，第 7 章）：反射器 0.2 λ，第一導向器 0.075 λ，之後逐漸增加到 0.4 λ；增益為 dBd + 2.15。該表從 10 元件開始；少於 10 元件時使用歸於 W8IO 的公式 G = 7.773·log(L/λ) + 11.43，但未找到其出處（兩者都適用時最多相差 0.1 dB）。非 DL6WU 天線可能有所不同。",
+            "1.9.1 - 從 GitHub 自動更新並核對 SHA-256 指紋，適用於 Windows、可攜式封存檔（Linux、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 應用程式（.deb, .rpm, Arch, Slackware 套件以套件管理員更新），並提示缺少的檔案；新增套件：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；更正 按鈕，用於修正 CALL3.TXT 中某電台的定位碼；距離與 Dgrd 使用 144 MHz 的傳統 Dgrd，按波段的 Dgrd 保留在 按頻率 DGRD；我的地平線 加入 天穹 的紫色框，並從規劃表取得計算時刻；值得嘗試的電台 採用表格中的時刻，增加捲軸，可排除本國電台（cty.dat）；八木天線增益取自 DL6WU 表（G3SEK），僅在少於 10 元件時使用歸於 W8IO 的公式；下拉清單和數字框採用 YA-MS 風格；手冊加入 144 MHz 轉頻器。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -57396,6 +57458,8 @@ namespace LunaCalc
             "YAEC pobiera nowy pakiet z GitHub, sprawdza jego odcisk i zastępuje własne pliki; nowa wersja uruchomi się przy następnym starcie. Twoje dane zostają na miejscu.",
             "YAEC {0} jest zainstalowany: nowa wersja uruchomi się przy następnym starcie.",
             "Nie udało się zapisać plików w folderze programu.",
+            "Odstępy i zyski z tabeli DL6WU podanej przez G3SEK (The VHF/UHF DX Book, RSGB, rozdz. 7): reflektor 0,2 λ, pierwszy direktor 0,075 λ, dalej rosnąco do 0,4 λ; zysk w dBd + 2,15. Tabela zaczyna się od 10 elementów: poniżej stosuje się wzór G = 7,773·log(L/λ) + 11,43 przypisywany W8IO, którego źródła nie znaleziono (tam, gdzie obowiązują oba, różnią się najwyżej o 0,1 dB). Anteny inne niż DL6WU mogą się różnić.",
+            "1.9.1 - Automatyczna aktualizacja z GitHub ze sprawdzeniem odcisku SHA-256 w Windows, dla archiwów przenośnych (Linux, FreeBSD, OpenBSD, Alpine), AppImage i aplikacji macOS (pakiety .deb, .rpm, Arch, Slackware aktualizuje menedżer pakietów) oraz ostrzeżenie o brakujących plikach; nowe pakiety dla Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; przycisk POPRAW do poprawienia lokatora stacji w CALL3.TXT; Odległość i Dgrd z klasyczną Dgrd na 144 MHz, a Dgrd według pasm zostaje w DGRD według częstotliwości; Mój horyzont z fioletowymi ramkami z Sklepienie niebieskie i chwilą wziętą z tabeli planowania; Stacje do spróbowania z chwilą z tabeli, paskiem przewijania i wykluczeniem stacji z własnego kraju (cty.dat); zysk anten Yagi z tabeli DL6WU (G3SEK), wzór przypisywany W8IO tylko poniżej 10 elementów; listy rozwijane i pola liczbowe w stylu YA-MS; transwertery 144 MHz w podręczniku.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -59137,6 +59201,8 @@ namespace LunaCalc
             "YAEC stáhne nový balíček z GitHubu, ověří jeho otisk a nahradí své soubory; nová verze se spustí při příštím spuštění. Vaše data zůstávají tam, kde jsou.",
             "YAEC {0} je nainstalován: nová verze se spustí při příštím spuštění.",
             "Soubory se nepodařilo zapsat do složky programu.",
+            "Rozestupy a zisky z tabulky DL6WU uvedené G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, první direktor 0,075 λ, dále rostoucí až na 0,4 λ; zisk v dBd + 2,15. Tabulka začíná od 10 prvků: pod tím se používá vzorec G = 7,773·log(L/λ) + 11,43 připisovaný W8IO, jehož zdroj se nepodařilo najít (kde platí oba, liší se nejvýše o 0,1 dB). Antény jiné než DL6WU se mohou lišit.",
+            "1.9.1 - Automatická aktualizace z GitHubu s ověřením otisku SHA-256 ve Windows, u přenosných archivů (Linux, FreeBSD, OpenBSD, Alpine), u AppImage a aplikace pro macOS (balíčky .deb, .rpm, Arch, Slackware aktualizuje správce balíčků) a upozornění na chybějící soubory; nové balíčky pro Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačítko OPRAVIT k opravě lokátoru stanice v CALL3.TXT; Vzdálenost a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podle pásem zůstává v DGRD podle kmitočtu; Můj obzor s fialovými rámečky z Nebeská klenba a okamžikem z plánovací tabulky; Stanice k vyzkoušení s okamžikem z tabulky, posuvníkem a vyloučením stanic vlastní země (cty.dat); zisk antén Yagi z tabulky DL6WU (G3SEK), vzorec připisovaný W8IO jen pod 10 prvků; rozbalovací seznamy a číselná pole ve stylu YA-MS; transvertory pro 144 MHz v příručce.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -60878,6 +60944,8 @@ namespace LunaCalc
             "YAEC descarcă noul pachet de pe GitHub, îi verifică amprenta și își înlocuiește fișierele; noua versiune pornește la următoarea lansare. Datele tale rămân unde sunt.",
             "YAEC {0} este instalat: noua versiune pornește la următoarea lansare.",
             "Fișierele nu au putut fi scrise în dosarul programului.",
+            "Distanțele și câștigurile din tabelul DL6WU prezentat de G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): reflector 0,2 λ, primul director 0,075 λ, apoi crescând până la 0,4 λ; câștigul în dBd + 2,15. Tabelul începe de la 10 elemente: sub acest număr se folosește formula G = 7,773·log(L/λ) + 11,43 atribuită lui W8IO, a cărei sursă nu a fost găsită (unde se aplică ambele, diferă cu cel mult 0,1 dB). Antenele care nu sunt DL6WU pot diferi.",
+            "1.9.1 - Actualizare automată de pe GitHub, cu verificarea amprentei SHA-256, pe Windows, cu arhivele portabile (Linux, FreeBSD, OpenBSD, Alpine), cu AppImage și cu aplicația macOS (pachetele .deb, .rpm, Arch, Slackware se actualizează cu managerul de pachete), și avertizare pentru fișierele lipsă; pachete noi pentru Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; butonul CORECTEAZĂ pentru corectarea locatorului unei stații în CALL3.TXT; Distanță și Dgrd cu Dgrd clasic la 144 MHz, iar Dgrd pe benzi rămâne în DGRD după frecvență; Orizontul meu cu chenarele violet din Bolta cerească și momentul luat din tabelul de planificare; Stații de încercat cu momentul din tabel, bară de derulare și excluderea stațiilor din propria țară (cty.dat); câștigul antenelor Yagi din tabelul DL6WU (G3SEK), formula atribuită lui W8IO doar sub 10 elemente; liste derulante și câmpuri numerice în stilul YA-MS; transvertere de 144 MHz în manual.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -62619,6 +62687,8 @@ namespace LunaCalc
             "Το YAEC κατεβάζει το νέο πακέτο από το GitHub, ελέγχει το αποτύπωμά του και αντικαθιστά τα δικά του αρχεία· η νέα έκδοση ξεκινά στην επόμενη εκκίνηση. Τα δεδομένα σας μένουν στη θέση τους.",
             "Το YAEC {0} εγκαταστάθηκε: η νέα έκδοση ξεκινά στην επόμενη εκκίνηση.",
             "Δεν ήταν δυνατή η εγγραφή των αρχείων στον φάκελο του προγράμματος.",
+            "Αποστάσεις και κέρδη από τον πίνακα DL6WU που παραθέτει ο G3SEK (The VHF/UHF DX Book, RSGB, κεφ. 7): ανακλαστήρας 0,2 λ, πρώτος κατευθυντήρας 0,075 λ, έπειτα αυξανόμενα έως 0,4 λ· κέρδος σε dBd + 2,15. Ο πίνακας ξεκινά από 10 στοιχεία: κάτω από αυτά χρησιμοποιείται ο τύπος G = 7,773·log(L/λ) + 11,43 που αποδίδεται στον W8IO, για τον οποίο δεν βρέθηκε πηγή (όπου ισχύουν και τα δύο, διαφέρουν το πολύ 0,1 dB). Κεραίες που δεν είναι DL6WU μπορεί να διαφέρουν.",
+            "1.9.1 - Αυτόματη ενημέρωση από το GitHub με έλεγχο του αποτυπώματος SHA-256 στα Windows, στα φορητά αρχεία (Linux, FreeBSD, OpenBSD, Alpine), στο AppImage και στην εφαρμογή macOS (τα πακέτα .deb, .rpm, Arch, Slackware ενημερώνονται με τον διαχειριστή πακέτων), και προειδοποίηση για αρχεία που λείπουν· νέα πακέτα για Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage· κουμπί ΔΙΟΡΘΩΣΗ για διόρθωση του locator ενός σταθμού στο CALL3.TXT· Απόσταση και Dgrd με το κλασικό Dgrd στα 144 MHz, ενώ το Dgrd ανά μπάντα μένει στο DGRD ανά συχνότητα· Ο ορίζοντάς μου με τα μοβ πλαίσια του Ουράνιος θόλος και τη στιγμή από τον πίνακα προγραμματισμού· Σταθμοί για δοκιμή με τη στιγμή του πίνακα, γραμμή κύλισης και εξαίρεση των σταθμών της δικής σας χώρας (cty.dat)· κέρδος κεραιών Yagi από τον πίνακα DL6WU (G3SEK), ο τύπος που αποδίδεται στον W8IO μόνο κάτω από 10 στοιχεία· αναπτυσσόμενες λίστες και αριθμητικά πεδία σε στιλ YA-MS· μετατροπείς 144 MHz στο εγχειρίδιο.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -64360,6 +64430,8 @@ namespace LunaCalc
             "A YAEC letölti az új csomagot a GitHubról, ellenőrzi az ujjlenyomatát, és lecseréli a saját fájljait; az új verzió a következő indításkor indul. Az adatai a helyükön maradnak.",
             "A YAEC {0} telepítve: az új verzió a következő indításkor indul.",
             "A fájlokat nem sikerült a program mappájába írni.",
+            "A távolságok és nyereségek a G3SEK által közölt DL6WU-táblázatból (The VHF/UHF DX Book, RSGB, 7. fej.): reflektor 0,2 λ, első direktor 0,075 λ, majd növekvően 0,4 λ-ig; nyereség dBd + 2,15. A táblázat 10 elemtől indul: alatta a W8IO-nak tulajdonított G = 7,773·log(L/λ) + 11,43 képletet használjuk, amelynek forrását nem találtuk (ahol mindkettő érvényes, legfeljebb 0,1 dB az eltérés). A nem DL6WU antennák eltérhetnek.",
+            "1.9.1 - Automatikus frissítés a GitHubról az SHA-256 ujjlenyomat ellenőrzésével Windowson, a hordozható archívumoknál (Linux, FreeBSD, OpenBSD, Alpine), az AppImage-nél és a macOS-alkalmazásnál (a(z) .deb, .rpm, Arch, Slackware csomagokat a csomagkezelő frissíti), valamint figyelmeztetés a hiányzó fájlokra; új csomagok: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; JAVÍTÁS gomb egy állomás lokátorának javítására a CALL3.TXT-ben; Távolság és Dgrd a klasszikus Dgrd-vel 144 MHz-en, a sávonkénti Dgrd marad a(z) DGRD frekvenciánként fülön; Az én horizontom a(z) Égbolt lila kereteivel és a tervezési táblázatból vett időponttal; Kipróbálandó állomások a táblázat időpontjával, görgetősávval és a saját ország állomásainak kizárásával (cty.dat); Yagi-nyereség a DL6WU-táblázatból (G3SEK), a W8IO-nak tulajdonított képlet csak 10 elem alatt; legördülő listák és számmezők YA-MS-stílusban; 144 MHz-es transzverterek a kézikönyvben.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -66101,6 +66173,8 @@ namespace LunaCalc
             "YAEC stiahne nový balík z GitHubu, overí jeho odtlačok a nahradí svoje súbory; nová verzia sa spustí pri ďalšom spustení. Vaše údaje zostávajú tam, kde sú.",
             "YAEC {0} je nainštalovaný: nová verzia sa spustí pri ďalšom spustení.",
             "Súbory sa nepodarilo zapísať do priečinka programu.",
+            "Rozostupy a zisky z tabuľky DL6WU uvedenej G3SEK (The VHF/UHF DX Book, RSGB, kap. 7): reflektor 0,2 λ, prvý direktor 0,075 λ, ďalej rastúce až na 0,4 λ; zisk v dBd + 2,15. Tabuľka začína od 10 prvkov: pod tým sa používa vzorec G = 7,773·log(L/λ) + 11,43 pripisovaný W8IO, ktorého zdroj sa nenašiel (kde platia oba, líšia sa najviac o 0,1 dB). Antény iné ako DL6WU sa môžu líšiť.",
+            "1.9.1 - Automatická aktualizácia z GitHubu s overením odtlačku SHA-256 vo Windows, pri prenosných archívoch (Linux, FreeBSD, OpenBSD, Alpine), pri AppImage a aplikácii pre macOS (balíky .deb, .rpm, Arch, Slackware aktualizuje správca balíkov) a upozornenie na chýbajúce súbory; nové balíky pre Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačidlo OPRAVIŤ na opravu lokátora stanice v CALL3.TXT; Vzdialenosť a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podľa pásiem zostáva v DGRD podľa kmitočtu; Môj obzor s fialovými rámčekmi z Nebeská klenba a okamihom z plánovacej tabuľky; Stanice na vyskúšanie s okamihom z tabuľky, posuvníkom a vylúčením staníc vlastnej krajiny (cty.dat); zisk antén Yagi z tabuľky DL6WU (G3SEK), vzorec pripisovaný W8IO len pod 10 prvkov; rozbaľovacie zoznamy a číselné polia v štýle YA-MS; transvertory pre 144 MHz v príručke.",
         };
     }
 
@@ -70726,8 +70800,23 @@ namespace LunaCalc
             for (int i = 0; i < n - 2; i++) l += i < Dl6wuPassi.Length ? Dl6wuPassi[i] : 0.4;
             return l;
         }
-        // guadagno (dBi) dalla lunghezza del boom: G = 7,773·log(L/λ) + 11,43 (curva DL6WU riportata da W8IO)
-        static double GuadagnoDl6wu(int n) { return 7.773 * Math.Log10(Math.Max(0.2, BoomDl6wu(n))) + 11.43; }
+        // Guadagno approssimato delle yagi DL6WU in dBd, per numero di direttori (8…15, 20, 25, 30): tabella «Element spacings
+        // for DL6WU long-yagis» in I. White G3SEK (a cura di), The VHF/UHF DX Book, RSGB, cap. 7 «DL6WU Yagi Designs».
+        static readonly int[] Dl6wuDir = { 8, 9, 10, 11, 12, 13, 14, 15, 20, 25, 30 };
+        static readonly double[] Dl6wuDbd = { 11.9, 12.4, 12.8, 13.2, 13.6, 14.0, 14.3, 14.6, 15.8, 16.6, 17.3 };
+        // Formula attribuita a W8IO, senza fonte verificata: G = 7,773·log(L/λ) + 11,43 dBi (riproduce la tabella entro 0,1 dB)
+        static double GuadagnoW8io(int n) { return 7.773 * Math.Log10(Math.Max(0.2, BoomDl6wu(n))) + 11.43; }
+        // Tabella DL6WU (G3SEK), interpolata tra le righe, dove c'è (da 10 a 32 elementi); fuori dalla tabella la formula
+        static bool InTabellaDl6wu(int n) { return n - 2 >= Dl6wuDir[0] && n - 2 <= Dl6wuDir[Dl6wuDir.Length - 1]; }
+        static double GuadagnoTabellaDl6wu(int n)
+        {
+            int d = n - 2;
+            for (int i = 0; i < Dl6wuDir.Length - 1; i++)
+                if (d >= Dl6wuDir[i] && d <= Dl6wuDir[i + 1])
+                    return Dl6wuDbd[i] + (Dl6wuDbd[i + 1] - Dl6wuDbd[i]) * (d - Dl6wuDir[i]) / (Dl6wuDir[i + 1] - Dl6wuDir[i]) + 2.15;
+            return double.NaN;
+        }
+        static double GuadagnoDl6wu(int n) { return InTabellaDl6wu(n) ? GuadagnoTabellaDl6wu(n) : GuadagnoW8io(n); }
 
         // impianto dichiarato nell'intestazione della chat: "4X14HV/1K", "2X10H750", "17H/600", "4X13H/KW"...
         static void LeggiImpianto(string imp, StazProva s)
@@ -71383,24 +71472,26 @@ namespace LunaCalc
                 // ----- dagli elementi al guadagno
                 {
                     int[] els = { 7, 9, 11, 13, 14, 17, 19, 22 };
-                    string nota = Lang.T("Spaziature DL6WU (W4RNL): riflettore 0,2 λ, primo direttore 0,075 λ, poi in crescita fino a 0,4 λ. G = 7,773·log(L/λ) + 11,43 (W8IO). Sotto i 2 λ di boom il valore è indicativo; antenne non DL6WU possono differire.");
+                    string nota = Lang.T("Spaziature e guadagni della tabella di DL6WU riportata da G3SEK (The VHF/UHF DX Book, RSGB, cap. 7): riflettore 0,2 λ, primo direttore 0,075 λ, poi in crescita fino a 0,4 λ; guadagno in dBd + 2,15. La tabella parte da 10 elementi: sotto si usa la formula G = 7,773·log(L/λ) + 11,43 attribuita a W8IO, di cui non è stata trovata la fonte (dove si sovrappongono le due differiscono di 0,1 dB al massimo). Antenne non DL6WU possono differire.");
                     float hn = g.MeasureString(nota, fp, (int)(wDx - S(32))).Height;
                     float rh2 = S(22);
                     RectangleF r = new RectangleF(xr, yr, wDx, S(70) + (els.Length + 1) * rh2 + hn);
                     Scheda(g, r, Color.Empty);
                     Testo(g, Spaziato(Lang.T("DAGLI ELEMENTI AL GUADAGNO (DL6WU, 144 MHz)")), ft, titCol, new RectangleF(r.Left + S(16), r.Top + S(12), r.Width - S(30), S(40)), StringAlignment.Near, StringAlignment.Near);
                     float yq = r.Top + S(52), wi = r.Width - S(32);
-                    string[] th = { Lang.T("Elementi"), Lang.T("Boom (m)"), Lang.T("Guadagno (dBi)") };
-                    Testo(g, th[0], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.33f, rh2), StringAlignment.Near, StringAlignment.Center);
-                    Testo(g, th[1], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.62f, rh2), StringAlignment.Far, StringAlignment.Center);
-                    Testo(g, th[2], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
+                    string[] th = { Lang.T("Elementi"), Lang.T("Boom (m)"), "DL6WU dBi", "W8IO dBi" };
+                    Testo(g, th[0], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.30f, rh2), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, th[1], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.50f, rh2), StringAlignment.Far, StringAlignment.Center);
+                    Testo(g, th[2], fpb, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.76f, rh2), StringAlignment.Far, StringAlignment.Center);
+                    Testo(g, th[3], fpb, Tema.Muted, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
                     yq += rh2;
                     foreach (int n in els)
                     {
                         using (Pen pl = new Pen(Tema.Linea)) g.DrawLine(pl, r.Left + S(16), yq, r.Right - S(16), yq);
-                        Testo(g, n.ToString(ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.33f, rh2), StringAlignment.Near, StringAlignment.Center);
-                        Testo(g, (BoomDl6wu(n) * 299.792458 / 144.0).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.62f, rh2), StringAlignment.Far, StringAlignment.Center);
-                        Testo(g, GuadagnoDl6wu(n).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, n.ToString(ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.30f, rh2), StringAlignment.Near, StringAlignment.Center);
+                        Testo(g, (BoomDl6wu(n) * 299.792458 / 144.0).ToString("0.0", ci), fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.50f, rh2), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, InTabellaDl6wu(n) ? GuadagnoTabellaDl6wu(n).ToString("0.0", ci) : "—", fp, Tema.Fore, new RectangleF(r.Left + S(16), yq, wi * 0.76f, rh2), StringAlignment.Far, StringAlignment.Center);
+                        Testo(g, GuadagnoW8io(n).ToString("0.0", ci), fp, Tema.Muted, new RectangleF(r.Left + S(16), yq, wi, rh2), StringAlignment.Far, StringAlignment.Center);
                         yq += rh2;
                     }
                     using (Brush bm = new SolidBrush(Tema.Muted)) g.DrawString(nota, fp, bm, new RectangleF(r.Left + S(16), yq + S(8), wi, hn + 2));
@@ -76494,7 +76585,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.9";
+        public const string Versione = "1.9.1";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -79677,6 +79768,7 @@ namespace LunaCalc
             Lang.T("1.7 - Otto lingue nuove: portoghese brasiliano, thailandese, cinese tradizionale, polacco, ceco, rumeno, greco e ungherese (36 in tutto), con i manuali e i LEGGIMI; nel Budget EME yagi e nel Budget EME dischi il calcolo dell'eco della propria stazione (io trasmetto e ricevo il mio eco); disco a primo fuoco oppure offset (W2IMU); a 1296 MHz con i dischi la perdita della polarizzazione circolare degli illuminatori reali (KA1GT); nel Controllo dei calcoli la scelta tra Budget EME yagi e Budget EME dischi; formule della DGRD per frequenza scritte come in un editor di equazioni; manuale: rotazione di Faraday a 1296 MHz secondo ITU-R P.531, depolarizzazione a 23 cm (Hagfors) e polarizzazione circolare in 23 cm."),
             Lang.T("1.8 - Nuova lingua slovacca (37 in tutto), con i manuali, il LEGGIMI e la licenza; larghezza del fascio unica in tutto il programma: 0,93·√(41253/G) per le yagi (regola di Kraus corretta con le simulazioni NEC di W4RNL, come in YA-MS) e 70·λ/D per i dischi (IZ0JNY), al posto di √(32000/G) senza fonte nella DGRD per frequenza; manuale aggiornato con la nuova formula e l'esempio del puntamento; su macOS l'avvio apre da solo XQuartz, scrive la versione di Mono nel registro e avvisa se YAEC non parte; presentazione del README anche in portoghese, turco, ceco, slovacco, cinese, giapponese e coreano; traduzioni corrette in thailandese, rumeno, greco, portoghese brasiliano, polacco, ceco e ungherese."),
             Lang.T("1.9 - Nuova linguetta Il mio orizzonte (In diretta): orizzonte dal terreno calcolato dai dati SRTM1 con curvatura terrestre e rifrazione, sullo sfondo della Volta celeste con una delle tre colorazioni, percorso della Luna, ostacoli principali con i nomi di OpenStreetMap e minuti di Luna persi; casella per usare il terreno come elevazione minima in tutto il programma; mappa del rumore locale secondo NJ9R, con ⚠ nelle ore in cui la Luna è in una direzione rumorosa; nuova linguetta Stazioni da provare (Pianificazione), idea di Matteo IW5DHN: le stazioni attive della chat N0UK ordinate con un indice da 0 a 100; caselle numeriche con le frecce affiancate, linguette a pillola e tre nuovi schemi di colori presi da IP-TRX-CTRL."),
+            Lang.T("1.9.1 - Aggiornamento automatico da GitHub, con controllo dell'impronta SHA-256, su Windows, con gli archivi portatili (Linux, FreeBSD, OpenBSD, Alpine), con l'AppImage e con l'app per macOS (i pacchetti .deb, .rpm, Arch e Slackware si aggiornano con il gestore dei pacchetti), e avviso dei file mancanti; nuovi pacchetti per Windows ARM64, Fedora e openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS a 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686 e AppImage; pulsante CORREGGI per correggere il locator di una stazione nel CALL3.TXT; Distanza e Dgrd con la Dgrd classica a 144 MHz, mentre la Dgrd per banda resta in DGRD per frequenza; Il mio orizzonte con i riquadri viola della Volta celeste e il momento preso dalla tabella di pianificazione; Stazioni da provare con il momento della tabella, la barra di scorrimento e l'esclusione delle stazioni del proprio paese (cty.dat); guadagno delle yagi dalla tabella di DL6WU (G3SEK), con la formula attribuita a W8IO solo sotto i 10 elementi; tendine e caselle numeriche nello stile di YA-MS; transverter per i 144 MHz nel manuale."),
         };
 
                     _AboutVersioniLg = Lang.Idx;

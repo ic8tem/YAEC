@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 autors: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Kalkulators radioamatieriem, kuri strādā EME (Zeme–Mēness–Zeme) režīmā
 Pirmkods un lejupielāde: https://github.com/ic8tem/YAEC/releases
 
 INSTALĒŠANA – WINDOWS
-1. Lejupielādējiet YAEC-1.9-win-x64-setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
+1. Lejupielādējiet YAEC-1.9.1-win-x64-setup.exe no lapas Releases un palaidiet to. Tas instalē YAEC mapē Dokumenti\YAEC bez administratora tiesībām, ar saīsnēm izvēlnē Sākt un uz darbvirsmas, kā arī ar atinstalēšanas programmu.
 2. Ja parādās SmartScreen brīdinājums: "More info" → "Run anyway".
-3. Bez instalēšanas: atarhivējiet YAEC-1.9-win-x64-portatile.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
+3. Bez instalēšanas: atarhivējiet YAEC-1.9.1-win-x64-portatile.zip mapē, kurā varat rakstīt, un palaidiet YAEC.exe.
 
 INSTALĒŠANA – LINUX
 YAEC darbojas ar Mono — brīvo .NET izpildlaika vidi.
-- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.9_amd64.deb un instalējiet to ar komandu
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: lejupielādējiet yaec_1.9.1_amd64.deb un instalējiet to ar komandu
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (tiek instalēts arī Mono). YAEC palaiž no lietotņu izvēlnes vai ar komandu "yaec".
-- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz) un palaidiet ./install.sh.
-- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
+- Citi distributīvi: instalējiet Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), atarhivējiet YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) un palaidiet ./install.sh.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 INSTALĒŠANA – macOS (eksperimentāli)
 1. Instalējiet Mono operētājsistēmai macOS (https://www.mono-project.com/download/stable/) un XQuartz (https://www.xquartz.org).
-2. Atveriet YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel) un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
+2. Atveriet YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) un ievelciet YAEC mapē Applications. Pirmajā reizē: ar peles labo pogu uz YAEC → Open (lietotne nav parakstīta ar Apple parakstu).
 
 AUTOMĀTISKĀ ATJAUNINĀŠANA
 Palaišanas brīdī YAEC pārbauda GitHub, vai ir jauna versija, un atjaunina sevi pats (Windows, pārnēsājamie .tar.gz arhīvi, AppImage, macOS lietotne), pārbaudot SHA-256 nospiedumu. Pakotnes .deb, .rpm, Arch, Slackware atjaunina ar sistēmas pakotņu pārvaldnieku: YAEC paziņo par jauno versiju un atver GitHub lapu.
 
 LEJUPIELĀDĒTO FAILU PĀRBAUDE (SHA-256)
 Katrā release ir fails SHA256SUMS.txt ar katras pakotnes SHA-256 jaucējvērtību. Salīdziniet to ar lejupielādētā faila jaucējvērtību:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ja abas vērtības atšķiras, neinstalējiet failu: lejupielādējiet to vēlreiz.
@@ -43,6 +43,7 @@ Kļūdas, labāki dati, tulkojumi: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERSIJU VĒSTURE
 Versijas pirms 1.0 sauc par beta versijām.
+- 1.9.1 - Automātiska atjaunināšana no GitHub ar SHA-256 nospieduma pārbaudi operētājsistēmā Windows, pārnēsājamajiem arhīviem (Linux, FreeBSD, OpenBSD, Alpine), AppImage un macOS lietotnei (pakotnes .deb, .rpm, Arch, Slackware atjaunina ar pakotņu pārvaldnieku) un brīdinājums par trūkstošām datnēm; jaunas pakotnes: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; poga LABOT stacijas lokatora labošanai CALL3.TXT; Attālums un Dgrd ar klasisko Dgrd pie 144 MHz, bet Dgrd pa joslām paliek DGRD pēc frekvences; Mans horizonts ar Debess velve violetajiem rāmjiem un brīdi no plānošanas tabulas; Stacijas, ko izmēģināt ar tabulas brīdi, ritjoslu un savas valsts staciju izslēgšanu (cty.dat); Jagi pastiprinājums no DL6WU tabulas (G3SEK), W8IO piedēvētā formula tikai zem 10 elementiem; nolaižamie saraksti un skaitļu lauki YA-MS stilā; 144 MHz transverteri rokasgrāmatā.
 - 1.9 - Jauna cilne Mans horizonts (Tiešraide): reljefa horizonts, aprēķināts no SRTM1 datiem, ņemot vērā Zemes izliekumu un refrakciju, uz Debess velve fona vienā no trim krāsu skalām, Mēness ceļš, galvenie šķēršļi ar OpenStreetMap nosaukumiem un zaudētās Mēness minūtes; izvēles rūtiņa, lai visā programmā izmantotu reljefu kā minimālo elevāciju; vietējā trokšņa karte pēc NJ9R ar ⚠ stundās, kad Mēness ir trokšņainā virzienā; jauna cilne Stacijas, ko izmēģināt (Plānošana), Matteo IW5DHN ideja: N0UK tērzētavas aktīvās stacijas, sakārtotas pēc indeksa no 0 līdz 100; skaitļu lauki ar blakus novietotām bultiņām, tabletes formas cilnes un trīs jaunas krāsu shēmas no IP-TRX-CTRL.
 - 1.8 - Jauna valoda – slovāku (kopā 37), ar rokasgrāmatām, README un licenci; vienots kūļa platums visā programmā: jagi antenām 0,93·√(41253/G) (Krausa likums, koriģēts ar W4RNL NEC simulācijām, kā YA-MS) un šķīvjiem 70·λ/D (IZ0JNY), bezavota √(32000/G) vietā DGRD pēc frekvences; rokasgrāmata atjaunināta ar jauno formulu un tēmēšanas piemēru; macOS palaidējs pats atver XQuartz, ieraksta Mono versiju žurnālā un brīdina, ja YAEC nestartē; README prezentācija arī portugāļu, turku, čehu, slovāku, ķīniešu, japāņu un korejiešu valodā; laboti tulkojumi taju, rumāņu, grieķu, Brazīlijas portugāļu, poļu, čehu un ungāru valodā.
 - 1.7 - Astoņas jaunas valodas: Brazīlijas portugāļu, taju, tradicionālā ķīniešu, poļu, čehu, rumāņu, grieķu un ungāru (kopā 36), ar rokasgrāmatām un README; cilnēs „EME budžets yagi” un „EME budžets šķīvji” savas stacijas atbalss aprēķins („Es raidu un uztveru savu atbalsi”); primārā fokusa vai ofseta šķīvis (W2IMU); 1296 MHz ar šķīvjiem reālu apstarotāju cirkulārās polarizācijas zudumi (KA1GT); cilnē „Aprēķinu pārbaude” izvēle starp „EME budžets yagi” un „EME budžets šķīvji”; cilnes „DGRD pēc frekvences” formulas uzrakstītas kā formulu redaktorā; rokasgrāmata: Faradeja rotācija 1296 MHz saskaņā ar ITU-R P.531, depolarizācija 23 cm diapazonā (Hagfors) un cirkulārā polarizācija 23 cm diapazonā.

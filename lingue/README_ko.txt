@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9
+﻿YAEC – Yet Another EME Calc 1.9.1
 제작: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 소스 및 다운로드: https://github.com/ic8tem/YAEC/releases
 
 설치 – WINDOWS
-1. Releases 페이지에서 YAEC-1.9-win-x64-setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
+1. Releases 페이지에서 YAEC-1.9.1-win-x64-setup.exe를 다운로드하여 실행합니다. 관리자 권한 없이 YAEC를 문서\YAEC에 설치하며, 시작 메뉴와 바탕 화면에 바로 가기를 만들고 제거 프로그램도 함께 설치합니다.
 2. SmartScreen 경고가 나타나면: "추가 정보" → "실행".
-3. 설치 없이 사용: YAEC-1.9-win-x64-portatile.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
+3. 설치 없이 사용: YAEC-1.9.1-win-x64-portatile.zip을 쓰기 권한이 있는 폴더에 압축 해제하고 YAEC.exe를 실행합니다.
 
 설치 – LINUX
 YAEC는 자유 .NET 런타임인 Mono에서 동작합니다.
-- Debian, Ubuntu, Mint: yaec_1.9_amd64.deb를 다운로드하여 다음 명령으로 설치합니다
-      sudo apt install ./yaec_1.9_amd64.deb
+- Debian, Ubuntu, Mint: yaec_1.9.1_amd64.deb를 다운로드하여 다음 명령으로 설치합니다
+      sudo apt install ./yaec_1.9.1_amd64.deb
   (Mono도 함께 설치됩니다). YAEC는 응용 프로그램 메뉴에서 또는 "yaec" 명령으로 실행합니다.
-- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9-linux-x64-portatile.tar.gz (ARM: YAEC-1.9-linux-arm64-portatile.tar.gz, YAEC-1.9-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9-alpine-x64-portatile.tar.gz, YAEC-1.9-alpine-arm64-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
-- Fedora, openSUSE: yaec-1.9-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9-1-any.pkg.tar.zst · Slackware: yaec-1.9-noarch-1_ic8tem.txz · AppImage: YAEC-1.9-x86_64.AppImage, YAEC-1.9-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9_armhf.deb · Windows ARM64: YAEC-1.9-win-arm64-setup.exe, YAEC-1.9-win-arm64-portatile.zip
+- 기타 배포판: Mono를 설치하고(Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz)의 압축을 푼 뒤 ./install.sh를 실행합니다.
+- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
 
 설치 – macOS (실험적)
 1. macOS용 Mono(https://www.mono-project.com/download/stable/)와 XQuartz(https://www.xquartz.org)를 설치합니다.
-2. YAEC-1.9-osx-arm64.dmg (Apple Silicon) / YAEC-1.9-osx-x64.dmg (Intel)를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
+2. YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel)를 열고 YAEC를 응용 프로그램 폴더로 드래그합니다. 처음 실행할 때: YAEC를 오른쪽 클릭 → 열기 (이 앱은 Apple의 서명을 받지 않았습니다).
 
 자동 업데이트
 YAEC는 시작할 때 GitHub에서 새 버전이 있는지 확인하고 SHA-256 지문을 검증하여 스스로 업데이트합니다(Windows, 휴대용 .tar.gz 압축 파일, AppImage, macOS 앱). .deb, .rpm, Arch, Slackware 패키지는 시스템의 패키지 관리자로 업데이트합니다. YAEC는 새 버전을 알리고 GitHub 페이지를 엽니다.
 
 다운로드한 파일 확인 (SHA-256)
 각 release에는 모든 패키지의 SHA-256 해시가 담긴 SHA256SUMS.txt가 포함되어 있습니다. 다운로드한 파일의 해시와 비교하십시오:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 두 값이 다르면 파일을 설치하지 말고 다시 다운로드하십시오.
@@ -43,6 +43,7 @@ YAEC는 무료입니다. 라이선스 전문은 LICENSE_ko.txt 파일과 프로�
 
 버전 기록
 1.0 이전 버전은 베타라고 부릅니다.
+- 1.9.1 - GitHub에서 자동 업데이트(SHA-256 지문 확인): Windows, 휴대용 압축 파일(Linux, FreeBSD, OpenBSD, Alpine), AppImage, macOS 앱(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트), 빠진 파일 경고; 새 패키지: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT에서 국의 로케이터를 고치는 수정 버튼; 거리와 Dgrd는 144 MHz의 고전적 Dgrd, 대역별 Dgrd는 주파수별 DGRD에 유지; 내 지평선에 하늘 보기의 보라색 상자와 계획 표에서 가져온 시각; 시도해 볼 국에 표의 시각, 스크롤 막대, 자국 국 제외(cty.dat); 야기 이득은 DL6WU 표(G3SEK)에서, W8IO의 것으로 알려진 식은 10소자 미만에서만; 드롭다운과 숫자 상자는 YA-MS 스타일; 매뉴얼에 144 MHz 트랜스버터.
 - 1.9 - 새 탭 내 지평선(실시간): SRTM1 데이터로 지구 곡률과 굴절을 고려해 계산한 지형 지평선을 세 가지 색상 중 하나의 하늘 보기 배경 위에 표시하고, 달의 경로, OpenStreetMap 이름이 붙은 주요 장애물, 잃는 달의 분을 보여 줍니다; 프로그램 전체에서 지형을 최소 앙각으로 쓰는 확인란; NJ9R 방식의 국지 잡음 지도, 달이 잡음이 많은 방향에 있는 시간에 ⚠ 표시; 새 탭 시도해 볼 국(계획), Matteo IW5DHN의 아이디어: N0UK 채팅의 활동 국을 0~100 지수로 정렬; 화살표가 나란히 있는 숫자 상자, 알약 모양 탭, IP-TRX-CTRL에서 가져온 새 색 구성표 세 가지.
 - 1.8 - 슬로바키아어 추가(총 37개), 매뉴얼·README·라이선스 포함. 프로그램 전체에서 빔폭 통일: 야기는 0.93·√(41253/G)(W4RNL의 NEC 시뮬레이션으로 보정한 Kraus 규칙, YA-MS와 동일), 파라볼라는 70·λ/D(IZ0JNY)로, 주파수별 DGRD의 출처 없는 √(32000/G)를 대체. 매뉴얼을 새 공식과 지향 예제로 갱신. macOS에서는 실행기가 XQuartz를 자동으로 열고 Mono 버전을 로그에 기록하며 YAEC가 시작되지 않으면 경고. README 소개를 포르투갈어·터키어·체코어·슬로바키아어·중국어·일본어·한국어로도 제공. 태국어·루마니아어·그리스어·브라질 포르투갈어·폴란드어·체코어·헝가리어 번역 수정.
 - 1.7 - 새 언어 8개: 브라질 포르투갈어, 태국어, 번체 중국어, 폴란드어, 체코어, 루마니아어, 그리스어, 헝가리어(총 36개), 매뉴얼과 README 포함; EME 링크 버짓 야기와 EME 링크 버짓 파라볼라에 자기 국의 에코 계산 추가(내가 송신하고 내 에코를 수신); 1차 초점 또는 오프셋 접시 안테나(W2IMU); 1296 MHz 접시 안테나에서 실제 피드의 원형 편파 손실 반영(KA1GT); 계산 검증에서 EME 링크 버짓 야기와 EME 링크 버짓 파라볼라 중 선택; 주파수별 DGRD의 공식을 수식 편집기처럼 표기; 매뉴얼: ITU-R P.531에 따른 1296 MHz의 패러데이 회전, 23 cm의 편파 소실(Hagfors), 23 cm의 원형 편파.
