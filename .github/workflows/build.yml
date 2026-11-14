@@ -110,7 +110,7 @@ jobs:
       - name: Prova dei pacchetti Arch, AppImage e Slackware (solo informativa)
         continue-on-error: true
         run: |
-          docker run --rm -v "$PWD/dist:/d" archlinux:latest sh -c 'pacman -Sy --noconfirm mono >/dev/null && pacman -U --noconfirm /d/*.pkg.tar.zst >/dev/null && test -f /usr/lib/yaec/YAEC.exe && echo "Arch: pacchetto installato"' || echo "Arch: installazione non riuscita"
+          docker run --rm -v "$PWD/dist:/d" archlinux:latest sh -c 'pacman --disable-sandbox -Syu --noconfirm >/dev/null && pacman --disable-sandbox -U --noconfirm /d/*.pkg.tar.zst >/dev/null && test -f /usr/lib/yaec/YAEC.exe && echo "Arch: pacchetto installato"' || echo "Arch: installazione non riuscita"
           A="$(ls dist/*-x86_64.AppImage)"; chmod +x "$A"; ( cd "$(mktemp -d)" && "$OLDPWD/$A" --appimage-extract >/dev/null && test -x squashfs-root/AppRun && test -f squashfs-root/usr/lib/yaec/YAEC.exe && echo "AppImage: contenuto corretto" ) || echo "AppImage: contenuto non corretto"
           tar -tJf dist/*.txz | grep -q '^usr/lib/yaec/YAEC.exe$' && tar -tJf dist/*.txz | grep -q '^install/slack-desc$' && echo "Slackware: pacchetto corretto" || echo "Slackware: pacchetto non corretto"
       - name: Prova del .rpm su openSUSE e Fedora (solo informativa)

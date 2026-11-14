@@ -16,7 +16,7 @@ jobs:
         run: |
           mkdir d && gh release download "v${{ inputs.versione }}" --repo "${{ github.repository }}" -p 'yaec-*-any.pkg.tar.zst' -D d
           docker run --rm -v "$PWD/d:/d" archlinux:latest bash -c '
-            pacman --disable-sandbox -Sy --noconfirm 2>&1 | tail -2
+            pacman --disable-sandbox -Syu --noconfirm >/dev/null 2>&1; echo aggiornato
             pacman -Si mono 2>&1 | head -5
             pacman --disable-sandbox -U --noconfirm /d/*.pkg.tar.zst 2>&1 | tail -15
             ls -l /usr/lib/yaec /usr/bin/yaec && mono --version | head -1'
