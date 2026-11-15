@@ -6,6 +6,7 @@ All the packages are on the **[Releases](https://github.com/ic8tem/YAEC/releases
 |---|---|---|
 | Windows 64-bit | `YAEC-x.y-win-x64-setup.exe` (installer) or `YAEC-x.y-win-x64-portatile.zip` | nothing (.NET Framework 4 is part of Windows) |
 | Windows 32-bit | `YAEC-x.y-win-x86-setup.exe` (installer) or `YAEC-x.y-win-x86-portatile.zip` | nothing |
+| Windows 7 SP1 ¹ | the same packages as Windows 64-bit and 32-bit | .NET Framework 4.8 (free from Microsoft) and the Windows updates that enable TLS 1.2, needed for the downloads from GitHub (updates, cty.dat, terrain data) |
 | Windows ARM64 (PC with Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe` (installer) or `YAEC-x.y-win-arm64-portatile.zip` | nothing (same AnyCPU program; .NET Framework 4.8.1 runs it natively on ARM64) |
 | Debian, Ubuntu, Mint | `yaec_x.y_amd64.deb` | Mono (installed automatically by apt) |
 | Raspberry Pi (Raspberry Pi OS 64-bit, Pi 4 and 5) | `yaec_x.y_arm64.deb` | Mono (installed automatically by apt) |

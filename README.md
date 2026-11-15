@@ -37,6 +37,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (with .NET Framework 4.8 and the TLS 1.2 updates) ¹ | the same packages as Windows 64 and 32 bit |
 | **Windows ARM64** (PC with Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -73,6 +74,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (con il .NET Framework 4.8 e gli aggiornamenti per il TLS 1.2) ¹ | gli stessi pacchetti di Windows 64 e 32 bit |
 | **Windows ARM64** (PC con Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -109,6 +111,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (mit .NET Framework 4.8 und den Updates für TLS 1.2) ¹ | dieselben Pakete wie Windows 64 und 32 Bit |
 | **Windows ARM64** (PC mit Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -145,6 +148,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (avec le .NET Framework 4.8 et les mises à jour pour TLS 1.2) ¹ | les mêmes paquets que Windows 64 et 32 bits |
 | **Windows ARM64** (PC avec Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -181,6 +185,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (con .NET Framework 4.8 y las actualizaciones para TLS 1.2) ¹ | los mismos paquetes que Windows de 64 y 32 bits |
 | **Windows ARM64** (PC con Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -217,6 +222,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (com o .NET Framework 4.8 e as atualizações para TLS 1.2) ¹ | os mesmos pacotes do Windows de 64 e 32 bits |
 | **Windows ARM64** (PC com Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -253,6 +259,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (.NET Framework 4.8 ve TLS 1.2 güncellemeleriyle) ¹ | Windows 64 ve 32 bit ile aynı paketler |
 | **Windows ARM64** (Snapdragon'lu PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -289,6 +296,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (s .NET Framework 4.8 a aktualizacemi pro TLS 1.2) ¹ | stejné balíčky jako Windows 64 a 32 bit |
 | **Windows ARM64** (PC se Snapdragonem) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -325,6 +333,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (s .NET Framework 4.8 a aktualizáciami pre TLS 1.2) ¹ | rovnaké balíky ako Windows 64 a 32 bit |
 | **Windows ARM64** (PC so Snapdragonom) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -361,6 +370,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (需 .NET Framework 4.8 和 TLS 1.2 更新) ¹ | 与 Windows 64 位和 32 位相同的软件包 |
 | **Windows ARM64** (Snapdragon PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -397,6 +407,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (.NET Framework 4.8 と TLS 1.2 の更新が必要) ¹ | Windows 64 ビット・32 ビットと同じパッケージ |
 | **Windows ARM64** (Snapdragon 搭載 PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
@@ -433,6 +444,7 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 |---|---|
 | **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
 | **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 7 SP1** (.NET Framework 4.8과 TLS 1.2 업데이트 필요) ¹ | Windows 64비트·32비트와 같은 패키지 |
 | **Windows ARM64** (Snapdragon PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
 | **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
 | **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
