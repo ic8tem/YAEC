@@ -18,6 +18,10 @@ on:
         description: 'Schermate in inglese per il video di presentazione'
         type: boolean
         default: false
+      guida:
+        description: 'Schermate in inglese per la guida video (JN56UE17, LU7MC, 24/11/2026)'
+        type: boolean
+        default: false
       aggiungi_pacchetti:
         description: 'Aggiunge alla release gia esistente (tag vVERSION) i pacchetti che le mancano'
         type: boolean
@@ -439,6 +443,58 @@ jobs:
           git add -A
           git commit -qm "Video screenshots ${GITHUB_SHA::7}"
           git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:video
+      - name: Schermate in inglese per la guida video (solo con l'avvio manuale «guida»)
+        if: github.event.inputs.guida == 'true'
+        run: |
+          sudo apt-get install -y -qq xdotool fonts-noto-core faketime > /dev/null 2>&1 || true
+          fc-cache -f > /dev/null
+          Xvfb :93 -screen 0 1920x1080x24 &
+          export DISPLAY=:93
+          sleep 2
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          mkdir -p guida
+          base() {  # $1 = 1 con il DX LU7MC, 0 senza
+            printf 'lingua=en\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
+            printf 'locator=JN56UE17\nquota=0\norizzonte_raggio=2\norizzonte_vista=0\nterreno=1\n'
+            if [ "$1" = 1 ]; then printf 'dx=1\ndx_locator=FF57OB\ndx_quota=0\ndx_nominativo=LU7MC\n'; else printf 'dx=0\ndx_locator=\ndx_nominativo=\n'; fi
+            printf 'b144_me_p=800\nb144_me_nant=2\nb144_me_gant=14.15\nb144_me_pregain=20\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
+            printf 'b144_dx_p=600\nb144_dx_nant=4\nb144_dx_gant=14.05\nb144_dx_pregain=20\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=20\nb144_dx_lendis=20\n'
+          }
+          scatta() {  # $1 = linguetta, $2 = file, $3 = attesa, $4 = ora locale (Europe/Rome) del 24/11/2026
+            YAEC_LINGUETTA="$1" TZ=Europe/Rome faketime -f "@2026-11-24 $4" mono YAEC.exe &
+            PID=$!
+            sleep 25
+            W=$(xdotool search --name "YAEC" | tail -1)
+            if [ -n "$W" ]; then xdotool windowmove $W 0 0 windowsize $W 1920 1080; fi
+            sleep "$3"; xdotool mousemove 1915 1075 || true; sleep 1
+            import -window root "guida/$2.png" || true
+            kill $PID 2>/dev/null || true; pkill -f YAEC.exe || true; sleep 3
+          }
+          base 0 > "$F"
+          scatta "Live position and +- 24h" g01-live_my_locator 12 "02:30:00"
+          base 1 > "$F"
+          scatta "Live position and +- 24h" g02-live_dx 12 "02:30:00"
+          YAEC_ORIZZONTE=1 scatta "My horizon" g03-my_horizon 240 "02:30:00"
+          scatta "Sky view" g04-sky_view 15 "02:30:00"
+          YAEC_CALCOLA=1 scatta "Distance and Dgrd" g05-distance_dgrd 20 "01:00:00"
+          scatta "DGRD by frequency" g06-dgrd_frequency 25 "02:30:00"
+          YAEC_CALCOLA=1 scatta "Moon position" g07-moon_position 15 "01:00:00"
+          scatta "EME budget Yagi" g08-budget_0230 12 "03:30:00"
+          scatta "EME budget Yagi" g09-budget_0500 12 "06:00:00"
+          scatta "EME budget Yagi" g10-budget_0545 12 "06:45:00"
+          YAEC_CALCOLA=1 scatta "Stations to try" g11-stations_to_try 40 "01:00:00"
+          scatta "USER MANUAL" g12-manual 15 "02:30:00"
+          scatta "THEORY AND TIPS ON EME" g13-theory 15 "02:30:00"
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+          H=$(git config --get http.https://github.com/.extraheader)
+          U=$(git remote get-url origin)
+          cd guida
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Tutorial screenshots ${GITHUB_SHA::7}"
+          git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:guida
       - name: Schermate per il README (solo con [schermate] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[schermate]')
         run: |
