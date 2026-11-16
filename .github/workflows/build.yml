@@ -14,6 +14,10 @@ on:
         description: 'Schermate per gli articoli'
         type: boolean
         default: false
+      video:
+        description: 'Schermate in inglese per il video di presentazione'
+        type: boolean
+        default: false
       aggiungi_pacchetti:
         description: 'Aggiunge alla release gia esistente (tag vVERSION) i pacchetti che le mancano'
         type: boolean
@@ -386,6 +390,55 @@ jobs:
           git add -A
           git commit -qm "Article screenshots ${GITHUB_SHA::7}"
           git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:articolo
+      - name: Schermate in inglese per il video di presentazione (solo con l'avvio manuale «video»)
+        if: github.event.inputs.video == 'true'
+        run: |
+          sudo apt-get install -y -qq xdotool fonts-noto-core faketime > /dev/null 2>&1 || true
+          fc-cache -f > /dev/null
+          Xvfb :94 -screen 0 1920x1080x24 &
+          export DISPLAY=:94
+          sleep 2
+          F="$HOME/.local/share/YAEC/data/impostazioni.txt"
+          mkdir -p video
+          {
+            printf 'lingua=en\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
+            printf 'locator=JN70CN83CL\nquota=62\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
+            printf 'orizzonte_raggio=2\norizzonte_vista=0\nterreno=1\n'
+            printf 'b144_me_p=1000\nb144_me_nant=4\nb144_me_gant=17\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
+            printf 'b144_dx_p=900\nb144_dx_nant=4\nb144_dx_gant=15.4\nb144_dx_pregain=25\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=30\nb144_dx_lendis=30\n'
+          } > "$F"
+          scatta() {  # $1 = linguetta (nome inglese), $2 = file, $3 = attesa in secondi
+            YAEC_LINGUETTA="$1" TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
+            PID=$!
+            sleep 25
+            W=$(xdotool search --name "YAEC" | tail -1)
+            if [ -n "$W" ]; then xdotool windowmove $W 0 0 windowsize $W 1920 1080; fi
+            sleep "$3"; xdotool mousemove 1915 1075 || true; sleep 1
+            import -window root "video/$2.png" || true
+            kill $PID 2>/dev/null || true; pkill -f YAEC.exe || true; sleep 3
+          }
+          scatta "Live position and +- 24h" v01-live 12
+          YAEC_CALCOLA=1 scatta "Moon position" v02-moon_position 15
+          scatta "Sky view" v03-sky_view 15
+          YAEC_ORIZZONTE=1 scatta "My horizon" v04-my_horizon 240
+          YAEC_CALCOLA=1 scatta "Distance and Dgrd" v05-distance_dgrd 20
+          scatta "DGRD by frequency" v06-dgrd_frequency 25
+          scatta "EME budget Yagi" v07-budget_yagi 12
+          scatta "EME budget dishes" v08-budget_dishes 12
+          scatta "Solar noise" v09-solar_noise 15
+          scatta "GRAVES radar" v10-graves 15
+          YAEC_CALCOLA=1 scatta "Stations to try" v11-stations_to_try 40
+          scatta "Moon over the world" v12-moon_world 15
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
+          H=$(git config --get http.https://github.com/.extraheader)
+          U=$(git remote get-url origin)
+          cd video
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Video screenshots ${GITHUB_SHA::7}"
+          git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:video
       - name: Schermate per il README (solo con [schermate] nel messaggio del commit)
         if: contains(github.event.head_commit.message, '[schermate]')
         run: |
