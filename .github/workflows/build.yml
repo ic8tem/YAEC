@@ -612,23 +612,7 @@ jobs:
           # impronte SHA-256 di tutti i pacchetti
           ( cd out && for f in windows/* linux/* macos/*; do sha256sum "$f" | sed 's|  .*/|  |'; done ) > SHA256SUMS.txt
           cat SHA256SUMS.txt
-          cat > notes.md <<NOTES
-          YAEC - Yet Another EME Calc ${V}, a cura di Costantino IC8TEM.
-
-          - **Windows su ARM64** (PC con Snapdragon): YAEC-${V}-win-arm64-setup.exe oppure YAEC-${V}-win-arm64-portatile.zip.
-          - **Arch Linux, Manjaro, EndeavourOS**: yaec-${V}-1-any.pkg.tar.zst (sudo pacman -U ...); **Slackware**: yaec-${V}-noarch-1_ic8tem.txz (installpkg ...); **qualsiasi Linux**: YAEC-${V}-x86_64.AppImage o YAEC-${V}-aarch64.AppImage (con Mono installato); **Alpine Linux**: YAEC-${V}-alpine-x64-portatile.tar.gz o -alpine-arm64- (non ancora provato).
-          - **Aggiornamenti automatici**: YAEC controlla GitHub all'avvio e si aggiorna da solo su Windows, con gli archivi portatili, l'AppImage e l'app per Mac. I pacchetti .deb, .rpm, Arch e Slackware si aggiornano invece con il gestore dei pacchetti: YAEC avvisa e apre questa pagina.
-          - **Fedora, openSUSE**: yaec-${V}-1.noarch.rpm (con Mono); **Raspberry Pi OS a 32 bit**: yaec_${V}_armhf.deb; **OpenBSD amd64** (con Mono, non ancora provato): YAEC-${V}-openbsd-x64-portatile.tar.gz.
-          - **Windows a 64 bit**: YAEC-${V}-win-x64-setup.exe (installatore) oppure YAEC-${V}-win-x64-portatile.zip; **Windows a 32 bit**: YAEC-${V}-win-x86-setup.exe oppure YAEC-${V}-win-x86-portatile.zip.
-          - **Linux (Debian, Ubuntu, Mint)**: yaec_${V}_amd64.deb (sudo apt install ./yaec_${V}_amd64.deb); **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4 e 5): yaec_${V}_arm64.deb.
-          - **Linux, tutte le distribuzioni (con Mono)**: YAEC-${V}-linux-x64-portatile.tar.gz (PC), YAEC-${V}-linux-arm64-portatile.tar.gz (ARM a 64 bit), YAEC-${V}-linux-arm-portatile.tar.gz (ARM a 32 bit, armv7l), YAEC-${V}-linux-x86-portatile.tar.gz (Linux i686, non ancora provato); Raspberry Pi Slackware ARM64: YAEC-${V}-linux-arm64-portatile.tar.gz (non ancora provato).
-          - **FreeBSD amd64** (con Mono, non ancora provato): YAEC-${V}-freebsd-x64-portatile.tar.gz.
-          - **macOS** (sperimentale; servono Mono e XQuartz): YAEC-${V}-osx-arm64.dmg oppure YAEC-${V}-osx-arm64-app.zip (Apple Silicon), YAEC-${V}-osx-x64.dmg oppure YAEC-${V}-osx-x64-app.zip (Intel).
-
-          Impronte SHA-256 di tutti i file in SHA256SUMS.txt (come verificarle: README.txt).
-
-          Le versioni precedenti alla 1.0 si chiamano beta. Dettagli nel file README.txt.
-          NOTES
+          bash packaging/release-notes.sh "$V" > notes.md
           gh release create "$TAG" out/windows/* out/linux/* out/macos/* SHA256SUMS.txt --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
 
   aggiungi:

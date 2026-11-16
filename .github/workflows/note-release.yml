@@ -1,0 +1,23 @@
+name: Note della release
+# Avvio manuale: riscrive le note della release indicata con la tabella di packaging/release-notes.sh
+on:
+  workflow_dispatch:
+    inputs:
+      versione:
+        description: 'Versione (senza la v); vuoto = quella del file VERSION'
+        default: ''
+jobs:
+  note:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Riscrive le note
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V="${{ inputs.versione }}"; [ -n "$V" ] || V="$(tr -d ' \r\n' < VERSION)"
+          bash packaging/release-notes.sh "$V" > notes.md
+          cat notes.md
+          gh release edit "v$V" --notes-file notes.md
