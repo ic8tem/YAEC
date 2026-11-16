@@ -1,0 +1,203 @@
+1
+00:00:00,800 --> 00:00:05,000
+A new user installs YAEC and wants to know one thing: can I work a DX across the Atlantic tonight?
+
+2
+00:00:05,100 --> 00:00:09,600
+We follow him from the first start to the QSO decision, using only what YAEC shows.
+
+3
+00:00:10,600 --> 00:00:16,200
+Step 1. On the first screen, type your Maidenhead locator: JN56UE17, eight characters.
+
+4
+00:00:16,350 --> 00:00:21,950
+YAEC converts it to 46.198° N, 11.679° E and starts showing the Moon from your QTH, every second.
+
+5
+00:00:22,100 --> 00:00:27,700
+At 01:30 UTC on 24 November the Moon is full, at azimuth 255.6° and elevation 45.4°.
+
+6
+00:00:27,850 --> 00:00:33,450
+The green band says it all: POINTABLE, the Moon is inside your antenna limits for another 4 h 49 min.
+
+7
+00:00:34,600 --> 00:00:40,200
+Step 2. Type the DX callsign, LU7MC: the locator FF57OB comes from the CALL3.TXT database.
+
+8
+00:00:40,350 --> 00:00:45,950
+YAEC downloads CALL3.TXT from W7GJ and WSJT-X Improved, so you rarely type a DX locator by hand.
+
+9
+00:00:46,100 --> 00:00:51,700
+The band turns blue: COMMON WINDOW. The Moon is now above the horizon for both stations.
+
+10
+00:00:51,850 --> 00:00:57,450
+The 24-hour bar shows tonight's common window: from midnight to about 05:00 UTC.
+
+11
+00:00:58,600 --> 00:01:04,700
+Step 3. In the Alps the real horizon matters. My horizon reads SRTM1 terrain data around the station.
+
+12
+00:01:04,850 --> 00:01:10,950
+Curvature and refraction are included; the panorama shows the hills, named from OpenStreetMap.
+
+13
+00:01:11,100 --> 00:01:17,200
+Here the Moon sets behind the terrain at 05:08 UTC, 70 minutes before the astronomical moonset.
+
+14
+00:01:17,350 --> 00:01:23,450
+One checkbox makes this terrain the minimum elevation everywhere in the program.
+
+15
+00:01:24,600 --> 00:01:30,120
+The Sky view shows where the Moon is against the radio sky at 144 MHz.
+
+16
+00:01:30,270 --> 00:01:35,780
+Tonight the Moon sits on a quiet patch of sky: about 378 K behind the Moon.
+
+17
+00:01:35,930 --> 00:01:41,450
+Hot regions such as Cas A and Cygnus are well away from it.
+
+18
+00:01:42,600 --> 00:01:48,200
+Step 4. How good is tonight? Distance and Dgrd plans the next 30 days of degradation.
+
+19
+00:01:48,350 --> 00:01:53,950
+Today, 24 November: Dgrd −2.15 dB, best at 02:30 UTC, with 5.5 useful hours of common window.
+
+20
+00:01:54,100 --> 00:01:59,700
+Not a top day, but a usable one. The best days of the month are marked with a star.
+
+21
+00:01:59,850 --> 00:02:05,450
+The red curve is the Dgrd, the orange one the Moon distance, the blue one the declination.
+
+22
+00:02:06,600 --> 00:02:12,120
+DGRD by frequency uses the real noise of your station and averages the sky over your antenna beam.
+
+23
+00:02:12,270 --> 00:02:17,780
+Tonight at 144.120 MHz the degradation is about −1.8 dB.
+
+24
+00:02:17,930 --> 00:02:23,450
+In December, when the Moon crosses the Milky Way, it will fall to about −10 dB.
+
+25
+00:02:24,600 --> 00:02:30,200
+Step 5. Moon position computes the night every 10 minutes, for both stations together.
+
+26
+00:02:30,350 --> 00:02:35,950
+Green rows mean the Moon is inside the limits of both stations; the terrain is included.
+
+27
+00:02:36,100 --> 00:02:41,700
+The common window: 24 November, 00:00 to 05:00 UTC, five hours. Your Moon peaks at 58.8°, LU7MC's at 32.2°.
+
+28
+00:02:41,850 --> 00:02:47,450
+The best moment is 02:50 UTC, with a spatial polarization loss of only 1.7 dB.
+
+29
+00:02:48,600 --> 00:02:53,850
+Step 6. Can we really make the QSO? Open the EME budget and enter your station.
+
+30
+00:02:54,000 --> 00:02:59,250
+Two Yagis of 12 dBd: 12 + 2.15 = 14.15 dBi each, 17.2 dBi in total; 800 W from the PA.
+
+31
+00:02:59,400 --> 00:03:04,650
+For the DX, take its station from the N0UK chat database: LU7MC, 4 × 10 elements and 600 W.
+
+32
+00:03:04,800 --> 00:03:10,050
+Result at 02:30 UTC: S/N −18.4 dB to the DX and −19.7 dB back to you, in 2500 Hz.
+
+33
+00:03:10,200 --> 00:03:15,450
+The JT65 threshold is −25 dB: about 5 dB of margin. QSO possible: YES.
+
+34
+00:03:16,600 --> 00:03:22,780
+Move the time forward and recalculate. At 05:00 UTC your Moon is only 11.4° high, but still pointable.
+
+35
+00:03:22,930 --> 00:03:29,120
+The S/N barely changes, but the spatial polarization angle is now 61°: 6.3 dB of extra loss.
+
+36
+00:03:29,270 --> 00:03:35,450
+With that loss the weaker direction falls to about −26 dB: below JT65. Plan the QSO well before 05:00.
+
+37
+00:03:36,600 --> 00:03:42,120
+At 05:45 UTC the answer is NO: the Moon is behind your terrain, at 4.8° of elevation.
+
+38
+00:03:42,270 --> 00:03:47,780
+So tonight's plan is clear: call LU7MC between midnight and about 04:30 UTC.
+
+39
+00:03:47,930 --> 00:03:53,450
+The best moment is around 02:30–02:50 UTC, when both elevation and polarization are on your side.
+
+40
+00:03:54,600 --> 00:03:59,850
+Step 7. Who else can you work tonight? Stations to try checks the 104 stations active in the N0UK chat.
+
+41
+00:04:00,000 --> 00:04:05,250
+Your station comes from the EME budget; each DX setup is read from what it writes in the chat.
+
+42
+00:04:05,400 --> 00:04:10,650
+Each station gets a score from 0 to 100, from the S/N in both directions in every common window.
+
+43
+00:04:10,800 --> 00:04:16,050
+Tonight's best six: IK2DDR, EA6VQ, VE3WY, JN1CSO and N1AV score 100, HA8CL 97.
+
+44
+00:04:16,200 --> 00:04:21,450
+N1AV in Arizona is a second American option, in the same 00:00–05:10 window.
+
+45
+00:04:22,600 --> 00:04:28,120
+Everything you have seen is described in the USER MANUAL, inside the program, in 37 languages.
+
+46
+00:04:28,270 --> 00:04:33,780
+Clickable index, search, formulas and sources; you can also save it as a Word document.
+
+47
+00:04:33,930 --> 00:04:39,450
+Start from chapter 2, First steps: locator, limits and the tabs, one by one.
+
+48
+00:04:40,600 --> 00:04:46,120
+THEORY AND TIPS ON EME explains why: polarization, sky noise, Dgrd, ground gain, preamplifiers.
+
+49
+00:04:46,270 --> 00:04:51,780
+It collects the advice of experienced EME operators, with the sources of every number.
+
+50
+00:04:51,930 --> 00:04:57,450
+Read it before your first sked: the calculation is a reference, the QSO is made at the station.
+
+51
+00:04:59,000 --> 00:05:07,400
+Download YAEC, enter your locator, and plan your first EME QSO tonight. 73!
