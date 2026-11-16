@@ -9,6 +9,13 @@ Posizione della Luna, finestre di puntamento, budget del collegamento EME, rumor
 
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-ic8tem-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/ic8tem)
 
+## Videos
+
+| | English | Italiano |
+|---|---|---|
+| [▶ What YAEC calculates](docs/video/YAEC_presentation_en.mp4) (2 min) · [subtitles](docs/video/YAEC_presentation_en.srt) | A tour of the calculation tabs, with English subtitles | Le linguette di calcolo, sottotitoli in inglese |
+| [▶ Getting started](docs/video/YAEC_getting_started_en.mp4) (5 min) · [subtitles](docs/video/YAEC_getting_started_en.srt) | A first EME evening step by step: locator, DX from CALL3.TXT, horizon, Dgrd, budget, Stations to try, manuals | Una prima serata EME passo passo: locator, DX dal CALL3.TXT, orizzonte, Dgrd, budget, Stazioni da provare, manuali |
+
 ## Languages
 
 YAEC, its two manuals (user manual and *Theory and tips on EME*), the licence and the README are available in **37 languages**; the language is chosen at the top of the main screen. Licence and README in every language are in the [`lingue`](lingue) folder.
