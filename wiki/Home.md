@@ -29,7 +29,7 @@ The tabs are gathered in six groups in the bar at the top. Click a group in the 
 | Group | Tabs |
 |---|---|
 | **Live** | [Live position and +- 24h](Live-Position) · [Reconnaissance of my obstacles](Reconnaissance-of-My-Obstacles) · [Sky view](Sky-View) |
-| **Planning** | [Distance and Dgrd](Distance-and-Dgrd) · [DGRD by frequency](DGRD-by-Frequency) · [Moon position](Moon-Position) · [Moon over the world](Moon-over-the-World) |
+| **Planning** | [Distance and Dgrd](Distance-and-Dgrd) · [DGRD by frequency](DGRD-by-Frequency) · [Moon position](Moon-Position) · [Moon over the world](Moon-over-the-World) · [Sky noise (Skynoise)](Sky-Noise) |
 | **Link** | [EME budget Yagi](EME-Budget) (called *EME budget* up to 1.5) · [EME budget dishes](EME-Budget-Dishes) · [GRAVES radar](GRAVES-Radar) · [Solar noise](Solar-Noise) · [Export calculations to Excel and Calculation check](Excel-Export-and-Calculation-Check) |
 | **Log** | [WWL map and ADIF](WWL-Map-and-ADIF) |
 | **Help and tools** | [USER MANUAL and THEORY AND TIPS ON EME](Manuals) · [COAXIAL CABLES](Coaxial-Cables) |

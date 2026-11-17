@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.1
+﻿YAEC – Yet Another EME Calc 1.9.2
 autor: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Kalkulaator raadioamatööridele, kes töötavad EME-sides (Maa–Kuu–Maa) sag
 Lähtekood ja allalaadimine: https://github.com/ic8tem/YAEC/releases
 
 PAIGALDAMINE – WINDOWS
-1. Laadi Releases-lehelt alla YAEC-1.9.1-win-x64-setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
+1. Laadi Releases-lehelt alla YAEC-1.9.2-win-x64-setup.exe ja käivita see. See paigaldab YAEC-i kausta Dokumendid\YAEC ilma administraatoriõigusteta, loob otseteed Start-menüüsse ja töölauale ning paigaldab ka desinstalliprogrammi.
 2. Kui ilmub SmartScreeni hoiatus: "More info" → "Run anyway".
-3. Ilma paigaldamata: paki YAEC-1.9.1-win-x64-portatile.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
+3. Ilma paigaldamata: paki YAEC-1.9.2-win-x64-portatile.zip lahti kausta, kuhu sul on kirjutusõigus, ja käivita YAEC.exe.
 
 PAIGALDAMINE – LINUX
 YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
-- Debian, Ubuntu, Mint: laadi alla yaec_1.9.1_amd64.deb ja paigalda see käsuga
-      sudo apt install ./yaec_1.9.1_amd64.deb
+- Debian, Ubuntu, Mint: laadi alla yaec_1.9.2_amd64.deb ja paigalda see käsuga
+      sudo apt install ./yaec_1.9.2_amd64.deb
   (paigaldab ka Mono). YAEC käivitub rakenduste menüüst või käsuga "yaec".
-- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) ja käivita ./install.sh.
-- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
+- Muud distributsioonid: paigalda Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), paki lahti YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) ja käivita ./install.sh.
+- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
 
 PAIGALDAMINE – macOS (eksperimentaalne)
 1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
-2. Ava YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+2. Ava YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
 
 AUTOMAATSED UUENDUSED
 Käivitamisel kontrollib YAEC GitHubist, kas on uus versioon, ja uuendab end ise (Windows, kaasaskantavad .tar.gz-arhiivid, AppImage, macOS-i rakendus), kontrollides SHA-256 sõrmejälge. Pakette .deb, .rpm, Arch, Slackware uuendatakse süsteemi paketihalduriga: YAEC teatab uuest versioonist ja avab GitHubi lehe.
 
 ALLALAADITUD FAILIDE KONTROLL (SHA-256)
 Iga release sisaldab faili SHA256SUMS.txt iga paketi SHA-256 räsiga. Võrdle seda allalaaditud faili räsiga:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kui kaks väärtust erinevad, ära faili paigalda: laadi see uuesti alla.
@@ -43,6 +43,7 @@ Vead, paremad andmed, tõlked: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 VERSIOONIAJALUGU
 Versioone enne 1.0 nimetatakse beetaks.
+- 1.9.2 - Uus vahekaart Taevamüra (Skynoise) rühmas Planeerimine: antenni temperatuur G8ONH ja G4SWX meetodiga antenni täielikust diagrammist (NEC-i .out-fail, YA-NEC või Gaussi kiir) ja taevakaardist (Remazeilles, Haslam, GSM 2008 või LFmap) sagedustel 50, 144, 432 MHz ja 23 cm, Kuu teekonnaga kuu jooksul, temperatuuriga ülemineku ajal sinu ja DX-i jaoks, mõjuga EME eelarve yagi-le ja võrdlusega DJ9BV-ga; automaatne test failis compila.bat; käsiraamatus EME TEOORIA JA NÕUANDED: taevamüra koos allikate võrdlusega, paraboolantenni võimendus (PE1RKI või arvutus osade kaupa, Ruze), primaarfookus üle 2320 MHz, toiteelemendi pööramine ja kiirega valgustatud Kuu (BWF).
 - 1.9.1 - Automaatne uuendus GitHubist koos SHA-256 sõrmejälje kontrolliga Windowsis, kaasaskantavate arhiividega (Linux, FreeBSD, OpenBSD, Alpine), AppImage'iga ja macOS-i rakendusega (pakette .deb, .rpm, Arch, Slackware uuendatakse paketihalduriga) ning hoiatus puuduvate failide kohta; uued paketid: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; nupp PARANDA jaama lokaatori parandamiseks failis CALL3.TXT; Kaugus ja Dgrd klassikalise Dgrd-ga 144 MHz juures, sagedusala kaupa Dgrd jääb DGRD sageduse järgi alla; Minu horisont koos Taevavõlv lillade kastide ja planeerimistabelist võetud ajahetkega; Jaamad proovimiseks koos tabeli ajahetke, kerimisriba ja oma riigi jaamade väljajätmisega (cty.dat); yagi võimendus DL6WU tabelist (G3SEK), W8IO-le omistatud valem ainult alla 10 elemendi; YA-MS-i stiilis rippmenüüd ja numbriväljad; 144 MHz transverterid juhendis.
 - 1.9 - Uus vahekaart Minu horisont (Reaalajas): maastiku horisont, arvutatud SRTM1 andmetest koos Maa kõveruse ja refraktsiooniga, Taevavõlv taustal ühes kolmest värviskaalast, Kuu teekond, peamised takistused OpenStreetMapi nimedega ja kaotatud Kuu minutid; märkeruut maastiku kasutamiseks minimaalse kõrgusnurgana kogu programmis; kohaliku müra kaart NJ9R järgi, ⚠ tundidel, mil Kuu on mürarikkas suunas; uus vahekaart Jaamad proovimiseks (Planeerimine), Matteo IW5DHN idee: N0UK vestluse aktiivsed jaamad järjestatud indeksiga 0 kuni 100; arvuväljad kõrvuti nooltega, pillikujulised vahekaardid ja kolm uut värviskeemi IP-TRX-CTRL-ist.
 - 1.8 - Uus keel slovaki (kokku 37), koos juhendite, README ja litsentsiga; kogu programmis üks keilu laius: jagidele 0,93·√(41253/G) (Krausi reegel, korrigeeritud W4RNL-i NEC-simulatsioonidega, nagu YA-MS-is) ja paraboolidele 70·λ/D (IZ0JNY), allikata √(32000/G) asemel sagedusepõhises DGRD-s; juhend uuendatud uue valemi ja suunamise näitega; macOS-is avab käivitaja ise XQuartzi, kirjutab Mono versiooni logisse ja hoiatab, kui YAEC ei käivitu; README tutvustus ka portugali, türgi, tšehhi, slovaki, hiina, jaapani ja korea keeles; parandatud tõlked tai, rumeenia, kreeka, Brasiilia portugali, poola, tšehhi ja ungari keeles.

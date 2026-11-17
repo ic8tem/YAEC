@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.1
+﻿YAEC – Yet Another EME Calc 1.9.2
 מאת Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 קוד מקור והורדה: https://github.com/ic8tem/YAEC/releases
 
 התקנה – WINDOWS
-1. הורד את YAEC-1.9.1-win-x64-setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
+1. הורד את YAEC-1.9.2-win-x64-setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
 2. אם מופיעה אזהרת SmartScreen: "More info" ← "Run anyway".
-3. ללא התקנה: חלץ את YAEC-1.9.1-win-x64-portatile.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
+3. ללא התקנה: חלץ את YAEC-1.9.2-win-x64-portatile.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
 
 התקנה – LINUX
 YAEC פועל על Mono, סביבת הריצה החופשית של .NET.
-- Debian, Ubuntu, Mint: הורד את yaec_1.9.1_amd64.deb והתקן אותו באמצעות
-      sudo apt install ./yaec_1.9.1_amd64.deb
+- Debian, Ubuntu, Mint: הורד את yaec_1.9.2_amd64.deb והתקן אותו באמצעות
+      sudo apt install ./yaec_1.9.2_amd64.deb
   (מתקין גם את Mono). YAEC מופעל מתפריט היישומים או בפקודה "yaec".
-- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.9.1-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.1-linux-arm64-portatile.tar.gz, YAEC-1.9.1-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.1-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.1-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.1-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.1-alpine-x64-portatile.tar.gz, YAEC-1.9.1-alpine-arm64-portatile.tar.gz) והפעל את ./install.sh.
-- Fedora, openSUSE: yaec-1.9.1-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.1-1-any.pkg.tar.zst · Slackware: yaec-1.9.1-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.1-x86_64.AppImage, YAEC-1.9.1-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.1_armhf.deb · Windows ARM64: YAEC-1.9.1-win-arm64-setup.exe, YAEC-1.9.1-win-arm64-portatile.zip
+- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) והפעל את ./install.sh.
+- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
 
 התקנה – macOS (ניסיוני)
 1. התקן את Mono עבור macOS (https://www.mono-project.com/download/stable/) ואת XQuartz (https://www.xquartz.org).
-2. פתח את YAEC-1.9.1-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.1-osx-x64.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
+2. פתח את YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
 
 עדכונים אוטומטיים
 בהפעלה YAEC בודק ב־GitHub אם יש גרסה חדשה ומתעדכן בעצמו (Windows, ארכיוני ‎.tar.gz ניידים, AppImage, אפליקציית macOS), תוך בדיקת טביעת ה־SHA-256. חבילות .deb, .rpm, Arch, Slackware מתעדכנות דרך מנהל החבילות של המערכת: YAEC מודיע על הגרסה החדשה ופותח את עמוד GitHub.
 
 בדיקת הקבצים שהורדו (SHA-256)
 כל release כולל את SHA256SUMS.txt עם טביעת ה-SHA-256 של כל חבילה. השווה אותה לטביעה של הקובץ שהורדת:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.1-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 אם שני הערכים שונים, אל תתקין את הקובץ: הורד אותו מחדש.
@@ -43,6 +43,7 @@ YAEC חינמי; נוסח הרישיון נמצא בקובץ LICENSE_he.txt וב
 
 היסטוריית גרסאות
 הגרסאות שלפני 1.0 נקראות בטא.
+- 1.9.2 - לשונית חדשה רעש שמיים (Skynoise) ב־תכנון: טמפרטורת אנטנה בשיטת G8ONH ו־G4SWX מהדיאגרמה המלאה של האנטנה (קובץ .out של NEC, ‏YA-NEC או אלומה גאוסיאנית) וממפת השמיים (Remazeilles, Haslam, GSM 2008 או LFmap) ב־50, 144, 432 MHz וב־23 cm, עם מסלול הירח במהלך החודש, הטמפרטורה במהלך המעבר עבורך ועבור ה־DX, ההשפעה על תקציב EME yagi וההשוואה ל־DJ9BV; בדיקה אוטומטית ב־compila.bat; במדריך תיאוריה ועצות על EME: רעש השמיים עם השוואת המקורות, הגבר הצלחות (PE1RKI או חישוב לפי רכיבים, Ruze), מוקד ראשי מעל 2320 MHz, סיבוב המזין והירח המואר באלומה (BWF).
 - 1.9.1 - עדכון אוטומטי מ־GitHub עם בדיקת טביעת SHA-256 ב־Windows, בארכיונים הניידים (Linux, FreeBSD, OpenBSD, Alpine), ב־AppImage ובאפליקציית macOS (חבילות .deb, .rpm, Arch, Slackware מתעדכנות דרך מנהל החבילות), והתרעה על קבצים חסרים; חבילות חדשות ל־Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; כפתור תיקון לתיקון הלוקייטור של תחנה ב־CALL3.TXT; מרחק ו-Dgrd עם Dgrd הקלאסי ב־144 MHz, וה־Dgrd לפי פס נשאר ב־DGRD לפי תדר; האופק שלי עם המסגרות הסגולות של כיפת השמיים והרגע שנלקח מטבלת התכנון; תחנות לנסות עם הרגע מהטבלה, פס גלילה והוצאת תחנות מהמדינה שלך (cty.dat); הגבר אנטנות יאגי מטבלת DL6WU ‏(G3SEK), והנוסחה המיוחסת ל־W8IO רק מתחת ל־10 אלמנטים; רשימות נפתחות ותיבות מספר בסגנון YA-MS; טרנסוורטרים ל־144 MHz במדריך.
 - 1.9 - לשונית חדשה האופק שלי (חי): אופק מפני השטח המחושב מנתוני SRTM1 עם עקמומיות כדור הארץ ושבירה, על רקע כיפת השמיים באחד משלושת סולמות הצבע, מסלול הירח, המכשולים העיקריים עם שמות מ־OpenStreetMap ודקות הירח שאבדו; תיבת סימון לשימוש בפני השטח כגובה מינימלי בכל התוכנה; מפת רעש מקומי לפי NJ9R, עם ⚠ בשעות שבהן הירח בכיוון רועש; לשונית חדשה תחנות לנסות (תכנון), רעיון של Matteo IW5DHN: התחנות הפעילות בצ'אט N0UK ממוינות לפי מדד מ־0 עד 100; תיבות מספרים עם חצים זה לצד זה, לשוניות בצורת גלולה ושלוש ערכות צבעים חדשות מ־IP-TRX-CTRL.
 - 1.8 - שפה חדשה: סלובקית (37 בסך הכול), עם המדריכים, קובץ README והרישיון; רוחב אלומה אחד בכל התוכנה: 0.93·√(41253/G) ליאגי (כלל קראוס מתוקן בסימולציות NEC של W4RNL, כמו ב-YA-MS) ו-70·λ/D לצלחות (IZ0JNY), במקום √(32000/G) ללא מקור ב-DGRD לפי תדר; המדריך עודכן עם הנוסחה החדשה ודוגמת הכיוון; ב-macOS המפעיל פותח את XQuartz בעצמו, כותב את גרסת Mono ליומן ומזהיר אם YAEC לא עולה; הצגת README גם בפורטוגזית, טורקית, צ'כית, סלובקית, סינית, יפנית וקוריאנית; תוקנו התרגומים לתאית, רומנית, יוונית, פורטוגזית ברזילאית, פולנית, צ'כית והונגרית.
