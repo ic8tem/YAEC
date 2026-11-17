@@ -1946,7 +1946,7 @@ namespace LunaCalc
                 if (!terra || fascio || i == d.Bs)
                 {
                     double h = Math.Sqrt(x * x + y * y), h2 = Math.Sqrt(h * h + z * z);
-                    double caz = -x / h, sel = z / h2, cel = h / h2;
+                    double caz = h > 0 ? -x / h : 0.0, sel = z / h2, cel = h / h2;   // allo zenit (h = 0) l'azimut non conta: cel = 0
                     if (!terra && terreno != null)
                     {
                         double azd = Math.Atan2(y, -x) * R2D;
@@ -2031,7 +2031,7 @@ namespace LunaCalc
                 sb.AppendLine(string.Format(inv, "Fascio gaussiano 14,6°: guadagno medio {0:F3}, apertura ricavata {1:F2}° ({2})", ga.GuadagnoMedio, ga.Hpbw, b5 ? "ok" : "ERRORE"));
                 ok &= b3 && b4 && b5;
             }
-            catch (Exception ex) { sb.AppendLine("ERRORE: " + ex.Message); ok = false; }
+            catch (Exception ex) { sb.AppendLine("ERRORE: " + ex.ToString()); ok = false; }
             sb.AppendLine(ok ? "COLLAUDO RUMORE DEL CIELO SUPERATO" : "COLLAUDO RUMORE DEL CIELO NON SUPERATO");
             try { File.WriteAllText(Path.Combine(dir, "collaudo_cielo.txt"), sb.ToString()); } catch { }
             return ok ? 0 : 1;
