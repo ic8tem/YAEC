@@ -69538,7 +69538,7 @@ namespace LunaCalc
             tip.SetToolTip(nudCieloBeta, Lang.T("Indice spettrale β della scala in frequenza T_f = k·T_408 + C, con k = (408/f)^β: 2,56 a 50 e 144 MHz, 2,617 a 432 MHz e 23 cm (Skynoise)."));
             tip.SetToolTip(nudCieloC, Lang.T("Correzione extragalattica C alla banda scelta (sorgenti non risolte e fondo cosmico a 2,73 K): C = 2,73 + 50·(150/f)^2,75 K (Lawson et al. 1987, come Skynoise e LFmap)."));
             ctCieloBeta = Tonda(nudCieloBeta); ctCieloC = Tonda(nudCieloC);
-            lblCieloBeta = new Label(); lblCieloBeta.AutoSize = true; lblCieloBeta.Text = Lang.T("Indice β");
+            lblCieloBeta = new Label(); lblCieloBeta.AutoSize = true; lblCieloBeta.Text = "β";
             lblCieloC = new Label(); lblCieloC.AutoSize = true; lblCieloC.Text = "C (K)";
             foreach (Control c in new Control[] { lblCieloBeta, ctCieloBeta, lblCieloC, ctCieloC }) { c.Visible = false; pnlCielo.Controls.Add(c); }
             nudCieloBeta.ValueChanged += (s, e) => { if (cieloSync) return; cieloBeta[cieloBanda] = (double)nudCieloBeta.Value; CieloCambiato(); };
@@ -69699,7 +69699,7 @@ namespace LunaCalc
         {
             using (OpenFileDialog od = new OpenFileDialog())
             {
-                od.Filter = quale == 0 ? Lang.T("Uscita del NEC") + " (*.out)|*.out;*.OUT|*.*|*.*" : "YA-NEC (*.yanec)|*.yanec|*.*|*.*";
+                od.Filter = quale == 0 ? "NEC (*.out)|*.out;*.OUT|*.*|*.*" : "YA-NEC (*.yanec)|*.yanec|*.*|*.*";
                 string vecchio = quale == 0 ? cieloNec : cieloYanec;
                 try { if (vecchio.Length > 0) od.InitialDirectory = Path.GetDirectoryName(vecchio); } catch { }
                 if (od.ShowDialog(this) != DialogResult.OK) return;
@@ -70162,7 +70162,7 @@ namespace LunaCalc
                     Color grigio = scuro ? Color.FromArgb(150, 160, 180) : Color.FromArgb(140, 150, 165);
                     curva(cpz.Fascio, grigio, true, Lang.T("solo cielo dietro la Luna"), false);
                     if (chkDx.Checked && dx.Ok) curva(cpz.Dx, arancio, false, Lang.T("Ta del DX"), true);
-                    curva(cpz.Me, blu, false, string.Format(Lang.T("Ta {0} (cielo + terra)"), call.Length > 0 ? call : Lang.T("della mia stazione")), true);
+                    curva(cpz.Me, blu, false, string.Format(Lang.T("Ta {0} (cielo + terra)"), call).Replace("  ", " "), true);
                     if (tSel >= cpz.T0 && tSel <= cpz.T1)
                         using (Pen pn = new Pen(Color.FromArgb(160, Tema.Fore), 1f)) { pn.DashStyle = DashStyle.Dot; g.DrawLine(pn, xT(tSel), rc.Top, xT(tSel), rc.Bottom); }
                 }
@@ -70177,7 +70177,7 @@ namespace LunaCalc
                     CieloPillola(g, new RectangleF(cA.Right - S(92), cA.Y + S(8), S(80), S(22)), Lang.T("Adesso"), false, fPic, fPic, bluPill, () => { cieloOra = true; pnlCielo.Invalidate(); }, Lang.T("Torna all'istante attuale."));
                 double eff = rs != null ? CieloEffettoBudget(rs.T) : double.NaN;
                 string[][] box = {
-                    new string[] { string.Format(Lang.T("Temperatura d'antenna {0}"), call.Length > 0 ? call : Lang.T("della mia stazione")), rs != null ? CieloK(rs.T) : "–",
+                    new string[] { (Lang.T("Temperatura d'antenna") + " " + call).Trim(), rs != null ? CieloK(rs.T) : "–",
                         f >= 1000 ? Lang.T("cielo pesato sul diagramma + atmosfera + terra a 290 K") : Lang.T("cielo pesato sul diagramma + terra a 290 K") },
                     new string[] { Lang.T("Cielo dietro la Luna (solo fascio)"), rs != null ? CieloK(rs.Tfascio) : "–",
                         rs != null ? string.Format(c, Lang.T("AR {0} h {1:00} m · Dec {2}°"), ((int)Math.Round(rs.Ra * 4.0) % 1440) / 60, ((int)Math.Round(rs.Ra * 4.0) % 1440) % 60, (rs.Dec >= 0 ? "+" : "−") + Math.Abs(rs.Dec).ToString("0", c)) : "" },
@@ -70237,13 +70237,13 @@ namespace LunaCalc
                 }
                 string av = "⚠ " + (f < 300 ? Lang.T("A 144 MHz cielo e terra hanno temperature simili: DJ9BV sbaglia di più (G8ONH/G4SWX).") + " " : "")
                     + Lang.T("Non sono ancora contati riflessione dal suolo, Luna e Sole.");
-                RectangleF ry = new RectangleF(rt.X, rt.Bottom + 3 * rt.Height + S(8), rt.Width, cC.Bottom - S(10) - (rt.Bottom + 3 * rt.Height + S(8)));
-                using (GraphicsPath p = Arrotondato(ry, S(6)))
+                RectangleF rAvv = new RectangleF(rt.X, rt.Bottom + 3 * rt.Height + S(8), rt.Width, cC.Bottom - S(10) - (rt.Bottom + 3 * rt.Height + S(8)));
+                using (GraphicsPath p = Arrotondato(rAvv, S(6)))
                 {
                     using (Brush b = new SolidBrush(scuro ? Tema.SoloBg : Color.FromArgb(255, 247, 214))) g.FillPath(b, p);
                     using (Pen pn = new Pen(scuro ? Tema.WarnFg : Color.FromArgb(234, 179, 8), 1f)) g.DrawPath(pn, p);
                 }
-                Testo(g, av, fPic, scuro ? Tema.Fore : Color.FromArgb(113, 63, 18), new RectangleF(ry.X + S(6), ry.Y + S(3), ry.Width - S(12), ry.Height - S(6)), StringAlignment.Near, StringAlignment.Center);
+                Testo(g, av, fPic, scuro ? Tema.Fore : Color.FromArgb(113, 63, 18), new RectangleF(rAvv.X + S(6), rAvv.Y + S(3), rAvv.Width - S(12), rAvv.Height - S(6)), StringAlignment.Near, StringAlignment.Center);
             }
         }
 
@@ -75560,10 +75560,9 @@ namespace LunaCalc
             Skynoise.Risultato r = Skynoise.Calcola(d, cielo, me.Lat, me.Lon, p.Az, p.El, t, CieloTerreno(), tau, TskyRif(f));
             double k = Math.Pow(408.0 / f, beta);
             DNota(CieloMappaNome[cieloMappa] + " · " + d.Nome + " · " + string.Format(ci, "Az {0:F1}° El {1:F1}°", p.Az, p.El));
-            DPasso(Lang.T("Scala in frequenza della mappa"), "k = \\p{\\frac{408}{f}}^{β}", "\\p{\\frac{408}{" + f.ToString("0.###", ci) + "}}^{" + Fd(beta, "0.000") + "}", Fd(k, "0.0000"));
+            DPasso(Lang.T("Scala in frequenza della mappa"), "T_f = k · T_{408} + C \\quad k = \\p{\\frac{408}{f}}^{β}", "\\p{\\frac{408}{" + f.ToString("0.###", ci) + "}}^{" + Fd(beta, "0.000") + "}", Fd(k, "0.0000"));
             DPasso(Lang.T("Correzione extragalattica"), "C = 2,73 + 50 · \\p{\\frac{150}{f}}^{2,75}", "2,73 + 50 · \\p{\\frac{150}{" + f.ToString("0.###", ci) + "}}^{2,75}", Fd(Skynoise.Cextra(f), "0.00") + " K");
             if (!double.IsNaN(cieloC[cieloBanda])) DNota("C = " + Fd(cc, "0.00") + " K (" + Lang.T("CALCOLI APPROFONDITI") + ")");
-            DPasso(Lang.T("Temperatura del cielo in una direzione"), "T_f = k · T_{408} + C", null, null);
             DPasso(Lang.T("Temperatura d'antenna"), "T_a = \\frac{Σ T · G · sin θ}{Σ G · sin θ}", "\\frac{Σ T · G · sin θ}{" + Fd(d.Gacc, "0.0") + "}", Fd(r.T, "0.0") + " K");
             DNota(string.Format(ci, Lang.T("{0} direzioni a passo di {1}°; sotto l'orizzonte 290 K."), d.W.Length, d.Passo));
             DPasso(Lang.T("Guadagno medio (controllo)"), "G_{m} = \\frac{Σ G · sin θ}{Σ sin θ}", "\\frac{" + Fd(d.Gacc, "0.0") + "}{" + Fd(d.SinAcc, "0.0") + "}", Fd(d.GuadagnoMedio, "0.0000"));
