@@ -1765,7 +1765,37 @@ namespace LunaCalc
             for (int i = 0; i < n; i++)
                 if (gs[i] >= Gmax * 0.5) { Fascio[i] = true; omega += Math.Sqrt(Math.Max(0, 1 - zs[i] * zs[i])) * d2; }
             Hpbw = 2.0 * Math.Acos(Math.Max(-1, 1 - omega / (2 * Math.PI))) / D2R;
+            // apertura a −3 dB vera: media geometrica delle larghezze nei due piani principali (phi 0° e theta 90°), interpolate in dB
+            double we = Larghezza(xs, ys, zs, gs, 1), wh = Larghezza(xs, ys, zs, gs, 2);
+            if (!double.IsNaN(we) && !double.IsNaN(wh)) Hpbw = Math.Sqrt(we * wh);
             Gacc = gAcc; SinAcc = sinAcc; Bs = bs;
+        }
+
+        // larghezza a −3 dB nel piano phi = 0° (piano 1, angolo in theta) o theta = 90° (piano 2, angolo in phi)
+        static double Larghezza(List<double> xs, List<double> ys, List<double> zs, List<double> gs, int piano)
+        {
+            List<KeyValuePair<double, double>> v = new List<KeyValuePair<double, double>>();
+            for (int i = 0; i < xs.Count; i++)
+            {
+                if (piano == 1 && Math.Abs(ys[i]) < 1e-9 && xs[i] > 0) v.Add(new KeyValuePair<double, double>(Math.Atan2(zs[i], xs[i]) / D2R, gs[i]));
+                if (piano == 2 && Math.Abs(zs[i]) < 1e-9 && xs[i] > 0) v.Add(new KeyValuePair<double, double>(Math.Atan2(ys[i], xs[i]) / D2R, gs[i]));
+            }
+            if (v.Count < 5) return double.NaN;
+            v.Sort((p, q) => p.Key.CompareTo(q.Key));
+            int im = 0;
+            for (int i = 1; i < v.Count; i++) if (v[i].Value > v[im].Value) im = i;
+            double soglia = v[im].Value / 2.0, a = double.NaN, b = double.NaN;
+            for (int i = im; i > 0; i--)
+                if (v[i - 1].Value < soglia) { a = Incrocio(v[i - 1], v[i], soglia); break; }
+            for (int i = im; i < v.Count - 1; i++)
+                if (v[i + 1].Value < soglia) { b = Incrocio(v[i], v[i + 1], soglia); break; }
+            return double.IsNaN(a) || double.IsNaN(b) ? double.NaN : b - a;
+        }
+
+        static double Incrocio(KeyValuePair<double, double> p, KeyValuePair<double, double> q, double soglia)
+        {
+            double lp = 10 * Math.Log10(Math.Max(1e-30, p.Value)), lq = 10 * Math.Log10(Math.Max(1e-30, q.Value)), ls = 10 * Math.Log10(soglia);
+            return Math.Abs(lq - lp) < 1e-12 ? p.Key : p.Key + (q.Key - p.Key) * (ls - lp) / (lq - lp);
         }
     }
 
