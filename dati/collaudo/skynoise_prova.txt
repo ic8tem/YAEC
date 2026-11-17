@@ -1,0 +1,9 @@
+# Collaudo del Rumore del cielo (YAEC.exe --collaudo-cielo dati), lanciato da compila.bat e dalla CI.
+# Diagramma: skynoise_prova.out.gz, yagi sintetica a 144 MHz in formato NEC2 (passo 1°, fascio verso theta 90°, phi 0°, guadagno medio 0,976).
+# Puntamento e istante dell'esempio di Skynoise 0.2.2 (config.toml): Parham 52,2 N 1,4 E, az 269,036°, el 40,0°, 14/05/2025 21:59:33 UTC
+# -> AR 142,0°, Dec 30,0°.
+# Valori attesi calcolati con l'algoritmo di Skynoise 0.2.2 (G8ONH) e le sue mappe SkyTemp144.fits / SkyTemp432.fits,
+# interpolazione bilineare di astropy_healpix 1.x; tolleranza 0,5 K.
+T144 = 245.7267
+T432 = 58.8091
+guadagno_medio = 0.976015

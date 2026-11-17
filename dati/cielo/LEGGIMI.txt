@@ -1,0 +1,14 @@
+Mappe del cielo della linguetta "Rumore del cielo (Skynoise)" di YAEC - YAEC sky maps
+
+Formato / format: HEALPix nside 128, schema RING, coordinate equatoriali J2000 (ICRS), 196 608 valori float32 little-endian, compressi con gzip.
+YAEC le scarica la prima volta nella cartella data\cielo. / YAEC downloads them the first time into data\cielo.
+
+remazeilles2014_gal408.bin.gz  parte galattica a 408 MHz (K) ricavata da SkyTemp144.fits di Skynoise 0.2.2 (J. C. Sager G8ONH, licenza MIT,
+                               LICENCE-skynoise.txt), cioè la mappa di Haslam rielaborata da Remazeilles et al., MNRAS 451, 4311 (2015):
+                               T408gal = (T144 - C144) / (408/144)^2,56 con C = 2,73 + 50*(150/f)^2,75 K (Lawson et al. 1987).
+                               Riproduce SkyTemp432.fits con indice 2,617 entro 0,2 mK.
+haslam1982_gal408.bin.gz       mappa di Haslam et al., A&AS 47, 1 (1982), 408 MHz senza filtri (LAMBDA, lambda_haslam408_nofilt.fits),
+                               ruotata in coordinate equatoriali e ridotta a nside 128, meno C408.
+lfmap_50/144/432.bin.gz        temperature totali (K) di LFmap (E. Polisensky, LWA Memo 111, 2007; github.com/epolisensky/LFmap) a 50, 144
+                               e 432 MHz, calcolate con l'algoritmo di LFmap riscritto in Python dai suoi file di dati (griglia 0,35°) e
+                               ricampionate su HEALPix nside 128.

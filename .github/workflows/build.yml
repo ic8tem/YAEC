@@ -47,6 +47,13 @@ jobs:
           call build.cmd || exit /b 1
           mkdir x86
           call build.cmd x86 x86\YAEC.exe || exit /b 1
+      - name: Collaudo del Rumore del cielo (metodo di Skynoise)
+        shell: cmd
+        run: |
+          start "" /wait YAEC.exe --collaudo-cielo "%CD%\dati"
+          set E=%ERRORLEVEL%
+          type dati\collaudo_cielo.txt
+          exit /b %E%
       - name: Installatore (Inno Setup)
         shell: pwsh
         run: |
@@ -144,6 +151,23 @@ jobs:
           convert shot/YAEC-linux-mono.png -resize 1200x shot/small.jpg 2>/dev/null && echo "SCREENSHOT-B64:$(base64 -w 0 shot/small.jpg)" || true
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           if kill -0 $PID 2>/dev/null; then echo "YAEC in esecuzione dopo 90 s: avvio riuscito"; kill $PID; else echo "YAEC si e' chiuso"; exit 1; fi
+          # Rumore del cielo (Skynoise): collaudo con Mono, poi schermate con il diagramma di prova nei temi chiaro, notte e nero
+          mono YAEC.exe --collaudo-cielo "$PWD/dati"; echo "collaudo Mono: uscita $?"; cat dati/collaudo_cielo.txt || true
+          mkdir -p "$HOME/.local/share/YAEC/data/cielo" && cp dati/cielo/*.bin.gz "$HOME/.local/share/YAEC/data/cielo/"
+          gunzip -c dati/collaudo/skynoise_prova.out.gz > /tmp/prova144.out
+          cp "$HOME/.local/share/YAEC/data/impostazioni.txt" /tmp/imp_cielo.bak
+          for TEMA in chiaro scuro nero; do
+            cp /tmp/imp_cielo.bak "$HOME/.local/share/YAEC/data/impostazioni.txt"
+            printf 'tema=%s\nskynoise_diagramma=0\nskynoise_nec=/tmp/prova144.out\nnominativo=IC8TEM\n' "$TEMA" >> "$HOME/.local/share/YAEC/data/impostazioni.txt"
+            YAEC_LINGUETTA="Rumore del cielo (Skynoise)" mono YAEC.exe &
+            PID=$!
+            sleep 45
+            import -window root shot/cielo.png || true
+            convert shot/cielo.png -resize 1600x shot/cielo.jpg 2>/dev/null && echo "SCREENSHOT-CIELO-$TEMA-B64:$(base64 -w 0 shot/cielo.jpg)" || true
+            kill $PID 2>/dev/null || true
+          done
+          cp /tmp/imp_cielo.bak "$HOME/.local/share/YAEC/data/impostazioni.txt"
+          if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt (cielo) ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           # seconda schermata: linguetta Distanza e Dgrd (e CALL3.TXT ormai scaricato)
           ls -la "$HOME/.local/share/YAEC/data" || true
           apt-cache search mono | grep -iE "cert|mono-devel|mono-complete" | head || true

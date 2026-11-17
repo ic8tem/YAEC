@@ -23,6 +23,18 @@ if errorlevel 1 (
 )
 echo.
 echo  Done: YAEC.exe created in this folder.
+if exist "dati\collaudo\skynoise_prova.txt" (
+  echo.
+  echo  Automatic test of the Sky noise tab ^(Skynoise method^)...
+  start "" /wait "%~dp0YAEC.exe" --collaudo-cielo "%~dp0dati"
+  if errorlevel 1 (
+    type "dati\collaudo_cielo.txt"
+    echo  TEST FAILED: copy the lines above and send them to me.
+    pause
+    exit /b 1
+  )
+  type "dati\collaudo_cielo.txt"
+)
 echo.
 echo  The manual is inside the program (Aiuto - MANUALE D'USO APPROFONDITO).
 echo.

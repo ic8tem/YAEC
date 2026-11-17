@@ -1651,6 +1651,393 @@ namespace LunaCalc
         }
     }
 
+    // ---------- Rumore del cielo: metodo di Skynoise (John C. Sager G8ONH, con John Regnault G4SWX; licenza MIT, vedi Credits) ----------
+    // Diagramma d'antenna sulla sfera: versori nel riferimento dell'antenna (fascio verso +X = theta 90°, phi 0°, come il NEC)
+    public sealed class DiagrammaAnt
+    {
+        public double[] X, Y, Z, W;      // versori e pesi G·sinθ (ai due poli il guadagno G, come Skynoise)
+        public bool[] Fascio;            // punti dentro il contorno a −3 dB
+        public double Gacc, SinAcc;      // Σ G·sinθ (più i due poli) e Σ sinθ
+        public double Gmax, Hpbw;        // guadagno massimo (lineare) e apertura a −3 dB equivalente (gradi)
+        public double Passo = 1.0;       // passo in theta e phi (gradi)
+        public int Bs = -1;              // indice della direzione del fascio (theta 90°, phi 0°)
+        public string Nome = "";
+        public double GuadagnoMedio { get { return SinAcc > 0 ? Gacc / SinAcc : 0; } }
+
+        const double D2R = Math.PI / 180.0;
+
+        // lettura delle righe dei diagrammi del NEC2/NEC4 (e di 4nec2, con theta negativo): come loadmodel() di Skynoise
+        public static DiagrammaAnt DaNec(TextReader rd, out string errore)
+        {
+            errore = null;
+            List<double> xs = new List<double>(), ys = new List<double>(), zs = new List<double>(), ws = new List<double>(), gs = new List<double>();
+            double sinAcc = 0, gAcc = 0, gzp = double.NaN, gzm = double.NaN, passo = double.NaN, primo = double.NaN;
+            int stato = 0, conta = 0, bs = -1;
+            string riga;
+            CultureInfo inv = CultureInfo.InvariantCulture;
+            while ((riga = rd.ReadLine()) != null)
+            {
+                riga = riga.Trim();
+                if (stato == 0) { if (riga.IndexOf("RADIATION PATTERNS", StringComparison.Ordinal) >= 0) { stato = 1; conta = 0; } continue; }
+                if (stato == 1) { conta++; if (conta >= 4) stato = 2; continue; }   // le quattro righe dell'intestazione
+                if (riga.Length == 0) break;
+                string[] f = riga.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
+                if (f.Length < 5) break;
+                double th, ph, db;
+                if (!double.TryParse(f[0], NumberStyles.Float, inv, out th) || !double.TryParse(f[1], NumberStyles.Float, inv, out ph)
+                    || !double.TryParse(f[4], NumberStyles.Float, inv, out db)) break;
+                if (double.IsNaN(primo)) primo = th;
+                else if (double.IsNaN(passo)) passo = Math.Abs(th - primo);
+                if (ph >= 359.99) break;
+                if (th < 0) { th = -th; ph += 180.0; if (ph >= 360.0) ph -= 360.0; }
+                double sth = Math.Sin(th * D2R), cth = Math.Cos(th * D2R), lin = Math.Pow(10.0, db / 10.0);
+                sinAcc += sth; gAcc += lin * sth;
+                int thi = (int)(th + 0.1);
+                if ((int)(ph + 0.1) == 0)
+                {
+                    if (thi == 0) gzp = lin;
+                    else if (thi == 90) bs = xs.Count;
+                    else if (thi == 180) gzm = lin;
+                }
+                if (thi == 0 || thi == 180) continue;
+                xs.Add(sth * Math.Cos(ph * D2R)); ys.Add(sth * Math.Sin(ph * D2R)); zs.Add(cth); ws.Add(lin * sth); gs.Add(lin);
+            }
+            if (stato == 0) { errore = "RADIATION PATTERNS"; return null; }
+            if (xs.Count < 100 || double.IsNaN(passo) || passo <= 0 || double.IsNaN(gzp) || double.IsNaN(gzm) || bs < 0) { errore = "pattern"; return null; }
+            int nth = (int)Math.Round(180.0 / passo) + 1, nph = (int)Math.Round(360.0 / passo);
+            if (xs.Count != (nth - 2) * nph) { errore = "pattern"; return null; }
+            DiagrammaAnt d = new DiagrammaAnt();
+            d.Passo = passo;
+            d.Completa(xs, ys, zs, ws, gs, gzp, gzm, sinAcc, gAcc, bs);
+            return d;
+        }
+
+        // diagramma sintetico sulla griglia di 1°: g(psi) con psi = angolo dal fascio
+        static DiagrammaAnt Sintetico(Func<double, double> g, bool normalizza)
+        {
+            List<double> xs = new List<double>(), ys = new List<double>(), zs = new List<double>(), ws = new List<double>(), gs = new List<double>();
+            double sinAcc = 0, gAcc = 0;
+            int bs = -1;
+            for (int ip = 0; ip < 360; ip++)
+                for (int it = 1; it < 180; it++)
+                {
+                    double sth = Math.Sin(it * D2R), x = sth * Math.Cos(ip * D2R);
+                    double lin = g(Math.Acos(Math.Max(-1, Math.Min(1, x))) / D2R);
+                    if (ip == 0 && it == 90) bs = xs.Count;
+                    sinAcc += sth; gAcc += lin * sth;
+                    xs.Add(x); ys.Add(sth * Math.Sin(ip * D2R)); zs.Add(Math.Cos(it * D2R)); ws.Add(lin * sth); gs.Add(lin);
+                }
+            double gp = g(90.0);
+            if (normalizza)
+            {
+                // antenna senza perdite: Σ G·sinθ = Σ sinθ
+                double k = sinAcc / gAcc;
+                for (int i = 0; i < ws.Count; i++) { ws[i] *= k; gs[i] *= k; }
+                gAcc = sinAcc; gp *= k;
+            }
+            DiagrammaAnt d = new DiagrammaAnt();
+            d.Completa(xs, ys, zs, ws, gs, gp, gp, sinAcc, gAcc, bs);
+            return d;
+        }
+
+        public static DiagrammaAnt Gaussiano(double hpbw)
+        {
+            double k = 4.0 * Math.Log(2.0) / (hpbw * hpbw);
+            DiagrammaAnt d = Sintetico(psi => Math.Exp(-k * psi * psi), true);
+            d.Nome = "Gauss " + hpbw.ToString("0.0", CultureInfo.InvariantCulture) + "°";
+            return d;
+        }
+
+        public static DiagrammaAnt Isotropo() { return Sintetico(psi => 1.0, false); }
+
+        void Completa(List<double> xs, List<double> ys, List<double> zs, List<double> ws, List<double> gs, double gzp, double gzm,
+            double sinAcc, double gAcc, int bs)
+        {
+            int n = xs.Count;
+            X = new double[n + 2]; Y = new double[n + 2]; Z = new double[n + 2]; W = new double[n + 2]; Fascio = new bool[n + 2];
+            Gmax = Math.Max(gzp, gzm);
+            for (int i = 0; i < n; i++) { X[i] = xs[i]; Y[i] = ys[i]; Z[i] = zs[i]; W[i] = ws[i]; if (gs[i] > Gmax) Gmax = gs[i]; }
+            // i due poli, come Skynoise: peso = guadagno (senza sinθ), x e y quasi nulli
+            X[n] = 1e-12; Y[n] = 1e-12; Z[n] = 1.0; W[n] = gzp;
+            X[n + 1] = 1e-12; Y[n + 1] = 1e-12; Z[n + 1] = -1.0; W[n + 1] = gzm;
+            gAcc += gzp + gzm;
+            double omega = 0, d2 = Math.Pow(Passo * D2R, 2);
+            for (int i = 0; i < n; i++)
+                if (gs[i] >= Gmax * 0.5) { Fascio[i] = true; omega += Math.Sqrt(Math.Max(0, 1 - zs[i] * zs[i])) * d2; }
+            Hpbw = 2.0 * Math.Acos(Math.Max(-1, 1 - omega / (2 * Math.PI))) / D2R;
+            Gacc = gAcc; SinAcc = sinAcc; Bs = bs;
+        }
+    }
+
+    public static class Skynoise
+    {
+        public const int Nside = 128;
+        const double D2R = Math.PI / 180.0, R2D = 180.0 / Math.PI;
+        public const double TTerra = 290.0;
+        // epoca J2000 in tempo terrestre e in UT, come config.toml di Skynoise
+        static readonly DateTime J2000tt = new DateTime(2000, 1, 1, 11, 58, 55, 816), J2000u = new DateTime(2000, 1, 1, 12, 0, 0);
+
+        // tempo siderale medio locale (gradi): Kaplan 2005, USNO Circular 179, eq. 2.11 e 2.12 (come calclmst() di Skynoise)
+        public static double Lmst(DateTime utc, double lonDeg)
+        {
+            DateTime t = new DateTime(utc.Ticks, DateTimeKind.Unspecified);
+            TimeSpan a = t - J2000tt, b = t - J2000u;
+            double tc = a.TotalDays / 36525.0;
+            double h = (b.Ticks % TimeSpan.TicksPerDay) / (double)TimeSpan.TicksPerDay;
+            if (h < 0) h += 1.0;
+            double dut = Math.Floor(b.TotalDays) + h;
+            double thk = 0.7790572732640 + dut * 0.00273781191135448 + h;
+            double thd = (thk - Math.Floor(thk)) * 360.0;
+            double l = thd + ((1.3915817 * tc + 4612.156534) * tc + 0.014506) / 3600.0 + lonDeg;
+            l = l % 360.0;
+            if (l < 0) l += 360.0;
+            return l;
+        }
+
+        // anelli della griglia HEALPix (schema RING): pixel iniziale, numero di pixel, colatitudine, spostamento di mezzo pixel
+        static int[] anStart, anN;
+        static double[] anTheta;
+        static bool[] anShift;
+        static void Anelli()
+        {
+            if (anStart != null) return;
+            int ns = Nside, nr = 4 * ns - 1;
+            long npix = 12L * ns * ns;
+            int[] st = new int[nr + 1], nn = new int[nr + 1];
+            double[] th = new double[nr + 1];
+            bool[] sh = new bool[nr + 1];
+            double fact2 = 4.0 / npix, fact1 = 2 * ns * fact2;
+            for (int ring = 1; ring <= nr; ring++)
+            {
+                int north = ring > 2 * ns ? 4 * ns - ring : ring;
+                double t; int rp; bool s; long sp;
+                if (north < ns)
+                {
+                    double tmp = (double)north * north * fact2, ct = 1 - tmp, stt = Math.Sqrt(tmp * (2 - tmp));
+                    t = Math.Atan2(stt, ct); rp = 4 * north; s = true; sp = 2L * north * (north - 1);
+                }
+                else
+                {
+                    t = Math.Acos((2 * ns - north) * fact1); rp = 4 * ns; s = ((north - ns) & 1) == 0; sp = 2L * ns * (ns - 1) + (long)(north - ns) * rp;
+                }
+                if (north != ring) { t = Math.PI - t; sp = npix - sp - rp; }
+                st[ring] = (int)sp; nn[ring] = rp; th[ring] = t; sh[ring] = s;
+            }
+            anN = nn; anTheta = th; anShift = sh;
+            anStart = st;   // per ultimo: gli altri thread lo controllano
+        }
+
+        static int AnelloSopra(double z)
+        {
+            int ns = Nside;
+            double az = Math.Abs(z);
+            if (az <= 2.0 / 3.0) return (int)(ns * (2 - 1.5 * z));
+            int ir = (int)(ns * Math.Sqrt(3 * (1 - az)));
+            return z > 0 ? ir : 4 * ns - ir - 1;
+        }
+
+        // interpolazione bilineare sulla sfera HEALPix: lo stesso schema di get_interpol di HEALPix (healpy) e di astropy_healpix,
+        // usato da Skynoise (verificato con astropy_healpix su 20 000 direzioni: scarto massimo 6·10⁻¹⁰ K)
+        public static double Interpola(float[] m, double raDeg, double decDeg)
+        {
+            Anelli();
+            int ns = Nside, npix = 12 * ns * ns;
+            double theta = (90.0 - decDeg) * D2R, phi = raDeg % 360.0;
+            if (phi < 0) phi += 360.0;
+            phi *= D2R;
+            int ir1 = AnelloSopra(Math.Cos(theta)), ir2 = ir1 + 1;
+            int p0 = 0, p1 = 0, p2 = 0, p3 = 0;
+            double w0 = 0, w1 = 0, w2 = 0, w3 = 0, th1 = 0, th2 = 0;
+            if (ir1 > 0) { Anello(ir1, phi, out p0, out p1, out w0, out w1); th1 = anTheta[ir1]; }
+            if (ir2 < 4 * ns) { Anello(ir2, phi, out p2, out p3, out w2, out w3); th2 = anTheta[ir2]; }
+            if (ir1 == 0)
+            {
+                double wt = theta / th2; w2 *= wt; w3 *= wt; double f = (1 - wt) * 0.25;
+                w0 = f; w1 = f; w2 += f; w3 += f; p0 = (p2 + 2) & 3; p1 = (p3 + 2) & 3;
+            }
+            else if (ir2 == 4 * ns)
+            {
+                double wt = (theta - th1) / (Math.PI - th1); w0 *= 1 - wt; w1 *= 1 - wt; double f = wt * 0.25;
+                w0 += f; w1 += f; w2 = f; w3 = f; p2 = ((p0 + 2) & 3) + npix - 4; p3 = ((p1 + 2) & 3) + npix - 4;
+            }
+            else
+            {
+                double wt = (theta - th1) / (th2 - th1); w0 *= 1 - wt; w1 *= 1 - wt; w2 *= wt; w3 *= wt;
+            }
+            return m[p0] * w0 + m[p1] * w1 + m[p2] * w2 + m[p3] * w3;
+        }
+
+        static void Anello(int ir, double phi, out int a, out int b, out double wa, out double wb)
+        {
+            int nr = anN[ir];
+            double dphi = 2 * Math.PI / nr, sh = anShift[ir] ? 0.5 : 0.0;
+            double tmp = phi / dphi - sh;
+            int i1 = (int)Math.Floor(tmp);
+            double w = (phi - (i1 + sh) * dphi) / dphi;
+            int i2 = i1 + 1;
+            if (i1 < 0) i1 += nr;
+            if (i2 >= nr) i2 -= nr;
+            a = anStart[ir] + i1; b = anStart[ir] + i2; wa = 1 - w; wb = w;
+        }
+
+        // mappa HEALPix nside 128, schema RING, coordinate equatoriali: 196 608 numeri float32 little-endian compressi con gzip
+        public static float[] CaricaMappa(string file)
+        {
+            byte[] b;
+            using (FileStream fs = File.OpenRead(file))
+            using (System.IO.Compression.GZipStream gz = new System.IO.Compression.GZipStream(fs, System.IO.Compression.CompressionMode.Decompress))
+            using (MemoryStream ms = new MemoryStream())
+            {
+                gz.CopyTo(ms);
+                b = ms.ToArray();
+            }
+            int n = 12 * Nside * Nside;
+            if (b.Length != n * 4) throw new InvalidDataException(file);
+            float[] m = new float[n];
+            Buffer.BlockCopy(b, 0, m, 0, b.Length);
+            if (!BitConverter.IsLittleEndian)
+                for (int i = 0; i < n; i++) { byte[] q = BitConverter.GetBytes(m[i]); Array.Reverse(q); m[i] = BitConverter.ToSingle(q, 0); }
+            return m;
+        }
+
+        // correzione extragalattica (sorgenti non risolte + fondo cosmico) come Skynoise: Lawson et al. 1987, C = 2,73 + 50·(150/f)^2,75 K
+        public static double Cextra(double f) { return 2.73 + 50.0 * Math.Pow(150.0 / f, 2.75); }
+        // indice spettrale di Skynoise: 2,56 a 144 MHz (e sotto), 2,617 a 432 MHz (e sopra)
+        public static double IndiceDefault(double f) { return f >= 300 ? 2.617 : 2.56; }
+
+        // assorbimento dell'atmosfera a 23 cm: spessore ottico allo zenit 0,0085 Np (≈ 0,037 dB, 2,3 K allo zenit, ITU-R P.676 e P.372),
+        // massa d'aria di Kasten e Young (1989), temperatura media dell'atmosfera 275 K
+        public const double TauZenit23 = 0.0085, TAtm = 275.0;
+        public static double MassaAria(double elDeg)
+        {
+            double e = Math.Max(0.0, elDeg);
+            return 1.0 / (Math.Sin(e * D2R) + 0.50572 * Math.Pow(e + 6.07995, -1.6364));
+        }
+
+        public sealed class Risultato
+        {
+            public double T;          // temperatura d'antenna (K): cielo pesato sul diagramma + terra
+            public double Tfascio;    // solo cielo dentro il contorno a −3 dB (dietro la Luna)
+            public double FrazCielo;  // frazione del diagramma rivolta al cielo
+            public double Ra, Dec;    // direzione del fascio (gradi, J2000 come la mappa)
+            public double Tdj9bv;     // DJ9BV: cielo uniforme Tfisso sopra l'orizzonte, terra 290 K sotto
+        }
+
+        // T = Σ T·G·sinθ / Σ G·sinθ (patsum di Skynoise); sotto l'orizzonte 290 K, oppure sotto il profilo del terreno
+        public static Risultato Calcola(DiagrammaAnt d, Func<double, double, double> cielo, double lat, double lon, double az, double el,
+            DateTime utc, Func<double, double> terreno, double tauZenit, double tFisso)
+        {
+            double elr = el * D2R, zrot = (180.0 - az) * D2R;
+            double cz = Math.Cos(zrot), sz = Math.Sin(zrot), ce = Math.Cos(elr), se = Math.Sin(elr);
+            double sla = Math.Sin(lat * D2R), cla = Math.Cos(lat * D2R);
+            double lmst = Lmst(utc, lon);
+            double sum = 0, sumF = 0, wF = 0, wCielo = 0;
+            Risultato r = new Risultato();
+            int n = d.W.Length;
+            for (int i = 0; i < n; i++)
+            {
+                double x0 = d.X[i], y0 = d.Y[i], z0 = d.Z[i];
+                double x = cz * ce * x0 - sz * y0 - cz * se * z0;
+                double y = sz * ce * x0 + cz * y0 - sz * se * z0;
+                double z = se * x0 + ce * z0;
+                bool fascio = d.Fascio[i];
+                double T = TTerra;
+                bool terra = z <= 0;
+                if (!terra || fascio || i == d.Bs)
+                {
+                    double h = Math.Sqrt(x * x + y * y), h2 = Math.Sqrt(h * h + z * z);
+                    double caz = -x / h, sel = z / h2, cel = h / h2;
+                    if (!terra && terreno != null)
+                    {
+                        double azd = Math.Atan2(y, -x) * R2D;
+                        if (azd < 0) azd += 360.0;
+                        double et = terreno(azd);
+                        if (!double.IsNaN(et) && Math.Asin(sel) * R2D < et) terra = true;
+                    }
+                    double sde = Math.Max(-1, Math.Min(1, sel * sla + cla * cel * caz));
+                    double dec = Math.Asin(sde);
+                    double cha = Math.Max(-1, Math.Min(1, (sel - sla * sde) / (cla * Math.Cos(dec))));
+                    double ha = Math.Acos(cha);
+                    if (y >= 0) ha = 2 * Math.PI - ha;
+                    double ra = lmst - ha * R2D;
+                    if (ra < 0) ra += 360.0;
+                    if (ra >= 360.0) ra -= 360.0;
+                    double tc = cielo(ra, dec * R2D);
+                    if (i == d.Bs) { r.Ra = ra; r.Dec = dec * R2D; }
+                    if (fascio) { sumF += d.W[i] * tc; wF += d.W[i]; }
+                    if (!terra)
+                    {
+                        if (tauZenit > 0)
+                        {
+                            double a = Math.Exp(-tauZenit * MassaAria(Math.Asin(sel) * R2D));
+                            tc = tc * a + TAtm * (1 - a);
+                        }
+                        T = tc;
+                    }
+                }
+                if (!terra) wCielo += d.W[i];
+                sum += d.W[i] * T;
+            }
+            r.T = sum / d.Gacc;
+            r.Tfascio = wF > 0 ? sumF / wF : double.NaN;
+            r.FrazCielo = wCielo / d.Gacc;
+            r.Tdj9bv = tFisso * r.FrazCielo + TTerra * (1 - r.FrazCielo);
+            return r;
+        }
+
+        // Collaudo (compila.bat e CI): YAEC.exe --collaudo-cielo <cartella dati del repository>
+        // diagramma di prova in formato NEC2, puntamento e istante dell'esempio di Skynoise (Parham 52,2 N 1,4 E; az 269,036°, el 40,0°;
+        // 14/05/2025 21:59:33 UTC): AR 142,0°, Dec 30,0°; temperatura uguale a quella di Skynoise entro 0,5 K; antenna isotropa: guadagno medio 1,000
+        public static int Collaudo(string dir)
+        {
+            StringBuilder sb = new StringBuilder();
+            CultureInfo inv = CultureInfo.InvariantCulture;
+            bool ok = true;
+            try
+            {
+                Dictionary<string, double> atteso = new Dictionary<string, double>();
+                foreach (string l in File.ReadAllLines(Path.Combine(dir, Path.Combine("collaudo", "skynoise_prova.txt"))))
+                {
+                    int k = l.IndexOf('=');
+                    if (k > 0 && !l.StartsWith("#")) atteso[l.Substring(0, k).Trim()] = double.Parse(l.Substring(k + 1).Trim(), inv);
+                }
+                DiagrammaAnt d;
+                string err;
+                using (FileStream fs = File.OpenRead(Path.Combine(dir, Path.Combine("collaudo", "skynoise_prova.out.gz"))))
+                using (System.IO.Compression.GZipStream gz = new System.IO.Compression.GZipStream(fs, System.IO.Compression.CompressionMode.Decompress))
+                using (StreamReader rd = new StreamReader(gz, Encoding.ASCII))
+                    d = DiagrammaAnt.DaNec(rd, out err);
+                if (d == null) throw new InvalidDataException("NEC: " + err);
+                float[] m = CaricaMappa(Path.Combine(dir, Path.Combine("cielo", "remazeilles2014_gal408.bin.gz")));
+                DateTime t = new DateTime(2025, 5, 14, 21, 59, 33, DateTimeKind.Utc);
+                foreach (double f in new double[] { 144.0, 432.0 })
+                {
+                    double k = Math.Pow(408.0 / f, IndiceDefault(f)), c = Cextra(f);
+                    Risultato r = Calcola(d, (ra, de) => Interpola(m, ra, de) * k + c, 52.2, 1.4, 269.036, 40.0, t, null, 0, 0);
+                    double te = atteso["T" + f.ToString("0", inv)];
+                    bool b1 = Math.Abs(r.Ra - 142.0) < 0.05 && Math.Abs(r.Dec - 30.0) < 0.05, b2 = Math.Abs(r.T - te) <= 0.5;
+                    sb.AppendLine(string.Format(inv, "{0} MHz: AR {1:F3} Dec {2:F3} ({3}); T {4:F3} K, Skynoise {5:F3} K ({6})",
+                        f, r.Ra, r.Dec, b1 ? "ok" : "ERRORE", r.T, te, b2 ? "ok" : "ERRORE"));
+                    ok &= b1 && b2;
+                }
+                double gm = d.GuadagnoMedio, gme = atteso["guadagno_medio"];
+                bool b3 = Math.Abs(gm - gme) < 0.0005;
+                sb.AppendLine(string.Format(inv, "Guadagno medio del diagramma di prova {0:F4}, atteso {1:F4} ({2})", gm, gme, b3 ? "ok" : "ERRORE"));
+                DiagrammaAnt iso = DiagrammaAnt.Isotropo();
+                bool b4 = Math.Abs(iso.GuadagnoMedio - 1.0) < 0.0005;
+                sb.AppendLine(string.Format(inv, "Antenna isotropa: guadagno medio {0:F3} ({1})", iso.GuadagnoMedio, b4 ? "ok" : "ERRORE"));
+                DiagrammaAnt ga = DiagrammaAnt.Gaussiano(14.6);
+                bool b5 = Math.Abs(ga.GuadagnoMedio - 1.0) < 0.0005 && Math.Abs(ga.Hpbw - 14.6) < 0.3;
+                sb.AppendLine(string.Format(inv, "Fascio gaussiano 14,6°: guadagno medio {0:F3}, apertura ricavata {1:F2}° ({2})", ga.GuadagnoMedio, ga.Hpbw, b5 ? "ok" : "ERRORE"));
+                ok &= b3 && b4 && b5;
+            }
+            catch (Exception ex) { sb.AppendLine("ERRORE: " + ex.Message); ok = false; }
+            sb.AppendLine(ok ? "COLLAUDO RUMORE DEL CIELO SUPERATO" : "COLLAUDO RUMORE DEL CIELO NON SUPERATO");
+            try { File.WriteAllText(Path.Combine(dir, "collaudo_cielo.txt"), sb.ToString()); } catch { }
+            return ok ? 0 : 1;
+        }
+    }
+
     // Schema di colori (chiaro / scuro) usato da tutto il programma
     // Lingua dell'interfaccia: i testi sono scritti in italiano nel codice e tradotti con Lang.T()
     // Traduzioni dell'interfaccia (chiave = testo italiano). Generato automaticamente.
@@ -69076,6 +69463,819 @@ namespace LunaCalc
         int FonteSfu { get { return cmbSfuFonte == null ? 0 : Math.Max(0, cmbSfuFonte.SelectedIndex); } }
         string CacheSfu { get { return Path.Combine(Path.GetDirectoryName(settingsPath), SfuFontiCache[FonteSfu]); } }
 
+        // ---------- Linguetta "Rumore del cielo (Skynoise)" (bozzetto approvato il 17/11/2026): temperatura d'antenna dal diagramma e dalla mappa del cielo ----------
+        TabPage tpCielo;
+        PannelloDisegno pnlCielo;
+        Panel pnlCieloScroll;
+        int cieloDiag = 2, cieloMappa, cieloBanda = 1, cieloSotto;   // diagramma: 0 NEC, 1 YA-NEC, 2 gaussiano; banda: 50, 144, 432, 1296
+        string cieloNec = "", cieloYanec = "";
+        static readonly double[] CieloBande = { 50, 144, 432, 1296 };
+        double[] cieloBeta = { double.NaN, double.NaN, double.NaN, double.NaN }, cieloC = { double.NaN, double.NaN, double.NaN, double.NaN };
+        static readonly string[] CieloFile = { "remazeilles2014_gal408.bin.gz", "haslam1982_gal408.bin.gz", "", "lfmap_50.bin.gz", "lfmap_144.bin.gz", "lfmap_432.bin.gz" };
+        Dictionary<string, float[]> cieloMappe = new Dictionary<string, float[]>();
+        HashSet<string> cieloScarico = new HashSet<string>();
+        string cieloErrore = "";
+        DiagrammaAnt cieloDiagNec, cieloDiagYanec, cieloDiagGauss;
+        string cieloDiagGaussChiave = "";
+        bool cieloOra = true;
+        DateTime cieloT = DateTime.MinValue;
+        List<KeyValuePair<RectangleF, Action>> cieloZone = new List<KeyValuePair<RectangleF, Action>>();
+        List<KeyValuePair<RectangleF, string>> cieloFumetti = new List<KeyValuePair<RectangleF, string>>();
+        string cieloFumetto = "";
+        Bitmap cieloBmp;
+        string cieloBmpChiave = "";
+        NumericUpDown nudCieloBeta, nudCieloC;
+        Control ctCieloBeta, ctCieloC;
+        Label lblCieloBeta, lblCieloC;
+        bool cieloSync;
+        // curve del passaggio, calcolate in un thread a parte
+        class CieloPassaggio
+        {
+            public string Chiave = "";
+            public DateTime T0, T1;
+            public List<DateTime> T = new List<DateTime>();
+            public List<double> Me = new List<double>(), Fascio = new List<double>(), Dx = new List<double>();
+            public bool Pronto;
+        }
+        CieloPassaggio cieloPass = new CieloPassaggio();
+        int cieloGen;
+
+        double CieloFreq { get { return CieloBande[Math.Max(0, Math.Min(3, cieloBanda))]; } }
+        double CieloBetaAtt { get { double b = cieloBeta[cieloBanda]; return double.IsNaN(b) ? Skynoise.IndiceDefault(CieloFreq) : b; } }
+        double CieloCAtt { get { double c = cieloC[cieloBanda]; return double.IsNaN(c) ? Skynoise.Cextra(CieloFreq) : c; } }
+        static string CieloBandaNome(double f) { return f >= 1000 ? "23 cm" : f.ToString("0", CultureInfo.InvariantCulture) + " MHz"; }
+
+        void BuildCieloTab(TabPage tp)
+        {
+            pnlCieloScroll = new Panel();
+            pnlCieloScroll.Dock = DockStyle.Fill;
+            pnlCieloScroll.AutoScroll = true;
+            pnlCieloScroll.AutoScrollMinSize = new Size(S(1180), S(740));
+            pnlCielo = new PannelloDisegno();
+            pnlCielo.Location = new Point(0, 0);
+            pnlCielo.Size = new Size(S(1180), S(740));
+            pnlCieloScroll.Resize += (s, e) => CieloDimensioni();
+            pnlCielo.Paint += DisegnaCielo;
+            pnlCielo.MouseClick += (s, e) =>
+            {
+                foreach (KeyValuePair<RectangleF, Action> kv in cieloZone)
+                    if (kv.Key.Contains(e.Location)) { kv.Value(); return; }
+            };
+            pnlCielo.MouseMove += (s, e) =>
+            {
+                string t = "";
+                foreach (KeyValuePair<RectangleF, string> kv in cieloFumetti)
+                    if (kv.Key.Contains(e.Location)) { t = kv.Value; break; }
+                bool mano = false;
+                foreach (KeyValuePair<RectangleF, Action> kv in cieloZone) if (kv.Key.Contains(e.Location)) { mano = true; break; }
+                pnlCielo.Cursor = mano ? Cursors.Hand : Cursors.Default;
+                if (t != cieloFumetto) { cieloFumetto = t; tip.SetToolTip(pnlCielo, t); }
+            };
+            nudCieloBeta = Nud(1.5m, 3.5m, 2.56m, 3, 58);
+            nudCieloBeta.Increment = 0.01m;
+            nudCieloC = Nud(0m, 5000m, 58.7m, 2, 58);
+            nudCieloC.Increment = 0.1m;
+            tip.SetToolTip(nudCieloBeta, Lang.T("Indice spettrale β della scala in frequenza T_f = k·T_408 + C, con k = (408/f)^β: 2,56 a 50 e 144 MHz, 2,617 a 432 MHz e 23 cm (Skynoise)."));
+            tip.SetToolTip(nudCieloC, Lang.T("Correzione extragalattica C alla banda scelta (sorgenti non risolte e fondo cosmico a 2,73 K): C = 2,73 + 50·(150/f)^2,75 K (Lawson et al. 1987, come Skynoise e LFmap)."));
+            ctCieloBeta = Tonda(nudCieloBeta); ctCieloC = Tonda(nudCieloC);
+            lblCieloBeta = new Label(); lblCieloBeta.AutoSize = true; lblCieloBeta.Text = Lang.T("Indice β");
+            lblCieloC = new Label(); lblCieloC.AutoSize = true; lblCieloC.Text = "C (K)";
+            foreach (Control c in new Control[] { lblCieloBeta, ctCieloBeta, lblCieloC, ctCieloC }) { c.Visible = false; pnlCielo.Controls.Add(c); }
+            nudCieloBeta.ValueChanged += (s, e) => { if (cieloSync) return; cieloBeta[cieloBanda] = (double)nudCieloBeta.Value; CieloCambiato(); };
+            nudCieloC.ValueChanged += (s, e) => { if (cieloSync) return; cieloC[cieloBanda] = (double)nudCieloC.Value; CieloCambiato(); };
+            pnlCieloScroll.Controls.Add(pnlCielo);
+            tp.Controls.Add(pnlCieloScroll);
+            Timer tm = new Timer();
+            tm.Interval = 30000;
+            tm.Tick += (s, e) => { if (cieloOra && tabs != null && tabs.SelectedTab == tpCielo) pnlCielo.Invalidate(); };
+            tm.Start();
+        }
+
+        void CieloDimensioni()
+        {
+            if (pnlCielo == null || pnlCieloScroll == null) return;
+            int w = Math.Max(S(1180), pnlCieloScroll.ClientSize.Width), h = Math.Max(S(740), pnlCieloScroll.ClientSize.Height);
+            pnlCielo.Size = new Size(w, h);
+            pnlCielo.Invalidate();
+        }
+
+        void CieloCambiato()
+        {
+            cieloBmpChiave = "";
+            if (!caricamento) SaveSettings();
+            if (pnlCielo != null) pnlCielo.Invalidate();
+        }
+
+        // le mappe stanno in data\cielo: si scaricano la prima volta dal repository di YAEC su GitHub (0,7 MB ciascuna)
+        float[] CieloMappaFile(string nome)
+        {
+            float[] m;
+            if (cieloMappe.TryGetValue(nome, out m)) return m;
+            string dir = Dati.Percorso("cielo"), f = Path.Combine(dir, nome);
+            if (File.Exists(f))
+            {
+                try { m = Skynoise.CaricaMappa(f); cieloMappe[nome] = m; return m; }
+                catch { try { File.Delete(f); } catch { } }
+            }
+            if (cieloScarico.Contains(nome)) return null;
+            cieloScarico.Add(nome);
+            cieloErrore = "";
+            System.Threading.Thread t = new System.Threading.Thread(() =>
+            {
+                string err = "";
+                try
+                {
+                    byte[] b = null;
+                    foreach (string rif in new string[] { "v" + Versione, "main" })
+                    {
+                        try { b = Dati.Scarica("https://raw.githubusercontent.com/" + RepoGit + "/" + rif + "/dati/cielo/" + nome, 60000); break; }
+                        catch { b = null; }
+                    }
+                    if (b == null) throw new IOException(nome);
+                    Directory.CreateDirectory(dir);
+                    File.WriteAllBytes(f + ".tmp", b);
+                    Skynoise.CaricaMappa(f + ".tmp");
+                    if (File.Exists(f)) File.Delete(f);
+                    File.Move(f + ".tmp", f);
+                }
+                catch { err = string.Format(Lang.T("Non è stato possibile scaricare la mappa {0} da GitHub."), nome); }
+                try
+                {
+                    this.BeginInvoke((Action)(() =>
+                    {
+                        cieloScarico.Remove(nome);
+                        if (err.Length > 0) cieloErrore = err;
+                        cieloBmpChiave = "";
+                        if (pnlCielo != null) pnlCielo.Invalidate();
+                    }));
+                }
+                catch { }
+            });
+            t.IsBackground = true;
+            t.Start();
+            return null;
+        }
+
+        // temperatura del cielo (K) alla banda scelta, in funzione di AR e Dec (gradi, J2000); null = mappa non ancora pronta
+        Func<double, double, double> CieloFunzione(int mappa, double f, double beta, double c)
+        {
+            if (mappa == 2)
+            {
+                double kg = Math.Pow(144.0 / f, beta), c144 = Skynoise.Cextra(144.0);
+                return (ra, de) => (CieloGsm.Tsky(ra, de, 144.0) - c144) * kg + c;
+            }
+            if (mappa == 3)
+            {
+                double fl = f >= 1000 ? 432.0 : f;
+                float[] ml = CieloMappaFile(CieloFile[fl == 50 ? 3 : (fl == 144 ? 4 : 5)]);
+                if (ml == null) return null;
+                double kl = f >= 1000 ? Math.Pow(432.0 / f, beta) : 1.0, cl = Skynoise.Cextra(fl);
+                return (ra, de) => (Skynoise.Interpola(ml, ra, de) - cl) * kl + c;
+            }
+            float[] m = CieloMappaFile(CieloFile[mappa]);
+            if (m == null) return null;
+            double k = Math.Pow(408.0 / f, beta);
+            return (ra, de) => Skynoise.Interpola(m, ra, de) * k + c;
+        }
+
+        static readonly string[] CieloMappaNome = { "Remazeilles 2014 (Skynoise)", "Haslam 1982", "GSM 2008", "LFmap" };
+
+        DiagrammaAnt CieloDiagGauss()
+        {
+            double hp = 15;
+            try { BudgetParams.Freq = curBand; BudgetParams pm = BudgetParams.FromUi(bMe); hp = pm.Fascio(CieloFreq); } catch { }
+            if (double.IsNaN(hp) || hp <= 0.5) hp = 15;
+            hp = Math.Min(120, hp);
+            string k = hp.ToString("0.00", CultureInfo.InvariantCulture);
+            if (cieloDiagGauss == null || cieloDiagGaussChiave != k) { cieloDiagGauss = DiagrammaAnt.Gaussiano(hp); cieloDiagGaussChiave = k; }
+            return cieloDiagGauss;
+        }
+
+        DiagrammaAnt CieloDiagScelto()
+        {
+            if (cieloDiag == 0) return cieloDiagNec;
+            if (cieloDiag == 1) return cieloDiagYanec;
+            return CieloDiagGauss();
+        }
+
+        DiagrammaAnt CieloLeggiNec(string file, out string err)
+        {
+            err = null;
+            try
+            {
+                using (StreamReader rd = new StreamReader(file, Encoding.ASCII))
+                {
+                    DiagrammaAnt d = DiagrammaAnt.DaNec(rd, out err);
+                    if (d != null) d.Nome = Path.GetFileName(file);
+                    return d;
+                }
+            }
+            catch (Exception ex) { err = ex.Message; return null; }
+        }
+
+        // .yanec di YA-NEC: contiene il modello dell'antenna, non il diagramma; si legge il .out del NEC con lo stesso nome accanto
+        DiagrammaAnt CieloLeggiYanec(string file, out string err)
+        {
+            err = null;
+            string nome = Path.GetFileNameWithoutExtension(file);
+            try
+            {
+                foreach (string l in File.ReadAllLines(file))
+                    if (l.StartsWith("CM YANEC NOME=", StringComparison.Ordinal)) { nome = l.Substring(14).Trim(); break; }
+            }
+            catch (Exception ex) { err = ex.Message; return null; }
+            foreach (string o in new string[] { Path.ChangeExtension(file, ".out"), file + ".out", Path.ChangeExtension(file, ".OUT") })
+                if (File.Exists(o))
+                {
+                    DiagrammaAnt d = CieloLeggiNec(o, out err);
+                    if (d != null) d.Nome = nome;
+                    return d;
+                }
+            err = Lang.T("Il file .yanec contiene il modello dell'antenna ma non il diagramma: calcolalo in YA-NEC (o 4nec2) con passo di 1° in theta e phi e salva il file .out del NEC accanto al .yanec, con lo stesso nome.");
+            return null;
+        }
+
+        void CieloScegliFile(int quale)
+        {
+            using (OpenFileDialog od = new OpenFileDialog())
+            {
+                od.Filter = quale == 0 ? Lang.T("Uscita del NEC") + " (*.out)|*.out;*.OUT|*.*|*.*" : "YA-NEC (*.yanec)|*.yanec|*.*|*.*";
+                string vecchio = quale == 0 ? cieloNec : cieloYanec;
+                try { if (vecchio.Length > 0) od.InitialDirectory = Path.GetDirectoryName(vecchio); } catch { }
+                if (od.ShowDialog(this) != DialogResult.OK) return;
+                string err;
+                DiagrammaAnt d = quale == 0 ? CieloLeggiNec(od.FileName, out err) : CieloLeggiYanec(od.FileName, out err);
+                if (d == null)
+                {
+                    string m = err == "RADIATION PATTERNS" || err == "pattern"
+                        ? Lang.T("Nel file non c'è un diagramma di radiazione completo del NEC (sezione RADIATION PATTERNS con theta da 0° a 180° e phi da 0° a 360°, passo 1°).")
+                        : err;
+                    Messaggio(this, m, "YAEC", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (quale == 0) { cieloNec = od.FileName; cieloDiagNec = d; } else { cieloYanec = od.FileName; cieloDiagYanec = d; }
+                cieloDiag = quale;
+                CieloCambiato();
+            }
+        }
+
+        void CieloCaricaDiagrammi()
+        {
+            string err;
+            if (cieloDiagNec == null && cieloNec.Length > 0 && File.Exists(cieloNec)) cieloDiagNec = CieloLeggiNec(cieloNec, out err);
+            if (cieloDiagYanec == null && cieloYanec.Length > 0 && File.Exists(cieloYanec)) cieloDiagYanec = CieloLeggiYanec(cieloYanec, out err);
+            if (cieloDiag == 0 && cieloDiagNec == null) cieloDiag = 2;
+            if (cieloDiag == 1 && cieloDiagYanec == null) cieloDiag = 2;
+        }
+
+        Func<double, double> CieloTerreno()
+        {
+            if (cieloSotto == 1 && OrizzonteValido) return new Func<double, double>(orizz.Elev);
+            return null;
+        }
+
+        // momento scelto: adesso, oppure il passaggio più alto del giorno cliccato sulla mappa
+        DateTime CieloIstante()
+        {
+            if (cieloOra || cieloT == DateTime.MinValue) return DateTime.SpecifyKind(NowUtcMinute(), DateTimeKind.Utc);
+            return cieloT;
+        }
+
+        void CieloScegliGiorno(DateTime giorno)
+        {
+            if (!me.Ok) return;
+            DateTime oggi = DateTime.UtcNow.Date;
+            if (giorno.Date == oggi) { cieloOra = true; pnlCielo.Invalidate(); return; }
+            DateTime best = giorno.Date.AddHours(12);
+            double eMax = -99;
+            for (int i = 0; i < 24 * 6; i++)
+            {
+                DateTime t = DateTime.SpecifyKind(giorno.Date.AddMinutes(10 * i), DateTimeKind.Utc);
+                MoonPos p = Moon.Compute(t, me.Lat, me.Lon, (double)me.H.Value, chkRefr.Checked);
+                if (p.El > eMax) { eMax = p.El; best = t; }
+            }
+            cieloOra = false;
+            cieloT = best;
+            pnlCielo.Invalidate();
+        }
+
+        static Color CieloColore(double t, double lo, double hi)
+        {
+            double x = (Math.Log(Math.Max(t, 1e-3)) - Math.Log(lo)) / (Math.Log(hi) - Math.Log(lo));
+            x = Math.Max(0, Math.Min(1, x));
+            // scala "jet": blu scuro, blu, azzurro, giallo, arancio, rosso
+            double[] p = { 0, 0.12, 0.36, 0.62, 0.82, 1.0 };
+            int[,] c = { { 8, 24, 110 }, { 20, 70, 200 }, { 40, 170, 230 }, { 245, 225, 70 }, { 245, 130, 40 }, { 200, 20, 30 } };
+            int i = 0;
+            while (i < p.Length - 2 && x > p[i + 1]) i++;
+            double k = (x - p[i]) / (p[i + 1] - p[i]);
+            return Color.FromArgb((int)(c[i, 0] + (c[i + 1, 0] - c[i, 0]) * k), (int)(c[i, 1] + (c[i + 1, 1] - c[i, 1]) * k), (int)(c[i, 2] + (c[i + 1, 2] - c[i, 2]) * k));
+        }
+
+        // limiti della scala dei colori: 150 – 6000 K a 144 MHz, portati alla banda con lo stesso indice
+        void CieloScala(out double lo, out double hi)
+        {
+            double f = CieloFreq, k = Math.Pow(144.0 / f, CieloBetaAtt), c144 = Skynoise.Cextra(144.0), c = CieloCAtt;
+            lo = Math.Max(0.5, (150.0 - c144) * k + c);
+            hi = Math.Max(lo * 2, (6000.0 - c144) * k + c);
+        }
+
+        static string CieloK(double t) { return double.IsNaN(t) ? "–" : t.ToString(t < 20 ? "0.0" : "0", Lang.Cultura) + " K"; }
+        static string CieloDb(double v) { return double.IsNaN(v) ? "–" : (v >= 0.05 ? "+" : "") + v.ToString("0.0", Lang.Cultura).Replace("-", "−") + " dB"; }
+
+        // effetto sul Budget EME yagi: Tsys con la Ta calcolata qui al posto di Tant (VE7BQH) + cielo di riferimento
+        double CieloEffettoBudget(double ta)
+        {
+            if (double.IsNaN(ta) || bMe == null || Math.Abs(curBand - CieloFreq) > 1) return double.NaN;
+            try
+            {
+                BudgetParams.Freq = curBand;
+                BudgetParams pm = BudgetParams.FromUi(bMe);
+                Tratta tr = CalcTratta(pm, pm, 0, 0, TskyRif(curBand), 0, LeggiBw(), 0, 0, 0, curBand);
+                double rif = tr.Tant + tr.Tloss, nuovo = ta + tr.Tloss;
+                return -10.0 * Math.Log10(nuovo / rif);
+            }
+            catch { return double.NaN; }
+        }
+
+        void CieloAvviaPassaggio(string chiave, DiagrammaAnt d, Func<double, double, double> cielo, DateTime tSel, double tau, Func<double, double> terr)
+        {
+            if (cieloPass.Chiave == chiave) return;
+            CieloPassaggio cp = new CieloPassaggio();
+            cp.Chiave = chiave;
+            cieloPass = cp;
+            int gen = ++cieloGen;
+            double lat = me.Lat, lon = me.Lon, hm = (double)me.H.Value;
+            bool dxOn = chkDx.Checked && dx.Ok, refr = chkRefr.Checked;
+            double dlat = dxOn ? dx.Lat : 0, dlon = dxOn ? dx.Lon : 0, dh = dxOn ? (double)dx.H.Value : 0;
+            double tf = TskyRif(CieloFreq);
+            System.Threading.Thread th = new System.Threading.Thread(() =>
+            {
+                try
+                {
+                    // passaggio della Luna che contiene l'istante scelto (o il successivo)
+                    Func<DateTime, double> el = t => Moon.Compute(t, lat, lon, hm, refr).El;
+                    DateTime a = tSel, b = tSel;
+                    if (el(tSel) <= 0)
+                    {
+                        DateTime x = tSel;
+                        for (int i = 0; i < 30 * 6 && el(x) <= 0; i++) x = x.AddMinutes(10);
+                        a = b = x;
+                    }
+                    for (int i = 0; i < 20 * 6 && el(a.AddMinutes(-10)) > 0; i++) a = a.AddMinutes(-10);
+                    for (int i = 0; i < 20 * 6 && el(b.AddMinutes(10)) > 0; i++) b = b.AddMinutes(10);
+                    DateTime t0 = new DateTime(a.Year, a.Month, a.Day, a.Hour, 0, 0, DateTimeKind.Utc).AddHours(-1);
+                    DateTime t1 = new DateTime(b.Year, b.Month, b.Day, b.Hour, 0, 0, DateTimeKind.Utc).AddHours(2);
+                    if (((t1 - t0).TotalHours % 2) != 0) t1 = t1.AddHours(1);
+                    cp.T0 = t0; cp.T1 = t1;
+                    for (DateTime t = t0; t <= t1; t = t.AddMinutes(10))
+                    {
+                        if (gen != cieloGen) return;
+                        MoonPos p = Moon.Compute(t, lat, lon, hm, refr);
+                        double vm = double.NaN, vf = double.NaN, vd = double.NaN;
+                        if (p.El > 0)
+                        {
+                            Skynoise.Risultato r = Skynoise.Calcola(d, cielo, lat, lon, p.Az, p.El, t, terr, tau, tf);
+                            vm = r.T; vf = r.Tfascio;
+                        }
+                        if (dxOn)
+                        {
+                            MoonPos q = Moon.Compute(t, dlat, dlon, dh, refr);
+                            if (q.El > 0) vd = Skynoise.Calcola(d, cielo, dlat, dlon, q.Az, q.El, t, null, tau, tf).T;
+                        }
+                        cp.T.Add(t); cp.Me.Add(vm); cp.Fascio.Add(vf); cp.Dx.Add(vd);
+                    }
+                    cp.Pronto = true;
+                }
+                catch { cp.Pronto = true; }
+                try { this.BeginInvoke((Action)(() => { if (pnlCielo != null) pnlCielo.Invalidate(); })); } catch { }
+            });
+            th.IsBackground = true;
+            th.Priority = System.Threading.ThreadPriority.BelowNormal;
+            th.Start();
+        }
+
+        void CieloPillola(Graphics g, RectangleF r, string t, bool on, Font f, Font fb, Color blu, Action clic, string fumetto)
+        {
+            using (GraphicsPath p = Arrotondato(r, r.Height / 2f))
+            {
+                using (Brush b = new SolidBrush(on ? blu : Tema.Carta)) g.FillPath(b, p);
+                using (Pen pn = new Pen(on ? blu : Tema.Linea, 1f)) g.DrawPath(pn, p);
+            }
+            Testo(g, t, on ? fb : f, on ? Color.White : Tema.Fore, new RectangleF(r.X + S(12), r.Y, r.Width - S(16), r.Height), StringAlignment.Near, StringAlignment.Center);
+            if (clic != null) cieloZone.Add(new KeyValuePair<RectangleF, Action>(r, clic));
+            if (!string.IsNullOrEmpty(fumetto)) cieloFumetti.Add(new KeyValuePair<RectangleF, string>(r, fumetto));
+        }
+
+        void DisegnaCielo(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            PreparaGrafica(g);
+            g.Clear(Tema.Back);
+            cieloZone.Clear();
+            cieloFumetti.Clear();
+            CultureInfo c = Lang.Cultura;
+            CieloCaricaDiagrammi();
+            bool scuro = Tema.Scuro;
+            Color blu = scuro ? Color.FromArgb(96, 165, 250) : Color.FromArgb(31, 111, 209);
+            Color bluPill = Color.FromArgb(31, 111, 209);
+            Color arancio = Color.FromArgb(240, 140, 40);
+            int W = pnlCielo.ClientSize.Width, H = pnlCielo.ClientSize.Height;
+            float m = S(8f), xl = m, wl = S(210f), wr = S(376f), xr = W - m - wr, xc = xl + wl + S(10f), wc = xr - S(10f) - xc;
+            using (Font fSez = FontPx(Lang.FontUi, S(12.5f), true))
+            using (Font fPil = FontPx(Lang.FontUi, S(13.5f), false))
+            using (Font fPilB = FontPx(Lang.FontUi, S(13.5f), true))
+            using (Font fTit = FontPx(Lang.FontUi, S(14.5f), true))
+            using (Font fPic = FontPx(Lang.FontUi, S(11.5f), false))
+            using (Font fPicB = FontPx(Lang.FontUi, S(12.5f), true))
+            using (Font fNum = FontPx(Lang.FontUi, S(20f), true))
+            using (Font fCel = FontPx(Lang.FontUi, S(12.5f), false))
+            {
+                // ----- colonna sinistra: le pillole
+                float y = S(12f), hp = S(26f), dy = S(32f);
+                Action<string> sez = s0 =>
+                {
+                    Testo(g, s0.ToUpper(c), fSez, scuro ? Tema.Muted : Color.FromArgb(55, 65, 81), new RectangleF(xl + S(4), y, wl, S(18)), StringAlignment.Near, StringAlignment.Center);
+                    y += S(24f);
+                };
+                sez(Lang.T("Diagramma d'antenna"));
+                string[] dn = { Lang.T("File NEC (.out, passo 1°)"), Lang.T("Da YA-NEC (.yanec)"), Lang.T("Gaussiano da HPBW (budget)") };
+                for (int i = 0; i < 3; i++)
+                {
+                    int ii = i;
+                    string fum = i == 0 ? Lang.T("Diagramma di radiazione calcolato dal NEC2/NEC4 (o 4nec2) con passo di 1° in theta e phi, fascio verso theta 90°, phi 0° (come richiede Skynoise). Clic per scegliere il file.") + (cieloNec.Length > 0 ? "\n" + cieloNec : "")
+                        : i == 1 ? Lang.T("Modello salvato da YA-NEC: si usa il file .out del NEC con lo stesso nome nella stessa cartella. Clic per scegliere il file.") + (cieloYanec.Length > 0 ? "\n" + cieloYanec : "")
+                        : Lang.T("Fascio gaussiano senza lobi laterali, con la larghezza a −3 dB del Budget EME yagi (stessa regola di tutto il programma).");
+                    CieloPillola(g, new RectangleF(xl, y, wl, hp), dn[i], cieloDiag == i, fPil, fPilB, bluPill, () =>
+                    {
+                        if (ii == 2) { cieloDiag = 2; CieloCambiato(); return; }
+                        DiagrammaAnt dd = ii == 0 ? cieloDiagNec : cieloDiagYanec;
+                        if (dd == null || cieloDiag == ii) CieloScegliFile(ii);
+                        else { cieloDiag = ii; CieloCambiato(); }
+                    }, fum);
+                    y += dy;
+                }
+                y += S(4f);
+                sez(Lang.T("Mappa del cielo"));
+                string[] mn = { Lang.T("Remazeilles 2014 (Skynoise)"), Lang.T("Haslam 1982 originale"), Lang.T("GSM 2008 (multi-survey)"), Lang.T("LFmap (per i 50 MHz)") };
+                string[] mf = { Lang.T("Mappa di Haslam a 408 MHz rielaborata da Remazeilles et al. (2015), la stessa di Skynoise: strisce e sorgenti puntiformi corrette."),
+                    Lang.T("Mappa di Haslam et al. (1982) a 408 MHz senza filtri (LAMBDA), portata alla banda con lo stesso indice."),
+                    Lang.T("Modello multi-survey GSM 2008 (de Oliveira-Costa et al.) già usato dalla Volta celeste, a 2° di risoluzione. Il GSM 2016 (Zheng et al.) non è distribuito in un formato che YAEC possa scaricare: si userà quando lo sarà."),
+                    Lang.T("LFmap (Polisensky 2007, LWA Memo 111): spettro curvo calcolato dalle mappe a 22, 408 e 1420 MHz, più adatto ai 50 MHz.") };
+                for (int i = 0; i < 4; i++)
+                {
+                    int ii = i;
+                    CieloPillola(g, new RectangleF(xl, y, wl, hp), mn[i], cieloMappa == i, fPil, fPilB, bluPill, () => { cieloMappa = ii; CieloCambiato(); }, mf[i]);
+                    y += dy;
+                }
+                y += S(4f);
+                sez(Lang.T("Banda"));
+                for (int i = 0; i < 4; i++)
+                {
+                    int ii = i;
+                    string t = i == 3 ? Lang.T("23 cm (CMB + atmosfera)") : CieloBande[i].ToString("0", c) + " MHz";
+                    CieloPillola(g, new RectangleF(xl, y, wl, hp), t, cieloBanda == i, fPil, fPilB, bluPill, () => { cieloBanda = ii; CieloAggiornaNud(); CieloCambiato(); },
+                        i == 3 ? Lang.T("A 23 cm il cielo galattico è debole: contano il fondo cosmico (2,73 K) e l'atmosfera (2,3 K allo zenit, di più verso l'orizzonte).") : null);
+                    y += dy;
+                }
+                y += S(4f);
+                sez(Lang.T("Sotto l'orizzonte"));
+                string[] so = { Lang.T("290 K (come Skynoise)"), Lang.T("Il mio orizzonte (DEM)") };
+                for (int i = 0; i < 2; i++)
+                {
+                    int ii = i;
+                    CieloPillola(g, new RectangleF(xl, y, wl, hp), so[i], cieloSotto == i, fPil, fPilB, bluPill, () => { cieloSotto = ii; CieloCambiato(); },
+                        i == 1 ? Lang.T("Le direzioni sotto il profilo del terreno calcolato nella linguetta Il mio orizzonte valgono 290 K come il suolo.") : null);
+                    y += dy;
+                }
+                string nota = string.Format(Lang.T("Indice spettrale {0} e correzione extragalattica come Skynoise (G8ONH, licenza MIT); cambiabili con CALCOLI APPROFONDITI."), CieloBetaAtt.ToString("0.00#", c));
+                if (cieloSotto == 1 && !OrizzonteValido) nota = Lang.T("Calcola prima l'orizzonte dal terreno nella linguetta Il mio orizzonte: fino ad allora vale 290 K sotto l'orizzonte piatto.") + "\n" + nota;
+                SizeF sn = g.MeasureString(nota, fPic, (int)wl);
+                Testo(g, nota, fPic, cieloSotto == 1 && !OrizzonteValido ? Tema.WarnFg : Tema.Muted, new RectangleF(xl, y, wl, sn.Height + S(4)), StringAlignment.Near, StringAlignment.Near);
+                y += sn.Height + S(10);
+                CieloPosizionaNud(xl, y);
+
+                // ----- dati comuni
+                DateTime tSel = CieloIstante();
+                double f = CieloFreq, beta = CieloBetaAtt, cc = CieloCAtt, tau = f >= 1000 ? Skynoise.TauZenit23 : 0;
+                Func<double, double, double> cielo = CieloFunzione(cieloMappa, f, beta, cc);
+                DiagrammaAnt d = CieloDiagScelto();
+                Func<double, double> terr = CieloTerreno();
+                MoonPos pm = me.Ok ? Moon.Compute(tSel, me.Lat, me.Lon, (double)me.H.Value, chkRefr.Checked) : new MoonPos();
+                Skynoise.Risultato rs = null, rg = null;
+                if (me.Ok && cielo != null && d != null)
+                {
+                    rs = Skynoise.Calcola(d, cielo, me.Lat, me.Lon, pm.Az, pm.El, tSel, terr, tau, TskyRif(f));
+                    rg = d == CieloDiagGauss() ? rs : Skynoise.Calcola(CieloDiagGauss(), cielo, me.Lat, me.Lon, pm.Az, pm.El, tSel, terr, tau, TskyRif(f));
+                }
+                double hpbw = d != null ? d.Hpbw : double.NaN;
+                string call = txtCall == null ? "" : txtCall.Text.Trim().ToUpperInvariant();
+
+                // ----- centro in alto: mappa del cielo e percorso della Luna nel mese
+                float hTop = Math.Max(S(330f), (H - 3 * m) * 0.6f), hBot = H - 3 * m - hTop;
+                RectangleF cTop = new RectangleF(xc, m, wc, hTop), cBot = new RectangleF(xc, m * 2 + hTop, wc, hBot);
+                Scheda(g, cTop, Color.Empty);
+                string tit = string.Format(Lang.T("Cielo a {0} e percorso della Luna nel mese (giorno {1} evidenziato)"), CieloBandaNome(f), tSel.Day);
+                Testo(g, tit, fTit, Tema.Fore, new RectangleF(cTop.X + S(12), cTop.Y + S(8), cTop.Width - S(24), S(22)), StringAlignment.Near, StringAlignment.Center);
+                RectangleF rm = new RectangleF(cTop.X + S(50), cTop.Y + S(44), cTop.Width - S(78), cTop.Height - S(44) - S(66));
+                double lo, hi;
+                CieloScala(out lo, out hi);
+                if (cielo == null)
+                {
+                    using (Brush b = new SolidBrush(Tema.ChartBg)) g.FillRectangle(b, rm);
+                    string msg = cieloErrore.Length > 0 ? cieloErrore + "\n" + Lang.T("Clic per riprovare.") : Lang.T("Scarico la mappa del cielo da GitHub (0,7 MB, una volta sola)…");
+                    Testo(g, msg, fCel, cieloErrore.Length > 0 ? Tema.BadFg : Tema.Muted, rm, StringAlignment.Center, StringAlignment.Center);
+                    if (cieloErrore.Length > 0) cieloZone.Add(new KeyValuePair<RectangleF, Action>(rm, () => { cieloErrore = ""; pnlCielo.Invalidate(); }));
+                }
+                else
+                {
+                    string kb = cieloMappa + "|" + f.ToString(CultureInfo.InvariantCulture) + "|" + beta.ToString("R", CultureInfo.InvariantCulture) + "|" + cc.ToString("R", CultureInfo.InvariantCulture) + "|" + (int)rm.Width + "x" + (int)rm.Height;
+                    if (cieloBmp == null || cieloBmpChiave != kb)
+                    {
+                        int bw = Math.Max(10, (int)rm.Width), bh = Math.Max(10, (int)rm.Height);
+                        Bitmap bmp = new Bitmap(bw, bh, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                        System.Drawing.Imaging.BitmapData bd = bmp.LockBits(new Rectangle(0, 0, bw, bh), System.Drawing.Imaging.ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                        int[] px = new int[bw * bh];
+                        for (int j = 0; j < bh; j++)
+                        {
+                            double de = 90.0 - (j + 0.5) / bh * 130.0;
+                            for (int i = 0; i < bw; i++)
+                            {
+                                double ra = 360.0 - (i + 0.5) / bw * 360.0;
+                                px[j * bw + i] = CieloColore(cielo(ra, de), lo, hi).ToArgb();
+                            }
+                        }
+                        Marshal.Copy(px, 0, bd.Scan0, px.Length);
+                        bmp.UnlockBits(bd);
+                        if (cieloBmp != null) cieloBmp.Dispose();
+                        cieloBmp = bmp; cieloBmpChiave = kb;
+                    }
+                    g.DrawImage(cieloBmp, rm);
+                }
+                Func<double, float> xRa = raq => rm.Left + (float)((360.0 - raq) / 360.0 * rm.Width);
+                Func<double, float> yDe = deq => rm.Top + (float)((90.0 - deq) / 130.0 * rm.Height);
+                using (Pen pg = new Pen(Color.FromArgb(70, 255, 255, 255), 1f))
+                {
+                    foreach (int de in new int[] { 60, 30, 0, -30 })
+                    {
+                        g.DrawLine(pg, rm.Left, yDe(de), rm.Right, yDe(de));
+                        Testo(g, (de < 0 ? "−" : "") + Math.Abs(de) + "°", fPic, Tema.ChartText, new RectangleF(rm.Left - S(46), yDe(de) - S(8), S(40), S(16)), StringAlignment.Far, StringAlignment.Center);
+                    }
+                    for (int hr = 0; hr < 24; hr += 3)
+                    {
+                        float x = xRa(hr * 15.0);
+                        if (hr > 0) g.DrawLine(pg, x, rm.Top, x, rm.Bottom);
+                        Testo(g, hr + " h", fPic, Tema.ChartText, new RectangleF(x - S(24), rm.Bottom + S(2), S(48), S(16)), StringAlignment.Center, StringAlignment.Near);
+                    }
+                }
+                // percorso della Luna nel mese: un pallino per giorno alla stessa ora, numerati ogni tre giorni
+                if (me.Ok)
+                {
+                    int nG = DateTime.DaysInMonth(tSel.Year, tSel.Month);
+                    float rPal = S(3.2f);
+                    using (Brush bw_ = new SolidBrush(Color.White))
+                    using (Pen pk = new Pen(Color.FromArgb(150, 20, 30, 60), 1f))
+                        for (int gi = 1; gi <= nG; gi++)
+                        {
+                            DateTime tg = new DateTime(tSel.Year, tSel.Month, gi, tSel.Hour, tSel.Minute, 0, DateTimeKind.Utc);
+                            MoonPos q = Moon.Compute(tg, me.Lat, me.Lon, (double)me.H.Value, false);
+                            if (q.Dec < -40) continue;
+                            float x = xRa(q.Ra), yy = yDe(q.Dec);
+                            bool sel = gi == tSel.Day;
+                            if (sel && rs != null) { x = xRa(rs.Ra); yy = yDe(rs.Dec); }
+                            float rr = sel ? S(5f) : rPal;
+                            g.FillEllipse(bw_, x - rr, yy - rr, 2 * rr, 2 * rr);
+                            g.DrawEllipse(pk, x - rr, yy - rr, 2 * rr, 2 * rr);
+                            if (gi % 3 == 0 || sel)
+                                using (Font fd = FontPx(Lang.FontUi, S(sel ? 12f : 11f), sel))
+                                    Testo(g, gi.ToString(c), fd, Color.White, new RectangleF(x - S(14), yy - S(22), S(28), S(16)), StringAlignment.Center, StringAlignment.Center);
+                            DateTime giorno = tg.Date;
+                            cieloZone.Add(new KeyValuePair<RectangleF, Action>(new RectangleF(x - S(7), yy - S(7), S(14), S(14)), () => CieloScegliGiorno(giorno)));
+                            cieloFumetti.Add(new KeyValuePair<RectangleF, string>(new RectangleF(x - S(7), yy - S(7), S(14), S(14)),
+                                tg.ToString("d MMMM yyyy", c) + " · " + Lang.T("clic per il passaggio di quel giorno")));
+                            if (sel && !double.IsNaN(hpbw))
+                            {
+                                double dec = rs != null ? rs.Dec : q.Dec;
+                                float ry = (float)(hpbw / 2 / 130.0 * rm.Height), rx = (float)(hpbw / 2 / Math.Max(0.2, Math.Cos(dec * Math.PI / 180)) / 360.0 * rm.Width);
+                                using (Pen pd = new Pen(Color.White, S(1.6f)))
+                                {
+                                    pd.DashStyle = DashStyle.Dash;
+                                    g.DrawEllipse(pd, x - rx, yy - ry, 2 * rx, 2 * ry);
+                                }
+                                Testo(g, string.Format(Lang.T("fascio a −3 dB ({0}°)"), hpbw.ToString("0.0", c)), fPic, Color.White,
+                                    new RectangleF(x + rx + S(4), yy + S(2), S(180), S(16)), StringAlignment.Near, StringAlignment.Near);
+                            }
+                        }
+                }
+                // scala dei colori
+                RectangleF rb = new RectangleF(rm.Left, rm.Bottom + S(24), Math.Min(S(240f), rm.Width / 3), S(9));
+                for (int i = 0; i < (int)rb.Width; i++)
+                    using (Pen pc = new Pen(CieloColore(lo * Math.Pow(hi / lo, i / rb.Width), lo, hi))) g.DrawLine(pc, rb.Left + i, rb.Top, rb.Left + i, rb.Bottom);
+                double mid = Math.Sqrt(lo * hi);
+                Testo(g, CieloK(lo), fPic, Tema.ChartText, new RectangleF(rb.Left, rb.Bottom + S(2), S(80), S(16)), StringAlignment.Near, StringAlignment.Near);
+                Testo(g, CieloK(mid), fPic, Tema.ChartText, new RectangleF(rb.Left + rb.Width / 2 - S(40), rb.Bottom + S(2), S(80), S(16)), StringAlignment.Center, StringAlignment.Near);
+                Testo(g, CieloK(hi), fPic, Tema.ChartText, new RectangleF(rb.Right - S(80), rb.Bottom + S(2), S(80), S(16)), StringAlignment.Far, StringAlignment.Near);
+                string fonte = string.Format(Lang.T("{0} a {1}, indice {2} · J2000"), CieloMappaNome[cieloMappa], CieloBandaNome(f), beta.ToString("0.00#", c));
+                Testo(g, fonte, fPic, Tema.ChartText, new RectangleF(rb.Right + S(10), rb.Top + S(4), rm.Right - rb.Right - S(10), S(16)), StringAlignment.Far, StringAlignment.Near);
+
+                // ----- centro in basso: temperatura d'antenna durante il passaggio
+                Scheda(g, cBot, Color.Empty);
+                Testo(g, Lang.T("Temperatura d'antenna durante il passaggio"), fTit, Tema.Fore, new RectangleF(cBot.X + S(12), cBot.Y + S(8), cBot.Width - S(24), S(22)), StringAlignment.Near, StringAlignment.Center);
+                RectangleF rc = new RectangleF(cBot.X + S(60), cBot.Y + S(40), cBot.Width - S(90), cBot.Height - S(40) - S(42));
+                using (Brush b = new SolidBrush(Tema.ChartBg)) g.FillRectangle(b, rc);
+                if (me.Ok && cielo != null && d != null)
+                {
+                    string kResto = string.Join("|", new string[] { cieloMappa.ToString(), f.ToString(CultureInfo.InvariantCulture),
+                        beta.ToString("R", CultureInfo.InvariantCulture), cc.ToString("R", CultureInfo.InvariantCulture), cieloDiag.ToString(), d.Nome, d.Hpbw.ToString("R", CultureInfo.InvariantCulture),
+                        cieloSotto.ToString(), terr == null ? "0" : ChiaveTerreno, me.Loc.Text, me.H.Value.ToString(), (chkDx.Checked && dx.Ok) ? dx.Loc.Text : "-", chkRefr.Checked ? "r" : "" });
+                    string kp = tSel.ToString("yyyyMMddHHmm", CultureInfo.InvariantCulture) + "#" + kResto;
+                    string vecchia = cieloPass.Chiave;
+                    int hv = vecchia.IndexOf('#');
+                    // con «adesso» si ricalcola solo quando l'istante esce dal passaggio già calcolato
+                    if (cieloOra && hv > 0 && vecchia.Substring(hv + 1) == kResto && (!cieloPass.Pronto || (cieloPass.T.Count > 0 && tSel >= cieloPass.T0 && tSel <= cieloPass.T1)))
+                        kp = vecchia;
+                    CieloAvviaPassaggio(kp, d, cielo, tSel, tau, terr);
+                }
+                CieloPassaggio cpz = cieloPass;
+                if (!cpz.Pronto || cpz.T.Count < 2)
+                    Testo(g, me.Ok ? Lang.T("Calcolo del passaggio…") : Lang.T("Imposta un locator valido per la tua stazione"), fCel, Tema.Muted, rc, StringAlignment.Center, StringAlignment.Center);
+                else
+                {
+                    double ymin = double.MaxValue, ymax = double.MinValue;
+                    foreach (List<double> ls in new List<double>[] { cpz.Me, cpz.Fascio, cpz.Dx })
+                        foreach (double v in ls) if (!double.IsNaN(v)) { ymin = Math.Min(ymin, v); ymax = Math.Max(ymax, v); }
+                    if (ymin > ymax) { ymin = 0; ymax = 100; }
+                    double passo = Math.Pow(10, Math.Floor(Math.Log10(Math.Max(1e-3, ymax - ymin))));
+                    if ((ymax - ymin) / passo < 3) passo /= 2;
+                    if ((ymax - ymin) / passo > 6) passo *= 2.5;
+                    passo = Math.Max(passo, f >= 1000 ? 0.5 : 1);
+                    double y0 = Math.Floor(ymin / passo) * passo, y1 = Math.Ceiling(ymax / passo) * passo;
+                    if (y1 - y0 < passo * 2) y1 = y0 + passo * 2;
+                    double tot = (cpz.T1 - cpz.T0).TotalMinutes;
+                    Func<DateTime, float> xT = tq => rc.Left + (float)((tq - cpz.T0).TotalMinutes / tot * rc.Width);
+                    Func<double, float> yK = vq => rc.Bottom - (float)((vq - y0) / (y1 - y0) * rc.Height);
+                    // finestra comune con il DX
+                    int iA = -1, iB = -1;
+                    for (int i = 0; i < cpz.T.Count; i++) if (!double.IsNaN(cpz.Me[i]) && !double.IsNaN(cpz.Dx[i])) { if (iA < 0) iA = i; iB = i; }
+                    if (iA >= 0 && iB > iA)
+                    {
+                        RectangleF rw = new RectangleF(xT(cpz.T[iA]), rc.Top, xT(cpz.T[iB]) - xT(cpz.T[iA]), rc.Height);
+                        using (Brush b = new SolidBrush(Color.FromArgb(scuro ? 50 : 26, blu))) g.FillRectangle(b, rw);
+                        Testo(g, Lang.T("finestra comune con il DX"), fPic, blu, new RectangleF(rw.X, rc.Top + S(2), rw.Width, S(16)), StringAlignment.Center, StringAlignment.Near);
+                    }
+                    using (Pen pg = new Pen(Tema.ChartGrid, 1f))
+                    {
+                        for (double vg = y0; vg <= y1 + 1e-9; vg += passo)
+                        {
+                            g.DrawLine(pg, rc.Left, yK(vg), rc.Right, yK(vg));
+                            Testo(g, vg.ToString(passo < 1 ? "0.0" : "0", c), fPic, Tema.ChartText, new RectangleF(rc.Left - S(46), yK(vg) - S(8), S(40), S(16)), StringAlignment.Far, StringAlignment.Center);
+                        }
+                        for (DateTime th = cpz.T0; th <= cpz.T1; th = th.AddHours(2))
+                        {
+                            g.DrawLine(pg, xT(th), rc.Top, xT(th), rc.Bottom);
+                            Testo(g, th.ToString("HH", CultureInfo.InvariantCulture), fPic, Tema.ChartText, new RectangleF(xT(th) - S(20), rc.Bottom + S(2), S(40), S(16)), StringAlignment.Center, StringAlignment.Near);
+                        }
+                    }
+                    Testo(g, "K", fPic, Tema.ChartText, new RectangleF(rc.Left - S(58), rc.Top + rc.Height / 2 - S(8), S(12), S(16)), StringAlignment.Center, StringAlignment.Center);
+                    Testo(g, "UTC, " + cpz.T0.AddMinutes(tot / 2).ToString("d MMMM yyyy", c), fPic, Tema.ChartText, new RectangleF(rc.Left, rc.Bottom + S(18), rc.Width, S(16)), StringAlignment.Center, StringAlignment.Near);
+                    Action<List<double>, Color, bool, string, bool> curva = (serie, col, tratt, eti, sopra) =>
+                    {
+                        List<PointF> pts = new List<PointF>();
+                        int iEti = -1;
+                        using (Pen pn = new Pen(col, S(tratt ? 1.6f : 2.2f)))
+                        {
+                            if (tratt) pn.DashStyle = DashStyle.Dash;
+                            for (int i = 0; i <= serie.Count; i++)
+                            {
+                                if (i < serie.Count && !double.IsNaN(serie[i])) { pts.Add(new PointF(xT(cpz.T[i]), yK(serie[i]))); continue; }
+                                if (pts.Count > 1) g.DrawLines(pn, pts.ToArray());
+                                pts.Clear();
+                            }
+                        }
+                        for (int i = 0; i < serie.Count; i++) if (!double.IsNaN(serie[i])) { if (iEti < 0 || Math.Abs(i - serie.Count * 0.55) < Math.Abs(iEti - serie.Count * 0.55)) iEti = i; }
+                        if (iEti >= 0)
+                        {
+                            float x = xT(cpz.T[iEti]), yy = yK(serie[iEti]);
+                            Testo(g, eti, fPic, col, new RectangleF(x - S(110), sopra ? yy - S(18) : yy + S(2), S(220), S(16)), StringAlignment.Center, StringAlignment.Near);
+                        }
+                    };
+                    Color grigio = scuro ? Color.FromArgb(150, 160, 180) : Color.FromArgb(140, 150, 165);
+                    curva(cpz.Fascio, grigio, true, Lang.T("solo cielo dietro la Luna"), false);
+                    if (chkDx.Checked && dx.Ok) curva(cpz.Dx, arancio, false, Lang.T("Ta del DX"), true);
+                    curva(cpz.Me, blu, false, string.Format(Lang.T("Ta {0} (cielo + terra)"), call.Length > 0 ? call : Lang.T("della mia stazione")), true);
+                    if (tSel >= cpz.T0 && tSel <= cpz.T1)
+                        using (Pen pn = new Pen(Color.FromArgb(160, Tema.Fore), 1f)) { pn.DashStyle = DashStyle.Dot; g.DrawLine(pn, xT(tSel), rc.Top, xT(tSel), rc.Bottom); }
+                }
+
+                // ----- destra: adesso
+                float hA = S(324f);
+                RectangleF cA = new RectangleF(xr, m, wr, hA);
+                Scheda(g, cA, Color.Empty);
+                string quando = cieloOra ? Lang.T("Adesso") : tSel.ToString("d MMM yyyy", c);
+                Testo(g, quando + " · " + tSel.ToString("HH:mm", CultureInfo.InvariantCulture) + " UTC", fTit, Tema.Fore, new RectangleF(cA.X + S(12), cA.Y + S(8), cA.Width - S(24), S(22)), StringAlignment.Near, StringAlignment.Center);
+                if (!cieloOra)
+                    CieloPillola(g, new RectangleF(cA.Right - S(92), cA.Y + S(8), S(80), S(22)), Lang.T("Adesso"), false, fPic, fPic, bluPill, () => { cieloOra = true; pnlCielo.Invalidate(); }, Lang.T("Torna all'istante attuale."));
+                double eff = rs != null ? CieloEffettoBudget(rs.T) : double.NaN;
+                string[][] box = {
+                    new string[] { string.Format(Lang.T("Temperatura d'antenna {0}"), call.Length > 0 ? call : Lang.T("della mia stazione")), rs != null ? CieloK(rs.T) : "–",
+                        f >= 1000 ? Lang.T("cielo pesato sul diagramma + atmosfera + terra a 290 K") : Lang.T("cielo pesato sul diagramma + terra a 290 K") },
+                    new string[] { Lang.T("Cielo dietro la Luna (solo fascio)"), rs != null ? CieloK(rs.Tfascio) : "–",
+                        rs != null ? string.Format(c, Lang.T("AR {0} h {1:00} m · Dec {2}°"), ((int)Math.Round(rs.Ra * 4.0) % 1440) / 60, ((int)Math.Round(rs.Ra * 4.0) % 1440) % 60, (rs.Dec >= 0 ? "+" : "−") + Math.Abs(rs.Dec).ToString("0", c)) : "" },
+                    new string[] { Lang.T("Guadagno medio (controllo)"), d != null ? d.GuadagnoMedio.ToString("0.000", c) : "–", Lang.T("come l'efficienza del NEC") },
+                    new string[] { Lang.T("Effetto sul Budget EME yagi"), CieloDb(eff),
+                        !double.IsNaN(eff) || rs == null ? Lang.T("rispetto al cielo freddo di riferimento") : string.Format(Lang.T("imposta {0} nel Budget EME yagi"), CieloBandaNome(f)) } };
+                string[] boxFum = {
+                    Lang.T("T = Σ T·G·sinθ / Σ G·sinθ su tutte le direzioni del diagramma (passo 1°): sopra l'orizzonte la mappa del cielo, sotto 290 K."),
+                    Lang.T("Media della mappa del cielo dentro il contorno a −3 dB del diagramma, senza la terra: il «cielo dietro la Luna» degli altri programmi."),
+                    Lang.T("Guadagno medio = Σ G / Σ sinθ: vale 1 per un'antenna senza perdite, come l'efficienza calcolata dal NEC."),
+                    Lang.T("Differenza di S/N rispetto al Budget EME yagi, che usa la Tant di VE7BQH con il cielo freddo di riferimento (200 K a 144 MHz): stessa catena di ricezione, Tant sostituita dalla temperatura calcolata qui.") };
+                float yb = cA.Y + S(38), hb = (cA.Bottom - S(10) - yb - 3 * S(8)) / 4f;
+                for (int i = 0; i < 4; i++)
+                {
+                    RectangleF r = new RectangleF(cA.X + S(10), yb, cA.Width - S(20), hb);
+                    using (GraphicsPath p = Arrotondato(r, S(8)))
+                    {
+                        Color fondo = i == 0 ? (scuro ? Color.FromArgb(40, blu) : Color.FromArgb(239, 245, 255)) : (scuro ? Tema.Field : Color.FromArgb(250, 251, 253));
+                        using (Brush b = new SolidBrush(fondo)) g.FillPath(b, p);
+                        using (Pen pn = new Pen(i == 0 ? blu : Tema.Linea, i == 0 ? S(1.4f) : 1f)) g.DrawPath(pn, p);
+                    }
+                    Testo(g, box[i][0], fCel, Tema.Muted, new RectangleF(r.X + S(10), r.Y + S(5), r.Width - S(16), S(17)), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, box[i][1], fNum, i == 0 ? blu : Tema.Fore, new RectangleF(r.X + S(10), r.Y + S(21), r.Width - S(16), S(26)), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, box[i][2], fPic, Tema.Muted, new RectangleF(r.X + S(10), r.Y + S(48), r.Width - S(16), Math.Max(S(15), r.Height - S(50))), StringAlignment.Near, StringAlignment.Near);
+                    cieloFumetti.Add(new KeyValuePair<RectangleF, string>(r, boxFum[i]));
+                    yb += hb + S(8);
+                }
+
+                // ----- destra: confronto dei metodi
+                float yC = cA.Bottom + m;
+                RectangleF cC = new RectangleF(xr, yC, wr, S(206f));
+                Scheda(g, cC, Color.Empty);
+                Testo(g, Lang.T("Confronto dei metodi (stesso istante)"), fTit, Tema.Fore, new RectangleF(cC.X + S(12), cC.Y + S(8), cC.Width - S(24), S(22)), StringAlignment.Near, StringAlignment.Center);
+                RectangleF rt = new RectangleF(cC.X + S(10), cC.Y + S(38), cC.Width - S(20), S(22));
+                float c1 = rt.Width * 0.64f, c2 = rt.Width * 0.17f;
+                using (Brush b = new SolidBrush(scuro ? Tema.Section : Color.FromArgb(241, 243, 247))) g.FillRectangle(b, rt);
+                using (Pen pn = new Pen(Tema.Linea, 1f)) g.DrawRectangle(pn, rt.X, rt.Y, rt.Width, rt.Height * 4);
+                Testo(g, Lang.T("Metodo"), fPicB, Tema.Fore, new RectangleF(rt.X + S(6), rt.Y, c1, rt.Height), StringAlignment.Near, StringAlignment.Center);
+                Testo(g, "Ta", fPicB, Tema.Fore, new RectangleF(rt.X + c1, rt.Y, c2, rt.Height), StringAlignment.Near, StringAlignment.Center);
+                Testo(g, Lang.T("Scarto"), fPicB, Tema.Fore, new RectangleF(rt.X + c1 + c2, rt.Y, rt.Width - c1 - c2, rt.Height), StringAlignment.Near, StringAlignment.Center);
+                string rif = cieloDiag == 2 ? Lang.T("Skynoise (fascio gaussiano, mappa)") : Lang.T("Skynoise (diagramma NEC, mappa)");
+                double[] tv = { rs != null ? rs.T : double.NaN, rg != null ? rg.T : double.NaN, rs != null ? rs.Tdj9bv : double.NaN };
+                string[] nomi = { rif, Lang.T("Fascio gaussiano da HPBW"), Lang.T("DJ9BV (Tcielo fisso, terra 290 K)") };
+                string[] fumM = { Lang.T("Diagramma completo e mappa del cielo, con il metodo di Skynoise (G8ONH, G4SWX): è il riferimento."),
+                    Lang.T("Lo stesso calcolo con un fascio gaussiano della larghezza a −3 dB del Budget EME yagi: senza lobi laterali né posteriori."),
+                    string.Format(Lang.T("Metodo di DJ9BV (DUBUS 1987/1991): cielo uniforme a {0} sopra l'orizzonte (il cielo freddo di riferimento del programma) e terra a 290 K sotto, pesati sul diagramma."), CieloK(TskyRif(f))) };
+                for (int i = 0; i < 3; i++)
+                {
+                    RectangleF rr = new RectangleF(rt.X, rt.Bottom + i * rt.Height, rt.Width, rt.Height);
+                    using (Pen pn = new Pen(Tema.Linea, 1f)) g.DrawLine(pn, rr.Left, rr.Top, rr.Right, rr.Top);
+                    Font ff = i == 0 ? fPicB : fCel;
+                    Testo(g, nomi[i], ff, Tema.Fore, new RectangleF(rr.X + S(6), rr.Y, c1 - S(6), rr.Height), StringAlignment.Near, StringAlignment.Center);
+                    Testo(g, CieloK(tv[i]), ff, Tema.Fore, new RectangleF(rr.X + c1, rr.Y, c2, rr.Height), StringAlignment.Near, StringAlignment.Center);
+                    string sc = i == 0 ? Lang.T("rif.") : (double.IsNaN(tv[i]) || double.IsNaN(tv[0]) ? "–" : CieloDb(10 * Math.Log10(tv[i] / tv[0])));
+                    Testo(g, sc, fCel, Tema.Fore, new RectangleF(rr.X + c1 + c2, rr.Y, rr.Width - c1 - c2, rr.Height), StringAlignment.Near, StringAlignment.Center);
+                    cieloFumetti.Add(new KeyValuePair<RectangleF, string>(rr, fumM[i]));
+                }
+                string av = "⚠ " + (f < 300 ? Lang.T("A 144 MHz cielo e terra hanno temperature simili: DJ9BV sbaglia di più (G8ONH/G4SWX).") + " " : "")
+                    + Lang.T("Non sono ancora contati riflessione dal suolo, Luna e Sole.");
+                RectangleF ry = new RectangleF(rt.X, rt.Bottom + 3 * rt.Height + S(8), rt.Width, cC.Bottom - S(10) - (rt.Bottom + 3 * rt.Height + S(8)));
+                using (GraphicsPath p = Arrotondato(ry, S(6)))
+                {
+                    using (Brush b = new SolidBrush(scuro ? Tema.SoloBg : Color.FromArgb(255, 247, 214))) g.FillPath(b, p);
+                    using (Pen pn = new Pen(scuro ? Tema.WarnFg : Color.FromArgb(234, 179, 8), 1f)) g.DrawPath(pn, p);
+                }
+                Testo(g, av, fPic, scuro ? Tema.Fore : Color.FromArgb(113, 63, 18), new RectangleF(ry.X + S(6), ry.Y + S(3), ry.Width - S(12), ry.Height - S(6)), StringAlignment.Near, StringAlignment.Center);
+            }
+        }
+
+        void CieloAggiornaNud()
+        {
+            if (nudCieloBeta == null) return;
+            cieloSync = true;
+            try
+            {
+                nudCieloBeta.Value = (decimal)Math.Max(1.5, Math.Min(3.5, Math.Round(CieloBetaAtt, 3)));
+                nudCieloC.Value = (decimal)Math.Max(0, Math.Min(5000, Math.Round(CieloCAtt, 2)));
+            }
+            finally { cieloSync = false; }
+        }
+
+        // indice e correzione modificabili solo con CALCOLI APPROFONDITI
+        void CieloPosizionaNud(float x, float y)
+        {
+            bool v = complessi;
+            foreach (Control c in new Control[] { lblCieloBeta, ctCieloBeta, lblCieloC, ctCieloC }) if (c.Visible != v) c.Visible = v;
+            if (!v) return;
+            lblCieloBeta.ForeColor = Tema.Fore; lblCieloC.ForeColor = Tema.Fore;
+            lblCieloBeta.BackColor = Tema.Back; lblCieloC.BackColor = Tema.Back;
+            Point pb = new Point((int)x, (int)y + S(4)), pc = new Point((int)x + S(110), (int)y + S(4));
+            if (lblCieloBeta.Location != pb) lblCieloBeta.Location = pb;
+            Point qb = new Point((int)x + S(44), (int)y), qc = new Point((int)x + S(148), (int)y);
+            if (ctCieloBeta.Location != qb) ctCieloBeta.Location = qb;
+            if (lblCieloC.Location != pc) lblCieloC.Location = pc;
+            if (ctCieloC.Location != qc) ctCieloC.Location = qc;
+            if (nudCieloBeta.Value != (decimal)Math.Round(CieloBetaAtt, 3) || nudCieloC.Value != (decimal)Math.Round(CieloCAtt, 2)) CieloAggiornaNud();
+        }
+
         // ---------- Linguetta "Il mio orizzonte" (bozzetti approvati): orizzonte dal terreno (DEM SRTM1) e mappa del rumore locale (NJ9R) ----------
         TabPage tpOriz;
         Orizzonte orizz;
@@ -74010,7 +75210,7 @@ namespace LunaCalc
                 gruppiNav.Add(g);
             };
             add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpOriz, tpSky });
-            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpStaz, tpPos, tpMondo });
+            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpStaz, tpPos, tpMondo, tpCielo });
             add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpBudgetD, tpGraves, tpSolar, tpExcel, tpDebug });
             add(Lang.T("Log"), "▦", new TabPage[] { tpMap });
             add(Lang.T("Aiuto e tools"), "?", new TabPage[] { tpIstr, tpEme, tpCavi });
@@ -74339,11 +75539,39 @@ namespace LunaCalc
             {
                 if (dir != 2) DebugSole("DX", sa, pd, a, pm, pd, path, pol, tskyDx, bw, ggMe, ggDx, freq, (double)nudSlDx.Value);
                 if (dir != 1) DebugSole(Lang.T("La mia stazione"), sbs, pm, b, pd, pm, path, pol, tskyMe, bw, ggDx, ggMe, freq, (double)nudSlMe.Value);
+                DebugCielo(t);
             }
             int prima = -docDebug.AutoScrollPosition.Y;
             docDebug.Blocchi = dbg;
             docDebug.Aggiorna();
             docDebug.AutoScrollPosition = new Point(0, prima);
+        }
+
+        // Controllo dei calcoli: il Rumore del cielo (Skynoise) per la mia stazione nello stesso istante del Budget EME
+        void DebugCielo(DateTime t)
+        {
+            double f = CieloFreq, beta = CieloBetaAtt, cc = CieloCAtt, tau = f >= 1000 ? Skynoise.TauZenit23 : 0;
+            Func<double, double, double> cielo = CieloFunzione(cieloMappa, f, beta, cc);
+            CieloCaricaDiagrammi();
+            DiagrammaAnt d = CieloDiagScelto();
+            DSez(Lang.T("Rumore del cielo (Skynoise)") + " – " + CieloBandaNome(f));
+            if (cielo == null || d == null || !me.Ok) { DNota(Lang.T("Scarico la mappa del cielo da GitHub (0,7 MB, una volta sola)…")); return; }
+            MoonPos p = Moon.Compute(t, me.Lat, me.Lon, (double)me.H.Value, chkRefr.Checked);
+            Skynoise.Risultato r = Skynoise.Calcola(d, cielo, me.Lat, me.Lon, p.Az, p.El, t, CieloTerreno(), tau, TskyRif(f));
+            double k = Math.Pow(408.0 / f, beta);
+            DNota(CieloMappaNome[cieloMappa] + " · " + d.Nome + " · " + string.Format(ci, "Az {0:F1}° El {1:F1}°", p.Az, p.El));
+            DPasso(Lang.T("Scala in frequenza della mappa"), "k = \\p{\\frac{408}{f}}^{β}", "\\p{\\frac{408}{" + f.ToString("0.###", ci) + "}}^{" + Fd(beta, "0.000") + "}", Fd(k, "0.0000"));
+            DPasso(Lang.T("Correzione extragalattica"), "C = 2,73 + 50 · \\p{\\frac{150}{f}}^{2,75}", "2,73 + 50 · \\p{\\frac{150}{" + f.ToString("0.###", ci) + "}}^{2,75}", Fd(Skynoise.Cextra(f), "0.00") + " K");
+            if (!double.IsNaN(cieloC[cieloBanda])) DNota("C = " + Fd(cc, "0.00") + " K (" + Lang.T("CALCOLI APPROFONDITI") + ")");
+            DPasso(Lang.T("Temperatura del cielo in una direzione"), "T_f = k · T_{408} + C", null, null);
+            DPasso(Lang.T("Temperatura d'antenna"), "T_a = \\frac{Σ T · G · sin θ}{Σ G · sin θ}", "\\frac{Σ T · G · sin θ}{" + Fd(d.Gacc, "0.0") + "}", Fd(r.T, "0.0") + " K");
+            DNota(string.Format(ci, Lang.T("{0} direzioni a passo di {1}°; sotto l'orizzonte 290 K."), d.W.Length, d.Passo));
+            DPasso(Lang.T("Guadagno medio (controllo)"), "G_{m} = \\frac{Σ G · sin θ}{Σ sin θ}", "\\frac{" + Fd(d.Gacc, "0.0") + "}{" + Fd(d.SinAcc, "0.0") + "}", Fd(d.GuadagnoMedio, "0.0000"));
+            DPasso(Lang.T("Cielo dietro la Luna (solo fascio)"), null, null, Fd(r.Tfascio, "0.0") + " K");
+            DPasso("DJ9BV", "T_{DJ9BV} = T_{rif} · a + 290 · \\p{1 − a}", Fd(TskyRif(f), "0.0") + " · " + Fd(r.FrazCielo, "0.0000") + " + 290 · \\p{1 − " + Fd(r.FrazCielo, "0.0000") + "}", Fd(r.Tdj9bv, "0.0") + " K");
+            double eff = CieloEffettoBudget(r.T);
+            if (!double.IsNaN(eff))
+                DPasso(Lang.T("Effetto sul Budget EME yagi"), "ΔS/N = −10 · log_{10} \\frac{T_a + T_e}{T_{ant} + T_e}", null, Fd(eff, "0.00") + " dB");
         }
 
         void DebugTratta(string titolo, BudgetParams tx, BudgetParams rx, Tratta t, double ggTx, double ggRx, double elTx, double elRx,
@@ -79216,6 +80444,7 @@ namespace LunaCalc
         {
             if (chkComplessiB != null && chkComplessiB.Checked != chkComplessi.Checked) chkComplessiB.Checked = chkComplessi.Checked;
             if (pnlTrk != null) pnlTrk.Invalidate();
+            if (pnlCielo != null) pnlCielo.Invalidate();
             if (caricamento) return;
             SetupColumns(tutte.Count > 0 ? calcDx : chkDx.Checked);
             ApplyFilter();
@@ -79646,6 +80875,13 @@ namespace LunaCalc
             new string[] { Lang.T("Temperatura del cielo su tutta la volta celeste"),
                 Lang.T("Global Sky Model: A. de Oliveira-Costa et al., \"A model of diffuse Galactic radio emission from 10 MHz to 100 GHz\", MNRAS 388, 247 (2008), basato tra l'altro sulla survey a 408 MHz di C.G.T. Haslam et al. (1982). Versione \"408 MHz locked\" distribuita con la LWA Software Library (LSL), ricampionata a 2° e calcolata a 144 MHz."),
                 "https://arxiv.org/abs/0802.1525   https://github.com/lwa-project/lsl   https://www.jb.man.ac.uk/research/cosmos/haslam_map" },
+            new string[] { Lang.T("Rumore del cielo (Skynoise)"),
+                Lang.T("John C. Sager G8ONH, con John Regnault G4SWX, \"Beyond DJ9BV – A high-resolution antenna temperature calculator 'Skynoise'\" (2026) e programma Skynoise 0.2.2 (licenza MIT, testo qui sotto): metodo riscritto in C# per YAEC; la mappa Remazeilles alle bande deriva dal suo file SkyTemp144.fits. Interpolazione bilineare HEALPix (K. M. Górski et al., ApJ 622, 759, 2005)."),
+                "https://pypi.org/project/skynoise/" },
+            new string[] { "Skynoise – MIT License", "MIT License – Copyright (c) 2026 John C Sager. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." },
+            new string[] { Lang.T("Mappe del cielo per il Rumore del cielo"),
+                Lang.T("C. G. T. Haslam et al., A&AS 47, 1 (1982), mappa a 408 MHz da LAMBDA (NASA); M. Remazeilles et al., MNRAS 451, 4311 (2015); E. Polisensky, LWA Memo 111 (2007), LFmap; correzione extragalattica di P. A. G. Lawson et al., MNRAS 225, 307 (1987); atmosfera a 23 cm secondo ITU-R P.676 e P.372, massa d'aria di F. Kasten e A. T. Young (1989). Metodo di confronto: R. Bertelsmeier DJ9BV, DUBUS 1987 e 1991."),
+                "https://lambda.gsfc.nasa.gov/product/foreground/fg_2014_haslam_408_info.html   https://arxiv.org/abs/1411.3628   https://github.com/epolisensky/LFmap" },
             new string[] { Lang.T("Immagine della Luna (finestra di apertura)"),
                 Lang.T("Disco lunare ricavato dalla mappa fotografica della Luna \"moon_1024.jpg\" distribuita con la libreria three.js, proiettata come vista dalla Terra."),
                 "https://github.com/mrdoob/three.js" },
@@ -80099,7 +81335,7 @@ namespace LunaCalc
                 foreach (string[] x in DescrizioniLinguette()) desc[x[0]] = x[1];
                 string[][] gruppi = {
                     new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Il mio orizzonte"), Lang.T("Volta celeste") },
-                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Stazioni da provare"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo") },
+                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Stazioni da provare"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo"), Lang.T("Rumore del cielo (Skynoise)") },
                     new string[] { Lang.T("Collegamento"), Lang.T("Budget EME yagi"), Lang.T("Budget EME dischi"), Lang.T("Radar GRAVES"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
                     new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
                     new string[] { Lang.T("Aiuto e tools"), Lang.T("MANUALE D'USO"), Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("CAVI COASSIALI") },
@@ -81722,6 +82958,7 @@ namespace LunaCalc
                 new string[] { Lang.T("Posizione live e +- 24h"), Lang.T("La schermata principale, aggiornata ogni secondo. In alto le impostazioni generali (nominativo, lingua, colori, caratteri e tipo di carattere), il pulsante SCELTA BANDE e la casella dei dati complessi; sotto, i locator tuo e del DX (da 4 a 14 caratteri, con la precisione della posizione), la frequenza e gli orologi UTC, locale e del DX. La fascia di stato (verde = puntabile, arancione = fuori dai limiti, grigio = sotto l'orizzonte, blu = finestra comune) ha il conto alla rovescia; seguono la bussola e l'arco dell'elevazione con i limiti dell'antenna in giallo e quattro riquadri: Luna (fase, sorgere e tramonto), Eco e frequenze (Doppler, ritardo dell'eco e frequenze CFOM), Cielo e geometria (Tsky, distanza, declinazione, angolo orario, Dgrd e il pulsante VAI A VOLTA CELESTE) e S/N stimato (in 2500 Hz con la soglia tipica del modo come riferimento, dati del DX, la casella CALCOLI APPROFONDITI e il pulsante VAI AI CALCOLI). In basso le prossime 24 ore.") + " " + Lang.T("Accanto al locator del DX c'è la casella del nominativo: se il nominativo è nel CALL3.TXT il locator si riempie da solo, e il pulsante CALL3 aggiorna l'elenco o lo copia nella cartella di WSJT-X. Trascinando la linea rossa delle 24 ore o scegliendo il giorno nel calendario la schermata mostra un istante passato o futuro; ▶ Adesso torna alla diretta. La frequenza si sceglie nel riquadro Eco e frequenze.") },
                 new string[] { Lang.T("Distanza e Dgrd"), Lang.T("Grafico da 7 a 61 giorni della Dgrd (0 dB in basso, -15 dB in alto) e della distanza media giornaliera della Luna, con perigeo, apogeo, luna nuova e i tre giorni migliori (★). La classifica tiene conto solo delle ore in cui la Luna è davvero puntabile con i tuoi limiti.") + " " + Lang.T("Il simbolo ☀ segna i giorni in cui la Luna è vicina al Sole (rosso: entro 3 larghezze del fascio, arancione: entro 6): il rumore solare può peggiorare la ricezione. Colore e spessore delle due curve si cambiano nella barra sopra il grafico.") + " " + Lang.T("La tabella a destra elenca i giorni con gli stessi colori delle fasce del grafico (verde i tre giorni migliori, rosso e arancione il Sole vicino alla Luna). La curva blu della declinazione si sovrappone al grafico, con la sua scala dentro il bordo sinistro; la casella \"Ore utili in verde sulla Dgrd\" colora le ore con la Luna dentro i limiti dell'antenna.") },
                 new string[] { Lang.T("DGRD per frequenza"), Lang.T("Il Dgrd alla tua frequenza di lavoro, confrontato con il calcolo di sempre (ricevitore da 80 K, cielo nel solo punto della Luna): puoi usare il rumore vero della tua stazione (Tant e Te dal Budget EME della banda) e il cielo mediato sul fascio dell'antenna. A destra come si forma il Dgrd del giorno scelto e lo stesso momento sulle altre bande. Le scelte valgono in tutto il programma, anche per i giorni migliori di Distanza e Dgrd.") },
+                new string[] { Lang.T("Rumore del cielo (Skynoise)"), Lang.T("Temperatura d'antenna calcolata con il metodo di Skynoise (G8ONH, G4SWX): il diagramma completo dell'antenna (file .out del NEC, file di YA-NEC o fascio gaussiano del Budget EME) viene puntato sulla Luna e ogni direzione legge la mappa del cielo alla banda scelta (Remazeilles, Haslam, GSM 2008 o LFmap); sotto l'orizzonte vale 290 K o il terreno de Il mio orizzonte. Mostra la mappa con il percorso della Luna nel mese (clic su un giorno per il suo passaggio), la temperatura d'antenna durante il passaggio per te e per il DX, il cielo dietro la Luna, il guadagno medio di controllo, l'effetto sul Budget EME yagi e il confronto con il fascio gaussiano e con il metodo di DJ9BV.") },
                 new string[] { Lang.T("Il mio orizzonte"), Lang.T("Due viste. Orizzonte dal terreno: il panorama del terreno attorno alla tua stazione, calcolato dai dati SRTM1 (circa 30 m) scaricati una volta sola in data\\dem, con la curvatura della Terra e la rifrazione; sullo sfondo la volta celeste con le fonti di rumore (tre scale di colori, come la Volta celeste) o un cielo azzurro, il percorso della Luna con il sorgere e il tramonto per il terreno, gli ostacoli principali con i nomi presi da OpenStreetMap e i minuti di Luna persi. Con la casella «Usa le ostruzioni del terreno nei calcoli» il minimo dell'elevazione segue il terreno in tutto il programma. Mappa del rumore locale (NJ9R): una griglia azimut × elevazione in cui annoti con i tasti da 1 a 10 il rumore che vedi in WSJT-X ruotando l'antenna; le ore con la Luna in una direzione rumorosa hanno il segno ⚠ nel calendario e nella Volta celeste.") },
                 new string[] { Lang.T("Stazioni da provare"), Lang.T("Per il giorno scelto le stazioni attive nella chat EME di N0UK (solo 144 MHz) con cui hai una finestra comune, la migliore per ogni campo di locator, ordinate con un indice da 0 a 100 ricavato dall'S/N nei due sensi nel momento migliore di ogni finestra. L'impianto del DX è ricostruito da quello che scrive nella chat (antenne, elementi, potenza), il tuo viene dal Budget EME. È un calcolo d'esempio, molto approssimato: confrontalo con i QSO che fai davvero. Idea di Matteo IW5DHN.") },
                 new string[] { Lang.T("Volta celeste"), Lang.T("Il cielo visto dal tuo QTH, con l'orizzonte piatto e i colori del rumore del cielo (dal blu al rosso) alla frequenza scelta, i limiti della tua antenna, l'orizzonte del DX, le radiosorgenti, il Sole e il percorso della Luna nelle prossime 24 ore.") + " " + Lang.T("Le zone fuori dai limiti della tua antenna sono coperte da righe diagonali grigio chiaro.") },
@@ -83784,6 +85021,9 @@ namespace LunaCalc
             tpStaz = new TabPage(Lang.T("Stazioni da provare"));
             BuildStazTab(tpStaz);
             pagineNuove.Add(tpStaz);
+            tpCielo = new TabPage(Lang.T("Rumore del cielo (Skynoise)"));
+            BuildCieloTab(tpCielo);
+            pagineNuove.Add(tpCielo);
             tpMondo = new TabPage(Lang.T("Luna sul mondo"));
             tpMap = new TabPage(Lang.T("Mappa WWL e ADIF"));
             BuildMapTab(tpMap);
@@ -83801,7 +85041,7 @@ namespace LunaCalc
             BuildExcelTab(tpExcel);
             tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
-            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpStaz, tpSky, tpPunt, tpOriz, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
+            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpStaz, tpCielo, tpSky, tpPunt, tpOriz, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
             BuildMondoTab(tpMondo);   // dopo che tabs esiste: segue il cambio di linguetta
             BuildManualeTab(tpIstr, false);   // dopo le altre linguette: il manuale ne mostra le schermate
@@ -83838,6 +85078,7 @@ namespace LunaCalc
                 if (sel == tpMap) map.Invalidate();
                 if (sel == tpPunt) pnlPunt.Invalidate();
                 if (sel == tpStaz) { LeggiBudgetStaz(); RicalcolaStaz(); }
+                if (sel == tpCielo) { CieloAggiornaNud(); CieloDimensioni(); }
                 if (sel == tpOriz) { AggiornaOrizTop(); if (orizVista == 0) pnlOriz.Invalidate(); else pnlRum.Invalidate(); }
                 if (sel == tpBudget) ImpostaModoBudget(false);
                 if (sel == tpBudgetD) ImpostaModoBudget(true);
@@ -84822,6 +86063,17 @@ namespace LunaCalc
                 lines.Add("orizzonte_k=" + orizKIdx.ToString(inv));
                 lines.Add("orizzonte_sfondo=" + (orizSfondo ? "1" : "0"));
                 lines.Add("orizzonte_colori=" + orizPal.ToString(inv));
+                lines.Add("skynoise_diagramma=" + cieloDiag.ToString(inv));
+                lines.Add("skynoise_mappa=" + cieloMappa.ToString(inv));
+                lines.Add("skynoise_banda=" + cieloBanda.ToString(inv));
+                lines.Add("skynoise_sotto=" + cieloSotto.ToString(inv));
+                lines.Add("skynoise_nec=" + cieloNec);
+                lines.Add("skynoise_yanec=" + cieloYanec);
+                for (int ib = 0; ib < 4; ib++)
+                {
+                    if (!double.IsNaN(cieloBeta[ib])) lines.Add("skynoise_indice_" + ib.ToString(inv) + "=" + cieloBeta[ib].ToString("R", inv));
+                    if (!double.IsNaN(cieloC[ib])) lines.Add("skynoise_c_" + ib.ToString(inv) + "=" + cieloC[ib].ToString("R", inv));
+                }
                 lines.Add("rumore_segnala=" + (rumSegnala ? "1" : "0"));
                 lines.Add("rumore_soglia=" + rumSoglia.ToString(inv));
                 lines.Add("prova_modo=" + stazModoVoce.ToString(inv));
@@ -85053,6 +86305,14 @@ namespace LunaCalc
                         case "prova_modo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazModoVoce = Math.Max(0, Math.Min(BudgetParams.ModiOrdine.Length - 1, x)); break; }
                         case "prova_temperature": stazTemp = v != "0"; break;
                         case "aggiorna_salta": aggSalta = v; break;
+                        case "skynoise_indice_0": case "skynoise_indice_1": case "skynoise_indice_2": case "skynoise_indice_3":
+                        case "skynoise_c_0": case "skynoise_c_1": case "skynoise_c_2": case "skynoise_c_3":
+                            {
+                                double x;
+                                int ib = key[key.Length - 1] - '0';
+                                if (double.TryParse(v, NumberStyles.Float, inv, out x)) { if (key.StartsWith("skynoise_indice_")) cieloBeta[ib] = x; else cieloC[ib] = x; }
+                                break;
+                            }
                         case "aggiorna_ultimo": long.TryParse(v, NumberStyles.Integer, CultureInfo.InvariantCulture, out aggUltimo); break;
                         case "prova_no_paese": stazNoPaese = v == "1"; if (chkStazPaese != null) chkStazPaese.Checked = stazNoPaese; break;
                         case "prova_pol": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazPol = Math.Max(0, Math.Min(2, x)); break; }
@@ -85062,6 +86322,12 @@ namespace LunaCalc
                         case "orizzonte_k": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizKIdx = Math.Max(0, Math.Min(OrizK.Length - 1, x)); break; }
                         case "orizzonte_sfondo": orizSfondo = v != "0"; break;
                         case "orizzonte_colori": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) orizPal = Math.Max(0, Math.Min(2, x)); break; }
+                        case "skynoise_diagramma": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) cieloDiag = Math.Max(0, Math.Min(2, x)); break; }
+                        case "skynoise_mappa": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) cieloMappa = Math.Max(0, Math.Min(3, x)); break; }
+                        case "skynoise_banda": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) cieloBanda = Math.Max(0, Math.Min(3, x)); break; }
+                        case "skynoise_sotto": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) cieloSotto = Math.Max(0, Math.Min(1, x)); break; }
+                        case "skynoise_nec": cieloNec = v; break;
+                        case "skynoise_yanec": cieloYanec = v; break;
                         case "rumore_segnala": rumSegnala = v != "0"; break;
                         case "rumore_soglia": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) rumSoglia = Math.Max(1, Math.Min(10, x)); break; }
                         case "cielo_colori":
@@ -117097,6 +118363,8 @@ namespace LunaCalc
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Dati.PreparaVerificaCertificati();   // Linux/macOS: HTTPS verificato con le autorità radice del sistema
+            // collaudo del Rumore del cielo (compila.bat e CI): YAEC.exe --collaudo-cielo <cartella dati del repository>
+            if (args != null && args.Length >= 2 && args[0] == "--collaudo-cielo") { Environment.Exit(Skynoise.Collaudo(args[1])); return; }
             // tutti i dati nella sottocartella "data" dell'eseguibile (spostando quelli delle versioni precedenti)
             Dati.Prepara();
             // lingua e nominativo letti dalle impostazioni prima di aprire le finestre (lingua predefinita: inglese)
