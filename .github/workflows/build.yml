@@ -68,17 +68,22 @@ jobs:
         run: |
           $v = "${{ steps.ver.outputs.version }}"
           New-Item -ItemType Directory -Force dist | Out-Null
-          Move-Item "YAEC-$v-Setup.exe" "dist/YAEC-$v-win-x64-setup.exe"
-          Move-Item "YAEC-$v-Setup-32bit.exe" "dist/YAEC-$v-win-x86-setup.exe"
+          Move-Item "YAEC-$v-Setup.exe" "dist/YAEC-$v-windows-x64-setup.exe"
+          Move-Item "YAEC-$v-Setup-32bit.exe" "dist/YAEC-$v-windows-x86-setup.exe"
           New-Item -ItemType Directory -Force p32 | Out-Null
           Copy-Item x86/YAEC.exe, YAEC.ico, README.txt, LICENZA.txt -Destination p32/
           Copy-Item -Recurse lingue p32/
-          Compress-Archive -Path p32/* -DestinationPath "dist/YAEC-$v-win-x86-portatile.zip"
-          Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-win-x64-portatile.zip"
+          Compress-Archive -Path p32/* -DestinationPath "dist/YAEC-$v-windows-x86-portatile.zip"
+          Compress-Archive -Path YAEC.exe, YAEC.ico, README.txt, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-windows-x64-portatile.zip"
           Compress-Archive -Path YAEC.cs, compila.bat, YAEC.manifest, YAEC.ico, README.txt, YAEC.iss, LICENZA.txt, lingue -DestinationPath "dist/YAEC-$v-source.zip"
           # Windows su ARM64 (PC con Snapdragon): YAEC.exe e' AnyCPU, con .NET Framework 4.8.1 gira nativo su ARM64
-          Copy-Item "dist/YAEC-$v-win-x64-setup.exe" "dist/YAEC-$v-win-arm64-setup.exe"
-          Copy-Item "dist/YAEC-$v-win-x64-portatile.zip" "dist/YAEC-$v-win-arm64-portatile.zip"
+          # Windows 7 SP1, 8, 8.1: lo stesso programma (.NET Framework 4.8), con i nomi -windows7- come in YA-MS
+          foreach ($n in "windows-arm64", "windows7-x64") {
+            Copy-Item "dist/YAEC-$v-windows-x64-setup.exe" "dist/YAEC-$v-$n-setup.exe"
+            Copy-Item "dist/YAEC-$v-windows-x64-portatile.zip" "dist/YAEC-$v-$n-portatile.zip"
+          }
+          Copy-Item "dist/YAEC-$v-windows-x86-setup.exe" "dist/YAEC-$v-windows7-x86-setup.exe"
+          Copy-Item "dist/YAEC-$v-windows-x86-portatile.zip" "dist/YAEC-$v-windows7-x86-portatile.zip"
           Copy-Item YAEC.exe dist/
       - uses: actions/upload-artifact@v4
         with:
@@ -117,22 +122,22 @@ jobs:
           cp win/YAEC.exe .
           packaging/linux/build-linux.sh "${{ steps.ver.outputs.version }}" dist
           ls dist/*.rpm dist/*_armhf.deb > /dev/null
-          rpm -qpi dist/*.rpm; rpm -qpl dist/*.rpm | head -20
+          rpm -qpi dist/*.x86_64.rpm; rpm -qpl dist/*.x86_64.rpm | head -20; ls dist/*.armv7hl.rpm > /dev/null
       - name: Pacchetti Arch, Slackware, AppImage e Alpine
         run: |
           bash packaging/linux/build-extra.sh "${{ steps.ver.outputs.version }}" dist
-          ls dist/*.pkg.tar.zst dist/*.txz dist/*-x86_64.AppImage dist/*-aarch64.AppImage dist/*-alpine-x64-portatile.tar.gz > /dev/null
+          ls dist/*.pkg.tar.zst dist/*.txz dist/*-x86_64.AppImage dist/*-aarch64.AppImage dist/*-alpine-x64.tar.gz dist/*.aarch64.rpm dist/*-1-aarch64.pkg.tar.zst dist/*-aarch64-1_ic8tem.txz > /dev/null
       - name: Prova dei pacchetti Arch, AppImage e Slackware (solo informativa)
         continue-on-error: true
         run: |
-          docker run --rm -v "$PWD/dist:/d" archlinux:latest sh -c 'pacman --disable-sandbox -Syu --noconfirm >/dev/null && pacman --disable-sandbox -U --noconfirm /d/*.pkg.tar.zst >/dev/null && test -f /usr/lib/yaec/YAEC.exe && echo "Arch: pacchetto installato"' || echo "Arch: installazione non riuscita"
+          docker run --rm -v "$PWD/dist:/d" archlinux:latest sh -c 'pacman --disable-sandbox -Syu --noconfirm >/dev/null && pacman --disable-sandbox -U --noconfirm /d/*-x86_64.pkg.tar.zst >/dev/null && test -f /usr/lib/yaec/YAEC.exe && echo "Arch: pacchetto installato"' || echo "Arch: installazione non riuscita"
           A="$(ls dist/*-x86_64.AppImage)"; chmod +x "$A"; ( cd "$(mktemp -d)" && "$OLDPWD/$A" --appimage-extract >/dev/null && test -x squashfs-root/AppRun && test -f squashfs-root/usr/lib/yaec/YAEC.exe && echo "AppImage: contenuto corretto" ) || echo "AppImage: contenuto non corretto"
-          tar -tJf dist/*.txz | grep -q '^usr/lib/yaec/YAEC.exe$' && tar -tJf dist/*.txz | grep -q '^install/slack-desc$' && echo "Slackware: pacchetto corretto" || echo "Slackware: pacchetto non corretto"
+          tar -tJf dist/*-x86_64-1_ic8tem.txz | grep -q '^usr/lib/yaec/YAEC.exe$' && tar -tJf dist/*-x86_64-1_ic8tem.txz | grep -q '^install/slack-desc$' && echo "Slackware: pacchetto corretto" || echo "Slackware: pacchetto non corretto"
       - name: Prova del .rpm su openSUSE e Fedora (solo informativa)
         continue-on-error: true
         run: |
-          docker run --rm -v "$PWD/dist:/d" opensuse/leap:15.6 sh -c 'zypper -q --non-interactive --no-gpg-checks install /d/*.noarch.rpm && rpm -q yaec && test -f /usr/lib/yaec/YAEC.exe && echo "openSUSE: rpm installato"' || echo "openSUSE: installazione non riuscita"
-          docker run --rm -v "$PWD/dist:/d" fedora:latest sh -c 'dnf -q -y install /d/*.noarch.rpm && rpm -q yaec && echo "Fedora: rpm installato"' || echo "Fedora: installazione non riuscita"
+          docker run --rm -v "$PWD/dist:/d" opensuse/leap:15.6 sh -c 'zypper -q --non-interactive --no-gpg-checks install /d/*.x86_64.rpm && rpm -q yaec && test -f /usr/lib/yaec/YAEC.exe && echo "openSUSE: rpm installato"' || echo "openSUSE: installazione non riuscita"
+          docker run --rm -v "$PWD/dist:/d" fedora:latest sh -c 'dnf -q -y install /d/*.x86_64.rpm && rpm -q yaec && echo "Fedora: rpm installato"' || echo "Fedora: installazione non riuscita"
       - name: Prova di avvio con Mono (schermo virtuale Xvfb) e schermata
         run: |
           sudo apt-get update -qq
@@ -633,11 +638,14 @@ jobs:
           TAG="v${V}"
           if gh release view "$TAG" >/dev/null 2>&1; then echo "La release $TAG esiste gia'."; exit 0; fi
           rm -f out/windows/YAEC.exe
+          # solo la 1.9.3 (nomi nuovi come in YA-MS): copie con i vecchi nomi per l'aggiornamento automatico della 1.9.1 e 1.9.2
+          mkdir -p out/vecchi
+          if [ "$V" = "1.9.3" ]; then bash packaging/nomi-vecchi.sh "$V" out; fi
           # impronte SHA-256 di tutti i pacchetti
-          ( cd out && for f in windows/* linux/* macos/*; do sha256sum "$f" | sed 's|  .*/|  |'; done ) > SHA256SUMS.txt
+          ( cd out && for f in windows/* linux/* macos/* vecchi/*; do [ -f "$f" ] && sha256sum "$f" | sed 's|  .*/|  |'; done ) > SHA256SUMS.txt
           cat SHA256SUMS.txt
           bash packaging/release-notes.sh "$V" > notes.md
-          gh release create "$TAG" out/windows/* out/linux/* out/macos/* SHA256SUMS.txt --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
+          gh release create "$TAG" out/windows/* out/linux/* out/macos/* $(ls out/vecchi/* 2>/dev/null) SHA256SUMS.txt --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
 
   aggiungi:
     # Avvio manuale con aggiungi_pacchetti: carica sulla release esistente solo i pacchetti che non ha ancora

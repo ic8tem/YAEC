@@ -1,5 +1,5 @@
 #!/bin/bash
-# Crea YAEC.app, YAEC-<versione>-osx-{arm64,x64}.dmg e -app.zip (su un Mac: usa iconutil e hdiutil)
+# Crea YAEC.app, YAEC-<versione>-mac-{apple-silicon,intel}.dmg e -app.zip (nomi come in YA-MS) (su un Mac: usa iconutil e hdiutil)
 set -euo pipefail
 VER="$1"; OUT="${2:-dist}"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -31,15 +31,15 @@ cat > "$APP/Contents/Info.plist" <<PLIST
 </dict>
 </plist>
 PLIST
-# zip dell'app e immagine disco con il collegamento ad Applicazioni, per Apple Silicon (arm64) e Intel (x64):
+# zip dell'app e immagine disco con il collegamento ad Applicazioni, per Apple Silicon e Intel:
 # il contenuto è lo stesso (YAEC.exe gira con Mono), cambia solo il nome come nelle altre distribuzioni
 D="$W/dmg"; mkdir -p "$D"
 cp -R "$APP" "$D/"
 ln -s /Applications "$D/Applications"
 cp "$ROOT/README.txt" "$D/README.txt"
 cp -R "$ROOT/lingue" "$D/"
-for A in arm64 x64; do
-  ( cd "$W" && ditto -c -k --keepParent YAEC.app "$OUT/YAEC-${VER}-osx-${A}-app.zip" )
-  hdiutil create -volname "YAEC ${VER}" -srcfolder "$D" -ov -format UDZO "$OUT/YAEC-${VER}-osx-${A}.dmg"
+for A in apple-silicon intel; do
+  ( cd "$W" && ditto -c -k --keepParent YAEC.app "$OUT/YAEC-${VER}-mac-${A}-app.zip" )
+  hdiutil create -volname "YAEC ${VER}" -srcfolder "$D" -ov -format UDZO "$OUT/YAEC-${VER}-mac-${A}.dmg"
 done
 ls -l "$OUT"

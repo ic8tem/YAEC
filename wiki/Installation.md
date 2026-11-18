@@ -4,26 +4,26 @@ All the packages are on the **[Releases](https://github.com/ic8tem/YAEC/releases
 
 | System | File | Needs |
 |---|---|---|
-| Windows 64-bit | `YAEC-x.y-win-x64-setup.exe` (installer) or `YAEC-x.y-win-x64-portatile.zip` | nothing (.NET Framework 4 is part of Windows) |
-| Windows 32-bit | `YAEC-x.y-win-x86-setup.exe` (installer) or `YAEC-x.y-win-x86-portatile.zip` | nothing |
+| Windows 64-bit | `YAEC-x.y-windows-x64-setup.exe` (installer) or `YAEC-x.y-windows-x64-portatile.zip` | nothing (.NET Framework 4 is part of Windows) |
+| Windows 32-bit | `YAEC-x.y-windows-x86-setup.exe` (installer) or `YAEC-x.y-windows-x86-portatile.zip` | nothing |
 | Windows 7 SP1 ¹ | the same packages as Windows 64-bit and 32-bit | .NET Framework 4.8 (free from Microsoft) and the Windows updates that enable TLS 1.2, needed for the downloads from GitHub (updates, cty.dat, terrain data) |
-| Windows ARM64 (PC with Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe` (installer) or `YAEC-x.y-win-arm64-portatile.zip` | nothing (same AnyCPU program; .NET Framework 4.8.1 runs it natively on ARM64) |
+| Windows ARM64 (PC with Snapdragon) ¹ | `YAEC-x.y-windows-arm64-setup.exe` (installer) or `YAEC-x.y-windows-arm64-portatile.zip` | nothing (same AnyCPU program; .NET Framework 4.8.1 runs it natively on ARM64) |
 | Debian, Ubuntu, Mint | `yaec_x.y_amd64.deb` | Mono (installed automatically by apt) |
 | Raspberry Pi (Raspberry Pi OS 64-bit, Pi 4 and 5) | `yaec_x.y_arm64.deb` | Mono (installed automatically by apt) |
 | Raspberry Pi OS 32-bit (armhf) ¹ | `yaec_x.y_armhf.deb` | Mono (installed automatically by apt) |
-| Fedora, openSUSE | `yaec-x.y-1.noarch.rpm` | Mono (`mono-core`, `mono-winforms`, installed by dnf/zypper) |
-| Arch Linux, Manjaro, EndeavourOS | `yaec-x.y-1-any.pkg.tar.zst` | Mono (`mono`, installed by pacman) |
-| Slackware ¹ | `yaec-x.y-noarch-1_ic8tem.txz` | Mono (from SlackBuilds) |
+| Fedora, openSUSE | `yaec-x.y.x86_64.rpm` | Mono (`mono-core`, `mono-winforms`, installed by dnf/zypper) |
+| Arch Linux, Manjaro, EndeavourOS | `yaec-x.y-1-x86_64.pkg.tar.zst` | Mono (`mono`, installed by pacman) |
+| Slackware ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` | Mono (from SlackBuilds) |
 | Any Linux (AppImage) ¹ | `YAEC-x.y-x86_64.AppImage` (PC), `YAEC-x.y-aarch64.AppImage` (ARM 64-bit) | Mono |
-| Alpine Linux (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` | Mono from the Alpine repositories |
-| Linux aarch64 (ARM 64-bit PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` | Mono |
-| Other Linux distributions | `YAEC-x.y-linux-x64-portatile.tar.gz` (PC), `YAEC-x.y-linux-arm64-portatile.tar.gz` (ARM 64-bit), `YAEC-x.y-linux-arm-portatile.tar.gz` (ARM 32-bit) | Mono |
-| Linux i686 (32-bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` | Mono |
-| Linux armv7l (Raspberry Pi OS 32-bit and other ARM 32-bit boards) | `YAEC-x.y-linux-arm-portatile.tar.gz` | Mono |
-| Raspberry Pi Slackware ARM64 ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` | Mono |
-| FreeBSD amd64 ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` | Mono and libgdiplus |
-| OpenBSD amd64 ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` | Mono and libgdiplus |
-| macOS (experimental) | `YAEC-x.y-osx-arm64.dmg` or `YAEC-x.y-osx-arm64-app.zip` (Apple Silicon), `YAEC-x.y-osx-x64.dmg` or `YAEC-x.y-osx-x64-app.zip` (Intel) | Mono for macOS and XQuartz |
+| Alpine Linux (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` | Mono from the Alpine repositories |
+| Linux aarch64 (ARM 64-bit PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` | Mono |
+| Other Linux distributions | `YAEC-x.y-linux-x64.tar.gz` (PC), `YAEC-x.y-linux-arm64.tar.gz` (ARM 64-bit), `YAEC-x.y-linux-armv7l.tar.gz` (ARM 32-bit) | Mono |
+| Linux i686 (32-bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` | Mono |
+| Linux armv7l (Raspberry Pi OS 32-bit and other ARM 32-bit boards) | `YAEC-x.y-linux-armv7l.tar.gz` | Mono |
+| Raspberry Pi Slackware ARM64 ¹ | `YAEC-x.y-linux-arm64.tar.gz` | Mono |
+| FreeBSD amd64 ¹ | `YAEC-x.y-freebsd-x64.tar.gz` | Mono and libgdiplus |
+| OpenBSD amd64 ¹ | `YAEC-x.y-openbsd-x64.tar.gz` | Mono and libgdiplus |
+| macOS (experimental) | `YAEC-x.y-mac-apple-silicon.dmg` or `YAEC-x.y-mac-apple-silicon-app.zip` (Apple Silicon), `YAEC-x.y-mac-intel.dmg` or `YAEC-x.y-mac-intel-app.zip` (Intel) | Mono for macOS and XQuartz |
 
 ¹ Same `YAEC.exe` as on the other systems; not yet tested on this platform: reports from users are welcome.
 
@@ -32,12 +32,12 @@ All the packages are on the **[Releases](https://github.com/ic8tem/YAEC/releases
 ## Windows
 
 ### Installer
-1. Download `YAEC-x.y-win-x64-setup.exe` (32-bit Windows: `YAEC-x.y-win-x86-setup.exe`) and run it.
+1. Download `YAEC-x.y-windows-x64-setup.exe` (32-bit Windows: `YAEC-x.y-windows-x86-setup.exe`) and run it.
 2. If **SmartScreen** shows a warning: *More info* → *Run anyway*.
 3. YAEC is installed into **Documents\YAEC**, **without administrator rights**, with Start menu and desktop shortcuts and an uninstaller.
 
 ### Portable
-Extract `YAEC-x.y-win-x64-portatile.zip` (32-bit: `YAEC-x.y-win-x86-portatile.zip`) into a folder **where you can write** (e.g. `Documents\YAEC`) and run `YAEC.exe`. Do not put it in *Program Files*: YAEC keeps its `data` folder next to the executable. Because nothing is written elsewhere, you can copy the whole folder to a USB stick or another computer.
+Extract `YAEC-x.y-windows-x64-portatile.zip` (32-bit: `YAEC-x.y-windows-x86-portatile.zip`) into a folder **where you can write** (e.g. `Documents\YAEC`) and run `YAEC.exe`. Do not put it in *Program Files*: YAEC keeps its `data` folder next to the executable. Because nothing is written elsewhere, you can copy the whole folder to a USB stick or another computer.
 
 ## Linux
 
@@ -57,14 +57,14 @@ sudo apt install ./yaec_x.y_arm64.deb
 
 ### Arch Linux, Manjaro, EndeavourOS
 ```sh
-sudo pacman -U yaec-x.y-1-any.pkg.tar.zst
+sudo pacman -U yaec-x.y-1-x86_64.pkg.tar.zst
 ```
 pacman installs Mono as well.
 
 ### Slackware
 Install Mono (SlackBuilds), then as root:
 ```sh
-installpkg yaec-x.y-noarch-1_ic8tem.txz
+installpkg yaec-x.y-x86_64-1_ic8tem.txz
 ```
 
 ### AppImage
@@ -82,14 +82,14 @@ Install Mono first:
 | Arch | `sudo pacman -S mono` |
 | openSUSE | `sudo zypper install mono-complete` |
 
-Then extract `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) and run `./install.sh` (it installs into `~/.local`, no root needed), or simply run `./yaec` from the extracted folder.
+Then extract `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) and run `./install.sh` (it installs into `~/.local`, no root needed), or simply run `./yaec` from the extracted folder.
 
 Data folder: `~/.local/share/YAEC/data`.
 
 ## macOS (experimental)
 
 1. Install **Mono for macOS** ([mono-project.com](https://www.mono-project.com/download/stable/) or the *Framework Mono* package from WineHQ) and **XQuartz** ([xquartz.org](https://www.xquartz.org)). On macOS the Windows Forms window of Mono is drawn through X11, which is why XQuartz is needed.
-2. Open `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) and drag YAEC into **Applications**; or extract `YAEC.app` from `YAEC-x.y-osx-arm64-app.zip` / `YAEC-x.y-osx-x64-app.zip`.
+2. Open `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) and drag YAEC into **Applications**; or extract `YAEC.app` from `YAEC-x.y-mac-apple-silicon-app.zip` / `YAEC-x.y-mac-intel-app.zip`.
 3. The first time, **right-click YAEC → Open** (the app is not signed by Apple).
 
 If Mono or XQuartz is missing, YAEC shows an alert and opens the download page. After installing XQuartz, log out and in again.
@@ -102,8 +102,8 @@ Each release has `SHA256SUMS.txt` with the SHA-256 fingerprint of every package.
 
 | System | Command |
 |---|---|
-| Windows (PowerShell) | `Get-FileHash .\YAEC-x.y-win-x64-setup.exe -Algorithm SHA256` |
-| Windows (command prompt) | `certutil -hashfile YAEC-x.y-win-x64-setup.exe SHA256` |
+| Windows (PowerShell) | `Get-FileHash .\YAEC-x.y-windows-x64-setup.exe -Algorithm SHA256` |
+| Windows (command prompt) | `certutil -hashfile YAEC-x.y-windows-x64-setup.exe SHA256` |
 | Linux | `sha256sum -c --ignore-missing SHA256SUMS.txt` |
 | macOS | `shasum -a 256 -c --ignore-missing SHA256SUMS.txt` |
 

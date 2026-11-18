@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.2
+﻿YAEC – Yet Another EME Calc 1.9.3
 автор: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 Исходный код и загрузка: https://github.com/ic8tem/YAEC/releases
 
 УСТАНОВКА – WINDOWS
-1. Скачайте YAEC-1.9.2-win-x64-setup.exe со страницы Releases и запустите его. Он устанавливает YAEC в Документы\YAEC без прав администратора, с ярлыками в меню «Пуск» и на рабочем столе, а также с программой удаления.
+1. Скачайте YAEC-1.9.3-windows-x64-setup.exe со страницы Releases и запустите его. Он устанавливает YAEC в Документы\YAEC без прав администратора, с ярлыками в меню «Пуск» и на рабочем столе, а также с программой удаления.
 2. Если появится предупреждение SmartScreen: «Подробнее» → «Выполнить в любом случае».
-3. Без установки: распакуйте YAEC-1.9.2-win-x64-portatile.zip в папку, в которую у вас есть право записи, и запустите YAEC.exe.
+3. Без установки: распакуйте YAEC-1.9.3-windows-x64-portatile.zip в папку, в которую у вас есть право записи, и запустите YAEC.exe.
 
 УСТАНОВКА – LINUX
 YAEC работает в Mono — свободной среде выполнения .NET.
-- Debian, Ubuntu, Mint: скачайте yaec_1.9.2_amd64.deb и установите его командой
-      sudo apt install ./yaec_1.9.2_amd64.deb
+- Debian, Ubuntu, Mint: скачайте yaec_1.9.3_amd64.deb и установите его командой
+      sudo apt install ./yaec_1.9.3_amd64.deb
   (заодно устанавливается и Mono). YAEC запускается из меню приложений или командой «yaec».
-- Другие дистрибутивы: установите Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), распакуйте YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) и запустите ./install.sh.
-- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
+- Другие дистрибутивы: установите Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), распакуйте YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) и запустите ./install.sh.
+- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
 
 УСТАНОВКА – macOS (экспериментально)
 1. Установите Mono для macOS (https://www.mono-project.com/download/stable/) и XQuartz (https://www.xquartz.org).
-2. Откройте YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) и перетащите YAEC в папку «Программы». При первом запуске: щелчок правой кнопкой по YAEC → «Открыть» (приложение не подписано Apple).
+2. Откройте YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) и перетащите YAEC в папку «Программы». При первом запуске: щелчок правой кнопкой по YAEC → «Открыть» (приложение не подписано Apple).
 
 АВТОМАТИЧЕСКИЕ ОБНОВЛЕНИЯ
 При запуске YAEC проверяет на GitHub, есть ли новая версия, и обновляется сам (Windows, переносные архивы .tar.gz, AppImage, приложение для macOS), проверяя отпечаток SHA-256. Пакеты .deb, .rpm, Arch, Slackware обновляются менеджером пакетов системы: YAEC сообщает о новой версии и открывает страницу GitHub.
 
 ПРОВЕРКА СКАЧАННЫХ ФАЙЛОВ (SHA-256)
 Каждый релиз содержит SHA256SUMS.txt с хешем SHA-256 каждого пакета. Сравните его с хешем скачанного файла:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Если значения не совпадают, не устанавливайте файл: скачайте его заново.
@@ -43,6 +43,7 @@ YAEC бесплатен; текст лицензии находится в фа�
 
 ИСТОРИЯ ВЕРСИЙ
 Версии до 1.0 называются бета-версиями.
+- 1.9.3 - Имена пакетов как в YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); пакеты .rpm, Arch и Slackware также для ARM; в примечаниях к выпуску таблица со ссылкой на каждый пакет для каждой системы. Эта версия содержит также файлы со старыми именами, только для автоматического обновления с 1.9.1 и 1.9.2.
 - 1.9.2 - Новая вкладка Шум неба (Skynoise) в Планирование: температура антенны по методу G8ONH и G4SWX из полной диаграммы антенны (файл .out из NEC, YA-NEC или гауссов луч) и карты неба (Remazeilles, Haslam, GSM 2008 или LFmap) на 50, 144, 432 МГц и 23 см, с путём Луны за месяц, температурой во время прохождения для вас и для DX, влиянием на Бюджет EME яги и сравнением с DJ9BV; автоматическая проверка в compila.bat; в руководстве ТЕОРИЯ И СОВЕТЫ ПО EME: шум неба со сравнением источников, усиление зеркальных антенн (PE1RKI или поэлементный расчёт, Ruze), прямой фокус выше 2320 МГц, поворот облучателя и Луна, освещённая лучом (BWF).
 - 1.9.1 - Автоматическое обновление с GitHub с проверкой отпечатка SHA-256 в Windows, для переносных архивов (Linux, FreeBSD, OpenBSD, Alpine), AppImage и приложения macOS (пакеты .deb, .rpm, Arch, Slackware обновляются менеджером пакетов), предупреждение об отсутствующих файлах; новые пакеты для Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; кнопка ИСПРАВИТЬ для исправления локатора станции в CALL3.TXT; Расстояние и Dgrd с классической Dgrd на 144 МГц, а Dgrd по диапазонам остаётся в DGRD по частоте; Мой горизонт с фиолетовыми рамками из Небесный свод и моментом из таблицы планирования; Станции для попытки с моментом из таблицы, полосой прокрутки и исключением станций своей страны (cty.dat); усиление яги по таблице DL6WU (G3SEK), формула, приписываемая W8IO, только ниже 10 элементов; выпадающие списки и числовые поля в стиле YA-MS; трансвертеры на 144 МГц в руководстве.
 - 1.9 - Новая вкладка Мой горизонт (В реальном времени): горизонт по рельефу, рассчитанный по данным SRTM1 с учётом кривизны Земли и рефракции, на фоне Небесный свод в одной из трёх цветовых шкал, путь Луны, основные препятствия с названиями из OpenStreetMap и потерянные минуты Луны; флажок для использования рельефа как минимального угла места во всей программе; карта местных помех по NJ9R, со знаком ⚠ в часы, когда Луна в шумном направлении; новая вкладка Станции для попытки (Планирование), идея Matteo IW5DHN: активные станции чата N0UK, упорядоченные по индексу от 0 до 100; числовые поля со стрелками рядом, вкладки в форме таблетки и три новые цветовые схемы из IP-TRX-CTRL.

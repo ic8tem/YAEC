@@ -1,5 +1,5 @@
 #!/bin/bash
-# Crea yaec_<versione>_amd64.deb, yaec_<versione>_arm64.deb e _armhf.deb (Raspberry Pi), yaec-<versione>-1.noarch.rpm (Fedora, openSUSE) e YAEC-<versione>-linux-{x64,x86,arm64,arm}-portatile.tar.gz, YAEC-<versione>-{freebsd,openbsd}-x64-portatile.tar.gz da YAEC.exe (lo stesso eseguibile di Windows)
+# Crea yaec_<versione>_amd64.deb, yaec_<versione>_arm64.deb e _armhf.deb (Raspberry Pi), yaec-<versione>.{x86_64,aarch64,armv7hl}.rpm (Fedora, openSUSE), YAEC-<versione>-linux-{x64,x86,arm64,armv7l}.tar.gz, YAEC-<versione>-raspberry-pi-{64,32}bit.tar.gz e YAEC-<versione>-{freebsd,openbsd}-x64.tar.gz da YAEC.exe (lo stesso eseguibile di Windows)
 set -euo pipefail
 VER="$1"; OUT="${2:-dist}"
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -38,7 +38,7 @@ PKGH="$(mktemp -d)/yaec_${VER}_armhf"
 cp -a "$PKG/." "$PKGH/"
 sed -i 's/^Architecture: amd64$/Architecture: armhf/' "$PKGH/DEBIAN/control"
 dpkg-deb --root-owner-group --build "$PKGH" "$OUT/yaec_${VER}_armhf.deb"
-# --- .rpm (Fedora, openSUSE): YAEC.exe gira con Mono, quindi il pacchetto è noarch ---
+# --- .rpm (Fedora, openSUSE): YAEC.exe gira con Mono; un pacchetto per processore (stesso contenuto), con i nomi di YA-MS ---
 if command -v rpmbuild >/dev/null 2>&1; then
   RB="$(mktemp -d)"; mkdir -p "$RB"/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
   RVER="$(echo "$VER" | tr '-' '_')"
@@ -49,8 +49,12 @@ Release: 1
 Summary: YAEC - Yet Another EME Calc
 License: Proprietary (see /usr/share/doc/yaec/copyright)
 URL: https://github.com/ic8tem/YAEC
-BuildArch: noarch
 Requires: mono-core, mono-winforms
+AutoReqProv: no
+%global debug_package %{nil}
+%global __strip /bin/true
+%global __os_install_post %{nil}
+%global _build_id_links none
 %description
 Moon position, pointing windows, EME link budget, sky and solar noise
 calculator for radio amateurs (Windows Forms program run with Mono).
@@ -64,8 +68,10 @@ cp -a "$PKG/usr" %{buildroot}/
 /usr/share/icons/hicolor/256x256/apps/yaec.png
 /usr/share/doc/yaec
 SPEC
-  rpmbuild --define "_topdir $RB" --define "_build_id_links none" -bb "$RB/SPECS/yaec.spec" >/dev/null
-  cp "$RB"/RPMS/noarch/yaec-*.noarch.rpm "$OUT/yaec-${VER}-1.noarch.rpm"
+  for RA in x86_64 aarch64 armv7hl; do
+    rpmbuild --target "$RA" --define "_topdir $RB" -bb "$RB/SPECS/yaec.spec" >/dev/null
+    cp "$RB"/RPMS/"$RA"/yaec-*."$RA".rpm "$OUT/yaec-${VER}.${RA}.rpm"
+  done
 else
   echo "rpmbuild non disponibile: niente .rpm" >&2
 fi
@@ -78,7 +84,7 @@ cp "$ROOT/packaging/linux/yaec" "$ROOT/packaging/linux/install.sh" "$ROOT/packag
 cp "$ROOT/packaging/icons/yaec-256.png" "$T/yaec.png"
 chmod +x "$T/yaec" "$T/install.sh"
 # stesso contenuto (YAEC.exe gira con Mono su ogni processore): un archivio per architettura, come le altre distribuzioni
-for A in x64 x86 arm64 arm; do tar -C "$(dirname "$T")" -czf "$OUT/YAEC-${VER}-linux-${A}-portatile.tar.gz" "$(basename "$T")"; done
+for A in linux-x64 linux-x86 linux-arm64 linux-armv7l raspberry-pi-64bit raspberry-pi-32bit; do tar -C "$(dirname "$T")" -czf "$OUT/YAEC-${VER}-${A}.tar.gz" "$(basename "$T")"; done
 # FreeBSD e OpenBSD amd64: stesso contenuto (Mono dai pacchetti del sistema), non ancora provati
-for B in freebsd openbsd; do tar -C "$(dirname "$T")" -czf "$OUT/YAEC-${VER}-${B}-x64-portatile.tar.gz" "$(basename "$T")"; done
+for B in freebsd openbsd; do tar -C "$(dirname "$T")" -czf "$OUT/YAEC-${VER}-${B}-x64.tar.gz" "$(basename "$T")"; done
 ls -l "$OUT"

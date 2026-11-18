@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.2
+﻿YAEC – Yet Another EME Calc 1.9.3
 autorius Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Skaičiuoklė radijo mėgėjams, dirbantiems EME (Žemė–Mėnulis–Žemė) ry
 Išeities kodas ir atsisiuntimas: https://github.com/ic8tem/YAEC/releases
 
 ĮDIEGIMAS – WINDOWS
-1. Atsisiųskite YAEC-1.9.2-win-x64-setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
+1. Atsisiųskite YAEC-1.9.3-windows-x64-setup.exe iš puslapio Releases ir paleiskite. Jis įdiegia YAEC į Dokumentai\YAEC be administratoriaus teisių, su nuorodomis meniu Pradžia ir darbalaukyje bei su šalinimo programa.
 2. Jei pasirodo SmartScreen įspėjimas: "More info" → "Run anyway".
-3. Be įdiegimo: išskleiskite YAEC-1.9.2-win-x64-portatile.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
+3. Be įdiegimo: išskleiskite YAEC-1.9.3-windows-x64-portatile.zip į aplanką, į kurį galite rašyti, ir paleiskite YAEC.exe.
 
 ĮDIEGIMAS – LINUX
 YAEC veikia su Mono – laisvąja .NET vykdymo aplinka.
-- Debian, Ubuntu, Mint: atsisiųskite yaec_1.9.2_amd64.deb ir įdiekite komanda
-      sudo apt install ./yaec_1.9.2_amd64.deb
+- Debian, Ubuntu, Mint: atsisiųskite yaec_1.9.3_amd64.deb ir įdiekite komanda
+      sudo apt install ./yaec_1.9.3_amd64.deb
   (kartu įdiegiama ir Mono). YAEC paleidžiama iš programų meniu arba komanda "yaec".
-- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) ir paleiskite ./install.sh.
-- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
+- Kiti distributyvai: įdiekite Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), išskleiskite YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) ir paleiskite ./install.sh.
+- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
 
 ĮDIEGIMAS – macOS (eksperimentinis)
 1. Įdiekite Mono, skirtą macOS (https://www.mono-project.com/download/stable/), ir XQuartz (https://www.xquartz.org).
-2. Atidarykite YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
+2. Atidarykite YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
 
 AUTOMATINIAI ATNAUJINIMAI
 Paleidžiama YAEC patikrina GitHub, ar yra nauja versija, ir atsinaujina pati (Windows, nešiojamieji .tar.gz archyvai, AppImage, macOS programa), tikrindama SHA-256 kontrolinį kodą. Paketai .deb, .rpm, Arch, Slackware atnaujinami sistemos paketų tvarkykle: YAEC praneša apie naują versiją ir atidaro GitHub puslapį.
 
 ATSISIŲSTŲ FAILŲ PATIKRINIMAS (SHA-256)
 Kiekviename release yra failas SHA256SUMS.txt su kiekvieno paketo SHA-256 maiša. Palyginkite ją su atsisiųsto failo maiša:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jei abi reikšmės skiriasi, failo nediekite: atsisiųskite jį iš naujo.
@@ -43,6 +43,7 @@ Klaidos, geresni duomenys, vertimai: ccerrotta@gmail.com · ic8tem@gmail.com · 
 
 VERSIJŲ ISTORIJA
 Versijos iki 1.0 vadinamos beta.
+- 1.9.3 - Paketų pavadinimai tokie patys kaip YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm, Arch ir Slackware paketai ir ARM; leidimo pastabose lentelė su nuoroda į kiekvieną kiekvienos sistemos paketą. Šioje versijoje yra ir failai senais pavadinimais, tik automatiniam atnaujinimui iš 1.9.1 ir 1.9.2.
 - 1.9.2 - Nauja kortelė Dangaus triukšmas (Skynoise) grupėje Planavimas: antenos temperatūra pagal G8ONH ir G4SWX metodą iš visos antenos diagramos (NEC .out failas, YA-NEC arba Gauso spindulys) ir dangaus žemėlapio (Remazeilles, Haslam, GSM 2008 arba LFmap) ties 50, 144, 432 MHz ir 23 cm, su Mėnulio keliu per mėnesį, temperatūra praėjimo metu jums ir DX, poveikiu EME biudžetas yagi ir palyginimu su DJ9BV; automatinis testas faile compila.bat; vadove EME TEORIJA IR PATARIMAI: dangaus triukšmas su šaltinių palyginimu, parabolinės antenos stiprinimas (PE1RKI arba skaičiavimas dalimis, Ruze), pirminis židinys virš 2320 MHz, švitintuvo pasukimas ir spinduliu apšviestas Mėnulis (BWF).
 - 1.9.1 - Automatinis atnaujinimas iš GitHub su SHA-256 kontrolinio kodo patikra Windows sistemoje, nešiojamiesiems archyvams (Linux, FreeBSD, OpenBSD, Alpine), AppImage ir macOS programai (paketai .deb, .rpm, Arch, Slackware atnaujinami paketų tvarkykle) bei įspėjimas apie trūkstamus failus; nauji paketai: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; mygtukas TAISYTI stoties lokatoriui CALL3.TXT pataisyti; Atstumas ir Dgrd su klasikine Dgrd ties 144 MHz, o Dgrd pagal juostas lieka DGRD pagal dažnį; Mano horizontas su Dangaus skliautas violetiniais rėmeliais ir momentu iš planavimo lentelės; Stotys išbandyti su lentelės momentu, slinkties juosta ir savos šalies stočių atmetimu (cty.dat); Yagi stiprinimas iš DL6WU lentelės (G3SEK), W8IO priskiriama formulė tik žemiau 10 elementų; išskleidžiamieji sąrašai ir skaičių laukai YA-MS stiliumi; 144 MHz transverteriai vadove.
 - 1.9 - Naujas skirtukas Mano horizontas (Tiesiogiai): reljefo horizontas, apskaičiuotas iš SRTM1 duomenų atsižvelgiant į Žemės kreivumą ir refrakciją, Dangaus skliautas fone viena iš trijų spalvų skalių, Mėnulio kelias, pagrindinės kliūtys su OpenStreetMap pavadinimais ir prarastos Mėnulio minutės; žymimasis langelis reljefui naudoti kaip mažiausiam pakilimo kampui visoje programoje; vietinio triukšmo žemėlapis pagal NJ9R, su ⚠ valandomis, kai Mėnulis yra triukšminga kryptimi; naujas skirtukas Stotys išbandyti (Planavimas), Matteo IW5DHN idėja: N0UK pokalbių aktyvios stotys, surikiuotos pagal indeksą nuo 0 iki 100; skaičių laukai su greta esančiomis rodyklėmis, piliulės formos skirtukai ir trys naujos spalvų schemos iš IP-TRX-CTRL.

@@ -14,7 +14,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir d && gh release download "v${{ inputs.versione }}" --repo "${{ github.repository }}" -p 'yaec-*-any.pkg.tar.zst' -D d
+          mkdir d && gh release download "v${{ inputs.versione }}" --repo "${{ github.repository }}" -p 'yaec-*-any.pkg.tar.zst' -p 'yaec-*-x86_64.pkg.tar.zst' -D d
           docker run --rm -v "$PWD/d:/d" archlinux:latest bash -c '
             pacman --disable-sandbox -Syu --noconfirm >/dev/null 2>&1; echo aggiornato
             pacman -Si mono 2>&1 | head -5

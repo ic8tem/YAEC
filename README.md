@@ -42,445 +42,445 @@ Download the files from the **[Releases](../../releases/latest)** page (x.y = ve
 ### English
 | Distribution | Files |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (with .NET Framework 4.8 and the TLS 1.2 updates) ¹ | the same packages as Windows 64 and 32 bit |
-| **Windows ARM64** (PC with Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64-bit, PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC with Snapdragon) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64-bit, PCs and mini PCs other than Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb package) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm package) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (.pkg.tar.zst package) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (.txz package) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (.rpm package) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst package) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (.txz package) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (any Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Not yet tested on this platform: reports from users are welcome.
 
 **Automatic updates** — from 1.9.1: at start-up YAEC checks GitHub for a new version and updates itself with the Windows installer or zip, the portable .tar.gz archives (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), the AppImage and the macOS app; every package is checked against SHA256SUMS.txt. The .deb, .rpm, Arch (.pkg.tar.zst) and Slackware (.txz) packages are updated with the system package manager instead: YAEC announces the new version and opens the GitHub page.
 
-- **Windows** – download `YAEC-x.y-win-x64-setup.exe` and run it. It installs YAEC into *Documents\YAEC* without administrator rights, with Start menu and desktop shortcuts and an uninstaller. If SmartScreen warns you: *More info* → *Run anyway*. No installation wanted? Extract `YAEC-x.y-win-x64-portatile.zip` into a folder where you can write and run `YAEC.exe`.
+- **Windows** – download `YAEC-x.y-windows-x64-setup.exe` and run it. It installs YAEC into *Documents\YAEC* without administrator rights, with Start menu and desktop shortcuts and an uninstaller. If SmartScreen warns you: *More info* → *Run anyway*. No installation wanted? Extract `YAEC-x.y-windows-x64-portatile.zip` into a folder where you can write and run `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – download `yaec_x.y_amd64.deb` and run `sudo apt install ./yaec_x.y_amd64.deb` (Mono is installed too); start YAEC from the applications menu or with `yaec`.
-- **Windows 32-bit** – `YAEC-x.y-win-x86-setup.exe` or `YAEC-x.y-win-x86-portatile.zip`.
+- **Windows 32-bit** – `YAEC-x.y-windows-x86-setup.exe` or `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (Raspberry Pi OS 64-bit, Pi 4/5) – download `yaec_x.y_arm64.deb` and run `sudo apt install ./yaec_x.y_arm64.deb`.
-- **Linux – other distributions** – install Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extract `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) and run `./install.sh`.
-- **macOS (experimental)** – install Mono for macOS and XQuartz, open `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) and drag YAEC into Applications; the first time, right-click → *Open*.
+- **Linux – other distributions** – install Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extract `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) and run `./install.sh`.
+- **macOS (experimental)** – install Mono for macOS and XQuartz, open `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) and drag YAEC into Applications; the first time, right-click → *Open*.
 - Every release has `SHA256SUMS.txt` to check the downloaded files.
 
 ### Italiano
 | Distribuzione | File |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (con il .NET Framework 4.8 e gli aggiornamenti per il TLS 1.2) ¹ | gli stessi pacchetti di Windows 64 e 32 bit |
-| **Windows ARM64** (PC con Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 bit, PC e mini-PC non Raspberry) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC con Snapdragon) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 bit, PC e mini-PC non Raspberry) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (pacchetto .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (pacchetto .rpm) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (pacchetto .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (pacchetto .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (pacchetto .rpm) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (pacchetto .pkg.tar.zst) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (pacchetto .txz) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (qualsiasi Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Non ancora provato su questa piattaforma: le prove degli utenti sono benvenute.
 
 **Aggiornamenti automatici** — dalla 1.9.1: all'avvio YAEC controlla su GitHub se c'è una versione nuova e si aggiorna da solo con l'installatore o lo zip per Windows, gli archivi portatili .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), l'AppImage e l'app per macOS; ogni pacchetto viene verificato con SHA256SUMS.txt. I pacchetti .deb, .rpm, Arch (.pkg.tar.zst) e Slackware (.txz) si aggiornano invece con il gestore dei pacchetti del sistema: YAEC avvisa della nuova versione e apre la pagina di GitHub.
 
-- **Windows** – scarica `YAEC-x.y-win-x64-setup.exe` ed eseguilo. Installa YAEC in *Documenti\YAEC* senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione. Se compare l'avviso di SmartScreen: *Ulteriori informazioni* → *Esegui comunque*. Senza installazione: estrai `YAEC-x.y-win-x64-portatile.zip` in una cartella in cui puoi scrivere e avvia `YAEC.exe`.
+- **Windows** – scarica `YAEC-x.y-windows-x64-setup.exe` ed eseguilo. Installa YAEC in *Documenti\YAEC* senza diritti di amministratore, con i collegamenti nel menu Start e sul desktop e il programma di disinstallazione. Se compare l'avviso di SmartScreen: *Ulteriori informazioni* → *Esegui comunque*. Senza installazione: estrai `YAEC-x.y-windows-x64-portatile.zip` in una cartella in cui puoi scrivere e avvia `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – scarica `yaec_x.y_amd64.deb` e dai `sudo apt install ./yaec_x.y_amd64.deb` (installa anche Mono); YAEC si avvia dal menu delle applicazioni o con `yaec`.
-- **Windows a 32 bit** – `YAEC-x.y-win-x86-setup.exe` oppure `YAEC-x.y-win-x86-portatile.zip`.
+- **Windows a 32 bit** – `YAEC-x.y-windows-x86-setup.exe` oppure `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (Raspberry Pi OS a 64 bit, Pi 4/5) – scarica `yaec_x.y_arm64.deb` e dai `sudo apt install ./yaec_x.y_arm64.deb`.
-- **Linux – altre distribuzioni** – installa Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), estrai `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) e avvia `./install.sh`.
-- **macOS (sperimentale)** – installa Mono per macOS e XQuartz, apri `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) e trascina YAEC in Applicazioni; la prima volta, clic destro → *Apri*.
+- **Linux – altre distribuzioni** – installa Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), estrai `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) e avvia `./install.sh`.
+- **macOS (sperimentale)** – installa Mono per macOS e XQuartz, apri `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) e trascina YAEC in Applicazioni; la prima volta, clic destro → *Apri*.
 - Ogni release ha il file `SHA256SUMS.txt` per controllare i file scaricati.
 
 ### Deutsch
 | Distribution | Dateien |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (mit .NET Framework 4.8 und den Updates für TLS 1.2) ¹ | dieselben Pakete wie Windows 64 und 32 Bit |
-| **Windows ARM64** (PC mit Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 Bit, PCs und Mini-PCs außer Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC mit Snapdragon) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 Bit, PCs und Mini-PCs außer Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb-Paket) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm-Paket) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (.pkg.tar.zst-Paket) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (.txz-Paket) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (.rpm-Paket) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst-Paket) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (.txz-Paket) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (jedes Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Auf dieser Plattform noch nicht getestet: Erfahrungsberichte sind willkommen.
 
 **Automatische Updates** — ab 1.9.1: Beim Start prüft YAEC auf GitHub, ob es eine neue Version gibt, und aktualisiert sich selbst beim Windows-Installer oder -Zip, bei den portablen .tar.gz-Archiven (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), beim AppImage und bei der macOS-App; jedes Paket wird mit SHA256SUMS.txt geprüft. Die Pakete .deb, .rpm, Arch (.pkg.tar.zst) und Slackware (.txz) werden dagegen mit der Paketverwaltung des Systems aktualisiert: YAEC meldet die neue Version und öffnet die GitHub-Seite.
 
-- **Windows** – `YAEC-x.y-win-x64-setup.exe` herunterladen und ausführen. YAEC wird ohne Administratorrechte in *Dokumente\YAEC* installiert, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm. Bei einer SmartScreen-Warnung: *Weitere Informationen* → *Trotzdem ausführen*. Ohne Installation: `YAEC-x.y-win-x64-portatile.zip` in einen beschreibbaren Ordner entpacken und `YAEC.exe` starten.
+- **Windows** – `YAEC-x.y-windows-x64-setup.exe` herunterladen und ausführen. YAEC wird ohne Administratorrechte in *Dokumente\YAEC* installiert, mit Verknüpfungen im Startmenü und auf dem Desktop sowie einem Deinstallationsprogramm. Bei einer SmartScreen-Warnung: *Weitere Informationen* → *Trotzdem ausführen*. Ohne Installation: `YAEC-x.y-windows-x64-portatile.zip` in einen beschreibbaren Ordner entpacken und `YAEC.exe` starten.
 - **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb` herunterladen und `sudo apt install ./yaec_x.y_amd64.deb` ausführen (Mono wird mitinstalliert); YAEC startet aus dem Anwendungsmenü oder mit `yaec`.
-- **Windows 32 Bit** – `YAEC-x.y-win-x86-setup.exe` oder `YAEC-x.y-win-x86-portatile.zip`.
+- **Windows 32 Bit** – `YAEC-x.y-windows-x86-setup.exe` oder `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (Raspberry Pi OS 64 Bit, Pi 4/5) – `yaec_x.y_arm64.deb` herunterladen und `sudo apt install ./yaec_x.y_arm64.deb` ausführen.
-- **Linux – andere Distributionen** – Mono installieren (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) entpacken und `./install.sh` ausführen.
-- **macOS (experimentell)** – Mono für macOS und XQuartz installieren, `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) öffnen und YAEC in den Ordner Programme ziehen; beim ersten Mal Rechtsklick → *Öffnen*.
+- **Linux – andere Distributionen** – Mono installieren (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) entpacken und `./install.sh` ausführen.
+- **macOS (experimentell)** – Mono für macOS und XQuartz installieren, `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) öffnen und YAEC in den Ordner Programme ziehen; beim ersten Mal Rechtsklick → *Öffnen*.
 - Jede Version enthält `SHA256SUMS.txt` zur Prüfung der heruntergeladenen Dateien.
 
 ### Français
 | Distribution | Fichiers |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (avec le .NET Framework 4.8 et les mises à jour pour TLS 1.2) ¹ | les mêmes paquets que Windows 64 et 32 bits |
-| **Windows ARM64** (PC avec Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 bits, PC et mini-PC autres que Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC avec Snapdragon) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 bits, PC et mini-PC autres que Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (paquet .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (paquet .rpm) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (paquet .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (paquet .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (paquet .rpm) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (paquet .pkg.tar.zst) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (paquet .txz) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (n'importe quel Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Pas encore testé sur cette plateforme : les retours des utilisateurs sont les bienvenus.
 
 **Mises à jour automatiques** — à partir de la 1.9.1 : au démarrage, YAEC vérifie sur GitHub s'il existe une nouvelle version et se met à jour tout seul avec l'installateur ou le zip pour Windows, les archives portables .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), l'AppImage et l'application macOS ; chaque paquet est vérifié avec SHA256SUMS.txt. Les paquets .deb, .rpm, Arch (.pkg.tar.zst) et Slackware (.txz) se mettent à jour avec le gestionnaire de paquets du système : YAEC signale la nouvelle version et ouvre la page GitHub.
 
-- **Windows** – téléchargez `YAEC-x.y-win-x64-setup.exe` et lancez-le. Il installe YAEC dans *Documents\YAEC* sans droits d'administrateur, avec les raccourcis dans le menu Démarrer et sur le bureau et un programme de désinstallation. Si SmartScreen affiche un avertissement : *Informations complémentaires* → *Exécuter quand même*. Sans installation : extrayez `YAEC-x.y-win-x64-portatile.zip` dans un dossier où vous pouvez écrire et lancez `YAEC.exe`.
+- **Windows** – téléchargez `YAEC-x.y-windows-x64-setup.exe` et lancez-le. Il installe YAEC dans *Documents\YAEC* sans droits d'administrateur, avec les raccourcis dans le menu Démarrer et sur le bureau et un programme de désinstallation. Si SmartScreen affiche un avertissement : *Informations complémentaires* → *Exécuter quand même*. Sans installation : extrayez `YAEC-x.y-windows-x64-portatile.zip` dans un dossier où vous pouvez écrire et lancez `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – téléchargez `yaec_x.y_amd64.deb` et lancez `sudo apt install ./yaec_x.y_amd64.deb` (Mono est installé aussi) ; YAEC se lance depuis le menu des applications ou avec `yaec`.
-- **Windows 32 bits** – `YAEC-x.y-win-x86-setup.exe` ou `YAEC-x.y-win-x86-portatile.zip`.
+- **Windows 32 bits** – `YAEC-x.y-windows-x86-setup.exe` ou `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (Raspberry Pi OS 64 bits, Pi 4/5) – téléchargez `yaec_x.y_arm64.deb` et lancez `sudo apt install ./yaec_x.y_arm64.deb`.
-- **Linux – autres distributions** – installez Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrayez `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) et lancez `./install.sh`.
-- **macOS (expérimental)** – installez Mono pour macOS et XQuartz, ouvrez `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) et faites glisser YAEC dans Applications ; la première fois, clic droit → *Ouvrir*.
+- **Linux – autres distributions** – installez Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrayez `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) et lancez `./install.sh`.
+- **macOS (expérimental)** – installez Mono pour macOS et XQuartz, ouvrez `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) et faites glisser YAEC dans Applications ; la première fois, clic droit → *Ouvrir*.
 - Chaque version contient `SHA256SUMS.txt` pour vérifier les fichiers téléchargés.
 
 ### Español
 | Distribución | Archivos |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (con .NET Framework 4.8 y las actualizaciones para TLS 1.2) ¹ | los mismos paquetes que Windows de 64 y 32 bits |
-| **Windows ARM64** (PC con Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM de 64 bits, PC y mini PC que no son Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC con Snapdragon) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM de 64 bits, PC y mini PC que no son Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (paquete .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (paquete .rpm) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (paquete .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (paquete .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (paquete .rpm) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (paquete .pkg.tar.zst) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (paquete .txz) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (cualquier Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Aún no probado en esta plataforma: los informes de los usuarios son bienvenidos.
 
 **Actualizaciones automáticas** — desde la 1.9.1: al arrancar, YAEC comprueba en GitHub si hay una versión nueva y se actualiza solo con el instalador o el zip de Windows, los archivos portátiles .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), la AppImage y la aplicación de macOS; cada paquete se verifica con SHA256SUMS.txt. Los paquetes .deb, .rpm, Arch (.pkg.tar.zst) y Slackware (.txz) se actualizan en cambio con el gestor de paquetes del sistema: YAEC avisa de la nueva versión y abre la página de GitHub.
 
-- **Windows** – descarga `YAEC-x.y-win-x64-setup.exe` y ejecútalo. Instala YAEC en *Documentos\YAEC* sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio y un desinstalador. Si SmartScreen muestra un aviso: *Más información* → *Ejecutar de todas formas*. Sin instalación: extrae `YAEC-x.y-win-x64-portatile.zip` en una carpeta en la que puedas escribir y ejecuta `YAEC.exe`.
+- **Windows** – descarga `YAEC-x.y-windows-x64-setup.exe` y ejecútalo. Instala YAEC en *Documentos\YAEC* sin derechos de administrador, con accesos directos en el menú Inicio y en el escritorio y un desinstalador. Si SmartScreen muestra un aviso: *Más información* → *Ejecutar de todas formas*. Sin instalación: extrae `YAEC-x.y-windows-x64-portatile.zip` en una carpeta en la que puedas escribir y ejecuta `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – descarga `yaec_x.y_amd64.deb` y ejecuta `sudo apt install ./yaec_x.y_amd64.deb` (también instala Mono); YAEC se abre desde el menú de aplicaciones o con `yaec`.
-- **Windows de 32 bits** – `YAEC-x.y-win-x86-setup.exe` o `YAEC-x.y-win-x86-portatile.zip`.
+- **Windows de 32 bits** – `YAEC-x.y-windows-x86-setup.exe` o `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (Raspberry Pi OS de 64 bits, Pi 4/5) – descarga `yaec_x.y_arm64.deb` y ejecuta `sudo apt install ./yaec_x.y_arm64.deb`.
-- **Linux – otras distribuciones** – instala Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrae `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) y ejecuta `./install.sh`.
-- **macOS (experimental)** – instala Mono para macOS y XQuartz, abre `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) y arrastra YAEC a Aplicaciones; la primera vez, clic derecho → *Abrir*.
+- **Linux – otras distribuciones** – instala Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrae `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) y ejecuta `./install.sh`.
+- **macOS (experimental)** – instala Mono para macOS y XQuartz, abre `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) y arrastra YAEC a Aplicaciones; la primera vez, clic derecho → *Abrir*.
 - Cada versión incluye `SHA256SUMS.txt` para comprobar los archivos descargados.
 
 ### Português
 | Distribuição | Ficheiros |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (com o .NET Framework 4.8 e as atualizações para TLS 1.2) ¹ | os mesmos pacotes do Windows de 64 e 32 bits |
-| **Windows ARM64** (PC com Snapdragon) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM de 64 bits, PC e mini-PC que não são Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC com Snapdragon) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM de 64 bits, PC e mini-PC que não são Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (pacote .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (pacote .rpm) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (pacote .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (pacote .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (pacote .rpm) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (pacote .pkg.tar.zst) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (pacote .txz) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (qualquer Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Ainda não testado nesta plataforma: os relatos dos utilizadores são bem-vindos.
 
 **Atualizações automáticas** — a partir da 1.9.1: ao arrancar, o YAEC verifica no GitHub se há uma versão nova e atualiza-se sozinho com o instalador ou o zip para Windows, os arquivos portáteis .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), a AppImage e a aplicação para macOS; cada pacote é verificado com SHA256SUMS.txt. Os pacotes .deb, .rpm, Arch (.pkg.tar.zst) e Slackware (.txz) atualizam-se com o gestor de pacotes do sistema: o YAEC avisa da nova versão e abre a página do GitHub.
 
-- **Windows** – descarrega `YAEC-x.y-win-x64-setup.exe` e executa-o. Instala o YAEC em *Documentos\YAEC* sem direitos de administrador, com atalhos no menu Iniciar e no ambiente de trabalho e um desinstalador. Se o SmartScreen avisar: *Mais informações* → *Executar mesmo assim*. Sem instalação: extrai `YAEC-x.y-win-x64-portatile.zip` para uma pasta onde possas escrever e executa `YAEC.exe`.
+- **Windows** – descarrega `YAEC-x.y-windows-x64-setup.exe` e executa-o. Instala o YAEC em *Documentos\YAEC* sem direitos de administrador, com atalhos no menu Iniciar e no ambiente de trabalho e um desinstalador. Se o SmartScreen avisar: *Mais informações* → *Executar mesmo assim*. Sem instalação: extrai `YAEC-x.y-windows-x64-portatile.zip` para uma pasta onde possas escrever e executa `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – descarrega `yaec_x.y_amd64.deb` e executa `sudo apt install ./yaec_x.y_amd64.deb` (o Mono também é instalado); o YAEC abre-se a partir do menu de aplicações ou com `yaec`.
-- **Windows de 32 bits** – `YAEC-x.y-win-x86-setup.exe` ou `YAEC-x.y-win-x86-portatile.zip`.
+- **Windows de 32 bits** – `YAEC-x.y-windows-x86-setup.exe` ou `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (Raspberry Pi OS de 64 bits, Pi 4/5) – descarrega `yaec_x.y_arm64.deb` e executa `sudo apt install ./yaec_x.y_arm64.deb`.
-- **Linux – outras distribuições** – instala o Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrai `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) e executa `./install.sh`.
-- **macOS (experimental)** – instala o Mono para macOS e o XQuartz, abre `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) e arrasta o YAEC para Aplicações; da primeira vez, clique direito → *Abrir*.
+- **Linux – outras distribuições** – instala o Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), extrai `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) e executa `./install.sh`.
+- **macOS (experimental)** – instala o Mono para macOS e o XQuartz, abre `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) e arrasta o YAEC para Aplicações; da primeira vez, clique direito → *Abrir*.
 - Cada versão inclui `SHA256SUMS.txt` para verificar os ficheiros descarregados.
 
 ### Türkçe
 | Dağıtım | Dosyalar |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (.NET Framework 4.8 ve TLS 1.2 güncellemeleriyle) ¹ | Windows 64 ve 32 bit ile aynı paketler |
-| **Windows ARM64** (Snapdragon'lu PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 bit, Raspberry Pi dışındaki PC'ler ve mini PC'ler) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (Snapdragon'lu PC) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 bit, Raspberry Pi dışındaki PC'ler ve mini PC'ler) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb paketi) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm paketi) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (.pkg.tar.zst paketi) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (.txz paketi) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (.rpm paketi) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst paketi) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (.txz paketi) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (her Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Bu platformda henüz denenmedi: kullanıcı geri bildirimleri memnuniyetle karşılanır.
 
 **Otomatik güncellemeler** — 1.9.1'den itibaren: YAEC açılışta GitHub'da yeni bir sürüm olup olmadığını denetler ve Windows kurulum programı veya zip'i, taşınabilir .tar.gz arşivleri (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage ve macOS uygulamasıyla kendini günceller; her paket SHA256SUMS.txt ile doğrulanır. .deb, .rpm, Arch (.pkg.tar.zst) ve Slackware (.txz) paketleri ise sistemin paket yöneticisiyle güncellenir: YAEC yeni sürümü bildirir ve GitHub sayfasını açar.
 
-- **Windows** – `YAEC-x.y-win-x64-setup.exe` dosyasını indirip çalıştırın. YAEC, yönetici hakları olmadan *Belgeler\YAEC* klasörüne kurulur; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturulur. SmartScreen uyarı verirse: *Ek bilgi* → *Yine de çalıştır*. Kurulum istemiyorsanız: `YAEC-x.y-win-x64-portatile.zip` dosyasını yazabildiğiniz bir klasöre açın ve `YAEC.exe` dosyasını çalıştırın.
+- **Windows** – `YAEC-x.y-windows-x64-setup.exe` dosyasını indirip çalıştırın. YAEC, yönetici hakları olmadan *Belgeler\YAEC* klasörüne kurulur; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturulur. SmartScreen uyarı verirse: *Ek bilgi* → *Yine de çalıştır*. Kurulum istemiyorsanız: `YAEC-x.y-windows-x64-portatile.zip` dosyasını yazabildiğiniz bir klasöre açın ve `YAEC.exe` dosyasını çalıştırın.
 - **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb` dosyasını indirip `sudo apt install ./yaec_x.y_amd64.deb` komutunu çalıştırın (Mono da kurulur); YAEC uygulamalar menüsünden ya da `yaec` komutuyla açılır.
-- **32 bit Windows** – `YAEC-x.y-win-x86-setup.exe` veya `YAEC-x.y-win-x86-portatile.zip`.
+- **32 bit Windows** – `YAEC-x.y-windows-x86-setup.exe` veya `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (64 bit Raspberry Pi OS, Pi 4/5) – `yaec_x.y_arm64.deb` dosyasını indirip `sudo apt install ./yaec_x.y_arm64.deb` komutunu çalıştırın.
-- **Linux – diğer dağıtımlar** – Mono'yu kurun (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64-portatile.tar.gz` dosyasını açın (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) ve `./install.sh` komutunu çalıştırın.
-- **macOS (deneysel)** – macOS için Mono'yu ve XQuartz'ı kurun, `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin; ilk seferde sağ tık → *Aç*.
+- **Linux – diğer dağıtımlar** – Mono'yu kurun (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64.tar.gz` dosyasını açın (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) ve `./install.sh` komutunu çalıştırın.
+- **macOS (deneysel)** – macOS için Mono'yu ve XQuartz'ı kurun, `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin; ilk seferde sağ tık → *Aç*.
 - Her sürümde, indirilen dosyaları doğrulamak için `SHA256SUMS.txt` bulunur.
 
 ### Čeština
 | Distribuce | Soubory |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (s .NET Framework 4.8 a aktualizacemi pro TLS 1.2) ¹ | stejné balíčky jako Windows 64 a 32 bit |
-| **Windows ARM64** (PC se Snapdragonem) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 bit, PC a mini-PC kromě Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC se Snapdragonem) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 bit, PC a mini-PC kromě Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (balíček .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (balíček .rpm) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (balíček .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (balíček .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (balíček .rpm) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (balíček .pkg.tar.zst) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (balíček .txz) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (jakýkoli Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Na této platformě zatím nevyzkoušeno: zprávy od uživatelů jsou vítány.
 
 **Automatické aktualizace** — od verze 1.9.1: YAEC při spuštění zjistí na GitHubu, zda existuje nová verze, a sám se aktualizuje u instalátoru nebo zipu pro Windows, přenosných archivů .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage a aplikace pro macOS; každý balíček se ověří podle SHA256SUMS.txt. Balíčky .deb, .rpm, Arch (.pkg.tar.zst) a Slackware (.txz) se naopak aktualizují správcem balíčků systému: YAEC na novou verzi upozorní a otevře stránku GitHub.
 
-- **Windows** – stáhni `YAEC-x.y-win-x64-setup.exe` a spusť ho. Nainstaluje YAEC do *Dokumenty\YAEC* bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem. Pokud se objeví upozornění SmartScreen: *Další informace* → *Přesto spustit*. Bez instalace: rozbal `YAEC-x.y-win-x64-portatile.zip` do složky, do které můžeš zapisovat, a spusť `YAEC.exe`.
+- **Windows** – stáhni `YAEC-x.y-windows-x64-setup.exe` a spusť ho. Nainstaluje YAEC do *Dokumenty\YAEC* bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem. Pokud se objeví upozornění SmartScreen: *Další informace* → *Přesto spustit*. Bez instalace: rozbal `YAEC-x.y-windows-x64-portatile.zip` do složky, do které můžeš zapisovat, a spusť `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – stáhni `yaec_x.y_amd64.deb` a spusť `sudo apt install ./yaec_x.y_amd64.deb` (nainstaluje i Mono); YAEC se spouští z nabídky aplikací nebo příkazem `yaec`.
-- **32bitové Windows** – `YAEC-x.y-win-x86-setup.exe` nebo `YAEC-x.y-win-x86-portatile.zip`.
+- **32bitové Windows** – `YAEC-x.y-windows-x86-setup.exe` nebo `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (64bitový Raspberry Pi OS, Pi 4/5) – stáhni `yaec_x.y_arm64.deb` a spusť `sudo apt install ./yaec_x.y_arm64.deb`.
-- **Linux – jiné distribuce** – nainstaluj Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), rozbal `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) a spusť `./install.sh`.
-- **macOS (experimentální)** – nainstaluj Mono pro macOS a XQuartz, otevři `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) a přetáhni YAEC do složky Aplikace; poprvé pravý klik → *Otevřít*.
+- **Linux – jiné distribuce** – nainstaluj Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), rozbal `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) a spusť `./install.sh`.
+- **macOS (experimentální)** – nainstaluj Mono pro macOS a XQuartz, otevři `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) a přetáhni YAEC do složky Aplikace; poprvé pravý klik → *Otevřít*.
 - Každé vydání obsahuje `SHA256SUMS.txt` pro kontrolu stažených souborů.
 
 ### Slovenčina
 | Distribúcia | Súbory |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (s .NET Framework 4.8 a aktualizáciami pre TLS 1.2) ¹ | rovnaké balíky ako Windows 64 a 32 bit |
-| **Windows ARM64** (PC so Snapdragonom) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 bit, PC a mini-PC okrem Raspberry Pi) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (PC so Snapdragonom) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 bit, PC a mini-PC okrem Raspberry Pi) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (balík .deb) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (balík .rpm) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (balík .pkg.tar.zst) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (balík .txz) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (balík .rpm) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (balík .pkg.tar.zst) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (balík .txz) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (akýkoľvek Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ Na tejto platforme zatiaľ nevyskúšané: správy od používateľov sú vítané.
 
 **Automatické aktualizácie** — od verzie 1.9.1: YAEC pri spustení zistí na GitHube, či existuje nová verzia, a sám sa aktualizuje pri inštalátore alebo zipe pre Windows, prenosných archívoch .tar.gz (Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage a aplikácii pre macOS; každý balík sa overí podľa SHA256SUMS.txt. Balíky .deb, .rpm, Arch (.pkg.tar.zst) a Slackware (.txz) sa naopak aktualizujú správcom balíkov systému: YAEC upozorní na novú verziu a otvorí stránku GitHub.
 
-- **Windows** – stiahni `YAEC-x.y-win-x64-setup.exe` a spusti ho. Nainštaluje YAEC do *Dokumenty\YAEC* bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom. Ak sa objaví upozornenie SmartScreen: *Ďalšie informácie* → *Napriek tomu spustiť*. Bez inštalácie: rozbaľ `YAEC-x.y-win-x64-portatile.zip` do priečinka, do ktorého môžeš zapisovať, a spusti `YAEC.exe`.
+- **Windows** – stiahni `YAEC-x.y-windows-x64-setup.exe` a spusti ho. Nainštaluje YAEC do *Dokumenty\YAEC* bez práv správcu, so zástupcami v ponuke Štart a na ploche a s odinštalačným programom. Ak sa objaví upozornenie SmartScreen: *Ďalšie informácie* → *Napriek tomu spustiť*. Bez inštalácie: rozbaľ `YAEC-x.y-windows-x64-portatile.zip` do priečinka, do ktorého môžeš zapisovať, a spusti `YAEC.exe`.
 - **Linux – Debian, Ubuntu, Mint** – stiahni `yaec_x.y_amd64.deb` a spusti `sudo apt install ./yaec_x.y_amd64.deb` (nainštaluje aj Mono); YAEC sa spúšťa z ponuky aplikácií alebo príkazom `yaec`.
-- **32-bitové Windows** – `YAEC-x.y-win-x86-setup.exe` alebo `YAEC-x.y-win-x86-portatile.zip`.
+- **32-bitové Windows** – `YAEC-x.y-windows-x86-setup.exe` alebo `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi** (64-bitový Raspberry Pi OS, Pi 4/5) – stiahni `yaec_x.y_arm64.deb` a spusti `sudo apt install ./yaec_x.y_arm64.deb`.
-- **Linux – iné distribúcie** – nainštaluj Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), rozbaľ `YAEC-x.y-linux-x64-portatile.tar.gz` (ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`) a spusti `./install.sh`.
-- **macOS (experimentálne)** – nainštaluj Mono pre macOS a XQuartz, otvor `YAEC-x.y-osx-arm64.dmg` (Apple Silicon) / `YAEC-x.y-osx-x64.dmg` (Intel) a pretiahni YAEC do priečinka Aplikácie; prvýkrát pravý klik → *Otvoriť*.
+- **Linux – iné distribúcie** – nainštaluj Mono (`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), rozbaľ `YAEC-x.y-linux-x64.tar.gz` (ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`) a spusti `./install.sh`.
+- **macOS (experimentálne)** – nainštaluj Mono pre macOS a XQuartz, otvor `YAEC-x.y-mac-apple-silicon.dmg` (Apple Silicon) / `YAEC-x.y-mac-intel.dmg` (Intel) a pretiahni YAEC do priečinka Aplikácie; prvýkrát pravý klik → *Otvoriť*.
 - Každé vydanie obsahuje `SHA256SUMS.txt` na kontrolu stiahnutých súborov.
 
 ### 中文
 | 发行版 | 文件 |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (需 .NET Framework 4.8 和 TLS 1.2 更新) ¹ | 与 Windows 64 位和 32 位相同的软件包 |
-| **Windows ARM64** (Snapdragon PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 位，树莓派以外的 PC 和迷你 PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (Snapdragon PC) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 位，树莓派以外的 PC 和迷你 PC) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb 软件包) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm 软件包) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (.pkg.tar.zst 软件包) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (.txz 软件包) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (.rpm 软件包) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst 软件包) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (.txz 软件包) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (任何 Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ 尚未在此平台上测试：欢迎用户反馈。
 
 **自动更新** — 自 1.9.1 起：YAEC 启动时会在 GitHub 上检查是否有新版本，并对 Windows 安装程序或 zip、便携 .tar.gz 归档（Linux、树莓派、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 应用自动更新；每个软件包都会用 SHA256SUMS.txt 校验。.deb、.rpm、Arch（.pkg.tar.zst）和 Slackware（.txz）软件包则通过系统的软件包管理器更新：YAEC 会提示新版本并打开 GitHub 页面。
 
-- **Windows** – 下载 `YAEC-x.y-win-x64-setup.exe` 并运行。它无需管理员权限，把 YAEC 安装到 *文档\YAEC*，并在开始菜单和桌面创建快捷方式，附带卸载程序。若 SmartScreen 发出警告：*更多信息* → *仍要运行*。不想安装：把 `YAEC-x.y-win-x64-portatile.zip` 解压到可写的文件夹，运行 `YAEC.exe`。
+- **Windows** – 下载 `YAEC-x.y-windows-x64-setup.exe` 并运行。它无需管理员权限，把 YAEC 安装到 *文档\YAEC*，并在开始菜单和桌面创建快捷方式，附带卸载程序。若 SmartScreen 发出警告：*更多信息* → *仍要运行*。不想安装：把 `YAEC-x.y-windows-x64-portatile.zip` 解压到可写的文件夹，运行 `YAEC.exe`。
 - **Linux – Debian、Ubuntu、Mint** – 下载 `yaec_x.y_amd64.deb`，运行 `sudo apt install ./yaec_x.y_amd64.deb`（会同时安装 Mono）；从应用菜单或用 `yaec` 命令启动 YAEC。
-- **32 位 Windows** – `YAEC-x.y-win-x86-setup.exe` 或 `YAEC-x.y-win-x86-portatile.zip`。
+- **32 位 Windows** – `YAEC-x.y-windows-x86-setup.exe` 或 `YAEC-x.y-windows-x86-portatile.zip`。
 - **树莓派**（64 位 Raspberry Pi OS，Pi 4/5）– 下载 `yaec_x.y_arm64.deb`，运行 `sudo apt install ./yaec_x.y_arm64.deb`。
-- **Linux – 其他发行版** – 安装 Mono（`sudo dnf install mono-complete`、`sudo pacman -S mono`、`sudo zypper install mono-complete`），解压 `YAEC-x.y-linux-x64-portatile.tar.gz`（ARM：`YAEC-x.y-linux-arm64-portatile.tar.gz`、`YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`），运行 `./install.sh`。
-- **macOS（实验性）** – 安装 macOS 版 Mono 和 XQuartz，打开 `YAEC-x.y-osx-arm64.dmg`（Apple Silicon）/ `YAEC-x.y-osx-x64.dmg`（Intel），把 YAEC 拖到“应用程序”；第一次请右键 → *打开*。
+- **Linux – 其他发行版** – 安装 Mono（`sudo dnf install mono-complete`、`sudo pacman -S mono`、`sudo zypper install mono-complete`），解压 `YAEC-x.y-linux-x64.tar.gz`（ARM：`YAEC-x.y-linux-arm64.tar.gz`、`YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`），运行 `./install.sh`。
+- **macOS（实验性）** – 安装 macOS 版 Mono 和 XQuartz，打开 `YAEC-x.y-mac-apple-silicon.dmg`（Apple Silicon）/ `YAEC-x.y-mac-intel.dmg`（Intel），把 YAEC 拖到“应用程序”；第一次请右键 → *打开*。
 - 每个版本都附有 `SHA256SUMS.txt`，用于校验下载的文件。
 
 ### 日本語
 | ディストリビューション | ファイル |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (.NET Framework 4.8 と TLS 1.2 の更新が必要) ¹ | Windows 64 ビット・32 ビットと同じパッケージ |
-| **Windows ARM64** (Snapdragon 搭載 PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64 ビット、Raspberry Pi 以外の PC とミニ PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (Snapdragon 搭載 PC) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64 ビット、Raspberry Pi 以外の PC とミニ PC) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb パッケージ) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm パッケージ) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (.pkg.tar.zst パッケージ) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (.txz パッケージ) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (.rpm パッケージ) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst パッケージ) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (.txz パッケージ) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (あらゆる Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ このプラットフォームではまだ試験していません。ユーザーからの報告を歓迎します。
 
 **自動更新** — 1.9.1 から：YAEC は起動時に GitHub で新しいバージョンを確認し、Windows のインストーラーまたは zip、ポータブルの .tar.gz アーカイブ（Linux、Raspberry Pi、FreeBSD、OpenBSD、Alpine）、AppImage、macOS アプリでは自動的に更新します。各パッケージは SHA256SUMS.txt で検証されます。.deb、.rpm、Arch（.pkg.tar.zst）、Slackware（.txz）のパッケージはシステムのパッケージマネージャーで更新します。YAEC は新しいバージョンを知らせ、GitHub のページを開きます。
 
-- **Windows** – `YAEC-x.y-win-x64-setup.exe` をダウンロードして実行します。管理者権限なしで *ドキュメント\YAEC* にインストールされ、スタートメニューとデスクトップのショートカット、アンインストーラーが作成されます。SmartScreen の警告が出たら：*詳細情報* → *実行*。インストールしない場合：`YAEC-x.y-win-x64-portatile.zip` を書き込み可能なフォルダーに展開し、`YAEC.exe` を実行します。
+- **Windows** – `YAEC-x.y-windows-x64-setup.exe` をダウンロードして実行します。管理者権限なしで *ドキュメント\YAEC* にインストールされ、スタートメニューとデスクトップのショートカット、アンインストーラーが作成されます。SmartScreen の警告が出たら：*詳細情報* → *実行*。インストールしない場合：`YAEC-x.y-windows-x64-portatile.zip` を書き込み可能なフォルダーに展開し、`YAEC.exe` を実行します。
 - **Linux – Debian、Ubuntu、Mint** – `yaec_x.y_amd64.deb` をダウンロードし、`sudo apt install ./yaec_x.y_amd64.deb` を実行します（Mono も一緒にインストールされます）。YAEC はアプリケーションメニューまたは `yaec` コマンドで起動します。
-- **32 ビット Windows** – `YAEC-x.y-win-x86-setup.exe` または `YAEC-x.y-win-x86-portatile.zip`。
+- **32 ビット Windows** – `YAEC-x.y-windows-x86-setup.exe` または `YAEC-x.y-windows-x86-portatile.zip`。
 - **Raspberry Pi**（64 ビット Raspberry Pi OS、Pi 4/5）– `yaec_x.y_arm64.deb` をダウンロードし、`sudo apt install ./yaec_x.y_arm64.deb` を実行します。
-- **Linux – その他のディストリビューション** – Mono をインストールし（`sudo dnf install mono-complete`、`sudo pacman -S mono`、`sudo zypper install mono-complete`）、`YAEC-x.y-linux-x64-portatile.tar.gz`（ARM：`YAEC-x.y-linux-arm64-portatile.tar.gz`、`YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`）を展開して `./install.sh` を実行します。
-- **macOS（試験的）** – macOS 用 Mono と XQuartz をインストールし、`YAEC-x.y-osx-arm64.dmg`（Apple Silicon）/ `YAEC-x.y-osx-x64.dmg`（Intel）を開いて YAEC をアプリケーションへドラッグします。初回は右クリック → *開く*。
+- **Linux – その他のディストリビューション** – Mono をインストールし（`sudo dnf install mono-complete`、`sudo pacman -S mono`、`sudo zypper install mono-complete`）、`YAEC-x.y-linux-x64.tar.gz`（ARM：`YAEC-x.y-linux-arm64.tar.gz`、`YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`）を展開して `./install.sh` を実行します。
+- **macOS（試験的）** – macOS 用 Mono と XQuartz をインストールし、`YAEC-x.y-mac-apple-silicon.dmg`（Apple Silicon）/ `YAEC-x.y-mac-intel.dmg`（Intel）を開いて YAEC をアプリケーションへドラッグします。初回は右クリック → *開く*。
 - 各リリースには、ダウンロードしたファイルを確認するための `SHA256SUMS.txt` が含まれます。
 
 ### 한국어
 | 배포판 | 파일 |
 |---|---|
-| **Windows 64 bit** | `YAEC-x.y-win-x64-setup.exe`, `YAEC-x.y-win-x64-portatile.zip` |
-| **Windows 32 bit** | `YAEC-x.y-win-x86-setup.exe`, `YAEC-x.y-win-x86-portatile.zip` |
+| **Windows 64 bit** | `YAEC-x.y-windows-x64-setup.exe`, `YAEC-x.y-windows-x64-portatile.zip` |
+| **Windows 32 bit** | `YAEC-x.y-windows-x86-setup.exe`, `YAEC-x.y-windows-x86-portatile.zip` |
 | **Windows 7 SP1** (.NET Framework 4.8과 TLS 1.2 업데이트 필요) ¹ | Windows 64비트·32비트와 같은 패키지 |
-| **Windows ARM64** (Snapdragon PC) ¹ | `YAEC-x.y-win-arm64-setup.exe`, `YAEC-x.y-win-arm64-portatile.zip` |
-| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64-portatile.tar.gz` |
-| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86-portatile.tar.gz` |
-| **Linux aarch64** (ARM 64비트, Raspberry Pi 이외의 PC와 미니 PC) | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
+| **Windows ARM64** (Snapdragon PC) ¹ | `YAEC-x.y-windows-arm64-setup.exe`, `YAEC-x.y-windows-arm64-portatile.zip` |
+| **Linux x86_64** (64 bit) | `YAEC-x.y-linux-x64.tar.gz` |
+| **Linux i686** (32 bit) ¹ | `YAEC-x.y-linux-x86.tar.gz` |
+| **Linux aarch64** (ARM 64비트, Raspberry Pi 이외의 PC와 미니 PC) | `YAEC-x.y-linux-arm64.tar.gz` |
 | **Debian / Ubuntu / Mint** (.deb 패키지) | `yaec_x.y_amd64.deb` |
-| **Fedora / openSUSE** (.rpm 패키지) | `yaec-x.y-1.noarch.rpm` |
-| **Arch Linux / Manjaro** (.pkg.tar.zst 패키지) | `yaec-x.y-1-any.pkg.tar.zst` |
-| **Slackware** (.txz 패키지) ¹ | `yaec-x.y-noarch-1_ic8tem.txz` |
+| **Fedora / openSUSE** (.rpm 패키지) | `yaec-x.y.x86_64.rpm` |
+| **Arch Linux / Manjaro** (.pkg.tar.zst 패키지) | `yaec-x.y-1-x86_64.pkg.tar.zst` |
+| **Slackware** (.txz 패키지) ¹ | `yaec-x.y-x86_64-1_ic8tem.txz` |
 | **AppImage** (모든 Linux) ¹ | `YAEC-x.y-x86_64.AppImage`, `YAEC-x.y-aarch64.AppImage` |
-| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64-portatile.tar.gz`, `YAEC-x.y-alpine-arm64-portatile.tar.gz` |
-| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64-portatile.tar.gz` |
-| **Linux armv7l** | `YAEC-x.y-linux-arm-portatile.tar.gz` |
-| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64-portatile.tar.gz` |
-| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64-portatile.tar.gz` |
-| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-osx-arm64.dmg`, `YAEC-x.y-osx-arm64-app.zip` |
-| **macOS Intel** | `YAEC-x.y-osx-x64.dmg`, `YAEC-x.y-osx-x64-app.zip` |
+| **Alpine Linux** (musl) ¹ | `YAEC-x.y-alpine-x64.tar.gz`, `YAEC-x.y-alpine-arm64.tar.gz` |
+| **Raspberry Pi (ARM)** → Raspberry Pi OS 32 bit (armhf) ¹ | `yaec_x.y_armhf.deb`, `YAEC-x.y-linux-armv7l.tar.gz` |
+| **Raspberry Pi OS 64 bit** (arm64) | `yaec_x.y_arm64.deb`, `YAEC-x.y-linux-arm64.tar.gz` |
+| **Raspberry Pi Slackware ARM64** ¹ | `YAEC-x.y-linux-arm64.tar.gz` |
+| **Linux armv7l** | `YAEC-x.y-linux-armv7l.tar.gz` |
+| **FreeBSD amd64** ¹ | `YAEC-x.y-freebsd-x64.tar.gz` |
+| **OpenBSD amd64** ¹ | `YAEC-x.y-openbsd-x64.tar.gz` |
+| **macOS** → macOS Apple Silicon (M1-M4) | `YAEC-x.y-mac-apple-silicon.dmg`, `YAEC-x.y-mac-apple-silicon-app.zip` |
+| **macOS Intel** | `YAEC-x.y-mac-intel.dmg`, `YAEC-x.y-mac-intel-app.zip` |
 
 ¹ 이 플랫폼에서는 아직 시험하지 않았습니다. 사용자 보고를 환영합니다.
 
 **자동 업데이트** — 1.9.1부터: YAEC는 시작할 때 GitHub에서 새 버전이 있는지 확인하고, Windows 설치 프로그램이나 zip, 휴대용 .tar.gz 압축 파일(Linux, Raspberry Pi, FreeBSD, OpenBSD, Alpine), AppImage, macOS 앱에서는 스스로 업데이트합니다. 모든 패키지는 SHA256SUMS.txt로 검증합니다. .deb, .rpm, Arch(.pkg.tar.zst), Slackware(.txz) 패키지는 시스템의 패키지 관리자로 업데이트합니다. YAEC는 새 버전을 알리고 GitHub 페이지를 엽니다.
 
-- **Windows** – `YAEC-x.y-win-x64-setup.exe`를 내려받아 실행합니다. 관리자 권한 없이 *문서\YAEC*에 설치되며, 시작 메뉴와 바탕 화면 바로 가기, 제거 프로그램이 만들어집니다. SmartScreen 경고가 나오면: *추가 정보* → *실행*. 설치하지 않으려면: `YAEC-x.y-win-x64-portatile.zip`을 쓰기 가능한 폴더에 풀고 `YAEC.exe`를 실행합니다.
+- **Windows** – `YAEC-x.y-windows-x64-setup.exe`를 내려받아 실행합니다. 관리자 권한 없이 *문서\YAEC*에 설치되며, 시작 메뉴와 바탕 화면 바로 가기, 제거 프로그램이 만들어집니다. SmartScreen 경고가 나오면: *추가 정보* → *실행*. 설치하지 않으려면: `YAEC-x.y-windows-x64-portatile.zip`을 쓰기 가능한 폴더에 풀고 `YAEC.exe`를 실행합니다.
 - **Linux – Debian, Ubuntu, Mint** – `yaec_x.y_amd64.deb`를 내려받아 `sudo apt install ./yaec_x.y_amd64.deb`를 실행합니다(Mono도 함께 설치됨). YAEC는 응용 프로그램 메뉴나 `yaec` 명령으로 시작합니다.
-- **32비트 Windows** – `YAEC-x.y-win-x86-setup.exe` 또는 `YAEC-x.y-win-x86-portatile.zip`.
+- **32비트 Windows** – `YAEC-x.y-windows-x86-setup.exe` 또는 `YAEC-x.y-windows-x86-portatile.zip`.
 - **Raspberry Pi**(64비트 Raspberry Pi OS, Pi 4/5) – `yaec_x.y_arm64.deb`를 내려받아 `sudo apt install ./yaec_x.y_arm64.deb`를 실행합니다.
-- **Linux – 기타 배포판** – Mono를 설치하고(`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64-portatile.tar.gz`(ARM: `YAEC-x.y-linux-arm64-portatile.tar.gz`, `YAEC-x.y-linux-arm-portatile.tar.gz`; Linux i686: `YAEC-x.y-linux-x86-portatile.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64-portatile.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64-portatile.tar.gz`)를 풀고 `./install.sh`를 실행합니다.
-- **macOS(실험적)** – macOS용 Mono와 XQuartz를 설치하고 `YAEC-x.y-osx-arm64.dmg`(Apple Silicon) / `YAEC-x.y-osx-x64.dmg`(Intel)를 열어 YAEC를 응용 프로그램으로 끌어다 놓습니다. 처음에는 오른쪽 클릭 → *열기*.
+- **Linux – 기타 배포판** – Mono를 설치하고(`sudo dnf install mono-complete`, `sudo pacman -S mono`, `sudo zypper install mono-complete`), `YAEC-x.y-linux-x64.tar.gz`(ARM: `YAEC-x.y-linux-arm64.tar.gz`, `YAEC-x.y-linux-armv7l.tar.gz`; Linux i686: `YAEC-x.y-linux-x86.tar.gz`; FreeBSD amd64: `YAEC-x.y-freebsd-x64.tar.gz`; OpenBSD amd64: `YAEC-x.y-openbsd-x64.tar.gz`)를 풀고 `./install.sh`를 실행합니다.
+- **macOS(실험적)** – macOS용 Mono와 XQuartz를 설치하고 `YAEC-x.y-mac-apple-silicon.dmg`(Apple Silicon) / `YAEC-x.y-mac-intel.dmg`(Intel)를 열어 YAEC를 응용 프로그램으로 끌어다 놓습니다. 처음에는 오른쪽 클릭 → *열기*.
 - 각 릴리스에는 내려받은 파일을 확인하는 `SHA256SUMS.txt`가 들어 있습니다.
 
 All the versions before 1.0 are called **beta**.
@@ -950,6 +950,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>English</b> – Version history</summary>
 
+- **1.9.3** – Package names the same as YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm, Arch and Slackware packages for ARM too; the release notes have a table with a link to each package for each system. This version also contains the files with the old names, only for the automatic update from 1.9.1 and 1.9.2.
 - **1.9.2** – New tab Sky noise (Skynoise) in Planning: antenna temperature computed with the G8ONH and G4SWX method from the full antenna pattern (NEC .out file, YA-NEC or Gaussian beam) and the sky map (Remazeilles, Haslam, GSM 2008 or LFmap) at 50, 144, 432 MHz and 23 cm, with the Moon path over the month, the temperature during the pass for you and for the DX, the effect on the EME budget Yagi and the comparison with DJ9BV; automatic test in compila.bat; in the THEORY AND TIPS ON EME manual: sky noise with the sources compared, dish gain (PE1RKI or itemised calculation, Ruze), prime focus above 2320 MHz, feed rotation and the Moon illuminated by the beam (BWF).
 - **1.9.1** – Automatic update from GitHub, with SHA-256 fingerprint check, on Windows, with the portable archives (Linux, FreeBSD, OpenBSD, Alpine), the AppImage and the macOS app (the .deb, .rpm, Arch, Slackware packages are updated with the package manager), and warning about missing files; new packages for Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CORRECT button to correct a station's locator in CALL3.TXT; Distance and Dgrd with the classic Dgrd at 144 MHz, while the per-band Dgrd stays in DGRD by frequency; My horizon with the violet boxes of Sky view and the time taken from the planning table; Stations to try with the time from the table, a scroll bar and the option to leave out the stations of your own country (cty.dat); Yagi gain from the DL6WU table (G3SEK), with the formula attributed to W8IO only below 10 elements; drop-down lists and numeric boxes in the YA-MS style; 144 MHz transverters in the manual.
 - **1.9** – New tab My horizon (Live): horizon from the terrain computed from SRTM1 data with Earth curvature and refraction, over the Sky view background in one of the three colour scales, Moon path, main obstacles with OpenStreetMap names and minutes of Moon lost; checkbox to use the terrain as minimum elevation throughout the program; local noise map after NJ9R, with ⚠ in the hours when the Moon is in a noisy direction; new tab Stations to try (Planning), idea by Matteo IW5DHN: the active stations of the N0UK chat ranked by an index from 0 to 100; numeric boxes with side-by-side arrows, pill-shaped tabs and three new colour schemes taken from IP-TRX-CTRL.
@@ -969,6 +970,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Italiano</b> – Storia delle versioni</summary>
 
+- **1.9.3** – Nomi dei pacchetti uguali a quelli di YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pacchetti .rpm, Arch e Slackware anche per ARM; nelle note della release una tabella con il collegamento a ogni pacchetto per ogni sistema. Questa versione contiene anche i file con i vecchi nomi, solo per l'aggiornamento automatico dalla 1.9.1 e dalla 1.9.2.
 - **1.9.2** – Nuova linguetta Rumore del cielo (Skynoise) in Pianificazione: temperatura d'antenna calcolata con il metodo di G8ONH e G4SWX dal diagramma completo dell'antenna (file .out del NEC, YA-NEC o fascio gaussiano) e dalla mappa del cielo (Remazeilles, Haslam, GSM 2008 o LFmap) a 50, 144, 432 MHz e 23 cm, con il percorso della Luna nel mese, la temperatura durante il passaggio per te e per il DX, l'effetto sul Budget EME yagi e il confronto con DJ9BV; collaudo automatico in compila.bat; nel manuale TEORIA E CONSIGLI SULL'EME il rumore del cielo con le fonti a confronto, il guadagno dei dischi (PE1RKI o calcolo per aliquote, Ruze), il primo fuoco sopra i 2320 MHz, la rotazione dell'illuminatore e la Luna illuminata dal fascio (BWF).
 - **1.9.1** – Aggiornamento automatico da GitHub, con controllo dell'impronta SHA-256, su Windows, con gli archivi portatili (Linux, FreeBSD, OpenBSD, Alpine), con l'AppImage e con l'app per macOS (i pacchetti .deb, .rpm, Arch e Slackware si aggiornano con il gestore dei pacchetti), e avviso dei file mancanti; nuovi pacchetti per Windows ARM64, Fedora e openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS a 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686 e AppImage; pulsante CORREGGI per correggere il locator di una stazione nel CALL3.TXT; Distanza e Dgrd con la Dgrd classica a 144 MHz, mentre la Dgrd per banda resta in DGRD per frequenza; Il mio orizzonte con i riquadri viola della Volta celeste e il momento preso dalla tabella di pianificazione; Stazioni da provare con il momento della tabella, la barra di scorrimento e l'esclusione delle stazioni del proprio paese (cty.dat); guadagno delle yagi dalla tabella di DL6WU (G3SEK), con la formula attribuita a W8IO solo sotto i 10 elementi; tendine e caselle numeriche nello stile di YA-MS; transverter per i 144 MHz nel manuale.
 - **1.9** – Nuova linguetta Il mio orizzonte (In diretta): orizzonte dal terreno calcolato dai dati SRTM1 con curvatura terrestre e rifrazione, sullo sfondo della Volta celeste con una delle tre colorazioni, percorso della Luna, ostacoli principali con i nomi di OpenStreetMap e minuti di Luna persi; casella per usare il terreno come elevazione minima in tutto il programma; mappa del rumore locale secondo NJ9R, con ⚠ nelle ore in cui la Luna è in una direzione rumorosa; nuova linguetta Stazioni da provare (Pianificazione), idea di Matteo IW5DHN: le stazioni attive della chat N0UK ordinate con un indice da 0 a 100; caselle numeriche con le frecce affiancate, linguette a pillola e tre nuovi schemi di colori presi da IP-TRX-CTRL.
@@ -988,6 +990,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Deutsch</b> – Versionsgeschichte</summary>
 
+- **1.9.3** – Paketnamen wie bei YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm-, Arch- und Slackware-Pakete auch für ARM; in den Release-Notizen eine Tabelle mit dem Link zu jedem Paket für jedes System. Diese Version enthält auch die Dateien mit den alten Namen, nur für die automatische Aktualisierung von 1.9.1 und 1.9.2.
 - **1.9.2** – Neuer Reiter Himmelsrauschen (Skynoise) in Planung: Antennentemperatur nach der Methode von G8ONH und G4SWX aus dem vollständigen Antennendiagramm (NEC-.out-Datei, YA-NEC oder Gauß-Strahl) und der Himmelskarte (Remazeilles, Haslam, GSM 2008 oder LFmap) bei 50, 144, 432 MHz und 23 cm, mit der Mondbahn im Monat, der Temperatur während des Durchgangs für dich und den DX, der Auswirkung auf das EME-Budget Yagi und dem Vergleich mit DJ9BV; automatischer Test in compila.bat; im Handbuch THEORIE UND TIPPS ZU EME: Himmelsrauschen mit den Quellen im Vergleich, Spiegelgewinn (PE1RKI oder Einzelberechnung, Ruze), Primärfokus über 2320 MHz, Drehung des Erregers und der vom Strahl beleuchtete Mond (BWF).
 - **1.9.1** – Automatisches Update von GitHub mit Prüfung des SHA-256-Fingerabdrucks unter Windows, bei den portablen Archiven (Linux, FreeBSD, OpenBSD, Alpine), beim AppImage und bei der macOS-App (die Pakete .deb, .rpm, Arch, Slackware werden mit der Paketverwaltung aktualisiert) und Hinweis auf fehlende Dateien; neue Pakete für Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; Schaltfläche KORRIGIEREN, um den Locator einer Station in CALL3.TXT zu korrigieren; Entfernung und Dgrd mit der klassischen Dgrd bei 144 MHz, die Dgrd je Band bleibt in DGRD nach Frequenz; Mein Horizont mit den violetten Rahmen aus Himmelsansicht und dem Zeitpunkt aus der Planungstabelle; Stationen zum Ausprobieren mit dem Zeitpunkt aus der Tabelle, Bildlaufleiste und Ausschluss der Stationen des eigenen Landes (cty.dat); Yagi-Gewinn aus der DL6WU-Tabelle (G3SEK), die W8IO zugeschriebene Formel nur unter 10 Elementen; Auswahllisten und Zahlenfelder im YA-MS-Stil; 144-MHz-Transverter im Handbuch.
 - **1.9** – Neuer Reiter Mein Horizont (Live): Horizont aus dem Gelände, berechnet aus SRTM1-Daten mit Erdkrümmung und Refraktion, vor dem Hintergrund der Himmelsansicht in einer der drei Farbskalen, Mondbahn, Haupthindernisse mit Namen aus OpenStreetMap und verlorene Mondminuten; Kästchen, um das Gelände im ganzen Programm als Mindestelevation zu verwenden; Karte des lokalen Rauschens nach NJ9R, mit ⚠ in den Stunden, in denen der Mond in einer verrauschten Richtung steht; neuer Reiter Stationen zum Ausprobieren (Planung), Idee von Matteo IW5DHN: die aktiven Stationen des N0UK-Chats, geordnet nach einem Index von 0 bis 100; Zahlenfelder mit nebeneinander liegenden Pfeilen, Reiter in Pillenform und drei neue Farbschemata aus IP-TRX-CTRL.
@@ -1007,6 +1010,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Français</b> – Historique des versions</summary>
 
+- **1.9.3** – Noms des paquets identiques à ceux de YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64) ; paquets .rpm, Arch et Slackware aussi pour ARM ; dans les notes de version, un tableau avec le lien vers chaque paquet pour chaque système. Cette version contient aussi les fichiers avec les anciens noms, uniquement pour la mise à jour automatique depuis 1.9.1 et 1.9.2.
 - **1.9.2** – Nouvel onglet Bruit du ciel (Skynoise) dans Planification : température d'antenne calculée avec la méthode de G8ONH et G4SWX à partir du diagramme complet de l'antenne (fichier .out du NEC, YA-NEC ou faisceau gaussien) et de la carte du ciel (Remazeilles, Haslam, GSM 2008 ou LFmap) à 50, 144, 432 MHz et 23 cm, avec le trajet de la Lune dans le mois, la température pendant le passage pour vous et pour le DX, l'effet sur le Bilan EME Yagi et la comparaison avec DJ9BV ; test automatique dans compila.bat ; dans le manuel THÉORIE ET CONSEILS SUR L'EME : le bruit du ciel avec les sources comparées, le gain des paraboles (PE1RKI ou calcul poste par poste, Ruze), le foyer primaire au-dessus de 2320 MHz, la rotation de la source et la Lune éclairée par le faisceau (BWF).
 - **1.9.1** – Mise à jour automatique depuis GitHub, avec contrôle de l'empreinte SHA-256, sous Windows, avec les archives portables (Linux, FreeBSD, OpenBSD, Alpine), l'AppImage et l'application macOS (les paquets .deb, .rpm, Arch, Slackware se mettent à jour avec le gestionnaire de paquets), et avertissement des fichiers manquants ; nouveaux paquets pour Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage ; bouton CORRIGER pour corriger le locator d'une station dans CALL3.TXT ; Distance et Dgrd avec la Dgrd classique à 144 MHz, la Dgrd par bande restant dans DGRD par fréquence ; Mon horizon avec les cadres violets de Voûte céleste et l'instant pris dans le tableau de planification ; Stations à essayer avec l'instant du tableau, une barre de défilement et l'exclusion des stations de son propre pays (cty.dat) ; gain des yagis d'après la table de DL6WU (G3SEK), la formule attribuée à W8IO seulement sous 10 éléments ; listes déroulantes et cases numériques dans le style de YA-MS ; transverters 144 MHz dans le manuel.
 - **1.9** – Nouvel onglet Mon horizon (En direct) : horizon du relief calculé à partir des données SRTM1 avec la courbure terrestre et la réfraction, sur le fond de la Voûte céleste dans l'une des trois échelles de couleurs, trajectoire de la Lune, principaux obstacles avec les noms d'OpenStreetMap et minutes de Lune perdues ; case pour utiliser le relief comme élévation minimale dans tout le programme ; carte du bruit local selon NJ9R, avec ⚠ aux heures où la Lune est dans une direction bruyante ; nouvel onglet Stations à essayer (Planification), idée de Matteo IW5DHN : les stations actives du chat N0UK classées par un indice de 0 à 100 ; champs numériques avec flèches côte à côte, onglets en forme de pilule et trois nouveaux schémas de couleurs repris d'IP-TRX-CTRL.
@@ -1026,6 +1030,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Español</b> – Historial de versiones</summary>
 
+- **1.9.3** – Nombres de los paquetes iguales a los de YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); paquetes .rpm, Arch y Slackware también para ARM; en las notas de la versión, una tabla con el enlace a cada paquete para cada sistema. Esta versión contiene también los archivos con los nombres antiguos, solo para la actualización automática desde 1.9.1 y 1.9.2.
 - **1.9.2** – Nueva pestaña Ruido del cielo (Skynoise) en Planificación: temperatura de antena calculada con el método de G8ONH y G4SWX a partir del diagrama completo de la antena (archivo .out del NEC, YA-NEC o haz gaussiano) y del mapa del cielo (Remazeilles, Haslam, GSM 2008 o LFmap) en 50, 144, 432 MHz y 23 cm, con el recorrido de la Luna en el mes, la temperatura durante el paso para ti y para el DX, el efecto en el Balance EME Yagi y la comparación con DJ9BV; prueba automática en compila.bat; en el manual TEORÍA Y CONSEJOS SOBRE EME: el ruido del cielo con las fuentes comparadas, la ganancia de las parábolas (PE1RKI o cálculo por partidas, Ruze), el foco primario por encima de 2320 MHz, la rotación del alimentador y la Luna iluminada por el haz (BWF).
 - **1.9.1** – Actualización automática desde GitHub, con comprobación de la huella SHA-256, en Windows, con los archivos portátiles (Linux, FreeBSD, OpenBSD, Alpine), con la AppImage y con la aplicación de macOS (los paquetes .deb, .rpm, Arch, Slackware se actualizan con el gestor de paquetes), y aviso de archivos que faltan; nuevos paquetes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botón CORREGIR para corregir el locator de una estación en CALL3.TXT; Distancia y Dgrd con la Dgrd clásica a 144 MHz, mientras la Dgrd por banda sigue en DGRD por frecuencia; Mi horizonte con los recuadros violeta de Bóveda celeste y el momento tomado de la tabla de planificación; Estaciones para probar con el momento de la tabla, barra de desplazamiento y exclusión de las estaciones del propio país (cty.dat); ganancia de las yagis según la tabla de DL6WU (G3SEK), con la fórmula atribuida a W8IO solo por debajo de 10 elementos; listas desplegables y casillas numéricas al estilo de YA-MS; transverters de 144 MHz en el manual.
 - **1.9** – Nueva pestaña Mi horizonte (En directo): horizonte del terreno calculado con datos SRTM1 con curvatura terrestre y refracción, sobre el fondo de la Bóveda celeste en una de las tres escalas de color, trayectoria de la Luna, obstáculos principales con los nombres de OpenStreetMap y minutos de Luna perdidos; casilla para usar el terreno como elevación mínima en todo el programa; mapa del ruido local según NJ9R, con ⚠ en las horas en que la Luna está en una dirección ruidosa; nueva pestaña Estaciones para probar (Planificación), idea de Matteo IW5DHN: las estaciones activas del chat N0UK ordenadas con un índice de 0 a 100; casillas numéricas con flechas una al lado de otra, pestañas en forma de píldora y tres nuevos esquemas de colores tomados de IP-TRX-CTRL.
@@ -1045,6 +1050,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Português</b> – Histórico de versões</summary>
 
+- **1.9.3** – Nomes dos pacotes iguais aos do YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pacotes .rpm, Arch e Slackware também para ARM; nas notas da versão, uma tabela com a ligação para cada pacote de cada sistema. Esta versão contém também os ficheiros com os nomes antigos, apenas para a atualização automática a partir da 1.9.1 e da 1.9.2.
 - **1.9.2** – Novo separador Ruído do céu (Skynoise) em Planeamento: temperatura de antena calculada com o método de G8ONH e G4SWX a partir do diagrama completo da antena (ficheiro .out do NEC, YA-NEC ou feixe gaussiano) e do mapa do céu (Remazeilles, Haslam, GSM 2008 ou LFmap) em 50, 144, 432 MHz e 23 cm, com o percurso da Lua no mês, a temperatura durante a passagem para si e para o DX, o efeito no Balanço EME Yagi e a comparação com DJ9BV; teste automático em compila.bat; no manual TEORIA E CONSELHOS SOBRE EME: o ruído do céu com as fontes comparadas, o ganho das parabólicas (PE1RKI ou cálculo por parcelas, Ruze), o foco primário acima dos 2320 MHz, a rotação do alimentador e a Lua iluminada pelo feixe (BWF).
 - **1.9.1** – Atualização automática a partir do GitHub, com verificação da impressão SHA-256, no Windows, com os arquivos portáteis (Linux, FreeBSD, OpenBSD, Alpine), com a AppImage e com a aplicação para macOS (os pacotes .deb, .rpm, Arch, Slackware atualizam-se com o gestor de pacotes), e aviso de ficheiros em falta; novos pacotes para Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; botão CORRIGIR para corrigir o locator de uma estação no CALL3.TXT; Distância e Dgrd com a Dgrd clássica a 144 MHz, ficando a Dgrd por banda em DGRD por frequência; O meu horizonte com os retângulos violeta de Abóbada celeste e o momento tirado da tabela de planeamento; Estações a experimentar com o momento da tabela, barra de deslocamento e exclusão das estações do próprio país (cty.dat); ganho das yagis pela tabela de DL6WU (G3SEK), com a fórmula atribuída a W8IO só abaixo de 10 elementos; listas pendentes e caixas numéricas no estilo do YA-MS; transverters de 144 MHz no manual.
 - **1.9** – Novo separador O meu horizonte (Em direto): horizonte do terreno calculado a partir dos dados SRTM1 com curvatura terrestre e refração, sobre o fundo da Abóbada celeste numa das três escalas de cores, trajetória da Lua, obstáculos principais com os nomes do OpenStreetMap e minutos de Lua perdidos; caixa para usar o terreno como elevação mínima em todo o programa; mapa do ruído local segundo NJ9R, com ⚠ nas horas em que a Lua está numa direção ruidosa; novo separador Estações a experimentar (Planeamento), ideia de Matteo IW5DHN: as estações ativas do chat N0UK ordenadas por um índice de 0 a 100; caixas numéricas com setas lado a lado, separadores em forma de pílula e três novos esquemas de cores retirados do IP-TRX-CTRL.
@@ -1064,6 +1070,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Türkçe</b> – Sürüm geçmişi</summary>
 
+- **1.9.3** – Paket adları YA-MS ile aynı (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm, Arch ve Slackware paketleri ARM için de; sürüm notlarında her sistem için her pakete bağlantı içeren bir tablo. Bu sürüm, yalnızca 1.9.1 ve 1.9.2'den otomatik güncelleme için eski adlı dosyaları da içerir.
 - **1.9.2** – Planlama içinde yeni Gökyüzü gürültüsü (Skynoise) sekmesi: antenin tam diyagramından (NEC .out dosyası, YA-NEC veya Gauss demeti) ve gök haritasından (Remazeilles, Haslam, GSM 2008 veya LFmap) G8ONH ve G4SWX yöntemiyle hesaplanan anten sıcaklığı, 50, 144, 432 MHz ve 23 cm'de; Ay'ın ay boyunca yolu, sizin ve DX için geçiş sırasındaki sıcaklık, EME bütçesi yagi üzerindeki etki ve DJ9BV ile karşılaştırma; compila.bat'ta otomatik test; EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzunda: kaynakların karşılaştırmasıyla gökyüzü gürültüsü, çanak kazancı (PE1RKI veya kalem kalem hesap, Ruze), 2320 MHz üstünde birincil odak, besleyicinin döndürülmesi ve demetin aydınlattığı Ay (BWF).
 - **1.9.1** – GitHub'dan SHA-256 parmak izi denetimiyle otomatik güncelleme: Windows'ta, taşınabilir arşivlerde (Linux, FreeBSD, OpenBSD, Alpine), AppImage'da ve macOS uygulamasında (.deb, .rpm, Arch, Slackware paketleri paket yöneticisiyle güncellenir) ve eksik dosya uyarısı; yeni paketler: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT'te bir istasyonun lokatörünü düzeltmek için DÜZELT düğmesi; Mesafe ve Dgrd'de 144 MHz'te klasik Dgrd, banda göre Dgrd Frekansa göre DGRD'de kalır; Ufkum'de Gök kubbesi'nin mor çerçeveleri ve planlama tablosundan alınan an; Denenecek istasyonlar'de tablodaki an, kaydırma çubuğu ve kendi ülkenin istasyonlarını dışarıda bırakma (cty.dat); Yagi kazancı DL6WU tablosundan (G3SEK), W8IO'ya atfedilen formül yalnızca 10 elemanın altında; YA-MS tarzında açılır listeler ve sayı kutuları; el kitabında 144 MHz transverterler.
 - **1.9** – Yeni sekme Ufkum (Canlı): Dünya eğriliği ve kırılma hesaba katılarak SRTM1 verilerinden hesaplanan arazi ufku, üç renk ölçeğinden biriyle Gök kubbesi arka planı üzerinde; Ay'ın yolu, OpenStreetMap adlarıyla başlıca engeller ve kaybedilen Ay dakikaları; araziyi tüm programda en düşük yükseklik açısı olarak kullanmak için onay kutusu; NJ9R'ye göre yerel gürültü haritası, Ay'ın gürültülü bir yönde olduğu saatlerde ⚠ ile; yeni sekme Denenecek istasyonlar (Planlama), fikir Matteo IW5DHN'den: N0UK sohbetindeki etkin istasyonlar 0'dan 100'e bir endeksle sıralanır; yan yana oklu sayı kutuları, hap biçimli sekmeler ve IP-TRX-CTRL'den alınan üç yeni renk şeması.
@@ -1083,6 +1090,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Čeština</b> – Historie verzí</summary>
 
+- **1.9.3** – Názvy balíčků stejné jako u YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); balíčky .rpm, Arch a Slackware i pro ARM; v poznámkách k vydání tabulka s odkazem na každý balíček pro každý systém. Tato verze obsahuje také soubory se starými názvy, pouze pro automatickou aktualizaci z 1.9.1 a 1.9.2.
 - **1.9.2** – Nová záložka Šum oblohy (Skynoise) ve skupině Plánování: teplota antény spočítaná metodou G8ONH a G4SWX z úplného diagramu antény (soubor .out z NEC, YA-NEC nebo gaussovský svazek) a z mapy oblohy (Remazeilles, Haslam, GSM 2008 nebo LFmap) na 50, 144, 432 MHz a 23 cm, s dráhou Měsíce během měsíce, teplotou během přechodu pro vás a pro DX, vlivem na Bilance EME yagi a porovnáním s DJ9BV; automatický test v compila.bat; v příručce TEORIE A RADY K EME: šum oblohy s porovnáním zdrojů, zisk parabol (PE1RKI nebo výpočet po položkách, Ruze), primární ohnisko nad 2320 MHz, otáčení ozařovače a Měsíc osvětlený svazkem (BWF).
 - **1.9.1** – Automatická aktualizace z GitHubu s ověřením otisku SHA-256 ve Windows, u přenosných archivů (Linux, FreeBSD, OpenBSD, Alpine), u AppImage a aplikace pro macOS (balíčky .deb, .rpm, Arch, Slackware aktualizuje správce balíčků) a upozornění na chybějící soubory; nové balíčky pro Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačítko OPRAVIT k opravě lokátoru stanice v CALL3.TXT; Vzdálenost a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podle pásem zůstává v DGRD podle kmitočtu; Můj obzor s fialovými rámečky z Nebeská klenba a okamžikem z plánovací tabulky; Stanice k vyzkoušení s okamžikem z tabulky, posuvníkem a vyloučením stanic vlastní země (cty.dat); zisk antén Yagi z tabulky DL6WU (G3SEK), vzorec připisovaný W8IO jen pod 10 prvků; rozbalovací seznamy a číselná pole ve stylu YA-MS; transvertory pro 144 MHz v příručce.
 - **1.9** – Nová karta Můj obzor (Živě): obzor z terénu vypočtený z dat SRTM1 se zakřivením Země a refrakcí, na pozadí Nebeská klenba v jedné ze tří barevných škál, dráha Měsíce, hlavní překážky s názvy z OpenStreetMap a ztracené minuty Měsíce; zaškrtávací políčko pro použití terénu jako minimální elevace v celém programu; mapa místního šumu podle NJ9R, s ⚠ v hodinách, kdy je Měsíc v hlučném směru; nová karta Stanice k vyzkoušení (Plánování), nápad Matteo IW5DHN: aktivní stanice chatu N0UK seřazené podle indexu od 0 do 100; číselná pole se šipkami vedle sebe, karty ve tvaru pilulky a tři nová barevná schémata z IP-TRX-CTRL.
@@ -1102,6 +1110,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Slovenčina</b> – História verzií</summary>
 
+- **1.9.3** – Názvy balíkov rovnaké ako pri YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); balíky .rpm, Arch a Slackware aj pre ARM; v poznámkach k vydaniu tabuľka s odkazom na každý balík pre každý systém. Táto verzia obsahuje aj súbory so starými názvami, iba na automatickú aktualizáciu z 1.9.1 a 1.9.2.
 - **1.9.2** – Nová záložka Šum oblohy (Skynoise) v skupine Plánovanie: teplota antény vypočítaná metódou G8ONH a G4SWX z úplného diagramu antény (súbor .out z NEC, YA-NEC alebo gaussovský zväzok) a z mapy oblohy (Remazeilles, Haslam, GSM 2008 alebo LFmap) na 50, 144, 432 MHz a 23 cm, s dráhou Mesiaca počas mesiaca, teplotou počas prechodu pre vás a pre DX, vplyvom na Bilancia EME yagi a porovnaním s DJ9BV; automatický test v compila.bat; v príručke TEÓRIA A RADY K EME: šum oblohy s porovnaním zdrojov, zisk parabol (PE1RKI alebo výpočet po položkách, Ruze), primárne ohnisko nad 2320 MHz, otáčanie ožarovača a Mesiac osvetlený zväzkom (BWF).
 - **1.9.1** – Automatická aktualizácia z GitHubu s overením odtlačku SHA-256 vo Windows, pri prenosných archívoch (Linux, FreeBSD, OpenBSD, Alpine), pri AppImage a aplikácii pre macOS (balíky .deb, .rpm, Arch, Slackware aktualizuje správca balíkov) a upozornenie na chýbajúce súbory; nové balíky pre Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačidlo OPRAVIŤ na opravu lokátora stanice v CALL3.TXT; Vzdialenosť a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podľa pásiem zostáva v DGRD podľa kmitočtu; Môj obzor s fialovými rámčekmi z Nebeská klenba a okamihom z plánovacej tabuľky; Stanice na vyskúšanie s okamihom z tabuľky, posuvníkom a vylúčením staníc vlastnej krajiny (cty.dat); zisk antén Yagi z tabuľky DL6WU (G3SEK), vzorec pripisovaný W8IO len pod 10 prvkov; rozbaľovacie zoznamy a číselné polia v štýle YA-MS; transvertory pre 144 MHz v príručke.
 - **1.9** – Nová karta Môj obzor (Naživo): obzor z terénu vypočítaný z dát SRTM1 so zakrivením Zeme a refrakciou, na pozadí Nebeská klenba v jednej z troch farebných škál, dráha Mesiaca, hlavné prekážky s názvami z OpenStreetMap a stratené minúty Mesiaca; začiarkavacie políčko na použitie terénu ako minimálnej elevácie v celom programe; mapa miestneho šumu podľa NJ9R, s ⚠ v hodinách, keď je Mesiac v hlučnom smere; nová karta Stanice na vyskúšanie (Plánovanie), nápad Matteo IW5DHN: aktívne stanice četu N0UK zoradené podľa indexu od 0 do 100; číselné polia so šípkami vedľa seba, karty v tvare tabletky a tri nové farebné schémy z IP-TRX-CTRL.
@@ -1121,6 +1130,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>中文</b> – 版本历史</summary>
 
+- **1.9.3** – 软件包名称与 YA-MS 相同（-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64）；.rpm、Arch 和 Slackware 软件包也提供 ARM 版本；发布说明中有一张表格，列出每个系统每个软件包的链接。此版本还包含旧名称的文件，仅用于从 1.9.1 和 1.9.2 自动更新。
 - **1.9.2** – 规划中新增标签页天空噪声（Skynoise）：用 G8ONH 和 G4SWX 的方法，由完整天线方向图（NEC .out 文件、YA-NEC 或高斯波束）和天空图（Remazeilles、Haslam、GSM 2008 或 LFmap）计算 50、144、432 MHz 和 23 cm 的天线温度，显示本月月球路径、你和 DX 在过境期间的温度、对EME 链路预算 八木的影响以及与 DJ9BV 的比较；compila.bat 中的自动测试；EME 理论与建议手册新增：天空噪声及资料来源比较、抛物面增益（PE1RKI 或分项计算、Ruze）、2320 MHz 以上的主焦点、馈源旋转以及被波束照亮的月面（BWF）。
 - **1.9.1** – 从 GitHub 自动更新并校验 SHA-256 指纹，适用于 Windows、便携归档（Linux、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 应用（.deb, .rpm, Arch, Slackware 软件包通过软件包管理器更新），并提示缺失的文件；新增软件包：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；更正 按钮，用于修正 CALL3.TXT 中某电台的定位符；距离与 Dgrd 使用 144 MHz 的经典 Dgrd，按波段的 Dgrd 保留在 按频率 DGRD；我的地平线 加入 天穹 的紫色框，并从计划表获取计算时刻；值得尝试的电台 采用表格中的时刻，增加滚动条，可排除本国电台（cty.dat）；八木天线增益取自 DL6WU 表（G3SEK），仅在少于 10 单元时使用归于 W8IO 的公式；下拉列表和数字框采用 YA-MS 风格；手册加入 144 MHz 变频器。
 - **1.9** – 新标签页 我的地平线（实时）：根据 SRTM1 数据计算的地形地平线，考虑地球曲率和折射，背景为三种配色之一的天穹，显示月球轨迹、带 OpenStreetMap 名称的主要障碍物以及损失的月球分钟数；可勾选在整个程序中把地形用作最低仰角；按 NJ9R 方法的本地噪声地图，月球处于噪声方向的时段标 ⚠；新标签页 值得尝试的电台（规划），创意来自 Matteo IW5DHN：N0UK 聊天中的活跃电台按 0 到 100 的指数排序；数字框箭头并排、药丸形标签页，以及取自 IP-TRX-CTRL 的三种新配色方案。
@@ -1140,6 +1150,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>日本語</b> – バージョン履歴</summary>
 
+- **1.9.3** – パッケージ名を YA-MS と同じにしました（-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64）。.rpm、Arch、Slackware パッケージに ARM 版も追加。リリースノートに、システムごとの各パッケージへのリンクを載せた表を追加。このバージョンには旧名称のファイルも含まれますが、1.9.1 と 1.9.2 からの自動更新専用です。
 - **1.9.2** – 計画 に新しいタブ 空の雑音（Skynoise）：完全なアンテナパターン（NEC .out ファイル、YA-NEC、またはガウスビーム）と天空マップ（Remazeilles、Haslam、GSM 2008、LFmap）から G8ONH と G4SWX の手法で 50、144、432 MHz と 23 cm のアンテナ温度を計算。1 か月の月の経路、自局と DX のパス中の温度、EME 回線計算 八木 への影響、DJ9BV との比較を表示。compila.bat に自動テスト。EME の理論とアドバイス のマニュアルに、出典を比較した空の雑音、ディッシュの利得（PE1RKI または項目別の計算、Ruze）、2320 MHz 以上のプライムフォーカス、フィードの回転、ビームが照らす月（BWF）を追加。
 - **1.9.1** – GitHub からの自動更新（SHA-256 フィンガープリントを確認）：Windows、ポータブルアーカイブ（Linux、FreeBSD、OpenBSD、Alpine）、AppImage、macOS アプリ（.deb, .rpm, Arch, Slackware のパッケージはパッケージマネージャーで更新）、不足ファイルの警告；新しいパッケージ：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；CALL3.TXT の局のロケーターを直す 修正 ボタン；距離と Dgrd は 144 MHz の従来の Dgrd、バンド別の Dgrd は 周波数別 DGRD に残る；自局の地平線 に 天球 の紫の枠と計画表からの時刻；試してみたい局 に表からの時刻、スクロールバー、自国の局を除外（cty.dat）；八木の利得は DL6WU の表（G3SEK）から、W8IO によるとされる式は 10 エレメント未満のみ；ドロップダウンと数値ボックスは YA-MS 風；マニュアルに 144 MHz トランスバーター。
 - **1.9** – 新しいタブ 自局の地平線（ライブ）：SRTM1 データから地球の曲率と屈折を考慮して計算した地形の地平線を、3 つの配色から選べる天球の背景上に表示し、月の軌跡、OpenStreetMap の名前付きの主な障害物、失われる月の分数を示します。プログラム全体で地形を最低仰角として使うチェックボックス。NJ9R による局所ノイズマップで、月がノイズの多い方向にある時間に ⚠ を表示。新しいタブ 試してみたい局（計画）、Matteo IW5DHN のアイデア：N0UK チャットのアクティブ局を 0〜100 の指数で並べます。数値ボックスの矢印を横並びに、タブを錠剤形にし、IP-TRX-CTRL から 3 つの新しい配色を追加。
@@ -1159,6 +1170,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>한국어</b> – 버전 기록</summary>
 
+- **1.9.3** – 패키지 이름을 YA-MS와 같게 변경(-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm, Arch, Slackware 패키지를 ARM용으로도 제공; 릴리스 노트에 시스템별 각 패키지 링크가 있는 표 추가. 이 버전에는 예전 이름의 파일도 들어 있으며, 1.9.1과 1.9.2에서의 자동 업데이트 전용입니다.
 - **1.9.2** – 계획에 새 탭 하늘 잡음 (Skynoise): 전체 안테나 패턴(NEC .out 파일, YA-NEC 또는 가우스 빔)과 하늘 지도(Remazeilles, Haslam, GSM 2008 또는 LFmap)로 G8ONH와 G4SWX의 방법에 따라 50, 144, 432 MHz와 23 cm의 안테나 온도를 계산하며, 한 달 동안의 달 경로, 나와 DX의 통과 중 온도, EME 링크 버짓 야기에 대한 영향, DJ9BV와의 비교를 보여 줍니다; compila.bat의 자동 테스트; EME 이론과 조언 매뉴얼에: 출처를 비교한 하늘 잡음, 접시 안테나 이득(PE1RKI 또는 항목별 계산, Ruze), 2320 MHz 이상의 주초점, 피드 회전, 빔이 비추는 달(BWF).
 - **1.9.1** – GitHub에서 자동 업데이트(SHA-256 지문 확인): Windows, 휴대용 압축 파일(Linux, FreeBSD, OpenBSD, Alpine), AppImage, macOS 앱(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트), 빠진 파일 경고; 새 패키지: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT에서 국의 로케이터를 고치는 수정 버튼; 거리와 Dgrd는 144 MHz의 고전적 Dgrd, 대역별 Dgrd는 주파수별 DGRD에 유지; 내 지평선에 하늘 보기의 보라색 상자와 계획 표에서 가져온 시각; 시도해 볼 국에 표의 시각, 스크롤 막대, 자국 국 제외(cty.dat); 야기 이득은 DL6WU 표(G3SEK)에서, W8IO의 것으로 알려진 식은 10소자 미만에서만; 드롭다운과 숫자 상자는 YA-MS 스타일; 매뉴얼에 144 MHz 트랜스버터.
 - **1.9** – 새 탭 내 지평선(실시간): SRTM1 데이터로 지구 곡률과 굴절을 고려해 계산한 지형 지평선을 세 가지 색상 중 하나의 하늘 보기 배경 위에 표시하고, 달의 경로, OpenStreetMap 이름이 붙은 주요 장애물, 잃는 달의 분을 보여 줍니다; 프로그램 전체에서 지형을 최소 앙각으로 쓰는 확인란; NJ9R 방식의 국지 잡음 지도, 달이 잡음이 많은 방향에 있는 시간에 ⚠ 표시; 새 탭 시도해 볼 국(계획), Matteo IW5DHN의 아이디어: N0UK 채팅의 활동 국을 0~100 지수로 정렬; 화살표가 나란히 있는 숫자 상자, 알약 모양 탭, IP-TRX-CTRL에서 가져온 새 색 구성표 세 가지.

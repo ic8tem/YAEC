@@ -1,10 +1,10 @@
 #!/bin/bash
 # Pacchetti Linux aggiuntivi ricavati dal .deb (stessi file, YAEC.exe gira con Mono su ogni processore):
-#   yaec-<versione>-1-any.pkg.tar.zst      Arch Linux, Manjaro, EndeavourOS, Arch Linux ARM (sudo pacman -U ...)
-#   yaec-<versione>-noarch-1_ic8tem.txz    Slackware, anche Slackware ARM (installpkg ...)
+#   yaec-<versione>-1-{x86_64,aarch64}.pkg.tar.zst   Arch Linux, Manjaro, EndeavourOS, Arch Linux ARM (sudo pacman -U ...)
+#   yaec-<versione>-{x86_64,aarch64}-1_ic8tem.txz    Slackware e Slackware ARM64 (installpkg ...)
 #   YAEC-<versione>-{x86_64,aarch64}.AppImage   un solo file per quasi tutte le distribuzioni (serve Mono installato)
-#   YAEC-<versione>-alpine-{x64,arm64}-portatile.tar.gz   Alpine Linux (musl), con Mono dai pacchetti di Alpine
-# Uso: packaging/linux/build-extra.sh <versione> <cartella dist con yaec_<versione>_amd64.deb e il tar.gz linux-x64>
+#   YAEC-<versione>-alpine-{x64,arm64}.tar.gz   Alpine Linux (musl), con Mono dai pacchetti di Alpine
+# Uso: packaging/linux/build-extra.sh <versione> <cartella dist con yaec_<versione>_amd64.deb e YAEC-<versione>-linux-x64.tar.gz>
 # Richiede docker (per makepkg nel contenitore archlinux) e la rete (appimagetool da GitHub).
 set -euo pipefail
 VER="$1"; OUT="$(cd "$2" && pwd)"
@@ -12,7 +12,7 @@ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 DEB="$OUT/yaec_${VER}_amd64.deb"
 PV="${VER//-/_}"
 
-# --- Arch Linux (.pkg.tar.zst, arch=any) ---
+# --- Arch Linux (.pkg.tar.zst): x86_64 e aarch64, stesso contenuto, come in YA-MS ---
 W="$(mktemp -d)"; mkdir -p "$W/albero"
 dpkg-deb -x "$DEB" "$W/albero"
 cat > "$W/PKGBUILD" <<EOF
@@ -20,7 +20,7 @@ pkgname=yaec
 pkgver=${PV}
 pkgrel=1
 pkgdesc="YAEC - Yet Another EME Calc: Moon position, EME link budget, sky and solar noise (Costantino Cerrotta IC8TEM)"
-arch=('any')
+arch=('x86_64' 'aarch64')
 url="https://github.com/ic8tem/YAEC"
 license=('custom:freeware')
 depends=('mono')
@@ -33,12 +33,15 @@ docker run --rm -v "$W:/w" archlinux:latest bash -c "
   set -e
   pacman --disable-sandbox -Sy --noconfirm --needed base-devel >/dev/null
   useradd -m b && chown -R b /w
-  su b -c 'cd /w && makepkg --nodeps --skipinteg -f'
+  for AR in x86_64 aarch64; do
+    sed -i \"s/^CARCH=.*/CARCH=\\\"\$AR\\\"/\" /etc/makepkg.conf
+    su b -c 'cd /w && makepkg --nodeps --skipinteg -f'
+  done
   chmod -R a+rwX /w
 "
-cp "$W"/yaec-*-any.pkg.tar.zst "$OUT/yaec-${PV}-1-any.pkg.tar.zst"
+for AR in x86_64 aarch64; do cp "$W"/yaec-*-"${AR}".pkg.tar.zst "$OUT/yaec-${PV}-1-${AR}.pkg.tar.zst"; done
 
-# --- Slackware (.txz, noarch) ---
+# --- Slackware (.txz): x86_64 e aarch64, stesso contenuto, come in YA-MS ---
 T="$(mktemp -d)"
 dpkg-deb -x "$DEB" "$T"
 mkdir -p "$T/install"
@@ -60,7 +63,7 @@ cat > "$T/install/doinst.sh" <<'EOF'
 if [ -x /usr/bin/update-desktop-database ]; then /usr/bin/update-desktop-database -q usr/share/applications >/dev/null 2>&1; fi
 if [ -x /usr/bin/gtk-update-icon-cache ]; then /usr/bin/gtk-update-icon-cache -q usr/share/icons/hicolor >/dev/null 2>&1; fi
 EOF
-tar -C "$T" --owner=0 --group=0 -cJf "$OUT/yaec-${PV}-noarch-1_ic8tem.txz" install usr
+for AR in x86_64 aarch64; do tar -C "$T" --owner=0 --group=0 -cJf "$OUT/yaec-${PV}-${AR}-1_ic8tem.txz" install usr; done
 
 # --- AppImage (x86_64 e aarch64: stesso YAEC.exe, cambia solo il runtime dell'AppImage) ---
 A="$(mktemp -d)/YAEC.AppDir"
@@ -91,5 +94,5 @@ for AR in x86_64 aarch64; do
 done
 
 # --- Alpine Linux (musl): stesso archivio portatile, nome a parte ---
-for AR in x64 arm64; do cp "$OUT/YAEC-${VER}-linux-x64-portatile.tar.gz" "$OUT/YAEC-${VER}-alpine-${AR}-portatile.tar.gz"; done
+for AR in x64 arm64; do cp "$OUT/YAEC-${VER}-linux-x64.tar.gz" "$OUT/YAEC-${VER}-alpine-${AR}.tar.gz"; done
 ls -l "$OUT"

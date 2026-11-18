@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.2
+﻿YAEC – Yet Another EME Calc 1.9.3
 โดย Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 ซอร์สโค้ดและการดาวน์โหลด: https://github.com/ic8tem/YAEC/releases
 
 การติดตั้ง – WINDOWS
-1. ดาวน์โหลด YAEC-1.9.2-win-x64-setup.exe จากหน้า Releases แล้วเรียกใช้ ตัวติดตั้งจะติดตั้ง YAEC ไว้ใน Documents\YAEC โดยไม่ต้องใช้สิทธิ์ผู้ดูแลระบบ พร้อมทางลัดในเมนู Start และบนเดสก์ท็อป และโปรแกรมถอนการติดตั้ง
+1. ดาวน์โหลด YAEC-1.9.3-windows-x64-setup.exe จากหน้า Releases แล้วเรียกใช้ ตัวติดตั้งจะติดตั้ง YAEC ไว้ใน Documents\YAEC โดยไม่ต้องใช้สิทธิ์ผู้ดูแลระบบ พร้อมทางลัดในเมนู Start และบนเดสก์ท็อป และโปรแกรมถอนการติดตั้ง
 2. หากมีคำเตือนของ SmartScreen ปรากฏ: "More info" → "Run anyway"
-3. แบบไม่ต้องติดตั้ง: แตกไฟล์ YAEC-1.9.2-win-x64-portatile.zip ลงในโฟลเดอร์ที่คุณเขียนได้ แล้วเรียกใช้ YAEC.exe
+3. แบบไม่ต้องติดตั้ง: แตกไฟล์ YAEC-1.9.3-windows-x64-portatile.zip ลงในโฟลเดอร์ที่คุณเขียนได้ แล้วเรียกใช้ YAEC.exe
 
 การติดตั้ง – LINUX
 YAEC ทำงานบน Mono ซึ่งเป็นรันไทม์ .NET แบบเสรี
-- Debian, Ubuntu, Mint: ดาวน์โหลด yaec_1.9.2_amd64.deb แล้วติดตั้งด้วย
-      sudo apt install ./yaec_1.9.2_amd64.deb
+- Debian, Ubuntu, Mint: ดาวน์โหลด yaec_1.9.3_amd64.deb แล้วติดตั้งด้วย
+      sudo apt install ./yaec_1.9.3_amd64.deb
   (คำสั่งนี้ติดตั้ง Mono ด้วย) เรียกใช้ YAEC จากเมนูแอปพลิเคชันหรือด้วยคำสั่ง "yaec"
-- ดิสทริบิวชันอื่น: ติดตั้ง Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete) แตกไฟล์ YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) แล้วเรียกใช้ ./install.sh
-- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
+- ดิสทริบิวชันอื่น: ติดตั้ง Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete) แตกไฟล์ YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) แล้วเรียกใช้ ./install.sh
+- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
 
 การติดตั้ง – macOS (ทดลอง)
 1. ติดตั้ง Mono สำหรับ macOS (https://www.mono-project.com/download/stable/) และ XQuartz (https://www.xquartz.org)
-2. เปิด YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) แล้วลาก YAEC ไปไว้ใน Applications ครั้งแรก: คลิกขวาที่ YAEC → Open (แอปไม่ได้ลงนามโดย Apple)
+2. เปิด YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) แล้วลาก YAEC ไปไว้ใน Applications ครั้งแรก: คลิกขวาที่ YAEC → Open (แอปไม่ได้ลงนามโดย Apple)
 
 การอัปเดตอัตโนมัติ
 เมื่อเริ่มทำงาน YAEC จะตรวจสอบใน GitHub ว่ามีเวอร์ชันใหม่หรือไม่ และอัปเดตตัวเองโดยตรวจสอบลายนิ้วมือ SHA-256 (Windows, ไฟล์ .tar.gz แบบพกพา, AppImage, แอป macOS) ส่วนแพ็กเกจ .deb, .rpm, Arch, Slackware จะอัปเดตด้วยตัวจัดการแพ็กเกจของระบบ: YAEC จะแจ้งเวอร์ชันใหม่และเปิดหน้า GitHub
 
 การตรวจสอบไฟล์ที่ดาวน์โหลด (SHA-256)
 ทุกรุ่นที่เผยแพร่มีไฟล์ SHA256SUMS.txt ที่มีค่าแฮช SHA-256 ของแต่ละแพ็กเกจ ให้เปรียบเทียบกับค่าแฮชของไฟล์ที่ดาวน์โหลด:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 หากค่าทั้งสองไม่ตรงกัน อย่าติดตั้งไฟล์นั้น: ให้ดาวน์โหลดใหม่
@@ -43,6 +43,7 @@ YAEC ใช้ได้ฟรี ข้อความของสัญญา�
 
 ประวัติเวอร์ชัน
 เวอร์ชันก่อน 1.0 เรียกว่า beta
+- 1.9.3 - ชื่อแพ็กเกจเหมือนกับ YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); แพ็กเกจ .rpm, Arch และ Slackware สำหรับ ARM ด้วย; ในบันทึกประจำรุ่นมีตารางพร้อมลิงก์ไปยังแต่ละแพ็กเกจของแต่ละระบบ รุ่นนี้มีไฟล์ชื่อเดิมด้วย เพื่อการอัปเดตอัตโนมัติจาก 1.9.1 และ 1.9.2 เท่านั้น
 - 1.9.2 - แท็บใหม่ สัญญาณรบกวนจากท้องฟ้า (Skynoise) ใน การวางแผน: อุณหภูมิสายอากาศคำนวณด้วยวิธีของ G8ONH และ G4SWX จากแบบรูปเต็มของสายอากาศ (ไฟล์ .out ของ NEC, YA-NEC หรือลำคลื่นเกาส์) และแผนที่ท้องฟ้า (Remazeilles, Haslam, GSM 2008 หรือ LFmap) ที่ 50, 144, 432 MHz และ 23 cm พร้อมเส้นทางดวงจันทร์ตลอดเดือน อุณหภูมิระหว่างการผ่านของคุณและของ DX ผลต่อ บัดเจ็ต EME ยากิ และการเปรียบเทียบกับ DJ9BV; การทดสอบอัตโนมัติใน compila.bat; ในคู่มือ ทฤษฎีและคำแนะนำเกี่ยวกับ EME: สัญญาณรบกวนจากท้องฟ้าพร้อมเปรียบเทียบแหล่งข้อมูล อัตราขยายของจาน (PE1RKI หรือคำนวณทีละรายการ, Ruze) จุดโฟกัสหลักเหนือ 2320 MHz การหมุนฟีด และดวงจันทร์ที่ลำคลื่นส่องถึง (BWF)
 - 1.9.1 - อัปเดตอัตโนมัติจาก GitHub พร้อมตรวจลายนิ้วมือ SHA-256 บน Windows, ไฟล์บีบอัดแบบพกพา (Linux, FreeBSD, OpenBSD, Alpine), AppImage และแอป macOS (แพ็กเกจ .deb, .rpm, Arch, Slackware อัปเดตด้วยตัวจัดการแพ็กเกจ) และแจ้งเตือนไฟล์ที่หายไป; แพ็กเกจใหม่สำหรับ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; ปุ่ม แก้ไข สำหรับแก้โลเคเตอร์ของสถานีใน CALL3.TXT; ระยะทางและ Dgrd ใช้ Dgrd แบบดั้งเดิมที่ 144 MHz ส่วน Dgrd ตามย่านความถี่ยังอยู่ใน DGRD ตามความถี่; ขอบฟ้าของฉัน มีกรอบสีม่วงจาก ทรงกลมฟ้า และเวลาที่นำมาจากตารางวางแผน; สถานีที่ควรลอง ใช้เวลาจากตาราง มีแถบเลื่อน และตัดสถานีในประเทศของตนออกได้ (cty.dat); อัตราขยายยากิจากตาราง DL6WU (G3SEK) ใช้สูตรที่อ้างว่าเป็นของ W8IO เฉพาะต่ำกว่า 10 อิลิเมนต์; รายการแบบเลื่อนลงและช่องตัวเลขแบบ YA-MS; ทรานสเวอร์เตอร์ 144 MHz ในคู่มือ
 - 1.9 - แท็บใหม่ ขอบฟ้าของฉัน (สด): ขอบฟ้าจากภูมิประเทศคำนวณจากข้อมูล SRTM1 พร้อมความโค้งของโลกและการหักเห บนพื้นหลัง ทรงกลมฟ้า ในหนึ่งในสามสเกลสี เส้นทางดวงจันทร์ สิ่งกีดขวางหลักพร้อมชื่อจาก OpenStreetMap และนาทีของดวงจันทร์ที่เสียไป; ช่องเลือกเพื่อใช้ภูมิประเทศเป็นมุมเงยต่ำสุดทั้งโปรแกรม; แผนที่สัญญาณรบกวนท้องถิ่นตาม NJ9R พร้อม ⚠ ในชั่วโมงที่ดวงจันทร์อยู่ในทิศที่มีสัญญาณรบกวน; แท็บใหม่ สถานีที่ควรลอง (การวางแผน) แนวคิดจาก Matteo IW5DHN: สถานีที่ใช้งานในแชท N0UK เรียงตามดัชนี 0 ถึง 100; ช่องตัวเลขที่มีลูกศรวางเคียงกัน แท็บรูปเม็ดยา และชุดสีใหม่สามชุดจาก IP-TRX-CTRL

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.2
+﻿YAEC – Yet Another EME Calc 1.9.3
 إعداد Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 المصدر والتنزيل: https://github.com/ic8tem/YAEC/releases
 
 التثبيت – WINDOWS
-1. نزّل YAEC-1.9.2-win-x64-setup.exe من صفحة Releases وشغّله. يثبّت YAEC في المستندات\YAEC دون صلاحيات المسؤول، مع اختصارات في قائمة "ابدأ" وعلى سطح المكتب، وبرنامج لإلغاء التثبيت.
+1. نزّل YAEC-1.9.3-windows-x64-setup.exe من صفحة Releases وشغّله. يثبّت YAEC في المستندات\YAEC دون صلاحيات المسؤول، مع اختصارات في قائمة "ابدأ" وعلى سطح المكتب، وبرنامج لإلغاء التثبيت.
 2. إذا ظهر تحذير SmartScreen: "More info" ← "Run anyway".
-3. دون تثبيت: استخرج YAEC-1.9.2-win-x64-portatile.zip في مجلد لديك صلاحية الكتابة فيه، ثم شغّل YAEC.exe.
+3. دون تثبيت: استخرج YAEC-1.9.3-windows-x64-portatile.zip في مجلد لديك صلاحية الكتابة فيه، ثم شغّل YAEC.exe.
 
 التثبيت – LINUX
 يعمل YAEC على Mono، بيئة تشغيل .NET الحرة.
-- Debian وUbuntu وMint: نزّل yaec_1.9.2_amd64.deb وثبّته بالأمر
-      sudo apt install ./yaec_1.9.2_amd64.deb
+- Debian وUbuntu وMint: نزّل yaec_1.9.3_amd64.deb وثبّته بالأمر
+      sudo apt install ./yaec_1.9.3_amd64.deb
   (يثبّت Mono أيضًا). يُشغَّل YAEC من قائمة التطبيقات أو بالأمر "yaec".
-- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) وشغّل ./install.sh.
-- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
+- التوزيعات الأخرى: ثبّت Mono (Fedora: sudo dnf install mono-complete؛ Arch: sudo pacman -S mono؛ openSUSE: sudo zypper install mono-complete)، ثم استخرج YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) وشغّل ./install.sh.
+- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
 
 التثبيت – macOS (تجريبي)
 1. ثبّت Mono لنظام macOS (https://www.mono-project.com/download/stable/) وXQuartz (https://www.xquartz.org).
-2. افتح YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
+2. افتح YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
 
 التحديثات التلقائية
 عند التشغيل يتحقق YAEC في GitHub من وجود إصدار جديد ويحدّث نفسه (Windows، أرشيفات ‎.tar.gz المحمولة، AppImage، تطبيق macOS) مع التحقق من بصمة SHA-256. أما حزم .deb, .rpm, Arch, Slackware فتُحدَّث بمدير الحزم في النظام: ينبّه YAEC إلى الإصدار الجديد ويفتح صفحة GitHub.
 
 التحقق من الملفات المنزّلة (SHA-256)
 يحتوي كل إصدار على SHA256SUMS.txt مع بصمة SHA-256 لكل حزمة. قارنها ببصمة الملف الذي نزّلته:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 إذا اختلفت القيمتان فلا تثبّت الملف: نزّله من جديد.
@@ -43,6 +43,7 @@ YAEC مجاني؛ نص الترخيص موجود في الملف LICENSE_ar.txt 
 
 سجل الإصدارات
 تُسمّى الإصدارات السابقة للإصدار 1.0 إصدارات تجريبية (بيتا).
+- 1.9.3 - أسماء الحزم مثل YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64)؛ حزم .rpm وArch وSlackware لمعالجات ARM أيضًا؛ في ملاحظات الإصدار جدول فيه رابط كل حزمة لكل نظام. يحتوي هذا الإصدار أيضًا على الملفات بالأسماء القديمة، فقط للتحديث التلقائي من 1.9.1 و1.9.2.
 - 1.9.2 - تبويب جديد ضجيج السماء (Skynoise) في التخطيط: حرارة الهوائي بطريقة G8ONH وG4SWX من المخطط الكامل للهوائي (ملف .out من NEC أو YA-NEC أو حزمة غاوسية) ومن خريطة السماء (Remazeilles أو Haslam أو GSM 2008 أو LFmap) عند 50 و144 و432 MHz و23 cm، مع مسار القمر خلال الشهر، والحرارة أثناء العبور لك وللـ DX، والأثر على ميزانية EME ياغي، والمقارنة مع DJ9BV؛ اختبار آلي في compila.bat؛ وفي دليل نظرية EME ونصائح: ضجيج السماء مع مقارنة المصادر، وكسب الصحون (PE1RKI أو الحساب بندًا بندًا، Ruze)، والبؤرة الرئيسية فوق 2320 MHz، وتدوير المغذي، والقمر المضاء بالحزمة (BWF).
 - 1.9.1 - تحديث تلقائي من GitHub مع التحقق من بصمة SHA-256 على Windows، ومع الأرشيفات المحمولة (Linux، FreeBSD، OpenBSD، Alpine)، وAppImage، وتطبيق macOS (حزم .deb, .rpm, Arch, Slackware تُحدَّث بمدير الحزم)، وتنبيه إلى الملفات الناقصة؛ حزم جديدة لـ Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage؛ زر تصحيح لتصحيح محدد موقع محطة في CALL3.TXT؛ المسافة وDgrd مع Dgrd الكلاسيكي عند 144 MHz، ويبقى Dgrd حسب النطاق في DGRD حسب التردد؛ أفق محطتي مع الإطارات البنفسجية من قبة السماء واللحظة المأخوذة من جدول التخطيط؛ محطات للتجربة مع لحظة الجدول وشريط التمرير واستبعاد محطات البلد نفسه (cty.dat)؛ كسب هوائيات ياغي من جدول DL6WU ‏(G3SEK)، والصيغة المنسوبة إلى W8IO تحت 10 عناصر فقط؛ قوائم منسدلة وخانات رقمية بأسلوب YA-MS؛ محوّلات 144 MHz في الدليل.
 - 1.9 - تبويب جديد أفق محطتي (مباشر): الأفق من التضاريس محسوباً من بيانات SRTM1 مع تحدّب الأرض والانكسار، على خلفية قبة السماء بأحد سلالم الألوان الثلاثة، مع مسار القمر والعوائق الرئيسية بأسماء من OpenStreetMap ودقائق القمر المفقودة؛ خانة لاستخدام التضاريس كارتفاع أدنى في البرنامج كله؛ خريطة الضوضاء المحلية وفق NJ9R، مع ⚠ في الساعات التي يكون فيها القمر في اتجاه مليء بالضوضاء؛ تبويب جديد محطات للتجربة (التخطيط)، فكرة Matteo IW5DHN: المحطات النشطة في دردشة N0UK مرتبة بمؤشر من 0 إلى 100؛ خانات رقمية بأسهم متجاورة، وتبويبات على شكل حبة، وثلاثة أنظمة ألوان جديدة مأخوذة من IP-TRX-CTRL.

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.2
+﻿YAEC – Yet Another EME Calc 1.9.3
 par Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Calculateur pour les radioamateurs qui pratiquent l'EME (Terre–Lune–Terre) d
 Sources et téléchargement : https://github.com/ic8tem/YAEC/releases
 
 INSTALLATION – WINDOWS
-1. Téléchargez YAEC-1.9.2-win-x64-setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
+1. Téléchargez YAEC-1.9.3-windows-x64-setup.exe depuis la page Releases et exécutez-le. Il installe YAEC dans Documents\YAEC, sans droits d'administrateur, avec des raccourcis dans le menu Démarrer et sur le Bureau, ainsi qu'un programme de désinstallation.
 2. Si l'avertissement SmartScreen apparaît : « Informations complémentaires » → « Exécuter quand même ».
-3. Sans installation : extrayez YAEC-1.9.2-win-x64-portatile.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
+3. Sans installation : extrayez YAEC-1.9.3-windows-x64-portatile.zip dans un dossier où vous pouvez écrire et lancez YAEC.exe.
 
 INSTALLATION – LINUX
 YAEC fonctionne avec Mono, l'environnement d'exécution .NET libre.
-- Debian, Ubuntu, Mint : téléchargez yaec_1.9.2_amd64.deb et installez-le avec
-      sudo apt install ./yaec_1.9.2_amd64.deb
+- Debian, Ubuntu, Mint : téléchargez yaec_1.9.3_amd64.deb et installez-le avec
+      sudo apt install ./yaec_1.9.3_amd64.deb
   (cela installe aussi Mono). YAEC se lance depuis le menu des applications ou avec la commande « yaec ».
-- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) et lancez ./install.sh.
-- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
+- Autres distributions : installez Mono (Fedora : sudo dnf install mono-complete ; Arch : sudo pacman -S mono ; openSUSE : sudo zypper install mono-complete), extrayez YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) et lancez ./install.sh.
+- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
 
 INSTALLATION – macOS (expérimental)
 1. Installez Mono pour macOS (https://www.mono-project.com/download/stable/) et XQuartz (https://www.xquartz.org).
-2. Ouvrez YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
+2. Ouvrez YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) et faites glisser YAEC dans Applications. La première fois : clic droit sur YAEC → Ouvrir (l'app n'est pas signée par Apple).
 
 MISES À JOUR AUTOMATIQUES
 Au démarrage, YAEC vérifie sur GitHub s'il existe une nouvelle version et se met à jour tout seul (Windows, archives portables .tar.gz, AppImage, application macOS), en contrôlant l'empreinte SHA-256. Les paquets .deb, .rpm, Arch, Slackware se mettent à jour avec le gestionnaire de paquets du système : YAEC signale la nouvelle version et ouvre la page GitHub.
 
 VÉRIFICATION DES FICHIERS TÉLÉCHARGÉS (SHA-256)
 Chaque release contient SHA256SUMS.txt avec l'empreinte SHA-256 de chaque paquet. Comparez-la avec celle du fichier téléchargé :
-- Windows (PowerShell) : Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell) : Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
 - Linux : sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS : shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Si les deux valeurs sont différentes, n'installez pas le fichier : téléchargez-le de nouveau.
@@ -43,6 +43,7 @@ Erreurs, meilleures données, traductions : ccerrotta@gmail.com · ic8tem@gmail.
 
 HISTORIQUE DES VERSIONS
 Les versions antérieures à la 1.0 sont appelées bêta.
+- 1.9.3 - Noms des paquets identiques à ceux de YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64) ; paquets .rpm, Arch et Slackware aussi pour ARM ; dans les notes de version, un tableau avec le lien vers chaque paquet pour chaque système. Cette version contient aussi les fichiers avec les anciens noms, uniquement pour la mise à jour automatique depuis 1.9.1 et 1.9.2.
 - 1.9.2 - Nouvel onglet Bruit du ciel (Skynoise) dans Planification : température d'antenne calculée avec la méthode de G8ONH et G4SWX à partir du diagramme complet de l'antenne (fichier .out du NEC, YA-NEC ou faisceau gaussien) et de la carte du ciel (Remazeilles, Haslam, GSM 2008 ou LFmap) à 50, 144, 432 MHz et 23 cm, avec le trajet de la Lune dans le mois, la température pendant le passage pour vous et pour le DX, l'effet sur le Bilan EME Yagi et la comparaison avec DJ9BV ; test automatique dans compila.bat ; dans le manuel THÉORIE ET CONSEILS SUR L'EME : le bruit du ciel avec les sources comparées, le gain des paraboles (PE1RKI ou calcul poste par poste, Ruze), le foyer primaire au-dessus de 2320 MHz, la rotation de la source et la Lune éclairée par le faisceau (BWF).
 - 1.9.1 - Mise à jour automatique depuis GitHub, avec contrôle de l'empreinte SHA-256, sous Windows, avec les archives portables (Linux, FreeBSD, OpenBSD, Alpine), l'AppImage et l'application macOS (les paquets .deb, .rpm, Arch, Slackware se mettent à jour avec le gestionnaire de paquets), et avertissement des fichiers manquants ; nouveaux paquets pour Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage ; bouton CORRIGER pour corriger le locator d'une station dans CALL3.TXT ; Distance et Dgrd avec la Dgrd classique à 144 MHz, la Dgrd par bande restant dans DGRD par fréquence ; Mon horizon avec les cadres violets de Voûte céleste et l'instant pris dans le tableau de planification ; Stations à essayer avec l'instant du tableau, une barre de défilement et l'exclusion des stations de son propre pays (cty.dat) ; gain des yagis d'après la table de DL6WU (G3SEK), la formule attribuée à W8IO seulement sous 10 éléments ; listes déroulantes et cases numériques dans le style de YA-MS ; transverters 144 MHz dans le manuel.
 - 1.9 - Nouvel onglet Mon horizon (En direct) : horizon du relief calculé à partir des données SRTM1 avec la courbure terrestre et la réfraction, sur le fond de la Voûte céleste dans l'une des trois échelles de couleurs, trajectoire de la Lune, principaux obstacles avec les noms d'OpenStreetMap et minutes de Lune perdues ; case pour utiliser le relief comme élévation minimale dans tout le programme ; carte du bruit local selon NJ9R, avec ⚠ aux heures où la Lune est dans une direction bruyante ; nouvel onglet Stations à essayer (Planification), idée de Matteo IW5DHN : les stations actives du chat N0UK classées par un indice de 0 à 100 ; champs numériques avec flèches côte à côte, onglets en forme de pilule et trois nouveaux schémas de couleurs repris d'IP-TRX-CTRL.

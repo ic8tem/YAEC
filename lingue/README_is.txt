@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.2
+﻿YAEC – Yet Another EME Calc 1.9.3
 höfundur: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Reiknivél fyrir radíóamatöra sem stunda EME (Jörð–Tungl–Jörð) frá 5
 Frumkóði og niðurhal: https://github.com/ic8tem/YAEC/releases
 
 UPPSETNING – WINDOWS
-1. Sæktu YAEC-1.9.2-win-x64-setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
+1. Sæktu YAEC-1.9.3-windows-x64-setup.exe af Releases-síðunni og keyrðu hana. Hún setur YAEC upp í Skjöl\YAEC, án stjórnandaréttinda, með flýtileiðum í Start-valmyndinni og á skjáborðinu ásamt fjarlægingarforriti.
 2. Ef SmartScreen-viðvörunin birtist: "More info" → "Run anyway".
-3. Án uppsetningar: afþjappaðu YAEC-1.9.2-win-x64-portatile.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
+3. Án uppsetningar: afþjappaðu YAEC-1.9.3-windows-x64-portatile.zip í möppu sem þú getur skrifað í og ræstu YAEC.exe.
 
 UPPSETNING – LINUX
 YAEC keyrir á Mono, frjálsa .NET-keyrsluumhverfinu.
-- Debian, Ubuntu, Mint: sæktu yaec_1.9.2_amd64.deb og settu hana upp með
-      sudo apt install ./yaec_1.9.2_amd64.deb
+- Debian, Ubuntu, Mint: sæktu yaec_1.9.3_amd64.deb og settu hana upp með
+      sudo apt install ./yaec_1.9.3_amd64.deb
   (setur einnig upp Mono). YAEC er ræst úr forritavalmyndinni eða með skipuninni "yaec".
-- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.9.2-linux-x64-portatile.tar.gz (ARM: YAEC-1.9.2-linux-arm64-portatile.tar.gz, YAEC-1.9.2-linux-arm-portatile.tar.gz; Linux i686: YAEC-1.9.2-linux-x86-portatile.tar.gz; FreeBSD amd64: YAEC-1.9.2-freebsd-x64-portatile.tar.gz; OpenBSD amd64: YAEC-1.9.2-openbsd-x64-portatile.tar.gz; Alpine Linux: YAEC-1.9.2-alpine-x64-portatile.tar.gz, YAEC-1.9.2-alpine-arm64-portatile.tar.gz) og keyrðu ./install.sh.
-- Fedora, openSUSE: yaec-1.9.2-1.noarch.rpm · Arch Linux, Manjaro: yaec-1.9.2-1-any.pkg.tar.zst · Slackware: yaec-1.9.2-noarch-1_ic8tem.txz · AppImage: YAEC-1.9.2-x86_64.AppImage, YAEC-1.9.2-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.2_armhf.deb · Windows ARM64: YAEC-1.9.2-win-arm64-setup.exe, YAEC-1.9.2-win-arm64-portatile.zip
+- Aðrar dreifingar: settu upp Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), afþjappaðu YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) og keyrðu ./install.sh.
+- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
 
 UPPSETNING – macOS (á tilraunastigi)
 1. Settu upp Mono fyrir macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
-2. Opnaðu YAEC-1.9.2-osx-arm64.dmg (Apple Silicon) / YAEC-1.9.2-osx-x64.dmg (Intel) og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
+2. Opnaðu YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
 
 SJÁLFVIRKAR UPPFÆRSLUR
 Við ræsingu athugar YAEC á GitHub hvort ný útgáfa sé til og uppfærir sig sjálft (Windows, ferðasöfn .tar.gz, AppImage, macOS-forrit) og sannreynir SHA-256-fingrafarið. Pakkarnir .deb, .rpm, Arch, Slackware eru hins vegar uppfærðir með pakkastjóra kerfisins: YAEC lætur vita af nýju útgáfunni og opnar GitHub-síðuna.
 
 ATHUGUN Á NIÐURHLÖÐNUM SKRÁM (SHA-256)
 Hver release inniheldur SHA256SUMS.txt með SHA-256-tætigildi hvers pakka. Berðu það saman við gildi niðurhlöðnu skrárinnar:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.2-win-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ef gildin tvö eru ólík skaltu ekki setja skrána upp: sæktu hana aftur.
@@ -43,6 +43,7 @@ Villur, betri gögn, þýðingar: ccerrotta@gmail.com · ic8tem@gmail.com · www
 
 ÚTGÁFUSAGA
 Útgáfur á undan 1.0 kallast beta.
+- 1.9.3 - Pakkanöfn þau sömu og í YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm-, Arch- og Slackware-pakkar einnig fyrir ARM; í útgáfuskýringum tafla með tengli á hvern pakka fyrir hvert kerfi. Þessi útgáfa inniheldur einnig skrárnar með gömlu nöfnunum, eingöngu fyrir sjálfvirka uppfærslu frá 1.9.1 og 1.9.2.
 - 1.9.2 - Nýr flipi Himinsuð (Skynoise) undir Áætlanagerð: loftnetshiti reiknaður með aðferð G8ONH og G4SWX út frá fullu geislunarmynstri loftnetsins (.out-skrá NEC, YA-NEC eða Gauss-geisli) og himinkortinu (Remazeilles, Haslam, GSM 2008 eða LFmap) á 50, 144, 432 MHz og 23 cm, með braut tunglsins í mánuðinum, hitanum meðan á yfirferð stendur fyrir þig og DX-stöðina, áhrifum á EME-aflreikningur yagi og samanburði við DJ9BV; sjálfvirk prófun í compila.bat; í handbókinni KENNING OG RÁÐ UM EME: himinsuð með heimildirnar bornar saman, mögnun diska (PE1RKI eða útreikningur lið fyrir lið, Ruze), frumbrennipunktur yfir 2320 MHz, snúningur fæðingar og tunglið lýst upp af geislanum (BWF).
 - 1.9.1 - Sjálfvirk uppfærsla frá GitHub með athugun á SHA-256-fingrafari í Windows, fyrir ferðasöfnin (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-forritið (pakkarnir .deb, .rpm, Arch, Slackware eru uppfærðir með pakkastjóranum), og viðvörun um skrár sem vantar; nýir pakkar fyrir Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; hnappurinn LEIÐRÉTTA til að leiðrétta staðsetningarkóða stöðvar í CALL3.TXT; Fjarlægð og Dgrd með hefðbundnu Dgrd á 144 MHz, en Dgrd eftir böndum er áfram í DGRD eftir tíðni; Sjóndeildarhringurinn minn með fjólubláum römmum úr Himinhvelfing og tímanum úr skipulagstöflunni; Stöðvar til að prófa með tímanum úr töflunni, skrunstiku og möguleika á að sleppa stöðvum eigin lands (cty.dat); Yagi-mögnun úr DL6WU-töflunni (G3SEK), formúlan sem eignuð er W8IO aðeins undir 10 einingum; fellilistar og talnareitir í YA-MS-stíl; 144 MHz-umbreytar í handbókinni.
 - 1.9 - Nýr flipi Sjóndeildarhringurinn minn (Í beinni): sjóndeildarhringur landslags reiknaður út frá SRTM1-gögnum með sveigju jarðar og ljósbroti, á bakgrunni Himinhvelfing í einum af þremur litakvörðum, braut tunglsins, helstu hindranir með nöfnum úr OpenStreetMap og töpuðum tunglmínútum; gátreitur til að nota landslagið sem lágmarkshæðarhorn í öllu forritinu; kort af staðbundnu suði samkvæmt NJ9R, með ⚠ á þeim klukkustundum þegar tunglið er í suðsamri átt; nýr flipi Stöðvar til að prófa (Áætlanagerð), hugmynd Matteo IW5DHN: virkar stöðvar í N0UK-spjallinu raðað eftir vísitölu frá 0 til 100; talnareitir með örvum hlið við hlið, pillulaga flipar og þrjú ný litaskemu úr IP-TRX-CTRL.
