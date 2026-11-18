@@ -18,6 +18,10 @@ on:
         description: 'Schermate in inglese per il video di presentazione'
         type: boolean
         default: false
+      video_it:
+        description: 'Schermate in italiano per il video di presentazione'
+        type: boolean
+        default: false
       guida:
         description: 'Schermate in inglese per la guida video (JN56UE17, LU7MC, 24/11/2026)'
         type: boolean
@@ -423,8 +427,8 @@ jobs:
           git add -A
           git commit -qm "Article screenshots ${GITHUB_SHA::7}"
           git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:articolo
-      - name: Schermate in inglese per il video di presentazione (solo con l'avvio manuale «video»)
-        if: github.event.inputs.video == 'true'
+      - name: Schermate per il video di presentazione, in inglese («video») o in italiano («video_it»)
+        if: github.event.inputs.video == 'true' || github.event.inputs.video_it == 'true'
         run: |
           sudo apt-get install -y -qq xdotool fonts-noto-core faketime > /dev/null 2>&1 || true
           fc-cache -f > /dev/null
@@ -433,15 +437,41 @@ jobs:
           sleep 2
           F="$HOME/.local/share/YAEC/data/impostazioni.txt"
           mkdir -p video
+          LG=en; RAMO=video
+          if [ "${{ github.event.inputs.video_it }}" = "true" ]; then LG=it; RAMO=video-it; fi
+          # nome della linguetta nella lingua delle schermate (YAEC_LINGUETTA cerca il testo mostrato)
+          tab() {
+            if [ "$LG" = en ]; then echo "$1"; return; fi
+            case "$1" in
+              "Live position and +- 24h") echo "Posizione live e +- 24h";;
+              "Moon position") echo "Posizione della Luna";;
+              "Sky view") echo "Volta celeste";;
+              "My horizon") echo "Il mio orizzonte";;
+              "Distance and Dgrd") echo "Distanza e Dgrd";;
+              "DGRD by frequency") echo "DGRD per frequenza";;
+              "EME budget Yagi") echo "Budget EME yagi";;
+              "EME budget dishes") echo "Budget EME dischi";;
+              "Solar noise") echo "Rumore solare";;
+              "GRAVES radar") echo "Radar GRAVES";;
+              "Stations to try") echo "Stazioni da provare";;
+              "Moon over the world") echo "Luna sul mondo";;
+              "Sky noise (Skynoise)") echo "Rumore del cielo (Skynoise)";;
+              "Calculation check") echo "Controllo dei calcoli";;
+              *) echo "$1";;
+            esac
+          }
+          mkdir -p "$HOME/.local/share/YAEC/data/cielo" && cp dati/cielo/*.bin.gz "$HOME/.local/share/YAEC/data/cielo/"
+          gunzip -c dati/collaudo/skynoise_prova.out.gz > /tmp/prova144.out
           {
-            printf 'lingua=en\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n'
+            printf 'lingua=%s\ntema=0\nfont_nome=Noto Sans\ncomplessi=1\nbanda=144\nfreq=144.120\n' "$LG"
             printf 'locator=JN70CN83CL\nquota=62\ndx=1\ndx_locator=BL20BB\ndx_quota=50\ndx_nominativo=\n'
             printf 'orizzonte_raggio=2\norizzonte_vista=0\nterreno=1\n'
             printf 'b144_me_p=1000\nb144_me_nant=4\nb144_me_gant=17\nb144_me_pregain=10\nb144_me_tvon=0\nb144_me_lenant=1\nb144_me_lenpa=20\nb144_me_lendis=20\n'
+            printf 'skynoise_diagramma=0\nskynoise_nec=/tmp/prova144.out\nnominativo=IC8TEM\n'
             printf 'b144_dx_p=900\nb144_dx_nant=4\nb144_dx_gant=15.4\nb144_dx_pregain=25\nb144_dx_tvon=0\nb144_dx_lenant=1\nb144_dx_lenpa=30\nb144_dx_lendis=30\n'
           } > "$F"
           scatta() {  # $1 = linguetta (nome inglese), $2 = file, $3 = attesa in secondi
-            YAEC_LINGUETTA="$1" TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
+            YAEC_LINGUETTA="$(tab "$1")" TZ=Europe/Rome faketime -f "@2026-11-25 06:14:00" mono YAEC.exe &
             PID=$!
             sleep 25
             W=$(xdotool search --name "YAEC" | tail -1)
@@ -462,6 +492,7 @@ jobs:
           scatta "GRAVES radar" v10-graves 15
           YAEC_CALCOLA=1 scatta "Stations to try" v11-stations_to_try 40
           scatta "Moon over the world" v12-moon_world 15
+          scatta "Sky noise (Skynoise)" v13-sky_noise 40
           if [ -f "$HOME/.local/share/YAEC/data/errori.txt" ]; then echo "---- errori.txt ----"; cat "$HOME/.local/share/YAEC/data/errori.txt"; fi
           H=$(git config --get http.https://github.com/.extraheader)
           U=$(git remote get-url origin)
@@ -471,7 +502,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -qm "Video screenshots ${GITHUB_SHA::7}"
-          git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:video
+          git -c http.https://github.com/.extraheader="$H" push -qf "$U" HEAD:$RAMO
       - name: Schermate in inglese per la guida video (solo con l'avvio manuale «guida»)
         if: github.event.inputs.guida == 'true'
         run: |
