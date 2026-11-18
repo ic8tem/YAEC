@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.3
+﻿YAEC – Yet Another EME Calc 1.9.4
 připravil Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Kalkulátor pro radioamatéry pracující přes EME (Země–Měsíc–Země) od
 Zdrojový kód a stažení: https://github.com/ic8tem/YAEC/releases
 
 INSTALACE – WINDOWS
-1. Stáhni YAEC-1.9.3-windows-x64-setup.exe ze stránky Releases a spusť ho. Nainstaluje YAEC do složky Dokumenty (Documents\YAEC), bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem.
+1. Stáhni YAEC-1.9.4-windows-x64-setup.exe ze stránky Releases a spusť ho. Nainstaluje YAEC do složky Dokumenty (Documents\YAEC), bez práv správce, se zástupci v nabídce Start a na ploše a s odinstalačním programem.
 2. Pokud se objeví upozornění SmartScreen: "Další informace" → "Přesto spustit".
-3. Bez instalace: rozbal YAEC-1.9.3-windows-x64-portatile.zip do složky, do které můžeš zapisovat, a spusť YAEC.exe.
+3. Bez instalace: rozbal YAEC-1.9.4-windows-x64-portatile.zip do složky, do které můžeš zapisovat, a spusť YAEC.exe.
 
 INSTALACE – LINUX
 YAEC běží pod Mono, svobodným běhovým prostředím .NET.
-- Debian, Ubuntu, Mint: stáhni yaec_1.9.3_amd64.deb a nainstaluj ho příkazem
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian, Ubuntu, Mint: stáhni yaec_1.9.4_amd64.deb a nainstaluj ho příkazem
+      sudo apt install ./yaec_1.9.4_amd64.deb
   (nainstaluje i Mono). YAEC se spouští z nabídky aplikací nebo příkazem "yaec".
-- Jiné distribuce: nainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbal YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) a spusť ./install.sh.
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- Jiné distribuce: nainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozbal YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) a spusť ./install.sh.
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 
 INSTALACE – macOS (experimentální)
 1. Nainstaluj Mono pro macOS (https://www.mono-project.com/download/stable/) a XQuartz (https://www.xquartz.org).
-2. Otevři YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) a přetáhni YAEC do složky Aplikace. Poprvé: pravý klik na YAEC → Otevřít (aplikace není podepsána společností Apple).
+2. Otevři YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) a přetáhni YAEC do složky Aplikace. Poprvé: pravý klik na YAEC → Otevřít (aplikace není podepsána společností Apple).
 
 AUTOMATICKÉ AKTUALIZACE
 Při spuštění YAEC zjistí na GitHubu, zda existuje nová verze, a sám se aktualizuje (Windows, přenosné archivy .tar.gz, AppImage, aplikace pro macOS) s ověřením otisku SHA-256. Balíčky .deb, .rpm, Arch, Slackware se naopak aktualizují správcem balíčků systému: YAEC na novou verzi upozorní a otevře stránku GitHub.
 
 KONTROLA STAŽENÝCH SOUBORŮ (SHA-256)
 Každé vydání obsahuje SHA256SUMS.txt s otiskem SHA-256 každého balíčku. Porovnej ho s otiskem staženého souboru:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Pokud se obě hodnoty liší, soubor neinstaluj: stáhni ho znovu.
@@ -43,6 +43,7 @@ Chyby, lepší data, překlady: ccerrotta@gmail.com · ic8tem@gmail.com · www.q
 
 HISTORIE VERZÍ
 Verze před 1.0 se nazývají beta.
+- 1.9.4 - Rozpočet EME yagi a paraboly: cena 0,1 dB vyšší ztráty před předzesilovačem (PA3CSG) a nový oddíl Test stanice s G/T na studené obloze a očekávaným faktorem Y pro Slunce, Měsíc, Cas A a zem (G3LTF, EMECalc od VK3UM); rozpočet EME paraboly: pokles ozáření na okraji a síťovina paraboly, s Tant odhadnutou z oblohy, přelivu a síťoviny a G/T naměřeným G3LTF pro srovnání; nový odstavec v příručce.
 - 1.9.3 - Názvy balíčků stejné jako u YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); balíčky .rpm, Arch a Slackware i pro ARM; v poznámkách k vydání tabulka s odkazem na každý balíček pro každý systém. Tato verze obsahuje také soubory se starými názvy, pouze pro automatickou aktualizaci z 1.9.1 a 1.9.2.
 - 1.9.2 - Nová záložka Šum oblohy (Skynoise) ve skupině Plánování: teplota antény spočítaná metodou G8ONH a G4SWX z úplného diagramu antény (soubor .out z NEC, YA-NEC nebo gaussovský svazek) a z mapy oblohy (Remazeilles, Haslam, GSM 2008 nebo LFmap) na 50, 144, 432 MHz a 23 cm, s dráhou Měsíce během měsíce, teplotou během přechodu pro vás a pro DX, vlivem na Bilance EME yagi a porovnáním s DJ9BV; automatický test v compila.bat; v příručce TEORIE A RADY K EME: šum oblohy s porovnáním zdrojů, zisk parabol (PE1RKI nebo výpočet po položkách, Ruze), primární ohnisko nad 2320 MHz, otáčení ozařovače a Měsíc osvětlený svazkem (BWF).
 - 1.9.1 - Automatická aktualizace z GitHubu s ověřením otisku SHA-256 ve Windows, u přenosných archivů (Linux, FreeBSD, OpenBSD, Alpine), u AppImage a aplikace pro macOS (balíčky .deb, .rpm, Arch, Slackware aktualizuje správce balíčků) a upozornění na chybějící soubory; nové balíčky pro Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; tlačítko OPRAVIT k opravě lokátoru stanice v CALL3.TXT; Vzdálenost a Dgrd s klasickou Dgrd na 144 MHz, Dgrd podle pásem zůstává v DGRD podle kmitočtu; Můj obzor s fialovými rámečky z Nebeská klenba a okamžikem z plánovací tabulky; Stanice k vyzkoušení s okamžikem z tabulky, posuvníkem a vyloučením stanic vlastní země (cty.dat); zisk antén Yagi z tabulky DL6WU (G3SEK), vzorec připisovaný W8IO jen pod 10 prvků; rozbalovací seznamy a číselná pole ve stylu YA-MS; transvertory pro 144 MHz v příručce.

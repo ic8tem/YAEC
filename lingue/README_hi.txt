@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.3
+﻿YAEC – Yet Another EME Calc 1.9.4
 लेखक: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 सोर्स कोड और डाउनलोड: https://github.com/ic8tem/YAEC/releases
 
 इंस्टॉलेशन – WINDOWS
-1. Releases पेज से YAEC-1.9.3-windows-x64-setup.exe डाउनलोड करें और चलाएँ। यह YAEC को Documents\YAEC में, बिना एडमिनिस्ट्रेटर अधिकारों के, Start मेनू और डेस्कटॉप पर शॉर्टकट तथा अनइंस्टॉलर के साथ इंस्टॉल करता है।
+1. Releases पेज से YAEC-1.9.4-windows-x64-setup.exe डाउनलोड करें और चलाएँ। यह YAEC को Documents\YAEC में, बिना एडमिनिस्ट्रेटर अधिकारों के, Start मेनू और डेस्कटॉप पर शॉर्टकट तथा अनइंस्टॉलर के साथ इंस्टॉल करता है।
 2. अगर SmartScreen की चेतावनी दिखे: "More info" → "Run anyway"।
-3. बिना इंस्टॉलेशन के: YAEC-1.9.3-windows-x64-portatile.zip को ऐसे फ़ोल्डर में निकालें जिसमें आप लिख सकते हों, और YAEC.exe चलाएँ।
+3. बिना इंस्टॉलेशन के: YAEC-1.9.4-windows-x64-portatile.zip को ऐसे फ़ोल्डर में निकालें जिसमें आप लिख सकते हों, और YAEC.exe चलाएँ।
 
 इंस्टॉलेशन – LINUX
 YAEC, Mono (मुक्त .NET रनटाइम) पर चलता है।
-- Debian, Ubuntu, Mint: yaec_1.9.3_amd64.deb डाउनलोड करें और इसे इस कमांड से इंस्टॉल करें
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian, Ubuntu, Mint: yaec_1.9.4_amd64.deb डाउनलोड करें और इसे इस कमांड से इंस्टॉल करें
+      sudo apt install ./yaec_1.9.4_amd64.deb
   (इससे Mono भी इंस्टॉल हो जाता है)। YAEC को एप्लिकेशन मेनू से या "yaec" कमांड से चलाया जाता है।
-- अन्य डिस्ट्रीब्यूशन: Mono इंस्टॉल करें (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) निकालें और ./install.sh चलाएँ।
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- अन्य डिस्ट्रीब्यूशन: Mono इंस्टॉल करें (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) निकालें और ./install.sh चलाएँ।
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 
 इंस्टॉलेशन – macOS (प्रायोगिक)
 1. macOS के लिए Mono (https://www.mono-project.com/download/stable/) और XQuartz (https://www.xquartz.org) इंस्टॉल करें।
-2. YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) खोलें और YAEC को Applications में खींचें। पहली बार: YAEC पर राइट-क्लिक → Open (यह ऐप Apple द्वारा हस्ताक्षरित नहीं है)।
+2. YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) खोलें और YAEC को Applications में खींचें। पहली बार: YAEC पर राइट-क्लिक → Open (यह ऐप Apple द्वारा हस्ताक्षरित नहीं है)।
 
 स्वचालित अपडेट
 शुरू होते समय YAEC GitHub पर नया संस्करण देखता है और SHA-256 फ़िंगरप्रिंट जाँचकर अपने-आप अपडेट हो जाता है (Windows, पोर्टेबल .tar.gz आर्काइव, AppImage, macOS ऐप)। .deb, .rpm, Arch, Slackware पैकेज सिस्टम के पैकेज मैनेजर से अपडेट होते हैं: YAEC नए संस्करण की सूचना देता है और GitHub पेज खोलता है।
 
 डाउनलोड की गई फ़ाइलों की जाँच (SHA-256)
 हर release में SHA256SUMS.txt होती है, जिसमें हर पैकेज का SHA-256 हैश होता है। इसे डाउनलोड की गई फ़ाइल के हैश से मिलाएँ:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 अगर दोनों मान अलग हैं तो फ़ाइल इंस्टॉल न करें: उसे फिर से डाउनलोड करें।
@@ -43,6 +43,7 @@ YAEC मुफ़्त है; लाइसेंस का पाठ LICENSE_h
 
 संस्करण इतिहास
 1.0 से पहले के संस्करण बीटा कहलाते हैं।
+- 1.9.4 - EME बजट यागी और डिश: प्रीएम्प से पहले 0.1 dB अधिक हानि की कीमत (PA3CSG) और नया स्टेशन जाँच खंड, ठंडे आकाश पर G/T और सूर्य, चंद्रमा, Cas A और ज़मीन पर अनुमानित Y-फ़ैक्टर के साथ (G3LTF, VK3UM का EMECalc); EME बजट डिश: किनारे पर रोशनी की गिरावट और डिश की जाली, आकाश, स्पिलओवर और जाली से अनुमानित Tant, और तुलना के लिए G3LTF का मापा G/T; मैनुअल में नया अनुच्छेद।
 - 1.9.3 - पैकेजों के नाम YA-MS जैसे (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm, Arch और Slackware पैकेज ARM के लिए भी; रिलीज़ नोट्स में हर सिस्टम के हर पैकेज के लिंक वाली तालिका। इस संस्करण में पुराने नामों वाली फ़ाइलें भी हैं, केवल 1.9.1 और 1.9.2 से स्वचालित अपडेट के लिए।
 - 1.9.2 - योजना में नया टैब आकाश शोर (Skynoise): एंटेना के पूरे पैटर्न (NEC की .out फ़ाइल, YA-NEC या गॉसियन बीम) और आकाश मानचित्र (Remazeilles, Haslam, GSM 2008 या LFmap) से G8ONH और G4SWX की विधि द्वारा 50, 144, 432 MHz और 23 cm पर एंटेना तापमान, महीने भर के चंद्र पथ, आपके और DX के लिए पारगमन के दौरान तापमान, EME बजट यागी पर प्रभाव और DJ9BV से तुलना के साथ; compila.bat में स्वचालित परीक्षण; EME सिद्धांत और सुझाव पुस्तिका में: स्रोतों की तुलना सहित आकाश शोर, डिश गेन (PE1RKI या मदवार गणना, Ruze), 2320 MHz से ऊपर प्राइम फ़ोकस, फ़ीड का घुमाव और बीम से प्रकाशित चंद्रमा (BWF)।
 - 1.9.1 - GitHub से स्वचालित अपडेट, SHA-256 फ़िंगरप्रिंट जाँच के साथ: Windows, पोर्टेबल आर्काइव (Linux, FreeBSD, OpenBSD, Alpine), AppImage और macOS ऐप पर (.deb, .rpm, Arch, Slackware पैकेज पैकेज मैनेजर से अपडेट होते हैं), और गायब फ़ाइलों की चेतावनी; नए पैकेज: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT में किसी स्टेशन का लोकेटर ठीक करने के लिए सुधारें बटन; दूरी और Dgrd में 144 MHz पर पारंपरिक Dgrd, बैंड के अनुसार Dgrd आवृत्ति अनुसार DGRD में रहता है; मेरा क्षितिज में आकाश दृश्य के बैंगनी बॉक्स और योजना तालिका से लिया गया समय; आज़माने के लिए स्टेशन में तालिका का समय, स्क्रॉल बार और अपने देश के स्टेशन हटाने का विकल्प (cty.dat); यागी गेन DL6WU तालिका (G3SEK) से, W8IO के नाम वाला सूत्र केवल 10 एलिमेंट से कम पर; YA-MS शैली की ड्रॉप-डाउन सूचियाँ और संख्या बॉक्स; मैनुअल में 144 MHz ट्रांसवर्टर।

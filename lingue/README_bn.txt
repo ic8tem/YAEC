@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.3
+﻿YAEC – Yet Another EME Calc 1.9.4
 প্রণেতা: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 সোর্স কোড ও ডাউনলোড: https://github.com/ic8tem/YAEC/releases
 
 ইনস্টলেশন – WINDOWS
-1. Releases পেজ থেকে YAEC-1.9.3-windows-x64-setup.exe ডাউনলোড করে চালান। এটি অ্যাডমিনিস্ট্রেটর অধিকার ছাড়াই YAEC-কে Documents\YAEC-এ ইনস্টল করে, Start মেনু ও ডেস্কটপে শর্টকাট এবং আনইনস্টলার সহ।
+1. Releases পেজ থেকে YAEC-1.9.4-windows-x64-setup.exe ডাউনলোড করে চালান। এটি অ্যাডমিনিস্ট্রেটর অধিকার ছাড়াই YAEC-কে Documents\YAEC-এ ইনস্টল করে, Start মেনু ও ডেস্কটপে শর্টকাট এবং আনইনস্টলার সহ।
 2. SmartScreen সতর্কবার্তা দেখা দিলে: "More info" → "Run anyway"।
-3. ইনস্টল ছাড়া: YAEC-1.9.3-windows-x64-portatile.zip এমন একটি ফোল্ডারে এক্সট্র্যাক্ট করুন যেখানে আপনি লিখতে পারেন, তারপর YAEC.exe চালান।
+3. ইনস্টল ছাড়া: YAEC-1.9.4-windows-x64-portatile.zip এমন একটি ফোল্ডারে এক্সট্র্যাক্ট করুন যেখানে আপনি লিখতে পারেন, তারপর YAEC.exe চালান।
 
 ইনস্টলেশন – LINUX
 YAEC চলে Mono-তে, যা একটি মুক্ত .NET রানটাইম।
-- Debian, Ubuntu, Mint: yaec_1.9.3_amd64.deb ডাউনলোড করে এই কমান্ড দিয়ে ইনস্টল করুন
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian, Ubuntu, Mint: yaec_1.9.4_amd64.deb ডাউনলোড করে এই কমান্ড দিয়ে ইনস্টল করুন
+      sudo apt install ./yaec_1.9.4_amd64.deb
   (এতে Mono-ও ইনস্টল হয়)। YAEC অ্যাপ্লিকেশন মেনু থেকে বা "yaec" কমান্ড দিয়ে চালু হয়।
-- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) এক্সট্র্যাক্ট করে ./install.sh চালান।
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- অন্যান্য ডিস্ট্রিবিউশন: Mono ইনস্টল করুন (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) এক্সট্র্যাক্ট করে ./install.sh চালান।
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 
 ইনস্টলেশন – macOS (পরীক্ষামূলক)
 1. macOS-এর জন্য Mono (https://www.mono-project.com/download/stable/) এবং XQuartz (https://www.xquartz.org) ইনস্টল করুন।
-2. YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) খুলে YAEC-কে Applications-এ টেনে আনুন। প্রথমবার: YAEC-এ রাইট-ক্লিক → Open (অ্যাপটি Apple দ্বারা স্বাক্ষরিত নয়)।
+2. YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) খুলে YAEC-কে Applications-এ টেনে আনুন। প্রথমবার: YAEC-এ রাইট-ক্লিক → Open (অ্যাপটি Apple দ্বারা স্বাক্ষরিত নয়)।
 
 স্বয়ংক্রিয় হালনাগাদ
 চালু হওয়ার সময় YAEC GitHub-এ নতুন সংস্করণ আছে কি না দেখে এবং SHA-256 ফিঙ্গারপ্রিন্ট যাচাই করে নিজেই হালনাগাদ হয় (Windows, বহনযোগ্য .tar.gz আর্কাইভ, AppImage, macOS অ্যাপ)। .deb, .rpm, Arch, Slackware প্যাকেজগুলো সিস্টেমের প্যাকেজ ম্যানেজার দিয়ে হালনাগাদ হয়: YAEC নতুন সংস্করণের কথা জানায় এবং GitHub পাতা খোলে।
 
 ডাউনলোড করা ফাইল যাচাই (SHA-256)
 প্রতিটি release-এ SHA256SUMS.txt থাকে, যাতে প্রতিটি প্যাকেজের SHA-256 হ্যাশ দেওয়া আছে। ডাউনলোড করা ফাইলের হ্যাশের সঙ্গে এটি মিলিয়ে দেখুন:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 দুটি মান আলাদা হলে ফাইলটি ইনস্টল করবেন না: আবার ডাউনলোড করুন।
@@ -43,6 +43,7 @@ YAEC বিনামূল্যে পাওয়া যায়; লাই�
 
 সংস্করণের ইতিহাস
 1.0-এর আগের সংস্করণগুলিকে বেটা বলা হয়।
+- 1.9.4 - EME বাজেট ইয়াগি ও ডিশ: প্রি-অ্যাম্পের আগে 0.1 dB বেশি ক্ষতির মূল্য (PA3CSG) এবং নতুন স্টেশন পরীক্ষা অংশ, ঠান্ডা আকাশে G/T ও সূর্য, চাঁদ, Cas A ও মাটিতে প্রত্যাশিত Y-ফ্যাক্টরসহ (G3LTF, VK3UM-এর EMECalc); EME বাজেট ডিশ: কিনারায় আলোকনের হ্রাস ও ডিশের জালি, আকাশ, স্পিলওভার ও জালি থেকে আনুমানিক Tant, এবং তুলনার জন্য G3LTF-এর মাপা G/T; ম্যানুয়ালে নতুন অনুচ্ছেদ।
 - 1.9.3 - প্যাকেজের নাম YA-MS-এর মতো (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm, Arch ও Slackware প্যাকেজ ARM-এর জন্যও; রিলিজ নোটে প্রতিটি সিস্টেমের প্রতিটি প্যাকেজের লিঙ্কসহ একটি সারণি। এই সংস্করণে পুরোনো নামের ফাইলগুলোও আছে, শুধু 1.9.1 ও 1.9.2 থেকে স্বয়ংক্রিয় হালনাগাদের জন্য।
 - 1.9.2 - পরিকল্পনা-এ নতুন ট্যাব আকাশের নয়েজ (Skynoise): অ্যান্টেনার সম্পূর্ণ নকশা (NEC-এর .out ফাইল, YA-NEC বা গাউসীয় রশ্মি) ও আকাশ মানচিত্র (Remazeilles, Haslam, GSM 2008 বা LFmap) থেকে G8ONH ও G4SWX-এর পদ্ধতিতে 50, 144, 432 MHz ও 23 cm-এ অ্যান্টেনার তাপমাত্রা, মাস জুড়ে চাঁদের পথ, আপনার ও DX-এর অতিক্রমণকালীন তাপমাত্রা, EME বাজেট ইয়াগি-এ প্রভাব এবং DJ9BV-র সঙ্গে তুলনাসহ; compila.bat-এ স্বয়ংক্রিয় পরীক্ষা; EME তত্ত্ব ও পরামর্শ নির্দেশিকায়: উৎসগুলোর তুলনাসহ আকাশের নয়েজ, ডিশের গেইন (PE1RKI বা খাতওয়ারি হিসাব, Ruze), 2320 MHz-এর ওপরে প্রাইম ফোকাস, ফিডের ঘূর্ণন এবং রশ্মিতে আলোকিত চাঁদ (BWF)।
 - 1.9.1 - GitHub থেকে স্বয়ংক্রিয় হালনাগাদ, SHA-256 ফিঙ্গারপ্রিন্ট যাচাইসহ: Windows, বহনযোগ্য আর্কাইভ (Linux, FreeBSD, OpenBSD, Alpine), AppImage ও macOS অ্যাপে (.deb, .rpm, Arch, Slackware প্যাকেজ প্যাকেজ ম্যানেজার দিয়ে হালনাগাদ হয়), আর অনুপস্থিত ফাইলের সতর্কবার্তা; নতুন প্যাকেজ: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT-এ কোনো স্টেশনের লোকেটর ঠিক করার সংশোধন বোতাম; দূরত্ব ও Dgrd-এ 144 MHz-এ প্রচলিত Dgrd, ব্যান্ড অনুযায়ী Dgrd থাকে ফ্রিকোয়েন্সি অনুযায়ী DGRD-এ; আমার দিগন্ত-এ আকাশ-গম্বুজ-এর বেগুনি বাক্স ও পরিকল্পনা সারণি থেকে নেওয়া সময়; চেষ্টা করার স্টেশন-এ সারণির সময়, স্ক্রল বার ও নিজের দেশের স্টেশন বাদ দেওয়ার সুবিধা (cty.dat); ইয়াগি গেইন DL6WU সারণি (G3SEK) থেকে, W8IO-র নামে প্রচলিত সূত্র শুধু 10 এলিমেন্টের নিচে; YA-MS ধাঁচের ড্রপ-ডাউন তালিকা ও সংখ্যার বাক্স; ম্যানুয়ালে 144 MHz ট্রান্সভার্টার।

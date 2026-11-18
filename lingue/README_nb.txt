@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.3
+﻿YAEC – Yet Another EME Calc 1.9.4
 av Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Kalkulator for radioamatører som kjører EME (Jord–Måne–Jord) fra 50 MHz t
 Kildekode og nedlasting: https://github.com/ic8tem/YAEC/releases
 
 INSTALLASJON – WINDOWS
-1. Last ned YAEC-1.9.3-windows-x64-setup.exe fra Releases-siden og kjør den. Den installerer YAEC i Dokumenter\YAEC, uten administratorrettigheter, med snarveier i Start-menyen og på skrivebordet, og med et avinstalleringsprogram.
+1. Last ned YAEC-1.9.4-windows-x64-setup.exe fra Releases-siden og kjør den. Den installerer YAEC i Dokumenter\YAEC, uten administratorrettigheter, med snarveier i Start-menyen og på skrivebordet, og med et avinstalleringsprogram.
 2. Hvis SmartScreen-advarselen vises: «Mer informasjon» → «Kjør likevel».
-3. Uten installasjon: pakk ut YAEC-1.9.3-windows-x64-portatile.zip i en mappe du kan skrive i, og start YAEC.exe.
+3. Uten installasjon: pakk ut YAEC-1.9.4-windows-x64-portatile.zip i en mappe du kan skrive i, og start YAEC.exe.
 
 INSTALLASJON – LINUX
 YAEC kjører på Mono, den frie .NET-kjøretiden.
-- Debian, Ubuntu, Mint: last ned yaec_1.9.3_amd64.deb og installer den med
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian, Ubuntu, Mint: last ned yaec_1.9.4_amd64.deb og installer den med
+      sudo apt install ./yaec_1.9.4_amd64.deb
   (installerer også Mono). YAEC startes fra programmenyen eller med kommandoen «yaec».
-- Andre distribusjoner: installer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pakk ut YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) og kjør ./install.sh.
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- Andre distribusjoner: installer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pakk ut YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) og kjør ./install.sh.
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 
 INSTALLASJON – macOS (eksperimentell)
 1. Installer Mono for macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
-2. Åpne YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) og dra YAEC til Programmer. Første gang: høyreklikk på YAEC → Åpne (appen er ikke signert av Apple).
+2. Åpne YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) og dra YAEC til Programmer. Første gang: høyreklikk på YAEC → Åpne (appen er ikke signert av Apple).
 
 AUTOMATISKE OPPDATERINGER
 Ved oppstart sjekker YAEC på GitHub om det finnes en ny versjon, og oppdaterer seg selv (Windows, portable .tar.gz-arkiver, AppImage, macOS-app) med kontroll av SHA-256-fingeravtrykket. Pakkene .deb, .rpm, Arch, Slackware oppdateres i stedet med systemets pakkebehandler: YAEC varsler om den nye versjonen og åpner GitHub-siden.
 
 KONTROLL AV NEDLASTEDE FILER (SHA-256)
 Hver release inneholder SHA256SUMS.txt med SHA-256-sjekksummen for hver pakke. Sammenlign den med sjekksummen for den nedlastede filen:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Hvis de to verdiene er forskjellige, skal du ikke installere filen: last den ned på nytt.
@@ -43,6 +43,7 @@ Feil, bedre data, oversettelser: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 VERSJONSHISTORIKK
 Versjoner før 1.0 kalles beta.
+- 1.9.4 - EME-budsjett yagi og paraboler: kostnad for 0,1 dB mer tap foran forforsterkeren (PA3CSG) og nytt avsnitt Stasjonstest med G/T mot kald himmel og ventet Y-faktor for solen, månen, Cas A og bakken (G3LTF, VK3UMs EMECalc); EME-budsjett paraboler: belysningsfall i kanten og parabolnett, med Tant anslått fra himmel, spillover og nett, og G3LTFs målte G/T til sammenligning; nytt avsnitt i håndboken.
 - 1.9.3 - Pakkenavn som i YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm-, Arch- og Slackware-pakker også for ARM; i utgivelsesnotatene en tabell med lenke til hver pakke for hvert system. Denne versjonen inneholder også filene med de gamle navnene, bare for den automatiske oppdateringen fra 1.9.1 og 1.9.2.
 - 1.9.2 - Ny fane Himmelstøy (Skynoise) under Planlegging: antennetemperatur beregnet med metoden til G8ONH og G4SWX fra hele antennediagrammet (NEC-.out-fil, YA-NEC eller gaussisk stråle) og himmelkartet (Remazeilles, Haslam, GSM 2008 eller LFmap) på 50, 144, 432 MHz og 23 cm, med Månens bane gjennom måneden, temperaturen under passasjen for deg og for DX-en, virkningen på EME-budsjett yagi og sammenligningen med DJ9BV; automatisk test i compila.bat; i manualen TEORI OG RÅD OM EME: himmelstøy med kildene sammenlignet, parabolforsterkning (PE1RKI eller beregning post for post, Ruze), primærfokus over 2320 MHz, matingens rotasjon og Månen belyst av strålen (BWF).
 - 1.9.1 - Automatisk oppdatering fra GitHub med kontroll av SHA-256-fingeravtrykket i Windows, for de portable arkivene (Linux, FreeBSD, OpenBSD, Alpine), AppImage og macOS-appen (pakkene .deb, .rpm, Arch, Slackware oppdateres med pakkebehandleren), og varsel om manglende filer; nye pakker for Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; knappen KORRIGER for å rette en stasjons lokator i CALL3.TXT; Avstand og Dgrd med klassisk Dgrd på 144 MHz, mens Dgrd per bånd blir i DGRD per frekvens; Min horisont med de fiolette rammene fra Himmelhvelvingen og tidspunktet fra planleggingstabellen; Stasjoner å prøve med tidspunktet fra tabellen, rullefelt og mulighet til å utelate stasjoner fra eget land (cty.dat); yagiforsterkning fra DL6WU-tabellen (G3SEK), formelen som tilskrives W8IO bare under 10 elementer; nedtrekkslister og tallfelt i YA-MS-stil; 144 MHz-transvertere i håndboken.

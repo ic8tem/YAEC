@@ -1,4 +1,4 @@
-﻿YAEC - Yet Another EME Calc  1.9.3
+﻿YAEC - Yet Another EME Calc  1.9.4
 by Costantino IC8TEM
 =================================
 
@@ -11,38 +11,38 @@ This README and the licence in every language: folder "lingue"
 All the versions before 1.0 are called beta (beta 1 ... beta 30).
 
 INSTALLATION - WINDOWS
-1. Download YAEC-1.9.3-windows-x64-setup.exe from the "Releases" page on GitHub and run it.
+1. Download YAEC-1.9.4-windows-x64-setup.exe from the "Releases" page on GitHub and run it.
    If SmartScreen shows a warning: "More info" -> "Run anyway".
    It installs into Documents\YAEC (no administrator rights needed), with
    Start menu and desktop shortcuts and the uninstaller.
-2. Portable alternative: YAEC-1.9.3-windows-x64-portatile.zip, extract it into a
+2. Portable alternative: YAEC-1.9.4-windows-x64-portatile.zip, extract it into a
    folder where you can write (e.g. Documents\YAEC) and run YAEC.exe.
-   32-bit Windows: YAEC-1.9.3-windows-x86-setup.exe or YAEC-1.9.3-windows-x86-portatile.zip.
+   32-bit Windows: YAEC-1.9.4-windows-x86-setup.exe or YAEC-1.9.4-windows-x86-portatile.zip.
 3. Developers only: to build it yourself, extract the source zip and
    double-click "compila.bat". You do not need it to use YAEC.
 
 INSTALLATION - LINUX (all distributions, the same program)
 YAEC runs with Mono (the open-source .NET runtime maintained by WineHQ).
-- Debian, Ubuntu, Mint: download yaec_1.9.3_amd64.deb and install it with
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian, Ubuntu, Mint: download yaec_1.9.4_amd64.deb and install it with
+      sudo apt install ./yaec_1.9.4_amd64.deb
   (apt installs Mono as well). Start it from the applications menu or with
   the command "yaec".
 - Fedora:   sudo dnf install mono-complete
   Arch:     sudo pacman -S mono
   openSUSE: sudo zypper install mono-complete
-  then extract YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) and run ./install.sh (installs into
+  then extract YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) and run ./install.sh (installs into
   ~/.local, no root needed), or simply ./yaec from the extracted folder.
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 - Raspberry Pi (Raspberry Pi OS 64-bit, Pi 4 or 5): download
-  yaec_1.9.3_arm64.deb and install it with
-      sudo apt install ./yaec_1.9.3_arm64.deb
+  yaec_1.9.4_arm64.deb and install it with
+      sudo apt install ./yaec_1.9.4_arm64.deb
 - Data: ~/.local/share/YAEC/data
 
 INSTALLATION - macOS (experimental)
 1. Install Mono for macOS (https://www.mono-project.com/download/stable/ or
    the "Framework Mono" package from WineHQ) and XQuartz (https://www.xquartz.org):
    on macOS the Windows Forms window of Mono is drawn through X11.
-2. Download YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel), open it and drag YAEC into Applications.
+2. Download YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel), open it and drag YAEC into Applications.
    The first time, right-click YAEC -> Open (the app is not signed by Apple).
 - Data: ~/Library/Application Support/YAEC/data
 
@@ -52,8 +52,8 @@ At start-up YAEC checks GitHub for a new version and updates itself (Windows, po
 CHECKING THE DOWNLOADED FILES (SHA-256)
 The release page also has SHA256SUMS.txt with the SHA-256 fingerprint of every
 package. Compare it with the fingerprint of the file you downloaded:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
-  or in the command prompt: certutil -hashfile YAEC-1.9.3-windows-x64-setup.exe SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
+  or in the command prompt: certutil -hashfile YAEC-1.9.4-windows-x64-setup.exe SHA256
 - Linux:  sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS:  shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 If the two values differ, do not install the file: download it again from
@@ -96,7 +96,7 @@ WHAT'S NEW IN 1.4
 - Font type: 10 recommended fonts for Windows, Linux and macOS, tested tab by
   tab, instead of every installed font.
 - New packages: 32-bit Windows (setup and portable zip) and Raspberry Pi OS
-  64-bit (yaec_1.9.3_arm64.deb).
+  64-bit (yaec_1.9.4_arm64.deb).
 - Sky view: dashed purple boxes around the area your antenna can point at.
 - Distance and Dgrd: a fourth useful day; clicking a day in the chart also
   highlights it in the strip of days.

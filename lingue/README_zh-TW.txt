@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.3
+﻿YAEC – Yet Another EME Calc 1.9.4
 作者：Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 原始碼和下載：https://github.com/ic8tem/YAEC/releases
 
 安裝 – WINDOWS
-1. 從 Releases 頁面下載 YAEC-1.9.3-windows-x64-setup.exe 並執行。它會將 YAEC 安裝到文件\YAEC，無需系統管理員權限，並在「開始」選單和桌面上建立捷徑，同時安裝解除安裝程式。
+1. 從 Releases 頁面下載 YAEC-1.9.4-windows-x64-setup.exe 並執行。它會將 YAEC 安裝到文件\YAEC，無需系統管理員權限，並在「開始」選單和桌面上建立捷徑，同時安裝解除安裝程式。
 2. 如果出現 SmartScreen 警告：「更多資訊」 → 「仍要執行」。
-3. 免安裝：將 YAEC-1.9.3-windows-x64-portatile.zip 解壓縮到一個有寫入權限的資料夾，然後啟動 YAEC.exe。
+3. 免安裝：將 YAEC-1.9.4-windows-x64-portatile.zip 解壓縮到一個有寫入權限的資料夾，然後啟動 YAEC.exe。
 
 安裝 – LINUX
 YAEC 在 Mono（自由的 .NET 執行環境）上執行。
-- Debian、Ubuntu、Mint：下載 yaec_1.9.3_amd64.deb，並用以下命令安裝
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian、Ubuntu、Mint：下載 yaec_1.9.4_amd64.deb，並用以下命令安裝
+      sudo apt install ./yaec_1.9.4_amd64.deb
   （同時會安裝 Mono）。可從應用程式選單或用命令“yaec”啟動 YAEC。
-- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) 並執行 ./install.sh。
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- 其他發行版：安裝 Mono（Fedora：sudo dnf install mono-complete；Arch：sudo pacman -S mono；openSUSE：sudo zypper install mono-complete），解壓縮 YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) 並執行 ./install.sh。
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 
 安裝 – macOS（實驗性）
 1. 安裝 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
-2. 開啟 YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel)，將 YAEC 拖到「應用程式」中。首次執行：按右鍵 YAEC → 開啟（該應用未經 Apple 簽名）。
+2. 開啟 YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel)，將 YAEC 拖到「應用程式」中。首次執行：按右鍵 YAEC → 開啟（該應用未經 Apple 簽名）。
 
 自動更新
 YAEC 啟動時會在 GitHub 上檢查是否有新版本，並自動更新（Windows、可攜式 .tar.gz 封存檔、AppImage、macOS 應用程式），同時核對 SHA-256 指紋。.deb, .rpm, Arch, Slackware 套件則透過系統的套件管理員更新：YAEC 會提示新版本並開啟 GitHub 頁面。
 
 驗證下載的檔案（SHA-256）
 每個 release 都包含 SHA256SUMS.txt，其中列出每個套件的 SHA-256 雜湊值。請將其與下載檔案的雜湊值進行比較：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 如果兩個值不同，請不要安裝該檔案，而應重新下載。
@@ -43,6 +43,7 @@ YAEC 是免費的；授權條款文字見檔案 LICENSE_zh-TW.txt 以及程式�
 
 版本歷史
 1.0 之前的版本稱為 beta 版。
+- 1.9.4 - EME 預算（八木與碟形天線）：前置放大器之前每多 0.1 dB 損耗的代價（PA3CSG），新增“臺站測試”一節，給出冷空 G/T 以及太陽、月球、Cas A 和地面的預計 Y 因子（G3LTF，VK3UM 的 EMECalc）；碟形天線 EME 預算：邊緣照射下降與碟面金屬網，由天空、溢位和金屬網估算 Tant，並與 G3LTF 實測的 G/T 對比；手冊新增一段。
 - 1.9.3 - 軟體包名稱與 YA-MS 相同（-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64）；.rpm、Arch 和 Slackware 軟體包也提供 ARM 版本；釋出說明中有一張表格，列出每個系統每個軟體包的連結。此版本還包含舊名稱的檔案，僅用於從 1.9.1 和 1.9.2 自動更新。
 - 1.9.2 - 規劃中新增標籤頁天空噪聲（Skynoise）：用 G8ONH 和 G4SWX 的方法，由完整天線方向圖（NEC .out 檔案、YA-NEC 或高斯波束）和天空圖（Remazeilles、Haslam、GSM 2008 或 LFmap）計算 50、144、432 MHz 和 23 cm 的天線溫度，顯示本月月球路徑、你和 DX 在過境期間的溫度、對EME 鏈路預算 八木的影響以及與 DJ9BV 的比較；compila.bat 中的自動測試；EME 理論與建議手冊新增：天空噪聲及資料來源比較、拋物面增益（PE1RKI 或分項計算、Ruze）、2320 MHz 以上的主焦點、饋源旋轉以及被波束照亮的月面（BWF）。
 - 1.9.1 - 從 GitHub 自動更新並核對 SHA-256 指紋，適用於 Windows、可攜式封存檔（Linux、FreeBSD、OpenBSD、Alpine）、AppImage 和 macOS 應用程式（.deb, .rpm, Arch, Slackware 套件以套件管理員更新），並提示缺少的檔案；新增套件：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；更正 按鈕，用於修正 CALL3.TXT 中某電台的定位碼；距離與 Dgrd 使用 144 MHz 的傳統 Dgrd，按波段的 Dgrd 保留在 按頻率 DGRD；我的地平線 加入 天穹 的紫色框，並從規劃表取得計算時刻；值得嘗試的電台 採用表格中的時刻，增加捲軸，可排除本國電台（cty.dat）；八木天線增益取自 DL6WU 表（G3SEK），僅在少於 10 元件時使用歸於 W8IO 的公式；下拉清單和數字框採用 YA-MS 風格；手冊加入 144 MHz 轉頻器。

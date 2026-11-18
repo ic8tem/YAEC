@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.3
+﻿YAEC – Yet Another EME Calc 1.9.4
 מאת Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 קוד מקור והורדה: https://github.com/ic8tem/YAEC/releases
 
 התקנה – WINDOWS
-1. הורד את YAEC-1.9.3-windows-x64-setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
+1. הורד את YAEC-1.9.4-windows-x64-setup.exe מדף Releases והפעל אותו. הוא מתקין את YAEC בתיקייה מסמכים\YAEC, ללא הרשאות מנהל, עם קיצורי דרך בתפריט התחל ובשולחן העבודה, וכן תוכנית הסרה.
 2. אם מופיעה אזהרת SmartScreen: "More info" ← "Run anyway".
-3. ללא התקנה: חלץ את YAEC-1.9.3-windows-x64-portatile.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
+3. ללא התקנה: חלץ את YAEC-1.9.4-windows-x64-portatile.zip לתיקייה שיש לך הרשאת כתיבה בה והפעל את YAEC.exe.
 
 התקנה – LINUX
 YAEC פועל על Mono, סביבת הריצה החופשית של .NET.
-- Debian, Ubuntu, Mint: הורד את yaec_1.9.3_amd64.deb והתקן אותו באמצעות
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian, Ubuntu, Mint: הורד את yaec_1.9.4_amd64.deb והתקן אותו באמצעות
+      sudo apt install ./yaec_1.9.4_amd64.deb
   (מתקין גם את Mono). YAEC מופעל מתפריט היישומים או בפקודה "yaec".
-- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) והפעל את ./install.sh.
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- הפצות אחרות: התקן את Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), חלץ את YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) והפעל את ./install.sh.
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 
 התקנה – macOS (ניסיוני)
 1. התקן את Mono עבור macOS (https://www.mono-project.com/download/stable/) ואת XQuartz (https://www.xquartz.org).
-2. פתח את YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
+2. פתח את YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
 
 עדכונים אוטומטיים
 בהפעלה YAEC בודק ב־GitHub אם יש גרסה חדשה ומתעדכן בעצמו (Windows, ארכיוני ‎.tar.gz ניידים, AppImage, אפליקציית macOS), תוך בדיקת טביעת ה־SHA-256. חבילות .deb, .rpm, Arch, Slackware מתעדכנות דרך מנהל החבילות של המערכת: YAEC מודיע על הגרסה החדשה ופותח את עמוד GitHub.
 
 בדיקת הקבצים שהורדו (SHA-256)
 כל release כולל את SHA256SUMS.txt עם טביעת ה-SHA-256 של כל חבילה. השווה אותה לטביעה של הקובץ שהורדת:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 אם שני הערכים שונים, אל תתקין את הקובץ: הורד אותו מחדש.
@@ -43,6 +43,7 @@ YAEC חינמי; נוסח הרישיון נמצא בקובץ LICENSE_he.txt וב
 
 היסטוריית גרסאות
 הגרסאות שלפני 1.0 נקראות בטא.
+- 1.9.4 - תקציב EME יאגי וצלחות: המחיר של 0.1 dB הפסד נוסף לפני קדם־המגבר (PA3CSG) וסעיף חדש בדיקת התחנה עם G/T על שמיים קרים ומקדם Y צפוי על השמש, הירח, Cas A והקרקע (G3LTF, ‏EMECalc של VK3UM); תקציב EME צלחות: ירידת ההארה בשוליים ורשת הצלחת, עם Tant משוערת מהשמיים, הגלישה והרשת, ו-G/T שמדד G3LTF להשוואה; פסקה חדשה במדריך.
 - 1.9.3 - שמות החבילות כמו ב-YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); חבילות ‎.rpm, Arch ו-Slackware גם ל-ARM; בהערות הגרסה טבלה עם קישור לכל חבילה לכל מערכת. גרסה זו מכילה גם את הקבצים בשמות הישנים, רק לעדכון האוטומטי מ-1.9.1 ומ-1.9.2.
 - 1.9.2 - לשונית חדשה רעש שמיים (Skynoise) ב־תכנון: טמפרטורת אנטנה בשיטת G8ONH ו־G4SWX מהדיאגרמה המלאה של האנטנה (קובץ .out של NEC, ‏YA-NEC או אלומה גאוסיאנית) וממפת השמיים (Remazeilles, Haslam, GSM 2008 או LFmap) ב־50, 144, 432 MHz וב־23 cm, עם מסלול הירח במהלך החודש, הטמפרטורה במהלך המעבר עבורך ועבור ה־DX, ההשפעה על תקציב EME yagi וההשוואה ל־DJ9BV; בדיקה אוטומטית ב־compila.bat; במדריך תיאוריה ועצות על EME: רעש השמיים עם השוואת המקורות, הגבר הצלחות (PE1RKI או חישוב לפי רכיבים, Ruze), מוקד ראשי מעל 2320 MHz, סיבוב המזין והירח המואר באלומה (BWF).
 - 1.9.1 - עדכון אוטומטי מ־GitHub עם בדיקת טביעת SHA-256 ב־Windows, בארכיונים הניידים (Linux, FreeBSD, OpenBSD, Alpine), ב־AppImage ובאפליקציית macOS (חבילות .deb, .rpm, Arch, Slackware מתעדכנות דרך מנהל החבילות), והתרעה על קבצים חסרים; חבילות חדשות ל־Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; כפתור תיקון לתיקון הלוקייטור של תחנה ב־CALL3.TXT; מרחק ו-Dgrd עם Dgrd הקלאסי ב־144 MHz, וה־Dgrd לפי פס נשאר ב־DGRD לפי תדר; האופק שלי עם המסגרות הסגולות של כיפת השמיים והרגע שנלקח מטבלת התכנון; תחנות לנסות עם הרגע מהטבלה, פס גלילה והוצאת תחנות מהמדינה שלך (cty.dat); הגבר אנטנות יאגי מטבלת DL6WU ‏(G3SEK), והנוסחה המיוחסת ל־W8IO רק מתחת ל־10 אלמנטים; רשימות נפתחות ותיבות מספר בסגנון YA-MS; טרנסוורטרים ל־144 MHz במדריך.

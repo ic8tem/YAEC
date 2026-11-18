@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.3
+﻿YAEC – Yet Another EME Calc 1.9.4
 από τον Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 Πηγαίος κώδικας και λήψη: https://github.com/ic8tem/YAEC/releases
 
 ΕΓΚΑΤΑΣΤΑΣΗ – WINDOWS
-1. Κατεβάστε το YAEC-1.9.3-windows-x64-setup.exe από τη σελίδα Releases και εκτελέστε το. Εγκαθιστά το YAEC στο Έγγραφα\YAEC, χωρίς δικαιώματα διαχειριστή, με συντομεύσεις στο μενού Έναρξη και στην επιφάνεια εργασίας και με πρόγραμμα απεγκατάστασης.
+1. Κατεβάστε το YAEC-1.9.4-windows-x64-setup.exe από τη σελίδα Releases και εκτελέστε το. Εγκαθιστά το YAEC στο Έγγραφα\YAEC, χωρίς δικαιώματα διαχειριστή, με συντομεύσεις στο μενού Έναρξη και στην επιφάνεια εργασίας και με πρόγραμμα απεγκατάστασης.
 2. Αν εμφανιστεί η προειδοποίηση του SmartScreen: "Περισσότερες πληροφορίες" → "Εκτέλεση οπωσδήποτε".
-3. Χωρίς εγκατάσταση: αποσυμπιέστε το YAEC-1.9.3-windows-x64-portatile.zip σε έναν φάκελο όπου μπορείτε να γράψετε και εκκινήστε το YAEC.exe.
+3. Χωρίς εγκατάσταση: αποσυμπιέστε το YAEC-1.9.4-windows-x64-portatile.zip σε έναν φάκελο όπου μπορείτε να γράψετε και εκκινήστε το YAEC.exe.
 
 ΕΓΚΑΤΑΣΤΑΣΗ – LINUX
 Το YAEC λειτουργεί με το Mono, το ελεύθερο runtime .NET.
-- Debian, Ubuntu, Mint: κατεβάστε το yaec_1.9.3_amd64.deb και εγκαταστήστε το με
-      sudo apt install ./yaec_1.9.3_amd64.deb
+- Debian, Ubuntu, Mint: κατεβάστε το yaec_1.9.4_amd64.deb και εγκαταστήστε το με
+      sudo apt install ./yaec_1.9.4_amd64.deb
   (εγκαθιστά και το Mono). Το YAEC εκκινείται από το μενού εφαρμογών ή με την εντολή "yaec".
-- Άλλες διανομές: εγκαταστήστε το Mono (Fedora: sudo dnf install mono-complete· Arch: sudo pacman -S mono· openSUSE: sudo zypper install mono-complete), αποσυμπιέστε το YAEC-1.9.3-linux-x64.tar.gz (ARM: YAEC-1.9.3-linux-arm64.tar.gz, YAEC-1.9.3-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.3-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.3-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.3-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.3-alpine-x64.tar.gz, YAEC-1.9.3-alpine-arm64.tar.gz) και εκτελέστε το ./install.sh.
-- Fedora, openSUSE: yaec-1.9.3.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.3-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.3-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.3-x86_64.AppImage, YAEC-1.9.3-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.3_armhf.deb · Windows ARM64: YAEC-1.9.3-windows-arm64-setup.exe, YAEC-1.9.3-windows-arm64-portatile.zip
+- Άλλες διανομές: εγκαταστήστε το Mono (Fedora: sudo dnf install mono-complete· Arch: sudo pacman -S mono· openSUSE: sudo zypper install mono-complete), αποσυμπιέστε το YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) και εκτελέστε το ./install.sh.
+- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
 
 ΕΓΚΑΤΑΣΤΑΣΗ – macOS (ΠΕΙΡΑΜΑΤΙΚΗ)
 1. Εγκαταστήστε το Mono για macOS (https://www.mono-project.com/download/stable/) και το XQuartz (https://www.xquartz.org).
-2. Ανοίξτε το YAEC-1.9.3-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.3-mac-intel.dmg (Intel) και σύρετε το YAEC στις Εφαρμογές. Την πρώτη φορά: δεξί κλικ στο YAEC → Άνοιγμα (η εφαρμογή δεν είναι υπογεγραμμένη από την Apple).
+2. Ανοίξτε το YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) και σύρετε το YAEC στις Εφαρμογές. Την πρώτη φορά: δεξί κλικ στο YAEC → Άνοιγμα (η εφαρμογή δεν είναι υπογεγραμμένη από την Apple).
 
 ΑΥΤΟΜΑΤΕΣ ΕΝΗΜΕΡΩΣΕΙΣ
 Κατά την εκκίνηση το YAEC ελέγχει στο GitHub αν υπάρχει νέα έκδοση και ενημερώνεται μόνο του (Windows, φορητά αρχεία .tar.gz, AppImage, εφαρμογή macOS), επαληθεύοντας το αποτύπωμα SHA-256. Τα πακέτα .deb, .rpm, Arch, Slackware ενημερώνονται αντίθετα με τον διαχειριστή πακέτων του συστήματος: το YAEC ειδοποιεί για τη νέα έκδοση και ανοίγει τη σελίδα του GitHub.
 
 ΕΛΕΓΧΟΣ ΤΩΝ ΑΡΧΕΙΩΝ ΠΟΥ ΚΑΤΕΒΗΚΑΝ (SHA-256)
 Κάθε release περιέχει το SHA256SUMS.txt με το αποτύπωμα SHA-256 κάθε πακέτου. Συγκρίνετέ το με εκείνο του αρχείου που κατεβάσατε:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.3-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Αν οι δύο τιμές διαφέρουν μην εγκαταστήσετε το αρχείο: κατεβάστε το ξανά.
@@ -43,6 +43,7 @@
 
 ΙΣΤΟΡΙΚΟ ΕΚΔΟΣΕΩΝ
 Οι εκδόσεις πριν από την 1.0 ονομάζονται beta.
+- 1.9.4 - Προϋπολογισμός EME yagi και κατόπτρων: κόστος 0,1 dB επιπλέον απώλειας πριν από τον προενισχυτή (PA3CSG) και νέα ενότητα Δοκιμή σταθμού με G/T σε κρύο ουρανό και αναμενόμενο συντελεστή Y για Ήλιο, Σελήνη, Cas A και έδαφος (G3LTF, EMECalc του VK3UM)· προϋπολογισμός EME κατόπτρων: πτώση φωτισμού στο χείλος και πλέγμα κατόπτρου, με Tant εκτιμώμενη από ουρανό, υπερχείλιση και πλέγμα, και το G/T που μέτρησε ο G3LTF για σύγκριση· νέα παράγραφος στο εγχειρίδιο.
 - 1.9.3 - Ονόματα πακέτων ίδια με του YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64)· πακέτα .rpm, Arch και Slackware και για ARM· στις σημειώσεις έκδοσης ένας πίνακας με σύνδεσμο για κάθε πακέτο κάθε συστήματος. Αυτή η έκδοση περιέχει επίσης τα αρχεία με τα παλιά ονόματα, μόνο για την αυτόματη ενημέρωση από τις 1.9.1 και 1.9.2.
 - 1.9.2 - Νέα καρτέλα Θόρυβος ουρανού (Skynoise) στο Σχεδιασμός: θερμοκρασία κεραίας με τη μέθοδο των G8ONH και G4SWX από το πλήρες διάγραμμα της κεραίας (αρχείο .out του NEC, YA-NEC ή γκαουσιανή δέσμη) και τον χάρτη ουρανού (Remazeilles, Haslam, GSM 2008 ή LFmap) στα 50, 144, 432 MHz και 23 cm, με την πορεία της Σελήνης μέσα στον μήνα, τη θερμοκρασία κατά τη διέλευση για σένα και για τον DX, την επίδραση στον Προϋπολογισμός EME yagi και τη σύγκριση με τον DJ9BV· αυτόματος έλεγχος στο compila.bat· στο εγχειρίδιο ΘΕΩΡΙΑ ΚΑΙ ΣΥΜΒΟΥΛΕΣ ΓΙΑ ΤΟ EME: ο θόρυβος του ουρανού με σύγκριση των πηγών, το κέρδος των πιάτων (PE1RKI ή υπολογισμός ανά στοιχείο, Ruze), η πρωτεύουσα εστία πάνω από τα 2320 MHz, η περιστροφή του τροφοδότη και η Σελήνη που φωτίζεται από τη δέσμη (BWF).
 - 1.9.1 - Αυτόματη ενημέρωση από το GitHub με έλεγχο του αποτυπώματος SHA-256 στα Windows, στα φορητά αρχεία (Linux, FreeBSD, OpenBSD, Alpine), στο AppImage και στην εφαρμογή macOS (τα πακέτα .deb, .rpm, Arch, Slackware ενημερώνονται με τον διαχειριστή πακέτων), και προειδοποίηση για αρχεία που λείπουν· νέα πακέτα για Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage· κουμπί ΔΙΟΡΘΩΣΗ για διόρθωση του locator ενός σταθμού στο CALL3.TXT· Απόσταση και Dgrd με το κλασικό Dgrd στα 144 MHz, ενώ το Dgrd ανά μπάντα μένει στο DGRD ανά συχνότητα· Ο ορίζοντάς μου με τα μοβ πλαίσια του Ουράνιος θόλος και τη στιγμή από τον πίνακα προγραμματισμού· Σταθμοί για δοκιμή με τη στιγμή του πίνακα, γραμμή κύλισης και εξαίρεση των σταθμών της δικής σας χώρας (cty.dat)· κέρδος κεραιών Yagi από τον πίνακα DL6WU (G3SEK), ο τύπος που αποδίδεται στον W8IO μόνο κάτω από 10 στοιχεία· αναπτυσσόμενες λίστες και αριθμητικά πεδία σε στιλ YA-MS· μετατροπείς 144 MHz στο εγχειρίδιο.
