@@ -86770,7 +86770,7 @@ namespace LunaCalc
                     using (GraphicsPath p = Arrotondato(sq, S(3)))
                     {
                         if (i == 3)
-                            using (HatchBrush hb = new HatchBrush(HatchStyle.WideUpwardDiagonal, Color.FromArgb(156, 163, 175), Tema.Scuro ? Tema.Section : Color.FromArgb(229, 231, 235))) g.FillPath(hb, p);
+                            using (HatchBrush hbr = new HatchBrush(HatchStyle.WideUpwardDiagonal, Color.FromArgb(156, 163, 175), Tema.Scuro ? Tema.Section : Color.FromArgb(229, 231, 235))) g.FillPath(hbr, p);
                         else if (i == 2)
                         {
                             using (Brush b = new SolidBrush(Color.FromArgb(90, ColBlu))) g.FillPath(b, p);
@@ -86811,7 +86811,7 @@ namespace LunaCalc
                             }
                             else if (bit == 8)
                                 using (GraphicsPath p = Arrotondato(rr, S(4)))
-                                using (HatchBrush hb = new HatchBrush(HatchStyle.WideUpwardDiagonal, Color.FromArgb(156, 163, 175), Tema.Scuro ? Tema.Section : Color.FromArgb(229, 231, 235))) g.FillPath(hb, p);
+                                using (HatchBrush hbr = new HatchBrush(HatchStyle.WideUpwardDiagonal, Color.FromArgb(156, 163, 175), Tema.Scuro ? Tema.Section : Color.FromArgb(229, 231, 235))) g.FillPath(hbr, p);
                             else
                                 using (GraphicsPath p = Arrotondato(rr, S(4)))
                                 using (Brush b = new SolidBrush(col)) g.FillPath(b, p);
