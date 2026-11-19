@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.4
+﻿YAEC – Yet Another EME Calc 1.9.5
 készítette: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Számítóprogram EME-ben (Föld–Hold–Föld) dolgozó rádióamatőröknek 5
 Forráskód és letöltés: https://github.com/ic8tem/YAEC/releases
 
 TELEPÍTÉS – WINDOWS
-1. Töltsd le a YAEC-1.9.4-windows-x64-setup.exe fájlt a Releases oldalról, és futtasd. A YAEC-et a Dokumentumok\YAEC mappába telepíti, rendszergazdai jogok nélkül, parancsikonokkal a Start menüben és az asztalon, valamint eltávolító programmal.
+1. Töltsd le a YAEC-1.9.5-windows-x64-setup.exe fájlt a Releases oldalról, és futtasd. A YAEC-et a Dokumentumok\YAEC mappába telepíti, rendszergazdai jogok nélkül, parancsikonokkal a Start menüben és az asztalon, valamint eltávolító programmal.
 2. Ha megjelenik a SmartScreen figyelmeztetése: „További információ” → „Futtatás mindenképp”.
-3. Telepítés nélkül: csomagold ki a YAEC-1.9.4-windows-x64-portatile.zip fájlt egy olyan mappába, amelybe írni tudsz, és indítsd el a YAEC.exe-t.
+3. Telepítés nélkül: csomagold ki a YAEC-1.9.5-windows-x64-portatile.zip fájlt egy olyan mappába, amelybe írni tudsz, és indítsd el a YAEC.exe-t.
 
 TELEPÍTÉS – LINUX
 A YAEC a Monóval, a szabad .NET-futtatókörnyezettel működik.
-- Debian, Ubuntu, Mint: töltsd le a yaec_1.9.4_amd64.deb fájlt, és telepítsd ezzel:
-      sudo apt install ./yaec_1.9.4_amd64.deb
+- Debian, Ubuntu, Mint: töltsd le a yaec_1.9.5_amd64.deb fájlt, és telepítsd ezzel:
+      sudo apt install ./yaec_1.9.5_amd64.deb
   (a Monót is telepíti). A YAEC az alkalmazásmenüből vagy a „yaec” paranccsal indítható.
-- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9.4-linux-x64.tar.gz fájlt (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz), és futtasd a ./install.sh-t.
-- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
+- Más disztribúciók: telepítsd a Monót (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), csomagold ki a YAEC-1.9.5-linux-x64.tar.gz fájlt (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz), és futtasd a ./install.sh-t.
+- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
 
 TELEPÍTÉS – macOS (kísérleti)
 1. Telepítsd a macOS-es Monót (https://www.mono-project.com/download/stable/) és az XQuartzot (https://www.xquartz.org).
-2. Nyisd meg a YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
+2. Nyisd meg a YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
 
 AUTOMATIKUS FRISSÍTÉSEK
 Induláskor a YAEC megnézi a GitHubon, van-e új verzió, és magától frissül (Windows, hordozható .tar.gz archívumok, AppImage, macOS-alkalmazás), az SHA-256 ujjlenyomat ellenőrzésével. A(z) .deb, .rpm, Arch, Slackware csomagokat viszont a rendszer csomagkezelője frissíti: a YAEC jelzi az új verziót, és megnyitja a GitHub-oldalt.
 
 A LETÖLTÖTT FÁJLOK ELLENŐRZÉSE (SHA-256)
 Minden kiadás tartalmazza az SHA256SUMS.txt fájlt, benne minden csomag SHA-256 ujjlenyomatával. Vesd össze a letöltött fájléval:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Ha a két érték eltér, ne telepítsd a fájlt: töltsd le újra.
@@ -43,7 +43,7 @@ Hibák, jobb adatok, fordítások: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERZIÓTÖRTÉNET
 Az 1.0 előtti verziók neve beta.
-- 1.9.4 - EME-költségvetés yagi és tányér: 0,1 dB-lel több veszteség ára az előerősítő előtt (PA3CSG) és új Állomáspróba rész a hideg égbolton mért G/T-vel és a Napra, Holdra, Cas A-ra és talajra várható Y-tényezővel (G3LTF, VK3UM EMECalc programja); EME-költségvetés tányér: megvilágításcsökkenés a peremen és a tányér hálója, égboltból, túlsugárzásból és hálóból becsült Tant-tal, összehasonlításul G3LTF mért G/T-jével; új bekezdés a kézikönyvben.
+- 1.9.5 - EME-költségvetés yagi és tányér: 0,1 dB-lel több veszteség ára az előerősítő előtt (PA3CSG) és új Állomáspróba rész a hideg égbolton mért G/T-vel és a Napra, Holdra, Cas A-ra és talajra várható Y-tényezővel (G3LTF, VK3UM EMECalc programja); EME-költségvetés tányér: megvilágításcsökkenés a peremen és a tányér hálója, égboltból, túlsugárzásból és hálóból becsült Tant-tal, összehasonlításul G3LTF mért G/T-jével; új bekezdés a kézikönyvben; a DX terepe: SRTM1-horizont a lokátora körül az Az én horizontom fülön, amelyet a közös ablakok, a 24 órás sáv, az égbolt és a Kipróbálandó állomások figyelembe vesznek (legalább 6 karakteres lokátor); az antenna ÁHA-ja az állomás vizsgálatában (AEH 41-19. egy.); a Nap átmérője 0,524° és 0,542° között a Föld–Nap távolság szerint; «A YAEC számol, nem tervez berendezéseket» megjegyzés a forrásoknál és a tanácsoknál.
 - 1.9.3 - A csomagnevek ugyanazok, mint a YA-MS-nél (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm-, Arch- és Slackware-csomagok ARM-re is; a kiadási megjegyzésekben táblázat minden rendszer minden csomagjának hivatkozásával. Ez a verzió a régi nevű fájlokat is tartalmazza, kizárólag az 1.9.1-ről és 1.9.2-ről történő automatikus frissítéshez.
 - 1.9.2 - Új lap: Égzaj (Skynoise) (Tervezés): antennahőmérséklet G8ONH és G4SWX módszerével az antenna teljes iránykarakterisztikájából (NEC .out fájl, YA-NEC vagy Gauss-nyaláb) és az égtérképből (Remazeilles, Haslam, GSM 2008 vagy LFmap) 50, 144, 432 MHz-en és 23 cm-en, a Hold havi útjával, a hőmérséklettel az áthaladás alatt neked és a DX-nek, a(z) Yagi EME-mérleg értékre gyakorolt hatással és a DJ9BV-vel való összehasonlítással; automatikus teszt a compila.bat-ban; a(z) ELMÉLET ÉS TANÁCSOK AZ EME-HEZ kézikönyvben: az égzaj a források összehasonlításával, a parabolák nyeresége (PE1RKI vagy tételes számítás, Ruze), primer fókusz 2320 MHz felett, a tápfej elforgatása és a nyalábbal megvilágított Hold (BWF).
 - 1.9.1 - Automatikus frissítés a GitHubról az SHA-256 ujjlenyomat ellenőrzésével Windowson, a hordozható archívumoknál (Linux, FreeBSD, OpenBSD, Alpine), az AppImage-nél és a macOS-alkalmazásnál (a(z) .deb, .rpm, Arch, Slackware csomagokat a csomagkezelő frissíti), valamint figyelmeztetés a hiányzó fájlokra; új csomagok: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; JAVÍTÁS gomb egy állomás lokátorának javítására a CALL3.TXT-ben; Távolság és Dgrd a klasszikus Dgrd-vel 144 MHz-en, a sávonkénti Dgrd marad a(z) DGRD frekvenciánként fülön; Az én horizontom a(z) Égbolt lila kereteivel és a tervezési táblázatból vett időponttal; Kipróbálandó állomások a táblázat időpontjával, görgetősávval és a saját ország állomásainak kizárásával (cty.dat); Yagi-nyereség a DL6WU-táblázatból (G3SEK), a W8IO-nak tulajdonított képlet csak 10 elem alatt; legördülő listák és számmezők YA-MS-stílusban; 144 MHz-es transzverterek a kézikönyvben.

@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.4
+﻿YAEC – Yet Another EME Calc 1.9.5
 de Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Calculator pentru radioamatorii care lucrează în EME (Pământ–Lună–Păm�
 Cod sursă și descărcări: https://github.com/ic8tem/YAEC/releases
 
 INSTALARE – WINDOWS
-1. Descarcă YAEC-1.9.4-windows-x64-setup.exe din pagina Releases și rulează-l. Instalează YAEC în Documente\YAEC, fără drepturi de administrator, cu scurtături în meniul Start și pe desktop și cu programul de dezinstalare.
+1. Descarcă YAEC-1.9.5-windows-x64-setup.exe din pagina Releases și rulează-l. Instalează YAEC în Documente\YAEC, fără drepturi de administrator, cu scurtături în meniul Start și pe desktop și cu programul de dezinstalare.
 2. Dacă apare avertismentul SmartScreen: "Mai multe informații" → "Rulați oricum".
-3. Fără instalare: extrage YAEC-1.9.4-windows-x64-portatile.zip într-un dosar în care poți scrie și pornește YAEC.exe.
+3. Fără instalare: extrage YAEC-1.9.5-windows-x64-portatile.zip într-un dosar în care poți scrie și pornește YAEC.exe.
 
 INSTALARE – LINUX
 YAEC funcționează cu Mono, mediul de rulare .NET liber.
-- Debian, Ubuntu, Mint: descarcă yaec_1.9.4_amd64.deb și instalează-l cu
-      sudo apt install ./yaec_1.9.4_amd64.deb
+- Debian, Ubuntu, Mint: descarcă yaec_1.9.5_amd64.deb și instalează-l cu
+      sudo apt install ./yaec_1.9.5_amd64.deb
   (instalează și Mono). YAEC se pornește din meniul de aplicații sau cu comanda "yaec".
-- Alte distribuții: instalează Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extrage YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) și rulează ./install.sh.
-- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
+- Alte distribuții: instalează Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extrage YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) și rulează ./install.sh.
+- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
 
 INSTALARE – macOS (experimental)
 1. Instalează Mono pentru macOS (https://www.mono-project.com/download/stable/) și XQuartz (https://www.xquartz.org).
-2. Deschide YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) și trage YAEC în Aplicații. Prima dată: clic dreapta pe YAEC → Deschide (aplicația nu este semnată de Apple).
+2. Deschide YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) și trage YAEC în Aplicații. Prima dată: clic dreapta pe YAEC → Deschide (aplicația nu este semnată de Apple).
 
 ACTUALIZĂRI AUTOMATE
 La pornire, YAEC verifică pe GitHub dacă există o versiune nouă și se actualizează singur (Windows, arhive portabile .tar.gz, AppImage, aplicația pentru macOS), verificând amprenta SHA-256. Pachetele .deb, .rpm, Arch, Slackware se actualizează în schimb cu managerul de pachete al sistemului: YAEC anunță noua versiune și deschide pagina GitHub.
 
 VERIFICAREA FIȘIERELOR DESCĂRCATE (SHA-256)
 Fiecare release conține SHA256SUMS.txt cu amprenta SHA-256 a fiecărui pachet. Compar-o cu cea a fișierului descărcat:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Dacă cele două valori sunt diferite, nu instala fișierul: descarcă-l din nou.
@@ -43,7 +43,7 @@ Erori, date mai bune, traduceri: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 ISTORICUL VERSIUNILOR
 Versiunile anterioare lui 1.0 se numesc beta.
-- 1.9.4 - Buget EME yagi și discuri: costul a 0,1 dB pierderi în plus înainte de preamplificator (PA3CSG) și secțiunea nouă Proba stației cu G/T pe cerul rece și factorul Y prevăzut pe Soare, Lună, Cas A și sol (G3LTF, EMECalc al lui VK3UM); buget EME discuri: scăderea iluminării la margine și plasa discului, cu Tant estimată din cer, revărsare și plasă, și G/T măsurat de G3LTF pentru comparație; paragraf nou în manual.
+- 1.9.5 - Buget EME yagi și discuri: costul a 0,1 dB pierderi în plus înainte de preamplificator (PA3CSG) și secțiunea nouă Proba stației cu G/T pe cerul rece și factorul Y prevăzut pe Soare, Lună, Cas A și sol (G3LTF, EMECalc al lui VK3UM); buget EME discuri: scăderea iluminării la margine și plasa discului, cu Tant estimată din cer, revărsare și plasă, și G/T măsurat de G3LTF pentru comparație; paragraf nou în manual; terenul DX: orizont SRTM1 în jurul locatorului său în fila Orizontul meu, luat în calcul de ferestrele comune, bara de 24 de ore, bolta cerească și Stațiile de încercat (locator de cel puțin 6 caractere); ROS al antenei în testul stației (AEH ec. 41-19); diametrul Soarelui de la 0,524° la 0,542° după distanța Pământ–Soare; nota «YAEC calculează, nu proiectează aparate» în surse și sfaturi.
 - 1.9.3 - Numele pachetelor la fel ca la YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pachete .rpm, Arch și Slackware și pentru ARM; în notele versiunii, un tabel cu legătura către fiecare pachet pentru fiecare sistem. Această versiune conține și fișierele cu numele vechi, doar pentru actualizarea automată de la 1.9.1 și 1.9.2.
 - 1.9.2 - Filă nouă Zgomotul cerului (Skynoise) în Planificare: temperatura antenei calculată cu metoda G8ONH și G4SWX din diagrama completă a antenei (fișier .out al NEC, YA-NEC sau fascicul gaussian) și din harta cerului (Remazeilles, Haslam, GSM 2008 sau LFmap) la 50, 144, 432 MHz și 23 cm, cu drumul Lunii în lună, temperatura în timpul trecerii pentru tine și pentru DX, efectul asupra Buget EME yagi și compararea cu DJ9BV; test automat în compila.bat; în manualul TEORIE ȘI SFATURI DESPRE EME: zgomotul cerului cu sursele comparate, câștigul parabolelor (PE1RKI sau calcul pe componente, Ruze), focarul primar peste 2320 MHz, rotirea iluminatorului și Luna iluminată de fascicul (BWF).
 - 1.9.1 - Actualizare automată de pe GitHub, cu verificarea amprentei SHA-256, pe Windows, cu arhivele portabile (Linux, FreeBSD, OpenBSD, Alpine), cu AppImage și cu aplicația macOS (pachetele .deb, .rpm, Arch, Slackware se actualizează cu managerul de pachete), și avertizare pentru fișierele lipsă; pachete noi pentru Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; butonul CORECTEAZĂ pentru corectarea locatorului unei stații în CALL3.TXT; Distanță și Dgrd cu Dgrd clasic la 144 MHz, iar Dgrd pe benzi rămâne în DGRD după frecvență; Orizontul meu cu chenarele violet din Bolta cerească și momentul luat din tabelul de planificare; Stații de încercat cu momentul din tabel, bară de derulare și excluderea stațiilor din propria țară (cty.dat); câștigul antenelor Yagi din tabelul DL6WU (G3SEK), formula atribuită lui W8IO doar sub 10 elemente; liste derulante și câmpuri numerice în stilul YA-MS; transvertere de 144 MHz în manual.

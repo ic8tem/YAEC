@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.4
+﻿YAEC – Yet Another EME Calc 1.9.5
 opracował Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Kalkulator dla krótkofalowców pracujących przez EME (Ziemia–Księżyc–Zie
 Kod źródłowy i pliki do pobrania: https://github.com/ic8tem/YAEC/releases
 
 INSTALACJA – WINDOWS
-1. Pobierz YAEC-1.9.4-windows-x64-setup.exe ze strony Releases i uruchom go. Instaluje YAEC w Dokumenty\YAEC, bez uprawnień administratora, ze skrótami w menu Start i na pulpicie oraz z programem odinstalowującym.
+1. Pobierz YAEC-1.9.5-windows-x64-setup.exe ze strony Releases i uruchom go. Instaluje YAEC w Dokumenty\YAEC, bez uprawnień administratora, ze skrótami w menu Start i na pulpicie oraz z programem odinstalowującym.
 2. Jeśli pojawi się ostrzeżenie SmartScreen: „Więcej informacji” → „Uruchom mimo to”.
-3. Bez instalacji: rozpakuj YAEC-1.9.4-windows-x64-portatile.zip do folderu, w którym możesz zapisywać, i uruchom YAEC.exe.
+3. Bez instalacji: rozpakuj YAEC-1.9.5-windows-x64-portatile.zip do folderu, w którym możesz zapisywać, i uruchom YAEC.exe.
 
 INSTALACJA – LINUX
 YAEC działa z Mono, wolnym środowiskiem uruchomieniowym .NET.
-- Debian, Ubuntu, Mint: pobierz yaec_1.9.4_amd64.deb i zainstaluj go poleceniem
-      sudo apt install ./yaec_1.9.4_amd64.deb
+- Debian, Ubuntu, Mint: pobierz yaec_1.9.5_amd64.deb i zainstaluj go poleceniem
+      sudo apt install ./yaec_1.9.5_amd64.deb
   (instaluje również Mono). YAEC uruchamia się z menu aplikacji lub poleceniem "yaec".
-- Inne dystrybucje: zainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozpakuj YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) i uruchom ./install.sh.
-- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
+- Inne dystrybucje: zainstaluj Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), rozpakuj YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) i uruchom ./install.sh.
+- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
 
 INSTALACJA – macOS (eksperymentalna)
 1. Zainstaluj Mono dla macOS (https://www.mono-project.com/download/stable/) i XQuartz (https://www.xquartz.org).
-2. Otwórz YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) i przeciągnij YAEC do folderu Aplikacje. Za pierwszym razem: kliknij prawym przyciskiem YAEC → Otwórz (aplikacja nie jest podpisana przez Apple).
+2. Otwórz YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) i przeciągnij YAEC do folderu Aplikacje. Za pierwszym razem: kliknij prawym przyciskiem YAEC → Otwórz (aplikacja nie jest podpisana przez Apple).
 
 AUTOMATYCZNE AKTUALIZACJE
 Przy uruchomieniu YAEC sprawdza w GitHub, czy jest nowa wersja, i sam się aktualizuje (Windows, przenośne archiwa .tar.gz, AppImage, aplikacja macOS), sprawdzając odcisk SHA-256. Pakiety .deb, .rpm, Arch, Slackware aktualizuje się natomiast menedżerem pakietów systemu: YAEC informuje o nowej wersji i otwiera stronę GitHub.
 
 SPRAWDZANIE POBRANYCH PLIKÓW (SHA-256)
 Każde wydanie zawiera plik SHA256SUMS.txt z sumą SHA-256 każdego pakietu. Porównaj ją z sumą pobranego pliku:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jeśli obie wartości się różnią, nie instaluj pliku: pobierz go ponownie.
@@ -43,7 +43,7 @@ Błędy, lepsze dane, tłumaczenia: ccerrotta@gmail.com · ic8tem@gmail.com · w
 
 HISTORIA WERSJI
 Wersje wcześniejsze niż 1.0 nazywają się beta.
-- 1.9.4 - Budżet EME yagi i czasze: koszt 0,1 dB większych strat przed przedwzmacniaczem (PA3CSG) i nowa sekcja Test stacji z G/T na zimnym niebie i oczekiwanym współczynnikiem Y dla Słońca, Księżyca, Cas A i ziemi (G3LTF, EMECalc VK3UM); budżet EME czasze: spadek oświetlenia na krawędzi i siatka czaszy, z Tant szacowaną z nieba, przelewania i siatki oraz G/T zmierzonym przez G3LTF do porównania; nowy akapit w instrukcji.
+- 1.9.5 - Budżet EME yagi i czasze: koszt 0,1 dB większych strat przed przedwzmacniaczem (PA3CSG) i nowa sekcja Test stacji z G/T na zimnym niebie i oczekiwanym współczynnikiem Y dla Słońca, Księżyca, Cas A i ziemi (G3LTF, EMECalc VK3UM); budżet EME czasze: spadek oświetlenia na krawędzi i siatka czaszy, z Tant szacowaną z nieba, przelewania i siatki oraz G/T zmierzonym przez G3LTF do porównania; nowy akapit w instrukcji; teren DX: horyzont SRTM1 wokół jego lokatora w karcie Mój horyzont, uwzględniany przez wspólne okna, pasek 24 godzin, sklepienie nieba i Stacje do spróbowania (lokator o co najmniej 6 znakach); WFS anteny w teście stacji (AEH równ. 41-19); średnica Słońca od 0,524° do 0,542° zależnie od odległości Ziemia–Słońce; uwaga «YAEC liczy, nie projektuje urządzeń» w źródłach i poradach.
 - 1.9.3 - Nazwy pakietów takie jak w YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pakiety .rpm, Arch i Slackware także dla ARM; w informacjach o wydaniu tabela z odnośnikiem do każdego pakietu dla każdego systemu. Ta wersja zawiera też pliki ze starymi nazwami, wyłącznie dla automatycznej aktualizacji z 1.9.1 i 1.9.2.
 - 1.9.2 - Nowa zakładka Szum nieba (Skynoise) w grupie Planowanie: temperatura anteny obliczana metodą G8ONH i G4SWX z pełnej charakterystyki anteny (plik .out z NEC, YA-NEC lub wiązka gaussowska) i mapy nieba (Remazeilles, Haslam, GSM 2008 lub LFmap) na 50, 144, 432 MHz i 23 cm, z drogą Księżyca w miesiącu, temperaturą podczas przejścia dla ciebie i dla DX-a, wpływem na Bilans EME Yagi i porównaniem z DJ9BV; test automatyczny w compila.bat; w podręczniku TEORIA I PORADY DOTYCZĄCE EME: szum nieba z porównaniem źródeł, zysk anten parabolicznych (PE1RKI lub obliczenie składnik po składniku, Ruze), ognisko pierwotne powyżej 2320 MHz, obrót promiennika i Księżyc oświetlony wiązką (BWF).
 - 1.9.1 - Automatyczna aktualizacja z GitHub ze sprawdzeniem odcisku SHA-256 w Windows, dla archiwów przenośnych (Linux, FreeBSD, OpenBSD, Alpine), AppImage i aplikacji macOS (pakiety .deb, .rpm, Arch, Slackware aktualizuje menedżer pakietów) oraz ostrzeżenie o brakujących plikach; nowe pakiety dla Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; przycisk POPRAW do poprawienia lokatora stacji w CALL3.TXT; Odległość i Dgrd z klasyczną Dgrd na 144 MHz, a Dgrd według pasm zostaje w DGRD według częstotliwości; Mój horyzont z fioletowymi ramkami z Sklepienie niebieskie i chwilą wziętą z tabeli planowania; Stacje do spróbowania z chwilą z tabeli, paskiem przewijania i wykluczeniem stacji z własnego kraju (cty.dat); zysk anten Yagi z tabeli DL6WU (G3SEK), wzór przypisywany W8IO tylko poniżej 10 elementów; listy rozwijane i pola liczbowe w stylu YA-MS; transwertery 144 MHz w podręczniku.

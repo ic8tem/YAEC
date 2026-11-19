@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.4
+﻿YAEC – Yet Another EME Calc 1.9.5
 hazırlayan: Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ hazırlayan: Costantino IC8TEM
 Kaynak kod ve indirme: https://github.com/ic8tem/YAEC/releases
 
 KURULUM – WINDOWS
-1. YAEC-1.9.4-windows-x64-setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
+1. YAEC-1.9.5-windows-x64-setup.exe dosyasını Releases sayfasından indirip çalıştırın. YAEC'i yönetici hakları olmadan Belgeler\YAEC klasörüne kurar; Başlat menüsünde ve masaüstünde kısayollar ile bir kaldırma programı oluşturur.
 2. SmartScreen uyarısı çıkarsa: "Ek bilgi" → "Yine de çalıştır".
-3. Kurulum olmadan: YAEC-1.9.4-windows-x64-portatile.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
+3. Kurulum olmadan: YAEC-1.9.5-windows-x64-portatile.zip dosyasını yazma izniniz olan bir klasöre çıkarın ve YAEC.exe'yi başlatın.
 
 KURULUM – LINUX
 YAEC, özgür .NET çalışma ortamı olan Mono ile çalışır.
-- Debian, Ubuntu, Mint: yaec_1.9.4_amd64.deb dosyasını indirin ve şu komutla kurun
-      sudo apt install ./yaec_1.9.4_amd64.deb
+- Debian, Ubuntu, Mint: yaec_1.9.5_amd64.deb dosyasını indirin ve şu komutla kurun
+      sudo apt install ./yaec_1.9.5_amd64.deb
   (Mono da kurulur). YAEC uygulamalar menüsünden veya "yaec" komutuyla başlatılır.
-- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) dosyasını çıkarın ve ./install.sh'yi çalıştırın.
-- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
+- Diğer dağıtımlar: Mono'yu kurun (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) dosyasını çıkarın ve ./install.sh'yi çalıştırın.
+- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
 
 KURULUM – macOS (deneysel)
 1. macOS için Mono (https://www.mono-project.com/download/stable/) ve XQuartz (https://www.xquartz.org) kurun.
-2. YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
+2. YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
 
 OTOMATİK GÜNCELLEMELER
 YAEC açılışta GitHub'da yeni sürüm olup olmadığını denetler ve SHA-256 parmak izini doğrulayarak kendini günceller (Windows, taşınabilir .tar.gz arşivleri, AppImage, macOS uygulaması). .deb, .rpm, Arch, Slackware paketleri ise sistemin paket yöneticisiyle güncellenir: YAEC yeni sürümü bildirir ve GitHub sayfasını açar.
 
 İNDİRİLEN DOSYALARIN DOĞRULANMASI (SHA-256)
 Her release, her paketin SHA-256 özetini içeren SHA256SUMS.txt dosyasını barındırır. Bunu indirdiğiniz dosyanın özetiyle karşılaştırın:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 İki değer farklıysa dosyayı kurmayın: yeniden indirin.
@@ -43,7 +43,7 @@ Hatalar, daha iyi veriler, çeviriler: ccerrotta@gmail.com · ic8tem@gmail.com �
 
 SÜRÜM GEÇMİŞİ
 1.0'dan önceki sürümlere beta denir.
-- 1.9.4 - EME bütçesi yagi ve çanak: ön yükselteçten önce 0,1 dB fazla kaybın bedeli (PA3CSG) ve soğuk gökyüzünde G/T ile Güneş, Ay, Cas A ve zemin için beklenen Y faktörünü gösteren yeni İstasyon testi bölümü (G3LTF, VK3UM'nin EMECalc'ı); EME bütçesi çanak: kenarda aydınlatma düşüşü ve çanak ağı, gök, taşma ve ağdan tahmin edilen Tant ve karşılaştırma için G3LTF'nin ölçtüğü G/T; kılavuzda yeni paragraf.
+- 1.9.5 - EME bütçesi yagi ve çanak: ön yükselteçten önce 0,1 dB fazla kaybın bedeli (PA3CSG) ve soğuk gökyüzünde G/T ile Güneş, Ay, Cas A ve zemin için beklenen Y faktörünü gösteren yeni İstasyon testi bölümü (G3LTF, VK3UM'nin EMECalc'ı); EME bütçesi çanak: kenarda aydınlatma düşüşü ve çanak ağı, gök, taşma ve ağdan tahmin edilen Tant ve karşılaştırma için G3LTF'nin ölçtüğü G/T; kılavuzda yeni paragraf; DX arazisi: Ufkum sekmesinde lokatörü çevresinde SRTM1 ufku; ortak pencereler, 24 saatlik çubuk, gök kubbe ve Denenecek istasyonlar bunu hesaba katar (en az 6 karakterli lokatör); istasyon testinde anten SWR'si (AEH denk. 41-19); Dünya–Güneş uzaklığına göre 0,524° ile 0,542° arası Güneş çapı; kaynaklarda ve ipuçlarında «YAEC hesaplar, cihaz tasarlamaz» notu.
 - 1.9.3 - Paket adları YA-MS ile aynı (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm, Arch ve Slackware paketleri ARM için de; sürüm notlarında her sistem için her pakete bağlantı içeren bir tablo. Bu sürüm, yalnızca 1.9.1 ve 1.9.2'den otomatik güncelleme için eski adlı dosyaları da içerir.
 - 1.9.2 - Planlama içinde yeni Gökyüzü gürültüsü (Skynoise) sekmesi: antenin tam diyagramından (NEC .out dosyası, YA-NEC veya Gauss demeti) ve gök haritasından (Remazeilles, Haslam, GSM 2008 veya LFmap) G8ONH ve G4SWX yöntemiyle hesaplanan anten sıcaklığı, 50, 144, 432 MHz ve 23 cm'de; Ay'ın ay boyunca yolu, sizin ve DX için geçiş sırasındaki sıcaklık, EME bütçesi yagi üzerindeki etki ve DJ9BV ile karşılaştırma; compila.bat'ta otomatik test; EME ÜZERİNE TEORİ VE ÖNERİLER kılavuzunda: kaynakların karşılaştırmasıyla gökyüzü gürültüsü, çanak kazancı (PE1RKI veya kalem kalem hesap, Ruze), 2320 MHz üstünde birincil odak, besleyicinin döndürülmesi ve demetin aydınlattığı Ay (BWF).
 - 1.9.1 - GitHub'dan SHA-256 parmak izi denetimiyle otomatik güncelleme: Windows'ta, taşınabilir arşivlerde (Linux, FreeBSD, OpenBSD, Alpine), AppImage'da ve macOS uygulamasında (.deb, .rpm, Arch, Slackware paketleri paket yöneticisiyle güncellenir) ve eksik dosya uyarısı; yeni paketler: Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; CALL3.TXT'te bir istasyonun lokatörünü düzeltmek için DÜZELT düğmesi; Mesafe ve Dgrd'de 144 MHz'te klasik Dgrd, banda göre Dgrd Frekansa göre DGRD'de kalır; Ufkum'de Gök kubbesi'nin mor çerçeveleri ve planlama tablosundan alınan an; Denenecek istasyonlar'de tablodaki an, kaydırma çubuğu ve kendi ülkenin istasyonlarını dışarıda bırakma (cty.dat); Yagi kazancı DL6WU tablosundan (G3SEK), W8IO'ya atfedilen formül yalnızca 10 elemanın altında; YA-MS tarzında açılır listeler ve sayı kutuları; el kitabında 144 MHz transverterler.

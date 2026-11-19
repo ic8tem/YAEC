@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.4
+﻿YAEC – Yet Another EME Calc 1.9.5
 作者：Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@
 ソースとダウンロード：https://github.com/ic8tem/YAEC/releases
 
 インストール – WINDOWS
-1. Releases ページから YAEC-1.9.4-windows-x64-setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
+1. Releases ページから YAEC-1.9.5-windows-x64-setup.exe をダウンロードして実行します。管理者権限なしで YAEC を ドキュメント\YAEC にインストールし、スタートメニューとデスクトップにショートカットを作成し、アンインストーラーも組み込みます。
 2. SmartScreen の警告が表示された場合：「詳細情報」→「実行」。
-3. インストールせずに使う場合：YAEC-1.9.4-windows-x64-portatile.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
+3. インストールせずに使う場合：YAEC-1.9.5-windows-x64-portatile.zip を書き込み可能なフォルダーに展開し、YAEC.exe を起動します。
 
 インストール – LINUX
 YAEC はフリーの .NET ランタイムである Mono で動作します。
-- Debian、Ubuntu、Mint：yaec_1.9.4_amd64.deb をダウンロードし、次のコマンドでインストールします
-      sudo apt install ./yaec_1.9.4_amd64.deb
+- Debian、Ubuntu、Mint：yaec_1.9.5_amd64.deb をダウンロードし、次のコマンドでインストールします
+      sudo apt install ./yaec_1.9.5_amd64.deb
   （Mono も同時にインストールされます）。YAEC はアプリケーションメニューから、またはコマンド「yaec」で起動します。
-- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) を展開して ./install.sh を実行します。
-- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
+- その他のディストリビューション：Mono をインストールし（Fedora: sudo dnf install mono-complete、Arch: sudo pacman -S mono、openSUSE: sudo zypper install mono-complete）、YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) を展開して ./install.sh を実行します。
+- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
 
 インストール – macOS（試験的）
 1. macOS 用 Mono（https://www.mono-project.com/download/stable/）と XQuartz（https://www.xquartz.org）をインストールします。
-2. YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
+2. YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) を開き、YAEC を「アプリケーション」にドラッグします。初回は YAEC を右クリック →「開く」を選びます（このアプリは Apple の署名を受けていません）。
 
 自動更新
 YAEC は起動時に GitHub で新しいバージョンを確認し、自動的に更新します（Windows、ポータブルの .tar.gz アーカイブ、AppImage、macOS アプリ）。その際 SHA-256 フィンガープリントを検証します。.deb, .rpm, Arch, Slackware のパッケージはシステムのパッケージマネージャーで更新します。YAEC は新しいバージョンを知らせ、GitHub のページを開きます。
 
 ダウンロードしたファイルの確認（SHA-256）
 各 release には、すべてのパッケージの SHA-256 ハッシュを記載した SHA256SUMS.txt が含まれています。ダウンロードしたファイルのハッシュと比較してください：
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 2 つの値が異なる場合は、そのファイルをインストールせず、もう一度ダウンロードしてください。
@@ -43,7 +43,7 @@ YAEC は無料です。ライセンス本文はファイル LICENSE_ja.txt と�
 
 バージョン履歴
 1.0 より前のバージョンはベータ版と呼びます。
-- 1.9.4 - EME バジェット（八木・ディッシュ）：プリアンプ手前の損失が 0.1 dB 増えたときの損失（PA3CSG）と、冷たい空での G/T、太陽・月・Cas A・地面での Y ファクター予測を示す新しい「局のテスト」の項（G3LTF、VK3UM の EMECalc）。ディッシュ用 EME バジェット：縁での照射の低下とメッシュを追加し、空・スピルオーバー・メッシュから Tant を推定、G3LTF の実測 G/T と比較。マニュアルに新しい段落。
+- 1.9.5 - EME バジェット（八木・ディッシュ）：プリアンプ手前の損失が 0.1 dB 増えたときの損失（PA3CSG）と、冷たい空での G/T、太陽・月・Cas A・地面での Y ファクター予測を示す新しい「局のテスト」の項（G3LTF、VK3UM の EMECalc）。ディッシュ用 EME バジェット：縁での照射の低下とメッシュを追加し、空・スピルオーバー・メッシュから Tant を推定、G3LTF の実測 G/T と比較。マニュアルに新しい段落；DX の地形：「自局の地平線」タブで DX のロケーター周辺の SRTM1 地平線を計算し、共通ウィンドウ、24時間バー、天球、「試してみたい局」に反映（ロケーターは6文字以上）。局のテストでアンテナの SWR（AEH 式 41-19）。太陽の直径は地球–太陽間距離により 0.524°〜0.542°。資料とヒントに「YAEC は計算するだけで、機器は設計しない」を明記。
 - 1.9.3 - パッケージ名を YA-MS と同じにしました（-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64）。.rpm、Arch、Slackware パッケージに ARM 版も追加。リリースノートに、システムごとの各パッケージへのリンクを載せた表を追加。このバージョンには旧名称のファイルも含まれますが、1.9.1 と 1.9.2 からの自動更新専用です。
 - 1.9.2 - 計画 に新しいタブ 空の雑音（Skynoise）：完全なアンテナパターン（NEC .out ファイル、YA-NEC、またはガウスビーム）と天空マップ（Remazeilles、Haslam、GSM 2008、LFmap）から G8ONH と G4SWX の手法で 50、144、432 MHz と 23 cm のアンテナ温度を計算。1 か月の月の経路、自局と DX のパス中の温度、EME 回線計算 八木 への影響、DJ9BV との比較を表示。compila.bat に自動テスト。EME の理論とアドバイス のマニュアルに、出典を比較した空の雑音、ディッシュの利得（PE1RKI または項目別の計算、Ruze）、2320 MHz 以上のプライムフォーカス、フィードの回転、ビームが照らす月（BWF）を追加。
 - 1.9.1 - GitHub からの自動更新（SHA-256 フィンガープリントを確認）：Windows、ポータブルアーカイブ（Linux、FreeBSD、OpenBSD、Alpine）、AppImage、macOS アプリ（.deb, .rpm, Arch, Slackware のパッケージはパッケージマネージャーで更新）、不足ファイルの警告；新しいパッケージ：Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage；CALL3.TXT の局のロケーターを直す 修正 ボタン；距離と Dgrd は 144 MHz の従来の Dgrd、バンド別の Dgrd は 周波数別 DGRD に残る；自局の地平線 に 天球 の紫の枠と計画表からの時刻；試してみたい局 に表からの時刻、スクロールバー、自国の局を除外（cty.dat）；八木の利得は DL6WU の表（G3SEK）から、W8IO によるとされる式は 10 エレメント未満のみ；ドロップダウンと数値ボックスは YA-MS 風；マニュアルに 144 MHz トランスバーター。

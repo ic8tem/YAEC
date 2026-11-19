@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.4
+﻿YAEC – Yet Another EME Calc 1.9.5
 inihanda ni Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Calculator para sa mga radio amateur na gumagawa ng EME (Daigdig–Buwan–Daigd
 Source at download: https://github.com/ic8tem/YAEC/releases
 
 PAG-INSTALL – WINDOWS
-1. I-download ang YAEC-1.9.4-windows-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
+1. I-download ang YAEC-1.9.5-windows-x64-setup.exe mula sa pahinang Releases at patakbuhin ito. Ini-install nito ang YAEC sa Documents\YAEC, nang hindi kailangan ng administrator rights, na may mga shortcut sa Start menu at sa desktop at may uninstaller.
 2. Kung lumabas ang babala ng SmartScreen: "More info" → "Run anyway".
-3. Nang walang pag-install: i-extract ang YAEC-1.9.4-windows-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
+3. Nang walang pag-install: i-extract ang YAEC-1.9.5-windows-x64-portatile.zip sa isang folder kung saan ka makakasulat at patakbuhin ang YAEC.exe.
 
 PAG-INSTALL – LINUX
 Tumatakbo ang YAEC sa Mono, ang libreng .NET runtime.
-- Debian, Ubuntu, Mint: i-download ang yaec_1.9.4_amd64.deb at i-install ito gamit ang
-      sudo apt install ./yaec_1.9.4_amd64.deb
+- Debian, Ubuntu, Mint: i-download ang yaec_1.9.5_amd64.deb at i-install ito gamit ang
+      sudo apt install ./yaec_1.9.5_amd64.deb
   (ini-install din nito ang Mono). Pinapatakbo ang YAEC mula sa menu ng mga application o gamit ang command na "yaec".
-- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.9.4-linux-x64.tar.gz (ARM: YAEC-1.9.4-linux-arm64.tar.gz, YAEC-1.9.4-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.4-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.4-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.4-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.4-alpine-x64.tar.gz, YAEC-1.9.4-alpine-arm64.tar.gz) at patakbuhin ang ./install.sh.
-- Fedora, openSUSE: yaec-1.9.4.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.4-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.4-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.4-x86_64.AppImage, YAEC-1.9.4-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.4_armhf.deb · Windows ARM64: YAEC-1.9.4-windows-arm64-setup.exe, YAEC-1.9.4-windows-arm64-portatile.zip
+- Ibang mga distribution: i-install ang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), i-extract ang YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) at patakbuhin ang ./install.sh.
+- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
 
 PAG-INSTALL – macOS (eksperimental)
 1. I-install ang Mono para sa macOS (https://www.mono-project.com/download/stable/) at ang XQuartz (https://www.xquartz.org).
-2. Buksan ang YAEC-1.9.4-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.4-mac-intel.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
+2. Buksan ang YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) at i-drag ang YAEC sa Applications. Sa unang pagkakataon: i-right-click ang YAEC → Open (hindi naka-sign ng Apple ang app).
 
 AWTOMATIKONG PAG-UPDATE
 Sa pagsisimula, tinitingnan ng YAEC sa GitHub kung may bagong bersyon at kusa itong nag-a-update (Windows, portable na .tar.gz archive, AppImage, macOS app), habang sinusuri ang SHA-256 fingerprint. Ang mga package na .deb, .rpm, Arch, Slackware ay ina-update naman gamit ang package manager ng system: inaabisuhan ng YAEC ang bagong bersyon at binubuksan ang pahina ng GitHub.
 
 PAGSURI NG MGA NA-DOWNLOAD NA FILE (SHA-256)
 Bawat release ay may SHA256SUMS.txt na naglalaman ng SHA-256 hash ng bawat package. Ihambing ito sa hash ng na-download na file:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.4-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Kung magkaiba ang dalawang halaga, huwag i-install ang file: i-download itong muli.
@@ -43,7 +43,7 @@ Mga mali, mas mahusay na datos, mga salin: ccerrotta@gmail.com · ic8tem@gmail.c
 
 KASAYSAYAN NG MGA BERSYON
 Beta ang tawag sa mga bersyon bago ang 1.0.
-- 1.9.4 - EME budget yagi at dish: halaga ng 0.1 dB pang pagkawala bago ang preamp (PA3CSG) at bagong seksyong Pagsubok sa istasyon na may G/T sa malamig na langit at inaasahang Y-factor sa Araw, Buwan, Cas A at lupa (G3LTF, EMECalc ni VK3UM); EME budget dish: pagbaba ng iluminasyon sa gilid at mesh ng dish, na may Tant na tinantiya mula sa langit, spillover at mesh, at ang nasukat na G/T ni G3LTF bilang paghahambing; bagong talata sa manwal.
+- 1.9.5 - EME budget yagi at dish: halaga ng 0.1 dB pang pagkawala bago ang preamp (PA3CSG) at bagong seksyong Pagsubok sa istasyon na may G/T sa malamig na langit at inaasahang Y-factor sa Araw, Buwan, Cas A at lupa (G3LTF, EMECalc ni VK3UM); EME budget dish: pagbaba ng iluminasyon sa gilid at mesh ng dish, na may Tant na tinantiya mula sa langit, spillover at mesh, at ang nasukat na G/T ni G3LTF bilang paghahambing; bagong talata sa manwal; lupain ng DX: SRTM1 na horizon sa paligid ng kanyang locator sa tab na Aking horizon, isinasaalang-alang ng mga karaniwang window, 24-oras na bar, tanaw ng langit at Mga istasyong susubukan (locator na hindi bababa sa 6 na karakter); SWR ng antena sa pagsubok ng istasyon (AEH eq. 41-19); diyametro ng Araw mula 0.524° hanggang 0.542° ayon sa layo ng Daigdig at Araw; tala na «Nagkakalkula ang YAEC, hindi nagdidisenyo ng kagamitan» sa mga sanggunian at payo.
 - 1.9.3 - Mga pangalan ng package na kapareho ng sa YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); mga package na .rpm, Arch at Slackware para rin sa ARM; sa release notes, isang talahanayan na may link sa bawat package para sa bawat sistema. Naglalaman din ang bersyong ito ng mga file na may lumang pangalan, para lamang sa awtomatikong update mula 1.9.1 at 1.9.2.
 - 1.9.2 - Bagong tab na Ingay ng langit (Skynoise) sa Pagpaplano: temperatura ng antena na kinalkula sa paraan nina G8ONH at G4SWX mula sa buong pattern ng antena (.out file ng NEC, YA-NEC o Gaussian beam) at sa mapa ng langit (Remazeilles, Haslam, GSM 2008 o LFmap) sa 50, 144, 432 MHz at 23 cm, kasama ang landas ng Buwan sa buong buwan, ang temperatura habang dumaraan para sa iyo at sa DX, ang epekto sa EME budget yagi at ang paghahambing kay DJ9BV; awtomatikong test sa compila.bat; sa manwal na TEORYA AT MGA PAYO SA EME: ingay ng langit kasama ang paghahambing ng mga pinagmulan, gain ng dish (PE1RKI o kalkulasyon bawat bahagi, Ruze), prime focus sa itaas ng 2320 MHz, pag-ikot ng feed at ang Buwang naiilawan ng beam (BWF).
 - 1.9.1 - Awtomatikong pag-update mula sa GitHub na may pagsusuri ng SHA-256 fingerprint sa Windows, sa mga portable na archive (Linux, FreeBSD, OpenBSD, Alpine), sa AppImage at sa macOS app (ang mga package na .deb, .rpm, Arch, Slackware ay ina-update gamit ang package manager), at babala sa mga nawawalang file; mga bagong package para sa Windows ARM64, Fedora/openSUSE (.rpm), Arch Linux, Slackware, Raspberry Pi OS 32 bit, Alpine, FreeBSD, OpenBSD, Linux i686, AppImage; button na ITAMA para itama ang locator ng isang istasyon sa CALL3.TXT; Layo at Dgrd na may klasikong Dgrd sa 144 MHz, habang ang Dgrd ayon sa banda ay nananatili sa DGRD ayon sa frequency; Aking horizon na may mga lilang kahon mula sa Tanaw ng langit at oras na kinuha sa talahanayan ng pagpaplano; Mga istasyong susubukan na may oras mula sa talahanayan, scroll bar at opsiyong alisin ang mga istasyon ng sariling bansa (cty.dat); gain ng yagi mula sa talaan ng DL6WU (G3SEK), ang pormulang iniuugnay kay W8IO ay sa ilalim lang ng 10 element; mga drop-down list at numeric box sa istilo ng YA-MS; mga transverter sa 144 MHz sa manwal.
