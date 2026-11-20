@@ -673,7 +673,7 @@ jobs:
           mkdir -p out/vecchi
           if [ "$V" = "1.9.3" ]; then bash packaging/nomi-vecchi.sh "$V" out; fi
           # impronte SHA-256 di tutti i pacchetti
-          ( cd out && for f in windows/* linux/* macos/* vecchi/*; do [ -f "$f" ] && sha256sum "$f" | sed 's|  .*/|  |'; done ) > SHA256SUMS.txt
+          ( cd out && for f in windows/* linux/* macos/* vecchi/*; do if [ -f "$f" ]; then sha256sum "$f" | sed 's|  .*/|  |'; fi; done ) > SHA256SUMS.txt
           cat SHA256SUMS.txt
           bash packaging/release-notes.sh "$V" > notes.md
           gh release create "$TAG" out/windows/* out/linux/* out/macos/* $(ls out/vecchi/* 2>/dev/null) SHA256SUMS.txt --target "$GITHUB_SHA" --title "YAEC ${V}" --notes-file notes.md
