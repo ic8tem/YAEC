@@ -44,7 +44,7 @@ jobs:
           python3 tools/call3_attivi.py /tmp/d/attivi.gz /tmp/d/call3-attivi.new --tutti /tmp/d/call3.new.gz \
             && mv /tmp/d/call3-attivi.new /tmp/d/call3-attivi.txt && mv /tmp/d/call3.new.gz /tmp/d/call3.gz || true
           # elenco di PA0PLY (432 e 1296 MHz): se il sito non risponde o il PDF non si legge resta il file del giorno prima
-          pip install -q pdfplumber==0.11.4 && python3 tools/pa0ply.py /tmp/d/pa0ply.gz || true
+          pip install -q pdfplumber==0.11.4 && python3 tools/pa0ply.py /tmp/d/pa0ply.gz ${{ inputs.prova && '--debug' || '' }} || true
           if [ "${{ inputs.prova }}" = "true" ]; then
             mkdir -p /tmp/prova && cp /tmp/d/*.gz /tmp/prova/ 2>/dev/null || true
             if [ -f /tmp/d/pa0ply.gz ]; then zcat /tmp/d/pa0ply.gz | sed 's/^/PA0PLY|/'; fi

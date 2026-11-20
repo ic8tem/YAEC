@@ -46,50 +46,88 @@ def watt(s):
     return ('%g' % v) if v > 0 else ''
 
 
-def righe_pdf(dati):
-    """Righe del PDF come elenco di (nominativo, locator, antenna, potenza), colonne dalla riga d'intestazione."""
+def _colonne_testa(celle):
+    """indice di colonna per nome, dalla riga d'intestazione di una tabella"""
+    col = {}
+    for i, c in enumerate(celle):
+        t = (c or '').strip().lower().rstrip(':')
+        for nome, chiavi in (('call', ('call', 'callsign')), ('locator', ('locator', 'loc', 'qra', 'qra loc')),
+                             ('antenna', ('antenna', 'antennas')), ('power', ('power', 'pwr', 'power (w)'))):
+            if t in chiavi and nome not in col:
+                col[nome] = i
+    return col if all(k in col for k in ('call', 'antenna', 'power')) else None
+
+
+def _voce(c, loc, ant, pw):
+    c = (c or '').strip().upper()
+    if not CALL.match(c):
+        return None
+    loc = (loc or '').strip().upper()
+    if not LOC.match(loc):
+        loc = ''
+    ant = re.sub(r'\s+', ' ', (ant or '')).strip()
+    return (c, loc, ant, watt(pw or ''))
+
+
+def righe_pdf(dati, debug=False):
+    """Righe del PDF come (nominativo, locator, antenna, potenza). Prima le tabelle con le righe di griglia
+    (pdfplumber), poi le parole allineate alle colonne dell'intestazione."""
     import pdfplumber
     out = []
     with pdfplumber.open(io.BytesIO(dati)) as pdf:
         col = None
+        for strategia in ({}, {'vertical_strategy': 'text', 'horizontal_strategy': 'text'}):
+            out = []
+            col = None
+            for pg in pdf.pages:
+                for tab in pg.extract_tables(strategia) or []:
+                    for celle in tab:
+                        cc = _colonne_testa(celle)
+                        if cc:
+                            col = cc
+                            continue
+                        if not col or len(celle) <= max(col.values()):
+                            continue
+                        v = _voce(celle[col['call']], celle[col['locator']] if 'locator' in col else '',
+                                  celle[col['antenna']], celle[col['power']])
+                        if v:
+                            out.append(v)
+            if debug:
+                print('DEBUG strategia', strategia or 'righe', 'righe lette', len(out), out[:5])
+            if len(out) >= 20:
+                return out
+        # ultima possibilità: parole e colonne dell'intestazione (confine a metà tra due titoli)
+        out = []
+        tit = None
         for pg in pdf.pages:
-            parole = pg.extract_words(keep_blank_chars=False, use_text_flow=False, x_tolerance=1.5, y_tolerance=2)
-            # raggruppa per riga (y)
+            parole = pg.extract_words(x_tolerance=1.5, y_tolerance=2)
             righe = {}
             for w in parole:
-                k = round(w['top'] / 3.0)
-                righe.setdefault(k, []).append(w)
+                righe.setdefault(round(w['top'] / 3.0), []).append(w)
             for k in sorted(righe):
                 ws = sorted(righe[k], key=lambda w: w['x0'])
-                testi = [w['text'] for w in ws]
-                low = [t.lower() for t in testi]
+                low = [w['text'].lower() for w in ws]
                 if 'call' in low and 'antenna' in low and 'power' in low:
-                    # inizio di ogni colonna = x0 della parola d'intestazione
-                    col = {}
-                    for w in ws:
-                        t = w['text'].lower().rstrip(':')
-                        if t in ('call', 'locator', 'firstname', 'state', 'antenna', 'power', 'e-mail', 'email', 'ham', 'ham-site'):
-                            col.setdefault('email' if t in ('e-mail', 'email') else ('ham' if t.startswith('ham') else t), w['x0'])
+                    tit = [(w['text'].lower(), w['x0'], w['x1']) for w in ws]
+                    if debug:
+                        print('DEBUG titoli', tit)
                     continue
-                if not col or 'call' not in col or 'antenna' not in col or 'power' not in col:
+                if not tit:
                     continue
-                ordine = sorted(col.items(), key=lambda kv: kv[1])
-                campi = {n: [] for n, _ in ordine}
+                confini = [(tit[i][0], (tit[i - 1][2] + tit[i][1]) / 2 if i else -1e9) for i in range(len(tit))]
+                campi = {n: [] for n, _ in confini}
                 for w in ws:
-                    nome = ordine[0][0]
-                    for n, x in ordine:
-                        if w['x0'] >= x - 2:
+                    nome = confini[0][0]
+                    for n, x in confini:
+                        if (w['x0'] + w['x1']) / 2 >= x:
                             nome = n
                     campi[nome].append(w['text'])
-                c = ' '.join(campi.get('call', [])).strip().upper()
-                if not CALL.match(c):
-                    continue
-                loc = ' '.join(campi.get('locator', [])).strip().upper()
-                if not LOC.match(loc):
-                    loc = ''
-                ant = ' '.join(campi.get('antenna', [])).strip()
-                pw = watt(' '.join(campi.get('power', [])))
-                out.append((c, loc, re.sub(r'[\t\r\n]+', ' ', ant), pw))
+                v = _voce(' '.join(campi.get('call', [])), ' '.join(campi.get('locator', [])),
+                          ' '.join(campi.get('antenna', [])), ' '.join(campi.get('power', [])))
+                if v:
+                    out.append(v)
+        if debug:
+            print('DEBUG parole', len(out), out[:5])
     return out
 
 
@@ -124,7 +162,7 @@ def main():
             print('banda %d: %s invariato (%d stazioni)' % (b, nome, len(vecchio[b])))
             continue
         try:
-            r = righe_pdf(scarica(link[b]))
+            r = righe_pdf(scarica(link[b]), '--debug' in sys.argv)
         except Exception as e:
             print('banda %d: PDF non leggibile (%s), resta l\'elenco di prima' % (b, e))
             r = []
