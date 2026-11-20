@@ -66,7 +66,12 @@ def _voce(c, loc, ant, pw):
     if not LOC.match(loc):
         loc = ''
     ant = re.sub(r'\s+', ' ', (ant or '')).strip()
-    return (c, loc, ant, watt(pw or ''))
+    pw = (pw or '').strip()
+    # un'antenna lunga sconfina nella colonna della potenza: "4x23el H+1x23el750" -> "4x23el H+1x23el", 750
+    m = re.match(r'^(.*[A-Za-z)])(\d{2,4})$', ant)
+    if not pw and m:
+        ant, pw = m.group(1), m.group(2)
+    return (c, loc, ant, watt(pw))
 
 
 def righe_pdf(dati, debug=False):
@@ -105,8 +110,6 @@ def righe_pdf(dati, debug=False):
                         if (w['x0'] + w['x1']) / 2 >= x:
                             nome = n
                     campi[nome].append(w['text'])
-                if debug and len(out) % 60 == 0:
-                    print('DEBUG riga', campi, [(w['text'], round(w['x0']), round(w['top'], 1)) for w in ws][:4], tit[:3])
                 v = _voce(' '.join(campi.get('call', [])), ' '.join(campi.get('locator', [])),
                           ' '.join(campi.get('antenna', [])), ' '.join(campi.get('power', [])))
                 if v:
