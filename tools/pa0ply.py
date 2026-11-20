@@ -143,7 +143,7 @@ def main():
         print('banda %d: %s, %d stazioni' % (b, nome, len(l)))
     if not nuovo:
         sys.exit('nessuna banda letta')
-    ora = dt.datetime.utcnow().strftime('%Y-%m-%dT%H:%MZ')
+    ora = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%MZ')
     with gzip.open(file, 'wt', encoding='utf-8') as f:
         f.write('# %s | %s | %s\n' % (PAGINA, ora, ' '.join('%d=%s' % (b, testa[b]) for b in sorted(testa))))
         for b in sorted(nuovo):

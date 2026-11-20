@@ -47,7 +47,7 @@ jobs:
           pip install -q pdfplumber==0.11.4 && python3 tools/pa0ply.py /tmp/d/pa0ply.gz || true
           if [ "${{ inputs.prova }}" = "true" ]; then
             mkdir -p /tmp/prova && cp /tmp/d/*.gz /tmp/prova/ 2>/dev/null || true
-            for f in /tmp/d/pa0ply.gz; do [ -f "$f" ] && zcat "$f" | head -5 && zcat "$f" | wc -l; done
+            if [ -f /tmp/d/pa0ply.gz ]; then zcat /tmp/d/pa0ply.gz | sed 's/^/PA0PLY|/'; fi
             exit 0
           fi
           git config user.name "github-actions[bot]"
