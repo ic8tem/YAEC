@@ -70,53 +70,25 @@ def _voce(c, loc, ant, pw):
 
 
 def righe_pdf(dati, debug=False):
-    """Righe del PDF come (nominativo, locator, antenna, potenza). Prima le tabelle con le righe di griglia
-    (pdfplumber), poi le parole allineate alle colonne dell'intestazione."""
+    """Righe del PDF come (nominativo, locator, antenna, potenza), dalle parole allineate alle colonne dell'intestazione."""
     import pdfplumber
     out = []
     with pdfplumber.open(io.BytesIO(dati)) as pdf:
-        col = None
-        for strategia in ({}, {'vertical_strategy': 'text', 'horizontal_strategy': 'text'}):
-            out = []
-            col = None
-            for pg in pdf.pages:
-                for tab in pg.extract_tables(strategia) or []:
-                    for celle in tab:
-                        cc = _colonne_testa(celle)
-                        if cc:
-                            col = cc
-                            continue
-                        if not col or len(celle) <= max(col.values()):
-                            continue
-                        v = _voce(celle[col['call']], celle[col['locator']] if 'locator' in col else '',
-                                  celle[col['antenna']], celle[col['power']])
-                        if v:
-                            out.append(v)
-            if debug:
-                print('DEBUG strategia', strategia or 'righe', 'righe lette', len(out), out[:5])
-                if strategia:
-                    for npg, pg in enumerate(pdf.pages[:3]):
-                        for tab in (pg.extract_tables(strategia) or [])[:1]:
-                            for celle in tab[:4]:
-                                print('DEBUG pag', npg, 'celle', celle)
-                        ws = pg.extract_words(x_tolerance=1.5, y_tolerance=2)
-                        righe = {}
-                        for w in ws:
-                            righe.setdefault(round(w['top'] / 3.0), []).append(w)
-                        for kk in sorted(righe)[:5]:
-                            print('DEBUG pag', npg, 'parole', [(w['text'], round(w['x0']), round(w['x1'])) for w in sorted(righe[kk], key=lambda w: w['x0'])])
-            if len(out) >= 20:
-                return out
-        # ultima possibilità: parole e colonne dell'intestazione (confine a metà tra due titoli)
+        # parole della pagina e colonne dell'intestazione: il confine tra due colonne sta a metà tra i due titoli
+        # (i dati partono qualche punto a sinistra del titolo: 2 x 14el a x=273 sotto Antenna a x=276)
         out = []
         tit = None
         for pg in pdf.pages:
-            parole = pg.extract_words(x_tolerance=1.5, y_tolerance=2)
-            righe = {}
+            parole = sorted(pg.extract_words(x_tolerance=1.5, y_tolerance=2), key=lambda w: w['top'])
+            # righe: parole con la stessa altezza (entro 2,5 punti)
+            righe = []
             for w in parole:
-                righe.setdefault(round(w['top'] / 3.0), []).append(w)
-            for k in sorted(righe):
-                ws = sorted(righe[k], key=lambda w: w['x0'])
+                if righe and abs(w['top'] - righe[-1][0]['top']) <= 2.5:
+                    righe[-1].append(w)
+                else:
+                    righe.append([w])
+            for riga in righe:
+                ws = sorted(riga, key=lambda w: w['x0'])
                 low = [w['text'].lower() for w in ws]
                 if 'call' in low and 'antenna' in low and 'power' in low:
                     tit = [(w['text'].lower(), w['x0'], w['x1']) for w in ws]
