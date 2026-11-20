@@ -105,6 +105,8 @@ def righe_pdf(dati, debug=False):
                         if (w['x0'] + w['x1']) / 2 >= x:
                             nome = n
                     campi[nome].append(w['text'])
+                if debug and len(out) % 60 == 0:
+                    print('DEBUG riga', campi, [(w['text'], round(w['x0']), round(w['top'], 1)) for w in ws][:4], tit[:3])
                 v = _voce(' '.join(campi.get('call', [])), ' '.join(campi.get('locator', [])),
                           ' '.join(campi.get('antenna', [])), ' '.join(campi.get('power', [])))
                 if v:
