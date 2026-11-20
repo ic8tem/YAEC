@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.5
+﻿YAEC – Yet Another EME Calc 1.9.6
 oleh Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Kalkulator untuk radio amatir yang bekerja di EME (Bumi–Bulan–Bumi) dari 50 
 Kode sumber dan unduhan: https://github.com/ic8tem/YAEC/releases
 
 INSTALASI – WINDOWS
-1. Unduh YAEC-1.9.5-windows-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
+1. Unduh YAEC-1.9.6-windows-x64-setup.exe dari halaman Releases lalu jalankan. Program ini memasang YAEC di Dokumen\YAEC, tanpa hak administrator, dengan pintasan di menu Start dan di desktop, serta program pencopot instalasi.
 2. Jika muncul peringatan SmartScreen: "Info selengkapnya" → "Tetap jalankan".
-3. Tanpa instalasi: ekstrak YAEC-1.9.5-windows-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
+3. Tanpa instalasi: ekstrak YAEC-1.9.6-windows-x64-portatile.zip ke folder yang dapat Anda tulisi, lalu jalankan YAEC.exe.
 
 INSTALASI – LINUX
 YAEC berjalan dengan Mono, runtime .NET yang bebas.
-- Debian, Ubuntu, Mint: unduh yaec_1.9.5_amd64.deb dan pasang dengan
-      sudo apt install ./yaec_1.9.5_amd64.deb
+- Debian, Ubuntu, Mint: unduh yaec_1.9.6_amd64.deb dan pasang dengan
+      sudo apt install ./yaec_1.9.6_amd64.deb
   (Mono juga ikut terpasang). YAEC dijalankan dari menu aplikasi atau dengan perintah "yaec".
-- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) lalu jalankan ./install.sh.
-- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
+- Distribusi lain: pasang Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), ekstrak YAEC-1.9.6-linux-x64.tar.gz (ARM: YAEC-1.9.6-linux-arm64.tar.gz, YAEC-1.9.6-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.6-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.6-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.6-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.6-alpine-x64.tar.gz, YAEC-1.9.6-alpine-arm64.tar.gz) lalu jalankan ./install.sh.
+- Fedora, openSUSE: yaec-1.9.6.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.6-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.6-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.6-x86_64.AppImage, YAEC-1.9.6-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.6_armhf.deb · Windows ARM64: YAEC-1.9.6-windows-arm64-setup.exe, YAEC-1.9.6-windows-arm64-portatile.zip
 
 INSTALASI – macOS (eksperimental)
 1. Pasang Mono untuk macOS (https://www.mono-project.com/download/stable/) dan XQuartz (https://www.xquartz.org).
-2. Buka YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
+2. Buka YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) dan seret YAEC ke Aplikasi. Pertama kali: klik kanan YAEC → Buka (aplikasi ini tidak ditandatangani oleh Apple).
 
 PEMBARUAN OTOMATIS
 Saat dijalankan, YAEC memeriksa GitHub untuk versi baru dan memperbarui dirinya sendiri (Windows, arsip portabel .tar.gz, AppImage, aplikasi macOS), dengan memeriksa sidik jari SHA-256. Paket .deb, .rpm, Arch, Slackware diperbarui dengan manajer paket sistem: YAEC memberi tahu versi baru dan membuka halaman GitHub.
 
 MEMERIKSA FILE YANG DIUNDUH (SHA-256)
 Setiap release berisi SHA256SUMS.txt dengan hash SHA-256 setiap paket. Bandingkan dengan hash file yang Anda unduh:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.6-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Jika kedua nilai berbeda, jangan pasang file tersebut: unduh ulang.
@@ -43,6 +43,7 @@ Kesalahan, data yang lebih baik, terjemahan: ccerrotta@gmail.com · ic8tem@gmail
 
 RIWAYAT VERSI
 Versi sebelum 1.0 disebut beta.
+- 1.9.6 - Risiko polarisasi: di kotak kedua stasiun Anda memilih polarisasi antena (H, V, H dan V (XPOL), sirkular; untuk DX juga «sesuai pita»); YAEC menandai saat kontak berisiko tanpa polarisasi kedua (MNR hingga 432 MHz, pergeseran spasial di atasnya) dengan pita di «Jendela bersama», baris di kartu DX, simbol ⇄ di kalender dan label di «Stasiun untuk dicoba»; peringatan sembul hanya muncul pada risiko merah; paragraf baru di manual.
 - 1.9.5 - Anggaran EME yagi dan piringan: biaya rugi 0,1 dB lebih sebelum preamp (PA3CSG) dan bagian baru Uji stasiun dengan G/T pada langit dingin dan faktor Y yang diperkirakan pada Matahari, Bulan, Cas A, dan tanah (G3LTF, EMECalc VK3UM); anggaran EME piringan: penurunan iluminasi di tepi dan jaring piringan, dengan Tant diperkirakan dari langit, spillover, dan jaring, serta G/T terukur G3LTF sebagai pembanding; paragraf baru di manual; medan DX: cakrawala SRTM1 di sekitar lokatornya di tab Cakrawala saya, diperhitungkan oleh jendela bersama, bilah 24 jam, kubah langit, dan Stasiun untuk dicoba (lokator minimal 6 karakter); SWR antena dalam uji stasiun (AEH pers. 41-19); diameter Matahari 0,524° hingga 0,542° menurut jarak Bumi–Matahari; catatan «YAEC menghitung, tidak merancang peralatan» di sumber dan kiat.
 - 1.9.3 - Nama paket sama dengan YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); paket .rpm, Arch, dan Slackware juga untuk ARM; catatan rilis berisi tabel dengan tautan ke setiap paket untuk setiap sistem. Versi ini juga berisi berkas dengan nama lama, hanya untuk pembaruan otomatis dari 1.9.1 dan 1.9.2.
 - 1.9.2 - Tab baru Derau langit (Skynoise) di Perencanaan: suhu antena dihitung dengan metode G8ONH dan G4SWX dari pola lengkap antena (berkas .out NEC, YA-NEC, atau berkas Gaussian) dan peta langit (Remazeilles, Haslam, GSM 2008 atau LFmap) pada 50, 144, 432 MHz dan 23 cm, dengan lintasan Bulan selama sebulan, suhu selama lintasan untuk Anda dan untuk DX, pengaruh pada Anggaran EME yagi, dan perbandingan dengan DJ9BV; uji otomatis di compila.bat; di manual TEORI DAN TIPS EME: derau langit dengan perbandingan sumber, penguatan parabola (PE1RKI atau perhitungan per komponen, Ruze), fokus utama di atas 2320 MHz, rotasi feed, dan Bulan yang disinari berkas (BWF).

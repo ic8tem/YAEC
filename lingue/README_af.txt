@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.5
+﻿YAEC – Yet Another EME Calc 1.9.6
 deur Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Sakrekenaar vir radioamateurs wat EME (Aarde–Maan–Aarde) van 50 MHz tot 23 c
 Bronkode en aflaai: https://github.com/ic8tem/YAEC/releases
 
 INSTALLASIE – WINDOWS
-1. Laai YAEC-1.9.5-windows-x64-setup.exe van die Releases-bladsy af en voer dit uit. Dit installeer YAEC in Documents\YAEC, sonder administrateurregte, met kortpaaie in die Start-kieslys en op die werkskerm, en 'n deïnstalleerder.
+1. Laai YAEC-1.9.6-windows-x64-setup.exe van die Releases-bladsy af en voer dit uit. Dit installeer YAEC in Documents\YAEC, sonder administrateurregte, met kortpaaie in die Start-kieslys en op die werkskerm, en 'n deïnstalleerder.
 2. As die SmartScreen-waarskuwing verskyn: "More info" → "Run anyway".
-3. Sonder installasie: pak YAEC-1.9.5-windows-x64-portatile.zip uit in 'n gids waarin jy kan skryf en begin YAEC.exe.
+3. Sonder installasie: pak YAEC-1.9.6-windows-x64-portatile.zip uit in 'n gids waarin jy kan skryf en begin YAEC.exe.
 
 INSTALLASIE – LINUX
 YAEC werk met Mono, die vrye .NET-looptydomgewing.
-- Debian, Ubuntu, Mint: laai yaec_1.9.5_amd64.deb af en installeer dit met
-      sudo apt install ./yaec_1.9.5_amd64.deb
+- Debian, Ubuntu, Mint: laai yaec_1.9.6_amd64.deb af en installeer dit met
+      sudo apt install ./yaec_1.9.6_amd64.deb
   (dit installeer ook Mono). YAEC begin uit die toepassingskieslys of met die opdrag "yaec".
-- Ander distribusies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) uit en voer ./install.sh uit.
-- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
+- Ander distribusies: installeer Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), pak YAEC-1.9.6-linux-x64.tar.gz (ARM: YAEC-1.9.6-linux-arm64.tar.gz, YAEC-1.9.6-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.6-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.6-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.6-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.6-alpine-x64.tar.gz, YAEC-1.9.6-alpine-arm64.tar.gz) uit en voer ./install.sh uit.
+- Fedora, openSUSE: yaec-1.9.6.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.6-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.6-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.6-x86_64.AppImage, YAEC-1.9.6-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.6_armhf.deb · Windows ARM64: YAEC-1.9.6-windows-arm64-setup.exe, YAEC-1.9.6-windows-arm64-portatile.zip
 
 INSTALLASIE – macOS (eksperimenteel)
 1. Installeer Mono vir macOS (https://www.mono-project.com/download/stable/) en XQuartz (https://www.xquartz.org).
-2. Maak YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) oop en sleep YAEC na Applications. Die eerste keer: regsklik op YAEC → Open (die toep is nie deur Apple onderteken nie).
+2. Maak YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) oop en sleep YAEC na Applications. Die eerste keer: regsklik op YAEC → Open (die toep is nie deur Apple onderteken nie).
 
 OUTOMATIESE OPDATERINGS
 By die begin kyk YAEC op GitHub of daar 'n nuwe weergawe is en werk homself by (Windows, draagbare .tar.gz-argiewe, AppImage, macOS-toep), met 'n kontrole van die SHA-256-vingerafdruk. Die .deb, .rpm, Arch, Slackware-pakkette word eerder met die stelsel se pakketbestuurder bygewerk: YAEC meld die nuwe weergawe en maak die GitHub-blad oop.
 
 KONTROLE VAN DIE AFGELAAIDE LÊERS (SHA-256)
 Elke release bevat SHA256SUMS.txt met die SHA-256-hash van elke pakket. Vergelyk dit met dié van die afgelaaide lêer:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.6-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 As die twee waardes verskil, moenie die lêer installeer nie: laai dit weer af.
@@ -43,6 +43,7 @@ Foute, beter data, vertalings: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 WEERGAWEGESKIEDENIS
 Weergawes voor 1.0 word beta genoem.
+- 1.9.6 - Polarisasierisiko: in die blokke van die twee stasies kies jy die polarisasie van die antenna (H, V, H en V (XPOL), sirkulêr; vir die DX ook «volgens die band»); YAEC wys wanneer die kontak sonder die tweede polarisasie in gevaar is (MNR tot 432 MHz, ruimtelike verskuiwing hoër op) met 'n strook in «Gemeenskaplike venster», 'n ry op die DX-kaart, die simbool ⇄ in die kalender en 'n etiket in «Stasies om te probeer»; die opspringwaarskuwing verskyn net by rooi risiko; nuwe paragraaf in die handleiding.
 - 1.9.5 - EME-begroting yagi's en skottels: koste van 0,1 dB meer verlies voor die voorversterker (PA3CSG) en nuwe afdeling Stasietoets met G/T op koue hemel en die verwagte Y-faktor op die Son, Maan, Cas A en grond (G3LTF, VK3UM se EMECalc); EME-begroting skottels: beligtingsdaling by die rand en skottelgaas, met Tant geskat uit hemel, oorspoel en gaas, en G3LTF se gemete G/T ter vergelyking; nuwe paragraaf in die handleiding; terrein van die DX: SRTM1-horison rondom sy locator in die oortjie My horison, in ag geneem deur gemeenskaplike vensters, die 24-uur-balk, die lugaansig en Stasies om te probeer (locator van minstens 6 karakters); SWV van die antenna in die stasietoets (AEH vgl. 41-19); Sondeursnee van 0,524° tot 0,542° met die afstand Aarde–Son; nota «YAEC bereken, dit ontwerp nie toerusting nie» in die bronne en wenke.
 - 1.9.3 - Pakketname dieselfde as dié van YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); .rpm-, Arch- en Slackware-pakkette ook vir ARM; in die vrystellingsnotas 'n tabel met die skakel na elke pakket vir elke stelsel. Hierdie weergawe bevat ook die lêers met die ou name, slegs vir die outomatiese opdatering vanaf 1.9.1 en 1.9.2.
 - 1.9.2 - Nuwe oortjie Lugruis (Skynoise) onder Beplanning: antennatemperatuur bereken met die metode van G8ONH en G4SWX uit die volledige antennapatroon (NEC-.out-lêer, YA-NEC of Gaussiese bundel) en die hemelkaart (Remazeilles, Haslam, GSM 2008 of LFmap) op 50, 144, 432 MHz en 23 cm, met die Maan se baan deur die maand, die temperatuur tydens die deurgang vir jou en vir die DX, die uitwerking op die EME-begroting yagi en die vergelyking met DJ9BV; outomatiese toets in compila.bat; in die handleiding TEORIE EN WENKE OOR EME: lugruis met die bronne vergelyk, skottelwins (PE1RKI of berekening item vir item, Ruze), primêre fokus bo 2320 MHz, draaiing van die voer en die Maan wat deur die bundel verlig word (BWF).

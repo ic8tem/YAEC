@@ -1,4 +1,4 @@
-﻿YAEC – Yet Another EME Calc 1.9.5
+﻿YAEC – Yet Another EME Calc 1.9.6
 por Costantino IC8TEM
 ==========================================
 
@@ -6,28 +6,28 @@ Calculadora para radioamadores que operam em EME (Terra–Lua–Terra) de 50 MHz
 Código-fonte e download: https://github.com/ic8tem/YAEC/releases
 
 INSTALAÇÃO – WINDOWS
-1. Baixe YAEC-1.9.5-windows-x64-setup.exe da página Releases e execute-o. Ele instala o YAEC em Documentos\YAEC, sem direitos de administrador, com atalhos no menu Iniciar e na área de trabalho e o programa de desinstalação.
+1. Baixe YAEC-1.9.6-windows-x64-setup.exe da página Releases e execute-o. Ele instala o YAEC em Documentos\YAEC, sem direitos de administrador, com atalhos no menu Iniciar e na área de trabalho e o programa de desinstalação.
 2. Se aparecer o aviso do SmartScreen: "Mais informações" → "Executar assim mesmo".
-3. Sem instalação: extraia YAEC-1.9.5-windows-x64-portatile.zip em uma pasta onde você tenha permissão de gravação e inicie YAEC.exe.
+3. Sem instalação: extraia YAEC-1.9.6-windows-x64-portatile.zip em uma pasta onde você tenha permissão de gravação e inicie YAEC.exe.
 
 INSTALAÇÃO – LINUX
 O YAEC funciona com o Mono, o runtime .NET livre.
-- Debian, Ubuntu, Mint: baixe yaec_1.9.5_amd64.deb e instale-o com
-      sudo apt install ./yaec_1.9.5_amd64.deb
+- Debian, Ubuntu, Mint: baixe yaec_1.9.6_amd64.deb e instale-o com
+      sudo apt install ./yaec_1.9.6_amd64.deb
   (instala também o Mono). O YAEC é iniciado pelo menu de aplicativos ou com o comando "yaec".
-- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.9.5-linux-x64.tar.gz (ARM: YAEC-1.9.5-linux-arm64.tar.gz, YAEC-1.9.5-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.5-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.5-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.5-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.5-alpine-x64.tar.gz, YAEC-1.9.5-alpine-arm64.tar.gz) e execute ./install.sh.
-- Fedora, openSUSE: yaec-1.9.5.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.5-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.5-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.5-x86_64.AppImage, YAEC-1.9.5-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.5_armhf.deb · Windows ARM64: YAEC-1.9.5-windows-arm64-setup.exe, YAEC-1.9.5-windows-arm64-portatile.zip
+- Outras distribuições: instale o Mono (Fedora: sudo dnf install mono-complete; Arch: sudo pacman -S mono; openSUSE: sudo zypper install mono-complete), extraia YAEC-1.9.6-linux-x64.tar.gz (ARM: YAEC-1.9.6-linux-arm64.tar.gz, YAEC-1.9.6-linux-armv7l.tar.gz; Linux i686: YAEC-1.9.6-linux-x86.tar.gz; FreeBSD amd64: YAEC-1.9.6-freebsd-x64.tar.gz; OpenBSD amd64: YAEC-1.9.6-openbsd-x64.tar.gz; Alpine Linux: YAEC-1.9.6-alpine-x64.tar.gz, YAEC-1.9.6-alpine-arm64.tar.gz) e execute ./install.sh.
+- Fedora, openSUSE: yaec-1.9.6.x86_64.rpm · Arch Linux, Manjaro: yaec-1.9.6-1-x86_64.pkg.tar.zst · Slackware: yaec-1.9.6-x86_64-1_ic8tem.txz · AppImage: YAEC-1.9.6-x86_64.AppImage, YAEC-1.9.6-aarch64.AppImage · Raspberry Pi OS 32 bit: yaec_1.9.6_armhf.deb · Windows ARM64: YAEC-1.9.6-windows-arm64-setup.exe, YAEC-1.9.6-windows-arm64-portatile.zip
 
 INSTALAÇÃO – macOS (experimental)
 1. Instale o Mono para macOS (https://www.mono-project.com/download/stable/) e o XQuartz (https://www.xquartz.org).
-2. Abra YAEC-1.9.5-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.5-mac-intel.dmg (Intel) e arraste o YAEC para Aplicativos. Na primeira vez: clique com o botão direito em YAEC → Abrir (o app não é assinado pela Apple).
+2. Abra YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) e arraste o YAEC para Aplicativos. Na primeira vez: clique com o botão direito em YAEC → Abrir (o app não é assinado pela Apple).
 
 ATUALIZAÇÕES AUTOMÁTICAS
 Ao iniciar, o YAEC verifica no GitHub se há uma versão nova e se atualiza sozinho (Windows, arquivos portáteis .tar.gz, AppImage, aplicativo para macOS), conferindo a impressão SHA-256. Os pacotes .deb, .rpm, Arch, Slackware são atualizados pelo gerenciador de pacotes do sistema: o YAEC avisa da nova versão e abre a página do GitHub.
 
 VERIFICAÇÃO DOS ARQUIVOS BAIXADOS (SHA-256)
 Cada release contém SHA256SUMS.txt com o hash SHA-256 de cada pacote. Compare-o com o do arquivo baixado:
-- Windows (PowerShell): Get-FileHash .\YAEC-1.9.5-windows-x64-setup.exe -Algorithm SHA256
+- Windows (PowerShell): Get-FileHash .\YAEC-1.9.6-windows-x64-setup.exe -Algorithm SHA256
 - Linux: sha256sum -c --ignore-missing SHA256SUMS.txt
 - macOS: shasum -a 256 -c --ignore-missing SHA256SUMS.txt
 Se os dois valores forem diferentes, não instale o arquivo: baixe-o de novo.
@@ -43,6 +43,7 @@ Erros, dados melhores, traduções: ccerrotta@gmail.com · ic8tem@gmail.com · w
 
 HISTÓRICO DE VERSÕES
 As versões anteriores à 1.0 são chamadas beta.
+- 1.9.6 - Risco de polarização: nos quadros das duas estações você escolhe a polarização da antena (H, V, H e V (XPOL), circular; para o DX também «conforme a banda»); o YAEC indica quando o contato está em risco sem a segunda polarização (MNR até 432 MHz, deslocamento espacial mais acima) com uma faixa em «Janela comum», uma linha no cartão do DX, o símbolo ⇄ no calendário e uma etiqueta em «Estações para testar»; o aviso em janela só aparece com risco vermelho; novo parágrafo no manual.
 - 1.9.5 - Orçamento EME yagi e pratos: custo de mais 0,1 dB de perda antes do pré-amplificador (PA3CSG) e nova seção Teste da estação com o G/T sobre céu frio e o fator Y previsto no Sol, na Lua, em Cas A e no solo (G3LTF, EMECalc de VK3UM); orçamento EME pratos: queda da iluminação na borda e rede do prato, com a Tant estimada a partir do céu, do transbordo e da rede, e o G/T medido por G3LTF para comparação; novo parágrafo no manual; terreno do DX: horizonte SRTM1 em torno do seu locator na aba Meu horizonte, levado em conta pelas janelas comuns, a barra das 24 horas, a Abóbada celeste e Estações para testar (locator de pelo menos 6 caracteres); ROE da antena no teste da estação (AEH eq. 41-19); diâmetro do Sol de 0,524° a 0,542° com a distância Terra–Sol; nota «O YAEC calcula, não projeta equipamentos» nas fontes e nas dicas.
 - 1.9.3 - Nomes dos pacotes iguais aos do YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pacotes .rpm, Arch e Slackware também para ARM; nas notas da versão, uma tabela com o link para cada pacote de cada sistema. Esta versão contém também os arquivos com os nomes antigos, apenas para a atualização automática a partir da 1.9.1 e da 1.9.2.
 - 1.9.2 - Nova aba Ruído do céu (Skynoise) em Planejamento: temperatura de antena calculada com o método de G8ONH e G4SWX a partir do diagrama completo da antena (arquivo .out do NEC, YA-NEC ou feixe gaussiano) e do mapa do céu (Remazeilles, Haslam, GSM 2008 ou LFmap) em 50, 144, 432 MHz e 23 cm, com o percurso da Lua no mês, a temperatura durante a passagem para você e para o DX, o efeito no Balanço EME Yagi e a comparação com DJ9BV; teste automático no compila.bat; no manual TEORIA E CONSELHOS SOBRE EME: o ruído do céu com as fontes comparadas, o ganho das parabólicas (PE1RKI ou cálculo por parcelas, Ruze), o foco primário acima de 2320 MHz, a rotação do alimentador e a Lua iluminada pelo feixe (BWF).
