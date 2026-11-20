@@ -94,6 +94,17 @@ def righe_pdf(dati, debug=False):
                             out.append(v)
             if debug:
                 print('DEBUG strategia', strategia or 'righe', 'righe lette', len(out), out[:5])
+                if strategia:
+                    for npg, pg in enumerate(pdf.pages[:3]):
+                        for tab in (pg.extract_tables(strategia) or [])[:1]:
+                            for celle in tab[:4]:
+                                print('DEBUG pag', npg, 'celle', celle)
+                        ws = pg.extract_words(x_tolerance=1.5, y_tolerance=2)
+                        righe = {}
+                        for w in ws:
+                            righe.setdefault(round(w['top'] / 3.0), []).append(w)
+                        for kk in sorted(righe)[:5]:
+                            print('DEBUG pag', npg, 'parole', [(w['text'], round(w['x0']), round(w['x1'])) for w in sorted(righe[kk], key=lambda w: w['x0'])])
             if len(out) >= 20:
                 return out
         # ultima possibilità: parole e colonne dell'intestazione (confine a metà tra due titoli)
