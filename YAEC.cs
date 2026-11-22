@@ -4042,6 +4042,7 @@ namespace LunaCalc
             "Le due fonti delle stazioni EME in una tabella da ordinare e filtrare: le stazioni attive negli ultimi 90 giorni nella chat EME di N0UK (144 MHz) e l'elenco EME di PA0PLY (432 e 1296 MHz), con distanza e azimut dalla tua stazione e l'impianto come lo interpreta YAEC (antenne, guadagno, potenza, EIRP, polarizzazione). Doppio clic su una riga: la stazione diventa il DX. In alto la fonte, i crediti e i ringraziamenti.",
             "yagi: l'antenna del Budget EME dischi resta com'è",
             "Impianto del DX messo nel Budget EME:",
+            "1.9.7 - Traduzioni completate in bengalese, arabo e turco (62 testi mancanti: perdite e guadagni della catena RX/TX, formula di Friis, schermata principale, descrizione delle linguette); Windows 7, 8 e 8.1 dichiarati nel manifesto del programma.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -6012,6 +6013,7 @@ namespace LunaCalc
             "The two sources of EME stations in a table to sort and filter: the stations active in the last 90 days in the N0UK EME chat (144 MHz) and the PA0PLY EME directory (432 and 1296 MHz), with distance and azimuth from your station and the setup as YAEC interprets it (antennas, gain, power, EIRP, polarization). Double click on a row: the station becomes the DX. At the top, the source, credits and thanks.",
             "yagi: the antenna in EME budget dishes stays as it is",
             "DX setup put into the EME budget:",
+            "1.9.7 - Translations completed in Bengali, Arabic and Turkish (62 missing texts: losses and gains of the RX/TX chain, Friis formula, main screen, description of the tabs); Windows 7, 8 and 8.1 declared in the program manifest.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -7982,6 +7984,7 @@ namespace LunaCalc
             "Die beiden Quellen der EME-Stationen in einer Tabelle zum Sortieren und Filtern: die in den letzten 90 Tagen im EME-Chat von N0UK aktiven Stationen (144 MHz) und die EME-Liste von PA0PLY (432 und 1296 MHz), mit Entfernung und Azimut von deiner Station und der Anlage, wie YAEC sie deutet (Antennen, Gewinn, Leistung, EIRP, Polarisation). Doppelklick auf eine Zeile: die Station wird zum DX. Oben die Quelle, Danksagungen und Dank.",
             "Yagi: die Antenne in «EME-Budget Spiegel» bleibt, wie sie ist",
             "Anlage des DX ins EME-Budget übernommen:",
+            "1.9.7 - Übersetzungen in Bengalisch, Arabisch und Türkisch vervollständigt (62 fehlende Texte: Verluste und Gewinne der RX/TX-Kette, Friis-Formel, Hauptbildschirm, Beschreibung der Registerkarten); Windows 7, 8 und 8.1 im Manifest des Programms angegeben.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -9952,6 +9955,7 @@ namespace LunaCalc
             "Les deux sources des stations EME dans un tableau à trier et filtrer : les stations actives ces 90 derniers jours sur le chat EME de N0UK (144 MHz) et la liste EME de PA0PLY (432 et 1296 MHz), avec la distance et l'azimut depuis ta station et l'installation telle que YAEC l'interprète (antennes, gain, puissance, PIRE, polarisation). Double clic sur une ligne : la station devient le DX. En haut, la source, les crédits et les remerciements.",
             "yagi : l'antenne de «Bilan EME paraboles» reste telle quelle",
             "Installation du DX mise dans le budget EME :",
+            "1.9.7 - Traductions complétées en bengali, arabe et turc (62 textes manquants : pertes et gains de la chaîne RX/TX, formule de Friis, écran principal, description des onglets) ; Windows 7, 8 et 8.1 déclarés dans le manifeste du programme.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -11922,6 +11926,7 @@ namespace LunaCalc
             "Las dos fuentes de estaciones EME en una tabla para ordenar y filtrar: las estaciones activas en los últimos 90 días en el chat EME de N0UK (144 MHz) y la lista EME de PA0PLY (432 y 1296 MHz), con distancia y acimut desde tu estación y la instalación tal como la interpreta YAEC (antenas, ganancia, potencia, PIRE, polarización). Doble clic en una fila: la estación pasa a ser el DX. Arriba, la fuente, los créditos y los agradecimientos.",
             "yagi: la antena de «Balance EME parábolas» queda como está",
             "Instalación del DX puesta en el presupuesto EME:",
+            "1.9.7 - Traducciones completadas en bengalí, árabe y turco (62 textos que faltaban: pérdidas y ganancias de la cadena RX/TX, fórmula de Friis, pantalla principal, descripción de las pestañas); Windows 7, 8 y 8.1 declarados en el manifiesto del programa.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -13892,6 +13897,7 @@ namespace LunaCalc
             "As duas fontes de estações EME numa tabela para ordenar e filtrar: as estações ativas nos últimos 90 dias no chat EME de N0UK (144 MHz) e a lista EME de PA0PLY (432 e 1296 MHz), com distância e azimute a partir da tua estação e a instalação como o YAEC a interpreta (antenas, ganho, potência, PIRE, polarização). Duplo clique numa linha: a estação torna-se o DX. Em cima, a fonte, os créditos e os agradecimentos.",
             "yagi: a antena de «Balanço EME parabólicas» fica como está",
             "Instalação do DX posta no orçamento EME:",
+            "1.9.7 - Traduções concluídas em bengali, árabe e turco (62 textos em falta: perdas e ganhos da cadeia RX/TX, fórmula de Friis, ecrã principal, descrição dos separadores); Windows 7, 8 e 8.1 declarados no manifesto do programa.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -15862,6 +15868,7 @@ namespace LunaCalc
             "EME 电台的两个来源，放在可排序、可筛选的表格中：过去 90 天内在 N0UK 的 EME 聊天室活跃的电台（144 MHz）和 PA0PLY 的 EME 名录（432 和 1296 MHz），附有距你电台的距离和方位角，以及 YAEC 解读的设备（天线、增益、功率、EIRP、极化）。双击一行：该电台成为 DX。顶部是来源、致谢和感谢。",
             "八木：“EME 链路预算 抛物面”中的天线保持不变",
             "DX 的设备已填入 EME 链路预算：",
+            "1.9.7 - 完成孟加拉语、阿拉伯语和土耳其语翻译（补齐 62 条文字：RX/TX 链路的损耗与增益、Friis 公式、主界面、标签页说明）；程序清单中声明支持 Windows 7、8 和 8.1。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -17832,6 +17839,7 @@ namespace LunaCalc
             "EME 局の 2 つの出典を、並べ替えと絞り込みができる表にまとめました：過去 90 日間に N0UK の EME チャットで活動した局（144 MHz）と PA0PLY の EME 名簿（432 と 1296 MHz）。あなたの局からの距離と方位、YAEC が解釈した設備（アンテナ、利得、出力、EIRP、偏波）付き。行をダブルクリック：その局が DX になります。上に出典、クレジット、謝辞があります。",
             "八木：「EME 回線計算 パラボラ」のアンテナはそのまま",
             "DX の設備を EME バジェットに入れました：",
+            "1.9.7 - ベンガル語、アラビア語、トルコ語の翻訳を完成（不足していた 62 項目：RX/TX 系統の損失と利得、Friis の式、メイン画面、タブの説明）。プログラムのマニフェストに Windows 7、8、8.1 を宣言。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -19802,6 +19810,7 @@ namespace LunaCalc
             "EME स्टेशनों के दो स्रोत एक तालिका में जिसे छाँटा और छाना जा सकता है: पिछले 90 दिनों में N0UK के EME चैट में सक्रिय स्टेशन (144 MHz) और PA0PLY की EME सूची (432 और 1296 MHz), आपके स्टेशन से दूरी और दिगंश के साथ, और उपकरण जैसा YAEC उसे समझता है (एंटीना, गेन, शक्ति, EIRP, ध्रुवीकरण)। किसी पंक्ति पर डबल क्लिक: स्टेशन DX बन जाता है। ऊपर स्रोत, श्रेय और धन्यवाद।",
             "यागी: «EME बजट डिश» में एंटीना जैसा है वैसा रहता है",
             "DX का उपकरण EME बजट में डाला गया:",
+            "1.9.7 - बांग्ला, अरबी और तुर्की अनुवाद पूरे (62 छूटे हुए पाठ: RX/TX शृंखला के नुकसान और गेन, Friis सूत्र, मुख्य स्क्रीन, टैब का विवरण); Windows 7, 8 और 8.1 प्रोग्राम के मैनिफ़ेस्ट में घोषित।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -21772,6 +21781,7 @@ namespace LunaCalc
             "EME 국의 두 출처를 정렬하고 거를 수 있는 표로 보여 줍니다: 최근 90일 동안 N0UK EME 채팅에서 활동한 국(144 MHz)과 PA0PLY EME 명부(432와 1296 MHz). 내 국에서의 거리와 방위각, YAEC가 해석한 설비(안테나, 이득, 출력, EIRP, 편파)가 함께 나옵니다. 줄을 더블클릭: 그 국이 DX가 됩니다. 위쪽에 출처, 크레딧, 감사의 말이 있습니다.",
             "야기: «EME 링크 버짓 파라볼라»의 안테나는 그대로입니다",
             "DX 설비를 EME 버짓에 넣었습니다:",
+            "1.9.7 - 벵골어, 아랍어, 터키어 번역 완료(누락된 62개 문구: RX/TX 체인의 손실과 이득, Friis 공식, 주 화면, 탭 설명); 프로그램 매니페스트에 Windows 7, 8, 8.1 명시.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -23742,6 +23752,7 @@ namespace LunaCalc
             "Dua sumber stasiun EME dalam tabel yang dapat diurutkan dan disaring: stasiun yang aktif dalam 90 hari terakhir di obrolan EME N0UK (144 MHz) dan daftar EME PA0PLY (432 dan 1296 MHz), dengan jarak dan azimut dari stasiun Anda serta perangkat sebagaimana ditafsirkan YAEC (antena, penguatan, daya, EIRP, polarisasi). Klik ganda pada baris: stasiun menjadi DX. Di atas: sumber, kredit dan ucapan terima kasih.",
             "yagi: antena di «Anggaran EME parabola» tetap seperti adanya",
             "Perangkat DX dimasukkan ke anggaran EME:",
+            "1.9.7 - Terjemahan bahasa Bengali, Arab, dan Turki dilengkapi (62 teks yang kurang: rugi dan penguatan rantai RX/TX, rumus Friis, layar utama, deskripsi tab); Windows 7, 8, dan 8.1 dinyatakan dalam manifes program.",
         };
 
         public static readonly string[] RU = {
@@ -25713,6 +25724,7 @@ namespace LunaCalc
             "Два источника EME-станций в таблице, которую можно сортировать и фильтровать: станции, активные за последние 90 дней в EME-чате N0UK (144 МГц), и EME-список PA0PLY (432 и 1296 МГц), с расстоянием и азимутом от вашей станции и оборудованием так, как его понимает YAEC (антенны, усиление, мощность, EIRP, поляризация). Двойной щелчок по строке: станция становится DX. Вверху — источник, ссылки на авторов и благодарности.",
             "яги: антенна в «Бюджет EME параболы» остаётся прежней",
             "Оборудование DX занесено в бюджет EME:",
+            "1.9.7 - Завершены переводы на бенгальский, арабский и турецкий (62 недостававших текста: потери и усиления тракта RX/TX, формула Фрииса, главный экран, описание вкладок); Windows 7, 8 и 8.1 указаны в манифесте программы.",
         };
 
         public static readonly string[] UK = {
@@ -27684,6 +27696,7 @@ namespace LunaCalc
             "Два джерела EME-станцій у таблиці, яку можна сортувати й фільтрувати: станції, активні за останні 90 днів в EME-чаті N0UK (144 МГц), і EME-список PA0PLY (432 і 1296 МГц), з відстанню й азимутом від вашої станції та обладнанням так, як його розуміє YAEC (антени, підсилення, потужність, EIRP, поляризація). Подвійне клацання по рядку: станція стає DX. Угорі — джерело, посилання на авторів і подяки.",
             "яги: антена в «Бюджет EME параболи» лишається без змін",
             "Обладнання DX занесено до бюджету EME:",
+            "1.9.7 - Завершено переклади бенгальською, арабською та турецькою (62 тексти, яких бракувало: втрати й підсилення тракту RX/TX, формула Фрііса, головний екран, опис вкладок); Windows 7, 8 і 8.1 зазначено в маніфесті програми.",
         };
 
         public static readonly string[] AF = {
@@ -29655,6 +29668,7 @@ namespace LunaCalc
             "Die twee bronne van EME-stasies in 'n tabel om te sorteer en te filter: die stasies wat in die afgelope 90 dae in die EME-klets van N0UK aktief was (144 MHz) en die EME-lys van PA0PLY (432 en 1296 MHz), met afstand en asimut vanaf jou stasie en die opstelling soos YAEC dit vertolk (antennas, wins, krag, EIRP, polarisasie). Dubbelklik op 'n ry: die stasie word die DX. Bo die bron, erkennings en dank.",
             "yagi: die antenna in «EME-begroting skottels» bly soos dit is",
             "Opstelling van die DX in die EME-begroting gesit:",
+            "1.9.7 - Vertalings in Bengaals, Arabies en Turks voltooi (62 ontbrekende tekste: verliese en winste van die RX/TX-ketting, Friis-formule, hoofskerm, beskrywing van die oortjies); Windows 7, 8 en 8.1 in die program se manifes verklaar.",
         };
 
         public static readonly string[] BN = {
@@ -31625,6 +31639,7 @@ namespace LunaCalc
             "EME স্টেশনের দুটি উৎস সাজানো ও ছাঁকা যায় এমন একটি সারণিতে: গত 90 দিনে N0UK-এর EME চ্যাটে সক্রিয় স্টেশন (144 MHz) এবং PA0PLY-এর EME তালিকা (432 ও 1296 MHz), আপনার স্টেশন থেকে দূরত্ব ও দিগংশসহ এবং YAEC যেভাবে বোঝে সেভাবে সরঞ্জাম (অ্যান্টেনা, গেইন, শক্তি, EIRP, পোলারাইজেশন)। কোনো সারিতে ডাবল ক্লিক: স্টেশনটি DX হয়ে যায়। ওপরে উৎস, কৃতজ্ঞতা ও ধন্যবাদ।",
             "ইয়াগি: «EME বাজেট ডিশ»-এর অ্যান্টেনা যেমন আছে তেমনই থাকে",
             "DX-এর সরঞ্জাম EME বাজেটে বসানো হয়েছে:",
+            "1.9.7 - বাংলা, আরবি ও তুর্কি অনুবাদ সম্পূর্ণ (62টি বাদ পড়া লেখা: RX/TX শৃঙ্খলের ক্ষতি ও গেইন, Friis সূত্র, প্রধান পর্দা, ট্যাবের বিবরণ); প্রোগ্রামের ম্যানিফেস্টে Windows 7, 8 ও 8.1 ঘোষিত।",
         };
 
         public static readonly string[] AR = {
@@ -33595,6 +33610,7 @@ namespace LunaCalc
             "مصدرا محطات EME في جدول يمكن ترتيبه وتصفيته: المحطات النشطة خلال آخر 90 يومًا في دردشة EME لدى N0UK ‏(144 MHz) وقائمة EME لدى PA0PLY ‏(432 و1296 MHz)، مع المسافة والسمت من محطتك والتجهيزات كما يفسرها YAEC (الهوائيات، الكسب، القدرة، EIRP، الاستقطاب). انقر نقرًا مزدوجًا على صف: تصبح المحطة هي DX. في الأعلى المصدر والإشارات والشكر.",
             "ياغي: يبقى هوائي «ميزانية EME الأطباق» كما هو",
             "وُضعت تجهيزات DX في ميزانية EME:",
+            "1.9.7 - اكتملت الترجمات إلى البنغالية والعربية والتركية (62 نصًا ناقصًا: خسائر ومكاسب سلسلة RX/TX، صيغة Friis، الشاشة الرئيسية، وصف التبويبات)؛ أُعلن عن Windows 7 و8 و8.1 في بيان البرنامج.",
         };
 
         public static readonly string[] TR = {
@@ -35565,6 +35581,7 @@ namespace LunaCalc
             "EME istasyonlarının iki kaynağı sıralanıp süzülebilen bir tabloda: son 90 günde N0UK EME sohbetinde aktif olan istasyonlar (144 MHz) ve PA0PLY EME listesi (432 ve 1296 MHz), istasyonuna uzaklık ve azimutla ve YAEC'in yorumladığı donanımla (antenler, kazanç, güç, EIRP, polarizasyon). Bir satıra çift tıkla: istasyon DX olur. Üstte kaynak, emeği geçenler ve teşekkürler.",
             "yagi: «EME bütçesi çanaklar» içindeki anten olduğu gibi kalır",
             "DX'in donanımı EME bütçesine kondu:",
+            "1.9.7 - Bengalce, Arapça ve Türkçe çeviriler tamamlandı (eksik 62 metin: RX/TX zincirinin kayıpları ve kazançları, Friis formülü, ana ekran, sekmelerin açıklaması); Windows 7, 8 ve 8.1 programın manifestosunda belirtildi.",
         };
 
         public static readonly string[] NL = {
@@ -37535,6 +37552,7 @@ namespace LunaCalc
             "De twee bronnen van EME-stations in een tabel om te sorteren en te filteren: de stations die de afgelopen 90 dagen actief waren in de EME-chat van N0UK (144 MHz) en de EME-lijst van PA0PLY (432 en 1296 MHz), met afstand en azimut vanaf jouw station en de opstelling zoals YAEC die uitlegt (antennes, winst, vermogen, EIRP, polarisatie). Dubbelklik op een regel: het station wordt de DX. Bovenaan de bron, vermeldingen en dank.",
             "yagi: de antenne in «EME-budget schotels» blijft zoals ze is",
             "Opstelling van de DX in het EME-budget gezet:",
+            "1.9.7 - Vertalingen in het Bengaals, Arabisch en Turks voltooid (62 ontbrekende teksten: verliezen en versterkingen van de RX/TX-keten, formule van Friis, hoofdscherm, beschrijving van de tabbladen); Windows 7, 8 en 8.1 vermeld in het manifest van het programma.",
         };
 
         public static readonly string[] ET = {
@@ -39505,6 +39523,7 @@ namespace LunaCalc
             "EME-jaamade kaks allikat tabelis, mida saab sorteerida ja filtreerida: viimase 90 päeva jooksul N0UK EME-vestluses aktiivsed jaamad (144 MHz) ja PA0PLY EME-nimekiri (432 ja 1296 MHz), kauguse ja asimuudiga sinu jaamast ning seadmetega nii, nagu YAEC neid tõlgendab (antennid, võimendus, võimsus, EIRP, polarisatsioon). Topeltklõps real: jaam saab DX-iks. Üleval allikas, tunnustused ja tänud.",
             "yagi: «EME eelarve paraboolid» antenn jääb samaks",
             "DX-i seadmed pandi EME-eelarvesse:",
+            "1.9.7 - Tõlked bengali, araabia ja türgi keelde lõpetatud (62 puuduvat teksti: RX/TX-ahela kaod ja võimendused, Friisi valem, põhiekraan, vahelehtede kirjeldus); Windows 7, 8 ja 8.1 programmi manifestis kirjas.",
         };
 
         public static readonly string[] LV = {
@@ -41475,6 +41494,7 @@ namespace LunaCalc
             "Divi EME staciju avoti tabulā, ko var kārtot un filtrēt: stacijas, kas pēdējās 90 dienās bijušas aktīvas N0UK EME tērzēšanā (144 MHz), un PA0PLY EME saraksts (432 un 1296 MHz), ar attālumu un azimutu no tavas stacijas un aprīkojumu tā, kā to interpretē YAEC (antenas, pastiprinājums, jauda, EIRP, polarizācija). Dubultklikšķis uz rindas: stacija kļūst par DX. Augšā avots, atsauces un pateicības.",
             "yagi: antena «EME budžets šķīvji» paliek, kāda ir",
             "DX aprīkojums ielikts EME budžetā:",
+            "1.9.7 - Pabeigti tulkojumi bengāļu, arābu un turku valodā (62 trūkstoši teksti: RX/TX ķēdes zudumi un pastiprinājumi, Friisa formula, galvenais ekrāns, cilņu apraksts); Windows 7, 8 un 8.1 norādīti programmas manifestā.",
         };
 
         public static readonly string[] LT = {
@@ -43445,6 +43465,7 @@ namespace LunaCalc
             "Du EME stočių šaltiniai lentelėje, kurią galima rikiuoti ir filtruoti: per pastarąsias 90 dienų N0UK EME pokalbiuose aktyvios stotys (144 MHz) ir PA0PLY EME sąrašas (432 ir 1296 MHz), su atstumu ir azimutu nuo tavo stoties bei įranga taip, kaip ją interpretuoja YAEC (antenos, stiprinimas, galia, EIRP, poliarizacija). Dukart spustelėk eilutę: stotis tampa DX. Viršuje šaltinis, padėkos ir nuorodos.",
             "yagi: antena «EME biudžetas lėkštės» lieka tokia, kokia yra",
             "DX įranga įrašyta į EME biudžetą:",
+            "1.9.7 - Užbaigti vertimai į bengalų, arabų ir turkų kalbas (62 trūkę tekstai: RX/TX grandinės nuostoliai ir stiprinimai, Friiso formulė, pagrindinis ekranas, skirtukų aprašymas); Windows 7, 8 ir 8.1 nurodytos programos manifeste.",
         };
 
         public static readonly string[] SV = {
@@ -45415,6 +45436,7 @@ namespace LunaCalc
             "De två källorna till EME-stationer i en tabell att sortera och filtrera: stationerna som varit aktiva de senaste 90 dagarna i EME-chatten hos N0UK (144 MHz) och EME-listan från PA0PLY (432 och 1296 MHz), med avstånd och azimut från din station och utrustningen som YAEC tolkar den (antenner, förstärkning, effekt, EIRP, polarisation). Dubbelklicka på en rad: stationen blir DX. Överst källan, erkännanden och tack.",
             "yagi: antennen i «EME-budget parabol» förblir som den är",
             "DX:ens utrustning inlagd i EME-budgeten:",
+            "1.9.7 - Översättningar till bengali, arabiska och turkiska slutförda (62 saknade texter: förluster och förstärkningar i RX/TX-kedjan, Friis formel, huvudskärmen, beskrivning av flikarna); Windows 7, 8 och 8.1 angivna i programmets manifest.",
         };
 
         public static readonly string[] NB = {
@@ -47385,6 +47407,7 @@ namespace LunaCalc
             "De to kildene til EME-stasjoner i en tabell som kan sorteres og filtreres: stasjonene som har vært aktive de siste 90 dagene i EME-chatten til N0UK (144 MHz) og EME-listen til PA0PLY (432 og 1296 MHz), med avstand og asimut fra stasjonen din og oppsettet slik YAEC tolker det (antenner, forsterkning, effekt, EIRP, polarisasjon). Dobbeltklikk på en rad: stasjonen blir DX. Øverst kilden, kreditering og takk.",
             "yagi: antennen i «EME-budsjett parabol» forblir som den er",
             "DX-ens oppsett lagt inn i EME-budsjettet:",
+            "1.9.7 - Oversettelser til bengali, arabisk og tyrkisk fullført (62 manglende tekster: tap og forsterkning i RX/TX-kjeden, Friis' formel, hovedskjermen, beskrivelse av fanene); Windows 7, 8 og 8.1 oppgitt i programmets manifest.",
         };
 
         public static readonly string[] IS = {
@@ -49355,6 +49378,7 @@ namespace LunaCalc
             "Tvær heimildir EME-stöðva í töflu sem hægt er að raða og sía: stöðvarnar sem hafa verið virkar síðustu 90 daga í EME-spjalli N0UK (144 MHz) og EME-listi PA0PLY (432 og 1296 MHz), með fjarlægð og stefnu frá stöðinni þinni og búnaðinum eins og YAEC túlkar hann (loftnet, ávinningur, afl, EIRP, skautun). Tvísmelltu á línu: stöðin verður DX. Efst heimildin, viðurkenningar og þakkir.",
             "yagi: loftnetið í «EME-aflreikningur diskar» helst óbreytt",
             "Búnaður DX settur í EME-fjárhagsáætlunina:",
+            "1.9.7 - Þýðingum á bengalísku, arabísku og tyrknesku lokið (62 textar sem vantaði: töp og mögnun í RX/TX-keðjunni, formúla Friis, aðalskjár, lýsing flipanna); Windows 7, 8 og 8.1 tilgreind í upplýsingaskrá forritsins.",
         };
 
         public static readonly string[] HE = {
@@ -51325,6 +51349,7 @@ namespace LunaCalc
             "שני מקורות תחנות ה-EME בטבלה שאפשר למיין ולסנן: התחנות שפעלו ב-90 הימים האחרונים בצ'אט ה-EME של N0UK ‏(144 MHz) ורשימת ה-EME של PA0PLY ‏(432 ו-1296 MHz), עם מרחק ואזימוט מהתחנה שלך והציוד כפי ש-YAEC מפרש אותו (אנטנות, הגבר, הספק, EIRP, קיטוב). לחיצה כפולה על שורה: התחנה הופכת ל-DX. למעלה המקור, הקרדיטים והתודות.",
             "יאגי: האנטנה ב-«תקציב EME צלחות» נשארת כפי שהיא",
             "ציוד ה-DX הוכנס לתקציב ה-EME:",
+            "1.9.7 - הושלמו התרגומים לבנגלית, לערבית ולטורקית (62 טקסטים חסרים: הפסדים והגברים בשרשרת RX/TX, נוסחת Friis, המסך הראשי, תיאור הלשוניות); Windows 7, 8 ו-8.1 מוצהרים במניפסט של התוכנה.",
         };
 
         public static readonly string[] UR = {
@@ -53295,6 +53320,7 @@ namespace LunaCalc
             "EME اسٹیشنوں کے دو ماخذ ایک جدول میں جسے ترتیب اور چھانٹا جا سکتا ہے: گزشتہ 90 دنوں میں N0UK کی EME چیٹ میں سرگرم اسٹیشن (144 MHz) اور PA0PLY کی EME فہرست (432 اور 1296 MHz)، آپ کے اسٹیشن سے فاصلے اور سمت کے ساتھ، اور سامان جیسا YAEC اسے سمجھتا ہے (اینٹینا، گین، طاقت، EIRP، پولرائزیشن)۔ کسی قطار پر ڈبل کلک: اسٹیشن DX بن جاتا ہے۔ اوپر ماخذ، اعترافات اور شکریہ۔",
             "یاگی: «EME بجٹ ڈش» میں اینٹینا جیسا ہے ویسا رہتا ہے",
             "DX کا سامان EME بجٹ میں ڈال دیا گیا:",
+            "1.9.7 - بنگالی، عربی اور ترکی ترجمے مکمل (62 گمشدہ متن: RX/TX زنجیر کے نقصانات اور گین، Friis فارمولا، مرکزی اسکرین، ٹیبز کی وضاحت)؛ Windows 7، 8 اور 8.1 پروگرام کے مینی فیسٹ میں درج۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -55264,6 +55290,7 @@ namespace LunaCalc
             "De to kilder til EME-stationer i en tabel, der kan sorteres og filtreres: stationerne, der har været aktive de sidste 90 dage i EME-chatten hos N0UK (144 MHz), og EME-listen fra PA0PLY (432 og 1296 MHz), med afstand og azimut fra din station og opstillingen, som YAEC tolker den (antenner, forstærkning, effekt, EIRP, polarisation). Dobbeltklik på en række: stationen bliver DX. Øverst kilden, krediteringer og tak.",
             "yagi: antennen i «EME-budget parabol» forbliver, som den er",
             "DX'ens opstilling sat ind i EME-budgettet:",
+            "1.9.7 - Oversættelser til bengali, arabisk og tyrkisk fuldført (62 manglende tekster: tab og forstærkning i RX/TX-kæden, Friis' formel, hovedskærmen, beskrivelse af fanerne); Windows 7, 8 og 8.1 angivet i programmets manifest.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -57233,6 +57260,7 @@ namespace LunaCalc
             "Ang dalawang pinagmulan ng mga istasyong EME sa isang talahanayang maaaring pagsunud-sunurin at salain: ang mga istasyong aktibo sa nakalipas na 90 araw sa EME chat ni N0UK (144 MHz) at ang listahan ng EME ni PA0PLY (432 at 1296 MHz), kasama ang layo at azimuth mula sa iyong istasyon at ang kagamitan ayon sa pagbasa ng YAEC (antena, gain, lakas, EIRP, polarization). I-double click ang isang hanay: magiging DX ang istasyon. Sa itaas ang pinagmulan, mga kredito at pasasalamat.",
             "yagi: nananatili ang antena sa «EME budget dish»",
             "Inilagay sa EME budget ang kagamitan ng DX:",
+            "1.9.7 - Nakumpleto ang mga salin sa Bengali, Arabe at Turko (62 nawawalang teksto: mga pagkawala at gain ng RX/TX chain, pormula ni Friis, pangunahing screen, paglalarawan ng mga tab); idineklara ang Windows 7, 8 at 8.1 sa manifest ng programa.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -59202,6 +59230,7 @@ namespace LunaCalc
             "As duas fontes de estações EME em uma tabela para ordenar e filtrar: as estações ativas nos últimos 90 dias no chat EME de N0UK (144 MHz) e a lista EME de PA0PLY (432 e 1296 MHz), com distância e azimute a partir da sua estação e a instalação como o YAEC a interpreta (antenas, ganho, potência, EIRP, polarização). Clique duplo em uma linha: a estação vira o DX. No alto, a fonte, os créditos e os agradecimentos.",
             "yagi: a antena de «Balanço EME parabólicas» fica como está",
             "Instalação do DX colocada no orçamento EME:",
+            "1.9.7 - Traduções concluídas em bengali, árabe e turco (62 textos que faltavam: perdas e ganhos da cadeia RX/TX, fórmula de Friis, tela principal, descrição das abas); Windows 7, 8 e 8.1 declarados no manifesto do programa.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -61171,6 +61200,7 @@ namespace LunaCalc
             "แหล่งสถานี EME สองแหล่งในตารางที่เรียงลำดับและกรองได้: สถานีที่ใช้งานในช่วง 90 วันที่ผ่านมาในแชต EME ของ N0UK (144 MHz) และรายชื่อ EME ของ PA0PLY (432 และ 1296 MHz) พร้อมระยะทางและมุมทิศจากสถานีของคุณ และอุปกรณ์ตามที่ YAEC ตีความ (สายอากาศ อัตราขยาย กำลังส่ง EIRP โพลาไรเซชัน) ดับเบิลคลิกที่แถว: สถานีนั้นจะเป็น DX ด้านบนคือแหล่งที่มา เครดิต และคำขอบคุณ",
             "ยากิ: สายอากาศใน «บัดเจ็ต EME จาน» คงเดิม",
             "ใส่อุปกรณ์ของ DX ลงในงบ EME แล้ว:",
+            "1.9.7 - แปลภาษาเบงกาลี อาหรับ และตุรกีครบแล้ว (ข้อความที่ขาด 62 รายการ: การสูญเสียและอัตราขยายของสาย RX/TX, สูตรของ Friis, หน้าจอหลัก, คำอธิบายแท็บ); ระบุ Windows 7, 8 และ 8.1 ในแมนิเฟสต์ของโปรแกรม",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -63140,6 +63170,7 @@ namespace LunaCalc
             "EME 電臺的兩個來源，放在可排序、可篩選的表格中：過去 90 天內在 N0UK 的 EME 聊天室活躍的電臺（144 MHz）和 PA0PLY 的 EME 名錄（432 和 1296 MHz），附有距你電臺的距離和方位角，以及 YAEC 解讀的裝置（天線、增益、功率、EIRP、極化）。雙擊一行：該電臺成為 DX。頂部是來源、致謝和感謝。",
             "八木：“EME 鏈路預算 拋物面”中的天線保持不變",
             "DX 的裝置已填入 EME 鏈路預算：",
+            "1.9.7 - 完成孟加拉語、阿拉伯語和土耳其語翻譯（補齊 62 條文字：RX/TX 鏈路的損耗與增益、Friis 公式、主畫面、分頁說明）；程式清單中宣告支援 Windows 7、8 和 8.1。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -65109,6 +65140,7 @@ namespace LunaCalc
             "Dwa źródła stacji EME w tabeli do sortowania i filtrowania: stacje aktywne w ciągu ostatnich 90 dni na czacie EME N0UK (144 MHz) i lista EME PA0PLY (432 i 1296 MHz), z odległością i azymutem od twojej stacji oraz wyposażeniem tak, jak interpretuje je YAEC (anteny, zysk, moc, EIRP, polaryzacja). Dwuklik na wierszu: stacja staje się DX. Na górze źródło, podziękowania i informacje o autorach danych.",
             "yagi: antena w «Bilans EME czasze» zostaje bez zmian",
             "Wyposażenie DX wpisane do budżetu EME:",
+            "1.9.7 - Ukończone tłumaczenia na bengalski, arabski i turecki (62 brakujące teksty: straty i wzmocnienia toru RX/TX, wzór Friisa, ekran główny, opis zakładek); Windows 7, 8 i 8.1 zadeklarowane w manifeście programu.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -67078,6 +67110,7 @@ namespace LunaCalc
             "Dva zdroje stanic EME v tabulce, kterou lze řadit a filtrovat: stanice aktivní za posledních 90 dní v EME chatu N0UK (144 MHz) a EME seznam PA0PLY (432 a 1296 MHz), se vzdáleností a azimutem od tvé stanice a vybavením tak, jak ho chápe YAEC (antény, zisk, výkon, EIRP, polarizace). Dvojklik na řádek: stanice se stane DX. Nahoře zdroj, uvedení autorů a poděkování.",
             "yagi: anténa v «Bilance EME paraboly» zůstává beze změny",
             "Vybavení DX vloženo do rozpočtu EME:",
+            "1.9.7 - Dokončené překlady do bengálštiny, arabštiny a turečtiny (62 chybějících textů: ztráty a zisky řetězce RX/TX, Friisův vzorec, hlavní obrazovka, popis záložek); Windows 7, 8 a 8.1 uvedeny v manifestu programu.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -69047,6 +69080,7 @@ namespace LunaCalc
             "Cele două surse de stații EME într-un tabel de sortat și filtrat: stațiile active în ultimele 90 de zile în chat-ul EME al lui N0UK (144 MHz) și lista EME a lui PA0PLY (432 și 1296 MHz), cu distanța și azimutul de la stația ta și echipamentul așa cum îl interpretează YAEC (antene, câștig, putere, EIRP, polarizare). Dublu clic pe un rând: stația devine DX. Sus, sursa, creditele și mulțumirile.",
             "yagi: antena din «Buget EME parabole» rămâne cum este",
             "Echipamentul DX-ului pus în bugetul EME:",
+            "1.9.7 - Traduceri finalizate în bengali, arabă și turcă (62 de texte lipsă: pierderile și câștigurile lanțului RX/TX, formula lui Friis, ecranul principal, descrierea filelor); Windows 7, 8 și 8.1 declarate în manifestul programului.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -71016,6 +71050,7 @@ namespace LunaCalc
             "Οι δύο πηγές σταθμών EME σε πίνακα για ταξινόμηση και φιλτράρισμα: οι σταθμοί που ήταν ενεργοί τις τελευταίες 90 ημέρες στο chat EME του N0UK (144 MHz) και η λίστα EME του PA0PLY (432 και 1296 MHz), με απόσταση και αζιμούθιο από τον σταθμό σου και τον εξοπλισμό όπως τον ερμηνεύει το YAEC (κεραίες, κέρδος, ισχύς, EIRP, πόλωση). Διπλό κλικ σε μια γραμμή: ο σταθμός γίνεται ο DX. Επάνω η πηγή, οι αναφορές και οι ευχαριστίες.",
             "yagi: η κεραία στο «Προϋπολογισμός EME παραβολικά» μένει όπως είναι",
             "Ο εξοπλισμός του DX μπήκε στον προϋπολογισμό EME:",
+            "1.9.7 - Ολοκληρώθηκαν οι μεταφράσεις στα βεγγαλικά, αραβικά και τουρκικά (62 κείμενα που έλειπαν: απώλειες και κέρδη της αλυσίδας RX/TX, τύπος του Friis, κύρια οθόνη, περιγραφή των καρτελών)· τα Windows 7, 8 και 8.1 δηλώνονται στο manifest του προγράμματος.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -72985,6 +73020,7 @@ namespace LunaCalc
             "Az EME-állomások két forrása egy rendezhető és szűrhető táblázatban: az N0UK EME-chatjén az elmúlt 90 napban aktív állomások (144 MHz) és a PA0PLY EME-lista (432 és 1296 MHz), az állomásodtól mért távolsággal és azimuttal, és a felszereléssel úgy, ahogy a YAEC értelmezi (antennák, nyereség, teljesítmény, EIRP, polarizáció). Dupla kattintás egy soron: az állomás lesz a DX. Fent a forrás, a hivatkozások és a köszönetek.",
             "yagi: a(z) «Parabola EME-mérleg» antennája marad, ahogy van",
             "A DX felszerelése bekerült az EME-költségvetésbe:",
+            "1.9.7 - Elkészültek a bengáli, arab és török fordítások (62 hiányzó szöveg: az RX/TX lánc veszteségei és erősítései, Friis-képlet, főképernyő, a fülek leírása); a Windows 7, 8 és 8.1 szerepel a program manifesztjében.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -74954,6 +74990,7 @@ namespace LunaCalc
             "Dva zdroje staníc EME v tabuľke, ktorú možno zoraďovať a filtrovať: stanice aktívne za posledných 90 dní v EME chate N0UK (144 MHz) a EME zoznam PA0PLY (432 a 1296 MHz), so vzdialenosťou a azimutom od tvojej stanice a vybavením tak, ako ho chápe YAEC (antény, zisk, výkon, EIRP, polarizácia). Dvojklik na riadok: stanica sa stane DX. Hore zdroj, uvedenie autorov a poďakovanie.",
             "yagi: anténa v «Bilancia EME paraboly» zostáva bez zmeny",
             "Vybavenie DX vložené do rozpočtu EME:",
+            "1.9.7 - Dokončené preklady do bengálčiny, arabčiny a turečtiny (62 chýbajúcich textov: straty a zisky reťazca RX/TX, Friisov vzorec, hlavná obrazovka, popis záložiek); Windows 7, 8 a 8.1 uvedené v manifeste programu.",
         };
     }
 
@@ -87460,7 +87497,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.9.6";
+        public const string Versione = "1.9.7";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -90839,6 +90876,7 @@ namespace LunaCalc
             Lang.T("1.9.2 - Nuova linguetta Rumore del cielo (Skynoise) in Pianificazione: temperatura d'antenna calcolata con il metodo di G8ONH e G4SWX dal diagramma completo dell'antenna (file .out del NEC, YA-NEC o fascio gaussiano) e dalla mappa del cielo (Remazeilles, Haslam, GSM 2008 o LFmap) a 50, 144, 432 MHz e 23 cm, con il percorso della Luna nel mese, la temperatura durante il passaggio per te e per il DX, l'effetto sul Budget EME yagi e il confronto con DJ9BV; collaudo automatico in compila.bat; nel manuale TEORIA E CONSIGLI SULL'EME il rumore del cielo con le fonti a confronto, il guadagno dei dischi (PE1RKI o calcolo per aliquote, Ruze), il primo fuoco sopra i 2320 MHz, la rotazione dell'illuminatore e la Luna illuminata dal fascio (BWF)."),
             Lang.T("1.9.3 - Nomi dei pacchetti uguali a quelli di YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pacchetti .rpm, Arch e Slackware anche per ARM; nelle note della release una tabella con il collegamento a ogni pacchetto per ogni sistema. Questa versione contiene anche i file con i vecchi nomi, solo per l'aggiornamento automatico dalla 1.9.1 e dalla 1.9.2."),
             Lang.T("1.9.5 - Budget EME yagi e dischi: costo di 0,1 dB di perdita in più prima del preampli (PA3CSG) e nuova sezione Prova della stazione con il G/T sul cielo freddo e il fattore Y previsto su Sole, Luna, Cas A e terreno (G3LTF, EMECalc di VK3UM); Budget EME dischi: calo dell'illuminazione al bordo e rete del disco, con la Tant stimata da cielo, ricaduta e rete, e il G/T misurato da G3LTF a confronto; nuovo paragrafo nel manuale; riga ΔT minimo misurabile con la banda passante e il tempo d'integrazione τ (Antenna Engineering Handbook, eq. 41-21); terreno del DX: orizzonte SRTM1 attorno al suo locator nella linguetta Il mio orizzonte, con finestre comuni, barra delle 24 ore, Volta celeste e Stazioni da provare che ne tengono conto (locator di almeno 6 caratteri); ROS dell'antenna nella prova della stazione (AEH eq. 41-19); diametro del Sole da 0,524° a 0,542° con la distanza Terra–Sole; nota «YAEC calcola, non progetta apparati» nelle fonti e nei consigli."),
+            Lang.T("1.9.7 - Traduzioni completate in bengalese, arabo e turco (62 testi mancanti: perdite e guadagni della catena RX/TX, formula di Friis, schermata principale, descrizione delle linguette); Windows 7, 8 e 8.1 dichiarati nel manifesto del programma."),
             Lang.T("1.9.6 - Rischio di polarizzazione: nei riquadri delle due stazioni si sceglie la polarizzazione dell'antenna (H, V, H e V (XPOL), circolare; per il DX anche «secondo la banda»); YAEC segnala quando il collegamento è a rischio senza la seconda polarizzazione (MNR fino a 432 MHz, spostamento spaziale più in alto) con una striscia in Finestra comune, una riga nella scheda del DX, il simbolo ⇄ nel calendario e un'etichetta in Stazioni da provare; l'avviso a comparsa scatta solo con il rischio rosso; nuovo paragrafo nel manuale; elenco EME di PA0PLY (432 e 1296 MHz) aggiornato ogni giorno: Stazioni da provare anche a 432 e 1296 MHz con la stazione del Budget EME della banda, nuova linguetta Elenchi delle stazioni EME (chat di N0UK ed elenco di PA0PLY, con fonte, crediti e ringraziamenti) e impianto del DX preso dagli elenchi quando se ne scrive il nominativo."),
         };
 
