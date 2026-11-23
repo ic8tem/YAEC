@@ -80057,8 +80057,15 @@ namespace LunaCalc
                     if (mn.El >= ymin && mn.El <= ymax)
                     {
                         float x = X(mn.Az), y = Y(mn.El), rr = S(9);
-                        using (Brush bm = new SolidBrush(Color.FromArgb(255, 252, 235))) g.FillEllipse(bm, x - rr, y - rr, 2 * rr, 2 * rr);
-                        using (Pen pm = new Pen(Color.FromArgb(60, 60, 60), S(1.5f))) g.DrawEllipse(pm, x - rr, y - rr, 2 * rr, 2 * rr);
+                        // disco in scala vera: semidiametro topocentrico (circa 0,25°), in azimut diviso per cos(el)
+                        double sdL = Math.Asin(1737.4 / (mn.DistTopo > 1737.4 ? mn.DistTopo : 384400.0)) * 180.0 / Math.PI;
+                        float rx = (float)(sdL / Math.Max(0.05, Math.Cos(mn.El * Math.PI / 180.0)) / 360.0 * a.Width);
+                        float ry = (float)(sdL / (ymax - ymin) * a.Height);
+                        // segnaposto: cerchio tratteggiato di grandezza fissa, solo contorno
+                        using (Pen ps = new Pen(Color.FromArgb(150, 60, 60, 60), S(1f)) { DashStyle = System.Drawing.Drawing2D.DashStyle.Dash })
+                            g.DrawEllipse(ps, x - rr, y - rr, 2 * rr, 2 * rr);
+                        using (Brush bm = new SolidBrush(Color.FromArgb(255, 252, 235))) g.FillEllipse(bm, x - rx, y - ry, 2 * rx, 2 * ry);
+                        using (Pen pm = new Pen(Color.FromArgb(60, 60, 60), S(1f))) g.DrawEllipse(pm, x - rx, y - ry, 2 * rx, 2 * ry);
                         string s = Lang.T("Luna") + " " + orizT.ToString("HH:mm", inv) + " · " + mn.Az.ToString("0.0", ci) + "°/" + mn.El.ToString("0.0", ci) + "°";
                         SizeF sz = g.MeasureString(s, fpb);
                         float xs = x + S(12) + sz.Width > a.Right ? x - S(12) - sz.Width : x + S(12);
