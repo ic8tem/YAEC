@@ -21,6 +21,7 @@ YAEC, özgür .NET çalışma ortamı olan Mono ile çalışır.
 KURULUM – macOS (deneysel)
 1. macOS için Mono (https://www.mono-project.com/download/stable/) ve XQuartz (https://www.xquartz.org) kurun.
 2. YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) dosyasını açın ve YAEC'i Uygulamalar klasörüne sürükleyin. İlk seferde: YAEC'e sağ tıklayın → Aç (uygulama Apple tarafından imzalanmamıştır).
+3. Apple işlemcili Mac (M1–M4): Mono, Rosetta 2 üzerinden çalışır. YAEC açılmazsa ("Bad CPU type in executable"), Terminal'i açıp şunu yazın: sudo softwareupdate --install-rosetta --agree-to-license (Mac parolası istenir, yazarken görünmez), ardından YAEC'i yeniden başlatın.
 
 OTOMATİK GÜNCELLEMELER
 YAEC açılışta GitHub'da yeni sürüm olup olmadığını denetler ve SHA-256 parmak izini doğrulayarak kendini günceller (Windows, taşınabilir .tar.gz arşivleri, AppImage, macOS uygulaması). .deb, .rpm, Arch, Slackware paketleri ise sistemin paket yöneticisiyle güncellenir: YAEC yeni sürümü bildirir ve GitHub sayfasını açar.

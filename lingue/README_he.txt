@@ -21,6 +21,7 @@ YAEC פועל על Mono, סביבת הריצה החופשית של .NET.
 התקנה – macOS (ניסיוני)
 1. התקן את Mono עבור macOS (https://www.mono-project.com/download/stable/) ואת XQuartz (https://www.xquartz.org).
 2. פתח את YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) וגרור את YAEC אל יישומים. בפעם הראשונה: לחיצה ימנית על YAEC ← פתח (היישום אינו חתום על ידי Apple).
+3. Mac עם מעבד Apple ‏(M1–M4): ‏Mono פועל דרך Rosetta 2. אם YAEC לא נפתח ("Bad CPU type in executable"), פתחו את «מסוף» והקלידו: sudo softwareupdate --install-rosetta --agree-to-license (תתבקשו להזין את סיסמת ה-Mac, שאינה מוצגת בזמן ההקלדה), ואז הפעילו את YAEC שוב.
 
 עדכונים אוטומטיים
 בהפעלה YAEC בודק ב־GitHub אם יש גרסה חדשה ומתעדכן בעצמו (Windows, ארכיוני ‎.tar.gz ניידים, AppImage, אפליקציית macOS), תוך בדיקת טביעת ה־SHA-256. חבילות .deb, .rpm, Arch, Slackware מתעדכנות דרך מנהל החבילות של המערכת: YAEC מודיע על הגרסה החדשה ופותח את עמוד GitHub.

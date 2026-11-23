@@ -21,6 +21,7 @@
 التثبيت – macOS (تجريبي)
 1. ثبّت Mono لنظام macOS (https://www.mono-project.com/download/stable/) وXQuartz (https://www.xquartz.org).
 2. افتح YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) واسحب YAEC إلى مجلد التطبيقات. في المرة الأولى: انقر بزر الماوس الأيمن على YAEC ← فتح (التطبيق غير موقّع من Apple).
+3. أجهزة Mac بمعالج Apple ‏(M1–M4): يعمل Mono عبر Rosetta 2. إذا لم يبدأ YAEC («Bad CPU type in executable»)، افتح تطبيق «الطرفية» واكتب: sudo softwareupdate --install-rosetta --agree-to-license (سيطلب كلمة سر جهاز Mac، ولا تظهر أثناء الكتابة)، ثم شغّل YAEC من جديد.
 
 التحديثات التلقائية
 عند التشغيل يتحقق YAEC في GitHub من وجود إصدار جديد ويحدّث نفسه (Windows، أرشيفات ‎.tar.gz المحمولة، AppImage، تطبيق macOS) مع التحقق من بصمة SHA-256. أما حزم .deb, .rpm, Arch, Slackware فتُحدَّث بمدير الحزم في النظام: ينبّه YAEC إلى الإصدار الجديد ويفتح صفحة GitHub.

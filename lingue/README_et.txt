@@ -21,6 +21,7 @@ YAEC töötab Mono peal, mis on vaba .NET-i käituskeskkond.
 PAIGALDAMINE – macOS (eksperimentaalne)
 1. Paigalda Mono macOS-ile (https://www.mono-project.com/download/stable/) ja XQuartz (https://www.xquartz.org).
 2. Ava YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) ja lohista YAEC kausta Applications. Esimesel korral: paremklõps YAEC-il → Open (rakendus ei ole Apple'i poolt allkirjastatud).
+3. Apple'i protsessoriga Mac (M1–M4): Mono töötab Rosetta 2 kaudu. Kui YAEC ei käivitu („Bad CPU type in executable“), ava Terminal ja kirjuta: sudo softwareupdate --install-rosetta --agree-to-license (küsitakse Maci parooli, mis kirjutamise ajal ei paista), seejärel käivita YAEC uuesti.
 
 AUTOMAATSED UUENDUSED
 Käivitamisel kontrollib YAEC GitHubist, kas on uus versioon, ja uuendab end ise (Windows, kaasaskantavad .tar.gz-arhiivid, AppImage, macOS-i rakendus), kontrollides SHA-256 sõrmejälge. Pakette .deb, .rpm, Arch, Slackware uuendatakse süsteemi paketihalduriga: YAEC teatab uuest versioonist ja avab GitHubi lehe.

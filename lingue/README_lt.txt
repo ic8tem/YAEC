@@ -21,6 +21,7 @@ YAEC veikia su Mono – laisvąja .NET vykdymo aplinka.
 ĮDIEGIMAS – macOS (eksperimentinis)
 1. Įdiekite Mono, skirtą macOS (https://www.mono-project.com/download/stable/), ir XQuartz (https://www.xquartz.org).
 2. Atidarykite YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) ir nuvilkite YAEC į Applications. Pirmą kartą: dešiniuoju pelės mygtuku spustelėkite YAEC → Open (programėlė nėra pasirašyta Apple).
+3. „Mac“ su „Apple“ procesoriumi (M1–M4): „Mono“ veikia per „Rosetta 2“. Jei YAEC nepasileidžia („Bad CPU type in executable“), atidarykite „Terminal“ ir įrašykite: sudo softwareupdate --install-rosetta --agree-to-license (bus paprašyta „Mac“ slaptažodžio, kuris rašant nerodomas), tada vėl paleiskite YAEC.
 
 AUTOMATINIAI ATNAUJINIMAI
 Paleidžiama YAEC patikrina GitHub, ar yra nauja versija, ir atsinaujina pati (Windows, nešiojamieji .tar.gz archyvai, AppImage, macOS programa), tikrindama SHA-256 kontrolinį kodą. Paketai .deb, .rpm, Arch, Slackware atnaujinami sistemos paketų tvarkykle: YAEC praneša apie naują versiją ir atidaro GitHub puslapį.

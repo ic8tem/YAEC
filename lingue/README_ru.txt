@@ -21,6 +21,7 @@ YAEC работает в Mono — свободной среде выполнен
 УСТАНОВКА – macOS (экспериментально)
 1. Установите Mono для macOS (https://www.mono-project.com/download/stable/) и XQuartz (https://www.xquartz.org).
 2. Откройте YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) и перетащите YAEC в папку «Программы». При первом запуске: щелчок правой кнопкой по YAEC → «Открыть» (приложение не подписано Apple).
+3. Mac с процессором Apple (M1–M4): Mono работает через Rosetta 2. Если YAEC не запускается («Bad CPU type in executable»), откройте «Терминал» и введите: sudo softwareupdate --install-rosetta --agree-to-license (будет запрошен пароль Mac, при вводе он не отображается), затем снова запустите YAEC.
 
 АВТОМАТИЧЕСКИЕ ОБНОВЛЕНИЯ
 При запуске YAEC проверяет на GitHub, есть ли новая версия, и обновляется сам (Windows, переносные архивы .tar.gz, AppImage, приложение для macOS), проверяя отпечаток SHA-256. Пакеты .deb, .rpm, Arch, Slackware обновляются менеджером пакетов системы: YAEC сообщает о новой версии и открывает страницу GitHub.

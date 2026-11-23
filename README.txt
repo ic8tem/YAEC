@@ -44,6 +44,10 @@ INSTALLATION - macOS (experimental)
    on macOS the Windows Forms window of Mono is drawn through X11.
 2. Download YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel), open it and drag YAEC into Applications.
    The first time, right-click YAEC -> Open (the app is not signed by Apple).
+3. Mac with an Apple processor (M1-M4): Mono runs through Rosetta 2. If YAEC does not start
+   ("Bad CPU type in executable"), open Terminal and run:
+   sudo softwareupdate --install-rosetta --agree-to-license
+   (it asks for your Mac password, which is not shown while you type), then start YAEC again.
 - Data: ~/Library/Application Support/YAEC/data
 
 AUTOMATIC UPDATES

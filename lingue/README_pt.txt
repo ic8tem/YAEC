@@ -21,6 +21,7 @@ O YAEC funciona com o Mono, o ambiente de execução .NET livre.
 INSTALAÇÃO – macOS (experimental)
 1. Instale o Mono para macOS (https://www.mono-project.com/download/stable/) e o XQuartz (https://www.xquartz.org).
 2. Abra YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) e arraste o YAEC para Aplicações. Na primeira vez: clique com o botão direito em YAEC → Abrir (a app não está assinada pela Apple).
+3. Mac com processador Apple (M1–M4): o Mono funciona através do Rosetta 2. Se o YAEC não arrancar («Bad CPU type in executable»), abra o Terminal e escreva: sudo softwareupdate --install-rosetta --agree-to-license (pede a palavra-passe do Mac, que não aparece enquanto a escreve) e volte a abrir o YAEC.
 
 ATUALIZAÇÕES AUTOMÁTICAS
 Ao arrancar, o YAEC verifica no GitHub se há uma versão nova e atualiza-se sozinho (Windows, arquivos portáteis .tar.gz, AppImage, aplicação para macOS), verificando a impressão SHA-256. Os pacotes .deb, .rpm, Arch, Slackware atualizam-se com o gestor de pacotes do sistema: o YAEC avisa da nova versão e abre a página do GitHub.

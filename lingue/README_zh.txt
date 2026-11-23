@@ -21,6 +21,7 @@ YAEC 在 Mono（自由的 .NET 运行时）上运行。
 安装 – macOS（实验性）
 1. 安装 macOS 版 Mono（https://www.mono-project.com/download/stable/）和 XQuartz（https://www.xquartz.org）。
 2. 打开 YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel)，将 YAEC 拖到“应用程序”中。首次运行：右键点按 YAEC → 打开（该应用未经 Apple 签名）。
+3. 搭载 Apple 芯片的 Mac（M1–M4）：Mono 需通过 Rosetta 2 运行。如果 YAEC 无法启动（“Bad CPU type in executable”），请打开“终端”并输入：sudo softwareupdate --install-rosetta --agree-to-license（会要求输入 Mac 密码，输入时不显示），然后重新启动 YAEC。
 
 自动更新
 YAEC 启动时会在 GitHub 上检查是否有新版本，并自动更新（Windows、便携 .tar.gz 归档、AppImage、macOS 应用），同时校验 SHA-256 指纹。.deb, .rpm, Arch, Slackware 软件包则通过系统的软件包管理器更新：YAEC 会提示新版本并打开 GitHub 页面。

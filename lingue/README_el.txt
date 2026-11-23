@@ -21,6 +21,7 @@
 ΕΓΚΑΤΑΣΤΑΣΗ – macOS (ΠΕΙΡΑΜΑΤΙΚΗ)
 1. Εγκαταστήστε το Mono για macOS (https://www.mono-project.com/download/stable/) και το XQuartz (https://www.xquartz.org).
 2. Ανοίξτε το YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) και σύρετε το YAEC στις Εφαρμογές. Την πρώτη φορά: δεξί κλικ στο YAEC → Άνοιγμα (η εφαρμογή δεν είναι υπογεγραμμένη από την Apple).
+3. Mac με επεξεργαστή Apple (M1–M4): το Mono λειτουργεί μέσω Rosetta 2. Αν το YAEC δεν ξεκινά («Bad CPU type in executable»), ανοίξτε το Τερματικό και γράψτε: sudo softwareupdate --install-rosetta --agree-to-license (ζητά τον κωδικό του Mac, που δεν εμφανίζεται καθώς τον πληκτρολογείτε) και ξεκινήστε ξανά το YAEC.
 
 ΑΥΤΟΜΑΤΕΣ ΕΝΗΜΕΡΩΣΕΙΣ
 Κατά την εκκίνηση το YAEC ελέγχει στο GitHub αν υπάρχει νέα έκδοση και ενημερώνεται μόνο του (Windows, φορητά αρχεία .tar.gz, AppImage, εφαρμογή macOS), επαληθεύοντας το αποτύπωμα SHA-256. Τα πακέτα .deb, .rpm, Arch, Slackware ενημερώνονται αντίθετα με τον διαχειριστή πακέτων του συστήματος: το YAEC ειδοποιεί για τη νέα έκδοση και ανοίγει τη σελίδα του GitHub.

@@ -21,6 +21,7 @@ YAEC keyrir á Mono, frjálsa .NET-keyrsluumhverfinu.
 UPPSETNING – macOS (á tilraunastigi)
 1. Settu upp Mono fyrir macOS (https://www.mono-project.com/download/stable/) og XQuartz (https://www.xquartz.org).
 2. Opnaðu YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) og dragðu YAEC í Applications. Í fyrsta skiptið: hægrismelltu á YAEC → Open (forritið er ekki undirritað af Apple).
+3. Mac með Apple-örgjörva (M1–M4): Mono keyrir í gegnum Rosetta 2. Ef YAEC ræsist ekki („Bad CPU type in executable“), opnaðu Terminal og skrifaðu: sudo softwareupdate --install-rosetta --agree-to-license (beðið er um lykilorð Mac-tölvunnar, sem sést ekki á meðan þú skrifar) og ræstu svo YAEC aftur.
 
 SJÁLFVIRKAR UPPFÆRSLUR
 Við ræsingu athugar YAEC á GitHub hvort ný útgáfa sé til og uppfærir sig sjálft (Windows, ferðasöfn .tar.gz, AppImage, macOS-forrit) og sannreynir SHA-256-fingrafarið. Pakkarnir .deb, .rpm, Arch, Slackware eru hins vegar uppfærðir með pakkastjóra kerfisins: YAEC lætur vita af nýju útgáfunni og opnar GitHub-síðuna.

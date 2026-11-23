@@ -21,6 +21,7 @@ A YAEC a Monóval, a szabad .NET-futtatókörnyezettel működik.
 TELEPÍTÉS – macOS (kísérleti)
 1. Telepítsd a macOS-es Monót (https://www.mono-project.com/download/stable/) és az XQuartzot (https://www.xquartz.org).
 2. Nyisd meg a YAEC-1.9.6-mac-apple-silicon.dmg (Apple Silicon) / YAEC-1.9.6-mac-intel.dmg (Intel) fájlt, és húzd a YAEC-et az Alkalmazások mappába. Első alkalommal: jobb kattintás a YAEC-en → Megnyitás (az alkalmazást az Apple nem írta alá).
+3. Apple processzoros Mac (M1–M4): a Mono a Rosetta 2-n keresztül fut. Ha a YAEC nem indul el („Bad CPU type in executable”), nyissa meg a Terminált, és írja be: sudo softwareupdate --install-rosetta --agree-to-license (a Mac jelszavát kéri, amely gépelés közben nem látszik), majd indítsa el újra a YAEC-et.
 
 AUTOMATIKUS FRISSÍTÉSEK
 Induláskor a YAEC megnézi a GitHubon, van-e új verzió, és magától frissül (Windows, hordozható .tar.gz archívumok, AppImage, macOS-alkalmazás), az SHA-256 ujjlenyomat ellenőrzésével. A(z) .deb, .rpm, Arch, Slackware csomagokat viszont a rendszer csomagkezelője frissíti: a YAEC jelzi az új verziót, és megnyitja a GitHub-oldalt.
