@@ -2,7 +2,7 @@
 LICENCJA YAEC, WERSJA 1
 © 2026 Costantino IC8TEM
 
-YAEC jest wolnym programem, napisanym przez krótkofalowca dla krótkofalowców. Jego kod powstał także z pomocą asystenta sztucznej inteligencji, a licencja przejmuje jego sposób działania: być naprawdę użytecznym, zawsze mówić, jak jest, pokazywać własny tok rozumowania, nikomu nie szkodzić i uznawać pracę innych. Poniżej znajdują się zasady, a następnie właściwe warunki.
+YAEC jest bezpłatnym programem o otwartym kodzie źródłowym, napisanym przez krótkofalowca dla krótkofalowców. Jego kod powstał także z pomocą asystenta sztucznej inteligencji, a licencja przejmuje jego sposób działania: być naprawdę użytecznym, zawsze mówić, jak jest, pokazywać własny tok rozumowania, nikomu nie szkodzić i uznawać pracę innych. Poniżej znajdują się zasady, a następnie właściwe warunki.
 
 • Użyteczny i bezpłatny: Program jest bezpłatny i można go używać bez ograniczeń w działalności krótkofalarskiej, do nauki i w nauczaniu. Ma służyć do nawiązywania QSO, a nie do sprzedawania czegokolwiek.
 • Przejrzysty: Kod źródłowy jest zawsze dostarczany razem z programem; każdy wzór jest widoczny w zakładce Kontrola obliczeń, a każda dana podaje swoje źródło. Żadnych czarnych skrzynek.

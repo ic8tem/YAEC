@@ -2,7 +2,7 @@
 YAEC KASUTUSLITSENTS, VERSIOON 1
 © 2026 Costantino IC8TEM
 
-YAEC on vaba programm, mille on kirjutanud raadioamatöör raadioamatööridele. Selle koodi arendamisel on kasutatud ka tehisintellekti assistendi abi ja litsents järgib selle tööviisi: olla tõeliselt kasulik, öelda alati, kuidas asjad on, näidata oma arutluskäiku, mitte kellelegi kahju teha ja tunnustada teiste tööd. Allpool on põhimõtted ja seejärel tegelikud tingimused.
+YAEC on tasuta avatud lähtekoodiga programm, mille on kirjutanud raadioamatöör raadioamatööridele. Selle koodi arendamisel on kasutatud ka tehisintellekti assistendi abi ja litsents järgib selle tööviisi: olla tõeliselt kasulik, öelda alati, kuidas asjad on, näidata oma arutluskäiku, mitte kellelegi kahju teha ja tunnustada teiste tööd. Allpool on põhimõtted ja seejärel tegelikud tingimused.
 
 • Kasulik ja tasuta: Programm on tasuta ja võid seda piiranguteta kasutada oma raadioamatööritegevuses, õppimiseks ja õpetamiseks. Selle eesmärk on aidata QSO-dele kaasa, mitte midagi müüa.
 • Läbipaistev: Lähtekood antakse alati koos programmiga; iga valem on nähtav sakil „Arvutuste kontroll“ ja iga andme juures on selle allikas. Ei mingeid musti kaste.

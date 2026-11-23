@@ -2,7 +2,7 @@
 NOTKUNARLEYFI YAEC, ÚTGÁFA 1
 © 2026 Costantino IC8TEM
 
-YAEC er frjáls hugbúnaður, skrifaður af radíóamatör fyrir radíóamatöra. Kóði hans var einnig þróaður með aðstoð gervigreindaraðstoðarmanns, og leyfið tekur mið af vinnulagi hans: að vera raunverulega gagnlegur, segja alltaf hlutina eins og þeir eru, sýna eigin rökhugsun, skaða engan og viðurkenna vinnu annarra. Hér fyrir neðan eru meginreglurnar og síðan skilmálarnir sjálfir.
+YAEC er ókeypis forrit með opnum frumkóða, skrifað af radíóamatör fyrir radíóamatöra. Kóði hans var einnig þróaður með aðstoð gervigreindaraðstoðarmanns, og leyfið tekur mið af vinnulagi hans: að vera raunverulega gagnlegur, segja alltaf hlutina eins og þeir eru, sýna eigin rökhugsun, skaða engan og viðurkenna vinnu annarra. Hér fyrir neðan eru meginreglurnar og síðan skilmálarnir sjálfir.
 
 • Gagnlegt og ókeypis: Forritið er ókeypis og þú mátt nota það án takmarkana fyrir radíóamatörstarf þitt, til náms og kennslu. Það er til að koma á QSO, ekki til að selja eitthvað.
 • Gagnsætt: Frumkóðinn fylgir alltaf forritinu; hver formúla er sýnileg í flipanum Yfirferð útreikninga og hver gagnaliður tilgreinir heimild sína. Engir svartir kassar.

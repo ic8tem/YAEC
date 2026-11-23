@@ -2,7 +2,7 @@
 YAEC-LIZENZ, VERSION 1
 © 2026 Costantino IC8TEM
 
-YAEC ist ein freies Programm, von einem Funkamateur für Funkamateure geschrieben. Sein Code wurde auch mit Hilfe eines KI-Assistenten entwickelt, und die Lizenz übernimmt dessen Arbeitsweise: wirklich nützlich sein, immer sagen, wie die Dinge sind, das eigene Denken zeigen, niemandem schaden und die Arbeit anderer anerkennen. Unten stehen die Grundsätze und dann die eigentlichen Bedingungen.
+YAEC ist ein kostenloses Programm mit offenem Quellcode, von einem Funkamateur für Funkamateure geschrieben. Sein Code wurde auch mit Hilfe eines KI-Assistenten entwickelt, und die Lizenz übernimmt dessen Arbeitsweise: wirklich nützlich sein, immer sagen, wie die Dinge sind, das eigene Denken zeigen, niemandem schaden und die Arbeit anderer anerkennen. Unten stehen die Grundsätze und dann die eigentlichen Bedingungen.
 
 • Nützlich und kostenlos: Das Programm ist kostenlos und kann ohne Einschränkungen für den Amateurfunk, zum Lernen und zum Unterrichten verwendet werden. Es soll QSOs ermöglichen, nicht etwas verkaufen.
 • Transparent: Der Quellcode wird immer mit dem Programm geliefert; jede Formel ist im Reiter Rechenkontrolle sichtbar und jede Angabe nennt ihre Quelle. Keine Blackboxen.

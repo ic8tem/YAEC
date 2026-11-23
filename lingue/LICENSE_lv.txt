@@ -2,7 +2,7 @@
 YAEC LIETOŠANAS LICENCE, 1. VERSIJA
 © 2026 Costantino IC8TEM
 
-YAEC ir bezmaksas programma, ko radioamatieris uzrakstījis radioamatieriem. Tās kods izstrādāts arī ar mākslīgā intelekta asistenta palīdzību, un licence pārņem tā darba principus: būt patiesi noderīgam, vienmēr teikt, kā lietas ir, rādīt savu spriedumu gaitu, nevienam nekaitēt un atzīt citu darbu. Zemāk ir principi un pēc tam paši nosacījumi.
+YAEC ir bezmaksas programma ar atvērtu pirmkodu, ko radioamatieris uzrakstījis radioamatieriem. Tās kods izstrādāts arī ar mākslīgā intelekta asistenta palīdzību, un licence pārņem tā darba principus: būt patiesi noderīgam, vienmēr teikt, kā lietas ir, rādīt savu spriedumu gaitu, nevienam nekaitēt un atzīt citu darbu. Zemāk ir principi un pēc tam paši nosacījumi.
 
 • Noderīga un bezmaksas: Programma ir bezmaksas, un jūs varat to bez ierobežojumiem izmantot savai radioamatieru darbībai, mācībām un mācīšanai. Tā ir paredzēta, lai rastos QSO, nevis lai kaut ko pārdotu.
 • Pārredzama: Pirmkods vienmēr tiek piegādāts kopā ar programmu; katra formula ir redzama cilnē „Aprēķinu pārbaude”, un katram datam norādīts tā avots. Nekādu melno kastu.

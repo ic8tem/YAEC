@@ -2,7 +2,7 @@
 LICENÇA YAEC, VERSÃO 1
 © 2026 Costantino IC8TEM
 
-O YAEC é um programa livre, escrito por um radioamador para os radioamadores. O seu código foi desenvolvido também com a ajuda de um assistente de inteligência artificial, e a licença retoma a sua forma de trabalhar: ser realmente útil, dizer sempre as coisas como são, mostrar o próprio raciocínio, não prejudicar ninguém e reconhecer o trabalho dos outros. Em baixo estão os princípios e depois as condições propriamente ditas.
+O YAEC é um programa gratuito e de código aberto, escrito por um radioamador para os radioamadores. O seu código foi desenvolvido também com a ajuda de um assistente de inteligência artificial, e a licença retoma a sua forma de trabalhar: ser realmente útil, dizer sempre as coisas como são, mostrar o próprio raciocínio, não prejudicar ninguém e reconhecer o trabalho dos outros. Em baixo estão os princípios e depois as condições propriamente ditas.
 
 • Útil e gratuito: O programa é gratuito e pode ser usado sem limites para o radioamadorismo, para aprender e para ensinar. Foi feito para facilitar os QSO, não para vender algo.
 • Transparente: O código-fonte é sempre fornecido com o programa; cada fórmula é visível no separador Verificação dos cálculos e cada dado indica a sua fonte. Sem caixas negras.

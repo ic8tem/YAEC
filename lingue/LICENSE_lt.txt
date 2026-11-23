@@ -2,7 +2,7 @@
 YAEC NAUDOJIMO LICENCIJA, 1 VERSIJA
 © 2026 Costantino IC8TEM
 
-YAEC yra laisva programa, radijo mėgėjo parašyta radijo mėgėjams. Jos kodas kurtas ir padedant dirbtinio intelekto asistentui, o licencija perima jo darbo principus: būti tikrai naudingai, visada sakyti, kaip yra, rodyti savo samprotavimą, niekam nekenkti ir pripažinti kitų darbą. Žemiau pateikiami principai, o po jų – pačios sąlygos.
+YAEC yra nemokama atvirojo kodo programa, radijo mėgėjo parašyta radijo mėgėjams. Jos kodas kurtas ir padedant dirbtinio intelekto asistentui, o licencija perima jo darbo principus: būti tikrai naudingai, visada sakyti, kaip yra, rodyti savo samprotavimą, niekam nekenkti ir pripažinti kitų darbą. Žemiau pateikiami principai, o po jų – pačios sąlygos.
 
 • Naudinga ir nemokama: Programa nemokama, ir ją galite be apribojimų naudoti savo radijo mėgėjų veiklai, mokymuisi ir mokymui. Ji skirta tam, kad gimtų QSO, o ne kam nors parduoti.
 • Skaidri: Išeitinis kodas visada pateikiamas kartu su programa; kiekviena formulė matoma skirtuke Skaičiavimų patikra, o prie kiekvieno duomens nurodytas jo šaltinis. Jokių juodųjų dėžių.

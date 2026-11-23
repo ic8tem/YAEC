@@ -2,7 +2,7 @@
 YAEC LICENC, 1. VERZIÓ
 © 2026 Costantino IC8TEM
 
-A YAEC szabad szoftver, amelyet egy rádióamatőr írt rádióamatőröknek. A kódját egy mesterséges intelligencia alapú asszisztens segítségével is fejlesztették, és a licenc az ő munkamódját követi: legyen valóban hasznos, mindig mondja meg, hogyan állnak a dolgok, mutassa meg a saját gondolatmenetét, ne ártson senkinek, és ismerje el mások munkáját. Alább először az alapelvek, majd a tényleges feltételek következnek.
+A YAEC ingyenes, nyílt forráskódú program, amelyet egy rádióamatőr írt rádióamatőröknek. A kódját egy mesterséges intelligencia alapú asszisztens segítségével is fejlesztették, és a licenc az ő munkamódját követi: legyen valóban hasznos, mindig mondja meg, hogyan állnak a dolgok, mutassa meg a saját gondolatmenetét, ne ártson senkinek, és ismerje el mások munkáját. Alább először az alapelvek, majd a tényleges feltételek következnek.
 
 • Hasznos és ingyenes: A program ingyenes, és korlátozás nélkül használhatod rádióamatőr-tevékenységedhez, tanuláshoz és oktatáshoz. Arra készült, hogy QSO-k jöjjenek létre, nem arra, hogy eladjon valamit.
 • Átlátható: A forráskód mindig a programmal együtt kerül átadásra; minden képlet látható a Számítások ellenőrzése fülön, és minden adat megadja a forrását. Nincsenek fekete dobozok.

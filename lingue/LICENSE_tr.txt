@@ -2,7 +2,7 @@
 YAEC LISANSI, SÜRÜM 1
 © 2026 Costantino IC8TEM
 
-YAEC, bir radyo amatörü tarafından radyo amatörleri için yazılmış özgür bir programdır. Kodu bir yapay zekâ asistanının yardımıyla da geliştirildi ve lisans onun çalışma biçimini benimser: gerçekten yararlı olmak, her zaman olanı olduğu gibi söylemek, akıl yürütmeyi göstermek, kimseye zarar vermemek ve başkalarının emeğini tanımak. Aşağıda önce ilkeler, sonra asıl koşullar yer alıyor.
+YAEC, bir radyo amatörü tarafından radyo amatörleri için yazılmış ücretsiz ve açık kaynak kodlu bir programdır. Kodu bir yapay zekâ asistanının yardımıyla da geliştirildi ve lisans onun çalışma biçimini benimser: gerçekten yararlı olmak, her zaman olanı olduğu gibi söylemek, akıl yürütmeyi göstermek, kimseye zarar vermemek ve başkalarının emeğini tanımak. Aşağıda önce ilkeler, sonra asıl koşullar yer alıyor.
 
 • Yararlı ve ücretsiz: Program ücretsizdir ve amatör telsizcilik, öğrenme ve öğretme için sınırsız kullanılabilir. QSO'ları kolaylaştırmak için yapılmıştır, bir şey satmak için değil.
 • Şeffaf: Kaynak kod her zaman programla birlikte verilir; her formül Hesapların kontrolü sekmesinde görülebilir ve her veri kaynağını belirtir. Kara kutu yok.

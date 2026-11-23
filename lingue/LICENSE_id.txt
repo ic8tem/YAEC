@@ -2,7 +2,7 @@
 LISENSI YAEC, VERSI 1
 © 2026 Costantino IC8TEM
 
-YAEC adalah program bebas, ditulis oleh seorang radio amatir untuk para radio amatir. Kodenya juga dikembangkan dengan bantuan asisten kecerdasan buatan, dan lisensinya mengambil cara kerjanya: benar-benar berguna, selalu mengatakan apa adanya, menunjukkan penalarannya, tidak merugikan siapa pun dan mengakui karya orang lain. Di bawah ini prinsipnya, lalu ketentuannya.
+YAEC adalah program gratis dengan kode sumber terbuka, ditulis oleh seorang radio amatir untuk para radio amatir. Kodenya juga dikembangkan dengan bantuan asisten kecerdasan buatan, dan lisensinya mengambil cara kerjanya: benar-benar berguna, selalu mengatakan apa adanya, menunjukkan penalarannya, tidak merugikan siapa pun dan mengakui karya orang lain. Di bawah ini prinsipnya, lalu ketentuannya.
 
 • Berguna dan gratis: Program ini gratis dan dapat dipakai tanpa batas untuk radio amatir, untuk belajar dan untuk mengajar. Ia dibuat untuk memudahkan QSO, bukan untuk menjual sesuatu.
 • Transparan: Kode sumber selalu disertakan bersama program; setiap rumus terlihat di tab Pemeriksaan perhitungan dan setiap data menyebut sumbernya. Tanpa kotak hitam.
