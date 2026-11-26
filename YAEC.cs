@@ -4043,6 +4043,7 @@ namespace LunaCalc
             "yagi: l'antenna del Budget EME dischi resta com'è",
             "Impianto del DX messo nel Budget EME:",
             "1.9.7 - Traduzioni completate in bengalese, arabo e turco (62 testi mancanti: perdite e guadagni della catena RX/TX, formula di Friis, schermata principale, descrizione delle linguette); Windows 7, 8 e 8.1 dichiarati nel manifesto del programma.",
+            "1.9.8 - Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -6014,6 +6015,7 @@ namespace LunaCalc
             "yagi: the antenna in EME budget dishes stays as it is",
             "DX setup put into the EME budget:",
             "1.9.7 - Translations completed in Bengali, Arabic and Turkish (62 missing texts: losses and gains of the RX/TX chain, Friis formula, main screen, description of the tabs); Windows 7, 8 and 8.1 declared in the program manifest.",
+            "1.9.8 - My horizon: the Moon is drawn at its true size (about 0.5°), with a dashed circle as a marker; automatic update only with a verified SHA-256 fingerprint (it is cancelled if the fingerprint list is missing or does not contain the package); links open only web and e-mail addresses; macOS: the launcher checks Mono (architecture, Rosetta, quarantine) and explains errors 126 and 127.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -7985,6 +7987,7 @@ namespace LunaCalc
             "Yagi: die Antenne in «EME-Budget Spiegel» bleibt, wie sie ist",
             "Anlage des DX ins EME-Budget übernommen:",
             "1.9.7 - Übersetzungen in Bengalisch, Arabisch und Türkisch vervollständigt (62 fehlende Texte: Verluste und Gewinne der RX/TX-Kette, Friis-Formel, Hauptbildschirm, Beschreibung der Registerkarten); Windows 7, 8 und 8.1 im Manifest des Programms angegeben.",
+            "1.9.8 - Mein Horizont: Der Mond wird in wahrer Größe gezeichnet (etwa 0,5°), mit einem gestrichelten Kreis als Markierung; automatische Aktualisierung nur mit geprüftem SHA-256-Fingerabdruck (sie wird abgebrochen, wenn die Liste der Fingerabdrücke fehlt oder das Paket nicht enthält); Links öffnen nur Web- und E-Mail-Adressen; macOS: Der Starter prüft Mono (Architektur, Rosetta, Quarantäne) und erklärt die Fehler 126 und 127.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -9956,6 +9959,7 @@ namespace LunaCalc
             "yagi : l'antenne de «Bilan EME paraboles» reste telle quelle",
             "Installation du DX mise dans le budget EME :",
             "1.9.7 - Traductions complétées en bengali, arabe et turc (62 textes manquants : pertes et gains de la chaîne RX/TX, formule de Friis, écran principal, description des onglets) ; Windows 7, 8 et 8.1 déclarés dans le manifeste du programme.",
+            "1.9.8 - Mon horizon : la Lune est dessinée à sa taille réelle (environ 0,5°), avec un cercle en pointillés comme repère ; mise à jour automatique uniquement avec une empreinte SHA-256 vérifiée (elle est annulée si la liste des empreintes manque ou ne contient pas le paquet) ; les liens n'ouvrent que des adresses web et de messagerie ; macOS : le lanceur vérifie Mono (architecture, Rosetta, quarantaine) et explique les erreurs 126 et 127.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -11927,6 +11931,7 @@ namespace LunaCalc
             "yagi: la antena de «Balance EME parábolas» queda como está",
             "Instalación del DX puesta en el presupuesto EME:",
             "1.9.7 - Traducciones completadas en bengalí, árabe y turco (62 textos que faltaban: pérdidas y ganancias de la cadena RX/TX, fórmula de Friis, pantalla principal, descripción de las pestañas); Windows 7, 8 y 8.1 declarados en el manifiesto del programa.",
+            "1.9.8 - Mi horizonte: la Luna se dibuja a su tamaño real (unos 0,5°), con un círculo discontinuo como marcador; actualización automática solo con la huella SHA-256 verificada (se cancela si falta la lista de huellas o no contiene el paquete); los enlaces solo abren direcciones web y de correo; macOS: el lanzador comprueba Mono (arquitectura, Rosetta, cuarentena) y explica los errores 126 y 127.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -13898,6 +13903,7 @@ namespace LunaCalc
             "yagi: a antena de «Balanço EME parabólicas» fica como está",
             "Instalação do DX posta no orçamento EME:",
             "1.9.7 - Traduções concluídas em bengali, árabe e turco (62 textos em falta: perdas e ganhos da cadeia RX/TX, fórmula de Friis, ecrã principal, descrição dos separadores); Windows 7, 8 e 8.1 declarados no manifesto do programa.",
+            "1.9.8 - O meu horizonte: a Lua é desenhada no seu tamanho real (cerca de 0,5°), com um círculo tracejado como marcador; atualização automática só com a impressão digital SHA-256 verificada (é cancelada se a lista de impressões faltar ou não contiver o pacote); as ligações só abrem endereços web e de correio eletrónico; macOS: o lançador verifica o Mono (arquitetura, Rosetta, quarentena) e explica os erros 126 e 127.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -15869,6 +15875,7 @@ namespace LunaCalc
             "八木：“EME 链路预算 抛物面”中的天线保持不变",
             "DX 的设备已填入 EME 链路预算：",
             "1.9.7 - 完成孟加拉语、阿拉伯语和土耳其语翻译（补齐 62 条文字：RX/TX 链路的损耗与增益、Friis 公式、主界面、标签页说明）；程序清单中声明支持 Windows 7、8 和 8.1。",
+            "1.9.8 - 我的地平线：月亮按真实大小绘制（约 0.5°），并以虚线圆作为标记；自动更新仅在 SHA-256 指纹校验通过后进行（若指纹列表缺失或不含该安装包则取消更新）；链接只打开网页和电子邮件地址；macOS：启动器会检查 Mono（架构、Rosetta、隔离属性）并说明错误 126 和 127。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -17840,6 +17847,7 @@ namespace LunaCalc
             "八木：「EME 回線計算 パラボラ」のアンテナはそのまま",
             "DX の設備を EME バジェットに入れました：",
             "1.9.7 - ベンガル語、アラビア語、トルコ語の翻訳を完成（不足していた 62 項目：RX/TX 系統の損失と利得、Friis の式、メイン画面、タブの説明）。プログラムのマニフェストに Windows 7、8、8.1 を宣言。",
+            "1.9.8 - 自局の地平線：月を実際の大きさ（約 0.5°）で描き、目印として破線の円を表示；自動更新は SHA-256 フィンガープリントの検証に成功した場合のみ（フィンガープリント一覧がない、またはパッケージが含まれていない場合は中止）；リンクはウェブとメールのアドレスのみを開く；macOS：起動スクリプトが Mono（アーキテクチャ、Rosetta、検疫属性）を確認し、エラー 126 と 127 を説明。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -19811,6 +19819,7 @@ namespace LunaCalc
             "यागी: «EME बजट डिश» में एंटीना जैसा है वैसा रहता है",
             "DX का उपकरण EME बजट में डाला गया:",
             "1.9.7 - बांग्ला, अरबी और तुर्की अनुवाद पूरे (62 छूटे हुए पाठ: RX/TX शृंखला के नुकसान और गेन, Friis सूत्र, मुख्य स्क्रीन, टैब का विवरण); Windows 7, 8 और 8.1 प्रोग्राम के मैनिफ़ेस्ट में घोषित।",
+            "1.9.8 - मेरा क्षितिज: चंद्रमा अब अपने वास्तविक आकार (लगभग 0.5°) में बनाया जाता है, संकेत के लिए एक डैश वाला वृत्त; स्वचालित अद्यतन केवल सत्यापित SHA-256 फ़िंगरप्रिंट के साथ (फ़िंगरप्रिंट सूची न होने या उसमें पैकेज न होने पर अद्यतन रद्द); लिंक केवल वेब और ईमेल पते खोलते हैं; macOS: लॉन्चर Mono (आर्किटेक्चर, Rosetta, क्वारंटीन) की जाँच करता है और त्रुटियाँ 126 और 127 समझाता है।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -21782,6 +21791,7 @@ namespace LunaCalc
             "야기: «EME 링크 버짓 파라볼라»의 안테나는 그대로입니다",
             "DX 설비를 EME 버짓에 넣었습니다:",
             "1.9.7 - 벵골어, 아랍어, 터키어 번역 완료(누락된 62개 문구: RX/TX 체인의 손실과 이득, Friis 공식, 주 화면, 탭 설명); 프로그램 매니페스트에 Windows 7, 8, 8.1 명시.",
+            "1.9.8 - 내 지평선: 달을 실제 크기(약 0.5°)로 그리고 표시용 점선 원을 함께 표시; 자동 업데이트는 SHA-256 지문이 확인된 경우에만 진행(지문 목록이 없거나 패키지가 목록에 없으면 취소); 링크는 웹과 이메일 주소만 엶; macOS: 실행기가 Mono(아키텍처, Rosetta, 격리 속성)를 확인하고 오류 126과 127을 설명.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -23753,6 +23763,7 @@ namespace LunaCalc
             "yagi: antena di «Anggaran EME parabola» tetap seperti adanya",
             "Perangkat DX dimasukkan ke anggaran EME:",
             "1.9.7 - Terjemahan bahasa Bengali, Arab, dan Turki dilengkapi (62 teks yang kurang: rugi dan penguatan rantai RX/TX, rumus Friis, layar utama, deskripsi tab); Windows 7, 8, dan 8.1 dinyatakan dalam manifes program.",
+            "1.9.8 - Cakrawala saya: Bulan digambar dalam ukuran sebenarnya (sekitar 0,5°), dengan lingkaran putus-putus sebagai penanda; pembaruan otomatis hanya dengan sidik SHA-256 yang terverifikasi (dibatalkan jika daftar sidik tidak ada atau tidak memuat paketnya); tautan hanya membuka alamat web dan surel; macOS: peluncur memeriksa Mono (arsitektur, Rosetta, karantina) dan menjelaskan galat 126 dan 127.",
         };
 
         public static readonly string[] RU = {
@@ -25725,6 +25736,7 @@ namespace LunaCalc
             "яги: антенна в «Бюджет EME параболы» остаётся прежней",
             "Оборудование DX занесено в бюджет EME:",
             "1.9.7 - Завершены переводы на бенгальский, арабский и турецкий (62 недостававших текста: потери и усиления тракта RX/TX, формула Фрииса, главный экран, описание вкладок); Windows 7, 8 и 8.1 указаны в манифесте программы.",
+            "1.9.8 - Мой горизонт: Луна рисуется в истинном размере (около 0,5°), с пунктирным кругом в качестве метки; автоматическое обновление только с проверенным отпечатком SHA-256 (отменяется, если список отпечатков отсутствует или не содержит пакет); ссылки открывают только веб-адреса и адреса электронной почты; macOS: загрузчик проверяет Mono (архитектура, Rosetta, карантин) и объясняет ошибки 126 и 127.",
         };
 
         public static readonly string[] UK = {
@@ -27697,6 +27709,7 @@ namespace LunaCalc
             "яги: антена в «Бюджет EME параболи» лишається без змін",
             "Обладнання DX занесено до бюджету EME:",
             "1.9.7 - Завершено переклади бенгальською, арабською та турецькою (62 тексти, яких бракувало: втрати й підсилення тракту RX/TX, формула Фрііса, головний екран, опис вкладок); Windows 7, 8 і 8.1 зазначено в маніфесті програми.",
+            "1.9.8 - Мій горизонт: Місяць малюється в справжньому розмірі (близько 0,5°), з пунктирним колом як позначкою; автоматичне оновлення лише з перевіреним відбитком SHA-256 (скасовується, якщо список відбитків відсутній або не містить пакета); посилання відкривають лише вебадреси та адреси електронної пошти; macOS: запускач перевіряє Mono (архітектура, Rosetta, карантин) і пояснює помилки 126 і 127.",
         };
 
         public static readonly string[] AF = {
@@ -29669,6 +29682,7 @@ namespace LunaCalc
             "yagi: die antenna in «EME-begroting skottels» bly soos dit is",
             "Opstelling van die DX in die EME-begroting gesit:",
             "1.9.7 - Vertalings in Bengaals, Arabies en Turks voltooi (62 ontbrekende tekste: verliese en winste van die RX/TX-ketting, Friis-formule, hoofskerm, beskrywing van die oortjies); Windows 7, 8 en 8.1 in die program se manifes verklaar.",
+            "1.9.8 - My horison: die Maan word op sy ware grootte geteken (ongeveer 0,5°), met 'n stippelsirkel as merker; outomatiese bywerking slegs met 'n geverifieerde SHA-256-vingerafdruk (dit word gekanselleer as die lys vingerafdrukke ontbreek of nie die pakket bevat nie); skakels maak slegs web- en e-posadresse oop; macOS: die lanseerder kontroleer Mono (argitektuur, Rosetta, kwarantyn) en verduidelik foute 126 en 127.",
         };
 
         public static readonly string[] BN = {
@@ -31640,6 +31654,7 @@ namespace LunaCalc
             "ইয়াগি: «EME বাজেট ডিশ»-এর অ্যান্টেনা যেমন আছে তেমনই থাকে",
             "DX-এর সরঞ্জাম EME বাজেটে বসানো হয়েছে:",
             "1.9.7 - বাংলা, আরবি ও তুর্কি অনুবাদ সম্পূর্ণ (62টি বাদ পড়া লেখা: RX/TX শৃঙ্খলের ক্ষতি ও গেইন, Friis সূত্র, প্রধান পর্দা, ট্যাবের বিবরণ); প্রোগ্রামের ম্যানিফেস্টে Windows 7, 8 ও 8.1 ঘোষিত।",
+            "1.9.8 - আমার দিগন্ত: চাঁদ এখন প্রকৃত আকারে (প্রায় 0.5°) আঁকা হয়, চিহ্ন হিসেবে একটি ড্যাশ দেওয়া বৃত্তসহ; স্বয়ংক্রিয় হালনাগাদ কেবল যাচাই করা SHA-256 ফিঙ্গারপ্রিন্টসহ (ফিঙ্গারপ্রিন্টের তালিকা না থাকলে বা তাতে প্যাকেজ না থাকলে বাতিল হয়); লিংক কেবল ওয়েব ও ই-মেইল ঠিকানা খোলে; macOS: লঞ্চার Mono (আর্কিটেকচার, Rosetta, কোয়ারেন্টাইন) পরীক্ষা করে এবং ত্রুটি 126 ও 127 ব্যাখ্যা করে।",
         };
 
         public static readonly string[] AR = {
@@ -33611,6 +33626,7 @@ namespace LunaCalc
             "ياغي: يبقى هوائي «ميزانية EME الأطباق» كما هو",
             "وُضعت تجهيزات DX في ميزانية EME:",
             "1.9.7 - اكتملت الترجمات إلى البنغالية والعربية والتركية (62 نصًا ناقصًا: خسائر ومكاسب سلسلة RX/TX، صيغة Friis، الشاشة الرئيسية، وصف التبويبات)؛ أُعلن عن Windows 7 و8 و8.1 في بيان البرنامج.",
+            "1.9.8 - أفق محطتي: يُرسم القمر بحجمه الحقيقي (نحو 0.5°) مع دائرة متقطعة علامةً له؛ التحديث التلقائي لا يتم إلا ببصمة SHA-256 متحقق منها (يُلغى إذا غابت قائمة البصمات أو لم تتضمن الحزمة)؛ الروابط تفتح عناوين الويب والبريد الإلكتروني فقط؛ macOS: المُشغِّل يفحص Mono (البنية، Rosetta، الحجر) ويشرح الخطأين 126 و127.",
         };
 
         public static readonly string[] TR = {
@@ -35582,6 +35598,7 @@ namespace LunaCalc
             "yagi: «EME bütçesi çanaklar» içindeki anten olduğu gibi kalır",
             "DX'in donanımı EME bütçesine kondu:",
             "1.9.7 - Bengalce, Arapça ve Türkçe çeviriler tamamlandı (eksik 62 metin: RX/TX zincirinin kayıpları ve kazançları, Friis formülü, ana ekran, sekmelerin açıklaması); Windows 7, 8 ve 8.1 programın manifestosunda belirtildi.",
+            "1.9.8 - Ufkum: Ay gerçek boyutunda (yaklaşık 0,5°) çiziliyor, işaret olarak kesikli bir daireyle; otomatik güncelleme yalnızca doğrulanmış SHA-256 parmak iziyle yapılıyor (parmak izi listesi yoksa ya da paketi içermiyorsa iptal ediliyor); bağlantılar yalnızca web ve e-posta adreslerini açıyor; macOS: başlatıcı Mono'yu (mimari, Rosetta, karantina) denetliyor ve 126 ile 127 hatalarını açıklıyor.",
         };
 
         public static readonly string[] NL = {
@@ -37553,6 +37570,7 @@ namespace LunaCalc
             "yagi: de antenne in «EME-budget schotels» blijft zoals ze is",
             "Opstelling van de DX in het EME-budget gezet:",
             "1.9.7 - Vertalingen in het Bengaals, Arabisch en Turks voltooid (62 ontbrekende teksten: verliezen en versterkingen van de RX/TX-keten, formule van Friis, hoofdscherm, beschrijving van de tabbladen); Windows 7, 8 en 8.1 vermeld in het manifest van het programma.",
+            "1.9.8 - Mijn horizon: de maan wordt op ware grootte getekend (ongeveer 0,5°), met een gestippelde cirkel als markering; automatische update alleen met een gecontroleerde SHA-256-vingerafdruk (wordt geannuleerd als de lijst met vingerafdrukken ontbreekt of het pakket niet bevat); koppelingen openen alleen web- en e-mailadressen; macOS: het startprogramma controleert Mono (architectuur, Rosetta, quarantaine) en legt de fouten 126 en 127 uit.",
         };
 
         public static readonly string[] ET = {
@@ -39524,6 +39542,7 @@ namespace LunaCalc
             "yagi: «EME eelarve paraboolid» antenn jääb samaks",
             "DX-i seadmed pandi EME-eelarvesse:",
             "1.9.7 - Tõlked bengali, araabia ja türgi keelde lõpetatud (62 puuduvat teksti: RX/TX-ahela kaod ja võimendused, Friisi valem, põhiekraan, vahelehtede kirjeldus); Windows 7, 8 ja 8.1 programmi manifestis kirjas.",
+            "1.9.8 - Minu horisont: Kuu joonistatakse tegelikus suuruses (umbes 0,5°), tähiseks katkendjoonega ring; automaatne uuendus ainult kontrollitud SHA-256 sõrmejäljega (tühistatakse, kui sõrmejälgede loend puudub või ei sisalda paketti); lingid avavad ainult veebi- ja e-posti aadresse; macOS: käivitaja kontrollib Monot (arhitektuur, Rosetta, karantiin) ja selgitab vigu 126 ja 127.",
         };
 
         public static readonly string[] LV = {
@@ -41495,6 +41514,7 @@ namespace LunaCalc
             "yagi: antena «EME budžets šķīvji» paliek, kāda ir",
             "DX aprīkojums ielikts EME budžetā:",
             "1.9.7 - Pabeigti tulkojumi bengāļu, arābu un turku valodā (62 trūkstoši teksti: RX/TX ķēdes zudumi un pastiprinājumi, Friisa formula, galvenais ekrāns, cilņu apraksts); Windows 7, 8 un 8.1 norādīti programmas manifestā.",
+            "1.9.8 - Mans horizonts: Mēness tiek zīmēts patiesajā lielumā (apmēram 0,5°) ar raustītu apli kā atzīmi; automātiskā atjaunināšana tikai ar pārbaudītu SHA-256 pirkstu nospiedumu (tā tiek atcelta, ja nospiedumu saraksta nav vai tajā nav pakotnes); saites atver tikai tīmekļa un e-pasta adreses; macOS: palaidējs pārbauda Mono (arhitektūra, Rosetta, karantīna) un izskaidro kļūdas 126 un 127.",
         };
 
         public static readonly string[] LT = {
@@ -43466,6 +43486,7 @@ namespace LunaCalc
             "yagi: antena «EME biudžetas lėkštės» lieka tokia, kokia yra",
             "DX įranga įrašyta į EME biudžetą:",
             "1.9.7 - Užbaigti vertimai į bengalų, arabų ir turkų kalbas (62 trūkę tekstai: RX/TX grandinės nuostoliai ir stiprinimai, Friiso formulė, pagrindinis ekranas, skirtukų aprašymas); Windows 7, 8 ir 8.1 nurodytos programos manifeste.",
+            "1.9.8 - Mano horizontas: Mėnulis piešiamas tikru dydžiu (apie 0,5°), su punktyriniu apskritimu kaip žyme; automatinis atnaujinimas tik su patikrintu SHA-256 kontroliniu kodu (atšaukiamas, jei kodų sąrašo nėra arba jame nėra paketo); nuorodos atveria tik žiniatinklio ir el. pašto adresus; macOS: paleidiklis tikrina Mono (architektūra, Rosetta, karantinas) ir paaiškina klaidas 126 ir 127.",
         };
 
         public static readonly string[] SV = {
@@ -45437,6 +45458,7 @@ namespace LunaCalc
             "yagi: antennen i «EME-budget parabol» förblir som den är",
             "DX:ens utrustning inlagd i EME-budgeten:",
             "1.9.7 - Översättningar till bengali, arabiska och turkiska slutförda (62 saknade texter: förluster och förstärkningar i RX/TX-kedjan, Friis formel, huvudskärmen, beskrivning av flikarna); Windows 7, 8 och 8.1 angivna i programmets manifest.",
+            "1.9.8 - Min horisont: månen ritas i sin verkliga storlek (cirka 0,5°), med en streckad cirkel som markering; automatisk uppdatering endast med verifierat SHA-256-fingeravtryck (avbryts om listan med fingeravtryck saknas eller inte innehåller paketet); länkar öppnar bara webb- och e-postadresser; macOS: startprogrammet kontrollerar Mono (arkitektur, Rosetta, karantän) och förklarar felen 126 och 127.",
         };
 
         public static readonly string[] NB = {
@@ -47408,6 +47430,7 @@ namespace LunaCalc
             "yagi: antennen i «EME-budsjett parabol» forblir som den er",
             "DX-ens oppsett lagt inn i EME-budsjettet:",
             "1.9.7 - Oversettelser til bengali, arabisk og tyrkisk fullført (62 manglende tekster: tap og forsterkning i RX/TX-kjeden, Friis' formel, hovedskjermen, beskrivelse av fanene); Windows 7, 8 og 8.1 oppgitt i programmets manifest.",
+            "1.9.8 - Min horisont: månen tegnes i sin virkelige størrelse (omtrent 0,5°), med en stiplet sirkel som markør; automatisk oppdatering bare med verifisert SHA-256-fingeravtrykk (avbrytes hvis listen over fingeravtrykk mangler eller ikke inneholder pakken); lenker åpner bare nett- og e-postadresser; macOS: startprogrammet kontrollerer Mono (arkitektur, Rosetta, karantene) og forklarer feil 126 og 127.",
         };
 
         public static readonly string[] IS = {
@@ -49379,6 +49402,7 @@ namespace LunaCalc
             "yagi: loftnetið í «EME-aflreikningur diskar» helst óbreytt",
             "Búnaður DX settur í EME-fjárhagsáætlunina:",
             "1.9.7 - Þýðingum á bengalísku, arabísku og tyrknesku lokið (62 textar sem vantaði: töp og mögnun í RX/TX-keðjunni, formúla Friis, aðalskjár, lýsing flipanna); Windows 7, 8 og 8.1 tilgreind í upplýsingaskrá forritsins.",
+            "1.9.8 - Sjóndeildarhringurinn minn: tunglið er teiknað í raunstærð (um 0,5°) með strikuðum hring sem merki; sjálfvirk uppfærsla aðeins með staðfestu SHA-256-fingrafari (hætt er við ef fingrafaralistann vantar eða pakkinn er ekki á honum); tenglar opna aðeins vef- og netfangaslóðir; macOS: ræsirinn athugar Mono (högun, Rosetta, sóttkví) og útskýrir villur 126 og 127.",
         };
 
         public static readonly string[] HE = {
@@ -51350,6 +51374,7 @@ namespace LunaCalc
             "יאגי: האנטנה ב-«תקציב EME צלחות» נשארת כפי שהיא",
             "ציוד ה-DX הוכנס לתקציב ה-EME:",
             "1.9.7 - הושלמו התרגומים לבנגלית, לערבית ולטורקית (62 טקסטים חסרים: הפסדים והגברים בשרשרת RX/TX, נוסחת Friis, המסך הראשי, תיאור הלשוניות); Windows 7, 8 ו-8.1 מוצהרים במניפסט של התוכנה.",
+            "1.9.8 - האופק שלי: הירח מצויר בגודלו האמיתי (כ-0.5°) עם עיגול מקווקו כסימון; עדכון אוטומטי רק עם טביעת SHA-256 מאומתת (העדכון מבוטל אם רשימת הטביעות חסרה או אינה כוללת את החבילה); קישורים פותחים רק כתובות אינטרנט ודואר אלקטרוני; macOS: המפעיל בודק את Mono (ארכיטקטורה, Rosetta, הסגר) ומסביר את השגיאות 126 ו-127.",
         };
 
         public static readonly string[] UR = {
@@ -53321,6 +53346,7 @@ namespace LunaCalc
             "یاگی: «EME بجٹ ڈش» میں اینٹینا جیسا ہے ویسا رہتا ہے",
             "DX کا سامان EME بجٹ میں ڈال دیا گیا:",
             "1.9.7 - بنگالی، عربی اور ترکی ترجمے مکمل (62 گمشدہ متن: RX/TX زنجیر کے نقصانات اور گین، Friis فارمولا، مرکزی اسکرین، ٹیبز کی وضاحت)؛ Windows 7، 8 اور 8.1 پروگرام کے مینی فیسٹ میں درج۔",
+            "1.9.8 - میرا افق: چاند اب اپنے اصل حجم (تقریباً 0.5°) میں بنایا جاتا ہے، نشان کے طور پر ایک ٹوٹی لکیر والے دائرے کے ساتھ؛ خودکار اپ ڈیٹ صرف تصدیق شدہ SHA-256 فنگر پرنٹ کے ساتھ (فنگر پرنٹس کی فہرست نہ ہو یا اس میں پیکیج نہ ہو تو منسوخ)؛ روابط صرف ویب اور ای میل پتے کھولتے ہیں؛ macOS: لانچر Mono (آرکیٹیکچر، Rosetta، قرنطینہ) جانچتا ہے اور غلطیاں 126 اور 127 سمجھاتا ہے۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -55291,6 +55317,7 @@ namespace LunaCalc
             "yagi: antennen i «EME-budget parabol» forbliver, som den er",
             "DX'ens opstilling sat ind i EME-budgettet:",
             "1.9.7 - Oversættelser til bengali, arabisk og tyrkisk fuldført (62 manglende tekster: tab og forstærkning i RX/TX-kæden, Friis' formel, hovedskærmen, beskrivelse af fanerne); Windows 7, 8 og 8.1 angivet i programmets manifest.",
+            "1.9.8 - Min horisont: Månen tegnes i sin sande størrelse (ca. 0,5°) med en stiplet cirkel som markør; automatisk opdatering kun med verificeret SHA-256-fingeraftryk (annulleres, hvis listen over fingeraftryk mangler eller ikke indeholder pakken); links åbner kun web- og e-mailadresser; macOS: startprogrammet kontrollerer Mono (arkitektur, Rosetta, karantæne) og forklarer fejl 126 og 127.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -57261,6 +57288,7 @@ namespace LunaCalc
             "yagi: nananatili ang antena sa «EME budget dish»",
             "Inilagay sa EME budget ang kagamitan ng DX:",
             "1.9.7 - Nakumpleto ang mga salin sa Bengali, Arabe at Turko (62 nawawalang teksto: mga pagkawala at gain ng RX/TX chain, pormula ni Friis, pangunahing screen, paglalarawan ng mga tab); idineklara ang Windows 7, 8 at 8.1 sa manifest ng programa.",
+            "1.9.8 - Aking horizon: iginuguhit ang Buwan sa tunay nitong laki (mga 0.5°), na may putul-putol na bilog bilang marka; awtomatikong pag-update lamang kapag napatunayan ang SHA-256 fingerprint (kinakansela kung wala ang listahan ng mga fingerprint o wala roon ang package); ang mga link ay nagbubukas lamang ng mga web at e-mail address; macOS: sinusuri ng launcher ang Mono (arkitektura, Rosetta, quarantine) at ipinapaliwanag ang mga error 126 at 127.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -59231,6 +59259,7 @@ namespace LunaCalc
             "yagi: a antena de «Balanço EME parabólicas» fica como está",
             "Instalação do DX colocada no orçamento EME:",
             "1.9.7 - Traduções concluídas em bengali, árabe e turco (62 textos que faltavam: perdas e ganhos da cadeia RX/TX, fórmula de Friis, tela principal, descrição das abas); Windows 7, 8 e 8.1 declarados no manifesto do programa.",
+            "1.9.8 - Meu horizonte: a Lua é desenhada em seu tamanho real (cerca de 0,5°), com um círculo tracejado como marcador; atualização automática só com a impressão digital SHA-256 verificada (é cancelada se a lista de impressões estiver ausente ou não contiver o pacote); os links só abrem endereços web e de e-mail; macOS: o inicializador verifica o Mono (arquitetura, Rosetta, quarentena) e explica os erros 126 e 127.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -61201,6 +61230,7 @@ namespace LunaCalc
             "ยากิ: สายอากาศใน «บัดเจ็ต EME จาน» คงเดิม",
             "ใส่อุปกรณ์ของ DX ลงในงบ EME แล้ว:",
             "1.9.7 - แปลภาษาเบงกาลี อาหรับ และตุรกีครบแล้ว (ข้อความที่ขาด 62 รายการ: การสูญเสียและอัตราขยายของสาย RX/TX, สูตรของ Friis, หน้าจอหลัก, คำอธิบายแท็บ); ระบุ Windows 7, 8 และ 8.1 ในแมนิเฟสต์ของโปรแกรม",
+            "1.9.8 - ขอบฟ้าของฉัน: วาดดวงจันทร์ตามขนาดจริง (ประมาณ 0.5°) พร้อมวงกลมเส้นประเป็นเครื่องหมาย; อัปเดตอัตโนมัติเฉพาะเมื่อตรวจสอบลายนิ้วมือ SHA-256 ผ่าน (ยกเลิกหากไม่มีรายการลายนิ้วมือหรือรายการไม่มีแพ็กเกจนั้น); ลิงก์เปิดได้เฉพาะที่อยู่เว็บและอีเมล; macOS: ตัวเปิดโปรแกรมตรวจสอบ Mono (สถาปัตยกรรม, Rosetta, การกักกัน) และอธิบายข้อผิดพลาด 126 และ 127",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -63171,6 +63201,7 @@ namespace LunaCalc
             "八木：“EME 鏈路預算 拋物面”中的天線保持不變",
             "DX 的裝置已填入 EME 鏈路預算：",
             "1.9.7 - 完成孟加拉語、阿拉伯語和土耳其語翻譯（補齊 62 條文字：RX/TX 鏈路的損耗與增益、Friis 公式、主畫面、分頁說明）；程式清單中宣告支援 Windows 7、8 和 8.1。",
+            "1.9.8 - 我的地平線：月亮依真實大小繪製（約 0.5°），並以虛線圓作為標記；自動更新僅在 SHA-256 指紋驗證通過後進行（若指紋清單缺少或不含該安裝包則取消更新）；連結只開啟網頁和電子郵件地址；macOS：啟動器會檢查 Mono（架構、Rosetta、隔離屬性）並說明錯誤 126 和 127。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -65141,6 +65172,7 @@ namespace LunaCalc
             "yagi: antena w «Bilans EME czasze» zostaje bez zmian",
             "Wyposażenie DX wpisane do budżetu EME:",
             "1.9.7 - Ukończone tłumaczenia na bengalski, arabski i turecki (62 brakujące teksty: straty i wzmocnienia toru RX/TX, wzór Friisa, ekran główny, opis zakładek); Windows 7, 8 i 8.1 zadeklarowane w manifeście programu.",
+            "1.9.8 - Mój horyzont: Księżyc jest rysowany w rzeczywistej wielkości (około 0,5°), z przerywanym okręgiem jako znacznikiem; automatyczna aktualizacja tylko ze sprawdzonym odciskiem SHA-256 (zostaje anulowana, gdy brakuje listy odcisków albo nie zawiera ona pakietu); odnośniki otwierają tylko adresy WWW i e-mail; macOS: program uruchamiający sprawdza Mono (architektura, Rosetta, kwarantanna) i wyjaśnia błędy 126 i 127.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -67111,6 +67143,7 @@ namespace LunaCalc
             "yagi: anténa v «Bilance EME paraboly» zůstává beze změny",
             "Vybavení DX vloženo do rozpočtu EME:",
             "1.9.7 - Dokončené překlady do bengálštiny, arabštiny a turečtiny (62 chybějících textů: ztráty a zisky řetězce RX/TX, Friisův vzorec, hlavní obrazovka, popis záložek); Windows 7, 8 a 8.1 uvedeny v manifestu programu.",
+            "1.9.8 - Můj obzor: Měsíc se kreslí ve skutečné velikosti (asi 0,5°) s čárkovaným kruhem jako značkou; automatická aktualizace jen s ověřeným otiskem SHA-256 (zruší se, když seznam otisků chybí nebo balíček neobsahuje); odkazy otevírají jen webové a e-mailové adresy; macOS: spouštěč kontroluje Mono (architektura, Rosetta, karanténa) a vysvětluje chyby 126 a 127.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -69081,6 +69114,7 @@ namespace LunaCalc
             "yagi: antena din «Buget EME parabole» rămâne cum este",
             "Echipamentul DX-ului pus în bugetul EME:",
             "1.9.7 - Traduceri finalizate în bengali, arabă și turcă (62 de texte lipsă: pierderile și câștigurile lanțului RX/TX, formula lui Friis, ecranul principal, descrierea filelor); Windows 7, 8 și 8.1 declarate în manifestul programului.",
+            "1.9.8 - Orizontul meu: Luna este desenată la dimensiunea reală (circa 0,5°), cu un cerc punctat ca reper; actualizare automată doar cu amprenta SHA-256 verificată (se anulează dacă lista amprentelor lipsește sau nu conține pachetul); legăturile deschid doar adrese web și de e-mail; macOS: lansatorul verifică Mono (arhitectură, Rosetta, carantină) și explică erorile 126 și 127.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -71051,6 +71085,7 @@ namespace LunaCalc
             "yagi: η κεραία στο «Προϋπολογισμός EME παραβολικά» μένει όπως είναι",
             "Ο εξοπλισμός του DX μπήκε στον προϋπολογισμό EME:",
             "1.9.7 - Ολοκληρώθηκαν οι μεταφράσεις στα βεγγαλικά, αραβικά και τουρκικά (62 κείμενα που έλειπαν: απώλειες και κέρδη της αλυσίδας RX/TX, τύπος του Friis, κύρια οθόνη, περιγραφή των καρτελών)· τα Windows 7, 8 και 8.1 δηλώνονται στο manifest του προγράμματος.",
+            "1.9.8 - Ο ορίζοντάς μου: η Σελήνη σχεδιάζεται στο πραγματικό της μέγεθος (περίπου 0,5°), με διακεκομμένο κύκλο ως σημάδι· αυτόματη ενημέρωση μόνο με επαληθευμένο αποτύπωμα SHA-256 (ακυρώνεται αν λείπει ο κατάλογος αποτυπωμάτων ή δεν περιέχει το πακέτο)· οι σύνδεσμοι ανοίγουν μόνο διευθύνσεις ιστού και ηλεκτρονικού ταχυδρομείου· macOS: ο εκκινητής ελέγχει το Mono (αρχιτεκτονική, Rosetta, καραντίνα) και εξηγεί τα σφάλματα 126 και 127.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -73021,6 +73056,7 @@ namespace LunaCalc
             "yagi: a(z) «Parabola EME-mérleg» antennája marad, ahogy van",
             "A DX felszerelése bekerült az EME-költségvetésbe:",
             "1.9.7 - Elkészültek a bengáli, arab és török fordítások (62 hiányzó szöveg: az RX/TX lánc veszteségei és erősítései, Friis-képlet, főképernyő, a fülek leírása); a Windows 7, 8 és 8.1 szerepel a program manifesztjében.",
+            "1.9.8 - Az én horizontom: a Hold valódi méretében látszik (kb. 0,5°), jelölőként szaggatott körrel; automatikus frissítés csak ellenőrzött SHA-256 ujjlenyomattal (megszakad, ha az ujjlenyomatok listája hiányzik, vagy nincs benne a csomag); a hivatkozások csak webes és e-mail-címeket nyitnak meg; macOS: az indító ellenőrzi a Monót (architektúra, Rosetta, karantén), és elmagyarázza a 126-os és 127-es hibát.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -74991,6 +75027,7 @@ namespace LunaCalc
             "yagi: anténa v «Bilancia EME paraboly» zostáva bez zmeny",
             "Vybavenie DX vložené do rozpočtu EME:",
             "1.9.7 - Dokončené preklady do bengálčiny, arabčiny a turečtiny (62 chýbajúcich textov: straty a zisky reťazca RX/TX, Friisov vzorec, hlavná obrazovka, popis záložiek); Windows 7, 8 a 8.1 uvedené v manifeste programu.",
+            "1.9.8 - Môj obzor: Mesiac sa kreslí v skutočnej veľkosti (asi 0,5°) s čiarkovaným kruhom ako značkou; automatická aktualizácia len s overeným odtlačkom SHA-256 (zruší sa, keď zoznam odtlačkov chýba alebo balík neobsahuje); odkazy otvárajú len webové a e-mailové adresy; macOS: spúšťač kontroluje Mono (architektúra, Rosetta, karanténa) a vysvetľuje chyby 126 a 127.",
         };
     }
 
@@ -80062,8 +80099,8 @@ namespace LunaCalc
                         float rx = (float)(sdL / Math.Max(0.05, Math.Cos(mn.El * Math.PI / 180.0)) / 360.0 * a.Width);
                         float ry = (float)(sdL / (ymax - ymin) * a.Height);
                         // segnaposto: cerchio tratteggiato di grandezza fissa, solo contorno
-                        using (Pen ps = new Pen(Color.FromArgb(150, 60, 60, 60), S(1f)) { DashStyle = System.Drawing.Drawing2D.DashStyle.Dash })
-                            g.DrawEllipse(ps, x - rr, y - rr, 2 * rr, 2 * rr);
+                        using (Pen pTratt = new Pen(Color.FromArgb(150, 60, 60, 60), S(1f)) { DashStyle = System.Drawing.Drawing2D.DashStyle.Dash })
+                            g.DrawEllipse(pTratt, x - rr, y - rr, 2 * rr, 2 * rr);
                         using (Brush bm = new SolidBrush(Color.FromArgb(255, 252, 235))) g.FillEllipse(bm, x - rx, y - ry, 2 * rx, 2 * ry);
                         using (Pen pm = new Pen(Color.FromArgb(60, 60, 60), S(1f))) g.DrawEllipse(pm, x - rx, y - ry, 2 * rx, 2 * ry);
                         string s = Lang.T("Luna") + " " + orizT.ToString("HH:mm", inv) + " · " + mn.Az.ToString("0.0", ci) + "°/" + mn.El.ToString("0.0", ci) + "°";
@@ -87504,7 +87541,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.9.7";
+        public const string Versione = "1.9.8";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -90892,6 +90929,7 @@ namespace LunaCalc
             Lang.T("1.9.2 - Nuova linguetta Rumore del cielo (Skynoise) in Pianificazione: temperatura d'antenna calcolata con il metodo di G8ONH e G4SWX dal diagramma completo dell'antenna (file .out del NEC, YA-NEC o fascio gaussiano) e dalla mappa del cielo (Remazeilles, Haslam, GSM 2008 o LFmap) a 50, 144, 432 MHz e 23 cm, con il percorso della Luna nel mese, la temperatura durante il passaggio per te e per il DX, l'effetto sul Budget EME yagi e il confronto con DJ9BV; collaudo automatico in compila.bat; nel manuale TEORIA E CONSIGLI SULL'EME il rumore del cielo con le fonti a confronto, il guadagno dei dischi (PE1RKI o calcolo per aliquote, Ruze), il primo fuoco sopra i 2320 MHz, la rotazione dell'illuminatore e la Luna illuminata dal fascio (BWF)."),
             Lang.T("1.9.3 - Nomi dei pacchetti uguali a quelli di YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pacchetti .rpm, Arch e Slackware anche per ARM; nelle note della release una tabella con il collegamento a ogni pacchetto per ogni sistema. Questa versione contiene anche i file con i vecchi nomi, solo per l'aggiornamento automatico dalla 1.9.1 e dalla 1.9.2."),
             Lang.T("1.9.5 - Budget EME yagi e dischi: costo di 0,1 dB di perdita in più prima del preampli (PA3CSG) e nuova sezione Prova della stazione con il G/T sul cielo freddo e il fattore Y previsto su Sole, Luna, Cas A e terreno (G3LTF, EMECalc di VK3UM); Budget EME dischi: calo dell'illuminazione al bordo e rete del disco, con la Tant stimata da cielo, ricaduta e rete, e il G/T misurato da G3LTF a confronto; nuovo paragrafo nel manuale; riga ΔT minimo misurabile con la banda passante e il tempo d'integrazione τ (Antenna Engineering Handbook, eq. 41-21); terreno del DX: orizzonte SRTM1 attorno al suo locator nella linguetta Il mio orizzonte, con finestre comuni, barra delle 24 ore, Volta celeste e Stazioni da provare che ne tengono conto (locator di almeno 6 caratteri); ROS dell'antenna nella prova della stazione (AEH eq. 41-19); diametro del Sole da 0,524° a 0,542° con la distanza Terra–Sole; nota «YAEC calcola, non progetta apparati» nelle fonti e nei consigli."),
+            Lang.T("1.9.8 - Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127."),
             Lang.T("1.9.7 - Traduzioni completate in bengalese, arabo e turco (62 testi mancanti: perdite e guadagni della catena RX/TX, formula di Friis, schermata principale, descrizione delle linguette); Windows 7, 8 e 8.1 dichiarati nel manifesto del programma."),
             Lang.T("1.9.6 - Rischio di polarizzazione: nei riquadri delle due stazioni si sceglie la polarizzazione dell'antenna (H, V, H e V (XPOL), circolare; per il DX anche «secondo la banda»); YAEC segnala quando il collegamento è a rischio senza la seconda polarizzazione (MNR fino a 432 MHz, spostamento spaziale più in alto) con una striscia in Finestra comune, una riga nella scheda del DX, il simbolo ⇄ nel calendario e un'etichetta in Stazioni da provare; l'avviso a comparsa scatta solo con il rischio rosso; nuovo paragrafo nel manuale; elenco EME di PA0PLY (432 e 1296 MHz) aggiornato ogni giorno: Stazioni da provare anche a 432 e 1296 MHz con la stazione del Budget EME della banda, nuova linguetta Elenchi delle stazioni EME (chat di N0UK ed elenco di PA0PLY, con fonte, crediti e ringraziamenti) e impianto del DX preso dagli elenchi quando se ne scrive il nominativo."),
         };
