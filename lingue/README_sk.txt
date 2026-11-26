@@ -44,6 +44,7 @@ Chyby, lepšie údaje, preklady: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 HISTÓRIA VERZIÍ
 Verzie pred 1.0 sa nazývajú beta.
+- 1.9.9 - Okno ukončenia a správy: tlačidlá už na sivej lište nemajú svetlé rohy.
 - 1.9.8 - Môj obzor: Mesiac sa kreslí v skutočnej veľkosti (asi 0,5°) s čiarkovaným kruhom ako značkou; automatická aktualizácia len s overeným odtlačkom SHA-256 (zruší sa, keď zoznam odtlačkov chýba alebo balík neobsahuje); odkazy otvárajú len webové a e-mailové adresy; macOS: spúšťač kontroluje Mono (architektúra, Rosetta, karanténa) a vysvetľuje chyby 126 a 127.
 - 1.9.7 - Dokončené preklady do bengálčiny, arabčiny a turečtiny (62 chýbajúcich textov: straty a zisky reťazca RX/TX, Friisov vzorec, hlavná obrazovka, popis záložiek); Windows 7, 8 a 8.1 uvedené v manifeste programu.
 - 1.9.6 - Riziko polarizácie: v poliach oboch staníc zvolíš polarizáciu antény (H, V, H a V (XPOL), kruhová; pre DX aj «podľa pásma»); YAEC upozorní, keď je spojenie bez druhej polarizácie ohrozené (MNR do 432 MHz, vyššie priestorový posun), pruhom v «Spoločné okno», riadkom na karte DX, symbolom ⇄ v kalendári a štítkom v «Stanice na vyskúšanie»; vyskakovacie varovanie len pri červenom riziku; nový odsek v návode; EME zoznam PA0PLY (432 a 1296 MHz) aktualizovaný každý deň: «Stanice na vyskúšanie» aj na 432 a 1296 MHz so stanicou z rozpočtu EME pásma, nová záložka «Zoznamy staníc EME» (chat N0UK a zoznam PA0PLY, so zdrojom, uvedením autorov a poďakovaním) a vybavenie DX prevzaté zo zoznamov po napísaní jeho značky.

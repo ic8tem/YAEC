@@ -44,6 +44,7 @@ Villur, betri gögn, þýðingar: ccerrotta@gmail.com · ic8tem@gmail.com · www
 
 ÚTGÁFUSAGA
 Útgáfur á undan 1.0 kallast beta.
+- 1.9.9 - Lokunargluggi og skilaboð: hnapparnir eru ekki lengur með ljós horn á gráu stikunni.
 - 1.9.8 - Sjóndeildarhringurinn minn: tunglið er teiknað í raunstærð (um 0,5°) með strikuðum hring sem merki; sjálfvirk uppfærsla aðeins með staðfestu SHA-256-fingrafari (hætt er við ef fingrafaralistann vantar eða pakkinn er ekki á honum); tenglar opna aðeins vef- og netfangaslóðir; macOS: ræsirinn athugar Mono (högun, Rosetta, sóttkví) og útskýrir villur 126 og 127.
 - 1.9.7 - Þýðingum á bengalísku, arabísku og tyrknesku lokið (62 textar sem vantaði: töp og mögnun í RX/TX-keðjunni, formúla Friis, aðalskjár, lýsing flipanna); Windows 7, 8 og 8.1 tilgreind í upplýsingaskrá forritsins.
 - 1.9.6 - Skautunarhætta: í reitum stöðvanna tveggja velurðu skautun loftnetsins (H, V, H og V (XPOL), hringskautun; fyrir DX einnig «eftir bandinu»); YAEC merkir þegar sambandið er í hættu án annarrar skautunar (MNR upp að 432 MHz, rúmfræðileg hliðrun ofar) með rönd í «Sameiginlegur gluggi», línu á DX-spjaldinu, tákninu ⇄ í dagatalinu og merki í «Stöðvar til að prófa»; sprettiglugginn birtist aðeins við rauða hættu; ný málsgrein í handbókinni; EME-listi PA0PLY (432 og 1296 MHz) uppfærður daglega: «Stöðvar til að prófa» einnig á 432 og 1296 MHz með stöðinni úr EME-fjárhagsáætlun bandsins, nýr flipi «Listar yfir EME-stöðvar» (spjall N0UK og listi PA0PLY, með heimild, viðurkenningum og þökkum) og búnaður DX sóttur í listana þegar kallmerkið er skrifað.
