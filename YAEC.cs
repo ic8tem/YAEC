@@ -90678,7 +90678,16 @@ namespace LunaCalc
 
         static void ApriLink(string url)
         {
+            if (!LinkSicuro(url)) return;
             try { System.Diagnostics.Process.Start(url); } catch { }
+        }
+
+        // apre solo indirizzi web e di posta: mai programmi, file locali o percorsi di rete
+        internal static bool LinkSicuro(string url)
+        {
+            if (string.IsNullOrEmpty(url)) return false;
+            string u = url.Trim().ToLowerInvariant();
+            return u.StartsWith("https://") || u.StartsWith("http://") || u.StartsWith("mailto:");
         }
 
         void Scrivi(RichTextBox rt, string t, float pt, bool bold)
@@ -93812,6 +93821,24 @@ namespace LunaCalc
             return false;
         }
 
+        // 0 = impronta giusta; 1 = elenco SHA256SUMS assente o senza il pacchetto; 2 = impronta diversa
+        static int VerificaImpronta(byte[] somme, byte[] pacchetto, string nome)
+        {
+            if (somme == null || pacchetto == null) return 1;
+            string h;
+            using (System.Security.Cryptography.SHA256 sh = System.Security.Cryptography.SHA256.Create())
+                h = BitConverter.ToString(sh.ComputeHash(pacchetto)).Replace("-", "").ToLowerInvariant();
+            int r = 1;
+            foreach (string riga in Encoding.ASCII.GetString(somme).Split('\n'))
+            {
+                string[] c = riga.Trim().Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                if (c.Length != 2 || c[1].TrimStart('*') != nome) continue;   // nome del file esatto, non solo la fine della riga
+                if (string.Equals(c[0], h, StringComparison.OrdinalIgnoreCase)) return 0;
+                r = 2;   // riga del pacchetto con un'altra impronta (un pacchetto ricaricato può avere due righe: basta che una combaci)
+            }
+            return r;
+        }
+
         void AvviaControlloAggiornamenti()
         {
             if (InProva) return;
@@ -93876,25 +93903,10 @@ namespace LunaCalc
                     }));
                     return;
                 }
-                // impronta SHA-256: se c'è l'elenco deve combaciare
-                if (somme != null)
-                {
-                    string h;
-                    using (System.Security.Cryptography.SHA256 sh = System.Security.Cryptography.SHA256.Create())
-                        h = BitConverter.ToString(sh.ComputeHash(pacchetto)).Replace("-", "").ToLowerInvariant();
-                    string elenco = Encoding.ASCII.GetString(somme);
-                    bool trovato = false, ok = false;
-                    foreach (string r in elenco.Split('\n'))
-                    {
-                        string rr = r.Trim();
-                        if (rr.EndsWith(nome)) { trovato = true; ok = rr.StartsWith(h, StringComparison.OrdinalIgnoreCase); }
-                    }
-                    if (trovato && !ok)
-                    {
-                        this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error)));
-                        return;
-                    }
-                }
+                // impronta SHA-256: l'elenco deve esserci e combaciare, altrimenti niente aggiornamento
+                int imp = VerificaImpronta(somme, pacchetto, nome);
+                if (imp == 2) { this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error))); return; }
+                if (imp != 0) { this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("Non è stato possibile scaricare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error))); return; }
                 string dir = Dati.Percorso("aggiornamento");
                 Directory.CreateDirectory(dir);
                 string file = Path.Combine(dir, nome);
@@ -94095,23 +94107,10 @@ namespace LunaCalc
                 }));
                 return;
             }
-            if (somme != null)
-            {
-                string h;
-                using (System.Security.Cryptography.SHA256 sh = System.Security.Cryptography.SHA256.Create())
-                    h = BitConverter.ToString(sh.ComputeHash(pacchetto)).Replace("-", "").ToLowerInvariant();
-                bool trovato = false, ok = false;
-                foreach (string r in Encoding.ASCII.GetString(somme).Split('\n'))
-                {
-                    string rr = r.Trim();
-                    if (rr.EndsWith(nome)) { trovato = true; ok = rr.StartsWith(h, StringComparison.OrdinalIgnoreCase); }
-                }
-                if (trovato && !ok)
-                {
-                    avvisa(Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Error);
-                    return;
-                }
-            }
+            // impronta SHA-256: l'elenco deve esserci e combaciare, altrimenti niente aggiornamento
+            int imp = VerificaImpronta(somme, pacchetto, nome);
+            if (imp == 2) { avvisa(Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Error); return; }
+            if (imp != 0) { avvisa(Lang.T("Non è stato possibile scaricare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Error); return; }
             try
             {
                 string app = FileAppImage;
@@ -104064,7 +104063,7 @@ namespace LunaCalc
         {
             base.OnMouseClick(e);
             object o = LinkA(e.Location);
-            if (o is string) { try { System.Diagnostics.Process.Start((string)o); } catch { } }
+            if (o is string) { if (MainForm.LinkSicuro((string)o)) try { System.Diagnostics.Process.Start((string)o); } catch { } }
             else if (o is Action) ((Action)o)();
         }
 
