@@ -5,7 +5,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>English</b> – Version history</summary>
 
-- **1.9.9** – Closing window and messages: the buttons no longer have light corners on the grey bar.
+- **1.9.9** – My horizon: the Moon has its true phase and tilt, and the new box «The Moon as seen by the two stations» shows it as you see it and as the DX sees it, with the spatial polarization offset Dpol and the loss; closing window and messages: the buttons no longer have light corners on the grey bar.
 - **1.9.8** – My horizon: the Moon is drawn at its true size (about 0.5°), with a dashed circle as a marker; automatic update only with a verified SHA-256 fingerprint (it is cancelled if the fingerprint list is missing or does not contain the package); links open only web and e-mail addresses; macOS: the launcher checks Mono (architecture, Rosetta, quarantine) and explains errors 126 and 127.
 - **1.9.7** – Translations completed in Bengali, Arabic and Turkish (62 missing texts: losses and gains of the RX/TX chain, Friis formula, main screen, description of the tabs); Windows 7, 8 and 8.1 declared in the program manifest.
 - **1.9.6** – Polarization risk: in the two station boxes you choose the antenna polarization (H, V, H and V (XPOL), circular; for the DX also «by band»); YAEC flags when the contact is at risk without the second polarization (MNR up to 432 MHz, spatial offset higher up) with a strip in Common window, a row on the DX card, the ⇄ symbol in the calendar and a tag in Stations to try; the pop-up warning appears only when the risk is red; new paragraph in the manual; PA0PLY EME directory (432 and 1296 MHz) updated every day: Stations to try also on 432 and 1296 MHz with the station of the band's EME budget, new EME station lists tab (N0UK chat and PA0PLY directory, with source, credits and thanks) and DX setup taken from the lists when its callsign is written.
@@ -30,7 +30,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Italiano</b> – Storia delle versioni</summary>
 
-- **1.9.9** – Finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio della barra.
+- **1.9.9** – Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio.
 - **1.9.8** – Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127.
 - **1.9.7** – Traduzioni completate in bengalese, arabo e turco (62 testi mancanti: perdite e guadagni della catena RX/TX, formula di Friis, schermata principale, descrizione delle linguette); Windows 7, 8 e 8.1 dichiarati nel manifesto del programma.
 - **1.9.6** – Rischio di polarizzazione: nei riquadri delle due stazioni si sceglie la polarizzazione dell'antenna (H, V, H e V (XPOL), circolare; per il DX anche «secondo la banda»); YAEC segnala quando il collegamento è a rischio senza la seconda polarizzazione (MNR fino a 432 MHz, spostamento spaziale più in alto) con una striscia in Finestra comune, una riga nella scheda del DX, il simbolo ⇄ nel calendario e un'etichetta in Stazioni da provare; l'avviso a comparsa scatta solo con il rischio rosso; nuovo paragrafo nel manuale; elenco EME di PA0PLY (432 e 1296 MHz) aggiornato ogni giorno: Stazioni da provare anche a 432 e 1296 MHz con la stazione del Budget EME della banda, nuova linguetta Elenchi delle stazioni EME (chat di N0UK ed elenco di PA0PLY, con fonte, crediti e ringraziamenti) e impianto del DX preso dagli elenchi quando se ne scrive il nominativo.
@@ -55,7 +55,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Deutsch</b> – Versionsgeschichte</summary>
 
-- **1.9.9** – Schließfenster und Meldungen: Die Schaltflächen haben auf der grauen Leiste keine hellen Ecken mehr.
+- **1.9.9** – Mein Horizont: Der Mond hat seine wahre Phase und Neigung, und das neue Feld «Der Mond, wie ihn die beiden Stationen sehen» zeigt ihn so, wie du und der DX ihn sehen, mit dem räumlichen Polarisationsversatz Dpol und dem Verlust; Schließfenster und Meldungen: Die Schaltflächen haben auf der grauen Leiste keine hellen Ecken mehr.
 - **1.9.8** – Mein Horizont: Der Mond wird in wahrer Größe gezeichnet (etwa 0,5°), mit einem gestrichelten Kreis als Markierung; automatische Aktualisierung nur mit geprüftem SHA-256-Fingerabdruck (sie wird abgebrochen, wenn die Liste der Fingerabdrücke fehlt oder das Paket nicht enthält); Links öffnen nur Web- und E-Mail-Adressen; macOS: Der Starter prüft Mono (Architektur, Rosetta, Quarantäne) und erklärt die Fehler 126 und 127.
 - **1.9.7** – Übersetzungen in Bengalisch, Arabisch und Türkisch vervollständigt (62 fehlende Texte: Verluste und Gewinne der RX/TX-Kette, Friis-Formel, Hauptbildschirm, Beschreibung der Registerkarten); Windows 7, 8 und 8.1 im Manifest des Programms angegeben.
 - **1.9.6** – Polarisationsrisiko: in den Feldern der beiden Stationen wählst du die Polarisation der Antenne (H, V, H und V (XPOL), zirkular; für den DX auch «nach Band»); YAEC meldet, wenn die Verbindung ohne zweite Polarisation gefährdet ist (MNR bis 432 MHz, räumlicher Versatz darüber), mit einem Streifen in «Gemeinsames Fenster», einer Zeile auf der DX-Karte, dem Symbol ⇄ im Kalender und einem Etikett in «Stationen zum Ausprobieren»; die Popup-Warnung erscheint nur bei rotem Risiko; neuer Absatz im Handbuch; EME-Liste von PA0PLY (432 und 1296 MHz) täglich aktualisiert: «Stationen zum Ausprobieren» auch auf 432 und 1296 MHz mit der Station aus dem EME-Budget der Band, neue Registerkarte «Listen der EME-Stationen» (Chat von N0UK und Liste von PA0PLY, mit Quelle, Danksagungen und Dank) und Anlage des DX aus den Listen, sobald sein Rufzeichen eingegeben wird.
@@ -80,7 +80,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Français</b> – Historique des versions</summary>
 
-- **1.9.9** – Fenêtre de fermeture et messages : les boutons n'ont plus de coins clairs sur la barre grise.
+- **1.9.9** – Mon horizon : la Lune a sa phase et son inclinaison réelles, et le nouveau cadre « La Lune vue par les deux stations » la montre comme tu la vois et comme la voit le DX, avec le décalage de polarisation spatiale Dpol et la perte ; fenêtre de fermeture et messages : les boutons n'ont plus de coins clairs sur la barre grise.
 - **1.9.8** – Mon horizon : la Lune est dessinée à sa taille réelle (environ 0,5°), avec un cercle en pointillés comme repère ; mise à jour automatique uniquement avec une empreinte SHA-256 vérifiée (elle est annulée si la liste des empreintes manque ou ne contient pas le paquet) ; les liens n'ouvrent que des adresses web et de messagerie ; macOS : le lanceur vérifie Mono (architecture, Rosetta, quarantaine) et explique les erreurs 126 et 127.
 - **1.9.7** – Traductions complétées en bengali, arabe et turc (62 textes manquants : pertes et gains de la chaîne RX/TX, formule de Friis, écran principal, description des onglets) ; Windows 7, 8 et 8.1 déclarés dans le manifeste du programme.
 - **1.9.6** – Risque de polarisation : dans les cadres des deux stations, on choisit la polarisation de l'antenne (H, V, H et V (XPOL), circulaire ; pour le DX aussi «selon la bande») ; YAEC signale quand la liaison est à risque sans la seconde polarisation (MNR jusqu'à 432 MHz, décalage spatial plus haut) avec une bande dans «Fenêtre commune», une ligne sur la fiche du DX, le symbole ⇄ dans le calendrier et une étiquette dans «Stations à essayer» ; l'avertissement en fenêtre n'apparaît qu'avec un risque rouge ; nouveau paragraphe dans le manuel ; liste EME de PA0PLY (432 et 1296 MHz) mise à jour chaque jour : «Stations à essayer» aussi sur 432 et 1296 MHz avec la station du budget EME de la bande, nouvel onglet «Listes des stations EME» (chat de N0UK et liste de PA0PLY, avec source, crédits et remerciements) et installation du DX prise dans les listes quand on écrit son indicatif.
@@ -105,7 +105,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Español</b> – Historial de versiones</summary>
 
-- **1.9.9** – Ventana de cierre y avisos: los botones ya no tienen esquinas claras sobre la barra gris.
+- **1.9.9** – Mi horizonte: la Luna tiene su fase e inclinación reales y el nuevo recuadro «La Luna vista desde las dos estaciones» la muestra como la ves tú y como la ve el DX, con el desfase de polarización espacial Dpol y la pérdida; ventana de cierre y avisos: los botones ya no tienen esquinas claras sobre la barra gris.
 - **1.9.8** – Mi horizonte: la Luna se dibuja a su tamaño real (unos 0,5°), con un círculo discontinuo como marcador; actualización automática solo con la huella SHA-256 verificada (se cancela si falta la lista de huellas o no contiene el paquete); los enlaces solo abren direcciones web y de correo; macOS: el lanzador comprueba Mono (arquitectura, Rosetta, cuarentena) y explica los errores 126 y 127.
 - **1.9.7** – Traducciones completadas en bengalí, árabe y turco (62 textos que faltaban: pérdidas y ganancias de la cadena RX/TX, fórmula de Friis, pantalla principal, descripción de las pestañas); Windows 7, 8 y 8.1 declarados en el manifiesto del programa.
 - **1.9.6** – Riesgo de polarización: en los recuadros de las dos estaciones se elige la polarización de la antena (H, V, H y V (XPOL), circular; para el DX también «según la banda»); YAEC señala cuándo el contacto está en riesgo sin la segunda polarización (MNR hasta 432 MHz, desplazamiento espacial más arriba) con una franja en «Ventana común», una fila en la ficha del DX, el símbolo ⇄ en el calendario y una etiqueta en «Estaciones para probar»; el aviso emergente solo aparece con riesgo rojo; nuevo párrafo en el manual; lista EME de PA0PLY (432 y 1296 MHz) actualizada cada día: «Estaciones para probar» también en 432 y 1296 MHz con la estación del presupuesto EME de la banda, nueva pestaña «Listas de estaciones EME» (chat de N0UK y lista de PA0PLY, con fuente, créditos y agradecimientos) e instalación del DX tomada de las listas al escribir su indicativo.
@@ -130,7 +130,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Português</b> – Histórico de versões</summary>
 
-- **1.9.9** – Janela de fecho e avisos: os botões já não têm cantos claros sobre a barra cinzenta.
+- **1.9.9** – O meu horizonte: a Lua tem a sua fase e inclinação reais e o novo quadro «A Lua vista pelas duas estações» mostra-a como tu a vês e como o DX a vê, com o desvio de polarização espacial Dpol e a perda; janela de fecho e avisos: os botões já não têm cantos claros sobre a barra cinzenta.
 - **1.9.8** – O meu horizonte: a Lua é desenhada no seu tamanho real (cerca de 0,5°), com um círculo tracejado como marcador; atualização automática só com a impressão digital SHA-256 verificada (é cancelada se a lista de impressões faltar ou não contiver o pacote); as ligações só abrem endereços web e de correio eletrónico; macOS: o lançador verifica o Mono (arquitetura, Rosetta, quarentena) e explica os erros 126 e 127.
 - **1.9.7** – Traduções concluídas em bengali, árabe e turco (62 textos em falta: perdas e ganhos da cadeia RX/TX, fórmula de Friis, ecrã principal, descrição dos separadores); Windows 7, 8 e 8.1 declarados no manifesto do programa.
 - **1.9.6** – Risco de polarização: nos quadros das duas estações escolhe-se a polarização da antena (H, V, H e V (XPOL), circular; para o DX também «conforme a banda»); o YAEC assinala quando o contacto está em risco sem a segunda polarização (MNR até 432 MHz, desvio espacial mais acima) com uma faixa em «Janela comum», uma linha na ficha do DX, o símbolo ⇄ no calendário e uma etiqueta em «Estações a experimentar»; o aviso em janela só aparece com risco vermelho; novo parágrafo no manual; lista EME de PA0PLY (432 e 1296 MHz) atualizada todos os dias: «Estações a experimentar» também em 432 e 1296 MHz com a estação do orçamento EME da banda, novo separador «Listas de estações EME» (chat de N0UK e lista de PA0PLY, com fonte, créditos e agradecimentos) e instalação do DX tirada das listas quando se escreve o indicativo.
@@ -155,7 +155,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Türkçe</b> – Sürüm geçmişi</summary>
 
-- **1.9.9** – Kapatma penceresi ve mesajlar: düğmelerin gri çubuk üzerinde artık açık renkli köşeleri yok.
+- **1.9.9** – Ufkum: Ay gerçek evresi ve eğimiyle çiziliyor; yeni «İki istasyondan görülen Ay» kutusu onu senin ve DX'in gördüğü gibi, uzaysal polarizasyon kayması Dpol ve kayıpla gösteriyor; kapatma penceresi ve mesajlar: düğmelerin gri çubuk üzerinde artık açık renkli köşeleri yok.
 - **1.9.8** – Ufkum: Ay gerçek boyutunda (yaklaşık 0,5°) çiziliyor, işaret olarak kesikli bir daireyle; otomatik güncelleme yalnızca doğrulanmış SHA-256 parmak iziyle yapılıyor (parmak izi listesi yoksa ya da paketi içermiyorsa iptal ediliyor); bağlantılar yalnızca web ve e-posta adreslerini açıyor; macOS: başlatıcı Mono'yu (mimari, Rosetta, karantina) denetliyor ve 126 ile 127 hatalarını açıklıyor.
 - **1.9.7** – Bengalce, Arapça ve Türkçe çeviriler tamamlandı (eksik 62 metin: RX/TX zincirinin kayıpları ve kazançları, Friis formülü, ana ekran, sekmelerin açıklaması); Windows 7, 8 ve 8.1 programın manifestosunda belirtildi.
 - **1.9.6** – Polarizasyon riski: iki istasyonun kutularında anten polarizasyonunu seçersin (H, V, H ve V (XPOL), dairesel; DX için ayrıca «banda göre»); ikinci polarizasyon olmadan bağlantı risk altındaysa (432 MHz'e kadar MNR, yukarıda uzaysal kayma) YAEC bunu «Ortak pencere» içinde bir şerit, DX kartında bir satır, takvimde ⇄ simgesi ve «Denenecek istasyonlar» içinde bir etiketle gösterir; açılır uyarı yalnızca kırmızı riskte çıkar; kılavuzda yeni paragraf; PA0PLY EME listesi (432 ve 1296 MHz) her gün güncellenir: «Denenecek istasyonlar» artık 432 ve 1296 MHz'te de bandın EME bütçesindeki istasyonla, yeni «EME istasyon listeleri» sekmesi (N0UK sohbeti ve PA0PLY listesi, kaynak, emeği geçenler ve teşekkürlerle) ve çağrı işareti yazılınca DX'in donanımı listelerden alınır.
@@ -180,7 +180,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Čeština</b> – Historie verzí</summary>
 
-- **1.9.9** – Okno ukončení a zprávy: tlačítka už na šedé liště nemají světlé rohy.
+- **1.9.9** – Můj obzor: Měsíc má skutečnou fázi a sklon a nový rámeček «Měsíc viděný z obou stanic» ho ukazuje tak, jak ho vidíš ty a DX, s prostorovým posunem polarizace Dpol a ztrátou; okno ukončení a zprávy: tlačítka už na šedé liště nemají světlé rohy.
 - **1.9.8** – Můj obzor: Měsíc se kreslí ve skutečné velikosti (asi 0,5°) s čárkovaným kruhem jako značkou; automatická aktualizace jen s ověřeným otiskem SHA-256 (zruší se, když seznam otisků chybí nebo balíček neobsahuje); odkazy otevírají jen webové a e-mailové adresy; macOS: spouštěč kontroluje Mono (architektura, Rosetta, karanténa) a vysvětluje chyby 126 a 127.
 - **1.9.7** – Dokončené překlady do bengálštiny, arabštiny a turečtiny (62 chybějících textů: ztráty a zisky řetězce RX/TX, Friisův vzorec, hlavní obrazovka, popis záložek); Windows 7, 8 a 8.1 uvedeny v manifestu programu.
 - **1.9.6** – Riziko polarizace: v polích obou stanic zvolíš polarizaci antény (H, V, H a V (XPOL), kruhová; pro DX také «podle pásma»); YAEC upozorní, když je spojení bez druhé polarizace ohroženo (MNR do 432 MHz, výše prostorový posun), pruhem v «Společné okno», řádkem na kartě DX, symbolem ⇄ v kalendáři a štítkem v «Stanice k vyzkoušení»; vyskakovací varování jen při červeném riziku; nový odstavec v návodu; EME seznam PA0PLY (432 a 1296 MHz) aktualizovaný každý den: «Stanice k vyzkoušení» i na 432 a 1296 MHz se stanicí z rozpočtu EME pásma, nová záložka «Seznamy stanic EME» (chat N0UK a seznam PA0PLY, se zdrojem, uvedením autorů a poděkováním) a vybavení DX převzaté ze seznamů po napsání jeho značky.
@@ -205,7 +205,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Slovenčina</b> – História verzií</summary>
 
-- **1.9.9** – Okno ukončenia a správy: tlačidlá už na sivej lište nemajú svetlé rohy.
+- **1.9.9** – Môj obzor: Mesiac má skutočnú fázu a sklon a nový rámček «Mesiac videný z oboch staníc» ho ukazuje tak, ako ho vidíš ty a DX, s priestorovým posunom polarizácie Dpol a stratou; okno ukončenia a správy: tlačidlá už na sivej lište nemajú svetlé rohy.
 - **1.9.8** – Môj obzor: Mesiac sa kreslí v skutočnej veľkosti (asi 0,5°) s čiarkovaným kruhom ako značkou; automatická aktualizácia len s overeným odtlačkom SHA-256 (zruší sa, keď zoznam odtlačkov chýba alebo balík neobsahuje); odkazy otvárajú len webové a e-mailové adresy; macOS: spúšťač kontroluje Mono (architektúra, Rosetta, karanténa) a vysvetľuje chyby 126 a 127.
 - **1.9.7** – Dokončené preklady do bengálčiny, arabčiny a turečtiny (62 chýbajúcich textov: straty a zisky reťazca RX/TX, Friisov vzorec, hlavná obrazovka, popis záložiek); Windows 7, 8 a 8.1 uvedené v manifeste programu.
 - **1.9.6** – Riziko polarizácie: v poliach oboch staníc zvolíš polarizáciu antény (H, V, H a V (XPOL), kruhová; pre DX aj «podľa pásma»); YAEC upozorní, keď je spojenie bez druhej polarizácie ohrozené (MNR do 432 MHz, vyššie priestorový posun), pruhom v «Spoločné okno», riadkom na karte DX, symbolom ⇄ v kalendári a štítkom v «Stanice na vyskúšanie»; vyskakovacie varovanie len pri červenom riziku; nový odsek v návode; EME zoznam PA0PLY (432 a 1296 MHz) aktualizovaný každý deň: «Stanice na vyskúšanie» aj na 432 a 1296 MHz so stanicou z rozpočtu EME pásma, nová záložka «Zoznamy staníc EME» (chat N0UK a zoznam PA0PLY, so zdrojom, uvedením autorov a poďakovaním) a vybavenie DX prevzaté zo zoznamov po napísaní jeho značky.
@@ -230,7 +230,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>中文</b> – 版本历史</summary>
 
-- **1.9.9** – 关闭窗口和提示框：按钮在灰色栏上不再出现浅色边角。
+- **1.9.9** – 我的地平线：月亮按真实月相和倾斜绘制，新的“两个电台看到的月亮”框显示你和 DX 看到的月亮，并给出空间极化偏移 Dpol 和损耗；关闭窗口和提示框：按钮在灰色栏上不再出现浅色边角。
 - **1.9.8** – 我的地平线：月亮按真实大小绘制（约 0.5°），并以虚线圆作为标记；自动更新仅在 SHA-256 指纹校验通过后进行（若指纹列表缺失或不含该安装包则取消更新）；链接只打开网页和电子邮件地址；macOS：启动器会检查 Mono（架构、Rosetta、隔离属性）并说明错误 126 和 127。
 - **1.9.7** – 完成孟加拉语、阿拉伯语和土耳其语翻译（补齐 62 条文字：RX/TX 链路的损耗与增益、Friis 公式、主界面、标签页说明）；程序清单中声明支持 Windows 7、8 和 8.1。
 - **1.9.6** – 极化风险：在两个电台的框中选择天线极化（H、V、H 和 V (XPOL)、圆极化；DX 还可选“按频段”）；缺少第二种极化而使通联有风险时（432 MHz 及以下看 MNR，更高频段看空间偏移），YAEC 会在“共同窗口”中显示色条，在 DX 卡片上显示一行，在日历中显示 ⇄ 符号，并在“值得尝试的电台”中显示标签；只有风险为红色时才弹出警告；手册新增一段；PA0PLY 的 EME 名录（432 和 1296 MHz）每天更新：“值得尝试的电台”也支持 432 和 1296 MHz，使用该频段 EME 链路预算中的电台；新增“EME 电台名录”标签页（N0UK 聊天室和 PA0PLY 名录，附来源、致谢和感谢）；写入 DX 呼号时从名录取其设备。
@@ -255,7 +255,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>日本語</b> – バージョン履歴</summary>
 
-- **1.9.9** – 終了確認とメッセージのウィンドウ：灰色のバー上でボタンの角が白く残らなくなりました。
+- **1.9.9** – 自局の地平線：月を実際の月相と傾きで描き、新しい「両局から見た月」の枠で自局と DX から見た月を空間偏波オフセット Dpol と損失とともに表示；終了確認とメッセージのウィンドウ：灰色のバー上でボタンの角が白く残らなくなりました。
 - **1.9.8** – 自局の地平線：月を実際の大きさ（約 0.5°）で描き、目印として破線の円を表示；自動更新は SHA-256 フィンガープリントの検証に成功した場合のみ（フィンガープリント一覧がない、またはパッケージが含まれていない場合は中止）；リンクはウェブとメールのアドレスのみを開く；macOS：起動スクリプトが Mono（アーキテクチャ、Rosetta、検疫属性）を確認し、エラー 126 と 127 を説明。
 - **1.9.7** – ベンガル語、アラビア語、トルコ語の翻訳を完成（不足していた 62 項目：RX/TX 系統の損失と利得、Friis の式、メイン画面、タブの説明）。プログラムのマニフェストに Windows 7、8、8.1 を宣言。
 - **1.9.6** – 偏波リスク：二つの局の枠でアンテナの偏波を選択（H、V、H と V (XPOL)、円偏波、DX には「バンドに応じて」も）。第二の偏波がないため交信が危うい時（432 MHz までは MNR、それより上は空間的なずれ）、YAEC は「共通ウィンドウ」の帯、DX カードの行、カレンダーの ⇄ 記号、「試してみたい局」のラベルで知らせます。ポップアップ警告はリスクが赤のときだけ。マニュアルに新しい段落。PA0PLY の EME 名簿（432 と 1296 MHz）を毎日更新：「試してみたい局」が 432 と 1296 MHz にも対応し、そのバンドの EME バジェットの局を使用。新しいタブ「EME 局の名簿」（N0UK チャットと PA0PLY 名簿、出典・クレジット・謝辞付き）。DX のコールサインを入力すると名簿から設備を取得。
@@ -280,7 +280,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>한국어</b> – 버전 기록</summary>
 
-- **1.9.9** – 종료 창과 알림: 회색 막대 위 버튼의 모서리가 더 이상 밝게 보이지 않음.
+- **1.9.9** – 내 지평선: 달을 실제 위상과 기울기로 그리고, 새 «두 국에서 본 달» 상자에서 나와 DX가 보는 달을 공간 편파 오프셋 Dpol 및 손실과 함께 표시; 종료 창과 알림: 회색 막대 위 버튼의 모서리가 더 이상 밝게 보이지 않음.
 - **1.9.8** – 내 지평선: 달을 실제 크기(약 0.5°)로 그리고 표시용 점선 원을 함께 표시; 자동 업데이트는 SHA-256 지문이 확인된 경우에만 진행(지문 목록이 없거나 패키지가 목록에 없으면 취소); 링크는 웹과 이메일 주소만 엶; macOS: 실행기가 Mono(아키텍처, Rosetta, 격리 속성)를 확인하고 오류 126과 127을 설명.
 - **1.9.7** – 벵골어, 아랍어, 터키어 번역 완료(누락된 62개 문구: RX/TX 체인의 손실과 이득, Friis 공식, 주 화면, 탭 설명); 프로그램 매니페스트에 Windows 7, 8, 8.1 명시.
 - **1.9.6** – 편파 위험: 두 국의 상자에서 안테나 편파를 선택(H, V, H와 V (XPOL), 원편파, DX는 «밴드에 따라»도); 두 번째 편파가 없어 교신이 위험할 때(432 MHz까지는 MNR, 그 위는 공간적 편차) YAEC가 «공통 창»의 띠, DX 카드의 줄, 달력의 ⇄ 기호, «시도해 볼 국»의 태그로 알려 줍니다; 팝업 경고는 위험이 빨강일 때만; 설명서에 새 단락; PA0PLY EME 명부(432와 1296 MHz)를 매일 갱신: «시도해 볼 국»가 432와 1296 MHz에서도 그 밴드의 EME 버짓 국으로 동작, 새 탭 «EME 국 명부»(N0UK 채팅과 PA0PLY 명부, 출처·크레딧·감사의 말 포함), DX 호출부호를 쓰면 명부에서 설비를 가져옴.
