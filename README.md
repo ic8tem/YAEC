@@ -52,7 +52,7 @@ Windows 7, ARM64, i686, Slackware, AppImage, Alpine, FreeBSD and OpenBSD are not
      ```
 
      It asks for your Mac password, which is not shown while you type. Then start YAEC again.
-- **Updates** – from 1.9.1 YAEC updates itself at start-up (Windows, AppImage, `.tar.gz`, macOS app), checking SHA-256; `.deb`, `.rpm`, Arch and Slackware packages are updated with the package manager.
+- **Updates** – from 1.9.11 YAEC updates itself silently (Windows, AppImage, `.tar.gz`, macOS app): it checks GitHub at start-up and every 30 minutes, downloads in the background and checks SHA-256; on Windows the new version installs when you close YAEC, elsewhere it starts at the next launch; `.deb`, `.rpm`, Arch and Slackware packages are updated with the package manager.
 
 **Italiano**
 - **Windows** – avvia `YAEC-x.y-windows-x64-setup.exe`: installa in *Documenti\YAEC* senza diritti di amministratore. SmartScreen: *Ulteriori informazioni* → *Esegui comunque*. Senza installare: estrai il `-portatile.zip` e avvia `YAEC.exe`.
@@ -68,7 +68,7 @@ Windows 7, ARM64, i686, Slackware, AppImage, Alpine, FreeBSD and OpenBSD are not
      ```
 
      Chiede la password del Mac, che non si vede mentre la scrivi. Poi riavvia YAEC.
-- **Aggiornamenti** – dalla 1.9.1 YAEC si aggiorna da solo all'avvio (Windows, AppImage, `.tar.gz`, app per macOS), con il controllo SHA-256; i pacchetti `.deb`, `.rpm`, Arch e Slackware si aggiornano con il gestore dei pacchetti.
+- **Aggiornamenti** – dalla 1.9.11 YAEC si aggiorna da solo in silenzio (Windows, AppImage, `.tar.gz`, app per macOS): controlla GitHub all'avvio e ogni 30 minuti, scarica in background e controlla lo SHA-256; su Windows la nuova versione si installa quando chiudi YAEC, altrove parte al prossimo avvio; i pacchetti `.deb`, `.rpm`, Arch e Slackware si aggiornano con il gestore dei pacchetti.
 
 Other languages: the README of each language in the [`lingue`](lingue) folder (links above).
 
@@ -93,14 +93,14 @@ Other languages: the README of each language in the [`lingue`](lingue) folder (l
 ## Latest versions
 
 **English**
+- **1.9.11** – Silent automatic update, as in YA-NEC: YAEC checks GitHub at start-up and every 30 minutes, downloads the package in the background and checks its SHA-256 fingerprint; on Windows it installs itself when you close the program, on Linux, BSD and macOS the new version starts at the next launch, and a message tells you which version it was updated from (.deb, .rpm, Arch and Slackware packages stay with the package manager). My horizon: the violet box of the pointable area has a stepped minimum, degree by degree of azimuth (the higher of the antenna limit and the terrain), for your station and for the DX.
 - **1.9.10** – New tab Polarization over the world (Planning): world map coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon, with the dashed 45° (3 dB) line; Dpol and loss on mouse hover and on the DX label.
 - **1.9.9** – My horizon: the Moon has its true phase and tilt, and the new box «The Moon as seen by the two stations» shows it as you see it and as the DX sees it, with the spatial polarization offset Dpol and the loss; closing window and messages: the buttons no longer have light corners on the grey bar.
-- **1.9.8** – My horizon: the Moon is drawn at its true size (about 0.5°), with a dashed circle as a marker; automatic update only with a verified SHA-256 fingerprint (it is cancelled if the fingerprint list is missing or does not contain the package); links open only web and e-mail addresses; macOS: the launcher checks Mono (architecture, Rosetta, quarantine) and explains errors 126 and 127.
 
 **Italiano**
+- **1.9.11** – Aggiornamento automatico silenzioso, come in YA-NEC: YAEC controlla GitHub all'avvio e ogni 30 minuti, scarica il pacchetto in background e ne controlla l'impronta SHA-256; su Windows si installa da solo quando chiudi il programma, su Linux, BSD e macOS la nuova versione parte al prossimo avvio, e un avviso dice da quale versione è stato aggiornato (i pacchetti .deb, .rpm, Arch e Slackware restano al gestore dei pacchetti). Il mio orizzonte: il riquadro viola della zona puntabile ha il minimo a scalini, grado per grado di azimut (il più alto fra il limite dell'antenna e il terreno), per la tua stazione e per il DX.
 - **1.9.10** – Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX.
 - **1.9.9** – Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio.
-- **1.9.8** – Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127.
 
 Full history in every README language: [CHANGELOG.md](CHANGELOG.md); in the program: *Help and tools*.
 

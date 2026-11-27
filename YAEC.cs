@@ -4051,6 +4051,9 @@ namespace LunaCalc
             "La stessa mappa del mondo, con le terre colorate secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna: verde dove le polarizzazioni lineari coincidono, rosso dove sono ruotate di 90°. Passando il mouse si leggono Dpol e la perdita in dB; la rotazione di Faraday non è compresa.",
             "Offset di polarizzazione spaziale (Dpol) rispetto alla tua stazione",
             "1.9.10 - Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX.",
+            "YAEC {0} è stato scaricato: si installa da solo quando chiudi il programma.",
+            "YAEC è stato aggiornato dalla versione {0} alla {1}.",
+            "1.9.11 - Aggiornamento automatico silenzioso, come in YA-NEC: YAEC controlla GitHub all'avvio e ogni 30 minuti, scarica il pacchetto in background e ne controlla l'impronta SHA-256; su Windows si installa da solo quando chiudi il programma, su Linux, BSD e macOS la nuova versione parte al prossimo avvio, e un avviso dice da quale versione è stato aggiornato (i pacchetti .deb, .rpm, Arch e Slackware restano al gestore dei pacchetti). Il mio orizzonte: il riquadro viola della zona puntabile ha il minimo a scalini, grado per grado di azimut (il più alto fra il limite dell'antenna e il terreno), per la tua stazione e per il DX.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -6030,6 +6033,9 @@ namespace LunaCalc
             "The same world map, with the land coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon: green where the linear polarizations match, red where they are 90° apart. Hover to read Dpol and the loss in dB; Faraday rotation is not included.",
             "Spatial polarization offset (Dpol) relative to your station",
             "1.9.10 - New tab Polarization over the world (Planning): world map coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon, with the dashed 45° (3 dB) line; Dpol and loss on mouse hover and on the DX label.",
+            "YAEC {0} has been downloaded: it installs itself when you close the program.",
+            "YAEC has been updated from version {0} to {1}.",
+            "1.9.11 - Silent automatic update, as in YA-NEC: YAEC checks GitHub at start-up and every 30 minutes, downloads the package in the background and checks its SHA-256 fingerprint; on Windows it installs itself when you close the program, on Linux, BSD and macOS the new version starts at the next launch, and a message tells you which version it was updated from (.deb, .rpm, Arch and Slackware packages stay with the package manager). My horizon: the violet box of the pointable area has a stepped minimum, degree by degree of azimuth (the higher of the antenna limit and the terrain), for your station and for the DX.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -8009,6 +8015,9 @@ namespace LunaCalc
             "Dieselbe Weltkarte, mit den Landflächen gefärbt nach dem räumlichen Polarisationsversatz (Dpol) zwischen deiner Station und jedem Ort, der den Mond sieht: grün, wo die linearen Polarisationen übereinstimmen, rot, wo sie um 90° gedreht sind. Mit der Maus liest man Dpol und den Verlust in dB; die Faraday-Drehung ist nicht enthalten.",
             "Räumlicher Polarisationsversatz (Dpol) gegenüber deiner Station",
             "1.9.10 - Neuer Reiter Polarisation über der Welt (Planung): Weltkarte gefärbt nach dem räumlichen Polarisationsversatz (Dpol) zwischen deiner Station und jedem Ort, der den Mond sieht, mit der gestrichelten 45°-Linie (3 dB); Dpol und Verlust beim Überfahren mit der Maus und am DX-Etikett.",
+            "YAEC {0} wurde heruntergeladen: es installiert sich selbst, wenn du das Programm schließt.",
+            "YAEC wurde von Version {0} auf {1} aktualisiert.",
+            "1.9.11 - Stille automatische Aktualisierung wie in YA-NEC: YAEC prüft GitHub beim Start und alle 30 Minuten, lädt das Paket im Hintergrund herunter und prüft seinen SHA-256-Fingerabdruck; unter Windows installiert es sich beim Schließen des Programms, unter Linux, BSD und macOS startet die neue Version beim nächsten Aufruf, und ein Hinweis nennt die vorherige Version (.deb-, .rpm-, Arch- und Slackware-Pakete bleiben beim Paketmanager). Mein Horizont: Der violette Rahmen des anpeilbaren Bereichs hat ein gestuftes Minimum, Grad für Grad im Azimut (das höhere aus Antennengrenze und Gelände), für deine Station und für den DX.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -9988,6 +9997,9 @@ namespace LunaCalc
             "La même carte du monde, avec les terres colorées selon le décalage de polarisation spatiale (Dpol) entre ta station et chaque lieu qui voit la Lune : vert là où les polarisations linéaires coïncident, rouge là où elles sont tournées de 90°. En survolant avec la souris on lit Dpol et la perte en dB ; la rotation de Faraday n'est pas comprise.",
             "Décalage de polarisation spatiale (Dpol) par rapport à ta station",
             "1.9.10 - Nouvel onglet Polarisation sur le monde (Planification) : carte du monde colorée selon le décalage de polarisation spatiale (Dpol) entre ta station et chaque lieu qui voit la Lune, avec la ligne pointillée des 45° (3 dB) ; Dpol et perte au survol de la souris et sur l'étiquette du DX.",
+            "YAEC {0} a été téléchargé : il s'installe tout seul quand tu fermes le programme.",
+            "YAEC a été mis à jour de la version {0} à la {1}.",
+            "1.9.11 - Mise à jour automatique silencieuse, comme dans YA-NEC : YAEC interroge GitHub au démarrage et toutes les 30 minutes, télécharge le paquet en arrière-plan et vérifie son empreinte SHA-256 ; sous Windows il s'installe tout seul à la fermeture du programme, sous Linux, BSD et macOS la nouvelle version démarre au lancement suivant, et un message indique la version précédente (les paquets .deb, .rpm, Arch et Slackware restent au gestionnaire de paquets). Mon horizon : le cadre violet de la zone pointable a un minimum en escalier, degré par degré d'azimut (le plus élevé entre la limite de l'antenne et le terrain), pour ta station et pour le DX.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -11967,6 +11979,9 @@ namespace LunaCalc
             "El mismo mapa del mundo, con las tierras coloreadas según el desfase de polarización espacial (Dpol) entre tu estación y cada lugar que ve la Luna: verde donde las polarizaciones lineales coinciden, rojo donde están giradas 90°. Al pasar el ratón se leen Dpol y la pérdida en dB; la rotación de Faraday no está incluida.",
             "Desfase de polarización espacial (Dpol) respecto a tu estación",
             "1.9.10 - Nueva pestaña Polarización sobre el mundo (Planificación): mapa del mundo coloreado según el desfase de polarización espacial (Dpol) entre tu estación y cada lugar que ve la Luna, con la línea discontinua de 45° (3 dB); Dpol y pérdida al pasar el ratón y en la etiqueta del DX.",
+            "YAEC {0} se ha descargado: se instala solo cuando cierras el programa.",
+            "YAEC se ha actualizado de la versión {0} a la {1}.",
+            "1.9.11 - Actualización automática silenciosa, como en YA-NEC: YAEC consulta GitHub al arrancar y cada 30 minutos, descarga el paquete en segundo plano y comprueba su huella SHA-256; en Windows se instala solo al cerrar el programa, en Linux, BSD y macOS la nueva versión arranca en el próximo inicio, y un aviso indica desde qué versión se actualizó (los paquetes .deb, .rpm, Arch y Slackware siguen con el gestor de paquetes). Mi horizonte: el recuadro violeta de la zona apuntable tiene el mínimo escalonado, grado a grado de acimut (el mayor entre el límite de la antena y el terreno), para tu estación y para el DX.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -13946,6 +13961,9 @@ namespace LunaCalc
             "O mesmo mapa do mundo, com as terras coloridas segundo o desvio de polarização espacial (Dpol) entre a tua estação e cada local que vê a Lua: verde onde as polarizações lineares coincidem, vermelho onde estão rodadas 90°. Passando o rato lê-se Dpol e a perda em dB; a rotação de Faraday não está incluída.",
             "Desvio de polarização espacial (Dpol) em relação à tua estação",
             "1.9.10 - Novo separador Polarização sobre o mundo (Planeamento): mapa do mundo colorido segundo o desvio de polarização espacial (Dpol) entre a tua estação e cada local que vê a Lua, com a linha tracejada dos 45° (3 dB); Dpol e perda ao passar o rato e na etiqueta do DX.",
+            "O YAEC {0} foi descarregado: instala-se sozinho quando fechares o programa.",
+            "O YAEC foi atualizado da versão {0} para a {1}.",
+            "1.9.11 - Atualização automática silenciosa, como no YA-NEC: o YAEC consulta o GitHub no arranque e a cada 30 minutos, descarrega o pacote em segundo plano e verifica a sua impressão SHA-256; no Windows instala-se sozinho ao fechar o programa, no Linux, BSD e macOS a nova versão arranca no próximo início, e um aviso indica a versão anterior (os pacotes .deb, .rpm, Arch e Slackware ficam com o gestor de pacotes). O meu horizonte: o quadro violeta da zona apontável tem o mínimo em degraus, grau a grau de azimute (o maior entre o limite da antena e o terreno), para a tua estação e para o DX.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -15925,6 +15943,9 @@ namespace LunaCalc
             "同一张世界地图，陆地按你的电台与每个能看到月亮的地点之间的空间极化偏差 (Dpol) 着色：线极化一致处为绿色，相差 90° 处为红色。鼠标悬停可读取 Dpol 和以 dB 计的损耗；不含法拉第旋转。",
             "相对于你电台的空间极化偏差 (Dpol)",
             "1.9.10 - 规划中新增“全球极化图”标签页：世界地图按你的电台与每个能看到月亮的地点之间的空间极化偏差 (Dpol) 着色，带 45° (3 dB) 虚线；鼠标悬停和 DX 标签上显示 Dpol 与损耗。",
+            "YAEC {0} 已下载：关闭程序时会自动安装。",
+            "YAEC 已从 {0} 版更新到 {1} 版。",
+            "1.9.11 - 与 YA-NEC 相同的静默自动更新：YAEC 在启动时及每 30 分钟检查 GitHub，在后台下载软件包并校验 SHA-256 指纹；Windows 上在关闭程序时自动安装，Linux、BSD 和 macOS 上新版本在下次启动时运行，并提示是从哪个版本更新的（.deb、.rpm、Arch 和 Slackware 软件包仍由包管理器更新）。我的地平线：可指向区域的紫色框下限按方位逐度呈阶梯状（取天线下限与地形中较高者），适用于你的电台和 DX。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -17904,6 +17925,9 @@ namespace LunaCalc
             "同じ世界地図で、陸地を自局と月が見える各地点との空間偏波オフセット (Dpol) で色分けします。直線偏波が一致する所は緑、90° ずれる所は赤です。マウスを重ねると Dpol と損失 (dB) が読めます。ファラデー回転は含みません。",
             "自局に対する空間偏波オフセット (Dpol)",
             "1.9.10 - 計画に新しいタブ「世界の偏波」：自局と月が見える各地点との空間偏波オフセット (Dpol) で色分けした世界地図、45° (3 dB) の破線付き。マウスを重ねた所と DX のラベルに Dpol と損失を表示。",
+            "YAEC {0} をダウンロードしました：プログラムを閉じると自動でインストールされます。",
+            "YAEC はバージョン {0} から {1} に更新されました。",
+            "1.9.11 - YA-NEC と同じサイレント自動更新：起動時と 30 分ごとに GitHub を確認し、バックグラウンドでパッケージをダウンロードして SHA-256 指紋を検証します。Windows ではプログラムを閉じると自動でインストールされ、Linux・BSD・macOS では次回起動時に新バージョンになり、どのバージョンから更新したかを表示します（.deb、.rpm、Arch、Slackware パッケージは引き続きパッケージマネージャーで更新）。自局の地平線：指向可能範囲の紫の枠の下限を方位 1 度ごとの階段状に（アンテナ下限と地形の高い方）、自局と DX の両方で表示。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -19883,6 +19907,9 @@ namespace LunaCalc
             "वही विश्व मानचित्र, जिसमें भूमि को आपके स्टेशन और चंद्रमा देखने वाले हर स्थान के बीच स्थानिक ध्रुवण विचलन (Dpol) के अनुसार रंगा गया है: जहाँ रैखिक ध्रुवण मेल खाते हैं वहाँ हरा, जहाँ वे 90° घूमे हैं वहाँ लाल। माउस रखने पर Dpol और dB में हानि दिखती है; फैराडे घूर्णन शामिल नहीं है।",
             "आपके स्टेशन के सापेक्ष स्थानिक ध्रुवण विचलन (Dpol)",
             "1.9.10 - योजना में नया टैब विश्व पर ध्रुवण: आपके स्टेशन और चंद्रमा देखने वाले हर स्थान के बीच स्थानिक ध्रुवण विचलन (Dpol) के अनुसार रंगा विश्व मानचित्र, 45° (3 dB) की टूटी रेखा के साथ; माउस रखने पर और DX लेबल पर Dpol और हानि।",
+            "YAEC {0} डाउनलोड हो गया है: प्रोग्राम बंद करने पर यह अपने आप इंस्टॉल हो जाएगा।",
+            "YAEC संस्करण {0} से {1} में अपडेट हो गया है।",
+            "1.9.11 - YA-NEC की तरह मौन स्वचालित अपडेट: YAEC शुरू होने पर और हर 30 मिनट में GitHub जाँचता है, पैकेज पृष्ठभूमि में डाउनलोड करता है और उसका SHA-256 फिंगरप्रिंट जाँचता है; Windows पर प्रोग्राम बंद करने पर अपने आप इंस्टॉल होता है, Linux, BSD और macOS पर नया संस्करण अगली बार शुरू होने पर चलता है, और एक संदेश बताता है कि किस संस्करण से अपडेट हुआ (.deb, .rpm, Arch और Slackware पैकेज पैकेज मैनेजर से ही अपडेट होते हैं)। मेरा क्षितिज: लक्ष्य-योग्य क्षेत्र के बैंगनी बॉक्स का न्यूनतम अब दिगंश के हर अंश पर सीढ़ीनुमा है (एंटीना सीमा और भूभाग में से ऊँचा), आपके स्टेशन और DX दोनों के लिए।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -21862,6 +21889,9 @@ namespace LunaCalc
             "같은 세계 지도에서 육지를 내 국과 달이 보이는 각 지점 사이의 공간 편파 오프셋(Dpol)으로 색칠합니다. 선형 편파가 일치하는 곳은 초록, 90° 어긋난 곳은 빨강입니다. 마우스를 올리면 Dpol과 dB 손실을 볼 수 있으며, 패러데이 회전은 포함되지 않습니다.",
             "내 국 기준 공간 편파 오프셋(Dpol)",
             "1.9.10 - 계획에 새 탭 세계 편파 지도: 내 국과 달이 보이는 각 지점 사이의 공간 편파 오프셋(Dpol)으로 색칠한 세계 지도, 45° (3 dB) 점선 포함; 마우스를 올린 곳과 DX 라벨에 Dpol과 손실 표시.",
+            "YAEC {0}을(를) 내려받았습니다: 프로그램을 닫으면 자동으로 설치됩니다.",
+            "YAEC가 {0} 버전에서 {1} 버전으로 업데이트되었습니다.",
+            "1.9.11 - YA-NEC와 같은 무음 자동 업데이트: YAEC는 시작할 때와 30분마다 GitHub를 확인하고, 백그라운드에서 패키지를 내려받아 SHA-256 지문을 검사합니다. Windows에서는 프로그램을 닫을 때 자동으로 설치되고, Linux·BSD·macOS에서는 다음 실행 때 새 버전이 시작되며, 어느 버전에서 업데이트되었는지 알려 줍니다(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트). 내 지평선: 지향 가능 영역의 보라색 상자 하한이 방위각 1도마다 계단식입니다(안테나 하한과 지형 중 높은 값), 내 국과 DX 모두.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -23841,6 +23871,9 @@ namespace LunaCalc
             "Peta dunia yang sama, dengan daratan diwarnai menurut offset polarisasi spasial (Dpol) antara stasiunmu dan setiap tempat yang melihat Bulan: hijau di mana polarisasi linear sama, merah di mana keduanya berselisih 90°. Arahkan mouse untuk membaca Dpol dan rugi dalam dB; rotasi Faraday tidak termasuk.",
             "Offset polarisasi spasial (Dpol) terhadap stasiunmu",
             "1.9.10 - Tab baru Polarisasi di seluruh dunia (Perencanaan): peta dunia diwarnai menurut offset polarisasi spasial (Dpol) antara stasiunmu dan setiap tempat yang melihat Bulan, dengan garis putus-putus 45° (3 dB); Dpol dan rugi saat mouse diarahkan dan pada label DX.",
+            "YAEC {0} sudah diunduh: akan terpasang sendiri saat kamu menutup program.",
+            "YAEC telah diperbarui dari versi {0} ke {1}.",
+            "1.9.11 - Pembaruan otomatis senyap, seperti di YA-NEC: YAEC memeriksa GitHub saat mulai dan setiap 30 menit, mengunduh paket di latar belakang dan memeriksa sidik jari SHA-256-nya; di Windows terpasang sendiri saat program ditutup, di Linux, BSD dan macOS versi baru berjalan pada peluncuran berikutnya, dan sebuah pesan menyebut versi sebelumnya (paket .deb, .rpm, Arch dan Slackware tetap lewat pengelola paket). Cakrawala saya: kotak ungu area yang dapat diarahkan memiliki minimum bertingkat, derajat demi derajat azimut (yang lebih tinggi antara batas antena dan medan), untuk stasiunmu dan untuk DX.",
         };
 
         public static readonly string[] RU = {
@@ -25821,6 +25854,9 @@ namespace LunaCalc
             "Та же карта мира, суша окрашена по пространственному сдвигу поляризации (Dpol) между твоей станцией и каждым местом, откуда видна Луна: зелёный — линейные поляризации совпадают, красный — повёрнуты на 90°. При наведении мыши видны Dpol и потери в дБ; фарадеевское вращение не учитывается.",
             "Пространственный сдвиг поляризации (Dpol) относительно твоей станции",
             "1.9.10 - Новая вкладка Поляризация по миру (Планирование): карта мира, окрашенная по пространственному сдвигу поляризации (Dpol) между твоей станцией и каждым местом, откуда видна Луна, с пунктиром 45° (3 дБ); Dpol и потери при наведении мыши и на метке DX.",
+            "YAEC {0} загружен: он установится сам, когда ты закроешь программу.",
+            "YAEC обновлён с версии {0} до {1}.",
+            "1.9.11 - Тихое автоматическое обновление, как в YA-NEC: YAEC проверяет GitHub при запуске и каждые 30 минут, скачивает пакет в фоне и проверяет его отпечаток SHA-256; в Windows он устанавливается сам при закрытии программы, в Linux, BSD и macOS новая версия запускается при следующем старте, а сообщение сообщает, с какой версии было обновление (пакеты .deb, .rpm, Arch и Slackware обновляются менеджером пакетов). Мой горизонт: фиолетовая рамка зоны наведения имеет ступенчатый минимум, градус за градусом по азимуту (большее из предела антенны и рельефа), для твоей станции и для DX.",
         };
 
         public static readonly string[] UK = {
@@ -27801,6 +27837,9 @@ namespace LunaCalc
             "Та сама карта світу, суходіл забарвлено за просторовим зсувом поляризації (Dpol) між твоєю станцією та кожним місцем, звідки видно Місяць: зелений — лінійні поляризації збігаються, червоний — повернуті на 90°. При наведенні миші видно Dpol і втрати в дБ; фарадеївське обертання не враховано.",
             "Просторовий зсув поляризації (Dpol) відносно твоєї станції",
             "1.9.10 - Нова вкладка Поляризація по світу (Планування): карта світу, забарвлена за просторовим зсувом поляризації (Dpol) між твоєю станцією та кожним місцем, звідки видно Місяць, з пунктиром 45° (3 дБ); Dpol і втрати при наведенні миші та на мітці DX.",
+            "YAEC {0} завантажено: він встановиться сам, коли ти закриєш програму.",
+            "YAEC оновлено з версії {0} до {1}.",
+            "1.9.11 - Тихе автоматичне оновлення, як у YA-NEC: YAEC перевіряє GitHub під час запуску і кожні 30 хвилин, завантажує пакет у фоні та перевіряє його відбиток SHA-256; у Windows він встановлюється сам під час закриття програми, у Linux, BSD і macOS нова версія запускається під час наступного старту, а повідомлення каже, з якої версії було оновлення (пакети .deb, .rpm, Arch і Slackware оновлюються менеджером пакетів). Мій горизонт: фіолетова рамка зони наведення має ступінчастий мінімум, градус за градусом за азимутом (більше з межі антени та рельєфу), для твоєї станції і для DX.",
         };
 
         public static readonly string[] AF = {
@@ -29781,6 +29820,9 @@ namespace LunaCalc
             "Dieselfde wêreldkaart, met die land gekleur volgens die ruimtelike polarisasieverskuiwing (Dpol) tussen jou stasie en elke plek wat die Maan sien: groen waar die lineêre polarisasies ooreenstem, rooi waar hulle 90° gedraai is. Beweeg die muis om Dpol en die verlies in dB te lees; Faraday-rotasie is nie ingesluit nie.",
             "Ruimtelike polarisasieverskuiwing (Dpol) teenoor jou stasie",
             "1.9.10 - Nuwe oortjie Polarisasie oor die wêreld (Beplanning): wêreldkaart gekleur volgens die ruimtelike polarisasieverskuiwing (Dpol) tussen jou stasie en elke plek wat die Maan sien, met die gestippelde 45°-lyn (3 dB); Dpol en verlies by die muis en op die DX-etiket.",
+            "YAEC {0} is afgelaai: dit installeer self wanneer jy die program toemaak.",
+            "YAEC is van weergawe {0} na {1} opgedateer.",
+            "1.9.11 - Stil outomatiese opdatering, soos in YA-NEC: YAEC kyk by die begin en elke 30 minute op GitHub, laai die pakket op die agtergrond af en kontroleer sy SHA-256-vingerafdruk; op Windows installeer dit self wanneer jy die program toemaak, op Linux, BSD en macOS begin die nuwe weergawe by die volgende keer, en 'n boodskap sê van watter weergawe opgedateer is (.deb-, .rpm-, Arch- en Slackware-pakkette bly by die pakketbestuurder). My horison: die pers blok van die rigbare gebied het 'n trapsgewyse minimum, graad vir graad van asimut (die hoogste van die antennagrens en die terrein), vir jou stasie en vir die DX.",
         };
 
         public static readonly string[] BN = {
@@ -31760,6 +31802,9 @@ namespace LunaCalc
             "একই বিশ্ব মানচিত্র, যেখানে স্থলভাগ রঙ করা হয়েছে তোমার স্টেশন ও চাঁদ দেখা প্রতিটি স্থানের মধ্যে স্থানিক পোলারাইজেশন অফসেট (Dpol) অনুযায়ী: যেখানে রৈখিক পোলারাইজেশন মেলে সেখানে সবুজ, যেখানে 90° ঘোরানো সেখানে লাল। মাউস রাখলে Dpol ও dB-তে ক্ষতি দেখা যায়; ফ্যারাডে ঘূর্ণন ধরা হয়নি।",
             "তোমার স্টেশনের সাপেক্ষে স্থানিক পোলারাইজেশন অফসেট (Dpol)",
             "1.9.10 - পরিকল্পনায় নতুন ট্যাব বিশ্বজুড়ে পোলারাইজেশন: তোমার স্টেশন ও চাঁদ দেখা প্রতিটি স্থানের মধ্যে স্থানিক পোলারাইজেশন অফসেট (Dpol) অনুযায়ী রঙ করা বিশ্ব মানচিত্র, 45° (3 dB) ড্যাশ রেখাসহ; মাউস রাখলে ও DX লেবেলে Dpol ও ক্ষতি।",
+            "YAEC {0} ডাউনলোড হয়েছে: প্রোগ্রাম বন্ধ করলে এটি নিজে থেকেই ইনস্টল হবে।",
+            "YAEC সংস্করণ {0} থেকে {1}-এ আপডেট হয়েছে।",
+            "1.9.11 - YA-NEC-এর মতো নীরব স্বয়ংক্রিয় আপডেট: YAEC চালু হওয়ার সময় ও প্রতি 30 মিনিটে GitHub দেখে, পটভূমিতে প্যাকেজ ডাউনলোড করে এবং এর SHA-256 ফিঙ্গারপ্রিন্ট যাচাই করে; Windows-এ প্রোগ্রাম বন্ধ করলে নিজে থেকেই ইনস্টল হয়, Linux, BSD ও macOS-এ নতুন সংস্করণ পরের বার চালু হলে চলে, এবং একটি বার্তা জানায় কোন সংস্করণ থেকে আপডেট হয়েছে (.deb, .rpm, Arch ও Slackware প্যাকেজ প্যাকেজ ম্যানেজারেই থাকে)। আমার দিগন্ত: লক্ষ্যযোগ্য অঞ্চলের বেগুনি বাক্সের ন্যূনতম এখন দিগংশের প্রতি ডিগ্রিতে সিঁড়ির মতো (অ্যান্টেনার সীমা ও ভূখণ্ডের মধ্যে বড়টি), তোমার স্টেশন ও DX উভয়ের জন্য।",
         };
 
         public static readonly string[] AR = {
@@ -33739,6 +33784,9 @@ namespace LunaCalc
             "خريطة العالم نفسها، واليابسة ملوّنة حسب إزاحة الاستقطاب المكانية (Dpol) بين محطتك وكل مكان يرى القمر: أخضر حيث يتطابق الاستقطابان الخطيّان، وأحمر حيث يختلفان بـ 90°. بتمرير الفأرة تُقرأ Dpol والفقد بالـ dB؛ دوران فاراداي غير مشمول.",
             "إزاحة الاستقطاب المكانية (Dpol) بالنسبة إلى محطتك",
             "1.9.10 - تبويب جديد الاستقطاب حول العالم (التخطيط): خريطة العالم ملوّنة حسب إزاحة الاستقطاب المكانية (Dpol) بين محطتك وكل مكان يرى القمر، مع خط 45° (3 dB) المتقطع؛ Dpol والفقد عند تمرير الفأرة وعلى ملصق DX.",
+            "تم تنزيل YAEC {0}: سيُثبَّت تلقائيًا عند إغلاق البرنامج.",
+            "تم تحديث YAEC من الإصدار {0} إلى {1}.",
+            "1.9.11 - تحديث تلقائي صامت كما في YA-NEC: يتحقق YAEC من GitHub عند التشغيل وكل 30 دقيقة، وينزّل الحزمة في الخلفية ويتحقق من بصمة SHA-256؛ على Windows يُثبَّت تلقائيًا عند إغلاق البرنامج، وعلى Linux وBSD وmacOS يعمل الإصدار الجديد عند التشغيل التالي، وتخبرك رسالة بالإصدار السابق (حزم .deb و.rpm وArch وSlackware تبقى لمدير الحزم). أفق محطتي: للإطار البنفسجي لمنطقة التوجيه حدّ أدنى متدرّج درجةً بدرجة في السمت (الأعلى بين حد الهوائي والتضاريس)، لمحطتك وللـ DX.",
         };
 
         public static readonly string[] TR = {
@@ -35718,6 +35766,9 @@ namespace LunaCalc
             "Aynı dünya haritası; karalar, istasyonun ile Ay'ı gören her yer arasındaki uzaysal polarizasyon kaymasına (Dpol) göre renklendirilir: doğrusal polarizasyonların örtüştüğü yerler yeşil, 90° döndüğü yerler kırmızı. Fareyle üzerine gelince Dpol ve dB cinsinden kayıp okunur; Faraday dönmesi dahil değildir.",
             "İstasyonuna göre uzaysal polarizasyon kayması (Dpol)",
             "1.9.10 - Planlamada yeni sekme Dünya genelinde polarizasyon: istasyonun ile Ay'ı gören her yer arasındaki uzaysal polarizasyon kaymasına (Dpol) göre renklendirilmiş dünya haritası, kesikli 45° (3 dB) çizgisiyle; fareyle üzerine gelince ve DX etiketinde Dpol ve kayıp.",
+            "YAEC {0} indirildi: programı kapattığında kendiliğinden kurulur.",
+            "YAEC {0} sürümünden {1} sürümüne güncellendi.",
+            "1.9.11 - YA-NEC'teki gibi sessiz otomatik güncelleme: YAEC açılışta ve her 30 dakikada GitHub'ı denetler, paketi arka planda indirir ve SHA-256 parmak izini doğrular; Windows'ta program kapatılınca kendiliğinden kurulur, Linux, BSD ve macOS'ta yeni sürüm bir sonraki açılışta başlar ve bir ileti hangi sürümden güncellendiğini söyler (.deb, .rpm, Arch ve Slackware paketleri paket yöneticisinde kalır). Ufkum: yönlendirilebilir alanın mor çerçevesinin alt sınırı artık azimutta derece derece basamaklı (anten sınırı ile arazinin yüksek olanı), senin istasyonun ve DX için.",
         };
 
         public static readonly string[] NL = {
@@ -37697,6 +37748,9 @@ namespace LunaCalc
             "Dezelfde wereldkaart, met het land gekleurd volgens de ruimtelijke polarisatieverschuiving (Dpol) tussen jouw station en elke plek die de maan ziet: groen waar de lineaire polarisaties overeenkomen, rood waar ze 90° gedraaid zijn. Met de muis lees je Dpol en het verlies in dB; Faraday-rotatie is niet meegenomen.",
             "Ruimtelijke polarisatieverschuiving (Dpol) ten opzichte van jouw station",
             "1.9.10 - Nieuw tabblad Polarisatie over de wereld (Planning): wereldkaart gekleurd volgens de ruimtelijke polarisatieverschuiving (Dpol) tussen jouw station en elke plek die de maan ziet, met de gestreepte 45°-lijn (3 dB); Dpol en verlies onder de muis en op het DX-label.",
+            "YAEC {0} is gedownload: het installeert zichzelf wanneer je het programma sluit.",
+            "YAEC is bijgewerkt van versie {0} naar {1}.",
+            "1.9.11 - Stille automatische update, zoals in YA-NEC: YAEC controleert GitHub bij het starten en elke 30 minuten, downloadt het pakket op de achtergrond en controleert de SHA-256-vingerafdruk; op Windows installeert het zichzelf bij het sluiten van het programma, op Linux, BSD en macOS start de nieuwe versie bij de volgende keer, en een melding noemt de vorige versie (.deb-, .rpm-, Arch- en Slackware-pakketten blijven bij de pakketbeheerder). Mijn horizon: het paarse kader van het richtbare gebied heeft een getrapt minimum, graad voor graad in azimut (het hoogste van antennegrens en terrein), voor jouw station en voor de DX.",
         };
 
         public static readonly string[] ET = {
@@ -39676,6 +39730,9 @@ namespace LunaCalc
             "Sama maailmakaart, kus maismaa on värvitud sinu jaama ja iga Kuud nägeva koha vahelise ruumilise polarisatsiooninihke (Dpol) järgi: roheline seal, kus lineaarsed polarisatsioonid kattuvad, punane seal, kus need on 90° pööratud. Hiirega näed Dpol-i ja kadu dB-des; Faraday pööret ei arvestata.",
             "Ruumiline polarisatsiooninihe (Dpol) sinu jaama suhtes",
             "1.9.10 - Uus vahekaart Polarisatsioon maailmas (Planeerimine): maailmakaart, värvitud sinu jaama ja iga Kuud nägeva koha vahelise ruumilise polarisatsiooninihke (Dpol) järgi, katkendliku 45° (3 dB) joonega; Dpol ja kadu hiire all ning DX-i sildil.",
+            "YAEC {0} on alla laaditud: see paigaldub ise, kui programmi sulged.",
+            "YAEC on uuendatud versioonilt {0} versioonile {1}.",
+            "1.9.11 - Vaikne automaatne uuendus nagu YA-NEC-is: YAEC kontrollib GitHubi käivitumisel ja iga 30 minuti järel, laadib paketi taustal alla ja kontrollib selle SHA-256 sõrmejälge; Windowsis paigaldub see programmi sulgemisel ise, Linuxis, BSD-s ja macOS-is käivitub uus versioon järgmisel korral ning teade ütleb, milliselt versioonilt uuendati (.deb-, .rpm-, Arch- ja Slackware-paketid jäävad paketihalduri hooleks). Minu horisont: suunatava ala lilla raami miinimum on astmeline, asimuudi kraadhaaval (antenni piiri ja maastiku kõrgem), sinu jaama ja DX-i jaoks.",
         };
 
         public static readonly string[] LV = {
@@ -41655,6 +41712,9 @@ namespace LunaCalc
             "Tā pati pasaules karte, kurā sauszeme iekrāsota pēc telpiskās polarizācijas nobīdes (Dpol) starp tavu staciju un katru vietu, kas redz Mēnesi: zaļš, kur lineārās polarizācijas sakrīt, sarkans, kur tās pagrieztas par 90°. Ar peli var nolasīt Dpol un zudumus dB; Faradeja rotācija nav iekļauta.",
             "Telpiskā polarizācijas nobīde (Dpol) attiecībā pret tavu staciju",
             "1.9.10 - Jauna cilne Polarizācija pasaulē (Plānošana): pasaules karte, iekrāsota pēc telpiskās polarizācijas nobīdes (Dpol) starp tavu staciju un katru vietu, kas redz Mēnesi, ar 45° (3 dB) raustīto līniju; Dpol un zudumi zem peles un uz DX etiķetes.",
+            "YAEC {0} ir lejupielādēts: tas instalēsies pats, kad aizvērsi programmu.",
+            "YAEC ir atjaunināts no versijas {0} uz {1}.",
+            "1.9.11 - Klusa automātiska atjaunināšana kā YA-NEC: YAEC pārbauda GitHub palaišanas brīdī un ik pēc 30 minūtēm, lejupielādē pakotni fonā un pārbauda tās SHA-256 nospiedumu; Windows tā instalējas pati, aizverot programmu, Linux, BSD un macOS jaunā versija sāk darboties nākamajā palaišanā, un ziņojums pasaka, no kuras versijas atjaunināts (.deb, .rpm, Arch un Slackware pakotnes paliek pakotņu pārvaldnieka ziņā). Mans horizonts: notēmējamās zonas violetajam rāmim ir pakāpenisks minimums, grādu pa grādam azimutā (augstākais no antenas robežas un reljefa), tavai stacijai un DX.",
         };
 
         public static readonly string[] LT = {
@@ -43634,6 +43694,9 @@ namespace LunaCalc
             "Tas pats pasaulio žemėlapis, kuriame sausuma nuspalvinta pagal erdvinį poliarizacijos poslinkį (Dpol) tarp tavo stoties ir kiekvienos vietos, matančios Mėnulį: žalia, kur linijinės poliarizacijos sutampa, raudona, kur jos pasuktos 90°. Pele galima perskaityti Dpol ir nuostolius dB; Faradėjaus sukimas neįtrauktas.",
             "Erdvinis poliarizacijos poslinkis (Dpol) tavo stoties atžvilgiu",
             "1.9.10 - Naujas skirtukas Poliarizacija pasaulyje (Planavimas): pasaulio žemėlapis, nuspalvintas pagal erdvinį poliarizacijos poslinkį (Dpol) tarp tavo stoties ir kiekvienos vietos, matančios Mėnulį, su punktyrine 45° (3 dB) linija; Dpol ir nuostoliai po pele ir DX etiketėje.",
+            "YAEC {0} atsisiųstas: jis įsidiegs pats, kai uždarysi programą.",
+            "YAEC atnaujintas iš versijos {0} į {1}.",
+            "1.9.11 - Tylus automatinis atnaujinimas kaip YA-NEC: YAEC tikrina GitHub paleidžiant ir kas 30 minučių, fone atsisiunčia paketą ir patikrina jo SHA-256 piršto atspaudą; Windows sistemoje jis įsidiegia pats uždarius programą, Linux, BSD ir macOS nauja versija paleidžiama kitą kartą, o pranešimas nurodo, iš kurios versijos atnaujinta (.deb, .rpm, Arch ir Slackware paketus atnaujina paketų tvarkyklė). Mano horizontas: nutaikomos zonos violetinio rėmelio minimumas yra laiptuotas, laipsnis po laipsnio azimutu (didesnis iš antenos ribos ir reljefo), tavo stočiai ir DX.",
         };
 
         public static readonly string[] SV = {
@@ -45613,6 +45676,9 @@ namespace LunaCalc
             "Samma världskarta, med landytorna färgade efter den rumsliga polarisationsförskjutningen (Dpol) mellan din station och varje plats som ser månen: grönt där de linjära polarisationerna stämmer, rött där de är vridna 90°. Med musen läser du Dpol och förlusten i dB; Faradayrotation ingår inte.",
             "Rumslig polarisationsförskjutning (Dpol) jämfört med din station",
             "1.9.10 - Ny flik Polarisation över världen (Planering): världskarta färgad efter den rumsliga polarisationsförskjutningen (Dpol) mellan din station och varje plats som ser månen, med den streckade 45°-linjen (3 dB); Dpol och förlust under musen och på DX-etiketten.",
+            "YAEC {0} har laddats ner: det installerar sig självt när du stänger programmet.",
+            "YAEC har uppdaterats från version {0} till {1}.",
+            "1.9.11 - Tyst automatisk uppdatering, som i YA-NEC: YAEC kollar GitHub vid start och var 30:e minut, laddar ner paketet i bakgrunden och kontrollerar dess SHA-256-fingeravtryck; på Windows installerar det sig självt när du stänger programmet, på Linux, BSD och macOS startar den nya versionen nästa gång, och ett meddelande talar om vilken version det uppdaterades från (.deb-, .rpm-, Arch- och Slackware-paket sköts av pakethanteraren). Min horisont: den violetta ramen för det riktbara området har ett trappstegsminimum, grad för grad i azimut (det högsta av antenngränsen och terrängen), för din station och för DX.",
         };
 
         public static readonly string[] NB = {
@@ -47592,6 +47658,9 @@ namespace LunaCalc
             "Det samme verdenskartet, med landområdene farget etter den romlige polarisasjonsforskyvningen (Dpol) mellom stasjonen din og hvert sted som ser månen: grønt der de lineære polarisasjonene stemmer, rødt der de er dreid 90°. Med musen leser du Dpol og tapet i dB; Faraday-rotasjon er ikke med.",
             "Romlig polarisasjonsforskyvning (Dpol) i forhold til stasjonen din",
             "1.9.10 - Ny fane Polarisasjon over verden (Planlegging): verdenskart farget etter den romlige polarisasjonsforskyvningen (Dpol) mellom stasjonen din og hvert sted som ser månen, med den stiplede 45°-linjen (3 dB); Dpol og tap under musen og på DX-etiketten.",
+            "YAEC {0} er lastet ned: det installerer seg selv når du lukker programmet.",
+            "YAEC er oppdatert fra versjon {0} til {1}.",
+            "1.9.11 - Stille automatisk oppdatering, som i YA-NEC: YAEC sjekker GitHub ved oppstart og hvert 30. minutt, laster ned pakken i bakgrunnen og kontrollerer SHA-256-fingeravtrykket; på Windows installerer det seg selv når du lukker programmet, på Linux, BSD og macOS starter den nye versjonen neste gang, og en melding forteller hvilken versjon det ble oppdatert fra (.deb-, .rpm-, Arch- og Slackware-pakker oppdateres av pakkebehandleren). Min horisont: den fiolette rammen for området som kan siktes har et trappetrinnsminimum, grad for grad i asimut (det høyeste av antennegrensen og terrenget), for stasjonen din og for DX.",
         };
 
         public static readonly string[] IS = {
@@ -49571,6 +49640,9 @@ namespace LunaCalc
             "Sama heimskortið, þar sem landið er litað eftir rúmfræðilegri skautunarhliðrun (Dpol) milli stöðvarinnar þinnar og hvers staðar sem sér tunglið: grænt þar sem línulegu skautanirnar fara saman, rautt þar sem þeim er snúið um 90°. Með músinni lestu Dpol og tapið í dB; Faraday-snúningur er ekki með.",
             "Rúmfræðileg skautunarhliðrun (Dpol) miðað við stöðina þína",
             "1.9.10 - Nýr flipi Skautun um heiminn (Áætlanagerð): heimskort litað eftir rúmfræðilegri skautunarhliðrun (Dpol) milli stöðvarinnar þinnar og hvers staðar sem sér tunglið, með brotinni 45° línu (3 dB); Dpol og tap undir músinni og á DX-merkinu.",
+            "YAEC {0} hefur verið sótt: það setur sig sjálft upp þegar þú lokar forritinu.",
+            "YAEC hefur verið uppfært úr útgáfu {0} í {1}.",
+            "1.9.11 - Hljóðlát sjálfvirk uppfærsla, eins og í YA-NEC: YAEC athugar GitHub við ræsingu og á 30 mínútna fresti, sækir pakkann í bakgrunni og athugar SHA-256 fingrafar hans; á Windows setur það sig sjálft upp þegar forritinu er lokað, á Linux, BSD og macOS ræsist nýja útgáfan næst, og skilaboð segja úr hvaða útgáfu var uppfært (.deb-, .rpm-, Arch- og Slackware-pakkar eru áfram í höndum pakkastjórans). Sjóndeildarhringurinn minn: fjólublái rammi miðanlega svæðisins hefur þrepaskipt lágmark, gráðu fyrir gráðu í áttarhorni (það hærra af loftnetsmörkum og landslagi), fyrir stöðina þína og fyrir DX.",
         };
 
         public static readonly string[] HE = {
@@ -51550,6 +51622,9 @@ namespace LunaCalc
             "אותה מפת עולם, והיבשה צבועה לפי היסט הקיטוב המרחבי (Dpol) בין התחנה שלך לבין כל מקום שרואה את הירח: ירוק היכן שהקיטובים הקוויים תואמים, אדום היכן שהם מסובבים ב־90°. במעבר העכבר נקראים Dpol וההפסד ב־dB; סיבוב פאראדיי אינו כלול.",
             "היסט קיטוב מרחבי (Dpol) ביחס לתחנה שלך",
             "1.9.10 - לשונית חדשה קיטוב על פני העולם (תכנון): מפת עולם צבועה לפי היסט הקיטוב המרחבי (Dpol) בין התחנה שלך לבין כל מקום שרואה את הירח, עם קו מקווקו של 45° (3 dB); Dpol והפסד במעבר העכבר ובתווית ה־DX.",
+            "YAEC {0} הורד: הוא יותקן מעצמו כשתסגור את התוכנה.",
+            "YAEC עודכן מגרסה {0} לגרסה {1}.",
+            "1.9.11 - עדכון אוטומטי שקט, כמו ב־YA-NEC: YAEC בודק את GitHub בהפעלה וכל 30 דקות, מוריד את החבילה ברקע ובודק את טביעת ה־SHA-256 שלה; ב־Windows הוא מותקן מעצמו בסגירת התוכנה, ב־Linux, BSD ו־macOS הגרסה החדשה עולה בהפעלה הבאה, והודעה מציינת מאיזו גרסה עודכן (חבילות ‎.deb, ‎.rpm, Arch ו־Slackware נשארות אצל מנהל החבילות). האופק שלי: למסגרת הסגולה של אזור הכיוון יש מינימום מדורג, מעלה אחר מעלה באזימוט (הגבוה מבין גבול האנטנה והשטח), לתחנה שלך ול־DX.",
         };
 
         public static readonly string[] UR = {
@@ -53529,6 +53604,9 @@ namespace LunaCalc
             "وہی عالمی نقشہ، جس میں خشکی کو آپ کے اسٹیشن اور چاند دیکھنے والی ہر جگہ کے درمیان مکانی پولرائزیشن آفسیٹ (Dpol) کے مطابق رنگا گیا ہے: جہاں خطی پولرائزیشن ملتی ہے وہاں سبز، جہاں 90° گھومی ہو وہاں سرخ۔ ماؤس رکھنے پر Dpol اور dB میں نقصان پڑھا جا سکتا ہے؛ فیراڈے گردش شامل نہیں۔",
             "آپ کے اسٹیشن کے لحاظ سے مکانی پولرائزیشن آفسیٹ (Dpol)",
             "1.9.10 - منصوبہ بندی میں نیا ٹیب دنیا بھر میں پولرائزیشن: آپ کے اسٹیشن اور چاند دیکھنے والی ہر جگہ کے درمیان مکانی پولرائزیشن آفسیٹ (Dpol) کے مطابق رنگا عالمی نقشہ، 45° (3 dB) کی ٹوٹی لکیر کے ساتھ؛ ماؤس رکھنے پر اور DX لیبل پر Dpol اور نقصان۔",
+            "YAEC {0} ڈاؤن لوڈ ہو گیا ہے: پروگرام بند کرنے پر یہ خود انسٹال ہو جائے گا۔",
+            "YAEC ورژن {0} سے {1} میں اپ ڈیٹ ہو گیا ہے۔",
+            "1.9.11 - YA-NEC کی طرح خاموش خودکار اپ ڈیٹ: YAEC شروع ہونے پر اور ہر 30 منٹ بعد GitHub دیکھتا ہے، پیکیج پس منظر میں ڈاؤن لوڈ کرتا ہے اور اس کا SHA-256 فنگرپرنٹ جانچتا ہے؛ Windows پر پروگرام بند کرنے پر خود انسٹال ہوتا ہے، Linux، BSD اور macOS پر نیا ورژن اگلی بار شروع ہونے پر چلتا ہے، اور ایک پیغام بتاتا ہے کہ کس ورژن سے اپ ڈیٹ ہوا (.deb، .rpm، Arch اور Slackware پیکیج پیکیج مینیجر ہی سے اپ ڈیٹ ہوتے ہیں)۔ میرا افق: ہدف کے قابل علاقے کے بنفشی خانے کی کم از کم حد اب سمت کے ہر درجے پر سیڑھی نما ہے (اینٹینا کی حد اور زمین میں سے اونچی)، آپ کے اسٹیشن اور DX دونوں کے لیے۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -55507,6 +55585,9 @@ namespace LunaCalc
             "Det samme verdenskort, med landområderne farvet efter den rumlige polarisationsforskydning (Dpol) mellem din station og hvert sted, der ser Månen: grønt hvor de lineære polarisationer passer, rødt hvor de er drejet 90°. Med musen aflæser du Dpol og tabet i dB; Faraday-rotation er ikke medregnet.",
             "Rumlig polarisationsforskydning (Dpol) i forhold til din station",
             "1.9.10 - Ny fane Polarisation over verden (Planlægning): verdenskort farvet efter den rumlige polarisationsforskydning (Dpol) mellem din station og hvert sted, der ser Månen, med den stiplede 45°-linje (3 dB); Dpol og tab under musen og på DX-etiketten.",
+            "YAEC {0} er hentet: det installerer sig selv, når du lukker programmet.",
+            "YAEC er opdateret fra version {0} til {1}.",
+            "1.9.11 - Stille automatisk opdatering, som i YA-NEC: YAEC tjekker GitHub ved start og hvert 30. minut, henter pakken i baggrunden og kontrollerer dens SHA-256-fingeraftryk; på Windows installerer det sig selv, når du lukker programmet, på Linux, BSD og macOS starter den nye version næste gang, og en besked fortæller, hvilken version der blev opdateret fra (.deb-, .rpm-, Arch- og Slackware-pakker opdateres af pakkehåndteringen). Min horisont: den violette ramme for det område, der kan peges på, har et trinvist minimum, grad for grad i azimut (det højeste af antennegrænsen og terrænet), for din station og for DX.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -57485,6 +57566,9 @@ namespace LunaCalc
             "Ang parehong mapa ng mundo, na ang lupa ay kinulayan ayon sa spatial polarization offset (Dpol) sa pagitan ng iyong istasyon at bawat lugar na nakakakita ng Buwan: berde kung saan magkatugma ang linear na polarisasyon, pula kung saan magkaiba ang mga ito nang 90°. Itapat ang mouse para mabasa ang Dpol at ang pagkawala sa dB; hindi kasama ang Faraday rotation.",
             "Spatial polarization offset (Dpol) kumpara sa iyong istasyon",
             "1.9.10 - Bagong tab Polarisasyon sa buong mundo (Pagpaplano): mapa ng mundo na kinulayan ayon sa spatial polarization offset (Dpol) sa pagitan ng iyong istasyon at bawat lugar na nakakakita ng Buwan, na may putol-putol na linya ng 45° (3 dB); Dpol at pagkawala sa ilalim ng mouse at sa label ng DX.",
+            "Na-download na ang YAEC {0}: kusa itong mag-i-install kapag isinara mo ang programa.",
+            "Na-update ang YAEC mula sa bersyong {0} patungong {1}.",
+            "1.9.11 - Tahimik na awtomatikong update, gaya ng sa YA-NEC: tinitingnan ng YAEC ang GitHub sa pagsisimula at bawat 30 minuto, dina-download ang package sa background at sinusuri ang SHA-256 fingerprint nito; sa Windows kusa itong nag-i-install kapag isinara ang programa, sa Linux, BSD at macOS tatakbo ang bagong bersyon sa susunod na pagbukas, at sinasabi ng isang mensahe kung mula saang bersyon ito na-update (ang mga package na .deb, .rpm, Arch at Slackware ay nananatili sa package manager). Aking horizon: ang lilang kahon ng maaaring tutukang lugar ay may minimum na pabaitang, digri kada digri ng azimuth (ang mas mataas sa hangganan ng antena at sa lupa), para sa iyong istasyon at para sa DX.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -59463,6 +59547,9 @@ namespace LunaCalc
             "O mesmo mapa do mundo, com as terras coloridas segundo o desvio de polarização espacial (Dpol) entre a sua estação e cada local que vê a Lua: verde onde as polarizações lineares coincidem, vermelho onde estão giradas 90°. Passando o mouse você lê Dpol e a perda em dB; a rotação de Faraday não está incluída.",
             "Desvio de polarização espacial (Dpol) em relação à sua estação",
             "1.9.10 - Nova aba Polarização sobre o mundo (Planejamento): mapa do mundo colorido segundo o desvio de polarização espacial (Dpol) entre a sua estação e cada local que vê a Lua, com a linha tracejada de 45° (3 dB); Dpol e perda ao passar o mouse e no rótulo do DX.",
+            "O YAEC {0} foi baixado: ele se instala sozinho quando você fechar o programa.",
+            "O YAEC foi atualizado da versão {0} para a {1}.",
+            "1.9.11 - Atualização automática silenciosa, como no YA-NEC: o YAEC consulta o GitHub na inicialização e a cada 30 minutos, baixa o pacote em segundo plano e verifica sua impressão SHA-256; no Windows ele se instala sozinho ao fechar o programa, no Linux, BSD e macOS a nova versão começa na próxima inicialização, e um aviso informa a versão anterior (os pacotes .deb, .rpm, Arch e Slackware continuam com o gerenciador de pacotes). Meu horizonte: o quadro violeta da zona apontável tem o mínimo em degraus, grau a grau de azimute (o maior entre o limite da antena e o terreno), para a sua estação e para o DX.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -61441,6 +61528,9 @@ namespace LunaCalc
             "แผนที่โลกเดียวกัน โดยระบายสีพื้นดินตามค่าออฟเซ็ตโพลาไรเซชันเชิงพื้นที่ (Dpol) ระหว่างสถานีของคุณกับแต่ละตำแหน่งที่เห็นดวงจันทร์: สีเขียวเมื่อโพลาไรเซชันเชิงเส้นตรงกัน สีแดงเมื่อหมุนต่างกัน 90° เลื่อนเมาส์เพื่ออ่าน Dpol และการสูญเสียเป็น dB ไม่รวมการหมุนฟาราเดย์",
             "ออฟเซ็ตโพลาไรเซชันเชิงพื้นที่ (Dpol) เทียบกับสถานีของคุณ",
             "1.9.10 - แท็บใหม่ โพลาไรเซชันทั่วโลก (การวางแผน): แผนที่โลกระบายสีตามออฟเซ็ตโพลาไรเซชันเชิงพื้นที่ (Dpol) ระหว่างสถานีของคุณกับแต่ละตำแหน่งที่เห็นดวงจันทร์ พร้อมเส้นประ 45° (3 dB); Dpol และการสูญเสียเมื่อเลื่อนเมาส์และบนป้าย DX",
+            "ดาวน์โหลด YAEC {0} แล้ว: จะติดตั้งเองเมื่อคุณปิดโปรแกรม",
+            "YAEC อัปเดตจากเวอร์ชัน {0} เป็น {1} แล้ว",
+            "1.9.11 - อัปเดตอัตโนมัติแบบเงียบเหมือน YA-NEC: YAEC ตรวจ GitHub ตอนเปิดและทุก 30 นาที ดาวน์โหลดแพ็กเกจเบื้องหลังและตรวจลายนิ้วมือ SHA-256 บน Windows จะติดตั้งเองเมื่อปิดโปรแกรม บน Linux, BSD และ macOS เวอร์ชันใหม่จะเริ่มในการเปิดครั้งถัดไป และมีข้อความบอกว่าอัปเดตจากเวอร์ชันใด (แพ็กเกจ .deb, .rpm, Arch และ Slackware ยังอัปเดตผ่านตัวจัดการแพ็กเกจ) ขอบฟ้าของฉัน: กรอบสีม่วงของพื้นที่ที่ชี้ได้มีค่าต่ำสุดแบบขั้นบันไดทีละองศาของแอซิมัท (ค่าที่สูงกว่าระหว่างขีดจำกัดของสายอากาศกับภูมิประเทศ) ทั้งสำหรับสถานีของคุณและ DX",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -63419,6 +63509,9 @@ namespace LunaCalc
             "同一張世界地圖，陸地依你的電台與每個能看到月亮的地點之間的空間極化偏差 (Dpol) 著色：線極化一致處為綠色，相差 90° 處為紅色。滑鼠停留可讀取 Dpol 與以 dB 計的損耗；不含法拉第旋轉。",
             "相對於你電台的空間極化偏差 (Dpol)",
             "1.9.10 - 規劃中新增「全球極化圖」分頁：世界地圖依你的電台與每個能看到月亮的地點之間的空間極化偏差 (Dpol) 著色，附 45° (3 dB) 虛線；滑鼠停留與 DX 標籤上顯示 Dpol 與損耗。",
+            "YAEC {0} 已下載：關閉程式時會自動安裝。",
+            "YAEC 已從 {0} 版更新到 {1} 版。",
+            "1.9.11 - 與 YA-NEC 相同的靜默自動更新：YAEC 在啟動時及每 30 分鐘檢查 GitHub，在背景下載套件並驗證 SHA-256 指紋；Windows 上於關閉程式時自動安裝，Linux、BSD 與 macOS 上新版本於下次啟動時執行，並提示是從哪個版本更新的（.deb、.rpm、Arch 與 Slackware 套件仍由套件管理員更新）。我的地平線：可指向區域的紫色框下限依方位逐度呈階梯狀（取天線下限與地形中較高者），適用於你的電台與 DX。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -65397,6 +65490,9 @@ namespace LunaCalc
             "Ta sama mapa świata, z lądami pokolorowanymi według przestrzennego przesunięcia polaryzacji (Dpol) między twoją stacją a każdym miejscem, które widzi Księżyc: zielony tam, gdzie polaryzacje liniowe się zgadzają, czerwony tam, gdzie są obrócone o 90°. Po najechaniu myszą widać Dpol i stratę w dB; rotacja Faradaya nie jest uwzględniona.",
             "Przestrzenne przesunięcie polaryzacji (Dpol) względem twojej stacji",
             "1.9.10 - Nowa zakładka Polaryzacja na świecie (Planowanie): mapa świata pokolorowana według przestrzennego przesunięcia polaryzacji (Dpol) między twoją stacją a każdym miejscem, które widzi Księżyc, z przerywaną linią 45° (3 dB); Dpol i strata pod myszą i na etykiecie DX.",
+            "YAEC {0} został pobrany: zainstaluje się sam, gdy zamkniesz program.",
+            "YAEC został zaktualizowany z wersji {0} do {1}.",
+            "1.9.11 - Cicha automatyczna aktualizacja, jak w YA-NEC: YAEC sprawdza GitHub przy starcie i co 30 minut, pobiera pakiet w tle i sprawdza jego odcisk SHA-256; w Windows instaluje się sam po zamknięciu programu, w Linuksie, BSD i macOS nowa wersja startuje przy następnym uruchomieniu, a komunikat podaje, z której wersji zaktualizowano (pakiety .deb, .rpm, Arch i Slackware aktualizuje menedżer pakietów). Mój horyzont: fioletowa ramka obszaru do nakierowania ma schodkowe minimum, stopień po stopniu w azymucie (wyższe z limitu anteny i terenu), dla twojej stacji i dla DX.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -67375,6 +67471,9 @@ namespace LunaCalc
             "Stejná mapa světa, souš je obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc: zelená tam, kde se lineární polarizace shodují, červená tam, kde jsou otočené o 90°. Po najetí myší se zobrazí Dpol a ztráta v dB; Faradayova rotace není zahrnuta.",
             "Prostorový posun polarizace (Dpol) vůči tvé stanici",
             "1.9.10 - Nová záložka Polarizace na světě (Plánování): mapa světa obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc, s čárkovanou linií 45° (3 dB); Dpol a ztráta pod myší a na štítku DX.",
+            "YAEC {0} byl stažen: nainstaluje se sám, až program zavřeš.",
+            "YAEC byl aktualizován z verze {0} na {1}.",
+            "1.9.11 - Tichá automatická aktualizace jako v YA-NEC: YAEC kontroluje GitHub při spuštění a každých 30 minut, stahuje balíček na pozadí a ověřuje jeho otisk SHA-256; ve Windows se nainstaluje sám po zavření programu, v Linuxu, BSD a macOS se nová verze spustí příště a zpráva řekne, ze které verze se aktualizovalo (balíčky .deb, .rpm, Arch a Slackware zůstávají správci balíčků). Můj obzor: fialový rámeček zaměřitelné oblasti má stupňovité minimum, stupeň po stupni v azimutu (vyšší z limitu antény a terénu), pro tvou stanici i pro DX.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -69353,6 +69452,9 @@ namespace LunaCalc
             "Aceeași hartă a lumii, cu uscatul colorat după decalajul spațial de polarizare (Dpol) dintre stația ta și fiecare loc care vede Luna: verde unde polarizările liniare coincid, roșu unde sunt rotite cu 90°. Trecând cu mouse-ul citești Dpol și pierderea în dB; rotația Faraday nu este inclusă.",
             "Decalaj spațial de polarizare (Dpol) față de stația ta",
             "1.9.10 - Filă nouă Polarizarea pe glob (Planificare): harta lumii colorată după decalajul spațial de polarizare (Dpol) dintre stația ta și fiecare loc care vede Luna, cu linia punctată de 45° (3 dB); Dpol și pierdere sub mouse și pe eticheta DX.",
+            "YAEC {0} a fost descărcat: se instalează singur când închizi programul.",
+            "YAEC a fost actualizat de la versiunea {0} la {1}.",
+            "1.9.11 - Actualizare automată silențioasă, ca în YA-NEC: YAEC verifică GitHub la pornire și la fiecare 30 de minute, descarcă pachetul în fundal și îi verifică amprenta SHA-256; pe Windows se instalează singur la închiderea programului, pe Linux, BSD și macOS noua versiune pornește la următoarea lansare, iar un mesaj spune de la ce versiune s-a actualizat (pachetele .deb, .rpm, Arch și Slackware rămân la managerul de pachete). Orizontul meu: caseta violetă a zonei în care se poate ținti are minimul în trepte, grad cu grad în azimut (cel mai mare dintre limita antenei și teren), pentru stația ta și pentru DX.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -71331,6 +71433,9 @@ namespace LunaCalc
             "Ο ίδιος παγκόσμιος χάρτης, με την ξηρά χρωματισμένη κατά τη χωρική μετατόπιση πόλωσης (Dpol) ανάμεσα στον σταθμό σου και κάθε τόπο που βλέπει τη Σελήνη: πράσινο όπου οι γραμμικές πολώσεις συμπίπτουν, κόκκινο όπου είναι στραμμένες κατά 90°. Με το ποντίκι διαβάζεις Dpol και απώλεια σε dB· η περιστροφή Faraday δεν περιλαμβάνεται.",
             "Χωρική μετατόπιση πόλωσης (Dpol) ως προς τον σταθμό σου",
             "1.9.10 - Νέα καρτέλα Πόλωση σε όλο τον κόσμο (Σχεδιασμός): παγκόσμιος χάρτης χρωματισμένος κατά τη χωρική μετατόπιση πόλωσης (Dpol) ανάμεσα στον σταθμό σου και κάθε τόπο που βλέπει τη Σελήνη, με τη διακεκομμένη γραμμή των 45° (3 dB)· Dpol και απώλεια κάτω από το ποντίκι και στην ετικέτα του DX.",
+            "Το YAEC {0} κατέβηκε: θα εγκατασταθεί μόνο του όταν κλείσεις το πρόγραμμα.",
+            "Το YAEC ενημερώθηκε από την έκδοση {0} στην {1}.",
+            "1.9.11 - Σιωπηλή αυτόματη ενημέρωση, όπως στο YA-NEC: το YAEC ελέγχει το GitHub κατά την εκκίνηση και κάθε 30 λεπτά, κατεβάζει το πακέτο στο παρασκήνιο και ελέγχει το αποτύπωμα SHA-256· στα Windows εγκαθίσταται μόνο του όταν κλείνεις το πρόγραμμα, σε Linux, BSD και macOS η νέα έκδοση ξεκινά στην επόμενη εκκίνηση και ένα μήνυμα λέει από ποια έκδοση έγινε η ενημέρωση (τα πακέτα .deb, .rpm, Arch και Slackware μένουν στον διαχειριστή πακέτων). Ο ορίζοντάς μου: το μωβ πλαίσιο της περιοχής σκόπευσης έχει κλιμακωτό ελάχιστο, μοίρα προς μοίρα στο αζιμούθιο (το υψηλότερο ανάμεσα στο όριο της κεραίας και στο έδαφος), για τον σταθμό σου και για τον DX.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -73309,6 +73414,9 @@ namespace LunaCalc
             "Ugyanaz a világtérkép, a szárazföld a saját állomásod és minden, a Holdat látó hely közötti térbeli polarizációs eltérés (Dpol) szerint színezve: zöld, ahol a lineáris polarizációk egyeznek, piros, ahol 90°-kal el vannak forgatva. Az egérrel leolvasható a Dpol és a veszteség dB-ben; a Faraday-forgatás nincs benne.",
             "Térbeli polarizációs eltérés (Dpol) a saját állomásodhoz képest",
             "1.9.10 - Új fül Polarizáció a világon (Tervezés): világtérkép a saját állomásod és minden, a Holdat látó hely közötti térbeli polarizációs eltérés (Dpol) szerint színezve, szaggatott 45°-os (3 dB) vonallal; Dpol és veszteség az egér alatt és a DX címkéjén.",
+            "A YAEC {0} letöltődött: magától települ, amikor bezárod a programot.",
+            "A YAEC frissült a {0} verzióról a {1} verzióra.",
+            "1.9.11 - Csendes automatikus frissítés, mint a YA-NEC-ben: a YAEC induláskor és 30 percenként megnézi a GitHubot, a háttérben letölti a csomagot és ellenőrzi az SHA-256 ujjlenyomatát; Windowson a program bezárásakor magától települ, Linuxon, BSD-n és macOS-en az új verzió a következő indításkor indul, és egy üzenet megmondja, melyik verzióról frissült (a .deb, .rpm, Arch és Slackware csomagokat továbbra is a csomagkezelő frissíti). Az én horizontom: a célozható terület lila keretének alsó határa lépcsős, azimutban fokról fokra (az antennahatár és a terep közül a magasabb), a saját állomásodra és a DX-re.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -75287,6 +75395,9 @@ namespace LunaCalc
             "Rovnaká mapa sveta, súš je zafarbená podľa priestorového posunu polarizácie (Dpol) medzi tvojou stanicou a každým miestom, ktoré vidí Mesiac: zelená tam, kde sa lineárne polarizácie zhodujú, červená tam, kde sú otočené o 90°. Po prechode myšou sa zobrazí Dpol a strata v dB; Faradayova rotácia nie je zahrnutá.",
             "Priestorový posun polarizácie (Dpol) voči tvojej stanici",
             "1.9.10 - Nová záložka Polarizácia vo svete (Plánovanie): mapa sveta zafarbená podľa priestorového posunu polarizácie (Dpol) medzi tvojou stanicou a každým miestom, ktoré vidí Mesiac, s čiarkovanou líniou 45° (3 dB); Dpol a strata pod myšou a na štítku DX.",
+            "YAEC {0} bol stiahnutý: nainštaluje sa sám, keď program zatvoríš.",
+            "YAEC bol aktualizovaný z verzie {0} na {1}.",
+            "1.9.11 - Tichá automatická aktualizácia ako v YA-NEC: YAEC kontroluje GitHub pri spustení a každých 30 minút, sťahuje balík na pozadí a overuje jeho odtlačok SHA-256; vo Windows sa nainštaluje sám po zatvorení programu, v Linuxe, BSD a macOS sa nová verzia spustí nabudúce a správa povie, z ktorej verzie sa aktualizovalo (balíky .deb, .rpm, Arch a Slackware ostávajú správcovi balíkov). Môj obzor: fialový rámček zamerateľnej oblasti má stupňovité minimum, stupeň po stupni v azimute (vyššie z limitu antény a terénu), pre tvoju stanicu aj pre DX.",
         };
     }
 
@@ -87980,7 +88091,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.9.10";
+        public const string Versione = "1.9.11";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -91368,6 +91479,7 @@ namespace LunaCalc
             Lang.T("1.9.2 - Nuova linguetta Rumore del cielo (Skynoise) in Pianificazione: temperatura d'antenna calcolata con il metodo di G8ONH e G4SWX dal diagramma completo dell'antenna (file .out del NEC, YA-NEC o fascio gaussiano) e dalla mappa del cielo (Remazeilles, Haslam, GSM 2008 o LFmap) a 50, 144, 432 MHz e 23 cm, con il percorso della Luna nel mese, la temperatura durante il passaggio per te e per il DX, l'effetto sul Budget EME yagi e il confronto con DJ9BV; collaudo automatico in compila.bat; nel manuale TEORIA E CONSIGLI SULL'EME il rumore del cielo con le fonti a confronto, il guadagno dei dischi (PE1RKI o calcolo per aliquote, Ruze), il primo fuoco sopra i 2320 MHz, la rotazione dell'illuminatore e la Luna illuminata dal fascio (BWF)."),
             Lang.T("1.9.3 - Nomi dei pacchetti uguali a quelli di YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pacchetti .rpm, Arch e Slackware anche per ARM; nelle note della release una tabella con il collegamento a ogni pacchetto per ogni sistema. Questa versione contiene anche i file con i vecchi nomi, solo per l'aggiornamento automatico dalla 1.9.1 e dalla 1.9.2."),
             Lang.T("1.9.5 - Budget EME yagi e dischi: costo di 0,1 dB di perdita in più prima del preampli (PA3CSG) e nuova sezione Prova della stazione con il G/T sul cielo freddo e il fattore Y previsto su Sole, Luna, Cas A e terreno (G3LTF, EMECalc di VK3UM); Budget EME dischi: calo dell'illuminazione al bordo e rete del disco, con la Tant stimata da cielo, ricaduta e rete, e il G/T misurato da G3LTF a confronto; nuovo paragrafo nel manuale; riga ΔT minimo misurabile con la banda passante e il tempo d'integrazione τ (Antenna Engineering Handbook, eq. 41-21); terreno del DX: orizzonte SRTM1 attorno al suo locator nella linguetta Il mio orizzonte, con finestre comuni, barra delle 24 ore, Volta celeste e Stazioni da provare che ne tengono conto (locator di almeno 6 caratteri); ROS dell'antenna nella prova della stazione (AEH eq. 41-19); diametro del Sole da 0,524° a 0,542° con la distanza Terra–Sole; nota «YAEC calcola, non progetta apparati» nelle fonti e nei consigli."),
+            Lang.T("1.9.11 - Aggiornamento automatico silenzioso, come in YA-NEC: YAEC controlla GitHub all'avvio e ogni 30 minuti, scarica il pacchetto in background e ne controlla l'impronta SHA-256; su Windows si installa da solo quando chiudi il programma, su Linux, BSD e macOS la nuova versione parte al prossimo avvio, e un avviso dice da quale versione è stato aggiornato (i pacchetti .deb, .rpm, Arch e Slackware restano al gestore dei pacchetti). Il mio orizzonte: il riquadro viola della zona puntabile ha il minimo a scalini, grado per grado di azimut (il più alto fra il limite dell'antenna e il terreno), per la tua stazione e per il DX."),
             Lang.T("1.9.10 - Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX."),
             Lang.T("1.9.9 - Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio."),
             Lang.T("1.9.8 - Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127."),
@@ -94261,7 +94373,7 @@ namespace LunaCalc
                 }
                 SaveSettings();
             };
-            this.FormClosed += (s, e) => FermaTimer();
+            this.FormClosed += (s, e) => { FermaTimer(); AvviaAggiornamentoInSospeso(); };
             // tutte le caselle dei numeri con la cornice arrotondata e le frecce ben visibili
             ArrotondaNumeri(this);
             this.Shown += (s, e) => ArrotondaNumeri(this);
@@ -94270,8 +94382,8 @@ namespace LunaCalc
 
 
         // ---------- Aggiornamenti da GitHub e file mancanti ----------
-        // All'avvio (al massimo una volta ogni 20 ore) YAEC chiede a GitHub l'ultima versione pubblicata; se è più nuova
-        // lo dice con un avviso. Su Windows scarica il pacchetto giusto (installatore o portatile, 64 o 32 bit), ne controlla
+        // Fino alla 1.9.10: all'avvio (al massimo una volta ogni 20 ore) YAEC chiedeva a GitHub l'ultima versione pubblicata e, se più nuova,
+        // lo diceva con un avviso (dalla 1.9.11 l'aggiornamento è silenzioso, vedi sotto). Su Windows scarica il pacchetto giusto (installatore o portatile, 64 o 32 bit), ne controlla
         // l'impronta SHA-256 con SHA256SUMS.txt, si chiude e si aggiorna da solo. Su Linux, FreeBSD, OpenBSD e macOS fa lo stesso
         // con l'archivio portatile, l'AppImage o l'app per Mac (la nuova versione parte al prossimo avvio); se YAEC è installato
         // con un pacchetto del sistema (.deb, .rpm, Arch, Slackware: cartella sotto /usr) apre la pagina della versione, perché
@@ -94279,6 +94391,43 @@ namespace LunaCalc
         const string RepoGit = "ic8tem/YAEC";
         string aggSalta = "";
         long aggUltimo;
+        // 1.9.11 (IC8TEM 28/11/2026, come YA-NEC): aggiornamento silenzioso. Controllo 10 secondi dopo l'avvio e poi ogni 30 minuti;
+        // il pacchetto si scarica in background e si controlla con SHA256SUMS.txt. Windows: si installa da solo quando chiudi YAEC
+        // (script che aspetta la chiusura); Linux, BSD, macOS: i file si sostituiscono subito e la nuova versione parte al prossimo avvio.
+        // All'avvio successivo un avviso dice «aggiornato dalla versione … alla …». I pacchetti del sistema (.deb, .rpm, Arch,
+        // Slackware) restano al gestore dei pacchetti: per loro c'è l'avviso di sempre, una volta per versione.
+        string aggDa = "";               // versione che c'era prima dell'aggiornamento scaricato (per l'avviso al prossimo avvio)
+        string aggPronto = "";           // versione già scaricata in questa sessione
+        string aggScript;                // Windows: script da lanciare alla chiusura
+        volatile bool aggInCorso;
+        System.Windows.Forms.Timer timerAgg;
+
+        void AggStato(string testo)
+        {
+            try { this.BeginInvoke((Action)(() => { if (lblStatus != null) lblStatus.Text = testo.Replace("\n", " ").Replace("\n", " "); })); } catch { }
+        }
+
+        void AvvisoDopoAggiornamento()
+        {
+            if (string.IsNullOrEmpty(aggDa)) return;
+            string da = aggDa;
+            aggDa = ""; SaveSettings();
+            if (PiuNuova(Versione, da))
+                Messaggio(this, string.Format(Lang.T("YAEC è stato aggiornato dalla versione {0} alla {1}."), da, Versione), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        void AvviaAggiornamentoInSospeso()
+        {
+            if (string.IsNullOrEmpty(aggScript) || !File.Exists(aggScript)) return;
+            try
+            {
+                System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("cmd.exe", "/c \"" + aggScript + "\"");
+                psi.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden; psi.CreateNoWindow = true; psi.UseShellExecute = false;
+                System.Diagnostics.Process.Start(psi);
+            }
+            catch { }
+            aggScript = null;
+        }
 
         static bool InProva { get { return Environment.GetEnvironmentVariable("CI") != null || Environment.GetEnvironmentVariable("GITHUB_ACTIONS") != null; } }
         static bool SuWindows { get { return Environment.OSVersion.Platform == PlatformID.Win32NT; } }
@@ -94322,19 +94471,41 @@ namespace LunaCalc
         void AvviaControlloAggiornamenti()
         {
             if (InProva) return;
-            if (DateTime.UtcNow.Ticks - aggUltimo < TimeSpan.FromHours(20).Ticks) return;
+            AvvisoDopoAggiornamento();
+            if (timerAgg == null)
+            {
+                timerAgg = new System.Windows.Forms.Timer();
+                timerAgg.Interval = 30 * 60 * 1000;
+                timerAgg.Tick += (s, e) => ControllaAggiornamento(0);
+                timerAgg.Start();
+            }
+            ControllaAggiornamento(10000);
+        }
+
+        void ControllaAggiornamento(int attesa)
+        {
+            if (aggInCorso || aggPronto.Length > 0) return;
             System.Threading.Thread t = new System.Threading.Thread(() =>
             {
                 try
                 {
-                    System.Threading.Thread.Sleep(6000);
+                    if (attesa > 0) System.Threading.Thread.Sleep(attesa);
                     string js = Encoding.UTF8.GetString(Dati.Scarica("https://api.github.com/repos/" + RepoGit + "/releases/latest", 15000));
                     System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(js, "\"tag_name\"\\s*:\\s*\"v?([0-9][0-9.]*)\"");
                     if (!m.Success) return;
                     string ver = m.Groups[1].Value;
                     aggUltimo = DateTime.UtcNow.Ticks;
-                    if (!PiuNuova(ver, Versione) || ver == aggSalta) return;
-                    this.BeginInvoke((Action)(() => ProponiAggiornamento(ver)));
+                    if (!PiuNuova(ver, Versione)) return;
+                    if (!SuWindows && InstallatoDaPacchetto)
+                    {
+                        // pacchetto del sistema: l'avviso di sempre, una volta per versione
+                        if (ver != aggSalta) this.BeginInvoke((Action)(() => ProponiAggiornamento(ver)));
+                        return;
+                    }
+                    aggInCorso = true;
+                    string pagina = "https://github.com/" + RepoGit + "/releases/tag/v" + ver;
+                    try { if (SuWindows) ScaricaAggiornamento(ver, pagina); else ScaricaAggiornamentoUnix(ver, pagina); }
+                    finally { aggInCorso = false; }
                 }
                 catch { }
             });
@@ -94349,17 +94520,10 @@ namespace LunaCalc
                 : (InstallatoDaPacchetto
                     ? Lang.T("YAEC è installato con un pacchetto del sistema (.deb, .rpm, Arch o Slackware), che si aggiorna con il gestore dei pacchetti: si apre la pagina di GitHub con il pacchetto nuovo.")
                     : Lang.T("YAEC scarica il nuovo pacchetto da GitHub, ne controlla l'impronta e sostituisce i suoi file; la nuova versione parte al prossimo avvio. I tuoi dati restano dove sono."));
-            if (!ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("È disponibile YAEC {0} su GitHub (tu hai la {1}). Vuoi aggiornarlo adesso?"), ver, Versione), nota))
-            {
-                if (ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("Vuoi che YAEC non ti avvisi più per la versione {0}?"), ver), Lang.T("Ti avviserà comunque alla prossima versione.")))
-                { aggSalta = ver; SaveSettings(); }
-                return;
-            }
+            aggSalta = ver; SaveSettings();   // 1.9.11: un solo avviso per versione (il controllo ora si ripete ogni 30 minuti)
+            if (!ChiediSiNo(Lang.T("Nuova versione di YAEC"), string.Format(Lang.T("È disponibile YAEC {0} su GitHub (tu hai la {1}). Vuoi aggiornarlo adesso?"), ver, Versione), nota)) return;
             string pagina = "https://github.com/" + RepoGit + "/releases/tag/v" + ver;
-            if (!SuWindows && InstallatoDaPacchetto) { try { System.Diagnostics.Process.Start(pagina); } catch { } return; }
-            System.Threading.Thread t = new System.Threading.Thread(() => { if (SuWindows) ScaricaAggiornamento(ver, pagina); else ScaricaAggiornamentoUnix(ver, pagina); });
-            t.IsBackground = true;
-            t.Start();
+            try { System.Diagnostics.Process.Start(pagina); } catch { }
         }
 
         void ScaricaAggiornamento(string ver, string pagina)
@@ -94374,19 +94538,11 @@ namespace LunaCalc
                 byte[] somme = null, pacchetto;
                 try { somme = Dati.Scarica(baseUrl + "SHA256SUMS.txt", 30000); } catch { }
                 try { pacchetto = Dati.Scarica(baseUrl + nome, 300000); }
-                catch
-                {
-                    this.BeginInvoke((Action)(() =>
-                    {
-                        Messaggio(this, string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver) + "\n" + Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        try { System.Diagnostics.Process.Start(pagina); } catch { }
-                    }));
-                    return;
-                }
+                catch { AggStato(string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver)); return; }
                 // impronta SHA-256: l'elenco deve esserci e combaciare, altrimenti niente aggiornamento
                 int imp = VerificaImpronta(somme, pacchetto, nome);
-                if (imp == 2) { this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error))); return; }
-                if (imp != 0) { this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("Non è stato possibile scaricare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error))); return; }
+                if (imp == 2) { AggStato(Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.")); return; }
+                if (imp != 0) { AggStato(Lang.T("Non è stato possibile scaricare l'aggiornamento.")); return; }
                 string dir = Dati.Percorso("aggiornamento");
                 Directory.CreateDirectory(dir);
                 string file = Path.Combine(dir, nome);
@@ -94398,7 +94554,7 @@ namespace LunaCalc
                 sb.Append("@echo off\r\nchcp 65001 >nul\r\n");
                 sb.Append(":attesa\r\ntasklist /FI \"PID eq " + pid + "\" | find \"" + pid + "\" >nul && (timeout /t 1 >nul & goto attesa)\r\n");
                 if (installato)
-                    sb.Append("start \"\" /wait \"" + file + "\" /SILENT /SUPPRESSMSGBOXES /NORESTART /DIR=\"" + app.TrimEnd('\\') + "\"\r\n");
+                    sb.Append("start \"\" /wait \"" + file + "\" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /DIR=\"" + app.TrimEnd('\\') + "\"\r\n");
                 else
                 {
                     string tmp = Path.Combine(dir, "nuovo");
@@ -94407,24 +94563,19 @@ namespace LunaCalc
                     sb.Append("xcopy /E /Y /I /Q \"" + tmp + "\\*\" \"" + app.TrimEnd('\\') + "\\\" >nul\r\n");
                     sb.Append("rmdir /s /q \"" + tmp + "\"\r\n");
                 }
-                sb.Append("start \"\" \"" + exe + "\"\r\n");
                 sb.Append("del \"" + file + "\" >nul 2>&1\r\n");
                 sb.Append("(goto) 2>nul & del \"%~f0\"\r\n");
                 string cmd = Path.Combine(dir, "aggiorna.cmd");
                 File.WriteAllText(cmd, sb.ToString(), new UTF8Encoding(false));
                 this.BeginInvoke((Action)(() =>
                 {
-                    Messaggio(this, string.Format(Lang.T("YAEC {0} è stato scaricato: ora il programma si chiude, si aggiorna e si riapre da solo."), ver), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("cmd.exe", "/c \"" + cmd + "\"");
-                    psi.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden; psi.CreateNoWindow = true; psi.UseShellExecute = false;
-                    try { System.Diagnostics.Process.Start(psi); Application.Exit(); }
-                    catch { Messaggio(this, Lang.T("Non è stato possibile avviare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    aggScript = cmd; aggPronto = ver;
+                    if (string.IsNullOrEmpty(aggDa)) aggDa = Versione;
+                    SaveSettings();
+                    if (lblStatus != null) lblStatus.Text = string.Format(Lang.T("YAEC {0} è stato scaricato: si installa da solo quando chiudi il programma."), ver);
                 }));
             }
-            catch
-            {
-                this.BeginInvoke((Action)(() => Messaggio(this, Lang.T("Non è stato possibile scaricare l'aggiornamento.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning)));
-            }
+            catch { AggStato(Lang.T("Non è stato possibile scaricare l'aggiornamento.")); }
         }
 
         // ---- Linux, FreeBSD, OpenBSD, macOS ----
@@ -94574,19 +94725,11 @@ namespace LunaCalc
         {
             string nome = NomePacchettoUnix(ver);
             string baseUrl = "https://github.com/" + RepoGit + "/releases/download/v" + ver + "/";
-            Action<string, MessageBoxIcon> avvisa = (testo, icona) => this.BeginInvoke((Action)(() => Messaggio(this, testo, Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, icona)));
+            Action<string, MessageBoxIcon> avvisa = (testo, icona) => AggStato(testo);
             byte[] somme = null, pacchetto;
             try { somme = Dati.Scarica(baseUrl + "SHA256SUMS.txt", 30000); } catch { }
             try { pacchetto = Dati.Scarica(baseUrl + nome, 300000); }
-            catch
-            {
-                this.BeginInvoke((Action)(() =>
-                {
-                    Messaggio(this, string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver) + "\n" + Lang.T("Si apre la pagina di GitHub con i pacchetti della nuova versione."), Lang.T("Nuova versione di YAEC"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    try { System.Diagnostics.Process.Start(pagina); } catch { }
-                }));
-                return;
-            }
+            catch { AggStato(string.Format(Lang.T("Il file {0} manca nella versione {1} su GitHub."), nome, ver)); return; }
             // impronta SHA-256: l'elenco deve esserci e combaciare, altrimenti niente aggiornamento
             int imp = VerificaImpronta(somme, pacchetto, nome);
             if (imp == 2) { avvisa(Lang.T("L'impronta del pacchetto scaricato non corrisponde a quella pubblicata su GitHub: l'aggiornamento è annullato.") + "\n" + Lang.T("Riprova più tardi o scarica il pacchetto dalla pagina di GitHub."), MessageBoxIcon.Error); return; }
@@ -94603,6 +94746,7 @@ namespace LunaCalc
                     foreach (Tuple<string, byte[], bool> f in file)
                         SostituisciFile(Path.Combine(radice, f.Item1.Replace('/', Path.DirectorySeparatorChar)), f.Item2, f.Item3);
                 }
+                this.BeginInvoke((Action)(() => { aggPronto = ver; if (string.IsNullOrEmpty(aggDa)) aggDa = Versione; SaveSettings(); }));
                 avvisa(string.Format(Lang.T("YAEC {0} è installato: la nuova versione parte al prossimo avvio."), ver), MessageBoxIcon.Information);
             }
             catch (UnauthorizedAccessException)
@@ -96634,6 +96778,7 @@ namespace LunaCalc
                 lines.Add("tema=" + Tema.Chiave);
                 lines.Add("aggiorna_salta=" + aggSalta);
                 lines.Add("aggiorna_ultimo=" + aggUltimo.ToString(CultureInfo.InvariantCulture));
+                lines.Add("aggiorna_da=" + aggDa);
                 lines.Add("lingua=" + Lang.Codici[cmbLingua.SelectedIndex]);
                 lines.Add("font_nome=" + (cmbFontNome != null && cmbFontNome.SelectedItem is VoceFont && ((VoceFont)cmbFontNome.SelectedItem).Tipo == 2 ? ((VoceFont)cmbFontNome.SelectedItem).Nome : ""));
                 lines.Add("nominativo=" + txtCall.Text.Trim());
@@ -96822,6 +96967,7 @@ namespace LunaCalc
                         case "prova_modo": { int x; if (int.TryParse(v, NumberStyles.Integer, inv, out x)) stazModoVoce = Math.Max(0, Math.Min(BudgetParams.ModiOrdine.Length - 1, x)); break; }
                         case "prova_temperature": stazTemp = v != "0"; break;
                         case "aggiorna_salta": aggSalta = v; break;
+                        case "aggiorna_da": aggDa = v; break;
                         case "skynoise_indice_0": case "skynoise_indice_1": case "skynoise_indice_2": case "skynoise_indice_3":
                         case "skynoise_c_0": case "skynoise_c_1": case "skynoise_c_2": case "skynoise_c_3":
                             {

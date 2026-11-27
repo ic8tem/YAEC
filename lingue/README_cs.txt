@@ -44,6 +44,7 @@ Chyby, lepší data, překlady: ccerrotta@gmail.com · ic8tem@gmail.com · www.q
 
 HISTORIE VERZÍ
 Verze před 1.0 se nazývají beta.
+- 1.9.11 - Tichá automatická aktualizace jako v YA-NEC: YAEC kontroluje GitHub při spuštění a každých 30 minut, stahuje balíček na pozadí a ověřuje jeho otisk SHA-256; ve Windows se nainstaluje sám po zavření programu, v Linuxu, BSD a macOS se nová verze spustí příště a zpráva řekne, ze které verze se aktualizovalo (balíčky .deb, .rpm, Arch a Slackware zůstávají správci balíčků). Můj obzor: fialový rámeček zaměřitelné oblasti má stupňovité minimum, stupeň po stupni v azimutu (vyšší z limitu antény a terénu), pro tvou stanici i pro DX.
 - 1.9.10 - Nová záložka Polarizace na světě (Plánování): mapa světa obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc, s čárkovanou linií 45° (3 dB); Dpol a ztráta pod myší a na štítku DX.
 - 1.9.9 - Můj obzor: Měsíc má skutečnou fázi a sklon a nový rámeček «Měsíc viděný z obou stanic» ho ukazuje tak, jak ho vidíš ty a DX, s prostorovým posunem polarizace Dpol a ztrátou; okno ukončení a zprávy: tlačítka už na šedé liště nemají světlé rohy.
 - 1.9.8 - Můj obzor: Měsíc se kreslí ve skutečné velikosti (asi 0,5°) s čárkovaným kruhem jako značkou; automatická aktualizace jen s ověřeným otiskem SHA-256 (zruší se, když seznam otisků chybí nebo balíček neobsahuje); odkazy otevírají jen webové a e-mailové adresy; macOS: spouštěč kontroluje Mono (architektura, Rosetta, karanténa) a vysvětluje chyby 126 a 127.

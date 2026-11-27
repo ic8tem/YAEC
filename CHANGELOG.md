@@ -5,6 +5,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>English</b> – Version history</summary>
 
+- **1.9.11** – Silent automatic update, as in YA-NEC: YAEC checks GitHub at start-up and every 30 minutes, downloads the package in the background and checks its SHA-256 fingerprint; on Windows it installs itself when you close the program, on Linux, BSD and macOS the new version starts at the next launch, and a message tells you which version it was updated from (.deb, .rpm, Arch and Slackware packages stay with the package manager). My horizon: the violet box of the pointable area has a stepped minimum, degree by degree of azimuth (the higher of the antenna limit and the terrain), for your station and for the DX.
 - **1.9.10** – New tab Polarization over the world (Planning): world map coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon, with the dashed 45° (3 dB) line; Dpol and loss on mouse hover and on the DX label.
 - **1.9.9** – My horizon: the Moon has its true phase and tilt, and the new box «The Moon as seen by the two stations» shows it as you see it and as the DX sees it, with the spatial polarization offset Dpol and the loss; closing window and messages: the buttons no longer have light corners on the grey bar.
 - **1.9.8** – My horizon: the Moon is drawn at its true size (about 0.5°), with a dashed circle as a marker; automatic update only with a verified SHA-256 fingerprint (it is cancelled if the fingerprint list is missing or does not contain the package); links open only web and e-mail addresses; macOS: the launcher checks Mono (architecture, Rosetta, quarantine) and explains errors 126 and 127.
@@ -31,6 +32,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Italiano</b> – Storia delle versioni</summary>
 
+- **1.9.11** – Aggiornamento automatico silenzioso, come in YA-NEC: YAEC controlla GitHub all'avvio e ogni 30 minuti, scarica il pacchetto in background e ne controlla l'impronta SHA-256; su Windows si installa da solo quando chiudi il programma, su Linux, BSD e macOS la nuova versione parte al prossimo avvio, e un avviso dice da quale versione è stato aggiornato (i pacchetti .deb, .rpm, Arch e Slackware restano al gestore dei pacchetti). Il mio orizzonte: il riquadro viola della zona puntabile ha il minimo a scalini, grado per grado di azimut (il più alto fra il limite dell'antenna e il terreno), per la tua stazione e per il DX.
 - **1.9.10** – Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX.
 - **1.9.9** – Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio.
 - **1.9.8** – Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127.
@@ -57,6 +59,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Deutsch</b> – Versionsgeschichte</summary>
 
+- **1.9.11** – Stille automatische Aktualisierung wie in YA-NEC: YAEC prüft GitHub beim Start und alle 30 Minuten, lädt das Paket im Hintergrund herunter und prüft seinen SHA-256-Fingerabdruck; unter Windows installiert es sich beim Schließen des Programms, unter Linux, BSD und macOS startet die neue Version beim nächsten Aufruf, und ein Hinweis nennt die vorherige Version (.deb-, .rpm-, Arch- und Slackware-Pakete bleiben beim Paketmanager). Mein Horizont: Der violette Rahmen des anpeilbaren Bereichs hat ein gestuftes Minimum, Grad für Grad im Azimut (das höhere aus Antennengrenze und Gelände), für deine Station und für den DX.
 - **1.9.10** – Neuer Reiter Polarisation über der Welt (Planung): Weltkarte gefärbt nach dem räumlichen Polarisationsversatz (Dpol) zwischen deiner Station und jedem Ort, der den Mond sieht, mit der gestrichelten 45°-Linie (3 dB); Dpol und Verlust beim Überfahren mit der Maus und am DX-Etikett.
 - **1.9.9** – Mein Horizont: Der Mond hat seine wahre Phase und Neigung, und das neue Feld «Der Mond, wie ihn die beiden Stationen sehen» zeigt ihn so, wie du und der DX ihn sehen, mit dem räumlichen Polarisationsversatz Dpol und dem Verlust; Schließfenster und Meldungen: Die Schaltflächen haben auf der grauen Leiste keine hellen Ecken mehr.
 - **1.9.8** – Mein Horizont: Der Mond wird in wahrer Größe gezeichnet (etwa 0,5°), mit einem gestrichelten Kreis als Markierung; automatische Aktualisierung nur mit geprüftem SHA-256-Fingerabdruck (sie wird abgebrochen, wenn die Liste der Fingerabdrücke fehlt oder das Paket nicht enthält); Links öffnen nur Web- und E-Mail-Adressen; macOS: Der Starter prüft Mono (Architektur, Rosetta, Quarantäne) und erklärt die Fehler 126 und 127.
@@ -83,6 +86,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Français</b> – Historique des versions</summary>
 
+- **1.9.11** – Mise à jour automatique silencieuse, comme dans YA-NEC : YAEC interroge GitHub au démarrage et toutes les 30 minutes, télécharge le paquet en arrière-plan et vérifie son empreinte SHA-256 ; sous Windows il s'installe tout seul à la fermeture du programme, sous Linux, BSD et macOS la nouvelle version démarre au lancement suivant, et un message indique la version précédente (les paquets .deb, .rpm, Arch et Slackware restent au gestionnaire de paquets). Mon horizon : le cadre violet de la zone pointable a un minimum en escalier, degré par degré d'azimut (le plus élevé entre la limite de l'antenne et le terrain), pour ta station et pour le DX.
 - **1.9.10** – Nouvel onglet Polarisation sur le monde (Planification) : carte du monde colorée selon le décalage de polarisation spatiale (Dpol) entre ta station et chaque lieu qui voit la Lune, avec la ligne pointillée des 45° (3 dB) ; Dpol et perte au survol de la souris et sur l'étiquette du DX.
 - **1.9.9** – Mon horizon : la Lune a sa phase et son inclinaison réelles, et le nouveau cadre « La Lune vue par les deux stations » la montre comme tu la vois et comme la voit le DX, avec le décalage de polarisation spatiale Dpol et la perte ; fenêtre de fermeture et messages : les boutons n'ont plus de coins clairs sur la barre grise.
 - **1.9.8** – Mon horizon : la Lune est dessinée à sa taille réelle (environ 0,5°), avec un cercle en pointillés comme repère ; mise à jour automatique uniquement avec une empreinte SHA-256 vérifiée (elle est annulée si la liste des empreintes manque ou ne contient pas le paquet) ; les liens n'ouvrent que des adresses web et de messagerie ; macOS : le lanceur vérifie Mono (architecture, Rosetta, quarantaine) et explique les erreurs 126 et 127.
@@ -109,6 +113,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Español</b> – Historial de versiones</summary>
 
+- **1.9.11** – Actualización automática silenciosa, como en YA-NEC: YAEC consulta GitHub al arrancar y cada 30 minutos, descarga el paquete en segundo plano y comprueba su huella SHA-256; en Windows se instala solo al cerrar el programa, en Linux, BSD y macOS la nueva versión arranca en el próximo inicio, y un aviso indica desde qué versión se actualizó (los paquetes .deb, .rpm, Arch y Slackware siguen con el gestor de paquetes). Mi horizonte: el recuadro violeta de la zona apuntable tiene el mínimo escalonado, grado a grado de acimut (el mayor entre el límite de la antena y el terreno), para tu estación y para el DX.
 - **1.9.10** – Nueva pestaña Polarización sobre el mundo (Planificación): mapa del mundo coloreado según el desfase de polarización espacial (Dpol) entre tu estación y cada lugar que ve la Luna, con la línea discontinua de 45° (3 dB); Dpol y pérdida al pasar el ratón y en la etiqueta del DX.
 - **1.9.9** – Mi horizonte: la Luna tiene su fase e inclinación reales y el nuevo recuadro «La Luna vista desde las dos estaciones» la muestra como la ves tú y como la ve el DX, con el desfase de polarización espacial Dpol y la pérdida; ventana de cierre y avisos: los botones ya no tienen esquinas claras sobre la barra gris.
 - **1.9.8** – Mi horizonte: la Luna se dibuja a su tamaño real (unos 0,5°), con un círculo discontinuo como marcador; actualización automática solo con la huella SHA-256 verificada (se cancela si falta la lista de huellas o no contiene el paquete); los enlaces solo abren direcciones web y de correo; macOS: el lanzador comprueba Mono (arquitectura, Rosetta, cuarentena) y explica los errores 126 y 127.
@@ -135,6 +140,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Português</b> – Histórico de versões</summary>
 
+- **1.9.11** – Atualização automática silenciosa, como no YA-NEC: o YAEC consulta o GitHub no arranque e a cada 30 minutos, descarrega o pacote em segundo plano e verifica a sua impressão SHA-256; no Windows instala-se sozinho ao fechar o programa, no Linux, BSD e macOS a nova versão arranca no próximo início, e um aviso indica a versão anterior (os pacotes .deb, .rpm, Arch e Slackware ficam com o gestor de pacotes). O meu horizonte: o quadro violeta da zona apontável tem o mínimo em degraus, grau a grau de azimute (o maior entre o limite da antena e o terreno), para a tua estação e para o DX.
 - **1.9.10** – Novo separador Polarização sobre o mundo (Planeamento): mapa do mundo colorido segundo o desvio de polarização espacial (Dpol) entre a tua estação e cada local que vê a Lua, com a linha tracejada dos 45° (3 dB); Dpol e perda ao passar o rato e na etiqueta do DX.
 - **1.9.9** – O meu horizonte: a Lua tem a sua fase e inclinação reais e o novo quadro «A Lua vista pelas duas estações» mostra-a como tu a vês e como o DX a vê, com o desvio de polarização espacial Dpol e a perda; janela de fecho e avisos: os botões já não têm cantos claros sobre a barra cinzenta.
 - **1.9.8** – O meu horizonte: a Lua é desenhada no seu tamanho real (cerca de 0,5°), com um círculo tracejado como marcador; atualização automática só com a impressão digital SHA-256 verificada (é cancelada se a lista de impressões faltar ou não contiver o pacote); as ligações só abrem endereços web e de correio eletrónico; macOS: o lançador verifica o Mono (arquitetura, Rosetta, quarentena) e explica os erros 126 e 127.
@@ -161,6 +167,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Türkçe</b> – Sürüm geçmişi</summary>
 
+- **1.9.11** – YA-NEC'teki gibi sessiz otomatik güncelleme: YAEC açılışta ve her 30 dakikada GitHub'ı denetler, paketi arka planda indirir ve SHA-256 parmak izini doğrular; Windows'ta program kapatılınca kendiliğinden kurulur, Linux, BSD ve macOS'ta yeni sürüm bir sonraki açılışta başlar ve bir ileti hangi sürümden güncellendiğini söyler (.deb, .rpm, Arch ve Slackware paketleri paket yöneticisinde kalır). Ufkum: yönlendirilebilir alanın mor çerçevesinin alt sınırı artık azimutta derece derece basamaklı (anten sınırı ile arazinin yüksek olanı), senin istasyonun ve DX için.
 - **1.9.10** – Planlamada yeni sekme Dünya genelinde polarizasyon: istasyonun ile Ay'ı gören her yer arasındaki uzaysal polarizasyon kaymasına (Dpol) göre renklendirilmiş dünya haritası, kesikli 45° (3 dB) çizgisiyle; fareyle üzerine gelince ve DX etiketinde Dpol ve kayıp.
 - **1.9.9** – Ufkum: Ay gerçek evresi ve eğimiyle çiziliyor; yeni «İki istasyondan görülen Ay» kutusu onu senin ve DX'in gördüğü gibi, uzaysal polarizasyon kayması Dpol ve kayıpla gösteriyor; kapatma penceresi ve mesajlar: düğmelerin gri çubuk üzerinde artık açık renkli köşeleri yok.
 - **1.9.8** – Ufkum: Ay gerçek boyutunda (yaklaşık 0,5°) çiziliyor, işaret olarak kesikli bir daireyle; otomatik güncelleme yalnızca doğrulanmış SHA-256 parmak iziyle yapılıyor (parmak izi listesi yoksa ya da paketi içermiyorsa iptal ediliyor); bağlantılar yalnızca web ve e-posta adreslerini açıyor; macOS: başlatıcı Mono'yu (mimari, Rosetta, karantina) denetliyor ve 126 ile 127 hatalarını açıklıyor.
@@ -187,6 +194,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Čeština</b> – Historie verzí</summary>
 
+- **1.9.11** – Tichá automatická aktualizace jako v YA-NEC: YAEC kontroluje GitHub při spuštění a každých 30 minut, stahuje balíček na pozadí a ověřuje jeho otisk SHA-256; ve Windows se nainstaluje sám po zavření programu, v Linuxu, BSD a macOS se nová verze spustí příště a zpráva řekne, ze které verze se aktualizovalo (balíčky .deb, .rpm, Arch a Slackware zůstávají správci balíčků). Můj obzor: fialový rámeček zaměřitelné oblasti má stupňovité minimum, stupeň po stupni v azimutu (vyšší z limitu antény a terénu), pro tvou stanici i pro DX.
 - **1.9.10** – Nová záložka Polarizace na světě (Plánování): mapa světa obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc, s čárkovanou linií 45° (3 dB); Dpol a ztráta pod myší a na štítku DX.
 - **1.9.9** – Můj obzor: Měsíc má skutečnou fázi a sklon a nový rámeček «Měsíc viděný z obou stanic» ho ukazuje tak, jak ho vidíš ty a DX, s prostorovým posunem polarizace Dpol a ztrátou; okno ukončení a zprávy: tlačítka už na šedé liště nemají světlé rohy.
 - **1.9.8** – Můj obzor: Měsíc se kreslí ve skutečné velikosti (asi 0,5°) s čárkovaným kruhem jako značkou; automatická aktualizace jen s ověřeným otiskem SHA-256 (zruší se, když seznam otisků chybí nebo balíček neobsahuje); odkazy otevírají jen webové a e-mailové adresy; macOS: spouštěč kontroluje Mono (architektura, Rosetta, karanténa) a vysvětluje chyby 126 a 127.
@@ -213,6 +221,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Slovenčina</b> – História verzií</summary>
 
+- **1.9.11** – Tichá automatická aktualizácia ako v YA-NEC: YAEC kontroluje GitHub pri spustení a každých 30 minút, sťahuje balík na pozadí a overuje jeho odtlačok SHA-256; vo Windows sa nainštaluje sám po zatvorení programu, v Linuxe, BSD a macOS sa nová verzia spustí nabudúce a správa povie, z ktorej verzie sa aktualizovalo (balíky .deb, .rpm, Arch a Slackware ostávajú správcovi balíkov). Môj obzor: fialový rámček zamerateľnej oblasti má stupňovité minimum, stupeň po stupni v azimute (vyššie z limitu antény a terénu), pre tvoju stanicu aj pre DX.
 - **1.9.10** – Nová záložka Polarizácia vo svete (Plánovanie): mapa sveta zafarbená podľa priestorového posunu polarizácie (Dpol) medzi tvojou stanicou a každým miestom, ktoré vidí Mesiac, s čiarkovanou líniou 45° (3 dB); Dpol a strata pod myšou a na štítku DX.
 - **1.9.9** – Môj obzor: Mesiac má skutočnú fázu a sklon a nový rámček «Mesiac videný z oboch staníc» ho ukazuje tak, ako ho vidíš ty a DX, s priestorovým posunom polarizácie Dpol a stratou; okno ukončenia a správy: tlačidlá už na sivej lište nemajú svetlé rohy.
 - **1.9.8** – Môj obzor: Mesiac sa kreslí v skutočnej veľkosti (asi 0,5°) s čiarkovaným kruhom ako značkou; automatická aktualizácia len s overeným odtlačkom SHA-256 (zruší sa, keď zoznam odtlačkov chýba alebo balík neobsahuje); odkazy otvárajú len webové a e-mailové adresy; macOS: spúšťač kontroluje Mono (architektúra, Rosetta, karanténa) a vysvetľuje chyby 126 a 127.
@@ -239,6 +248,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>中文</b> – 版本历史</summary>
 
+- **1.9.11** – 与 YA-NEC 相同的静默自动更新：YAEC 在启动时及每 30 分钟检查 GitHub，在后台下载软件包并校验 SHA-256 指纹；Windows 上在关闭程序时自动安装，Linux、BSD 和 macOS 上新版本在下次启动时运行，并提示是从哪个版本更新的（.deb、.rpm、Arch 和 Slackware 软件包仍由包管理器更新）。我的地平线：可指向区域的紫色框下限按方位逐度呈阶梯状（取天线下限与地形中较高者），适用于你的电台和 DX。
 - **1.9.10** – 规划中新增“全球极化图”标签页：世界地图按你的电台与每个能看到月亮的地点之间的空间极化偏差 (Dpol) 着色，带 45° (3 dB) 虚线；鼠标悬停和 DX 标签上显示 Dpol 与损耗。
 - **1.9.9** – 我的地平线：月亮按真实月相和倾斜绘制，新的“两个电台看到的月亮”框显示你和 DX 看到的月亮，并给出空间极化偏移 Dpol 和损耗；关闭窗口和提示框：按钮在灰色栏上不再出现浅色边角。
 - **1.9.8** – 我的地平线：月亮按真实大小绘制（约 0.5°），并以虚线圆作为标记；自动更新仅在 SHA-256 指纹校验通过后进行（若指纹列表缺失或不含该安装包则取消更新）；链接只打开网页和电子邮件地址；macOS：启动器会检查 Mono（架构、Rosetta、隔离属性）并说明错误 126 和 127。
@@ -265,6 +275,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>日本語</b> – バージョン履歴</summary>
 
+- **1.9.11** – YA-NEC と同じサイレント自動更新：起動時と 30 分ごとに GitHub を確認し、バックグラウンドでパッケージをダウンロードして SHA-256 指紋を検証します。Windows ではプログラムを閉じると自動でインストールされ、Linux・BSD・macOS では次回起動時に新バージョンになり、どのバージョンから更新したかを表示します（.deb、.rpm、Arch、Slackware パッケージは引き続きパッケージマネージャーで更新）。自局の地平線：指向可能範囲の紫の枠の下限を方位 1 度ごとの階段状に（アンテナ下限と地形の高い方）、自局と DX の両方で表示。
 - **1.9.10** – 計画に新しいタブ「世界の偏波」：自局と月が見える各地点との空間偏波オフセット (Dpol) で色分けした世界地図、45° (3 dB) の破線付き。マウスを重ねた所と DX のラベルに Dpol と損失を表示。
 - **1.9.9** – 自局の地平線：月を実際の月相と傾きで描き、新しい「両局から見た月」の枠で自局と DX から見た月を空間偏波オフセット Dpol と損失とともに表示；終了確認とメッセージのウィンドウ：灰色のバー上でボタンの角が白く残らなくなりました。
 - **1.9.8** – 自局の地平線：月を実際の大きさ（約 0.5°）で描き、目印として破線の円を表示；自動更新は SHA-256 フィンガープリントの検証に成功した場合のみ（フィンガープリント一覧がない、またはパッケージが含まれていない場合は中止）；リンクはウェブとメールのアドレスのみを開く；macOS：起動スクリプトが Mono（アーキテクチャ、Rosetta、検疫属性）を確認し、エラー 126 と 127 を説明。
@@ -291,6 +302,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>한국어</b> – 버전 기록</summary>
 
+- **1.9.11** – YA-NEC와 같은 무음 자동 업데이트: YAEC는 시작할 때와 30분마다 GitHub를 확인하고, 백그라운드에서 패키지를 내려받아 SHA-256 지문을 검사합니다. Windows에서는 프로그램을 닫을 때 자동으로 설치되고, Linux·BSD·macOS에서는 다음 실행 때 새 버전이 시작되며, 어느 버전에서 업데이트되었는지 알려 줍니다(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트). 내 지평선: 지향 가능 영역의 보라색 상자 하한이 방위각 1도마다 계단식입니다(안테나 하한과 지형 중 높은 값), 내 국과 DX 모두.
 - **1.9.10** – 계획에 새 탭 세계 편파 지도: 내 국과 달이 보이는 각 지점 사이의 공간 편파 오프셋(Dpol)으로 색칠한 세계 지도, 45° (3 dB) 점선 포함; 마우스를 올린 곳과 DX 라벨에 Dpol과 손실 표시.
 - **1.9.9** – 내 지평선: 달을 실제 위상과 기울기로 그리고, 새 «두 국에서 본 달» 상자에서 나와 DX가 보는 달을 공간 편파 오프셋 Dpol 및 손실과 함께 표시; 종료 창과 알림: 회색 막대 위 버튼의 모서리가 더 이상 밝게 보이지 않음.
 - **1.9.8** – 내 지평선: 달을 실제 크기(약 0.5°)로 그리고 표시용 점선 원을 함께 표시; 자동 업데이트는 SHA-256 지문이 확인된 경우에만 진행(지문 목록이 없거나 패키지가 목록에 없으면 취소); 링크는 웹과 이메일 주소만 엶; macOS: 실행기가 Mono(아키텍처, Rosetta, 격리 속성)를 확인하고 오류 126과 127을 설명.
