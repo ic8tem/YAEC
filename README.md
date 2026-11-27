@@ -1,0 +1,6 @@
+Active EME stations (N0UK chat, last 90 days), updated daily by .github/workflows/attivi.yml on main.
+attivi.gz (YAEC), attivi.json and attivi.txt (LunaCalc Mobile, other programs): callsign and date of the last message.
+call3-attivi.txt (LunaCalc Mobile): CALL3.TXT of W7GJ + WSJT-X Improved reduced to the active stations (CALL,LOCATOR,date).
+call3.gz (LunaCalc Mobile): the whole merged CALL3.TXT, callsign and locator only (inactive stations are not excluded from the calculation).
+impianti.gz (YAEC, Stations to try): callsign, date, locator and station setup declared in the chat header (e.g. 4X14HV/1K).
+pa0ply.gz (YAEC): from the EME Directory of PA0PLY (www.pa0ply.nl/eme-directory), 432 and 1296 MHz: band, callsign, locator, antenna and power only (no names, cities or e-mail addresses).
