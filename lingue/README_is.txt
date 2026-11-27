@@ -44,6 +44,7 @@ Villur, betri gögn, þýðingar: ccerrotta@gmail.com · ic8tem@gmail.com · www
 
 ÚTGÁFUSAGA
 Útgáfur á undan 1.0 kallast beta.
+- 1.9.10 - Nýr flipi Skautun um heiminn (Áætlanagerð): heimskort litað eftir rúmfræðilegri skautunarhliðrun (Dpol) milli stöðvarinnar þinnar og hvers staðar sem sér tunglið, með brotinni 45° línu (3 dB); Dpol og tap undir músinni og á DX-merkinu.
 - 1.9.9 - Sjóndeildarhringurinn minn: tunglið er með raunverulegan kvartil og halla, og nýi reiturinn «Tunglið eins og stöðvarnar tvær sjá það» sýnir það eins og þú og DX sjáið það, með rúmfræðilegri skautunarhliðrun Dpol og tapi; lokunargluggi og skilaboð: hnapparnir eru ekki lengur með ljós horn á gráu stikunni.
 - 1.9.8 - Sjóndeildarhringurinn minn: tunglið er teiknað í raunstærð (um 0,5°) með strikuðum hring sem merki; sjálfvirk uppfærsla aðeins með staðfestu SHA-256-fingrafari (hætt er við ef fingrafaralistann vantar eða pakkinn er ekki á honum); tenglar opna aðeins vef- og netfangaslóðir; macOS: ræsirinn athugar Mono (högun, Rosetta, sóttkví) og útskýrir villur 126 og 127.
 - 1.9.7 - Þýðingum á bengalísku, arabísku og tyrknesku lokið (62 textar sem vantaði: töp og mögnun í RX/TX-keðjunni, formúla Friis, aðalskjár, lýsing flipanna); Windows 7, 8 og 8.1 tilgreind í upplýsingaskrá forritsins.

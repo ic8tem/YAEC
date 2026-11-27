@@ -44,6 +44,7 @@ Erreurs, meilleures données, traductions : ccerrotta@gmail.com · ic8tem@gmail.
 
 HISTORIQUE DES VERSIONS
 Les versions antérieures à la 1.0 sont appelées bêta.
+- 1.9.10 - Nouvel onglet Polarisation sur le monde (Planification) : carte du monde colorée selon le décalage de polarisation spatiale (Dpol) entre ta station et chaque lieu qui voit la Lune, avec la ligne pointillée des 45° (3 dB) ; Dpol et perte au survol de la souris et sur l'étiquette du DX.
 - 1.9.9 - Mon horizon : la Lune a sa phase et son inclinaison réelles, et le nouveau cadre « La Lune vue par les deux stations » la montre comme tu la vois et comme la voit le DX, avec le décalage de polarisation spatiale Dpol et la perte ; fenêtre de fermeture et messages : les boutons n'ont plus de coins clairs sur la barre grise.
 - 1.9.8 - Mon horizon : la Lune est dessinée à sa taille réelle (environ 0,5°), avec un cercle en pointillés comme repère ; mise à jour automatique uniquement avec une empreinte SHA-256 vérifiée (elle est annulée si la liste des empreintes manque ou ne contient pas le paquet) ; les liens n'ouvrent que des adresses web et de messagerie ; macOS : le lanceur vérifie Mono (architecture, Rosetta, quarantaine) et explique les erreurs 126 et 127.
 - 1.9.7 - Traductions complétées en bengali, arabe et turc (62 textes manquants : pertes et gains de la chaîne RX/TX, formule de Friis, écran principal, description des onglets) ; Windows 7, 8 et 8.1 déclarés dans le manifeste du programme.

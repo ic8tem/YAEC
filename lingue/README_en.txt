@@ -44,6 +44,7 @@ Bugs, better data, translations: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 VERSION HISTORY
 Versions before 1.0 are called beta.
+- 1.9.10 - New tab Polarization over the world (Planning): world map coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon, with the dashed 45° (3 dB) line; Dpol and loss on mouse hover and on the DX label.
 - 1.9.9 - My horizon: the Moon has its true phase and tilt, and the new box «The Moon as seen by the two stations» shows it as you see it and as the DX sees it, with the spatial polarization offset Dpol and the loss; closing window and messages: the buttons no longer have light corners on the grey bar.
 - 1.9.8 - My horizon: the Moon is drawn at its true size (about 0.5°), with a dashed circle as a marker; automatic update only with a verified SHA-256 fingerprint (it is cancelled if the fingerprint list is missing or does not contain the package); links open only web and e-mail addresses; macOS: the launcher checks Mono (architecture, Rosetta, quarantine) and explains errors 126 and 127.
 - 1.9.7 - Translations completed in Bengali, Arabic and Turkish (62 missing texts: losses and gains of the RX/TX chain, Friis formula, main screen, description of the tabs); Windows 7, 8 and 8.1 declared in the program manifest.

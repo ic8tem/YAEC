@@ -44,6 +44,7 @@ Errori, dati migliori, traduzioni: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 STORIA DELLE VERSIONI
 Le versioni precedenti alla 1.0 si chiamano beta.
+- 1.9.10 - Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX.
 - 1.9.9 - Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio.
 - 1.9.8 - Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127.
 - 1.9.7 - Traduzioni completate in bengalese, arabo e turco (62 testi mancanti: perdite e guadagni della catena RX/TX, formula di Friis, schermata principale, descrizione delle linguette); Windows 7, 8 e 8.1 dichiarati nel manifesto del programma.

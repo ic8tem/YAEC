@@ -44,6 +44,7 @@ Hibák, jobb adatok, fordítások: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERZIÓTÖRTÉNET
 Az 1.0 előtti verziók neve beta.
+- 1.9.10 - Új fül Polarizáció a világon (Tervezés): világtérkép a saját állomásod és minden, a Holdat látó hely közötti térbeli polarizációs eltérés (Dpol) szerint színezve, szaggatott 45°-os (3 dB) vonallal; Dpol és veszteség az egér alatt és a DX címkéjén.
 - 1.9.9 - Az én horizontom: a Hold valódi fázisával és dőlésével látszik, és az új «A Hold a két állomásról nézve» keret úgy mutatja, ahogy te és a DX látjátok, a térbeli polarizációs eltolással (Dpol) és a veszteséggel; bezáró ablak és üzenetek: a gombok sarkai már nem világosak a szürke sávon.
 - 1.9.8 - Az én horizontom: a Hold valódi méretében látszik (kb. 0,5°), jelölőként szaggatott körrel; automatikus frissítés csak ellenőrzött SHA-256 ujjlenyomattal (megszakad, ha az ujjlenyomatok listája hiányzik, vagy nincs benne a csomag); a hivatkozások csak webes és e-mail-címeket nyitnak meg; macOS: az indító ellenőrzi a Monót (architektúra, Rosetta, karantén), és elmagyarázza a 126-os és 127-es hibát.
 - 1.9.7 - Elkészültek a bengáli, arab és török fordítások (62 hiányzó szöveg: az RX/TX lánc veszteségei és erősítései, Friis-képlet, főképernyő, a fülek leírása); a Windows 7, 8 és 8.1 szerepel a program manifesztjében.

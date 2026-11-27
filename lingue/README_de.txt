@@ -44,6 +44,7 @@ Fehler, bessere Daten, Übersetzungen: ccerrotta@gmail.com · ic8tem@gmail.com �
 
 VERSIONSGESCHICHTE
 Die Versionen vor 1.0 heißen Beta.
+- 1.9.10 - Neuer Reiter Polarisation über der Welt (Planung): Weltkarte gefärbt nach dem räumlichen Polarisationsversatz (Dpol) zwischen deiner Station und jedem Ort, der den Mond sieht, mit der gestrichelten 45°-Linie (3 dB); Dpol und Verlust beim Überfahren mit der Maus und am DX-Etikett.
 - 1.9.9 - Mein Horizont: Der Mond hat seine wahre Phase und Neigung, und das neue Feld «Der Mond, wie ihn die beiden Stationen sehen» zeigt ihn so, wie du und der DX ihn sehen, mit dem räumlichen Polarisationsversatz Dpol und dem Verlust; Schließfenster und Meldungen: Die Schaltflächen haben auf der grauen Leiste keine hellen Ecken mehr.
 - 1.9.8 - Mein Horizont: Der Mond wird in wahrer Größe gezeichnet (etwa 0,5°), mit einem gestrichelten Kreis als Markierung; automatische Aktualisierung nur mit geprüftem SHA-256-Fingerabdruck (sie wird abgebrochen, wenn die Liste der Fingerabdrücke fehlt oder das Paket nicht enthält); Links öffnen nur Web- und E-Mail-Adressen; macOS: Der Starter prüft Mono (Architektur, Rosetta, Quarantäne) und erklärt die Fehler 126 und 127.
 - 1.9.7 - Übersetzungen in Bengalisch, Arabisch und Türkisch vervollständigt (62 fehlende Texte: Verluste und Gewinne der RX/TX-Kette, Friis-Formel, Hauptbildschirm, Beschreibung der Registerkarten); Windows 7, 8 und 8.1 im Manifest des Programms angegeben.

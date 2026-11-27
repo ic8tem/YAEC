@@ -44,6 +44,7 @@ Kļūdas, labāki dati, tulkojumi: ccerrotta@gmail.com · ic8tem@gmail.com · ww
 
 VERSIJU VĒSTURE
 Versijas pirms 1.0 sauc par beta versijām.
+- 1.9.10 - Jauna cilne Polarizācija pasaulē (Plānošana): pasaules karte, iekrāsota pēc telpiskās polarizācijas nobīdes (Dpol) starp tavu staciju un katru vietu, kas redz Mēnesi, ar 45° (3 dB) raustīto līniju; Dpol un zudumi zem peles un uz DX etiķetes.
 - 1.9.9 - Mans horizonts: Mēness ir ar patieso fāzi un slīpumu, un jaunais lodziņš «Mēness, kā to redz abas stacijas» rāda to tā, kā to redzi tu un DX, ar telpiskās polarizācijas nobīdi Dpol un zudumiem; aizvēršanas logs un paziņojumi: pogām uz pelēkās joslas vairs nav gaišu stūru.
 - 1.9.8 - Mans horizonts: Mēness tiek zīmēts patiesajā lielumā (apmēram 0,5°) ar raustītu apli kā atzīmi; automātiskā atjaunināšana tikai ar pārbaudītu SHA-256 pirkstu nospiedumu (tā tiek atcelta, ja nospiedumu saraksta nav vai tajā nav pakotnes); saites atver tikai tīmekļa un e-pasta adreses; macOS: palaidējs pārbauda Mono (arhitektūra, Rosetta, karantīna) un izskaidro kļūdas 126 un 127.
 - 1.9.7 - Pabeigti tulkojumi bengāļu, arābu un turku valodā (62 trūkstoši teksti: RX/TX ķēdes zudumi un pastiprinājumi, Friisa formula, galvenais ekrāns, cilņu apraksts); Windows 7, 8 un 8.1 norādīti programmas manifestā.

@@ -44,6 +44,7 @@ Erros, dados melhores, traduções: ccerrotta@gmail.com · ic8tem@gmail.com · w
 
 HISTÓRICO DE VERSÕES
 As versões anteriores à 1.0 chamam-se beta.
+- 1.9.10 - Novo separador Polarização sobre o mundo (Planeamento): mapa do mundo colorido segundo o desvio de polarização espacial (Dpol) entre a tua estação e cada local que vê a Lua, com a linha tracejada dos 45° (3 dB); Dpol e perda ao passar o rato e na etiqueta do DX.
 - 1.9.9 - O meu horizonte: a Lua tem a sua fase e inclinação reais e o novo quadro «A Lua vista pelas duas estações» mostra-a como tu a vês e como o DX a vê, com o desvio de polarização espacial Dpol e a perda; janela de fecho e avisos: os botões já não têm cantos claros sobre a barra cinzenta.
 - 1.9.8 - O meu horizonte: a Lua é desenhada no seu tamanho real (cerca de 0,5°), com um círculo tracejado como marcador; atualização automática só com a impressão digital SHA-256 verificada (é cancelada se a lista de impressões faltar ou não contiver o pacote); as ligações só abrem endereços web e de correio eletrónico; macOS: o lançador verifica o Mono (arquitetura, Rosetta, quarentena) e explica os erros 126 e 127.
 - 1.9.7 - Traduções concluídas em bengali, árabe e turco (62 textos em falta: perdas e ganhos da cadeia RX/TX, fórmula de Friis, ecrã principal, descrição dos separadores); Windows 7, 8 e 8.1 declarados no manifesto do programa.

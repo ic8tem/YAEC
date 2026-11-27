@@ -44,6 +44,7 @@ Fejl, bedre data, oversættelser: ccerrotta@gmail.com · ic8tem@gmail.com · www
 
 VERSIONSHISTORIK
 Versionerne før 1.0 hedder beta.
+- 1.9.10 - Ny fane Polarisation over verden (Planlægning): verdenskort farvet efter den rumlige polarisationsforskydning (Dpol) mellem din station og hvert sted, der ser Månen, med den stiplede 45°-linje (3 dB); Dpol og tab under musen og på DX-etiketten.
 - 1.9.9 - Min horisont: Månen har sin sande fase og hældning, og det nye felt «Månen set fra de to stationer» viser den, som du og DX ser den, med den rumlige polarisationsforskydning Dpol og tabet; lukkevindue og meddelelser: knapperne har ikke længere lyse hjørner på den grå bjælke.
 - 1.9.8 - Min horisont: Månen tegnes i sin sande størrelse (ca. 0,5°) med en stiplet cirkel som markør; automatisk opdatering kun med verificeret SHA-256-fingeraftryk (annulleres, hvis listen over fingeraftryk mangler eller ikke indeholder pakken); links åbner kun web- og e-mailadresser; macOS: startprogrammet kontrollerer Mono (arkitektur, Rosetta, karantæne) og forklarer fejl 126 og 127.
 - 1.9.7 - Oversættelser til bengali, arabisk og tyrkisk fuldført (62 manglende tekster: tab og forstærkning i RX/TX-kæden, Friis' formel, hovedskærmen, beskrivelse af fanerne); Windows 7, 8 og 8.1 angivet i programmets manifest.

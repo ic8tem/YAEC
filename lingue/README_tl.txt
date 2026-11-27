@@ -44,6 +44,7 @@ Mga mali, mas mahusay na datos, mga salin: ccerrotta@gmail.com · ic8tem@gmail.c
 
 KASAYSAYAN NG MGA BERSYON
 Beta ang tawag sa mga bersyon bago ang 1.0.
+- 1.9.10 - Bagong tab Polarisasyon sa buong mundo (Pagpaplano): mapa ng mundo na kinulayan ayon sa spatial polarization offset (Dpol) sa pagitan ng iyong istasyon at bawat lugar na nakakakita ng Buwan, na may putol-putol na linya ng 45° (3 dB); Dpol at pagkawala sa ilalim ng mouse at sa label ng DX.
 - 1.9.9 - Aking horizon: may tunay na yugto at hilig ang Buwan, at ipinapakita ito ng bagong kahong «Ang Buwan na nakikita ng dalawang istasyon» kung paano ito nakikita mo at ng DX, kasama ang spatial polarization offset Dpol at ang kawalan; window ng pagsasara at mga mensahe: wala nang maliwanag na sulok ang mga button sa abuhing bar.
 - 1.9.8 - Aking horizon: iginuguhit ang Buwan sa tunay nitong laki (mga 0.5°), na may putul-putol na bilog bilang marka; awtomatikong pag-update lamang kapag napatunayan ang SHA-256 fingerprint (kinakansela kung wala ang listahan ng mga fingerprint o wala roon ang package); ang mga link ay nagbubukas lamang ng mga web at e-mail address; macOS: sinusuri ng launcher ang Mono (arkitektura, Rosetta, quarantine) at ipinapaliwanag ang mga error 126 at 127.
 - 1.9.7 - Nakumpleto ang mga salin sa Bengali, Arabe at Turko (62 nawawalang teksto: mga pagkawala at gain ng RX/TX chain, pormula ni Friis, pangunahing screen, paglalarawan ng mga tab); idineklara ang Windows 7, 8 at 8.1 sa manifest ng programa.

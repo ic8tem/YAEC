@@ -44,6 +44,7 @@ Klaidos, geresni duomenys, vertimai: ccerrotta@gmail.com · ic8tem@gmail.com · 
 
 VERSIJŲ ISTORIJA
 Versijos iki 1.0 vadinamos beta.
+- 1.9.10 - Naujas skirtukas Poliarizacija pasaulyje (Planavimas): pasaulio žemėlapis, nuspalvintas pagal erdvinį poliarizacijos poslinkį (Dpol) tarp tavo stoties ir kiekvienos vietos, matančios Mėnulį, su punktyrine 45° (3 dB) linija; Dpol ir nuostoliai po pele ir DX etiketėje.
 - 1.9.9 - Mano horizontas: Mėnulis rodomas su tikra faze ir posvyriu, o naujas langelis «Mėnulis, matomas iš abiejų stočių» rodo jį taip, kaip jį matote jūs ir DX, su erdviniu poliarizacijos poslinkiu Dpol ir nuostoliais; uždarymo langas ir pranešimai: mygtukai ant pilkos juostos nebeturi šviesių kampų.
 - 1.9.8 - Mano horizontas: Mėnulis piešiamas tikru dydžiu (apie 0,5°), su punktyriniu apskritimu kaip žyme; automatinis atnaujinimas tik su patikrintu SHA-256 kontroliniu kodu (atšaukiamas, jei kodų sąrašo nėra arba jame nėra paketo); nuorodos atveria tik žiniatinklio ir el. pašto adresus; macOS: paleidiklis tikrina Mono (architektūra, Rosetta, karantinas) ir paaiškina klaidas 126 ir 127.
 - 1.9.7 - Užbaigti vertimai į bengalų, arabų ir turkų kalbas (62 trūkę tekstai: RX/TX grandinės nuostoliai ir stiprinimai, Friiso formulė, pagrindinis ekranas, skirtukų aprašymas); Windows 7, 8 ir 8.1 nurodytos programos manifeste.

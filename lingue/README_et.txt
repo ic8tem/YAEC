@@ -44,6 +44,7 @@ Vead, paremad andmed, tõlked: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 VERSIOONIAJALUGU
 Versioone enne 1.0 nimetatakse beetaks.
+- 1.9.10 - Uus vahekaart Polarisatsioon maailmas (Planeerimine): maailmakaart, värvitud sinu jaama ja iga Kuud nägeva koha vahelise ruumilise polarisatsiooninihke (Dpol) järgi, katkendliku 45° (3 dB) joonega; Dpol ja kadu hiire all ning DX-i sildil.
 - 1.9.9 - Minu horisont: Kuu on tegeliku faasi ja kaldega ning uus kast «Kuu, nagu seda näevad kaks jaama» näitab seda nii, nagu sina ja DX seda näete, koos ruumilise polarisatsiooni nihke Dpol ja kaoga; sulgemisaken ja teated: nuppudel pole hallil ribal enam heledaid nurki.
 - 1.9.8 - Minu horisont: Kuu joonistatakse tegelikus suuruses (umbes 0,5°), tähiseks katkendjoonega ring; automaatne uuendus ainult kontrollitud SHA-256 sõrmejäljega (tühistatakse, kui sõrmejälgede loend puudub või ei sisalda paketti); lingid avavad ainult veebi- ja e-posti aadresse; macOS: käivitaja kontrollib Monot (arhitektuur, Rosetta, karantiin) ja selgitab vigu 126 ja 127.
 - 1.9.7 - Tõlked bengali, araabia ja türgi keelde lõpetatud (62 puuduvat teksti: RX/TX-ahela kaod ja võimendused, Friisi valem, põhiekraan, vahelehtede kirjeldus); Windows 7, 8 ja 8.1 programmi manifestis kirjas.

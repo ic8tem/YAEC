@@ -44,6 +44,7 @@ Erori, date mai bune, traduceri: ccerrotta@gmail.com · ic8tem@gmail.com · www.
 
 ISTORICUL VERSIUNILOR
 Versiunile anterioare lui 1.0 se numesc beta.
+- 1.9.10 - Filă nouă Polarizarea pe glob (Planificare): harta lumii colorată după decalajul spațial de polarizare (Dpol) dintre stația ta și fiecare loc care vede Luna, cu linia punctată de 45° (3 dB); Dpol și pierdere sub mouse și pe eticheta DX.
 - 1.9.9 - Orizontul meu: Luna are faza și înclinarea reale, iar noua casetă «Luna văzută de cele două stații» o arată așa cum o vezi tu și cum o vede DX, cu decalajul de polarizare spațială Dpol și pierderea; fereastra de închidere și mesajele: butoanele nu mai au colțuri deschise pe bara gri.
 - 1.9.8 - Orizontul meu: Luna este desenată la dimensiunea reală (circa 0,5°), cu un cerc punctat ca reper; actualizare automată doar cu amprenta SHA-256 verificată (se anulează dacă lista amprentelor lipsește sau nu conține pachetul); legăturile deschid doar adrese web și de e-mail; macOS: lansatorul verifică Mono (arhitectură, Rosetta, carantină) și explică erorile 126 și 127.
 - 1.9.7 - Traduceri finalizate în bengali, arabă și turcă (62 de texte lipsă: pierderile și câștigurile lanțului RX/TX, formula lui Friis, ecranul principal, descrierea filelor); Windows 7, 8 și 8.1 declarate în manifestul programului.

@@ -44,6 +44,7 @@ Fouten, betere gegevens, vertalingen: ccerrotta@gmail.com · ic8tem@gmail.com ·
 
 VERSIEGESCHIEDENIS
 Versies vóór 1.0 heten bèta.
+- 1.9.10 - Nieuw tabblad Polarisatie over de wereld (Planning): wereldkaart gekleurd volgens de ruimtelijke polarisatieverschuiving (Dpol) tussen jouw station en elke plek die de maan ziet, met de gestreepte 45°-lijn (3 dB); Dpol en verlies onder de muis en op het DX-label.
 - 1.9.9 - Mijn horizon: de maan heeft haar ware fase en helling, en het nieuwe kader «De maan gezien vanaf de twee stations» toont haar zoals jij en de DX haar zien, met de ruimtelijke polarisatieverschuiving Dpol en het verlies; afsluitvenster en meldingen: de knoppen hebben geen lichte hoeken meer op de grijze balk.
 - 1.9.8 - Mijn horizon: de maan wordt op ware grootte getekend (ongeveer 0,5°), met een gestippelde cirkel als markering; automatische update alleen met een gecontroleerde SHA-256-vingerafdruk (wordt geannuleerd als de lijst met vingerafdrukken ontbreekt of het pakket niet bevat); koppelingen openen alleen web- en e-mailadressen; macOS: het startprogramma controleert Mono (architectuur, Rosetta, quarantaine) en legt de fouten 126 en 127 uit.
 - 1.9.7 - Vertalingen in het Bengaals, Arabisch en Turks voltooid (62 ontbrekende teksten: verliezen en versterkingen van de RX/TX-keten, formule van Friis, hoofdscherm, beschrijving van de tabbladen); Windows 7, 8 en 8.1 vermeld in het manifest van het programma.

@@ -44,6 +44,7 @@ Błędy, lepsze dane, tłumaczenia: ccerrotta@gmail.com · ic8tem@gmail.com · w
 
 HISTORIA WERSJI
 Wersje wcześniejsze niż 1.0 nazywają się beta.
+- 1.9.10 - Nowa zakładka Polaryzacja na świecie (Planowanie): mapa świata pokolorowana według przestrzennego przesunięcia polaryzacji (Dpol) między twoją stacją a każdym miejscem, które widzi Księżyc, z przerywaną linią 45° (3 dB); Dpol i strata pod myszą i na etykiecie DX.
 - 1.9.9 - Mój horyzont: Księżyc ma prawdziwą fazę i nachylenie, a nowa ramka «Księżyc widziany z obu stacji» pokazuje go tak, jak widzisz go ty i DX, z przestrzennym przesunięciem polaryzacji Dpol i stratą; okno zamykania i komunikaty: przyciski nie mają już jasnych narożników na szarym pasku.
 - 1.9.8 - Mój horyzont: Księżyc jest rysowany w rzeczywistej wielkości (około 0,5°), z przerywanym okręgiem jako znacznikiem; automatyczna aktualizacja tylko ze sprawdzonym odciskiem SHA-256 (zostaje anulowana, gdy brakuje listy odcisków albo nie zawiera ona pakietu); odnośniki otwierają tylko adresy WWW i e-mail; macOS: program uruchamiający sprawdza Mono (architektura, Rosetta, kwarantanna) i wyjaśnia błędy 126 i 127.
 - 1.9.7 - Ukończone tłumaczenia na bengalski, arabski i turecki (62 brakujące teksty: straty i wzmocnienia toru RX/TX, wzór Friisa, ekran główny, opis zakładek); Windows 7, 8 i 8.1 zadeklarowane w manifeście programu.

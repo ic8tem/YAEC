@@ -44,6 +44,7 @@ Foute, beter data, vertalings: ccerrotta@gmail.com · ic8tem@gmail.com · www.qr
 
 WEERGAWEGESKIEDENIS
 Weergawes voor 1.0 word beta genoem.
+- 1.9.10 - Nuwe oortjie Polarisasie oor die wêreld (Beplanning): wêreldkaart gekleur volgens die ruimtelike polarisasieverskuiwing (Dpol) tussen jou stasie en elke plek wat die Maan sien, met die gestippelde 45°-lyn (3 dB); Dpol en verlies by die muis en op die DX-etiket.
 - 1.9.9 - My horison: die Maan het sy ware fase en helling, en die nuwe blok «Die Maan soos die twee stasies dit sien» wys hom soos jy en die DX hom sien, met die ruimtelike polarisasie-afwyking Dpol en die verlies; afsluitvenster en boodskappe: die knoppies het nie meer ligte hoeke op die grys balk nie.
 - 1.9.8 - My horison: die Maan word op sy ware grootte geteken (ongeveer 0,5°), met 'n stippelsirkel as merker; outomatiese bywerking slegs met 'n geverifieerde SHA-256-vingerafdruk (dit word gekanselleer as die lys vingerafdrukke ontbreek of nie die pakket bevat nie); skakels maak slegs web- en e-posadresse oop; macOS: die lanseerder kontroleer Mono (argitektuur, Rosetta, kwarantyn) en verduidelik foute 126 en 127.
 - 1.9.7 - Vertalings in Bengaals, Arabies en Turks voltooi (62 ontbrekende tekste: verliese en winste van die RX/TX-ketting, Friis-formule, hoofskerm, beskrywing van die oortjies); Windows 7, 8 en 8.1 in die program se manifes verklaar.

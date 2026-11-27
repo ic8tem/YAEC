@@ -4047,6 +4047,10 @@ namespace LunaCalc
             "1.9.9 - Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio.",
             "La Luna vista dalle due stazioni",
             "Dpol {0}° · perdita {1} dB (polarizzazione lineare)",
+            "Polarizzazione sul mondo",
+            "La stessa mappa del mondo, con le terre colorate secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna: verde dove le polarizzazioni lineari coincidono, rosso dove sono ruotate di 90°. Passando il mouse si leggono Dpol e la perdita in dB; la rotazione di Faraday non è compresa.",
+            "Offset di polarizzazione spaziale (Dpol) rispetto alla tua stazione",
+            "1.9.10 - Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX.",
         };
         public static readonly string[] EN = {
             " (estimated from longitude)",
@@ -6022,6 +6026,10 @@ namespace LunaCalc
             "1.9.9 - My horizon: the Moon has its true phase and tilt, and the new box «The Moon as seen by the two stations» shows it as you see it and as the DX sees it, with the spatial polarization offset Dpol and the loss; closing window and messages: the buttons no longer have light corners on the grey bar.",
             "The Moon as seen by the two stations",
             "Dpol {0}° · loss {1} dB (linear polarization)",
+            "Polarization over the world",
+            "The same world map, with the land coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon: green where the linear polarizations match, red where they are 90° apart. Hover to read Dpol and the loss in dB; Faraday rotation is not included.",
+            "Spatial polarization offset (Dpol) relative to your station",
+            "1.9.10 - New tab Polarization over the world (Planning): world map coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon, with the dashed 45° (3 dB) line; Dpol and loss on mouse hover and on the DX label.",
         };
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
@@ -7997,6 +8005,10 @@ namespace LunaCalc
             "1.9.9 - Mein Horizont: Der Mond hat seine wahre Phase und Neigung, und das neue Feld «Der Mond, wie ihn die beiden Stationen sehen» zeigt ihn so, wie du und der DX ihn sehen, mit dem räumlichen Polarisationsversatz Dpol und dem Verlust; Schließfenster und Meldungen: Die Schaltflächen haben auf der grauen Leiste keine hellen Ecken mehr.",
             "Der Mond, wie ihn die beiden Stationen sehen",
             "Dpol {0}° · Verlust {1} dB (lineare Polarisation)",
+            "Polarisation über der Welt",
+            "Dieselbe Weltkarte, mit den Landflächen gefärbt nach dem räumlichen Polarisationsversatz (Dpol) zwischen deiner Station und jedem Ort, der den Mond sieht: grün, wo die linearen Polarisationen übereinstimmen, rot, wo sie um 90° gedreht sind. Mit der Maus liest man Dpol und den Verlust in dB; die Faraday-Drehung ist nicht enthalten.",
+            "Räumlicher Polarisationsversatz (Dpol) gegenüber deiner Station",
+            "1.9.10 - Neuer Reiter Polarisation über der Welt (Planung): Weltkarte gefärbt nach dem räumlichen Polarisationsversatz (Dpol) zwischen deiner Station und jedem Ort, der den Mond sieht, mit der gestrichelten 45°-Linie (3 dB); Dpol und Verlust beim Überfahren mit der Maus und am DX-Etikett.",
         };
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
@@ -9972,6 +9984,10 @@ namespace LunaCalc
             "1.9.9 - Mon horizon : la Lune a sa phase et son inclinaison réelles, et le nouveau cadre « La Lune vue par les deux stations » la montre comme tu la vois et comme la voit le DX, avec le décalage de polarisation spatiale Dpol et la perte ; fenêtre de fermeture et messages : les boutons n'ont plus de coins clairs sur la barre grise.",
             "La Lune vue par les deux stations",
             "Dpol {0}° · perte {1} dB (polarisation linéaire)",
+            "Polarisation sur le monde",
+            "La même carte du monde, avec les terres colorées selon le décalage de polarisation spatiale (Dpol) entre ta station et chaque lieu qui voit la Lune : vert là où les polarisations linéaires coïncident, rouge là où elles sont tournées de 90°. En survolant avec la souris on lit Dpol et la perte en dB ; la rotation de Faraday n'est pas comprise.",
+            "Décalage de polarisation spatiale (Dpol) par rapport à ta station",
+            "1.9.10 - Nouvel onglet Polarisation sur le monde (Planification) : carte du monde colorée selon le décalage de polarisation spatiale (Dpol) entre ta station et chaque lieu qui voit la Lune, avec la ligne pointillée des 45° (3 dB) ; Dpol et perte au survol de la souris et sur l'étiquette du DX.",
         };
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
@@ -11947,6 +11963,10 @@ namespace LunaCalc
             "1.9.9 - Mi horizonte: la Luna tiene su fase e inclinación reales y el nuevo recuadro «La Luna vista desde las dos estaciones» la muestra como la ves tú y como la ve el DX, con el desfase de polarización espacial Dpol y la pérdida; ventana de cierre y avisos: los botones ya no tienen esquinas claras sobre la barra gris.",
             "La Luna vista desde las dos estaciones",
             "Dpol {0}° · pérdida {1} dB (polarización lineal)",
+            "Polarización sobre el mundo",
+            "El mismo mapa del mundo, con las tierras coloreadas según el desfase de polarización espacial (Dpol) entre tu estación y cada lugar que ve la Luna: verde donde las polarizaciones lineales coinciden, rojo donde están giradas 90°. Al pasar el ratón se leen Dpol y la pérdida en dB; la rotación de Faraday no está incluida.",
+            "Desfase de polarización espacial (Dpol) respecto a tu estación",
+            "1.9.10 - Nueva pestaña Polarización sobre el mundo (Planificación): mapa del mundo coloreado según el desfase de polarización espacial (Dpol) entre tu estación y cada lugar que ve la Luna, con la línea discontinua de 45° (3 dB); Dpol y pérdida al pasar el ratón y en la etiqueta del DX.",
         };
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
@@ -13922,6 +13942,10 @@ namespace LunaCalc
             "1.9.9 - O meu horizonte: a Lua tem a sua fase e inclinação reais e o novo quadro «A Lua vista pelas duas estações» mostra-a como tu a vês e como o DX a vê, com o desvio de polarização espacial Dpol e a perda; janela de fecho e avisos: os botões já não têm cantos claros sobre a barra cinzenta.",
             "A Lua vista pelas duas estações",
             "Dpol {0}° · perda {1} dB (polarização linear)",
+            "Polarização sobre o mundo",
+            "O mesmo mapa do mundo, com as terras coloridas segundo o desvio de polarização espacial (Dpol) entre a tua estação e cada local que vê a Lua: verde onde as polarizações lineares coincidem, vermelho onde estão rodadas 90°. Passando o rato lê-se Dpol e a perda em dB; a rotação de Faraday não está incluída.",
+            "Desvio de polarização espacial (Dpol) em relação à tua estação",
+            "1.9.10 - Novo separador Polarização sobre o mundo (Planeamento): mapa do mundo colorido segundo o desvio de polarização espacial (Dpol) entre a tua estação e cada local que vê a Lua, com a linha tracejada dos 45° (3 dB); Dpol e perda ao passar o rato e na etiqueta do DX.",
         };
         public static readonly string[] ZH = {
             " （根据经度估算）",
@@ -15897,6 +15921,10 @@ namespace LunaCalc
             "1.9.9 - 我的地平线：月亮按真实月相和倾斜绘制，新的“两个电台看到的月亮”框显示你和 DX 看到的月亮，并给出空间极化偏移 Dpol 和损耗；关闭窗口和提示框：按钮在灰色栏上不再出现浅色边角。",
             "两个电台看到的月亮",
             "Dpol {0}° · 损耗 {1} dB（线极化）",
+            "全球极化图",
+            "同一张世界地图，陆地按你的电台与每个能看到月亮的地点之间的空间极化偏差 (Dpol) 着色：线极化一致处为绿色，相差 90° 处为红色。鼠标悬停可读取 Dpol 和以 dB 计的损耗；不含法拉第旋转。",
+            "相对于你电台的空间极化偏差 (Dpol)",
+            "1.9.10 - 规划中新增“全球极化图”标签页：世界地图按你的电台与每个能看到月亮的地点之间的空间极化偏差 (Dpol) 着色，带 45° (3 dB) 虚线；鼠标悬停和 DX 标签上显示 Dpol 与损耗。",
         };
         public static readonly string[] JA = {
             " （経度から推定）",
@@ -17872,6 +17900,10 @@ namespace LunaCalc
             "1.9.9 - 自局の地平線：月を実際の月相と傾きで描き、新しい「両局から見た月」の枠で自局と DX から見た月を空間偏波オフセット Dpol と損失とともに表示；終了確認とメッセージのウィンドウ：灰色のバー上でボタンの角が白く残らなくなりました。",
             "両局から見た月",
             "Dpol {0}° · 損失 {1} dB（直線偏波）",
+            "世界の偏波",
+            "同じ世界地図で、陸地を自局と月が見える各地点との空間偏波オフセット (Dpol) で色分けします。直線偏波が一致する所は緑、90° ずれる所は赤です。マウスを重ねると Dpol と損失 (dB) が読めます。ファラデー回転は含みません。",
+            "自局に対する空間偏波オフセット (Dpol)",
+            "1.9.10 - 計画に新しいタブ「世界の偏波」：自局と月が見える各地点との空間偏波オフセット (Dpol) で色分けした世界地図、45° (3 dB) の破線付き。マウスを重ねた所と DX のラベルに Dpol と損失を表示。",
         };
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
@@ -19847,6 +19879,10 @@ namespace LunaCalc
             "1.9.9 - मेरा क्षितिज: चंद्रमा अपनी वास्तविक कला और झुकाव के साथ, और नया बॉक्स «दोनों स्टेशनों से दिखता चंद्रमा» उसे आपकी और DX की नज़र से दिखाता है, स्थानिक ध्रुवण ऑफ़सेट Dpol और हानि के साथ; बंद करने की खिड़की और संदेश: धूसर पट्टी पर बटनों के कोने अब हल्के नहीं दिखते।",
             "दोनों स्टेशनों से दिखता चंद्रमा",
             "Dpol {0}° · हानि {1} dB (रैखिक ध्रुवण)",
+            "विश्व पर ध्रुवण",
+            "वही विश्व मानचित्र, जिसमें भूमि को आपके स्टेशन और चंद्रमा देखने वाले हर स्थान के बीच स्थानिक ध्रुवण विचलन (Dpol) के अनुसार रंगा गया है: जहाँ रैखिक ध्रुवण मेल खाते हैं वहाँ हरा, जहाँ वे 90° घूमे हैं वहाँ लाल। माउस रखने पर Dpol और dB में हानि दिखती है; फैराडे घूर्णन शामिल नहीं है।",
+            "आपके स्टेशन के सापेक्ष स्थानिक ध्रुवण विचलन (Dpol)",
+            "1.9.10 - योजना में नया टैब विश्व पर ध्रुवण: आपके स्टेशन और चंद्रमा देखने वाले हर स्थान के बीच स्थानिक ध्रुवण विचलन (Dpol) के अनुसार रंगा विश्व मानचित्र, 45° (3 dB) की टूटी रेखा के साथ; माउस रखने पर और DX लेबल पर Dpol और हानि।",
         };
         public static readonly string[] KO = {
             " (경도로 추정)",
@@ -21822,6 +21858,10 @@ namespace LunaCalc
             "1.9.9 - 내 지평선: 달을 실제 위상과 기울기로 그리고, 새 «두 국에서 본 달» 상자에서 나와 DX가 보는 달을 공간 편파 오프셋 Dpol 및 손실과 함께 표시; 종료 창과 알림: 회색 막대 위 버튼의 모서리가 더 이상 밝게 보이지 않음.",
             "두 국에서 본 달",
             "Dpol {0}° · 손실 {1} dB (선형 편파)",
+            "세계 편파 지도",
+            "같은 세계 지도에서 육지를 내 국과 달이 보이는 각 지점 사이의 공간 편파 오프셋(Dpol)으로 색칠합니다. 선형 편파가 일치하는 곳은 초록, 90° 어긋난 곳은 빨강입니다. 마우스를 올리면 Dpol과 dB 손실을 볼 수 있으며, 패러데이 회전은 포함되지 않습니다.",
+            "내 국 기준 공간 편파 오프셋(Dpol)",
+            "1.9.10 - 계획에 새 탭 세계 편파 지도: 내 국과 달이 보이는 각 지점 사이의 공간 편파 오프셋(Dpol)으로 색칠한 세계 지도, 45° (3 dB) 점선 포함; 마우스를 올린 곳과 DX 라벨에 Dpol과 손실 표시.",
         };
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
@@ -23797,6 +23837,10 @@ namespace LunaCalc
             "1.9.9 - Cakrawala saya: Bulan memiliki fase dan kemiringan sebenarnya, dan kotak baru «Bulan dilihat dari kedua stasiun» menampilkannya seperti yang Anda dan DX lihat, dengan offset polarisasi spasial Dpol dan rugi; jendela penutupan dan pesan: tombol tidak lagi memiliki sudut terang di atas bilah abu-abu.",
             "Bulan dilihat dari kedua stasiun",
             "Dpol {0}° · rugi {1} dB (polarisasi linier)",
+            "Polarisasi di seluruh dunia",
+            "Peta dunia yang sama, dengan daratan diwarnai menurut offset polarisasi spasial (Dpol) antara stasiunmu dan setiap tempat yang melihat Bulan: hijau di mana polarisasi linear sama, merah di mana keduanya berselisih 90°. Arahkan mouse untuk membaca Dpol dan rugi dalam dB; rotasi Faraday tidak termasuk.",
+            "Offset polarisasi spasial (Dpol) terhadap stasiunmu",
+            "1.9.10 - Tab baru Polarisasi di seluruh dunia (Perencanaan): peta dunia diwarnai menurut offset polarisasi spasial (Dpol) antara stasiunmu dan setiap tempat yang melihat Bulan, dengan garis putus-putus 45° (3 dB); Dpol dan rugi saat mouse diarahkan dan pada label DX.",
         };
 
         public static readonly string[] RU = {
@@ -25773,6 +25817,10 @@ namespace LunaCalc
             "1.9.9 - Мой горизонт: Луна показана с истинной фазой и наклоном, а новая рамка «Луна, видимая с двух станций» показывает её так, как видите её вы и DX, со смещением пространственной поляризации Dpol и потерями; окно закрытия и сообщения: у кнопок на серой панели больше нет светлых углов.",
             "Луна, видимая с двух станций",
             "Dpol {0}° · потери {1} дБ (линейная поляризация)",
+            "Поляризация по миру",
+            "Та же карта мира, суша окрашена по пространственному сдвигу поляризации (Dpol) между твоей станцией и каждым местом, откуда видна Луна: зелёный — линейные поляризации совпадают, красный — повёрнуты на 90°. При наведении мыши видны Dpol и потери в дБ; фарадеевское вращение не учитывается.",
+            "Пространственный сдвиг поляризации (Dpol) относительно твоей станции",
+            "1.9.10 - Новая вкладка Поляризация по миру (Планирование): карта мира, окрашенная по пространственному сдвигу поляризации (Dpol) между твоей станцией и каждым местом, откуда видна Луна, с пунктиром 45° (3 дБ); Dpol и потери при наведении мыши и на метке DX.",
         };
 
         public static readonly string[] UK = {
@@ -27749,6 +27797,10 @@ namespace LunaCalc
             "1.9.9 - Мій горизонт: Місяць показано зі справжньою фазою та нахилом, а нова рамка «Місяць, видимий з двох станцій» показує його так, як бачите його ви і DX, зі зміщенням просторової поляризації Dpol і втратами; вікно закриття та повідомлення: у кнопок на сірій панелі більше немає світлих кутів.",
             "Місяць, видимий з двох станцій",
             "Dpol {0}° · втрати {1} дБ (лінійна поляризація)",
+            "Поляризація по світу",
+            "Та сама карта світу, суходіл забарвлено за просторовим зсувом поляризації (Dpol) між твоєю станцією та кожним місцем, звідки видно Місяць: зелений — лінійні поляризації збігаються, червоний — повернуті на 90°. При наведенні миші видно Dpol і втрати в дБ; фарадеївське обертання не враховано.",
+            "Просторовий зсув поляризації (Dpol) відносно твоєї станції",
+            "1.9.10 - Нова вкладка Поляризація по світу (Планування): карта світу, забарвлена за просторовим зсувом поляризації (Dpol) між твоєю станцією та кожним місцем, звідки видно Місяць, з пунктиром 45° (3 дБ); Dpol і втрати при наведенні миші та на мітці DX.",
         };
 
         public static readonly string[] AF = {
@@ -29725,6 +29777,10 @@ namespace LunaCalc
             "1.9.9 - My horison: die Maan het sy ware fase en helling, en die nuwe blok «Die Maan soos die twee stasies dit sien» wys hom soos jy en die DX hom sien, met die ruimtelike polarisasie-afwyking Dpol en die verlies; afsluitvenster en boodskappe: die knoppies het nie meer ligte hoeke op die grys balk nie.",
             "Die Maan soos die twee stasies dit sien",
             "Dpol {0}° · verlies {1} dB (lineêre polarisasie)",
+            "Polarisasie oor die wêreld",
+            "Dieselfde wêreldkaart, met die land gekleur volgens die ruimtelike polarisasieverskuiwing (Dpol) tussen jou stasie en elke plek wat die Maan sien: groen waar die lineêre polarisasies ooreenstem, rooi waar hulle 90° gedraai is. Beweeg die muis om Dpol en die verlies in dB te lees; Faraday-rotasie is nie ingesluit nie.",
+            "Ruimtelike polarisasieverskuiwing (Dpol) teenoor jou stasie",
+            "1.9.10 - Nuwe oortjie Polarisasie oor die wêreld (Beplanning): wêreldkaart gekleur volgens die ruimtelike polarisasieverskuiwing (Dpol) tussen jou stasie en elke plek wat die Maan sien, met die gestippelde 45°-lyn (3 dB); Dpol en verlies by die muis en op die DX-etiket.",
         };
 
         public static readonly string[] BN = {
@@ -31700,6 +31756,10 @@ namespace LunaCalc
             "1.9.9 - আমার দিগন্ত: চাঁদ তার প্রকৃত কলা ও হেলানো অবস্থায়, আর নতুন বাক্স «দুই স্টেশন থেকে দেখা চাঁদ» আপনার ও DX-এর চোখে চাঁদ দেখায়, স্থানিক পোলারাইজেশন অফসেট Dpol ও ক্ষতিসহ; বন্ধ করার জানালা ও বার্তা: ধূসর বারে বোতামগুলোর কোণ আর হালকা দেখায় না।",
             "দুই স্টেশন থেকে দেখা চাঁদ",
             "Dpol {0}° · ক্ষতি {1} dB (রৈখিক পোলারাইজেশন)",
+            "বিশ্বজুড়ে পোলারাইজেশন",
+            "একই বিশ্ব মানচিত্র, যেখানে স্থলভাগ রঙ করা হয়েছে তোমার স্টেশন ও চাঁদ দেখা প্রতিটি স্থানের মধ্যে স্থানিক পোলারাইজেশন অফসেট (Dpol) অনুযায়ী: যেখানে রৈখিক পোলারাইজেশন মেলে সেখানে সবুজ, যেখানে 90° ঘোরানো সেখানে লাল। মাউস রাখলে Dpol ও dB-তে ক্ষতি দেখা যায়; ফ্যারাডে ঘূর্ণন ধরা হয়নি।",
+            "তোমার স্টেশনের সাপেক্ষে স্থানিক পোলারাইজেশন অফসেট (Dpol)",
+            "1.9.10 - পরিকল্পনায় নতুন ট্যাব বিশ্বজুড়ে পোলারাইজেশন: তোমার স্টেশন ও চাঁদ দেখা প্রতিটি স্থানের মধ্যে স্থানিক পোলারাইজেশন অফসেট (Dpol) অনুযায়ী রঙ করা বিশ্ব মানচিত্র, 45° (3 dB) ড্যাশ রেখাসহ; মাউস রাখলে ও DX লেবেলে Dpol ও ক্ষতি।",
         };
 
         public static readonly string[] AR = {
@@ -33675,6 +33735,10 @@ namespace LunaCalc
             "1.9.9 - أفق محطتي: يُرسم القمر بطوره وميله الحقيقيين، ويعرضه الإطار الجديد «القمر كما تراه المحطتان» كما تراه أنت والـDX، مع إزاحة الاستقطاب المكانية Dpol والفقد؛ نافذة الإغلاق والرسائل: لم تعد للأزرار زوايا فاتحة على الشريط الرمادي.",
             "القمر كما تراه المحطتان",
             "Dpol {0}° · الفقد {1} dB (استقطاب خطي)",
+            "الاستقطاب حول العالم",
+            "خريطة العالم نفسها، واليابسة ملوّنة حسب إزاحة الاستقطاب المكانية (Dpol) بين محطتك وكل مكان يرى القمر: أخضر حيث يتطابق الاستقطابان الخطيّان، وأحمر حيث يختلفان بـ 90°. بتمرير الفأرة تُقرأ Dpol والفقد بالـ dB؛ دوران فاراداي غير مشمول.",
+            "إزاحة الاستقطاب المكانية (Dpol) بالنسبة إلى محطتك",
+            "1.9.10 - تبويب جديد الاستقطاب حول العالم (التخطيط): خريطة العالم ملوّنة حسب إزاحة الاستقطاب المكانية (Dpol) بين محطتك وكل مكان يرى القمر، مع خط 45° (3 dB) المتقطع؛ Dpol والفقد عند تمرير الفأرة وعلى ملصق DX.",
         };
 
         public static readonly string[] TR = {
@@ -35650,6 +35714,10 @@ namespace LunaCalc
             "1.9.9 - Ufkum: Ay gerçek evresi ve eğimiyle çiziliyor; yeni «İki istasyondan görülen Ay» kutusu onu senin ve DX'in gördüğü gibi, uzaysal polarizasyon kayması Dpol ve kayıpla gösteriyor; kapatma penceresi ve mesajlar: düğmelerin gri çubuk üzerinde artık açık renkli köşeleri yok.",
             "İki istasyondan görülen Ay",
             "Dpol {0}° · kayıp {1} dB (doğrusal polarizasyon)",
+            "Dünya genelinde polarizasyon",
+            "Aynı dünya haritası; karalar, istasyonun ile Ay'ı gören her yer arasındaki uzaysal polarizasyon kaymasına (Dpol) göre renklendirilir: doğrusal polarizasyonların örtüştüğü yerler yeşil, 90° döndüğü yerler kırmızı. Fareyle üzerine gelince Dpol ve dB cinsinden kayıp okunur; Faraday dönmesi dahil değildir.",
+            "İstasyonuna göre uzaysal polarizasyon kayması (Dpol)",
+            "1.9.10 - Planlamada yeni sekme Dünya genelinde polarizasyon: istasyonun ile Ay'ı gören her yer arasındaki uzaysal polarizasyon kaymasına (Dpol) göre renklendirilmiş dünya haritası, kesikli 45° (3 dB) çizgisiyle; fareyle üzerine gelince ve DX etiketinde Dpol ve kayıp.",
         };
 
         public static readonly string[] NL = {
@@ -37625,6 +37693,10 @@ namespace LunaCalc
             "1.9.9 - Mijn horizon: de maan heeft haar ware fase en helling, en het nieuwe kader «De maan gezien vanaf de twee stations» toont haar zoals jij en de DX haar zien, met de ruimtelijke polarisatieverschuiving Dpol en het verlies; afsluitvenster en meldingen: de knoppen hebben geen lichte hoeken meer op de grijze balk.",
             "De maan gezien vanaf de twee stations",
             "Dpol {0}° · verlies {1} dB (lineaire polarisatie)",
+            "Polarisatie over de wereld",
+            "Dezelfde wereldkaart, met het land gekleurd volgens de ruimtelijke polarisatieverschuiving (Dpol) tussen jouw station en elke plek die de maan ziet: groen waar de lineaire polarisaties overeenkomen, rood waar ze 90° gedraaid zijn. Met de muis lees je Dpol en het verlies in dB; Faraday-rotatie is niet meegenomen.",
+            "Ruimtelijke polarisatieverschuiving (Dpol) ten opzichte van jouw station",
+            "1.9.10 - Nieuw tabblad Polarisatie over de wereld (Planning): wereldkaart gekleurd volgens de ruimtelijke polarisatieverschuiving (Dpol) tussen jouw station en elke plek die de maan ziet, met de gestreepte 45°-lijn (3 dB); Dpol en verlies onder de muis en op het DX-label.",
         };
 
         public static readonly string[] ET = {
@@ -39600,6 +39672,10 @@ namespace LunaCalc
             "1.9.9 - Minu horisont: Kuu on tegeliku faasi ja kaldega ning uus kast «Kuu, nagu seda näevad kaks jaama» näitab seda nii, nagu sina ja DX seda näete, koos ruumilise polarisatsiooni nihke Dpol ja kaoga; sulgemisaken ja teated: nuppudel pole hallil ribal enam heledaid nurki.",
             "Kuu, nagu seda näevad kaks jaama",
             "Dpol {0}° · kadu {1} dB (lineaarne polarisatsioon)",
+            "Polarisatsioon maailmas",
+            "Sama maailmakaart, kus maismaa on värvitud sinu jaama ja iga Kuud nägeva koha vahelise ruumilise polarisatsiooninihke (Dpol) järgi: roheline seal, kus lineaarsed polarisatsioonid kattuvad, punane seal, kus need on 90° pööratud. Hiirega näed Dpol-i ja kadu dB-des; Faraday pööret ei arvestata.",
+            "Ruumiline polarisatsiooninihe (Dpol) sinu jaama suhtes",
+            "1.9.10 - Uus vahekaart Polarisatsioon maailmas (Planeerimine): maailmakaart, värvitud sinu jaama ja iga Kuud nägeva koha vahelise ruumilise polarisatsiooninihke (Dpol) järgi, katkendliku 45° (3 dB) joonega; Dpol ja kadu hiire all ning DX-i sildil.",
         };
 
         public static readonly string[] LV = {
@@ -41575,6 +41651,10 @@ namespace LunaCalc
             "1.9.9 - Mans horizonts: Mēness ir ar patieso fāzi un slīpumu, un jaunais lodziņš «Mēness, kā to redz abas stacijas» rāda to tā, kā to redzi tu un DX, ar telpiskās polarizācijas nobīdi Dpol un zudumiem; aizvēršanas logs un paziņojumi: pogām uz pelēkās joslas vairs nav gaišu stūru.",
             "Mēness, kā to redz abas stacijas",
             "Dpol {0}° · zudumi {1} dB (lineārā polarizācija)",
+            "Polarizācija pasaulē",
+            "Tā pati pasaules karte, kurā sauszeme iekrāsota pēc telpiskās polarizācijas nobīdes (Dpol) starp tavu staciju un katru vietu, kas redz Mēnesi: zaļš, kur lineārās polarizācijas sakrīt, sarkans, kur tās pagrieztas par 90°. Ar peli var nolasīt Dpol un zudumus dB; Faradeja rotācija nav iekļauta.",
+            "Telpiskā polarizācijas nobīde (Dpol) attiecībā pret tavu staciju",
+            "1.9.10 - Jauna cilne Polarizācija pasaulē (Plānošana): pasaules karte, iekrāsota pēc telpiskās polarizācijas nobīdes (Dpol) starp tavu staciju un katru vietu, kas redz Mēnesi, ar 45° (3 dB) raustīto līniju; Dpol un zudumi zem peles un uz DX etiķetes.",
         };
 
         public static readonly string[] LT = {
@@ -43550,6 +43630,10 @@ namespace LunaCalc
             "1.9.9 - Mano horizontas: Mėnulis rodomas su tikra faze ir posvyriu, o naujas langelis «Mėnulis, matomas iš abiejų stočių» rodo jį taip, kaip jį matote jūs ir DX, su erdviniu poliarizacijos poslinkiu Dpol ir nuostoliais; uždarymo langas ir pranešimai: mygtukai ant pilkos juostos nebeturi šviesių kampų.",
             "Mėnulis, matomas iš abiejų stočių",
             "Dpol {0}° · nuostoliai {1} dB (tiesinė poliarizacija)",
+            "Poliarizacija pasaulyje",
+            "Tas pats pasaulio žemėlapis, kuriame sausuma nuspalvinta pagal erdvinį poliarizacijos poslinkį (Dpol) tarp tavo stoties ir kiekvienos vietos, matančios Mėnulį: žalia, kur linijinės poliarizacijos sutampa, raudona, kur jos pasuktos 90°. Pele galima perskaityti Dpol ir nuostolius dB; Faradėjaus sukimas neįtrauktas.",
+            "Erdvinis poliarizacijos poslinkis (Dpol) tavo stoties atžvilgiu",
+            "1.9.10 - Naujas skirtukas Poliarizacija pasaulyje (Planavimas): pasaulio žemėlapis, nuspalvintas pagal erdvinį poliarizacijos poslinkį (Dpol) tarp tavo stoties ir kiekvienos vietos, matančios Mėnulį, su punktyrine 45° (3 dB) linija; Dpol ir nuostoliai po pele ir DX etiketėje.",
         };
 
         public static readonly string[] SV = {
@@ -45525,6 +45609,10 @@ namespace LunaCalc
             "1.9.9 - Min horisont: månen har sin verkliga fas och lutning, och den nya rutan «Månen sedd från de två stationerna» visar den som du och DX ser den, med den rumsliga polarisationsförskjutningen Dpol och förlusten; stängningsfönster och meddelanden: knapparna har inte längre ljusa hörn på den grå listen.",
             "Månen sedd från de två stationerna",
             "Dpol {0}° · förlust {1} dB (linjär polarisation)",
+            "Polarisation över världen",
+            "Samma världskarta, med landytorna färgade efter den rumsliga polarisationsförskjutningen (Dpol) mellan din station och varje plats som ser månen: grönt där de linjära polarisationerna stämmer, rött där de är vridna 90°. Med musen läser du Dpol och förlusten i dB; Faradayrotation ingår inte.",
+            "Rumslig polarisationsförskjutning (Dpol) jämfört med din station",
+            "1.9.10 - Ny flik Polarisation över världen (Planering): världskarta färgad efter den rumsliga polarisationsförskjutningen (Dpol) mellan din station och varje plats som ser månen, med den streckade 45°-linjen (3 dB); Dpol och förlust under musen och på DX-etiketten.",
         };
 
         public static readonly string[] NB = {
@@ -47500,6 +47588,10 @@ namespace LunaCalc
             "1.9.9 - Min horisont: månen har sin virkelige fase og helning, og den nye ruten «Månen sett fra de to stasjonene» viser den slik du og DX ser den, med den romlige polarisasjonsforskyvningen Dpol og tapet; lukkevindu og meldinger: knappene har ikke lenger lyse hjørner på den grå linjen.",
             "Månen sett fra de to stasjonene",
             "Dpol {0}° · tap {1} dB (lineær polarisasjon)",
+            "Polarisasjon over verden",
+            "Det samme verdenskartet, med landområdene farget etter den romlige polarisasjonsforskyvningen (Dpol) mellom stasjonen din og hvert sted som ser månen: grønt der de lineære polarisasjonene stemmer, rødt der de er dreid 90°. Med musen leser du Dpol og tapet i dB; Faraday-rotasjon er ikke med.",
+            "Romlig polarisasjonsforskyvning (Dpol) i forhold til stasjonen din",
+            "1.9.10 - Ny fane Polarisasjon over verden (Planlegging): verdenskart farget etter den romlige polarisasjonsforskyvningen (Dpol) mellom stasjonen din og hvert sted som ser månen, med den stiplede 45°-linjen (3 dB); Dpol og tap under musen og på DX-etiketten.",
         };
 
         public static readonly string[] IS = {
@@ -49475,6 +49567,10 @@ namespace LunaCalc
             "1.9.9 - Sjóndeildarhringurinn minn: tunglið er með raunverulegan kvartil og halla, og nýi reiturinn «Tunglið eins og stöðvarnar tvær sjá það» sýnir það eins og þú og DX sjáið það, með rúmfræðilegri skautunarhliðrun Dpol og tapi; lokunargluggi og skilaboð: hnapparnir eru ekki lengur með ljós horn á gráu stikunni.",
             "Tunglið eins og stöðvarnar tvær sjá það",
             "Dpol {0}° · tap {1} dB (línuleg skautun)",
+            "Skautun um heiminn",
+            "Sama heimskortið, þar sem landið er litað eftir rúmfræðilegri skautunarhliðrun (Dpol) milli stöðvarinnar þinnar og hvers staðar sem sér tunglið: grænt þar sem línulegu skautanirnar fara saman, rautt þar sem þeim er snúið um 90°. Með músinni lestu Dpol og tapið í dB; Faraday-snúningur er ekki með.",
+            "Rúmfræðileg skautunarhliðrun (Dpol) miðað við stöðina þína",
+            "1.9.10 - Nýr flipi Skautun um heiminn (Áætlanagerð): heimskort litað eftir rúmfræðilegri skautunarhliðrun (Dpol) milli stöðvarinnar þinnar og hvers staðar sem sér tunglið, með brotinni 45° línu (3 dB); Dpol og tap undir músinni og á DX-merkinu.",
         };
 
         public static readonly string[] HE = {
@@ -51450,6 +51546,10 @@ namespace LunaCalc
             "1.9.9 - האופק שלי: הירח מצויר במופע ובנטייה האמיתיים, והמסגרת החדשה «הירח כפי שרואות אותו שתי התחנות» מראה אותו כפי שאתה וה-DX רואים אותו, עם היסט הקיטוב המרחבי Dpol וההפסד; חלון הסגירה וההודעות: לכפתורים אין עוד פינות בהירות על הפס האפור.",
             "הירח כפי שרואות אותו שתי התחנות",
             "Dpol {0}° · הפסד {1} dB (קיטוב קווי)",
+            "קיטוב על פני העולם",
+            "אותה מפת עולם, והיבשה צבועה לפי היסט הקיטוב המרחבי (Dpol) בין התחנה שלך לבין כל מקום שרואה את הירח: ירוק היכן שהקיטובים הקוויים תואמים, אדום היכן שהם מסובבים ב־90°. במעבר העכבר נקראים Dpol וההפסד ב־dB; סיבוב פאראדיי אינו כלול.",
+            "היסט קיטוב מרחבי (Dpol) ביחס לתחנה שלך",
+            "1.9.10 - לשונית חדשה קיטוב על פני העולם (תכנון): מפת עולם צבועה לפי היסט הקיטוב המרחבי (Dpol) בין התחנה שלך לבין כל מקום שרואה את הירח, עם קו מקווקו של 45° (3 dB); Dpol והפסד במעבר העכבר ובתווית ה־DX.",
         };
 
         public static readonly string[] UR = {
@@ -53425,6 +53525,10 @@ namespace LunaCalc
             "1.9.9 - میرا افق: چاند اپنی اصل حالت اور جھکاؤ کے ساتھ، اور نیا خانہ «دونوں اسٹیشنوں سے نظر آنے والا چاند» اسے آپ اور DX کی نظر سے دکھاتا ہے، فضائی پولرائزیشن آفسیٹ Dpol اور نقصان کے ساتھ؛ بند کرنے کی ونڈو اور پیغامات: سرمئی پٹی پر بٹنوں کے کونے اب ہلکے نظر نہیں آتے۔",
             "دونوں اسٹیشنوں سے نظر آنے والا چاند",
             "Dpol {0}° · نقصان {1} dB (خطی پولرائزیشن)",
+            "دنیا بھر میں پولرائزیشن",
+            "وہی عالمی نقشہ، جس میں خشکی کو آپ کے اسٹیشن اور چاند دیکھنے والی ہر جگہ کے درمیان مکانی پولرائزیشن آفسیٹ (Dpol) کے مطابق رنگا گیا ہے: جہاں خطی پولرائزیشن ملتی ہے وہاں سبز، جہاں 90° گھومی ہو وہاں سرخ۔ ماؤس رکھنے پر Dpol اور dB میں نقصان پڑھا جا سکتا ہے؛ فیراڈے گردش شامل نہیں۔",
+            "آپ کے اسٹیشن کے لحاظ سے مکانی پولرائزیشن آفسیٹ (Dpol)",
+            "1.9.10 - منصوبہ بندی میں نیا ٹیب دنیا بھر میں پولرائزیشن: آپ کے اسٹیشن اور چاند دیکھنے والی ہر جگہ کے درمیان مکانی پولرائزیشن آفسیٹ (Dpol) کے مطابق رنگا عالمی نقشہ، 45° (3 dB) کی ٹوٹی لکیر کے ساتھ؛ ماؤس رکھنے پر اور DX لیبل پر Dpol اور نقصان۔",
         };
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
@@ -55399,6 +55503,10 @@ namespace LunaCalc
             "1.9.9 - Min horisont: Månen har sin sande fase og hældning, og det nye felt «Månen set fra de to stationer» viser den, som du og DX ser den, med den rumlige polarisationsforskydning Dpol og tabet; lukkevindue og meddelelser: knapperne har ikke længere lyse hjørner på den grå bjælke.",
             "Månen set fra de to stationer",
             "Dpol {0}° · tab {1} dB (lineær polarisation)",
+            "Polarisation over verden",
+            "Det samme verdenskort, med landområderne farvet efter den rumlige polarisationsforskydning (Dpol) mellem din station og hvert sted, der ser Månen: grønt hvor de lineære polarisationer passer, rødt hvor de er drejet 90°. Med musen aflæser du Dpol og tabet i dB; Faraday-rotation er ikke medregnet.",
+            "Rumlig polarisationsforskydning (Dpol) i forhold til din station",
+            "1.9.10 - Ny fane Polarisation over verden (Planlægning): verdenskort farvet efter den rumlige polarisationsforskydning (Dpol) mellem din station og hvert sted, der ser Månen, med den stiplede 45°-linje (3 dB); Dpol og tab under musen og på DX-etiketten.",
         };
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
@@ -57373,6 +57481,10 @@ namespace LunaCalc
             "1.9.9 - Aking horizon: may tunay na yugto at hilig ang Buwan, at ipinapakita ito ng bagong kahong «Ang Buwan na nakikita ng dalawang istasyon» kung paano ito nakikita mo at ng DX, kasama ang spatial polarization offset Dpol at ang kawalan; window ng pagsasara at mga mensahe: wala nang maliwanag na sulok ang mga button sa abuhing bar.",
             "Ang Buwan na nakikita ng dalawang istasyon",
             "Dpol {0}° · kawalan {1} dB (linear na polarisasyon)",
+            "Polarisasyon sa buong mundo",
+            "Ang parehong mapa ng mundo, na ang lupa ay kinulayan ayon sa spatial polarization offset (Dpol) sa pagitan ng iyong istasyon at bawat lugar na nakakakita ng Buwan: berde kung saan magkatugma ang linear na polarisasyon, pula kung saan magkaiba ang mga ito nang 90°. Itapat ang mouse para mabasa ang Dpol at ang pagkawala sa dB; hindi kasama ang Faraday rotation.",
+            "Spatial polarization offset (Dpol) kumpara sa iyong istasyon",
+            "1.9.10 - Bagong tab Polarisasyon sa buong mundo (Pagpaplano): mapa ng mundo na kinulayan ayon sa spatial polarization offset (Dpol) sa pagitan ng iyong istasyon at bawat lugar na nakakakita ng Buwan, na may putol-putol na linya ng 45° (3 dB); Dpol at pagkawala sa ilalim ng mouse at sa label ng DX.",
         };
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
@@ -59347,6 +59459,10 @@ namespace LunaCalc
             "1.9.9 - Meu horizonte: a Lua tem sua fase e inclinação reais e o novo quadro «A Lua vista pelas duas estações» mostra-a como você a vê e como o DX a vê, com o desvio de polarização espacial Dpol e a perda; janela de fechamento e avisos: os botões não têm mais cantos claros sobre a barra cinza.",
             "A Lua vista pelas duas estações",
             "Dpol {0}° · perda {1} dB (polarização linear)",
+            "Polarização sobre o mundo",
+            "O mesmo mapa do mundo, com as terras coloridas segundo o desvio de polarização espacial (Dpol) entre a sua estação e cada local que vê a Lua: verde onde as polarizações lineares coincidem, vermelho onde estão giradas 90°. Passando o mouse você lê Dpol e a perda em dB; a rotação de Faraday não está incluída.",
+            "Desvio de polarização espacial (Dpol) em relação à sua estação",
+            "1.9.10 - Nova aba Polarização sobre o mundo (Planejamento): mapa do mundo colorido segundo o desvio de polarização espacial (Dpol) entre a sua estação e cada local que vê a Lua, com a linha tracejada de 45° (3 dB); Dpol e perda ao passar o mouse e no rótulo do DX.",
         };
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
@@ -61321,6 +61437,10 @@ namespace LunaCalc
             "1.9.9 - ขอบฟ้าของฉัน: ดวงจันทร์แสดงด้วยข้างขึ้นข้างแรมและความเอียงจริง และกรอบใหม่ «ดวงจันทร์ที่มองเห็นจากทั้งสองสถานี» แสดงดวงจันทร์อย่างที่คุณและ DX เห็น พร้อมค่าชดเชยโพลาไรเซชันเชิงพื้นที่ Dpol และการสูญเสีย; หน้าต่างปิดโปรแกรมและข้อความแจ้ง: ปุ่มบนแถบสีเทาไม่มีมุมสีอ่อนอีกต่อไป",
             "ดวงจันทร์ที่มองเห็นจากทั้งสองสถานี",
             "Dpol {0}° · การสูญเสีย {1} dB (โพลาไรเซชันเชิงเส้น)",
+            "โพลาไรเซชันทั่วโลก",
+            "แผนที่โลกเดียวกัน โดยระบายสีพื้นดินตามค่าออฟเซ็ตโพลาไรเซชันเชิงพื้นที่ (Dpol) ระหว่างสถานีของคุณกับแต่ละตำแหน่งที่เห็นดวงจันทร์: สีเขียวเมื่อโพลาไรเซชันเชิงเส้นตรงกัน สีแดงเมื่อหมุนต่างกัน 90° เลื่อนเมาส์เพื่ออ่าน Dpol และการสูญเสียเป็น dB ไม่รวมการหมุนฟาราเดย์",
+            "ออฟเซ็ตโพลาไรเซชันเชิงพื้นที่ (Dpol) เทียบกับสถานีของคุณ",
+            "1.9.10 - แท็บใหม่ โพลาไรเซชันทั่วโลก (การวางแผน): แผนที่โลกระบายสีตามออฟเซ็ตโพลาไรเซชันเชิงพื้นที่ (Dpol) ระหว่างสถานีของคุณกับแต่ละตำแหน่งที่เห็นดวงจันทร์ พร้อมเส้นประ 45° (3 dB); Dpol และการสูญเสียเมื่อเลื่อนเมาส์และบนป้าย DX",
         };
         public static readonly string[] TW = {
             " （根據經度估算）",
@@ -63295,6 +63415,10 @@ namespace LunaCalc
             "1.9.9 - 我的地平線：月亮依真實月相和傾斜繪製，新的「兩個電台看到的月亮」框顯示你和 DX 看到的月亮，並給出空間極化偏移 Dpol 和損耗；關閉視窗和提示框：按鈕在灰色欄上不再出現淺色邊角。",
             "兩個電台看到的月亮",
             "Dpol {0}° · 損耗 {1} dB（線極化）",
+            "全球極化圖",
+            "同一張世界地圖，陸地依你的電台與每個能看到月亮的地點之間的空間極化偏差 (Dpol) 著色：線極化一致處為綠色，相差 90° 處為紅色。滑鼠停留可讀取 Dpol 與以 dB 計的損耗；不含法拉第旋轉。",
+            "相對於你電台的空間極化偏差 (Dpol)",
+            "1.9.10 - 規劃中新增「全球極化圖」分頁：世界地圖依你的電台與每個能看到月亮的地點之間的空間極化偏差 (Dpol) 著色，附 45° (3 dB) 虛線；滑鼠停留與 DX 標籤上顯示 Dpol 與損耗。",
         };
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
@@ -65269,6 +65393,10 @@ namespace LunaCalc
             "1.9.9 - Mój horyzont: Księżyc ma prawdziwą fazę i nachylenie, a nowa ramka «Księżyc widziany z obu stacji» pokazuje go tak, jak widzisz go ty i DX, z przestrzennym przesunięciem polaryzacji Dpol i stratą; okno zamykania i komunikaty: przyciski nie mają już jasnych narożników na szarym pasku.",
             "Księżyc widziany z obu stacji",
             "Dpol {0}° · strata {1} dB (polaryzacja liniowa)",
+            "Polaryzacja na świecie",
+            "Ta sama mapa świata, z lądami pokolorowanymi według przestrzennego przesunięcia polaryzacji (Dpol) między twoją stacją a każdym miejscem, które widzi Księżyc: zielony tam, gdzie polaryzacje liniowe się zgadzają, czerwony tam, gdzie są obrócone o 90°. Po najechaniu myszą widać Dpol i stratę w dB; rotacja Faradaya nie jest uwzględniona.",
+            "Przestrzenne przesunięcie polaryzacji (Dpol) względem twojej stacji",
+            "1.9.10 - Nowa zakładka Polaryzacja na świecie (Planowanie): mapa świata pokolorowana według przestrzennego przesunięcia polaryzacji (Dpol) między twoją stacją a każdym miejscem, które widzi Księżyc, z przerywaną linią 45° (3 dB); Dpol i strata pod myszą i na etykiecie DX.",
         };
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
@@ -67243,6 +67371,10 @@ namespace LunaCalc
             "1.9.9 - Můj obzor: Měsíc má skutečnou fázi a sklon a nový rámeček «Měsíc viděný z obou stanic» ho ukazuje tak, jak ho vidíš ty a DX, s prostorovým posunem polarizace Dpol a ztrátou; okno ukončení a zprávy: tlačítka už na šedé liště nemají světlé rohy.",
             "Měsíc viděný z obou stanic",
             "Dpol {0}° · ztráta {1} dB (lineární polarizace)",
+            "Polarizace na světě",
+            "Stejná mapa světa, souš je obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc: zelená tam, kde se lineární polarizace shodují, červená tam, kde jsou otočené o 90°. Po najetí myší se zobrazí Dpol a ztráta v dB; Faradayova rotace není zahrnuta.",
+            "Prostorový posun polarizace (Dpol) vůči tvé stanici",
+            "1.9.10 - Nová záložka Polarizace na světě (Plánování): mapa světa obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc, s čárkovanou linií 45° (3 dB); Dpol a ztráta pod myší a na štítku DX.",
         };
         public static readonly string[] RO = {
             " (estimat din longitudine)",
@@ -69217,6 +69349,10 @@ namespace LunaCalc
             "1.9.9 - Orizontul meu: Luna are faza și înclinarea reale, iar noua casetă «Luna văzută de cele două stații» o arată așa cum o vezi tu și cum o vede DX, cu decalajul de polarizare spațială Dpol și pierderea; fereastra de închidere și mesajele: butoanele nu mai au colțuri deschise pe bara gri.",
             "Luna văzută de cele două stații",
             "Dpol {0}° · pierdere {1} dB (polarizare liniară)",
+            "Polarizarea pe glob",
+            "Aceeași hartă a lumii, cu uscatul colorat după decalajul spațial de polarizare (Dpol) dintre stația ta și fiecare loc care vede Luna: verde unde polarizările liniare coincid, roșu unde sunt rotite cu 90°. Trecând cu mouse-ul citești Dpol și pierderea în dB; rotația Faraday nu este inclusă.",
+            "Decalaj spațial de polarizare (Dpol) față de stația ta",
+            "1.9.10 - Filă nouă Polarizarea pe glob (Planificare): harta lumii colorată după decalajul spațial de polarizare (Dpol) dintre stația ta și fiecare loc care vede Luna, cu linia punctată de 45° (3 dB); Dpol și pierdere sub mouse și pe eticheta DX.",
         };
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
@@ -71191,6 +71327,10 @@ namespace LunaCalc
             "1.9.9 - Ο ορίζοντάς μου: η Σελήνη έχει την πραγματική φάση και κλίση της και το νέο πλαίσιο «Η Σελήνη όπως τη βλέπουν οι δύο σταθμοί» τη δείχνει όπως τη βλέπεις εσύ και ο DX, με τη χωρική μετατόπιση πόλωσης Dpol και την απώλεια· παράθυρο κλεισίματος και μηνύματα: τα κουμπιά δεν έχουν πια ανοιχτόχρωμες γωνίες στη γκρι μπάρα.",
             "Η Σελήνη όπως τη βλέπουν οι δύο σταθμοί",
             "Dpol {0}° · απώλεια {1} dB (γραμμική πόλωση)",
+            "Πόλωση σε όλο τον κόσμο",
+            "Ο ίδιος παγκόσμιος χάρτης, με την ξηρά χρωματισμένη κατά τη χωρική μετατόπιση πόλωσης (Dpol) ανάμεσα στον σταθμό σου και κάθε τόπο που βλέπει τη Σελήνη: πράσινο όπου οι γραμμικές πολώσεις συμπίπτουν, κόκκινο όπου είναι στραμμένες κατά 90°. Με το ποντίκι διαβάζεις Dpol και απώλεια σε dB· η περιστροφή Faraday δεν περιλαμβάνεται.",
+            "Χωρική μετατόπιση πόλωσης (Dpol) ως προς τον σταθμό σου",
+            "1.9.10 - Νέα καρτέλα Πόλωση σε όλο τον κόσμο (Σχεδιασμός): παγκόσμιος χάρτης χρωματισμένος κατά τη χωρική μετατόπιση πόλωσης (Dpol) ανάμεσα στον σταθμό σου και κάθε τόπο που βλέπει τη Σελήνη, με τη διακεκομμένη γραμμή των 45° (3 dB)· Dpol και απώλεια κάτω από το ποντίκι και στην ετικέτα του DX.",
         };
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
@@ -73165,6 +73305,10 @@ namespace LunaCalc
             "1.9.9 - Az én horizontom: a Hold valódi fázisával és dőlésével látszik, és az új «A Hold a két állomásról nézve» keret úgy mutatja, ahogy te és a DX látjátok, a térbeli polarizációs eltolással (Dpol) és a veszteséggel; bezáró ablak és üzenetek: a gombok sarkai már nem világosak a szürke sávon.",
             "A Hold a két állomásról nézve",
             "Dpol {0}° · veszteség {1} dB (lineáris polarizáció)",
+            "Polarizáció a világon",
+            "Ugyanaz a világtérkép, a szárazföld a saját állomásod és minden, a Holdat látó hely közötti térbeli polarizációs eltérés (Dpol) szerint színezve: zöld, ahol a lineáris polarizációk egyeznek, piros, ahol 90°-kal el vannak forgatva. Az egérrel leolvasható a Dpol és a veszteség dB-ben; a Faraday-forgatás nincs benne.",
+            "Térbeli polarizációs eltérés (Dpol) a saját állomásodhoz képest",
+            "1.9.10 - Új fül Polarizáció a világon (Tervezés): világtérkép a saját állomásod és minden, a Holdat látó hely közötti térbeli polarizációs eltérés (Dpol) szerint színezve, szaggatott 45°-os (3 dB) vonallal; Dpol és veszteség az egér alatt és a DX címkéjén.",
         };
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
@@ -75139,6 +75283,10 @@ namespace LunaCalc
             "1.9.9 - Môj obzor: Mesiac má skutočnú fázu a sklon a nový rámček «Mesiac videný z oboch staníc» ho ukazuje tak, ako ho vidíš ty a DX, s priestorovým posunom polarizácie Dpol a stratou; okno ukončenia a správy: tlačidlá už na sivej lište nemajú svetlé rohy.",
             "Mesiac videný z oboch staníc",
             "Dpol {0}° · strata {1} dB (lineárna polarizácia)",
+            "Polarizácia vo svete",
+            "Rovnaká mapa sveta, súš je zafarbená podľa priestorového posunu polarizácie (Dpol) medzi tvojou stanicou a každým miestom, ktoré vidí Mesiac: zelená tam, kde sa lineárne polarizácie zhodujú, červená tam, kde sú otočené o 90°. Po prechode myšou sa zobrazí Dpol a strata v dB; Faradayova rotácia nie je zahrnutá.",
+            "Priestorový posun polarizácie (Dpol) voči tvojej stanici",
+            "1.9.10 - Nová záložka Polarizácia vo svete (Plánovanie): mapa sveta zafarbená podľa priestorového posunu polarizácie (Dpol) medzi tvojou stanicou a každým miestom, ktoré vidí Mesiac, s čiarkovanou líniou 45° (3 dB); Dpol a strata pod myšou a na štítku DX.",
         };
     }
 
@@ -85130,7 +85278,7 @@ namespace LunaCalc
                 gruppiNav.Add(g);
             };
             add(Lang.T("In diretta"), "◎", new TabPage[] { tpTrack, tpPunt, tpOriz, tpSky });
-            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpStaz, tpElenchi, tpPos, tpMondo, tpCielo });
+            add(Lang.T("Pianificazione"), "◐", new TabPage[] { tpDgrd, tpDgFreq, tpStaz, tpElenchi, tpPos, tpMondo, tpMondoPol, tpCielo });
             add(Lang.T("Collegamento"), "⇄", new TabPage[] { tpBudget, tpBudgetD, tpGraves, tpSolar, tpExcel, tpDebug });
             add(Lang.T("Log"), "▦", new TabPage[] { tpMap });
             add(Lang.T("Aiuto e tools"), "?", new TabPage[] { tpIstr, tpEme, tpCavi });
@@ -86447,7 +86595,11 @@ namespace LunaCalc
         // ---------- Linguetta LUNA SUL MONDO (Pianificazione) ----------
         // Mappa del mondo senza foto aeree e senza reticolo Maidenhead: le terre emerse sono colorate secondo l'elevazione
         // della Luna vista da ogni località, nello stesso momento della linguetta Posizione della Luna.
-        TabPage tpMondo;
+        TabPage tpMondo, tpMondoPol;   // le due linguette condividono la stessa mappa (si sposta da una all'altra)
+        bool mondoPol;                 // true: colori = Dpol rispetto alla mia stazione, false: elevazione della Luna
+        float[] mondoDp;               // |Dpol| (°) per ogni pixel della mappa (solo nel modo polarizzazione)
+        double mondoPolMe;             // angolo di polarizzazione locale della mia stazione
+        TableLayoutPanel mondoRoot;
         PannelloDisegno pnlMondo;
         DateTimePicker dtpMondoData, dtpMondoOra;
         Label lblMondoLoc, lblMondoLocBox, lblMondoCoord, lblMondoEl, lblMondoNota;
@@ -86483,6 +86635,25 @@ namespace LunaCalc
             return MondoColori[MondoColori.Length - 1];
         }
 
+        // colore di |Dpol|: 0° verde scuro, 30° verde chiaro (1,2 dB), 45° giallo (3 dB), 60° arancio (6 dB), 90° rosso
+        static readonly double[] MondoPolTappe = { 0, 30, 45, 60, 90 };
+        static readonly Color[] MondoPolColori = { Color.FromArgb(26, 128, 64), Color.FromArgb(120, 196, 90), Color.FromArgb(246, 212, 60), Color.FromArgb(244, 140, 40), Color.FromArgb(214, 48, 39) };
+        static Color ColoreDpol(double dp)
+        {
+            dp = Math.Abs(dp);
+            if (dp <= 0) return MondoPolColori[0];
+            for (int i = 1; i < MondoPolTappe.Length; i++)
+                if (dp <= MondoPolTappe[i])
+                {
+                    double t = (dp - MondoPolTappe[i - 1]) / (MondoPolTappe[i] - MondoPolTappe[i - 1]);
+                    Color a = MondoPolColori[i - 1], b = MondoPolColori[i];
+                    return Color.FromArgb((int)(a.R + (b.R - a.R) * t), (int)(a.G + (b.G - a.G) * t), (int)(a.B + (b.B - a.B) * t));
+                }
+            return MondoPolColori[MondoPolColori.Length - 1];
+        }
+
+        bool MondoVisibile() { return tabs != null && (tabs.SelectedTab == tpMondo || (tpMondoPol != null && tabs.SelectedTab == tpMondoPol)); }
+
         DateTime MondoMomento()
         {
             DateTime d = dtpMondoData.Value.Date, o = dtpMondoOra.Value;
@@ -86512,12 +86683,13 @@ namespace LunaCalc
         void MondoAggiorna()
         {
             mondoSporca = true;
-            if (pnlMondo != null && tabs != null && tabs.SelectedTab == tpMondo) pnlMondo.Invalidate();
+            if (pnlMondo != null && MondoVisibile()) pnlMondo.Invalidate();
         }
 
         void BuildMondoTab(TabPage tp)
         {
             TableLayoutPanel root = new TableLayoutPanel();
+            mondoRoot = root;
             root.Dock = DockStyle.Fill;
             root.ColumnCount = 1; root.RowCount = 2;
             root.RowStyles.Add(new RowStyle(SizeType.AutoSize));
@@ -86645,7 +86817,7 @@ namespace LunaCalc
             timerMondo.Interval = 15000;
             timerMondo.Tick += (s, e) =>
             {
-                if (tabs.SelectedTab != tpMondo) return;
+                if (!MondoVisibile()) return;
                 DateTime n = NowUtcMinute();
                 if (dtp.Value == n) return;
                 mondoDaTimer = true;
@@ -86656,7 +86828,20 @@ namespace LunaCalc
                 timerMondo.Enabled = chkMondoSegui.Checked;
                 if (chkMondoSegui.Checked) { mondoDaTimer = true; try { dtp.Value = NowUtcMinute(); } finally { mondoDaTimer = false; } }
             };
-            tabs.SelectedIndexChanged += (s, e) => { if (tabs.SelectedTab == tpMondo && mondoSporca) pnlMondo.Invalidate(); };
+            // una sola mappa per le due linguette: va nella linguetta scelta e cambia i colori
+            tabs.SelectedIndexChanged += (s, e) =>
+            {
+                if (!MondoVisibile()) return;
+                bool pol = tabs.SelectedTab == tpMondoPol;
+                if (mondoRoot.Parent != tabs.SelectedTab)
+                {
+                    tabs.SelectedTab.SuspendLayout();
+                    tabs.SelectedTab.Controls.Add(mondoRoot);
+                    tabs.SelectedTab.ResumeLayout(true);
+                }
+                if (pol != mondoPol) { mondoPol = pol; mondoSporca = true; }
+                if (mondoSporca) pnlMondo.Invalidate();
+            };
             MondoDaPosizione();
         }
 
@@ -86700,6 +86885,14 @@ namespace LunaCalc
                 mx[x] = Math.Min(W - 1, (int)((lon + 180.0) / 360.0 * W));
             }
             mondoEl = new float[mondoW * mondoH];
+            mondoDp = mondoPol ? new float[mondoW * mondoH] : null;
+            double[] sinH = null;
+            if (mondoPol)
+            {
+                sinH = new double[mondoW];
+                for (int x = 0; x < mondoW; x++) { double lon = -180.0 + (x + 0.5) / mondoW * 360.0; sinH[x] = Math.Sin((gast + lon) * Math.PI / 180.0 - ra); }
+                mondoPolMe = me.Ok ? Moon.PolAngle(me.Lat, mondoMe.Az, mondoMe.El) : 0;
+            }
             bool[] terra = new bool[mondoW * mondoH];
             double sinD = Math.Sin(dec), cosD = Math.Cos(dec), kPar = 6378.14 / dist;
             for (int y = 0; y < mondoH; y++)
@@ -86718,6 +86911,14 @@ namespace LunaCalc
                     }
                     mondoEl[y * mondoW + x] = (float)el;
                     terra[y * mondoW + x] = m[my * W + mx[x]] != 0;
+                    if (mondoDp != null)
+                    {
+                        // azimut della Luna da quel punto (da nord verso est) e angolo di polarizzazione locale (WSJT-X)
+                        double est = -cosD * sinH[x], nord = sinD * Math.Cos(phi) - cosD * Math.Sin(phi) * cosH[x];
+                        double az = Math.Atan2(est, nord) * 180.0 / Math.PI;
+                        if (az < 0) az += 360.0;
+                        mondoDp[y * mondoW + x] = (float)Math.Abs(Moon.PolOffset(mondoPolMe, Moon.PolAngle(lat, az, el)));
+                    }
                 }
             }
 
@@ -86755,13 +86956,19 @@ namespace LunaCalc
                     else
                     {
                         bool bordo = (x + 1 < mondoW && !terra[i + 1]) || (y + 1 < mondoH && !terra[i + mondoW]) || (x > 0 && !terra[i - 1]) || (y > 0 && !terra[i - mondoW]);
-                        c = bordo ? costa : (el >= 0 ? ColoreElevazione(el) : sotto);
+                        c = bordo ? costa : (el < 0 || (mondoDp != null && !mondoMeOk) ? sotto : (mondoDp != null ? ColoreDpol(mondoDp[i]) : ColoreElevazione(el)));
                     }
                     // linea dell'orizzonte (continua) e dei 10° (tratteggiata)
                     if (x + 1 < mondoW && y + 1 < mondoH)
                     {
                         float e2 = mondoEl[i + 1], e3 = mondoEl[i + mondoW];
                         if ((el >= 0) != (e2 >= 0) || (el >= 0) != (e3 >= 0)) c = linea;
+                        else if (mondoDp != null)
+                        {
+                            // nel modo polarizzazione: tratteggio a 45° (3 dB), solo dove la Luna è sopra l'orizzonte
+                            float d1 = mondoDp[i], d2 = mondoDp[i + 1], d3 = mondoDp[i + mondoW];
+                            if (el >= 0 && mondoMeOk && ((d1 >= 45) != (d2 >= 45) || (d1 >= 45) != (d3 >= 45)) && Math.Abs(d1 - d2) < 20 && Math.Abs(d1 - d3) < 20 && ((x + y) / S(5)) % 2 == 0) c = Color.FromArgb((c.R + linea.R) / 2, (c.G + linea.G) / 2, (c.B + linea.B) / 2);
+                        }
                         else if (((el >= 10) != (e2 >= 10) || (el >= 10) != (e3 >= 10)) && ((x + y) / S(5)) % 2 == 0) c = Color.FromArgb((c.R + linea.R) / 2, (c.G + linea.G) / 2, (c.B + linea.B) / 2);
                     }
                     pix[i] = c.ToArgb();
@@ -86841,9 +87048,12 @@ namespace LunaCalc
                     PointF pd = MondoXY(dx.Lat, dx.Lon);
                     using (Brush bd = new SolidBrush(Color.FromArgb(217, 119, 6))) g.FillEllipse(bd, pd.X - S(6), pd.Y - S(6), S(12), S(12));
                     using (Pen pw = new Pen(Color.White, S(1.5f))) g.DrawEllipse(pw, pd.X - S(6), pd.Y - S(6), S(12), S(12));
-                    double eDx = MondoElevA(dx.Lat, dx.Lon);
+                    double eDx, aDx;
+                    MondoElAz(dx.Lat, dx.Lon, out eDx, out aDx);
                     string nomeDx = txtDxCall != null && txtDxCall.Text.Trim().Length > 0 ? txtDxCall.Text.Trim() + " · " : "";
-                    EtichettaMappa(g, nomeDx + Locator.Da(dx.Lat, dx.Lon, 6), fb, " · El " + eDx.ToString("0.0", c2) + "°", pd.X + S(10), pd.Y + S(4));
+                    string codaDx = " · El " + eDx.ToString("0.0", c2) + "°";
+                    if (mondoPol && mondoMeOk && eDx >= 0) codaDx += " · Dpol " + Math.Abs(Moon.PolOffset(mondoPolMe, Moon.PolAngle(dx.Lat, aDx, eDx))).ToString("0", c2) + "°";
+                    EtichettaMappa(g, nomeDx + Locator.Da(dx.Lat, dx.Lon, 6), fb, codaDx, pd.X + S(10), pd.Y + S(4));
                 }
                 // la mia stazione: stella blu
                 if (mondoMeOk)
@@ -86878,6 +87088,11 @@ namespace LunaCalc
                     List<string> r = new List<string>();
                     r.Add(Locator.Da(la, lo, 4) + " · " + Math.Abs(la).ToString("0.0", c2) + "° " + (la >= 0 ? "N" : "S") + " " + Math.Abs(lo).ToString("0.0", c2) + "° " + (lo >= 0 ? "E" : "W"));
                     r.Add(el >= 0 ? Lang.T("Luna:") + " El " + el.ToString("0.0", c2) + "°   Az " + az.ToString("0", c2) + "°" : Lang.T("Luna sotto l'orizzonte"));
+                    if (mondoPol && mondoMeOk && el >= 0)
+                    {
+                        double dp = Math.Abs(Moon.PolOffset(mondoPolMe, Moon.PolAngle(la, az, el)));
+                        r.Insert(1, string.Format(c2, Lang.T("Dpol {0}° · perdita {1} dB (polarizzazione lineare)"), dp.ToString("0", c2), Moon.PolLoss(dp).ToString("0.0", c2)));
+                    }
                     if (mondoMeOk) r.Add(Lang.T("Distanza da te:") + " " + GreatCircleKm(me.Lat, me.Lon, la, lo).ToString("N0", c2) + " km");
                     r.Add(Lang.T("clic: usa come stazione DX"));
                     float w = 0, h = S(8);
@@ -86896,7 +87111,7 @@ namespace LunaCalc
                     float yy = by + S(4);
                     for (int i = 0; i < r.Count; i++)
                     {
-                        Font f = i == 0 || i == 1 ? fb : fl;
+                        Font f = i == 0 || i == 1 || (mondoPol && i == 2) ? fb : fl;
                         using (Brush bt = new SolidBrush(i == r.Count - 1 ? Tema.Muted : Tema.Fore)) g.DrawString(r[i], f, bt, bx + S(9), yy);
                         yy += g.MeasureString(r[i], f).Height;
                     }
@@ -86907,14 +87122,14 @@ namespace LunaCalc
                 for (int i = 0; i < (int)barra.Width; i++)
                 {
                     double v = i / barra.Width * 90.0;
-                    using (Pen pv = new Pen(ColoreElevazione(v))) g.DrawLine(pv, barra.Left + i, barra.Top, barra.Left + i, barra.Bottom);
+                    using (Pen pv = new Pen(mondoPol ? ColoreDpol(v) : ColoreElevazione(v))) g.DrawLine(pv, barra.Left + i, barra.Top, barra.Left + i, barra.Bottom);
                 }
                 using (Pen pb = new Pen(Tema.Muted)) g.DrawRectangle(pb, barra.Left, barra.Top, barra.Width, barra.Height);
                 using (Font fs = FontPx(Lang.FontUi, S(10.5f), false))
                 using (Brush tm = new SolidBrush(Tema.Muted))
                 using (Brush tf = new SolidBrush(Tema.Fore))
                 {
-                    foreach (double v in MondoTappe)
+                    foreach (double v in mondoPol ? MondoPolTappe : MondoTappe)
                     {
                         float x = barra.Left + (float)(v / 90.0 * barra.Width);
                         string sv = v.ToString("0", c2) + "°";
@@ -86922,7 +87137,7 @@ namespace LunaCalc
                         g.DrawString(sv, fs, tm, Math.Min(barra.Right - ws, Math.Max(barra.Left, x - ws / 2)), barra.Bottom + S(1));
                     }
                     float x2 = barra.Right + S(16);
-                    string t1 = Lang.T("Elevazione della Luna vista da ogni località");
+                    string t1 = mondoPol ? Lang.T("Offset di polarizzazione spaziale (Dpol) rispetto alla tua stazione") : Lang.T("Elevazione della Luna vista da ogni località");
                     g.DrawString(t1, fl, tf, x2, ly - S(2)); x2 += g.MeasureString(t1, fl).Width + S(18);
                     Color sotto = Tema.Scuro ? Color.FromArgb(78, 86, 100) : Color.FromArgb(206, 211, 219);
                     Color mare = Tema.Scuro ? Color.FromArgb(30, 38, 52) : Color.FromArgb(234, 241, 248);
@@ -86932,7 +87147,8 @@ namespace LunaCalc
                     using (Pen p1 = new Pen(linea, S(2.5f))) g.DrawLine(p1, x2, ly + S(5), x2 + S(20), ly + S(5));
                     x2 += S(26); string t3 = Lang.T("orizzonte (0°)"); g.DrawString(t3, fl, tf, x2, ly - S(2)); x2 += g.MeasureString(t3, fl).Width + S(18);
                     using (Pen p2 = new Pen(linea, S(2.5f))) { p2.DashStyle = DashStyle.Dash; g.DrawLine(p2, x2, ly + S(5), x2 + S(20), ly + S(5)); }
-                    x2 += S(26); g.DrawString("10°", fl, tf, x2, ly - S(2)); x2 += g.MeasureString("10°", fl).Width + S(18);
+                    string t4 = mondoPol ? "45° (3 dB)" : "10°";
+                    x2 += S(26); g.DrawString(t4, fl, tf, x2, ly - S(2)); x2 += g.MeasureString(t4, fl).Width + S(18);
                     using (Brush b3 = new SolidBrush(mare)) g.FillRectangle(b3, x2, ly, S(20), S(11));
                     using (Pen pb = new Pen(Tema.Muted)) g.DrawRectangle(pb, x2, ly, S(20), S(11));
                     x2 += S(26); g.DrawString(Lang.T("mari (non colorati)"), fl, tf, x2, ly - S(2));
@@ -87744,7 +87960,7 @@ namespace LunaCalc
         // ---------- Linguette fisse, tema e caratteri ----------
 
         public const string NomeProgramma = "YAEC - Yet Another EME Calc";
-        public const string Versione = "1.9.9";
+        public const string Versione = "1.9.10";
         public static string TitoloProgramma { get { return NomeProgramma + " " + Versione + " - " + Lang.T("a cura di Costantino IC8TEM"); } }
         string TitoloFinestra()
         {
@@ -91132,6 +91348,7 @@ namespace LunaCalc
             Lang.T("1.9.2 - Nuova linguetta Rumore del cielo (Skynoise) in Pianificazione: temperatura d'antenna calcolata con il metodo di G8ONH e G4SWX dal diagramma completo dell'antenna (file .out del NEC, YA-NEC o fascio gaussiano) e dalla mappa del cielo (Remazeilles, Haslam, GSM 2008 o LFmap) a 50, 144, 432 MHz e 23 cm, con il percorso della Luna nel mese, la temperatura durante il passaggio per te e per il DX, l'effetto sul Budget EME yagi e il confronto con DJ9BV; collaudo automatico in compila.bat; nel manuale TEORIA E CONSIGLI SULL'EME il rumore del cielo con le fonti a confronto, il guadagno dei dischi (PE1RKI o calcolo per aliquote, Ruze), il primo fuoco sopra i 2320 MHz, la rotazione dell'illuminatore e la Luna illuminata dal fascio (BWF)."),
             Lang.T("1.9.3 - Nomi dei pacchetti uguali a quelli di YA-MS (-windows-x64/-x86/-arm64, -windows7-x64/-x86, -mac-apple-silicon, -mac-intel, -linux-x64/-arm64/-armv7l/-x86, -raspberry-pi-64bit/-32bit, -alpine-x64/-arm64); pacchetti .rpm, Arch e Slackware anche per ARM; nelle note della release una tabella con il collegamento a ogni pacchetto per ogni sistema. Questa versione contiene anche i file con i vecchi nomi, solo per l'aggiornamento automatico dalla 1.9.1 e dalla 1.9.2."),
             Lang.T("1.9.5 - Budget EME yagi e dischi: costo di 0,1 dB di perdita in più prima del preampli (PA3CSG) e nuova sezione Prova della stazione con il G/T sul cielo freddo e il fattore Y previsto su Sole, Luna, Cas A e terreno (G3LTF, EMECalc di VK3UM); Budget EME dischi: calo dell'illuminazione al bordo e rete del disco, con la Tant stimata da cielo, ricaduta e rete, e il G/T misurato da G3LTF a confronto; nuovo paragrafo nel manuale; riga ΔT minimo misurabile con la banda passante e il tempo d'integrazione τ (Antenna Engineering Handbook, eq. 41-21); terreno del DX: orizzonte SRTM1 attorno al suo locator nella linguetta Il mio orizzonte, con finestre comuni, barra delle 24 ore, Volta celeste e Stazioni da provare che ne tengono conto (locator di almeno 6 caratteri); ROS dell'antenna nella prova della stazione (AEH eq. 41-19); diametro del Sole da 0,524° a 0,542° con la distanza Terra–Sole; nota «YAEC calcola, non progetta apparati» nelle fonti e nei consigli."),
+            Lang.T("1.9.10 - Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX."),
             Lang.T("1.9.9 - Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio."),
             Lang.T("1.9.8 - Il mio orizzonte: la Luna è disegnata in scala vera (circa 0,5°), con un cerchio tratteggiato come segnaposto; aggiornamento automatico solo con l'impronta SHA-256 verificata (si annulla se l'elenco delle impronte manca o non contiene il pacchetto); i collegamenti aprono solo indirizzi web e di posta; macOS: il lanciatore controlla Mono (architettura, Rosetta, quarantena) e spiega gli errori 126 e 127."),
             Lang.T("1.9.7 - Traduzioni completate in bengalese, arabo e turco (62 testi mancanti: perdite e guadagni della catena RX/TX, formula di Friis, schermata principale, descrizione delle linguette); Windows 7, 8 e 8.1 dichiarati nel manifesto del programma."),
@@ -91466,7 +91683,7 @@ namespace LunaCalc
                 foreach (string[] x in DescrizioniLinguette()) desc[x[0]] = x[1];
                 string[][] gruppi = {
                     new string[] { Lang.T("In diretta"), Lang.T("Posizione live e +- 24h"), Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Il mio orizzonte"), Lang.T("Volta celeste") },
-                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Stazioni da provare"), Lang.T("Elenchi delle stazioni EME"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo"), Lang.T("Rumore del cielo (Skynoise)") },
+                    new string[] { Lang.T("Pianificazione"), Lang.T("Distanza e Dgrd"), Lang.T("DGRD per frequenza"), Lang.T("Stazioni da provare"), Lang.T("Elenchi delle stazioni EME"), Lang.T("Posizione della Luna"), Lang.T("Luna sul mondo"), Lang.T("Polarizzazione sul mondo"), Lang.T("Rumore del cielo (Skynoise)") },
                     new string[] { Lang.T("Collegamento"), Lang.T("Budget EME yagi"), Lang.T("Budget EME dischi"), Lang.T("Radar GRAVES"), Lang.T("Rumore solare"), Lang.T("Export in Excel dei calcoli"), Lang.T("Controllo dei calcoli") },
                     new string[] { Lang.T("Log"), Lang.T("Mappa WWL e ADIF") },
                     new string[] { Lang.T("Aiuto e tools"), Lang.T("MANUALE D'USO"), Lang.T("TEORIA E CONSIGLI SULL'EME"), Lang.T("CAVI COASSIALI") },
@@ -93098,6 +93315,7 @@ namespace LunaCalc
                 new string[] { Lang.T("Volta celeste"), Lang.T("Il cielo visto dal tuo QTH, con l'orizzonte piatto e i colori del rumore del cielo (dal blu al rosso) alla frequenza scelta, i limiti della tua antenna, l'orizzonte del DX, le radiosorgenti, il Sole e il percorso della Luna nelle prossime 24 ore.") + " " + Lang.T("Le zone fuori dai limiti della tua antenna sono coperte da righe diagonali grigio chiaro.") },
                 new string[] { Lang.T("Ricognizione dei miei ostacoli"), Lang.T("Mappa aerofotografica o topografica centrata sulla tua stazione, con sopra la volta celeste in pianta (orizzonte = cerchio esterno, zenit = centro): posizione attuale della Luna, percorso nelle prossime 24 ore con sorgere e tramonto, limiti dell'antenna in giallo e zone fuori dai limiti sfocate in grigio chiaro. Le maniglie gialle si trascinano con il mouse per regolare i limiti direttamente sulla mappa; la rotella cambia lo zoom.") + " " + Lang.T("La casella \"Sfuma le zone fuori dai limiti\" accende o spegne la sfocatura.") + " " + Lang.T("In alto a destra due cursori regolano l'opacità e il tono del grigio delle zone fuori dai limiti (il tono vale anche per la Volta celeste).") },
                 new string[] { Lang.T("Luna sul mondo"), Lang.T("Mappa del mondo con le terre colorate secondo l'elevazione della Luna vista da ogni località, nello stesso momento della Posizione della Luna; passando il mouse si leggono elevazione, azimut e distanza, con un clic il punto diventa la stazione DX.") },
+                new string[] { Lang.T("Polarizzazione sul mondo"), Lang.T("La stessa mappa del mondo, con le terre colorate secondo lo sfasamento di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna: verde dove le polarizzazioni lineari coincidono, rosso dove sono ruotate di 90°. Passando il mouse si leggono Dpol e la perdita in dB; la rotazione di Faraday non è compresa.") },
                 new string[] { Lang.T("Posizione della Luna"), Lang.T("Tabella per il periodo scelto (in giorni, con l'intervallo in minuti) con il colore della puntabilità; passando il mouse sull'intestazione di una colonna compare la sua spiegazione. Esportazione CSV per Excel.") },
                 new string[] { Lang.T("Budget EME yagi"), Lang.T("Bilancio del collegamento per ogni banda scelta (da 50 a 1296 MHz), con i dati di ogni banda memorizzati separatamente. A sinistra le due stazioni (antenna e guadagno, BETA per le antenne senza elevazione), sei indicatori (collegamento possibile, EIRP mia e del DX, perdita di tratta, S/N io → DX e DX → io nella banda passante scelta e con il Sole, riportato anche a 2500 Hz) e la tabella con tutti i passaggi; a destra lo schema dell'impianto di trasmissione e ricezione della stazione scelta: antenna e Tant, cavo antenna – relè, relè coassiale, trasmettitore con il suo cavo, preamplificatore, cavo di discesa, transverter facoltativo, cavetti e radio con MDS e modo. I cavi si scelgono dal database della linguetta CAVI COASSIALI e le perdite si calcolano da sole. In alto a destra la casella CALCOLI APPROFONDITI, la stessa della schermata principale.") },
                 new string[] { Lang.T("Budget EME dischi"), Lang.T("Lo stesso bilancio del Budget EME yagi per le stazioni con antenna a disco, a 432, 902 e 1296 MHz, con valori memorizzati a parte. Nella scheda di ogni stazione si sceglie il disco a primo fuoco o offset (nell'offset il diametro è l'apertura proiettata, cioè l'asse minore, e manca l'oscuramento dell'illuminatore: W2IMU) e si scrivono diametro, efficienza (60 % in media, 60–80 % tipica) e rapporto f/D; il guadagno si calcola con la formula di PE1RKI, G = 10·log[η·(π·D/λ)²], con i dBd (dBi − 2,15) e l'apertura a −3 dB (70·λ/D). Lo schema mostra il disco con l'illuminatore e la catena completa: preamplificatore a uno o due stadi (fino a circa 30 dB), cavo di discesa, transverter con la sua uscita in trasmissione e il cavo verso l'amplificatore, con il controllo del pilotaggio richiesto dal PA.") },
@@ -93985,7 +94203,7 @@ namespace LunaCalc
             string giro = Environment.GetEnvironmentVariable("YAEC_GIRO");
             if (!string.IsNullOrEmpty(giro)) this.Shown += (s, e) =>
             {
-                TabPage[] tutte = { tpTrack, tpPos, tpBudget, tpBudgetD, tpGraves, tpSolar, tpSky, tpPunt, tpDgrd, tpMondo, tpMap, tpExcel, tpDebug, tpIstr, tpEme, tpCavi, tpContatti, tpLicenza, tpAbout };
+                TabPage[] tutte = { tpTrack, tpPos, tpBudget, tpBudgetD, tpGraves, tpSolar, tpSky, tpPunt, tpDgrd, tpMondo, tpMondoPol, tpMap, tpExcel, tpDebug, tpIstr, tpEme, tpCavi, tpContatti, tpLicenza, tpAbout };
                 int n = -1;
                 System.Windows.Forms.Timer tg = new System.Windows.Forms.Timer();
                 tg.Interval = 3000;
@@ -95171,6 +95389,7 @@ namespace LunaCalc
             BuildCieloTab(tpCielo);
             pagineNuove.Add(tpCielo);
             tpMondo = new TabPage(Lang.T("Luna sul mondo"));
+            tpMondoPol = new TabPage(Lang.T("Polarizzazione sul mondo"));
             tpMap = new TabPage(Lang.T("Mappa WWL e ADIF"));
             BuildMapTab(tpMap);
             tpAbout = new TabPage(Lang.T("INFORMAZIONI E CREDITI"));
@@ -95187,7 +95406,7 @@ namespace LunaCalc
             BuildExcelTab(tpExcel);
             tpDebug = new TabPage(Lang.T("Controllo dei calcoli"));
             BuildDebugTab(tpDebug);
-            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpStaz, tpElenchi, tpCielo, tpSky, tpPunt, tpOriz, tpPos, tpMondo, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
+            foreach (TabPage tpx in new TabPage[] { tpTrack, tpDgrd, tpDgFreq, tpStaz, tpElenchi, tpCielo, tpSky, tpPunt, tpOriz, tpPos, tpMondo, tpMondoPol, tpBudget, tpBudgetD, tpGraves, tpSolar, tpMap, tpAbout, tpIstr, tpEme, tpExcel, tpDebug, tpCavi, tpContatti, tpLicenza })
                 tabs.TabPages.Add(tpx);
             BuildMondoTab(tpMondo);   // dopo che tabs esiste: segue il cambio di linguetta
             BuildElenchiTab(tpElenchi);

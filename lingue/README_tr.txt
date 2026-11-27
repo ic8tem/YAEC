@@ -44,6 +44,7 @@ Hatalar, daha iyi veriler, çeviriler: ccerrotta@gmail.com · ic8tem@gmail.com �
 
 SÜRÜM GEÇMİŞİ
 1.0'dan önceki sürümlere beta denir.
+- 1.9.10 - Planlamada yeni sekme Dünya genelinde polarizasyon: istasyonun ile Ay'ı gören her yer arasındaki uzaysal polarizasyon kaymasına (Dpol) göre renklendirilmiş dünya haritası, kesikli 45° (3 dB) çizgisiyle; fareyle üzerine gelince ve DX etiketinde Dpol ve kayıp.
 - 1.9.9 - Ufkum: Ay gerçek evresi ve eğimiyle çiziliyor; yeni «İki istasyondan görülen Ay» kutusu onu senin ve DX'in gördüğü gibi, uzaysal polarizasyon kayması Dpol ve kayıpla gösteriyor; kapatma penceresi ve mesajlar: düğmelerin gri çubuk üzerinde artık açık renkli köşeleri yok.
 - 1.9.8 - Ufkum: Ay gerçek boyutunda (yaklaşık 0,5°) çiziliyor, işaret olarak kesikli bir daireyle; otomatik güncelleme yalnızca doğrulanmış SHA-256 parmak iziyle yapılıyor (parmak izi listesi yoksa ya da paketi içermiyorsa iptal ediliyor); bağlantılar yalnızca web ve e-posta adreslerini açıyor; macOS: başlatıcı Mono'yu (mimari, Rosetta, karantina) denetliyor ve 126 ile 127 hatalarını açıklıyor.
 - 1.9.7 - Bengalce, Arapça ve Türkçe çeviriler tamamlandı (eksik 62 metin: RX/TX zincirinin kayıpları ve kazançları, Friis formülü, ana ekran, sekmelerin açıklaması); Windows 7, 8 ve 8.1 programın manifestosunda belirtildi.
