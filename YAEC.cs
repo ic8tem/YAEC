@@ -80358,7 +80358,27 @@ namespace LunaCalc
                         {
                             vp.DashStyle = DashStyle.Dash;
                             foreach (RectangleF rv in zone)
-                                if (rv.Width > 1 && rv.Height > 1) g.DrawRectangle(vp, rv.X, rv.Y, rv.Width, rv.Height);
+                            {
+                                if (rv.Width <= 1 || rv.Height <= 1) continue;
+                                if (st.Orizzonte == null) { g.DrawRectangle(vp, rv.X, rv.Y, rv.Width, rv.Height); continue; }
+                                // minimo a scalini, grado per grado di azimut: il più alto fra il limite dell'antenna e il terreno in quel grado
+                                // (lo stesso minimo che usano i calcoli: sotto il terreno la Luna è «dietro il terreno»)
+                                double azL = (rv.Left - a.Left) / a.Width * 360.0, azR = (rv.Right - a.Left) / a.Width * 360.0;
+                                List<PointF> bordo = new List<PointF>();
+                                bordo.Add(new PointF(rv.Left, yt)); bordo.Add(new PointF(rv.Right, yt));
+                                double zA = azR;
+                                while (zA > azL + 1e-6)
+                                {
+                                    double zB = Math.Max(azL, Math.Ceiling(zA - 1.0 - 1e-9));
+                                    double mx = e1;
+                                    for (double zz = zB; zz <= zA + 1e-9; zz += 0.25) mx = Math.Max(mx, st.Orizzonte(((zz % 360.0) + 360.0) % 360.0));
+                                    float yy = Y(Math.Max(ymin, Math.Min(e2c, mx)));
+                                    bordo.Add(new PointF(Xd(zA), yy)); bordo.Add(new PointF(Xd(zB), yy));
+                                    zA = zB;
+                                }
+                                bordo.Add(new PointF(rv.Left, yt));
+                                g.DrawLines(vp, bordo.ToArray());
+                            }
                         }
                         g.Clip = primaClipV;
                     }
