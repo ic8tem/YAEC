@@ -29,6 +29,7 @@ jobs:
           foreach ($v in @(@{n="1.9.11"; exe="vecchia\YAEC.exe"}, @{n="ramo"; exe="nuova.exe"})) {
             foreach ($lg in @("it","en")) {
               foreach ($tab in @("", "Luna sul mondo")) {
+                if ($lg -eq "en" -and $tab -ne "") { continue }
                 $d = "prova\$($v.n)-$lg-$giro-$($tab.Length)"
                 New-Item -ItemType Directory -Force "$d\data" | Out-Null
                 Copy-Item $v.exe "$d\YAEC.exe"

@@ -90330,9 +90330,33 @@ namespace LunaCalc
                 now.ToString("yyyyMMddHHmm", inv), "|", trk.DxTzNome, "|", Tema.Schema, "|", Lang.Idx, "|", corrDx });
             if (forzaFinestra || fs != trkFirmaSchede) { trkFirmaSchede = fs; InvalidaSchede(); }
             else if (cardUtc != null) cardUtc.Invalidate();
-            pnlTrk.Invalidate();
+            // 1.9.12: anche il pannello grande si ridisegna solo se cambia qualcosa di visibile (valori alla precisione con cui
+            // sono scritti: gradi al decimo, Hz interi, minuti, la linea «adesso» ogni 30 secondi); prima ogni secondo
+            string fp = FirmaTrk();
+            if (forzaFinestra || trkTrascina || fp != trkFirmaPannello) { trkFirmaPannello = fp; pnlTrk.Invalidate(); }
         }
-        string trkFirmaSchede = "";
+        string trkFirmaSchede = "", trkFirmaPannello = "";
+
+        string FirmaTrk()
+        {
+            StringBuilder b = new StringBuilder(512);
+            Action<object> a = o => { b.Append(Convert.ToString(o, inv)); b.Append('|'); };
+            Action<double, string> d = (v, f) => { b.Append(v.ToString(f, inv)); b.Append('|'); };
+            a(trk.Utc.Ticks / TimeSpan.FromSeconds(30).Ticks); a(trk.Diretta); a(trk.MeOk); a(trk.UsaDx); a(trk.DxValido); a(trk.DxTzNome);
+            d(trk.Az, "F1"); d(trk.El, "F1"); d(trk.AzDx, "F1"); d(trk.ElDx, "F1");
+            a(trk.Stato); a(trk.StatoTesto); a(trk.Conto);
+            d(trk.Az1, "F1"); d(trk.Az2, "F1"); d(trk.El1, "F1"); d(trk.El2, "F1");
+            foreach (string[] r in trk.Info) foreach (string x in r) a(x);
+            d(trk.Dgrd, "F2"); a(trk.DxTitolo); a(trk.DxRiga); a(trk.DxStato);
+            d(trk.Illum, "F3"); a(trk.Crescente); a(trk.Fase); a(trk.SorgeTramonta); a(trk.Finestra); a(trk.Avvisi);
+            a(trk.SnOn); a(trk.SnValido); a(trk.SnComune); a(trk.SnTitolo); a(trk.SnMsg); a(trk.SnRiga);
+            d(trk.SnMargine, "F1"); d(trk.SnSoglia, "F1"); d(trk.SnA, "F1"); d(trk.SnB, "F1"); d(trk.SnSoleA, "F1"); d(trk.SnSoleB, "F1");
+            a(trk.EcoTxt); a(trk.DxIoTxt); a(trk.CfomTx); a(trk.CfomRx); a(trk.DxSole); a(trk.SnNomeModo);
+            a(trk.Striscia == null ? 0 : System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(trk.Striscia)); a(trk.StrisciaT0.Ticks);
+            a(trk.FinTrovata); a(trk.FinInCorso); a(trk.FinA.Ticks); a(trk.FinB.Ticks);
+            a(Tema.Schema); a(Lang.Idx); a(trkScelto.HasValue);
+            return b.ToString();
+        }
 
         // "· 10 caratteri · ±18 m", con un consiglio per la mia stazione se il locator è corto
         string PrecisioneLoc(string loc, double lat, bool mia)
