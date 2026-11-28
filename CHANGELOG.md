@@ -5,6 +5,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>English</b> – Version history</summary>
 
+- **1.9.12** – Less CPU and less memory, with the same calculations: on the Live page the top cards and the large panel are redrawn only when a visible value changes (the UTC clock every second), and only the language in use is loaded into memory; on Windows the CPU of the Live page drops by about 60% and the memory peak at start-up from about 350 to about 155 MB.
 - **1.9.11** – Silent automatic update, as in YA-NEC: YAEC checks GitHub at start-up and every 30 minutes, downloads the package in the background and checks its SHA-256 fingerprint; on Windows it installs itself when you close the program, on Linux, BSD and macOS the new version starts at the next launch, and a message tells you which version it was updated from (.deb, .rpm, Arch and Slackware packages stay with the package manager). My horizon: the violet box of the pointable area has a stepped minimum, degree by degree of azimuth (the higher of the antenna limit and the terrain), for your station and for the DX.
 - **1.9.10** – New tab Polarization over the world (Planning): world map coloured by the spatial polarization offset (Dpol) between your station and every place that sees the Moon, with the dashed 45° (3 dB) line; Dpol and loss on mouse hover and on the DX label.
 - **1.9.9** – My horizon: the Moon has its true phase and tilt, and the new box «The Moon as seen by the two stations» shows it as you see it and as the DX sees it, with the spatial polarization offset Dpol and the loss; closing window and messages: the buttons no longer have light corners on the grey bar.
@@ -32,6 +33,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Italiano</b> – Storia delle versioni</summary>
 
+- **1.9.12** – Meno CPU e meno memoria, con gli stessi calcoli: nella pagina In diretta le schede in alto e il pannello grande si ridisegnano solo quando cambia un valore visibile (l'orologio UTC ogni secondo), e in memoria si carica solo la lingua in uso; su Windows la CPU della pagina In diretta scende di circa il 60% e il picco di memoria all'avvio da circa 350 a circa 155 MB.
 - **1.9.11** – Aggiornamento automatico silenzioso, come in YA-NEC: YAEC controlla GitHub all'avvio e ogni 30 minuti, scarica il pacchetto in background e ne controlla l'impronta SHA-256; su Windows si installa da solo quando chiudi il programma, su Linux, BSD e macOS la nuova versione parte al prossimo avvio, e un avviso dice da quale versione è stato aggiornato (i pacchetti .deb, .rpm, Arch e Slackware restano al gestore dei pacchetti). Il mio orizzonte: il riquadro viola della zona puntabile ha il minimo a scalini, grado per grado di azimut (il più alto fra il limite dell'antenna e il terreno), per la tua stazione e per il DX.
 - **1.9.10** – Nuova linguetta Polarizzazione sul mondo (Pianificazione): mappa del mondo colorata secondo l'offset di polarizzazione spaziale (Dpol) tra la tua stazione e ogni località che vede la Luna, con la linea tratteggiata dei 45° (3 dB); Dpol e perdita al passaggio del mouse e sull'etichetta del DX.
 - **1.9.9** – Il mio orizzonte: la Luna ha la fase e l'inclinazione vere e il nuovo riquadro «La Luna vista dalle due stazioni» la mostra come la vedi tu e come la vede il DX, con l'offset di polarizzazione spaziale Dpol e la perdita; finestra di chiusura e avvisi: i pulsanti non hanno più gli angoli chiari sul fondo grigio.
@@ -59,6 +61,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Deutsch</b> – Versionsgeschichte</summary>
 
+- **1.9.12** – Weniger CPU und weniger Speicher bei gleichen Berechnungen: Auf der Seite Live werden die oberen Karten und das große Feld nur neu gezeichnet, wenn sich ein sichtbarer Wert ändert (die UTC-Uhr jede Sekunde), und im Speicher wird nur die verwendete Sprache geladen; unter Windows sinkt die CPU der Seite Live um etwa 60 % und die Speicherspitze beim Start von etwa 350 auf etwa 155 MB.
 - **1.9.11** – Stille automatische Aktualisierung wie in YA-NEC: YAEC prüft GitHub beim Start und alle 30 Minuten, lädt das Paket im Hintergrund herunter und prüft seinen SHA-256-Fingerabdruck; unter Windows installiert es sich beim Schließen des Programms, unter Linux, BSD und macOS startet die neue Version beim nächsten Aufruf, und ein Hinweis nennt die vorherige Version (.deb-, .rpm-, Arch- und Slackware-Pakete bleiben beim Paketmanager). Mein Horizont: Der violette Rahmen des anpeilbaren Bereichs hat ein gestuftes Minimum, Grad für Grad im Azimut (das höhere aus Antennengrenze und Gelände), für deine Station und für den DX.
 - **1.9.10** – Neuer Reiter Polarisation über der Welt (Planung): Weltkarte gefärbt nach dem räumlichen Polarisationsversatz (Dpol) zwischen deiner Station und jedem Ort, der den Mond sieht, mit der gestrichelten 45°-Linie (3 dB); Dpol und Verlust beim Überfahren mit der Maus und am DX-Etikett.
 - **1.9.9** – Mein Horizont: Der Mond hat seine wahre Phase und Neigung, und das neue Feld «Der Mond, wie ihn die beiden Stationen sehen» zeigt ihn so, wie du und der DX ihn sehen, mit dem räumlichen Polarisationsversatz Dpol und dem Verlust; Schließfenster und Meldungen: Die Schaltflächen haben auf der grauen Leiste keine hellen Ecken mehr.
@@ -86,6 +89,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Français</b> – Historique des versions</summary>
 
+- **1.9.12** – Moins de CPU et moins de mémoire, avec les mêmes calculs : sur la page En direct, les cartes du haut et le grand panneau ne sont redessinés que lorsqu'une valeur visible change (l'horloge UTC chaque seconde), et seule la langue utilisée est chargée en mémoire ; sous Windows, le CPU de la page En direct baisse d'environ 60 % et le pic de mémoire au démarrage passe d'environ 350 à environ 155 Mo.
 - **1.9.11** – Mise à jour automatique silencieuse, comme dans YA-NEC : YAEC interroge GitHub au démarrage et toutes les 30 minutes, télécharge le paquet en arrière-plan et vérifie son empreinte SHA-256 ; sous Windows il s'installe tout seul à la fermeture du programme, sous Linux, BSD et macOS la nouvelle version démarre au lancement suivant, et un message indique la version précédente (les paquets .deb, .rpm, Arch et Slackware restent au gestionnaire de paquets). Mon horizon : le cadre violet de la zone pointable a un minimum en escalier, degré par degré d'azimut (le plus élevé entre la limite de l'antenne et le terrain), pour ta station et pour le DX.
 - **1.9.10** – Nouvel onglet Polarisation sur le monde (Planification) : carte du monde colorée selon le décalage de polarisation spatiale (Dpol) entre ta station et chaque lieu qui voit la Lune, avec la ligne pointillée des 45° (3 dB) ; Dpol et perte au survol de la souris et sur l'étiquette du DX.
 - **1.9.9** – Mon horizon : la Lune a sa phase et son inclinaison réelles, et le nouveau cadre « La Lune vue par les deux stations » la montre comme tu la vois et comme la voit le DX, avec le décalage de polarisation spatiale Dpol et la perte ; fenêtre de fermeture et messages : les boutons n'ont plus de coins clairs sur la barre grise.
@@ -113,6 +117,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Español</b> – Historial de versiones</summary>
 
+- **1.9.12** – Menos CPU y menos memoria, con los mismos cálculos: en la página En directo las tarjetas superiores y el panel grande se redibujan solo cuando cambia un valor visible (el reloj UTC cada segundo), y en memoria se carga solo el idioma en uso; en Windows la CPU de la página En directo baja alrededor de un 60 % y el pico de memoria al arrancar pasa de unos 350 a unos 155 MB.
 - **1.9.11** – Actualización automática silenciosa, como en YA-NEC: YAEC consulta GitHub al arrancar y cada 30 minutos, descarga el paquete en segundo plano y comprueba su huella SHA-256; en Windows se instala solo al cerrar el programa, en Linux, BSD y macOS la nueva versión arranca en el próximo inicio, y un aviso indica desde qué versión se actualizó (los paquetes .deb, .rpm, Arch y Slackware siguen con el gestor de paquetes). Mi horizonte: el recuadro violeta de la zona apuntable tiene el mínimo escalonado, grado a grado de acimut (el mayor entre el límite de la antena y el terreno), para tu estación y para el DX.
 - **1.9.10** – Nueva pestaña Polarización sobre el mundo (Planificación): mapa del mundo coloreado según el desfase de polarización espacial (Dpol) entre tu estación y cada lugar que ve la Luna, con la línea discontinua de 45° (3 dB); Dpol y pérdida al pasar el ratón y en la etiqueta del DX.
 - **1.9.9** – Mi horizonte: la Luna tiene su fase e inclinación reales y el nuevo recuadro «La Luna vista desde las dos estaciones» la muestra como la ves tú y como la ve el DX, con el desfase de polarización espacial Dpol y la pérdida; ventana de cierre y avisos: los botones ya no tienen esquinas claras sobre la barra gris.
@@ -140,6 +145,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Português</b> – Histórico de versões</summary>
 
+- **1.9.12** – Menos CPU e menos memória, com os mesmos cálculos: na página Em direto os cartões de cima e o painel grande só se redesenham quando muda um valor visível (o relógio UTC a cada segundo), e em memória carrega-se só a língua em uso; no Windows a CPU da página Em direto desce cerca de 60 % e o pico de memória no arranque passa de cerca de 350 para cerca de 155 MB.
 - **1.9.11** – Atualização automática silenciosa, como no YA-NEC: o YAEC consulta o GitHub no arranque e a cada 30 minutos, descarrega o pacote em segundo plano e verifica a sua impressão SHA-256; no Windows instala-se sozinho ao fechar o programa, no Linux, BSD e macOS a nova versão arranca no próximo início, e um aviso indica a versão anterior (os pacotes .deb, .rpm, Arch e Slackware ficam com o gestor de pacotes). O meu horizonte: o quadro violeta da zona apontável tem o mínimo em degraus, grau a grau de azimute (o maior entre o limite da antena e o terreno), para a tua estação e para o DX.
 - **1.9.10** – Novo separador Polarização sobre o mundo (Planeamento): mapa do mundo colorido segundo o desvio de polarização espacial (Dpol) entre a tua estação e cada local que vê a Lua, com a linha tracejada dos 45° (3 dB); Dpol e perda ao passar o rato e na etiqueta do DX.
 - **1.9.9** – O meu horizonte: a Lua tem a sua fase e inclinação reais e o novo quadro «A Lua vista pelas duas estações» mostra-a como tu a vês e como o DX a vê, com o desvio de polarização espacial Dpol e a perda; janela de fecho e avisos: os botões já não têm cantos claros sobre a barra cinzenta.
@@ -167,6 +173,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Türkçe</b> – Sürüm geçmişi</summary>
 
+- **1.9.12** – Aynı hesaplarla daha az CPU ve daha az bellek: Canlı sayfasında üstteki kartlar ve büyük panel yalnızca görünen bir değer değiştiğinde yeniden çizilir (UTC saati her saniye) ve bellekte yalnızca kullanılan dil yüklenir; Windows'ta Canlı sayfasının CPU kullanımı yaklaşık %60 düşer, açılıştaki bellek tepesi yaklaşık 350'den yaklaşık 155 MB'ye iner.
 - **1.9.11** – YA-NEC'teki gibi sessiz otomatik güncelleme: YAEC açılışta ve her 30 dakikada GitHub'ı denetler, paketi arka planda indirir ve SHA-256 parmak izini doğrular; Windows'ta program kapatılınca kendiliğinden kurulur, Linux, BSD ve macOS'ta yeni sürüm bir sonraki açılışta başlar ve bir ileti hangi sürümden güncellendiğini söyler (.deb, .rpm, Arch ve Slackware paketleri paket yöneticisinde kalır). Ufkum: yönlendirilebilir alanın mor çerçevesinin alt sınırı artık azimutta derece derece basamaklı (anten sınırı ile arazinin yüksek olanı), senin istasyonun ve DX için.
 - **1.9.10** – Planlamada yeni sekme Dünya genelinde polarizasyon: istasyonun ile Ay'ı gören her yer arasındaki uzaysal polarizasyon kaymasına (Dpol) göre renklendirilmiş dünya haritası, kesikli 45° (3 dB) çizgisiyle; fareyle üzerine gelince ve DX etiketinde Dpol ve kayıp.
 - **1.9.9** – Ufkum: Ay gerçek evresi ve eğimiyle çiziliyor; yeni «İki istasyondan görülen Ay» kutusu onu senin ve DX'in gördüğü gibi, uzaysal polarizasyon kayması Dpol ve kayıpla gösteriyor; kapatma penceresi ve mesajlar: düğmelerin gri çubuk üzerinde artık açık renkli köşeleri yok.
@@ -194,6 +201,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Čeština</b> – Historie verzí</summary>
 
+- **1.9.12** – Méně CPU a paměti při stejných výpočtech: na stránce Živě se horní karty a velký panel překreslují jen tehdy, když se změní viditelná hodnota (hodiny UTC každou sekundu), a do paměti se načítá jen používaný jazyk; ve Windows klesá zátěž CPU stránky Živě asi o 60 % a špička paměti při spuštění z asi 350 na asi 155 MB.
 - **1.9.11** – Tichá automatická aktualizace jako v YA-NEC: YAEC kontroluje GitHub při spuštění a každých 30 minut, stahuje balíček na pozadí a ověřuje jeho otisk SHA-256; ve Windows se nainstaluje sám po zavření programu, v Linuxu, BSD a macOS se nová verze spustí příště a zpráva řekne, ze které verze se aktualizovalo (balíčky .deb, .rpm, Arch a Slackware zůstávají správci balíčků). Můj obzor: fialový rámeček zaměřitelné oblasti má stupňovité minimum, stupeň po stupni v azimutu (vyšší z limitu antény a terénu), pro tvou stanici i pro DX.
 - **1.9.10** – Nová záložka Polarizace na světě (Plánování): mapa světa obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc, s čárkovanou linií 45° (3 dB); Dpol a ztráta pod myší a na štítku DX.
 - **1.9.9** – Můj obzor: Měsíc má skutečnou fázi a sklon a nový rámeček «Měsíc viděný z obou stanic» ho ukazuje tak, jak ho vidíš ty a DX, s prostorovým posunem polarizace Dpol a ztrátou; okno ukončení a zprávy: tlačítka už na šedé liště nemají světlé rohy.
@@ -221,6 +229,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>Slovenčina</b> – História verzií</summary>
 
+- **1.9.12** – Menej CPU a pamäte pri rovnakých výpočtoch: na stránke Naživo sa horné karty a veľký panel prekresľujú len vtedy, keď sa zmení viditeľná hodnota (hodiny UTC každú sekundu), a do pamäte sa načítava len používaný jazyk; vo Windows klesá záťaž CPU stránky Naživo asi o 60 % a špička pamäte pri spustení z asi 350 na asi 155 MB.
 - **1.9.11** – Tichá automatická aktualizácia ako v YA-NEC: YAEC kontroluje GitHub pri spustení a každých 30 minút, sťahuje balík na pozadí a overuje jeho odtlačok SHA-256; vo Windows sa nainštaluje sám po zatvorení programu, v Linuxe, BSD a macOS sa nová verzia spustí nabudúce a správa povie, z ktorej verzie sa aktualizovalo (balíky .deb, .rpm, Arch a Slackware ostávajú správcovi balíkov). Môj obzor: fialový rámček zamerateľnej oblasti má stupňovité minimum, stupeň po stupni v azimute (vyššie z limitu antény a terénu), pre tvoju stanicu aj pre DX.
 - **1.9.10** – Nová záložka Polarizácia vo svete (Plánovanie): mapa sveta zafarbená podľa priestorového posunu polarizácie (Dpol) medzi tvojou stanicou a každým miestom, ktoré vidí Mesiac, s čiarkovanou líniou 45° (3 dB); Dpol a strata pod myšou a na štítku DX.
 - **1.9.9** – Môj obzor: Mesiac má skutočnú fázu a sklon a nový rámček «Mesiac videný z oboch staníc» ho ukazuje tak, ako ho vidíš ty a DX, s priestorovým posunom polarizácie Dpol a stratou; okno ukončenia a správy: tlačidlá už na sivej lište nemajú svetlé rohy.
@@ -248,6 +257,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>中文</b> – 版本历史</summary>
 
+- **1.9.12** – 计算不变，CPU 和内存占用更少：实时页面顶部的卡片和大面板仅在可见数值变化时重绘（UTC 时钟每秒一次），内存中只加载当前使用的语言；在 Windows 上，实时页面的 CPU 占用下降约 60%，启动时的内存峰值从约 350 MB 降至约 155 MB。
 - **1.9.11** – 与 YA-NEC 相同的静默自动更新：YAEC 在启动时及每 30 分钟检查 GitHub，在后台下载软件包并校验 SHA-256 指纹；Windows 上在关闭程序时自动安装，Linux、BSD 和 macOS 上新版本在下次启动时运行，并提示是从哪个版本更新的（.deb、.rpm、Arch 和 Slackware 软件包仍由包管理器更新）。我的地平线：可指向区域的紫色框下限按方位逐度呈阶梯状（取天线下限与地形中较高者），适用于你的电台和 DX。
 - **1.9.10** – 规划中新增“全球极化图”标签页：世界地图按你的电台与每个能看到月亮的地点之间的空间极化偏差 (Dpol) 着色，带 45° (3 dB) 虚线；鼠标悬停和 DX 标签上显示 Dpol 与损耗。
 - **1.9.9** – 我的地平线：月亮按真实月相和倾斜绘制，新的“两个电台看到的月亮”框显示你和 DX 看到的月亮，并给出空间极化偏移 Dpol 和损耗；关闭窗口和提示框：按钮在灰色栏上不再出现浅色边角。
@@ -275,6 +285,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>日本語</b> – バージョン履歴</summary>
 
+- **1.9.12** – 計算はそのままで CPU とメモリを削減：ライブページの上部カードと大きなパネルは、表示される値が変わったときだけ再描画し（UTC 時計は毎秒）、メモリには使用中の言語だけを読み込みます。Windows ではライブページの CPU が約 60% 減り、起動時のメモリのピークは約 350 MB から約 155 MB に下がりました。
 - **1.9.11** – YA-NEC と同じサイレント自動更新：起動時と 30 分ごとに GitHub を確認し、バックグラウンドでパッケージをダウンロードして SHA-256 指紋を検証します。Windows ではプログラムを閉じると自動でインストールされ、Linux・BSD・macOS では次回起動時に新バージョンになり、どのバージョンから更新したかを表示します（.deb、.rpm、Arch、Slackware パッケージは引き続きパッケージマネージャーで更新）。自局の地平線：指向可能範囲の紫の枠の下限を方位 1 度ごとの階段状に（アンテナ下限と地形の高い方）、自局と DX の両方で表示。
 - **1.9.10** – 計画に新しいタブ「世界の偏波」：自局と月が見える各地点との空間偏波オフセット (Dpol) で色分けした世界地図、45° (3 dB) の破線付き。マウスを重ねた所と DX のラベルに Dpol と損失を表示。
 - **1.9.9** – 自局の地平線：月を実際の月相と傾きで描き、新しい「両局から見た月」の枠で自局と DX から見た月を空間偏波オフセット Dpol と損失とともに表示；終了確認とメッセージのウィンドウ：灰色のバー上でボタンの角が白く残らなくなりました。
@@ -302,6 +313,7 @@ From the first stable version (1.0) to the current one; the full history, includ
 
 <details><summary><b>한국어</b> – 버전 기록</summary>
 
+- **1.9.12** – 계산은 같고 CPU와 메모리는 줄었습니다: 실시간 페이지의 위쪽 카드와 큰 패널은 보이는 값이 바뀔 때만 다시 그리며(UTC 시계는 매초), 메모리에는 사용 중인 언어만 불러옵니다. Windows에서 실시간 페이지의 CPU가 약 60% 줄고 시작 시 메모리 최고치가 약 350 MB에서 약 155 MB로 내려갑니다.
 - **1.9.11** – YA-NEC와 같은 무음 자동 업데이트: YAEC는 시작할 때와 30분마다 GitHub를 확인하고, 백그라운드에서 패키지를 내려받아 SHA-256 지문을 검사합니다. Windows에서는 프로그램을 닫을 때 자동으로 설치되고, Linux·BSD·macOS에서는 다음 실행 때 새 버전이 시작되며, 어느 버전에서 업데이트되었는지 알려 줍니다(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트). 내 지평선: 지향 가능 영역의 보라색 상자 하한이 방위각 1도마다 계단식입니다(안테나 하한과 지형 중 높은 값), 내 국과 DX 모두.
 - **1.9.10** – 계획에 새 탭 세계 편파 지도: 내 국과 달이 보이는 각 지점 사이의 공간 편파 오프셋(Dpol)으로 색칠한 세계 지도, 45° (3 dB) 점선 포함; 마우스를 올린 곳과 DX 라벨에 Dpol과 손실 표시.
 - **1.9.9** – 내 지평선: 달을 실제 위상과 기울기로 그리고, 새 «두 국에서 본 달» 상자에서 나와 DX가 보는 달을 공간 편파 오프셋 Dpol 및 손실과 함께 표시; 종료 창과 알림: 회색 막대 위 버튼의 모서리가 더 이상 밝게 보이지 않음.

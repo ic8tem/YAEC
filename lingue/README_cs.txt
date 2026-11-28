@@ -44,6 +44,7 @@ Chyby, lepší data, překlady: ccerrotta@gmail.com · ic8tem@gmail.com · www.q
 
 HISTORIE VERZÍ
 Verze před 1.0 se nazývají beta.
+- 1.9.12 - Méně CPU a paměti při stejných výpočtech: na stránce Živě se horní karty a velký panel překreslují jen tehdy, když se změní viditelná hodnota (hodiny UTC každou sekundu), a do paměti se načítá jen používaný jazyk; ve Windows klesá zátěž CPU stránky Živě asi o 60 % a špička paměti při spuštění z asi 350 na asi 155 MB.
 - 1.9.11 - Tichá automatická aktualizace jako v YA-NEC: YAEC kontroluje GitHub při spuštění a každých 30 minut, stahuje balíček na pozadí a ověřuje jeho otisk SHA-256; ve Windows se nainstaluje sám po zavření programu, v Linuxu, BSD a macOS se nová verze spustí příště a zpráva řekne, ze které verze se aktualizovalo (balíčky .deb, .rpm, Arch a Slackware zůstávají správci balíčků). Můj obzor: fialový rámeček zaměřitelné oblasti má stupňovité minimum, stupeň po stupni v azimutu (vyšší z limitu antény a terénu), pro tvou stanici i pro DX.
 - 1.9.10 - Nová záložka Polarizace na světě (Plánování): mapa světa obarvená podle prostorového posunu polarizace (Dpol) mezi tvou stanicí a každým místem, které vidí Měsíc, s čárkovanou linií 45° (3 dB); Dpol a ztráta pod myší a na štítku DX.
 - 1.9.9 - Můj obzor: Měsíc má skutečnou fázi a sklon a nový rámeček «Měsíc viděný z obou stanic» ho ukazuje tak, jak ho vidíš ty a DX, s prostorovým posunem polarizace Dpol a ztrátou; okno ukončení a zprávy: tlačítka už na šedé liště nemají světlé rohy.
