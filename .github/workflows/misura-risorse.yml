@@ -1,0 +1,56 @@
+name: Misura risorse (CPU e RAM su Windows)
+# Prova temporanea del ramo «risorse»: confronta YAEC 1.9.11 pubblicato con la versione del ramo
+on:
+  push:
+    branches: [ risorse ]
+jobs:
+  misura:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compila la versione del ramo
+        shell: cmd
+        run: call build.cmd anycpu nuova.exe || exit /b 1
+      - name: Scarica YAEC 1.9.11
+        shell: pwsh
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          gh release download v1.9.11 -R ic8tem/YAEC -p "YAEC-1.9.11-windows-x64-portatile.zip"
+          Expand-Archive YAEC-1.9.11-windows-x64-portatile.zip -DestinationPath vecchia
+      - name: Misura
+        shell: pwsh
+        run: |
+          Add-Type @"
+          using System; using System.Runtime.InteropServices;
+          public static class G { [DllImport("user32.dll")] public static extern uint GetGuiResources(IntPtr h, uint f); }
+          "@
+          $righe = @("| Versione | Lingua | Linguetta | CPU (% di un core) | Working set MB | Privata MB | Picco WS MB | GDI | USER |", "|---|---|---|---|---|---|---|---|---|")
+          foreach ($giro in 1..2) {
+          foreach ($v in @(@{n="1.9.11"; exe="vecchia\YAEC.exe"}, @{n="ramo"; exe="nuova.exe"})) {
+            foreach ($lg in @("it","en")) {
+              foreach ($tab in @("", "Luna sul mondo")) {
+                $d = "prova\$($v.n)-$lg-$giro-$($tab.Length)"
+                New-Item -ItemType Directory -Force "$d\data" | Out-Null
+                Copy-Item $v.exe "$d\YAEC.exe"
+                "lingua=$lg`r`nlocator=JN70CN83CL`r`ndx_locator=BL20BB`r`ndx_nominativo=W7GJ`r`n" | Set-Content "$d\data\impostazioni.txt" -Encoding UTF8
+                $env:YAEC_LINGUETTA = $tab
+                $p = Start-Process "$d\YAEC.exe" -WorkingDirectory $d -PassThru
+                Start-Sleep 45
+                $p.Refresh(); $t1 = $p.TotalProcessorTime.TotalSeconds
+                Start-Sleep 60
+                $p.Refresh(); $t2 = $p.TotalProcessorTime.TotalSeconds
+                $cpu = [math]::Round(($t2 - $t1) / 60 * 100, 2)
+                $gdi = [G]::GetGuiResources($p.Handle, 0); $usr = [G]::GetGuiResources($p.Handle, 1)
+                $nome = if ($tab -eq "") { "In diretta" } else { $tab }
+                $righe += "| $($v.n) | $lg | $nome | $cpu | $([math]::Round($p.WorkingSet64/1MB)) | $([math]::Round($p.PrivateMemorySize64/1MB)) | $([math]::Round($p.PeakWorkingSet64/1MB)) | $gdi | $usr |"
+                Stop-Process -Id $p.Id -Force
+                Start-Sleep 3
+              }
+            }
+          }
+          }
+          $righe | Out-File risultati.md -Encoding utf8
+          $righe | Add-Content $env:GITHUB_STEP_SUMMARY
+          Get-Content risultati.md
+      - uses: actions/upload-artifact@v4
+        with: { name: risultati, path: risultati.md }

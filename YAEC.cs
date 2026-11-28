@@ -2071,8 +2071,11 @@ namespace LunaCalc
     // Schema di colori (chiaro / scuro) usato da tutto il programma
     // Lingua dell'interfaccia: i testi sono scritti in italiano nel codice e tradotti con Lang.T()
     // Traduzioni dell'interfaccia (chiave = testo italiano). Generato automaticamente.
+    // 1.9.12: ogni lingua sta in una classe a sé (Testi_XX), con il costruttore statico esplicito: in memoria si carica
+    // solo la lingua in uso (più l'inglese di riserva), non tutte e 37 (circa 9 MB in meno)
     static class Testi
     {
+        static Testi() { }
         public static readonly string[] IT = {
             " (stimato dalla longitudine)",
             "PUNTABILE",
@@ -4055,6 +4058,10 @@ namespace LunaCalc
             "YAEC è stato aggiornato dalla versione {0} alla {1}.",
             "1.9.11 - Aggiornamento automatico silenzioso, come in YA-NEC: YAEC controlla GitHub all'avvio e ogni 30 minuti, scarica il pacchetto in background e ne controlla l'impronta SHA-256; su Windows si installa da solo quando chiudi il programma, su Linux, BSD e macOS la nuova versione parte al prossimo avvio, e un avviso dice da quale versione è stato aggiornato (i pacchetti .deb, .rpm, Arch e Slackware restano al gestore dei pacchetti). Il mio orizzonte: il riquadro viola della zona puntabile ha il minimo a scalini, grado per grado di azimut (il più alto fra il limite dell'antenna e il terreno), per la tua stazione e per il DX.",
         };
+    }
+    static class Testi_EN
+    {
+        static Testi_EN() { }
         public static readonly string[] EN = {
             " (estimated from longitude)",
             "POINTABLE",
@@ -6037,6 +6044,10 @@ namespace LunaCalc
             "YAEC has been updated from version {0} to {1}.",
             "1.9.11 - Silent automatic update, as in YA-NEC: YAEC checks GitHub at start-up and every 30 minutes, downloads the package in the background and checks its SHA-256 fingerprint; on Windows it installs itself when you close the program, on Linux, BSD and macOS the new version starts at the next launch, and a message tells you which version it was updated from (.deb, .rpm, Arch and Slackware packages stay with the package manager). My horizon: the violet box of the pointable area has a stepped minimum, degree by degree of azimuth (the higher of the antenna limit and the terrain), for your station and for the DX.",
         };
+    }
+    static class Testi_DE
+    {
+        static Testi_DE() { }
         public static readonly string[] DE = {
             " (aus der Länge geschätzt)",
             "ERREICHBAR",
@@ -8019,6 +8030,10 @@ namespace LunaCalc
             "YAEC wurde von Version {0} auf {1} aktualisiert.",
             "1.9.11 - Stille automatische Aktualisierung wie in YA-NEC: YAEC prüft GitHub beim Start und alle 30 Minuten, lädt das Paket im Hintergrund herunter und prüft seinen SHA-256-Fingerabdruck; unter Windows installiert es sich beim Schließen des Programms, unter Linux, BSD und macOS startet die neue Version beim nächsten Aufruf, und ein Hinweis nennt die vorherige Version (.deb-, .rpm-, Arch- und Slackware-Pakete bleiben beim Paketmanager). Mein Horizont: Der violette Rahmen des anpeilbaren Bereichs hat ein gestuftes Minimum, Grad für Grad im Azimut (das höhere aus Antennengrenze und Gelände), für deine Station und für den DX.",
         };
+    }
+    static class Testi_FR
+    {
+        static Testi_FR() { }
         public static readonly string[] FR = {
             " (estimé à partir de la longitude)",
             "POINTABLE",
@@ -10001,6 +10016,10 @@ namespace LunaCalc
             "YAEC a été mis à jour de la version {0} à la {1}.",
             "1.9.11 - Mise à jour automatique silencieuse, comme dans YA-NEC : YAEC interroge GitHub au démarrage et toutes les 30 minutes, télécharge le paquet en arrière-plan et vérifie son empreinte SHA-256 ; sous Windows il s'installe tout seul à la fermeture du programme, sous Linux, BSD et macOS la nouvelle version démarre au lancement suivant, et un message indique la version précédente (les paquets .deb, .rpm, Arch et Slackware restent au gestionnaire de paquets). Mon horizon : le cadre violet de la zone pointable a un minimum en escalier, degré par degré d'azimut (le plus élevé entre la limite de l'antenne et le terrain), pour ta station et pour le DX.",
         };
+    }
+    static class Testi_ES
+    {
+        static Testi_ES() { }
         public static readonly string[] ES = {
             " (estimado a partir de la longitud)",
             "APUNTABLE",
@@ -11983,6 +12002,10 @@ namespace LunaCalc
             "YAEC se ha actualizado de la versión {0} a la {1}.",
             "1.9.11 - Actualización automática silenciosa, como en YA-NEC: YAEC consulta GitHub al arrancar y cada 30 minutos, descarga el paquete en segundo plano y comprueba su huella SHA-256; en Windows se instala solo al cerrar el programa, en Linux, BSD y macOS la nueva versión arranca en el próximo inicio, y un aviso indica desde qué versión se actualizó (los paquetes .deb, .rpm, Arch y Slackware siguen con el gestor de paquetes). Mi horizonte: el recuadro violeta de la zona apuntable tiene el mínimo escalonado, grado a grado de acimut (el mayor entre el límite de la antena y el terreno), para tu estación y para el DX.",
         };
+    }
+    static class Testi_PT
+    {
+        static Testi_PT() { }
         public static readonly string[] PT = {
             " (estimado a partir da longitude)",
             "APONTÁVEL",
@@ -13965,6 +13988,10 @@ namespace LunaCalc
             "O YAEC foi atualizado da versão {0} para a {1}.",
             "1.9.11 - Atualização automática silenciosa, como no YA-NEC: o YAEC consulta o GitHub no arranque e a cada 30 minutos, descarrega o pacote em segundo plano e verifica a sua impressão SHA-256; no Windows instala-se sozinho ao fechar o programa, no Linux, BSD e macOS a nova versão arranca no próximo início, e um aviso indica a versão anterior (os pacotes .deb, .rpm, Arch e Slackware ficam com o gestor de pacotes). O meu horizonte: o quadro violeta da zona apontável tem o mínimo em degraus, grau a grau de azimute (o maior entre o limite da antena e o terreno), para a tua estação e para o DX.",
         };
+    }
+    static class Testi_ZH
+    {
+        static Testi_ZH() { }
         public static readonly string[] ZH = {
             " （根据经度估算）",
             "可指向",
@@ -15947,6 +15974,10 @@ namespace LunaCalc
             "YAEC 已从 {0} 版更新到 {1} 版。",
             "1.9.11 - 与 YA-NEC 相同的静默自动更新：YAEC 在启动时及每 30 分钟检查 GitHub，在后台下载软件包并校验 SHA-256 指纹；Windows 上在关闭程序时自动安装，Linux、BSD 和 macOS 上新版本在下次启动时运行，并提示是从哪个版本更新的（.deb、.rpm、Arch 和 Slackware 软件包仍由包管理器更新）。我的地平线：可指向区域的紫色框下限按方位逐度呈阶梯状（取天线下限与地形中较高者），适用于你的电台和 DX。",
         };
+    }
+    static class Testi_JA
+    {
+        static Testi_JA() { }
         public static readonly string[] JA = {
             " （経度から推定）",
             "指向可能",
@@ -17929,6 +17960,10 @@ namespace LunaCalc
             "YAEC はバージョン {0} から {1} に更新されました。",
             "1.9.11 - YA-NEC と同じサイレント自動更新：起動時と 30 分ごとに GitHub を確認し、バックグラウンドでパッケージをダウンロードして SHA-256 指紋を検証します。Windows ではプログラムを閉じると自動でインストールされ、Linux・BSD・macOS では次回起動時に新バージョンになり、どのバージョンから更新したかを表示します（.deb、.rpm、Arch、Slackware パッケージは引き続きパッケージマネージャーで更新）。自局の地平線：指向可能範囲の紫の枠の下限を方位 1 度ごとの階段状に（アンテナ下限と地形の高い方）、自局と DX の両方で表示。",
         };
+    }
+    static class Testi_HI
+    {
+        static Testi_HI() { }
         public static readonly string[] HI = {
             " (देशांतर से अनुमानित)",
             "लक्ष्य योग्य",
@@ -19911,6 +19946,10 @@ namespace LunaCalc
             "YAEC संस्करण {0} से {1} में अपडेट हो गया है।",
             "1.9.11 - YA-NEC की तरह मौन स्वचालित अपडेट: YAEC शुरू होने पर और हर 30 मिनट में GitHub जाँचता है, पैकेज पृष्ठभूमि में डाउनलोड करता है और उसका SHA-256 फिंगरप्रिंट जाँचता है; Windows पर प्रोग्राम बंद करने पर अपने आप इंस्टॉल होता है, Linux, BSD और macOS पर नया संस्करण अगली बार शुरू होने पर चलता है, और एक संदेश बताता है कि किस संस्करण से अपडेट हुआ (.deb, .rpm, Arch और Slackware पैकेज पैकेज मैनेजर से ही अपडेट होते हैं)। मेरा क्षितिज: लक्ष्य-योग्य क्षेत्र के बैंगनी बॉक्स का न्यूनतम अब दिगंश के हर अंश पर सीढ़ीनुमा है (एंटीना सीमा और भूभाग में से ऊँचा), आपके स्टेशन और DX दोनों के लिए।",
         };
+    }
+    static class Testi_KO
+    {
+        static Testi_KO() { }
         public static readonly string[] KO = {
             " (경도로 추정)",
             "지향 가능",
@@ -21893,6 +21932,10 @@ namespace LunaCalc
             "YAEC가 {0} 버전에서 {1} 버전으로 업데이트되었습니다.",
             "1.9.11 - YA-NEC와 같은 무음 자동 업데이트: YAEC는 시작할 때와 30분마다 GitHub를 확인하고, 백그라운드에서 패키지를 내려받아 SHA-256 지문을 검사합니다. Windows에서는 프로그램을 닫을 때 자동으로 설치되고, Linux·BSD·macOS에서는 다음 실행 때 새 버전이 시작되며, 어느 버전에서 업데이트되었는지 알려 줍니다(.deb, .rpm, Arch, Slackware 패키지는 패키지 관리자로 업데이트). 내 지평선: 지향 가능 영역의 보라색 상자 하한이 방위각 1도마다 계단식입니다(안테나 하한과 지형 중 높은 값), 내 국과 DX 모두.",
         };
+    }
+    static class Testi_ID
+    {
+        static Testi_ID() { }
         public static readonly string[] ID = {
             " (diperkirakan dari bujur)",
             "DAPAT DIARAHKAN",
@@ -23876,6 +23919,10 @@ namespace LunaCalc
             "1.9.11 - Pembaruan otomatis senyap, seperti di YA-NEC: YAEC memeriksa GitHub saat mulai dan setiap 30 menit, mengunduh paket di latar belakang dan memeriksa sidik jari SHA-256-nya; di Windows terpasang sendiri saat program ditutup, di Linux, BSD dan macOS versi baru berjalan pada peluncuran berikutnya, dan sebuah pesan menyebut versi sebelumnya (paket .deb, .rpm, Arch dan Slackware tetap lewat pengelola paket). Cakrawala saya: kotak ungu area yang dapat diarahkan memiliki minimum bertingkat, derajat demi derajat azimut (yang lebih tinggi antara batas antena dan medan), untuk stasiunmu dan untuk DX.",
         };
 
+    }
+    static class Testi_RU
+    {
+        static Testi_RU() { }
         public static readonly string[] RU = {
             " (оценка по долготе)",
             "МОЖНО НАВЕСТИ",
@@ -25859,6 +25906,10 @@ namespace LunaCalc
             "1.9.11 - Тихое автоматическое обновление, как в YA-NEC: YAEC проверяет GitHub при запуске и каждые 30 минут, скачивает пакет в фоне и проверяет его отпечаток SHA-256; в Windows он устанавливается сам при закрытии программы, в Linux, BSD и macOS новая версия запускается при следующем старте, а сообщение сообщает, с какой версии было обновление (пакеты .deb, .rpm, Arch и Slackware обновляются менеджером пакетов). Мой горизонт: фиолетовая рамка зоны наведения имеет ступенчатый минимум, градус за градусом по азимуту (большее из предела антенны и рельефа), для твоей станции и для DX.",
         };
 
+    }
+    static class Testi_UK
+    {
+        static Testi_UK() { }
         public static readonly string[] UK = {
             " (оцінка за довготою)",
             "МОЖНА НАВЕСТИ",
@@ -27842,6 +27893,10 @@ namespace LunaCalc
             "1.9.11 - Тихе автоматичне оновлення, як у YA-NEC: YAEC перевіряє GitHub під час запуску і кожні 30 хвилин, завантажує пакет у фоні та перевіряє його відбиток SHA-256; у Windows він встановлюється сам під час закриття програми, у Linux, BSD і macOS нова версія запускається під час наступного старту, а повідомлення каже, з якої версії було оновлення (пакети .deb, .rpm, Arch і Slackware оновлюються менеджером пакетів). Мій горизонт: фіолетова рамка зони наведення має ступінчастий мінімум, градус за градусом за азимутом (більше з межі антени та рельєфу), для твоєї станції і для DX.",
         };
 
+    }
+    static class Testi_AF
+    {
+        static Testi_AF() { }
         public static readonly string[] AF = {
             " (beraam uit lengtegraad)",
             "RIGBAAR",
@@ -29825,6 +29880,10 @@ namespace LunaCalc
             "1.9.11 - Stil outomatiese opdatering, soos in YA-NEC: YAEC kyk by die begin en elke 30 minute op GitHub, laai die pakket op die agtergrond af en kontroleer sy SHA-256-vingerafdruk; op Windows installeer dit self wanneer jy die program toemaak, op Linux, BSD en macOS begin die nuwe weergawe by die volgende keer, en 'n boodskap sê van watter weergawe opgedateer is (.deb-, .rpm-, Arch- en Slackware-pakkette bly by die pakketbestuurder). My horison: die pers blok van die rigbare gebied het 'n trapsgewyse minimum, graad vir graad van asimut (die hoogste van die antennagrens en die terrein), vir jou stasie en vir die DX.",
         };
 
+    }
+    static class Testi_BN
+    {
+        static Testi_BN() { }
         public static readonly string[] BN = {
             " (দ্রাঘিমা থেকে আনুমানিক)",
             "লক্ষ্যযোগ্য",
@@ -31807,6 +31866,10 @@ namespace LunaCalc
             "1.9.11 - YA-NEC-এর মতো নীরব স্বয়ংক্রিয় আপডেট: YAEC চালু হওয়ার সময় ও প্রতি 30 মিনিটে GitHub দেখে, পটভূমিতে প্যাকেজ ডাউনলোড করে এবং এর SHA-256 ফিঙ্গারপ্রিন্ট যাচাই করে; Windows-এ প্রোগ্রাম বন্ধ করলে নিজে থেকেই ইনস্টল হয়, Linux, BSD ও macOS-এ নতুন সংস্করণ পরের বার চালু হলে চলে, এবং একটি বার্তা জানায় কোন সংস্করণ থেকে আপডেট হয়েছে (.deb, .rpm, Arch ও Slackware প্যাকেজ প্যাকেজ ম্যানেজারেই থাকে)। আমার দিগন্ত: লক্ষ্যযোগ্য অঞ্চলের বেগুনি বাক্সের ন্যূনতম এখন দিগংশের প্রতি ডিগ্রিতে সিঁড়ির মতো (অ্যান্টেনার সীমা ও ভূখণ্ডের মধ্যে বড়টি), তোমার স্টেশন ও DX উভয়ের জন্য।",
         };
 
+    }
+    static class Testi_AR
+    {
+        static Testi_AR() { }
         public static readonly string[] AR = {
             " (مقدَّر من خط الطول)",
             "قابل للتوجيه",
@@ -33789,6 +33852,10 @@ namespace LunaCalc
             "1.9.11 - تحديث تلقائي صامت كما في YA-NEC: يتحقق YAEC من GitHub عند التشغيل وكل 30 دقيقة، وينزّل الحزمة في الخلفية ويتحقق من بصمة SHA-256؛ على Windows يُثبَّت تلقائيًا عند إغلاق البرنامج، وعلى Linux وBSD وmacOS يعمل الإصدار الجديد عند التشغيل التالي، وتخبرك رسالة بالإصدار السابق (حزم .deb و.rpm وArch وSlackware تبقى لمدير الحزم). أفق محطتي: للإطار البنفسجي لمنطقة التوجيه حدّ أدنى متدرّج درجةً بدرجة في السمت (الأعلى بين حد الهوائي والتضاريس)، لمحطتك وللـ DX.",
         };
 
+    }
+    static class Testi_TR
+    {
+        static Testi_TR() { }
         public static readonly string[] TR = {
             " (boylamdan tahmin)",
             "YÖNLENDİRİLEBİLİR",
@@ -35771,6 +35838,10 @@ namespace LunaCalc
             "1.9.11 - YA-NEC'teki gibi sessiz otomatik güncelleme: YAEC açılışta ve her 30 dakikada GitHub'ı denetler, paketi arka planda indirir ve SHA-256 parmak izini doğrular; Windows'ta program kapatılınca kendiliğinden kurulur, Linux, BSD ve macOS'ta yeni sürüm bir sonraki açılışta başlar ve bir ileti hangi sürümden güncellendiğini söyler (.deb, .rpm, Arch ve Slackware paketleri paket yöneticisinde kalır). Ufkum: yönlendirilebilir alanın mor çerçevesinin alt sınırı artık azimutta derece derece basamaklı (anten sınırı ile arazinin yüksek olanı), senin istasyonun ve DX için.",
         };
 
+    }
+    static class Testi_NL
+    {
+        static Testi_NL() { }
         public static readonly string[] NL = {
             " (geschat uit de lengtegraad)",
             "RICHTBAAR",
@@ -37753,6 +37824,10 @@ namespace LunaCalc
             "1.9.11 - Stille automatische update, zoals in YA-NEC: YAEC controleert GitHub bij het starten en elke 30 minuten, downloadt het pakket op de achtergrond en controleert de SHA-256-vingerafdruk; op Windows installeert het zichzelf bij het sluiten van het programma, op Linux, BSD en macOS start de nieuwe versie bij de volgende keer, en een melding noemt de vorige versie (.deb-, .rpm-, Arch- en Slackware-pakketten blijven bij de pakketbeheerder). Mijn horizon: het paarse kader van het richtbare gebied heeft een getrapt minimum, graad voor graad in azimut (het hoogste van antennegrens en terrein), voor jouw station en voor de DX.",
         };
 
+    }
+    static class Testi_ET
+    {
+        static Testi_ET() { }
         public static readonly string[] ET = {
             " (hinnatud pikkuskraadi järgi)",
             "SUUNATAV",
@@ -39735,6 +39810,10 @@ namespace LunaCalc
             "1.9.11 - Vaikne automaatne uuendus nagu YA-NEC-is: YAEC kontrollib GitHubi käivitumisel ja iga 30 minuti järel, laadib paketi taustal alla ja kontrollib selle SHA-256 sõrmejälge; Windowsis paigaldub see programmi sulgemisel ise, Linuxis, BSD-s ja macOS-is käivitub uus versioon järgmisel korral ning teade ütleb, milliselt versioonilt uuendati (.deb-, .rpm-, Arch- ja Slackware-paketid jäävad paketihalduri hooleks). Minu horisont: suunatava ala lilla raami miinimum on astmeline, asimuudi kraadhaaval (antenni piiri ja maastiku kõrgem), sinu jaama ja DX-i jaoks.",
         };
 
+    }
+    static class Testi_LV
+    {
+        static Testi_LV() { }
         public static readonly string[] LV = {
             " (novērtēts pēc garuma)",
             "NOTĒMĒJAMS",
@@ -41717,6 +41796,10 @@ namespace LunaCalc
             "1.9.11 - Klusa automātiska atjaunināšana kā YA-NEC: YAEC pārbauda GitHub palaišanas brīdī un ik pēc 30 minūtēm, lejupielādē pakotni fonā un pārbauda tās SHA-256 nospiedumu; Windows tā instalējas pati, aizverot programmu, Linux, BSD un macOS jaunā versija sāk darboties nākamajā palaišanā, un ziņojums pasaka, no kuras versijas atjaunināts (.deb, .rpm, Arch un Slackware pakotnes paliek pakotņu pārvaldnieka ziņā). Mans horizonts: notēmējamās zonas violetajam rāmim ir pakāpenisks minimums, grādu pa grādam azimutā (augstākais no antenas robežas un reljefa), tavai stacijai un DX.",
         };
 
+    }
+    static class Testi_LT
+    {
+        static Testi_LT() { }
         public static readonly string[] LT = {
             " (įvertinta pagal ilgumą)",
             "NUKREIPIAMA",
@@ -43699,6 +43782,10 @@ namespace LunaCalc
             "1.9.11 - Tylus automatinis atnaujinimas kaip YA-NEC: YAEC tikrina GitHub paleidžiant ir kas 30 minučių, fone atsisiunčia paketą ir patikrina jo SHA-256 piršto atspaudą; Windows sistemoje jis įsidiegia pats uždarius programą, Linux, BSD ir macOS nauja versija paleidžiama kitą kartą, o pranešimas nurodo, iš kurios versijos atnaujinta (.deb, .rpm, Arch ir Slackware paketus atnaujina paketų tvarkyklė). Mano horizontas: nutaikomos zonos violetinio rėmelio minimumas yra laiptuotas, laipsnis po laipsnio azimutu (didesnis iš antenos ribos ir reljefo), tavo stočiai ir DX.",
         };
 
+    }
+    static class Testi_SV
+    {
+        static Testi_SV() { }
         public static readonly string[] SV = {
             " (uppskattad från longituden)",
             "RIKTBAR",
@@ -45681,6 +45768,10 @@ namespace LunaCalc
             "1.9.11 - Tyst automatisk uppdatering, som i YA-NEC: YAEC kollar GitHub vid start och var 30:e minut, laddar ner paketet i bakgrunden och kontrollerar dess SHA-256-fingeravtryck; på Windows installerar det sig självt när du stänger programmet, på Linux, BSD och macOS startar den nya versionen nästa gång, och ett meddelande talar om vilken version det uppdaterades från (.deb-, .rpm-, Arch- och Slackware-paket sköts av pakethanteraren). Min horisont: den violetta ramen för det riktbara området har ett trappstegsminimum, grad för grad i azimut (det högsta av antenngränsen och terrängen), för din station och för DX.",
         };
 
+    }
+    static class Testi_NB
+    {
+        static Testi_NB() { }
         public static readonly string[] NB = {
             " (estimert fra lengdegraden)",
             "KAN PEILES",
@@ -47663,6 +47754,10 @@ namespace LunaCalc
             "1.9.11 - Stille automatisk oppdatering, som i YA-NEC: YAEC sjekker GitHub ved oppstart og hvert 30. minutt, laster ned pakken i bakgrunnen og kontrollerer SHA-256-fingeravtrykket; på Windows installerer det seg selv når du lukker programmet, på Linux, BSD og macOS starter den nye versjonen neste gang, og en melding forteller hvilken versjon det ble oppdatert fra (.deb-, .rpm-, Arch- og Slackware-pakker oppdateres av pakkebehandleren). Min horisont: den fiolette rammen for området som kan siktes har et trappetrinnsminimum, grad for grad i asimut (det høyeste av antennegrensen og terrenget), for stasjonen din og for DX.",
         };
 
+    }
+    static class Testi_IS
+    {
+        static Testi_IS() { }
         public static readonly string[] IS = {
             " (áætlað út frá lengdargráðu)",
             "HÆGT AÐ MIÐA",
@@ -49645,6 +49740,10 @@ namespace LunaCalc
             "1.9.11 - Hljóðlát sjálfvirk uppfærsla, eins og í YA-NEC: YAEC athugar GitHub við ræsingu og á 30 mínútna fresti, sækir pakkann í bakgrunni og athugar SHA-256 fingrafar hans; á Windows setur það sig sjálft upp þegar forritinu er lokað, á Linux, BSD og macOS ræsist nýja útgáfan næst, og skilaboð segja úr hvaða útgáfu var uppfært (.deb-, .rpm-, Arch- og Slackware-pakkar eru áfram í höndum pakkastjórans). Sjóndeildarhringurinn minn: fjólublái rammi miðanlega svæðisins hefur þrepaskipt lágmark, gráðu fyrir gráðu í áttarhorni (það hærra af loftnetsmörkum og landslagi), fyrir stöðina þína og fyrir DX.",
         };
 
+    }
+    static class Testi_HE
+    {
+        static Testi_HE() { }
         public static readonly string[] HE = {
             " (מוערך לפי קו האורך)",
             "ניתן לכוון",
@@ -51627,6 +51726,10 @@ namespace LunaCalc
             "1.9.11 - עדכון אוטומטי שקט, כמו ב־YA-NEC: YAEC בודק את GitHub בהפעלה וכל 30 דקות, מוריד את החבילה ברקע ובודק את טביעת ה־SHA-256 שלה; ב־Windows הוא מותקן מעצמו בסגירת התוכנה, ב־Linux, BSD ו־macOS הגרסה החדשה עולה בהפעלה הבאה, והודעה מציינת מאיזו גרסה עודכן (חבילות ‎.deb, ‎.rpm, Arch ו־Slackware נשארות אצל מנהל החבילות). האופק שלי: למסגרת הסגולה של אזור הכיוון יש מינימום מדורג, מעלה אחר מעלה באזימוט (הגבוה מבין גבול האנטנה והשטח), לתחנה שלך ול־DX.",
         };
 
+    }
+    static class Testi_UR
+    {
+        static Testi_UR() { }
         public static readonly string[] UR = {
             " (طول بلد سے اندازہ)",
             "رخ کیا جا سکتا ہے",
@@ -53608,6 +53711,10 @@ namespace LunaCalc
             "YAEC ورژن {0} سے {1} میں اپ ڈیٹ ہو گیا ہے۔",
             "1.9.11 - YA-NEC کی طرح خاموش خودکار اپ ڈیٹ: YAEC شروع ہونے پر اور ہر 30 منٹ بعد GitHub دیکھتا ہے، پیکیج پس منظر میں ڈاؤن لوڈ کرتا ہے اور اس کا SHA-256 فنگرپرنٹ جانچتا ہے؛ Windows پر پروگرام بند کرنے پر خود انسٹال ہوتا ہے، Linux، BSD اور macOS پر نیا ورژن اگلی بار شروع ہونے پر چلتا ہے، اور ایک پیغام بتاتا ہے کہ کس ورژن سے اپ ڈیٹ ہوا (.deb، .rpm، Arch اور Slackware پیکیج پیکیج مینیجر ہی سے اپ ڈیٹ ہوتے ہیں)۔ میرا افق: ہدف کے قابل علاقے کے بنفشی خانے کی کم از کم حد اب سمت کے ہر درجے پر سیڑھی نما ہے (اینٹینا کی حد اور زمین میں سے اونچی)، آپ کے اسٹیشن اور DX دونوں کے لیے۔",
         };
+    }
+    static class Testi_DA
+    {
+        static Testi_DA() { }
         public static readonly string[] DA = {
             " (anslået ud fra længdegraden)",
             "KAN RETTES IND",
@@ -55589,6 +55696,10 @@ namespace LunaCalc
             "YAEC er opdateret fra version {0} til {1}.",
             "1.9.11 - Stille automatisk opdatering, som i YA-NEC: YAEC tjekker GitHub ved start og hvert 30. minut, henter pakken i baggrunden og kontrollerer dens SHA-256-fingeraftryk; på Windows installerer det sig selv, når du lukker programmet, på Linux, BSD og macOS starter den nye version næste gang, og en besked fortæller, hvilken version der blev opdateret fra (.deb-, .rpm-, Arch- og Slackware-pakker opdateres af pakkehåndteringen). Min horisont: den violette ramme for det område, der kan peges på, har et trinvist minimum, grad for grad i azimut (det højeste af antennegrænsen og terrænet), for din station og for DX.",
         };
+    }
+    static class Testi_TL
+    {
+        static Testi_TL() { }
         public static readonly string[] TL = {
             " (tinantya mula sa longitude)",
             "MATUTUTUKAN",
@@ -57570,6 +57681,10 @@ namespace LunaCalc
             "Na-update ang YAEC mula sa bersyong {0} patungong {1}.",
             "1.9.11 - Tahimik na awtomatikong update, gaya ng sa YA-NEC: tinitingnan ng YAEC ang GitHub sa pagsisimula at bawat 30 minuto, dina-download ang package sa background at sinusuri ang SHA-256 fingerprint nito; sa Windows kusa itong nag-i-install kapag isinara ang programa, sa Linux, BSD at macOS tatakbo ang bagong bersyon sa susunod na pagbukas, at sinasabi ng isang mensahe kung mula saang bersyon ito na-update (ang mga package na .deb, .rpm, Arch at Slackware ay nananatili sa package manager). Aking horizon: ang lilang kahon ng maaaring tutukang lugar ay may minimum na pabaitang, digri kada digri ng azimuth (ang mas mataas sa hangganan ng antena at sa lupa), para sa iyong istasyon at para sa DX.",
         };
+    }
+    static class Testi_BR
+    {
+        static Testi_BR() { }
         public static readonly string[] BR = {
             " (estimado a partir da longitude)",
             "APONTÁVEL",
@@ -59551,6 +59666,10 @@ namespace LunaCalc
             "O YAEC foi atualizado da versão {0} para a {1}.",
             "1.9.11 - Atualização automática silenciosa, como no YA-NEC: o YAEC consulta o GitHub na inicialização e a cada 30 minutos, baixa o pacote em segundo plano e verifica sua impressão SHA-256; no Windows ele se instala sozinho ao fechar o programa, no Linux, BSD e macOS a nova versão começa na próxima inicialização, e um aviso informa a versão anterior (os pacotes .deb, .rpm, Arch e Slackware continuam com o gerenciador de pacotes). Meu horizonte: o quadro violeta da zona apontável tem o mínimo em degraus, grau a grau de azimute (o maior entre o limite da antena e o terreno), para a sua estação e para o DX.",
         };
+    }
+    static class Testi_TH
+    {
+        static Testi_TH() { }
         public static readonly string[] TH = {
             " (ประมาณจากลองจิจูด)",
             "ชี้ได้",
@@ -61532,6 +61651,10 @@ namespace LunaCalc
             "YAEC อัปเดตจากเวอร์ชัน {0} เป็น {1} แล้ว",
             "1.9.11 - อัปเดตอัตโนมัติแบบเงียบเหมือน YA-NEC: YAEC ตรวจ GitHub ตอนเปิดและทุก 30 นาที ดาวน์โหลดแพ็กเกจเบื้องหลังและตรวจลายนิ้วมือ SHA-256 บน Windows จะติดตั้งเองเมื่อปิดโปรแกรม บน Linux, BSD และ macOS เวอร์ชันใหม่จะเริ่มในการเปิดครั้งถัดไป และมีข้อความบอกว่าอัปเดตจากเวอร์ชันใด (แพ็กเกจ .deb, .rpm, Arch และ Slackware ยังอัปเดตผ่านตัวจัดการแพ็กเกจ) ขอบฟ้าของฉัน: กรอบสีม่วงของพื้นที่ที่ชี้ได้มีค่าต่ำสุดแบบขั้นบันไดทีละองศาของแอซิมัท (ค่าที่สูงกว่าระหว่างขีดจำกัดของสายอากาศกับภูมิประเทศ) ทั้งสำหรับสถานีของคุณและ DX",
         };
+    }
+    static class Testi_TW
+    {
+        static Testi_TW() { }
         public static readonly string[] TW = {
             " （根據經度估算）",
             "可指向",
@@ -63513,6 +63636,10 @@ namespace LunaCalc
             "YAEC 已從 {0} 版更新到 {1} 版。",
             "1.9.11 - 與 YA-NEC 相同的靜默自動更新：YAEC 在啟動時及每 30 分鐘檢查 GitHub，在背景下載套件並驗證 SHA-256 指紋；Windows 上於關閉程式時自動安裝，Linux、BSD 與 macOS 上新版本於下次啟動時執行，並提示是從哪個版本更新的（.deb、.rpm、Arch 與 Slackware 套件仍由套件管理員更新）。我的地平線：可指向區域的紫色框下限依方位逐度呈階梯狀（取天線下限與地形中較高者），適用於你的電台與 DX。",
         };
+    }
+    static class Testi_PL
+    {
+        static Testi_PL() { }
         public static readonly string[] PL = {
             " (oszacowane z długości geograficznej)",
             "MOŻNA NAKIEROWAĆ",
@@ -65494,6 +65621,10 @@ namespace LunaCalc
             "YAEC został zaktualizowany z wersji {0} do {1}.",
             "1.9.11 - Cicha automatyczna aktualizacja, jak w YA-NEC: YAEC sprawdza GitHub przy starcie i co 30 minut, pobiera pakiet w tle i sprawdza jego odcisk SHA-256; w Windows instaluje się sam po zamknięciu programu, w Linuksie, BSD i macOS nowa wersja startuje przy następnym uruchomieniu, a komunikat podaje, z której wersji zaktualizowano (pakiety .deb, .rpm, Arch i Slackware aktualizuje menedżer pakietów). Mój horyzont: fioletowa ramka obszaru do nakierowania ma schodkowe minimum, stopień po stopniu w azymucie (wyższe z limitu anteny i terenu), dla twojej stacji i dla DX.",
         };
+    }
+    static class Testi_CS
+    {
+        static Testi_CS() { }
         public static readonly string[] CS = {
             " (odhadnuto z délky)",
             "ZAMIŘITELNÝ",
@@ -67475,6 +67606,10 @@ namespace LunaCalc
             "YAEC byl aktualizován z verze {0} na {1}.",
             "1.9.11 - Tichá automatická aktualizace jako v YA-NEC: YAEC kontroluje GitHub při spuštění a každých 30 minut, stahuje balíček na pozadí a ověřuje jeho otisk SHA-256; ve Windows se nainstaluje sám po zavření programu, v Linuxu, BSD a macOS se nová verze spustí příště a zpráva řekne, ze které verze se aktualizovalo (balíčky .deb, .rpm, Arch a Slackware zůstávají správci balíčků). Můj obzor: fialový rámeček zaměřitelné oblasti má stupňovité minimum, stupeň po stupni v azimutu (vyšší z limitu antény a terénu), pro tvou stanici i pro DX.",
         };
+    }
+    static class Testi_RO
+    {
+        static Testi_RO() { }
         public static readonly string[] RO = {
             " (estimat din longitudine)",
             "ORIENTABILĂ",
@@ -69456,6 +69591,10 @@ namespace LunaCalc
             "YAEC a fost actualizat de la versiunea {0} la {1}.",
             "1.9.11 - Actualizare automată silențioasă, ca în YA-NEC: YAEC verifică GitHub la pornire și la fiecare 30 de minute, descarcă pachetul în fundal și îi verifică amprenta SHA-256; pe Windows se instalează singur la închiderea programului, pe Linux, BSD și macOS noua versiune pornește la următoarea lansare, iar un mesaj spune de la ce versiune s-a actualizat (pachetele .deb, .rpm, Arch și Slackware rămân la managerul de pachete). Orizontul meu: caseta violetă a zonei în care se poate ținti are minimul în trepte, grad cu grad în azimut (cel mai mare dintre limita antenei și teren), pentru stația ta și pentru DX.",
         };
+    }
+    static class Testi_EL
+    {
+        static Testi_EL() { }
         public static readonly string[] EL = {
             " (εκτίμηση από το γεωγραφικό μήκος)",
             "ΣΤΟΧΕΥΣΙΜΗ",
@@ -71437,6 +71576,10 @@ namespace LunaCalc
             "Το YAEC ενημερώθηκε από την έκδοση {0} στην {1}.",
             "1.9.11 - Σιωπηλή αυτόματη ενημέρωση, όπως στο YA-NEC: το YAEC ελέγχει το GitHub κατά την εκκίνηση και κάθε 30 λεπτά, κατεβάζει το πακέτο στο παρασκήνιο και ελέγχει το αποτύπωμα SHA-256· στα Windows εγκαθίσταται μόνο του όταν κλείνεις το πρόγραμμα, σε Linux, BSD και macOS η νέα έκδοση ξεκινά στην επόμενη εκκίνηση και ένα μήνυμα λέει από ποια έκδοση έγινε η ενημέρωση (τα πακέτα .deb, .rpm, Arch και Slackware μένουν στον διαχειριστή πακέτων). Ο ορίζοντάς μου: το μωβ πλαίσιο της περιοχής σκόπευσης έχει κλιμακωτό ελάχιστο, μοίρα προς μοίρα στο αζιμούθιο (το υψηλότερο ανάμεσα στο όριο της κεραίας και στο έδαφος), για τον σταθμό σου και για τον DX.",
         };
+    }
+    static class Testi_HU
+    {
+        static Testi_HU() { }
         public static readonly string[] HU = {
             " (a földrajzi hosszúságból becsülve)",
             "IRÁNYÍTHATÓ",
@@ -73418,6 +73561,10 @@ namespace LunaCalc
             "A YAEC frissült a {0} verzióról a {1} verzióra.",
             "1.9.11 - Csendes automatikus frissítés, mint a YA-NEC-ben: a YAEC induláskor és 30 percenként megnézi a GitHubot, a háttérben letölti a csomagot és ellenőrzi az SHA-256 ujjlenyomatát; Windowson a program bezárásakor magától települ, Linuxon, BSD-n és macOS-en az új verzió a következő indításkor indul, és egy üzenet megmondja, melyik verzióról frissült (a .deb, .rpm, Arch és Slackware csomagokat továbbra is a csomagkezelő frissíti). Az én horizontom: a célozható terület lila keretének alsó határa lépcsős, azimutban fokról fokra (az antennahatár és a terep közül a magasabb), a saját állomásodra és a DX-re.",
         };
+    }
+    static class Testi_SK
+    {
+        static Testi_SK() { }
         public static readonly string[] SK = {
             " (odhadnuté z dĺžky)",
             "NAMIERITEĽNÝ",
@@ -75528,45 +75675,45 @@ namespace LunaCalc
             string[] col;
             switch (Idx)
             {
-                case 0: col = Testi.EN; break;
-                case 2: col = Testi.DE; break;
-                case 3: col = Testi.FR; break;
-                case 4: col = Testi.ES; break;
-                case 5: col = Testi.PT; break;
-                case 6: col = Testi.ZH; break;
-                case 7: col = Testi.JA; break;
-                case 8: col = Testi.HI; break;
-                case 9: col = Testi.KO; break;
-                case 11: col = Testi.RU; break;
-                case 12: col = Testi.UK; break;
-                case 13: col = Testi.AF; break;
-                case 14: col = Testi.BN; break;
-                case 15: col = Testi.AR; break;
-                case 16: col = Testi.TR; break;
-                case 17: col = Testi.NL; break;
-                case 18: col = Testi.ET; break;
-                case 19: col = Testi.LV; break;
-                case 20: col = Testi.LT; break;
-                case 21: col = Testi.SV; break;
-                case 22: col = Testi.NB; break;
-                case 23: col = Testi.IS; break;
-                case 24: col = Testi.HE; break;
-                case 25: col = Testi.UR; break;
-                case 26: col = Testi.DA; break;
-                case 27: col = Testi.TL; break;
-                case 28: col = Testi.BR; break;
-                case 29: col = Testi.TH; break;
-                case 30: col = Testi.TW; break;
-                case 31: col = Testi.PL; break;
-                case 32: col = Testi.CS; break;
-                case 33: col = Testi.RO; break;
-                case 34: col = Testi.EL; break;
-                case 35: col = Testi.HU; break;
-                case 36: col = Testi.SK; break;
-                default: col = Testi.ID; break;
+                case 0: col = Testi_EN.EN; break;
+                case 2: col = Testi_DE.DE; break;
+                case 3: col = Testi_FR.FR; break;
+                case 4: col = Testi_ES.ES; break;
+                case 5: col = Testi_PT.PT; break;
+                case 6: col = Testi_ZH.ZH; break;
+                case 7: col = Testi_JA.JA; break;
+                case 8: col = Testi_HI.HI; break;
+                case 9: col = Testi_KO.KO; break;
+                case 11: col = Testi_RU.RU; break;
+                case 12: col = Testi_UK.UK; break;
+                case 13: col = Testi_AF.AF; break;
+                case 14: col = Testi_BN.BN; break;
+                case 15: col = Testi_AR.AR; break;
+                case 16: col = Testi_TR.TR; break;
+                case 17: col = Testi_NL.NL; break;
+                case 18: col = Testi_ET.ET; break;
+                case 19: col = Testi_LV.LV; break;
+                case 20: col = Testi_LT.LT; break;
+                case 21: col = Testi_SV.SV; break;
+                case 22: col = Testi_NB.NB; break;
+                case 23: col = Testi_IS.IS; break;
+                case 24: col = Testi_HE.HE; break;
+                case 25: col = Testi_UR.UR; break;
+                case 26: col = Testi_DA.DA; break;
+                case 27: col = Testi_TL.TL; break;
+                case 28: col = Testi_BR.BR; break;
+                case 29: col = Testi_TH.TH; break;
+                case 30: col = Testi_TW.TW; break;
+                case 31: col = Testi_PL.PL; break;
+                case 32: col = Testi_CS.CS; break;
+                case 33: col = Testi_RO.RO; break;
+                case 34: col = Testi_EL.EL; break;
+                case 35: col = Testi_HU.HU; break;
+                case 36: col = Testi_SK.SK; break;
+                default: col = Testi_ID.ID; break;
             }
             if (n < col.Length && !string.IsNullOrEmpty(col[n])) return col[n];
-            if (n < Testi.EN.Length && !string.IsNullOrEmpty(Testi.EN[n])) return Testi.EN[n];
+            if (n < Testi_EN.EN.Length && !string.IsNullOrEmpty(Testi_EN.EN[n])) return Testi_EN.EN[n];
             return it;
         }
     }
@@ -90175,9 +90322,17 @@ namespace LunaCalc
             else trk.Conto = string.Format(ci, Lang.T("inizia tra {0}"), Durata(trk.FinA > now ? trk.FinA - now : TimeSpan.Zero));
             trk.SnOn = chkDatiMain != null && chkDatiMain.Checked;
             if (trk.SnOn) AggiornaSnTracciamento(now);
-            InvalidaSchede();
+            // 1.9.12: le sei schede in alto si ridisegnano solo quando cambia quello che mostrano (testi, colori, minuto);
+            // l'orologio UTC con i secondi ogni volta. Prima si ridisegnavano tutte ogni secondo e, essendo trasparenti,
+            // ognuna ridisegnava anche il pannello sotto: circa 6 disegni completi della pagina al secondo.
+            string fs = string.Concat(new object[] { subMe, "|", subMeCol.ToArgb(), "|", badgeMe, "|", subFreq, "|", subDx, "|", subDxCol.ToArgb(), "|", subDxTag, "|",
+                trkScelto.HasValue, "|", dxAttivo, "|", trkDxTerraTipo, trkDxTerraBadge, trkDxTerraTesto, "|", trkPolTipo, trkPolBadge, trkPolTesto, "|",
+                now.ToString("yyyyMMddHHmm", inv), "|", trk.DxTzNome, "|", Tema.Schema, "|", Lang.Idx, "|", corrDx });
+            if (forzaFinestra || fs != trkFirmaSchede) { trkFirmaSchede = fs; InvalidaSchede(); }
+            else if (cardUtc != null) cardUtc.Invalidate();
             pnlTrk.Invalidate();
         }
+        string trkFirmaSchede = "";
 
         // "· 10 caratteri · ±18 m", con un consiglio per la mia stazione se il locator è corto
         string PrecisioneLoc(string loc, double lat, bool mia)
